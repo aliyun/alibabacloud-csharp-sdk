@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class DeleteInstanceResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>94B03BBA-A132-42C3-8367-0A0C1C45****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

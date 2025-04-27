@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListAllNodeRequest : TeaModel {
         /// <summary>
-        /// The Java Virtual Machine (JVM) heap memory usage of the node.
+        /// <para>The Java Virtual Machine (JVM) heap memory usage of the node.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("extended")]
         [Validation(Required=false)]

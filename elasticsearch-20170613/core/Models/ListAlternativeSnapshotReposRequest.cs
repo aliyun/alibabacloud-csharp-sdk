@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListAlternativeSnapshotReposRequest : TeaModel {
         /// <summary>
-        /// Indicates whether to return the OSS reference repository added. The return value. Valid values: true and false.
+        /// <para>Indicates whether to return the OSS reference repository added. The return value. Valid values: true and false.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("alreadySetItems")]
         [Validation(Required=false)]

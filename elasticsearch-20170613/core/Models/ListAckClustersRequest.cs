@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListAckClustersRequest : TeaModel {
         /// <summary>
-        /// The number of the page to return.
+        /// <para>The number of the page to return.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("page")]
         [Validation(Required=false)]
         public int? Page { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("size")]
         [Validation(Required=false)]
         public int? Size { get; set; }
 
         /// <summary>
-        /// The ID of the virtual private cloud (VPC) to which the ACK clusters belong.
+        /// <para>The ID of the virtual private cloud (VPC) to which the ACK clusters belong.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vpc-bp12nu14urf0upaf4****</para>
         /// </summary>
         [NameInMap("vpcId")]
         [Validation(Required=false)]

@@ -10,42 +10,54 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListExtendfilesResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The returned result.
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<ListExtendfilesResponseBodyResult> Result { get; set; }
         public class ListExtendfilesResponseBodyResult : TeaModel {
             /// <summary>
-            /// The path of the driver file.
+            /// <para>The path of the driver file.</para>
             /// </summary>
             [NameInMap("filePath")]
             [Validation(Required=false)]
             public string FilePath { get; set; }
 
             /// <summary>
-            /// The size of the driver file.
+            /// <para>The size of the driver file.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>968668</para>
             /// </summary>
             [NameInMap("fileSize")]
             [Validation(Required=false)]
             public long? FileSize { get; set; }
 
             /// <summary>
-            /// The name of the driver file.
+            /// <para>The name of the driver file.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>mysql-connector-java-5.1.35.jar</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The source type.
+            /// <para>The source type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ORIGIN</para>
             /// </summary>
             [NameInMap("sourceType")]
             [Validation(Required=false)]

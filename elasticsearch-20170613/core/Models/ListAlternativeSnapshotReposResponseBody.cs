@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListAlternativeSnapshotReposResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The return results.
+        /// <para>The return results.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<ListAlternativeSnapshotReposResponseBodyResult> Result { get; set; }
         public class ListAlternativeSnapshotReposResponseBodyResult : TeaModel {
             /// <summary>
-            /// The ID of the instance.
+            /// <para>The ID of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>es-cn-6ja1ro4jt000c****</para>
             /// </summary>
             [NameInMap("instanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The address of the repository.
+            /// <para>The address of the repository.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>RepoPath</para>
             /// </summary>
             [NameInMap("repoPath")]
             [Validation(Required=false)]

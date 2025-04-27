@@ -10,45 +10,64 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListCollectorsRequest : TeaModel {
         /// <summary>
-        /// The ID of the resource with which the shipper is associated.
+        /// <para>The ID of the resource with which the shipper is associated.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>es-cn-nif1q8auz0003****</para>
         /// </summary>
         [NameInMap("instanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The name of the shipper.
+        /// <para>The name of the shipper.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>collectorName1</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Valid values: 1 to 200. Default value: 1.
+        /// <para>The number of the page to return. Valid values: 1 to 200. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("page")]
         [Validation(Required=false)]
         public int? Page { get; set; }
 
         /// <summary>
-        /// The ID of the shipper.
+        /// <para>The ID of the shipper.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ct-cn-77uqof2s7rg5c****</para>
         /// </summary>
         [NameInMap("resId")]
         [Validation(Required=false)]
         public string ResId { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Valid values: 1 to 500. Default value: 20.
+        /// <para>The number of entries to return on each page. Valid values: 1 to 500. Default value: 20.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("size")]
         [Validation(Required=false)]
         public int? Size { get; set; }
 
         /// <summary>
-        /// The type of the machine on which the shipper is deployed. If you leave this parameter empty, shippers deployed on all types of machines are returned. Valid values:
+        /// <para>The type of the machine on which the shipper is deployed. If you leave this parameter empty, shippers deployed on all types of machines are returned. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ECS</description></item>
+        /// <item><description>ACK</description></item>
+        /// </list>
         /// 
-        /// *   ECS
-        /// *   ACK
+        /// <b>Example:</b>
+        /// <para>ECS</para>
         /// </summary>
         [NameInMap("sourceType")]
         [Validation(Required=false)]

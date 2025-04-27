@@ -13,12 +13,20 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public ListComponentIndicesResponseBodyHeaders Headers { get; set; }
         public class ListComponentIndicesResponseBodyHeaders : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
             [NameInMap("X-Total-Count")]
             [Validation(Required=false)]
             public long? XTotalCount { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>F99407AB-2FA9-489E-A259-40CF6DCC47D9</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -35,6 +43,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [Validation(Required=false)]
             public ListComponentIndicesResponseBodyResultContent Content { get; set; }
             public class ListComponentIndicesResponseBodyResultContent : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>{ &quot;description&quot;: &quot;set number of shards to one&quot; }</para>
+                /// </summary>
                 [NameInMap("_meta")]
                 [Validation(Required=false)]
                 public Dictionary<string, object> Meta { get; set; }
@@ -51,6 +63,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                         [Validation(Required=false)]
                         public ListComponentIndicesResponseBodyResultContentTemplateSettingsIndex Index { get; set; }
                         public class ListComponentIndicesResponseBodyResultContentTemplateSettingsIndex : TeaModel {
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>best_compression</para>
+                            /// </summary>
                             [NameInMap("codec")]
                             [Validation(Required=false)]
                             public string Codec { get; set; }
@@ -59,6 +75,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                             [Validation(Required=false)]
                             public ListComponentIndicesResponseBodyResultContentTemplateSettingsIndexLifecycle Lifecycle { get; set; }
                             public class ListComponentIndicesResponseBodyResultContentTemplateSettingsIndexLifecycle : TeaModel {
+                                /// <summary>
+                                /// <b>Example:</b>
+                                /// <para>synthetics</para>
+                                /// </summary>
                                 [NameInMap("name")]
                                 [Validation(Required=false)]
                                 public string Name { get; set; }
@@ -71,12 +91,20 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 
                 }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
                 [NameInMap("version")]
                 [Validation(Required=false)]
                 public long? Version { get; set; }
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>synthetics-settings</para>
+            /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }

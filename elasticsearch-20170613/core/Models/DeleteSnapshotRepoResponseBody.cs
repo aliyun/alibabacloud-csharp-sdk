@@ -10,17 +10,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class DeleteSnapshotRepoResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Return results:
+        /// <para>Return results:</para>
+        /// <list type="bullet">
+        /// <item><description>true: reference warehouse deleted successfully</description></item>
+        /// <item><description>false: reference warehouse deleted successfully failed</description></item>
+        /// </list>
         /// 
-        /// *   true: reference warehouse deleted successfully
-        /// *   false: reference warehouse deleted successfully failed
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]

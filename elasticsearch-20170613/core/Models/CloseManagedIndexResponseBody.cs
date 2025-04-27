@@ -9,10 +9,28 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class CloseManagedIndexResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F99407AB-2FA9-489E-A259-40CF6DCC****</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the index\&quot;s cloud management has been successfully closed:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: Success</para>
+        /// </description></item>
+        /// <item><description><para>false: Failure</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public bool? Result { get; set; }

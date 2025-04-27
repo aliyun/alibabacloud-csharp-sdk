@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListKibanaPluginsRequest : TeaModel {
         /// <summary>
-        /// The number of the page to return. Default value: 1.
+        /// <para>The number of the page to return. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("page")]
         [Validation(Required=false)]
         public string Page { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("size")]
         [Validation(Required=false)]

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class InstallLogstashSystemPluginResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>F99407AB-2FA9-489E-A259-40CF6DCC4****</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

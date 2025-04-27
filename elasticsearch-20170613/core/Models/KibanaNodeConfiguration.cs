@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public long? Disk { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("spec")]
         [Validation(Required=false)]
         public string Spec { get; set; }

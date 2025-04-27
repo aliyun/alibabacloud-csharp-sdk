@@ -10,17 +10,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class UntagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F99407AB-2FA9-489E-A259-40CF6D******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Return results:
+        /// <para>Return results:</para>
+        /// <list type="bullet">
+        /// <item><description>true: deleted</description></item>
+        /// <item><description>false: Failed</description></item>
+        /// </list>
         /// 
-        /// *   true: deleted
-        /// *   false: Failed
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]

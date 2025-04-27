@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListDictsResponseBody : TeaModel {
         /// <summary>
-        /// The header of the response.
+        /// <para>The header of the response.</para>
         /// </summary>
         [NameInMap("Headers")]
         [Validation(Required=false)]
         public ListDictsResponseBodyHeaders Headers { get; set; }
         public class ListDictsResponseBodyHeaders : TeaModel {
             /// <summary>
-            /// The total number of entries returned.
+            /// <para>The total number of entries returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("X-Total-Count")]
             [Validation(Required=false)]
@@ -26,52 +29,71 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2937F832-F39E-41EF-89BA-B528342A2A3A</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The returned result.
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<ListDictsResponseBodyResult> Result { get; set; }
         public class ListDictsResponseBodyResult : TeaModel {
             /// <summary>
-            /// The link that is used to download the dictionary over the Internet. The link is valid for 90s.
+            /// <para>The link that is used to download the dictionary over the Internet. The link is valid for 90s.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="http://test_bucket.oss-cn-hangzhou.aliyuncs.com/AliyunEs/test.dic?Expires=162573****&OSSAccessKeyId=LTAI*****V9&Signature=PNPO********BBGsJDO4V3VfU4sE%3D">http://test_bucket.oss-cn-hangzhou.aliyuncs.com/AliyunEs/test.dic?Expires=162573****&amp;OSSAccessKeyId=LTAI*****V9&amp;Signature=PNPO********BBGsJDO4V3VfU4sE%3D</a></para>
             /// </summary>
             [NameInMap("downloadUrl")]
             [Validation(Required=false)]
             public string DownloadUrl { get; set; }
 
             /// <summary>
-            /// The size of the dictionary file. Unit: byte.
+            /// <para>The size of the dictionary file. Unit: byte.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2782602</para>
             /// </summary>
             [NameInMap("fileSize")]
             [Validation(Required=false)]
             public long? FileSize { get; set; }
 
             /// <summary>
-            /// The name of the dictionary file.
+            /// <para>The name of the dictionary file.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>SYSTEM_MAIN.dic</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The source type.
+            /// <para>The source type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ORIGIN</para>
             /// </summary>
             [NameInMap("sourceType")]
             [Validation(Required=false)]
             public string SourceType { get; set; }
 
             /// <summary>
-            /// The type of the IK dictionary. Valid values:
+            /// <para>The type of the IK dictionary. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>MAIN: main dictionary</description></item>
+            /// <item><description>STOP: stopword list</description></item>
+            /// </list>
             /// 
-            /// *   MAIN: main dictionary
-            /// *   STOP: stopword list
+            /// <b>Example:</b>
+            /// <para>MAIN</para>
             /// </summary>
             [NameInMap("type")]
             [Validation(Required=false)]

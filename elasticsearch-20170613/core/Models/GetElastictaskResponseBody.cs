@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class GetElastictaskResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -21,14 +25,26 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [Validation(Required=false)]
             public GetElastictaskResponseBodyResultElasticExpansionTask ElasticExpansionTask { get; set; }
             public class GetElastictaskResponseBodyResultElasticExpansionTask : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0 0 0 ? * MON</para>
+                /// </summary>
                 [NameInMap("cronExpression")]
                 [Validation(Required=false)]
                 public string CronExpression { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2</para>
+                /// </summary>
                 [NameInMap("elasticNodeCount")]
                 [Validation(Required=false)]
                 public int? ElasticNodeCount { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2</para>
+                /// </summary>
                 [NameInMap("replicaCount")]
                 [Validation(Required=false)]
                 public int? ReplicaCount { get; set; }
@@ -37,6 +53,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 [Validation(Required=false)]
                 public List<string> TargetIndices { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>crontab</para>
+                /// </summary>
                 [NameInMap("triggerType")]
                 [Validation(Required=false)]
                 public string TriggerType { get; set; }
@@ -47,14 +67,26 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [Validation(Required=false)]
             public GetElastictaskResponseBodyResultElasticShrinkTask ElasticShrinkTask { get; set; }
             public class GetElastictaskResponseBodyResultElasticShrinkTask : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>4 4 4 ? * WED</para>
+                /// </summary>
                 [NameInMap("cronExpression")]
                 [Validation(Required=false)]
                 public string CronExpression { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2</para>
+                /// </summary>
                 [NameInMap("elasticNodeCount")]
                 [Validation(Required=false)]
                 public int? ElasticNodeCount { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2</para>
+                /// </summary>
                 [NameInMap("replicaCount")]
                 [Validation(Required=false)]
                 public int? ReplicaCount { get; set; }
@@ -63,6 +95,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 [Validation(Required=false)]
                 public List<string> TargetIndices { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>crontab</para>
+                /// </summary>
                 [NameInMap("triggerType")]
                 [Validation(Required=false)]
                 public string TriggerType { get; set; }

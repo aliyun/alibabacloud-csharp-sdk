@@ -10,42 +10,62 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListSearchLogRequest : TeaModel {
         /// <summary>
-        /// 20
+        /// <para>20</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1531910852074</para>
         /// </summary>
         [NameInMap("beginTime")]
         [Validation(Required=false)]
         public long? BeginTime { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1531910852074</para>
         /// </summary>
         [NameInMap("endTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// The header of the response.
+        /// <para>The header of the response.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("page")]
         [Validation(Required=false)]
         public int? Page { get; set; }
 
         /// <summary>
-        /// 1
+        /// <para>1</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>host:<c>172.16.**.**</c> AND content:netty</para>
         /// </summary>
         [NameInMap("query")]
         [Validation(Required=false)]
         public string Query { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// <para>The number of entries returned per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("size")]
         [Validation(Required=false)]
         public int? Size { get; set; }
 
         /// <summary>
-        /// 1531910852074
+        /// <para>1531910852074</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>INSTANCELOG</para>
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]

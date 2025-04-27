@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class UpdateComponentIndexResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>F99407AB-2FA9-489E-A259-40CF6DCC47D9</para>
+        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

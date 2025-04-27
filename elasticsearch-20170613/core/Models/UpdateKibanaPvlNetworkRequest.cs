@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class UpdateKibanaPvlNetworkRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>es-cn-27a3mul6l00***-kibana</para>
+        /// </summary>
         [NameInMap("endpointName")]
         [Validation(Required=false)]
         public string EndpointName { get; set; }
@@ -17,6 +21,12 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public List<string> SecurityGroups { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>es-cn-27a3mul6l0***-kibana-internal</para>
+        /// </summary>
         [NameInMap("pvlId")]
         [Validation(Required=false)]
         public string PvlId { get; set; }

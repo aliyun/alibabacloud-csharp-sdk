@@ -10,50 +10,60 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class CapacityPlanResponseBody : TeaModel {
         /// <summary>
-        /// The response of the request.
+        /// <para>ID of the current request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>E91B7129-A669-4D9D-A743-F90A0FF1F5EF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The extension configuration information.
+        /// <para>Returned result of the request.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public CapacityPlanResponseBodyResult Result { get; set; }
         public class CapacityPlanResponseBodyResult : TeaModel {
             /// <summary>
-            /// The type of the configuration. Set the value to sharedDisk.
-            /// 
-            /// >  The extendConfigs attribute that may occur when the planned instance type is enhanced (advanced).
+            /// <para>Extended configuration information.</para>
             /// </summary>
             [NameInMap("ExtendConfigs")]
             [Validation(Required=false)]
             public List<CapacityPlanResponseBodyResultExtendConfigs> ExtendConfigs { get; set; }
             public class CapacityPlanResponseBodyResultExtendConfigs : TeaModel {
                 /// <summary>
-                /// The size of the disk. Unit: GiB.
+                /// <para>Configuration type, with a single value: sharedDisk.</para>
+                /// <remarks>
+                /// <para>This extendConfigs attribute may appear when the planned instance type is Advanced.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>sharedDisk</para>
                 /// </summary>
                 [NameInMap("ConfigType")]
                 [Validation(Required=false)]
                 public string ConfigType { get; set; }
 
                 /// <summary>
-                /// The type of the disk. Valid value: CPFS_PREMIUM.
+                /// <para>Disk size, in GiB.</para>
                 /// 
-                /// >  The extendConfigs attribute that may occur when the planned instance type is enhanced (advanced).
+                /// <b>Example:</b>
+                /// <para>2048</para>
                 /// </summary>
                 [NameInMap("Disk")]
                 [Validation(Required=false)]
                 public long? Disk { get; set; }
 
                 /// <summary>
-                /// The version type. Valid values:
+                /// <para>Disk type, with a single value: CPFS_PREMIUM.</para>
+                /// <remarks>
+                /// <para>This extendConfigs attribute may appear when the planned instance type is Advanced.</para>
+                /// </remarks>
                 /// 
-                /// *   advanced: enhanced edition
-                /// *   x-pack: Commercial Edition
-                /// *   community: community version
+                /// <b>Example:</b>
+                /// <para>CPFS_PREMIUM</para>
                 /// </summary>
                 [NameInMap("DiskType")]
                 [Validation(Required=false)]
@@ -62,72 +72,111 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             }
 
             /// <summary>
-            /// The node information.
+            /// <para>Edition type, with values meaning as follows:</para>
+            /// <list type="bullet">
+            /// <item><description><para>advanced: Enhanced Edition</para>
+            /// </description></item>
+            /// <item><description><para>x-pack: Commercial Edition</para>
+            /// </description></item>
+            /// <item><description><para>community: Community Edition</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>advanced</para>
             /// </summary>
             [NameInMap("InstanceCategory")]
             [Validation(Required=false)]
             public string InstanceCategory { get; set; }
 
             /// <summary>
-            /// The number of cores.
+            /// <para>Node information.</para>
             /// </summary>
             [NameInMap("NodeConfigurations")]
             [Validation(Required=false)]
             public List<CapacityPlanResponseBodyResultNodeConfigurations> NodeConfigurations { get; set; }
             public class CapacityPlanResponseBodyResultNodeConfigurations : TeaModel {
                 /// <summary>
-                /// The number of CPUs of the cloud desktop.
+                /// <para>Number of nodes.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10</para>
                 /// </summary>
                 [NameInMap("Amount")]
                 [Validation(Required=false)]
                 public long? Amount { get; set; }
 
                 /// <summary>
-                /// The size of the disk. Unit: GiB.
+                /// <para>Number of CPUs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("Cpu")]
                 [Validation(Required=false)]
                 public long? Cpu { get; set; }
 
                 /// <summary>
-                /// The type of the hard disk. Valid values:
+                /// <para>Disk size, in GiB.</para>
                 /// 
-                /// *   cloud_essd: enhanced SSD (ESSD)
-                /// *   cloud_ssd: standard SSD
-                /// *   cloud_efficiency: ultra disk
-                /// *   local_ssd: local SSD
-                /// *   local_efficiency: local ultra disk
+                /// <b>Example:</b>
+                /// <para>20</para>
                 /// </summary>
                 [NameInMap("Disk")]
                 [Validation(Required=false)]
                 public long? Disk { get; set; }
 
                 /// <summary>
-                /// The memory size of the current node role.
+                /// <para>Disk type, with meanings as follows:</para>
+                /// <list type="bullet">
+                /// <item><description><para>cloud_essd: ESSD Cloud Disk</para>
+                /// </description></item>
+                /// <item><description><para>cloud_ssd: SSD Cloud Disk</para>
+                /// </description></item>
+                /// <item><description><para>cloud_efficiency: Efficient Cloud Disk</para>
+                /// </description></item>
+                /// <item><description><para>local_ssd: Local SSD Disk</para>
+                /// </description></item>
+                /// <item><description><para>local_efficiency: Local Efficient Disk</para>
+                /// </description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cloud_ssd</para>
                 /// </summary>
                 [NameInMap("DiskType")]
                 [Validation(Required=false)]
                 public string DiskType { get; set; }
 
                 /// <summary>
-                /// The type of the node. Supported types are as follows:
+                /// <para>Specified memory size for the current node role.</para>
                 /// 
-                /// *   WORKER: data node
-                /// *   WORKER_WARM: cold data node
-                /// *   MASTER: dedicated master node
-                /// *   KIBANA: Kibana node
-                /// *   COORDINATING: client node
-                /// *   ELASTIC_WORKER: elastic node
+                /// <b>Example:</b>
+                /// <para>2</para>
                 /// </summary>
                 [NameInMap("Memory")]
                 [Validation(Required=false)]
                 public long? Memory { get; set; }
 
                 /// <summary>
-                /// The result calculated based on the capacity planning. No default value is available. The values are as follows:
+                /// <para>Node type, with supported types as follows:</para>
+                /// <list type="bullet">
+                /// <item><description><para>WORKER: Data Node</para>
+                /// </description></item>
+                /// <item><description><para>WORKER_WARM: Cold Data Node</para>
+                /// </description></item>
+                /// <item><description><para>MASTER: Dedicated Master Node</para>
+                /// </description></item>
+                /// <item><description><para>KIBANA: Kibana Node</para>
+                /// </description></item>
+                /// <item><description><para>COORDINATING: Coordinator Node</para>
+                /// </description></item>
+                /// <item><description><para>ELASTIC_WORKER: Elastic Node</para>
+                /// </description></item>
+                /// </list>
                 /// 
-                /// *   true: indicates that the number of data nodes calculated by capacity planning exceeds the threshold of 50.
-                /// *   false: The number of data nodes calculated by capacity planning is less than 50.
+                /// <b>Example:</b>
+                /// <para>WORKER</para>
                 /// </summary>
                 [NameInMap("NodeType")]
                 [Validation(Required=false)]
@@ -135,6 +184,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 
             }
 
+            /// <summary>
+            /// <para>Based on the capacity planning calculation, there is no default value. The meanings of the values are as follows:</para>
+            /// <list type="bullet">
+            /// <item><description><para>true: Represents an oversized cluster, indicating that the number of data nodes calculated by the capacity planning exceeds the threshold of 50.</para>
+            /// </description></item>
+            /// <item><description><para>false: The number of data nodes calculated by the capacity planning is within 50.</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("OversizedCluster")]
             [Validation(Required=false)]
             public bool? OversizedCluster { get; set; }

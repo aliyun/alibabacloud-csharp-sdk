@@ -10,17 +10,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class CancelLogstashDeletionResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>23EBF56B-2DC0-4507-8BE5-B87395DB0FEB</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the cluster is restored. Valid values:
+        /// <para>Indicates whether the cluster is restored. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The cluster is restored.</description></item>
+        /// <item><description>false: The cluster is not restored.</description></item>
+        /// </list>
         /// 
-        /// *   true: The cluster is restored.
-        /// *   false: The cluster is not restored.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]

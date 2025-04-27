@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListDiagnoseIndicesRequest : TeaModel {
         /// <summary>
-        /// The language. Multiple languages are supported.
+        /// <para>The language. Multiple languages are supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("lang")]
         [Validation(Required=false)]

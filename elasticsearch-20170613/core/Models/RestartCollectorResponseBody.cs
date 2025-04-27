@@ -10,17 +10,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class RestartCollectorResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>84B4038A-AF38-4BF4-9FAD-EA92A4FFF00A</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the shipper is restarted. Valid values:
+        /// <para>Indicates whether the shipper is restarted. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The shipper is restarted.</description></item>
+        /// <item><description>false: The shipper fails to be restarted.</description></item>
+        /// </list>
         /// 
-        /// *   true: The shipper is restarted.
-        /// *   false: The shipper fails to be restarted.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]

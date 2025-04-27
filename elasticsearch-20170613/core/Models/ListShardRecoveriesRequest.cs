@@ -10,10 +10,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListShardRecoveriesRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to return information about data restoration of shards. Valid values:
+        /// <para>Specifies whether to return information about data restoration of shards. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: returns information about data restoration of shards that are being restored.</description></item>
+        /// <item><description>false: returns information about data restoration of all shards.</description></item>
+        /// </list>
         /// 
-        /// *   true: returns information about data restoration of shards that are being restored.
-        /// *   false: returns information about data restoration of all shards.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("activeOnly")]
         [Validation(Required=false)]

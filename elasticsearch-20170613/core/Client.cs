@@ -38,6 +38,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restores nodes in disabled zones. This operation is available only for multi-zone Elasticsearch clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ActivateZonesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ActivateZonesResponse
+        /// </returns>
         public ActivateZonesResponse ActivateZonesWithOptions(string InstanceId, ActivateZonesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -67,6 +85,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ActivateZonesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restores nodes in disabled zones. This operation is available only for multi-zone Elasticsearch clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ActivateZonesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ActivateZonesResponse
+        /// </returns>
         public async Task<ActivateZonesResponse> ActivateZonesWithOptionsAsync(string InstanceId, ActivateZonesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -96,6 +132,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ActivateZonesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restores nodes in disabled zones. This operation is available only for multi-zone Elasticsearch clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ActivateZonesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ActivateZonesResponse
+        /// </returns>
         public ActivateZonesResponse ActivateZones(string InstanceId, ActivateZonesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -103,6 +151,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ActivateZonesWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restores nodes in disabled zones. This operation is available only for multi-zone Elasticsearch clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ActivateZonesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ActivateZonesResponse
+        /// </returns>
         public async Task<ActivateZonesResponse> ActivateZonesAsync(string InstanceId, ActivateZonesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -110,6 +170,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ActivateZonesWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// AddConnectableClusterRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddConnectableClusterResponse
+        /// </returns>
         public AddConnectableClusterResponse AddConnectableClusterWithOptions(string InstanceId, AddConnectableClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -139,6 +212,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<AddConnectableClusterResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// AddConnectableClusterRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddConnectableClusterResponse
+        /// </returns>
         public async Task<AddConnectableClusterResponse> AddConnectableClusterWithOptionsAsync(string InstanceId, AddConnectableClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -168,6 +254,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<AddConnectableClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// AddConnectableClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddConnectableClusterResponse
+        /// </returns>
         public AddConnectableClusterResponse AddConnectableCluster(string InstanceId, AddConnectableClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -175,6 +268,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return AddConnectableClusterWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// AddConnectableClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddConnectableClusterResponse
+        /// </returns>
         public async Task<AddConnectableClusterResponse> AddConnectableClusterAsync(string InstanceId, AddConnectableClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -182,6 +282,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await AddConnectableClusterWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call the AddSnapshotRepo to create a reference repository when configuring a cross-cluster OSS repository.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddSnapshotRepoRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddSnapshotRepoResponse
+        /// </returns>
         public AddSnapshotRepoResponse AddSnapshotRepoWithOptions(string InstanceId, AddSnapshotRepoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -205,6 +323,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<AddSnapshotRepoResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call the AddSnapshotRepo to create a reference repository when configuring a cross-cluster OSS repository.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddSnapshotRepoRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddSnapshotRepoResponse
+        /// </returns>
         public async Task<AddSnapshotRepoResponse> AddSnapshotRepoWithOptionsAsync(string InstanceId, AddSnapshotRepoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -228,6 +364,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<AddSnapshotRepoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call the AddSnapshotRepo to create a reference repository when configuring a cross-cluster OSS repository.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddSnapshotRepoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddSnapshotRepoResponse
+        /// </returns>
         public AddSnapshotRepoResponse AddSnapshotRepo(string InstanceId, AddSnapshotRepoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -235,6 +383,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return AddSnapshotRepoWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call the AddSnapshotRepo to create a reference repository when configuring a cross-cluster OSS repository.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddSnapshotRepoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddSnapshotRepoResponse
+        /// </returns>
         public async Task<AddSnapshotRepoResponse> AddSnapshotRepoAsync(string InstanceId, AddSnapshotRepoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -242,6 +402,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await AddSnapshotRepoWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restores an Elasticsearch cluster that is frozen after it is released.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelDeletionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelDeletionResponse
+        /// </returns>
         public CancelDeletionResponse CancelDeletionWithOptions(string InstanceId, CancelDeletionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -270,6 +448,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<CancelDeletionResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restores an Elasticsearch cluster that is frozen after it is released.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelDeletionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelDeletionResponse
+        /// </returns>
         public async Task<CancelDeletionResponse> CancelDeletionWithOptionsAsync(string InstanceId, CancelDeletionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -298,6 +494,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<CancelDeletionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restores an Elasticsearch cluster that is frozen after it is released.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelDeletionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelDeletionResponse
+        /// </returns>
         public CancelDeletionResponse CancelDeletion(string InstanceId, CancelDeletionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -305,6 +513,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return CancelDeletionWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restores an Elasticsearch cluster that is frozen after it is released.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelDeletionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelDeletionResponse
+        /// </returns>
         public async Task<CancelDeletionResponse> CancelDeletionAsync(string InstanceId, CancelDeletionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -312,6 +532,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await CancelDeletionWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restores a Logstash cluster that is frozen after it is released.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelLogstashDeletionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelLogstashDeletionResponse
+        /// </returns>
         public CancelLogstashDeletionResponse CancelLogstashDeletionWithOptions(string InstanceId, CancelLogstashDeletionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -340,6 +578,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<CancelLogstashDeletionResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restores a Logstash cluster that is frozen after it is released.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelLogstashDeletionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelLogstashDeletionResponse
+        /// </returns>
         public async Task<CancelLogstashDeletionResponse> CancelLogstashDeletionWithOptionsAsync(string InstanceId, CancelLogstashDeletionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -368,6 +624,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<CancelLogstashDeletionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restores a Logstash cluster that is frozen after it is released.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelLogstashDeletionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelLogstashDeletionResponse
+        /// </returns>
         public CancelLogstashDeletionResponse CancelLogstashDeletion(string InstanceId, CancelLogstashDeletionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -375,6 +643,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return CancelLogstashDeletionWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restores a Logstash cluster that is frozen after it is released.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelLogstashDeletionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelLogstashDeletionResponse
+        /// </returns>
         public async Task<CancelLogstashDeletionResponse> CancelLogstashDeletionAsync(string InstanceId, CancelLogstashDeletionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -382,6 +662,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await CancelLogstashDeletionWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// CancelTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelTaskResponse
+        /// </returns>
         public CancelTaskResponse CancelTaskWithOptions(string InstanceId, CancelTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -414,6 +707,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<CancelTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// CancelTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelTaskResponse
+        /// </returns>
         public async Task<CancelTaskResponse> CancelTaskWithOptionsAsync(string InstanceId, CancelTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -446,6 +752,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<CancelTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// CancelTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelTaskResponse
+        /// </returns>
         public CancelTaskResponse CancelTask(string InstanceId, CancelTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -453,6 +766,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return CancelTaskWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// CancelTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelTaskResponse
+        /// </returns>
         public async Task<CancelTaskResponse> CancelTaskAsync(string InstanceId, CancelTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -460,6 +780,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await CancelTaskWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Capacity Planning</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CapacityPlanRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CapacityPlanResponse
+        /// </returns>
         public CapacityPlanResponse CapacityPlanWithOptions(CapacityPlanRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -500,6 +838,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<CapacityPlanResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Capacity Planning</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CapacityPlanRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CapacityPlanResponse
+        /// </returns>
         public async Task<CapacityPlanResponse> CapacityPlanWithOptionsAsync(CapacityPlanRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -540,6 +896,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<CapacityPlanResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Capacity Planning</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CapacityPlanRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CapacityPlanResponse
+        /// </returns>
         public CapacityPlanResponse CapacityPlan(CapacityPlanRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -547,6 +915,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return CapacityPlanWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Capacity Planning</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CapacityPlanRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CapacityPlanResponse
+        /// </returns>
         public async Task<CapacityPlanResponse> CapacityPlanAsync(CapacityPlanRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -554,6 +934,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await CapacityPlanWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭实例的智能运维功能</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CloseDiagnosisRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CloseDiagnosisResponse
+        /// </returns>
         public CloseDiagnosisResponse CloseDiagnosisWithOptions(string InstanceId, CloseDiagnosisRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -586,6 +984,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<CloseDiagnosisResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭实例的智能运维功能</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CloseDiagnosisRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CloseDiagnosisResponse
+        /// </returns>
         public async Task<CloseDiagnosisResponse> CloseDiagnosisWithOptionsAsync(string InstanceId, CloseDiagnosisRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -618,6 +1034,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<CloseDiagnosisResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭实例的智能运维功能</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CloseDiagnosisRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CloseDiagnosisResponse
+        /// </returns>
         public CloseDiagnosisResponse CloseDiagnosis(string InstanceId, CloseDiagnosisRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -625,6 +1053,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return CloseDiagnosisWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭实例的智能运维功能</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CloseDiagnosisRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CloseDiagnosisResponse
+        /// </returns>
         public async Task<CloseDiagnosisResponse> CloseDiagnosisAsync(string InstanceId, CloseDiagnosisRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -632,6 +1072,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await CloseDiagnosisWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// CloseHttpsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CloseHttpsResponse
+        /// </returns>
         public CloseHttpsResponse CloseHttpsWithOptions(string InstanceId, CloseHttpsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -660,6 +1113,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<CloseHttpsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// CloseHttpsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CloseHttpsResponse
+        /// </returns>
         public async Task<CloseHttpsResponse> CloseHttpsWithOptionsAsync(string InstanceId, CloseHttpsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -688,6 +1154,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<CloseHttpsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// CloseHttpsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CloseHttpsResponse
+        /// </returns>
         public CloseHttpsResponse CloseHttps(string InstanceId, CloseHttpsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -695,6 +1168,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return CloseHttpsWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// CloseHttpsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CloseHttpsResponse
+        /// </returns>
         public async Task<CloseHttpsResponse> CloseHttpsAsync(string InstanceId, CloseHttpsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -702,6 +1182,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await CloseHttpsWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disable Managed Index</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CloseManagedIndexRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CloseManagedIndexResponse
+        /// </returns>
         public CloseManagedIndexResponse CloseManagedIndexWithOptions(string InstanceId, string Index, CloseManagedIndexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -730,6 +1228,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<CloseManagedIndexResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disable Managed Index</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CloseManagedIndexRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CloseManagedIndexResponse
+        /// </returns>
         public async Task<CloseManagedIndexResponse> CloseManagedIndexWithOptionsAsync(string InstanceId, string Index, CloseManagedIndexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -758,6 +1274,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<CloseManagedIndexResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disable Managed Index</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CloseManagedIndexRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CloseManagedIndexResponse
+        /// </returns>
         public CloseManagedIndexResponse CloseManagedIndex(string InstanceId, string Index, CloseManagedIndexRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -765,6 +1293,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return CloseManagedIndexWithOptions(InstanceId, Index, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disable Managed Index</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CloseManagedIndexRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CloseManagedIndexResponse
+        /// </returns>
         public async Task<CloseManagedIndexResponse> CloseManagedIndexAsync(string InstanceId, string Index, CloseManagedIndexRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -772,6 +1312,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await CloseManagedIndexWithOptionsAsync(InstanceId, Index, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建收集器</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCollectorRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCollectorResponse
+        /// </returns>
         public CreateCollectorResponse CreateCollectorWithOptions(CreateCollectorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -834,6 +1392,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<CreateCollectorResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建收集器</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCollectorRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCollectorResponse
+        /// </returns>
         public async Task<CreateCollectorResponse> CreateCollectorWithOptionsAsync(CreateCollectorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -896,6 +1472,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<CreateCollectorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建收集器</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCollectorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCollectorResponse
+        /// </returns>
         public CreateCollectorResponse CreateCollector(CreateCollectorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -903,6 +1491,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return CreateCollectorWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建收集器</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCollectorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCollectorResponse
+        /// </returns>
         public async Task<CreateCollectorResponse> CreateCollectorAsync(CreateCollectorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -910,6 +1510,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await CreateCollectorWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建Elasticsearch组合模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateComponentIndexRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateComponentIndexResponse
+        /// </returns>
         public CreateComponentIndexResponse CreateComponentIndexWithOptions(string InstanceId, string name, CreateComponentIndexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -942,6 +1560,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<CreateComponentIndexResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建Elasticsearch组合模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateComponentIndexRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateComponentIndexResponse
+        /// </returns>
         public async Task<CreateComponentIndexResponse> CreateComponentIndexWithOptionsAsync(string InstanceId, string name, CreateComponentIndexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -974,6 +1610,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<CreateComponentIndexResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建Elasticsearch组合模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateComponentIndexRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateComponentIndexResponse
+        /// </returns>
         public CreateComponentIndexResponse CreateComponentIndex(string InstanceId, string name, CreateComponentIndexRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -981,6 +1629,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return CreateComponentIndexWithOptions(InstanceId, name, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建Elasticsearch组合模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateComponentIndexRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateComponentIndexResponse
+        /// </returns>
         public async Task<CreateComponentIndexResponse> CreateComponentIndexAsync(string InstanceId, string name, CreateComponentIndexRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -988,6 +1648,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await CreateComponentIndexWithOptionsAsync(InstanceId, name, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建数据流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDataStreamRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataStreamResponse
+        /// </returns>
         public CreateDataStreamResponse CreateDataStreamWithOptions(string InstanceId, CreateDataStreamRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1017,6 +1695,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<CreateDataStreamResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建数据流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDataStreamRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataStreamResponse
+        /// </returns>
         public async Task<CreateDataStreamResponse> CreateDataStreamWithOptionsAsync(string InstanceId, CreateDataStreamRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1046,6 +1742,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<CreateDataStreamResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建数据流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDataStreamRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataStreamResponse
+        /// </returns>
         public CreateDataStreamResponse CreateDataStream(string InstanceId, CreateDataStreamRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1053,6 +1761,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return CreateDataStreamWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建数据流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDataStreamRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataStreamResponse
+        /// </returns>
         public async Task<CreateDataStreamResponse> CreateDataStreamAsync(string InstanceId, CreateDataStreamRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1060,122 +1780,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await CreateDataStreamWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * @deprecated
-          * Before you call this operation, note that:
-          * *   Currently, the one-click index migration feature only supports the China (Beijing) region.
-          * *   The source and destination Elasticsearch clusters must meet the following requirements: a user-created or Alibaba Cloud Elasticsearch Elasticsearch cluster with a source of version 6.7.0 and a Alibaba Cloud Elasticsearch Elasticsearch cluster with a destination of version 6.3.2 or 6.7.0.
-          *
-          * @param request CreateDataTasksRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateDataTasksResponse
-         */
-        // Deprecated
-        public CreateDataTasksResponse CreateDataTasksWithOptions(string InstanceId, CreateDataTasksRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
-            {
-                query["ClientToken"] = request.ClientToken;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToArray(request.Body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CreateDataTasks",
-                Version = "2017-06-13",
-                Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/data-task",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CreateDataTasksResponse>(CallApi(params_, req, runtime));
-        }
-
-        /**
-          * @deprecated
-          * Before you call this operation, note that:
-          * *   Currently, the one-click index migration feature only supports the China (Beijing) region.
-          * *   The source and destination Elasticsearch clusters must meet the following requirements: a user-created or Alibaba Cloud Elasticsearch Elasticsearch cluster with a source of version 6.7.0 and a Alibaba Cloud Elasticsearch Elasticsearch cluster with a destination of version 6.3.2 or 6.7.0.
-          *
-          * @param request CreateDataTasksRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateDataTasksResponse
-         */
-        // Deprecated
-        public async Task<CreateDataTasksResponse> CreateDataTasksWithOptionsAsync(string InstanceId, CreateDataTasksRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
-            {
-                query["ClientToken"] = request.ClientToken;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToArray(request.Body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CreateDataTasks",
-                Version = "2017-06-13",
-                Protocol = "HTTPS",
-                Pathname = "/openapi/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/data-task",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CreateDataTasksResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /**
-          * @deprecated
-          * Before you call this operation, note that:
-          * *   Currently, the one-click index migration feature only supports the China (Beijing) region.
-          * *   The source and destination Elasticsearch clusters must meet the following requirements: a user-created or Alibaba Cloud Elasticsearch Elasticsearch cluster with a source of version 6.7.0 and a Alibaba Cloud Elasticsearch Elasticsearch cluster with a destination of version 6.3.2 or 6.7.0.
-          *
-          * @param request CreateDataTasksRequest
-          * @return CreateDataTasksResponse
-         */
-        // Deprecated
-        public CreateDataTasksResponse CreateDataTasks(string InstanceId, CreateDataTasksRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return CreateDataTasksWithOptions(InstanceId, request, headers, runtime);
-        }
-
-        /**
-          * @deprecated
-          * Before you call this operation, note that:
-          * *   Currently, the one-click index migration feature only supports the China (Beijing) region.
-          * *   The source and destination Elasticsearch clusters must meet the following requirements: a user-created or Alibaba Cloud Elasticsearch Elasticsearch cluster with a source of version 6.7.0 and a Alibaba Cloud Elasticsearch Elasticsearch cluster with a destination of version 6.3.2 or 6.7.0.
-          *
-          * @param request CreateDataTasksRequest
-          * @return CreateDataTasksResponse
-         */
-        // Deprecated
-        public async Task<CreateDataTasksResponse> CreateDataTasksAsync(string InstanceId, CreateDataTasksRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await CreateDataTasksWithOptionsAsync(InstanceId, request, headers, runtime);
-        }
-
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建索引生命周期策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateILMPolicyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateILMPolicyResponse
+        /// </returns>
         public CreateILMPolicyResponse CreateILMPolicyWithOptions(string InstanceId, CreateILMPolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1205,6 +1827,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<CreateILMPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建索引生命周期策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateILMPolicyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateILMPolicyResponse
+        /// </returns>
         public async Task<CreateILMPolicyResponse> CreateILMPolicyWithOptionsAsync(string InstanceId, CreateILMPolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1234,6 +1874,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<CreateILMPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建索引生命周期策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateILMPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateILMPolicyResponse
+        /// </returns>
         public CreateILMPolicyResponse CreateILMPolicy(string InstanceId, CreateILMPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1241,6 +1893,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return CreateILMPolicyWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建索引生命周期策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateILMPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateILMPolicyResponse
+        /// </returns>
         public async Task<CreateILMPolicyResponse> CreateILMPolicyAsync(string InstanceId, CreateILMPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1248,6 +1912,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await CreateILMPolicyWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建索引模版</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateIndexTemplateRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIndexTemplateResponse
+        /// </returns>
         public CreateIndexTemplateResponse CreateIndexTemplateWithOptions(string InstanceId, CreateIndexTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1302,6 +1984,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<CreateIndexTemplateResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建索引模版</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateIndexTemplateRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIndexTemplateResponse
+        /// </returns>
         public async Task<CreateIndexTemplateResponse> CreateIndexTemplateWithOptionsAsync(string InstanceId, CreateIndexTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1356,6 +2056,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<CreateIndexTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建索引模版</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateIndexTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIndexTemplateResponse
+        /// </returns>
         public CreateIndexTemplateResponse CreateIndexTemplate(string InstanceId, CreateIndexTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1363,6 +2075,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return CreateIndexTemplateWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建索引模版</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateIndexTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIndexTemplateResponse
+        /// </returns>
         public async Task<CreateIndexTemplateResponse> CreateIndexTemplateAsync(string InstanceId, CreateIndexTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1370,6 +2094,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await CreateIndexTemplateWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建logstash实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLogstashRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLogstashResponse
+        /// </returns>
         public CreateLogstashResponse CreateLogstashWithOptions(CreateLogstashRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1432,6 +2174,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<CreateLogstashResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建logstash实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLogstashRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLogstashResponse
+        /// </returns>
         public async Task<CreateLogstashResponse> CreateLogstashWithOptionsAsync(CreateLogstashRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1494,6 +2254,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<CreateLogstashResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建logstash实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLogstashRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLogstashResponse
+        /// </returns>
         public CreateLogstashResponse CreateLogstash(CreateLogstashRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1501,6 +2273,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return CreateLogstashWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建logstash实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLogstashRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLogstashResponse
+        /// </returns>
         public async Task<CreateLogstashResponse> CreateLogstashAsync(CreateLogstashRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1508,6 +2292,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await CreateLogstashWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建Logstash管道任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreatePipelinesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePipelinesResponse
+        /// </returns>
         public CreatePipelinesResponse CreatePipelinesWithOptions(string InstanceId, CreatePipelinesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1541,6 +2343,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<CreatePipelinesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建Logstash管道任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreatePipelinesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePipelinesResponse
+        /// </returns>
         public async Task<CreatePipelinesResponse> CreatePipelinesWithOptionsAsync(string InstanceId, CreatePipelinesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1574,6 +2394,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<CreatePipelinesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建Logstash管道任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreatePipelinesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePipelinesResponse
+        /// </returns>
         public CreatePipelinesResponse CreatePipelines(string InstanceId, CreatePipelinesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1581,6 +2413,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return CreatePipelinesWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建Logstash管道任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreatePipelinesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePipelinesResponse
+        /// </returns>
         public async Task<CreatePipelinesResponse> CreatePipelinesAsync(string InstanceId, CreatePipelinesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1588,6 +2432,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await CreatePipelinesWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// CreateSnapshotRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSnapshotResponse
+        /// </returns>
         public CreateSnapshotResponse CreateSnapshotWithOptions(string InstanceId, CreateSnapshotRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1617,6 +2474,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<CreateSnapshotResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// CreateSnapshotRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSnapshotResponse
+        /// </returns>
         public async Task<CreateSnapshotResponse> CreateSnapshotWithOptionsAsync(string InstanceId, CreateSnapshotRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1646,6 +2516,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<CreateSnapshotResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// CreateSnapshotRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSnapshotResponse
+        /// </returns>
         public CreateSnapshotResponse CreateSnapshot(string InstanceId, CreateSnapshotRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1653,6 +2530,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return CreateSnapshotWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// CreateSnapshotRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSnapshotResponse
+        /// </returns>
         public async Task<CreateSnapshotResponse> CreateSnapshotAsync(string InstanceId, CreateSnapshotRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1660,14 +2544,29 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await CreateSnapshotWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * 5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D\\*\\*\\*
-          *
-          * @param request CreateVpcEndpointRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateVpcEndpointResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建私网链接VPC终端节点</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D\<em>\</em>\*</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateVpcEndpointRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVpcEndpointResponse
+        /// </returns>
         public CreateVpcEndpointResponse CreateVpcEndpointWithOptions(string InstanceId, CreateVpcEndpointRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1710,14 +2609,29 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<CreateVpcEndpointResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * 5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D\\*\\*\\*
-          *
-          * @param request CreateVpcEndpointRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateVpcEndpointResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建私网链接VPC终端节点</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D\<em>\</em>\*</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateVpcEndpointRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVpcEndpointResponse
+        /// </returns>
         public async Task<CreateVpcEndpointResponse> CreateVpcEndpointWithOptionsAsync(string InstanceId, CreateVpcEndpointRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1760,12 +2674,23 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<CreateVpcEndpointResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * 5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D\\*\\*\\*
-          *
-          * @param request CreateVpcEndpointRequest
-          * @return CreateVpcEndpointResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建私网链接VPC终端节点</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D\<em>\</em>\*</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateVpcEndpointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVpcEndpointResponse
+        /// </returns>
         public CreateVpcEndpointResponse CreateVpcEndpoint(string InstanceId, CreateVpcEndpointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1773,12 +2698,23 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return CreateVpcEndpointWithOptions(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * 5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D\\*\\*\\*
-          *
-          * @param request CreateVpcEndpointRequest
-          * @return CreateVpcEndpointResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建私网链接VPC终端节点</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D\<em>\</em>\*</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateVpcEndpointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVpcEndpointResponse
+        /// </returns>
         public async Task<CreateVpcEndpointResponse> CreateVpcEndpointAsync(string InstanceId, CreateVpcEndpointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1786,6 +2722,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await CreateVpcEndpointWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke DeactivateZones to offline certain zones when there are multiple availability zones, and migrate nodes in the offline zones to other availability zones.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeactivateZonesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeactivateZonesResponse
+        /// </returns>
         public DeactivateZonesResponse DeactivateZonesWithOptions(string InstanceId, DeactivateZonesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1815,6 +2769,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeactivateZonesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke DeactivateZones to offline certain zones when there are multiple availability zones, and migrate nodes in the offline zones to other availability zones.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeactivateZonesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeactivateZonesResponse
+        /// </returns>
         public async Task<DeactivateZonesResponse> DeactivateZonesWithOptionsAsync(string InstanceId, DeactivateZonesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1844,6 +2816,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeactivateZonesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke DeactivateZones to offline certain zones when there are multiple availability zones, and migrate nodes in the offline zones to other availability zones.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeactivateZonesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeactivateZonesResponse
+        /// </returns>
         public DeactivateZonesResponse DeactivateZones(string InstanceId, DeactivateZonesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1851,6 +2835,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DeactivateZonesWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke DeactivateZones to offline certain zones when there are multiple availability zones, and migrate nodes in the offline zones to other availability zones.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeactivateZonesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeactivateZonesResponse
+        /// </returns>
         public async Task<DeactivateZonesResponse> DeactivateZonesAsync(string InstanceId, DeactivateZonesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1858,6 +2854,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DeactivateZonesWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a shipper.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCollectorRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCollectorResponse
+        /// </returns>
         public DeleteCollectorResponse DeleteCollectorWithOptions(string ResId, DeleteCollectorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1886,6 +2900,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteCollectorResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a shipper.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCollectorRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCollectorResponse
+        /// </returns>
         public async Task<DeleteCollectorResponse> DeleteCollectorWithOptionsAsync(string ResId, DeleteCollectorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1914,6 +2946,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteCollectorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a shipper.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCollectorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCollectorResponse
+        /// </returns>
         public DeleteCollectorResponse DeleteCollector(string ResId, DeleteCollectorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1921,6 +2965,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DeleteCollectorWithOptions(ResId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a shipper.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCollectorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCollectorResponse
+        /// </returns>
         public async Task<DeleteCollectorResponse> DeleteCollectorAsync(string ResId, DeleteCollectorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1928,6 +2984,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DeleteCollectorWithOptionsAsync(ResId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除组合索引模板</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteComponentIndexResponse
+        /// </returns>
         public DeleteComponentIndexResponse DeleteComponentIndexWithOptions(string InstanceId, string name, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1949,6 +3020,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteComponentIndexResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除组合索引模板</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteComponentIndexResponse
+        /// </returns>
         public async Task<DeleteComponentIndexResponse> DeleteComponentIndexWithOptionsAsync(string InstanceId, string name, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1970,6 +3056,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteComponentIndexResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除组合索引模板</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteComponentIndexResponse
+        /// </returns>
         public DeleteComponentIndexResponse DeleteComponentIndex(string InstanceId, string name)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1977,6 +3071,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DeleteComponentIndexWithOptions(InstanceId, name, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除组合索引模板</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteComponentIndexResponse
+        /// </returns>
         public async Task<DeleteComponentIndexResponse> DeleteComponentIndexAsync(string InstanceId, string name)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1984,6 +3086,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DeleteComponentIndexWithOptionsAsync(InstanceId, name, headers, runtime);
         }
 
+        /// <param name="request">
+        /// DeleteConnectedClusterRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConnectedClusterResponse
+        /// </returns>
         public DeleteConnectedClusterResponse DeleteConnectedClusterWithOptions(string InstanceId, DeleteConnectedClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2016,6 +3131,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteConnectedClusterResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// DeleteConnectedClusterRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConnectedClusterResponse
+        /// </returns>
         public async Task<DeleteConnectedClusterResponse> DeleteConnectedClusterWithOptionsAsync(string InstanceId, DeleteConnectedClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2048,6 +3176,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteConnectedClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// DeleteConnectedClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConnectedClusterResponse
+        /// </returns>
         public DeleteConnectedClusterResponse DeleteConnectedCluster(string InstanceId, DeleteConnectedClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2055,6 +3190,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DeleteConnectedClusterWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// DeleteConnectedClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConnectedClusterResponse
+        /// </returns>
         public async Task<DeleteConnectedClusterResponse> DeleteConnectedClusterAsync(string InstanceId, DeleteConnectedClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2062,6 +3204,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DeleteConnectedClusterWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除数据流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDataStreamRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataStreamResponse
+        /// </returns>
         public DeleteDataStreamResponse DeleteDataStreamWithOptions(string InstanceId, string DataStream, DeleteDataStreamRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2090,6 +3250,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteDataStreamResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除数据流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDataStreamRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataStreamResponse
+        /// </returns>
         public async Task<DeleteDataStreamResponse> DeleteDataStreamWithOptionsAsync(string InstanceId, string DataStream, DeleteDataStreamRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2118,6 +3296,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteDataStreamResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除数据流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDataStreamRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataStreamResponse
+        /// </returns>
         public DeleteDataStreamResponse DeleteDataStream(string InstanceId, string DataStream, DeleteDataStreamRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2125,6 +3315,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DeleteDataStreamWithOptions(InstanceId, DataStream, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除数据流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDataStreamRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataStreamResponse
+        /// </returns>
         public async Task<DeleteDataStreamResponse> DeleteDataStreamAsync(string InstanceId, string DataStream, DeleteDataStreamRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2132,6 +3334,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DeleteDataStreamWithOptionsAsync(InstanceId, DataStream, request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// DeleteDataTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataTaskResponse
+        /// </returns>
         public DeleteDataTaskResponse DeleteDataTaskWithOptions(string InstanceId, DeleteDataTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2164,6 +3379,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteDataTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// DeleteDataTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataTaskResponse
+        /// </returns>
         public async Task<DeleteDataTaskResponse> DeleteDataTaskWithOptionsAsync(string InstanceId, DeleteDataTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2196,6 +3424,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteDataTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// DeleteDataTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataTaskResponse
+        /// </returns>
         public DeleteDataTaskResponse DeleteDataTask(string InstanceId, DeleteDataTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2203,6 +3438,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DeleteDataTaskWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// DeleteDataTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataTaskResponse
+        /// </returns>
         public async Task<DeleteDataTaskResponse> DeleteDataTaskAsync(string InstanceId, DeleteDataTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2210,6 +3452,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DeleteDataTaskWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除历史索引模板</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDeprecatedTemplateResponse
+        /// </returns>
         public DeleteDeprecatedTemplateResponse DeleteDeprecatedTemplateWithOptions(string InstanceId, string name, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2231,6 +3488,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteDeprecatedTemplateResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除历史索引模板</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDeprecatedTemplateResponse
+        /// </returns>
         public async Task<DeleteDeprecatedTemplateResponse> DeleteDeprecatedTemplateWithOptionsAsync(string InstanceId, string name, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2252,6 +3524,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteDeprecatedTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除历史索引模板</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteDeprecatedTemplateResponse
+        /// </returns>
         public DeleteDeprecatedTemplateResponse DeleteDeprecatedTemplate(string InstanceId, string name)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2259,6 +3539,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DeleteDeprecatedTemplateWithOptions(InstanceId, name, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除历史索引模板</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteDeprecatedTemplateResponse
+        /// </returns>
         public async Task<DeleteDeprecatedTemplateResponse> DeleteDeprecatedTemplateAsync(string InstanceId, string name)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2266,6 +3554,16 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DeleteDeprecatedTemplateWithOptionsAsync(InstanceId, name, headers, runtime);
         }
 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteILMPolicyResponse
+        /// </returns>
         public DeleteILMPolicyResponse DeleteILMPolicyWithOptions(string InstanceId, string PolicyName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2287,6 +3585,16 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteILMPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteILMPolicyResponse
+        /// </returns>
         public async Task<DeleteILMPolicyResponse> DeleteILMPolicyWithOptionsAsync(string InstanceId, string PolicyName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2308,6 +3616,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteILMPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <returns>
+        /// DeleteILMPolicyResponse
+        /// </returns>
         public DeleteILMPolicyResponse DeleteILMPolicy(string InstanceId, string PolicyName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2315,6 +3626,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DeleteILMPolicyWithOptions(InstanceId, PolicyName, headers, runtime);
         }
 
+        /// <returns>
+        /// DeleteILMPolicyResponse
+        /// </returns>
         public async Task<DeleteILMPolicyResponse> DeleteILMPolicyAsync(string InstanceId, string PolicyName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2322,6 +3636,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DeleteILMPolicyWithOptionsAsync(InstanceId, PolicyName, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除ES集群索引模版</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteIndexTemplateResponse
+        /// </returns>
         public DeleteIndexTemplateResponse DeleteIndexTemplateWithOptions(string InstanceId, string IndexTemplate, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2343,6 +3672,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteIndexTemplateResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除ES集群索引模版</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteIndexTemplateResponse
+        /// </returns>
         public async Task<DeleteIndexTemplateResponse> DeleteIndexTemplateWithOptionsAsync(string InstanceId, string IndexTemplate, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2364,6 +3708,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteIndexTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除ES集群索引模版</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteIndexTemplateResponse
+        /// </returns>
         public DeleteIndexTemplateResponse DeleteIndexTemplate(string InstanceId, string IndexTemplate)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2371,6 +3723,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DeleteIndexTemplateWithOptions(InstanceId, IndexTemplate, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除ES集群索引模版</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteIndexTemplateResponse
+        /// </returns>
         public async Task<DeleteIndexTemplateResponse> DeleteIndexTemplateAsync(string InstanceId, string IndexTemplate)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2378,6 +3738,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DeleteIndexTemplateWithOptionsAsync(InstanceId, IndexTemplate, headers, runtime);
         }
 
+        /// <param name="request">
+        /// DeleteInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstanceResponse
+        /// </returns>
         public DeleteInstanceResponse DeleteInstanceWithOptions(string InstanceId, DeleteInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2410,6 +3783,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// DeleteInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstanceResponse
+        /// </returns>
         public async Task<DeleteInstanceResponse> DeleteInstanceWithOptionsAsync(string InstanceId, DeleteInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2442,6 +3828,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// DeleteInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstanceResponse
+        /// </returns>
         public DeleteInstanceResponse DeleteInstance(string InstanceId, DeleteInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2449,6 +3842,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DeleteInstanceWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// DeleteInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstanceResponse
+        /// </returns>
         public async Task<DeleteInstanceResponse> DeleteInstanceAsync(string InstanceId, DeleteInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2456,14 +3856,29 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DeleteInstanceWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * Before you call this operation, take note of the following information: After the cluster is released, the physical resources used by the cluster are reclaimed. The data stored in the cluster is deleted and cannot be recovered. The disks attached to the nodes in the cluster and the snapshots created for the cluster are released.
-          *
-          * @param request DeleteLogstashRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteLogstashResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases a Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, take note of the following information: After the cluster is released, the physical resources used by the cluster are reclaimed. The data stored in the cluster is deleted and cannot be recovered. The disks attached to the nodes in the cluster and the snapshots created for the cluster are released.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteLogstashRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLogstashResponse
+        /// </returns>
         public DeleteLogstashResponse DeleteLogstashWithOptions(string InstanceId, DeleteLogstashRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2496,14 +3911,29 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteLogstashResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * Before you call this operation, take note of the following information: After the cluster is released, the physical resources used by the cluster are reclaimed. The data stored in the cluster is deleted and cannot be recovered. The disks attached to the nodes in the cluster and the snapshots created for the cluster are released.
-          *
-          * @param request DeleteLogstashRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeleteLogstashResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases a Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, take note of the following information: After the cluster is released, the physical resources used by the cluster are reclaimed. The data stored in the cluster is deleted and cannot be recovered. The disks attached to the nodes in the cluster and the snapshots created for the cluster are released.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteLogstashRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLogstashResponse
+        /// </returns>
         public async Task<DeleteLogstashResponse> DeleteLogstashWithOptionsAsync(string InstanceId, DeleteLogstashRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2536,12 +3966,23 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteLogstashResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * Before you call this operation, take note of the following information: After the cluster is released, the physical resources used by the cluster are reclaimed. The data stored in the cluster is deleted and cannot be recovered. The disks attached to the nodes in the cluster and the snapshots created for the cluster are released.
-          *
-          * @param request DeleteLogstashRequest
-          * @return DeleteLogstashResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases a Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, take note of the following information: After the cluster is released, the physical resources used by the cluster are reclaimed. The data stored in the cluster is deleted and cannot be recovered. The disks attached to the nodes in the cluster and the snapshots created for the cluster are released.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteLogstashRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLogstashResponse
+        /// </returns>
         public DeleteLogstashResponse DeleteLogstash(string InstanceId, DeleteLogstashRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2549,12 +3990,23 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DeleteLogstashWithOptions(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * Before you call this operation, take note of the following information: After the cluster is released, the physical resources used by the cluster are reclaimed. The data stored in the cluster is deleted and cannot be recovered. The disks attached to the nodes in the cluster and the snapshots created for the cluster are released.
-          *
-          * @param request DeleteLogstashRequest
-          * @return DeleteLogstashResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases a Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, take note of the following information: After the cluster is released, the physical resources used by the cluster are reclaimed. The data stored in the cluster is deleted and cannot be recovered. The disks attached to the nodes in the cluster and the snapshots created for the cluster are released.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteLogstashRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLogstashResponse
+        /// </returns>
         public async Task<DeleteLogstashResponse> DeleteLogstashAsync(string InstanceId, DeleteLogstashRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2562,6 +4014,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DeleteLogstashWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a pipeline that is configured for a Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeletePipelinesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePipelinesResponse
+        /// </returns>
         public DeletePipelinesResponse DeletePipelinesWithOptions(string InstanceId, DeletePipelinesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2594,6 +4064,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeletePipelinesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a pipeline that is configured for a Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeletePipelinesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePipelinesResponse
+        /// </returns>
         public async Task<DeletePipelinesResponse> DeletePipelinesWithOptionsAsync(string InstanceId, DeletePipelinesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2626,6 +4114,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeletePipelinesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a pipeline that is configured for a Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeletePipelinesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePipelinesResponse
+        /// </returns>
         public DeletePipelinesResponse DeletePipelines(string InstanceId, DeletePipelinesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2633,6 +4133,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DeletePipelinesWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a pipeline that is configured for a Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeletePipelinesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePipelinesResponse
+        /// </returns>
         public async Task<DeletePipelinesResponse> DeletePipelinesAsync(string InstanceId, DeletePipelinesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2640,6 +4152,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DeletePipelinesWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// DeleteSnapshotRepoRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSnapshotRepoResponse
+        /// </returns>
         public DeleteSnapshotRepoResponse DeleteSnapshotRepoWithOptions(string InstanceId, DeleteSnapshotRepoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2672,6 +4197,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteSnapshotRepoResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// DeleteSnapshotRepoRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSnapshotRepoResponse
+        /// </returns>
         public async Task<DeleteSnapshotRepoResponse> DeleteSnapshotRepoWithOptionsAsync(string InstanceId, DeleteSnapshotRepoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2704,6 +4242,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteSnapshotRepoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// DeleteSnapshotRepoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSnapshotRepoResponse
+        /// </returns>
         public DeleteSnapshotRepoResponse DeleteSnapshotRepo(string InstanceId, DeleteSnapshotRepoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2711,6 +4256,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DeleteSnapshotRepoWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// DeleteSnapshotRepoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSnapshotRepoResponse
+        /// </returns>
         public async Task<DeleteSnapshotRepoResponse> DeleteSnapshotRepoAsync(string InstanceId, DeleteSnapshotRepoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2718,6 +4270,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DeleteSnapshotRepoWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除服务账号vpc下的终端节点</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteVpcEndpointRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVpcEndpointResponse
+        /// </returns>
         public DeleteVpcEndpointResponse DeleteVpcEndpointWithOptions(string InstanceId, string EndpointId, DeleteVpcEndpointRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2746,6 +4316,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteVpcEndpointResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除服务账号vpc下的终端节点</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteVpcEndpointRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVpcEndpointResponse
+        /// </returns>
         public async Task<DeleteVpcEndpointResponse> DeleteVpcEndpointWithOptionsAsync(string InstanceId, string EndpointId, DeleteVpcEndpointRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2774,6 +4362,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DeleteVpcEndpointResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除服务账号vpc下的终端节点</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteVpcEndpointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVpcEndpointResponse
+        /// </returns>
         public DeleteVpcEndpointResponse DeleteVpcEndpoint(string InstanceId, string EndpointId, DeleteVpcEndpointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2781,6 +4381,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DeleteVpcEndpointWithOptions(InstanceId, EndpointId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除服务账号vpc下的终端节点</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteVpcEndpointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVpcEndpointResponse
+        /// </returns>
         public async Task<DeleteVpcEndpointResponse> DeleteVpcEndpointAsync(string InstanceId, string EndpointId, DeleteVpcEndpointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2788,13 +4400,28 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DeleteVpcEndpointWithOptionsAsync(InstanceId, EndpointId, request, headers, runtime);
         }
 
-        /**
-          * > Before you install a shipper on an ACK cluster, you can call this operation to query the installation status of ES-operator for the ACK cluster.
-          *
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeAckOperatorResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of ES-operator that is installed for a specified Container Service for Kubernetes (ACK) cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Before you install a shipper on an ACK cluster, you can call this operation to query the installation status of ES-operator for the ACK cluster.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAckOperatorResponse
+        /// </returns>
         public DescribeAckOperatorResponse DescribeAckOperatorWithOptions(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2816,13 +4443,28 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeAckOperatorResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * > Before you install a shipper on an ACK cluster, you can call this operation to query the installation status of ES-operator for the ACK cluster.
-          *
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeAckOperatorResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of ES-operator that is installed for a specified Container Service for Kubernetes (ACK) cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Before you install a shipper on an ACK cluster, you can call this operation to query the installation status of ES-operator for the ACK cluster.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAckOperatorResponse
+        /// </returns>
         public async Task<DescribeAckOperatorResponse> DescribeAckOperatorWithOptionsAsync(string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2844,11 +4486,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeAckOperatorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * > Before you install a shipper on an ACK cluster, you can call this operation to query the installation status of ES-operator for the ACK cluster.
-          *
-          * @return DescribeAckOperatorResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of ES-operator that is installed for a specified Container Service for Kubernetes (ACK) cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Before you install a shipper on an ACK cluster, you can call this operation to query the installation status of ES-operator for the ACK cluster.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <returns>
+        /// DescribeAckOperatorResponse
+        /// </returns>
         public DescribeAckOperatorResponse DescribeAckOperator(string ClusterId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2856,11 +4508,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DescribeAckOperatorWithOptions(ClusterId, headers, runtime);
         }
 
-        /**
-          * > Before you install a shipper on an ACK cluster, you can call this operation to query the installation status of ES-operator for the ACK cluster.
-          *
-          * @return DescribeAckOperatorResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of ES-operator that is installed for a specified Container Service for Kubernetes (ACK) cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Before you install a shipper on an ACK cluster, you can call this operation to query the installation status of ES-operator for the ACK cluster.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <returns>
+        /// DescribeAckOperatorResponse
+        /// </returns>
         public async Task<DescribeAckOperatorResponse> DescribeAckOperatorAsync(string ClusterId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2868,6 +4530,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DescribeAckOperatorWithOptionsAsync(ClusterId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Describe APM</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApmResponse
+        /// </returns>
         public DescribeApmResponse DescribeApmWithOptions(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2889,6 +4566,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeApmResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Describe APM</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApmResponse
+        /// </returns>
         public async Task<DescribeApmResponse> DescribeApmWithOptionsAsync(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2910,6 +4602,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeApmResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Describe APM</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeApmResponse
+        /// </returns>
         public DescribeApmResponse DescribeApm(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2917,6 +4617,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DescribeApmWithOptions(instanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Describe APM</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeApmResponse
+        /// </returns>
         public async Task<DescribeApmResponse> DescribeApmAsync(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2924,6 +4632,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DescribeApmWithOptionsAsync(instanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a shipper.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCollectorResponse
+        /// </returns>
         public DescribeCollectorResponse DescribeCollectorWithOptions(string ResId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2945,6 +4668,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeCollectorResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a shipper.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCollectorResponse
+        /// </returns>
         public async Task<DescribeCollectorResponse> DescribeCollectorWithOptionsAsync(string ResId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2966,6 +4704,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeCollectorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a shipper.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeCollectorResponse
+        /// </returns>
         public DescribeCollectorResponse DescribeCollector(string ResId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2973,6 +4719,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DescribeCollectorWithOptions(ResId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a shipper.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeCollectorResponse
+        /// </returns>
         public async Task<DescribeCollectorResponse> DescribeCollectorAsync(string ResId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2980,6 +4734,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DescribeCollectorWithOptionsAsync(ResId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看组合索引模板详情</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeComponentIndexResponse
+        /// </returns>
         public DescribeComponentIndexResponse DescribeComponentIndexWithOptions(string InstanceId, string name, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3001,6 +4770,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeComponentIndexResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看组合索引模板详情</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeComponentIndexResponse
+        /// </returns>
         public async Task<DescribeComponentIndexResponse> DescribeComponentIndexWithOptionsAsync(string InstanceId, string name, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3022,6 +4806,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeComponentIndexResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看组合索引模板详情</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeComponentIndexResponse
+        /// </returns>
         public DescribeComponentIndexResponse DescribeComponentIndex(string InstanceId, string name)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3029,6 +4821,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DescribeComponentIndexWithOptions(InstanceId, name, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看组合索引模板详情</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeComponentIndexResponse
+        /// </returns>
         public async Task<DescribeComponentIndexResponse> DescribeComponentIndexAsync(string InstanceId, string name)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3036,6 +4836,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DescribeComponentIndexWithOptionsAsync(InstanceId, name, headers, runtime);
         }
 
+        /// <param name="request">
+        /// DescribeConnectableClustersRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeConnectableClustersResponse
+        /// </returns>
         public DescribeConnectableClustersResponse DescribeConnectableClustersWithOptions(string InstanceId, DescribeConnectableClustersRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3064,6 +4877,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeConnectableClustersResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// DescribeConnectableClustersRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeConnectableClustersResponse
+        /// </returns>
         public async Task<DescribeConnectableClustersResponse> DescribeConnectableClustersWithOptionsAsync(string InstanceId, DescribeConnectableClustersRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3092,6 +4918,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeConnectableClustersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// DescribeConnectableClustersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeConnectableClustersResponse
+        /// </returns>
         public DescribeConnectableClustersResponse DescribeConnectableClusters(string InstanceId, DescribeConnectableClustersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3099,6 +4932,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DescribeConnectableClustersWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// DescribeConnectableClustersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeConnectableClustersResponse
+        /// </returns>
         public async Task<DescribeConnectableClustersResponse> DescribeConnectableClustersAsync(string InstanceId, DescribeConnectableClustersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3106,6 +4946,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DescribeConnectableClustersWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeDeprecatedTemplate</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDeprecatedTemplateResponse
+        /// </returns>
         public DescribeDeprecatedTemplateResponse DescribeDeprecatedTemplateWithOptions(string InstanceId, string name, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3127,6 +4982,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeDeprecatedTemplateResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeDeprecatedTemplate</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDeprecatedTemplateResponse
+        /// </returns>
         public async Task<DescribeDeprecatedTemplateResponse> DescribeDeprecatedTemplateWithOptionsAsync(string InstanceId, string name, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3148,6 +5018,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeDeprecatedTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeDeprecatedTemplate</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeDeprecatedTemplateResponse
+        /// </returns>
         public DescribeDeprecatedTemplateResponse DescribeDeprecatedTemplate(string InstanceId, string name)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3155,6 +5033,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DescribeDeprecatedTemplateWithOptions(InstanceId, name, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeDeprecatedTemplate</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeDeprecatedTemplateResponse
+        /// </returns>
         public async Task<DescribeDeprecatedTemplateResponse> DescribeDeprecatedTemplateAsync(string InstanceId, string name)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3162,6 +5048,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DescribeDeprecatedTemplateWithOptionsAsync(InstanceId, name, headers, runtime);
         }
 
+        /// <param name="request">
+        /// DescribeDiagnoseReportRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDiagnoseReportResponse
+        /// </returns>
         public DescribeDiagnoseReportResponse DescribeDiagnoseReportWithOptions(string InstanceId, string ReportId, DescribeDiagnoseReportRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3190,6 +5089,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeDiagnoseReportResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// DescribeDiagnoseReportRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDiagnoseReportResponse
+        /// </returns>
         public async Task<DescribeDiagnoseReportResponse> DescribeDiagnoseReportWithOptionsAsync(string InstanceId, string ReportId, DescribeDiagnoseReportRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3218,6 +5130,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeDiagnoseReportResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// DescribeDiagnoseReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDiagnoseReportResponse
+        /// </returns>
         public DescribeDiagnoseReportResponse DescribeDiagnoseReport(string InstanceId, string ReportId, DescribeDiagnoseReportRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3225,6 +5144,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DescribeDiagnoseReportWithOptions(InstanceId, ReportId, request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// DescribeDiagnoseReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDiagnoseReportResponse
+        /// </returns>
         public async Task<DescribeDiagnoseReportResponse> DescribeDiagnoseReportAsync(string InstanceId, string ReportId, DescribeDiagnoseReportRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3232,6 +5158,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DescribeDiagnoseReportWithOptionsAsync(InstanceId, ReportId, request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// DescribeDiagnosisSettingsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDiagnosisSettingsResponse
+        /// </returns>
         public DescribeDiagnosisSettingsResponse DescribeDiagnosisSettingsWithOptions(string InstanceId, DescribeDiagnosisSettingsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3260,6 +5199,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeDiagnosisSettingsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// DescribeDiagnosisSettingsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDiagnosisSettingsResponse
+        /// </returns>
         public async Task<DescribeDiagnosisSettingsResponse> DescribeDiagnosisSettingsWithOptionsAsync(string InstanceId, DescribeDiagnosisSettingsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3288,6 +5240,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeDiagnosisSettingsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// DescribeDiagnosisSettingsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDiagnosisSettingsResponse
+        /// </returns>
         public DescribeDiagnosisSettingsResponse DescribeDiagnosisSettings(string InstanceId, DescribeDiagnosisSettingsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3295,6 +5254,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DescribeDiagnosisSettingsWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// DescribeDiagnosisSettingsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDiagnosisSettingsResponse
+        /// </returns>
         public async Task<DescribeDiagnosisSettingsResponse> DescribeDiagnosisSettingsAsync(string InstanceId, DescribeDiagnosisSettingsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3302,6 +5268,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DescribeDiagnosisSettingsWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取集群动态指标</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDynamicSettingsResponse
+        /// </returns>
         public DescribeDynamicSettingsResponse DescribeDynamicSettingsWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3323,6 +5304,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeDynamicSettingsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取集群动态指标</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDynamicSettingsResponse
+        /// </returns>
         public async Task<DescribeDynamicSettingsResponse> DescribeDynamicSettingsWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3344,6 +5340,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeDynamicSettingsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取集群动态指标</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeDynamicSettingsResponse
+        /// </returns>
         public DescribeDynamicSettingsResponse DescribeDynamicSettings(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3351,6 +5355,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DescribeDynamicSettingsWithOptions(InstanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取集群动态指标</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeDynamicSettingsResponse
+        /// </returns>
         public async Task<DescribeDynamicSettingsResponse> DescribeDynamicSettingsAsync(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3358,16 +5370,31 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DescribeDynamicSettingsWithOptionsAsync(InstanceId, headers, runtime);
         }
 
-        /**
-          * An Elasticsearch cluster can be in a health state indicated by one of the following colors:
-          * *   GREEN: Primary shards and replica shards for the primary shards are normally allocated.
-          * *   YELLOW: Primary shards are normally allocated, but replica shards for the primary shards are not normally allocated.
-          * *   RED: Primary shards are not normally allocated.
-          *
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeElasticsearchHealthResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the health status of an Elasticsearch cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An Elasticsearch cluster can be in a health state indicated by one of the following colors:</para>
+        /// <list type="bullet">
+        /// <item><description>GREEN: Primary shards and replica shards for the primary shards are normally allocated.</description></item>
+        /// <item><description>YELLOW: Primary shards are normally allocated, but replica shards for the primary shards are not normally allocated.</description></item>
+        /// <item><description>RED: Primary shards are not normally allocated.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeElasticsearchHealthResponse
+        /// </returns>
         public DescribeElasticsearchHealthResponse DescribeElasticsearchHealthWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3389,16 +5416,31 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeElasticsearchHealthResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * An Elasticsearch cluster can be in a health state indicated by one of the following colors:
-          * *   GREEN: Primary shards and replica shards for the primary shards are normally allocated.
-          * *   YELLOW: Primary shards are normally allocated, but replica shards for the primary shards are not normally allocated.
-          * *   RED: Primary shards are not normally allocated.
-          *
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeElasticsearchHealthResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the health status of an Elasticsearch cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An Elasticsearch cluster can be in a health state indicated by one of the following colors:</para>
+        /// <list type="bullet">
+        /// <item><description>GREEN: Primary shards and replica shards for the primary shards are normally allocated.</description></item>
+        /// <item><description>YELLOW: Primary shards are normally allocated, but replica shards for the primary shards are not normally allocated.</description></item>
+        /// <item><description>RED: Primary shards are not normally allocated.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeElasticsearchHealthResponse
+        /// </returns>
         public async Task<DescribeElasticsearchHealthResponse> DescribeElasticsearchHealthWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3420,14 +5462,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeElasticsearchHealthResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * An Elasticsearch cluster can be in a health state indicated by one of the following colors:
-          * *   GREEN: Primary shards and replica shards for the primary shards are normally allocated.
-          * *   YELLOW: Primary shards are normally allocated, but replica shards for the primary shards are not normally allocated.
-          * *   RED: Primary shards are not normally allocated.
-          *
-          * @return DescribeElasticsearchHealthResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the health status of an Elasticsearch cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An Elasticsearch cluster can be in a health state indicated by one of the following colors:</para>
+        /// <list type="bullet">
+        /// <item><description>GREEN: Primary shards and replica shards for the primary shards are normally allocated.</description></item>
+        /// <item><description>YELLOW: Primary shards are normally allocated, but replica shards for the primary shards are not normally allocated.</description></item>
+        /// <item><description>RED: Primary shards are not normally allocated.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <returns>
+        /// DescribeElasticsearchHealthResponse
+        /// </returns>
         public DescribeElasticsearchHealthResponse DescribeElasticsearchHealth(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3435,14 +5487,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DescribeElasticsearchHealthWithOptions(InstanceId, headers, runtime);
         }
 
-        /**
-          * An Elasticsearch cluster can be in a health state indicated by one of the following colors:
-          * *   GREEN: Primary shards and replica shards for the primary shards are normally allocated.
-          * *   YELLOW: Primary shards are normally allocated, but replica shards for the primary shards are not normally allocated.
-          * *   RED: Primary shards are not normally allocated.
-          *
-          * @return DescribeElasticsearchHealthResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the health status of an Elasticsearch cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An Elasticsearch cluster can be in a health state indicated by one of the following colors:</para>
+        /// <list type="bullet">
+        /// <item><description>GREEN: Primary shards and replica shards for the primary shards are normally allocated.</description></item>
+        /// <item><description>YELLOW: Primary shards are normally allocated, but replica shards for the primary shards are not normally allocated.</description></item>
+        /// <item><description>RED: Primary shards are not normally allocated.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <returns>
+        /// DescribeElasticsearchHealthResponse
+        /// </returns>
         public async Task<DescribeElasticsearchHealthResponse> DescribeElasticsearchHealthAsync(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3450,6 +5512,16 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DescribeElasticsearchHealthWithOptionsAsync(InstanceId, headers, runtime);
         }
 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeILMPolicyResponse
+        /// </returns>
         public DescribeILMPolicyResponse DescribeILMPolicyWithOptions(string InstanceId, string PolicyName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3471,6 +5543,16 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeILMPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeILMPolicyResponse
+        /// </returns>
         public async Task<DescribeILMPolicyResponse> DescribeILMPolicyWithOptionsAsync(string InstanceId, string PolicyName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3492,6 +5574,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeILMPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <returns>
+        /// DescribeILMPolicyResponse
+        /// </returns>
         public DescribeILMPolicyResponse DescribeILMPolicy(string InstanceId, string PolicyName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3499,6 +5584,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DescribeILMPolicyWithOptions(InstanceId, PolicyName, headers, runtime);
         }
 
+        /// <returns>
+        /// DescribeILMPolicyResponse
+        /// </returns>
         public async Task<DescribeILMPolicyResponse> DescribeILMPolicyAsync(string InstanceId, string PolicyName)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3506,6 +5594,16 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DescribeILMPolicyWithOptionsAsync(InstanceId, PolicyName, headers, runtime);
         }
 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeIndexTemplateResponse
+        /// </returns>
         public DescribeIndexTemplateResponse DescribeIndexTemplateWithOptions(string InstanceId, string IndexTemplate, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3527,6 +5625,16 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeIndexTemplateResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeIndexTemplateResponse
+        /// </returns>
         public async Task<DescribeIndexTemplateResponse> DescribeIndexTemplateWithOptionsAsync(string InstanceId, string IndexTemplate, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3548,6 +5656,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeIndexTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <returns>
+        /// DescribeIndexTemplateResponse
+        /// </returns>
         public DescribeIndexTemplateResponse DescribeIndexTemplate(string InstanceId, string IndexTemplate)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3555,6 +5666,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DescribeIndexTemplateWithOptions(InstanceId, IndexTemplate, headers, runtime);
         }
 
+        /// <returns>
+        /// DescribeIndexTemplateResponse
+        /// </returns>
         public async Task<DescribeIndexTemplateResponse> DescribeIndexTemplateAsync(string InstanceId, string IndexTemplate)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3562,6 +5676,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DescribeIndexTemplateWithOptionsAsync(InstanceId, IndexTemplate, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The name of the dictionary file.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceResponse
+        /// </returns>
         public DescribeInstanceResponse DescribeInstanceWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3583,6 +5712,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The name of the dictionary file.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceResponse
+        /// </returns>
         public async Task<DescribeInstanceResponse> DescribeInstanceWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3604,6 +5748,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The name of the dictionary file.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeInstanceResponse
+        /// </returns>
         public DescribeInstanceResponse DescribeInstance(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3611,6 +5763,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DescribeInstanceWithOptions(InstanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The name of the dictionary file.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeInstanceResponse
+        /// </returns>
         public async Task<DescribeInstanceResponse> DescribeInstanceAsync(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3618,6 +5778,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DescribeInstanceWithOptionsAsync(InstanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取Elasticsearch集群Kibana节点settings配置</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeKibanaSettingsResponse
+        /// </returns>
         public DescribeKibanaSettingsResponse DescribeKibanaSettingsWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3639,6 +5814,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeKibanaSettingsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取Elasticsearch集群Kibana节点settings配置</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeKibanaSettingsResponse
+        /// </returns>
         public async Task<DescribeKibanaSettingsResponse> DescribeKibanaSettingsWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3660,6 +5850,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeKibanaSettingsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取Elasticsearch集群Kibana节点settings配置</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeKibanaSettingsResponse
+        /// </returns>
         public DescribeKibanaSettingsResponse DescribeKibanaSettings(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3667,6 +5865,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DescribeKibanaSettingsWithOptions(InstanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取Elasticsearch集群Kibana节点settings配置</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeKibanaSettingsResponse
+        /// </returns>
         public async Task<DescribeKibanaSettingsResponse> DescribeKibanaSettingsAsync(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3674,6 +5880,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DescribeKibanaSettingsWithOptionsAsync(InstanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看Logstash实例详情</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLogstashResponse
+        /// </returns>
         public DescribeLogstashResponse DescribeLogstashWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3695,6 +5916,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeLogstashResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看Logstash实例详情</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLogstashResponse
+        /// </returns>
         public async Task<DescribeLogstashResponse> DescribeLogstashWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3716,6 +5952,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeLogstashResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看Logstash实例详情</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeLogstashResponse
+        /// </returns>
         public DescribeLogstashResponse DescribeLogstash(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3723,6 +5967,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DescribeLogstashWithOptions(InstanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看Logstash实例详情</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeLogstashResponse
+        /// </returns>
         public async Task<DescribeLogstashResponse> DescribeLogstashAsync(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3730,6 +5982,16 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DescribeLogstashWithOptionsAsync(InstanceId, headers, runtime);
         }
 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePipelineResponse
+        /// </returns>
         public DescribePipelineResponse DescribePipelineWithOptions(string InstanceId, string PipelineId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3751,6 +6013,16 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribePipelineResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePipelineResponse
+        /// </returns>
         public async Task<DescribePipelineResponse> DescribePipelineWithOptionsAsync(string InstanceId, string PipelineId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3772,6 +6044,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribePipelineResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <returns>
+        /// DescribePipelineResponse
+        /// </returns>
         public DescribePipelineResponse DescribePipeline(string InstanceId, string PipelineId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3779,6 +6054,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DescribePipelineWithOptions(InstanceId, PipelineId, headers, runtime);
         }
 
+        /// <returns>
+        /// DescribePipelineResponse
+        /// </returns>
         public async Task<DescribePipelineResponse> DescribePipelineAsync(string InstanceId, string PipelineId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3786,6 +6064,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DescribePipelineWithOptionsAsync(InstanceId, PipelineId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the management configurations of pipelines in a Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePipelineManagementConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePipelineManagementConfigResponse
+        /// </returns>
         public DescribePipelineManagementConfigResponse DescribePipelineManagementConfigWithOptions(string InstanceId, DescribePipelineManagementConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3814,6 +6110,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribePipelineManagementConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the management configurations of pipelines in a Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePipelineManagementConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePipelineManagementConfigResponse
+        /// </returns>
         public async Task<DescribePipelineManagementConfigResponse> DescribePipelineManagementConfigWithOptionsAsync(string InstanceId, DescribePipelineManagementConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3842,6 +6156,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribePipelineManagementConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the management configurations of pipelines in a Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePipelineManagementConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePipelineManagementConfigResponse
+        /// </returns>
         public DescribePipelineManagementConfigResponse DescribePipelineManagementConfig(string InstanceId, DescribePipelineManagementConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3849,6 +6175,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DescribePipelineManagementConfigWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the management configurations of pipelines in a Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePipelineManagementConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePipelineManagementConfigResponse
+        /// </returns>
         public async Task<DescribePipelineManagementConfigResponse> DescribePipelineManagementConfigAsync(string InstanceId, DescribePipelineManagementConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3856,6 +6194,16 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DescribePipelineManagementConfigWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRegionsResponse
+        /// </returns>
         public DescribeRegionsResponse DescribeRegionsWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3877,6 +6225,16 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeRegionsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRegionsResponse
+        /// </returns>
         public async Task<DescribeRegionsResponse> DescribeRegionsWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3898,6 +6256,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeRegionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <returns>
+        /// DescribeRegionsResponse
+        /// </returns>
         public DescribeRegionsResponse DescribeRegions()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3905,6 +6266,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DescribeRegionsWithOptions(headers, runtime);
         }
 
+        /// <returns>
+        /// DescribeRegionsResponse
+        /// </returns>
         public async Task<DescribeRegionsResponse> DescribeRegionsAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3912,6 +6276,16 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DescribeRegionsWithOptionsAsync(headers, runtime);
         }
 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSnapshotSettingResponse
+        /// </returns>
         public DescribeSnapshotSettingResponse DescribeSnapshotSettingWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3933,6 +6307,16 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeSnapshotSettingResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSnapshotSettingResponse
+        /// </returns>
         public async Task<DescribeSnapshotSettingResponse> DescribeSnapshotSettingWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3954,6 +6338,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeSnapshotSettingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <returns>
+        /// DescribeSnapshotSettingResponse
+        /// </returns>
         public DescribeSnapshotSettingResponse DescribeSnapshotSetting(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3961,6 +6348,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DescribeSnapshotSettingWithOptions(InstanceId, headers, runtime);
         }
 
+        /// <returns>
+        /// DescribeSnapshotSettingResponse
+        /// </returns>
         public async Task<DescribeSnapshotSettingResponse> DescribeSnapshotSettingAsync(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3968,6 +6358,16 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DescribeSnapshotSettingWithOptionsAsync(InstanceId, headers, runtime);
         }
 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTemplatesResponse
+        /// </returns>
         public DescribeTemplatesResponse DescribeTemplatesWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -3989,6 +6389,16 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeTemplatesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTemplatesResponse
+        /// </returns>
         public async Task<DescribeTemplatesResponse> DescribeTemplatesWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -4010,6 +6420,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeTemplatesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <returns>
+        /// DescribeTemplatesResponse
+        /// </returns>
         public DescribeTemplatesResponse DescribeTemplates(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4017,6 +6430,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DescribeTemplatesWithOptions(InstanceId, headers, runtime);
         }
 
+        /// <returns>
+        /// DescribeTemplatesResponse
+        /// </returns>
         public async Task<DescribeTemplatesResponse> DescribeTemplatesAsync(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4024,6 +6440,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DescribeTemplatesWithOptionsAsync(InstanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configurations of the X-Pack Monitoring feature of a Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeXpackMonitorConfigResponse
+        /// </returns>
         public DescribeXpackMonitorConfigResponse DescribeXpackMonitorConfigWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -4045,6 +6476,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeXpackMonitorConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configurations of the X-Pack Monitoring feature of a Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeXpackMonitorConfigResponse
+        /// </returns>
         public async Task<DescribeXpackMonitorConfigResponse> DescribeXpackMonitorConfigWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -4066,6 +6512,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeXpackMonitorConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configurations of the X-Pack Monitoring feature of a Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeXpackMonitorConfigResponse
+        /// </returns>
         public DescribeXpackMonitorConfigResponse DescribeXpackMonitorConfig(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4073,6 +6527,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DescribeXpackMonitorConfigWithOptions(InstanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configurations of the X-Pack Monitoring feature of a Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeXpackMonitorConfigResponse
+        /// </returns>
         public async Task<DescribeXpackMonitorConfigResponse> DescribeXpackMonitorConfigAsync(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4080,6 +6542,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DescribeXpackMonitorConfigWithOptionsAsync(InstanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>触发ES实例智能诊断</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DiagnoseInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DiagnoseInstanceResponse
+        /// </returns>
         public DiagnoseInstanceResponse DiagnoseInstanceWithOptions(string InstanceId, DiagnoseInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4126,6 +6606,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DiagnoseInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>触发ES实例智能诊断</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DiagnoseInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DiagnoseInstanceResponse
+        /// </returns>
         public async Task<DiagnoseInstanceResponse> DiagnoseInstanceWithOptionsAsync(string InstanceId, DiagnoseInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4172,6 +6670,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DiagnoseInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>触发ES实例智能诊断</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DiagnoseInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DiagnoseInstanceResponse
+        /// </returns>
         public DiagnoseInstanceResponse DiagnoseInstance(string InstanceId, DiagnoseInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4179,6 +6689,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DiagnoseInstanceWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>触发ES实例智能诊断</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DiagnoseInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DiagnoseInstanceResponse
+        /// </returns>
         public async Task<DiagnoseInstanceResponse> DiagnoseInstanceAsync(string InstanceId, DiagnoseInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4186,6 +6708,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DiagnoseInstanceWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭kibana私网</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableKibanaPvlNetworkResponse
+        /// </returns>
         public DisableKibanaPvlNetworkResponse DisableKibanaPvlNetworkWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -4207,6 +6744,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DisableKibanaPvlNetworkResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭kibana私网</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableKibanaPvlNetworkResponse
+        /// </returns>
         public async Task<DisableKibanaPvlNetworkResponse> DisableKibanaPvlNetworkWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -4228,6 +6780,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DisableKibanaPvlNetworkResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭kibana私网</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DisableKibanaPvlNetworkResponse
+        /// </returns>
         public DisableKibanaPvlNetworkResponse DisableKibanaPvlNetwork(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4235,6 +6795,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DisableKibanaPvlNetworkWithOptions(InstanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭kibana私网</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DisableKibanaPvlNetworkResponse
+        /// </returns>
         public async Task<DisableKibanaPvlNetworkResponse> DisableKibanaPvlNetworkAsync(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4242,6 +6810,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DisableKibanaPvlNetworkWithOptionsAsync(InstanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开启v3 kibana私网</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableKibanaPvlNetworkRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableKibanaPvlNetworkResponse
+        /// </returns>
         public EnableKibanaPvlNetworkResponse EnableKibanaPvlNetworkWithOptions(string InstanceId, EnableKibanaPvlNetworkRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4282,6 +6868,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<EnableKibanaPvlNetworkResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开启v3 kibana私网</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableKibanaPvlNetworkRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableKibanaPvlNetworkResponse
+        /// </returns>
         public async Task<EnableKibanaPvlNetworkResponse> EnableKibanaPvlNetworkWithOptionsAsync(string InstanceId, EnableKibanaPvlNetworkRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4322,6 +6926,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<EnableKibanaPvlNetworkResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开启v3 kibana私网</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableKibanaPvlNetworkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableKibanaPvlNetworkResponse
+        /// </returns>
         public EnableKibanaPvlNetworkResponse EnableKibanaPvlNetwork(string InstanceId, EnableKibanaPvlNetworkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4329,6 +6945,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return EnableKibanaPvlNetworkWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开启v3 kibana私网</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableKibanaPvlNetworkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableKibanaPvlNetworkResponse
+        /// </returns>
         public async Task<EnableKibanaPvlNetworkResponse> EnableKibanaPvlNetworkAsync(string InstanceId, EnableKibanaPvlNetworkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4336,6 +6964,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await EnableKibanaPvlNetworkWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the estimated time that is required to restart a Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EstimatedLogstashRestartTimeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EstimatedLogstashRestartTimeResponse
+        /// </returns>
         public EstimatedLogstashRestartTimeResponse EstimatedLogstashRestartTimeWithOptions(string InstanceId, EstimatedLogstashRestartTimeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4365,6 +7011,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<EstimatedLogstashRestartTimeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the estimated time that is required to restart a Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EstimatedLogstashRestartTimeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EstimatedLogstashRestartTimeResponse
+        /// </returns>
         public async Task<EstimatedLogstashRestartTimeResponse> EstimatedLogstashRestartTimeWithOptionsAsync(string InstanceId, EstimatedLogstashRestartTimeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4394,6 +7058,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<EstimatedLogstashRestartTimeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the estimated time that is required to restart a Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EstimatedLogstashRestartTimeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EstimatedLogstashRestartTimeResponse
+        /// </returns>
         public EstimatedLogstashRestartTimeResponse EstimatedLogstashRestartTime(string InstanceId, EstimatedLogstashRestartTimeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4401,6 +7077,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return EstimatedLogstashRestartTimeWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the estimated time that is required to restart a Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EstimatedLogstashRestartTimeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EstimatedLogstashRestartTimeResponse
+        /// </returns>
         public async Task<EstimatedLogstashRestartTimeResponse> EstimatedLogstashRestartTimeAsync(string InstanceId, EstimatedLogstashRestartTimeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4408,6 +7096,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await EstimatedLogstashRestartTimeWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the estimated time that is required to restart an Elasticsearch cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EstimatedRestartTimeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EstimatedRestartTimeResponse
+        /// </returns>
         public EstimatedRestartTimeResponse EstimatedRestartTimeWithOptions(string InstanceId, EstimatedRestartTimeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4437,6 +7143,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<EstimatedRestartTimeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the estimated time that is required to restart an Elasticsearch cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EstimatedRestartTimeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EstimatedRestartTimeResponse
+        /// </returns>
         public async Task<EstimatedRestartTimeResponse> EstimatedRestartTimeWithOptionsAsync(string InstanceId, EstimatedRestartTimeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4466,6 +7190,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<EstimatedRestartTimeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the estimated time that is required to restart an Elasticsearch cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EstimatedRestartTimeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EstimatedRestartTimeResponse
+        /// </returns>
         public EstimatedRestartTimeResponse EstimatedRestartTime(string InstanceId, EstimatedRestartTimeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4473,6 +7209,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return EstimatedRestartTimeWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the estimated time that is required to restart an Elasticsearch cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EstimatedRestartTimeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EstimatedRestartTimeResponse
+        /// </returns>
         public async Task<EstimatedRestartTimeResponse> EstimatedRestartTimeAsync(string InstanceId, EstimatedRestartTimeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4480,6 +7228,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await EstimatedRestartTimeWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call GetClusterDataInformation to obtain the data information about the cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetClusterDataInformationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetClusterDataInformationResponse
+        /// </returns>
         public GetClusterDataInformationResponse GetClusterDataInformationWithOptions(GetClusterDataInformationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4503,6 +7269,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<GetClusterDataInformationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call GetClusterDataInformation to obtain the data information about the cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetClusterDataInformationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetClusterDataInformationResponse
+        /// </returns>
         public async Task<GetClusterDataInformationResponse> GetClusterDataInformationWithOptionsAsync(GetClusterDataInformationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4526,6 +7310,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<GetClusterDataInformationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call GetClusterDataInformation to obtain the data information about the cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetClusterDataInformationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetClusterDataInformationResponse
+        /// </returns>
         public GetClusterDataInformationResponse GetClusterDataInformation(GetClusterDataInformationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4533,6 +7329,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return GetClusterDataInformationWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call GetClusterDataInformation to obtain the data information about the cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetClusterDataInformationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetClusterDataInformationResponse
+        /// </returns>
         public async Task<GetClusterDataInformationResponse> GetClusterDataInformationAsync(GetClusterDataInformationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4540,6 +7348,16 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await GetClusterDataInformationWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetElastictaskResponse
+        /// </returns>
         public GetElastictaskResponse GetElastictaskWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -4561,6 +7379,16 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<GetElastictaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetElastictaskResponse
+        /// </returns>
         public async Task<GetElastictaskResponse> GetElastictaskWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -4582,6 +7410,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<GetElastictaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <returns>
+        /// GetElastictaskResponse
+        /// </returns>
         public GetElastictaskResponse GetElastictask(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4589,6 +7420,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return GetElastictaskWithOptions(InstanceId, headers, runtime);
         }
 
+        /// <returns>
+        /// GetElastictaskResponse
+        /// </returns>
         public async Task<GetElastictaskResponse> GetElastictaskAsync(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4596,6 +7430,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await GetElastictaskWithOptionsAsync(InstanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取高级监控报警自定义Grafana监控报警项</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEmonGrafanaAlertsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEmonGrafanaAlertsResponse
+        /// </returns>
         public GetEmonGrafanaAlertsResponse GetEmonGrafanaAlertsWithOptions(string ProjectId, GetEmonGrafanaAlertsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4619,6 +7471,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<GetEmonGrafanaAlertsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取高级监控报警自定义Grafana监控报警项</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEmonGrafanaAlertsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEmonGrafanaAlertsResponse
+        /// </returns>
         public async Task<GetEmonGrafanaAlertsResponse> GetEmonGrafanaAlertsWithOptionsAsync(string ProjectId, GetEmonGrafanaAlertsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4642,6 +7512,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<GetEmonGrafanaAlertsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取高级监控报警自定义Grafana监控报警项</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEmonGrafanaAlertsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEmonGrafanaAlertsResponse
+        /// </returns>
         public GetEmonGrafanaAlertsResponse GetEmonGrafanaAlerts(string ProjectId, GetEmonGrafanaAlertsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4649,6 +7531,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return GetEmonGrafanaAlertsWithOptions(ProjectId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取高级监控报警自定义Grafana监控报警项</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEmonGrafanaAlertsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEmonGrafanaAlertsResponse
+        /// </returns>
         public async Task<GetEmonGrafanaAlertsResponse> GetEmonGrafanaAlertsAsync(string ProjectId, GetEmonGrafanaAlertsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4656,6 +7550,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await GetEmonGrafanaAlertsWithOptionsAsync(ProjectId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取高级监控报警自定义Grafana监控大盘列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEmonGrafanaDashboardsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEmonGrafanaDashboardsResponse
+        /// </returns>
         public GetEmonGrafanaDashboardsResponse GetEmonGrafanaDashboardsWithOptions(string ProjectId, GetEmonGrafanaDashboardsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4679,6 +7591,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<GetEmonGrafanaDashboardsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取高级监控报警自定义Grafana监控大盘列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEmonGrafanaDashboardsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEmonGrafanaDashboardsResponse
+        /// </returns>
         public async Task<GetEmonGrafanaDashboardsResponse> GetEmonGrafanaDashboardsWithOptionsAsync(string ProjectId, GetEmonGrafanaDashboardsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4702,6 +7632,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<GetEmonGrafanaDashboardsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取高级监控报警自定义Grafana监控大盘列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEmonGrafanaDashboardsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEmonGrafanaDashboardsResponse
+        /// </returns>
         public GetEmonGrafanaDashboardsResponse GetEmonGrafanaDashboards(string ProjectId, GetEmonGrafanaDashboardsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4709,6 +7651,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return GetEmonGrafanaDashboardsWithOptions(ProjectId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取高级监控报警自定义Grafana监控大盘列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEmonGrafanaDashboardsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEmonGrafanaDashboardsResponse
+        /// </returns>
         public async Task<GetEmonGrafanaDashboardsResponse> GetEmonGrafanaDashboardsAsync(string ProjectId, GetEmonGrafanaDashboardsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4716,6 +7670,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await GetEmonGrafanaDashboardsWithOptionsAsync(ProjectId, request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// GetEmonMonitorDataRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEmonMonitorDataResponse
+        /// </returns>
         public GetEmonMonitorDataResponse GetEmonMonitorDataWithOptions(string ProjectId, GetEmonMonitorDataRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4739,6 +7706,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<GetEmonMonitorDataResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// GetEmonMonitorDataRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEmonMonitorDataResponse
+        /// </returns>
         public async Task<GetEmonMonitorDataResponse> GetEmonMonitorDataWithOptionsAsync(string ProjectId, GetEmonMonitorDataRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4762,6 +7742,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<GetEmonMonitorDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// GetEmonMonitorDataRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEmonMonitorDataResponse
+        /// </returns>
         public GetEmonMonitorDataResponse GetEmonMonitorData(string ProjectId, GetEmonMonitorDataRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4769,6 +7756,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return GetEmonMonitorDataWithOptions(ProjectId, request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// GetEmonMonitorDataRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEmonMonitorDataResponse
+        /// </returns>
         public async Task<GetEmonMonitorDataResponse> GetEmonMonitorDataAsync(string ProjectId, GetEmonMonitorDataRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4776,6 +7770,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await GetEmonMonitorDataWithOptionsAsync(ProjectId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>统计OpenStore实例的存储容量和使用情况</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOpenStoreUsageResponse
+        /// </returns>
         public GetOpenStoreUsageResponse GetOpenStoreUsageWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -4797,6 +7806,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<GetOpenStoreUsageResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>统计OpenStore实例的存储容量和使用情况</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOpenStoreUsageResponse
+        /// </returns>
         public async Task<GetOpenStoreUsageResponse> GetOpenStoreUsageWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -4818,6 +7842,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<GetOpenStoreUsageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>统计OpenStore实例的存储容量和使用情况</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetOpenStoreUsageResponse
+        /// </returns>
         public GetOpenStoreUsageResponse GetOpenStoreUsage(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4825,6 +7857,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return GetOpenStoreUsageWithOptions(InstanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>统计OpenStore实例的存储容量和使用情况</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetOpenStoreUsageResponse
+        /// </returns>
         public async Task<GetOpenStoreUsageResponse> GetOpenStoreUsageAsync(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4832,6 +7872,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await GetOpenStoreUsageWithOptionsAsync(InstanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The maximum number of nodes.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRegionConfigurationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRegionConfigurationResponse
+        /// </returns>
         public GetRegionConfigurationResponse GetRegionConfigurationWithOptions(GetRegionConfigurationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4860,6 +7918,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<GetRegionConfigurationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The maximum number of nodes.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRegionConfigurationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRegionConfigurationResponse
+        /// </returns>
         public async Task<GetRegionConfigurationResponse> GetRegionConfigurationWithOptionsAsync(GetRegionConfigurationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4888,6 +7964,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<GetRegionConfigurationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The maximum number of nodes.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRegionConfigurationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRegionConfigurationResponse
+        /// </returns>
         public GetRegionConfigurationResponse GetRegionConfiguration(GetRegionConfigurationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4895,6 +7983,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return GetRegionConfigurationWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The maximum number of nodes.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRegionConfigurationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRegionConfigurationResponse
+        /// </returns>
         public async Task<GetRegionConfigurationResponse> GetRegionConfigurationAsync(GetRegionConfigurationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4902,6 +8002,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await GetRegionConfigurationWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实例区域商品化配置</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRegionalInstanceConfigResponse
+        /// </returns>
         public GetRegionalInstanceConfigResponse GetRegionalInstanceConfigWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -4923,6 +8038,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<GetRegionalInstanceConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实例区域商品化配置</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRegionalInstanceConfigResponse
+        /// </returns>
         public async Task<GetRegionalInstanceConfigResponse> GetRegionalInstanceConfigWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -4944,6 +8074,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<GetRegionalInstanceConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实例区域商品化配置</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetRegionalInstanceConfigResponse
+        /// </returns>
         public GetRegionalInstanceConfigResponse GetRegionalInstanceConfig()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4951,6 +8089,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return GetRegionalInstanceConfigWithOptions(headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实例区域商品化配置</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetRegionalInstanceConfigResponse
+        /// </returns>
         public async Task<GetRegionalInstanceConfigResponse> GetRegionalInstanceConfigAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4958,6 +8104,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await GetRegionalInstanceConfigWithOptionsAsync(headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ES集群可缩容节点</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSuggestShrinkableNodesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSuggestShrinkableNodesResponse
+        /// </returns>
         public GetSuggestShrinkableNodesResponse GetSuggestShrinkableNodesWithOptions(string InstanceId, GetSuggestShrinkableNodesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4994,6 +8158,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<GetSuggestShrinkableNodesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ES集群可缩容节点</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSuggestShrinkableNodesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSuggestShrinkableNodesResponse
+        /// </returns>
         public async Task<GetSuggestShrinkableNodesResponse> GetSuggestShrinkableNodesWithOptionsAsync(string InstanceId, GetSuggestShrinkableNodesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5030,6 +8212,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<GetSuggestShrinkableNodesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ES集群可缩容节点</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSuggestShrinkableNodesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSuggestShrinkableNodesResponse
+        /// </returns>
         public GetSuggestShrinkableNodesResponse GetSuggestShrinkableNodes(string InstanceId, GetSuggestShrinkableNodesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5037,6 +8231,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return GetSuggestShrinkableNodesWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ES集群可缩容节点</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSuggestShrinkableNodesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSuggestShrinkableNodesResponse
+        /// </returns>
         public async Task<GetSuggestShrinkableNodesResponse> GetSuggestShrinkableNodesAsync(string InstanceId, GetSuggestShrinkableNodesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5044,6 +8250,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await GetSuggestShrinkableNodesWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取可数据迁移节点</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTransferableNodesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTransferableNodesResponse
+        /// </returns>
         public GetTransferableNodesResponse GetTransferableNodesWithOptions(string InstanceId, GetTransferableNodesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5076,6 +8300,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<GetTransferableNodesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取可数据迁移节点</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTransferableNodesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTransferableNodesResponse
+        /// </returns>
         public async Task<GetTransferableNodesResponse> GetTransferableNodesWithOptionsAsync(string InstanceId, GetTransferableNodesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5108,6 +8350,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<GetTransferableNodesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取可数据迁移节点</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTransferableNodesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTransferableNodesResponse
+        /// </returns>
         public GetTransferableNodesResponse GetTransferableNodes(string InstanceId, GetTransferableNodesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5115,6 +8369,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return GetTransferableNodesWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取可数据迁移节点</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTransferableNodesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTransferableNodesResponse
+        /// </returns>
         public async Task<GetTransferableNodesResponse> GetTransferableNodesAsync(string InstanceId, GetTransferableNodesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5122,14 +8388,31 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await GetTransferableNodesWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * > Before you perform auto scaling for a cluster at the China site (aliyun.com) or you use shippers to collect logs, you must create a service-linked role.
-          *
-          * @param request InitializeOperationRoleRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return InitializeOperationRoleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a service-linked role.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Before you perform auto scaling for a cluster at the China site (aliyun.com) or you use shippers to collect logs, you must create a service-linked role.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// InitializeOperationRoleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InitializeOperationRoleResponse
+        /// </returns>
         public InitializeOperationRoleResponse InitializeOperationRoleWithOptions(InitializeOperationRoleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5159,14 +8442,31 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<InitializeOperationRoleResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * > Before you perform auto scaling for a cluster at the China site (aliyun.com) or you use shippers to collect logs, you must create a service-linked role.
-          *
-          * @param request InitializeOperationRoleRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return InitializeOperationRoleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a service-linked role.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Before you perform auto scaling for a cluster at the China site (aliyun.com) or you use shippers to collect logs, you must create a service-linked role.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// InitializeOperationRoleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InitializeOperationRoleResponse
+        /// </returns>
         public async Task<InitializeOperationRoleResponse> InitializeOperationRoleWithOptionsAsync(InitializeOperationRoleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5196,12 +8496,25 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<InitializeOperationRoleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * > Before you perform auto scaling for a cluster at the China site (aliyun.com) or you use shippers to collect logs, you must create a service-linked role.
-          *
-          * @param request InitializeOperationRoleRequest
-          * @return InitializeOperationRoleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a service-linked role.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Before you perform auto scaling for a cluster at the China site (aliyun.com) or you use shippers to collect logs, you must create a service-linked role.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// InitializeOperationRoleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InitializeOperationRoleResponse
+        /// </returns>
         public InitializeOperationRoleResponse InitializeOperationRole(InitializeOperationRoleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5209,12 +8522,25 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return InitializeOperationRoleWithOptions(request, headers, runtime);
         }
 
-        /**
-          * > Before you perform auto scaling for a cluster at the China site (aliyun.com) or you use shippers to collect logs, you must create a service-linked role.
-          *
-          * @param request InitializeOperationRoleRequest
-          * @return InitializeOperationRoleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a service-linked role.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Before you perform auto scaling for a cluster at the China site (aliyun.com) or you use shippers to collect logs, you must create a service-linked role.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// InitializeOperationRoleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InitializeOperationRoleResponse
+        /// </returns>
         public async Task<InitializeOperationRoleResponse> InitializeOperationRoleAsync(InitializeOperationRoleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5222,14 +8548,31 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await InitializeOperationRoleWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-          * > Before you install a shipper for an ACK cluster, you must call this operation to install ES-operator for the cluster.
-          *
-          * @param request InstallAckOperatorRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return InstallAckOperatorResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Installs ES-operator for a Container Service for Kubernetes (ACK) cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Before you install a shipper for an ACK cluster, you must call this operation to install ES-operator for the cluster.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// InstallAckOperatorRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallAckOperatorResponse
+        /// </returns>
         public InstallAckOperatorResponse InstallAckOperatorWithOptions(string ClusterId, InstallAckOperatorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5259,14 +8602,31 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<InstallAckOperatorResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * > Before you install a shipper for an ACK cluster, you must call this operation to install ES-operator for the cluster.
-          *
-          * @param request InstallAckOperatorRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return InstallAckOperatorResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Installs ES-operator for a Container Service for Kubernetes (ACK) cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Before you install a shipper for an ACK cluster, you must call this operation to install ES-operator for the cluster.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// InstallAckOperatorRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallAckOperatorResponse
+        /// </returns>
         public async Task<InstallAckOperatorResponse> InstallAckOperatorWithOptionsAsync(string ClusterId, InstallAckOperatorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5296,12 +8656,25 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<InstallAckOperatorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * > Before you install a shipper for an ACK cluster, you must call this operation to install ES-operator for the cluster.
-          *
-          * @param request InstallAckOperatorRequest
-          * @return InstallAckOperatorResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Installs ES-operator for a Container Service for Kubernetes (ACK) cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Before you install a shipper for an ACK cluster, you must call this operation to install ES-operator for the cluster.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// InstallAckOperatorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallAckOperatorResponse
+        /// </returns>
         public InstallAckOperatorResponse InstallAckOperator(string ClusterId, InstallAckOperatorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5309,12 +8682,25 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return InstallAckOperatorWithOptions(ClusterId, request, headers, runtime);
         }
 
-        /**
-          * > Before you install a shipper for an ACK cluster, you must call this operation to install ES-operator for the cluster.
-          *
-          * @param request InstallAckOperatorRequest
-          * @return InstallAckOperatorResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Installs ES-operator for a Container Service for Kubernetes (ACK) cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Before you install a shipper for an ACK cluster, you must call this operation to install ES-operator for the cluster.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// InstallAckOperatorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallAckOperatorResponse
+        /// </returns>
         public async Task<InstallAckOperatorResponse> InstallAckOperatorAsync(string ClusterId, InstallAckOperatorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5322,6 +8708,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await InstallAckOperatorWithOptionsAsync(ClusterId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call InstallKibanaSystemPlugin to install the Kibana plug-in. The Kibana specification must be 2-Core 4 GB or higher.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InstallKibanaSystemPluginRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallKibanaSystemPluginResponse
+        /// </returns>
         public InstallKibanaSystemPluginResponse InstallKibanaSystemPluginWithOptions(string InstanceId, InstallKibanaSystemPluginRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5351,6 +8755,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<InstallKibanaSystemPluginResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call InstallKibanaSystemPlugin to install the Kibana plug-in. The Kibana specification must be 2-Core 4 GB or higher.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InstallKibanaSystemPluginRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallKibanaSystemPluginResponse
+        /// </returns>
         public async Task<InstallKibanaSystemPluginResponse> InstallKibanaSystemPluginWithOptionsAsync(string InstanceId, InstallKibanaSystemPluginRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5380,6 +8802,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<InstallKibanaSystemPluginResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call InstallKibanaSystemPlugin to install the Kibana plug-in. The Kibana specification must be 2-Core 4 GB or higher.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InstallKibanaSystemPluginRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallKibanaSystemPluginResponse
+        /// </returns>
         public InstallKibanaSystemPluginResponse InstallKibanaSystemPlugin(string InstanceId, InstallKibanaSystemPluginRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5387,6 +8821,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return InstallKibanaSystemPluginWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call InstallKibanaSystemPlugin to install the Kibana plug-in. The Kibana specification must be 2-Core 4 GB or higher.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InstallKibanaSystemPluginRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallKibanaSystemPluginResponse
+        /// </returns>
         public async Task<InstallKibanaSystemPluginResponse> InstallKibanaSystemPluginAsync(string InstanceId, InstallKibanaSystemPluginRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5394,14 +8840,29 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await InstallKibanaSystemPluginWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * ls-cn-oew1qbgl\\*\\*\\*\\*
-          *
-          * @param request InstallLogstashSystemPluginRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return InstallLogstashSystemPluginResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The returned data also contains <b>Headers</b> parameters, indicating that header information is returned.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>ls-cn-oew1qbgl\<em>\</em>\<em>\</em></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// InstallLogstashSystemPluginRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallLogstashSystemPluginResponse
+        /// </returns>
         public InstallLogstashSystemPluginResponse InstallLogstashSystemPluginWithOptions(string InstanceId, InstallLogstashSystemPluginRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5431,14 +8892,29 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<InstallLogstashSystemPluginResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * ls-cn-oew1qbgl\\*\\*\\*\\*
-          *
-          * @param request InstallLogstashSystemPluginRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return InstallLogstashSystemPluginResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The returned data also contains <b>Headers</b> parameters, indicating that header information is returned.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>ls-cn-oew1qbgl\<em>\</em>\<em>\</em></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// InstallLogstashSystemPluginRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallLogstashSystemPluginResponse
+        /// </returns>
         public async Task<InstallLogstashSystemPluginResponse> InstallLogstashSystemPluginWithOptionsAsync(string InstanceId, InstallLogstashSystemPluginRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5468,12 +8944,23 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<InstallLogstashSystemPluginResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * ls-cn-oew1qbgl\\*\\*\\*\\*
-          *
-          * @param request InstallLogstashSystemPluginRequest
-          * @return InstallLogstashSystemPluginResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The returned data also contains <b>Headers</b> parameters, indicating that header information is returned.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>ls-cn-oew1qbgl\<em>\</em>\<em>\</em></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// InstallLogstashSystemPluginRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallLogstashSystemPluginResponse
+        /// </returns>
         public InstallLogstashSystemPluginResponse InstallLogstashSystemPlugin(string InstanceId, InstallLogstashSystemPluginRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5481,12 +8968,23 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return InstallLogstashSystemPluginWithOptions(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * ls-cn-oew1qbgl\\*\\*\\*\\*
-          *
-          * @param request InstallLogstashSystemPluginRequest
-          * @return InstallLogstashSystemPluginResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The returned data also contains <b>Headers</b> parameters, indicating that header information is returned.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>ls-cn-oew1qbgl\<em>\</em>\<em>\</em></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// InstallLogstashSystemPluginRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallLogstashSystemPluginResponse
+        /// </returns>
         public async Task<InstallLogstashSystemPluginResponse> InstallLogstashSystemPluginAsync(string InstanceId, InstallLogstashSystemPluginRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5494,6 +8992,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await InstallLogstashSystemPluginWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call InstallSystemPlugin to install a system preset plug-in.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InstallSystemPluginRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallSystemPluginResponse
+        /// </returns>
         public InstallSystemPluginResponse InstallSystemPluginWithOptions(string InstanceId, InstallSystemPluginRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5523,6 +9039,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<InstallSystemPluginResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call InstallSystemPlugin to install a system preset plug-in.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InstallSystemPluginRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallSystemPluginResponse
+        /// </returns>
         public async Task<InstallSystemPluginResponse> InstallSystemPluginWithOptionsAsync(string InstanceId, InstallSystemPluginRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5552,6 +9086,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<InstallSystemPluginResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call InstallSystemPlugin to install a system preset plug-in.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InstallSystemPluginRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallSystemPluginResponse
+        /// </returns>
         public InstallSystemPluginResponse InstallSystemPlugin(string InstanceId, InstallSystemPluginRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5559,6 +9105,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return InstallSystemPluginWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call InstallSystemPlugin to install a system preset plug-in.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InstallSystemPluginRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallSystemPluginResponse
+        /// </returns>
         public async Task<InstallSystemPluginResponse> InstallSystemPluginAsync(string InstanceId, InstallSystemPluginRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5566,6 +9124,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await InstallSystemPluginWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Installs custom plug-ins that are uploaded to the Elasticsearch console.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InstallUserPluginsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallUserPluginsResponse
+        /// </returns>
         public InstallUserPluginsResponse InstallUserPluginsWithOptions(string InstanceId, InstallUserPluginsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5589,6 +9165,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<InstallUserPluginsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Installs custom plug-ins that are uploaded to the Elasticsearch console.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InstallUserPluginsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallUserPluginsResponse
+        /// </returns>
         public async Task<InstallUserPluginsResponse> InstallUserPluginsWithOptionsAsync(string InstanceId, InstallUserPluginsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5612,6 +9206,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<InstallUserPluginsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Installs custom plug-ins that are uploaded to the Elasticsearch console.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InstallUserPluginsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallUserPluginsResponse
+        /// </returns>
         public InstallUserPluginsResponse InstallUserPlugins(string InstanceId, InstallUserPluginsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5619,6 +9225,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return InstallUserPluginsWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Installs custom plug-ins that are uploaded to the Elasticsearch console.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InstallUserPluginsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallUserPluginsResponse
+        /// </returns>
         public async Task<InstallUserPluginsResponse> InstallUserPluginsAsync(string InstanceId, InstallUserPluginsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5626,6 +9244,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await InstallUserPluginsWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// InterruptElasticsearchTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InterruptElasticsearchTaskResponse
+        /// </returns>
         public InterruptElasticsearchTaskResponse InterruptElasticsearchTaskWithOptions(string InstanceId, InterruptElasticsearchTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5654,6 +9285,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<InterruptElasticsearchTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// InterruptElasticsearchTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InterruptElasticsearchTaskResponse
+        /// </returns>
         public async Task<InterruptElasticsearchTaskResponse> InterruptElasticsearchTaskWithOptionsAsync(string InstanceId, InterruptElasticsearchTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5682,6 +9326,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<InterruptElasticsearchTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// InterruptElasticsearchTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InterruptElasticsearchTaskResponse
+        /// </returns>
         public InterruptElasticsearchTaskResponse InterruptElasticsearchTask(string InstanceId, InterruptElasticsearchTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5689,6 +9340,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return InterruptElasticsearchTaskWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// InterruptElasticsearchTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InterruptElasticsearchTaskResponse
+        /// </returns>
         public async Task<InterruptElasticsearchTaskResponse> InterruptElasticsearchTaskAsync(string InstanceId, InterruptElasticsearchTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5696,6 +9354,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await InterruptElasticsearchTaskWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>After the task is suspended, the Logstash cluster is in the suspended state.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InterruptLogstashTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InterruptLogstashTaskResponse
+        /// </returns>
         public InterruptLogstashTaskResponse InterruptLogstashTaskWithOptions(string InstanceId, InterruptLogstashTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5724,6 +9400,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<InterruptLogstashTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>After the task is suspended, the Logstash cluster is in the suspended state.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InterruptLogstashTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InterruptLogstashTaskResponse
+        /// </returns>
         public async Task<InterruptLogstashTaskResponse> InterruptLogstashTaskWithOptionsAsync(string InstanceId, InterruptLogstashTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5752,6 +9446,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<InterruptLogstashTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>After the task is suspended, the Logstash cluster is in the suspended state.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InterruptLogstashTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InterruptLogstashTaskResponse
+        /// </returns>
         public InterruptLogstashTaskResponse InterruptLogstashTask(string InstanceId, InterruptLogstashTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5759,6 +9465,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return InterruptLogstashTaskWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>After the task is suspended, the Logstash cluster is in the suspended state.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InterruptLogstashTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InterruptLogstashTaskResponse
+        /// </returns>
         public async Task<InterruptLogstashTaskResponse> InterruptLogstashTaskAsync(string InstanceId, InterruptLogstashTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5766,6 +9484,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await InterruptLogstashTaskWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of Container Service for Kubernetes (ACK) clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAckClustersRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAckClustersResponse
+        /// </returns>
         public ListAckClustersResponse ListAckClustersWithOptions(ListAckClustersRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5802,6 +9538,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListAckClustersResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of Container Service for Kubernetes (ACK) clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAckClustersRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAckClustersResponse
+        /// </returns>
         public async Task<ListAckClustersResponse> ListAckClustersWithOptionsAsync(ListAckClustersRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5838,6 +9592,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListAckClustersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of Container Service for Kubernetes (ACK) clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAckClustersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAckClustersResponse
+        /// </returns>
         public ListAckClustersResponse ListAckClusters(ListAckClustersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5845,6 +9611,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListAckClustersWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of Container Service for Kubernetes (ACK) clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAckClustersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAckClustersResponse
+        /// </returns>
         public async Task<ListAckClustersResponse> ListAckClustersAsync(ListAckClustersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5852,14 +9630,31 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListAckClustersWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-          * > When you install a shipper on an ACK cluster, you must specify a namespace. You can call this operation to query all namespaces in the ACK cluster, and select a namespace based on your business requirements.
-          *
-          * @param request ListAckNamespacesRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListAckNamespacesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all namespaces in a specified Container Service for Kubernetes (ACK) cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>When you install a shipper on an ACK cluster, you must specify a namespace. You can call this operation to query all namespaces in the ACK cluster, and select a namespace based on your business requirements.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAckNamespacesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAckNamespacesResponse
+        /// </returns>
         public ListAckNamespacesResponse ListAckNamespacesWithOptions(string ClusterId, ListAckNamespacesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5892,14 +9687,31 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListAckNamespacesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * > When you install a shipper on an ACK cluster, you must specify a namespace. You can call this operation to query all namespaces in the ACK cluster, and select a namespace based on your business requirements.
-          *
-          * @param request ListAckNamespacesRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListAckNamespacesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all namespaces in a specified Container Service for Kubernetes (ACK) cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>When you install a shipper on an ACK cluster, you must specify a namespace. You can call this operation to query all namespaces in the ACK cluster, and select a namespace based on your business requirements.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAckNamespacesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAckNamespacesResponse
+        /// </returns>
         public async Task<ListAckNamespacesResponse> ListAckNamespacesWithOptionsAsync(string ClusterId, ListAckNamespacesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5932,12 +9744,25 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListAckNamespacesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * > When you install a shipper on an ACK cluster, you must specify a namespace. You can call this operation to query all namespaces in the ACK cluster, and select a namespace based on your business requirements.
-          *
-          * @param request ListAckNamespacesRequest
-          * @return ListAckNamespacesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all namespaces in a specified Container Service for Kubernetes (ACK) cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>When you install a shipper on an ACK cluster, you must specify a namespace. You can call this operation to query all namespaces in the ACK cluster, and select a namespace based on your business requirements.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAckNamespacesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAckNamespacesResponse
+        /// </returns>
         public ListAckNamespacesResponse ListAckNamespaces(string ClusterId, ListAckNamespacesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5945,12 +9770,25 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListAckNamespacesWithOptions(ClusterId, request, headers, runtime);
         }
 
-        /**
-          * > When you install a shipper on an ACK cluster, you must specify a namespace. You can call this operation to query all namespaces in the ACK cluster, and select a namespace based on your business requirements.
-          *
-          * @param request ListAckNamespacesRequest
-          * @return ListAckNamespacesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all namespaces in a specified Container Service for Kubernetes (ACK) cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>When you install a shipper on an ACK cluster, you must specify a namespace. You can call this operation to query all namespaces in the ACK cluster, and select a namespace based on your business requirements.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAckNamespacesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAckNamespacesResponse
+        /// </returns>
         public async Task<ListAckNamespacesResponse> ListAckNamespacesAsync(string ClusterId, ListAckNamespacesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5958,6 +9796,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListAckNamespacesWithOptionsAsync(ClusterId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>变更记录 变更详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListActionRecordsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListActionRecordsResponse
+        /// </returns>
         public ListActionRecordsResponse ListActionRecordsWithOptions(string InstanceId, ListActionRecordsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6014,6 +9870,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListActionRecordsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>变更记录 变更详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListActionRecordsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListActionRecordsResponse
+        /// </returns>
         public async Task<ListActionRecordsResponse> ListActionRecordsWithOptionsAsync(string InstanceId, ListActionRecordsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6070,6 +9944,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListActionRecordsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>变更记录 变更详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListActionRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListActionRecordsResponse
+        /// </returns>
         public ListActionRecordsResponse ListActionRecords(string InstanceId, ListActionRecordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6077,6 +9963,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListActionRecordsWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>变更记录 变更详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListActionRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListActionRecordsResponse
+        /// </returns>
         public async Task<ListActionRecordsResponse> ListActionRecordsAsync(string InstanceId, ListActionRecordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6084,6 +9982,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListActionRecordsWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>es-cn-tl32cpgwa002l\<em>\</em>\<em>\</em></para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAllNodeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAllNodeResponse
+        /// </returns>
         public ListAllNodeResponse ListAllNodeWithOptions(string InstanceId, ListAllNodeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6112,6 +10028,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListAllNodeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>es-cn-tl32cpgwa002l\<em>\</em>\<em>\</em></para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAllNodeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAllNodeResponse
+        /// </returns>
         public async Task<ListAllNodeResponse> ListAllNodeWithOptionsAsync(string InstanceId, ListAllNodeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6140,6 +10074,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListAllNodeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>es-cn-tl32cpgwa002l\<em>\</em>\<em>\</em></para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAllNodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAllNodeResponse
+        /// </returns>
         public ListAllNodeResponse ListAllNode(string InstanceId, ListAllNodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6147,6 +10093,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListAllNodeWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>es-cn-tl32cpgwa002l\<em>\</em>\<em>\</em></para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAllNodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAllNodeResponse
+        /// </returns>
         public async Task<ListAllNodeResponse> ListAllNodeAsync(string InstanceId, ListAllNodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6154,6 +10112,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListAllNodeWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实例可添加的OSS引用仓库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAlternativeSnapshotReposRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAlternativeSnapshotReposResponse
+        /// </returns>
         public ListAlternativeSnapshotReposResponse ListAlternativeSnapshotReposWithOptions(string InstanceId, ListAlternativeSnapshotReposRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6182,6 +10158,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListAlternativeSnapshotReposResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实例可添加的OSS引用仓库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAlternativeSnapshotReposRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAlternativeSnapshotReposResponse
+        /// </returns>
         public async Task<ListAlternativeSnapshotReposResponse> ListAlternativeSnapshotReposWithOptionsAsync(string InstanceId, ListAlternativeSnapshotReposRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6210,6 +10204,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListAlternativeSnapshotReposResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实例可添加的OSS引用仓库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAlternativeSnapshotReposRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAlternativeSnapshotReposResponse
+        /// </returns>
         public ListAlternativeSnapshotReposResponse ListAlternativeSnapshotRepos(string InstanceId, ListAlternativeSnapshotReposRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6217,6 +10223,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListAlternativeSnapshotReposWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实例可添加的OSS引用仓库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAlternativeSnapshotReposRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAlternativeSnapshotReposResponse
+        /// </returns>
         public async Task<ListAlternativeSnapshotReposResponse> ListAlternativeSnapshotReposAsync(string InstanceId, ListAlternativeSnapshotReposRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6224,6 +10242,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListAlternativeSnapshotReposWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListApm</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListApmRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApmResponse
+        /// </returns>
         public ListApmResponse ListApmWithOptions(ListApmRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6268,6 +10304,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListApmResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListApm</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListApmRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApmResponse
+        /// </returns>
         public async Task<ListApmResponse> ListApmWithOptionsAsync(ListApmRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6312,6 +10366,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListApmResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListApm</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListApmRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApmResponse
+        /// </returns>
         public ListApmResponse ListApm(ListApmRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6319,6 +10385,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListApmWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListApm</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListApmRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApmResponse
+        /// </returns>
         public async Task<ListApmResponse> ListApmAsync(ListApmRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6326,6 +10404,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListApmWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Elasticsearch clusters that can be associated with a Logstash cluster when you configure the X-Pack Monitoring feature for the Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAvailableEsInstanceIdsResponse
+        /// </returns>
         public ListAvailableEsInstanceIdsResponse ListAvailableEsInstanceIdsWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -6347,6 +10440,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListAvailableEsInstanceIdsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Elasticsearch clusters that can be associated with a Logstash cluster when you configure the X-Pack Monitoring feature for the Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAvailableEsInstanceIdsResponse
+        /// </returns>
         public async Task<ListAvailableEsInstanceIdsResponse> ListAvailableEsInstanceIdsWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -6368,6 +10476,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListAvailableEsInstanceIdsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Elasticsearch clusters that can be associated with a Logstash cluster when you configure the X-Pack Monitoring feature for the Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListAvailableEsInstanceIdsResponse
+        /// </returns>
         public ListAvailableEsInstanceIdsResponse ListAvailableEsInstanceIds(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6375,6 +10491,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListAvailableEsInstanceIdsWithOptions(InstanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Elasticsearch clusters that can be associated with a Logstash cluster when you configure the X-Pack Monitoring feature for the Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListAvailableEsInstanceIdsResponse
+        /// </returns>
         public async Task<ListAvailableEsInstanceIdsResponse> ListAvailableEsInstanceIdsAsync(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6382,6 +10506,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListAvailableEsInstanceIdsWithOptionsAsync(InstanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries shippers.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCollectorsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCollectorsResponse
+        /// </returns>
         public ListCollectorsResponse ListCollectorsWithOptions(ListCollectorsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6430,6 +10572,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListCollectorsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries shippers.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCollectorsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCollectorsResponse
+        /// </returns>
         public async Task<ListCollectorsResponse> ListCollectorsWithOptionsAsync(ListCollectorsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6478,6 +10638,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListCollectorsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries shippers.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCollectorsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCollectorsResponse
+        /// </returns>
         public ListCollectorsResponse ListCollectors(ListCollectorsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6485,6 +10657,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListCollectorsWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries shippers.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCollectorsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCollectorsResponse
+        /// </returns>
         public async Task<ListCollectorsResponse> ListCollectorsAsync(ListCollectorsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6492,6 +10676,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListCollectorsWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ES集群组合索引列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListComponentIndicesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListComponentIndicesResponse
+        /// </returns>
         public ListComponentIndicesResponse ListComponentIndicesWithOptions(string InstanceId, ListComponentIndicesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6528,6 +10730,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListComponentIndicesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ES集群组合索引列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListComponentIndicesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListComponentIndicesResponse
+        /// </returns>
         public async Task<ListComponentIndicesResponse> ListComponentIndicesWithOptionsAsync(string InstanceId, ListComponentIndicesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6564,6 +10784,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListComponentIndicesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ES集群组合索引列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListComponentIndicesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListComponentIndicesResponse
+        /// </returns>
         public ListComponentIndicesResponse ListComponentIndices(string InstanceId, ListComponentIndicesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6571,6 +10803,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListComponentIndicesWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ES集群组合索引列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListComponentIndicesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListComponentIndicesResponse
+        /// </returns>
         public async Task<ListComponentIndicesResponse> ListComponentIndicesAsync(string InstanceId, ListComponentIndicesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6578,6 +10822,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListComponentIndicesWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取与当前实例进行网络互通的实例列表</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConnectedClustersResponse
+        /// </returns>
         public ListConnectedClustersResponse ListConnectedClustersWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -6599,6 +10858,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListConnectedClustersResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取与当前实例进行网络互通的实例列表</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConnectedClustersResponse
+        /// </returns>
         public async Task<ListConnectedClustersResponse> ListConnectedClustersWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -6620,6 +10894,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListConnectedClustersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取与当前实例进行网络互通的实例列表</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListConnectedClustersResponse
+        /// </returns>
         public ListConnectedClustersResponse ListConnectedClusters(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6627,6 +10909,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListConnectedClustersWithOptions(InstanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取与当前实例进行网络互通的实例列表</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListConnectedClustersResponse
+        /// </returns>
         public async Task<ListConnectedClustersResponse> ListConnectedClustersAsync(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6634,6 +10924,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListConnectedClustersWithOptionsAsync(InstanceId, headers, runtime);
         }
 
+        /// <param name="request">
+        /// ListDataStreamsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataStreamsResponse
+        /// </returns>
         public ListDataStreamsResponse ListDataStreamsWithOptions(string InstanceId, ListDataStreamsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6666,6 +10969,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListDataStreamsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// ListDataStreamsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataStreamsResponse
+        /// </returns>
         public async Task<ListDataStreamsResponse> ListDataStreamsWithOptionsAsync(string InstanceId, ListDataStreamsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6698,6 +11014,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListDataStreamsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// ListDataStreamsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataStreamsResponse
+        /// </returns>
         public ListDataStreamsResponse ListDataStreams(string InstanceId, ListDataStreamsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6705,6 +11028,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListDataStreamsWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// ListDataStreamsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataStreamsResponse
+        /// </returns>
         public async Task<ListDataStreamsResponse> ListDataStreamsAsync(string InstanceId, ListDataStreamsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6712,6 +11042,16 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListDataStreamsWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataTasksResponse
+        /// </returns>
         public ListDataTasksResponse ListDataTasksWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -6733,6 +11073,16 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListDataTasksResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataTasksResponse
+        /// </returns>
         public async Task<ListDataTasksResponse> ListDataTasksWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -6754,6 +11104,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListDataTasksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <returns>
+        /// ListDataTasksResponse
+        /// </returns>
         public ListDataTasksResponse ListDataTasks(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6761,6 +11114,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListDataTasksWithOptions(InstanceId, headers, runtime);
         }
 
+        /// <returns>
+        /// ListDataTasksResponse
+        /// </returns>
         public async Task<ListDataTasksResponse> ListDataTasksAsync(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6768,6 +11124,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListDataTasksWithOptionsAsync(InstanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the default configuration files of shippers.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDefaultCollectorConfigurationsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDefaultCollectorConfigurationsResponse
+        /// </returns>
         public ListDefaultCollectorConfigurationsResponse ListDefaultCollectorConfigurationsWithOptions(ListDefaultCollectorConfigurationsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6804,6 +11178,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListDefaultCollectorConfigurationsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the default configuration files of shippers.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDefaultCollectorConfigurationsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDefaultCollectorConfigurationsResponse
+        /// </returns>
         public async Task<ListDefaultCollectorConfigurationsResponse> ListDefaultCollectorConfigurationsWithOptionsAsync(ListDefaultCollectorConfigurationsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6840,6 +11232,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListDefaultCollectorConfigurationsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the default configuration files of shippers.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDefaultCollectorConfigurationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDefaultCollectorConfigurationsResponse
+        /// </returns>
         public ListDefaultCollectorConfigurationsResponse ListDefaultCollectorConfigurations(ListDefaultCollectorConfigurationsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6847,6 +11251,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListDefaultCollectorConfigurationsWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the default configuration files of shippers.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDefaultCollectorConfigurationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDefaultCollectorConfigurationsResponse
+        /// </returns>
         public async Task<ListDefaultCollectorConfigurationsResponse> ListDefaultCollectorConfigurationsAsync(ListDefaultCollectorConfigurationsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6854,6 +11270,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListDefaultCollectorConfigurationsWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListDeprecatedTemplates</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDeprecatedTemplatesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDeprecatedTemplatesResponse
+        /// </returns>
         public ListDeprecatedTemplatesResponse ListDeprecatedTemplatesWithOptions(string InstanceId, ListDeprecatedTemplatesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6890,6 +11324,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListDeprecatedTemplatesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListDeprecatedTemplates</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDeprecatedTemplatesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDeprecatedTemplatesResponse
+        /// </returns>
         public async Task<ListDeprecatedTemplatesResponse> ListDeprecatedTemplatesWithOptionsAsync(string InstanceId, ListDeprecatedTemplatesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6926,6 +11378,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListDeprecatedTemplatesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListDeprecatedTemplates</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDeprecatedTemplatesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDeprecatedTemplatesResponse
+        /// </returns>
         public ListDeprecatedTemplatesResponse ListDeprecatedTemplates(string InstanceId, ListDeprecatedTemplatesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6933,6 +11397,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListDeprecatedTemplatesWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListDeprecatedTemplates</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDeprecatedTemplatesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDeprecatedTemplatesResponse
+        /// </returns>
         public async Task<ListDeprecatedTemplatesResponse> ListDeprecatedTemplatesAsync(string InstanceId, ListDeprecatedTemplatesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6940,6 +11416,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListDeprecatedTemplatesWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the indexes for health diagnosis performed on an Elasticsearch cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDiagnoseIndicesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDiagnoseIndicesResponse
+        /// </returns>
         public ListDiagnoseIndicesResponse ListDiagnoseIndicesWithOptions(string InstanceId, ListDiagnoseIndicesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6968,6 +11462,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListDiagnoseIndicesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the indexes for health diagnosis performed on an Elasticsearch cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDiagnoseIndicesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDiagnoseIndicesResponse
+        /// </returns>
         public async Task<ListDiagnoseIndicesResponse> ListDiagnoseIndicesWithOptionsAsync(string InstanceId, ListDiagnoseIndicesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6996,6 +11508,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListDiagnoseIndicesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the indexes for health diagnosis performed on an Elasticsearch cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDiagnoseIndicesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDiagnoseIndicesResponse
+        /// </returns>
         public ListDiagnoseIndicesResponse ListDiagnoseIndices(string InstanceId, ListDiagnoseIndicesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7003,6 +11527,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListDiagnoseIndicesWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the indexes for health diagnosis performed on an Elasticsearch cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDiagnoseIndicesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDiagnoseIndicesResponse
+        /// </returns>
         public async Task<ListDiagnoseIndicesResponse> ListDiagnoseIndicesAsync(string InstanceId, ListDiagnoseIndicesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7010,6 +11546,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListDiagnoseIndicesWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取集群诊断报告列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDiagnoseReportRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDiagnoseReportResponse
+        /// </returns>
         public ListDiagnoseReportResponse ListDiagnoseReportWithOptions(string InstanceId, ListDiagnoseReportRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7062,6 +11616,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListDiagnoseReportResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取集群诊断报告列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDiagnoseReportRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDiagnoseReportResponse
+        /// </returns>
         public async Task<ListDiagnoseReportResponse> ListDiagnoseReportWithOptionsAsync(string InstanceId, ListDiagnoseReportRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7114,6 +11686,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListDiagnoseReportResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取集群诊断报告列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDiagnoseReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDiagnoseReportResponse
+        /// </returns>
         public ListDiagnoseReportResponse ListDiagnoseReport(string InstanceId, ListDiagnoseReportRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7121,6 +11705,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListDiagnoseReportWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取集群诊断报告列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDiagnoseReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDiagnoseReportResponse
+        /// </returns>
         public async Task<ListDiagnoseReportResponse> ListDiagnoseReportAsync(string InstanceId, ListDiagnoseReportRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7128,6 +11724,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListDiagnoseReportWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the IDs of the historical intelligent O&amp;M reports of an Elasticsearch cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDiagnoseReportIdsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDiagnoseReportIdsResponse
+        /// </returns>
         public ListDiagnoseReportIdsResponse ListDiagnoseReportIdsWithOptions(string InstanceId, ListDiagnoseReportIdsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7176,6 +11790,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListDiagnoseReportIdsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the IDs of the historical intelligent O&amp;M reports of an Elasticsearch cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDiagnoseReportIdsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDiagnoseReportIdsResponse
+        /// </returns>
         public async Task<ListDiagnoseReportIdsResponse> ListDiagnoseReportIdsWithOptionsAsync(string InstanceId, ListDiagnoseReportIdsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7224,6 +11856,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListDiagnoseReportIdsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the IDs of the historical intelligent O&amp;M reports of an Elasticsearch cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDiagnoseReportIdsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDiagnoseReportIdsResponse
+        /// </returns>
         public ListDiagnoseReportIdsResponse ListDiagnoseReportIds(string InstanceId, ListDiagnoseReportIdsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7231,6 +11875,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListDiagnoseReportIdsWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the IDs of the historical intelligent O&amp;M reports of an Elasticsearch cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDiagnoseReportIdsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDiagnoseReportIdsResponse
+        /// </returns>
         public async Task<ListDiagnoseReportIdsResponse> ListDiagnoseReportIdsAsync(string InstanceId, ListDiagnoseReportIdsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7238,6 +11894,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListDiagnoseReportIdsWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The diagnostic item is used to check whether data write requests of a cluster are accumulated. If data write requests are accumulated, a bulk rejection occurs. This may cause data loss and severely consume system resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDiagnosisItemsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDiagnosisItemsResponse
+        /// </returns>
         public ListDiagnosisItemsResponse ListDiagnosisItemsWithOptions(ListDiagnosisItemsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7266,6 +11940,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListDiagnosisItemsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The diagnostic item is used to check whether data write requests of a cluster are accumulated. If data write requests are accumulated, a bulk rejection occurs. This may cause data loss and severely consume system resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDiagnosisItemsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDiagnosisItemsResponse
+        /// </returns>
         public async Task<ListDiagnosisItemsResponse> ListDiagnosisItemsWithOptionsAsync(ListDiagnosisItemsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7294,6 +11986,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListDiagnosisItemsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The diagnostic item is used to check whether data write requests of a cluster are accumulated. If data write requests are accumulated, a bulk rejection occurs. This may cause data loss and severely consume system resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDiagnosisItemsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDiagnosisItemsResponse
+        /// </returns>
         public ListDiagnosisItemsResponse ListDiagnosisItems(ListDiagnosisItemsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7301,6 +12005,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListDiagnosisItemsWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The diagnostic item is used to check whether data write requests of a cluster are accumulated. If data write requests are accumulated, a bulk rejection occurs. This may cause data loss and severely consume system resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDiagnosisItemsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDiagnosisItemsResponse
+        /// </returns>
         public async Task<ListDiagnosisItemsResponse> ListDiagnosisItemsAsync(ListDiagnosisItemsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7308,6 +12024,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListDiagnosisItemsWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// ListDictInformationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDictInformationResponse
+        /// </returns>
         public ListDictInformationResponse ListDictInformationWithOptions(string InstanceId, ListDictInformationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7344,6 +12073,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListDictInformationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// ListDictInformationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDictInformationResponse
+        /// </returns>
         public async Task<ListDictInformationResponse> ListDictInformationWithOptionsAsync(string InstanceId, ListDictInformationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7380,6 +12122,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListDictInformationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// ListDictInformationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDictInformationResponse
+        /// </returns>
         public ListDictInformationResponse ListDictInformation(string InstanceId, ListDictInformationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7387,6 +12136,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListDictInformationWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// ListDictInformationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDictInformationResponse
+        /// </returns>
         public async Task<ListDictInformationResponse> ListDictInformationAsync(string InstanceId, ListDictInformationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7394,6 +12150,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListDictInformationWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified type of dictionary.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDictsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDictsResponse
+        /// </returns>
         public ListDictsResponse ListDictsWithOptions(string InstanceId, ListDictsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7426,6 +12200,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListDictsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified type of dictionary.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDictsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDictsResponse
+        /// </returns>
         public async Task<ListDictsResponse> ListDictsWithOptionsAsync(string InstanceId, ListDictsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7458,6 +12250,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListDictsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified type of dictionary.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDictsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDictsResponse
+        /// </returns>
         public ListDictsResponse ListDicts(string InstanceId, ListDictsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7465,6 +12269,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListDictsWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified type of dictionary.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDictsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDictsResponse
+        /// </returns>
         public async Task<ListDictsResponse> ListDictsAsync(string InstanceId, ListDictsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7472,14 +12288,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListDictsWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * **Important** To call this operation, you must create the Aliyun Elasticsearch AccessingOOSRole and the system service role AliyunOOSAccessingECS 4ESRole to Elasticsearch the service account to obtain the ECS access permissions of the primary account. For more information, see [Collect ECS service logs](~~146446~~).
-          *
-          * @param request ListEcsInstancesRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListEcsInstancesResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Important</em>* To call this operation, you must create the Aliyun Elasticsearch AccessingOOSRole and the system service role AliyunOOSAccessingECS 4ESRole to Elasticsearch the service account to obtain the ECS access permissions of the primary account. For more information, see <a href="https://help.aliyun.com/document_detail/146446.html">Collect ECS service logs</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListEcsInstancesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEcsInstancesResponse
+        /// </returns>
         public ListEcsInstancesResponse ListEcsInstancesWithOptions(ListEcsInstancesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7528,14 +12354,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListEcsInstancesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * **Important** To call this operation, you must create the Aliyun Elasticsearch AccessingOOSRole and the system service role AliyunOOSAccessingECS 4ESRole to Elasticsearch the service account to obtain the ECS access permissions of the primary account. For more information, see [Collect ECS service logs](~~146446~~).
-          *
-          * @param request ListEcsInstancesRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListEcsInstancesResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Important</em>* To call this operation, you must create the Aliyun Elasticsearch AccessingOOSRole and the system service role AliyunOOSAccessingECS 4ESRole to Elasticsearch the service account to obtain the ECS access permissions of the primary account. For more information, see <a href="https://help.aliyun.com/document_detail/146446.html">Collect ECS service logs</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListEcsInstancesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEcsInstancesResponse
+        /// </returns>
         public async Task<ListEcsInstancesResponse> ListEcsInstancesWithOptionsAsync(ListEcsInstancesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7584,12 +12420,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListEcsInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * **Important** To call this operation, you must create the Aliyun Elasticsearch AccessingOOSRole and the system service role AliyunOOSAccessingECS 4ESRole to Elasticsearch the service account to obtain the ECS access permissions of the primary account. For more information, see [Collect ECS service logs](~~146446~~).
-          *
-          * @param request ListEcsInstancesRequest
-          * @return ListEcsInstancesResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Important</em>* To call this operation, you must create the Aliyun Elasticsearch AccessingOOSRole and the system service role AliyunOOSAccessingECS 4ESRole to Elasticsearch the service account to obtain the ECS access permissions of the primary account. For more information, see <a href="https://help.aliyun.com/document_detail/146446.html">Collect ECS service logs</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListEcsInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEcsInstancesResponse
+        /// </returns>
         public ListEcsInstancesResponse ListEcsInstances(ListEcsInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7597,12 +12439,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListEcsInstancesWithOptions(request, headers, runtime);
         }
 
-        /**
-          * **Important** To call this operation, you must create the Aliyun Elasticsearch AccessingOOSRole and the system service role AliyunOOSAccessingECS 4ESRole to Elasticsearch the service account to obtain the ECS access permissions of the primary account. For more information, see [Collect ECS service logs](~~146446~~).
-          *
-          * @param request ListEcsInstancesRequest
-          * @return ListEcsInstancesResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Important</em>* To call this operation, you must create the Aliyun Elasticsearch AccessingOOSRole and the system service role AliyunOOSAccessingECS 4ESRole to Elasticsearch the service account to obtain the ECS access permissions of the primary account. For more information, see <a href="https://help.aliyun.com/document_detail/146446.html">Collect ECS service logs</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListEcsInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEcsInstancesResponse
+        /// </returns>
         public async Task<ListEcsInstancesResponse> ListEcsInstancesAsync(ListEcsInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7610,6 +12458,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListEcsInstancesWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the driver files of a Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListExtendfilesResponse
+        /// </returns>
         public ListExtendfilesResponse ListExtendfilesWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -7631,6 +12494,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListExtendfilesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the driver files of a Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListExtendfilesResponse
+        /// </returns>
         public async Task<ListExtendfilesResponse> ListExtendfilesWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -7652,6 +12530,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListExtendfilesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the driver files of a Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListExtendfilesResponse
+        /// </returns>
         public ListExtendfilesResponse ListExtendfiles(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7659,6 +12545,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListExtendfilesWithOptions(InstanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the driver files of a Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListExtendfilesResponse
+        /// </returns>
         public async Task<ListExtendfilesResponse> ListExtendfilesAsync(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7666,6 +12560,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListExtendfilesWithOptionsAsync(InstanceId, headers, runtime);
         }
 
+        /// <param name="request">
+        /// ListILMPoliciesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListILMPoliciesResponse
+        /// </returns>
         public ListILMPoliciesResponse ListILMPoliciesWithOptions(string InstanceId, ListILMPoliciesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7694,6 +12601,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListILMPoliciesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// ListILMPoliciesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListILMPoliciesResponse
+        /// </returns>
         public async Task<ListILMPoliciesResponse> ListILMPoliciesWithOptionsAsync(string InstanceId, ListILMPoliciesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7722,6 +12642,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListILMPoliciesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// ListILMPoliciesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListILMPoliciesResponse
+        /// </returns>
         public ListILMPoliciesResponse ListILMPolicies(string InstanceId, ListILMPoliciesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7729,6 +12656,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListILMPoliciesWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// ListILMPoliciesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListILMPoliciesResponse
+        /// </returns>
         public async Task<ListILMPoliciesResponse> ListILMPoliciesAsync(string InstanceId, ListILMPoliciesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7736,6 +12670,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListILMPoliciesWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// ListIndexTemplatesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIndexTemplatesResponse
+        /// </returns>
         public ListIndexTemplatesResponse ListIndexTemplatesWithOptions(string InstanceId, ListIndexTemplatesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7772,6 +12719,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListIndexTemplatesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// ListIndexTemplatesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIndexTemplatesResponse
+        /// </returns>
         public async Task<ListIndexTemplatesResponse> ListIndexTemplatesWithOptionsAsync(string InstanceId, ListIndexTemplatesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7808,6 +12768,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListIndexTemplatesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// ListIndexTemplatesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIndexTemplatesResponse
+        /// </returns>
         public ListIndexTemplatesResponse ListIndexTemplates(string InstanceId, ListIndexTemplatesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7815,6 +12782,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListIndexTemplatesWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// ListIndexTemplatesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIndexTemplatesResponse
+        /// </returns>
         public async Task<ListIndexTemplatesResponse> ListIndexTemplatesAsync(string InstanceId, ListIndexTemplatesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7822,6 +12796,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListIndexTemplatesWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询Elasticsearch实例列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceResponse
+        /// </returns>
         public ListInstanceResponse ListInstanceWithOptions(ListInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7890,6 +12882,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询Elasticsearch实例列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceResponse
+        /// </returns>
         public async Task<ListInstanceResponse> ListInstanceWithOptionsAsync(ListInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7958,6 +12968,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询Elasticsearch实例列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceResponse
+        /// </returns>
         public ListInstanceResponse ListInstance(ListInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7965,6 +12987,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListInstanceWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询Elasticsearch实例列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceResponse
+        /// </returns>
         public async Task<ListInstanceResponse> ListInstanceAsync(ListInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7972,6 +13006,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListInstanceWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>集群触发的硬件运维事件列表</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListInstanceHistoryEventsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceHistoryEventsResponse
+        /// </returns>
         public ListInstanceHistoryEventsResponse ListInstanceHistoryEventsWithOptions(ListInstanceHistoryEventsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -8063,6 +13115,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListInstanceHistoryEventsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>集群触发的硬件运维事件列表</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListInstanceHistoryEventsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceHistoryEventsResponse
+        /// </returns>
         public async Task<ListInstanceHistoryEventsResponse> ListInstanceHistoryEventsWithOptionsAsync(ListInstanceHistoryEventsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -8154,6 +13224,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListInstanceHistoryEventsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>集群触发的硬件运维事件列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceHistoryEventsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceHistoryEventsResponse
+        /// </returns>
         public ListInstanceHistoryEventsResponse ListInstanceHistoryEvents(ListInstanceHistoryEventsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8161,6 +13243,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListInstanceHistoryEventsWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>集群触发的硬件运维事件列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceHistoryEventsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceHistoryEventsResponse
+        /// </returns>
         public async Task<ListInstanceHistoryEventsResponse> ListInstanceHistoryEventsAsync(ListInstanceHistoryEventsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8168,6 +13262,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListInstanceHistoryEventsWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取当前实例先特定的索引列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceIndicesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceIndicesResponse
+        /// </returns>
         public ListInstanceIndicesResponse ListInstanceIndicesWithOptions(string InstanceId, ListInstanceIndicesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8216,6 +13328,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListInstanceIndicesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取当前实例先特定的索引列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceIndicesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceIndicesResponse
+        /// </returns>
         public async Task<ListInstanceIndicesResponse> ListInstanceIndicesWithOptionsAsync(string InstanceId, ListInstanceIndicesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8264,6 +13394,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListInstanceIndicesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取当前实例先特定的索引列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceIndicesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceIndicesResponse
+        /// </returns>
         public ListInstanceIndicesResponse ListInstanceIndices(string InstanceId, ListInstanceIndicesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8271,6 +13413,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListInstanceIndicesWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取当前实例先特定的索引列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceIndicesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceIndicesResponse
+        /// </returns>
         public async Task<ListInstanceIndicesResponse> ListInstanceIndicesAsync(string InstanceId, ListInstanceIndicesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8278,6 +13432,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListInstanceIndicesWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of Kibana plug-ins.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListKibanaPluginsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKibanaPluginsResponse
+        /// </returns>
         public ListKibanaPluginsResponse ListKibanaPluginsWithOptions(string InstanceId, ListKibanaPluginsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8310,6 +13482,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListKibanaPluginsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of Kibana plug-ins.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListKibanaPluginsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKibanaPluginsResponse
+        /// </returns>
         public async Task<ListKibanaPluginsResponse> ListKibanaPluginsWithOptionsAsync(string InstanceId, ListKibanaPluginsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8342,6 +13532,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListKibanaPluginsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of Kibana plug-ins.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListKibanaPluginsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKibanaPluginsResponse
+        /// </returns>
         public ListKibanaPluginsResponse ListKibanaPlugins(string InstanceId, ListKibanaPluginsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8349,6 +13551,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListKibanaPluginsWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of Kibana plug-ins.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListKibanaPluginsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKibanaPluginsResponse
+        /// </returns>
         public async Task<ListKibanaPluginsResponse> ListKibanaPluginsAsync(string InstanceId, ListKibanaPluginsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8356,6 +13570,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListKibanaPluginsWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询kibana私网连接信息</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKibanaPvlNetworkResponse
+        /// </returns>
         public ListKibanaPvlNetworkResponse ListKibanaPvlNetworkWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -8377,6 +13606,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListKibanaPvlNetworkResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询kibana私网连接信息</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKibanaPvlNetworkResponse
+        /// </returns>
         public async Task<ListKibanaPvlNetworkResponse> ListKibanaPvlNetworkWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -8398,6 +13642,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListKibanaPvlNetworkResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询kibana私网连接信息</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListKibanaPvlNetworkResponse
+        /// </returns>
         public ListKibanaPvlNetworkResponse ListKibanaPvlNetwork(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8405,6 +13657,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListKibanaPvlNetworkWithOptions(InstanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询kibana私网连接信息</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListKibanaPvlNetworkResponse
+        /// </returns>
         public async Task<ListKibanaPvlNetworkResponse> ListKibanaPvlNetworkAsync(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8412,6 +13672,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListKibanaPvlNetworkWithOptionsAsync(InstanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Logstash集群列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListLogstashRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLogstashResponse
+        /// </returns>
         public ListLogstashResponse ListLogstashWithOptions(ListLogstashRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8464,6 +13742,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListLogstashResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Logstash集群列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListLogstashRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLogstashResponse
+        /// </returns>
         public async Task<ListLogstashResponse> ListLogstashWithOptionsAsync(ListLogstashRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8516,6 +13812,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListLogstashResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Logstash集群列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListLogstashRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLogstashResponse
+        /// </returns>
         public ListLogstashResponse ListLogstash(ListLogstashRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8523,6 +13831,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListLogstashWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Logstash集群列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListLogstashRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLogstashResponse
+        /// </returns>
         public async Task<ListLogstashResponse> ListLogstashAsync(ListLogstashRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8530,6 +13850,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListLogstashWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取Logstash日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListLogstashLogRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLogstashLogResponse
+        /// </returns>
         public ListLogstashLogResponse ListLogstashLogWithOptions(string InstanceId, ListLogstashLogRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8578,6 +13916,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListLogstashLogResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取Logstash日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListLogstashLogRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLogstashLogResponse
+        /// </returns>
         public async Task<ListLogstashLogResponse> ListLogstashLogWithOptionsAsync(string InstanceId, ListLogstashLogRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8626,6 +13982,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListLogstashLogResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取Logstash日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListLogstashLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLogstashLogResponse
+        /// </returns>
         public ListLogstashLogResponse ListLogstashLog(string InstanceId, ListLogstashLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8633,6 +14001,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListLogstashLogWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取Logstash日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListLogstashLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLogstashLogResponse
+        /// </returns>
         public async Task<ListLogstashLogResponse> ListLogstashLogAsync(string InstanceId, ListLogstashLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8640,6 +14020,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListLogstashLogWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Logstash插件列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListLogstashPluginsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLogstashPluginsResponse
+        /// </returns>
         public ListLogstashPluginsResponse ListLogstashPluginsWithOptions(string InstanceId, ListLogstashPluginsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8680,6 +14078,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListLogstashPluginsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Logstash插件列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListLogstashPluginsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLogstashPluginsResponse
+        /// </returns>
         public async Task<ListLogstashPluginsResponse> ListLogstashPluginsWithOptionsAsync(string InstanceId, ListLogstashPluginsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8720,6 +14136,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListLogstashPluginsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Logstash插件列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListLogstashPluginsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLogstashPluginsResponse
+        /// </returns>
         public ListLogstashPluginsResponse ListLogstashPlugins(string InstanceId, ListLogstashPluginsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8727,6 +14155,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListLogstashPluginsWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Logstash插件列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListLogstashPluginsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLogstashPluginsResponse
+        /// </returns>
         public async Task<ListLogstashPluginsResponse> ListLogstashPluginsAsync(string InstanceId, ListLogstashPluginsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8734,6 +14174,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListLogstashPluginsWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statuses of Elastic Compute Service (ECS) instances on which a shipper is installed.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListNodesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNodesResponse
+        /// </returns>
         public ListNodesResponse ListNodesWithOptions(string ResId, ListNodesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8778,6 +14236,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListNodesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statuses of Elastic Compute Service (ECS) instances on which a shipper is installed.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListNodesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNodesResponse
+        /// </returns>
         public async Task<ListNodesResponse> ListNodesWithOptionsAsync(string ResId, ListNodesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8822,6 +14298,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListNodesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statuses of Elastic Compute Service (ECS) instances on which a shipper is installed.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListNodesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNodesResponse
+        /// </returns>
         public ListNodesResponse ListNodes(string ResId, ListNodesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8829,6 +14317,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListNodesWithOptions(ResId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statuses of Elastic Compute Service (ECS) instances on which a shipper is installed.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListNodesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNodesResponse
+        /// </returns>
         public async Task<ListNodesResponse> ListNodesAsync(string ResId, ListNodesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8836,6 +14336,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListNodesWithOptionsAsync(ResId, request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// ListPipelineRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPipelineResponse
+        /// </returns>
         public ListPipelineResponse ListPipelineWithOptions(string InstanceId, ListPipelineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8872,6 +14385,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListPipelineResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// ListPipelineRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPipelineResponse
+        /// </returns>
         public async Task<ListPipelineResponse> ListPipelineWithOptionsAsync(string InstanceId, ListPipelineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8908,6 +14434,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListPipelineResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// ListPipelineRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPipelineResponse
+        /// </returns>
         public ListPipelineResponse ListPipeline(string InstanceId, ListPipelineRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8915,6 +14448,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListPipelineWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// ListPipelineRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPipelineResponse
+        /// </returns>
         public async Task<ListPipelineResponse> ListPipelineAsync(string InstanceId, ListPipelineRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8922,6 +14462,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListPipelineWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The error message returned.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPipelineIdsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPipelineIdsResponse
+        /// </returns>
         public ListPipelineIdsResponse ListPipelineIdsWithOptions(string InstanceId, ListPipelineIdsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8945,6 +14503,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListPipelineIdsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The error message returned.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPipelineIdsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPipelineIdsResponse
+        /// </returns>
         public async Task<ListPipelineIdsResponse> ListPipelineIdsWithOptionsAsync(string InstanceId, ListPipelineIdsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8968,6 +14544,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListPipelineIdsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The error message returned.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPipelineIdsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPipelineIdsResponse
+        /// </returns>
         public ListPipelineIdsResponse ListPipelineIds(string InstanceId, ListPipelineIdsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8975,6 +14563,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListPipelineIdsWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The error message returned.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPipelineIdsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPipelineIdsResponse
+        /// </returns>
         public async Task<ListPipelineIdsResponse> ListPipelineIdsAsync(string InstanceId, ListPipelineIdsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8982,6 +14582,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListPipelineIdsWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ES系统插件列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPluginsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPluginsResponse
+        /// </returns>
         public ListPluginsResponse ListPluginsWithOptions(string InstanceId, ListPluginsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9022,6 +14640,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListPluginsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ES系统插件列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPluginsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPluginsResponse
+        /// </returns>
         public async Task<ListPluginsResponse> ListPluginsWithOptionsAsync(string InstanceId, ListPluginsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9062,6 +14698,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListPluginsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ES系统插件列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPluginsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPluginsResponse
+        /// </returns>
         public ListPluginsResponse ListPlugins(string InstanceId, ListPluginsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9069,6 +14717,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListPluginsWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ES系统插件列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPluginsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPluginsResponse
+        /// </returns>
         public async Task<ListPluginsResponse> ListPluginsAsync(string InstanceId, ListPluginsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9076,6 +14736,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListPluginsWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看Elasticsearch集群各种类型的日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSearchLogRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSearchLogResponse
+        /// </returns>
         public ListSearchLogResponse ListSearchLogWithOptions(string InstanceId, ListSearchLogRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9124,6 +14802,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListSearchLogResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看Elasticsearch集群各种类型的日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSearchLogRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSearchLogResponse
+        /// </returns>
         public async Task<ListSearchLogResponse> ListSearchLogWithOptionsAsync(string InstanceId, ListSearchLogRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9172,6 +14868,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListSearchLogResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看Elasticsearch集群各种类型的日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSearchLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSearchLogResponse
+        /// </returns>
         public ListSearchLogResponse ListSearchLog(string InstanceId, ListSearchLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9179,6 +14887,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListSearchLogWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看Elasticsearch集群各种类型的日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSearchLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSearchLogResponse
+        /// </returns>
         public async Task<ListSearchLogResponse> ListSearchLogAsync(string InstanceId, ListSearchLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9186,14 +14906,31 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListSearchLogWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * > The restoration of a shard is a process of synchronizing data from a primary shard to a replica shard. After the restoration is complete, the replica shard is available for data searches.
-          *
-          * @param request ListShardRecoveriesRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListShardRecoveriesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about shards that are being restored or shards that are restored. By default, this operation returns only the information about shards that are being restored after you call this operation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>The restoration of a shard is a process of synchronizing data from a primary shard to a replica shard. After the restoration is complete, the replica shard is available for data searches.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListShardRecoveriesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListShardRecoveriesResponse
+        /// </returns>
         public ListShardRecoveriesResponse ListShardRecoveriesWithOptions(string InstanceId, ListShardRecoveriesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9222,14 +14959,31 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListShardRecoveriesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * > The restoration of a shard is a process of synchronizing data from a primary shard to a replica shard. After the restoration is complete, the replica shard is available for data searches.
-          *
-          * @param request ListShardRecoveriesRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListShardRecoveriesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about shards that are being restored or shards that are restored. By default, this operation returns only the information about shards that are being restored after you call this operation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>The restoration of a shard is a process of synchronizing data from a primary shard to a replica shard. After the restoration is complete, the replica shard is available for data searches.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListShardRecoveriesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListShardRecoveriesResponse
+        /// </returns>
         public async Task<ListShardRecoveriesResponse> ListShardRecoveriesWithOptionsAsync(string InstanceId, ListShardRecoveriesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9258,12 +15012,25 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListShardRecoveriesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * > The restoration of a shard is a process of synchronizing data from a primary shard to a replica shard. After the restoration is complete, the replica shard is available for data searches.
-          *
-          * @param request ListShardRecoveriesRequest
-          * @return ListShardRecoveriesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about shards that are being restored or shards that are restored. By default, this operation returns only the information about shards that are being restored after you call this operation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>The restoration of a shard is a process of synchronizing data from a primary shard to a replica shard. After the restoration is complete, the replica shard is available for data searches.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListShardRecoveriesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListShardRecoveriesResponse
+        /// </returns>
         public ListShardRecoveriesResponse ListShardRecoveries(string InstanceId, ListShardRecoveriesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9271,12 +15038,25 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListShardRecoveriesWithOptions(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * > The restoration of a shard is a process of synchronizing data from a primary shard to a replica shard. After the restoration is complete, the replica shard is available for data searches.
-          *
-          * @param request ListShardRecoveriesRequest
-          * @return ListShardRecoveriesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about shards that are being restored or shards that are restored. By default, this operation returns only the information about shards that are being restored after you call this operation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>The restoration of a shard is a process of synchronizing data from a primary shard to a replica shard. After the restoration is complete, the replica shard is available for data searches.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListShardRecoveriesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListShardRecoveriesResponse
+        /// </returns>
         public async Task<ListShardRecoveriesResponse> ListShardRecoveriesAsync(string InstanceId, ListShardRecoveriesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9284,6 +15064,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListShardRecoveriesWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取跨集群索引仓库列表</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSnapshotReposByInstanceIdResponse
+        /// </returns>
         public ListSnapshotReposByInstanceIdResponse ListSnapshotReposByInstanceIdWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -9305,6 +15100,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListSnapshotReposByInstanceIdResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取跨集群索引仓库列表</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSnapshotReposByInstanceIdResponse
+        /// </returns>
         public async Task<ListSnapshotReposByInstanceIdResponse> ListSnapshotReposByInstanceIdWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -9326,6 +15136,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListSnapshotReposByInstanceIdResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取跨集群索引仓库列表</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListSnapshotReposByInstanceIdResponse
+        /// </returns>
         public ListSnapshotReposByInstanceIdResponse ListSnapshotReposByInstanceId(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9333,6 +15151,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListSnapshotReposByInstanceIdWithOptions(InstanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取跨集群索引仓库列表</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListSnapshotReposByInstanceIdResponse
+        /// </returns>
         public async Task<ListSnapshotReposByInstanceIdResponse> ListSnapshotReposByInstanceIdAsync(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9340,6 +15166,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListSnapshotReposByInstanceIdWithOptionsAsync(InstanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看资源和标签关系</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public ListTagResourcesResponse ListTagResourcesWithOptions(ListTagResourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9388,6 +15232,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListTagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看资源和标签关系</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public async Task<ListTagResourcesResponse> ListTagResourcesWithOptionsAsync(ListTagResourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9436,6 +15298,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看资源和标签关系</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public ListTagResourcesResponse ListTagResources(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9443,6 +15317,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListTagResourcesWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看资源和标签关系</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public async Task<ListTagResourcesResponse> ListTagResourcesAsync(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9450,6 +15336,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListTagResourcesWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看所有已常见的标签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagsResponse
+        /// </returns>
         public ListTagsResponse ListTagsWithOptions(ListTagsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9482,6 +15386,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListTagsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看所有已常见的标签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagsResponse
+        /// </returns>
         public async Task<ListTagsResponse> ListTagsWithOptionsAsync(ListTagsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9514,6 +15436,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListTagsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看所有已常见的标签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagsResponse
+        /// </returns>
         public ListTagsResponse ListTags(ListTagsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9521,6 +15455,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListTagsWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看所有已常见的标签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagsResponse
+        /// </returns>
         public async Task<ListTagsResponse> ListTagsAsync(ListTagsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9528,6 +15474,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListTagsWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statuses of endpoints in the virtual private cloud (VPC) within the Elasticsearch service account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVpcEndpointsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVpcEndpointsResponse
+        /// </returns>
         public ListVpcEndpointsResponse ListVpcEndpointsWithOptions(string InstanceId, ListVpcEndpointsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9560,6 +15524,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListVpcEndpointsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statuses of endpoints in the virtual private cloud (VPC) within the Elasticsearch service account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVpcEndpointsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVpcEndpointsResponse
+        /// </returns>
         public async Task<ListVpcEndpointsResponse> ListVpcEndpointsWithOptionsAsync(string InstanceId, ListVpcEndpointsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9592,6 +15574,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListVpcEndpointsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statuses of endpoints in the virtual private cloud (VPC) within the Elasticsearch service account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVpcEndpointsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVpcEndpointsResponse
+        /// </returns>
         public ListVpcEndpointsResponse ListVpcEndpoints(string InstanceId, ListVpcEndpointsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9599,6 +15593,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListVpcEndpointsWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statuses of endpoints in the virtual private cloud (VPC) within the Elasticsearch service account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVpcEndpointsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVpcEndpointsResponse
+        /// </returns>
         public async Task<ListVpcEndpointsResponse> ListVpcEndpointsAsync(string InstanceId, ListVpcEndpointsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9606,18 +15612,35 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListVpcEndpointsWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * If the specifications in your zone are insufficient, you can upgrade your instance to nodes in another zone. Before calling this interface, you must ensure that:
-          * *   The error message returned because the current account is in a zone that has sufficient resources.
-          *     After migrating nodes with current specifications to another zone, you need to manually [upgrade cluster](~~96650~~) because the cluster will not be upgraded during the migration process. Therefore, select a zone with sufficient resources to avoid cluster upgrade failure. We recommend that you choose new zones that are in lower alphabetical order. For example, for cn-hangzhou-e and cn-hangzhou-h zones, choose cn-hangzhou-h first.
-          * *   The cluster is in the healthy state.
-          *     Can be passed`  GET _cat/health?v  `command to view the health status of the cluster.
-          *
-          * @param request MigrateToOtherZoneRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return MigrateToOtherZoneResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call the MigrateToOtherZone to migrate the nodes in the specified zone to the destination zone.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If the specifications in your zone are insufficient, you can upgrade your instance to nodes in another zone. Before calling this interface, you must ensure that:</para>
+        /// <list type="bullet">
+        /// <item><description>The error message returned because the current account is in a zone that has sufficient resources.
+        /// After migrating nodes with current specifications to another zone, you need to manually <a href="https://help.aliyun.com/document_detail/96650.html">upgrade cluster</a> because the cluster will not be upgraded during the migration process. Therefore, select a zone with sufficient resources to avoid cluster upgrade failure. We recommend that you choose new zones that are in lower alphabetical order. For example, for cn-hangzhou-e and cn-hangzhou-h zones, choose cn-hangzhou-h first.</description></item>
+        /// <item><description>The cluster is in the healthy state.
+        /// Can be passed<c> GET _cat/health?v </c>command to view the health status of the cluster.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MigrateToOtherZoneRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MigrateToOtherZoneResponse
+        /// </returns>
         public MigrateToOtherZoneResponse MigrateToOtherZoneWithOptions(string InstanceId, MigrateToOtherZoneRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9647,18 +15670,35 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<MigrateToOtherZoneResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * If the specifications in your zone are insufficient, you can upgrade your instance to nodes in another zone. Before calling this interface, you must ensure that:
-          * *   The error message returned because the current account is in a zone that has sufficient resources.
-          *     After migrating nodes with current specifications to another zone, you need to manually [upgrade cluster](~~96650~~) because the cluster will not be upgraded during the migration process. Therefore, select a zone with sufficient resources to avoid cluster upgrade failure. We recommend that you choose new zones that are in lower alphabetical order. For example, for cn-hangzhou-e and cn-hangzhou-h zones, choose cn-hangzhou-h first.
-          * *   The cluster is in the healthy state.
-          *     Can be passed`  GET _cat/health?v  `command to view the health status of the cluster.
-          *
-          * @param request MigrateToOtherZoneRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return MigrateToOtherZoneResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call the MigrateToOtherZone to migrate the nodes in the specified zone to the destination zone.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If the specifications in your zone are insufficient, you can upgrade your instance to nodes in another zone. Before calling this interface, you must ensure that:</para>
+        /// <list type="bullet">
+        /// <item><description>The error message returned because the current account is in a zone that has sufficient resources.
+        /// After migrating nodes with current specifications to another zone, you need to manually <a href="https://help.aliyun.com/document_detail/96650.html">upgrade cluster</a> because the cluster will not be upgraded during the migration process. Therefore, select a zone with sufficient resources to avoid cluster upgrade failure. We recommend that you choose new zones that are in lower alphabetical order. For example, for cn-hangzhou-e and cn-hangzhou-h zones, choose cn-hangzhou-h first.</description></item>
+        /// <item><description>The cluster is in the healthy state.
+        /// Can be passed<c> GET _cat/health?v </c>command to view the health status of the cluster.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MigrateToOtherZoneRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MigrateToOtherZoneResponse
+        /// </returns>
         public async Task<MigrateToOtherZoneResponse> MigrateToOtherZoneWithOptionsAsync(string InstanceId, MigrateToOtherZoneRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9688,16 +15728,29 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<MigrateToOtherZoneResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * If the specifications in your zone are insufficient, you can upgrade your instance to nodes in another zone. Before calling this interface, you must ensure that:
-          * *   The error message returned because the current account is in a zone that has sufficient resources.
-          *     After migrating nodes with current specifications to another zone, you need to manually [upgrade cluster](~~96650~~) because the cluster will not be upgraded during the migration process. Therefore, select a zone with sufficient resources to avoid cluster upgrade failure. We recommend that you choose new zones that are in lower alphabetical order. For example, for cn-hangzhou-e and cn-hangzhou-h zones, choose cn-hangzhou-h first.
-          * *   The cluster is in the healthy state.
-          *     Can be passed`  GET _cat/health?v  `command to view the health status of the cluster.
-          *
-          * @param request MigrateToOtherZoneRequest
-          * @return MigrateToOtherZoneResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call the MigrateToOtherZone to migrate the nodes in the specified zone to the destination zone.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If the specifications in your zone are insufficient, you can upgrade your instance to nodes in another zone. Before calling this interface, you must ensure that:</para>
+        /// <list type="bullet">
+        /// <item><description>The error message returned because the current account is in a zone that has sufficient resources.
+        /// After migrating nodes with current specifications to another zone, you need to manually <a href="https://help.aliyun.com/document_detail/96650.html">upgrade cluster</a> because the cluster will not be upgraded during the migration process. Therefore, select a zone with sufficient resources to avoid cluster upgrade failure. We recommend that you choose new zones that are in lower alphabetical order. For example, for cn-hangzhou-e and cn-hangzhou-h zones, choose cn-hangzhou-h first.</description></item>
+        /// <item><description>The cluster is in the healthy state.
+        /// Can be passed<c> GET _cat/health?v </c>command to view the health status of the cluster.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MigrateToOtherZoneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MigrateToOtherZoneResponse
+        /// </returns>
         public MigrateToOtherZoneResponse MigrateToOtherZone(string InstanceId, MigrateToOtherZoneRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9705,16 +15758,29 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return MigrateToOtherZoneWithOptions(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * If the specifications in your zone are insufficient, you can upgrade your instance to nodes in another zone. Before calling this interface, you must ensure that:
-          * *   The error message returned because the current account is in a zone that has sufficient resources.
-          *     After migrating nodes with current specifications to another zone, you need to manually [upgrade cluster](~~96650~~) because the cluster will not be upgraded during the migration process. Therefore, select a zone with sufficient resources to avoid cluster upgrade failure. We recommend that you choose new zones that are in lower alphabetical order. For example, for cn-hangzhou-e and cn-hangzhou-h zones, choose cn-hangzhou-h first.
-          * *   The cluster is in the healthy state.
-          *     Can be passed`  GET _cat/health?v  `command to view the health status of the cluster.
-          *
-          * @param request MigrateToOtherZoneRequest
-          * @return MigrateToOtherZoneResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call the MigrateToOtherZone to migrate the nodes in the specified zone to the destination zone.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If the specifications in your zone are insufficient, you can upgrade your instance to nodes in another zone. Before calling this interface, you must ensure that:</para>
+        /// <list type="bullet">
+        /// <item><description>The error message returned because the current account is in a zone that has sufficient resources.
+        /// After migrating nodes with current specifications to another zone, you need to manually <a href="https://help.aliyun.com/document_detail/96650.html">upgrade cluster</a> because the cluster will not be upgraded during the migration process. Therefore, select a zone with sufficient resources to avoid cluster upgrade failure. We recommend that you choose new zones that are in lower alphabetical order. For example, for cn-hangzhou-e and cn-hangzhou-h zones, choose cn-hangzhou-h first.</description></item>
+        /// <item><description>The cluster is in the healthy state.
+        /// Can be passed<c> GET _cat/health?v </c>command to view the health status of the cluster.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MigrateToOtherZoneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MigrateToOtherZoneResponse
+        /// </returns>
         public async Task<MigrateToOtherZoneResponse> MigrateToOtherZoneAsync(string InstanceId, MigrateToOtherZoneRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9722,6 +15788,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await MigrateToOtherZoneWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the Elastic Compute Service (ECS) instances on which a shipper is installed.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDeployMachineRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDeployMachineResponse
+        /// </returns>
         public ModifyDeployMachineResponse ModifyDeployMachineWithOptions(string ResId, ModifyDeployMachineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9751,6 +15835,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ModifyDeployMachineResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the Elastic Compute Service (ECS) instances on which a shipper is installed.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDeployMachineRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDeployMachineResponse
+        /// </returns>
         public async Task<ModifyDeployMachineResponse> ModifyDeployMachineWithOptionsAsync(string ResId, ModifyDeployMachineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9780,6 +15882,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ModifyDeployMachineResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the Elastic Compute Service (ECS) instances on which a shipper is installed.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDeployMachineRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDeployMachineResponse
+        /// </returns>
         public ModifyDeployMachineResponse ModifyDeployMachine(string ResId, ModifyDeployMachineRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9787,6 +15901,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ModifyDeployMachineWithOptions(ResId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the Elastic Compute Service (ECS) instances on which a shipper is installed.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDeployMachineRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDeployMachineResponse
+        /// </returns>
         public async Task<ModifyDeployMachineResponse> ModifyDeployMachineAsync(string ResId, ModifyDeployMachineRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9794,6 +15920,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ModifyDeployMachineWithOptionsAsync(ResId, request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// ModifyElastictaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyElastictaskResponse
+        /// </returns>
         public ModifyElastictaskResponse ModifyElastictaskWithOptions(string InstanceId, ModifyElastictaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9817,6 +15956,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ModifyElastictaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// ModifyElastictaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyElastictaskResponse
+        /// </returns>
         public async Task<ModifyElastictaskResponse> ModifyElastictaskWithOptionsAsync(string InstanceId, ModifyElastictaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9840,6 +15992,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ModifyElastictaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// ModifyElastictaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyElastictaskResponse
+        /// </returns>
         public ModifyElastictaskResponse ModifyElastictask(string InstanceId, ModifyElastictaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9847,6 +16006,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ModifyElastictaskWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// ModifyElastictaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyElastictaskResponse
+        /// </returns>
         public async Task<ModifyElastictaskResponse> ModifyElastictaskAsync(string InstanceId, ModifyElastictaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9854,14 +16020,75 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ModifyElastictaskWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * es-cn-n6w1o1x0w001c\\*\\*\\*\\*
-          *
-          * @param request ModifyInstanceMaintainTimeRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyInstanceMaintainTimeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <h2>RequestBody</h2>
+        /// <para>You must also specify the following parameters in the RequestBody parameter to specify the maintenance window information.  </para>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Parameter</th>
+        /// <th>Type</th>
+        /// <th>Required</th>
+        /// <th>Example</th>
+        /// <th>Description</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>maintainStartTime</td>
+        /// <td>String</td>
+        /// <td>No</td>
+        /// <td>02:00Z</td>
+        /// <td>The start time of the maintenance window. Specify the time in the HH:mmZ format. The time must be in UTC.</td>
+        /// </tr>
+        /// <tr>
+        /// <td>maintainEndTime</td>
+        /// <td>String</td>
+        /// <td>No</td>
+        /// <td>06:00Z</td>
+        /// <td>The end time of the maintenance window. Specify the time in the HH:mmZ format. The time must be displayed in UTC.</td>
+        /// </tr>
+        /// <tr>
+        /// <td>openMaintainTime</td>
+        /// <td>boolean</td>
+        /// <td>Yes</td>
+        /// <td>true</td>
+        /// <td>Specifies whether to enable the maintenance window feature. Only <b>true</b> is supported, indicating that the feature is enabled.</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Examples:</td>
+        /// <td></td>
+        /// <td></td>
+        /// <td></td>
+        /// <td></td>
+        /// </tr>
+        /// </tbody></table>
+        /// <pre><c>{
+        ///     &quot;openMaintainTime&quot;: true,
+        ///     &quot;maintainStartTime&quot;: &quot;03:00Z&quot;,
+        ///     &quot;maintainEndTime&quot;: &quot;04:00Z&quot;
+        /// }
+        /// </c></pre>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>es-cn-n6w1o1x0w001c\<em>\</em>\<em>\</em></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceMaintainTimeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceMaintainTimeResponse
+        /// </returns>
         public ModifyInstanceMaintainTimeResponse ModifyInstanceMaintainTimeWithOptions(string InstanceId, ModifyInstanceMaintainTimeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9891,14 +16118,75 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ModifyInstanceMaintainTimeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * es-cn-n6w1o1x0w001c\\*\\*\\*\\*
-          *
-          * @param request ModifyInstanceMaintainTimeRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyInstanceMaintainTimeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <h2>RequestBody</h2>
+        /// <para>You must also specify the following parameters in the RequestBody parameter to specify the maintenance window information.  </para>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Parameter</th>
+        /// <th>Type</th>
+        /// <th>Required</th>
+        /// <th>Example</th>
+        /// <th>Description</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>maintainStartTime</td>
+        /// <td>String</td>
+        /// <td>No</td>
+        /// <td>02:00Z</td>
+        /// <td>The start time of the maintenance window. Specify the time in the HH:mmZ format. The time must be in UTC.</td>
+        /// </tr>
+        /// <tr>
+        /// <td>maintainEndTime</td>
+        /// <td>String</td>
+        /// <td>No</td>
+        /// <td>06:00Z</td>
+        /// <td>The end time of the maintenance window. Specify the time in the HH:mmZ format. The time must be displayed in UTC.</td>
+        /// </tr>
+        /// <tr>
+        /// <td>openMaintainTime</td>
+        /// <td>boolean</td>
+        /// <td>Yes</td>
+        /// <td>true</td>
+        /// <td>Specifies whether to enable the maintenance window feature. Only <b>true</b> is supported, indicating that the feature is enabled.</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Examples:</td>
+        /// <td></td>
+        /// <td></td>
+        /// <td></td>
+        /// <td></td>
+        /// </tr>
+        /// </tbody></table>
+        /// <pre><c>{
+        ///     &quot;openMaintainTime&quot;: true,
+        ///     &quot;maintainStartTime&quot;: &quot;03:00Z&quot;,
+        ///     &quot;maintainEndTime&quot;: &quot;04:00Z&quot;
+        /// }
+        /// </c></pre>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>es-cn-n6w1o1x0w001c\<em>\</em>\<em>\</em></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceMaintainTimeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceMaintainTimeResponse
+        /// </returns>
         public async Task<ModifyInstanceMaintainTimeResponse> ModifyInstanceMaintainTimeWithOptionsAsync(string InstanceId, ModifyInstanceMaintainTimeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9928,12 +16216,69 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ModifyInstanceMaintainTimeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * es-cn-n6w1o1x0w001c\\*\\*\\*\\*
-          *
-          * @param request ModifyInstanceMaintainTimeRequest
-          * @return ModifyInstanceMaintainTimeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <h2>RequestBody</h2>
+        /// <para>You must also specify the following parameters in the RequestBody parameter to specify the maintenance window information.  </para>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Parameter</th>
+        /// <th>Type</th>
+        /// <th>Required</th>
+        /// <th>Example</th>
+        /// <th>Description</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>maintainStartTime</td>
+        /// <td>String</td>
+        /// <td>No</td>
+        /// <td>02:00Z</td>
+        /// <td>The start time of the maintenance window. Specify the time in the HH:mmZ format. The time must be in UTC.</td>
+        /// </tr>
+        /// <tr>
+        /// <td>maintainEndTime</td>
+        /// <td>String</td>
+        /// <td>No</td>
+        /// <td>06:00Z</td>
+        /// <td>The end time of the maintenance window. Specify the time in the HH:mmZ format. The time must be displayed in UTC.</td>
+        /// </tr>
+        /// <tr>
+        /// <td>openMaintainTime</td>
+        /// <td>boolean</td>
+        /// <td>Yes</td>
+        /// <td>true</td>
+        /// <td>Specifies whether to enable the maintenance window feature. Only <b>true</b> is supported, indicating that the feature is enabled.</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Examples:</td>
+        /// <td></td>
+        /// <td></td>
+        /// <td></td>
+        /// <td></td>
+        /// </tr>
+        /// </tbody></table>
+        /// <pre><c>{
+        ///     &quot;openMaintainTime&quot;: true,
+        ///     &quot;maintainStartTime&quot;: &quot;03:00Z&quot;,
+        ///     &quot;maintainEndTime&quot;: &quot;04:00Z&quot;
+        /// }
+        /// </c></pre>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>es-cn-n6w1o1x0w001c\<em>\</em>\<em>\</em></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceMaintainTimeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceMaintainTimeResponse
+        /// </returns>
         public ModifyInstanceMaintainTimeResponse ModifyInstanceMaintainTime(string InstanceId, ModifyInstanceMaintainTimeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9941,12 +16286,69 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ModifyInstanceMaintainTimeWithOptions(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * es-cn-n6w1o1x0w001c\\*\\*\\*\\*
-          *
-          * @param request ModifyInstanceMaintainTimeRequest
-          * @return ModifyInstanceMaintainTimeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <h2>RequestBody</h2>
+        /// <para>You must also specify the following parameters in the RequestBody parameter to specify the maintenance window information.  </para>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Parameter</th>
+        /// <th>Type</th>
+        /// <th>Required</th>
+        /// <th>Example</th>
+        /// <th>Description</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>maintainStartTime</td>
+        /// <td>String</td>
+        /// <td>No</td>
+        /// <td>02:00Z</td>
+        /// <td>The start time of the maintenance window. Specify the time in the HH:mmZ format. The time must be in UTC.</td>
+        /// </tr>
+        /// <tr>
+        /// <td>maintainEndTime</td>
+        /// <td>String</td>
+        /// <td>No</td>
+        /// <td>06:00Z</td>
+        /// <td>The end time of the maintenance window. Specify the time in the HH:mmZ format. The time must be displayed in UTC.</td>
+        /// </tr>
+        /// <tr>
+        /// <td>openMaintainTime</td>
+        /// <td>boolean</td>
+        /// <td>Yes</td>
+        /// <td>true</td>
+        /// <td>Specifies whether to enable the maintenance window feature. Only <b>true</b> is supported, indicating that the feature is enabled.</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Examples:</td>
+        /// <td></td>
+        /// <td></td>
+        /// <td></td>
+        /// <td></td>
+        /// </tr>
+        /// </tbody></table>
+        /// <pre><c>{
+        ///     &quot;openMaintainTime&quot;: true,
+        ///     &quot;maintainStartTime&quot;: &quot;03:00Z&quot;,
+        ///     &quot;maintainEndTime&quot;: &quot;04:00Z&quot;
+        /// }
+        /// </c></pre>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>es-cn-n6w1o1x0w001c\<em>\</em>\<em>\</em></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceMaintainTimeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceMaintainTimeResponse
+        /// </returns>
         public async Task<ModifyInstanceMaintainTimeResponse> ModifyInstanceMaintainTimeAsync(string InstanceId, ModifyInstanceMaintainTimeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9954,14 +16356,36 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ModifyInstanceMaintainTimeWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * The ID of the cluster.
-          *
-          * @param request ModifyWhiteIpsRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyWhiteIpsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <remarks>
+        /// <para> If you want to add an IP address whitelist, you can set the modifyMode parameter only to Cover. If you set this parameter to Delete or Append, you can only update an IP address whitelist.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>If you set the modifyMode parameter to Cover and leave the ips parameter empty, the system deletes the specified whitelist. If the whitelist specified by using the groupName parameter does not exist, the system creates such a whitelist.</description></item>
+        /// <item><description>If you set the modifyMode parameter to Delete, at least one IP address must be retained for the specified whitelist.</description></item>
+        /// <item><description>If you set the modifyMode parameter to Append, you must make sure that the specified whitelist exists. Otherwise, the system reports the NotFound error.</description></item>
+        /// </list>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The ID of the cluster.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyWhiteIpsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyWhiteIpsResponse
+        /// </returns>
         public ModifyWhiteIpsResponse ModifyWhiteIpsWithOptions(string InstanceId, ModifyWhiteIpsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10012,14 +16436,36 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ModifyWhiteIpsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * The ID of the cluster.
-          *
-          * @param request ModifyWhiteIpsRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ModifyWhiteIpsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <remarks>
+        /// <para> If you want to add an IP address whitelist, you can set the modifyMode parameter only to Cover. If you set this parameter to Delete or Append, you can only update an IP address whitelist.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>If you set the modifyMode parameter to Cover and leave the ips parameter empty, the system deletes the specified whitelist. If the whitelist specified by using the groupName parameter does not exist, the system creates such a whitelist.</description></item>
+        /// <item><description>If you set the modifyMode parameter to Delete, at least one IP address must be retained for the specified whitelist.</description></item>
+        /// <item><description>If you set the modifyMode parameter to Append, you must make sure that the specified whitelist exists. Otherwise, the system reports the NotFound error.</description></item>
+        /// </list>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The ID of the cluster.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyWhiteIpsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyWhiteIpsResponse
+        /// </returns>
         public async Task<ModifyWhiteIpsResponse> ModifyWhiteIpsWithOptionsAsync(string InstanceId, ModifyWhiteIpsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10070,12 +16516,30 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ModifyWhiteIpsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * The ID of the cluster.
-          *
-          * @param request ModifyWhiteIpsRequest
-          * @return ModifyWhiteIpsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <remarks>
+        /// <para> If you want to add an IP address whitelist, you can set the modifyMode parameter only to Cover. If you set this parameter to Delete or Append, you can only update an IP address whitelist.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>If you set the modifyMode parameter to Cover and leave the ips parameter empty, the system deletes the specified whitelist. If the whitelist specified by using the groupName parameter does not exist, the system creates such a whitelist.</description></item>
+        /// <item><description>If you set the modifyMode parameter to Delete, at least one IP address must be retained for the specified whitelist.</description></item>
+        /// <item><description>If you set the modifyMode parameter to Append, you must make sure that the specified whitelist exists. Otherwise, the system reports the NotFound error.</description></item>
+        /// </list>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The ID of the cluster.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyWhiteIpsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyWhiteIpsResponse
+        /// </returns>
         public ModifyWhiteIpsResponse ModifyWhiteIps(string InstanceId, ModifyWhiteIpsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10083,12 +16547,30 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ModifyWhiteIpsWithOptions(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * The ID of the cluster.
-          *
-          * @param request ModifyWhiteIpsRequest
-          * @return ModifyWhiteIpsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <remarks>
+        /// <para> If you want to add an IP address whitelist, you can set the modifyMode parameter only to Cover. If you set this parameter to Delete or Append, you can only update an IP address whitelist.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>If you set the modifyMode parameter to Cover and leave the ips parameter empty, the system deletes the specified whitelist. If the whitelist specified by using the groupName parameter does not exist, the system creates such a whitelist.</description></item>
+        /// <item><description>If you set the modifyMode parameter to Delete, at least one IP address must be retained for the specified whitelist.</description></item>
+        /// <item><description>If you set the modifyMode parameter to Append, you must make sure that the specified whitelist exists. Otherwise, the system reports the NotFound error.</description></item>
+        /// </list>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The ID of the cluster.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyWhiteIpsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyWhiteIpsResponse
+        /// </returns>
         public async Task<ModifyWhiteIpsResponse> ModifyWhiteIpsAsync(string InstanceId, ModifyWhiteIpsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10096,6 +16578,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ModifyWhiteIpsWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Migrates an Elasticsearch cluster to a specified resource group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MoveResourceGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MoveResourceGroupResponse
+        /// </returns>
         public MoveResourceGroupResponse MoveResourceGroupWithOptions(string InstanceId, MoveResourceGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10125,6 +16625,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<MoveResourceGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Migrates an Elasticsearch cluster to a specified resource group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MoveResourceGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MoveResourceGroupResponse
+        /// </returns>
         public async Task<MoveResourceGroupResponse> MoveResourceGroupWithOptionsAsync(string InstanceId, MoveResourceGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10154,6 +16672,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<MoveResourceGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Migrates an Elasticsearch cluster to a specified resource group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MoveResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MoveResourceGroupResponse
+        /// </returns>
         public MoveResourceGroupResponse MoveResourceGroup(string InstanceId, MoveResourceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10161,6 +16691,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return MoveResourceGroupWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Migrates an Elasticsearch cluster to a specified resource group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MoveResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MoveResourceGroupResponse
+        /// </returns>
         public async Task<MoveResourceGroupResponse> MoveResourceGroupAsync(string InstanceId, MoveResourceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10168,6 +16710,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await MoveResourceGroupWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// OpenDiagnosisRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenDiagnosisResponse
+        /// </returns>
         public OpenDiagnosisResponse OpenDiagnosisWithOptions(string InstanceId, OpenDiagnosisRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10200,6 +16755,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<OpenDiagnosisResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// OpenDiagnosisRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenDiagnosisResponse
+        /// </returns>
         public async Task<OpenDiagnosisResponse> OpenDiagnosisWithOptionsAsync(string InstanceId, OpenDiagnosisRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10232,6 +16800,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<OpenDiagnosisResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// OpenDiagnosisRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenDiagnosisResponse
+        /// </returns>
         public OpenDiagnosisResponse OpenDiagnosis(string InstanceId, OpenDiagnosisRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10239,6 +16814,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return OpenDiagnosisWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// OpenDiagnosisRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenDiagnosisResponse
+        /// </returns>
         public async Task<OpenDiagnosisResponse> OpenDiagnosisAsync(string InstanceId, OpenDiagnosisRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10246,14 +16828,26 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await OpenDiagnosisWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * >  To ensure data security, we recommend that you enable HTTPS.
-          *
-          * @param request OpenHttpsRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return OpenHttpsResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> To ensure data security, we recommend that you enable HTTPS.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// OpenHttpsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenHttpsResponse
+        /// </returns>
         public OpenHttpsResponse OpenHttpsWithOptions(string InstanceId, OpenHttpsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10282,14 +16876,26 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<OpenHttpsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * >  To ensure data security, we recommend that you enable HTTPS.
-          *
-          * @param request OpenHttpsRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return OpenHttpsResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> To ensure data security, we recommend that you enable HTTPS.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// OpenHttpsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenHttpsResponse
+        /// </returns>
         public async Task<OpenHttpsResponse> OpenHttpsWithOptionsAsync(string InstanceId, OpenHttpsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10318,12 +16924,20 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<OpenHttpsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * >  To ensure data security, we recommend that you enable HTTPS.
-          *
-          * @param request OpenHttpsRequest
-          * @return OpenHttpsResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> To ensure data security, we recommend that you enable HTTPS.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// OpenHttpsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenHttpsResponse
+        /// </returns>
         public OpenHttpsResponse OpenHttps(string InstanceId, OpenHttpsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10331,12 +16945,20 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return OpenHttpsWithOptions(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * >  To ensure data security, we recommend that you enable HTTPS.
-          *
-          * @param request OpenHttpsRequest
-          * @return OpenHttpsResponse
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> To ensure data security, we recommend that you enable HTTPS.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// OpenHttpsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenHttpsResponse
+        /// </returns>
         public async Task<OpenHttpsResponse> OpenHttpsAsync(string InstanceId, OpenHttpsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10344,6 +16966,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await OpenHttpsWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// PostEmonTryAlarmRuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PostEmonTryAlarmRuleResponse
+        /// </returns>
         public PostEmonTryAlarmRuleResponse PostEmonTryAlarmRuleWithOptions(string ProjectId, string AlarmGroupId, PostEmonTryAlarmRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10367,6 +17002,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<PostEmonTryAlarmRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// PostEmonTryAlarmRuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PostEmonTryAlarmRuleResponse
+        /// </returns>
         public async Task<PostEmonTryAlarmRuleResponse> PostEmonTryAlarmRuleWithOptionsAsync(string ProjectId, string AlarmGroupId, PostEmonTryAlarmRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10390,6 +17038,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<PostEmonTryAlarmRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// PostEmonTryAlarmRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PostEmonTryAlarmRuleResponse
+        /// </returns>
         public PostEmonTryAlarmRuleResponse PostEmonTryAlarmRule(string ProjectId, string AlarmGroupId, PostEmonTryAlarmRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10397,6 +17052,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return PostEmonTryAlarmRuleWithOptions(ProjectId, AlarmGroupId, request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// PostEmonTryAlarmRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PostEmonTryAlarmRuleResponse
+        /// </returns>
         public async Task<PostEmonTryAlarmRuleResponse> PostEmonTryAlarmRuleAsync(string ProjectId, string AlarmGroupId, PostEmonTryAlarmRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10404,6 +17066,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await PostEmonTryAlarmRuleWithOptionsAsync(ProjectId, AlarmGroupId, request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// RecommendTemplatesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecommendTemplatesResponse
+        /// </returns>
         public RecommendTemplatesResponse RecommendTemplatesWithOptions(string InstanceId, RecommendTemplatesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10432,6 +17107,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<RecommendTemplatesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// RecommendTemplatesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecommendTemplatesResponse
+        /// </returns>
         public async Task<RecommendTemplatesResponse> RecommendTemplatesWithOptionsAsync(string InstanceId, RecommendTemplatesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10460,6 +17148,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<RecommendTemplatesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// RecommendTemplatesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecommendTemplatesResponse
+        /// </returns>
         public RecommendTemplatesResponse RecommendTemplates(string InstanceId, RecommendTemplatesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10467,6 +17162,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return RecommendTemplatesWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// RecommendTemplatesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecommendTemplatesResponse
+        /// </returns>
         public async Task<RecommendTemplatesResponse> RecommendTemplatesAsync(string InstanceId, RecommendTemplatesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10474,6 +17176,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await RecommendTemplatesWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Installs a shipper that failed to be installed when you create the shipper.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReinstallCollectorRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReinstallCollectorResponse
+        /// </returns>
         public ReinstallCollectorResponse ReinstallCollectorWithOptions(string ResId, ReinstallCollectorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10503,6 +17223,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ReinstallCollectorResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Installs a shipper that failed to be installed when you create the shipper.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReinstallCollectorRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReinstallCollectorResponse
+        /// </returns>
         public async Task<ReinstallCollectorResponse> ReinstallCollectorWithOptionsAsync(string ResId, ReinstallCollectorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10532,6 +17270,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ReinstallCollectorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Installs a shipper that failed to be installed when you create the shipper.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReinstallCollectorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReinstallCollectorResponse
+        /// </returns>
         public ReinstallCollectorResponse ReinstallCollector(string ResId, ReinstallCollectorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10539,6 +17289,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ReinstallCollectorWithOptions(ResId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Installs a shipper that failed to be installed when you create the shipper.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReinstallCollectorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReinstallCollectorResponse
+        /// </returns>
         public async Task<ReinstallCollectorResponse> ReinstallCollectorAsync(string ResId, ReinstallCollectorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10546,6 +17308,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ReinstallCollectorWithOptionsAsync(ResId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>RemoveApm</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveApmResponse
+        /// </returns>
         public RemoveApmResponse RemoveApmWithOptions(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -10567,6 +17344,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<RemoveApmResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>RemoveApm</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveApmResponse
+        /// </returns>
         public async Task<RemoveApmResponse> RemoveApmWithOptionsAsync(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -10588,6 +17380,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<RemoveApmResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>RemoveApm</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// RemoveApmResponse
+        /// </returns>
         public RemoveApmResponse RemoveApm(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10595,6 +17395,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return RemoveApmWithOptions(instanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>RemoveApm</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// RemoveApmResponse
+        /// </returns>
         public async Task<RemoveApmResponse> RemoveApmAsync(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10602,6 +17410,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await RemoveApmWithOptionsAsync(instanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call RenewInstance to renew a subscription instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RenewInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenewInstanceResponse
+        /// </returns>
         public RenewInstanceResponse RenewInstanceWithOptions(string InstanceId, RenewInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10631,6 +17457,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<RenewInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call RenewInstance to renew a subscription instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RenewInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenewInstanceResponse
+        /// </returns>
         public async Task<RenewInstanceResponse> RenewInstanceWithOptionsAsync(string InstanceId, RenewInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10660,6 +17504,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<RenewInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call RenewInstance to renew a subscription instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RenewInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenewInstanceResponse
+        /// </returns>
         public RenewInstanceResponse RenewInstance(string InstanceId, RenewInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10667,6 +17523,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return RenewInstanceWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call RenewInstance to renew a subscription instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RenewInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenewInstanceResponse
+        /// </returns>
         public async Task<RenewInstanceResponse> RenewInstanceAsync(string InstanceId, RenewInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10674,6 +17542,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await RenewInstanceWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Renews a Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RenewLogstashRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenewLogstashResponse
+        /// </returns>
         public RenewLogstashResponse RenewLogstashWithOptions(string InstanceId, RenewLogstashRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10703,6 +17589,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<RenewLogstashResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Renews a Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RenewLogstashRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenewLogstashResponse
+        /// </returns>
         public async Task<RenewLogstashResponse> RenewLogstashWithOptionsAsync(string InstanceId, RenewLogstashRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10732,6 +17636,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<RenewLogstashResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Renews a Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RenewLogstashRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenewLogstashResponse
+        /// </returns>
         public RenewLogstashResponse RenewLogstash(string InstanceId, RenewLogstashRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10739,6 +17655,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return RenewLogstashWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Renews a Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RenewLogstashRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenewLogstashResponse
+        /// </returns>
         public async Task<RenewLogstashResponse> RenewLogstashAsync(string InstanceId, RenewLogstashRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10746,6 +17674,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await RenewLogstashWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restarts a shipper.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RestartCollectorRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestartCollectorResponse
+        /// </returns>
         public RestartCollectorResponse RestartCollectorWithOptions(string ResId, RestartCollectorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10774,6 +17720,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<RestartCollectorResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restarts a shipper.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RestartCollectorRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestartCollectorResponse
+        /// </returns>
         public async Task<RestartCollectorResponse> RestartCollectorWithOptionsAsync(string ResId, RestartCollectorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10802,6 +17766,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<RestartCollectorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restarts a shipper.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RestartCollectorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestartCollectorResponse
+        /// </returns>
         public RestartCollectorResponse RestartCollector(string ResId, RestartCollectorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10809,6 +17785,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return RestartCollectorWithOptions(ResId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restarts a shipper.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RestartCollectorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestartCollectorResponse
+        /// </returns>
         public async Task<RestartCollectorResponse> RestartCollectorAsync(string ResId, RestartCollectorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10816,14 +17804,31 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await RestartCollectorWithOptionsAsync(ResId, request, headers, runtime);
         }
 
-        /**
-          * >  After the instance is restarted, the instance enters the activating state. After the instance is restarted, its status changes to active. Alibaba Cloud Elasticsearch supports restarting a single node. Restarting a node can be divided into normal restart and blue-green restart.
-          *
-          * @param request RestartInstanceRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return RestartInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to restart a specified Elasticsearch instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> After the instance is restarted, the instance enters the activating state. After the instance is restarted, its status changes to active. Alibaba Cloud Elasticsearch supports restarting a single node. Restarting a node can be divided into normal restart and blue-green restart.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RestartInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestartInstanceResponse
+        /// </returns>
         public RestartInstanceResponse RestartInstanceWithOptions(string InstanceId, RestartInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10857,14 +17862,31 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<RestartInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * >  After the instance is restarted, the instance enters the activating state. After the instance is restarted, its status changes to active. Alibaba Cloud Elasticsearch supports restarting a single node. Restarting a node can be divided into normal restart and blue-green restart.
-          *
-          * @param request RestartInstanceRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return RestartInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to restart a specified Elasticsearch instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> After the instance is restarted, the instance enters the activating state. After the instance is restarted, its status changes to active. Alibaba Cloud Elasticsearch supports restarting a single node. Restarting a node can be divided into normal restart and blue-green restart.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RestartInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestartInstanceResponse
+        /// </returns>
         public async Task<RestartInstanceResponse> RestartInstanceWithOptionsAsync(string InstanceId, RestartInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10898,12 +17920,25 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<RestartInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * >  After the instance is restarted, the instance enters the activating state. After the instance is restarted, its status changes to active. Alibaba Cloud Elasticsearch supports restarting a single node. Restarting a node can be divided into normal restart and blue-green restart.
-          *
-          * @param request RestartInstanceRequest
-          * @return RestartInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to restart a specified Elasticsearch instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> After the instance is restarted, the instance enters the activating state. After the instance is restarted, its status changes to active. Alibaba Cloud Elasticsearch supports restarting a single node. Restarting a node can be divided into normal restart and blue-green restart.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RestartInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestartInstanceResponse
+        /// </returns>
         public RestartInstanceResponse RestartInstance(string InstanceId, RestartInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10911,12 +17946,25 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return RestartInstanceWithOptions(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * >  After the instance is restarted, the instance enters the activating state. After the instance is restarted, its status changes to active. Alibaba Cloud Elasticsearch supports restarting a single node. Restarting a node can be divided into normal restart and blue-green restart.
-          *
-          * @param request RestartInstanceRequest
-          * @return RestartInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call this operation to restart a specified Elasticsearch instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> After the instance is restarted, the instance enters the activating state. After the instance is restarted, its status changes to active. Alibaba Cloud Elasticsearch supports restarting a single node. Restarting a node can be divided into normal restart and blue-green restart.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RestartInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestartInstanceResponse
+        /// </returns>
         public async Task<RestartInstanceResponse> RestartInstanceAsync(string InstanceId, RestartInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10924,6 +17972,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await RestartInstanceWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重启Logstash集群</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RestartLogstashRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestartLogstashResponse
+        /// </returns>
         public RestartLogstashResponse RestartLogstashWithOptions(string InstanceId, RestartLogstashRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10978,6 +18044,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<RestartLogstashResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重启Logstash集群</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RestartLogstashRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestartLogstashResponse
+        /// </returns>
         public async Task<RestartLogstashResponse> RestartLogstashWithOptionsAsync(string InstanceId, RestartLogstashRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11032,6 +18116,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<RestartLogstashResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重启Logstash集群</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RestartLogstashRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestartLogstashResponse
+        /// </returns>
         public RestartLogstashResponse RestartLogstash(string InstanceId, RestartLogstashRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11039,6 +18135,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return RestartLogstashWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重启Logstash集群</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RestartLogstashRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestartLogstashResponse
+        /// </returns>
         public async Task<RestartLogstashResponse> RestartLogstashAsync(string InstanceId, RestartLogstashRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11046,6 +18154,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await RestartLogstashWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// ResumeElasticsearchTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeElasticsearchTaskResponse
+        /// </returns>
         public ResumeElasticsearchTaskResponse ResumeElasticsearchTaskWithOptions(string InstanceId, ResumeElasticsearchTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11074,6 +18195,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ResumeElasticsearchTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// ResumeElasticsearchTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeElasticsearchTaskResponse
+        /// </returns>
         public async Task<ResumeElasticsearchTaskResponse> ResumeElasticsearchTaskWithOptionsAsync(string InstanceId, ResumeElasticsearchTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11102,6 +18236,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ResumeElasticsearchTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// ResumeElasticsearchTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeElasticsearchTaskResponse
+        /// </returns>
         public ResumeElasticsearchTaskResponse ResumeElasticsearchTask(string InstanceId, ResumeElasticsearchTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11109,6 +18250,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ResumeElasticsearchTaskWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// ResumeElasticsearchTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeElasticsearchTaskResponse
+        /// </returns>
         public async Task<ResumeElasticsearchTaskResponse> ResumeElasticsearchTaskAsync(string InstanceId, ResumeElasticsearchTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11116,6 +18264,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ResumeElasticsearchTaskWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resumes a change task of a Logstash cluster. After the task is resumed, the Logstash cluster is in the activating state.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResumeLogstashTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeLogstashTaskResponse
+        /// </returns>
         public ResumeLogstashTaskResponse ResumeLogstashTaskWithOptions(string InstanceId, ResumeLogstashTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11144,6 +18310,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ResumeLogstashTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resumes a change task of a Logstash cluster. After the task is resumed, the Logstash cluster is in the activating state.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResumeLogstashTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeLogstashTaskResponse
+        /// </returns>
         public async Task<ResumeLogstashTaskResponse> ResumeLogstashTaskWithOptionsAsync(string InstanceId, ResumeLogstashTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11172,6 +18356,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ResumeLogstashTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resumes a change task of a Logstash cluster. After the task is resumed, the Logstash cluster is in the activating state.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResumeLogstashTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeLogstashTaskResponse
+        /// </returns>
         public ResumeLogstashTaskResponse ResumeLogstashTask(string InstanceId, ResumeLogstashTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11179,6 +18375,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ResumeLogstashTaskWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resumes a change task of a Logstash cluster. After the task is resumed, the Logstash cluster is in the activating state.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResumeLogstashTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeLogstashTaskResponse
+        /// </returns>
         public async Task<ResumeLogstashTaskResponse> ResumeLogstashTaskAsync(string InstanceId, ResumeLogstashTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11186,6 +18394,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ResumeLogstashTaskWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>滚动数据流，生成新索引</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RolloverDataStreamRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RolloverDataStreamResponse
+        /// </returns>
         public RolloverDataStreamResponse RolloverDataStreamWithOptions(string InstanceId, string DataStream, RolloverDataStreamRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11214,6 +18440,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<RolloverDataStreamResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>滚动数据流，生成新索引</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RolloverDataStreamRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RolloverDataStreamResponse
+        /// </returns>
         public async Task<RolloverDataStreamResponse> RolloverDataStreamWithOptionsAsync(string InstanceId, string DataStream, RolloverDataStreamRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11242,6 +18486,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<RolloverDataStreamResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>滚动数据流，生成新索引</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RolloverDataStreamRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RolloverDataStreamResponse
+        /// </returns>
         public RolloverDataStreamResponse RolloverDataStream(string InstanceId, string DataStream, RolloverDataStreamRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11249,6 +18505,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return RolloverDataStreamWithOptions(InstanceId, DataStream, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>滚动数据流，生成新索引</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RolloverDataStreamRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RolloverDataStreamResponse
+        /// </returns>
         public async Task<RolloverDataStreamResponse> RolloverDataStreamAsync(string InstanceId, string DataStream, RolloverDataStreamRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11256,6 +18524,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await RolloverDataStreamWithOptionsAsync(InstanceId, DataStream, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Runs pipelines in a Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunPipelinesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunPipelinesResponse
+        /// </returns>
         public RunPipelinesResponse RunPipelinesWithOptions(string InstanceId, RunPipelinesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11285,6 +18571,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<RunPipelinesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Runs pipelines in a Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunPipelinesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunPipelinesResponse
+        /// </returns>
         public async Task<RunPipelinesResponse> RunPipelinesWithOptionsAsync(string InstanceId, RunPipelinesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11314,6 +18618,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<RunPipelinesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Runs pipelines in a Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunPipelinesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunPipelinesResponse
+        /// </returns>
         public RunPipelinesResponse RunPipelines(string InstanceId, RunPipelinesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11321,6 +18637,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return RunPipelinesWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Runs pipelines in a Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunPipelinesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunPipelinesResponse
+        /// </returns>
         public async Task<RunPipelinesResponse> RunPipelinesAsync(string InstanceId, RunPipelinesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11328,6 +18656,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await RunPipelinesWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ES集群缩节点</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ShrinkNodeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ShrinkNodeResponse
+        /// </returns>
         public ShrinkNodeResponse ShrinkNodeWithOptions(string InstanceId, ShrinkNodeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11369,6 +18715,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ShrinkNodeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ES集群缩节点</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ShrinkNodeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ShrinkNodeResponse
+        /// </returns>
         public async Task<ShrinkNodeResponse> ShrinkNodeWithOptionsAsync(string InstanceId, ShrinkNodeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11410,6 +18774,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ShrinkNodeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ES集群缩节点</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ShrinkNodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ShrinkNodeResponse
+        /// </returns>
         public ShrinkNodeResponse ShrinkNode(string InstanceId, ShrinkNodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11417,6 +18793,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ShrinkNodeWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ES集群缩节点</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ShrinkNodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ShrinkNodeResponse
+        /// </returns>
         public async Task<ShrinkNodeResponse> ShrinkNodeAsync(string InstanceId, ShrinkNodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11424,6 +18812,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ShrinkNodeWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>StartApm</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartApmResponse
+        /// </returns>
         public StartApmResponse StartApmWithOptions(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -11445,6 +18848,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<StartApmResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>StartApm</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartApmResponse
+        /// </returns>
         public async Task<StartApmResponse> StartApmWithOptionsAsync(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -11466,6 +18884,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<StartApmResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>StartApm</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// StartApmResponse
+        /// </returns>
         public StartApmResponse StartApm(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11473,6 +18899,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return StartApmWithOptions(instanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>StartApm</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// StartApmResponse
+        /// </returns>
         public async Task<StartApmResponse> StartApmAsync(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11480,6 +18914,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await StartApmWithOptionsAsync(instanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a collector to collect data.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartCollectorRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartCollectorResponse
+        /// </returns>
         public StartCollectorResponse StartCollectorWithOptions(string ResId, StartCollectorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11508,6 +18960,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<StartCollectorResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a collector to collect data.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartCollectorRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartCollectorResponse
+        /// </returns>
         public async Task<StartCollectorResponse> StartCollectorWithOptionsAsync(string ResId, StartCollectorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11536,6 +19006,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<StartCollectorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a collector to collect data.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartCollectorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartCollectorResponse
+        /// </returns>
         public StartCollectorResponse StartCollector(string ResId, StartCollectorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11543,6 +19025,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return StartCollectorWithOptions(ResId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a collector to collect data.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartCollectorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartCollectorResponse
+        /// </returns>
         public async Task<StartCollectorResponse> StartCollectorAsync(string ResId, StartCollectorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11550,6 +19044,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await StartCollectorWithOptionsAsync(ResId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>StopApm</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopApmResponse
+        /// </returns>
         public StopApmResponse StopApmWithOptions(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -11571,6 +19080,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<StopApmResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>StopApm</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopApmResponse
+        /// </returns>
         public async Task<StopApmResponse> StopApmWithOptionsAsync(string instanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -11592,6 +19116,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<StopApmResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>StopApm</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// StopApmResponse
+        /// </returns>
         public StopApmResponse StopApm(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11599,6 +19131,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return StopApmWithOptions(instanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>StopApm</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// StopApmResponse
+        /// </returns>
         public async Task<StopApmResponse> StopApmAsync(string instanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11606,6 +19146,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await StopApmWithOptionsAsync(instanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops a shipper.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopCollectorRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopCollectorResponse
+        /// </returns>
         public StopCollectorResponse StopCollectorWithOptions(string ResId, StopCollectorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11634,6 +19192,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<StopCollectorResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops a shipper.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopCollectorRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopCollectorResponse
+        /// </returns>
         public async Task<StopCollectorResponse> StopCollectorWithOptionsAsync(string ResId, StopCollectorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11662,6 +19238,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<StopCollectorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops a shipper.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopCollectorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopCollectorResponse
+        /// </returns>
         public StopCollectorResponse StopCollector(string ResId, StopCollectorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11669,6 +19257,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return StopCollectorWithOptions(ResId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops a shipper.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopCollectorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopCollectorResponse
+        /// </returns>
         public async Task<StopCollectorResponse> StopCollectorAsync(string ResId, StopCollectorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11676,6 +19276,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await StopCollectorWithOptionsAsync(ResId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops pipelines in a Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopPipelinesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopPipelinesResponse
+        /// </returns>
         public StopPipelinesResponse StopPipelinesWithOptions(string InstanceId, StopPipelinesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11705,6 +19323,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<StopPipelinesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops pipelines in a Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopPipelinesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopPipelinesResponse
+        /// </returns>
         public async Task<StopPipelinesResponse> StopPipelinesWithOptionsAsync(string InstanceId, StopPipelinesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11734,6 +19370,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<StopPipelinesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops pipelines in a Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopPipelinesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopPipelinesResponse
+        /// </returns>
         public StopPipelinesResponse StopPipelines(string InstanceId, StopPipelinesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11741,6 +19389,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return StopPipelinesWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops pipelines in a Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopPipelinesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopPipelinesResponse
+        /// </returns>
         public async Task<StopPipelinesResponse> StopPipelinesAsync(string InstanceId, StopPipelinesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11748,6 +19408,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await StopPipelinesWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The information about the clusters and tags.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public TagResourcesResponse TagResourcesWithOptions(TagResourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11784,6 +19462,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<TagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The information about the clusters and tags.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public async Task<TagResourcesResponse> TagResourcesWithOptionsAsync(TagResourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11820,6 +19516,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<TagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The information about the clusters and tags.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public TagResourcesResponse TagResources(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11827,6 +19535,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TagResourcesWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The information about the clusters and tags.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public async Task<TagResourcesResponse> TagResourcesAsync(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11834,6 +19554,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await TagResourcesWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>缩节点，数据迁移</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TransferNodeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransferNodeResponse
+        /// </returns>
         public TransferNodeResponse TransferNodeWithOptions(string InstanceId, TransferNodeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11867,6 +19605,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<TransferNodeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>缩节点，数据迁移</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TransferNodeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransferNodeResponse
+        /// </returns>
         public async Task<TransferNodeResponse> TransferNodeWithOptionsAsync(string InstanceId, TransferNodeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11900,6 +19656,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<TransferNodeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>缩节点，数据迁移</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TransferNodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransferNodeResponse
+        /// </returns>
         public TransferNodeResponse TransferNode(string InstanceId, TransferNodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11907,6 +19675,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TransferNodeWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>缩节点，数据迁移</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TransferNodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransferNodeResponse
+        /// </returns>
         public async Task<TransferNodeResponse> TransferNodeAsync(string InstanceId, TransferNodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11914,6 +19694,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await TransferNodeWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开关ES集群及Kibana节点公私网访问</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TriggerNetworkRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TriggerNetworkResponse
+        /// </returns>
         public TriggerNetworkResponse TriggerNetworkWithOptions(string InstanceId, TriggerNetworkRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11956,6 +19754,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<TriggerNetworkResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开关ES集群及Kibana节点公私网访问</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TriggerNetworkRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TriggerNetworkResponse
+        /// </returns>
         public async Task<TriggerNetworkResponse> TriggerNetworkWithOptionsAsync(string InstanceId, TriggerNetworkRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11998,6 +19814,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<TriggerNetworkResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开关ES集群及Kibana节点公私网访问</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TriggerNetworkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TriggerNetworkResponse
+        /// </returns>
         public TriggerNetworkResponse TriggerNetwork(string InstanceId, TriggerNetworkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12005,6 +19833,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TriggerNetworkWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开关ES集群及Kibana节点公私网访问</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TriggerNetworkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TriggerNetworkResponse
+        /// </returns>
         public async Task<TriggerNetworkResponse> TriggerNetworkAsync(string InstanceId, TriggerNetworkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12012,6 +19852,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await TriggerNetworkWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call the UninstallKibanaPlugin to uninstall the Kibana plug-in.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UninstallKibanaPluginRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UninstallKibanaPluginResponse
+        /// </returns>
         public UninstallKibanaPluginResponse UninstallKibanaPluginWithOptions(string InstanceId, UninstallKibanaPluginRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12041,6 +19899,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UninstallKibanaPluginResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call the UninstallKibanaPlugin to uninstall the Kibana plug-in.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UninstallKibanaPluginRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UninstallKibanaPluginResponse
+        /// </returns>
         public async Task<UninstallKibanaPluginResponse> UninstallKibanaPluginWithOptionsAsync(string InstanceId, UninstallKibanaPluginRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12070,6 +19946,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UninstallKibanaPluginResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call the UninstallKibanaPlugin to uninstall the Kibana plug-in.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UninstallKibanaPluginRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UninstallKibanaPluginResponse
+        /// </returns>
         public UninstallKibanaPluginResponse UninstallKibanaPlugin(string InstanceId, UninstallKibanaPluginRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12077,6 +19965,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return UninstallKibanaPluginWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call the UninstallKibanaPlugin to uninstall the Kibana plug-in.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UninstallKibanaPluginRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UninstallKibanaPluginResponse
+        /// </returns>
         public async Task<UninstallKibanaPluginResponse> UninstallKibanaPluginAsync(string InstanceId, UninstallKibanaPluginRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12084,6 +19984,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await UninstallKibanaPluginWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>卸载Logstash实例已安装的插件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UninstallLogstashPluginRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UninstallLogstashPluginResponse
+        /// </returns>
         public UninstallLogstashPluginResponse UninstallLogstashPluginWithOptions(string InstanceId, UninstallLogstashPluginRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12113,6 +20031,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UninstallLogstashPluginResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>卸载Logstash实例已安装的插件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UninstallLogstashPluginRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UninstallLogstashPluginResponse
+        /// </returns>
         public async Task<UninstallLogstashPluginResponse> UninstallLogstashPluginWithOptionsAsync(string InstanceId, UninstallLogstashPluginRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12142,6 +20078,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UninstallLogstashPluginResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>卸载Logstash实例已安装的插件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UninstallLogstashPluginRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UninstallLogstashPluginResponse
+        /// </returns>
         public UninstallLogstashPluginResponse UninstallLogstashPlugin(string InstanceId, UninstallLogstashPluginRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12149,6 +20097,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return UninstallLogstashPluginWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>卸载Logstash实例已安装的插件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UninstallLogstashPluginRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UninstallLogstashPluginResponse
+        /// </returns>
         public async Task<UninstallLogstashPluginResponse> UninstallLogstashPluginAsync(string InstanceId, UninstallLogstashPluginRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12156,6 +20116,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await UninstallLogstashPluginWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call UninstallPlugin to uninstall the preset plug-in.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UninstallPluginRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UninstallPluginResponse
+        /// </returns>
         public UninstallPluginResponse UninstallPluginWithOptions(string InstanceId, UninstallPluginRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12189,6 +20167,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UninstallPluginResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call UninstallPlugin to uninstall the preset plug-in.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UninstallPluginRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UninstallPluginResponse
+        /// </returns>
         public async Task<UninstallPluginResponse> UninstallPluginWithOptionsAsync(string InstanceId, UninstallPluginRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12222,6 +20218,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UninstallPluginResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call UninstallPlugin to uninstall the preset plug-in.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UninstallPluginRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UninstallPluginResponse
+        /// </returns>
         public UninstallPluginResponse UninstallPlugin(string InstanceId, UninstallPluginRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12229,6 +20237,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return UninstallPluginWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call UninstallPlugin to uninstall the preset plug-in.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UninstallPluginRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UninstallPluginResponse
+        /// </returns>
         public async Task<UninstallPluginResponse> UninstallPluginAsync(string InstanceId, UninstallPluginRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12236,17 +20256,36 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await UninstallPluginWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * When you call this operation, take note of the following items:
-          * *   You can only delete user tags.
-          * > User labels are manually added to instances by users. A system Tag is a tag that Alibaba Cloud services add to instances. System labels are divided into visible labels and invisible labels.
-          * *   If you delete a resource tag relationship that is not associated with any resources, you must delete the tags.
-          *
-          * @param request UntagResourcesRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UntagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除ES集群实例的用户可见标签</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>You can only delete user tags.<remarks>
+        /// <para>User labels are manually added to instances by users. A system Tag is a tag that Alibaba Cloud services add to instances. System labels are divided into visible labels and invisible labels.</para>
+        /// </remarks>
+        /// </description></item>
+        /// <item><description>If you delete a resource tag relationship that is not associated with any resources, you must delete the tags.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public UntagResourcesResponse UntagResourcesWithOptions(UntagResourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12288,17 +20327,36 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UntagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * When you call this operation, take note of the following items:
-          * *   You can only delete user tags.
-          * > User labels are manually added to instances by users. A system Tag is a tag that Alibaba Cloud services add to instances. System labels are divided into visible labels and invisible labels.
-          * *   If you delete a resource tag relationship that is not associated with any resources, you must delete the tags.
-          *
-          * @param request UntagResourcesRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UntagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除ES集群实例的用户可见标签</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>You can only delete user tags.<remarks>
+        /// <para>User labels are manually added to instances by users. A system Tag is a tag that Alibaba Cloud services add to instances. System labels are divided into visible labels and invisible labels.</para>
+        /// </remarks>
+        /// </description></item>
+        /// <item><description>If you delete a resource tag relationship that is not associated with any resources, you must delete the tags.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public async Task<UntagResourcesResponse> UntagResourcesWithOptionsAsync(UntagResourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12340,15 +20398,30 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UntagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * When you call this operation, take note of the following items:
-          * *   You can only delete user tags.
-          * > User labels are manually added to instances by users. A system Tag is a tag that Alibaba Cloud services add to instances. System labels are divided into visible labels and invisible labels.
-          * *   If you delete a resource tag relationship that is not associated with any resources, you must delete the tags.
-          *
-          * @param request UntagResourcesRequest
-          * @return UntagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除ES集群实例的用户可见标签</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>You can only delete user tags.<remarks>
+        /// <para>User labels are manually added to instances by users. A system Tag is a tag that Alibaba Cloud services add to instances. System labels are divided into visible labels and invisible labels.</para>
+        /// </remarks>
+        /// </description></item>
+        /// <item><description>If you delete a resource tag relationship that is not associated with any resources, you must delete the tags.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public UntagResourcesResponse UntagResources(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12356,15 +20429,30 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return UntagResourcesWithOptions(request, headers, runtime);
         }
 
-        /**
-          * When you call this operation, take note of the following items:
-          * *   You can only delete user tags.
-          * > User labels are manually added to instances by users. A system Tag is a tag that Alibaba Cloud services add to instances. System labels are divided into visible labels and invisible labels.
-          * *   If you delete a resource tag relationship that is not associated with any resources, you must delete the tags.
-          *
-          * @param request UntagResourcesRequest
-          * @return UntagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除ES集群实例的用户可见标签</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>You can only delete user tags.<remarks>
+        /// <para>User labels are manually added to instances by users. A system Tag is a tag that Alibaba Cloud services add to instances. System labels are divided into visible labels and invisible labels.</para>
+        /// </remarks>
+        /// </description></item>
+        /// <item><description>If you delete a resource tag relationship that is not associated with any resources, you must delete the tags.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public async Task<UntagResourcesResponse> UntagResourcesAsync(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12372,14 +20460,29 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await UntagResourcesWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-          * 5A2CFF0E-5718-45B5-9D4D-70B3FF\\*\\*\\*\\*
-          *
-          * @param request UpdateAdminPasswordRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateAdminPasswordResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改ES集群密码</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>5A2CFF0E-5718-45B5-9D4D-70B3FF\<em>\</em>\<em>\</em></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateAdminPasswordRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAdminPasswordResponse
+        /// </returns>
         public UpdateAdminPasswordResponse UpdateAdminPasswordWithOptions(string InstanceId, UpdateAdminPasswordRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12414,14 +20517,29 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateAdminPasswordResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * 5A2CFF0E-5718-45B5-9D4D-70B3FF\\*\\*\\*\\*
-          *
-          * @param request UpdateAdminPasswordRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateAdminPasswordResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改ES集群密码</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>5A2CFF0E-5718-45B5-9D4D-70B3FF\<em>\</em>\<em>\</em></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateAdminPasswordRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAdminPasswordResponse
+        /// </returns>
         public async Task<UpdateAdminPasswordResponse> UpdateAdminPasswordWithOptionsAsync(string InstanceId, UpdateAdminPasswordRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12456,12 +20574,23 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateAdminPasswordResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * 5A2CFF0E-5718-45B5-9D4D-70B3FF\\*\\*\\*\\*
-          *
-          * @param request UpdateAdminPasswordRequest
-          * @return UpdateAdminPasswordResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改ES集群密码</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>5A2CFF0E-5718-45B5-9D4D-70B3FF\<em>\</em>\<em>\</em></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateAdminPasswordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAdminPasswordResponse
+        /// </returns>
         public UpdateAdminPasswordResponse UpdateAdminPassword(string InstanceId, UpdateAdminPasswordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12469,12 +20598,23 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return UpdateAdminPasswordWithOptions(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * 5A2CFF0E-5718-45B5-9D4D-70B3FF\\*\\*\\*\\*
-          *
-          * @param request UpdateAdminPasswordRequest
-          * @return UpdateAdminPasswordResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改ES集群密码</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>5A2CFF0E-5718-45B5-9D4D-70B3FF\<em>\</em>\<em>\</em></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateAdminPasswordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAdminPasswordResponse
+        /// </returns>
         public async Task<UpdateAdminPasswordResponse> UpdateAdminPasswordAsync(string InstanceId, UpdateAdminPasswordRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12482,6 +20622,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await UpdateAdminPasswordWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call UpdateAdvancedSetting to change the garbage collector configuration for the specified instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAdvancedSettingRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAdvancedSettingResponse
+        /// </returns>
         public UpdateAdvancedSettingResponse UpdateAdvancedSettingWithOptions(string InstanceId, UpdateAdvancedSettingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12511,6 +20669,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateAdvancedSettingResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call UpdateAdvancedSetting to change the garbage collector configuration for the specified instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAdvancedSettingRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAdvancedSettingResponse
+        /// </returns>
         public async Task<UpdateAdvancedSettingResponse> UpdateAdvancedSettingWithOptionsAsync(string InstanceId, UpdateAdvancedSettingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12540,6 +20716,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateAdvancedSettingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call UpdateAdvancedSetting to change the garbage collector configuration for the specified instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAdvancedSettingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAdvancedSettingResponse
+        /// </returns>
         public UpdateAdvancedSettingResponse UpdateAdvancedSetting(string InstanceId, UpdateAdvancedSettingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12547,6 +20735,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return UpdateAdvancedSettingWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call UpdateAdvancedSetting to change the garbage collector configuration for the specified instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAdvancedSettingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAdvancedSettingResponse
+        /// </returns>
         public async Task<UpdateAdvancedSettingResponse> UpdateAdvancedSettingAsync(string InstanceId, UpdateAdvancedSettingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12554,17 +20754,34 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await UpdateAdvancedSettingWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * Before you call this operation, take note of the following items:
-          * *   Elasticsearch V5.X clusters do not support the analysis-aliws plug-in.
-          * *   If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.
-          * *   If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.
-          *
-          * @param request UpdateAliwsDictRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateAliwsDictResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the dictionary file of the analysis-aliws plug-in.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>Elasticsearch V5.X clusters do not support the analysis-aliws plug-in.</description></item>
+        /// <item><description>If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.</description></item>
+        /// <item><description>If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateAliwsDictRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAliwsDictResponse
+        /// </returns>
         public UpdateAliwsDictResponse UpdateAliwsDictWithOptions(string InstanceId, UpdateAliwsDictRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12594,17 +20811,34 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateAliwsDictResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * Before you call this operation, take note of the following items:
-          * *   Elasticsearch V5.X clusters do not support the analysis-aliws plug-in.
-          * *   If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.
-          * *   If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.
-          *
-          * @param request UpdateAliwsDictRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateAliwsDictResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the dictionary file of the analysis-aliws plug-in.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>Elasticsearch V5.X clusters do not support the analysis-aliws plug-in.</description></item>
+        /// <item><description>If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.</description></item>
+        /// <item><description>If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateAliwsDictRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAliwsDictResponse
+        /// </returns>
         public async Task<UpdateAliwsDictResponse> UpdateAliwsDictWithOptionsAsync(string InstanceId, UpdateAliwsDictRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12634,15 +20868,28 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateAliwsDictResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * Before you call this operation, take note of the following items:
-          * *   Elasticsearch V5.X clusters do not support the analysis-aliws plug-in.
-          * *   If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.
-          * *   If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.
-          *
-          * @param request UpdateAliwsDictRequest
-          * @return UpdateAliwsDictResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the dictionary file of the analysis-aliws plug-in.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>Elasticsearch V5.X clusters do not support the analysis-aliws plug-in.</description></item>
+        /// <item><description>If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.</description></item>
+        /// <item><description>If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateAliwsDictRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAliwsDictResponse
+        /// </returns>
         public UpdateAliwsDictResponse UpdateAliwsDict(string InstanceId, UpdateAliwsDictRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12650,15 +20897,28 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return UpdateAliwsDictWithOptions(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * Before you call this operation, take note of the following items:
-          * *   Elasticsearch V5.X clusters do not support the analysis-aliws plug-in.
-          * *   If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.
-          * *   If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.
-          *
-          * @param request UpdateAliwsDictRequest
-          * @return UpdateAliwsDictResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the dictionary file of the analysis-aliws plug-in.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>Elasticsearch V5.X clusters do not support the analysis-aliws plug-in.</description></item>
+        /// <item><description>If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.</description></item>
+        /// <item><description>If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateAliwsDictRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAliwsDictResponse
+        /// </returns>
         public async Task<UpdateAliwsDictResponse> UpdateAliwsDictAsync(string InstanceId, UpdateAliwsDictRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12666,6 +20926,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await UpdateAliwsDictWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改APM实规格配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateApmRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateApmResponse
+        /// </returns>
         public UpdateApmResponse UpdateApmWithOptions(string instanceId, UpdateApmRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12710,6 +20988,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateApmResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改APM实规格配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateApmRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateApmResponse
+        /// </returns>
         public async Task<UpdateApmResponse> UpdateApmWithOptionsAsync(string instanceId, UpdateApmRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12754,6 +21050,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateApmResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改APM实规格配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateApmRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateApmResponse
+        /// </returns>
         public UpdateApmResponse UpdateApm(string instanceId, UpdateApmRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12761,6 +21069,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return UpdateApmWithOptions(instanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改APM实规格配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateApmRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateApmResponse
+        /// </returns>
         public async Task<UpdateApmResponse> UpdateApmAsync(string instanceId, UpdateApmRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12768,14 +21088,29 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await UpdateApmWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
-        /**
-          * @deprecated
-          *
-          * @param request UpdateBlackIpsRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateBlackIpsResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI UpdateBlackIps is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改ES实例访问黑名单，已废弃</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateBlackIpsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateBlackIpsResponse
+        /// </returns>
+        [Obsolete("OpenAPI UpdateBlackIps is deprecated")]
         // Deprecated
         public UpdateBlackIpsResponse UpdateBlackIpsWithOptions(string InstanceId, UpdateBlackIpsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12805,14 +21140,29 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateBlackIpsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * @deprecated
-          *
-          * @param request UpdateBlackIpsRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateBlackIpsResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI UpdateBlackIps is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改ES实例访问黑名单，已废弃</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateBlackIpsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateBlackIpsResponse
+        /// </returns>
+        [Obsolete("OpenAPI UpdateBlackIps is deprecated")]
         // Deprecated
         public async Task<UpdateBlackIpsResponse> UpdateBlackIpsWithOptionsAsync(string InstanceId, UpdateBlackIpsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -12842,12 +21192,23 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateBlackIpsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * @deprecated
-          *
-          * @param request UpdateBlackIpsRequest
-          * @return UpdateBlackIpsResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI UpdateBlackIps is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改ES实例访问黑名单，已废弃</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateBlackIpsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateBlackIpsResponse
+        /// </returns>
+        [Obsolete("OpenAPI UpdateBlackIps is deprecated")]
         // Deprecated
         public UpdateBlackIpsResponse UpdateBlackIps(string InstanceId, UpdateBlackIpsRequest request)
         {
@@ -12856,12 +21217,23 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return UpdateBlackIpsWithOptions(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * @deprecated
-          *
-          * @param request UpdateBlackIpsRequest
-          * @return UpdateBlackIpsResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI UpdateBlackIps is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改ES实例访问黑名单，已废弃</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateBlackIpsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateBlackIpsResponse
+        /// </returns>
+        [Obsolete("OpenAPI UpdateBlackIps is deprecated")]
         // Deprecated
         public async Task<UpdateBlackIpsResponse> UpdateBlackIpsAsync(string InstanceId, UpdateBlackIpsRequest request)
         {
@@ -12870,6 +21242,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await UpdateBlackIpsWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the configurations of a shipper.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCollectorRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCollectorResponse
+        /// </returns>
         public UpdateCollectorResponse UpdateCollectorWithOptions(string ResId, UpdateCollectorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12899,6 +21289,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateCollectorResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the configurations of a shipper.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCollectorRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCollectorResponse
+        /// </returns>
         public async Task<UpdateCollectorResponse> UpdateCollectorWithOptionsAsync(string ResId, UpdateCollectorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12928,6 +21336,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateCollectorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the configurations of a shipper.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCollectorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCollectorResponse
+        /// </returns>
         public UpdateCollectorResponse UpdateCollector(string ResId, UpdateCollectorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12935,6 +21355,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return UpdateCollectorWithOptions(ResId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the configurations of a shipper.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCollectorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCollectorResponse
+        /// </returns>
         public async Task<UpdateCollectorResponse> UpdateCollectorAsync(string ResId, UpdateCollectorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12942,6 +21374,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await UpdateCollectorWithOptionsAsync(ResId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the name of a shipper.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCollectorNameRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCollectorNameResponse
+        /// </returns>
         public UpdateCollectorNameResponse UpdateCollectorNameWithOptions(string ResId, UpdateCollectorNameRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12971,6 +21421,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateCollectorNameResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the name of a shipper.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCollectorNameRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCollectorNameResponse
+        /// </returns>
         public async Task<UpdateCollectorNameResponse> UpdateCollectorNameWithOptionsAsync(string ResId, UpdateCollectorNameRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13000,6 +21468,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateCollectorNameResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the name of a shipper.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCollectorNameRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCollectorNameResponse
+        /// </returns>
         public UpdateCollectorNameResponse UpdateCollectorName(string ResId, UpdateCollectorNameRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13007,6 +21487,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return UpdateCollectorNameWithOptions(ResId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the name of a shipper.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCollectorNameRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCollectorNameResponse
+        /// </returns>
         public async Task<UpdateCollectorNameResponse> UpdateCollectorNameAsync(string ResId, UpdateCollectorNameRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13014,6 +21506,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await UpdateCollectorNameWithOptionsAsync(ResId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改ES集群动态索引</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateComponentIndexRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateComponentIndexResponse
+        /// </returns>
         public UpdateComponentIndexResponse UpdateComponentIndexWithOptions(string InstanceId, string name, UpdateComponentIndexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13046,6 +21556,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateComponentIndexResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改ES集群动态索引</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateComponentIndexRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateComponentIndexResponse
+        /// </returns>
         public async Task<UpdateComponentIndexResponse> UpdateComponentIndexWithOptionsAsync(string InstanceId, string name, UpdateComponentIndexRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13078,6 +21606,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateComponentIndexResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改ES集群动态索引</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateComponentIndexRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateComponentIndexResponse
+        /// </returns>
         public UpdateComponentIndexResponse UpdateComponentIndex(string InstanceId, string name, UpdateComponentIndexRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13085,6 +21625,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return UpdateComponentIndexWithOptions(InstanceId, name, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改ES集群动态索引</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateComponentIndexRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateComponentIndexResponse
+        /// </returns>
         public async Task<UpdateComponentIndexResponse> UpdateComponentIndexAsync(string InstanceId, string name, UpdateComponentIndexRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13092,6 +21644,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await UpdateComponentIndexWithOptionsAsync(InstanceId, name, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改elasticsearch实例名称名称</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDescriptionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDescriptionResponse
+        /// </returns>
         public UpdateDescriptionResponse UpdateDescriptionWithOptions(string InstanceId, UpdateDescriptionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13126,6 +21696,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateDescriptionResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改elasticsearch实例名称名称</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDescriptionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDescriptionResponse
+        /// </returns>
         public async Task<UpdateDescriptionResponse> UpdateDescriptionWithOptionsAsync(string InstanceId, UpdateDescriptionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13160,6 +21748,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateDescriptionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改elasticsearch实例名称名称</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDescriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDescriptionResponse
+        /// </returns>
         public UpdateDescriptionResponse UpdateDescription(string InstanceId, UpdateDescriptionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13167,6 +21767,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return UpdateDescriptionWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改elasticsearch实例名称名称</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDescriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDescriptionResponse
+        /// </returns>
         public async Task<UpdateDescriptionResponse> UpdateDescriptionAsync(string InstanceId, UpdateDescriptionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13174,6 +21786,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await UpdateDescriptionWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call UpdateDiagnosisSettings to update the instance of intelligent operation&amp;maintenance (O&amp;M) scene settings.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDiagnosisSettingsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDiagnosisSettingsResponse
+        /// </returns>
         public UpdateDiagnosisSettingsResponse UpdateDiagnosisSettingsWithOptions(string InstanceId, UpdateDiagnosisSettingsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13207,6 +21837,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateDiagnosisSettingsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call UpdateDiagnosisSettings to update the instance of intelligent operation&amp;maintenance (O&amp;M) scene settings.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDiagnosisSettingsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDiagnosisSettingsResponse
+        /// </returns>
         public async Task<UpdateDiagnosisSettingsResponse> UpdateDiagnosisSettingsWithOptionsAsync(string InstanceId, UpdateDiagnosisSettingsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13240,6 +21888,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateDiagnosisSettingsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call UpdateDiagnosisSettings to update the instance of intelligent operation&amp;maintenance (O&amp;M) scene settings.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDiagnosisSettingsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDiagnosisSettingsResponse
+        /// </returns>
         public UpdateDiagnosisSettingsResponse UpdateDiagnosisSettings(string InstanceId, UpdateDiagnosisSettingsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13247,6 +21907,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return UpdateDiagnosisSettingsWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call UpdateDiagnosisSettings to update the instance of intelligent operation&amp;maintenance (O&amp;M) scene settings.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDiagnosisSettingsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDiagnosisSettingsResponse
+        /// </returns>
         public async Task<UpdateDiagnosisSettingsResponse> UpdateDiagnosisSettingsAsync(string InstanceId, UpdateDiagnosisSettingsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13254,16 +21926,33 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await UpdateDiagnosisSettingsWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * Before you call this operation, take note of the following items:
-          * *   If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.
-          * *   If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.
-          *
-          * @param request UpdateDictRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateDictResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a dictionary of an Elasticsearch cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.</description></item>
+        /// <item><description>If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateDictRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDictResponse
+        /// </returns>
         public UpdateDictResponse UpdateDictWithOptions(string InstanceId, UpdateDictRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13293,16 +21982,33 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateDictResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * Before you call this operation, take note of the following items:
-          * *   If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.
-          * *   If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.
-          *
-          * @param request UpdateDictRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateDictResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a dictionary of an Elasticsearch cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.</description></item>
+        /// <item><description>If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateDictRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDictResponse
+        /// </returns>
         public async Task<UpdateDictResponse> UpdateDictWithOptionsAsync(string InstanceId, UpdateDictRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13332,14 +22038,27 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateDictResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * Before you call this operation, take note of the following items:
-          * *   If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.
-          * *   If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.
-          *
-          * @param request UpdateDictRequest
-          * @return UpdateDictResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a dictionary of an Elasticsearch cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.</description></item>
+        /// <item><description>If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateDictRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDictResponse
+        /// </returns>
         public UpdateDictResponse UpdateDict(string InstanceId, UpdateDictRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13347,14 +22066,27 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return UpdateDictWithOptions(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * Before you call this operation, take note of the following items:
-          * *   If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.
-          * *   If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.
-          *
-          * @param request UpdateDictRequest
-          * @return UpdateDictResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a dictionary of an Elasticsearch cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.</description></item>
+        /// <item><description>If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateDictRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDictResponse
+        /// </returns>
         public async Task<UpdateDictResponse> UpdateDictAsync(string InstanceId, UpdateDictRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13362,6 +22094,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await UpdateDictWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改集群动态配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDynamicSettingsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDynamicSettingsResponse
+        /// </returns>
         public UpdateDynamicSettingsResponse UpdateDynamicSettingsWithOptions(string InstanceId, UpdateDynamicSettingsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13399,6 +22149,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateDynamicSettingsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改集群动态配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDynamicSettingsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDynamicSettingsResponse
+        /// </returns>
         public async Task<UpdateDynamicSettingsResponse> UpdateDynamicSettingsWithOptionsAsync(string InstanceId, UpdateDynamicSettingsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13436,6 +22204,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateDynamicSettingsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改集群动态配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDynamicSettingsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDynamicSettingsResponse
+        /// </returns>
         public UpdateDynamicSettingsResponse UpdateDynamicSettings(string InstanceId, UpdateDynamicSettingsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13443,6 +22223,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return UpdateDynamicSettingsWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改集群动态配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDynamicSettingsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDynamicSettingsResponse
+        /// </returns>
         public async Task<UpdateDynamicSettingsResponse> UpdateDynamicSettingsAsync(string InstanceId, UpdateDynamicSettingsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13450,6 +22242,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await UpdateDynamicSettingsWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// UpdateExtendConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateExtendConfigResponse
+        /// </returns>
         public UpdateExtendConfigResponse UpdateExtendConfigWithOptions(string InstanceId, UpdateExtendConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13479,6 +22284,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateExtendConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// UpdateExtendConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateExtendConfigResponse
+        /// </returns>
         public async Task<UpdateExtendConfigResponse> UpdateExtendConfigWithOptionsAsync(string InstanceId, UpdateExtendConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13508,6 +22326,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateExtendConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// UpdateExtendConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateExtendConfigResponse
+        /// </returns>
         public UpdateExtendConfigResponse UpdateExtendConfig(string InstanceId, UpdateExtendConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13515,6 +22340,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return UpdateExtendConfigWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// UpdateExtendConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateExtendConfigResponse
+        /// </returns>
         public async Task<UpdateExtendConfigResponse> UpdateExtendConfigAsync(string InstanceId, UpdateExtendConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13522,14 +22354,29 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await UpdateExtendConfigWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * When you call this operation, take note of the following items: You can call this operation only to delete the driver files that are uploaded to a Logstash cluster in the Alibaba Cloud Management Console. You can add or modify driver files only in the Alibaba Cloud Management Console.
-          *
-          * @param request UpdateExtendfilesRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateExtendfilesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the driver files of a Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, take note of the following items: You can call this operation only to delete the driver files that are uploaded to a Logstash cluster in the Alibaba Cloud Management Console. You can add or modify driver files only in the Alibaba Cloud Management Console.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateExtendfilesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateExtendfilesResponse
+        /// </returns>
         public UpdateExtendfilesResponse UpdateExtendfilesWithOptions(string InstanceId, UpdateExtendfilesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13559,14 +22406,29 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateExtendfilesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * When you call this operation, take note of the following items: You can call this operation only to delete the driver files that are uploaded to a Logstash cluster in the Alibaba Cloud Management Console. You can add or modify driver files only in the Alibaba Cloud Management Console.
-          *
-          * @param request UpdateExtendfilesRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateExtendfilesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the driver files of a Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, take note of the following items: You can call this operation only to delete the driver files that are uploaded to a Logstash cluster in the Alibaba Cloud Management Console. You can add or modify driver files only in the Alibaba Cloud Management Console.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateExtendfilesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateExtendfilesResponse
+        /// </returns>
         public async Task<UpdateExtendfilesResponse> UpdateExtendfilesWithOptionsAsync(string InstanceId, UpdateExtendfilesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13596,12 +22458,23 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateExtendfilesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * When you call this operation, take note of the following items: You can call this operation only to delete the driver files that are uploaded to a Logstash cluster in the Alibaba Cloud Management Console. You can add or modify driver files only in the Alibaba Cloud Management Console.
-          *
-          * @param request UpdateExtendfilesRequest
-          * @return UpdateExtendfilesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the driver files of a Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, take note of the following items: You can call this operation only to delete the driver files that are uploaded to a Logstash cluster in the Alibaba Cloud Management Console. You can add or modify driver files only in the Alibaba Cloud Management Console.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateExtendfilesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateExtendfilesResponse
+        /// </returns>
         public UpdateExtendfilesResponse UpdateExtendfiles(string InstanceId, UpdateExtendfilesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13609,12 +22482,23 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return UpdateExtendfilesWithOptions(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * When you call this operation, take note of the following items: You can call this operation only to delete the driver files that are uploaded to a Logstash cluster in the Alibaba Cloud Management Console. You can add or modify driver files only in the Alibaba Cloud Management Console.
-          *
-          * @param request UpdateExtendfilesRequest
-          * @return UpdateExtendfilesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the driver files of a Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, take note of the following items: You can call this operation only to delete the driver files that are uploaded to a Logstash cluster in the Alibaba Cloud Management Console. You can add or modify driver files only in the Alibaba Cloud Management Console.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateExtendfilesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateExtendfilesResponse
+        /// </returns>
         public async Task<UpdateExtendfilesResponse> UpdateExtendfilesAsync(string InstanceId, UpdateExtendfilesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13622,16 +22506,33 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await UpdateExtendfilesWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * Before you call this operation, take note of the following items:
-          * *   If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.
-          * *   If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.
-          *
-          * @param request UpdateHotIkDictsRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateHotIkDictsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a rolling update for the IK dictionaries of an Elasticsearch cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.</description></item>
+        /// <item><description>If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateHotIkDictsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateHotIkDictsResponse
+        /// </returns>
         public UpdateHotIkDictsResponse UpdateHotIkDictsWithOptions(string InstanceId, UpdateHotIkDictsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13661,16 +22562,33 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateHotIkDictsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * Before you call this operation, take note of the following items:
-          * *   If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.
-          * *   If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.
-          *
-          * @param request UpdateHotIkDictsRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateHotIkDictsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a rolling update for the IK dictionaries of an Elasticsearch cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.</description></item>
+        /// <item><description>If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateHotIkDictsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateHotIkDictsResponse
+        /// </returns>
         public async Task<UpdateHotIkDictsResponse> UpdateHotIkDictsWithOptionsAsync(string InstanceId, UpdateHotIkDictsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13700,14 +22618,27 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateHotIkDictsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * Before you call this operation, take note of the following items:
-          * *   If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.
-          * *   If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.
-          *
-          * @param request UpdateHotIkDictsRequest
-          * @return UpdateHotIkDictsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a rolling update for the IK dictionaries of an Elasticsearch cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.</description></item>
+        /// <item><description>If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateHotIkDictsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateHotIkDictsResponse
+        /// </returns>
         public UpdateHotIkDictsResponse UpdateHotIkDicts(string InstanceId, UpdateHotIkDictsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13715,14 +22646,27 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return UpdateHotIkDictsWithOptions(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * Before you call this operation, take note of the following items:
-          * *   If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.
-          * *   If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.
-          *
-          * @param request UpdateHotIkDictsRequest
-          * @return UpdateHotIkDictsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a rolling update for the IK dictionaries of an Elasticsearch cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.</description></item>
+        /// <item><description>If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateHotIkDictsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateHotIkDictsResponse
+        /// </returns>
         public async Task<UpdateHotIkDictsResponse> UpdateHotIkDictsAsync(string InstanceId, UpdateHotIkDictsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13730,6 +22674,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await UpdateHotIkDictsWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改ES集群索引生命周期策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateILMPolicyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateILMPolicyResponse
+        /// </returns>
         public UpdateILMPolicyResponse UpdateILMPolicyWithOptions(string InstanceId, string PolicyName, UpdateILMPolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13759,6 +22721,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateILMPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改ES集群索引生命周期策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateILMPolicyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateILMPolicyResponse
+        /// </returns>
         public async Task<UpdateILMPolicyResponse> UpdateILMPolicyWithOptionsAsync(string InstanceId, string PolicyName, UpdateILMPolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13788,6 +22768,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateILMPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改ES集群索引生命周期策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateILMPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateILMPolicyResponse
+        /// </returns>
         public UpdateILMPolicyResponse UpdateILMPolicy(string InstanceId, string PolicyName, UpdateILMPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13795,6 +22787,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return UpdateILMPolicyWithOptions(InstanceId, PolicyName, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改ES集群索引生命周期策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateILMPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateILMPolicyResponse
+        /// </returns>
         public async Task<UpdateILMPolicyResponse> UpdateILMPolicyAsync(string InstanceId, string PolicyName, UpdateILMPolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13802,6 +22806,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await UpdateILMPolicyWithOptionsAsync(InstanceId, PolicyName, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改ES集群索引模版配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateIndexTemplateRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateIndexTemplateResponse
+        /// </returns>
         public UpdateIndexTemplateResponse UpdateIndexTemplateWithOptions(string InstanceId, string IndexTemplate, UpdateIndexTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13831,6 +22853,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateIndexTemplateResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改ES集群索引模版配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateIndexTemplateRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateIndexTemplateResponse
+        /// </returns>
         public async Task<UpdateIndexTemplateResponse> UpdateIndexTemplateWithOptionsAsync(string InstanceId, string IndexTemplate, UpdateIndexTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13860,6 +22900,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateIndexTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改ES集群索引模版配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateIndexTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateIndexTemplateResponse
+        /// </returns>
         public UpdateIndexTemplateResponse UpdateIndexTemplate(string InstanceId, string IndexTemplate, UpdateIndexTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13867,6 +22919,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return UpdateIndexTemplateWithOptions(InstanceId, IndexTemplate, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改ES集群索引模版配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateIndexTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateIndexTemplateResponse
+        /// </returns>
         public async Task<UpdateIndexTemplateResponse> UpdateIndexTemplateAsync(string InstanceId, string IndexTemplate, UpdateIndexTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13874,14 +22938,29 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await UpdateIndexTemplateWithOptionsAsync(InstanceId, IndexTemplate, request, headers, runtime);
         }
 
-        /**
-          * es-cn-n6w1ptcb30009\\*\\*\\*\\*
-          *
-          * @param request UpdateInstanceRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改ES集群节点配置</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>es-cn-n6w1ptcb30009\<em>\</em>\<em>\</em></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceResponse
+        /// </returns>
         public UpdateInstanceResponse UpdateInstanceWithOptions(string InstanceId, UpdateInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13952,14 +23031,29 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * es-cn-n6w1ptcb30009\\*\\*\\*\\*
-          *
-          * @param request UpdateInstanceRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改ES集群节点配置</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>es-cn-n6w1ptcb30009\<em>\</em>\<em>\</em></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceResponse
+        /// </returns>
         public async Task<UpdateInstanceResponse> UpdateInstanceWithOptionsAsync(string InstanceId, UpdateInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14030,12 +23124,23 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * es-cn-n6w1ptcb30009\\*\\*\\*\\*
-          *
-          * @param request UpdateInstanceRequest
-          * @return UpdateInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改ES集群节点配置</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>es-cn-n6w1ptcb30009\<em>\</em>\<em>\</em></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceResponse
+        /// </returns>
         public UpdateInstanceResponse UpdateInstance(string InstanceId, UpdateInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14043,12 +23148,23 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return UpdateInstanceWithOptions(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * es-cn-n6w1ptcb30009\\*\\*\\*\\*
-          *
-          * @param request UpdateInstanceRequest
-          * @return UpdateInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改ES集群节点配置</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>es-cn-n6w1ptcb30009\<em>\</em>\<em>\</em></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceResponse
+        /// </returns>
         public async Task<UpdateInstanceResponse> UpdateInstanceAsync(string InstanceId, UpdateInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14056,6 +23172,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await UpdateInstanceWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call UpdateInstanceChargeType to change the billing method of a pay-as-you-go instance to subscription.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceChargeTypeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceChargeTypeResponse
+        /// </returns>
         public UpdateInstanceChargeTypeResponse UpdateInstanceChargeTypeWithOptions(string InstanceId, UpdateInstanceChargeTypeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14085,6 +23219,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateInstanceChargeTypeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call UpdateInstanceChargeType to change the billing method of a pay-as-you-go instance to subscription.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceChargeTypeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceChargeTypeResponse
+        /// </returns>
         public async Task<UpdateInstanceChargeTypeResponse> UpdateInstanceChargeTypeWithOptionsAsync(string InstanceId, UpdateInstanceChargeTypeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14114,6 +23266,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateInstanceChargeTypeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call UpdateInstanceChargeType to change the billing method of a pay-as-you-go instance to subscription.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceChargeTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceChargeTypeResponse
+        /// </returns>
         public UpdateInstanceChargeTypeResponse UpdateInstanceChargeType(string InstanceId, UpdateInstanceChargeTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14121,6 +23285,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return UpdateInstanceChargeTypeWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call UpdateInstanceChargeType to change the billing method of a pay-as-you-go instance to subscription.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceChargeTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceChargeTypeResponse
+        /// </returns>
         public async Task<UpdateInstanceChargeTypeResponse> UpdateInstanceChargeTypeAsync(string InstanceId, UpdateInstanceChargeTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14128,15 +23304,30 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await UpdateInstanceChargeTypeWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * When you call this operation, take note of the following items:
-          * When the instance is in the activating, invalid, or inactive state, you cannot update the configuration.
-          *
-          * @param request UpdateInstanceSettingsRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateInstanceSettingsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call UpdateInstanceSettings to update the YML configuration of a specified instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, take note of the following items:
+        /// When the instance is in the activating, invalid, or inactive state, you cannot update the configuration.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceSettingsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceSettingsResponse
+        /// </returns>
         public UpdateInstanceSettingsResponse UpdateInstanceSettingsWithOptions(string InstanceId, UpdateInstanceSettingsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14144,6 +23335,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["clientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateStrategy))
+            {
+                query["updateStrategy"] = request.UpdateStrategy;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -14166,15 +23361,30 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateInstanceSettingsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * When you call this operation, take note of the following items:
-          * When the instance is in the activating, invalid, or inactive state, you cannot update the configuration.
-          *
-          * @param request UpdateInstanceSettingsRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateInstanceSettingsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call UpdateInstanceSettings to update the YML configuration of a specified instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, take note of the following items:
+        /// When the instance is in the activating, invalid, or inactive state, you cannot update the configuration.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceSettingsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceSettingsResponse
+        /// </returns>
         public async Task<UpdateInstanceSettingsResponse> UpdateInstanceSettingsWithOptionsAsync(string InstanceId, UpdateInstanceSettingsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14182,6 +23392,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["clientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateStrategy))
+            {
+                query["updateStrategy"] = request.UpdateStrategy;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -14204,13 +23418,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateInstanceSettingsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * When you call this operation, take note of the following items:
-          * When the instance is in the activating, invalid, or inactive state, you cannot update the configuration.
-          *
-          * @param request UpdateInstanceSettingsRequest
-          * @return UpdateInstanceSettingsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call UpdateInstanceSettings to update the YML configuration of a specified instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, take note of the following items:
+        /// When the instance is in the activating, invalid, or inactive state, you cannot update the configuration.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceSettingsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceSettingsResponse
+        /// </returns>
         public UpdateInstanceSettingsResponse UpdateInstanceSettings(string InstanceId, UpdateInstanceSettingsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14218,13 +23443,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return UpdateInstanceSettingsWithOptions(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * When you call this operation, take note of the following items:
-          * When the instance is in the activating, invalid, or inactive state, you cannot update the configuration.
-          *
-          * @param request UpdateInstanceSettingsRequest
-          * @return UpdateInstanceSettingsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call UpdateInstanceSettings to update the YML configuration of a specified instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, take note of the following items:
+        /// When the instance is in the activating, invalid, or inactive state, you cannot update the configuration.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceSettingsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceSettingsResponse
+        /// </returns>
         public async Task<UpdateInstanceSettingsResponse> UpdateInstanceSettingsAsync(string InstanceId, UpdateInstanceSettingsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14232,6 +23468,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await UpdateInstanceSettingsWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新kibana私网链接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateKibanaPvlNetworkRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKibanaPvlNetworkResponse
+        /// </returns>
         public UpdateKibanaPvlNetworkResponse UpdateKibanaPvlNetworkWithOptions(string InstanceId, UpdateKibanaPvlNetworkRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14270,6 +23524,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateKibanaPvlNetworkResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新kibana私网链接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateKibanaPvlNetworkRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKibanaPvlNetworkResponse
+        /// </returns>
         public async Task<UpdateKibanaPvlNetworkResponse> UpdateKibanaPvlNetworkWithOptionsAsync(string InstanceId, UpdateKibanaPvlNetworkRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14308,6 +23580,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateKibanaPvlNetworkResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新kibana私网链接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateKibanaPvlNetworkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKibanaPvlNetworkResponse
+        /// </returns>
         public UpdateKibanaPvlNetworkResponse UpdateKibanaPvlNetwork(string InstanceId, UpdateKibanaPvlNetworkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14315,6 +23599,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return UpdateKibanaPvlNetworkWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新kibana私网链接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateKibanaPvlNetworkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKibanaPvlNetworkResponse
+        /// </returns>
         public async Task<UpdateKibanaPvlNetworkResponse> UpdateKibanaPvlNetworkAsync(string InstanceId, UpdateKibanaPvlNetworkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14322,6 +23618,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await UpdateKibanaPvlNetworkWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call UpdateKibanaSettings to modify the Kibana configuration. Currently, you can only modify the Kibana language configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateKibanaSettingsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKibanaSettingsResponse
+        /// </returns>
         public UpdateKibanaSettingsResponse UpdateKibanaSettingsWithOptions(string InstanceId, UpdateKibanaSettingsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14351,6 +23665,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateKibanaSettingsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call UpdateKibanaSettings to modify the Kibana configuration. Currently, you can only modify the Kibana language configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateKibanaSettingsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKibanaSettingsResponse
+        /// </returns>
         public async Task<UpdateKibanaSettingsResponse> UpdateKibanaSettingsWithOptionsAsync(string InstanceId, UpdateKibanaSettingsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14380,6 +23712,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateKibanaSettingsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call UpdateKibanaSettings to modify the Kibana configuration. Currently, you can only modify the Kibana language configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateKibanaSettingsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKibanaSettingsResponse
+        /// </returns>
         public UpdateKibanaSettingsResponse UpdateKibanaSettings(string InstanceId, UpdateKibanaSettingsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14387,6 +23731,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return UpdateKibanaSettingsWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call UpdateKibanaSettings to modify the Kibana configuration. Currently, you can only modify the Kibana language configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateKibanaSettingsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKibanaSettingsResponse
+        /// </returns>
         public async Task<UpdateKibanaSettingsResponse> UpdateKibanaSettingsAsync(string InstanceId, UpdateKibanaSettingsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14394,18 +23750,37 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await UpdateKibanaSettingsWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * *   Before you call this operation, you must make sure that the cluster is not in the activating, invalid, or inactive state.
-          * *   You can update an IP address whitelist by using the following parameters:
-          *     *   kibanaIPWhitelist
-          *     *   modifyMode and whiteIpGroup
-          * *   You cannot specify private IP addresses for public IP address whitelists and cannot specify public IP addresses for private IP address whitelists.
-          *
-          * @param request UpdateKibanaWhiteIpsRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateKibanaWhiteIpsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an IP address whitelist for access to the Kibana console of a specified Elasticsearch cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, you must make sure that the cluster is not in the activating, invalid, or inactive state.</para>
+        /// <list type="bullet">
+        /// <item><description>You can update an IP address whitelist by using the following parameters:<list type="bullet">
+        /// <item><description>kibanaIPWhitelist</description></item>
+        /// <item><description>modifyMode and whiteIpGroup</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>You cannot specify private IP addresses for public IP address whitelists and cannot specify public IP addresses for private IP address whitelists.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateKibanaWhiteIpsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKibanaWhiteIpsResponse
+        /// </returns>
         public UpdateKibanaWhiteIpsResponse UpdateKibanaWhiteIpsWithOptions(string InstanceId, UpdateKibanaWhiteIpsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14448,18 +23823,37 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateKibanaWhiteIpsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * *   Before you call this operation, you must make sure that the cluster is not in the activating, invalid, or inactive state.
-          * *   You can update an IP address whitelist by using the following parameters:
-          *     *   kibanaIPWhitelist
-          *     *   modifyMode and whiteIpGroup
-          * *   You cannot specify private IP addresses for public IP address whitelists and cannot specify public IP addresses for private IP address whitelists.
-          *
-          * @param request UpdateKibanaWhiteIpsRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateKibanaWhiteIpsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an IP address whitelist for access to the Kibana console of a specified Elasticsearch cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, you must make sure that the cluster is not in the activating, invalid, or inactive state.</para>
+        /// <list type="bullet">
+        /// <item><description>You can update an IP address whitelist by using the following parameters:<list type="bullet">
+        /// <item><description>kibanaIPWhitelist</description></item>
+        /// <item><description>modifyMode and whiteIpGroup</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>You cannot specify private IP addresses for public IP address whitelists and cannot specify public IP addresses for private IP address whitelists.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateKibanaWhiteIpsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKibanaWhiteIpsResponse
+        /// </returns>
         public async Task<UpdateKibanaWhiteIpsResponse> UpdateKibanaWhiteIpsWithOptionsAsync(string InstanceId, UpdateKibanaWhiteIpsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14502,16 +23896,31 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateKibanaWhiteIpsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * *   Before you call this operation, you must make sure that the cluster is not in the activating, invalid, or inactive state.
-          * *   You can update an IP address whitelist by using the following parameters:
-          *     *   kibanaIPWhitelist
-          *     *   modifyMode and whiteIpGroup
-          * *   You cannot specify private IP addresses for public IP address whitelists and cannot specify public IP addresses for private IP address whitelists.
-          *
-          * @param request UpdateKibanaWhiteIpsRequest
-          * @return UpdateKibanaWhiteIpsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an IP address whitelist for access to the Kibana console of a specified Elasticsearch cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, you must make sure that the cluster is not in the activating, invalid, or inactive state.</para>
+        /// <list type="bullet">
+        /// <item><description>You can update an IP address whitelist by using the following parameters:<list type="bullet">
+        /// <item><description>kibanaIPWhitelist</description></item>
+        /// <item><description>modifyMode and whiteIpGroup</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>You cannot specify private IP addresses for public IP address whitelists and cannot specify public IP addresses for private IP address whitelists.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateKibanaWhiteIpsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKibanaWhiteIpsResponse
+        /// </returns>
         public UpdateKibanaWhiteIpsResponse UpdateKibanaWhiteIps(string InstanceId, UpdateKibanaWhiteIpsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14519,16 +23928,31 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return UpdateKibanaWhiteIpsWithOptions(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * *   Before you call this operation, you must make sure that the cluster is not in the activating, invalid, or inactive state.
-          * *   You can update an IP address whitelist by using the following parameters:
-          *     *   kibanaIPWhitelist
-          *     *   modifyMode and whiteIpGroup
-          * *   You cannot specify private IP addresses for public IP address whitelists and cannot specify public IP addresses for private IP address whitelists.
-          *
-          * @param request UpdateKibanaWhiteIpsRequest
-          * @return UpdateKibanaWhiteIpsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an IP address whitelist for access to the Kibana console of a specified Elasticsearch cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, you must make sure that the cluster is not in the activating, invalid, or inactive state.</para>
+        /// <list type="bullet">
+        /// <item><description>You can update an IP address whitelist by using the following parameters:<list type="bullet">
+        /// <item><description>kibanaIPWhitelist</description></item>
+        /// <item><description>modifyMode and whiteIpGroup</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>You cannot specify private IP addresses for public IP address whitelists and cannot specify public IP addresses for private IP address whitelists.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateKibanaWhiteIpsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKibanaWhiteIpsResponse
+        /// </returns>
         public async Task<UpdateKibanaWhiteIpsResponse> UpdateKibanaWhiteIpsAsync(string InstanceId, UpdateKibanaWhiteIpsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14536,6 +23960,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await UpdateKibanaWhiteIpsWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改Logstash节点规格磁盘配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateLogstashRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLogstashResponse
+        /// </returns>
         public UpdateLogstashResponse UpdateLogstashWithOptions(string InstanceId, UpdateLogstashRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14574,6 +24016,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateLogstashResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改Logstash节点规格磁盘配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateLogstashRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLogstashResponse
+        /// </returns>
         public async Task<UpdateLogstashResponse> UpdateLogstashWithOptionsAsync(string InstanceId, UpdateLogstashRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14612,6 +24072,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateLogstashResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改Logstash节点规格磁盘配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateLogstashRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLogstashResponse
+        /// </returns>
         public UpdateLogstashResponse UpdateLogstash(string InstanceId, UpdateLogstashRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14619,6 +24091,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return UpdateLogstashWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改Logstash节点规格磁盘配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateLogstashRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLogstashResponse
+        /// </returns>
         public async Task<UpdateLogstashResponse> UpdateLogstashAsync(string InstanceId, UpdateLogstashRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14626,6 +24110,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await UpdateLogstashWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Switches the billing method of a Logstash cluster from pay-as-you-go to subscription.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateLogstashChargeTypeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLogstashChargeTypeResponse
+        /// </returns>
         public UpdateLogstashChargeTypeResponse UpdateLogstashChargeTypeWithOptions(string InstanceId, UpdateLogstashChargeTypeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14655,6 +24157,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateLogstashChargeTypeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Switches the billing method of a Logstash cluster from pay-as-you-go to subscription.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateLogstashChargeTypeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLogstashChargeTypeResponse
+        /// </returns>
         public async Task<UpdateLogstashChargeTypeResponse> UpdateLogstashChargeTypeWithOptionsAsync(string InstanceId, UpdateLogstashChargeTypeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14684,6 +24204,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateLogstashChargeTypeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Switches the billing method of a Logstash cluster from pay-as-you-go to subscription.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateLogstashChargeTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLogstashChargeTypeResponse
+        /// </returns>
         public UpdateLogstashChargeTypeResponse UpdateLogstashChargeType(string InstanceId, UpdateLogstashChargeTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14691,6 +24223,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return UpdateLogstashChargeTypeWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Switches the billing method of a Logstash cluster from pay-as-you-go to subscription.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateLogstashChargeTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLogstashChargeTypeResponse
+        /// </returns>
         public async Task<UpdateLogstashChargeTypeResponse> UpdateLogstashChargeTypeAsync(string InstanceId, UpdateLogstashChargeTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14698,14 +24242,29 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await UpdateLogstashChargeTypeWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * When you call this operation, take note of the following items: You cannot change the name of a cluster that is in the activating, invalid, or inactive state.
-          *
-          * @param request UpdateLogstashDescriptionRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateLogstashDescriptionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the name of a specified Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, take note of the following items: You cannot change the name of a cluster that is in the activating, invalid, or inactive state.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateLogstashDescriptionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLogstashDescriptionResponse
+        /// </returns>
         public UpdateLogstashDescriptionResponse UpdateLogstashDescriptionWithOptions(string InstanceId, UpdateLogstashDescriptionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14740,14 +24299,29 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateLogstashDescriptionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * When you call this operation, take note of the following items: You cannot change the name of a cluster that is in the activating, invalid, or inactive state.
-          *
-          * @param request UpdateLogstashDescriptionRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateLogstashDescriptionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the name of a specified Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, take note of the following items: You cannot change the name of a cluster that is in the activating, invalid, or inactive state.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateLogstashDescriptionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLogstashDescriptionResponse
+        /// </returns>
         public async Task<UpdateLogstashDescriptionResponse> UpdateLogstashDescriptionWithOptionsAsync(string InstanceId, UpdateLogstashDescriptionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14782,12 +24356,23 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateLogstashDescriptionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * When you call this operation, take note of the following items: You cannot change the name of a cluster that is in the activating, invalid, or inactive state.
-          *
-          * @param request UpdateLogstashDescriptionRequest
-          * @return UpdateLogstashDescriptionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the name of a specified Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, take note of the following items: You cannot change the name of a cluster that is in the activating, invalid, or inactive state.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateLogstashDescriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLogstashDescriptionResponse
+        /// </returns>
         public UpdateLogstashDescriptionResponse UpdateLogstashDescription(string InstanceId, UpdateLogstashDescriptionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14795,12 +24380,23 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return UpdateLogstashDescriptionWithOptions(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * When you call this operation, take note of the following items: You cannot change the name of a cluster that is in the activating, invalid, or inactive state.
-          *
-          * @param request UpdateLogstashDescriptionRequest
-          * @return UpdateLogstashDescriptionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the name of a specified Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, take note of the following items: You cannot change the name of a cluster that is in the activating, invalid, or inactive state.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateLogstashDescriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLogstashDescriptionResponse
+        /// </returns>
         public async Task<UpdateLogstashDescriptionResponse> UpdateLogstashDescriptionAsync(string InstanceId, UpdateLogstashDescriptionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14808,15 +24404,30 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await UpdateLogstashDescriptionWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * When you call this operation, take note of the following items:
-          * If the instance is in the Active (activating), Invalid (invalid), and Inactive (inactive) state, the information cannot be updated.
-          *
-          * @param request UpdateLogstashSettingsRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateLogstashSettingsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the configuration of a specified Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, take note of the following items:
+        /// If the instance is in the Active (activating), Invalid (invalid), and Inactive (inactive) state, the information cannot be updated.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateLogstashSettingsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLogstashSettingsResponse
+        /// </returns>
         public UpdateLogstashSettingsResponse UpdateLogstashSettingsWithOptions(string InstanceId, UpdateLogstashSettingsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14846,15 +24457,30 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateLogstashSettingsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * When you call this operation, take note of the following items:
-          * If the instance is in the Active (activating), Invalid (invalid), and Inactive (inactive) state, the information cannot be updated.
-          *
-          * @param request UpdateLogstashSettingsRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateLogstashSettingsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the configuration of a specified Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, take note of the following items:
+        /// If the instance is in the Active (activating), Invalid (invalid), and Inactive (inactive) state, the information cannot be updated.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateLogstashSettingsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLogstashSettingsResponse
+        /// </returns>
         public async Task<UpdateLogstashSettingsResponse> UpdateLogstashSettingsWithOptionsAsync(string InstanceId, UpdateLogstashSettingsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14884,13 +24510,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateLogstashSettingsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * When you call this operation, take note of the following items:
-          * If the instance is in the Active (activating), Invalid (invalid), and Inactive (inactive) state, the information cannot be updated.
-          *
-          * @param request UpdateLogstashSettingsRequest
-          * @return UpdateLogstashSettingsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the configuration of a specified Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, take note of the following items:
+        /// If the instance is in the Active (activating), Invalid (invalid), and Inactive (inactive) state, the information cannot be updated.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateLogstashSettingsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLogstashSettingsResponse
+        /// </returns>
         public UpdateLogstashSettingsResponse UpdateLogstashSettings(string InstanceId, UpdateLogstashSettingsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14898,13 +24535,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return UpdateLogstashSettingsWithOptions(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * When you call this operation, take note of the following items:
-          * If the instance is in the Active (activating), Invalid (invalid), and Inactive (inactive) state, the information cannot be updated.
-          *
-          * @param request UpdateLogstashSettingsRequest
-          * @return UpdateLogstashSettingsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the configuration of a specified Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, take note of the following items:
+        /// If the instance is in the Active (activating), Invalid (invalid), and Inactive (inactive) state, the information cannot be updated.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateLogstashSettingsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLogstashSettingsResponse
+        /// </returns>
         public async Task<UpdateLogstashSettingsResponse> UpdateLogstashSettingsAsync(string InstanceId, UpdateLogstashSettingsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14912,6 +24560,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await UpdateLogstashSettingsWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改Logstash管道配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdatePipelineManagementConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePipelineManagementConfigResponse
+        /// </returns>
         public UpdatePipelineManagementConfigResponse UpdatePipelineManagementConfigWithOptions(string InstanceId, UpdatePipelineManagementConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14924,6 +24590,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Endpoints))
             {
                 body["endpoints"] = request.Endpoints;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EsInstanceId))
+            {
+                body["esInstanceId"] = request.EsInstanceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
             {
@@ -14962,6 +24632,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdatePipelineManagementConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改Logstash管道配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdatePipelineManagementConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePipelineManagementConfigResponse
+        /// </returns>
         public async Task<UpdatePipelineManagementConfigResponse> UpdatePipelineManagementConfigWithOptionsAsync(string InstanceId, UpdatePipelineManagementConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14974,6 +24662,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Endpoints))
             {
                 body["endpoints"] = request.Endpoints;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EsInstanceId))
+            {
+                body["esInstanceId"] = request.EsInstanceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
             {
@@ -15012,6 +24704,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdatePipelineManagementConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改Logstash管道配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdatePipelineManagementConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePipelineManagementConfigResponse
+        /// </returns>
         public UpdatePipelineManagementConfigResponse UpdatePipelineManagementConfig(string InstanceId, UpdatePipelineManagementConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15019,6 +24723,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return UpdatePipelineManagementConfigWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改Logstash管道配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdatePipelineManagementConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePipelineManagementConfigResponse
+        /// </returns>
         public async Task<UpdatePipelineManagementConfigResponse> UpdatePipelineManagementConfigAsync(string InstanceId, UpdatePipelineManagementConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15026,6 +24742,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await UpdatePipelineManagementConfigWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a pipeline of a Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdatePipelinesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePipelinesResponse
+        /// </returns>
         public UpdatePipelinesResponse UpdatePipelinesWithOptions(string InstanceId, UpdatePipelinesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15059,6 +24793,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdatePipelinesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a pipeline of a Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdatePipelinesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePipelinesResponse
+        /// </returns>
         public async Task<UpdatePipelinesResponse> UpdatePipelinesWithOptionsAsync(string InstanceId, UpdatePipelinesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15092,6 +24844,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdatePipelinesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a pipeline of a Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdatePipelinesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePipelinesResponse
+        /// </returns>
         public UpdatePipelinesResponse UpdatePipelines(string InstanceId, UpdatePipelinesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15099,6 +24863,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return UpdatePipelinesWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a pipeline of a Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdatePipelinesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePipelinesResponse
+        /// </returns>
         public async Task<UpdatePipelinesResponse> UpdatePipelinesAsync(string InstanceId, UpdatePipelinesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15106,14 +24882,91 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await UpdatePipelinesWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * >  In the following returned example, only the parameters in the returned data list are guaranteed to be included, and the parameters not mentioned are for reference only. For more information about the parameters, see [ListInstance](~~142230~~). You cannot force a dependency in a program to get these parameters.
-          *
-          * @param request UpdatePrivateNetworkWhiteIpsRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdatePrivateNetworkWhiteIpsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <h2>RequestBody</h2>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Property</th>
+        /// <th>Type</th>
+        /// <th>Required</th>
+        /// <th>Example</th>
+        /// <th>Description</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>privateNetworkIpWhiteList</td>
+        /// <td>List<String></td>
+        /// <td>No</td>
+        /// <td>[&quot;0.0.XX.XX&quot;,&quot;10.2.XX.XX&quot;,&quot;192.168.XX.XX/25&quot;]</td>
+        /// <td>The list of IP address whitelists. This parameter is available if whiteIpGroup is left empty. The value of this parameter updates the IP address whitelist configurations in the Default whitelist group.</td>
+        /// </tr>
+        /// <tr>
+        /// <td>You cannot configure both privateNetworkIpWhiteList and whiteIpGroup.</td>
+        /// <td></td>
+        /// <td></td>
+        /// <td></td>
+        /// <td></td>
+        /// </tr>
+        /// <tr>
+        /// <td>whiteIpGroup</td>
+        /// <td>Object</td>
+        /// <td>No</td>
+        /// <td></td>
+        /// <td>You can update the whitelist configurations of an instance by using a whitelist group. You can update only one whitelist group.</td>
+        /// </tr>
+        /// <tr>
+        /// <td>You cannot configure both privateNetworkIpWhiteList and whiteIpGroup.</td>
+        /// <td></td>
+        /// <td></td>
+        /// <td></td>
+        /// <td></td>
+        /// </tr>
+        /// <tr>
+        /// <td>└ groupName</td>
+        /// <td>String</td>
+        /// <td>No</td>
+        /// <td>test_group_name</td>
+        /// <td>The group name of the whitelist group. This parameter is required if the whiteIpGroup parameter is optional.</td>
+        /// </tr>
+        /// <tr>
+        /// <td>└ ips</td>
+        /// <td>List<String></td>
+        /// <td>No</td>
+        /// <td>[&quot;0.0.0.0&quot;, &quot;10.2.XX.XX&quot;]</td>
+        /// <td>The list of IP addresses in the whitelist group. This parameter is required if the whiteIpGroup parameter is optional.</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <remarks>
+        /// <para><b>Notice</b>  The addition and deletion of whitelist groups are implemented by calling modifyMode to Cover. Delete and Append cannot add or delete whitelist groups at the same time. You can only modify the IP address list in the whitelist group. Take note of the following items: - If the modifyMode parameter is set to Cover, the whitelist group is deleted if ips is empty. If groupName is not in the list of existing whitelist group names, a whitelist group is created.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>If the modifyMode parameter is set to Delete, you must retain at least one IP address for the deleted ips.</description></item>
+        /// <item><description>If the modifyMode parameter is set to Append, make sure that the whitelist group name has been created. Otherwise, the NotFound error message appears.</description></item>
+        /// </list>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> In the following returned example, only the parameters in the returned data list are guaranteed to be included, and the parameters not mentioned are for reference only. For more information about the parameters, see <a href="https://help.aliyun.com/document_detail/142230.html">ListInstance</a>. You cannot force a dependency in a program to get these parameters.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdatePrivateNetworkWhiteIpsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePrivateNetworkWhiteIpsResponse
+        /// </returns>
         public UpdatePrivateNetworkWhiteIpsResponse UpdatePrivateNetworkWhiteIpsWithOptions(string InstanceId, UpdatePrivateNetworkWhiteIpsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15147,14 +25000,91 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdatePrivateNetworkWhiteIpsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * >  In the following returned example, only the parameters in the returned data list are guaranteed to be included, and the parameters not mentioned are for reference only. For more information about the parameters, see [ListInstance](~~142230~~). You cannot force a dependency in a program to get these parameters.
-          *
-          * @param request UpdatePrivateNetworkWhiteIpsRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdatePrivateNetworkWhiteIpsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <h2>RequestBody</h2>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Property</th>
+        /// <th>Type</th>
+        /// <th>Required</th>
+        /// <th>Example</th>
+        /// <th>Description</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>privateNetworkIpWhiteList</td>
+        /// <td>List<String></td>
+        /// <td>No</td>
+        /// <td>[&quot;0.0.XX.XX&quot;,&quot;10.2.XX.XX&quot;,&quot;192.168.XX.XX/25&quot;]</td>
+        /// <td>The list of IP address whitelists. This parameter is available if whiteIpGroup is left empty. The value of this parameter updates the IP address whitelist configurations in the Default whitelist group.</td>
+        /// </tr>
+        /// <tr>
+        /// <td>You cannot configure both privateNetworkIpWhiteList and whiteIpGroup.</td>
+        /// <td></td>
+        /// <td></td>
+        /// <td></td>
+        /// <td></td>
+        /// </tr>
+        /// <tr>
+        /// <td>whiteIpGroup</td>
+        /// <td>Object</td>
+        /// <td>No</td>
+        /// <td></td>
+        /// <td>You can update the whitelist configurations of an instance by using a whitelist group. You can update only one whitelist group.</td>
+        /// </tr>
+        /// <tr>
+        /// <td>You cannot configure both privateNetworkIpWhiteList and whiteIpGroup.</td>
+        /// <td></td>
+        /// <td></td>
+        /// <td></td>
+        /// <td></td>
+        /// </tr>
+        /// <tr>
+        /// <td>└ groupName</td>
+        /// <td>String</td>
+        /// <td>No</td>
+        /// <td>test_group_name</td>
+        /// <td>The group name of the whitelist group. This parameter is required if the whiteIpGroup parameter is optional.</td>
+        /// </tr>
+        /// <tr>
+        /// <td>└ ips</td>
+        /// <td>List<String></td>
+        /// <td>No</td>
+        /// <td>[&quot;0.0.0.0&quot;, &quot;10.2.XX.XX&quot;]</td>
+        /// <td>The list of IP addresses in the whitelist group. This parameter is required if the whiteIpGroup parameter is optional.</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <remarks>
+        /// <para><b>Notice</b>  The addition and deletion of whitelist groups are implemented by calling modifyMode to Cover. Delete and Append cannot add or delete whitelist groups at the same time. You can only modify the IP address list in the whitelist group. Take note of the following items: - If the modifyMode parameter is set to Cover, the whitelist group is deleted if ips is empty. If groupName is not in the list of existing whitelist group names, a whitelist group is created.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>If the modifyMode parameter is set to Delete, you must retain at least one IP address for the deleted ips.</description></item>
+        /// <item><description>If the modifyMode parameter is set to Append, make sure that the whitelist group name has been created. Otherwise, the NotFound error message appears.</description></item>
+        /// </list>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> In the following returned example, only the parameters in the returned data list are guaranteed to be included, and the parameters not mentioned are for reference only. For more information about the parameters, see <a href="https://help.aliyun.com/document_detail/142230.html">ListInstance</a>. You cannot force a dependency in a program to get these parameters.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdatePrivateNetworkWhiteIpsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePrivateNetworkWhiteIpsResponse
+        /// </returns>
         public async Task<UpdatePrivateNetworkWhiteIpsResponse> UpdatePrivateNetworkWhiteIpsWithOptionsAsync(string InstanceId, UpdatePrivateNetworkWhiteIpsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15188,12 +25118,85 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdatePrivateNetworkWhiteIpsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * >  In the following returned example, only the parameters in the returned data list are guaranteed to be included, and the parameters not mentioned are for reference only. For more information about the parameters, see [ListInstance](~~142230~~). You cannot force a dependency in a program to get these parameters.
-          *
-          * @param request UpdatePrivateNetworkWhiteIpsRequest
-          * @return UpdatePrivateNetworkWhiteIpsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <h2>RequestBody</h2>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Property</th>
+        /// <th>Type</th>
+        /// <th>Required</th>
+        /// <th>Example</th>
+        /// <th>Description</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>privateNetworkIpWhiteList</td>
+        /// <td>List<String></td>
+        /// <td>No</td>
+        /// <td>[&quot;0.0.XX.XX&quot;,&quot;10.2.XX.XX&quot;,&quot;192.168.XX.XX/25&quot;]</td>
+        /// <td>The list of IP address whitelists. This parameter is available if whiteIpGroup is left empty. The value of this parameter updates the IP address whitelist configurations in the Default whitelist group.</td>
+        /// </tr>
+        /// <tr>
+        /// <td>You cannot configure both privateNetworkIpWhiteList and whiteIpGroup.</td>
+        /// <td></td>
+        /// <td></td>
+        /// <td></td>
+        /// <td></td>
+        /// </tr>
+        /// <tr>
+        /// <td>whiteIpGroup</td>
+        /// <td>Object</td>
+        /// <td>No</td>
+        /// <td></td>
+        /// <td>You can update the whitelist configurations of an instance by using a whitelist group. You can update only one whitelist group.</td>
+        /// </tr>
+        /// <tr>
+        /// <td>You cannot configure both privateNetworkIpWhiteList and whiteIpGroup.</td>
+        /// <td></td>
+        /// <td></td>
+        /// <td></td>
+        /// <td></td>
+        /// </tr>
+        /// <tr>
+        /// <td>└ groupName</td>
+        /// <td>String</td>
+        /// <td>No</td>
+        /// <td>test_group_name</td>
+        /// <td>The group name of the whitelist group. This parameter is required if the whiteIpGroup parameter is optional.</td>
+        /// </tr>
+        /// <tr>
+        /// <td>└ ips</td>
+        /// <td>List<String></td>
+        /// <td>No</td>
+        /// <td>[&quot;0.0.0.0&quot;, &quot;10.2.XX.XX&quot;]</td>
+        /// <td>The list of IP addresses in the whitelist group. This parameter is required if the whiteIpGroup parameter is optional.</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <remarks>
+        /// <para><b>Notice</b>  The addition and deletion of whitelist groups are implemented by calling modifyMode to Cover. Delete and Append cannot add or delete whitelist groups at the same time. You can only modify the IP address list in the whitelist group. Take note of the following items: - If the modifyMode parameter is set to Cover, the whitelist group is deleted if ips is empty. If groupName is not in the list of existing whitelist group names, a whitelist group is created.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>If the modifyMode parameter is set to Delete, you must retain at least one IP address for the deleted ips.</description></item>
+        /// <item><description>If the modifyMode parameter is set to Append, make sure that the whitelist group name has been created. Otherwise, the NotFound error message appears.</description></item>
+        /// </list>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> In the following returned example, only the parameters in the returned data list are guaranteed to be included, and the parameters not mentioned are for reference only. For more information about the parameters, see <a href="https://help.aliyun.com/document_detail/142230.html">ListInstance</a>. You cannot force a dependency in a program to get these parameters.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdatePrivateNetworkWhiteIpsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePrivateNetworkWhiteIpsResponse
+        /// </returns>
         public UpdatePrivateNetworkWhiteIpsResponse UpdatePrivateNetworkWhiteIps(string InstanceId, UpdatePrivateNetworkWhiteIpsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15201,12 +25204,85 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return UpdatePrivateNetworkWhiteIpsWithOptions(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * >  In the following returned example, only the parameters in the returned data list are guaranteed to be included, and the parameters not mentioned are for reference only. For more information about the parameters, see [ListInstance](~~142230~~). You cannot force a dependency in a program to get these parameters.
-          *
-          * @param request UpdatePrivateNetworkWhiteIpsRequest
-          * @return UpdatePrivateNetworkWhiteIpsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <h2>RequestBody</h2>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Property</th>
+        /// <th>Type</th>
+        /// <th>Required</th>
+        /// <th>Example</th>
+        /// <th>Description</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>privateNetworkIpWhiteList</td>
+        /// <td>List<String></td>
+        /// <td>No</td>
+        /// <td>[&quot;0.0.XX.XX&quot;,&quot;10.2.XX.XX&quot;,&quot;192.168.XX.XX/25&quot;]</td>
+        /// <td>The list of IP address whitelists. This parameter is available if whiteIpGroup is left empty. The value of this parameter updates the IP address whitelist configurations in the Default whitelist group.</td>
+        /// </tr>
+        /// <tr>
+        /// <td>You cannot configure both privateNetworkIpWhiteList and whiteIpGroup.</td>
+        /// <td></td>
+        /// <td></td>
+        /// <td></td>
+        /// <td></td>
+        /// </tr>
+        /// <tr>
+        /// <td>whiteIpGroup</td>
+        /// <td>Object</td>
+        /// <td>No</td>
+        /// <td></td>
+        /// <td>You can update the whitelist configurations of an instance by using a whitelist group. You can update only one whitelist group.</td>
+        /// </tr>
+        /// <tr>
+        /// <td>You cannot configure both privateNetworkIpWhiteList and whiteIpGroup.</td>
+        /// <td></td>
+        /// <td></td>
+        /// <td></td>
+        /// <td></td>
+        /// </tr>
+        /// <tr>
+        /// <td>└ groupName</td>
+        /// <td>String</td>
+        /// <td>No</td>
+        /// <td>test_group_name</td>
+        /// <td>The group name of the whitelist group. This parameter is required if the whiteIpGroup parameter is optional.</td>
+        /// </tr>
+        /// <tr>
+        /// <td>└ ips</td>
+        /// <td>List<String></td>
+        /// <td>No</td>
+        /// <td>[&quot;0.0.0.0&quot;, &quot;10.2.XX.XX&quot;]</td>
+        /// <td>The list of IP addresses in the whitelist group. This parameter is required if the whiteIpGroup parameter is optional.</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <remarks>
+        /// <para><b>Notice</b>  The addition and deletion of whitelist groups are implemented by calling modifyMode to Cover. Delete and Append cannot add or delete whitelist groups at the same time. You can only modify the IP address list in the whitelist group. Take note of the following items: - If the modifyMode parameter is set to Cover, the whitelist group is deleted if ips is empty. If groupName is not in the list of existing whitelist group names, a whitelist group is created.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>If the modifyMode parameter is set to Delete, you must retain at least one IP address for the deleted ips.</description></item>
+        /// <item><description>If the modifyMode parameter is set to Append, make sure that the whitelist group name has been created. Otherwise, the NotFound error message appears.</description></item>
+        /// </list>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> In the following returned example, only the parameters in the returned data list are guaranteed to be included, and the parameters not mentioned are for reference only. For more information about the parameters, see <a href="https://help.aliyun.com/document_detail/142230.html">ListInstance</a>. You cannot force a dependency in a program to get these parameters.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdatePrivateNetworkWhiteIpsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePrivateNetworkWhiteIpsResponse
+        /// </returns>
         public async Task<UpdatePrivateNetworkWhiteIpsResponse> UpdatePrivateNetworkWhiteIpsAsync(string InstanceId, UpdatePrivateNetworkWhiteIpsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15214,15 +25290,30 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await UpdatePrivateNetworkWhiteIpsWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * When you call this operation, take note of the following items:
-          * When the instance is in the activating, invalid, or inactive state, its configuration cannot be updated.
-          *
-          * @param request UpdatePublicNetworkRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdatePublicNetworkResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call UpdatePublicNetwork to open or close the public network address of the specified elasticsearch instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, take note of the following items:
+        /// When the instance is in the activating, invalid, or inactive state, its configuration cannot be updated.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdatePublicNetworkRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePublicNetworkResponse
+        /// </returns>
         public UpdatePublicNetworkResponse UpdatePublicNetworkWithOptions(string InstanceId, UpdatePublicNetworkRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15252,15 +25343,30 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdatePublicNetworkResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * When you call this operation, take note of the following items:
-          * When the instance is in the activating, invalid, or inactive state, its configuration cannot be updated.
-          *
-          * @param request UpdatePublicNetworkRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdatePublicNetworkResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call UpdatePublicNetwork to open or close the public network address of the specified elasticsearch instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, take note of the following items:
+        /// When the instance is in the activating, invalid, or inactive state, its configuration cannot be updated.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdatePublicNetworkRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePublicNetworkResponse
+        /// </returns>
         public async Task<UpdatePublicNetworkResponse> UpdatePublicNetworkWithOptionsAsync(string InstanceId, UpdatePublicNetworkRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15290,13 +25396,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdatePublicNetworkResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * When you call this operation, take note of the following items:
-          * When the instance is in the activating, invalid, or inactive state, its configuration cannot be updated.
-          *
-          * @param request UpdatePublicNetworkRequest
-          * @return UpdatePublicNetworkResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call UpdatePublicNetwork to open or close the public network address of the specified elasticsearch instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, take note of the following items:
+        /// When the instance is in the activating, invalid, or inactive state, its configuration cannot be updated.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdatePublicNetworkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePublicNetworkResponse
+        /// </returns>
         public UpdatePublicNetworkResponse UpdatePublicNetwork(string InstanceId, UpdatePublicNetworkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15304,13 +25421,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return UpdatePublicNetworkWithOptions(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * When you call this operation, take note of the following items:
-          * When the instance is in the activating, invalid, or inactive state, its configuration cannot be updated.
-          *
-          * @param request UpdatePublicNetworkRequest
-          * @return UpdatePublicNetworkResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call UpdatePublicNetwork to open or close the public network address of the specified elasticsearch instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, take note of the following items:
+        /// When the instance is in the activating, invalid, or inactive state, its configuration cannot be updated.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdatePublicNetworkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePublicNetworkResponse
+        /// </returns>
         public async Task<UpdatePublicNetworkResponse> UpdatePublicNetworkAsync(string InstanceId, UpdatePublicNetworkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15318,14 +25446,91 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await UpdatePublicNetworkWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * >  In the following example, only the parameters in the returned data list are guaranteed to be included. The parameters that are not mentioned are for reference only. For more information about the parameters, see [ListInstance](~~142230~~). You cannot force a dependency in a program to get these parameters.
-          *
-          * @param request UpdatePublicWhiteIpsRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdatePublicWhiteIpsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <h2>RequestBody</h2>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Property</th>
+        /// <th>Type</th>
+        /// <th>Required</th>
+        /// <th>Example</th>
+        /// <th>Description</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>publicIpWhitelist</td>
+        /// <td>List<String></td>
+        /// <td>Yes</td>
+        /// <td>[&quot;0.0.0.0/0&quot;,&quot;0.0.0.0/1&quot;]</td>
+        /// <td>The list of IP address whitelists. This parameter is available if whiteIpGroup is left empty. The value of this parameter updates the IP address whitelist configurations in the Default whitelist group.</td>
+        /// </tr>
+        /// <tr>
+        /// <td>You cannot configure both publicIpWhitelist and whiteIpGroup.</td>
+        /// <td></td>
+        /// <td></td>
+        /// <td></td>
+        /// <td></td>
+        /// </tr>
+        /// <tr>
+        /// <td>whiteIpGroup</td>
+        /// <td>Object</td>
+        /// <td>No</td>
+        /// <td></td>
+        /// <td>You can update the whitelist configurations of an instance by using a whitelist group. You can update only one whitelist group.</td>
+        /// </tr>
+        /// <tr>
+        /// <td>You cannot configure both publicIpWhitelist and whiteIpGroup.</td>
+        /// <td></td>
+        /// <td></td>
+        /// <td></td>
+        /// <td></td>
+        /// </tr>
+        /// <tr>
+        /// <td>└ groupName</td>
+        /// <td>String</td>
+        /// <td>No</td>
+        /// <td>test_group_name</td>
+        /// <td>The group name of the whitelist group. This parameter is required if the whiteIpGroup parameter is optional.</td>
+        /// </tr>
+        /// <tr>
+        /// <td>└ ips</td>
+        /// <td>List<String></td>
+        /// <td>No</td>
+        /// <td>[&quot;0.0.0.0&quot;, &quot;10.2.XX.XX&quot;]</td>
+        /// <td>The list of IP addresses in the whitelist group. This parameter is required if the whiteIpGroup parameter is optional.</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <remarks>
+        /// <para><b>Notice</b>  The addition and deletion of whitelist groups are implemented by calling modifyMode to Cover. Delete and Append cannot add or delete whitelist groups at the same time. You can only modify the IP address list in the whitelist group. Take note of the following items: - If the modifyMode parameter is set to Cover, the whitelist group is deleted if ips is empty. If groupName is not in the list of existing whitelist group names, a whitelist group is created.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>If the modifyMode parameter is set to Delete, you must retain at least one IP address for the deleted ips.</description></item>
+        /// <item><description>If the modifyMode parameter is set to Append, make sure that the whitelist group name has been created. Otherwise, the NotFound error message appears.</description></item>
+        /// </list>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> In the following example, only the parameters in the returned data list are guaranteed to be included. The parameters that are not mentioned are for reference only. For more information about the parameters, see <a href="https://help.aliyun.com/document_detail/142230.html">ListInstance</a>. You cannot force a dependency in a program to get these parameters.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdatePublicWhiteIpsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePublicWhiteIpsResponse
+        /// </returns>
         public UpdatePublicWhiteIpsResponse UpdatePublicWhiteIpsWithOptions(string InstanceId, UpdatePublicWhiteIpsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15359,14 +25564,91 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdatePublicWhiteIpsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * >  In the following example, only the parameters in the returned data list are guaranteed to be included. The parameters that are not mentioned are for reference only. For more information about the parameters, see [ListInstance](~~142230~~). You cannot force a dependency in a program to get these parameters.
-          *
-          * @param request UpdatePublicWhiteIpsRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdatePublicWhiteIpsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <h2>RequestBody</h2>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Property</th>
+        /// <th>Type</th>
+        /// <th>Required</th>
+        /// <th>Example</th>
+        /// <th>Description</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>publicIpWhitelist</td>
+        /// <td>List<String></td>
+        /// <td>Yes</td>
+        /// <td>[&quot;0.0.0.0/0&quot;,&quot;0.0.0.0/1&quot;]</td>
+        /// <td>The list of IP address whitelists. This parameter is available if whiteIpGroup is left empty. The value of this parameter updates the IP address whitelist configurations in the Default whitelist group.</td>
+        /// </tr>
+        /// <tr>
+        /// <td>You cannot configure both publicIpWhitelist and whiteIpGroup.</td>
+        /// <td></td>
+        /// <td></td>
+        /// <td></td>
+        /// <td></td>
+        /// </tr>
+        /// <tr>
+        /// <td>whiteIpGroup</td>
+        /// <td>Object</td>
+        /// <td>No</td>
+        /// <td></td>
+        /// <td>You can update the whitelist configurations of an instance by using a whitelist group. You can update only one whitelist group.</td>
+        /// </tr>
+        /// <tr>
+        /// <td>You cannot configure both publicIpWhitelist and whiteIpGroup.</td>
+        /// <td></td>
+        /// <td></td>
+        /// <td></td>
+        /// <td></td>
+        /// </tr>
+        /// <tr>
+        /// <td>└ groupName</td>
+        /// <td>String</td>
+        /// <td>No</td>
+        /// <td>test_group_name</td>
+        /// <td>The group name of the whitelist group. This parameter is required if the whiteIpGroup parameter is optional.</td>
+        /// </tr>
+        /// <tr>
+        /// <td>└ ips</td>
+        /// <td>List<String></td>
+        /// <td>No</td>
+        /// <td>[&quot;0.0.0.0&quot;, &quot;10.2.XX.XX&quot;]</td>
+        /// <td>The list of IP addresses in the whitelist group. This parameter is required if the whiteIpGroup parameter is optional.</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <remarks>
+        /// <para><b>Notice</b>  The addition and deletion of whitelist groups are implemented by calling modifyMode to Cover. Delete and Append cannot add or delete whitelist groups at the same time. You can only modify the IP address list in the whitelist group. Take note of the following items: - If the modifyMode parameter is set to Cover, the whitelist group is deleted if ips is empty. If groupName is not in the list of existing whitelist group names, a whitelist group is created.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>If the modifyMode parameter is set to Delete, you must retain at least one IP address for the deleted ips.</description></item>
+        /// <item><description>If the modifyMode parameter is set to Append, make sure that the whitelist group name has been created. Otherwise, the NotFound error message appears.</description></item>
+        /// </list>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> In the following example, only the parameters in the returned data list are guaranteed to be included. The parameters that are not mentioned are for reference only. For more information about the parameters, see <a href="https://help.aliyun.com/document_detail/142230.html">ListInstance</a>. You cannot force a dependency in a program to get these parameters.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdatePublicWhiteIpsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePublicWhiteIpsResponse
+        /// </returns>
         public async Task<UpdatePublicWhiteIpsResponse> UpdatePublicWhiteIpsWithOptionsAsync(string InstanceId, UpdatePublicWhiteIpsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15400,12 +25682,85 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdatePublicWhiteIpsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * >  In the following example, only the parameters in the returned data list are guaranteed to be included. The parameters that are not mentioned are for reference only. For more information about the parameters, see [ListInstance](~~142230~~). You cannot force a dependency in a program to get these parameters.
-          *
-          * @param request UpdatePublicWhiteIpsRequest
-          * @return UpdatePublicWhiteIpsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <h2>RequestBody</h2>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Property</th>
+        /// <th>Type</th>
+        /// <th>Required</th>
+        /// <th>Example</th>
+        /// <th>Description</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>publicIpWhitelist</td>
+        /// <td>List<String></td>
+        /// <td>Yes</td>
+        /// <td>[&quot;0.0.0.0/0&quot;,&quot;0.0.0.0/1&quot;]</td>
+        /// <td>The list of IP address whitelists. This parameter is available if whiteIpGroup is left empty. The value of this parameter updates the IP address whitelist configurations in the Default whitelist group.</td>
+        /// </tr>
+        /// <tr>
+        /// <td>You cannot configure both publicIpWhitelist and whiteIpGroup.</td>
+        /// <td></td>
+        /// <td></td>
+        /// <td></td>
+        /// <td></td>
+        /// </tr>
+        /// <tr>
+        /// <td>whiteIpGroup</td>
+        /// <td>Object</td>
+        /// <td>No</td>
+        /// <td></td>
+        /// <td>You can update the whitelist configurations of an instance by using a whitelist group. You can update only one whitelist group.</td>
+        /// </tr>
+        /// <tr>
+        /// <td>You cannot configure both publicIpWhitelist and whiteIpGroup.</td>
+        /// <td></td>
+        /// <td></td>
+        /// <td></td>
+        /// <td></td>
+        /// </tr>
+        /// <tr>
+        /// <td>└ groupName</td>
+        /// <td>String</td>
+        /// <td>No</td>
+        /// <td>test_group_name</td>
+        /// <td>The group name of the whitelist group. This parameter is required if the whiteIpGroup parameter is optional.</td>
+        /// </tr>
+        /// <tr>
+        /// <td>└ ips</td>
+        /// <td>List<String></td>
+        /// <td>No</td>
+        /// <td>[&quot;0.0.0.0&quot;, &quot;10.2.XX.XX&quot;]</td>
+        /// <td>The list of IP addresses in the whitelist group. This parameter is required if the whiteIpGroup parameter is optional.</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <remarks>
+        /// <para><b>Notice</b>  The addition and deletion of whitelist groups are implemented by calling modifyMode to Cover. Delete and Append cannot add or delete whitelist groups at the same time. You can only modify the IP address list in the whitelist group. Take note of the following items: - If the modifyMode parameter is set to Cover, the whitelist group is deleted if ips is empty. If groupName is not in the list of existing whitelist group names, a whitelist group is created.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>If the modifyMode parameter is set to Delete, you must retain at least one IP address for the deleted ips.</description></item>
+        /// <item><description>If the modifyMode parameter is set to Append, make sure that the whitelist group name has been created. Otherwise, the NotFound error message appears.</description></item>
+        /// </list>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> In the following example, only the parameters in the returned data list are guaranteed to be included. The parameters that are not mentioned are for reference only. For more information about the parameters, see <a href="https://help.aliyun.com/document_detail/142230.html">ListInstance</a>. You cannot force a dependency in a program to get these parameters.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdatePublicWhiteIpsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePublicWhiteIpsResponse
+        /// </returns>
         public UpdatePublicWhiteIpsResponse UpdatePublicWhiteIps(string InstanceId, UpdatePublicWhiteIpsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15413,12 +25768,85 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return UpdatePublicWhiteIpsWithOptions(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * >  In the following example, only the parameters in the returned data list are guaranteed to be included. The parameters that are not mentioned are for reference only. For more information about the parameters, see [ListInstance](~~142230~~). You cannot force a dependency in a program to get these parameters.
-          *
-          * @param request UpdatePublicWhiteIpsRequest
-          * @return UpdatePublicWhiteIpsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <h2>RequestBody</h2>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Property</th>
+        /// <th>Type</th>
+        /// <th>Required</th>
+        /// <th>Example</th>
+        /// <th>Description</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>publicIpWhitelist</td>
+        /// <td>List<String></td>
+        /// <td>Yes</td>
+        /// <td>[&quot;0.0.0.0/0&quot;,&quot;0.0.0.0/1&quot;]</td>
+        /// <td>The list of IP address whitelists. This parameter is available if whiteIpGroup is left empty. The value of this parameter updates the IP address whitelist configurations in the Default whitelist group.</td>
+        /// </tr>
+        /// <tr>
+        /// <td>You cannot configure both publicIpWhitelist and whiteIpGroup.</td>
+        /// <td></td>
+        /// <td></td>
+        /// <td></td>
+        /// <td></td>
+        /// </tr>
+        /// <tr>
+        /// <td>whiteIpGroup</td>
+        /// <td>Object</td>
+        /// <td>No</td>
+        /// <td></td>
+        /// <td>You can update the whitelist configurations of an instance by using a whitelist group. You can update only one whitelist group.</td>
+        /// </tr>
+        /// <tr>
+        /// <td>You cannot configure both publicIpWhitelist and whiteIpGroup.</td>
+        /// <td></td>
+        /// <td></td>
+        /// <td></td>
+        /// <td></td>
+        /// </tr>
+        /// <tr>
+        /// <td>└ groupName</td>
+        /// <td>String</td>
+        /// <td>No</td>
+        /// <td>test_group_name</td>
+        /// <td>The group name of the whitelist group. This parameter is required if the whiteIpGroup parameter is optional.</td>
+        /// </tr>
+        /// <tr>
+        /// <td>└ ips</td>
+        /// <td>List<String></td>
+        /// <td>No</td>
+        /// <td>[&quot;0.0.0.0&quot;, &quot;10.2.XX.XX&quot;]</td>
+        /// <td>The list of IP addresses in the whitelist group. This parameter is required if the whiteIpGroup parameter is optional.</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <remarks>
+        /// <para><b>Notice</b>  The addition and deletion of whitelist groups are implemented by calling modifyMode to Cover. Delete and Append cannot add or delete whitelist groups at the same time. You can only modify the IP address list in the whitelist group. Take note of the following items: - If the modifyMode parameter is set to Cover, the whitelist group is deleted if ips is empty. If groupName is not in the list of existing whitelist group names, a whitelist group is created.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>If the modifyMode parameter is set to Delete, you must retain at least one IP address for the deleted ips.</description></item>
+        /// <item><description>If the modifyMode parameter is set to Append, make sure that the whitelist group name has been created. Otherwise, the NotFound error message appears.</description></item>
+        /// </list>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> In the following example, only the parameters in the returned data list are guaranteed to be included. The parameters that are not mentioned are for reference only. For more information about the parameters, see <a href="https://help.aliyun.com/document_detail/142230.html">ListInstance</a>. You cannot force a dependency in a program to get these parameters.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdatePublicWhiteIpsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePublicWhiteIpsResponse
+        /// </returns>
         public async Task<UpdatePublicWhiteIpsResponse> UpdatePublicWhiteIpsAsync(string InstanceId, UpdatePublicWhiteIpsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15426,6 +25854,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await UpdatePublicWhiteIpsWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更改ES集群高可用策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateReadWritePolicyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateReadWritePolicyResponse
+        /// </returns>
         public UpdateReadWritePolicyResponse UpdateReadWritePolicyWithOptions(string InstanceId, UpdateReadWritePolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15455,6 +25901,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateReadWritePolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更改ES集群高可用策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateReadWritePolicyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateReadWritePolicyResponse
+        /// </returns>
         public async Task<UpdateReadWritePolicyResponse> UpdateReadWritePolicyWithOptionsAsync(string InstanceId, UpdateReadWritePolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15484,6 +25948,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateReadWritePolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更改ES集群高可用策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateReadWritePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateReadWritePolicyResponse
+        /// </returns>
         public UpdateReadWritePolicyResponse UpdateReadWritePolicy(string InstanceId, UpdateReadWritePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15491,6 +25967,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return UpdateReadWritePolicyWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更改ES集群高可用策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateReadWritePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateReadWritePolicyResponse
+        /// </returns>
         public async Task<UpdateReadWritePolicyResponse> UpdateReadWritePolicyAsync(string InstanceId, UpdateReadWritePolicyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15498,6 +25986,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await UpdateReadWritePolicyWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call UpdateSnapshotSetting to update the data backup configuration of the specified instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSnapshotSettingRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSnapshotSettingResponse
+        /// </returns>
         public UpdateSnapshotSettingResponse UpdateSnapshotSettingWithOptions(string InstanceId, UpdateSnapshotSettingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15521,6 +26027,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateSnapshotSettingResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call UpdateSnapshotSetting to update the data backup configuration of the specified instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSnapshotSettingRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSnapshotSettingResponse
+        /// </returns>
         public async Task<UpdateSnapshotSettingResponse> UpdateSnapshotSettingWithOptionsAsync(string InstanceId, UpdateSnapshotSettingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15544,6 +26068,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateSnapshotSettingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call UpdateSnapshotSetting to update the data backup configuration of the specified instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSnapshotSettingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSnapshotSettingResponse
+        /// </returns>
         public UpdateSnapshotSettingResponse UpdateSnapshotSetting(string InstanceId, UpdateSnapshotSettingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15551,6 +26087,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return UpdateSnapshotSettingWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call UpdateSnapshotSetting to update the data backup configuration of the specified instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSnapshotSettingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSnapshotSettingResponse
+        /// </returns>
         public async Task<UpdateSnapshotSettingResponse> UpdateSnapshotSettingAsync(string InstanceId, UpdateSnapshotSettingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15558,16 +26106,33 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await UpdateSnapshotSettingWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * Before you call this operation, take note of the following items:
-          * *   If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.
-          * *   If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.
-          *
-          * @param request UpdateSynonymsDictsRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateSynonymsDictsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the synonym dictionaries of an Elasticsearch cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.</description></item>
+        /// <item><description>If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateSynonymsDictsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSynonymsDictsResponse
+        /// </returns>
         public UpdateSynonymsDictsResponse UpdateSynonymsDictsWithOptions(string InstanceId, UpdateSynonymsDictsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15597,16 +26162,33 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateSynonymsDictsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * Before you call this operation, take note of the following items:
-          * *   If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.
-          * *   If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.
-          *
-          * @param request UpdateSynonymsDictsRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateSynonymsDictsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the synonym dictionaries of an Elasticsearch cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.</description></item>
+        /// <item><description>If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateSynonymsDictsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSynonymsDictsResponse
+        /// </returns>
         public async Task<UpdateSynonymsDictsResponse> UpdateSynonymsDictsWithOptionsAsync(string InstanceId, UpdateSynonymsDictsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15636,14 +26218,27 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateSynonymsDictsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * Before you call this operation, take note of the following items:
-          * *   If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.
-          * *   If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.
-          *
-          * @param request UpdateSynonymsDictsRequest
-          * @return UpdateSynonymsDictsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the synonym dictionaries of an Elasticsearch cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.</description></item>
+        /// <item><description>If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateSynonymsDictsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSynonymsDictsResponse
+        /// </returns>
         public UpdateSynonymsDictsResponse UpdateSynonymsDicts(string InstanceId, UpdateSynonymsDictsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15651,14 +26246,27 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return UpdateSynonymsDictsWithOptions(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * Before you call this operation, take note of the following items:
-          * *   If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.
-          * *   If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.
-          *
-          * @param request UpdateSynonymsDictsRequest
-          * @return UpdateSynonymsDictsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the synonym dictionaries of an Elasticsearch cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.</description></item>
+        /// <item><description>If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateSynonymsDictsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSynonymsDictsResponse
+        /// </returns>
         public async Task<UpdateSynonymsDictsResponse> UpdateSynonymsDictsAsync(string InstanceId, UpdateSynonymsDictsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15666,6 +26274,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await UpdateSynonymsDictsWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// UpdateTemplateRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTemplateResponse
+        /// </returns>
         public UpdateTemplateResponse UpdateTemplateWithOptions(string InstanceId, string TemplateName, UpdateTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15695,6 +26316,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateTemplateResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// UpdateTemplateRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTemplateResponse
+        /// </returns>
         public async Task<UpdateTemplateResponse> UpdateTemplateWithOptionsAsync(string InstanceId, string TemplateName, UpdateTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15724,6 +26358,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// UpdateTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTemplateResponse
+        /// </returns>
         public UpdateTemplateResponse UpdateTemplate(string InstanceId, string TemplateName, UpdateTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15731,6 +26372,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return UpdateTemplateWithOptions(InstanceId, TemplateName, request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// UpdateTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTemplateResponse
+        /// </returns>
         public async Task<UpdateTemplateResponse> UpdateTemplateAsync(string InstanceId, string TemplateName, UpdateTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15738,14 +26386,38 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await UpdateTemplateWithOptionsAsync(InstanceId, TemplateName, request, headers, runtime);
         }
 
-        /**
-          * > For more information about the parameters displayed in the following sample code but not provided in the preceding tables, see [ListInstance](~~142230~~). You cannot force your program to obtain these parameters.
-          *
-          * @param request UpdateWhiteIpsRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateWhiteIpsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <remarks>
+        /// <para> If you want to add an IP address whitelist, you can set the modifyMode parameter only to Cover. If you set this parameter to Delete or Append, you can only update an IP address whitelist.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>If you set the modifyMode parameter to Cover and leave the ips parameter empty, the system deletes the specified whitelist. If the whitelist specified by using the groupName parameter does not exist, the system creates such a whitelist.</description></item>
+        /// <item><description>If you set the modifyMode parameter to Delete, at least one IP address must be retained for the specified whitelist.</description></item>
+        /// <item><description>If you set the modifyMode parameter to Append, you must make sure that the specified whitelist exists. Otherwise, the system reports the NotFound error.</description></item>
+        /// </list>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>For more information about the parameters displayed in the following sample code but not provided in the preceding tables, see <a href="https://help.aliyun.com/document_detail/142230.html">ListInstance</a>. You cannot force your program to obtain these parameters.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateWhiteIpsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWhiteIpsResponse
+        /// </returns>
         public UpdateWhiteIpsResponse UpdateWhiteIpsWithOptions(string InstanceId, UpdateWhiteIpsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15788,14 +26460,38 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateWhiteIpsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * > For more information about the parameters displayed in the following sample code but not provided in the preceding tables, see [ListInstance](~~142230~~). You cannot force your program to obtain these parameters.
-          *
-          * @param request UpdateWhiteIpsRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateWhiteIpsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <remarks>
+        /// <para> If you want to add an IP address whitelist, you can set the modifyMode parameter only to Cover. If you set this parameter to Delete or Append, you can only update an IP address whitelist.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>If you set the modifyMode parameter to Cover and leave the ips parameter empty, the system deletes the specified whitelist. If the whitelist specified by using the groupName parameter does not exist, the system creates such a whitelist.</description></item>
+        /// <item><description>If you set the modifyMode parameter to Delete, at least one IP address must be retained for the specified whitelist.</description></item>
+        /// <item><description>If you set the modifyMode parameter to Append, you must make sure that the specified whitelist exists. Otherwise, the system reports the NotFound error.</description></item>
+        /// </list>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>For more information about the parameters displayed in the following sample code but not provided in the preceding tables, see <a href="https://help.aliyun.com/document_detail/142230.html">ListInstance</a>. You cannot force your program to obtain these parameters.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateWhiteIpsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWhiteIpsResponse
+        /// </returns>
         public async Task<UpdateWhiteIpsResponse> UpdateWhiteIpsWithOptionsAsync(string InstanceId, UpdateWhiteIpsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15838,12 +26534,32 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateWhiteIpsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * > For more information about the parameters displayed in the following sample code but not provided in the preceding tables, see [ListInstance](~~142230~~). You cannot force your program to obtain these parameters.
-          *
-          * @param request UpdateWhiteIpsRequest
-          * @return UpdateWhiteIpsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <remarks>
+        /// <para> If you want to add an IP address whitelist, you can set the modifyMode parameter only to Cover. If you set this parameter to Delete or Append, you can only update an IP address whitelist.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>If you set the modifyMode parameter to Cover and leave the ips parameter empty, the system deletes the specified whitelist. If the whitelist specified by using the groupName parameter does not exist, the system creates such a whitelist.</description></item>
+        /// <item><description>If you set the modifyMode parameter to Delete, at least one IP address must be retained for the specified whitelist.</description></item>
+        /// <item><description>If you set the modifyMode parameter to Append, you must make sure that the specified whitelist exists. Otherwise, the system reports the NotFound error.</description></item>
+        /// </list>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>For more information about the parameters displayed in the following sample code but not provided in the preceding tables, see <a href="https://help.aliyun.com/document_detail/142230.html">ListInstance</a>. You cannot force your program to obtain these parameters.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateWhiteIpsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWhiteIpsResponse
+        /// </returns>
         public UpdateWhiteIpsResponse UpdateWhiteIps(string InstanceId, UpdateWhiteIpsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15851,12 +26567,32 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return UpdateWhiteIpsWithOptions(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * > For more information about the parameters displayed in the following sample code but not provided in the preceding tables, see [ListInstance](~~142230~~). You cannot force your program to obtain these parameters.
-          *
-          * @param request UpdateWhiteIpsRequest
-          * @return UpdateWhiteIpsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <remarks>
+        /// <para> If you want to add an IP address whitelist, you can set the modifyMode parameter only to Cover. If you set this parameter to Delete or Append, you can only update an IP address whitelist.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>If you set the modifyMode parameter to Cover and leave the ips parameter empty, the system deletes the specified whitelist. If the whitelist specified by using the groupName parameter does not exist, the system creates such a whitelist.</description></item>
+        /// <item><description>If you set the modifyMode parameter to Delete, at least one IP address must be retained for the specified whitelist.</description></item>
+        /// <item><description>If you set the modifyMode parameter to Append, you must make sure that the specified whitelist exists. Otherwise, the system reports the NotFound error.</description></item>
+        /// </list>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>For more information about the parameters displayed in the following sample code but not provided in the preceding tables, see <a href="https://help.aliyun.com/document_detail/142230.html">ListInstance</a>. You cannot force your program to obtain these parameters.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateWhiteIpsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWhiteIpsResponse
+        /// </returns>
         public async Task<UpdateWhiteIpsResponse> UpdateWhiteIpsAsync(string InstanceId, UpdateWhiteIpsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15864,6 +26600,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await UpdateWhiteIpsWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改Logstash实例的X-Pack监控报警配置。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateXpackMonitorConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateXpackMonitorConfigResponse
+        /// </returns>
         public UpdateXpackMonitorConfigResponse UpdateXpackMonitorConfigWithOptions(string InstanceId, UpdateXpackMonitorConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15910,6 +26664,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateXpackMonitorConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改Logstash实例的X-Pack监控报警配置。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateXpackMonitorConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateXpackMonitorConfigResponse
+        /// </returns>
         public async Task<UpdateXpackMonitorConfigResponse> UpdateXpackMonitorConfigWithOptionsAsync(string InstanceId, UpdateXpackMonitorConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15956,6 +26728,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpdateXpackMonitorConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改Logstash实例的X-Pack监控报警配置。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateXpackMonitorConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateXpackMonitorConfigResponse
+        /// </returns>
         public UpdateXpackMonitorConfigResponse UpdateXpackMonitorConfig(string InstanceId, UpdateXpackMonitorConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15963,6 +26747,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return UpdateXpackMonitorConfigWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改Logstash实例的X-Pack监控报警配置。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateXpackMonitorConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateXpackMonitorConfigResponse
+        /// </returns>
         public async Task<UpdateXpackMonitorConfigResponse> UpdateXpackMonitorConfigAsync(string InstanceId, UpdateXpackMonitorConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15970,14 +26766,29 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await UpdateXpackMonitorConfigWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * 5A2CFF0E-5718-45B5-9D4D-70B3FF\\*\\*\\*\\*
-          *
-          * @param request UpgradeEngineVersionRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpgradeEngineVersionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ES集群版本升级</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>5A2CFF0E-5718-45B5-9D4D-70B3FF\<em>\</em>\<em>\</em></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpgradeEngineVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeEngineVersionResponse
+        /// </returns>
         public UpgradeEngineVersionResponse UpgradeEngineVersionWithOptions(string InstanceId, UpgradeEngineVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15990,7 +26801,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 query["dryRun"] = request.DryRun;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateStrategy))
+            {
+                query["updateStrategy"] = request.UpdateStrategy;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Plugins))
+            {
+                body["plugins"] = request.Plugins;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
                 body["type"] = request.Type;
@@ -16020,14 +26839,29 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpgradeEngineVersionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * 5A2CFF0E-5718-45B5-9D4D-70B3FF\\*\\*\\*\\*
-          *
-          * @param request UpgradeEngineVersionRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpgradeEngineVersionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ES集群版本升级</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>5A2CFF0E-5718-45B5-9D4D-70B3FF\<em>\</em>\<em>\</em></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpgradeEngineVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeEngineVersionResponse
+        /// </returns>
         public async Task<UpgradeEngineVersionResponse> UpgradeEngineVersionWithOptionsAsync(string InstanceId, UpgradeEngineVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16040,7 +26874,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 query["dryRun"] = request.DryRun;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateStrategy))
+            {
+                query["updateStrategy"] = request.UpdateStrategy;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Plugins))
+            {
+                body["plugins"] = request.Plugins;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
                 body["type"] = request.Type;
@@ -16070,12 +26912,23 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<UpgradeEngineVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * 5A2CFF0E-5718-45B5-9D4D-70B3FF\\*\\*\\*\\*
-          *
-          * @param request UpgradeEngineVersionRequest
-          * @return UpgradeEngineVersionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ES集群版本升级</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>5A2CFF0E-5718-45B5-9D4D-70B3FF\<em>\</em>\<em>\</em></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpgradeEngineVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeEngineVersionResponse
+        /// </returns>
         public UpgradeEngineVersionResponse UpgradeEngineVersion(string InstanceId, UpgradeEngineVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16083,12 +26936,23 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return UpgradeEngineVersionWithOptions(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * 5A2CFF0E-5718-45B5-9D4D-70B3FF\\*\\*\\*\\*
-          *
-          * @param request UpgradeEngineVersionRequest
-          * @return UpgradeEngineVersionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ES集群版本升级</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>5A2CFF0E-5718-45B5-9D4D-70B3FF\<em>\</em>\<em>\</em></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpgradeEngineVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeEngineVersionResponse
+        /// </returns>
         public async Task<UpgradeEngineVersionResponse> UpgradeEngineVersionAsync(string InstanceId, UpgradeEngineVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16096,14 +26960,31 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await UpgradeEngineVersionWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * > Before you enable the X-Pack Monitoring feature for a Logstash cluster, you must associate the Logstash cluster with an Elasticsearch cluster. This way, you can view the monitoring data of the Logstash cluster in the Kibana console of the Elasticsearch cluster.
-          *
-          * @param request ValidateConnectionRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ValidateConnectionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Tests the connectivity between a Logstash cluster and its associated Elasticsearch cluster when you configure the X-Pack Monitoring feature for the Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Before you enable the X-Pack Monitoring feature for a Logstash cluster, you must associate the Logstash cluster with an Elasticsearch cluster. This way, you can view the monitoring data of the Logstash cluster in the Kibana console of the Elasticsearch cluster.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ValidateConnectionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateConnectionResponse
+        /// </returns>
         public ValidateConnectionResponse ValidateConnectionWithOptions(string InstanceId, ValidateConnectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16133,14 +27014,31 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ValidateConnectionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * > Before you enable the X-Pack Monitoring feature for a Logstash cluster, you must associate the Logstash cluster with an Elasticsearch cluster. This way, you can view the monitoring data of the Logstash cluster in the Kibana console of the Elasticsearch cluster.
-          *
-          * @param request ValidateConnectionRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ValidateConnectionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Tests the connectivity between a Logstash cluster and its associated Elasticsearch cluster when you configure the X-Pack Monitoring feature for the Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Before you enable the X-Pack Monitoring feature for a Logstash cluster, you must associate the Logstash cluster with an Elasticsearch cluster. This way, you can view the monitoring data of the Logstash cluster in the Kibana console of the Elasticsearch cluster.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ValidateConnectionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateConnectionResponse
+        /// </returns>
         public async Task<ValidateConnectionResponse> ValidateConnectionWithOptionsAsync(string InstanceId, ValidateConnectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16170,12 +27068,25 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ValidateConnectionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * > Before you enable the X-Pack Monitoring feature for a Logstash cluster, you must associate the Logstash cluster with an Elasticsearch cluster. This way, you can view the monitoring data of the Logstash cluster in the Kibana console of the Elasticsearch cluster.
-          *
-          * @param request ValidateConnectionRequest
-          * @return ValidateConnectionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Tests the connectivity between a Logstash cluster and its associated Elasticsearch cluster when you configure the X-Pack Monitoring feature for the Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Before you enable the X-Pack Monitoring feature for a Logstash cluster, you must associate the Logstash cluster with an Elasticsearch cluster. This way, you can view the monitoring data of the Logstash cluster in the Kibana console of the Elasticsearch cluster.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ValidateConnectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateConnectionResponse
+        /// </returns>
         public ValidateConnectionResponse ValidateConnection(string InstanceId, ValidateConnectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16183,12 +27094,25 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ValidateConnectionWithOptions(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * > Before you enable the X-Pack Monitoring feature for a Logstash cluster, you must associate the Logstash cluster with an Elasticsearch cluster. This way, you can view the monitoring data of the Logstash cluster in the Kibana console of the Elasticsearch cluster.
-          *
-          * @param request ValidateConnectionRequest
-          * @return ValidateConnectionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Tests the connectivity between a Logstash cluster and its associated Elasticsearch cluster when you configure the X-Pack Monitoring feature for the Logstash cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Before you enable the X-Pack Monitoring feature for a Logstash cluster, you must associate the Logstash cluster with an Elasticsearch cluster. This way, you can view the monitoring data of the Logstash cluster in the Kibana console of the Elasticsearch cluster.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ValidateConnectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateConnectionResponse
+        /// </returns>
         public async Task<ValidateConnectionResponse> ValidateConnectionAsync(string InstanceId, ValidateConnectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16196,6 +27120,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ValidateConnectionWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>校验缩节点合法性</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ValidateShrinkNodesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateShrinkNodesResponse
+        /// </returns>
         public ValidateShrinkNodesResponse ValidateShrinkNodesWithOptions(string InstanceId, ValidateShrinkNodesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16233,6 +27175,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ValidateShrinkNodesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>校验缩节点合法性</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ValidateShrinkNodesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateShrinkNodesResponse
+        /// </returns>
         public async Task<ValidateShrinkNodesResponse> ValidateShrinkNodesWithOptionsAsync(string InstanceId, ValidateShrinkNodesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16270,6 +27230,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ValidateShrinkNodesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>校验缩节点合法性</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ValidateShrinkNodesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateShrinkNodesResponse
+        /// </returns>
         public ValidateShrinkNodesResponse ValidateShrinkNodes(string InstanceId, ValidateShrinkNodesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16277,6 +27249,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ValidateShrinkNodesWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>校验缩节点合法性</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ValidateShrinkNodesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateShrinkNodesResponse
+        /// </returns>
         public async Task<ValidateShrinkNodesResponse> ValidateShrinkNodesAsync(string InstanceId, ValidateShrinkNodesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16284,6 +27268,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ValidateShrinkNodesWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// ValidateSlrPermissionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateSlrPermissionResponse
+        /// </returns>
         public ValidateSlrPermissionResponse ValidateSlrPermissionWithOptions(ValidateSlrPermissionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16316,6 +27313,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ValidateSlrPermissionResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// ValidateSlrPermissionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateSlrPermissionResponse
+        /// </returns>
         public async Task<ValidateSlrPermissionResponse> ValidateSlrPermissionWithOptionsAsync(ValidateSlrPermissionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16348,6 +27358,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ValidateSlrPermissionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// ValidateSlrPermissionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateSlrPermissionResponse
+        /// </returns>
         public ValidateSlrPermissionResponse ValidateSlrPermission(ValidateSlrPermissionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16355,6 +27372,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ValidateSlrPermissionWithOptions(request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// ValidateSlrPermissionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateSlrPermissionResponse
+        /// </returns>
         public async Task<ValidateSlrPermissionResponse> ValidateSlrPermissionAsync(ValidateSlrPermissionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16362,6 +27386,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ValidateSlrPermissionWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>缩节点校验数据迁移合法性</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ValidateTransferableNodesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateTransferableNodesResponse
+        /// </returns>
         public ValidateTransferableNodesResponse ValidateTransferableNodesWithOptions(string InstanceId, ValidateTransferableNodesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16391,6 +27433,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ValidateTransferableNodesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>缩节点校验数据迁移合法性</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ValidateTransferableNodesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateTransferableNodesResponse
+        /// </returns>
         public async Task<ValidateTransferableNodesResponse> ValidateTransferableNodesWithOptionsAsync(string InstanceId, ValidateTransferableNodesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16420,6 +27480,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ValidateTransferableNodesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>缩节点校验数据迁移合法性</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ValidateTransferableNodesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateTransferableNodesResponse
+        /// </returns>
         public ValidateTransferableNodesResponse ValidateTransferableNodes(string InstanceId, ValidateTransferableNodesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16427,6 +27499,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ValidateTransferableNodesWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>缩节点校验数据迁移合法性</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ValidateTransferableNodesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateTransferableNodesResponse
+        /// </returns>
         public async Task<ValidateTransferableNodesResponse> ValidateTransferableNodesAsync(string InstanceId, ValidateTransferableNodesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16434,14 +27518,29 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ValidateTransferableNodesWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
-        /**
-          * The configurations of warm nodes.
-          *
-          * @param request CreateInstanceRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The configurations of dedicated master nodes.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The configurations of warm nodes.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceResponse
+        /// </returns>
         public CreateInstanceResponse CreateInstanceWithOptions(CreateInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16540,14 +27639,29 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<CreateInstanceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * The configurations of warm nodes.
-          *
-          * @param request CreateInstanceRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The configurations of dedicated master nodes.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The configurations of warm nodes.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceResponse
+        /// </returns>
         public async Task<CreateInstanceResponse> CreateInstanceWithOptionsAsync(CreateInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16646,12 +27760,23 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<CreateInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * The configurations of warm nodes.
-          *
-          * @param request CreateInstanceRequest
-          * @return CreateInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The configurations of dedicated master nodes.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The configurations of warm nodes.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceResponse
+        /// </returns>
         public CreateInstanceResponse CreateInstance(CreateInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16659,12 +27784,23 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return CreateInstanceWithOptions(request, headers, runtime);
         }
 
-        /**
-          * The configurations of warm nodes.
-          *
-          * @param request CreateInstanceRequest
-          * @return CreateInstanceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The configurations of dedicated master nodes.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The configurations of warm nodes.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceResponse
+        /// </returns>
         public async Task<CreateInstanceResponse> CreateInstanceAsync(CreateInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

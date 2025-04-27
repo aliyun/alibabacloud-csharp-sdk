@@ -10,42 +10,57 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListSnapshotReposByInstanceIdResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The return results.
+        /// <para>The return results.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<ListSnapshotReposByInstanceIdResponseBodyResult> Result { get; set; }
         public class ListSnapshotReposByInstanceIdResponseBodyResult : TeaModel {
             /// <summary>
-            /// Reference instance ID.
+            /// <para>Reference instance ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>es-cn-6ja1ro4jt000c****</para>
             /// </summary>
             [NameInMap("instanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The address of the repository.
+            /// <para>The address of the repository.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>es-cn-6ja1ro4jt000c****</para>
             /// </summary>
             [NameInMap("repoPath")]
             [Validation(Required=false)]
             public string RepoPath { get; set; }
 
             /// <summary>
-            /// Reference warehouse name.
+            /// <para>Reference warehouse name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>aliyun_snapshot_from_es-cn-6ja1ro4jt000c****</para>
             /// </summary>
             [NameInMap("snapWarehouse")]
             [Validation(Required=false)]
             public string SnapWarehouse { get; set; }
 
             /// <summary>
-            /// Reference warehouse status. available indicates that it is valid. unavailable indicates that it is invalid.
+            /// <para>Reference warehouse status. available indicates that it is valid. unavailable indicates that it is invalid.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>available</para>
             /// </summary>
             [NameInMap("status")]
             [Validation(Required=false)]

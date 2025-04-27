@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListConnectedClustersResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The return results.
+        /// <para>The return results.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
@@ -28,14 +31,20 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public List<ListConnectedClustersResponseBodyResultResult> Result { get; set; }
             public class ListConnectedClustersResponseBodyResultResult : TeaModel {
                 /// <summary>
-                /// The ID of the remote instance that is connected to the network of the current instance.
+                /// <para>The ID of the remote instance that is connected to the network of the current instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>es-cn-09k1rocex0006****</para>
                 /// </summary>
                 [NameInMap("instances")]
                 [Validation(Required=false)]
                 public string Instances { get; set; }
 
                 /// <summary>
-                /// The network type of the instance.
+                /// <para>The network type of the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vpc</para>
                 /// </summary>
                 [NameInMap("networkType")]
                 [Validation(Required=false)]

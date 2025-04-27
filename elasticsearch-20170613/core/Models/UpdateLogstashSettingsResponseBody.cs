@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class UpdateLogstashSettingsResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>71D0D1DA-B22F-58CB-AF5B-D1657A6A****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

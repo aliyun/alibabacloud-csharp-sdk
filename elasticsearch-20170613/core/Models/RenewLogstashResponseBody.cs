@@ -10,17 +10,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class RenewLogstashResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F99407AB-2FA9-489E-A259-40CF6DC****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The returned result. Valid values:
+        /// <para>The returned result. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The cluster is renewed.</description></item>
+        /// <item><description>false: The cluster fails to be renewed.</description></item>
+        /// </list>
         /// 
-        /// *   true: The cluster is renewed.
-        /// *   false: The cluster fails to be renewed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]

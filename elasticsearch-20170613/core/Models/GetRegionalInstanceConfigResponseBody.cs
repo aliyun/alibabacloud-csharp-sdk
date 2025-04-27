@@ -179,6 +179,68 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [Validation(Required=false)]
             public List<string> Versions { get; set; }
 
+            [NameInMap("warmNodeAmountRange")]
+            [Validation(Required=false)]
+            public GetRegionalInstanceConfigResponseBodyResultWarmNodeAmountRange WarmNodeAmountRange { get; set; }
+            public class GetRegionalInstanceConfigResponseBodyResultWarmNodeAmountRange : TeaModel {
+                [NameInMap("maxAmount")]
+                [Validation(Required=false)]
+                public int? MaxAmount { get; set; }
+
+                [NameInMap("minAmount")]
+                [Validation(Required=false)]
+                public int? MinAmount { get; set; }
+
+            }
+
+            [NameInMap("warmNodeDiskList")]
+            [Validation(Required=false)]
+            public List<GetRegionalInstanceConfigResponseBodyResultWarmNodeDiskList> WarmNodeDiskList { get; set; }
+            public class GetRegionalInstanceConfigResponseBodyResultWarmNodeDiskList : TeaModel {
+                [NameInMap("diskType")]
+                [Validation(Required=false)]
+                public string DiskType { get; set; }
+
+                [NameInMap("maxSize")]
+                [Validation(Required=false)]
+                public int? MaxSize { get; set; }
+
+                [NameInMap("minSize")]
+                [Validation(Required=false)]
+                public int? MinSize { get; set; }
+
+                [NameInMap("scaleLimit")]
+                [Validation(Required=false)]
+                public int? ScaleLimit { get; set; }
+
+                [NameInMap("subClassificationConfines")]
+                [Validation(Required=false)]
+                public List<GetRegionalInstanceConfigResponseBodyResultWarmNodeDiskListSubClassificationConfines> SubClassificationConfines { get; set; }
+                public class GetRegionalInstanceConfigResponseBodyResultWarmNodeDiskListSubClassificationConfines : TeaModel {
+                    [NameInMap("maxSize")]
+                    [Validation(Required=false)]
+                    public int? MaxSize { get; set; }
+
+                    [NameInMap("minSize")]
+                    [Validation(Required=false)]
+                    public int? MinSize { get; set; }
+
+                    [NameInMap("performanceLevel")]
+                    [Validation(Required=false)]
+                    public string PerformanceLevel { get; set; }
+
+                }
+
+                [NameInMap("valueLimitSet")]
+                [Validation(Required=false)]
+                public List<int?> ValueLimitSet { get; set; }
+
+            }
+
+            [NameInMap("warmNodeSpecs")]
+            [Validation(Required=false)]
+            public List<string> WarmNodeSpecs { get; set; }
+
         }
 
     }

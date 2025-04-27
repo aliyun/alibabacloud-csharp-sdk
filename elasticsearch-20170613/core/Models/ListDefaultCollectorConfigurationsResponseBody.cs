@@ -10,28 +10,39 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListDefaultCollectorConfigurationsResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8BAE3C32-8E4A-47D6-B4B0-95B5DE643BF5</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The returned result.
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<ListDefaultCollectorConfigurationsResponseBodyResult> Result { get; set; }
         public class ListDefaultCollectorConfigurationsResponseBodyResult : TeaModel {
             /// <summary>
-            /// The content of the configuration file.
+            /// <para>The content of the configuration file.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <list type="bullet">
+            /// <item><description>key: log\n  title: Log file content\n  description: &gt;\n    Contains log file lines.\n  fields:\n ......</description></item>
+            /// </list>
             /// </summary>
             [NameInMap("content")]
             [Validation(Required=false)]
             public string Content { get; set; }
 
             /// <summary>
-            /// The name of the configuration file.
+            /// <para>The name of the configuration file.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>fields.yml</para>
             /// </summary>
             [NameInMap("fileName")]
             [Validation(Required=false)]

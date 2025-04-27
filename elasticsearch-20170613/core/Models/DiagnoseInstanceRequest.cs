@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class DiagnoseInstanceRequest : TeaModel {
         /// <summary>
-        /// The timestamp when the diagnostic report was generated.
+        /// <para>The timestamp when the diagnostic report was generated.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5A2CFF0E-5718-45B5-9D4D-70B3FF****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -24,12 +27,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public List<string> Indices { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ALL</para>
+        /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]
         public string Type { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// <para>The returned data.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("lang")]
         [Validation(Required=false)]

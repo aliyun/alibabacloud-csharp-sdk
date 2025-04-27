@@ -14,14 +14,20 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Body { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5A2CFF0E-5718-45B5-9D4D-70B3FF****</para>
         /// </summary>
         [NameInMap("clientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The results that are returned.
+        /// <para>The results that are returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Cover</para>
         /// </summary>
         [NameInMap("modifyMode")]
         [Validation(Required=false)]

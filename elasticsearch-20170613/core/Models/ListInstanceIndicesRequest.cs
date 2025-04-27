@@ -10,42 +10,60 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListInstanceIndicesRequest : TeaModel {
         /// <summary>
-        /// false
+        /// <para>false</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("all")]
         [Validation(Required=false)]
         public bool? All { get; set; }
 
         /// <summary>
-        /// 15
+        /// <para>15</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("isManaged")]
         [Validation(Required=false)]
         public bool? IsManaged { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("isOpenstore")]
         [Validation(Required=false)]
         public bool? IsOpenstore { get; set; }
 
         /// <summary>
-        /// 1
+        /// <para>1</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>log-0001</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The header of the response.
+        /// <para>The header of the response.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("page")]
         [Validation(Required=false)]
         public int? Page { get; set; }
 
         /// <summary>
-        /// The total size of the index in Cloud Hosting. Unit: bytes.
+        /// <para>The total size of the index in Cloud Hosting. Unit: bytes.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>15</para>
         /// </summary>
         [NameInMap("size")]
         [Validation(Required=false)]

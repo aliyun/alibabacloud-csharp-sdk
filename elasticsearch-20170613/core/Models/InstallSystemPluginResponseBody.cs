@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class InstallSystemPluginResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F99407AB-2FA9-489E-A259-40CF6DCC****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The list of plug-ins to be installed.
+        /// <para>The list of plug-ins to be installed.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]

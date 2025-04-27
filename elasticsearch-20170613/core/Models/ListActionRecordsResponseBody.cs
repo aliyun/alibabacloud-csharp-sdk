@@ -17,63 +17,63 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public List<ListActionRecordsResponseBodyResult> Result { get; set; }
         public class ListActionRecordsResponseBodyResult : TeaModel {
-            [NameInMap("ActionName")]
+            [NameInMap("actionName")]
             [Validation(Required=false)]
             public string ActionName { get; set; }
 
-            [NameInMap("ActionParams")]
+            [NameInMap("actionParams")]
             [Validation(Required=false)]
             public Dictionary<string, object> ActionParams { get; set; }
 
-            [NameInMap("ActionResultAccessList")]
+            [NameInMap("actionResultAccessList")]
             [Validation(Required=false)]
             public List<string> ActionResultAccessList { get; set; }
 
-            [NameInMap("EndTime")]
+            [NameInMap("endTime")]
             [Validation(Required=false)]
             public long? EndTime { get; set; }
 
-            [NameInMap("InstanceId")]
+            [NameInMap("instanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
-            [NameInMap("MetaNow")]
+            [NameInMap("metaNow")]
             [Validation(Required=false)]
             public string MetaNow { get; set; }
 
-            [NameInMap("MetaOld")]
+            [NameInMap("metaOld")]
             [Validation(Required=false)]
             public string MetaOld { get; set; }
 
-            [NameInMap("OwnerId")]
+            [NameInMap("ownerId")]
             [Validation(Required=false)]
             public string OwnerId { get; set; }
 
-            [NameInMap("Process")]
+            [NameInMap("process")]
             [Validation(Required=false)]
             public string Process { get; set; }
 
-            [NameInMap("RecordDiff")]
+            [NameInMap("recordDiff")]
             [Validation(Required=false)]
             public Dictionary<string, object> RecordDiff { get; set; }
 
-            [NameInMap("RecordIds")]
+            [NameInMap("recordIds")]
             [Validation(Required=false)]
             public List<string> RecordIds { get; set; }
 
-            [NameInMap("RequestId")]
+            [NameInMap("requestId")]
             [Validation(Required=false)]
             public string RequestId { get; set; }
 
-            [NameInMap("StartTime")]
+            [NameInMap("startTime")]
             [Validation(Required=false)]
             public long? StartTime { get; set; }
 
-            [NameInMap("StateType")]
+            [NameInMap("stateType")]
             [Validation(Required=false)]
             public string StateType { get; set; }
 
-            [NameInMap("StatusInfo")]
+            [NameInMap("statusInfo")]
             [Validation(Required=false)]
             public List<ListActionRecordsResponseBodyResultStatusInfo> StatusInfo { get; set; }
             public class ListActionRecordsResponseBodyResultStatusInfo : TeaModel {
@@ -157,15 +157,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 
             }
 
-            [NameInMap("UserId")]
+            [NameInMap("userId")]
             [Validation(Required=false)]
             public string UserId { get; set; }
 
-            [NameInMap("UserInfo")]
+            [NameInMap("userInfo")]
             [Validation(Required=false)]
             public string UserInfo { get; set; }
 
-            [NameInMap("UserType")]
+            [NameInMap("userType")]
             [Validation(Required=false)]
             public string UserType { get; set; }
 

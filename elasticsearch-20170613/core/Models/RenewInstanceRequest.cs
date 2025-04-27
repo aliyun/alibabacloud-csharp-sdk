@@ -14,7 +14,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Body { get; set; }
 
         /// <summary>
-        /// This parameter is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.
+        /// <para>This parameter is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5A2CFF0E-5718-45B5-9D4D-70B350****</para>
         /// </summary>
         [NameInMap("clientToken")]
         [Validation(Required=false)]

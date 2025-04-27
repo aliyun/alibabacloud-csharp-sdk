@@ -10,21 +10,32 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class GetSuggestShrinkableNodesRequest : TeaModel {
         /// <summary>
-        /// The number of nodes that you want to remove.
+        /// <para>The number of nodes that you want to remove.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("count")]
         [Validation(Required=false)]
         public int? Count { get; set; }
 
         /// <summary>
-        /// Specifies whether to ignore the instance status. Default value: false.
+        /// <para>Specifies whether to ignore the instance status. Default value: false.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("ignoreStatus")]
         [Validation(Required=false)]
         public bool? IgnoreStatus { get; set; }
 
         /// <summary>
-        /// The type of removing nodes. WORKER indicates hot node and WORKER_WARM indicates warm node.
+        /// <para>The type of removing nodes. WORKER indicates hot node and WORKER_WARM indicates warm node.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>WORKER</para>
         /// </summary>
         [NameInMap("nodeType")]
         [Validation(Required=false)]

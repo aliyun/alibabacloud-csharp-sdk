@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class GetSuggestShrinkableNodesResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F99407AB-2FA9-489E-A259-40CF6DCC****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The return results.
+        /// <para>The return results.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<GetSuggestShrinkableNodesResponseBodyResult> Result { get; set; }
         public class GetSuggestShrinkableNodesResponseBodyResult : TeaModel {
             /// <summary>
-            /// The IP address of the node.
+            /// <para>The IP address of the node.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><c>192.168.**.**</c></para>
             /// </summary>
             [NameInMap("host")]
             [Validation(Required=false)]
             public string Host { get; set; }
 
             /// <summary>
-            /// The access port number of the node.
+            /// <para>The access port number of the node.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>9200</para>
             /// </summary>
             [NameInMap("port")]
             [Validation(Required=false)]

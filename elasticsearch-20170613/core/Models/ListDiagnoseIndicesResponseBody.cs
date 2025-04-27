@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListDiagnoseIndicesResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F05ED12E-140A-4ACB-B059-3A508A69F2E1</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

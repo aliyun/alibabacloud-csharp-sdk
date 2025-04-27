@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class UpdateLogstashDescriptionResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The result returned.
+        /// <para>The result returned.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public UpdateLogstashDescriptionResponseBodyResult Result { get; set; }
         public class UpdateLogstashDescriptionResponseBodyResult : TeaModel {
             /// <summary>
-            /// The name of the cluster.
+            /// <para>The name of the cluster.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>logstash_name</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]

@@ -14,7 +14,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Body { get; set; }
 
         /// <summary>
-        /// 5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*
+        /// <para>5A2CFF0E-5718-45B5-9D4D-70B3FF\<em>\</em>\<em>\</em></para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5A2CFF0E-5718-45B5-9D4D-70B3FF****</para>
         /// </summary>
         [NameInMap("clientToken")]
         [Validation(Required=false)]

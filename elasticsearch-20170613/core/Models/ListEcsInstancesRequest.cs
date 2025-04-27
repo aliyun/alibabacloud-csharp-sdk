@@ -10,42 +10,60 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListEcsInstancesRequest : TeaModel {
         /// <summary>
-        /// test
+        /// <para>test</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;i-bp13y63575oypr9d****&quot;,&quot;i-bp1gyhphjaj73jsr****&quot;]</para>
         /// </summary>
         [NameInMap("ecsInstanceIds")]
         [Validation(Required=false)]
         public string EcsInstanceIds { get; set; }
 
         /// <summary>
-        /// \[{ "tagKey":"a","tagValue":"b"}]
+        /// <para>[{ &quot;tagKey&quot;:&quot;a&quot;,&quot;tagValue&quot;:&quot;b&quot;}]</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("ecsInstanceName")]
         [Validation(Required=false)]
         public string EcsInstanceName { get; set; }
 
         /// <summary>
-        /// 10
+        /// <para>10</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("page")]
         [Validation(Required=false)]
         public int? Page { get; set; }
 
         /// <summary>
-        /// \["i-bp13y63575oypr9d\*\*\*\*","i-bp1gyhphjaj73jsr\*\*\*\*"]
+        /// <para>[&quot;i-bp13y63575oypr9d\<em>\</em>\<em>\</em>&quot;,&quot;i-bp1gyhphjaj73jsr\<em>\</em>\<em>\</em>&quot;]</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("size")]
         [Validation(Required=false)]
         public int? Size { get; set; }
 
         /// <summary>
-        /// vpc-bp16k1dvzxtmagcva\*\*\*\*
+        /// <para>vpc-bp16k1dvzxtmagcva\<em>\</em>\<em>\</em></para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{ &quot;tagKey&quot;:&quot;a&quot;,&quot;tagValue&quot;:&quot;b&quot;}]</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
         public string Tags { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vpc-bp16k1dvzxtmagcva****</para>
         /// </summary>
         [NameInMap("vpcId")]
         [Validation(Required=false)]

@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class DescribeDiagnosisSettingsResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5E82B8A8-EED7-4557-A6E9-D1AD3E58****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The return results.
+        /// <para>The return results.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public DescribeDiagnosisSettingsResponseBodyResult Result { get; set; }
         public class DescribeDiagnosisSettingsResponseBodyResult : TeaModel {
             /// <summary>
-            /// Scenarios of intelligent maintenance.
+            /// <para>Scenarios of intelligent maintenance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Business Search</para>
             /// </summary>
             [NameInMap("scene")]
             [Validation(Required=false)]
             public string Scene { get; set; }
 
             /// <summary>
-            /// The timestamp of the last update for Intelligent Maintenance scenarios.
+            /// <para>The timestamp of the last update for Intelligent Maintenance scenarios.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1588994035385</para>
             /// </summary>
             [NameInMap("updateTime")]
             [Validation(Required=false)]
