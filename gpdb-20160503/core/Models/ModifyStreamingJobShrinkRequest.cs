@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Account { get; set; }
 
         /// <summary>
-        /// <para>Delivery guarantee.</para>
+        /// <para>The delivery guarantee setting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ATLEAST / EXACTLY</para>
@@ -88,9 +88,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? ErrorLimitCount { get; set; }
 
         /// <summary>
-        /// <para>FallbackOffset rollback position, offset rollback</para>
+        /// <para>The fallback offset for data consumption.</para>
         /// <list type="bullet">
-        /// <item><description>The FallbackOffset parameter defines the behavior when the consumer does not request a specific consumption point or the requested consumption point exceeds the current Kafka cluster\&quot;s recorded points. You can choose to start consuming from the earliest (newest) or latest (oldest) point.</description></item>
+        /// <item><description>This parameter specifies the starting offset from which data consumption resumes when a consumer does not request a consumption offset or requests a consumption offset that is beyond the range of the offset information recorded in the current Kafka cluster. You can choose to start data consumption from the earliest or latest offset.</description></item>
+        /// </list>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>EARLIEST</description></item>
+        /// <item><description>LATEST</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -298,7 +303,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string SrcColumnsShrink { get; set; }
 
         /// <summary>
-        /// <para>Whether to test the real-time task, values:</para>
+        /// <para>Specifies whether to test the real-time job. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true</description></item>
         /// <item><description>false</description></item>
@@ -320,7 +325,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string UpdateColumnsShrink { get; set; }
 
         /// <summary>
-        /// <para>Write mode.</para>
+        /// <para>The write mode.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>MERGE</description></item>
+        /// <item><description>INSERT</description></item>
+        /// <item><description>UPDATE</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>INSERT/UPDATE/MERGE</para>

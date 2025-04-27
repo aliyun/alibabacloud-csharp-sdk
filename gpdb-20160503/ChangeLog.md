@@ -1,3 +1,6 @@
+2025-04-27 Version: 2.2.4
+- Generated csharp 2016-05-03 for gpdb.
+
 2025-03-25 Version: 2.2.3
 - Update API QueryContent: update param Content.
 
