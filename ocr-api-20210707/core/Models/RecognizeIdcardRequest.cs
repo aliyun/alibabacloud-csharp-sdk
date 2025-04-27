@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ocr_api20210707.Models
 {
     public class RecognizeIdcardRequest : TeaModel {
+        [NameInMap("Llm_rec")]
+        [Validation(Required=false)]
+        public bool? LlmRec { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>false</para>

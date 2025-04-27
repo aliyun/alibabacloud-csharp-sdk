@@ -83,6 +83,10 @@ namespace AlibabaCloud.SDK.Ocr_api20210707.Models
         [Validation(Required=false)]
         public RecognizeAllTextRequestIdCardConfig IdCardConfig { get; set; }
         public class RecognizeAllTextRequestIdCardConfig : TeaModel {
+            [NameInMap("Llm_rec")]
+            [Validation(Required=false)]
+            public bool? LlmRec { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>false</para>

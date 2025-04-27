@@ -5412,6 +5412,10 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LlmRec))
+            {
+                query["Llm_rec"] = request.LlmRec;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputFigure))
             {
                 query["OutputFigure"] = request.OutputFigure;
@@ -5464,6 +5468,10 @@ namespace AlibabaCloud.SDK.Ocr_api20210707
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LlmRec))
+            {
+                query["Llm_rec"] = request.LlmRec;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputFigure))
             {
                 query["OutputFigure"] = request.OutputFigure;
