@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string DatasetVersion { get; set; }
 
         /// <summary>
-        /// <para>The end time when the file is updated. This parameter is used when you want to query file metadata during a period of time. The time follows the ISO 8601 standard. This parameter is valid only when QueryType is set to TAG.</para>
+        /// <para>The update time range to query. The end time. The time follows the ISO 8601 standard. This parameter is valid only when QueryType is set to TAG.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
         /// 
         /// <b>Example:</b>
@@ -33,11 +33,18 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
         /// <summary>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2025-01-12T14:36:01.000Z</para>
         /// </summary>
         [NameInMap("EndTagUpdateTime")]
         [Validation(Required=false)]
         public string EndTagUpdateTime { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
@@ -82,10 +89,18 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Obsolete]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cars/20250221/</para>
+        /// </summary>
         [NameInMap("QueryFileDir")]
         [Validation(Required=false)]
         public string QueryFileDir { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>shuima</para>
+        /// </summary>
         [NameInMap("QueryFileName")]
         [Validation(Required=false)]
         public string QueryFileName { get; set; }
@@ -94,6 +109,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string QueryFileTypeIncludeAnyShrink { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>oss://test-xxx-oss/car/0001.png</para>
+        /// </summary>
         [NameInMap("QueryImage")]
         [Validation(Required=false)]
         public string QueryImage { get; set; }
@@ -156,7 +175,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The start time when the file is updated. This parameter is used when you want to query file metadata during a period of time. The time follows the ISO 8601 standard. This parameter is valid only when QueryType is set to TAG.</para>
+        /// <para>The update time range to query. The start time. The time follows the ISO 8601 standard. This parameter is valid only when QueryType is set to TAG.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
         /// 
         /// <b>Example:</b>
@@ -168,11 +187,18 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
         /// <summary>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2025-01-12T14:36:01.000Z</para>
         /// </summary>
         [NameInMap("StartTagUpdateTime")]
         [Validation(Required=false)]
         public string StartTagUpdateTime { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>w_100</para>
+        /// </summary>
         [NameInMap("ThumbnailMode")]
         [Validation(Required=false)]
         public string ThumbnailMode { get; set; }

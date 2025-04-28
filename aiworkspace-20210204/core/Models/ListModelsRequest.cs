@@ -130,14 +130,29 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string SortBy { get; set; }
 
+        /// <summary>
+        /// <para>The tags of the model.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListModelsRequestTag> Tag { get; set; }
         public class ListModelsRequestTag : TeaModel {
+            /// <summary>
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>key1</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>value1</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

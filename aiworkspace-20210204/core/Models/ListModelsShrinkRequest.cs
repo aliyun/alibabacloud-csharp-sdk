@@ -130,6 +130,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string SortBy { get; set; }
 
+        /// <summary>
+        /// <para>The tags of the model.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public string TagShrink { get; set; }

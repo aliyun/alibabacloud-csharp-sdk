@@ -160,13 +160,6 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <item><description>ITAG: a dataset generated from a labeling job of iTAG.</description></item>
         /// <item><description>USER: a dataset registered by a user.</description></item>
         /// </list>
-        /// <!---->
-        /// 
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// <item><description></description></item>
-        /// <item><description></description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>USER,ITAG</para>

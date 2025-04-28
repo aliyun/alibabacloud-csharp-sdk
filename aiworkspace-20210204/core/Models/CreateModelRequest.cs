@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <para>The visibility of the model in the workspace. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>PRIVATE (default): Visible only to you and the administrator of the workspace.</description></item>
-        /// <item><description>PUBLIC: Visible to all users in the workspace.</description></item>
+        /// <item><description>PUBLIC: Vvisible to all users in the workspace.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Accessibility { get; set; }
 
         /// <summary>
-        /// <para>The domain of the model. Describes the domain in which the model is for. Example: nlp (Natural Language Processing), cv (computer vision), and others.</para>
+        /// <para>The domain of the model. Describes the domain in which the model is for. Example: nlp (natural language processing), cv (computer vision), and others.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nlp</para>
@@ -55,14 +55,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public Dictionary<string, object> ExtraInfo { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The tags. This parameter will be deprecated and replaced by Tag.</para>
         /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]
         public List<Label> Labels { get; set; }
 
         /// <summary>
-        /// <para>The model description, which is used to distinguish different models.</para>
+        /// <para>The model description, used to distinguish different models.</para>
         /// </summary>
         [NameInMap("ModelDescription")]
         [Validation(Required=false)]
@@ -116,6 +116,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string Origin { get; set; }
 
+        /// <summary>
+        /// <para>The tags.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<Label> Tag { get; set; }
@@ -131,7 +134,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Task { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID. To obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
+        /// <para>The workspace ID. Call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>796**</para>

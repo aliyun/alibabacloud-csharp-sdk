@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string EnvType { get; set; }
 
             /// <summary>
-            /// <para>The name of the resource group, which is unique within your Alibaba Cloud account.</para>
+            /// <para>The name of the resource group, which is unique within your Alibaba Cloud account. This parameter is required for MaxCompute, Elastic Compute Service (ECS), Lingjun, Alibaba Cloud Container Compute Service (ACS), and Realtime Compute for Apache Flink resources.</para>
             /// 
             /// <b>Example:</b>
             /// <para>groupName</para>
@@ -74,14 +74,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public bool? IsDefault { get; set; }
 
             /// <summary>
-            /// <para>The tags added to the resource.</para>
+            /// <para>The labels added to the resource.</para>
             /// </summary>
             [NameInMap("Labels")]
             [Validation(Required=false)]
             public List<CreateWorkspaceResourceRequestResourcesLabels> Labels { get; set; }
             public class CreateWorkspaceResourceRequestResourcesLabels : TeaModel {
                 /// <summary>
-                /// <para>The tag key.</para>
+                /// <para>The label key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>system.support.eas</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The tag value.</para>
+                /// <para>The label value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -103,10 +103,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             }
 
             /// <summary>
-            /// <para>The resource name. Format:</para>
+            /// <para>The resource name. The name must meet the following requirements:</para>
             /// <list type="bullet">
             /// <item><description>The name must be 3 to 28 characters in length, and can contain only letters, digits, and underscores (_). The name must start with a letter.</description></item>
-            /// <item><description>The name is unique in the region.</description></item>
+            /// <item><description>The name must be unique in the region.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>**This field is no longer used and will be removed. Use the ResourceType field instead.</para>
+            /// <para>**This parameter is no longer used and will be removed. Use the ResourceType parameter instead.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MaxCompute</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string ProductType { get; set; }
 
             /// <summary>
-            /// <para>The list of quotas. Only MaxCompute quotas are available.</para>
+            /// <para>The quotas. Only MaxCompute quotas are available.</para>
             /// </summary>
             [NameInMap("Quotas")]
             [Validation(Required=false)]
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             }
 
             /// <summary>
-            /// <para>The resource type. Valid values:</para>
+            /// <para>The resource types. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>MaxCompute</description></item>
             /// <item><description>ECS</description></item>

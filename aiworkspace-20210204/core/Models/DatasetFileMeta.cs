@@ -11,6 +11,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
     public class DatasetFileMeta : TeaModel {
         /// <summary>
         /// <b>Example:</b>
+        /// <para>image/jpeg</para>
+        /// </summary>
+        [NameInMap("ContentType")]
+        [Validation(Required=false)]
+        public string ContentType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>12</para>
         /// </summary>
         [NameInMap("DataSize")]
@@ -46,6 +54,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [NameInMap("FileName")]
         [Validation(Required=false)]
         public string FileName { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>image</para>
+        /// </summary>
+        [NameInMap("FileType")]
+        [Validation(Required=false)]
+        public string FileType { get; set; }
 
         /// <summary>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>

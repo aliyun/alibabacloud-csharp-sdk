@@ -80,17 +80,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Properties { get; set; }
 
         /// <summary>
-        /// <para>The field used to sort the results in queries by page. Default value: GmtCreateTime.</para>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// <item><description></description></item>
-        /// <item><description></description></item>
-        /// <item><description></description></item>
-        /// <item><description></description></item>
-        /// <item><description></description></item>
-        /// <item><description></description></item>
-        /// </list>
-        /// <para>Valid values:</para>
+        /// <para>The field used to sort the results in queries by page. Default value: GmtCreateTime.
+        /// Valid values:</para>
         /// <list type="bullet">
         /// <item><description>SourceType</description></item>
         /// <item><description>DataSourceType</description></item>
@@ -130,13 +121,6 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <item><description>PAI-PUBLIC-DATASET: a public dataset of Platform for AI (PAI).</description></item>
         /// <item><description>ITAG: a dataset generated from a labeling job of iTAG.</description></item>
         /// <item><description>USER: a dataset registered by a user.</description></item>
-        /// </list>
-        /// <!---->
-        /// 
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// <item><description></description></item>
-        /// <item><description></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

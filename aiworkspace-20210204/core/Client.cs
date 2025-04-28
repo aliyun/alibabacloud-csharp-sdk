@@ -3991,6 +3991,144 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Deletes workspace configurations.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConfigResponse
+        /// </returns>
+        public DeleteConfigResponse DeleteConfigWithOptions(string WorkspaceId, string ConfigKey, DeleteConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryName))
+            {
+                query["CategoryName"] = request.CategoryName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Labels))
+            {
+                query["Labels"] = request.Labels;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteConfig",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(WorkspaceId) + "/configs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ConfigKey),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes workspace configurations.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConfigResponse
+        /// </returns>
+        public async Task<DeleteConfigResponse> DeleteConfigWithOptionsAsync(string WorkspaceId, string ConfigKey, DeleteConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryName))
+            {
+                query["CategoryName"] = request.CategoryName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Labels))
+            {
+                query["Labels"] = request.Labels;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteConfig",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(WorkspaceId) + "/configs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ConfigKey),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes workspace configurations.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConfigResponse
+        /// </returns>
+        public DeleteConfigResponse DeleteConfig(string WorkspaceId, string ConfigKey, DeleteConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteConfigWithOptions(WorkspaceId, ConfigKey, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes workspace configurations.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConfigResponse
+        /// </returns>
+        public async Task<DeleteConfigResponse> DeleteConfigAsync(string WorkspaceId, string ConfigKey, DeleteConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteConfigWithOptionsAsync(WorkspaceId, ConfigKey, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes a dataset.</para>
         /// </summary>
         /// 
@@ -6339,6 +6477,152 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConfigResponse
+        /// </returns>
+        public GetConfigResponse GetConfigWithOptions(string WorkspaceId, GetConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryName))
+            {
+                query["CategoryName"] = request.CategoryName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigKey))
+            {
+                query["ConfigKey"] = request.ConfigKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Verbose))
+            {
+                query["Verbose"] = request.Verbose;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetConfig",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(WorkspaceId) + "/config",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConfigResponse
+        /// </returns>
+        public async Task<GetConfigResponse> GetConfigWithOptionsAsync(string WorkspaceId, GetConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryName))
+            {
+                query["CategoryName"] = request.CategoryName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigKey))
+            {
+                query["ConfigKey"] = request.ConfigKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Verbose))
+            {
+                query["Verbose"] = request.Verbose;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetConfig",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(WorkspaceId) + "/config",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConfigResponse
+        /// </returns>
+        public GetConfigResponse GetConfig(string WorkspaceId, GetConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetConfigWithOptions(WorkspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConfigResponse
+        /// </returns>
+        public async Task<GetConfigResponse> GetConfigAsync(string WorkspaceId, GetConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetConfigWithOptionsAsync(WorkspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Obtains a dataset.</para>
         /// </summary>
         /// 
@@ -6579,7 +6863,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据集下元数据的统计信息。</para>
+        /// <para>Obtains metadata statistics of a dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6637,7 +6921,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据集下元数据的统计信息。</para>
+        /// <para>Obtains metadata statistics of a dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6695,7 +6979,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据集下元数据的统计信息。</para>
+        /// <para>Obtains metadata statistics of a dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6714,7 +6998,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据集下元数据的统计信息。</para>
+        /// <para>Obtains metadata statistics of a dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8435,6 +8719,160 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListCodeSourcesWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListConfigsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConfigsResponse
+        /// </returns>
+        public ListConfigsResponse ListConfigsWithOptions(string WorkspaceId, ListConfigsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryName))
+            {
+                query["CategoryName"] = request.CategoryName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigKeys))
+            {
+                query["ConfigKeys"] = request.ConfigKeys;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Labels))
+            {
+                query["Labels"] = request.Labels;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Verbose))
+            {
+                query["Verbose"] = request.Verbose;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListConfigs",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(WorkspaceId) + "/configs",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListConfigsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListConfigsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConfigsResponse
+        /// </returns>
+        public async Task<ListConfigsResponse> ListConfigsWithOptionsAsync(string WorkspaceId, ListConfigsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryName))
+            {
+                query["CategoryName"] = request.CategoryName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigKeys))
+            {
+                query["ConfigKeys"] = request.ConfigKeys;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Labels))
+            {
+                query["Labels"] = request.Labels;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Verbose))
+            {
+                query["Verbose"] = request.Verbose;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListConfigs",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(WorkspaceId) + "/configs",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListConfigsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListConfigsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConfigsResponse
+        /// </returns>
+        public ListConfigsResponse ListConfigs(string WorkspaceId, ListConfigsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListConfigsWithOptions(WorkspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListConfigsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConfigsResponse
+        /// </returns>
+        public async Task<ListConfigsResponse> ListConfigsAsync(string WorkspaceId, ListConfigsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListConfigsWithOptionsAsync(WorkspaceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -11729,7 +12167,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the user configurations.</para>
+        /// <para>Queries user information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11779,7 +12217,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the user configurations.</para>
+        /// <para>Queries user information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11829,7 +12267,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the user configurations.</para>
+        /// <para>Queries user information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11848,7 +12286,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the user configurations.</para>
+        /// <para>Queries user information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13557,6 +13995,290 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateCodeSourceWithOptionsAsync(CodeSourceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConfigResponse
+        /// </returns>
+        public UpdateConfigResponse UpdateConfigWithOptions(string WorkspaceId, UpdateConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryName))
+            {
+                body["CategoryName"] = request.CategoryName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigKey))
+            {
+                body["ConfigKey"] = request.ConfigKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigValue))
+            {
+                body["ConfigValue"] = request.ConfigValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Labels))
+            {
+                body["Labels"] = request.Labels;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateConfig",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(WorkspaceId) + "/config",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConfigResponse
+        /// </returns>
+        public async Task<UpdateConfigResponse> UpdateConfigWithOptionsAsync(string WorkspaceId, UpdateConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryName))
+            {
+                body["CategoryName"] = request.CategoryName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigKey))
+            {
+                body["ConfigKey"] = request.ConfigKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigValue))
+            {
+                body["ConfigValue"] = request.ConfigValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Labels))
+            {
+                body["Labels"] = request.Labels;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateConfig",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(WorkspaceId) + "/config",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConfigResponse
+        /// </returns>
+        public UpdateConfigResponse UpdateConfig(string WorkspaceId, UpdateConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateConfigWithOptions(WorkspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConfigResponse
+        /// </returns>
+        public async Task<UpdateConfigResponse> UpdateConfigAsync(string WorkspaceId, UpdateConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateConfigWithOptionsAsync(WorkspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateConfigsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConfigsResponse
+        /// </returns>
+        public UpdateConfigsResponse UpdateConfigsWithOptions(string WorkspaceId, UpdateConfigsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Configs))
+            {
+                body["Configs"] = request.Configs;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateConfigs",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(WorkspaceId) + "/configs",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateConfigsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateConfigsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConfigsResponse
+        /// </returns>
+        public async Task<UpdateConfigsResponse> UpdateConfigsWithOptionsAsync(string WorkspaceId, UpdateConfigsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Configs))
+            {
+                body["Configs"] = request.Configs;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateConfigs",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(WorkspaceId) + "/configs",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateConfigsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateConfigsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConfigsResponse
+        /// </returns>
+        public UpdateConfigsResponse UpdateConfigs(string WorkspaceId, UpdateConfigsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateConfigsWithOptions(WorkspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateConfigsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConfigsResponse
+        /// </returns>
+        public async Task<UpdateConfigsResponse> UpdateConfigsAsync(string WorkspaceId, UpdateConfigsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateConfigsWithOptionsAsync(WorkspaceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

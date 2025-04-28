@@ -36,6 +36,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string DatasetVersion { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
@@ -53,7 +57,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

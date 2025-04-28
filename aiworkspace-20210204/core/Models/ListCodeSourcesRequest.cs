@@ -20,11 +20,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The order in which the entries are sorted by the specific field on the returned page.</para>
-        /// <para>Valid values:</para>
+        /// <para>The order in which the entries are sorted by the specific field on the returned page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>asc: ascending order. This is the default value.</description></item>
-        /// <item><description>desc: descending order.</description></item>
+        /// <item><description>ASC (default)</description></item>
+        /// <item><description>DESC</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -57,10 +56,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <summary>
         /// <para>The field used for sorting. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>GmtModifyTime: the time when the source code is modified.</description></item>
+        /// <item><description>GmtModifyTime: the time when the code source was modified.</description></item>
         /// <item><description>DisplayName: the display name.</description></item>
-        /// <item><description>CodeSourceId: the ID of the code source.</description></item>
-        /// <item><description>GmtCreateTime: the time when the code source is created. This is the default value.</description></item>
+        /// <item><description>CodeSourceId: the code source ID.</description></item>
+        /// <item><description>GmtCreateTime: the time when the code source was created. This is the default value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
