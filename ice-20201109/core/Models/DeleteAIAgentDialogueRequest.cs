@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string DialogueId { get; set; }
 
+        [NameInMap("NodeId")]
+        [Validation(Required=false)]
+        public string NodeId { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

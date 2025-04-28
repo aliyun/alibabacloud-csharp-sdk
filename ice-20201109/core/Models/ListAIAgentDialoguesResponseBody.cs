@@ -47,6 +47,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string DialogueId { get; set; }
 
+            [NameInMap("Extend")]
+            [Validation(Required=false)]
+            public string Extend { get; set; }
+
+            [NameInMap("NodeId")]
+            [Validation(Required=false)]
+            public string NodeId { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>user</para>

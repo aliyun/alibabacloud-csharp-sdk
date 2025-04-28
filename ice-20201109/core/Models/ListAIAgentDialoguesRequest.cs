@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("RoundLimit")]
+        [Validation(Required=false)]
+        public string RoundLimit { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
