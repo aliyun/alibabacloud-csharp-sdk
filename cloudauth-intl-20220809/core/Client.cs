@@ -1355,6 +1355,206 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>全球证件ocr识别接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DocOcrMaxRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DocOcrMaxResponse
+        /// </returns>
+        public DocOcrMaxResponse DocOcrMaxWithOptions(DocOcrMaxRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocType))
+            {
+                body["DocType"] = request.DocType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdOcrPictureBase64))
+            {
+                body["IdOcrPictureBase64"] = request.IdOcrPictureBase64;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdOcrPictureUrl))
+            {
+                body["IdOcrPictureUrl"] = request.IdOcrPictureUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdThreshold))
+            {
+                body["IdThreshold"] = request.IdThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
+            {
+                body["MerchantBizId"] = request.MerchantBizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantUserId))
+            {
+                body["MerchantUserId"] = request.MerchantUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OcrModel))
+            {
+                body["OcrModel"] = request.OcrModel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                body["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prompt))
+            {
+                body["Prompt"] = request.Prompt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneCode))
+            {
+                body["SceneCode"] = request.SceneCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Spoof))
+            {
+                body["Spoof"] = request.Spoof;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DocOcrMax",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DocOcrMaxResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>全球证件ocr识别接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DocOcrMaxRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DocOcrMaxResponse
+        /// </returns>
+        public async Task<DocOcrMaxResponse> DocOcrMaxWithOptionsAsync(DocOcrMaxRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocType))
+            {
+                body["DocType"] = request.DocType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdOcrPictureBase64))
+            {
+                body["IdOcrPictureBase64"] = request.IdOcrPictureBase64;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdOcrPictureUrl))
+            {
+                body["IdOcrPictureUrl"] = request.IdOcrPictureUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdThreshold))
+            {
+                body["IdThreshold"] = request.IdThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
+            {
+                body["MerchantBizId"] = request.MerchantBizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantUserId))
+            {
+                body["MerchantUserId"] = request.MerchantUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OcrModel))
+            {
+                body["OcrModel"] = request.OcrModel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                body["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prompt))
+            {
+                body["Prompt"] = request.Prompt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneCode))
+            {
+                body["SceneCode"] = request.SceneCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Spoof))
+            {
+                body["Spoof"] = request.Spoof;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DocOcrMax",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DocOcrMaxResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>全球证件ocr识别接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DocOcrMaxRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DocOcrMaxResponse
+        /// </returns>
+        public DocOcrMaxResponse DocOcrMax(DocOcrMaxRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DocOcrMaxWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>全球证件ocr识别接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DocOcrMaxRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DocOcrMaxResponse
+        /// </returns>
+        public async Task<DocOcrMaxResponse> DocOcrMaxAsync(DocOcrMaxRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DocOcrMaxWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>ekyc纯服务端接口</para>
         /// </summary>
         /// 
