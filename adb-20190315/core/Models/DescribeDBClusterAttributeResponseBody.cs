@@ -464,6 +464,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 [Validation(Required=false)]
                 public int? Port { get; set; }
 
+                [NameInMap("ProductForm")]
+                [Validation(Required=false)]
+                public string ProductForm { get; set; }
+
                 /// <summary>
                 /// <para>The edition of the cluster. Valid values:</para>
                 /// <list type="bullet">
@@ -497,6 +501,14 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
+
+                [NameInMap("ReservedNodeCount")]
+                [Validation(Required=false)]
+                public int? ReservedNodeCount { get; set; }
+
+                [NameInMap("ReservedNodeSize")]
+                [Validation(Required=false)]
+                public string ReservedNodeSize { get; set; }
 
                 /// <summary>
                 /// <para>The resource group ID.</para>
