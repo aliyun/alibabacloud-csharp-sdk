@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class ModifyActiveOperationTasksResponseBody : TeaModel {
         /// <summary>
+        /// <para>The O\&amp;M event IDs that are separated by commas (,).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string Ids { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8B709A33-5E8D-511F-A225-AFC0B6AAAD76</para>
         /// </summary>

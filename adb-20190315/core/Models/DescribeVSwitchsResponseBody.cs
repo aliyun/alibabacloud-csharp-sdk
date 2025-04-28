@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeVSwitchsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1B892DA2-9ABC-5CC0-AD73-405479C3FA53</para>
         /// </summary>
@@ -17,15 +19,23 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The queried vSwitches.</para>
+        /// </summary>
         [NameInMap("VSwitches")]
         [Validation(Required=false)]
         public DescribeVSwitchsResponseBodyVSwitches VSwitches { get; set; }
         public class DescribeVSwitchsResponseBodyVSwitches : TeaModel {
+            /// <summary>
+            /// <para>The queried vSwitch.</para>
+            /// </summary>
             [NameInMap("VSwitch")]
             [Validation(Required=false)]
             public List<DescribeVSwitchsResponseBodyVSwitchesVSwitch> VSwitch { get; set; }
             public class DescribeVSwitchsResponseBodyVSwitchesVSwitch : TeaModel {
                 /// <summary>
+                /// <para>The ID of the Resource Access Management (RAM) user.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>195813423043****</para>
                 /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 public string AliUid { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the user channel.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>26842</para>
                 /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 public string Bid { get; set; }
 
                 /// <summary>
+                /// <para>The IPv4 CIDR block of the vSwitch.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>172.16.0.0/24</para>
                 /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 public string CidrBlock { get; set; }
 
                 /// <summary>
+                /// <para>The time when the vSwitch was created.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2022-01-18T12:43:57Z</para>
                 /// </summary>
@@ -58,6 +74,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
+                /// <para>The time when the vSwitch was modified.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2022-01-22T12:43:57Z</para>
                 /// </summary>
@@ -66,6 +84,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether the vSwitch is the default vSwitch. Valid values: <b>true</b>: The vSwitch is the default vSwitch. <b>false</b>: The vSwitch is not the default vSwitch.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
                 /// </summary>
@@ -74,6 +94,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 public bool? IsDefault { get; set; }
 
                 /// <summary>
+                /// <para>The zone ID of the vSwitch.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou-k</para>
                 /// </summary>
@@ -82,6 +104,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 public string IzNo { get; set; }
 
                 /// <summary>
+                /// <para>The region ID of the vSwitch.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
                 /// </summary>
@@ -90,6 +114,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 public string RegionNo { get; set; }
 
                 /// <summary>
+                /// <para>The state of the vSwitch. Valid values: <b>Pending</b>: the vSwitch is being configured. <b>Available</b>: the vSwitch is available.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Available</para>
                 /// </summary>
@@ -98,6 +124,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 public string Status { get; set; }
 
                 /// <summary>
+                /// <para>The vSwitch ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>vsw-25bcdxs7pv1****</para>
                 /// </summary>
@@ -105,6 +133,12 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 [Validation(Required=false)]
                 public string VSwitchId { get; set; }
 
+                /// <summary>
+                /// <para>The name of the vSwitch.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>VSW-Test-hangzhou-I</para>
+                /// </summary>
                 [NameInMap("VSwitchName")]
                 [Validation(Required=false)]
                 public string VSwitchName { get; set; }

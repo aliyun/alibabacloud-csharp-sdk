@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeComputeResourceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
+        /// <para>The cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>am-bp1r053byu48p****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The version of the AnalyticDB for MySQL Data Warehouse Edition cluster. Set the value to <b>3</b>.</para>
+        /// <para>The version of the AnalyticDB for MySQL Data Warehouse Edition cluster. Set the value to <b>3.0</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3.0</para>
@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string DBClusterVersion { get; set; }
 
         /// <summary>
-        /// <para>The available computing resources for migrating AnalyticDB MySQL Data Warehouse Edition to AnalyticDB MySQL Lakehouse Edition. Possible values are:</para>
+        /// <para>Specifies whether to query the specifications of the available computing resources that are migrated from AnalyticDB for MySQL Data Warehouse Edition to Data Lakehouse Edition. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b>(default value)</description></item>
+        /// <item><description><b>false</b> (default)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

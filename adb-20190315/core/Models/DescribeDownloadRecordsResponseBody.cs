@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeDownloadRecordsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the download tasks.</para>
+        /// <para>The queried download tasks.</para>
         /// </summary>
         [NameInMap("Records")]
         [Validation(Required=false)]
         public List<DescribeDownloadRecordsResponseBodyRecords> Records { get; set; }
         public class DescribeDownloadRecordsResponseBodyRecords : TeaModel {
             /// <summary>
-            /// <para>The ID of the download task.</para>
+            /// <para>The download task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>69</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public long? DownloadId { get; set; }
 
             /// <summary>
-            /// <para>The error message returned when the download task has failed.</para>
+            /// <para>The error message returned if the download task failed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The query result is empty.</para>
@@ -47,11 +47,11 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string FileName { get; set; }
 
             /// <summary>
-            /// <para>The status of the download task.</para>
+            /// <para>The status of the download task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>running</b>: The download task is currently in progress.</description></item>
-            /// <item><description><b>finished</b>: The download task is complete.</description></item>
-            /// <item><description><b>failed</b>: The download task has failed.</description></item>
+            /// <item><description><b>running</b></description></item>
+            /// <item><description><b>finished</b></description></item>
+            /// <item><description><b>failed</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>987F51BE-C4CB-332A-B159-63CE87******</para>

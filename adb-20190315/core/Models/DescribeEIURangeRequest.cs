@@ -74,6 +74,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        [NameInMap("ProductVersion")]
+        [Validation(Required=false)]
+        public string ProductVersion { get; set; }
+
         /// <summary>
         /// <para>The region ID of the cluster.</para>
         /// <remarks>

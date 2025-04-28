@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             /// <para>The specifications of computing resources displayed in the console.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>8 Core 32 GB（单机版）</para>
+            /// <para>8 Core 32 GB</para>
             /// </summary>
             [NameInMap("DisplayValue")]
             [Validation(Required=false)]

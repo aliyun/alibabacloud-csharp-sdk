@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string ConnectionStringPrefix { get; set; }
 
         /// <summary>
-        /// <para>The current public endpoint of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
+        /// <para>The current public endpoint of the AnalyticDB for MySQL Data Warehouse Edition cluster.</para>
         /// <remarks>
         /// <para> You can call the <a href="https://help.aliyun.com/document_detail/143384.html">DescribeDBClusterNetInfo</a> operation to query the public endpoint of the cluster.</para>
         /// </remarks>
@@ -39,9 +39,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string CurrentConnectionString { get; set; }
 
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
+        /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition cluster.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</para>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition clusters within a region.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

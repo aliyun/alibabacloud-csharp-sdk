@@ -26,11 +26,11 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// <summary>
         /// <para>The renewal duration. Default value: <b>1</b>.</para>
         /// <list type="bullet">
-        /// <item><description>Valid values when PeriodUnit is set to <b>Month</b>: 1 to 11. Data type: INTEGER.</description></item>
-        /// <item><description>Valid values when PeriodUnit is set to <b>Year</b>: 1, 2, 3, and 5. Data type: INTEGER.</description></item>
+        /// <item><description>Valid values when PeriodUnit is set to <b>Month</b>: 1 to 11.</description></item>
+        /// <item><description>Valid values when PeriodUnit is set to <b>Year</b>: 1, 2, 3, and 5.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Longer subscription durations offer more savings. Purchasing a cluster for one year is more cost-effective than purchasing the cluster for 10 or 11 months.</para>
+        /// <para> Longer subscription durations offer more savings. Purchasing a cluster for one year is more cost-effective than purchasing the cluster for 10 or 11 months.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The unit of the renewal period. Default value: <b>Month</b>. Valid values:</para>
+        /// <para>The unit of the renewal duration. Default value: <b>Month</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Year</b></description></item>
         /// <item><description><b>Month</b></description></item>

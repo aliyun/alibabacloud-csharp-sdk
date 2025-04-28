@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeSchemasResponseBody : TeaModel {
         /// <summary>
-        /// <para>The databases.</para>
+        /// <para>The queried databases.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public List<DescribeSchemasResponseBodyItemsSchema> Schema { get; set; }
             public class DescribeSchemasResponseBodyItemsSchema : TeaModel {
                 /// <summary>
-                /// <para>The ID of the cluster.</para>
+                /// <para>The cluster ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>am-bp1xxxxxxxx47</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>

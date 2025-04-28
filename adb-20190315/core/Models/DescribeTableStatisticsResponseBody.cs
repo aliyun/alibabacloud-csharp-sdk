@@ -196,6 +196,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("SchemaNames")]
+        [Validation(Required=false)]
+        public string SchemaNames { get; set; }
+
         /// <summary>
         /// <para>The total number of entries returned.</para>
         /// 

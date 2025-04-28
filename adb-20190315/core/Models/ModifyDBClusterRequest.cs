@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string DBNodeStorage { get; set; }
 
         /// <summary>
-        /// <para>The enhanced SSD (ESSD) performance level of the cluster. Valid values:</para>
+        /// <para>The Enterprise SSD (ESSD) performance level of the cluster. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>PL0</description></item>
         /// <item><description>PL1</description></item>

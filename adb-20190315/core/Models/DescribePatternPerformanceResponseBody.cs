@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribePatternPerformanceResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The IP address of the SQL client that submits the SQL pattern.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>172.16.14.*</para>
+        /// </summary>
         [NameInMap("AccessIp")]
         [Validation(Required=false)]
         public string AccessIp { get; set; }
@@ -23,6 +29,12 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        /// <summary>
+        /// <para>The number of failed SQL patterns within the time range.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("FailedCount")]
         [Validation(Required=false)]
         public long? FailedCount { get; set; }
@@ -123,6 +135,12 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 
         }
 
+        /// <summary>
+        /// <para>The number of queries executed in association with the SQL pattern within the time range.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>35018</para>
+        /// </summary>
         [NameInMap("QueryCount")]
         [Validation(Required=false)]
         public long? QueryCount { get; set; }
@@ -137,6 +155,12 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The SQL statement that represents the SQL pattern.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SELECT *nFROM HIVE.<c>ADB_EXTERNAL_TPCH_10GB</c>.<c>External_customer</c>nLIMIT ?</para>
+        /// </summary>
         [NameInMap("SQLPattern")]
         [Validation(Required=false)]
         public string SQLPattern { get; set; }
@@ -151,10 +175,22 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
+        /// <summary>
+        /// <para>The tables that are in association with the SQL pattern.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>tpch_1g.part;tpch_1g.supplier;tpch_1g.lineitem;tpch_1g.partsupp;tpch_1g.orders;tpch_1g.nation</para>
+        /// </summary>
         [NameInMap("Tables")]
         [Validation(Required=false)]
         public string Tables { get; set; }
 
+        /// <summary>
+        /// <para>The database account that is used to execute the SQL statement.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
+        /// </summary>
         [NameInMap("User")]
         [Validation(Required=false)]
         public string User { get; set; }

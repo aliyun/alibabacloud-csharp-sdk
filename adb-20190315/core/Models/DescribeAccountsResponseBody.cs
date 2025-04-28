@@ -69,6 +69,26 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 [Validation(Required=false)]
                 public string AccountType { get; set; }
 
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
+                public DescribeAccountsResponseBodyAccountListDBAccountTags Tags { get; set; }
+                public class DescribeAccountsResponseBodyAccountListDBAccountTags : TeaModel {
+                    [NameInMap("Tag")]
+                    [Validation(Required=false)]
+                    public List<DescribeAccountsResponseBodyAccountListDBAccountTagsTag> Tag { get; set; }
+                    public class DescribeAccountsResponseBodyAccountListDBAccountTagsTag : TeaModel {
+                        [NameInMap("Key")]
+                        [Validation(Required=false)]
+                        public string Key { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                }
+
             }
 
         }

@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeBackupsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The free size of backup sets. Unit: bytes.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("FreeBackupSize")]
         [Validation(Required=false)]
         public long? FreeBackupSize { get; set; }
@@ -34,6 +40,12 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 [Validation(Required=false)]
                 public string BackupEndTime { get; set; }
 
+                /// <summary>
+                /// <para>The expiration time of the backup set.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2022-07-02T16:00Z</para>
+                /// </summary>
                 [NameInMap("BackupExpiredTime")]
                 [Validation(Required=false)]
                 public string BackupExpiredTime { get; set; }
@@ -93,7 +105,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 public string BackupType { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
+                /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition cluster.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>am-bp18934i73vb5****</para>
@@ -136,6 +148,12 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The total size of backup sets. Unit: bytes.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>64953700</para>
+        /// </summary>
         [NameInMap("TotalBackupSize")]
         [Validation(Required=false)]
         public long? TotalBackupSize { get; set; }

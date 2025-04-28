@@ -509,6 +509,32 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the secondary vSwitch.</para>
+                /// <remarks>
+                /// <para> You cannot set this parameter to a value that is the same as that of the VSwitchId parameter.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vsw-0jlb72a9dan1ja9cvg9tf</para>
+                /// </summary>
+                [NameInMap("SecondaryVSwitchId")]
+                [Validation(Required=false)]
+                public string SecondaryVSwitchId { get; set; }
+
+                /// <summary>
+                /// <para>The ID of the secondary zone.</para>
+                /// <remarks>
+                /// <para> You cannot set this parameter to a value that is the same as that of the ZoneId parameter.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-zhangjiakou-b</para>
+                /// </summary>
+                [NameInMap("SecondaryZoneId")]
+                [Validation(Required=false)]
+                public string SecondaryZoneId { get; set; }
+
+                /// <summary>
                 /// <para>The specifications of storage resources that are used in the cluster in elastic mode. Storage resources are used to read and write data. The increase in the storage resources can improve the read and write performance of the cluster.</para>
                 /// 
                 /// <b>Example:</b>

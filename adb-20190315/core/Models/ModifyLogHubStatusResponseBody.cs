@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class ModifyLogHubStatusResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0AA1F421-395B-5BC4-BDDC-762C508A952B</para>
         /// </summary>

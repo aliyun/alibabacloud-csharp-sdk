@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class OperateLogHubRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to create the log shipping job.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public bool? Create { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition clusters within a region.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +35,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The name of the log shipping job.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +46,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string DeliverName { get; set; }
 
         /// <summary>
+        /// <para>The shipping time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +57,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string DeliverTime { get; set; }
 
         /// <summary>
+        /// <para>The description of the log shipping job.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,6 +68,13 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to filter dirty data.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -68,6 +83,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public bool? FilterDirtyData { get; set; }
 
         /// <summary>
+        /// <para>The log keywords.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("LogHubStores")]
@@ -75,6 +91,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public List<OperateLogHubRequestLogHubStores> LogHubStores { get; set; }
         public class OperateLogHubRequestLogHubStores : TeaModel {
             /// <summary>
+            /// <para>The value of the log keyword.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -85,6 +102,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string FieldKey { get; set; }
 
             /// <summary>
+            /// <para>The log keyword.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -97,6 +115,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         }
 
         /// <summary>
+        /// <para>The name of the Logstore.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -115,6 +134,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The password of the database account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -125,6 +145,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string Password { get; set; }
 
         /// <summary>
+        /// <para>The name of the Simple Log Service project.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -135,6 +156,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string ProjectName { get; set; }
 
         /// <summary>
+        /// <para>The channel of the log shipping job.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SLS</para>
         /// </summary>
@@ -151,6 +174,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The name of the database.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -161,6 +185,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string SchemaName { get; set; }
 
         /// <summary>
+        /// <para>The name of the table.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -171,6 +196,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string TableName { get; set; }
 
         /// <summary>
+        /// <para>The name of the database account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

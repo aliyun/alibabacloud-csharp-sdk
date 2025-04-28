@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public bool? DiskEncryption { get; set; }
 
         /// <summary>
-        /// <para>The number of elastic I/O units (EIUs). For more information, see <a href="https://help.aliyun.com/document_detail/189505.html">Use EIUs to scale up storage resources</a>.</para>
+        /// <para>The number of elastic I/O units (EIUs). For more information, see <a href="https://help.aliyun.com/document_detail/189505.html">Elasticity of the storage layer</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -391,8 +391,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// <summary>
         /// <para>The subscription period of the subscription cluster.</para>
         /// <list type="bullet">
-        /// <item><description>Valid values when Period is set to Year: 1, 2, 3, and 5 (integer)</description></item>
-        /// <item><description>Valid values when Period is set to Month: 1 to 11 (integer)</description></item>
+        /// <item><description>Valid values when Period is set to Year: 1, 2, and 3 (integer)</description></item>
+        /// <item><description>Valid values when Period is set to Month: 1 to 9 (integer)</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">

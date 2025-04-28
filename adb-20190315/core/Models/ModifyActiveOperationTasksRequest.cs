@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class ModifyActiveOperationTasksRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the O\&amp;M event.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1482487</para>
         /// </summary>
@@ -18,6 +20,12 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string Ids { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to immediately execute the O\&amp;M event. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: immediately executes the O\&amp;M event.</description></item>
+        /// <item><description>0: executes the O\&amp;M event at a specific point in time.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -34,6 +42,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -54,6 +64,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
+        /// <para>The time from which you want to execute the O\&amp;M event.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2021-08-15T12:00:00Z</para>
         /// </summary>

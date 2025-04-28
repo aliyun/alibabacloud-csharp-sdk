@@ -295,10 +295,20 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             [Validation(Required=false)]
             public string ZoneId { get; set; }
 
+            /// <summary>
+            /// <para>The name of the zone.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou-k</para>
+            /// </summary>
+            [NameInMap("ZoneName")]
+            [Validation(Required=false)]
+            public string ZoneName { get; set; }
+
         }
 
         /// <summary>
-        /// <para>The resources available in the supported editions.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -308,7 +318,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class BindDBResourceGroupWithUserRequest : TeaModel {
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
         /// <summary>
         /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
         /// <remarks>

@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeActiveOperationTasksRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether the O\&amp;M task can be canceled. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>\-1: yes for all O\&amp;M tasks.</description></item>
+        /// <item><description>0: no.</description></item>
+        /// <item><description>1: yes.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>-1</para>
         /// </summary>
@@ -18,6 +25,13 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public int? AllowCancel { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether the execution time of the O\&amp;M task can be changed. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>\-1: yes for all O\&amp;M tasks.</description></item>
+        /// <item><description>0: no.</description></item>
+        /// <item><description>1: yes.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>-1</para>
         /// </summary>
@@ -26,6 +40,13 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public int? AllowChange { get; set; }
 
         /// <summary>
+        /// <para>The trigger level of the O\&amp;M task. Default value: all. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>all: all task levels.</description></item>
+        /// <item><description>S0: exception fixing.</description></item>
+        /// <item><description>S1: system O\&amp;M.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>all</para>
         /// </summary>
@@ -34,6 +55,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string ChangeLevel { get; set; }
 
         /// <summary>
+        /// <para>The database type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>analyticdb</para>
         /// </summary>
@@ -42,6 +65,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string DbType { get; set; }
 
         /// <summary>
+        /// <para>The name of the cluster.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>am-2ze307ym37t762hnl</para>
         /// </summary>
@@ -58,6 +83,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -66,6 +93,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default value: 25.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>25</para>
         /// </summary>
@@ -74,6 +103,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The product ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ads</para>
         /// </summary>
@@ -82,6 +113,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string ProductId { get; set; }
 
         /// <summary>
+        /// <para>The region information.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shenzhen</para>
         /// </summary>
@@ -90,6 +123,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string Region { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shenzhen</para>
         /// </summary>
@@ -110,6 +145,13 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
+        /// <para>The status of the O\&amp;M task. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>\-1: all statuses.</description></item>
+        /// <item><description>3: pending.</description></item>
+        /// <item><description>4: executing.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>-1</para>
         /// </summary>
@@ -118,6 +160,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public int? Status { get; set; }
 
         /// <summary>
+        /// <para>The type of the O\&amp;M tasks that you want to query. Set the value to all to query all O\&amp;M tasks configured by the Alibaba Cloud account.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>all</para>
         /// </summary>

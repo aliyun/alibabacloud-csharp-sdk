@@ -65,11 +65,6 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 
         /// <summary>
         /// <para>Specifies whether to enable short query acceleration (SQA).</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>on</description></item>
-        /// <item><description>off</description></item>
-        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

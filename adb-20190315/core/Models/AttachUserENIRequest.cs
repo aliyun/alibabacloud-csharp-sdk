@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class AttachUserENIRequest : TeaModel {
-        [NameInMap("AccessKeyId-copy")]
-        [Validation(Required=false)]
-        public string AccessKeyIdCopy { get; set; }
-
         /// <summary>
         /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
         /// <remarks>

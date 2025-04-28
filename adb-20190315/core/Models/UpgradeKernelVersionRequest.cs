@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// <item><description><b>1</b>: performs the update during the maintenance window.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/612236.html">ModifyDBClusterMaintainTime</a> operation to modify the maintenance window of an AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/612236.html">ModifyDBClusterMaintainTime</a> operation to modify the maintenance window of an AnalyticDB for MySQL cluster.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

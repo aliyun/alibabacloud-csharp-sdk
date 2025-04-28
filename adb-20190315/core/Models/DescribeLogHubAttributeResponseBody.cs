@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeLogHubAttributeResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The log collection information.</para>
+        /// </summary>
         [NameInMap("LoghubInfo")]
         [Validation(Required=false)]
         public DescribeLogHubAttributeResponseBodyLoghubInfo LoghubInfo { get; set; }
         public class DescribeLogHubAttributeResponseBodyLoghubInfo : TeaModel {
             /// <summary>
+            /// <para>The cluster ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>am-8vbs48m7553du1gz2</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string DBClusterId { get; set; }
 
             /// <summary>
+            /// <para>The database type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>rds</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string DBType { get; set; }
 
             /// <summary>
+            /// <para>The synchronization latency, which is the latency between the latest update time of the synchronization job and the current system time. Unit: seconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>361</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public long? Delay { get; set; }
 
             /// <summary>
+            /// <para>The name of the log shipping job.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>loghub-web-login-new</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string DeliverName { get; set; }
 
             /// <summary>
+            /// <para>The log shipping time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-12-06\&quot;T\&quot;10:15\&quot;Z\&quot;</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string DeliverTime { get; set; }
 
             /// <summary>
+            /// <para>The description.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>description</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether dirty data is filtered.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -69,6 +86,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             [Validation(Required=false)]
             public bool? FilterDirtyData { get; set; }
 
+            /// <summary>
+            /// <para>The names of the Logstores.</para>
+            /// </summary>
             [NameInMap("LogHubStores")]
             [Validation(Required=false)]
             public DescribeLogHubAttributeResponseBodyLoghubInfoLogHubStores LogHubStores { get; set; }
@@ -78,6 +98,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 public List<DescribeLogHubAttributeResponseBodyLoghubInfoLogHubStoresLogHubStore> LogHubStore { get; set; }
                 public class DescribeLogHubAttributeResponseBodyLoghubInfoLogHubStoresLogHubStore : TeaModel {
                     /// <summary>
+                    /// <para>The value of the log keyword.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>255311</para>
                     /// </summary>
@@ -86,6 +108,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                     public string FieldKey { get; set; }
 
                     /// <summary>
+                    /// <para>The log keyword.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>taskid</para>
                     /// </summary>
@@ -98,6 +122,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             }
 
             /// <summary>
+            /// <para>The name of the Logstore.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>device_login</para>
             /// </summary>
@@ -106,6 +132,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string LogStoreName { get; set; }
 
             /// <summary>
+            /// <para>The returned message.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>SUCCESS</para>
             /// </summary>
@@ -114,6 +142,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string Message { get; set; }
 
             /// <summary>
+            /// <para>The name of the Simple Log Service project.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test-adb</para>
             /// </summary>
@@ -122,6 +152,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string ProjectName { get; set; }
 
             /// <summary>
+            /// <para>The region ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
             /// </summary>
@@ -130,6 +162,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string RegionId { get; set; }
 
             /// <summary>
+            /// <para>The name of the database.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cbd_bi</para>
             /// </summary>
@@ -138,6 +172,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string SchemaName { get; set; }
 
             /// <summary>
+            /// <para>The synchronization status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>processing</para>
             /// </summary>
@@ -146,6 +182,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string SyncStatus { get; set; }
 
             /// <summary>
+            /// <para>The name of the table.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test2</para>
             /// </summary>
@@ -154,6 +192,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string TableName { get; set; }
 
             /// <summary>
+            /// <para>The name of the database account.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>aaa</para>
             /// </summary>
@@ -162,6 +202,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string UserName { get; set; }
 
             /// <summary>
+            /// <para>The zone ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-k</para>
             /// </summary>
@@ -172,6 +214,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8A564B7F-8C00-43C0-8EC5-919FBB70573</para>
         /// </summary>

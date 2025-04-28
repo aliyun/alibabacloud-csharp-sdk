@@ -107,6 +107,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("SchemaName")]
+        [Validation(Required=false)]
+        public string SchemaName { get; set; }
+
     }
 
 }

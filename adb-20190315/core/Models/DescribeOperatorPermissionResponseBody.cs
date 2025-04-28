@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeOperatorPermissionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The time when the authorization takes effect.</para>
+        /// <para>The time when the permissions take effect.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-05-20T05:41:19Z</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string CreatedTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cluster.</para>
+        /// <para>The cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-uf6wjk5xxxxxxxxxx</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The time when the authorization expires.</para>
+        /// <para>The time when the permissions expire.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-05-20T07:41:19Z</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string ExpiredTime { get; set; }
 
         /// <summary>
-        /// <para>The type of authorization. Valid values: Control | Data.</para>
+        /// <para>The types of the permissions. Valid values: Control and Data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Control,Data</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string Privileges { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>

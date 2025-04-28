@@ -36,9 +36,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string EnableBackupLog { get; set; }
 
         /// <summary>
-        /// <para>The number of days for which to retain backup files. Valid values: 7 to 730.</para>
+        /// <para>The number of days for which to retain log backup files. Valid values: 7 to 730.</para>
         /// <remarks>
-        /// <para>The default value is 7.</para>
+        /// <para> If you do not specify this parameter, the default value 7 is used.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeRdsAnalysisResourceQuotasResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The editions of the MySQL analytic instances.</para>
+        /// </summary>
         [NameInMap("DBNodeCategoryList")]
         [Validation(Required=false)]
         public DescribeRdsAnalysisResourceQuotasResponseBodyDBNodeCategoryList DBNodeCategoryList { get; set; }
@@ -18,6 +21,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public List<DescribeRdsAnalysisResourceQuotasResponseBodyDBNodeCategoryListDBNodeCategory> DBNodeCategory { get; set; }
             public class DescribeRdsAnalysisResourceQuotasResponseBodyDBNodeCategoryListDBNodeCategory : TeaModel {
                 /// <summary>
+                /// <para>The display value.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>mixed_storage</para>
                 /// </summary>
@@ -26,6 +31,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 public string Text { get; set; }
 
                 /// <summary>
+                /// <para>The real value.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>mixed_storage</para>
                 /// </summary>
@@ -37,6 +44,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 
         }
 
+        /// <summary>
+        /// <para>The instance types of the MySQL analytic instances.</para>
+        /// </summary>
         [NameInMap("DBNodeClassList")]
         [Validation(Required=false)]
         public DescribeRdsAnalysisResourceQuotasResponseBodyDBNodeClassList DBNodeClassList { get; set; }
@@ -46,6 +56,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public List<DescribeRdsAnalysisResourceQuotasResponseBodyDBNodeClassListDBNodeClass> DBNodeClass { get; set; }
             public class DescribeRdsAnalysisResourceQuotasResponseBodyDBNodeClassListDBNodeClass : TeaModel {
                 /// <summary>
+                /// <para>The display value.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>E32</para>
                 /// </summary>
@@ -54,6 +66,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 public string Text { get; set; }
 
                 /// <summary>
+                /// <para>The real value.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>E32</para>
                 /// </summary>
@@ -65,6 +79,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 
         }
 
+        /// <summary>
+        /// <para>The storage sizes of the MySQL analytic instances.</para>
+        /// </summary>
         [NameInMap("DBNodeStorageList")]
         [Validation(Required=false)]
         public DescribeRdsAnalysisResourceQuotasResponseBodyDBNodeStorageList DBNodeStorageList { get; set; }
@@ -74,6 +91,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public List<DescribeRdsAnalysisResourceQuotasResponseBodyDBNodeStorageListDBNodeStorage> DBNodeStorage { get; set; }
             public class DescribeRdsAnalysisResourceQuotasResponseBodyDBNodeStorageListDBNodeStorage : TeaModel {
                 /// <summary>
+                /// <para>The display value.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
                 /// </summary>
@@ -82,6 +101,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 public string Text { get; set; }
 
                 /// <summary>
+                /// <para>The real value.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
                 /// </summary>
@@ -93,6 +114,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 
         }
 
+        /// <summary>
+        /// <para>The versions of the MySQL analytic instances.</para>
+        /// </summary>
         [NameInMap("EngineVersionList")]
         [Validation(Required=false)]
         public DescribeRdsAnalysisResourceQuotasResponseBodyEngineVersionList EngineVersionList { get; set; }
@@ -102,6 +126,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public List<DescribeRdsAnalysisResourceQuotasResponseBodyEngineVersionListEngineVersion> EngineVersion { get; set; }
             public class DescribeRdsAnalysisResourceQuotasResponseBodyEngineVersionListEngineVersion : TeaModel {
                 /// <summary>
+                /// <para>The display value.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>3.0</para>
                 /// </summary>
@@ -110,6 +136,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 public string Text { get; set; }
 
                 /// <summary>
+                /// <para>The real value.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>3.0</para>
                 /// </summary>
@@ -121,6 +149,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 
         }
 
+        /// <summary>
+        /// <para>The modes of the MySQL analytic instances.</para>
+        /// </summary>
         [NameInMap("ModeList")]
         [Validation(Required=false)]
         public DescribeRdsAnalysisResourceQuotasResponseBodyModeList ModeList { get; set; }
@@ -130,6 +161,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public List<DescribeRdsAnalysisResourceQuotasResponseBodyModeListMode> Mode { get; set; }
             public class DescribeRdsAnalysisResourceQuotasResponseBodyModeListMode : TeaModel {
                 /// <summary>
+                /// <para>The display value.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>flexible</para>
                 /// </summary>
@@ -138,6 +171,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 public string Text { get; set; }
 
                 /// <summary>
+                /// <para>The real value.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>flexible</para>
                 /// </summary>
@@ -150,6 +185,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1A31D7FA-1826-5843-8807-D2F715E70CB0</para>
         /// </summary>
@@ -157,6 +194,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The storage types of the MySQL analytic instances.</para>
+        /// </summary>
         [NameInMap("StorageTypeList")]
         [Validation(Required=false)]
         public DescribeRdsAnalysisResourceQuotasResponseBodyStorageTypeList StorageTypeList { get; set; }
@@ -166,6 +206,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public List<DescribeRdsAnalysisResourceQuotasResponseBodyStorageTypeListStorageType> StorageType { get; set; }
             public class DescribeRdsAnalysisResourceQuotasResponseBodyStorageTypeListStorageType : TeaModel {
                 /// <summary>
+                /// <para>The display value.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>cloud_essd</para>
                 /// </summary>
@@ -174,6 +216,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 public string Text { get; set; }
 
                 /// <summary>
+                /// <para>The real value.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>cloud_essd</para>
                 /// </summary>

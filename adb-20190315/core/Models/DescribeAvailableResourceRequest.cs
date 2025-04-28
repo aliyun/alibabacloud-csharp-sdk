@@ -24,7 +24,11 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The resources available in the supported modes.</para>
+        /// <para>The billing method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>PrePaid</b>: subscription.</description></item>
+        /// <item><description><b>PostPaid</b>: pay-as-you-go.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>PostPaid</para>

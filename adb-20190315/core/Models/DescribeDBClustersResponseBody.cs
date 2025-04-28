@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeDBClustersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried clusters.</para>
+        /// <para>The queried cluster information.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -498,7 +498,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                     public string Status { get; set; }
 
                     /// <summary>
-                    /// <para>The job steps.</para>
+                    /// <para>The job step.</para>
                     /// </summary>
                     [NameInMap("StepList")]
                     [Validation(Required=false)]

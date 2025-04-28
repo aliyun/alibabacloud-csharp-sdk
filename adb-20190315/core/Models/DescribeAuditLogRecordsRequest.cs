@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values:</para>
+        /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>10</b></description></item>
         /// <item><description><b>30</b></description></item>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// <item><description><b>100</b></description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the value 10 is used.</para>
+        /// <para> If you leave this parameter empty, the value 10 is used.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

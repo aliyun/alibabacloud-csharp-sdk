@@ -37,63 +37,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The performance metrics to be queried. Separate multiple values with commas (,). Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>CPU</para>
-        /// <list type="bullet">
-        /// <item><description><b>AnalyticDB_CPU</b>: the average CPU utilization.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><para>Connections</para>
-        /// <list type="bullet">
-        /// <item><description><b>AnalyticDB_Connections</b>: the number of connections of the cluster.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><para>Writes</para>
-        /// <list type="bullet">
-        /// <item><description><b>AnalyticDB_TPS</b>: the write transactions per second (TPS).</description></item>
-        /// <item><description><b>AnalyticDB_InsertRT</b>: the write response time.</description></item>
-        /// <item><description><b>AnalyticDB_InsertBytes</b>: the write throughput.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><para>Updates</para>
-        /// <list type="bullet">
-        /// <item><description><b>AnalyticDB_UpdateRT</b>: the update response time.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><para>Deletes</para>
-        /// <list type="bullet">
-        /// <item><description><b>AnalyticDB_DeleteRT</b>: the delete response time.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><para>Queries</para>
-        /// <list type="bullet">
-        /// <item><description><b>AnalyticDB_QPS</b>: the queries per second (QPS).</description></item>
-        /// <item><description><b>AnalyticDB_QueryRT</b>: the query response time.</description></item>
-        /// <item><description><b>AnalyticDB_QueryWaitTime</b>: the query wait time.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><para>Disks</para>
-        /// <list type="bullet">
-        /// <item><description><b>AnalyticDB_IO</b>: the disk I/O throughput.</description></item>
-        /// <item><description><b>AnalyticDB_IO_UTIL</b>: the disk I/O usage.</description></item>
-        /// <item><description><b>AnalyticDB_IO_WAIT</b>: the disk I/O wait time.</description></item>
-        /// <item><description><b>AnalyticDB_IOPS</b>: the disk IOPS.</description></item>
-        /// <item><description><b>AnalyticDB_DiskUsage</b>: the disk space that is used.</description></item>
-        /// <item><description><b>AnalyticDB_HotDataDiskUsage</b>: the disk space that is used by hot data.</description></item>
-        /// <item><description><b>AnalyticDB_ColdDataDiskUsage</b>: the disk space that is used by cold data.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><para>Other</para>
-        /// <list type="bullet">
-        /// <item><description><b>AnalyticDB_BuildTaskCount</b>: the number of BUILD jobs.</description></item>
-        /// <item><description><b>AnalyticDB_ComputeMemoryUsedRatio</b>: the compute memory usage.</description></item>
-        /// </list>
-        /// </description></item>
-        /// </list>
-        /// <remarks>
-        /// <para> If you leave this parameter empty, the values of all the preceding performance metrics are returned.</para>
-        /// </remarks>
+        /// <para>The key of the performance metric that you want to query. Separate multiple keys with commas (,). For more information about the performance metrics, see <a href="https://help.aliyun.com/document_detail/2863211.html">Metric overview</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AnalyticDB_CPU</para>

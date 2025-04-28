@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class ModifyActiveOperationMaintainConfRequest : TeaModel {
         /// <summary>
+        /// <para>The days on which you want to execute O\&amp;M events. Valid values: 1 to 7.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1,2,3,4,5,6,7</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string CycleTime { get; set; }
 
         /// <summary>
+        /// <para>The unit of the O\&amp;M cycle. Set the value to Week.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Week</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string CycleType { get; set; }
 
         /// <summary>
+        /// <para>The end time of the maintenance window.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>02:00:00Z</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string MaintainEndTime { get; set; }
 
         /// <summary>
+        /// <para>The start time of the maintenance window.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>02:00:00Z</para>
         /// </summary>
@@ -50,6 +58,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
         /// </summary>
@@ -70,6 +80,12 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable O\&amp;M events.</para>
+        /// <list type="bullet">
+        /// <item><description>1: yes.</description></item>
+        /// <item><description>0: no.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

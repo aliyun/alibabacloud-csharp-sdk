@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeColumnsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of columns.</para>
+        /// <para>The queried columns.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public List<DescribeColumnsResponseBodyItemsColumn> Column { get; set; }
             public class DescribeColumnsResponseBodyItemsColumn : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether the columns are auto-incremented.</para>
+                /// <para>Indicates whether the column is auto-incremented.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 public string ColumnName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the cluster.</para>
+                /// <para>The cluster ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>am-bp1xxxxxxxx47</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 public string DBClusterId { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the column is a primary key.</para>
+                /// <para>Indicates whether the column is a primary key column.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>

@@ -109,6 +109,15 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             [Validation(Required=false)]
             public long? OutputRows { get; set; }
 
+            /// <summary>
+            /// <para>The SQL pattern ID.</para>
+            /// <remarks>
+            /// <para> You can call the <a href="https://help.aliyun.com/document_detail/612503.html">DescribePatternPerformance</a> operation to query the performance metrics of an SQL pattern within a time range.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>-5575924945138******</para>
+            /// </summary>
             [NameInMap("PatternId")]
             [Validation(Required=false)]
             public string PatternId { get; set; }
@@ -154,7 +163,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 /// <para>The value of the query property.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xian</para>
+                /// <para>40</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]

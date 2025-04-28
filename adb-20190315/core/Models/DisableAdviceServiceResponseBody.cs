@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DisableAdviceServiceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The message returned for the operation. Valid values:</para>
+        /// <para>The returned message. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Success</b> is returned if the operation is successful.</description></item>
-        /// <item><description>An error message is returned if the operation fails.</description></item>
+        /// <item><description>If the request was successful, a <b>success</b> message is returned.</description></item>
+        /// <item><description>If the request failed, an error message is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>57EC6CCA-A582-572C-A33D-F61845CBC03C</para>

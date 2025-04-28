@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class CreateDBClusterResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
+        /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>am-bp1r053byu48p****</para>

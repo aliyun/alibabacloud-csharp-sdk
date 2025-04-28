@@ -135,11 +135,11 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? MinScanSize { get; set; }
 
         /// <summary>
-        /// <para>The SQL query condition, which can be a combination of the <c>Type</c> and <c>Value</c> fields or a combination of the Type, <c>Min</c>, and <c>Max</c> fields. Specify the condition in the JSON format. <c>Type</c> specifies the SQL query dimension. Valid values for Type: <c>maxCost</c>, <c>status</c>, and <c>cost</c>. <c>Value</c>, <c>Min</c>, or <c>Max</c> specifies the SQL query range for the dimension. Valid values:</para>
+        /// <para>The query condition for SQL statements, which can be a combination of the <c>Type</c> and <c>Value</c> fields or a combination of the Type, <c>Min</c>, and <c>Max</c> fields. Specify the conditions in the JSON format. <c>Type</c> specifies the query dimension. Valid values for Type: <c>maxCost</c>, <c>status</c>, and <c>cost</c>. <c>Value</c>, <c>Min</c>, or <c>Max</c> specifies the query range for the dimension. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><c>{&quot;Type&quot;:&quot;maxCost&quot;,&quot;Value&quot;:&quot;100&quot;}</c>: queries the top 100 most time-consuming SQL statements. Set <c>Value</c> to 100.</description></item>
-        /// <item><description><c>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;finished&quot;}</c>: queries executed SQL statements. You can set <c>Value</c> to <c>running</c> to query SQL statements that are being executed. You can also set Value to <c>failed</c> to query SQL statements that failed to be executed.</description></item>
-        /// <item><description><c>{&quot;Type&quot;:&quot;cost&quot;,&quot;Min&quot;:&quot;10&quot;,&quot;Max&quot;:&quot;200&quot;}</c>: queries SQL statements whose execution durations are in the range of 10 to 200 milliseconds. You can also customize the maximum and minimum execution durations.</description></item>
+        /// <item><description><c>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;finished&quot;}</c>: queries the executed SQL statements, <b>including successful and failed SQL statements</b>. You can set <c>Value</c> to <c>running</c> to query the SQL statements that are being executed. You can also set Value to <c>failed</c> to query the SQL statements that failed to be executed.</description></item>
+        /// <item><description><c>{&quot;Type&quot;:&quot;cost&quot;,&quot;Min&quot;:&quot;10&quot;,&quot;Max&quot;:&quot;200&quot;}</c>: queries the SQL statements whose execution duration is in the range of 10 to 200 milliseconds. You can also specify custom values for the Min and Max fields.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

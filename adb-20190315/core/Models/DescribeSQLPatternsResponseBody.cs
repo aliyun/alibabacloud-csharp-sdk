@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public double? AverageExecutionTime { get; set; }
 
             /// <summary>
-            /// <para>The number of average operator cost.</para>
+            /// <para>The average operation duration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public double? AverageQueryTime { get; set; }
 
             /// <summary>
-            /// <para>The number of average scan cost.</para>
+            /// <para>The average scan duration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public long? MaxExecutionTime { get; set; }
 
             /// <summary>
-            /// <para>The number of max operator cost.</para>
+            /// <para>The maximum operation duration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public long? MaxQueryTime { get; set; }
 
             /// <summary>
-            /// <para>The number of max scan cost.</para>
+            /// <para>The maximum scan duration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7</para>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public long? MaxScanSize { get; set; }
 
             /// <summary>
-            /// <para>The number of operator cost percentage.</para>
+            /// <para>The operation duration percentage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>75</para>
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public double? OperatorCostPercentage { get; set; }
 
             /// <summary>
-            /// <para>The number of operator cost sum.</para>
+            /// <para>The total operation duration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -234,7 +234,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string PatternId { get; set; }
 
             /// <summary>
-            /// <para>The number of peak memory percentage.</para>
+            /// <para>The peak memory percentage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -244,7 +244,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public double? PeakMemoryPercentage { get; set; }
 
             /// <summary>
-            /// <para>The number of peak memory sum.</para>
+            /// <para>The total peak memory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3600</para>
@@ -264,7 +264,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public long? QueryCount { get; set; }
 
             /// <summary>
-            /// <para>The number of query time percentage.</para>
+            /// <para>The queue duration of the SQL statement. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -274,7 +274,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public double? QueryTimePercentage { get; set; }
 
             /// <summary>
-            /// <para>The number of query time sum.</para>
+            /// <para>The total query duration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -294,7 +294,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string SQLPattern { get; set; }
 
             /// <summary>
-            /// <para>The number of scan cost percentage.</para>
+            /// <para>The scan duration percentage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>75</para>
@@ -304,7 +304,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public double? ScanCostPercentage { get; set; }
 
             /// <summary>
-            /// <para>The number of scan cost sum.</para>
+            /// <para>The total scan duration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>11</para>
@@ -314,7 +314,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public double? ScanCostSum { get; set; }
 
             /// <summary>
-            /// <para>The number of scan size percentage.</para>
+            /// <para>The amount of time consumed to scan data from a data source in the task. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -324,7 +324,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public double? ScanSizePercentage { get; set; }
 
             /// <summary>
-            /// <para>The number of scan size sum.</para>
+            /// <para>Total total scan size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>

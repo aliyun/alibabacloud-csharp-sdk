@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 public string ColumnName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
+                /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition cluster.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>am-bp1xxxxxxxx47</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public List<DescribeAllDataSourceResponseBodySchemasSchema> Schema { get; set; }
             public class DescribeAllDataSourceResponseBodySchemasSchema : TeaModel {
                 /// <summary>
-                /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
+                /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition cluster.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>am-bp1xxxxxxxx47</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public List<DescribeAllDataSourceResponseBodyTablesTable> Table { get; set; }
             public class DescribeAllDataSourceResponseBodyTablesTable : TeaModel {
                 /// <summary>
-                /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
+                /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition cluster.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>am-bp1xxxxxxxx47</para>

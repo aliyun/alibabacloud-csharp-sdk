@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class ModifyDBClusterVipRequest : TeaModel {
         /// <summary>
+        /// <para>The internal or public endpoint for which the server certificate needs to be created or updated.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>am-2ze8mbuai974s4y2500000169.ads.aliyuncs.com</para>
         /// </summary>
@@ -18,6 +20,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string ConnectionString { get; set; }
 
         /// <summary>
+        /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition cluster.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition clusters within a specific region.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +42,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The region ID of the cluster.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
         /// </summary>
@@ -52,6 +60,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The virtual private cloud (VPC) ID of the cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,6 +71,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string VPCId { get; set; }
 
         /// <summary>
+        /// <para>The vSwitch ID of the cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeSQLPlanTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of tasks.</para>
+        /// <para>The queried task.</para>
         /// </summary>
         [NameInMap("TaskList")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public long? InputSize { get; set; }
 
             /// <summary>
-            /// <para>The total amount of time consumed by operators in the task on a specific node. This parameter can be used to determine whether long tails occur in computing. Unit: milliseconds.</para>
+            /// <para>The total amount of time consumed by all operators in the task on a specific node. This parameter can be used to determine whether long tails occur in computing. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public long? PeakMemory { get; set; }
 
             /// <summary>
-            /// <para>The time consumed to scan data from a data source in the task. Unit: milliseconds.</para>
+            /// <para>The amount of time consumed to scan data from a data source in the task. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             public string State { get; set; }
 
             /// <summary>
-            /// <para>The ID of the task.</para>
+            /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>198877623</para>
