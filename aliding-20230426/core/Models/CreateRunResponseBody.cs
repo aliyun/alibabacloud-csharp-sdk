@@ -184,6 +184,132 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public long? CreateAt { get; set; }
 
+        [NameInMap("data")]
+        [Validation(Required=false)]
+        public CreateRunResponseBodyData Data { get; set; }
+        public class CreateRunResponseBodyData : TeaModel {
+            [NameInMap("content")]
+            [Validation(Required=false)]
+            public List<CreateRunResponseBodyDataContent> Content { get; set; }
+            public class CreateRunResponseBodyDataContent : TeaModel {
+                [NameInMap("cardCallback")]
+                [Validation(Required=false)]
+                public CreateRunResponseBodyDataContentCardCallback CardCallback { get; set; }
+                public class CreateRunResponseBodyDataContentCardCallback : TeaModel {
+                    [NameInMap("content")]
+                    [Validation(Required=false)]
+                    public string Content { get; set; }
+
+                    [NameInMap("templateId")]
+                    [Validation(Required=false)]
+                    public string TemplateId { get; set; }
+
+                    [NameInMap("userId")]
+                    [Validation(Required=false)]
+                    public string UserId { get; set; }
+
+                }
+
+                [NameInMap("dingCard")]
+                [Validation(Required=false)]
+                public CreateRunResponseBodyDataContentDingCard DingCard { get; set; }
+                public class CreateRunResponseBodyDataContentDingCard : TeaModel {
+                    [NameInMap("cardDesc")]
+                    [Validation(Required=false)]
+                    public string CardDesc { get; set; }
+
+                    [NameInMap("content")]
+                    [Validation(Required=false)]
+                    public string Content { get; set; }
+
+                    [NameInMap("contentType")]
+                    [Validation(Required=false)]
+                    public string ContentType { get; set; }
+
+                    [NameInMap("finished")]
+                    [Validation(Required=false)]
+                    public bool? Finished { get; set; }
+
+                    [NameInMap("templateId")]
+                    [Validation(Required=false)]
+                    public string TemplateId { get; set; }
+
+                }
+
+                [NameInMap("imageUrl")]
+                [Validation(Required=false)]
+                public CreateRunResponseBodyDataContentImageUrl ImageUrl { get; set; }
+                public class CreateRunResponseBodyDataContentImageUrl : TeaModel {
+                    [NameInMap("detail")]
+                    [Validation(Required=false)]
+                    public string Detail { get; set; }
+
+                    [NameInMap("imageDesc")]
+                    [Validation(Required=false)]
+                    public string ImageDesc { get; set; }
+
+                    [NameInMap("url")]
+                    [Validation(Required=false)]
+                    public string Url { get; set; }
+
+                }
+
+                [NameInMap("markdown")]
+                [Validation(Required=false)]
+                public CreateRunResponseBodyDataContentMarkdown Markdown { get; set; }
+                public class CreateRunResponseBodyDataContentMarkdown : TeaModel {
+                    [NameInMap("value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
+                [NameInMap("text")]
+                [Validation(Required=false)]
+                public CreateRunResponseBodyDataContentText Text { get; set; }
+                public class CreateRunResponseBodyDataContentText : TeaModel {
+                    [NameInMap("value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
+                [NameInMap("type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+            }
+
+            [NameInMap("createAt")]
+            [Validation(Required=false)]
+            public long? CreateAt { get; set; }
+
+            [NameInMap("id")]
+            [Validation(Required=false)]
+            public string Id { get; set; }
+
+            [NameInMap("metadata")]
+            [Validation(Required=false)]
+            public Dictionary<string, object> Metadata { get; set; }
+
+            [NameInMap("object")]
+            [Validation(Required=false)]
+            public string Object { get; set; }
+
+            [NameInMap("role")]
+            [Validation(Required=false)]
+            public string Role { get; set; }
+
+            [NameInMap("runId")]
+            [Validation(Required=false)]
+            public string RunId { get; set; }
+
+            [NameInMap("threadId")]
+            [Validation(Required=false)]
+            public string ThreadId { get; set; }
+
+        }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>{}</para>

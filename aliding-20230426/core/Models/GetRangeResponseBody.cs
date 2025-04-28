@@ -76,6 +76,28 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         public List<List<string>> Formulas { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>[]</para>
+        /// </summary>
+        [NameInMap("hyperlinks")]
+        [Validation(Required=false)]
+        public List<List<GetRangeResponseBodyHyperlinks>> Hyperlinks { get; set; }
+        public class GetRangeResponseBodyHyperlinks : TeaModel {
+            [NameInMap("type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
+            [NameInMap("link")]
+            [Validation(Required=false)]
+            public string Link { get; set; }
+
+            [NameInMap("text")]
+            [Validation(Required=false)]
+            public string Text { get; set; }
+
+        }
+
+        /// <summary>
         /// <para>requestId</para>
         /// 
         /// <b>Example:</b>
