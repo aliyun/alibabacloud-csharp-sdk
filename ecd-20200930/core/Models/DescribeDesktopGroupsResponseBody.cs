@@ -658,7 +658,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The user\&quot;s organizational unit path.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>example.com\wuying\users</para>
+            /// <para>example.com</para>
             /// </summary>
             [NameInMap("UserOuPath")]
             [Validation(Required=false)]

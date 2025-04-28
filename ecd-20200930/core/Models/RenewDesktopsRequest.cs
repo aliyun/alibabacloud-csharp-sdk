@@ -107,6 +107,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("ResellerOwnerUid")]
+        [Validation(Required=false)]
+        public long? ResellerOwnerUid { get; set; }
+
         /// <summary>
         /// <remarks>
         /// <para> This field is not available for public use.</para>
