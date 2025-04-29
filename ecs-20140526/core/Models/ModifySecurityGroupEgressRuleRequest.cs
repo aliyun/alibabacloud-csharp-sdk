@@ -183,6 +183,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string PortRange { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the port list. You can call the <c>DescribePortRangeLists</c> operation to query the IDs of available prefix lists.</para>
+        /// <list type="bullet">
+        /// <item><description>If you specify PortRange, the value of this parameter is ignored.</description></item>
+        /// <item><description>If the security group is of the classic network type, you cannot reference port lists in the security group rules. For information about the limits on security groups and port lists, see the <a href="~~25412#SecurityGroupQuota1~~">Security groups</a> section of the &quot;Limits and quotas&quot; topic.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>prl-2ze9743****</para>
+        /// </summary>
         [NameInMap("PortRangeListId")]
         [Validation(Required=false)]
         public string PortRangeListId { get; set; }

@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </list>
         /// <para>Default value: false.</para>
         /// <para>**</para>
-        /// <para><b>Warning</b> When the Force parameter is set to true, this operation is equivalent to a power-off operation. Temporary data in the memory and storage of the instance is erased and cannot be restored.</para>
+        /// <para><b>Warning</b> When Force is set to true, this operation is equivalent to a power-off operation. Temporary data in the memory and storage of the instance is erased and cannot be restored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -52,15 +52,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? Force { get; set; }
 
         /// <summary>
-        /// <para>释放<b>运行中</b>（<c>Running</c>）的实例时的是否采取强制关机策略。仅当<c>Force=true</c>时生效。取值范围：</para>
+        /// <para>Specifies whether to forcefully stop the ECS instance in the <b>Running</b> (<c>Running</c>) state before the instance is released. This parameter takes effect only when <c>Force</c> is set to true. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true：强制关机并释放实例。相当于典型的断电操作，实例会直接进入资源释放流程。<remarks>
-        /// <para>Warning: 强制释放相当于断电，实例内存以及存储中的临时数据都会被擦除，无法恢复。</para>
-        /// </remarks>
+        /// <item><description><para>true: forcefully stops and releases the ECS instance. In this case, this operation is equivalent to a power-off operation. The instance directly enters the resource release process.</para>
+        /// <para>**</para>
+        /// <para><b>Warning</b> A forceful stop and release is equivalent to a power-off operation. Temporary data in the memory and storage of the instance is erased and cannot be restored.</para>
         /// </description></item>
-        /// <item><description>false：在实例释放前，系统将优先执行标准关机流程，该模式会导致实例释放动作持续几分钟。用户在操作系统关机时，配置一些业务排水动作，从而减少业务系统的噪声。</description></item>
+        /// <item><description><para>false: stops the ECS instance in the normal stop process and then releases the instance. In this case, the release process takes several minutes to complete. You can configure business drainage actions to reduce the noise of the business system on operating system shutdown.</para>
+        /// </description></item>
         /// </list>
-        /// <para>默认值：true。</para>
+        /// <para>Default value: true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -108,7 +109,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to release the expired subscription ECS instance. Valid values:</para>
+        /// <para>Specifies whether to release the expired subscription instance.</para>
         /// <list type="bullet">
         /// <item><description>true</description></item>
         /// <item><description>false</description></item>

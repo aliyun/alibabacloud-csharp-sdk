@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of resource N. Valid values of N: 1 to 50.</para>
+        /// <para>Resource IDs. You can specify up to 50 resource IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource. Valid values:</para>
+        /// <para>The type of the resource to which the tags are added. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>instance: ECS instance</description></item>
         /// <item><description>disk: disk</description></item>
@@ -52,17 +52,19 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>image: image</description></item>
         /// <item><description>securitygroup: security group</description></item>
         /// <item><description>volume: storage volume</description></item>
-        /// <item><description>eni: elastic network interface (ENI)</description></item>
+        /// <item><description>eni: ENI</description></item>
         /// <item><description>ddh: dedicated host</description></item>
         /// <item><description>ddhcluster: dedicated host cluster</description></item>
         /// <item><description>keypair: SSH key pair</description></item>
         /// <item><description>launchtemplate: launch template</description></item>
-        /// <item><description>reservedinstance: reserved instance</description></item>
+        /// <item><description>reservedinstance</description></item>
         /// <item><description>snapshotpolicy: automatic snapshot policy</description></item>
         /// <item><description>elasticityassurance: elasticity assurance</description></item>
         /// <item><description>capacityreservation: capacity reservation</description></item>
         /// <item><description>command: Cloud Assistant command</description></item>
-        /// <item><description>invocation: Cloud Assistant command execution result</description></item>
+        /// <item><description>invocation: Cloud Assistant command execution result or file delivery result</description></item>
+        /// <item><description>activation: activation code for a Cloud Assistant managed instance</description></item>
+        /// <item><description>managedinstance: Cloud Assistant managed instance</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -74,7 +76,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tags to add to the resource.</para>
+        /// <para>The tags of the reserved instance. You can specify up to 20 tags. If you specify multiple tags, the tag keys cannot be duplicated.``</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tag")]
@@ -82,7 +84,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N to add to the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>acs:</c> or <c>aliyun</c>.</para>
+            /// <para>The tag key cannot be null or an empty string. The tag key can be up to 128 characters in length and cannot start with <c>acs:</c> or <c>aliyun</c>. The tag key cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -93,7 +95,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N to add to the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag value cannot start with <c>acs:</c>.</para>
+            /// <para>The value of tag N. The tag value cannot be null and can be an empty string. The tag key can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

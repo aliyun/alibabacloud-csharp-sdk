@@ -30,9 +30,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>false: normally releases the ECS instance. This value is valid only if the instance is in the <b>Stopped</b> (<c>Stopped</c>) state.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
-        /// <remarks>
-        /// <para>Warning: When the Force parameter is set to true, this operation is equivalent to a power-off operation. Temporary data in the memory and storage of the instance is erased and cannot be restored.</para>
-        /// </remarks>
+        /// <para>**</para>
+        /// <para><b>Warning</b> When Force is set to true, this operation is equivalent to a power-off operation. Temporary data in the memory and storage of the instance is erased and cannot be restored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -41,6 +40,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public bool? Force { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to forcefully stop the ECS instance in the <b>Running</b> (<c>Running</c>) state before the instance is released. This parameter takes effect only when <c>Force</c> is set to true. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: forcefully stops and releases the ECS instance. In this case, this operation is equivalent to a power-off operation. The instance directly enters the resource release process.</para>
+        /// <para>**</para>
+        /// <para><b>Warning</b> A forceful stop and release is equivalent to a power-off operation. Temporary data in the memory and storage of the instance is erased and cannot be restored.</para>
+        /// </description></item>
+        /// <item><description><para>false: stops the ECS instance in the normal stop process and then releases the instance. In this case, the release process takes several minutes to complete. You can configure business drainage actions to reduce the noise of the business system on operating system shutdown.</para>
+        /// </description></item>
+        /// </list>
+        /// <para>Default value: true.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("ForceStop")]
         [Validation(Required=false)]
         public bool? ForceStop { get; set; }

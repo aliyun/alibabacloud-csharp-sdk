@@ -68,19 +68,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>Warn: Diagnostic information was recorded and may indicate exceptions.</description></item>
         /// <item><description>Critical: Critical exceptions were detected.</description></item>
         /// </list>
-        /// <para>Enumerated values:</para>
-        /// <list type="bullet">
-        /// <item><description>normal</description></item>
-        /// <item><description>info</description></item>
-        /// <item><description>warn</description></item>
-        /// <item><description>critical</description></item>
-        /// <item><description>Normal</description></item>
-        /// <item><description>Info</description></item>
-        /// <item><description>Warn</description></item>
-        /// <item><description>Critical</description></item>
-        /// <item><description>unknown</description></item>
-        /// <item><description>Unknown</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Normal</para>

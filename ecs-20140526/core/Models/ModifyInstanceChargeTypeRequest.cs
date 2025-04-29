@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to automatically complete the payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The payment is automatically completed. Maintain a sufficient account balance. Otherwise, your order becomes invalid and is canceled.</description></item>
-        /// <item><description>false: An order is generated but no payment is made.</description></item>
+        /// <item><description>true: enables automatic payment. Maintain a sufficient account balance. Otherwise, your order becomes invalid and is canceled.</description></item>
+        /// <item><description>false: disables automatic payment. An order is generated but no payment is made.</description></item>
         /// </list>
         /// <para>Default value: true.</para>
         /// <remarks>

@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>An array of security group rules. You can specify 1 to 100 security group rules in a request.</para>
+        /// <para>The security group rules. You can specify 1 to 100 security group rules in a request.</para>
         /// </summary>
         [NameInMap("Permissions")]
         [Validation(Required=false)]
@@ -212,12 +212,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Policy { get; set; }
 
             /// <summary>
-            /// <para>The range of destination port numbers for the protocols specified in the security group rule. Valid values:</para>
+            /// <para>The destination port range of the security group rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port number range in the format of \<Start port number>/\<End port number>. Example: 1/200.</description></item>
-            /// <item><description>If you set IpProtocol to ICMP, the port number range is -1/-1.</description></item>
-            /// <item><description>If you set IpProtocol to GRE, the port number range is -1/-1.</description></item>
-            /// <item><description>If you set IpProtocol to ALL, the port number range is -1/-1, which indicates all port numbers.</description></item>
+            /// <item><description>If you set IpProtocol to TCP or UDP, the valid values of this parameter are 1 to 65535. Specify a port range in the format of \<Start port number>/\<End port number>. Example: 1/200.</description></item>
+            /// <item><description>If you set IpProtocol to ICMP, the port range is -1/-1.</description></item>
+            /// <item><description>If you set IpProtocol to GRE, the port range is -1/-1.</description></item>
+            /// <item><description>If you set IpProtocol to ALL, the port range is -1/-1.</description></item>
             /// </list>
             /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/40724.html">Common ports</a>.</para>
             /// 
@@ -229,6 +229,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string PortRange { get; set; }
 
             /// <summary>
+            /// <para>The ID of the port list. You can call the <c>DescribePortRangeLists</c> operation to query the IDs of available port lists.</para>
+            /// <list type="bullet">
+            /// <item><description>If you specify <c>Permissions.N.PortRange</c>, this parameter is ignored.</description></item>
+            /// <item><description>If a security group resides in the classic network, you cannot reference port lists in the security group rules. For information about the limits on security groups and port lists, see the <a href="~~25412#SecurityGroupQuota1~~">Security groups</a> section of the &quot;Limits and quotas on ECS&quot; topic.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>prl-2ze9743****</para>
             /// </summary>
@@ -258,7 +264,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string SourceCidrIp { get; set; }
 
             /// <summary>
-            /// <para>The ID of the source security group of the security group rule.</para>
+            /// <para>The ID of the source security group referenced in the security group rule.</para>
             /// <list type="bullet">
             /// <item><description>You must specify at least one of the following parameters: <c>SourceGroupId</c>, <c>SourceCidrIp</c>, <c>Ipv6SourceCidrIp</c>, and <c>SourcePrefixListId</c>.</description></item>
             /// <item><description>If you specify <c>SourceGroupId</c> but do not specify <c>SourceCidrIp</c> or <c>Ipv6SourceCidrIp</c>, you must set <c>NicType</c> to <c>intranet</c>.</description></item>
@@ -273,7 +279,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string SourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The Alibaba Cloud account that manages the source security group specified in the security group rule.</para>
+            /// <para>The Alibaba Cloud account that manages the source security group referenced in the security group rule.</para>
             /// <list type="bullet">
             /// <item><description>If both <c>SourceGroupOwnerAccount</c> and <c>SourceGroupOwnerId</c> are empty, access permissions are configured for another security group in your Alibaba Cloud account.</description></item>
             /// <item><description>If you specify <c>SourceCidrIp</c>, <c>SourceGroupOwnerAccount</c> is ignored.</description></item>
@@ -287,7 +293,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string SourceGroupOwnerAccount { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account that manages the source security group specified in the security group rule.</para>
+            /// <para>The ID of the Alibaba Cloud account that manages the source security group referenced in the security group rule.</para>
             /// <list type="bullet">
             /// <item><description>If both <c>SourceGroupOwnerAccount</c> and <c>SourceGroupOwnerId</c> are empty, access permissions are configured for another security group in your Alibaba Cloud account.</description></item>
             /// <item><description>If you specify <c>SourceCidrIp</c>, <c>SourceGroupOwnerAccount</c> is ignored.</description></item>
@@ -301,12 +307,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public long? SourceGroupOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The range of source port numbers for the protocols specified in the security group rule. Valid values:</para>
+            /// <para>The source port range of the security group rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port number range in the format of \<Start port number>/\<End port number>. Example: 1/200.</description></item>
-            /// <item><description>If you set IpProtocol to ICMP, the port number range is -1/-1.</description></item>
-            /// <item><description>If you set IpProtocol to GRE, the port number range is -1/-1.</description></item>
-            /// <item><description>If you set IpProtocol to ALL, the port number range is -1/-1, which indicates all port numbers.</description></item>
+            /// <item><description>If you set IpProtocol to TCP or UDP, the valid values of this parameter are 1 to 65535. Specify a port range in the format of \<Start port number>/\<End port number>. Example: 1/200.</description></item>
+            /// <item><description>If you set IpProtocol to ICMP, the port range is -1/-1.</description></item>
+            /// <item><description>If you set IpProtocol to GRE, the port range is -1/-1.</description></item>
+            /// <item><description>If you set IpProtocol to ALL, the port range is -1/-1.</description></item>
             /// </list>
             /// <para>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</para>
             /// 
@@ -319,9 +325,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <para>The ID of the source prefix list of the security group rule. You can call the <a href="https://help.aliyun.com/document_detail/205046.html">DescribePrefixLists</a> operation to query the IDs of available prefix lists.</para>
-            /// <para>When you specify this parameter, take note of the following items:</para>
+            /// <para>Take note of the following items:</para>
             /// <list type="bullet">
-            /// <item><description>If a security group resides in the classic network, you cannot specify prefix lists in the rules of the security group. For information about the limits on security groups and prefix lists, see the <a href="~~25412#SecurityGroupQuota1~~">Security groups</a> section of the &quot;Limits and quotas&quot; topic.</description></item>
+            /// <item><description>If a security group resides in the classic network, you cannot specify prefix lists in the rules of the security group. For information about the limits on security groups and prefix lists, see the <a href="~~25412#SecurityGroupQuota1~~">Security groups</a> section of the &quot;Limits and quotas on ECS&quot; topic.</description></item>
             /// <item><description>If you specify <c>SourceCidrIp</c>, <c>Ipv6SourceCidrIp</c>, or <c>SourceGroupId</c>, this parameter is ignored.</description></item>
             /// </list>
             /// 

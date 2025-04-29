@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The content of security group rules. You can specify up to 100 security group rules.</para>
+        /// <para>The security group rules. You can specify up to 100 security group rules.</para>
         /// </summary>
         [NameInMap("Permissions")]
         [Validation(Required=false)]
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// </list>
             /// <para>Take note of the following items:</para>
             /// <list type="bullet">
-            /// <item><description>Advanced security groups do not support security group rules that reference security groups as authorization objects (sources or destinations of traffic).</description></item>
+            /// <item><description>Advanced security groups do not support security group rules that reference security groups as authorization objects.</description></item>
             /// <item><description>Each basic security group can contain up to 20 security group rules that reference security groups as authorization objects.</description></item>
             /// </list>
             /// 
@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <para>The ID of the destination prefix list of the security group rule. You can call the <a href="https://help.aliyun.com/document_detail/205046.html">DescribePrefixLists</a> operation to query the IDs of available prefix lists.</para>
             /// <para>Take note of the following items:</para>
             /// <list type="bullet">
-            /// <item><description>If a security group resides in the classic network, you cannot specify prefix lists in the rules of the security group. For information about the limits on security groups and prefix lists, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits and quotas&quot; topic.</description></item>
+            /// <item><description>If a security group resides in the classic network, you cannot reference prefix lists in the rules of the security group. For information about the limits on security groups and prefix lists, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits and quotas&quot; topic.</description></item>
             /// <item><description>If you specify <c>DestCidrIp</c>, <c>Ipv6DestCidrIp</c>, or <c>DestGroupId</c>, this parameter is ignored.</description></item>
             /// </list>
             /// 
@@ -248,7 +248,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string DestPrefixListId { get; set; }
 
             /// <summary>
-            /// <para>The protocol. The values of this parameter are case-insensitive. Valid values:</para>
+            /// <para>The protocol type. The values of this parameter are case-insensitive. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>TCP.</description></item>
             /// <item><description>UDP.</description></item>
@@ -312,8 +312,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The action of the security group rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>accept: allows outbound traffic.</description></item>
-            /// <item><description>drop: denies outbound traffic and returns no responses. In this case, the request times out or the connection cannot be established.</description></item>
+            /// <item><description>accept: allows access.</description></item>
+            /// <item><description>drop: denies access and returns no responses. In this case, the request times out or the connection cannot be established.</description></item>
             /// </list>
             /// <para>Default value: accept.</para>
             /// 
@@ -340,6 +340,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public string PortRange { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the port list. You can call the <c>DescribePortRangeLists</c> operation to query the IDs of available prefix lists.</para>
+            /// <list type="bullet">
+            /// <item><description>If you specify <c>Permissions.N.PortRange</c>, this parameter is ignored.</description></item>
+            /// <item><description>If a security group resides in the classic network, you cannot reference port lists in the rules of the security group. For information about the limits on security groups and port lists, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits and quotas&quot; topic.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>prl-2ze9743****</para>
+            /// </summary>
             [NameInMap("PortRangeListId")]
             [Validation(Required=false)]
             public string PortRangeListId { get; set; }

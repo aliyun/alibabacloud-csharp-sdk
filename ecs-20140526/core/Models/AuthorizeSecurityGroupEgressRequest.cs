@@ -339,6 +339,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public string PortRange { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>prl-2ze9743****</para>
+            /// </summary>
             [NameInMap("PortRangeListId")]
             [Validation(Required=false)]
             public string PortRangeListId { get; set; }

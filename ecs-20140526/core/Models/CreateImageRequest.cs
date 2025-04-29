@@ -28,15 +28,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The boot mode of the image. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>BIOS: Basic Input/Output System (BIOS)</description></item>
-        /// <item><description>UEFI: Unified Extensible Firmware Interface (UEFI)</description></item>
-        /// <item><description>UEFI-Preferred: BIOS and UEFI</description></item>
+        /// <item><description>BIOS: BIOS mode</description></item>
+        /// <item><description>UEFI: Unified Extensible Firmware Interface (UEFI) mode</description></item>
+        /// <item><description>UEFI-Preferred (default): BIOS mode and UEFI mode</description></item>
         /// </list>
         /// <remarks>
-        /// <para> Before you change the boot mode of an image, we recommend that you get familiar with the boot modes supported by the image to ensure that instances created from the image can start as expected. If you do not know which boot modes are supported by the image, we recommend that you use the image check feature to perform a check. For information about the image check feature, see <a href="https://help.aliyun.com/document_detail/439819.html">Overview of image check</a>.</para>
-        /// </remarks>
-        /// <remarks>
-        /// <para> For information about the UEFI-Preferred boot mode, see <a href="https://help.aliyun.com/document_detail/2244655.html">Best practices for ECS instance boot modes</a>.</para>
+        /// <para> Before you specify this parameter, make sure that you are familiar with the boot modes supported by the image. If you specify a boot mode that is not supported by the image, ECS instances created from the image cannot start as expected. For information about the boot modes of images, see the <a href="~~2244655#b9caa9b8bb1wf~~">Boot modes of images</a> section of the &quot;Best practices for ECS instance boot modes&quot; topic.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -80,7 +77,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DetectionStrategy { get; set; }
 
         /// <summary>
-        /// <para>The information about the custom image. To create a custom image from multiple snapshots, specify the parameters in this parameter list.</para>
+        /// <para>Details of the disks and snapshots from which the custom image is created. If you want to create a custom image based on a system disk snapshot and data disk snapshots, use this parameter to specify the snapshots.</para>
         /// </summary>
         [NameInMap("DiskDeviceMapping")]
         [Validation(Required=false)]
@@ -89,8 +86,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The device name of disk N in the custom image. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>For disks other than basic disks, such as standard SSDs, ultra disks, and Enterprise SSDs (ESSDs), the valid values range from /dev/vda to /dev/vdz in alphabetical order.</description></item>
-            /// <item><description>For basic disks, the valid values range from /dev/xvda to /dev/xvdz in alphabetical order.</description></item>
+            /// <item><description>The device name of the system disk must be /dev/xvda.</description></item>
+            /// <item><description>The device names of the data disks are unique and range from /dev/xvdb to /dev/xvdz in alphabetical order.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -101,7 +98,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Device { get; set; }
 
             /// <summary>
-            /// <para>The type of disk N in the custom image. You can specify this parameter to create the system disk of the custom image from a data disk snapshot. If you leave this parameter empty, the disk type is determined by the corresponding snapshot. Valid values:</para>
+            /// <para>The type of disk N in the custom image. You can specify this parameter to create the system disk of the custom image from a data disk snapshot. If you do not specify this parameter, the disk type is determined by the corresponding snapshot. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>system: system disk. You can specify only one snapshot to use to create the system disk in the custom image.</description></item>
             /// <item><description>data: data disk. You can specify up to 16 snapshots to use to create data disks in the custom image.</description></item>
@@ -135,7 +132,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? Size { get; set; }
 
             /// <summary>
-            /// <para>The ID of snapshot N to use to create the custom image.</para>
+            /// <para>The ID of the snapshot.</para>
             /// 
             /// <b>Example:</b>
             /// <para>s-bp17441ohwkdca0****</para>
@@ -145,6 +142,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string SnapshotId { get; set; }
 
         }
+
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
 
         /// <summary>
         /// <para>The attributes of the custom image.</para>
@@ -295,7 +296,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The ID of the snapshot from which to create the custom image.</para>
         /// <remarks>
-        /// <para> To create a custom image from only a system disk snapshot of an ECS instance, you can specify this parameter or <c>DiskDeviceMapping.SnapshotId</c>. To create a custom image from multiple snapshots, you can specify only <c>DiskDeviceMapping.SnapshotId</c>.</para>
+        /// <para> To create a custom image from only a system disk snapshot of an ECS instance, you can specify this parameter or <c>DiskDeviceMapping.N.SnapshotId</c> to specify the snapshot ID. If you add data disk snapshots, you can use only <c>DiskDeviceMapping.N.SnapshotId</c> to specify snapshots.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

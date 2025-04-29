@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribePortRangeListEntriesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Port list entries.</para>
+        /// </summary>
         [NameInMap("Entries")]
         [Validation(Required=false)]
         public List<DescribePortRangeListEntriesResponseBodyEntries> Entries { get; set; }
         public class DescribePortRangeListEntriesResponseBodyEntries : TeaModel {
             /// <summary>
+            /// <para>The description of the port range.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Description information of PortRangeList</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The port range.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>80/80</para>
             /// </summary>
@@ -32,6 +39,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>882304EC-5CE2-5860-98ED-3FA1D8D74A0C</para>
         /// </summary>
