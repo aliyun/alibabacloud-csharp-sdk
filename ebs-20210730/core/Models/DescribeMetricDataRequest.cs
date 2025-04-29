@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         [Validation(Required=false)]
         public string AggreOps { get; set; }
 
+        [NameInMap("AggreOverLineOps")]
+        [Validation(Required=false)]
+        public string AggreOverLineOps { get; set; }
+
         /// <summary>
         /// <para>The dimension map in the JSON format. A dimension is a key-value pair. Valid dimension key: diskId.</para>
         /// 

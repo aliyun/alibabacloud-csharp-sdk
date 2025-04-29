@@ -162,6 +162,10 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            [NameInMap("SharingEnabled")]
+            [Validation(Required=false)]
+            public string SharingEnabled { get; set; }
+
             /// <summary>
             /// <para>The size of the disk. Unit: GiB.</para>
             /// 

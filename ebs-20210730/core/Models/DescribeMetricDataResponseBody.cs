@@ -70,6 +70,10 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
 
+        [NameInMap("Warnings")]
+        [Validation(Required=false)]
+        public List<string> Warnings { get; set; }
+
     }
 
 }
