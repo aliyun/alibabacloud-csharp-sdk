@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("Edition")]
+        [Validation(Required=false)]
+        public string Edition { get; set; }
+
         /// <summary>
         /// <para>实例是否开通数据存储加密功能</para>
         /// 
@@ -110,6 +114,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         [NameInMap("ModifyType")]
         [Validation(Required=false)]
         public string ModifyType { get; set; }
+
+        [NameInMap("ProvisionedCapacity")]
+        [Validation(Required=false)]
+        public int? ProvisionedCapacity { get; set; }
 
         /// <summary>
         /// <para>The maximum number of queues that can be created on the instance.</para>
