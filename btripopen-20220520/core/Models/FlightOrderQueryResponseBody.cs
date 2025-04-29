@@ -219,6 +219,52 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string AirlineName { get; set; }
 
+                [NameInMap("arr_airport_city_county")]
+                [Validation(Required=false)]
+                public FlightOrderQueryResponseBodyModuleFlightInfoListArrAirportCityCounty ArrAirportCityCounty { get; set; }
+                public class FlightOrderQueryResponseBodyModuleFlightInfoListArrAirportCityCounty : TeaModel {
+                    [NameInMap("adcode")]
+                    [Validation(Required=false)]
+                    public string Adcode { get; set; }
+
+                    [NameInMap("airport_city_code")]
+                    [Validation(Required=false)]
+                    public string AirportCityCode { get; set; }
+
+                    [NameInMap("airport_city_name")]
+                    [Validation(Required=false)]
+                    public string AirportCityName { get; set; }
+
+                    [NameInMap("airport_code")]
+                    [Validation(Required=false)]
+                    public string AirportCode { get; set; }
+
+                    [NameInMap("airport_name")]
+                    [Validation(Required=false)]
+                    public string AirportName { get; set; }
+
+                    [NameInMap("airport_parent_city_name")]
+                    [Validation(Required=false)]
+                    public string AirportParentCityName { get; set; }
+
+                    [NameInMap("county_city_adcode")]
+                    [Validation(Required=false)]
+                    public string CountyCityAdcode { get; set; }
+
+                    [NameInMap("county_city_name")]
+                    [Validation(Required=false)]
+                    public string CountyCityName { get; set; }
+
+                    [NameInMap("prefecture_city_adcode")]
+                    [Validation(Required=false)]
+                    public string PrefectureCityAdcode { get; set; }
+
+                    [NameInMap("prefecture_city_name")]
+                    [Validation(Required=false)]
+                    public string PrefectureCityName { get; set; }
+
+                }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>LHW</para>
@@ -274,6 +320,52 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("cabin_level")]
                 [Validation(Required=false)]
                 public string CabinLevel { get; set; }
+
+                [NameInMap("dep_airport_city_county")]
+                [Validation(Required=false)]
+                public FlightOrderQueryResponseBodyModuleFlightInfoListDepAirportCityCounty DepAirportCityCounty { get; set; }
+                public class FlightOrderQueryResponseBodyModuleFlightInfoListDepAirportCityCounty : TeaModel {
+                    [NameInMap("adcode")]
+                    [Validation(Required=false)]
+                    public string Adcode { get; set; }
+
+                    [NameInMap("airport_city_code")]
+                    [Validation(Required=false)]
+                    public string AirportCityCode { get; set; }
+
+                    [NameInMap("airport_city_name")]
+                    [Validation(Required=false)]
+                    public string AirportCityName { get; set; }
+
+                    [NameInMap("airport_code")]
+                    [Validation(Required=false)]
+                    public string AirportCode { get; set; }
+
+                    [NameInMap("airport_name")]
+                    [Validation(Required=false)]
+                    public string AirportName { get; set; }
+
+                    [NameInMap("airport_parent_city_name")]
+                    [Validation(Required=false)]
+                    public string AirportParentCityName { get; set; }
+
+                    [NameInMap("county_city_adcode")]
+                    [Validation(Required=false)]
+                    public string CountyCityAdcode { get; set; }
+
+                    [NameInMap("county_city_name")]
+                    [Validation(Required=false)]
+                    public string CountyCityName { get; set; }
+
+                    [NameInMap("prefecture_city_adcode")]
+                    [Validation(Required=false)]
+                    public string PrefectureCityAdcode { get; set; }
+
+                    [NameInMap("prefecture_city_name")]
+                    [Validation(Required=false)]
+                    public string PrefectureCityName { get; set; }
+
+                }
 
                 /// <summary>
                 /// <b>Example:</b>
@@ -342,6 +434,62 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("stop_city")]
                 [Validation(Required=false)]
                 public List<string> StopCity { get; set; }
+
+                [NameInMap("stop_city_info_list")]
+                [Validation(Required=false)]
+                public List<FlightOrderQueryResponseBodyModuleFlightInfoListStopCityInfoList> StopCityInfoList { get; set; }
+                public class FlightOrderQueryResponseBodyModuleFlightInfoListStopCityInfoList : TeaModel {
+                    [NameInMap("stop_airport_city_county")]
+                    [Validation(Required=false)]
+                    public FlightOrderQueryResponseBodyModuleFlightInfoListStopCityInfoListStopAirportCityCounty StopAirportCityCounty { get; set; }
+                    public class FlightOrderQueryResponseBodyModuleFlightInfoListStopCityInfoListStopAirportCityCounty : TeaModel {
+                        [NameInMap("adcode")]
+                        [Validation(Required=false)]
+                        public string Adcode { get; set; }
+
+                        [NameInMap("airport_city_code")]
+                        [Validation(Required=false)]
+                        public string AirportCityCode { get; set; }
+
+                        [NameInMap("airport_city_name")]
+                        [Validation(Required=false)]
+                        public string AirportCityName { get; set; }
+
+                        [NameInMap("airport_code")]
+                        [Validation(Required=false)]
+                        public string AirportCode { get; set; }
+
+                        [NameInMap("airport_name")]
+                        [Validation(Required=false)]
+                        public string AirportName { get; set; }
+
+                        [NameInMap("airport_parent_city_name")]
+                        [Validation(Required=false)]
+                        public string AirportParentCityName { get; set; }
+
+                        [NameInMap("county_city_adcode")]
+                        [Validation(Required=false)]
+                        public string CountyCityAdcode { get; set; }
+
+                        [NameInMap("county_city_name")]
+                        [Validation(Required=false)]
+                        public string CountyCityName { get; set; }
+
+                        [NameInMap("prefecture_city_adcode")]
+                        [Validation(Required=false)]
+                        public string PrefectureCityAdcode { get; set; }
+
+                        [NameInMap("prefecture_city_name")]
+                        [Validation(Required=false)]
+                        public string PrefectureCityName { get; set; }
+
+                    }
+
+                    [NameInMap("stop_airport_code")]
+                    [Validation(Required=false)]
+                    public string StopAirportCode { get; set; }
+
+                }
 
             }
 

@@ -100,6 +100,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string BillingEntity { get; set; }
 
+                [NameInMap("book_channel")]
+                [Validation(Required=false)]
+                public string BookChannel { get; set; }
+
                 [NameInMap("book_mode")]
                 [Validation(Required=false)]
                 public string BookMode { get; set; }
@@ -557,6 +561,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("traveler_job_no")]
                 [Validation(Required=false)]
                 public string TravelerJobNo { get; set; }
+
+                [NameInMap("traveler_member_type")]
+                [Validation(Required=false)]
+                public string TravelerMemberType { get; set; }
 
                 [NameInMap("traveler_member_type_name")]
                 [Validation(Required=false)]

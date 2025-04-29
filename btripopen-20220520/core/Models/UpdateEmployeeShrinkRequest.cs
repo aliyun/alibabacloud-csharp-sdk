@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string BaseCityCodeListShrink { get; set; }
 
+        [NameInMap("base_location_list")]
+        [Validation(Required=false)]
+        public string BaseLocationListShrink { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>2000-01-02</para>

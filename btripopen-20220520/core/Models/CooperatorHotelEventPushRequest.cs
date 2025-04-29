@@ -10,8 +10,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class CooperatorHotelEventPushRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>11</para>
         /// </summary>
@@ -19,9 +17,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public int? ChangeOrderStatus { get; set; }
 
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
         [NameInMap("change_order_status_desc")]
         [Validation(Required=false)]
         public string ChangeOrderStatusDesc { get; set; }

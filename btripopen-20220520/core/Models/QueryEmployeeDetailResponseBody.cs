@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public QueryEmployeeDetailResponseBodyModule Module { get; set; }
         public class QueryEmployeeDetailResponseBodyModule : TeaModel {
+            [NameInMap("email")]
+            [Validation(Required=false)]
+            public string Email { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>false</para>
@@ -76,6 +80,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [NameInMap("out_employee_id")]
             [Validation(Required=false)]
             public string OutEmployeeId { get; set; }
+
+            [NameInMap("phone_no")]
+            [Validation(Required=false)]
+            public string PhoneNo { get; set; }
 
             [NameInMap("real_name")]
             [Validation(Required=false)]

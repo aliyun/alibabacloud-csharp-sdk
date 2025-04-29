@@ -63,6 +63,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string Phone { get; set; }
 
+        [NameInMap("session_parameters")]
+        [Validation(Required=false)]
+        public string SessionParameters { get; set; }
+
         [NameInMap("sub_corp_id")]
         [Validation(Required=false)]
         public string SubCorpId { get; set; }

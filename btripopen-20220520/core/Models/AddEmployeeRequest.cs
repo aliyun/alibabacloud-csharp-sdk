@@ -25,6 +25,20 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public List<string> BaseCityCodeList { get; set; }
 
+        [NameInMap("base_location_list")]
+        [Validation(Required=false)]
+        public List<AddEmployeeRequestBaseLocationList> BaseLocationList { get; set; }
+        public class AddEmployeeRequestBaseLocationList : TeaModel {
+            [NameInMap("code")]
+            [Validation(Required=false)]
+            public string Code { get; set; }
+
+            [NameInMap("level")]
+            [Validation(Required=false)]
+            public string Level { get; set; }
+
+        }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>2000-01-02</para>

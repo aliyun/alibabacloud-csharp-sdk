@@ -627,6 +627,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public int? LimitTraveler { get; set; }
 
+            [NameInMap("meal_budget")]
+            [Validation(Required=false)]
+            public long? MealBudget { get; set; }
+
             [NameInMap("payment_department_id")]
             [Validation(Required=false)]
             public string PaymentDepartmentId { get; set; }

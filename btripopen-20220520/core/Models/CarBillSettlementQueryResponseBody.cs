@@ -494,6 +494,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string TravelerJobNo { get; set; }
 
+                [NameInMap("traveler_member_type")]
+                [Validation(Required=false)]
+                public string TravelerMemberType { get; set; }
+
                 [NameInMap("traveler_member_type_name")]
                 [Validation(Required=false)]
                 public string TravelerMemberTypeName { get; set; }

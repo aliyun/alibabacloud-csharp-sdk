@@ -100,6 +100,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string ArrStation { get; set; }
 
+                [NameInMap("arr_station_location")]
+                [Validation(Required=false)]
+                public string ArrStationLocation { get; set; }
+
+                [NameInMap("arr_station_location_code")]
+                [Validation(Required=false)]
+                public string ArrStationLocationCode { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>12:30</para>
@@ -219,6 +227,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("dep_city_name")]
                 [Validation(Required=false)]
                 public string DepCityName { get; set; }
+
+                [NameInMap("dep_station_location")]
+                [Validation(Required=false)]
+                public string DepStationLocation { get; set; }
+
+                [NameInMap("dep_station_location_code")]
+                [Validation(Required=false)]
+                public string DepStationLocationCode { get; set; }
 
                 [NameInMap("department")]
                 [Validation(Required=false)]
@@ -525,6 +541,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("traveler_job_no")]
                 [Validation(Required=false)]
                 public string TravelerJobNo { get; set; }
+
+                [NameInMap("traveler_member_type")]
+                [Validation(Required=false)]
+                public string TravelerMemberType { get; set; }
 
                 [NameInMap("traveler_member_type_name")]
                 [Validation(Required=false)]

@@ -148,6 +148,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string BillRecordTime { get; set; }
 
+                [NameInMap("book_channel")]
+                [Validation(Required=false)]
+                public string BookChannel { get; set; }
+
                 [NameInMap("book_mode")]
                 [Validation(Required=false)]
                 public string BookMode { get; set; }
@@ -352,6 +356,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string FlightNo { get; set; }
 
+                [NameInMap("flight_trip_type")]
+                [Validation(Required=false)]
+                public string FlightTripType { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>4564547</para>
@@ -475,6 +483,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("order_id")]
                 [Validation(Required=false)]
                 public string OrderId { get; set; }
+
+                [NameInMap("order_ticket_no")]
+                [Validation(Required=false)]
+                public string OrderTicketNo { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
@@ -673,6 +685,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("traveler_job_no")]
                 [Validation(Required=false)]
                 public string TravelerJobNo { get; set; }
+
+                [NameInMap("traveler_member_type")]
+                [Validation(Required=false)]
+                public string TravelerMemberType { get; set; }
 
                 [NameInMap("traveler_member_type_name")]
                 [Validation(Required=false)]

@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public HotelSearchResponseBodyModule Module { get; set; }
         public class HotelSearchResponseBodyModule : TeaModel {
+            [NameInMap("count")]
+            [Validation(Required=false)]
+            public int? Count { get; set; }
+
             [NameInMap("items")]
             [Validation(Required=false)]
             public List<HotelSearchResponseBodyModuleItems> Items { get; set; }

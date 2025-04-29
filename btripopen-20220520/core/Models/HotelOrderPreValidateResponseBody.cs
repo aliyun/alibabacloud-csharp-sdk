@@ -33,6 +33,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string ExtendInfo { get; set; }
 
+            [NameInMap("item_invoice")]
+            [Validation(Required=false)]
+            public HotelOrderPreValidateResponseBodyModuleItemInvoice ItemInvoice { get; set; }
+            public class HotelOrderPreValidateResponseBodyModuleItemInvoice : TeaModel {
+                [NameInMap("support_special")]
+                [Validation(Required=false)]
+                public bool? SupportSpecial { get; set; }
+
+            }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>fb5e1abf33924b6c912bd6d80deec0eb-4</para>

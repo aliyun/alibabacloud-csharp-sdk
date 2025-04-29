@@ -520,6 +520,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public long? Pid { get; set; }
 
+                [NameInMap("ticket_no_segment_map")]
+                [Validation(Required=false)]
+                public Dictionary<string, object> TicketNoSegmentMap { get; set; }
+
                 [NameInMap("ticket_nos")]
                 [Validation(Required=false)]
                 public List<string> TicketNos { get; set; }

@@ -105,6 +105,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string BillRecordTime { get; set; }
 
+                [NameInMap("book_channel")]
+                [Validation(Required=false)]
+                public string BookChannel { get; set; }
+
                 [NameInMap("book_mode")]
                 [Validation(Required=false)]
                 public string BookMode { get; set; }

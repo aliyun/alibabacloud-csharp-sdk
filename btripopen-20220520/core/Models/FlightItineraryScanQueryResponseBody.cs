@@ -270,6 +270,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string PassengerName { get; set; }
 
+                [NameInMap("pdf_oss_url")]
+                [Validation(Required=false)]
+                public string PdfOssUrl { get; set; }
+
                 [NameInMap("project")]
                 [Validation(Required=false)]
                 public string Project { get; set; }
@@ -284,6 +288,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("purchaser_name")]
                 [Validation(Required=false)]
                 public string PurchaserName { get; set; }
+
+                [NameInMap("purchaser_tax_no")]
+                [Validation(Required=false)]
+                public string PurchaserTaxNo { get; set; }
 
                 [NameInMap("purchaser_type")]
                 [Validation(Required=false)]
