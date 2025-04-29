@@ -169,6 +169,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 
                 }
 
+                [NameInMap("VersionLifecycle")]
+                [Validation(Required=false)]
+                public string VersionLifecycle { get; set; }
+
                 /// <summary>
                 /// <para>VPC ID</para>
                 /// 
