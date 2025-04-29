@@ -983,6 +983,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 [Validation(Required=false)]
                 public string FcType { get; set; }
 
+                [NameInMap("FcVersion")]
+                [Validation(Required=false)]
+                public string FcVersion { get; set; }
+
                 /// <summary>
                 /// <para>The function name defined in Function Compute.</para>
                 /// 
