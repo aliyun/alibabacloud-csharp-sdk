@@ -68,6 +68,16 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         }
 
+        [NameInMap("AlarmOptions")]
+        [Validation(Required=false)]
+        public CreateScalingRuleRequestAlarmOptions AlarmOptions { get; set; }
+        public class CreateScalingRuleRequestAlarmOptions : TeaModel {
+            [NameInMap("Period")]
+            [Validation(Required=false)]
+            public int? Period { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The cooldown time of the scaling rule. This parameter is available only if you set the ScalingRuleType parameter to SimpleScalingRule. Valid values: 0 to 86400. Unit: seconds.</para>
         /// <para>By default, this parameter is left empty.</para>

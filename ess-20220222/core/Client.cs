@@ -5607,6 +5607,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             {
                 query["AlarmDimensions"] = request.AlarmDimensions;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmOptions))
+            {
+                query["AlarmOptions"] = request.AlarmOptions;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cooldown))
             {
                 query["Cooldown"] = request.Cooldown;
@@ -5772,6 +5776,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmDimensions))
             {
                 query["AlarmDimensions"] = request.AlarmDimensions;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmOptions))
+            {
+                query["AlarmOptions"] = request.AlarmOptions;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cooldown))
             {
@@ -10746,7 +10754,7 @@ namespace AlibabaCloud.SDK.Ess20220222
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the latest diagnosis details for a scaling group. Diagnosis details are only returned in the presence of exceptions.</para>
+        /// <para>DescribeScalingGroupDiagnoseDetails</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10784,7 +10792,7 @@ namespace AlibabaCloud.SDK.Ess20220222
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the latest diagnosis details for a scaling group. Diagnosis details are only returned in the presence of exceptions.</para>
+        /// <para>DescribeScalingGroupDiagnoseDetails</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10822,7 +10830,7 @@ namespace AlibabaCloud.SDK.Ess20220222
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the latest diagnosis details for a scaling group. Diagnosis details are only returned in the presence of exceptions.</para>
+        /// <para>DescribeScalingGroupDiagnoseDetails</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10840,7 +10848,7 @@ namespace AlibabaCloud.SDK.Ess20220222
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the latest diagnosis details for a scaling group. Diagnosis details are only returned in the presence of exceptions.</para>
+        /// <para>DescribeScalingGroupDiagnoseDetails</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17671,6 +17679,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             {
                 query["AlarmDimensions"] = request.AlarmDimensions;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmOptions))
+            {
+                query["AlarmOptions"] = request.AlarmOptions;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cooldown))
             {
                 query["Cooldown"] = request.Cooldown;
@@ -17812,6 +17824,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmDimensions))
             {
                 query["AlarmDimensions"] = request.AlarmDimensions;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmOptions))
+            {
+                query["AlarmOptions"] = request.AlarmOptions;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cooldown))
             {

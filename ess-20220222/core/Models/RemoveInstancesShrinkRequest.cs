@@ -57,6 +57,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
 
+        /// <summary>
+        /// <para>The context of the lifecycle hook.</para>
+        /// </summary>
         [NameInMap("LifecycleHookContext")]
         [Validation(Required=false)]
         public string LifecycleHookContextShrink { get; set; }

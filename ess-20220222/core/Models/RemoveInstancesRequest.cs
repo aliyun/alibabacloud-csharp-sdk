@@ -57,14 +57,30 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
 
+        /// <summary>
+        /// <para>The context of the lifecycle hook.</para>
+        /// </summary>
         [NameInMap("LifecycleHookContext")]
         [Validation(Required=false)]
         public RemoveInstancesRequestLifecycleHookContext LifecycleHookContext { get; set; }
         public class RemoveInstancesRequestLifecycleHookContext : TeaModel {
+            /// <summary>
+            /// <para>Specifies whether to disable the lifecycle hook. Valid Values:</para>
+            /// <list type="bullet">
+            /// <item><description>true</description></item>
+            /// <item><description>false</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("DisableLifecycleHook")]
             [Validation(Required=false)]
             public bool? DisableLifecycleHook { get; set; }
 
+            /// <summary>
+            /// <para>The IDs of the lifecycle hooks that you want to disable.</para>
+            /// </summary>
             [NameInMap("IgnoredLifecycleHookIds")]
             [Validation(Required=false)]
             public List<string> IgnoredLifecycleHookIds { get; set; }

@@ -212,6 +212,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 [Validation(Required=false)]
                 public string MetricType { get; set; }
 
+                [NameInMap("Period")]
+                [Validation(Required=false)]
+                public int? Period { get; set; }
+
                 /// <summary>
                 /// <para>The statistical method of the event-triggered task that is associated with the scaling rule. Valid values:</para>
                 /// <list type="bullet">

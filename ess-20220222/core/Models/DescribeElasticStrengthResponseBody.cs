@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribeElasticStrengthResponseBody : TeaModel {
         /// <summary>
+        /// <para>The scaling strength level of the scaling group. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Strong</description></item>
+        /// <item><description>Medium</description></item>
+        /// <item><description>Weak</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Strong</para>
         /// </summary>
@@ -240,11 +247,17 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public string InstanceType { get; set; }
 
+            /// <summary>
+            /// <para>The inventory health.</para>
+            /// </summary>
             [NameInMap("InventoryHealth")]
             [Validation(Required=false)]
             public DescribeElasticStrengthResponseBodyResourcePoolsInventoryHealth InventoryHealth { get; set; }
             public class DescribeElasticStrengthResponseBodyResourcePoolsInventoryHealth : TeaModel {
                 /// <summary>
+                /// <para>The adequacy score.</para>
+                /// <para>Valid values: 0 to 3.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
                 /// </summary>
@@ -253,6 +266,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public int? AdequacyScore { get; set; }
 
                 /// <summary>
+                /// <para>The inventory health score.</para>
+                /// <list type="bullet">
+                /// <item><description>A score between 5 and 6 indicates a sufficient inventory.</description></item>
+                /// <item><description>A score between 1 and 4 indicates that there is no guarantee of a sufficient inventory. Select a reservation as necessary.</description></item>
+                /// <item><description>A score between -3 and 0 indicates that the inventory is sufficient, and an alert is triggered. Select another instance type.</description></item>
+                /// </list>
+                /// <para>Calculation formula: <c>HealthScore</c> = <c>AdequacyScore</c> + <c>SupplyScore</c> - <c>HotScore</c>.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
                 /// </summary>
@@ -261,6 +282,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public int? HealthScore { get; set; }
 
                 /// <summary>
+                /// <para>The popularity score.</para>
+                /// <para>Valid values: 0 to 3.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
                 /// </summary>
@@ -269,6 +293,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public int? HotScore { get; set; }
 
                 /// <summary>
+                /// <para>The replenishment capability score.</para>
+                /// <para>Valid values: 0 to 3.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
                 /// </summary>
@@ -289,6 +316,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string Msg { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the resource pool is available. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Available</description></item>
+            /// <item><description>Unavailable (If a constraint is not provided, the instance type is not deployed, or the instance type is out of stock, the resource pool becomes unavailable.)</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>Available</para>
             /// </summary>

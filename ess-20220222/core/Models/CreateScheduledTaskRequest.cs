@@ -44,10 +44,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? LaunchExpirationTime { get; set; }
 
         /// <summary>
-        /// <para>The point in time at which the scheduled task is triggered. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. The time must be in UTC. You cannot enter a point in time that is later than 90 days from the point in time at which the scheduled task is created.</para>
+        /// <para>The point in time at which the scheduled task is triggered. Specify the time in the ISO 8601 standard. The time must be in UTC. You cannot trigger a scheduled task more than 90 days after its creation.</para>
         /// <list type="bullet">
-        /// <item><description>If you specify the <c>RecurrenceType</c> parameter, the scheduled task is repeatedly executed at the point in time that is specified by the LaunchTime parameter.</description></item>
-        /// <item><description>If you do not specify the <c>RecurrenceType</c> parameter, the task is executed only once at the point in time that is specified by the LaunchTime parameter.</description></item>
+        /// <item><description>If you specify <c>RecurrenceType</c>, the scheduled task is repeatedly triggered at the point in time that is specified by LaunchTime.</description></item>
+        /// <item><description>If you do not specify <c>RecurrenceType</c>, the scheduled task is triggered only once at the time point that is specified by LaunchTime.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
