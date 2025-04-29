@@ -60,6 +60,10 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
             [Validation(Required=false)]
             public string OriginalNumber { get; set; }
 
+            [NameInMap("OutId")]
+            [Validation(Required=false)]
+            public string OutId { get; set; }
+
         }
 
         /// <summary>

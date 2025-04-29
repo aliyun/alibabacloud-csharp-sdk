@@ -4111,6 +4111,10 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
             {
                 query["Mask"] = request.Mask;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutId))
+            {
+                query["OutId"] = request.OutId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
@@ -4179,6 +4183,10 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mask))
             {
                 query["Mask"] = request.Mask;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutId))
+            {
+                query["OutId"] = request.OutId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
@@ -5075,214 +5083,6 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await PhoneNumberStatusForSmsWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Queries the status of a virtual phone number. You can choose an encryption method for your phone number query, including plaintext, MD5, and SHA256.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</para>
-        /// <list type="bullet">
-        /// <item><description>You are charged only if the value of Code is OK and the value of IsPrivacyNumber is true or false.</description></item>
-        /// <item><description>By default, only Alibaba Cloud accounts can call this operation. RAM users can call this operation only after the RAM users are granted the related permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
-        /// </list>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 300 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// PhoneNumberStatusForVirtualRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// PhoneNumberStatusForVirtualResponse
-        /// </returns>
-        public PhoneNumberStatusForVirtualResponse PhoneNumberStatusForVirtualWithOptions(PhoneNumberStatusForVirtualRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthCode))
-            {
-                query["AuthCode"] = request.AuthCode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputNumber))
-            {
-                query["InputNumber"] = request.InputNumber;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mask))
-            {
-                query["Mask"] = request.Mask;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
-            {
-                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
-            {
-                query["ResourceOwnerId"] = request.ResourceOwnerId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "PhoneNumberStatusForVirtual",
-                Version = "2020-02-17",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<PhoneNumberStatusForVirtualResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Queries the status of a virtual phone number. You can choose an encryption method for your phone number query, including plaintext, MD5, and SHA256.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</para>
-        /// <list type="bullet">
-        /// <item><description>You are charged only if the value of Code is OK and the value of IsPrivacyNumber is true or false.</description></item>
-        /// <item><description>By default, only Alibaba Cloud accounts can call this operation. RAM users can call this operation only after the RAM users are granted the related permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
-        /// </list>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 300 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// PhoneNumberStatusForVirtualRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// PhoneNumberStatusForVirtualResponse
-        /// </returns>
-        public async Task<PhoneNumberStatusForVirtualResponse> PhoneNumberStatusForVirtualWithOptionsAsync(PhoneNumberStatusForVirtualRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthCode))
-            {
-                query["AuthCode"] = request.AuthCode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputNumber))
-            {
-                query["InputNumber"] = request.InputNumber;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mask))
-            {
-                query["Mask"] = request.Mask;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
-            {
-                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
-            {
-                query["ResourceOwnerId"] = request.ResourceOwnerId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "PhoneNumberStatusForVirtual",
-                Version = "2020-02-17",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<PhoneNumberStatusForVirtualResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Queries the status of a virtual phone number. You can choose an encryption method for your phone number query, including plaintext, MD5, and SHA256.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</para>
-        /// <list type="bullet">
-        /// <item><description>You are charged only if the value of Code is OK and the value of IsPrivacyNumber is true or false.</description></item>
-        /// <item><description>By default, only Alibaba Cloud accounts can call this operation. RAM users can call this operation only after the RAM users are granted the related permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
-        /// </list>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 300 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// PhoneNumberStatusForVirtualRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// PhoneNumberStatusForVirtualResponse
-        /// </returns>
-        public PhoneNumberStatusForVirtualResponse PhoneNumberStatusForVirtual(PhoneNumberStatusForVirtualRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return PhoneNumberStatusForVirtualWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Queries the status of a virtual phone number. You can choose an encryption method for your phone number query, including plaintext, MD5, and SHA256.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</para>
-        /// <list type="bullet">
-        /// <item><description>You are charged only if the value of Code is OK and the value of IsPrivacyNumber is true or false.</description></item>
-        /// <item><description>By default, only Alibaba Cloud accounts can call this operation. RAM users can call this operation only after the RAM users are granted the related permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
-        /// </list>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 300 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// PhoneNumberStatusForVirtualRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// PhoneNumberStatusForVirtualResponse
-        /// </returns>
-        public async Task<PhoneNumberStatusForVirtualResponse> PhoneNumberStatusForVirtualAsync(PhoneNumberStatusForVirtualRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await PhoneNumberStatusForVirtualWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

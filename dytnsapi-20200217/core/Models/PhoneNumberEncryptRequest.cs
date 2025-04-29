@@ -51,6 +51,10 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         [Validation(Required=false)]
         public string Mask { get; set; }
 
+        [NameInMap("OutId")]
+        [Validation(Required=false)]
+        public string OutId { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
