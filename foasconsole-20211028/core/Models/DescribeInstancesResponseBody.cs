@@ -470,6 +470,14 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 
                 }
 
+                [NameInMap("SupportCreateFullyManagedStorage")]
+                [Validation(Required=false)]
+                public bool? SupportCreateFullyManagedStorage { get; set; }
+
+                [NameInMap("SupportMigrationProgressDetection")]
+                [Validation(Required=false)]
+                public bool? SupportMigrationProgressDetection { get; set; }
+
             }
 
             [NameInMap("Tags")]
