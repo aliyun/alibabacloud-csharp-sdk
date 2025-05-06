@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string CompliancePackId { get; set; }
 
+        [NameInMap("MultiFiles")]
+        [Validation(Required=false)]
+        public bool? MultiFiles { get; set; }
+
     }
 
 }

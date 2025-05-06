@@ -1,3 +1,7 @@
+2025-05-06 Version: 2.4.15
+- Update API GenerateAggregateCompliancePackReport: add request parameters MultiFiles.
+
+
 2025-04-23 Version: 2.4.14
 - Update API ListAggregateConfigRuleEvaluationResults: add response parameters Body.EvaluationResults.EvaluationResultList.$.EvaluationId.
 - Update API ListAggregateConfigRuleEvaluationResults: add response parameters Body.EvaluationResults.EvaluationResultList.$.LastNonCompliantRecordTimestamp.

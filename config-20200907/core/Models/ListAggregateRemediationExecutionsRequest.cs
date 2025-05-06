@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the member account in the account group.</para>
+        /// <para>The ID of the member account in the account group. When left unfilled, this rule queries the remediation result for the account that created the rule. If the account is not in the account group, the result will be empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>126672004088****</para>

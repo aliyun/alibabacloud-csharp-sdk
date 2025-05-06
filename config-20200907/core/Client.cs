@@ -6297,6 +6297,10 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 body["CompliancePackId"] = request.CompliancePackId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MultiFiles))
+            {
+                body["MultiFiles"] = request.MultiFiles;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -6354,6 +6358,10 @@ namespace AlibabaCloud.SDK.Config20200907
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompliancePackId))
             {
                 body["CompliancePackId"] = request.CompliancePackId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MultiFiles))
+            {
+                body["MultiFiles"] = request.MultiFiles;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
