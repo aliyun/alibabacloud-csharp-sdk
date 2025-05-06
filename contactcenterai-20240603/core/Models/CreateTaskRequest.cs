@@ -264,6 +264,10 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
             [Validation(Required=false)]
             public string Level { get; set; }
 
+            [NameInMap("roleIdentification")]
+            [Validation(Required=false)]
+            public bool? RoleIdentification { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>1</para>
