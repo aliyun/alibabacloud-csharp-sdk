@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             }
 
             /// <summary>
-            /// <para>The automatic startup configurations.</para>
+            /// <para>Indicates whether automatic startup is enabled.</para>
             /// </summary>
             [NameInMap("autoStartConfiguration")]
             [Validation(Required=false)]
@@ -74,6 +74,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public class GetSessionClusterResponseBodySessionClusterAutoStartConfiguration : TeaModel {
                 /// <summary>
                 /// <para>Indicates whether automatic startup is enabled.</para>
+                /// <list type="bullet">
+                /// <item><description>true</description></item>
+                /// <item><description>false</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -85,7 +89,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             }
 
             /// <summary>
-            /// <para>The automatic termination configurations.</para>
+            /// <para>Indicates whether automatic termination is enabled.</para>
             /// </summary>
             [NameInMap("autoStopConfiguration")]
             [Validation(Required=false)]
@@ -93,6 +97,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public class GetSessionClusterResponseBodySessionClusterAutoStopConfiguration : TeaModel {
                 /// <summary>
                 /// <para>Indicates whether automatic termination is enabled.</para>
+                /// <list type="bullet">
+                /// <item><description>true</description></item>
+                /// <item><description>false</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -164,6 +172,16 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string EnvId { get; set; }
 
             /// <summary>
+            /// <para>The additional metadata of the session.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;extraInfoKey&quot;:&quot;extraInfoValue&quot;}</para>
+            /// </summary>
+            [NameInMap("extra")]
+            [Validation(Required=false)]
+            public string Extra { get; set; }
+
+            /// <summary>
             /// <para>Indicates whether the Fusion engine is used for acceleration.</para>
             /// 
             /// <b>Example:</b>
@@ -219,7 +237,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string QueueName { get; set; }
 
             /// <summary>
-            /// <para>The version of E-MapReduce (EMR) Serverless Spark.</para>
+            /// <para>The version of Serverless Spark.</para>
             /// 
             /// <b>Example:</b>
             /// <para>esr-2.2(Java Runtime)</para>
@@ -250,6 +268,13 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 
             /// <summary>
             /// <para>The job status.</para>
+            /// <list type="bullet">
+            /// <item><description>Starting</description></item>
+            /// <item><description>Running</description></item>
+            /// <item><description>Stopping</description></item>
+            /// <item><description>Stopped</description></item>
+            /// <item><description>Error</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>

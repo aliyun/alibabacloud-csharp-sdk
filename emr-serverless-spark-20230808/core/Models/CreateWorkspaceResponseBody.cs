@@ -8,7 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
-    public class StopSessionClusterResponseBody : TeaModel {
+    public class CreateWorkspaceResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The operation ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>op-******</para>
+        /// </summary>
+        [NameInMap("operationId")]
+        [Validation(Required=false)]
+        public string OperationId { get; set; }
+
         /// <summary>
         /// <para>The request ID.</para>
         /// 
@@ -20,14 +30,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The session ID.</para>
+        /// <para>The workspace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>w-******</para>
         /// </summary>
-        [NameInMap("sessionClusterId")]
+        [NameInMap("workspaceId")]
         [Validation(Required=false)]
-        public string SessionClusterId { get; set; }
+        public string WorkspaceId { get; set; }
 
     }
 

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class StartProcessInstanceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The code that is returned by the backend server.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1400009</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? Code { get; set; }
 
         /// <summary>
+        /// <para>The data returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{\&quot;sessionBizId\&quot;: \&quot;sc-dc85644dba1c8c63\&quot;, \&quot;bizId\&quot;: \&quot;st-aeed3b0d4f87418a9a9dcbd757477658\&quot;, \&quot;gmtCreated\&quot;: \&quot;Thu Sep 12 02:28:45 UTC 2024\&quot;}</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public object Data { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the workflow fails to be run manually.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public bool? Failed { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The description of the returned code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>No permission for resource action</para>
         /// </summary>
@@ -50,7 +60,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Msg { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DD6B1B2A-5837-5237-ABE4-FF0C8944****</para>
@@ -60,6 +70,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

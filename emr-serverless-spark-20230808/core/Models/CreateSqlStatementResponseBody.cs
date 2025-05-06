@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public CreateSqlStatementResponseBodyData Data { get; set; }
         public class CreateSqlStatementResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the SQL query.</para>
+            /// <para>The interactive query ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>st-1231dfafadfa***</para>

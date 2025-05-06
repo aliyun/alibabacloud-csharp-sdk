@@ -319,7 +319,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工作流定义</para>
+        /// <para>Creates a workflow.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -340,6 +340,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateProcessDefinitionWithScheduleShrinkRequest request = new CreateProcessDefinitionWithScheduleShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.GlobalParams))
+            {
+                request.GlobalParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.GlobalParams, "globalParams", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Schedule))
             {
                 request.ScheduleShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Schedule, "schedule", "json");
@@ -368,6 +372,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecutionType))
             {
                 query["executionType"] = request.ExecutionType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GlobalParamsShrink))
+            {
+                query["globalParams"] = request.GlobalParamsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -443,7 +451,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工作流定义</para>
+        /// <para>Creates a workflow.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -464,6 +472,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateProcessDefinitionWithScheduleShrinkRequest request = new CreateProcessDefinitionWithScheduleShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.GlobalParams))
+            {
+                request.GlobalParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.GlobalParams, "globalParams", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Schedule))
             {
                 request.ScheduleShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Schedule, "schedule", "json");
@@ -492,6 +504,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecutionType))
             {
                 query["executionType"] = request.ExecutionType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GlobalParamsShrink))
+            {
+                query["globalParams"] = request.GlobalParamsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -567,7 +583,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工作流定义</para>
+        /// <para>Creates a workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -586,7 +602,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工作流定义</para>
+        /// <para>Creates a workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -601,6 +617,220 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await CreateProcessDefinitionWithScheduleWithOptionsAsync(bizId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a session.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSessionClusterRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSessionClusterResponse
+        /// </returns>
+        public CreateSessionClusterResponse CreateSessionClusterWithOptions(string workspaceId, CreateSessionClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationConfigs))
+            {
+                body["applicationConfigs"] = request.ApplicationConfigs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStartConfiguration))
+            {
+                body["autoStartConfiguration"] = request.AutoStartConfiguration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStopConfiguration))
+            {
+                body["autoStopConfiguration"] = request.AutoStopConfiguration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayReleaseVersion))
+            {
+                body["displayReleaseVersion"] = request.DisplayReleaseVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvId))
+            {
+                body["envId"] = request.EnvId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Fusion))
+            {
+                body["fusion"] = request.Fusion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Kind))
+            {
+                body["kind"] = request.Kind;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueName))
+            {
+                body["queueName"] = request.QueueName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReleaseVersion))
+            {
+                body["releaseVersion"] = request.ReleaseVersion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSessionCluster",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/sessionClusters",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSessionClusterResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a session.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSessionClusterRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSessionClusterResponse
+        /// </returns>
+        public async Task<CreateSessionClusterResponse> CreateSessionClusterWithOptionsAsync(string workspaceId, CreateSessionClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationConfigs))
+            {
+                body["applicationConfigs"] = request.ApplicationConfigs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStartConfiguration))
+            {
+                body["autoStartConfiguration"] = request.AutoStartConfiguration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStopConfiguration))
+            {
+                body["autoStopConfiguration"] = request.AutoStopConfiguration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayReleaseVersion))
+            {
+                body["displayReleaseVersion"] = request.DisplayReleaseVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvId))
+            {
+                body["envId"] = request.EnvId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Fusion))
+            {
+                body["fusion"] = request.Fusion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Kind))
+            {
+                body["kind"] = request.Kind;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueName))
+            {
+                body["queueName"] = request.QueueName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReleaseVersion))
+            {
+                body["releaseVersion"] = request.ReleaseVersion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSessionCluster",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/sessionClusters",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSessionClusterResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a session.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSessionClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSessionClusterResponse
+        /// </returns>
+        public CreateSessionClusterResponse CreateSessionCluster(string workspaceId, CreateSessionClusterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateSessionClusterWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a session.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSessionClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSessionClusterResponse
+        /// </returns>
+        public async Task<CreateSessionClusterResponse> CreateSessionClusterAsync(string workspaceId, CreateSessionClusterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateSessionClusterWithOptionsAsync(workspaceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -779,6 +1009,718 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates a workspace.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateWorkspaceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateWorkspaceResponse
+        /// </returns>
+        public CreateWorkspaceResponse CreateWorkspaceWithOptions(CreateWorkspaceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                body["autoRenew"] = request.AutoRenew;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenewPeriod))
+            {
+                body["autoRenewPeriod"] = request.AutoRenewPeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenewPeriodUnit))
+            {
+                body["autoRenewPeriodUnit"] = request.AutoRenewPeriodUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStartSessionCluster))
+            {
+                body["autoStartSessionCluster"] = request.AutoStartSessionCluster;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["clientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DlfCatalogId))
+            {
+                body["dlfCatalogId"] = request.DlfCatalogId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DlfType))
+            {
+                body["dlfType"] = request.DlfType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Duration))
+            {
+                body["duration"] = request.Duration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssBucket))
+            {
+                body["ossBucket"] = request.OssBucket;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaymentDurationUnit))
+            {
+                body["paymentDurationUnit"] = request.PaymentDurationUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaymentType))
+            {
+                body["paymentType"] = request.PaymentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RamRoleName))
+            {
+                body["ramRoleName"] = request.RamRoleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReleaseType))
+            {
+                body["releaseType"] = request.ReleaseType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceSpec))
+            {
+                body["resourceSpec"] = request.ResourceSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                body["tag"] = request.Tag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceName))
+            {
+                body["workspaceName"] = request.WorkspaceName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateWorkspace",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateWorkspaceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a workspace.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateWorkspaceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateWorkspaceResponse
+        /// </returns>
+        public async Task<CreateWorkspaceResponse> CreateWorkspaceWithOptionsAsync(CreateWorkspaceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                body["autoRenew"] = request.AutoRenew;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenewPeriod))
+            {
+                body["autoRenewPeriod"] = request.AutoRenewPeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenewPeriodUnit))
+            {
+                body["autoRenewPeriodUnit"] = request.AutoRenewPeriodUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStartSessionCluster))
+            {
+                body["autoStartSessionCluster"] = request.AutoStartSessionCluster;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["clientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DlfCatalogId))
+            {
+                body["dlfCatalogId"] = request.DlfCatalogId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DlfType))
+            {
+                body["dlfType"] = request.DlfType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Duration))
+            {
+                body["duration"] = request.Duration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssBucket))
+            {
+                body["ossBucket"] = request.OssBucket;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaymentDurationUnit))
+            {
+                body["paymentDurationUnit"] = request.PaymentDurationUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaymentType))
+            {
+                body["paymentType"] = request.PaymentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RamRoleName))
+            {
+                body["ramRoleName"] = request.RamRoleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReleaseType))
+            {
+                body["releaseType"] = request.ReleaseType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceSpec))
+            {
+                body["resourceSpec"] = request.ResourceSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                body["tag"] = request.Tag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceName))
+            {
+                body["workspaceName"] = request.WorkspaceName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateWorkspace",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateWorkspaceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a workspace.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateWorkspaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateWorkspaceResponse
+        /// </returns>
+        public CreateWorkspaceResponse CreateWorkspace(CreateWorkspaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateWorkspaceWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a workspace.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateWorkspaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateWorkspaceResponse
+        /// </returns>
+        public async Task<CreateWorkspaceResponse> CreateWorkspaceAsync(CreateWorkspaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateWorkspaceWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the queue of a workspace.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EditWorkspaceQueueRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EditWorkspaceQueueResponse
+        /// </returns>
+        public EditWorkspaceQueueResponse EditWorkspaceQueueWithOptions(EditWorkspaceQueueRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Environments))
+            {
+                body["environments"] = request.Environments;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceSpec))
+            {
+                body["resourceSpec"] = request.ResourceSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["workspaceId"] = request.WorkspaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceQueueName))
+            {
+                body["workspaceQueueName"] = request.WorkspaceQueueName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EditWorkspaceQueue",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/queues/action/edit",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EditWorkspaceQueueResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the queue of a workspace.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EditWorkspaceQueueRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EditWorkspaceQueueResponse
+        /// </returns>
+        public async Task<EditWorkspaceQueueResponse> EditWorkspaceQueueWithOptionsAsync(EditWorkspaceQueueRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Environments))
+            {
+                body["environments"] = request.Environments;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceSpec))
+            {
+                body["resourceSpec"] = request.ResourceSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["workspaceId"] = request.WorkspaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceQueueName))
+            {
+                body["workspaceQueueName"] = request.WorkspaceQueueName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EditWorkspaceQueue",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/queues/action/edit",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EditWorkspaceQueueResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the queue of a workspace.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EditWorkspaceQueueRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EditWorkspaceQueueResponse
+        /// </returns>
+        public EditWorkspaceQueueResponse EditWorkspaceQueue(EditWorkspaceQueueRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return EditWorkspaceQueueWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the queue of a workspace.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EditWorkspaceQueueRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EditWorkspaceQueueResponse
+        /// </returns>
+        public async Task<EditWorkspaceQueueResponse> EditWorkspaceQueueAsync(EditWorkspaceQueueRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await EditWorkspaceQueueWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of CU-hours consumed by a queue during a specified cycle.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCuHoursRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCuHoursResponse
+        /// </returns>
+        public GetCuHoursResponse GetCuHoursWithOptions(string workspaceId, string queue, GetCuHoursRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["startTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCuHours",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/metric/cuHours/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(queue),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCuHoursResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of CU-hours consumed by a queue during a specified cycle.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCuHoursRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCuHoursResponse
+        /// </returns>
+        public async Task<GetCuHoursResponse> GetCuHoursWithOptionsAsync(string workspaceId, string queue, GetCuHoursRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["startTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCuHours",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/metric/cuHours/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(queue),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCuHoursResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of CU-hours consumed by a queue during a specified cycle.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCuHoursRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCuHoursResponse
+        /// </returns>
+        public GetCuHoursResponse GetCuHours(string workspaceId, string queue, GetCuHoursRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetCuHoursWithOptions(workspaceId, queue, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of CU-hours consumed by a queue during a specified cycle.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCuHoursRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCuHoursResponse
+        /// </returns>
+        public async Task<GetCuHoursResponse> GetCuHoursAsync(string workspaceId, string queue, GetCuHoursRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetCuHoursWithOptionsAsync(workspaceId, queue, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains job analysis information on E-MapReduce (EMR) Doctor.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDoctorApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDoctorApplicationResponse
+        /// </returns>
+        public GetDoctorApplicationResponse GetDoctorApplicationWithOptions(string workspaceId, string runId, GetDoctorApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Locale))
+            {
+                query["locale"] = request.Locale;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryTime))
+            {
+                query["queryTime"] = request.QueryTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDoctorApplication",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/runs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(runId) + "/action/getDoctorApplication",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDoctorApplicationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains job analysis information on E-MapReduce (EMR) Doctor.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDoctorApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDoctorApplicationResponse
+        /// </returns>
+        public async Task<GetDoctorApplicationResponse> GetDoctorApplicationWithOptionsAsync(string workspaceId, string runId, GetDoctorApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Locale))
+            {
+                query["locale"] = request.Locale;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryTime))
+            {
+                query["queryTime"] = request.QueryTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDoctorApplication",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/runs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(runId) + "/action/getDoctorApplication",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDoctorApplicationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains job analysis information on E-MapReduce (EMR) Doctor.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDoctorApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDoctorApplicationResponse
+        /// </returns>
+        public GetDoctorApplicationResponse GetDoctorApplication(string workspaceId, string runId, GetDoctorApplicationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetDoctorApplicationWithOptions(workspaceId, runId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains job analysis information on E-MapReduce (EMR) Doctor.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDoctorApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDoctorApplicationResponse
+        /// </returns>
+        public async Task<GetDoctorApplicationResponse> GetDoctorApplicationAsync(string workspaceId, string runId, GetDoctorApplicationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetDoctorApplicationWithOptionsAsync(workspaceId, runId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Obtain the job details.</para>
         /// </summary>
         /// 
@@ -909,7 +1851,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of sessions.</para>
+        /// <para>Queries the information about a session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -955,7 +1897,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of sessions.</para>
+        /// <para>Queries the information about a session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1001,7 +1943,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of sessions.</para>
+        /// <para>Queries the information about a session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1020,7 +1962,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of sessions.</para>
+        /// <para>Queries the information about a session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1515,6 +2457,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             {
                 query["maxResults"] = request.MaxResults;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinDuration))
+            {
+                query["minDuration"] = request.MinDuration;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["name"] = request.Name;
@@ -1623,6 +2569,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             {
                 query["maxResults"] = request.MaxResults;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinDuration))
+            {
+                query["minDuration"] = request.MinDuration;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["name"] = request.Name;
@@ -1711,7 +2661,181 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the log content.</para>
+        /// <para>Queries the applications that are submitted by using a Kyuubi gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListKyuubiSparkApplicationsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKyuubiSparkApplicationsResponse
+        /// </returns>
+        public ListKyuubiSparkApplicationsResponse ListKyuubiSparkApplicationsWithOptions(string workspaceId, string kyuubiServiceId, ListKyuubiSparkApplicationsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListKyuubiSparkApplicationsShrinkRequest request = new ListKyuubiSparkApplicationsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.StartTime))
+            {
+                request.StartTimeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.StartTime, "startTime", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["applicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationName))
+            {
+                query["applicationName"] = request.ApplicationName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTimeShrink))
+            {
+                query["startTime"] = request.StartTimeShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListKyuubiSparkApplications",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/kyuubi/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(kyuubiServiceId) + "/applications",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListKyuubiSparkApplicationsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the applications that are submitted by using a Kyuubi gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListKyuubiSparkApplicationsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKyuubiSparkApplicationsResponse
+        /// </returns>
+        public async Task<ListKyuubiSparkApplicationsResponse> ListKyuubiSparkApplicationsWithOptionsAsync(string workspaceId, string kyuubiServiceId, ListKyuubiSparkApplicationsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListKyuubiSparkApplicationsShrinkRequest request = new ListKyuubiSparkApplicationsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.StartTime))
+            {
+                request.StartTimeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.StartTime, "startTime", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["applicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationName))
+            {
+                query["applicationName"] = request.ApplicationName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTimeShrink))
+            {
+                query["startTime"] = request.StartTimeShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListKyuubiSparkApplications",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/kyuubi/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(kyuubiServiceId) + "/applications",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListKyuubiSparkApplicationsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the applications that are submitted by using a Kyuubi gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListKyuubiSparkApplicationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKyuubiSparkApplicationsResponse
+        /// </returns>
+        public ListKyuubiSparkApplicationsResponse ListKyuubiSparkApplications(string workspaceId, string kyuubiServiceId, ListKyuubiSparkApplicationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListKyuubiSparkApplicationsWithOptions(workspaceId, kyuubiServiceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the applications that are submitted by using a Kyuubi gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListKyuubiSparkApplicationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKyuubiSparkApplicationsResponse
+        /// </returns>
+        public async Task<ListKyuubiSparkApplicationsResponse> ListKyuubiSparkApplicationsAsync(string workspaceId, string kyuubiServiceId, ListKyuubiSparkApplicationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListKyuubiSparkApplicationsWithOptionsAsync(workspaceId, kyuubiServiceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get Log Content</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1769,7 +2893,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the log content.</para>
+        /// <para>Get Log Content</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1827,7 +2951,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the log content.</para>
+        /// <para>Get Log Content</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1846,7 +2970,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the log content.</para>
+        /// <para>Get Log Content</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1900,6 +3024,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReleaseVersionStatus))
             {
                 query["releaseVersionStatus"] = request.ReleaseVersionStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceFilter))
+            {
+                query["serviceFilter"] = request.ServiceFilter;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
@@ -1962,6 +3090,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReleaseVersionStatus))
             {
                 query["releaseVersionStatus"] = request.ReleaseVersionStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceFilter))
+            {
+                query["serviceFilter"] = request.ServiceFilter;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
@@ -2338,7 +3470,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         /// <para>Queries a list of workspaces.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListWorkspacesRequest
         /// </param>
         /// <param name="headers">
@@ -2351,9 +3483,15 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         /// <returns>
         /// ListWorkspacesResponse
         /// </returns>
-        public ListWorkspacesResponse ListWorkspacesWithOptions(ListWorkspacesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListWorkspacesResponse ListWorkspacesWithOptions(ListWorkspacesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListWorkspacesShrinkRequest request = new ListWorkspacesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
+            {
+                request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "tag", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
@@ -2374,6 +3512,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.State))
             {
                 query["state"] = request.State;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagShrink))
+            {
+                query["tag"] = request.TagShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2400,7 +3542,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         /// <para>Queries a list of workspaces.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListWorkspacesRequest
         /// </param>
         /// <param name="headers">
@@ -2413,9 +3555,15 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         /// <returns>
         /// ListWorkspacesResponse
         /// </returns>
-        public async Task<ListWorkspacesResponse> ListWorkspacesWithOptionsAsync(ListWorkspacesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListWorkspacesResponse> ListWorkspacesWithOptionsAsync(ListWorkspacesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListWorkspacesShrinkRequest request = new ListWorkspacesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
+            {
+                request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "tag", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
@@ -2436,6 +3584,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.State))
             {
                 query["state"] = request.State;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagShrink))
+            {
+                query["tag"] = request.TagShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2727,7 +3879,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动工作流实例</para>
+        /// <para>Manually runs a workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2747,6 +3899,22 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Action))
+            {
+                query["action"] = request.Action;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comments))
+            {
+                query["comments"] = request.Comments;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                query["email"] = request.Email;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
+            {
+                query["interval"] = request.Interval;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsProd))
             {
                 query["isProd"] = request.IsProd;
@@ -2797,7 +3965,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动工作流实例</para>
+        /// <para>Manually runs a workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2817,6 +3985,22 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Action))
+            {
+                query["action"] = request.Action;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comments))
+            {
+                query["comments"] = request.Comments;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                query["email"] = request.Email;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
+            {
+                query["interval"] = request.Interval;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsProd))
             {
                 query["isProd"] = request.IsProd;
@@ -2867,7 +4051,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动工作流实例</para>
+        /// <para>Manually runs a workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2886,7 +4070,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动工作流实例</para>
+        /// <para>Manually runs a workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3335,7 +4519,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新工作流定义和定时调度</para>
+        /// <para>Updates the workflow and time-based scheduling configurations.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3356,6 +4540,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             UpdateProcessDefinitionWithScheduleShrinkRequest request = new UpdateProcessDefinitionWithScheduleShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.GlobalParams))
+            {
+                request.GlobalParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.GlobalParams, "globalParams", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Schedule))
             {
                 request.ScheduleShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Schedule, "schedule", "json");
@@ -3384,6 +4572,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecutionType))
             {
                 query["executionType"] = request.ExecutionType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GlobalParamsShrink))
+            {
+                query["globalParams"] = request.GlobalParamsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -3463,7 +4655,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新工作流定义和定时调度</para>
+        /// <para>Updates the workflow and time-based scheduling configurations.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3484,6 +4676,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             UpdateProcessDefinitionWithScheduleShrinkRequest request = new UpdateProcessDefinitionWithScheduleShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.GlobalParams))
+            {
+                request.GlobalParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.GlobalParams, "globalParams", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Schedule))
             {
                 request.ScheduleShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Schedule, "schedule", "json");
@@ -3512,6 +4708,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecutionType))
             {
                 query["executionType"] = request.ExecutionType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GlobalParamsShrink))
+            {
+                query["globalParams"] = request.GlobalParamsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -3591,7 +4791,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新工作流定义和定时调度</para>
+        /// <para>Updates the workflow and time-based scheduling configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3610,7 +4810,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新工作流定义和定时调度</para>
+        /// <para>Updates the workflow and time-based scheduling configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">

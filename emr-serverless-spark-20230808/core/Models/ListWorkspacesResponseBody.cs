@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The workspaces.</para>
+        /// <para>The queried workspaces.</para>
         /// </summary>
         [NameInMap("workspaces")]
         [Validation(Required=false)]
         public List<ListWorkspacesResponseBodyWorkspaces> Workspaces { get; set; }
         public class ListWorkspacesResponseBodyWorkspaces : TeaModel {
             /// <summary>
-            /// <para>Indicates whether auto-renewal is enabled. This parameter is required only if the paymentType parameter is set to Subscription.</para>
+            /// <para>Specifies whether to enable auto-renewal. This parameter is required only if the paymentType parameter is set to Pre.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public bool? AutoRenew { get; set; }
 
             /// <summary>
-            /// <para>The auto-renewal duration. This parameter is required only if the paymentType parameter is set to Subscription.</para>
+            /// <para>The auto-renewal duration. This parameter is required only if the paymentType parameter is set to Pre.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public int? AutoRenewPeriod { get; set; }
 
             /// <summary>
-            /// <para>The unit of the auto-renewal duration. This parameter is required only if the paymentType parameter is set to Subscription.</para>
+            /// <para>The unit of the auto-renewal duration. This parameter is required only if the paymentType parameter is set to Pre.</para>
             /// 
             /// <b>Example:</b>
             /// <para>YEAR, MONTH, WEEK, DAY, HOUR, MINUTE</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string AutoRenewPeriodUnit { get; set; }
 
             /// <summary>
-            /// <para>The time when the workspace was created.</para>
+            /// <para>The time when the workflow was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1684115879955</para>
@@ -106,12 +106,18 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [Validation(Required=false)]
             public string DlfCatalogId { get; set; }
 
+            /// <summary>
+            /// <para>The version of DLF.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1.0</para>
+            /// </summary>
             [NameInMap("dlfType")]
             [Validation(Required=false)]
             public string DlfType { get; set; }
 
             /// <summary>
-            /// <para>The subscription period. This parameter is required only if the paymentType parameter is set to Subscription.</para>
+            /// <para>The subscription period. This parameter is required only if the paymentType parameter is set to Pre.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -121,7 +127,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public int? Duration { get; set; }
 
             /// <summary>
-            /// <para>The time when the workspace was released.</para>
+            /// <para>The end of the end time range.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1687103999999</para>
@@ -131,7 +137,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>The reason for the failure.</para>
+            /// <para>The failure reason.</para>
             /// 
             /// <b>Example:</b>
             /// <para>out of stock</para>
@@ -141,7 +147,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string FailReason { get; set; }
 
             /// <summary>
-            /// <para>The unit of the subscription duration. This parameter is required only if the paymentType parameter is set to Subscription.</para>
+            /// <para>The unit of the subscription duration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>YEAR, MONTH, WEEK, DAY, HOUR, MINUTE</para>
@@ -161,14 +167,116 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string PaymentStatus { get; set; }
 
             /// <summary>
-            /// <para>The payment type.</para>
+            /// <para>The billing method. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>PayAsYouGo</description></item>
+            /// <item><description>Pre</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>PayAsYouGo or Subscription</para>
+            /// <para>PayAsYouGo</para>
             /// </summary>
             [NameInMap("paymentType")]
             [Validation(Required=false)]
             public string PaymentType { get; set; }
+
+            /// <summary>
+            /// <para>The information about the subscription quota.</para>
+            /// </summary>
+            [NameInMap("prePaidQuota")]
+            [Validation(Required=false)]
+            public ListWorkspacesResponseBodyWorkspacesPrePaidQuota PrePaidQuota { get; set; }
+            public class ListWorkspacesResponseBodyWorkspacesPrePaidQuota : TeaModel {
+                /// <summary>
+                /// <para>The amount of resources that are allocated by a subscription quota.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{\&quot;cpu\&quot;:\&quot;1\&quot;,\&quot;memory\&quot;:\&quot;4Gi\&quot;,\&quot;cu\&quot;:\&quot;1\&quot;}</para>
+                /// </summary>
+                [NameInMap("allocatedResource")]
+                [Validation(Required=false)]
+                public string AllocatedResource { get; set; }
+
+                /// <summary>
+                /// <para>Indicates whether auto-renewal is enabled for the subscription quota.</para>
+                /// <list type="bullet">
+                /// <item><description>true</description></item>
+                /// <item><description>false</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
+                [NameInMap("autoRenewal")]
+                [Validation(Required=false)]
+                public bool? AutoRenewal { get; set; }
+
+                /// <summary>
+                /// <para>The creation time of the subscription quota.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1745683200000</para>
+                /// </summary>
+                [NameInMap("createTime")]
+                [Validation(Required=false)]
+                public long? CreateTime { get; set; }
+
+                /// <summary>
+                /// <para>The expiration time of the subscription quota.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1740537153000</para>
+                /// </summary>
+                [NameInMap("expireTime")]
+                [Validation(Required=false)]
+                public long? ExpireTime { get; set; }
+
+                /// <summary>
+                /// <para>The ID of the instance that is generated when you purchase the subscription quota.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>i-abc12345</para>
+                /// </summary>
+                [NameInMap("instanceId")]
+                [Validation(Required=false)]
+                public string InstanceId { get; set; }
+
+                /// <summary>
+                /// <para>The maximum amount of resources that can be used in a subscription quota.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{\&quot;cpu\&quot;:\&quot;1\&quot;,\&quot;memory\&quot;:\&quot;4Gi\&quot;,\&quot;cu\&quot;:\&quot;1\&quot;}</para>
+                /// </summary>
+                [NameInMap("maxResource")]
+                [Validation(Required=false)]
+                public string MaxResource { get; set; }
+
+                /// <summary>
+                /// <para>The status of the subscription quota. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>NORMAL</description></item>
+                /// <item><description>WAIT_FOR_EXPIRE</description></item>
+                /// <item><description>EXPIRED</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>NORMAL</para>
+                /// </summary>
+                [NameInMap("paymentStatus")]
+                [Validation(Required=false)]
+                public string PaymentStatus { get; set; }
+
+                /// <summary>
+                /// <para>The amount of resources that are used.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{\&quot;cpu\&quot;:\&quot;0\&quot;,\&quot;memory\&quot;:\&quot;0Gi\&quot;,\&quot;cu\&quot;:\&quot;0\&quot;}</para>
+                /// </summary>
+                [NameInMap("usedResource")]
+                [Validation(Required=false)]
+                public string UsedResource { get; set; }
+
+            }
 
             /// <summary>
             /// <para>The region ID.</para>
@@ -201,7 +309,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string ResourceSpec { get; set; }
 
             /// <summary>
-            /// <para>The information about the workspace status change.</para>
+            /// <para>The reason of the job status change.</para>
             /// </summary>
             [NameInMap("stateChangeReason")]
             [Validation(Required=false)]
@@ -230,7 +338,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             }
 
             /// <summary>
-            /// <para>The Object Storage Service (OSS) path.</para>
+            /// <para>The OSS path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>spark-result</para>
@@ -238,6 +346,20 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [NameInMap("storage")]
             [Validation(Required=false)]
             public string Storage { get; set; }
+
+            [NameInMap("tags")]
+            [Validation(Required=false)]
+            public List<ListWorkspacesResponseBodyWorkspacesTags> Tags { get; set; }
+            public class ListWorkspacesResponseBodyWorkspacesTags : TeaModel {
+                [NameInMap("tagKey")]
+                [Validation(Required=false)]
+                public string TagKey { get; set; }
+
+                [NameInMap("tagValue")]
+                [Validation(Required=false)]
+                public string TagValue { get; set; }
+
+            }
 
             /// <summary>
             /// <para>The workspace ID.</para>
@@ -253,7 +375,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             /// <para>The name of the workspace.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>spark批作业空间-1</para>
+            /// <para>spark-1</para>
             /// </summary>
             [NameInMap("workspaceName")]
             [Validation(Required=false)]

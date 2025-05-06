@@ -56,14 +56,18 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Creator { get; set; }
 
             /// <summary>
+            /// <para>The number of CUs consumed during a specified cycle of a task. The value is an estimated value. Refer to your Alibaba Cloud bill for the actual number of consumed CUs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2.059</para>
             /// </summary>
             [NameInMap("cuHours")]
             [Validation(Required=false)]
-            public long? CuHours { get; set; }
+            public double? CuHours { get; set; }
 
             /// <summary>
+            /// <para>The version of Spark on which the jobs run.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>esr-3.0.0 (Spark 3.4.3, Scala 2.12)</para>
             /// </summary>
@@ -92,6 +96,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public int? ExecutionTimeoutSeconds { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the Fusion engine is used for acceleration.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -124,6 +130,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public RunLog Log { get; set; }
 
             /// <summary>
+            /// <para>The total amount of memory allocated to the job multiplied by the running duration (seconds).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>33030784</para>
             /// </summary>
@@ -208,6 +216,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public List<Tag> Tags { get; set; }
 
             /// <summary>
+            /// <para>The total number of CPU cores allocated to the job multiplied by the running duration (seconds).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>8236</para>
             /// </summary>
@@ -248,7 +258,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// <para>A pagination token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DD6B1B2A-5837-5237-ABE4-FF0C89568980</para>

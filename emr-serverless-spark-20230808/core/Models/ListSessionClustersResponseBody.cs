@@ -174,6 +174,16 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string DraftId { get; set; }
 
             /// <summary>
+            /// <para>The additional metadata of the session.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;extraInfoKey&quot;:&quot;extraInfoValue&quot;}</para>
+            /// </summary>
+            [NameInMap("extra")]
+            [Validation(Required=false)]
+            public string Extra { get; set; }
+
+            /// <summary>
             /// <para>Indicates whether the Fusion engine is used for acceleration.</para>
             /// 
             /// <b>Example:</b>

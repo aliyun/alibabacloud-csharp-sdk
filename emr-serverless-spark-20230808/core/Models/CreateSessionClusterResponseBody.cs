@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
-    public class StopSessionClusterResponseBody : TeaModel {
+    public class CreateSessionClusterResponseBody : TeaModel {
         /// <summary>
         /// <para>The request ID.</para>
         /// 

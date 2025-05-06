@@ -150,6 +150,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public List<string> Jars { get; set; }
 
+        [NameInMap("kernelId")]
+        [Validation(Required=false)]
+        public string KernelId { get; set; }
+
         [NameInMap("lastRunResourceQueueId")]
         [Validation(Required=false)]
         public string LastRunResourceQueueId { get; set; }
@@ -168,9 +172,17 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("params")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> Params { get; set; }
+
         [NameInMap("pyFiles")]
         [Validation(Required=false)]
         public List<string> PyFiles { get; set; }
+
+        [NameInMap("sessionClusterId")]
+        [Validation(Required=false)]
+        public string SessionClusterId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

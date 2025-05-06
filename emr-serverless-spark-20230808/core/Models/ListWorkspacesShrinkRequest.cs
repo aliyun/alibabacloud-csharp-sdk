@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
-    public class ListWorkspacesRequest : TeaModel {
+    public class ListWorkspacesShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The maximum number of entries returned.</para>
         /// 
@@ -61,17 +61,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 
         [NameInMap("tag")]
         [Validation(Required=false)]
-        public List<ListWorkspacesRequestTag> Tag { get; set; }
-        public class ListWorkspacesRequestTag : TeaModel {
-            [NameInMap("key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
-
-            [NameInMap("value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-        }
+        public string TagShrink { get; set; }
 
     }
 

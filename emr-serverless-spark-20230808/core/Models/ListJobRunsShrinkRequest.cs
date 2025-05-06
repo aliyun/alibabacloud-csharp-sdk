@@ -26,6 +26,12 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public string EndTimeShrink { get; set; }
 
+        /// <summary>
+        /// <para>The job run ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>jd-b6d003f1930f****</para>
+        /// </summary>
         [NameInMap("jobRunDeploymentId")]
         [Validation(Required=false)]
         public string JobRunDeploymentId { get; set; }
@@ -49,6 +55,16 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [NameInMap("maxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
+
+        /// <summary>
+        /// <para>The minimum running duration of the job. Unit: ms.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>60000</para>
+        /// </summary>
+        [NameInMap("minDuration")]
+        [Validation(Required=false)]
+        public long? MinDuration { get; set; }
 
         /// <summary>
         /// <para>The job name.</para>

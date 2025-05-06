@@ -82,6 +82,12 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 
         }
 
+        /// <summary>
+        /// <para>The version of the Spark engine.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>esr-3.3.1</para>
+        /// </summary>
         [NameInMap("displayReleaseVersion")]
         [Validation(Required=false)]
         public string DisplayReleaseVersion { get; set; }
@@ -96,6 +102,12 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public int? ExecutionTimeoutSeconds { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable Fusion engine for acceleration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("fusion")]
         [Validation(Required=false)]
         public bool? Fusion { get; set; }
@@ -118,7 +130,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The job name.</para>
+        /// <para>The name of the job.</para>
         /// 
         /// <b>Example:</b>
         /// <para>spark_job_name</para>
@@ -148,7 +160,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string ResourceQueueId { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The tags of the job.</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]

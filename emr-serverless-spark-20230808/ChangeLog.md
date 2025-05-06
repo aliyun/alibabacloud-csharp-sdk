@@ -1,3 +1,6 @@
+2025-05-06 Version: 1.8.3
+- Generated csharp 2023-08-08 for emr-serverless-spark.
+
 2024-12-24 Version: 1.9.0
 - Support API CreateProcessDefinitionWithSchedule.
 - Support API StartProcessInstance.

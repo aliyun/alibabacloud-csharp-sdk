@@ -60,6 +60,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 [Validation(Required=false)]
                 public string Rows { get; set; }
 
+                [NameInMap("rowsFilePath")]
+                [Validation(Required=false)]
+                public string RowsFilePath { get; set; }
+
                 /// <summary>
                 /// <para>The information about the schema, which is a string in the JSON format.</para>
                 /// 

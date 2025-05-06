@@ -8,36 +8,29 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
-    public class ListLogContentsRequest : TeaModel {
+    public class GetDoctorApplicationRequest : TeaModel {
         /// <summary>
-        /// <para>Full path of the file.</para>
-        /// </summary>
-        [NameInMap("fileName")]
-        [Validation(Required=false)]
-        public string FileName { get; set; }
-
-        /// <summary>
-        /// <para>Length of the log.</para>
+        /// <para>The language of diagnostic information.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>9999</para>
+        /// <para>zh-CN</para>
         /// </summary>
-        [NameInMap("length")]
+        [NameInMap("locale")]
         [Validation(Required=false)]
-        public int? Length { get; set; }
+        public string Locale { get; set; }
 
         /// <summary>
-        /// <para>Start line for query.</para>
+        /// <para>The query time.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0</para>
+        /// <para>2024-01-01</para>
         /// </summary>
-        [NameInMap("offset")]
+        [NameInMap("queryTime")]
         [Validation(Required=false)]
-        public int? Offset { get; set; }
+        public string QueryTime { get; set; }
 
         /// <summary>
-        /// <para>Region ID.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

@@ -59,6 +59,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public string ReleaseVersionStatus { get; set; }
 
+        [NameInMap("serviceFilter")]
+        [Validation(Required=false)]
+        public string ServiceFilter { get; set; }
+
         /// <summary>
         /// <para>The workspace ID.</para>
         /// 

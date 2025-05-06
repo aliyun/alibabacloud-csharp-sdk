@@ -63,6 +63,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public long? Modifier { get; set; }
 
+        [NameInMap("modifierName")]
+        [Validation(Required=false)]
+        public string ModifierName { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>

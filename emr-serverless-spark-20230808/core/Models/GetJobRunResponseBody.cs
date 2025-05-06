@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string CodeType { get; set; }
 
             /// <summary>
-            /// <para>The job configurations of Spark.</para>
+            /// <para>The configurations of the Spark jobs.</para>
             /// </summary>
             [NameInMap("configurationOverrides")]
             [Validation(Required=false)]
@@ -47,6 +47,12 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 
             }
 
+            /// <summary>
+            /// <para>The version of the Spark engine.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>esr-4.0.0 (Spark 3.5.2, Scala 2.12)</para>
+            /// </summary>
             [NameInMap("displayReleaseVersion")]
             [Validation(Required=false)]
             public string DisplayReleaseVersion { get; set; }
@@ -61,6 +67,12 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [Validation(Required=false)]
             public long? EndTime { get; set; }
 
+            /// <summary>
+            /// <para>The environment ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>env-cpv569tlhtgndjl8****</para>
+            /// </summary>
             [NameInMap("environmentId")]
             [Validation(Required=false)]
             public string EnvironmentId { get; set; }
@@ -75,6 +87,12 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [Validation(Required=false)]
             public int? ExecutionTimeoutSeconds { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the Fusion engine is used for acceleration.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("fusion")]
             [Validation(Required=false)]
             public bool? Fusion { get; set; }
@@ -193,7 +211,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? SubmitTime { get; set; }
 
             /// <summary>
-            /// <para>The tags.</para>
+            /// <para>The tags of the job.</para>
             /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]

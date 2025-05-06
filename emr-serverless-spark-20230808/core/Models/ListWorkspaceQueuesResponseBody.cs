@@ -96,6 +96,16 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             }
 
             /// <summary>
+            /// <para>The time when the workspace was created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1684115879955</para>
+            /// </summary>
+            [NameInMap("createTime")]
+            [Validation(Required=false)]
+            public long? CreateTime { get; set; }
+
+            /// <summary>
             /// <para>The ID of the user who created the queue.</para>
             /// 
             /// <b>Example:</b>
@@ -131,6 +141,20 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [NameInMap("minResource")]
             [Validation(Required=false)]
             public string MinResource { get; set; }
+
+            /// <summary>
+            /// <para>The billing method. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>PayAsYouGo</description></item>
+            /// <item><description>Pre</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>PayAsYouGo</para>
+            /// </summary>
+            [NameInMap("paymentType")]
+            [Validation(Required=false)]
+            public string PaymentType { get; set; }
 
             /// <summary>
             /// <para>The queue label.</para>
@@ -173,7 +197,11 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string QueueStatus { get; set; }
 
             /// <summary>
-            /// <para>The queue type.</para>
+            /// <para>The type of the queue. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>instance</description></item>
+            /// <item><description>instanceChildren</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>instance, instanceChildren</para>
