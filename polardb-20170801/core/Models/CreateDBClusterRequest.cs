@@ -354,15 +354,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string GDNId { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable the hot standby cluster. Values are as follows:</para>
+        /// <para>Specifies whether to enable the hot standby storage cluster feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ON</b> (default): Enables the hot standby cluster.</description></item>
-        /// <item><description><b>OFF</b>: Disables the hot standby cluster.</description></item>
-        /// <item><description><b>STANDBY</b>: Enables the hot standby cluster for the standard edition.<remarks>
-        /// <para>The default value for standard edition clusters is <b>STANDBY</b>.</para>
-        /// </remarks>
-        /// </description></item>
+        /// <item><description><b>ON</b> (default): enables the hot standby storage cluster feature.</description></item>
+        /// <item><description><b>OFF</b>: disables the hot standby storage cluster feature.</description></item>
+        /// <item><description><b>STANDBY</b>: enables the hot standby storage cluster feature for Standard Edition clusters.</description></item>
         /// </list>
+        /// <remarks>
+        /// <para> The default value for Standard Edition clusters is <b>STANDBY</b>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>ON</para>

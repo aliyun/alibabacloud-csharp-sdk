@@ -30,18 +30,21 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <list type="bullet">
         /// <item><description><b>ReadWrite</b>: read and write permissions.</description></item>
         /// <item><description><b>ReadOnly</b>: read-only permissions.</description></item>
-        /// <item><description><b>DMLOnly</b>: the permissions to execute only DML statements.</description></item>
-        /// <item><description><b>DDLOnly</b>: the permissions to execute only DDL statements.</description></item>
-        /// <item><description><b>ReadIndex</b>: the read-only and index permissions.</description></item>
+        /// <item><description><b>DMLOnly</b>: permissions only to execute DML statements on the database.</description></item>
+        /// <item><description><b>DDLOnly</b>: permissions only to execute DDL statements on the database.</description></item>
+        /// <item><description><b>ReadIndex</b>: read-only and index permissions.</description></item>
         /// </list>
-        /// <para>If you leave this parameter empty, the default value <b>ReadWrite</b> is used.</para>
+        /// <para>The default value is <b>ReadWrite</b>.</para>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This parameter is valid only if you specify <b>AccountName</b>.</description></item>
-        /// <item><description>This parameter is required for PolarDB for PostgreSQL (Compatible with Oracle) clusters or PolarDB for PostgreSQL clusters.</description></item>
-        /// <item><description>This parameter is optional for PolarDB for MySQL clusters.</description></item>
-        /// </list>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>This parameter is valid only when the <b>AccountName</b> parameter is specified.</para>
+        /// </description></item>
+        /// <item><description><para>For a PolarDB for PostgreSQL (Compatible with Oracle) or PolarDB for PostgreSQL cluster, this parameter is optional. If <b>AccountName</b> is specified, it is the account of the database owner.</para>
+        /// </description></item>
+        /// <item><description><para>For a PolarDB for MySQL cluster, this parameter is optional.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>ReadWrite</para>

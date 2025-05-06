@@ -33,6 +33,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 [Validation(Required=false)]
                 public string ConnectionString { get; set; }
 
+                /// <summary>
+                /// <para>Whether it is the dashboard endpoint of the PolarDB search node.</para>
+                /// <list type="bullet">
+                /// <item><description>Ture</description></item>
+                /// <item><description>False</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>True</para>
+                /// </summary>
                 [NameInMap("DashboardUsed")]
                 [Validation(Required=false)]
                 public bool? DashboardUsed { get; set; }
@@ -209,9 +219,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string EndpointType { get; set; }
 
             /// <summary>
-            /// <para>The role name of each node in the endpoint. The role name of the primary node is <b>Writer</b>. Multiple read-only nodes can be associated with an endpoint. Therefore, the role name of each read-only node is suffixed with a number, such as <b>Reader1</b> and <b>Reader2</b>.</para>
+            /// <para>The role name of each node in the endpoint. The role name of the primary node is <b>Writer</b>. Multiple read-only nodes can be associated with an endpoint. Therefore, the role name of each read-only node is suffixed with a number. For example, you can use <b>Reader1</b> and <b>Reader2</b> as the role names.</para>
             /// <remarks>
-            /// <para>This parameter is valid only for PolarDB for PostgreSQL clusters and PolarDB for PostgreSQL (Compatible with Oracle)) clusters.</para>
+            /// <para> This parameter is valid only for PolarDB for PostgreSQL clusters and PolarDB for PostgreSQL (Compatible with Oracle)) clusters.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

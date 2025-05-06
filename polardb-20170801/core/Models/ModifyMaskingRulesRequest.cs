@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        [NameInMap("DefaultAlgo")]
+        [Validation(Required=false)]
+        public string DefaultAlgo { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to enable the specified masking rule. Valid values:</para>
         /// <list type="bullet">
@@ -43,6 +47,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("InterfaceVersion")]
         [Validation(Required=false)]
         public string InterfaceVersion { get; set; }
+
+        [NameInMap("MaskingAlgo")]
+        [Validation(Required=false)]
+        public string MaskingAlgo { get; set; }
 
         /// <summary>
         /// <para>The parameter that is used to specify the masking rule that you want to modify and the value in the JSON format. All parameter values are of the string type. Example: <c>{&quot;auto&quot;: {&quot;databases&quot;: [&quot;db1&quot;], &quot;tables&quot;: [&quot;tb1&quot;], &quot;columns&quot;: [&quot;c1,c2&quot;] }, &quot;description&quot;: &quot;This rule will be applied to the columns c1 and c2 in table t1&quot;, &quot;enabled&quot;: true, &quot;applies_to&quot;: [&quot;user&quot;]}</c>. Where,</para>

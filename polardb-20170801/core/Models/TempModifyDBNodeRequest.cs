@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The information of the added node.</para>
+        /// <para>The information about the scaled/added node.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DBNode")]
@@ -39,10 +39,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<TempModifyDBNodeRequestDBNode> DBNode { get; set; }
         public class TempModifyDBNodeRequestDBNode : TeaModel {
             /// <summary>
-            /// <para>The instance type of the added node. The instance type of the added node must be the same as the instance type of the original node.</para>
+            /// <para>The specifications of the scaled/added node.</para>
             /// <remarks>
-            /// <para> You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to view the instance types of original nodes.</para>
             /// </remarks>
+            /// <list type="bullet">
+            /// <item><description><para>The specification of the new node must be consistent with the specifications of the original nodes.</para>
+            /// </description></item>
+            /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to view the specifications of the original nodes.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>polar.mysql.x4.medium</para>
@@ -52,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string TargetClass { get; set; }
 
             /// <summary>
-            /// <para>The ID of the zone in which the added node is deployed. The instance type of the added node must be the same as the instance type of the original node.</para>
+            /// <para>The ID of the zone in which the added node is deployed. It must be the same zone as the original nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-i</para>

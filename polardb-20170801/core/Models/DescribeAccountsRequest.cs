@@ -30,6 +30,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        /// <summary>
+        /// <para>The node type. This parameter is required when you query the PolarDB search node account.</para>
+        /// <list type="bullet">
+        /// <item><description>Search</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Search</para>
+        /// </summary>
         [NameInMap("NodeType")]
         [Validation(Required=false)]
         public string NodeType { get; set; }

@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <list type="bullet">
         /// <item><description>0: <c>Crash SQL</c>-based fault injection.</description></item>
         /// </list>
-        /// <para>Valid values:</para>
+        /// <para>Enumerated values:</para>
         /// <list type="bullet">
         /// <item><description>CrashSQLInjection: CrashSQLInjection.</description></item>
         /// </list>
@@ -90,6 +90,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// </description></item>
         /// <item><description><para>In <b>node-level disaster recovery drill</b> scenarios, you can specify only one compute node for the disaster recovery drill. You can use the <c>DBNodeCrashList</c> parameter to specify the name of the compute node that you want to use for the drill.</para>
         /// </description></item>
+        /// </list>
+        /// <para>Enumerated values:</para>
+        /// <list type="bullet">
+        /// <item><description>FaultInjectToPrimaryAz</description></item>
+        /// <item><description>FaultInjectToDbNode</description></item>
+        /// <item><description>FaultInjection</description></item>
+        /// <item><description>0</description></item>
+        /// <item><description>1</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -156,7 +164,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string StandbyHAMode { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable automatic storage scaling. This parameter is available only for Standard Edition clusters. Valid values:</para>
+        /// <para>Specifies whether to enable automatic storage scaling for the Standard Edition cluster. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Enable</description></item>
         /// <item><description>Disable</description></item>

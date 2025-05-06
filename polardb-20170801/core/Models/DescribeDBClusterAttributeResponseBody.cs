@@ -47,6 +47,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string Architecture { get; set; }
 
+        /// <summary>
+        /// <para>The minor version upgrade method.</para>
+        /// <list type="bullet">
+        /// <item><description>Auto</description></item>
+        /// <item><description>Manual</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Manual</para>
+        /// </summary>
         [NameInMap("AutoUpgradeMinorVersion")]
         [Validation(Required=false)]
         public string AutoUpgradeMinorVersion { get; set; }
