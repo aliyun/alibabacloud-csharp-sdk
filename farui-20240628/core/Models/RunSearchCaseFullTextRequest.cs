@@ -67,6 +67,10 @@ namespace AlibabaCloud.SDK.FaRui20240628.Models
         [Validation(Required=false)]
         public List<string> QueryKeywords { get; set; }
 
+        [NameInMap("referLevel")]
+        [Validation(Required=false)]
+        public string ReferLevel { get; set; }
+
         [NameInMap("sortKeyAndDirection")]
         [Validation(Required=false)]
         public Dictionary<string, string> SortKeyAndDirection { get; set; }

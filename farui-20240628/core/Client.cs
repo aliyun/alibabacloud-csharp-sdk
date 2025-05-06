@@ -909,6 +909,10 @@ namespace AlibabaCloud.SDK.FaRui20240628
             {
                 body["queryKeywords"] = request.QueryKeywordsShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReferLevel))
+            {
+                body["referLevel"] = request.ReferLevel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortKeyAndDirectionShrink))
             {
                 body["sortKeyAndDirection"] = request.SortKeyAndDirectionShrink;
@@ -1000,6 +1004,10 @@ namespace AlibabaCloud.SDK.FaRui20240628
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryKeywordsShrink))
             {
                 body["queryKeywords"] = request.QueryKeywordsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReferLevel))
+            {
+                body["referLevel"] = request.ReferLevel;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortKeyAndDirectionShrink))
             {

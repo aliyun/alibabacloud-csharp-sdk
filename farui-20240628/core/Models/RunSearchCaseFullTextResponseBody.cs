@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.FaRui20240628.Models
         [Validation(Required=false)]
         public RunSearchCaseFullTextResponseBodyData Data { get; set; }
         public class RunSearchCaseFullTextResponseBodyData : TeaModel {
+            [NameInMap("caseLevel")]
+            [Validation(Required=false)]
+            public string CaseLevel { get; set; }
+
             [NameInMap("caseResult")]
             [Validation(Required=false)]
             public List<RunSearchCaseFullTextResponseBodyDataCaseResult> CaseResult { get; set; }
@@ -37,9 +41,17 @@ namespace AlibabaCloud.SDK.FaRui20240628.Models
                     [Validation(Required=false)]
                     public string AppliedLaws { get; set; }
 
+                    [NameInMap("basicCase")]
+                    [Validation(Required=false)]
+                    public string BasicCase { get; set; }
+
                     [NameInMap("caseBasic")]
                     [Validation(Required=false)]
                     public string CaseBasic { get; set; }
+
+                    [NameInMap("caseCause")]
+                    [Validation(Required=false)]
+                    public string CaseCause { get; set; }
 
                     [NameInMap("caseFeature")]
                     [Validation(Required=false)]
@@ -97,6 +109,10 @@ namespace AlibabaCloud.SDK.FaRui20240628.Models
                     [Validation(Required=false)]
                     public string DocumentType { get; set; }
 
+                    [NameInMap("judgReason")]
+                    [Validation(Required=false)]
+                    public string JudgReason { get; set; }
+
                     [NameInMap("keyfacts")]
                     [Validation(Required=false)]
                     public string Keyfacts { get; set; }
@@ -124,6 +140,10 @@ namespace AlibabaCloud.SDK.FaRui20240628.Models
                     [NameInMap("referLevel")]
                     [Validation(Required=false)]
                     public string ReferLevel { get; set; }
+
+                    [NameInMap("refereeGist")]
+                    [Validation(Required=false)]
+                    public string RefereeGist { get; set; }
 
                     [NameInMap("sourceContent")]
                     [Validation(Required=false)]
@@ -196,6 +216,10 @@ namespace AlibabaCloud.SDK.FaRui20240628.Models
                     public string Verdict { get; set; }
 
                 }
+
+                [NameInMap("mode")]
+                [Validation(Required=false)]
+                public string Mode { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
