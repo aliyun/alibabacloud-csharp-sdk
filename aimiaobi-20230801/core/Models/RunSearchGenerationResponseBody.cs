@@ -105,6 +105,18 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                     public class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContext : TeaModel {
                         /// <summary>
                         /// <b>Example:</b>
+                        /// <para>您想了解关于xx的哪些信息？</para>
+                        /// </summary>
+                        [NameInMap("AskUser")]
+                        [Validation(Required=false)]
+                        public string AskUser { get; set; }
+
+                        [NameInMap("AskUserKeywords")]
+                        [Validation(Required=false)]
+                        public List<string> AskUserKeywords { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
                         /// <para>start</para>
                         /// </summary>
                         [NameInMap("CurrentStep")]

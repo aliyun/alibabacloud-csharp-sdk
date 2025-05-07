@@ -17,6 +17,18 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public RunSearchGenerationRequestAgentContextBizContext BizContext { get; set; }
             public class RunSearchGenerationRequestAgentContextBizContext : TeaModel {
+                [NameInMap("AskUser")]
+                [Validation(Required=false)]
+                public string AskUser { get; set; }
+
+                [NameInMap("AskUserKeywords")]
+                [Validation(Required=false)]
+                public List<string> AskUserKeywords { get; set; }
+
+                [NameInMap("CurrentStep")]
+                [Validation(Required=false)]
+                public string CurrentStep { get; set; }
+
                 [NameInMap("MultimodalMediaSelection")]
                 [Validation(Required=false)]
                 public RunSearchGenerationRequestAgentContextBizContextMultimodalMediaSelection MultimodalMediaSelection { get; set; }
@@ -175,9 +187,29 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
                 }
 
+                [NameInMap("NextStep")]
+                [Validation(Required=false)]
+                public string NextStep { get; set; }
+
                 [NameInMap("SkipCurrentSupplement")]
                 [Validation(Required=false)]
                 public bool? SkipCurrentSupplement { get; set; }
+
+                [NameInMap("SupplementDataType")]
+                [Validation(Required=false)]
+                public string SupplementDataType { get; set; }
+
+                [NameInMap("SupplementEnable")]
+                [Validation(Required=false)]
+                public bool? SupplementEnable { get; set; }
+
+                [NameInMap("UserBack")]
+                [Validation(Required=false)]
+                public string UserBack { get; set; }
+
+                [NameInMap("UserBackKeywords")]
+                [Validation(Required=false)]
+                public List<string> UserBackKeywords { get; set; }
 
             }
 
