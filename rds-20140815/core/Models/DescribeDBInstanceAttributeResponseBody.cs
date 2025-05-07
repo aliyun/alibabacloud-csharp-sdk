@@ -110,6 +110,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
                 }
 
+                [NameInMap("BlueGreenDeploymentName")]
+                [Validation(Required=false)]
+                public string BlueGreenDeploymentName { get; set; }
+
+                [NameInMap("BlueInstanceName")]
+                [Validation(Required=false)]
+                public string BlueInstanceName { get; set; }
+
                 /// <summary>
                 /// <para>A deprecated parameter. You do not need to specify this parameter.</para>
                 /// 
@@ -121,7 +129,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string BpeEnabled { get; set; }
 
                 /// <summary>
-                /// <para>An invalid parameter. You do not need to specify this parameter.</para>
+                /// <para>Indicates whether the I/O burst feature is enabled for Premium ESSDs. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>true</description></item>
+                /// <item><description>false</description></item>
+                /// </list>
+                /// <remarks>
+                /// <para> For more information about the I/O burst feature, see <a href="https://help.aliyun.com/document_detail/2340501.html">What are Premium ESSDs?</a></para>
+                /// </remarks>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -162,7 +177,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Category { get; set; }
 
                 /// <summary>
-                /// <para>A reserved parameter.</para>
+                /// <para>Indicates whether the data archiving feature is enabled for Premium ESSDs. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b></description></item>
+                /// <item><description><b>false</b></description></item>
+                /// </list>
+                /// <para>For more information about the data archiving feature, see <a href="https://help.aliyun.com/document_detail/2701832.html">Use the data archiving feature</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>None</para>
@@ -200,6 +220,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [NameInMap("CompressionRatio")]
                 [Validation(Required=false)]
                 public string CompressionRatio { get; set; }
+
+                [NameInMap("ComputeBurstEnabled")]
+                [Validation(Required=false)]
+                public bool? ComputeBurstEnabled { get; set; }
 
                 /// <summary>
                 /// <para>The connection mode of the instance. Valid values:</para>
@@ -495,10 +519,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// <para>The storage type of the instance. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>local_ssd</b> or <b>ephemeral_ssd</b>: local SSD</description></item>
+                /// <item><description><b>local_ssd</b> and <b>ephemeral_ssd</b>: Premium Local SSD</description></item>
                 /// <item><description><b>cloud_ssd</b>: standard SSD</description></item>
-                /// <item><description><b>cloud_essd</b>: Enterprise SSD (ESSD).</description></item>
-                /// <item><description><b>general_essd</b>: general ESSD</description></item>
+                /// <item><description><b>cloud_essd</b>: ESSD</description></item>
+                /// <item><description><b>cloud_essd</b>: Premium ESSD</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -673,6 +697,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public string GeneralGroupName { get; set; }
 
+                [NameInMap("GreenInstanceName")]
+                [Validation(Required=false)]
+                public string GreenInstanceName { get; set; }
+
                 /// <summary>
                 /// <para>The ID of the disaster recovery instance that is attached to the primary instance.</para>
                 /// 
@@ -732,7 +760,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string InstructionSetArch { get; set; }
 
                 /// <summary>
-                /// <para>A reserved parameter.</para>
+                /// <para>Indicates whether Buffer Pool Extension (BPE) is enabled for Premium ESSDs.</para>
+                /// <list type="bullet">
+                /// <item><description><b>1</b>: enabled</description></item>
+                /// <item><description><b>0</b>: disabled</description></item>
+                /// </list>
+                /// <remarks>
+                /// <para> For more information, see <a href="https://help.aliyun.com/document_detail/2527067.html">Buffer Pool Extension(BPE)</a>.</para>
+                /// </remarks>
                 /// 
                 /// <b>Example:</b>
                 /// <para>None</para>
@@ -853,12 +888,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public bool? MultipleTempUpgrade { get; set; }
 
                 /// <summary>
-                /// <para>OptimizedWritesInfo contains two fields:</para>
+                /// <para>The OptimizedWritesInfo parameter contains the following fields:</para>
                 /// <list type="bullet">
-                /// <item><description><para>optimized_writes: Whether write optimization is enabled for the current instance.</para>
-                /// </description></item>
-                /// <item><description><para>init_optimized_writes: Whether write optimization can be enabled for the instance. Some instances do not display the write optimization switch in the console because init_optimized_writes is false.</para>
-                /// </description></item>
+                /// <item><description><b>optimized_writes</b>: indicates whether the 16K atomic write feature is enabled for the current instance.</description></item>
+                /// <item><description><b>init_optimized_writes</b>: indicates whether the 16K atomic write feature can be enabled for the current instance. If init_optimized_writes is set to false, the 16K atomic write switch is not displayed for specific instances in the console.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

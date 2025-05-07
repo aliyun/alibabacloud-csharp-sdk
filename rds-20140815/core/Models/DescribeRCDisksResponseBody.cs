@@ -17,20 +17,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public List<DescribeRCDisksResponseBodyDisks> Disks { get; set; }
         public class DescribeRCDisksResponseBodyDisks : TeaModel {
             /// <summary>
-            /// <para>The disk category. Valid values:</para>
+            /// <para>The category of the disk. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>cloud: basic disk</description></item>
-            /// <item><description>cloud_efficiency: utra disk</description></item>
-            /// <item><description>cloud_ssd: standard SSD</description></item>
-            /// <item><description>cloud_essd: Enterprise SSD (ESSD)</description></item>
-            /// <item><description>cloud_auto: ESSD AutoPL disk</description></item>
-            /// <item><description>local_ssd_pro: I/O-intensive local disk</description></item>
-            /// <item><description>local_hdd_pro: throughput-intensive local disk</description></item>
-            /// <item><description>cloud_essd_entry: ESSD Entry disk</description></item>
-            /// <item><description>elastic_ephemeral_disk_standard: standard elastic ephemeral disk</description></item>
-            /// <item><description>elastic_ephemeral_disk_premium: premium static ephemeral disk</description></item>
-            /// <item><description>ephemeral: retired local disk</description></item>
-            /// <item><description>ephemeral_ssd: retired local SSD</description></item>
+            /// <item><description><b>cloud_efficiency</b>: ultra disk</description></item>
+            /// <item><description><b>cloud_ssd</b>: standard SSD</description></item>
+            /// <item><description><b>cloud_essd</b>: ESSD</description></item>
+            /// <item><description><b>cloud_auto</b>: Premium ESSD</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -81,11 +81,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? DBInstanceStorage { get; set; }
 
         /// <summary>
-        /// <para>The storage type of the instance. Valid values:</para>
+        /// <para>The storage type of the new instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>local_ssd</b>: local SSD</description></item>
+        /// <item><description><b>general_essd</b>: premium Enterprise SSD (ESSD)</description></item>
+        /// <item><description><b>local_ssd</b>: premium local SSD</description></item>
         /// <item><description><b>cloud_ssd</b>: standard SSD</description></item>
-        /// <item><description><b>cloud_essd</b>: PL1 ESSD</description></item>
+        /// <item><description><b>cloud_essd</b>: performance level 1 (PL1) ESSD</description></item>
         /// <item><description><b>cloud_essd2</b>: PL2 ESSD</description></item>
         /// <item><description><b>cloud_essd3</b>: PL3 ESSD</description></item>
         /// </list>
@@ -128,10 +129,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The database engine version of the instance.</para>
+        /// <para>The database engine version of the instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Valid values if you set Engine to <b>MySQL</b>: <b>5.5</b>, <b>5.6</b>, <b>5.7</b>, and <b>8.0</b></description></item>
-        /// <item><description>Valid values if you set Engine to <b>SQLServer</b>: <b>08r2_ent_ha</b> (cloud disks, discontinued), <b>2008r2</b>(local disks, discontinued), <b>2012</b> (SQL Server EE Basic), <b>2012_ent_ha</b>, <b>2012_std_ha</b>, <b>2012_web</b>, <b>2016_ent_ha</b>, <b>2016_std_ha</b>, <b>2016_web</b>, <b>2017_ent</b>, <b>2017_std_ha</b>, <b>2017_web</b>, <b>2019_ent</b>, <b>2019_std_ha</b>, <b>2019_web</b>, <b>2022_ent</b>, <b>2022_std_ha</b>, and <b>2022_web</b></description></item>
+        /// <item><description>Valid values if you set Engine to <b>SQL Server</b>: <b>08r2_ent_ha</b>(cloud disks, discontinued), <b>2008r2</b>(high-performance local disks, discontinued), <b>2012</b> (SQL Server EE Basic)<b>2012_ent_ha</b>, <b>2012_std_ha</b>, <b>2012_web</b>, <b>2016_ent_ha</b>, <b>2016_std_ha</b>, <b>2016_web</b>, <b>2017_ent</b>, <b>2017_std_ha</b>, <b>2017_web</b>, <b>2019_ent</b>, <b>2019_std_ha</b>, <b>2019_web</b>, <b>2022_ent</b>, <b>2022_std_ha</b>, and <b>2022_web</b></description></item>
         /// <item><description>Valid values if you set Engine to <b>PostgreSQL</b>: <b>10.0</b>, <b>11.0</b>, <b>12.0</b>, <b>13.0</b>, <b>14.0</b>, and <b>15.0</b></description></item>
         /// <item><description>Valid value if you set Engine to <b>MariaDB</b>: <b>10.3</b></description></item>
         /// </list>

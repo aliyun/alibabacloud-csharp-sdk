@@ -30281,6 +30281,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             return await DescribeDBInstancesByPerformanceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DescribeDBInstancesForClone is deprecated, please use Rds::2014-08-15::DescribeDBInstances instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries a list of instances.</para>
@@ -30301,6 +30305,8 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// <returns>
         /// DescribeDBInstancesForCloneResponse
         /// </returns>
+        [Obsolete("OpenAPI DescribeDBInstancesForClone is deprecated, please use Rds::2014-08-15::DescribeDBInstances instead.")]
+        // Deprecated
         public DescribeDBInstancesForCloneResponse DescribeDBInstancesForCloneWithOptions(DescribeDBInstancesForCloneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -30428,6 +30434,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDBInstancesForCloneResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DescribeDBInstancesForClone is deprecated, please use Rds::2014-08-15::DescribeDBInstances instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries a list of instances.</para>
@@ -30448,6 +30458,8 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// <returns>
         /// DescribeDBInstancesForCloneResponse
         /// </returns>
+        [Obsolete("OpenAPI DescribeDBInstancesForClone is deprecated, please use Rds::2014-08-15::DescribeDBInstances instead.")]
+        // Deprecated
         public async Task<DescribeDBInstancesForCloneResponse> DescribeDBInstancesForCloneWithOptionsAsync(DescribeDBInstancesForCloneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -30575,6 +30587,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             return TeaModel.ToObject<DescribeDBInstancesForCloneResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DescribeDBInstancesForClone is deprecated, please use Rds::2014-08-15::DescribeDBInstances instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries a list of instances.</para>
@@ -30592,12 +30608,18 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// <returns>
         /// DescribeDBInstancesForCloneResponse
         /// </returns>
+        [Obsolete("OpenAPI DescribeDBInstancesForClone is deprecated, please use Rds::2014-08-15::DescribeDBInstances instead.")]
+        // Deprecated
         public DescribeDBInstancesForCloneResponse DescribeDBInstancesForClone(DescribeDBInstancesForCloneRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeDBInstancesForCloneWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DescribeDBInstancesForClone is deprecated, please use Rds::2014-08-15::DescribeDBInstances instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries a list of instances.</para>
@@ -30615,6 +30637,8 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// <returns>
         /// DescribeDBInstancesForCloneResponse
         /// </returns>
+        [Obsolete("OpenAPI DescribeDBInstancesForClone is deprecated, please use Rds::2014-08-15::DescribeDBInstances instead.")]
+        // Deprecated
         public async Task<DescribeDBInstancesForCloneResponse> DescribeDBInstancesForCloneAsync(DescribeDBInstancesForCloneRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -42028,6 +42052,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
                 query["Tag"] = request.Tag;
@@ -42101,6 +42129,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
@@ -66859,22 +66891,12 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the SQL Explorer (SQL Audit) feature for an instance.</para>
+        /// <para>This operation can still be called but is no longer maintained. This operation enables or disables the SQL Explorer (SQL Audit) feature for an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Note:</h3>
-        /// <para>This operation is no longer maintained. We recommend that you enable or configure Database Autonomy Service (DAS) Enterprise Edition. For more information, see <a href="https://help.aliyun.com/document_detail/2778835.html">Enable or configure DAS Enterprise Edition</a>.</para>
-        /// <h3><a href="#"></a>References</h3>
-        /// <remarks>
-        /// <para> Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.</para>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description><a href="https://help.aliyun.com/document_detail/476574.html">Use the SQL Explorer and Audit feature for an ApsaraDB RDS for MySQL instance</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/96766.html">Use the SQL Audit feature for an ApsaraDB RDS for PostgreSQL instance</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/95712.html">Use the SQL Audit feature for an ApsaraDB RDS for SQL Server instance</a></description></item>
-        /// </list>
+        /// <para>This operation can still be called but is no longer maintained. We recommend that you call the <a href="https://help.aliyun.com/document_detail/2778835.html">ModifySqlLogConfig</a> operation instead of this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -66940,22 +66962,12 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the SQL Explorer (SQL Audit) feature for an instance.</para>
+        /// <para>This operation can still be called but is no longer maintained. This operation enables or disables the SQL Explorer (SQL Audit) feature for an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Note:</h3>
-        /// <para>This operation is no longer maintained. We recommend that you enable or configure Database Autonomy Service (DAS) Enterprise Edition. For more information, see <a href="https://help.aliyun.com/document_detail/2778835.html">Enable or configure DAS Enterprise Edition</a>.</para>
-        /// <h3><a href="#"></a>References</h3>
-        /// <remarks>
-        /// <para> Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.</para>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description><a href="https://help.aliyun.com/document_detail/476574.html">Use the SQL Explorer and Audit feature for an ApsaraDB RDS for MySQL instance</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/96766.html">Use the SQL Audit feature for an ApsaraDB RDS for PostgreSQL instance</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/95712.html">Use the SQL Audit feature for an ApsaraDB RDS for SQL Server instance</a></description></item>
-        /// </list>
+        /// <para>This operation can still be called but is no longer maintained. We recommend that you call the <a href="https://help.aliyun.com/document_detail/2778835.html">ModifySqlLogConfig</a> operation instead of this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -67021,22 +67033,12 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the SQL Explorer (SQL Audit) feature for an instance.</para>
+        /// <para>This operation can still be called but is no longer maintained. This operation enables or disables the SQL Explorer (SQL Audit) feature for an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Note:</h3>
-        /// <para>This operation is no longer maintained. We recommend that you enable or configure Database Autonomy Service (DAS) Enterprise Edition. For more information, see <a href="https://help.aliyun.com/document_detail/2778835.html">Enable or configure DAS Enterprise Edition</a>.</para>
-        /// <h3><a href="#"></a>References</h3>
-        /// <remarks>
-        /// <para> Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.</para>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description><a href="https://help.aliyun.com/document_detail/476574.html">Use the SQL Explorer and Audit feature for an ApsaraDB RDS for MySQL instance</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/96766.html">Use the SQL Audit feature for an ApsaraDB RDS for PostgreSQL instance</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/95712.html">Use the SQL Audit feature for an ApsaraDB RDS for SQL Server instance</a></description></item>
-        /// </list>
+        /// <para>This operation can still be called but is no longer maintained. We recommend that you call the <a href="https://help.aliyun.com/document_detail/2778835.html">ModifySqlLogConfig</a> operation instead of this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -67054,22 +67056,12 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the SQL Explorer (SQL Audit) feature for an instance.</para>
+        /// <para>This operation can still be called but is no longer maintained. This operation enables or disables the SQL Explorer (SQL Audit) feature for an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Note:</h3>
-        /// <para>This operation is no longer maintained. We recommend that you enable or configure Database Autonomy Service (DAS) Enterprise Edition. For more information, see <a href="https://help.aliyun.com/document_detail/2778835.html">Enable or configure DAS Enterprise Edition</a>.</para>
-        /// <h3><a href="#"></a>References</h3>
-        /// <remarks>
-        /// <para> Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.</para>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description><a href="https://help.aliyun.com/document_detail/476574.html">Use the SQL Explorer and Audit feature for an ApsaraDB RDS for MySQL instance</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/96766.html">Use the SQL Audit feature for an ApsaraDB RDS for PostgreSQL instance</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/95712.html">Use the SQL Audit feature for an ApsaraDB RDS for SQL Server instance</a></description></item>
-        /// </list>
+        /// <para>This operation can still be called but is no longer maintained. We recommend that you call the <a href="https://help.aliyun.com/document_detail/2778835.html">ModifySqlLogConfig</a> operation instead of this operation.</para>
         /// </description>
         /// 
         /// <param name="request">

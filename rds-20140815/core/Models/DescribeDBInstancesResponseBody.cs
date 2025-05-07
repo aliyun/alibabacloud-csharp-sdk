@@ -20,6 +20,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeDBInstancesResponseBodyItemsDBInstance> DBInstance { get; set; }
             public class DescribeDBInstancesResponseBodyItemsDBInstance : TeaModel {
+                [NameInMap("BlueGreenDeploymentName")]
+                [Validation(Required=false)]
+                public string BlueGreenDeploymentName { get; set; }
+
+                [NameInMap("BlueInstanceName")]
+                [Validation(Required=false)]
+                public string BlueInstanceName { get; set; }
+
                 /// <summary>
                 /// <para>A deprecated parameter.</para>
                 /// 
@@ -384,6 +392,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [NameInMap("GeneralGroupName")]
                 [Validation(Required=false)]
                 public string GeneralGroupName { get; set; }
+
+                [NameInMap("GreenInstanceName")]
+                [Validation(Required=false)]
+                public string GreenInstanceName { get; set; }
 
                 /// <summary>
                 /// <para>The ID of the disaster recovery instance. This parameter is returned only when the instance is a primary instance and has a disaster recovery instance attached.</para>
