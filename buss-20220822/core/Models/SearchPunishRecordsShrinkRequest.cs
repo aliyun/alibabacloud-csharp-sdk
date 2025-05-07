@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Buss20220822.Models
         public string ActionCodesShrink { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AliUid")]
         [Validation(Required=false)]

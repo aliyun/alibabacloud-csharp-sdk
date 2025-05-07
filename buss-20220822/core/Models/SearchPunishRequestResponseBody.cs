@@ -109,6 +109,14 @@ namespace AlibabaCloud.SDK.Buss20220822.Models
             [Validation(Required=false)]
             public string Modifier { get; set; }
 
+            [NameInMap("Operator")]
+            [Validation(Required=false)]
+            public string Operator { get; set; }
+
+            [NameInMap("OperatorNum")]
+            [Validation(Required=false)]
+            public string OperatorNum { get; set; }
+
             [NameInMap("PunishDomain")]
             [Validation(Required=false)]
             public string PunishDomain { get; set; }
@@ -116,6 +124,14 @@ namespace AlibabaCloud.SDK.Buss20220822.Models
             [NameInMap("PunishIp")]
             [Validation(Required=false)]
             public string PunishIp { get; set; }
+
+            [NameInMap("PunishOfficer")]
+            [Validation(Required=false)]
+            public string PunishOfficer { get; set; }
+
+            [NameInMap("PunishOfficerNum")]
+            [Validation(Required=false)]
+            public string PunishOfficerNum { get; set; }
 
             [NameInMap("PunishRequest")]
             [Validation(Required=false)]

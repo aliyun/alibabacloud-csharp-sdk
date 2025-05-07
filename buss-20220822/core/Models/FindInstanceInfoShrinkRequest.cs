@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Buss20220822.Models
 {
     public class FindInstanceInfoShrinkRequest : TeaModel {
+        [NameInMap("businessCodes")]
+        [Validation(Required=false)]
+        public string BusinessCodes { get; set; }
+
         [NameInMap("bussinessCode")]
         [Validation(Required=false)]
         public string BussinessCode { get; set; }

@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Buss20220822.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]

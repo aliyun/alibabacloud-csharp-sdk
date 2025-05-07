@@ -14,14 +14,14 @@ namespace AlibabaCloud.SDK.Buss20220822.Models
         public bool? Deleted { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DiscoveryTime")]
         [Validation(Required=false)]
         public long? DiscoveryTime { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("EventName")]
         [Validation(Required=false)]
@@ -36,14 +36,14 @@ namespace AlibabaCloud.SDK.Buss20220822.Models
         public string RelevanceBu { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RiskDetail")]
         [Validation(Required=false)]
         public string RiskDetail { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RiskEffectType")]
         [Validation(Required=false)]
@@ -54,21 +54,21 @@ namespace AlibabaCloud.SDK.Buss20220822.Models
         public string RiskLevel { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RiskType")]
         [Validation(Required=false)]
         public string RiskType { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]
         public string Source { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Submitter")]
         [Validation(Required=false)]

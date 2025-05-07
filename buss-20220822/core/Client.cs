@@ -37,13 +37,21 @@ namespace AlibabaCloud.SDK.Buss20220822
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-         * @summary 处罚请求异步接口回调
-         *
-         * @param tmpReq BusinessResultServiceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return BusinessResultServiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>处罚请求异步接口回调</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// BusinessResultServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BusinessResultServiceResponse
+        /// </returns>
         public BusinessResultServiceResponse BusinessResultServiceWithOptions(BusinessResultServiceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -73,13 +81,21 @@ namespace AlibabaCloud.SDK.Buss20220822
             return TeaModel.ToObject<BusinessResultServiceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 处罚请求异步接口回调
-         *
-         * @param tmpReq BusinessResultServiceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return BusinessResultServiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>处罚请求异步接口回调</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// BusinessResultServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BusinessResultServiceResponse
+        /// </returns>
         public async Task<BusinessResultServiceResponse> BusinessResultServiceWithOptionsAsync(BusinessResultServiceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -109,37 +125,57 @@ namespace AlibabaCloud.SDK.Buss20220822
             return TeaModel.ToObject<BusinessResultServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 处罚请求异步接口回调
-         *
-         * @param request BusinessResultServiceRequest
-         * @return BusinessResultServiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>处罚请求异步接口回调</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BusinessResultServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BusinessResultServiceResponse
+        /// </returns>
         public BusinessResultServiceResponse BusinessResultService(BusinessResultServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return BusinessResultServiceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 处罚请求异步接口回调
-         *
-         * @param request BusinessResultServiceRequest
-         * @return BusinessResultServiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>处罚请求异步接口回调</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BusinessResultServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BusinessResultServiceResponse
+        /// </returns>
         public async Task<BusinessResultServiceResponse> BusinessResultServiceAsync(BusinessResultServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await BusinessResultServiceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 协查中心查询任务接口
-         *
-         * @param request CreateUserInvestigationInfoQueryTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateUserInvestigationInfoQueryTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>协查中心查询任务接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateUserInvestigationInfoQueryTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserInvestigationInfoQueryTaskResponse
+        /// </returns>
         public CreateUserInvestigationInfoQueryTaskResponse CreateUserInvestigationInfoQueryTaskWithOptions(CreateUserInvestigationInfoQueryTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -163,13 +199,21 @@ namespace AlibabaCloud.SDK.Buss20220822
             return TeaModel.ToObject<CreateUserInvestigationInfoQueryTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 协查中心查询任务接口
-         *
-         * @param request CreateUserInvestigationInfoQueryTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateUserInvestigationInfoQueryTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>协查中心查询任务接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateUserInvestigationInfoQueryTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserInvestigationInfoQueryTaskResponse
+        /// </returns>
         public async Task<CreateUserInvestigationInfoQueryTaskResponse> CreateUserInvestigationInfoQueryTaskWithOptionsAsync(CreateUserInvestigationInfoQueryTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -193,37 +237,57 @@ namespace AlibabaCloud.SDK.Buss20220822
             return TeaModel.ToObject<CreateUserInvestigationInfoQueryTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 协查中心查询任务接口
-         *
-         * @param request CreateUserInvestigationInfoQueryTaskRequest
-         * @return CreateUserInvestigationInfoQueryTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>协查中心查询任务接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateUserInvestigationInfoQueryTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserInvestigationInfoQueryTaskResponse
+        /// </returns>
         public CreateUserInvestigationInfoQueryTaskResponse CreateUserInvestigationInfoQueryTask(CreateUserInvestigationInfoQueryTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateUserInvestigationInfoQueryTaskWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 协查中心查询任务接口
-         *
-         * @param request CreateUserInvestigationInfoQueryTaskRequest
-         * @return CreateUserInvestigationInfoQueryTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>协查中心查询任务接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateUserInvestigationInfoQueryTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserInvestigationInfoQueryTaskResponse
+        /// </returns>
         public async Task<CreateUserInvestigationInfoQueryTaskResponse> CreateUserInvestigationInfoQueryTaskAsync(CreateUserInvestigationInfoQueryTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateUserInvestigationInfoQueryTaskWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 反查资源
-         *
-         * @param tmpReq FindInstanceInfoRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return FindInstanceInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>反查资源</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// FindInstanceInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FindInstanceInfoResponse
+        /// </returns>
         public FindInstanceInfoResponse FindInstanceInfoWithOptions(FindInstanceInfoRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -253,13 +317,21 @@ namespace AlibabaCloud.SDK.Buss20220822
             return TeaModel.ToObject<FindInstanceInfoResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 反查资源
-         *
-         * @param tmpReq FindInstanceInfoRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return FindInstanceInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>反查资源</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// FindInstanceInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FindInstanceInfoResponse
+        /// </returns>
         public async Task<FindInstanceInfoResponse> FindInstanceInfoWithOptionsAsync(FindInstanceInfoRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -289,37 +361,57 @@ namespace AlibabaCloud.SDK.Buss20220822
             return TeaModel.ToObject<FindInstanceInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 反查资源
-         *
-         * @param request FindInstanceInfoRequest
-         * @return FindInstanceInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>反查资源</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FindInstanceInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FindInstanceInfoResponse
+        /// </returns>
         public FindInstanceInfoResponse FindInstanceInfo(FindInstanceInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return FindInstanceInfoWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 反查资源
-         *
-         * @param request FindInstanceInfoRequest
-         * @return FindInstanceInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>反查资源</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FindInstanceInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FindInstanceInfoResponse
+        /// </returns>
         public async Task<FindInstanceInfoResponse> FindInstanceInfoAsync(FindInstanceInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await FindInstanceInfoWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 根据用户id查询对应产品下全部可用资产信息接口
-         *
-         * @param request FindUserAvailbleResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return FindUserAvailbleResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据用户id查询对应产品下全部可用资产信息接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FindUserAvailbleResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FindUserAvailbleResourcesResponse
+        /// </returns>
         public FindUserAvailbleResourcesResponse FindUserAvailbleResourcesWithOptions(FindUserAvailbleResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -343,13 +435,21 @@ namespace AlibabaCloud.SDK.Buss20220822
             return TeaModel.ToObject<FindUserAvailbleResourcesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 根据用户id查询对应产品下全部可用资产信息接口
-         *
-         * @param request FindUserAvailbleResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return FindUserAvailbleResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据用户id查询对应产品下全部可用资产信息接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FindUserAvailbleResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FindUserAvailbleResourcesResponse
+        /// </returns>
         public async Task<FindUserAvailbleResourcesResponse> FindUserAvailbleResourcesWithOptionsAsync(FindUserAvailbleResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -373,37 +473,169 @@ namespace AlibabaCloud.SDK.Buss20220822
             return TeaModel.ToObject<FindUserAvailbleResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 根据用户id查询对应产品下全部可用资产信息接口
-         *
-         * @param request FindUserAvailbleResourcesRequest
-         * @return FindUserAvailbleResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据用户id查询对应产品下全部可用资产信息接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FindUserAvailbleResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FindUserAvailbleResourcesResponse
+        /// </returns>
         public FindUserAvailbleResourcesResponse FindUserAvailbleResources(FindUserAvailbleResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return FindUserAvailbleResourcesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 根据用户id查询对应产品下全部可用资产信息接口
-         *
-         * @param request FindUserAvailbleResourcesRequest
-         * @return FindUserAvailbleResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据用户id查询对应产品下全部可用资产信息接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FindUserAvailbleResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FindUserAvailbleResourcesResponse
+        /// </returns>
         public async Task<FindUserAvailbleResourcesResponse> FindUserAvailbleResourcesAsync(FindUserAvailbleResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await FindUserAvailbleResourcesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 处罚资源搜索
-         *
-         * @param tmpReq PunishResourceSearchRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return PunishResourceSearchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询安全事件详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSecurityEventDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSecurityEventDetailResponse
+        /// </returns>
+        public GetSecurityEventDetailResponse GetSecurityEventDetailWithOptions(GetSecurityEventDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSecurityEventDetail",
+                Version = "2022-08-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSecurityEventDetailResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询安全事件详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSecurityEventDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSecurityEventDetailResponse
+        /// </returns>
+        public async Task<GetSecurityEventDetailResponse> GetSecurityEventDetailWithOptionsAsync(GetSecurityEventDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSecurityEventDetail",
+                Version = "2022-08-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSecurityEventDetailResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询安全事件详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSecurityEventDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSecurityEventDetailResponse
+        /// </returns>
+        public GetSecurityEventDetailResponse GetSecurityEventDetail(GetSecurityEventDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetSecurityEventDetailWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询安全事件详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSecurityEventDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSecurityEventDetailResponse
+        /// </returns>
+        public async Task<GetSecurityEventDetailResponse> GetSecurityEventDetailAsync(GetSecurityEventDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetSecurityEventDetailWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>处罚资源搜索</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// PunishResourceSearchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PunishResourceSearchResponse
+        /// </returns>
         public PunishResourceSearchResponse PunishResourceSearchWithOptions(PunishResourceSearchRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -445,13 +677,21 @@ namespace AlibabaCloud.SDK.Buss20220822
             return TeaModel.ToObject<PunishResourceSearchResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 处罚资源搜索
-         *
-         * @param tmpReq PunishResourceSearchRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return PunishResourceSearchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>处罚资源搜索</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// PunishResourceSearchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PunishResourceSearchResponse
+        /// </returns>
         public async Task<PunishResourceSearchResponse> PunishResourceSearchWithOptionsAsync(PunishResourceSearchRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -493,37 +733,177 @@ namespace AlibabaCloud.SDK.Buss20220822
             return TeaModel.ToObject<PunishResourceSearchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 处罚资源搜索
-         *
-         * @param request PunishResourceSearchRequest
-         * @return PunishResourceSearchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>处罚资源搜索</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PunishResourceSearchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PunishResourceSearchResponse
+        /// </returns>
         public PunishResourceSearchResponse PunishResourceSearch(PunishResourceSearchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return PunishResourceSearchWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 处罚资源搜索
-         *
-         * @param request PunishResourceSearchRequest
-         * @return PunishResourceSearchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>处罚资源搜索</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PunishResourceSearchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PunishResourceSearchResponse
+        /// </returns>
         public async Task<PunishResourceSearchResponse> PunishResourceSearchAsync(PunishResourceSearchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await PunishResourceSearchWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 风险事件同步
-         *
-         * @param request RiskEventSyncRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RiskEventSyncResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>记录是否点击链接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecordClickLinkActionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecordClickLinkActionResponse
+        /// </returns>
+        public RecordClickLinkActionResponse RecordClickLinkActionWithOptions(RecordClickLinkActionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                body["Tag"] = request.Tag;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RecordClickLinkAction",
+                Version = "2022-08-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RecordClickLinkActionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>记录是否点击链接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecordClickLinkActionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecordClickLinkActionResponse
+        /// </returns>
+        public async Task<RecordClickLinkActionResponse> RecordClickLinkActionWithOptionsAsync(RecordClickLinkActionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                body["Tag"] = request.Tag;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RecordClickLinkAction",
+                Version = "2022-08-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RecordClickLinkActionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>记录是否点击链接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecordClickLinkActionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecordClickLinkActionResponse
+        /// </returns>
+        public RecordClickLinkActionResponse RecordClickLinkAction(RecordClickLinkActionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RecordClickLinkActionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>记录是否点击链接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecordClickLinkActionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecordClickLinkActionResponse
+        /// </returns>
+        public async Task<RecordClickLinkActionResponse> RecordClickLinkActionAsync(RecordClickLinkActionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RecordClickLinkActionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>风险事件同步</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RiskEventSyncRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RiskEventSyncResponse
+        /// </returns>
         public RiskEventSyncResponse RiskEventSyncWithOptions(RiskEventSyncRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -591,13 +971,21 @@ namespace AlibabaCloud.SDK.Buss20220822
             return TeaModel.ToObject<RiskEventSyncResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 风险事件同步
-         *
-         * @param request RiskEventSyncRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return RiskEventSyncResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>风险事件同步</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RiskEventSyncRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RiskEventSyncResponse
+        /// </returns>
         public async Task<RiskEventSyncResponse> RiskEventSyncWithOptionsAsync(RiskEventSyncRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -665,37 +1053,57 @@ namespace AlibabaCloud.SDK.Buss20220822
             return TeaModel.ToObject<RiskEventSyncResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 风险事件同步
-         *
-         * @param request RiskEventSyncRequest
-         * @return RiskEventSyncResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>风险事件同步</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RiskEventSyncRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RiskEventSyncResponse
+        /// </returns>
         public RiskEventSyncResponse RiskEventSync(RiskEventSyncRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RiskEventSyncWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 风险事件同步
-         *
-         * @param request RiskEventSyncRequest
-         * @return RiskEventSyncResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>风险事件同步</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RiskEventSyncRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RiskEventSyncResponse
+        /// </returns>
         public async Task<RiskEventSyncResponse> RiskEventSyncAsync(RiskEventSyncRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RiskEventSyncWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 管控事件查询
-         *
-         * @param tmpReq SearchPunishEventsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SearchPunishEventsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>管控事件查询</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SearchPunishEventsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchPunishEventsResponse
+        /// </returns>
         public SearchPunishEventsResponse SearchPunishEventsWithOptions(SearchPunishEventsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -753,13 +1161,21 @@ namespace AlibabaCloud.SDK.Buss20220822
             return TeaModel.ToObject<SearchPunishEventsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 管控事件查询
-         *
-         * @param tmpReq SearchPunishEventsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SearchPunishEventsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>管控事件查询</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SearchPunishEventsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchPunishEventsResponse
+        /// </returns>
         public async Task<SearchPunishEventsResponse> SearchPunishEventsWithOptionsAsync(SearchPunishEventsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -817,37 +1233,57 @@ namespace AlibabaCloud.SDK.Buss20220822
             return TeaModel.ToObject<SearchPunishEventsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 管控事件查询
-         *
-         * @param request SearchPunishEventsRequest
-         * @return SearchPunishEventsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>管控事件查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchPunishEventsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchPunishEventsResponse
+        /// </returns>
         public SearchPunishEventsResponse SearchPunishEvents(SearchPunishEventsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SearchPunishEventsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 管控事件查询
-         *
-         * @param request SearchPunishEventsRequest
-         * @return SearchPunishEventsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>管控事件查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchPunishEventsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchPunishEventsResponse
+        /// </returns>
         public async Task<SearchPunishEventsResponse> SearchPunishEventsAsync(SearchPunishEventsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SearchPunishEventsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 管控事件查询
-         *
-         * @param tmpReq SearchPunishRecordsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SearchPunishRecordsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>管控事件查询</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SearchPunishRecordsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchPunishRecordsResponse
+        /// </returns>
         public SearchPunishRecordsResponse SearchPunishRecordsWithOptions(SearchPunishRecordsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -957,13 +1393,21 @@ namespace AlibabaCloud.SDK.Buss20220822
             return TeaModel.ToObject<SearchPunishRecordsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 管控事件查询
-         *
-         * @param tmpReq SearchPunishRecordsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SearchPunishRecordsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>管控事件查询</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SearchPunishRecordsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchPunishRecordsResponse
+        /// </returns>
         public async Task<SearchPunishRecordsResponse> SearchPunishRecordsWithOptionsAsync(SearchPunishRecordsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1073,37 +1517,57 @@ namespace AlibabaCloud.SDK.Buss20220822
             return TeaModel.ToObject<SearchPunishRecordsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 管控事件查询
-         *
-         * @param request SearchPunishRecordsRequest
-         * @return SearchPunishRecordsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>管控事件查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchPunishRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchPunishRecordsResponse
+        /// </returns>
         public SearchPunishRecordsResponse SearchPunishRecords(SearchPunishRecordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SearchPunishRecordsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 管控事件查询
-         *
-         * @param request SearchPunishRecordsRequest
-         * @return SearchPunishRecordsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>管控事件查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchPunishRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchPunishRecordsResponse
+        /// </returns>
         public async Task<SearchPunishRecordsResponse> SearchPunishRecordsAsync(SearchPunishRecordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SearchPunishRecordsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 处罚记录查询
-         *
-         * @param tmpReq SearchPunishRequestRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SearchPunishRequestResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>处罚记录查询</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SearchPunishRequestRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchPunishRequestResponse
+        /// </returns>
         public SearchPunishRequestResponse SearchPunishRequestWithOptions(SearchPunishRequestRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1153,13 +1617,21 @@ namespace AlibabaCloud.SDK.Buss20220822
             return TeaModel.ToObject<SearchPunishRequestResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 处罚记录查询
-         *
-         * @param tmpReq SearchPunishRequestRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return SearchPunishRequestResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>处罚记录查询</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SearchPunishRequestRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchPunishRequestResponse
+        /// </returns>
         public async Task<SearchPunishRequestResponse> SearchPunishRequestWithOptionsAsync(SearchPunishRequestRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1209,28 +1681,152 @@ namespace AlibabaCloud.SDK.Buss20220822
             return TeaModel.ToObject<SearchPunishRequestResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 处罚记录查询
-         *
-         * @param request SearchPunishRequestRequest
-         * @return SearchPunishRequestResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>处罚记录查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchPunishRequestRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchPunishRequestResponse
+        /// </returns>
         public SearchPunishRequestResponse SearchPunishRequest(SearchPunishRequestRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SearchPunishRequestWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 处罚记录查询
-         *
-         * @param request SearchPunishRequestRequest
-         * @return SearchPunishRequestResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>处罚记录查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchPunishRequestRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchPunishRequestResponse
+        /// </returns>
         public async Task<SearchPunishRequestResponse> SearchPunishRequestAsync(SearchPunishRequestRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SearchPunishRequestWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新安全事件状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSecurityEventStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSecurityEventStatusResponse
+        /// </returns>
+        public UpdateSecurityEventStatusResponse UpdateSecurityEventStatusWithOptions(UpdateSecurityEventStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateSecurityEventStatus",
+                Version = "2022-08-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateSecurityEventStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新安全事件状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSecurityEventStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSecurityEventStatusResponse
+        /// </returns>
+        public async Task<UpdateSecurityEventStatusResponse> UpdateSecurityEventStatusWithOptionsAsync(UpdateSecurityEventStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateSecurityEventStatus",
+                Version = "2022-08-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateSecurityEventStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新安全事件状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSecurityEventStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSecurityEventStatusResponse
+        /// </returns>
+        public UpdateSecurityEventStatusResponse UpdateSecurityEventStatus(UpdateSecurityEventStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateSecurityEventStatusWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新安全事件状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSecurityEventStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSecurityEventStatusResponse
+        /// </returns>
+        public async Task<UpdateSecurityEventStatusResponse> UpdateSecurityEventStatusAsync(UpdateSecurityEventStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateSecurityEventStatusWithOptionsAsync(request, runtime);
         }
 
     }

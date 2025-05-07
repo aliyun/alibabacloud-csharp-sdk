@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Buss20220822.Models
 {
     public class SearchPunishEventsShrinkRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AliUid")]
         [Validation(Required=false)]
