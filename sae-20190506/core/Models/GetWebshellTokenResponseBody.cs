@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public GetWebshellTokenResponseBodyData Data { get; set; }
         public class GetWebshellTokenResponseBodyData : TeaModel {
+            [NameInMap("HttpUrl")]
+            [Validation(Required=false)]
+            public string HttpUrl { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>zWWpvRj_5pzof4hfo7-hGynM8oGMmO_7</para>
@@ -28,6 +32,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [NameInMap("Token")]
             [Validation(Required=false)]
             public string Token { get; set; }
+
+            [NameInMap("WebSocketUrl")]
+            [Validation(Required=false)]
+            public string WebSocketUrl { get; set; }
 
         }
 
