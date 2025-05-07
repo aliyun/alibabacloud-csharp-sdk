@@ -83,6 +83,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string JobId { get; set; }
 
+        [NameInMap("JobIds")]
+        [Validation(Required=false)]
+        public string JobIds { get; set; }
+
         /// <summary>
         /// <para>The job type. The default value null indicates any type. Valid values:</para>
         /// <list type="bullet">
@@ -150,6 +154,17 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The type of the resource. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PrePaid: Resource quota</description></item>
+        /// <item><description>Spot: Preemptible resources</description></item>
+        /// <item><description>PostPaid: Public resources</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PostPaid</para>
+        /// </summary>
         [NameInMap("PaymentType")]
         [Validation(Required=false)]
         public string PaymentType { get; set; }

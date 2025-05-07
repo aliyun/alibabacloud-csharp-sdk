@@ -1809,8 +1809,13 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 Ray Dashboard 链接</para>
+        /// <para>Obtains a Ray Dashboard URL.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Deep Learning Containers (DLC) of Platform for AI (PAI).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetRayDashboardRequest
@@ -1859,8 +1864,13 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 Ray Dashboard 链接</para>
+        /// <para>Obtains a Ray Dashboard URL.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Deep Learning Containers (DLC) of Platform for AI (PAI).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetRayDashboardRequest
@@ -1909,8 +1919,13 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 Ray Dashboard 链接</para>
+        /// <para>Obtains a Ray Dashboard URL.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Deep Learning Containers (DLC) of Platform for AI (PAI).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetRayDashboardRequest
@@ -1928,8 +1943,13 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 Ray Dashboard 链接</para>
+        /// <para>Obtains a Ray Dashboard URL.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Deep Learning Containers (DLC) of Platform for AI (PAI).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetRayDashboardRequest
@@ -2223,7 +2243,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a user token.</para>
+        /// <para>Obtains the sharing token of a DLC job. This token is used to view the information about the shared job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2277,7 +2297,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a user token.</para>
+        /// <para>Obtains the sharing token of a DLC job. This token is used to view the information about the shared job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2331,7 +2351,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a user token.</para>
+        /// <para>Obtains the sharing token of a DLC job. This token is used to view the information about the shared job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2350,7 +2370,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a user token.</para>
+        /// <para>Obtains the sharing token of a DLC job. This token is used to view the information about the shared job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2869,6 +2889,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             {
                 query["JobId"] = request.JobId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobIds))
+            {
+                query["JobIds"] = request.JobIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobType))
             {
                 query["JobType"] = request.JobType;
@@ -3012,6 +3036,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
             {
                 query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobIds))
+            {
+                query["JobIds"] = request.JobIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobType))
             {
