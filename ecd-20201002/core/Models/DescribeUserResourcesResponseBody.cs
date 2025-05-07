@@ -661,6 +661,10 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
             [Validation(Required=false)]
             public List<DescribeUserResourcesResponseBodyResourcesSessions> Sessions { get; set; }
             public class DescribeUserResourcesResponseBodyResourcesSessions : TeaModel {
+                [NameInMap("NickName")]
+                [Validation(Required=false)]
+                public string NickName { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>2025-01-22T11:03:36Z</para>
