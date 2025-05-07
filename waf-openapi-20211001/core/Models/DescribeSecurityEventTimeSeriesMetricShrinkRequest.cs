@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeSecurityEventTimeSeriesMetricShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The filter parameters for the query. Multiple parameters are evaluated by using a logical AND.</para>
+        /// <para>The filter conditions for the query. Multiple conditions are evaluated by using a logical AND.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Filter")]

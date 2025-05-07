@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeSecurityEventTopNMetricShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The filter parameters for the query. Multiple parameters are evaluated by using a logical AND.</para>
+        /// <para>The filter conditions for the query. Multiple conditions are evaluated by using a logical AND.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Filter")]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The metric whose top N data entries you want to return. The following metrics are supported:</para>
         /// <remarks>
-        /// <para> For more information about attack requests, see the &quot;Usage notes&quot; section of this topic.</para>
+        /// <para> For more information about attack requests, see the &quot;Operation description&quot; section of this topic.</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description>real_client_ip: The system aggregates the source IP addresses of attack requests to collect statistics, sorts the statistical results in descending order, and returns top N data entries.</description></item>

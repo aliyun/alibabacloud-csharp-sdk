@@ -67,7 +67,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
         /// <summary>
         /// <para>The ID of the protection rule template to which the protection rule whose configurations you want to modify belongs.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5325</para>

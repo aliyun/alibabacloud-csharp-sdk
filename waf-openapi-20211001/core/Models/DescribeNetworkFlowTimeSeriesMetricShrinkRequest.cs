@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The Web Application Firewall (WAF) instance ID.</para>
         /// <remarks>
-        /// <para> Call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to get the WAF instance ID.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to retrieve the WAF instance ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -32,12 +32,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies the type of data returned by each metric. Valid values:</para>
+        /// <para>Specifies the data type to be returned. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>qps: Queries per second (QPS) of requests processed by WAF.</description></item>
-        /// <item><description>total_requests: Total number of requests processed by WAF.</description></item>
-        /// <item><description>top5_status: The top 5 HTTP status codes returned by WAF, along with their counts.</description></item>
-        /// <item><description>top 5_upstream_status: The top 5 HTTP status codes returned by the origin server, along with their counts.</description></item>
+        /// <item><description>qps: Returns the queries per second (QPS) processed by WAF. This value is calculated using a peak detection method: QPS is measured every 10 seconds, and the highest value within the specified time range is returned.</description></item>
+        /// <item><description>total_requests: Returns the total number of requests processed by WAF.</description></item>
+        /// <item><description>top5_status: Returns the top 5 HTTP status codes returned by the WAF to clients, along with their corresponding time series statistics.</description></item>
+        /// <item><description>top 5_upstream_status: Returns the top 5 HTTP status codes returned by the origin server to clients, along with their corresponding time series data.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Metric { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the WAF instance. Valid values:</para>
+        /// <para>The region ID of WAF instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>cn-hangzhou</b>: The Chinese mainland.</description></item>
         /// <item><description><b>ap-southeast-1</b>: Outside the Chinese mainland.</description></item>

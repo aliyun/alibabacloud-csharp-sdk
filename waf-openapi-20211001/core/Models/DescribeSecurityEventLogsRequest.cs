@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeSecurityEventLogsRequest : TeaModel {
         /// <summary>
-        /// <para>The filter parameters for the query. Multiple parameters are evaluated by using a logical AND.</para>
+        /// <para>The filter conditions for the query. Multiple conditions are evaluated by using a logical AND.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Filter")]
@@ -18,14 +18,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public DescribeSecurityEventLogsRequestFilter Filter { get; set; }
         public class DescribeSecurityEventLogsRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The filter conditions. Multiple conditions are evaluated by using a logical AND.</para>
+            /// <para>The filter conditions. Each object describes a filter condition.</para>
             /// </summary>
             [NameInMap("Conditions")]
             [Validation(Required=false)]
             public List<DescribeSecurityEventLogsRequestFilterConditions> Conditions { get; set; }
             public class DescribeSecurityEventLogsRequestFilterConditions : TeaModel {
                 /// <summary>
-                /// <para>The field name. This operation supports all fields.</para>
+                /// <para>The field name. This operation supports all fields. For more information, see the <b>Supported field names</b> section below.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>matched_host</para>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The operator.</para>
+                /// <para>The operator. For more information, see the <b>Supported operators</b> section below.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>eq</para>

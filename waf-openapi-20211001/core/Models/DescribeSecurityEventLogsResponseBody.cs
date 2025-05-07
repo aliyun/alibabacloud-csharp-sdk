@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? SecurityEventLogsTotalCount { get; set; }
 
         /// <summary>
-        /// <para>The metadata of logs returned.</para>
+        /// <para>The metadata of the time series data returned.</para>
         /// </summary>
         [NameInMap("SecurityEventMetaData")]
         [Validation(Required=false)]
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             }
 
             /// <summary>
-            /// <para>The unit of the returned data. Defaults to the value: requests.</para>
+            /// <para>The unit of the statistics returned. The value is fixed as requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>requests</para>

@@ -18,18 +18,19 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public DescribeNetworkFlowTimeSeriesMetricRequestFilter Filter { get; set; }
         public class DescribeNetworkFlowTimeSeriesMetricRequestFilter : TeaModel {
             /// <summary>
-            /// <para>An array of filter conditions. Multiple filter parameters use AND logic.</para>
+            /// <para>The list of filter conditions. Each node describes a filter condition.</para>
             /// </summary>
             [NameInMap("Conditions")]
             [Validation(Required=false)]
             public List<DescribeNetworkFlowTimeSeriesMetricRequestFilterConditions> Conditions { get; set; }
             public class DescribeNetworkFlowTimeSeriesMetricRequestFilterConditions : TeaModel {
                 /// <summary>
-                /// <para>The filter field. Valid values:</para>
+                /// <para>The filter fields. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>matched_host: The protected object.</description></item>
-                /// <item><description>cluster: The protected cluster.</description></item>
+                /// <item><description>matched_host</description></item>
+                /// <item><description>cluster</description></item>
                 /// </list>
+                /// <para>For details, see the <b>Filter fields (Key)</b> section below.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>matched_host</para>
@@ -39,7 +40,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The filter operator.</para>
+                /// <para>The filter operator. For details, see the <b>Filter operators (OpValue)</b> section below.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>eq</para>
@@ -49,7 +50,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 public string OpValue { get; set; }
 
                 /// <summary>
-                /// <para>Specifies the values to filter by.</para>
+                /// <para>The filter content.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test.waf-top</para>
@@ -69,7 +70,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public DescribeNetworkFlowTimeSeriesMetricRequestFilterDateRange DateRange { get; set; }
             public class DescribeNetworkFlowTimeSeriesMetricRequestFilterDateRange : TeaModel {
                 /// <summary>
-                /// <para>End time of the query range (UNIX timestamp, seconds).</para>
+                /// <para>End time of the query range (Unix timestamp, seconds).</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -80,7 +81,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 public long? EndDate { get; set; }
 
                 /// <summary>
-                /// <para>Start time of the query range (UNIX timestamp, seconds).</para>
+                /// <para>Start time of the query range (Unix timestamp, seconds).</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -97,7 +98,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The Web Application Firewall (WAF) instance ID.</para>
         /// <remarks>
-        /// <para> Call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to get the WAF instance ID.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to retrieve the WAF instance ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -109,12 +110,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies the type of data returned by each metric. Valid values:</para>
+        /// <para>Specifies the data type to be returned. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>qps: Queries per second (QPS) of requests processed by WAF.</description></item>
-        /// <item><description>total_requests: Total number of requests processed by WAF.</description></item>
-        /// <item><description>top5_status: The top 5 HTTP status codes returned by WAF, along with their counts.</description></item>
-        /// <item><description>top 5_upstream_status: The top 5 HTTP status codes returned by the origin server, along with their counts.</description></item>
+        /// <item><description>qps: Returns the queries per second (QPS) processed by WAF. This value is calculated using a peak detection method: QPS is measured every 10 seconds, and the highest value within the specified time range is returned.</description></item>
+        /// <item><description>total_requests: Returns the total number of requests processed by WAF.</description></item>
+        /// <item><description>top5_status: Returns the top 5 HTTP status codes returned by the WAF to clients, along with their corresponding time series statistics.</description></item>
+        /// <item><description>top 5_upstream_status: Returns the top 5 HTTP status codes returned by the origin server to clients, along with their corresponding time series data.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -126,7 +127,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Metric { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the WAF instance. Valid values:</para>
+        /// <para>The region ID of WAF instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>cn-hangzhou</b>: The Chinese mainland.</description></item>
         /// <item><description><b>ap-southeast-1</b>: Outside the Chinese mainland.</description></item>

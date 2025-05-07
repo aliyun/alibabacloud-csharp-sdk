@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>D827FCFE-90A7-4330-9326-D33C8B4C7726</para>
+        /// <para>D827FCFE-90A7-4330-9326-*****B4C7726</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <para>The additional information, such as the protection module for a protection rule whose ID is returned.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>“”</para>
+            /// <para>waf_base</para>
             /// </summary>
             [NameInMap("Attribute")]
             [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <para>The field value, which varies based on the metric.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>i-8v****a-443-ecs</para>
+            /// <para>10000</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public DescribeSecurityEventTopNMetricResponseBodyTopNMetaDataDateRange DateRange { get; set; }
             public class DescribeSecurityEventTopNMetricResponseBodyTopNMetaDataDateRange : TeaModel {
                 /// <summary>
-                /// <para>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds. This value is the same as the value of EndDate in the request parameters.</para>
+                /// <para>The end of the time range to query. The value is a Unix timestamp. Unit: seconds. This value is the same as the value of EndDate in the request parameters.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1713888600</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 public long? EndDate { get; set; }
 
                 /// <summary>
-                /// <para>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds. This value is the same as the value of StartDate in the request parameters.</para>
+                /// <para>The beginning of the time range to query. The value is a Unix timestamp. Unit: seconds. This value is the same as the value of StartDate in the request parameters.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1713888000</para>
@@ -95,10 +95,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             }
 
             /// <summary>
-            /// <para>The unit of the returned data. Defaults to the value: request.</para>
+            /// <para>The unit of the statistics returned. It is fixed as requests.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>request</para>
+            /// <para>requests</para>
             /// </summary>
             [NameInMap("Units")]
             [Validation(Required=false)]
