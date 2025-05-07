@@ -567,6 +567,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                                 [Validation(Required=false)]
                                 public string GenerateLevel { get; set; }
 
+                                [NameInMap("ReasonTextGenerate")]
+                                [Validation(Required=false)]
+                                public string ReasonTextGenerate { get; set; }
+
                                 [NameInMap("SearchResult")]
                                 [Validation(Required=false)]
                                 public List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentExcerptResultSearchResult> SearchResult { get; set; }
@@ -1391,6 +1395,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
                                 }
 
+                                [NameInMap("ReasonTextGenerate")]
+                                [Validation(Required=false)]
+                                public string ReasonTextGenerate { get; set; }
+
                                 [NameInMap("ReferenceList")]
                                 [Validation(Required=false)]
                                 public List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResultReferenceList> ReferenceList { get; set; }
@@ -1969,6 +1977,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
                                 }
 
+                                [NameInMap("ReasonTextGenerate")]
+                                [Validation(Required=false)]
+                                public string ReasonTextGenerate { get; set; }
+
                                 [NameInMap("ReferenceList")]
                                 [Validation(Required=false)]
                                 public List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultReferenceList> ReferenceList { get; set; }
@@ -2337,6 +2349,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
                         }
 
+                        [NameInMap("ModelId")]
+                        [Validation(Required=false)]
+                        public string ModelId { get; set; }
+
                         /// <summary>
                         /// <b>Example:</b>
                         /// <para>search</para>
@@ -2372,6 +2388,32 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                         [NameInMap("SupplementEnable")]
                         [Validation(Required=false)]
                         public bool? SupplementEnable { get; set; }
+
+                        [NameInMap("TokenCalculate")]
+                        [Validation(Required=false)]
+                        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextTokenCalculate TokenCalculate { get; set; }
+                        public class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextTokenCalculate : TeaModel {
+                            [NameInMap("FirstTokenTime")]
+                            [Validation(Required=false)]
+                            public float? FirstTokenTime { get; set; }
+
+                            [NameInMap("OutputAvgTime")]
+                            [Validation(Required=false)]
+                            public float? OutputAvgTime { get; set; }
+
+                            [NameInMap("SearchTime")]
+                            [Validation(Required=false)]
+                            public float? SearchTime { get; set; }
+
+                            [NameInMap("Time")]
+                            [Validation(Required=false)]
+                            public float? Time { get; set; }
+
+                            [NameInMap("TotalTokens")]
+                            [Validation(Required=false)]
+                            public long? TotalTokens { get; set; }
+
+                        }
 
                     }
 

@@ -21,6 +21,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public GetDataSourceOrderConfigResponseBodyData Data { get; set; }
         public class GetDataSourceOrderConfigResponseBodyData : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("TotalDocSize")]
+            [Validation(Required=false)]
+            public int? TotalDocSize { get; set; }
+
             [NameInMap("UserConfigDataSourceList")]
             [Validation(Required=false)]
             public List<GetDataSourceOrderConfigResponseBodyDataUserConfigDataSourceList> UserConfigDataSourceList { get; set; }
@@ -32,6 +40,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 [NameInMap("Code")]
                 [Validation(Required=false)]
                 public string Code { get; set; }
+
+                [NameInMap("Enable")]
+                [Validation(Required=false)]
+                public bool? Enable { get; set; }
 
                 [NameInMap("Name")]
                 [Validation(Required=false)]

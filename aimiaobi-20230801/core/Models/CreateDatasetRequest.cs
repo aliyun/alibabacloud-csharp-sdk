@@ -297,6 +297,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>portal</para>
+        /// </summary>
+        [NameInMap("InvokeType")]
+        [Validation(Required=false)]
+        public string InvokeType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
         [NameInMap("SearchDatasetEnable")]

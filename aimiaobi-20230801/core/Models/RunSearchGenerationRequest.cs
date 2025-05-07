@@ -263,6 +263,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>qwen-max-latest</para>
+        /// </summary>
+        [NameInMap("ModelId")]
+        [Validation(Required=false)]
+        public string ModelId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>xxx</para>
         /// </summary>
         [NameInMap("OriginalSessionId")]
