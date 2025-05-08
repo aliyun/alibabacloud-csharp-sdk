@@ -1,3 +1,6 @@
+2025-05-08 Version: 1.23.5
+- Generated csharp 2023-08-01 for AiMiaoBi.
+
 2025-05-08 Version: 1.23.4
 - Update API GetDataSourceOrderConfig: add request parameters GenerateTechnology.
 - Update API SaveDataSourceOrderConfig: add request parameters GenerateTechnology.
