@@ -59,6 +59,12 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string BuildInfo { get; set; }
 
+        /// <summary>
+        /// <para>The parameters for building the service</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{ &quot;ServiceTemplateId&quot;: &quot;st-xxxxx&quot;}</para>
+        /// </summary>
         [NameInMap("BuildParameters")]
         [Validation(Required=false)]
         public string BuildParameters { get; set; }
@@ -214,7 +220,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                     /// <para>The package name.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>按量付费套餐</para>
+                    /// <para>Pay-as-you-go package</para>
                     /// </summary>
                     [NameInMap("SpecificationName")]
                     [Validation(Required=false)]
@@ -1135,14 +1141,29 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string SupplierUrl { get; set; }
 
+        /// <summary>
+        /// <para>Contact information of the service provider.</para>
+        /// </summary>
         [NameInMap("SupportContacts")]
         [Validation(Required=false)]
         public List<GetServiceResponseBodySupportContacts> SupportContacts { get; set; }
         public class GetServiceResponseBodySupportContacts : TeaModel {
+            /// <summary>
+            /// <para>The type of Contact information.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Email</para>
+            /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
+            /// <summary>
+            /// <para>The value of Contact information.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="mailto:supplier@test.com">supplier@test.com</a></para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
