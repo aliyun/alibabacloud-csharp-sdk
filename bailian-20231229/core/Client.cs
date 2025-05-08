@@ -236,6 +236,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             {
                 body["LeaseId"] = request.LeaseId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginalFileUrl))
+            {
+                body["OriginalFileUrl"] = request.OriginalFileUrl;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parser))
             {
                 body["Parser"] = request.Parser;
@@ -316,6 +320,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LeaseId))
             {
                 body["LeaseId"] = request.LeaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginalFileUrl))
+            {
+                body["OriginalFileUrl"] = request.OriginalFileUrl;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parser))
             {

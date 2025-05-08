@@ -35,6 +35,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         [Validation(Required=false)]
         public string LeaseId { get; set; }
 
+        [NameInMap("OriginalFileUrl")]
+        [Validation(Required=false)]
+        public string OriginalFileUrl { get; set; }
+
         /// <summary>
         /// <para>The parser. Valid value:</para>
         /// <list type="bullet">
