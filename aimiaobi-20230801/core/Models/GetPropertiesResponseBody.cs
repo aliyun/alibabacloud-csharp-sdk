@@ -51,6 +51,36 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public GetPropertiesResponseBodyDataIntelligentSearchConfig IntelligentSearchConfig { get; set; }
             public class GetPropertiesResponseBodyDataIntelligentSearchConfig : TeaModel {
+                [NameInMap("CopilotPreciseSearchSources")]
+                [Validation(Required=false)]
+                public List<GetPropertiesResponseBodyDataIntelligentSearchConfigCopilotPreciseSearchSources> CopilotPreciseSearchSources { get; set; }
+                public class GetPropertiesResponseBodyDataIntelligentSearchConfigCopilotPreciseSearchSources : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>x</para>
+                    /// </summary>
+                    [NameInMap("Code")]
+                    [Validation(Required=false)]
+                    public string Code { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>x</para>
+                    /// </summary>
+                    [NameInMap("DatasetName")]
+                    [Validation(Required=false)]
+                    public string DatasetName { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>x</para>
+                    /// </summary>
+                    [NameInMap("Name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
+
+                }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>xxx</para>
