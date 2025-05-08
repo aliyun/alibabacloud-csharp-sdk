@@ -19522,6 +19522,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             {
                 query["OwnerId"] = request.OwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParallelTask))
+            {
+                query["ParallelTask"] = request.ParallelTask;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
                 query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
@@ -19626,6 +19630,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParallelTask))
+            {
+                query["ParallelTask"] = request.ParallelTask;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {

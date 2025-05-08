@@ -89,6 +89,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        [NameInMap("ParallelTask")]
+        [Validation(Required=false)]
+        public bool? ParallelTask { get; set; }
+
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
