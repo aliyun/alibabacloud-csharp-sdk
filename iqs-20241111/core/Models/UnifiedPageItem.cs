@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         [Validation(Required=false)]
         public string MarkdownText { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2025-04-07T10:15:30.123+08:00</para>
+        /// </summary>
         [NameInMap("publishedTime")]
         [Validation(Required=false)]
         public string PublishedTime { get; set; }
@@ -41,10 +45,6 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         [Validation(Required=false)]
         public double? RerankScore { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>2025-04-07T10:15:30.123+08:00</para>
-        /// </summary>
         [NameInMap("snippet")]
         [Validation(Required=false)]
         public string Snippet { get; set; }

@@ -9,29 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.IQS20241111.Models
 {
     public class UnifiedSearchResponse : TeaModel {
-        [NameInMap("costCredits")]
+        [NameInMap("headers")]
         [Validation(Required=false)]
-        public UnifiedCostCredits CostCredits { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("pageItems")]
+        [NameInMap("statusCode")]
         [Validation(Required=false)]
-        public List<UnifiedPageItem> PageItems { get; set; }
+        public int? StatusCode { get; set; }
 
-        [NameInMap("queryContext")]
+        [NameInMap("body")]
         [Validation(Required=false)]
-        public UnifiedQueryContext QueryContext { get; set; }
-
-        [NameInMap("requestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
-        [NameInMap("sceneItems")]
-        [Validation(Required=false)]
-        public List<UnifiedSceneItem> SceneItems { get; set; }
-
-        [NameInMap("searchInformation")]
-        [Validation(Required=false)]
-        public UnifiedSearchInformation SearchInformation { get; set; }
+        public UnifiedSearchOutput Body { get; set; }
 
     }
 

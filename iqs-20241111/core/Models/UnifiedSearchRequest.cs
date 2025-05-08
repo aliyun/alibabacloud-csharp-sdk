@@ -9,25 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.IQS20241111.Models
 {
     public class UnifiedSearchRequest : TeaModel {
-        [NameInMap("category")]
+        [NameInMap("body")]
         [Validation(Required=false)]
-        public string Category { get; set; }
-
-        [NameInMap("contents")]
-        [Validation(Required=false)]
-        public RequestContents Contents { get; set; }
-
-        [NameInMap("engineType")]
-        [Validation(Required=false)]
-        public string EngineType { get; set; }
-
-        [NameInMap("query")]
-        [Validation(Required=false)]
-        public string Query { get; set; }
-
-        [NameInMap("timeRange")]
-        [Validation(Required=false)]
-        public string TimeRange { get; set; }
+        public UnifiedSearchInput Body { get; set; }
 
     }
 
