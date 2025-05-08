@@ -88,6 +88,10 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         [Validation(Required=false)]
         public string NextStage { get; set; }
 
+        [NameInMap("NickName")]
+        [Validation(Required=false)]
+        public string NickName { get; set; }
+
         /// <summary>
         /// <remarks>
         /// <para>This is a parameter only for internal use.</para>
