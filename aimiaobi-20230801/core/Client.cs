@@ -4413,6 +4413,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
                 query["AgentKey"] = request.AgentKey;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GenerateTechnology))
+            {
+                body["GenerateTechnology"] = request.GenerateTechnology;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 body["ProductCode"] = request.ProductCode;
@@ -4461,6 +4465,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
                 query["AgentKey"] = request.AgentKey;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GenerateTechnology))
+            {
+                body["GenerateTechnology"] = request.GenerateTechnology;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 body["ProductCode"] = request.ProductCode;
@@ -17399,6 +17407,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
                 query["AgentKey"] = request.AgentKey;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GenerateTechnology))
+            {
+                body["GenerateTechnology"] = request.GenerateTechnology;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 body["ProductCode"] = request.ProductCode;
@@ -17457,6 +17469,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
                 query["AgentKey"] = request.AgentKey;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GenerateTechnology))
+            {
+                body["GenerateTechnology"] = request.GenerateTechnology;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 body["ProductCode"] = request.ProductCode;

@@ -20,6 +20,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string AgentKey { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>copilotReference</para>
+        /// </summary>
+        [NameInMap("GenerateTechnology")]
+        [Validation(Required=false)]
+        public string GenerateTechnology { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -45,6 +53,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [NameInMap("Code")]
             [Validation(Required=false)]
             public string Code { get; set; }
+
+            [NameInMap("Enable")]
+            [Validation(Required=false)]
+            public bool? Enable { get; set; }
 
             [NameInMap("Name")]
             [Validation(Required=false)]

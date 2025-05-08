@@ -20,6 +20,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string AgentKey { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>copilotPrecise</para>
+        /// </summary>
+        [NameInMap("GenerateTechnology")]
+        [Validation(Required=false)]
+        public string GenerateTechnology { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
