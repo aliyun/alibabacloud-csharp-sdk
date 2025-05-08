@@ -21,6 +21,92 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public List<ListSearchTaskDialoguesResponseBodyData> Data { get; set; }
         public class ListSearchTaskDialoguesResponseBodyData : TeaModel {
+            [NameInMap("ChatConfig")]
+            [Validation(Required=false)]
+            public ListSearchTaskDialoguesResponseBodyDataChatConfig ChatConfig { get; set; }
+            public class ListSearchTaskDialoguesResponseBodyDataChatConfig : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>24</para>
+                /// </summary>
+                [NameInMap("DialogueType")]
+                [Validation(Required=false)]
+                public int? DialogueType { get; set; }
+
+                [NameInMap("EndToEnd")]
+                [Validation(Required=false)]
+                public bool? EndToEnd { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>concise</para>
+                /// </summary>
+                [NameInMap("GenerateLevel")]
+                [Validation(Required=false)]
+                public string GenerateLevel { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>copilotReference</para>
+                /// </summary>
+                [NameInMap("GenerateTechnology")]
+                [Validation(Required=false)]
+                public string GenerateTechnology { get; set; }
+
+                [NameInMap("SearchModels")]
+                [Validation(Required=false)]
+                public List<string> SearchModels { get; set; }
+
+                [NameInMap("SearchParam")]
+                [Validation(Required=false)]
+                public ListSearchTaskDialoguesResponseBodyDataChatConfigSearchParam SearchParam { get; set; }
+                public class ListSearchTaskDialoguesResponseBodyDataChatConfigSearchParam : TeaModel {
+                    [NameInMap("EndTime")]
+                    [Validation(Required=false)]
+                    public string EndTime { get; set; }
+
+                    [NameInMap("MultimodalSearchTypes")]
+                    [Validation(Required=false)]
+                    public List<string> MultimodalSearchTypes { get; set; }
+
+                    [NameInMap("SearchSources")]
+                    [Validation(Required=false)]
+                    public List<ListSearchTaskDialoguesResponseBodyDataChatConfigSearchParamSearchSources> SearchSources { get; set; }
+                    public class ListSearchTaskDialoguesResponseBodyDataChatConfigSearchParamSearchSources : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>x&quot;x</para>
+                        /// </summary>
+                        [NameInMap("Code")]
+                        [Validation(Required=false)]
+                        public string Code { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>xx</para>
+                        /// </summary>
+                        [NameInMap("DatasetName")]
+                        [Validation(Required=false)]
+                        public string DatasetName { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>x</para>
+                        /// </summary>
+                        [NameInMap("Name")]
+                        [Validation(Required=false)]
+                        public string Name { get; set; }
+
+                    }
+
+                    [NameInMap("StartTime")]
+                    [Validation(Required=false)]
+                    public string StartTime { get; set; }
+
+                }
+
+            }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>2024-11-25 13:33:01</para>
