@@ -96,6 +96,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string Namespace { get; set; }
 
+            [NameInMap("SaeAppId")]
+            [Validation(Required=false)]
+            public string SaeAppId { get; set; }
+
             /// <summary>
             /// <para>The port of the service.</para>
             /// 
