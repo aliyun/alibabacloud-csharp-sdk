@@ -59,6 +59,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string EnsRegionId { get; set; }
 
+        [NameInMap("InstanceBillingCycle")]
+        [Validation(Required=false)]
+        public string InstanceBillingCycle { get; set; }
+
         /// <summary>
         /// <para>The billing method of the instance. Set the value to <b>PostPaid</b>.</para>
         /// <para>This parameter is required.</para>

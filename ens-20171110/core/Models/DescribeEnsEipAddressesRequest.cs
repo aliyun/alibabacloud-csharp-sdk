@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnsRegionId { get; set; }
 
         /// <summary>
-        /// <para>ENS节点ID数组。数组长度：1~100。</para>
+        /// <para>The IDs of edge nodes. You can specify 1 to 100 IDs.</para>
         /// </summary>
         [NameInMap("EnsRegionIds")]
         [Validation(Required=false)]

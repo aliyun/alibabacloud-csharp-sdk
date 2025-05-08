@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The destination CIDR block of the custom route entry. Make sure that the destination CIDR block meets the following requirements:</para>
+        /// <para>The destination CIDR block of the custom route entry. Make sure that the following requirements are met:</para>
         /// <list type="bullet">
-        /// <item><description>The destination CIDR block is not 100.64.0.0/10 or a subset of 100.64.0.0/10.</description></item>
-        /// <item><description>The destination CIDR block of the custom route entry is different from the destination CIDR blocks of other route entries in the same route table.</description></item>
+        /// <item><description>The destination CIDR block cannot point or belong to 100.64.0.0/10.</description></item>
+        /// <item><description>The destination CIDR blocks of the custom route entries in the same route table cannot overlap.</description></item>
         /// <item><description>0.0.0.0/0 indicates the default CIDR block.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>

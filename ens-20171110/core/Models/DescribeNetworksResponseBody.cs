@@ -156,6 +156,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     public List<DescribeNetworksResponseBodyNetworksNetworkTagsTag> Tag { get; set; }
                     public class DescribeNetworksResponseBodyNetworksNetworkTagsTag : TeaModel {
                         /// <summary>
+                        /// <para>标签键。</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>TestKey</para>
                         /// </summary>
@@ -188,6 +190,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                         public string TagValue { get; set; }
 
                         /// <summary>
+                        /// <para>标签值。</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>TestValue</para>
                         /// </summary>

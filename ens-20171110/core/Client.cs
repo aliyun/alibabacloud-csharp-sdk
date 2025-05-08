@@ -2596,6 +2596,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["ServerType"] = request.ServerType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -2701,6 +2705,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerType))
             {
                 query["ServerType"] = request.ServerType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3224,6 +3232,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["EnsRegionId"] = request.EnsRegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceBillingCycle))
+            {
+                query["InstanceBillingCycle"] = request.InstanceBillingCycle;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceChargeType))
             {
                 query["InstanceChargeType"] = request.InstanceChargeType;
@@ -3297,6 +3309,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnsRegionId))
             {
                 query["EnsRegionId"] = request.EnsRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceBillingCycle))
+            {
+                query["InstanceBillingCycle"] = request.InstanceBillingCycle;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceChargeType))
             {
@@ -8108,6 +8124,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["EnsRegionId"] = request.EnsRegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceBillingCycle))
+            {
+                query["InstanceBillingCycle"] = request.InstanceBillingCycle;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnapshotName))
             {
                 query["SnapshotName"] = request.SnapshotName;
@@ -8161,6 +8181,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnsRegionId))
             {
                 query["EnsRegionId"] = request.EnsRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceBillingCycle))
+            {
+                query["InstanceBillingCycle"] = request.InstanceBillingCycle;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnapshotName))
             {
@@ -38566,6 +38590,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["IpType"] = request.IpType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6AddressCount))
+            {
+                query["Ipv6AddressCount"] = request.Ipv6AddressCount;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyPairName))
             {
                 query["KeyPairName"] = request.KeyPairName;
@@ -38761,6 +38789,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpType))
             {
                 query["IpType"] = request.IpType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6AddressCount))
+            {
+                query["Ipv6AddressCount"] = request.Ipv6AddressCount;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyPairName))
             {

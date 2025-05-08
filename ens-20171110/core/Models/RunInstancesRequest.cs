@@ -285,6 +285,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string IpType { get; set; }
 
+        [NameInMap("Ipv6AddressCount")]
+        [Validation(Required=false)]
+        public long? Ipv6AddressCount { get; set; }
+
         /// <summary>
         /// <para>The name of the key pair.</para>
         /// <remarks>

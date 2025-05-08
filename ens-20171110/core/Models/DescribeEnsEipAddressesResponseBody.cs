@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeEnsEipAddressesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the EIP.</para>
+        /// <para>Details of the EIPs.</para>
         /// </summary>
         [NameInMap("EipAddresses")]
         [Validation(Required=false)]
@@ -208,6 +208,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     public List<DescribeEnsEipAddressesResponseBodyEipAddressesEipAddressTagsTag> Tag { get; set; }
                     public class DescribeEnsEipAddressesResponseBodyEipAddressesEipAddressTagsTag : TeaModel {
                         /// <summary>
+                        /// <para>标签键</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>TestKey</para>
                         /// </summary>
@@ -240,6 +242,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                         public string TagValue { get; set; }
 
                         /// <summary>
+                        /// <para>标签值。</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>TestValue</para>
                         /// </summary>
