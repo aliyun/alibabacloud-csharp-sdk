@@ -95,13 +95,21 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-         * @summary 大文本异步翻译，支持5000-50000字翻译
-         *
-         * @param request CreateAsyncTranslateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateAsyncTranslateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>大文本异步翻译，支持5000-50000字翻译</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAsyncTranslateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAsyncTranslateResponse
+        /// </returns>
         public CreateAsyncTranslateResponse CreateAsyncTranslateWithOptions(CreateAsyncTranslateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -149,13 +157,21 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<CreateAsyncTranslateResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 大文本异步翻译，支持5000-50000字翻译
-         *
-         * @param request CreateAsyncTranslateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateAsyncTranslateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>大文本异步翻译，支持5000-50000字翻译</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAsyncTranslateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAsyncTranslateResponse
+        /// </returns>
         public async Task<CreateAsyncTranslateResponse> CreateAsyncTranslateWithOptionsAsync(CreateAsyncTranslateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -203,35 +219,52 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<CreateAsyncTranslateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 大文本异步翻译，支持5000-50000字翻译
-         *
-         * @param request CreateAsyncTranslateRequest
-         * @return CreateAsyncTranslateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>大文本异步翻译，支持5000-50000字翻译</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAsyncTranslateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAsyncTranslateResponse
+        /// </returns>
         public CreateAsyncTranslateResponse CreateAsyncTranslate(CreateAsyncTranslateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateAsyncTranslateWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 大文本异步翻译，支持5000-50000字翻译
-         *
-         * @param request CreateAsyncTranslateRequest
-         * @return CreateAsyncTranslateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>大文本异步翻译，支持5000-50000字翻译</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAsyncTranslateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAsyncTranslateResponse
+        /// </returns>
         public async Task<CreateAsyncTranslateResponse> CreateAsyncTranslateAsync(CreateAsyncTranslateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateAsyncTranslateWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request CreateDocTranslateTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDocTranslateTaskResponse
-         */
+        /// <param name="request">
+        /// CreateDocTranslateTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDocTranslateTaskResponse
+        /// </returns>
         public CreateDocTranslateTaskResponse CreateDocTranslateTaskWithOptions(CreateDocTranslateTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -279,11 +312,16 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<CreateDocTranslateTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request CreateDocTranslateTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateDocTranslateTaskResponse
-         */
+        /// <param name="request">
+        /// CreateDocTranslateTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDocTranslateTaskResponse
+        /// </returns>
         public async Task<CreateDocTranslateTaskResponse> CreateDocTranslateTaskWithOptionsAsync(CreateDocTranslateTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -331,20 +369,26 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<CreateDocTranslateTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request CreateDocTranslateTaskRequest
-         * @return CreateDocTranslateTaskResponse
-         */
+        /// <param name="request">
+        /// CreateDocTranslateTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDocTranslateTaskResponse
+        /// </returns>
         public CreateDocTranslateTaskResponse CreateDocTranslateTask(CreateDocTranslateTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateDocTranslateTaskWithOptions(request, runtime);
         }
 
-        /**
-         * @param request CreateDocTranslateTaskRequest
-         * @return CreateDocTranslateTaskResponse
-         */
+        /// <param name="request">
+        /// CreateDocTranslateTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDocTranslateTaskResponse
+        /// </returns>
         public async Task<CreateDocTranslateTaskResponse> CreateDocTranslateTaskAsync(CreateDocTranslateTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -515,11 +559,16 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return createDocTranslateTaskResp;
         }
 
-        /**
-         * @param request CreateImageTranslateTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateImageTranslateTaskResponse
-         */
+        /// <param name="request">
+        /// CreateImageTranslateTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateImageTranslateTaskResponse
+        /// </returns>
         public CreateImageTranslateTaskResponse CreateImageTranslateTaskWithOptions(CreateImageTranslateTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -563,11 +612,16 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<CreateImageTranslateTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request CreateImageTranslateTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateImageTranslateTaskResponse
-         */
+        /// <param name="request">
+        /// CreateImageTranslateTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateImageTranslateTaskResponse
+        /// </returns>
         public async Task<CreateImageTranslateTaskResponse> CreateImageTranslateTaskWithOptionsAsync(CreateImageTranslateTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -611,33 +665,47 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<CreateImageTranslateTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request CreateImageTranslateTaskRequest
-         * @return CreateImageTranslateTaskResponse
-         */
+        /// <param name="request">
+        /// CreateImageTranslateTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateImageTranslateTaskResponse
+        /// </returns>
         public CreateImageTranslateTaskResponse CreateImageTranslateTask(CreateImageTranslateTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateImageTranslateTaskWithOptions(request, runtime);
         }
 
-        /**
-         * @param request CreateImageTranslateTaskRequest
-         * @return CreateImageTranslateTaskResponse
-         */
+        /// <param name="request">
+        /// CreateImageTranslateTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateImageTranslateTaskResponse
+        /// </returns>
         public async Task<CreateImageTranslateTaskResponse> CreateImageTranslateTaskAsync(CreateImageTranslateTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateImageTranslateTaskWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 大文本异步翻译，支持5000-50000字翻译
-         *
-         * @param request GetAsyncTranslateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetAsyncTranslateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>大文本异步翻译，支持5000-50000字翻译</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAsyncTranslateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAsyncTranslateResponse
+        /// </returns>
         public GetAsyncTranslateResponse GetAsyncTranslateWithOptions(GetAsyncTranslateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -665,13 +733,21 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<GetAsyncTranslateResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 大文本异步翻译，支持5000-50000字翻译
-         *
-         * @param request GetAsyncTranslateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetAsyncTranslateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>大文本异步翻译，支持5000-50000字翻译</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAsyncTranslateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAsyncTranslateResponse
+        /// </returns>
         public async Task<GetAsyncTranslateResponse> GetAsyncTranslateWithOptionsAsync(GetAsyncTranslateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -699,35 +775,52 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<GetAsyncTranslateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 大文本异步翻译，支持5000-50000字翻译
-         *
-         * @param request GetAsyncTranslateRequest
-         * @return GetAsyncTranslateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>大文本异步翻译，支持5000-50000字翻译</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAsyncTranslateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAsyncTranslateResponse
+        /// </returns>
         public GetAsyncTranslateResponse GetAsyncTranslate(GetAsyncTranslateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetAsyncTranslateWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 大文本异步翻译，支持5000-50000字翻译
-         *
-         * @param request GetAsyncTranslateRequest
-         * @return GetAsyncTranslateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>大文本异步翻译，支持5000-50000字翻译</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAsyncTranslateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAsyncTranslateResponse
+        /// </returns>
         public async Task<GetAsyncTranslateResponse> GetAsyncTranslateAsync(GetAsyncTranslateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetAsyncTranslateWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request GetBatchTranslateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetBatchTranslateResponse
-         */
+        /// <param name="request">
+        /// GetBatchTranslateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBatchTranslateResponse
+        /// </returns>
         public GetBatchTranslateResponse GetBatchTranslateWithOptions(GetBatchTranslateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -775,11 +868,16 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<GetBatchTranslateResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request GetBatchTranslateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetBatchTranslateResponse
-         */
+        /// <param name="request">
+        /// GetBatchTranslateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBatchTranslateResponse
+        /// </returns>
         public async Task<GetBatchTranslateResponse> GetBatchTranslateWithOptionsAsync(GetBatchTranslateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -827,33 +925,47 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<GetBatchTranslateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request GetBatchTranslateRequest
-         * @return GetBatchTranslateResponse
-         */
+        /// <param name="request">
+        /// GetBatchTranslateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBatchTranslateResponse
+        /// </returns>
         public GetBatchTranslateResponse GetBatchTranslate(GetBatchTranslateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetBatchTranslateWithOptions(request, runtime);
         }
 
-        /**
-         * @param request GetBatchTranslateRequest
-         * @return GetBatchTranslateResponse
-         */
+        /// <param name="request">
+        /// GetBatchTranslateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBatchTranslateResponse
+        /// </returns>
         public async Task<GetBatchTranslateResponse> GetBatchTranslateAsync(GetBatchTranslateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetBatchTranslateWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary GetBatchTranslateByVPC
-         *
-         * @param request GetBatchTranslateByVPCRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetBatchTranslateByVPCResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetBatchTranslateByVPC</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetBatchTranslateByVPCRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBatchTranslateByVPCResponse
+        /// </returns>
         public GetBatchTranslateByVPCResponse GetBatchTranslateByVPCWithOptions(GetBatchTranslateByVPCRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -901,13 +1013,21 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<GetBatchTranslateByVPCResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary GetBatchTranslateByVPC
-         *
-         * @param request GetBatchTranslateByVPCRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetBatchTranslateByVPCResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetBatchTranslateByVPC</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetBatchTranslateByVPCRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBatchTranslateByVPCResponse
+        /// </returns>
         public async Task<GetBatchTranslateByVPCResponse> GetBatchTranslateByVPCWithOptionsAsync(GetBatchTranslateByVPCRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -955,37 +1075,57 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<GetBatchTranslateByVPCResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary GetBatchTranslateByVPC
-         *
-         * @param request GetBatchTranslateByVPCRequest
-         * @return GetBatchTranslateByVPCResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetBatchTranslateByVPC</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetBatchTranslateByVPCRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBatchTranslateByVPCResponse
+        /// </returns>
         public GetBatchTranslateByVPCResponse GetBatchTranslateByVPC(GetBatchTranslateByVPCRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetBatchTranslateByVPCWithOptions(request, runtime);
         }
 
-        /**
-         * @summary GetBatchTranslateByVPC
-         *
-         * @param request GetBatchTranslateByVPCRequest
-         * @return GetBatchTranslateByVPCResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetBatchTranslateByVPC</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetBatchTranslateByVPCRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBatchTranslateByVPCResponse
+        /// </returns>
         public async Task<GetBatchTranslateByVPCResponse> GetBatchTranslateByVPCAsync(GetBatchTranslateByVPCRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetBatchTranslateByVPCWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 语种识别
-         *
-         * @param request GetDetectLanguageRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDetectLanguageResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>语种识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDetectLanguageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDetectLanguageResponse
+        /// </returns>
         public GetDetectLanguageResponse GetDetectLanguageWithOptions(GetDetectLanguageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1013,13 +1153,21 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<GetDetectLanguageResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 语种识别
-         *
-         * @param request GetDetectLanguageRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDetectLanguageResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>语种识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDetectLanguageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDetectLanguageResponse
+        /// </returns>
         public async Task<GetDetectLanguageResponse> GetDetectLanguageWithOptionsAsync(GetDetectLanguageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1047,35 +1195,177 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<GetDetectLanguageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 语种识别
-         *
-         * @param request GetDetectLanguageRequest
-         * @return GetDetectLanguageResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>语种识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDetectLanguageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDetectLanguageResponse
+        /// </returns>
         public GetDetectLanguageResponse GetDetectLanguage(GetDetectLanguageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetDetectLanguageWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 语种识别
-         *
-         * @param request GetDetectLanguageRequest
-         * @return GetDetectLanguageResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>语种识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDetectLanguageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDetectLanguageResponse
+        /// </returns>
         public async Task<GetDetectLanguageResponse> GetDetectLanguageAsync(GetDetectLanguageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetDetectLanguageWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request GetDocTranslateTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDocTranslateTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>语种识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDetectLanguageVpcRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDetectLanguageVpcResponse
+        /// </returns>
+        public GetDetectLanguageVpcResponse GetDetectLanguageVpcWithOptions(GetDetectLanguageVpcRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceText))
+            {
+                body["SourceText"] = request.SourceText;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDetectLanguageVpc",
+                Version = "2018-10-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDetectLanguageVpcResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>语种识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDetectLanguageVpcRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDetectLanguageVpcResponse
+        /// </returns>
+        public async Task<GetDetectLanguageVpcResponse> GetDetectLanguageVpcWithOptionsAsync(GetDetectLanguageVpcRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceText))
+            {
+                body["SourceText"] = request.SourceText;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDetectLanguageVpc",
+                Version = "2018-10-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDetectLanguageVpcResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>语种识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDetectLanguageVpcRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDetectLanguageVpcResponse
+        /// </returns>
+        public GetDetectLanguageVpcResponse GetDetectLanguageVpc(GetDetectLanguageVpcRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetDetectLanguageVpcWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>语种识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDetectLanguageVpcRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDetectLanguageVpcResponse
+        /// </returns>
+        public async Task<GetDetectLanguageVpcResponse> GetDetectLanguageVpcAsync(GetDetectLanguageVpcRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetDetectLanguageVpcWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取文档翻译任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDocTranslateTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDocTranslateTaskResponse
+        /// </returns>
         public GetDocTranslateTaskResponse GetDocTranslateTaskWithOptions(GetDocTranslateTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1099,11 +1389,21 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<GetDocTranslateTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request GetDocTranslateTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetDocTranslateTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取文档翻译任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDocTranslateTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDocTranslateTaskResponse
+        /// </returns>
         public async Task<GetDocTranslateTaskResponse> GetDocTranslateTaskWithOptionsAsync(GetDocTranslateTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1127,31 +1427,52 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<GetDocTranslateTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request GetDocTranslateTaskRequest
-         * @return GetDocTranslateTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取文档翻译任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDocTranslateTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDocTranslateTaskResponse
+        /// </returns>
         public GetDocTranslateTaskResponse GetDocTranslateTask(GetDocTranslateTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetDocTranslateTaskWithOptions(request, runtime);
         }
 
-        /**
-         * @param request GetDocTranslateTaskRequest
-         * @return GetDocTranslateTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取文档翻译任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDocTranslateTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDocTranslateTaskResponse
+        /// </returns>
         public async Task<GetDocTranslateTaskResponse> GetDocTranslateTaskAsync(GetDocTranslateTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetDocTranslateTaskWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request GetImageDiagnoseRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetImageDiagnoseResponse
-         */
+        /// <param name="request">
+        /// GetImageDiagnoseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetImageDiagnoseResponse
+        /// </returns>
         public GetImageDiagnoseResponse GetImageDiagnoseWithOptions(GetImageDiagnoseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1183,11 +1504,16 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<GetImageDiagnoseResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request GetImageDiagnoseRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetImageDiagnoseResponse
-         */
+        /// <param name="request">
+        /// GetImageDiagnoseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetImageDiagnoseResponse
+        /// </returns>
         public async Task<GetImageDiagnoseResponse> GetImageDiagnoseWithOptionsAsync(GetImageDiagnoseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1219,31 +1545,42 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<GetImageDiagnoseResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request GetImageDiagnoseRequest
-         * @return GetImageDiagnoseResponse
-         */
+        /// <param name="request">
+        /// GetImageDiagnoseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetImageDiagnoseResponse
+        /// </returns>
         public GetImageDiagnoseResponse GetImageDiagnose(GetImageDiagnoseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetImageDiagnoseWithOptions(request, runtime);
         }
 
-        /**
-         * @param request GetImageDiagnoseRequest
-         * @return GetImageDiagnoseResponse
-         */
+        /// <param name="request">
+        /// GetImageDiagnoseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetImageDiagnoseResponse
+        /// </returns>
         public async Task<GetImageDiagnoseResponse> GetImageDiagnoseAsync(GetImageDiagnoseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetImageDiagnoseWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request GetImageTranslateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetImageTranslateResponse
-         */
+        /// <param name="request">
+        /// GetImageTranslateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetImageTranslateResponse
+        /// </returns>
         public GetImageTranslateResponse GetImageTranslateWithOptions(GetImageTranslateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1283,11 +1620,16 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<GetImageTranslateResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request GetImageTranslateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetImageTranslateResponse
-         */
+        /// <param name="request">
+        /// GetImageTranslateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetImageTranslateResponse
+        /// </returns>
         public async Task<GetImageTranslateResponse> GetImageTranslateWithOptionsAsync(GetImageTranslateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1327,31 +1669,42 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<GetImageTranslateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request GetImageTranslateRequest
-         * @return GetImageTranslateResponse
-         */
+        /// <param name="request">
+        /// GetImageTranslateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetImageTranslateResponse
+        /// </returns>
         public GetImageTranslateResponse GetImageTranslate(GetImageTranslateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetImageTranslateWithOptions(request, runtime);
         }
 
-        /**
-         * @param request GetImageTranslateRequest
-         * @return GetImageTranslateResponse
-         */
+        /// <param name="request">
+        /// GetImageTranslateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetImageTranslateResponse
+        /// </returns>
         public async Task<GetImageTranslateResponse> GetImageTranslateAsync(GetImageTranslateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetImageTranslateWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request GetImageTranslateTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetImageTranslateTaskResponse
-         */
+        /// <param name="request">
+        /// GetImageTranslateTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetImageTranslateTaskResponse
+        /// </returns>
         public GetImageTranslateTaskResponse GetImageTranslateTaskWithOptions(GetImageTranslateTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1379,11 +1732,16 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<GetImageTranslateTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request GetImageTranslateTaskRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetImageTranslateTaskResponse
-         */
+        /// <param name="request">
+        /// GetImageTranslateTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetImageTranslateTaskResponse
+        /// </returns>
         public async Task<GetImageTranslateTaskResponse> GetImageTranslateTaskWithOptionsAsync(GetImageTranslateTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1411,31 +1769,47 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<GetImageTranslateTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request GetImageTranslateTaskRequest
-         * @return GetImageTranslateTaskResponse
-         */
+        /// <param name="request">
+        /// GetImageTranslateTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetImageTranslateTaskResponse
+        /// </returns>
         public GetImageTranslateTaskResponse GetImageTranslateTask(GetImageTranslateTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetImageTranslateTaskWithOptions(request, runtime);
         }
 
-        /**
-         * @param request GetImageTranslateTaskRequest
-         * @return GetImageTranslateTaskResponse
-         */
+        /// <param name="request">
+        /// GetImageTranslateTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetImageTranslateTaskResponse
+        /// </returns>
         public async Task<GetImageTranslateTaskResponse> GetImageTranslateTaskAsync(GetImageTranslateTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetImageTranslateTaskWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request GetTitleDiagnoseRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTitleDiagnoseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetTitleDiagnose</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTitleDiagnoseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTitleDiagnoseResponse
+        /// </returns>
         public GetTitleDiagnoseResponse GetTitleDiagnoseWithOptions(GetTitleDiagnoseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1479,11 +1853,21 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<GetTitleDiagnoseResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request GetTitleDiagnoseRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTitleDiagnoseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetTitleDiagnose</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTitleDiagnoseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTitleDiagnoseResponse
+        /// </returns>
         public async Task<GetTitleDiagnoseResponse> GetTitleDiagnoseWithOptionsAsync(GetTitleDiagnoseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1527,31 +1911,57 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<GetTitleDiagnoseResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request GetTitleDiagnoseRequest
-         * @return GetTitleDiagnoseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetTitleDiagnose</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTitleDiagnoseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTitleDiagnoseResponse
+        /// </returns>
         public GetTitleDiagnoseResponse GetTitleDiagnose(GetTitleDiagnoseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetTitleDiagnoseWithOptions(request, runtime);
         }
 
-        /**
-         * @param request GetTitleDiagnoseRequest
-         * @return GetTitleDiagnoseResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetTitleDiagnose</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTitleDiagnoseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTitleDiagnoseResponse
+        /// </returns>
         public async Task<GetTitleDiagnoseResponse> GetTitleDiagnoseAsync(GetTitleDiagnoseRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetTitleDiagnoseWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request GetTitleGenerateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTitleGenerateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetTitleGenerate</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTitleGenerateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTitleGenerateResponse
+        /// </returns>
         public GetTitleGenerateResponse GetTitleGenerateWithOptions(GetTitleGenerateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1603,11 +2013,21 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<GetTitleGenerateResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request GetTitleGenerateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTitleGenerateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetTitleGenerate</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTitleGenerateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTitleGenerateResponse
+        /// </returns>
         public async Task<GetTitleGenerateResponse> GetTitleGenerateWithOptionsAsync(GetTitleGenerateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1659,31 +2079,57 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<GetTitleGenerateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request GetTitleGenerateRequest
-         * @return GetTitleGenerateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetTitleGenerate</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTitleGenerateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTitleGenerateResponse
+        /// </returns>
         public GetTitleGenerateResponse GetTitleGenerate(GetTitleGenerateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetTitleGenerateWithOptions(request, runtime);
         }
 
-        /**
-         * @param request GetTitleGenerateRequest
-         * @return GetTitleGenerateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetTitleGenerate</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTitleGenerateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTitleGenerateResponse
+        /// </returns>
         public async Task<GetTitleGenerateResponse> GetTitleGenerateAsync(GetTitleGenerateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetTitleGenerateWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request GetTitleIntelligenceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTitleIntelligenceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetTitleIntelligence</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTitleIntelligenceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTitleIntelligenceResponse
+        /// </returns>
         public GetTitleIntelligenceResponse GetTitleIntelligenceWithOptions(GetTitleIntelligenceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1727,11 +2173,21 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<GetTitleIntelligenceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request GetTitleIntelligenceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTitleIntelligenceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetTitleIntelligence</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTitleIntelligenceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTitleIntelligenceResponse
+        /// </returns>
         public async Task<GetTitleIntelligenceResponse> GetTitleIntelligenceWithOptionsAsync(GetTitleIntelligenceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1775,33 +2231,57 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<GetTitleIntelligenceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request GetTitleIntelligenceRequest
-         * @return GetTitleIntelligenceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetTitleIntelligence</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTitleIntelligenceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTitleIntelligenceResponse
+        /// </returns>
         public GetTitleIntelligenceResponse GetTitleIntelligence(GetTitleIntelligenceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetTitleIntelligenceWithOptions(request, runtime);
         }
 
-        /**
-         * @param request GetTitleIntelligenceRequest
-         * @return GetTitleIntelligenceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetTitleIntelligence</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTitleIntelligenceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTitleIntelligenceResponse
+        /// </returns>
         public async Task<GetTitleIntelligenceResponse> GetTitleIntelligenceAsync(GetTitleIntelligenceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetTitleIntelligenceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 获取图片批量翻译结果
-         *
-         * @param request GetTranslateImageBatchResultRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTranslateImageBatchResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取图片批量翻译结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTranslateImageBatchResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTranslateImageBatchResultResponse
+        /// </returns>
         public GetTranslateImageBatchResultResponse GetTranslateImageBatchResultWithOptions(GetTranslateImageBatchResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1829,13 +2309,21 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<GetTranslateImageBatchResultResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取图片批量翻译结果
-         *
-         * @param request GetTranslateImageBatchResultRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTranslateImageBatchResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取图片批量翻译结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTranslateImageBatchResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTranslateImageBatchResultResponse
+        /// </returns>
         public async Task<GetTranslateImageBatchResultResponse> GetTranslateImageBatchResultWithOptionsAsync(GetTranslateImageBatchResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1863,35 +2351,57 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<GetTranslateImageBatchResultResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取图片批量翻译结果
-         *
-         * @param request GetTranslateImageBatchResultRequest
-         * @return GetTranslateImageBatchResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取图片批量翻译结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTranslateImageBatchResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTranslateImageBatchResultResponse
+        /// </returns>
         public GetTranslateImageBatchResultResponse GetTranslateImageBatchResult(GetTranslateImageBatchResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetTranslateImageBatchResultWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 获取图片批量翻译结果
-         *
-         * @param request GetTranslateImageBatchResultRequest
-         * @return GetTranslateImageBatchResultResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取图片批量翻译结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTranslateImageBatchResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTranslateImageBatchResultResponse
+        /// </returns>
         public async Task<GetTranslateImageBatchResultResponse> GetTranslateImageBatchResultAsync(GetTranslateImageBatchResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetTranslateImageBatchResultWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request GetTranslateReportRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTranslateReportResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetTranslateReport</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTranslateReportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTranslateReportResponse
+        /// </returns>
         public GetTranslateReportResponse GetTranslateReportWithOptions(GetTranslateReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1931,11 +2441,21 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<GetTranslateReportResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request GetTranslateReportRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTranslateReportResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetTranslateReport</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTranslateReportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTranslateReportResponse
+        /// </returns>
         public async Task<GetTranslateReportResponse> GetTranslateReportWithOptionsAsync(GetTranslateReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1975,33 +2495,57 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<GetTranslateReportResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request GetTranslateReportRequest
-         * @return GetTranslateReportResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetTranslateReport</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTranslateReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTranslateReportResponse
+        /// </returns>
         public GetTranslateReportResponse GetTranslateReport(GetTranslateReportRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetTranslateReportWithOptions(request, runtime);
         }
 
-        /**
-         * @param request GetTranslateReportRequest
-         * @return GetTranslateReportResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetTranslateReport</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTranslateReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTranslateReportResponse
+        /// </returns>
         public async Task<GetTranslateReportResponse> GetTranslateReportAsync(GetTranslateReportRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetTranslateReportWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 开通服务
-         *
-         * @param request OpenAlimtServiceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return OpenAlimtServiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开通服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OpenAlimtServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenAlimtServiceResponse
+        /// </returns>
         public OpenAlimtServiceResponse OpenAlimtServiceWithOptions(OpenAlimtServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2033,13 +2577,21 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<OpenAlimtServiceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 开通服务
-         *
-         * @param request OpenAlimtServiceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return OpenAlimtServiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开通服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OpenAlimtServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenAlimtServiceResponse
+        /// </returns>
         public async Task<OpenAlimtServiceResponse> OpenAlimtServiceWithOptionsAsync(OpenAlimtServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2071,35 +2623,57 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<OpenAlimtServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 开通服务
-         *
-         * @param request OpenAlimtServiceRequest
-         * @return OpenAlimtServiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开通服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OpenAlimtServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenAlimtServiceResponse
+        /// </returns>
         public OpenAlimtServiceResponse OpenAlimtService(OpenAlimtServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return OpenAlimtServiceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 开通服务
-         *
-         * @param request OpenAlimtServiceRequest
-         * @return OpenAlimtServiceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开通服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OpenAlimtServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenAlimtServiceResponse
+        /// </returns>
         public async Task<OpenAlimtServiceResponse> OpenAlimtServiceAsync(OpenAlimtServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await OpenAlimtServiceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request TranslateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TranslateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>专业文本翻译</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TranslateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TranslateResponse
+        /// </returns>
         public TranslateResponse TranslateWithOptions(TranslateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2149,11 +2723,21 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<TranslateResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request TranslateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TranslateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>专业文本翻译</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TranslateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TranslateResponse
+        /// </returns>
         public async Task<TranslateResponse> TranslateWithOptionsAsync(TranslateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2203,31 +2787,57 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<TranslateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request TranslateRequest
-         * @return TranslateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>专业文本翻译</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TranslateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TranslateResponse
+        /// </returns>
         public TranslateResponse Translate(TranslateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return TranslateWithOptions(request, runtime);
         }
 
-        /**
-         * @param request TranslateRequest
-         * @return TranslateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>专业文本翻译</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TranslateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TranslateResponse
+        /// </returns>
         public async Task<TranslateResponse> TranslateAsync(TranslateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await TranslateWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request TranslateCertificateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TranslateCertificateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>TranslateCertificate</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TranslateCertificateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TranslateCertificateResponse
+        /// </returns>
         public TranslateCertificateResponse TranslateCertificateWithOptions(TranslateCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2271,11 +2881,21 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<TranslateCertificateResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request TranslateCertificateRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TranslateCertificateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>TranslateCertificate</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TranslateCertificateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TranslateCertificateResponse
+        /// </returns>
         public async Task<TranslateCertificateResponse> TranslateCertificateWithOptionsAsync(TranslateCertificateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2319,20 +2939,36 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<TranslateCertificateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request TranslateCertificateRequest
-         * @return TranslateCertificateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>TranslateCertificate</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TranslateCertificateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TranslateCertificateResponse
+        /// </returns>
         public TranslateCertificateResponse TranslateCertificate(TranslateCertificateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return TranslateCertificateWithOptions(request, runtime);
         }
 
-        /**
-         * @param request TranslateCertificateRequest
-         * @return TranslateCertificateResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>TranslateCertificate</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TranslateCertificateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TranslateCertificateResponse
+        /// </returns>
         public async Task<TranslateCertificateResponse> TranslateCertificateAsync(TranslateCertificateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2503,13 +3139,26 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return translateCertificateResp;
         }
 
-        /**
-         * @deprecated OpenAPI TranslateECommerce is deprecated, please use alimt::2018-10-12::Translate instead.
-         *
-         * @param request TranslateECommerceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TranslateECommerceResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI TranslateECommerce is deprecated, please use alimt::2018-10-12::Translate instead.
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>TranslateECommerce</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TranslateECommerceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TranslateECommerceResponse
+        /// </returns>
+        [Obsolete("OpenAPI TranslateECommerce is deprecated, please use alimt::2018-10-12::Translate instead.")]
         // Deprecated
         public TranslateECommerceResponse TranslateECommerceWithOptions(TranslateECommerceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2560,13 +3209,26 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<TranslateECommerceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @deprecated OpenAPI TranslateECommerce is deprecated, please use alimt::2018-10-12::Translate instead.
-         *
-         * @param request TranslateECommerceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TranslateECommerceResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI TranslateECommerce is deprecated, please use alimt::2018-10-12::Translate instead.
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>TranslateECommerce</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TranslateECommerceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TranslateECommerceResponse
+        /// </returns>
+        [Obsolete("OpenAPI TranslateECommerce is deprecated, please use alimt::2018-10-12::Translate instead.")]
         // Deprecated
         public async Task<TranslateECommerceResponse> TranslateECommerceWithOptionsAsync(TranslateECommerceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2617,12 +3279,23 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<TranslateECommerceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @deprecated OpenAPI TranslateECommerce is deprecated, please use alimt::2018-10-12::Translate instead.
-         *
-         * @param request TranslateECommerceRequest
-         * @return TranslateECommerceResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI TranslateECommerce is deprecated, please use alimt::2018-10-12::Translate instead.
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>TranslateECommerce</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TranslateECommerceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TranslateECommerceResponse
+        /// </returns>
+        [Obsolete("OpenAPI TranslateECommerce is deprecated, please use alimt::2018-10-12::Translate instead.")]
         // Deprecated
         public TranslateECommerceResponse TranslateECommerce(TranslateECommerceRequest request)
         {
@@ -2630,12 +3303,23 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TranslateECommerceWithOptions(request, runtime);
         }
 
-        /**
-         * @deprecated OpenAPI TranslateECommerce is deprecated, please use alimt::2018-10-12::Translate instead.
-         *
-         * @param request TranslateECommerceRequest
-         * @return TranslateECommerceResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI TranslateECommerce is deprecated, please use alimt::2018-10-12::Translate instead.
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>TranslateECommerce</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TranslateECommerceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TranslateECommerceResponse
+        /// </returns>
+        [Obsolete("OpenAPI TranslateECommerce is deprecated, please use alimt::2018-10-12::Translate instead.")]
         // Deprecated
         public async Task<TranslateECommerceResponse> TranslateECommerceAsync(TranslateECommerceRequest request)
         {
@@ -2643,11 +3327,21 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return await TranslateECommerceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request TranslateGeneralRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TranslateGeneralResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文本通用翻译</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TranslateGeneralRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TranslateGeneralResponse
+        /// </returns>
         public TranslateGeneralResponse TranslateGeneralWithOptions(TranslateGeneralRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2697,11 +3391,21 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<TranslateGeneralResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request TranslateGeneralRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TranslateGeneralResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文本通用翻译</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TranslateGeneralRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TranslateGeneralResponse
+        /// </returns>
         public async Task<TranslateGeneralResponse> TranslateGeneralWithOptionsAsync(TranslateGeneralRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2751,33 +3455,57 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<TranslateGeneralResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request TranslateGeneralRequest
-         * @return TranslateGeneralResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文本通用翻译</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TranslateGeneralRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TranslateGeneralResponse
+        /// </returns>
         public TranslateGeneralResponse TranslateGeneral(TranslateGeneralRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return TranslateGeneralWithOptions(request, runtime);
         }
 
-        /**
-         * @param request TranslateGeneralRequest
-         * @return TranslateGeneralResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文本通用翻译</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TranslateGeneralRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TranslateGeneralResponse
+        /// </returns>
         public async Task<TranslateGeneralResponse> TranslateGeneralAsync(TranslateGeneralRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await TranslateGeneralWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary TranslateGeneralVpc
-         *
-         * @param request TranslateGeneralVpcRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TranslateGeneralVpcResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>TranslateGeneralVpc</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TranslateGeneralVpcRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TranslateGeneralVpcResponse
+        /// </returns>
         public TranslateGeneralVpcResponse TranslateGeneralVpcWithOptions(TranslateGeneralVpcRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2827,13 +3555,21 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<TranslateGeneralVpcResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary TranslateGeneralVpc
-         *
-         * @param request TranslateGeneralVpcRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TranslateGeneralVpcResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>TranslateGeneralVpc</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TranslateGeneralVpcRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TranslateGeneralVpcResponse
+        /// </returns>
         public async Task<TranslateGeneralVpcResponse> TranslateGeneralVpcWithOptionsAsync(TranslateGeneralVpcRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2883,37 +3619,57 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<TranslateGeneralVpcResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary TranslateGeneralVpc
-         *
-         * @param request TranslateGeneralVpcRequest
-         * @return TranslateGeneralVpcResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>TranslateGeneralVpc</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TranslateGeneralVpcRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TranslateGeneralVpcResponse
+        /// </returns>
         public TranslateGeneralVpcResponse TranslateGeneralVpc(TranslateGeneralVpcRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return TranslateGeneralVpcWithOptions(request, runtime);
         }
 
-        /**
-         * @summary TranslateGeneralVpc
-         *
-         * @param request TranslateGeneralVpcRequest
-         * @return TranslateGeneralVpcResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>TranslateGeneralVpc</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TranslateGeneralVpcRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TranslateGeneralVpcResponse
+        /// </returns>
         public async Task<TranslateGeneralVpcResponse> TranslateGeneralVpcAsync(TranslateGeneralVpcRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await TranslateGeneralVpcWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 公有云图片翻译产品API
-         *
-         * @param request TranslateImageRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TranslateImageResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>公有云图片翻译产品API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TranslateImageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TranslateImageResponse
+        /// </returns>
         public TranslateImageResponse TranslateImageWithOptions(TranslateImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2961,13 +3717,21 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<TranslateImageResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 公有云图片翻译产品API
-         *
-         * @param request TranslateImageRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TranslateImageResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>公有云图片翻译产品API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TranslateImageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TranslateImageResponse
+        /// </returns>
         public async Task<TranslateImageResponse> TranslateImageWithOptionsAsync(TranslateImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3015,37 +3779,57 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<TranslateImageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 公有云图片翻译产品API
-         *
-         * @param request TranslateImageRequest
-         * @return TranslateImageResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>公有云图片翻译产品API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TranslateImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TranslateImageResponse
+        /// </returns>
         public TranslateImageResponse TranslateImage(TranslateImageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return TranslateImageWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 公有云图片翻译产品API
-         *
-         * @param request TranslateImageRequest
-         * @return TranslateImageResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>公有云图片翻译产品API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TranslateImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TranslateImageResponse
+        /// </returns>
         public async Task<TranslateImageResponse> TranslateImageAsync(TranslateImageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await TranslateImageWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 批量图片翻译接口
-         *
-         * @param request TranslateImageBatchRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TranslateImageBatchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量图片翻译接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TranslateImageBatchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TranslateImageBatchResponse
+        /// </returns>
         public TranslateImageBatchResponse TranslateImageBatchWithOptions(TranslateImageBatchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3093,13 +3877,21 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<TranslateImageBatchResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 批量图片翻译接口
-         *
-         * @param request TranslateImageBatchRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TranslateImageBatchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量图片翻译接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TranslateImageBatchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TranslateImageBatchResponse
+        /// </returns>
         public async Task<TranslateImageBatchResponse> TranslateImageBatchWithOptionsAsync(TranslateImageBatchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3147,28 +3939,192 @@ namespace AlibabaCloud.SDK.Alimt20181012
             return TeaModel.ToObject<TranslateImageBatchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 批量图片翻译接口
-         *
-         * @param request TranslateImageBatchRequest
-         * @return TranslateImageBatchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量图片翻译接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TranslateImageBatchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TranslateImageBatchResponse
+        /// </returns>
         public TranslateImageBatchResponse TranslateImageBatch(TranslateImageBatchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return TranslateImageBatchWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 批量图片翻译接口
-         *
-         * @param request TranslateImageBatchRequest
-         * @return TranslateImageBatchResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量图片翻译接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TranslateImageBatchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TranslateImageBatchResponse
+        /// </returns>
         public async Task<TranslateImageBatchResponse> TranslateImageBatchAsync(TranslateImageBatchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await TranslateImageBatchWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>搜索翻译</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TranslateSearchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TranslateSearchResponse
+        /// </returns>
+        public TranslateSearchResponse TranslateSearchWithOptions(TranslateSearchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FormatType))
+            {
+                body["FormatType"] = request.FormatType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scene))
+            {
+                body["Scene"] = request.Scene;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            {
+                body["SourceLanguage"] = request.SourceLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceText))
+            {
+                body["SourceText"] = request.SourceText;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            {
+                body["TargetLanguage"] = request.TargetLanguage;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TranslateSearch",
+                Version = "2018-10-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TranslateSearchResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>搜索翻译</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TranslateSearchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TranslateSearchResponse
+        /// </returns>
+        public async Task<TranslateSearchResponse> TranslateSearchWithOptionsAsync(TranslateSearchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FormatType))
+            {
+                body["FormatType"] = request.FormatType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scene))
+            {
+                body["Scene"] = request.Scene;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            {
+                body["SourceLanguage"] = request.SourceLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceText))
+            {
+                body["SourceText"] = request.SourceText;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            {
+                body["TargetLanguage"] = request.TargetLanguage;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TranslateSearch",
+                Version = "2018-10-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TranslateSearchResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>搜索翻译</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TranslateSearchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TranslateSearchResponse
+        /// </returns>
+        public TranslateSearchResponse TranslateSearch(TranslateSearchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return TranslateSearchWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>搜索翻译</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TranslateSearchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TranslateSearchResponse
+        /// </returns>
+        public async Task<TranslateSearchResponse> TranslateSearchAsync(TranslateSearchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await TranslateSearchWithOptionsAsync(request, runtime);
         }
 
     }

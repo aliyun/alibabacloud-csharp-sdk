@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
 {
     public class GetTranslateImageBatchResultRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EEA28E6D-4828-5031-BD8C-8FF1B3216842</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

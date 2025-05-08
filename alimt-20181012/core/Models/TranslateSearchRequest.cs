@@ -8,22 +8,15 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alimt20181012.Models
 {
-    public class GetBatchTranslateRequest : TeaModel {
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>translate_standard</para>
-        /// </summary>
-        [NameInMap("ApiType")]
-        [Validation(Required=false)]
-        public string ApiType { get; set; }
-
+    public class TranslateSearchRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>text</para>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>false</c>
         /// </summary>
         [NameInMap("FormatType")]
         [Validation(Required=false)]
@@ -33,7 +26,7 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>general</para>
+        /// <para>query</para>
         /// </summary>
         [NameInMap("Scene")]
         [Validation(Required=false)]
@@ -43,7 +36,10 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>en</para>
+        /// <para>zh</para>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>false</c>
         /// </summary>
         [NameInMap("SourceLanguage")]
         [Validation(Required=false)]
@@ -53,7 +49,7 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;11&quot;:&quot;hello boy&quot;,&quot;12&quot;:&quot;go home&quot;,&quot;13&quot;:&quot;we can&quot;}</para>
+        /// <para>今天天气不错</para>
         /// </summary>
         [NameInMap("SourceText")]
         [Validation(Required=false)]
@@ -63,7 +59,7 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>zh</para>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("TargetLanguage")]
         [Validation(Required=false)]

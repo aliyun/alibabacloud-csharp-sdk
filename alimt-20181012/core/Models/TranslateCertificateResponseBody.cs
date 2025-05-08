@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>name</para>
+                /// </summary>
                 [NameInMap("KeyTranslation")]
                 [Validation(Required=false)]
                 public string KeyTranslation { get; set; }
@@ -29,6 +33,10 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
                 [Validation(Required=false)]
                 public string Value { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>Solemn</para>
+                /// </summary>
                 [NameInMap("ValueTranslation")]
                 [Validation(Required=false)]
                 public string ValueTranslation { get; set; }
@@ -37,6 +45,10 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>6640DE48-201C-4110-AE87-FB8FA34412B9</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

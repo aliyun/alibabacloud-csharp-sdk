@@ -1,3 +1,8 @@
+2025-05-08 Version: 2.4.0
+- Support API GetDetectLanguageVpc.
+- Support API TranslateSearch.
+
+
 2024-06-06 Version: 2.3.0
 - Support API GetBatchTranslateByVPC.
 - Support API TranslateGeneralVpc.

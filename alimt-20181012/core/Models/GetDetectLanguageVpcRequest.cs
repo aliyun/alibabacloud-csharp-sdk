@@ -8,10 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alimt20181012.Models
 {
-    public class GetDetectLanguageRequest : TeaModel {
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
+    public class GetDetectLanguageVpcRequest : TeaModel {
         [NameInMap("SourceText")]
         [Validation(Required=false)]
         public string SourceText { get; set; }

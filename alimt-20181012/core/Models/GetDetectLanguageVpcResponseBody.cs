@@ -8,19 +8,15 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alimt20181012.Models
 {
-    public class OpenAlimtServiceResponseBody : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>123456</para>
-        /// </summary>
-        [NameInMap("OrderId")]
+    public class GetDetectLanguageVpcResponseBody : TeaModel {
+        [NameInMap("DetectedLanguage")]
         [Validation(Required=false)]
-        public string OrderId { get; set; }
+        public string DetectedLanguage { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>xxxx-xxxxx</para>
-        /// </summary>
+        [NameInMap("LanguageProbabilities")]
+        [Validation(Required=false)]
+        public string LanguageProbabilities { get; set; }
+
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

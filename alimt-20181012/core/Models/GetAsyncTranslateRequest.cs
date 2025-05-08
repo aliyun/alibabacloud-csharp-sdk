@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
 {
     public class GetAsyncTranslateRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>77056ab7-7be1-4c2a-91a1-f20f63894048</para>
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]

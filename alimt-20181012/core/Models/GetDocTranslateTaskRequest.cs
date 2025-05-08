@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Alimt20181012.Models
 {
     public class GetDocTranslateTaskRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0586df512c8b4bb382d7d9a6a01b5854</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
