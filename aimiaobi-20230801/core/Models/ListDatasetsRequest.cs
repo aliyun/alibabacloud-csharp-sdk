@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        [NameInMap("IncludeConfig")]
+        [Validation(Required=false)]
+        public bool? IncludeConfig { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>1</para>

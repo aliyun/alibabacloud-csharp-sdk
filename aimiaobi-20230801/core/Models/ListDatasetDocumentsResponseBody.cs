@@ -39,6 +39,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>2025-04-14 19:59:53</para>
+            /// </summary>
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public string CreateTime { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
             [NameInMap("DisableHandleMultimodalMedia")]
@@ -162,6 +170,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [NameInMap("Title")]
             [Validation(Required=false)]
             public string Title { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2025-04-14 19:59:53</para>
+            /// </summary>
+            [NameInMap("UpdateTime")]
+            [Validation(Required=false)]
+            public string UpdateTime { get; set; }
 
             /// <summary>
             /// <para>url</para>

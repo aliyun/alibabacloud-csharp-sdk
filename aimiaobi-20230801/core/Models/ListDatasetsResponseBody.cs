@@ -17,6 +17,44 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("CustomSemanticSearchConfig")]
+        [Validation(Required=false)]
+        public ListDatasetsResponseBodyCustomSemanticSearchConfig CustomSemanticSearchConfig { get; set; }
+        public class ListDatasetsResponseBodyCustomSemanticSearchConfig : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>3</para>
+            /// </summary>
+            [NameInMap("DatasetQuota")]
+            [Validation(Required=false)]
+            public int? DatasetQuota { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("DatasetUsedQuota")]
+            [Validation(Required=false)]
+            public int? DatasetUsedQuota { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1000</para>
+            /// </summary>
+            [NameInMap("DocQuota")]
+            [Validation(Required=false)]
+            public long? DocQuota { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("DocUsedQuota")]
+            [Validation(Required=false)]
+            public long? DocUsedQuota { get; set; }
+
+        }
+
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListDatasetsResponseBodyData> Data { get; set; }
@@ -68,6 +106,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [NameInMap("DatasetType")]
             [Validation(Required=false)]
             public string DatasetType { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("DocUsedQuota")]
+            [Validation(Required=false)]
+            public long? DocUsedQuota { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
@@ -126,6 +172,28 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
+
+        [NameInMap("ThirdSearchConfig")]
+        [Validation(Required=false)]
+        public ListDatasetsResponseBodyThirdSearchConfig ThirdSearchConfig { get; set; }
+        public class ListDatasetsResponseBodyThirdSearchConfig : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2</para>
+            /// </summary>
+            [NameInMap("DatasetQuota")]
+            [Validation(Required=false)]
+            public int? DatasetQuota { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("DatasetUsedQuota")]
+            [Validation(Required=false)]
+            public int? DatasetUsedQuota { get; set; }
+
+        }
 
         /// <summary>
         /// <b>Example:</b>
