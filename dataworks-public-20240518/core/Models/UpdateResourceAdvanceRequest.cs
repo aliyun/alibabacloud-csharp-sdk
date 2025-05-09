@@ -8,13 +8,24 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
-    public class CreateResourceRequest : TeaModel {
+    public class UpdateResourceAdvanceRequest : TeaModel {
+        /// <summary>
+        /// <para>The ID of the file resource.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>543217824470354XXXX</para>
+        /// </summary>
+        [NameInMap("Id")]
+        [Validation(Required=false)]
+        public long? Id { get; set; }
+
         /// <summary>
         /// <para>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>123456</para>
+        /// <para>10000</para>
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
@@ -22,7 +33,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         [NameInMap("ResourceFile")]
         [Validation(Required=false)]
-        public string ResourceFile { get; set; }
+        public Stream ResourceFileObject { get; set; }
 
         /// <summary>
         /// <para>The FlowSpec field information about the file resource. For more information, see <a href="https://github.com/aliyun/dataworks-spec/blob/master/README_zh_CN.md">FlowSpec</a>.</para>
@@ -35,10 +46,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         ///     &quot;spec&quot;: {
         ///         &quot;fileResources&quot;: [
         ///             {
-        ///                 &quot;name&quot;: &quot;OpenAPITestResource.py&quot;,
+        ///                 &quot;name&quot;: &quot;OpenAPI_Test_Resource.py&quot;,
         ///                 &quot;script&quot;: {
         ///                     &quot;content&quot;: &quot;&quot;,
-        ///                     &quot;path&quot;: &quot;XX/OpenAPITest/ResourcesTest/OpenAPITestResource.py&quot;,
+        ///                     &quot;path&quot;: &quot;XX/OpenAPI_Test/Resources_Test/OpenAPI_Test_Resource.py&quot;,
         ///                     &quot;runtime&quot;: {
         ///                         &quot;command&quot;: &quot;ODPS_PYTHON&quot;
         ///                     }

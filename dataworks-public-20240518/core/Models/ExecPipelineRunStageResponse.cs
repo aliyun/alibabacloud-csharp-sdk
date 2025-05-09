@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
-    public class CreateDeploymentResponse : TeaModel {
+    public class ExecPipelineRunStageResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public CreateDeploymentResponseBody Body { get; set; }
+        public ExecPipelineRunStageResponseBody Body { get; set; }
 
     }
 

@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
+        [NameInMap("ResourceFile")]
+        [Validation(Required=false)]
+        public string ResourceFile { get; set; }
+
         /// <summary>
         /// <para>The FlowSpec field information about the file resource. For more information, see <a href="https://github.com/aliyun/dataworks-spec/blob/master/README_zh_CN.md">FlowSpec</a>.</para>
         /// <para>This parameter is required.</para>

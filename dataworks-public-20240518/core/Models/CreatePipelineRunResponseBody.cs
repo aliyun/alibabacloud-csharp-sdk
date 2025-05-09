@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
-    public class CreateDeploymentResponseBody : TeaModel {
+    public class CreatePipelineRunResponseBody : TeaModel {
         /// <summary>
         /// <para>The ID of the process.</para>
         /// 

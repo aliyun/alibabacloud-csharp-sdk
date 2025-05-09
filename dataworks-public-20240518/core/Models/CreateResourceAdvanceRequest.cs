@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
-    public class CreateResourceRequest : TeaModel {
+    public class CreateResourceAdvanceRequest : TeaModel {
         /// <summary>
         /// <para>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</para>
         /// <para>This parameter is required.</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         [NameInMap("ResourceFile")]
         [Validation(Required=false)]
-        public string ResourceFile { get; set; }
+        public Stream ResourceFileObject { get; set; }
 
         /// <summary>
         /// <para>The FlowSpec field information about the file resource. For more information, see <a href="https://github.com/aliyun/dataworks-spec/blob/master/README_zh_CN.md">FlowSpec</a>.</para>

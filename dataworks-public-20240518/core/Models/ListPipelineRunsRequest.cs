@@ -8,12 +8,12 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
-    public class ListDeploymentsRequest : TeaModel {
+    public class ListPipelineRunsRequest : TeaModel {
         /// <summary>
         /// <para>The ID of the user who creates the processes. This parameter specifies a filter condition.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>110755000425XXXX</para>
+        /// <para>110755000425****</para>
         /// </summary>
         [NameInMap("Creator")]
         [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>RUNNING</para>
+        /// <para>Running</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

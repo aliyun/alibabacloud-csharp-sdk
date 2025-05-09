@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
-    public class CreateDeploymentRequest : TeaModel {
+    public class CreatePipelineRunShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The description of the process.</para>
         /// 
@@ -28,11 +28,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// </summary>
         [NameInMap("ObjectIds")]
         [Validation(Required=false)]
-        public List<string> ObjectIds { get; set; }
+        public string ObjectIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</para>
-        /// <para>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</para>
+        /// <para>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID. You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

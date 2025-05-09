@@ -8,12 +8,12 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
-    public class ExecDeploymentStageResponseBody : TeaModel {
+    public class AbolishPipelineRunResponseBody : TeaModel {
         /// <summary>
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>AFBB799F-8578-51C5-A766-E922EDB8XXXX</para>
+        /// <para>55D786C9-DD57-524D-884C-C5239278XXXX</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -22,12 +22,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// <para>**</para>
-        /// <para><b>Note:</b> The value of this parameter indicates only whether the stage is triggered but does not indicate whether the execution of the stage is successful.</para>
-        /// </description></item>
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -8,13 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
-    public class GetDeploymentRequest : TeaModel {
+    public class AbolishPipelineRunRequest : TeaModel {
         /// <summary>
         /// <para>The ID of the process.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>a7ef0634-20ec-4a7c-a214-54020f91XXXX</para>
+        /// <para>1606087c-9ac4-43f0-83a8-0b5ced21XXXX</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

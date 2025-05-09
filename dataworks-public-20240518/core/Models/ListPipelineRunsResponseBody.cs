@@ -8,21 +8,41 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
-    public class ListDeploymentsResponseBody : TeaModel {
+    public class ListPipelineRunsResponseBody : TeaModel {
         /// <summary>
         /// <para>The pagination information.</para>
         /// </summary>
         [NameInMap("PagingInfo")]
         [Validation(Required=false)]
-        public ListDeploymentsResponseBodyPagingInfo PagingInfo { get; set; }
-        public class ListDeploymentsResponseBodyPagingInfo : TeaModel {
+        public ListPipelineRunsResponseBodyPagingInfo PagingInfo { get; set; }
+        public class ListPipelineRunsResponseBodyPagingInfo : TeaModel {
+            /// <summary>
+            /// <para>The page number.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("PageNumber")]
+            [Validation(Required=false)]
+            public int? PageNumber { get; set; }
+
+            /// <summary>
+            /// <para>The number of entries per page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
+            [NameInMap("PageSize")]
+            [Validation(Required=false)]
+            public int? PageSize { get; set; }
+
             /// <summary>
             /// <para>The processes.</para>
             /// </summary>
-            [NameInMap("Deployments")]
+            [NameInMap("PipelineRuns")]
             [Validation(Required=false)]
-            public List<ListDeploymentsResponseBodyPagingInfoDeployments> Deployments { get; set; }
-            public class ListDeploymentsResponseBodyPagingInfoDeployments : TeaModel {
+            public List<ListPipelineRunsResponseBodyPagingInfoPipelineRuns> PipelineRuns { get; set; }
+            public class ListPipelineRunsResponseBodyPagingInfoPipelineRuns : TeaModel {
                 /// <summary>
                 /// <para>The time when the process was created. This value is a UNIX timestamp.</para>
                 /// 
@@ -34,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the user who creates the process.</para>
+                /// <para>The creator of the process.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>110755000425XXXX</para>
@@ -47,14 +67,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>The process ID.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>ddf354a5-03df-48fc-94c1-cc973f79XXXX</para>
+                /// <para>097c73fe-ed6e-4fb1-b109-a5d59e46cd58</para>
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The error message returned if the process fails.</para>
+                /// <para>The error message returned during the stage.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Error message</para>
@@ -64,7 +84,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Message { get; set; }
 
                 /// <summary>
-                /// <para>The time when the process was last modified. This value is a UNIX timestamp.</para>
+                /// <para>The time when the process was modified. This value is a UNIX timestamp.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1702736654000</para>
@@ -77,7 +97,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>The DataWorks workspace ID.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>44683</para>
+                /// <para>70199</para>
                 /// </summary>
                 [NameInMap("ProjectId")]
                 [Validation(Required=false)]
@@ -88,8 +108,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// </summary>
                 [NameInMap("Stages")]
                 [Validation(Required=false)]
-                public List<ListDeploymentsResponseBodyPagingInfoDeploymentsStages> Stages { get; set; }
-                public class ListDeploymentsResponseBodyPagingInfoDeploymentsStages : TeaModel {
+                public List<ListPipelineRunsResponseBodyPagingInfoPipelineRunsStages> Stages { get; set; }
+                public class ListPipelineRunsResponseBodyPagingInfoPipelineRunsStages : TeaModel {
                     /// <summary>
                     /// <para>The code of the stage.</para>
                     /// 
@@ -150,7 +170,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// </list>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>RUNNING</para>
+                    /// <para>Running</para>
                     /// </summary>
                     [NameInMap("Status")]
                     [Validation(Required=false)]
@@ -178,7 +198,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// </list>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>CHECK</para>
+                    /// <para>Check</para>
                     /// </summary>
                     [NameInMap("Type")]
                     [Validation(Required=false)]
@@ -199,33 +219,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>RUNNING</para>
+                /// <para>Running</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
             }
-
-            /// <summary>
-            /// <para>The page number.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>1</para>
-            /// </summary>
-            [NameInMap("PageNumber")]
-            [Validation(Required=false)]
-            public string PageNumber { get; set; }
-
-            /// <summary>
-            /// <para>The number of entries per page.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>10</para>
-            /// </summary>
-            [NameInMap("PageSize")]
-            [Validation(Required=false)]
-            public string PageSize { get; set; }
 
             /// <summary>
             /// <para>The total number of entries returned.</para>
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
-            public string TotalCount { get; set; }
+            public int? TotalCount { get; set; }
 
         }
 

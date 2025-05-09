@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
-    public class ExecDeploymentStageRequest : TeaModel {
+    public class ExecPipelineRunStageRequest : TeaModel {
         /// <summary>
         /// <para>The code of the stage in the process. You can call the GetDeployment operation to query the code.</para>
         /// <para>This parameter is required.</para>
@@ -32,8 +32,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the ID.</para>
-        /// <para>You can use this parameter to specify the DataWorks workspace on which you want to perform the API operation.</para>
+        /// <para>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

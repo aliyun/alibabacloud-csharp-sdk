@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
-    public class GetDeploymentResponseBody : TeaModel {
+    public class GetPipelineRunResponseBody : TeaModel {
         /// <summary>
         /// <para>The information about the process.</para>
         /// </summary>
         [NameInMap("Pipeline")]
         [Validation(Required=false)]
-        public GetDeploymentResponseBodyPipeline Pipeline { get; set; }
-        public class GetDeploymentResponseBodyPipeline : TeaModel {
+        public GetPipelineRunResponseBodyPipeline Pipeline { get; set; }
+        public class GetPipelineRunResponseBodyPipeline : TeaModel {
             /// <summary>
             /// <para>The time when the process was created. This value is a UNIX timestamp.</para>
             /// 
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Creator { get; set; }
 
             /// <summary>
-            /// <para>The ID of the process.</para>
+            /// <para>The process ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a7ef0634-20ec-4a7c-a214-54020f91XXXX</para>
@@ -81,8 +81,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// </summary>
             [NameInMap("Stages")]
             [Validation(Required=false)]
-            public List<GetDeploymentResponseBodyPipelineStages> Stages { get; set; }
-            public class GetDeploymentResponseBodyPipelineStages : TeaModel {
+            public List<GetPipelineRunResponseBodyPipelineStages> Stages { get; set; }
+            public class GetPipelineRunResponseBodyPipelineStages : TeaModel {
                 /// <summary>
                 /// <para>The code of the stage.</para>
                 /// 
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>INIT</para>
+                /// <para>Running</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>BUILD</para>
+                /// <para>Check</para>
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>RUNNING</para>
+            /// <para>Running</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]

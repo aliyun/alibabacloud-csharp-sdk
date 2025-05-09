@@ -8,13 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
-    public class AbolishDeploymentRequest : TeaModel {
+    public class GetPipelineRunRequest : TeaModel {
         /// <summary>
         /// <para>The ID of the process.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1606087c-9ac4-43f0-83a8-0b5ced21XXXX</para>
+        /// <para>a7ef0634-20ec-4a7c-a214-54020f****</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         /// <summary>
         /// <para>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</para>
-        /// <para>You can use this parameter to specify the DataWorks workspace on which you want to perform the API operation.</para>
+        /// <para>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
