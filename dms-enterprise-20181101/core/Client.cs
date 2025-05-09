@@ -39283,6 +39283,166 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>添加实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SimplyAddInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SimplyAddInstanceResponse
+        /// </returns>
+        public SimplyAddInstanceResponse SimplyAddInstanceWithOptions(SimplyAddInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabasePassword))
+            {
+                query["DatabasePassword"] = request.DatabasePassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseUser))
+            {
+                query["DatabaseUser"] = request.DatabaseUser;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Host))
+            {
+                query["Host"] = request.Host;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceRegion))
+            {
+                query["InstanceRegion"] = request.InstanceRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Port))
+            {
+                query["Port"] = request.Port;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SimplyAddInstance",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SimplyAddInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SimplyAddInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SimplyAddInstanceResponse
+        /// </returns>
+        public async Task<SimplyAddInstanceResponse> SimplyAddInstanceWithOptionsAsync(SimplyAddInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabasePassword))
+            {
+                query["DatabasePassword"] = request.DatabasePassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseUser))
+            {
+                query["DatabaseUser"] = request.DatabaseUser;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Host))
+            {
+                query["Host"] = request.Host;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceRegion))
+            {
+                query["InstanceRegion"] = request.InstanceRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Port))
+            {
+                query["Port"] = request.Port;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SimplyAddInstance",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SimplyAddInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SimplyAddInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SimplyAddInstanceResponse
+        /// </returns>
+        public SimplyAddInstanceResponse SimplyAddInstance(SimplyAddInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SimplyAddInstanceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SimplyAddInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SimplyAddInstanceResponse
+        /// </returns>
+        public async Task<SimplyAddInstanceResponse> SimplyAddInstanceAsync(SimplyAddInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SimplyAddInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Skips the verification on the number of rows in the precheck for data change.</para>
         /// </summary>
         /// 
