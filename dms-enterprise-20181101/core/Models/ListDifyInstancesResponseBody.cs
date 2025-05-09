@@ -1,0 +1,86 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
+{
+    public class ListDifyInstancesResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        [NameInMap("ErrorCode")]
+        [Validation(Required=false)]
+        public string ErrorCode { get; set; }
+
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public int? HttpStatusCode { get; set; }
+
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Root")]
+        [Validation(Required=false)]
+        public ListDifyInstancesResponseBodyRoot Root { get; set; }
+        public class ListDifyInstancesResponseBodyRoot : TeaModel {
+            [NameInMap("Data")]
+            [Validation(Required=false)]
+            public List<ListDifyInstancesResponseBodyRootData> Data { get; set; }
+            public class ListDifyInstancesResponseBodyRootData : TeaModel {
+                [NameInMap("AppUuid")]
+                [Validation(Required=false)]
+                public string AppUuid { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
+                public string InstanceId { get; set; }
+
+                [NameInMap("SecurityGroupId")]
+                [Validation(Required=false)]
+                public string SecurityGroupId { get; set; }
+
+                [NameInMap("VSwitchId")]
+                [Validation(Required=false)]
+                public string VSwitchId { get; set; }
+
+                [NameInMap("VpcId")]
+                [Validation(Required=false)]
+                public string VpcId { get; set; }
+
+                [NameInMap("WorkspaceId")]
+                [Validation(Required=false)]
+                public string WorkspaceId { get; set; }
+
+                [NameInMap("ZoneId")]
+                [Validation(Required=false)]
+                public string ZoneId { get; set; }
+
+            }
+
+        }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
+    }
+
+}
