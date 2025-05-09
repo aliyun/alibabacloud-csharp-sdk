@@ -87,6 +87,36 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public bool? HasAclRecommend { get; set; }
 
             /// <summary>
+            /// <para>The inbound network throughput, which indicates the total number of bytes that are sent inbound. Unit: bytes.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>235</para>
+            /// </summary>
+            [NameInMap("InBytes")]
+            [Validation(Required=false)]
+            public long? InBytes { get; set; }
+
+            /// <summary>
+            /// <para>The UID of the member that is managed by your Alibaba Cloud account.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>14151892****7022</para>
+            /// </summary>
+            [NameInMap("MemberUid")]
+            [Validation(Required=false)]
+            public long? MemberUid { get; set; }
+
+            /// <summary>
+            /// <para>The outbound network throughput, which indicates the total number of bytes that are sent outbound. Unit: bytes.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1123</para>
+            /// </summary>
+            [NameInMap("OutBytes")]
+            [Validation(Required=false)]
+            public long? OutBytes { get; set; }
+
+            /// <summary>
             /// <para>The list of ports.</para>
             /// </summary>
             [NameInMap("PortList")]
@@ -157,6 +187,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? SrcIpCnt { get; set; }
 
             /// <summary>
+            /// <para>The total inbound and outbound network throughput, which indicates the total number of bytes that are sent inbound and outbound. Unit: bytes.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>253023143</para>
+            /// </summary>
+            [NameInMap("TotalBytes")]
+            [Validation(Required=false)]
+            public long? TotalBytes { get; set; }
+
+            /// <summary>
             /// <para>Outbound traffic in the last 7 days.</para>
             /// 
             /// <b>Example:</b>
@@ -167,34 +207,41 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? TotalReplyBytes { get; set; }
 
             /// <summary>
-            /// <para>The percentage of traffic of a day. Unit: percent (%).</para>
+            /// <para>For detailed traffic information, see the TotalBytes field.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>11.1</para>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("TrafficPercent1Day")]
             [Validation(Required=false)]
             public string TrafficPercent1Day { get; set; }
 
             /// <summary>
-            /// <para>The percentage of traffic of 30 days. Unit: percent (%).</para>
+            /// <para>For detailed traffic information, see the TotalBytes field.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>99.9</para>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("TrafficPercent30Day")]
             [Validation(Required=false)]
             public string TrafficPercent30Day { get; set; }
 
             /// <summary>
-            /// <para>The percentage of traffic of seven days. Unit: percent (%).</para>
+            /// <para>For detailed traffic information, see the TotalBytes field.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>77.7</para>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("TrafficPercent7Day")]
             [Validation(Required=false)]
             public string TrafficPercent7Day { get; set; }
+
+            /// <summary>
+            /// <para>Reasons for not analyzing the protocol when the protocol is identified as Unknown.</para>
+            /// </summary>
+            [NameInMap("UnknownReason")]
+            [Validation(Required=false)]
+            public List<string> UnknownReason { get; set; }
 
         }
 

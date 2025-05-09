@@ -7860,6 +7860,100 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取日志服务信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLogStoreInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLogStoreInfoResponse
+        /// </returns>
+        public DescribeLogStoreInfoResponse DescribeLogStoreInfoWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeLogStoreInfo",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeLogStoreInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取日志服务信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLogStoreInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLogStoreInfoResponse
+        /// </returns>
+        public async Task<DescribeLogStoreInfoResponse> DescribeLogStoreInfoWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeLogStoreInfo",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeLogStoreInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取日志服务信息</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeLogStoreInfoResponse
+        /// </returns>
+        public DescribeLogStoreInfoResponse DescribeLogStoreInfo()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeLogStoreInfoWithOptions(runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取日志服务信息</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeLogStoreInfoResponse
+        /// </returns>
+        public async Task<DescribeLogStoreInfoResponse> DescribeLogStoreInfoAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeLogStoreInfoWithOptionsAsync(runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the pagination status of NAT firewalls.</para>
         /// </summary>
         /// 
@@ -8576,6 +8670,118 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeNatFirewallPolicyPriorUsedWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>概览页-NAT流量趋势</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeNatFirewallTrafficTrendRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeNatFirewallTrafficTrendResponse
+        /// </returns>
+        public DescribeNatFirewallTrafficTrendResponse DescribeNatFirewallTrafficTrendWithOptions(DescribeNatFirewallTrafficTrendRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeNatFirewallTrafficTrend",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeNatFirewallTrafficTrendResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>概览页-NAT流量趋势</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeNatFirewallTrafficTrendRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeNatFirewallTrafficTrendResponse
+        /// </returns>
+        public async Task<DescribeNatFirewallTrafficTrendResponse> DescribeNatFirewallTrafficTrendWithOptionsAsync(DescribeNatFirewallTrafficTrendRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeNatFirewallTrafficTrend",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeNatFirewallTrafficTrendResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>概览页-NAT流量趋势</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeNatFirewallTrafficTrendRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeNatFirewallTrafficTrendResponse
+        /// </returns>
+        public DescribeNatFirewallTrafficTrendResponse DescribeNatFirewallTrafficTrend(DescribeNatFirewallTrafficTrendRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeNatFirewallTrafficTrendWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>概览页-NAT流量趋势</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeNatFirewallTrafficTrendRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeNatFirewallTrafficTrendResponse
+        /// </returns>
+        public async Task<DescribeNatFirewallTrafficTrendResponse> DescribeNatFirewallTrafficTrendAsync(DescribeNatFirewallTrafficTrendRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeNatFirewallTrafficTrendWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

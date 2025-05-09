@@ -301,6 +301,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public string SrcIP { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The tag added to the source IP address. The tag helps identify whether the source IP address is a back-to-origin IP address for a cloud service.</para>
             /// 
@@ -309,6 +311,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// </summary>
             [NameInMap("SrcIPTag")]
             [Validation(Required=false)]
+            [Obsolete]
             public string SrcIPTag { get; set; }
 
             /// <summary>

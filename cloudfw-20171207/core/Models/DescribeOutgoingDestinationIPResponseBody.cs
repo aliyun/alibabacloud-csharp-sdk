@@ -133,6 +133,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 [Validation(Required=false)]
                 public int? Port { get; set; }
 
+                [NameInMap("UnknownReason")]
+                [Validation(Required=false)]
+                public List<string> UnknownReason { get; set; }
+
             }
 
             /// <summary>
