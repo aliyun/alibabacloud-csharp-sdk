@@ -1,3 +1,8 @@
+2025-05-09 Version: 2.0.3
+- Update API GetJob: add response parameters Body.JobInfo.AppExtraInfo.
+- Update API ListJobs: add response parameters Body.JobList.$.AppExtraInfo.
+
+
 2025-03-31 Version: 2.0.2
 - Generated csharp 2023-07-01 for EhpcInstant.
 
