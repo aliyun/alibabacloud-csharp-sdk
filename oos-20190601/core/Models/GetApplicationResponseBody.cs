@@ -50,6 +50,16 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             }
 
             /// <summary>
+            /// <para>The source of application.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;Platform&quot;:&quot;gitee&quot;,&quot;Owner&quot;:&quot;aliyun-computenest&quot;,&quot;RepoName&quot;:&quot;aliyun-computenest/java-springboot-demo&quot;,&quot;Name&quot;:&quot;java-springboot-demo&quot;}</para>
+            /// </summary>
+            [NameInMap("ApplicationSource")]
+            [Validation(Required=false)]
+            public string ApplicationSource { get; set; }
+
+            /// <summary>
             /// <para>The type of the application.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
@@ -123,7 +133,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the service.</para>
+            /// <para>The ID of the Compute Nest service that corresponds to the application template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>service-79538e30e44541b699d8</para>

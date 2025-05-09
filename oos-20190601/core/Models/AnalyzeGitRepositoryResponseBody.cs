@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [Validation(Required=false)]
             public string BuildType { get; set; }
 
+            [NameInMap("RuntimeType")]
+            [Validation(Required=false)]
+            public string RuntimeType { get; set; }
+
         }
 
         [NameInMap("Count")]

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
-    public class ListGitRepositoriesResponse : TeaModel {
+    public class GenerateOpsItemResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public ListGitRepositoriesResponseBody Body { get; set; }
+        public GenerateOpsItemResponseBody Body { get; set; }
 
     }
 

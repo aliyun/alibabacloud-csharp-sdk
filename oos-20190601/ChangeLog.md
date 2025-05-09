@@ -1,3 +1,13 @@
+2025-05-09 Version: 3.5.0
+- Support API DeleteOpsItems.
+- Support API GenerateOpsItem.
+- Delete API ListGitRepositories.
+- Delete API ListGitRepositoryContents.
+- Update API AnalyzeGitRepository: add response parameters Body.AnalysisResults.$.RuntimeType.
+- Update API GetApplication: add response parameters Body.Application.ApplicationSource.
+- Update API ListExecutions: add response parameters Body.TotalCount.
+
+
 2024-12-19 Version: 3.4.2
 - Generated csharp 2019-06-01 for oos.
 

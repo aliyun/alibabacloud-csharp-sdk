@@ -419,6 +419,16 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The total number of the executions.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
+        /// </summary>
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
+
     }
 
 }

@@ -2723,6 +2723,134 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Deletes O\\\&amp;M Items.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteOpsItemsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteOpsItemsResponse
+        /// </returns>
+        public DeleteOpsItemsResponse DeleteOpsItemsWithOptions(DeleteOpsItemsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsItemIds))
+            {
+                query["OpsItemIds"] = request.OpsItemIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteOpsItems",
+                Version = "2019-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteOpsItemsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes O\\\&amp;M Items.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteOpsItemsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteOpsItemsResponse
+        /// </returns>
+        public async Task<DeleteOpsItemsResponse> DeleteOpsItemsWithOptionsAsync(DeleteOpsItemsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsItemIds))
+            {
+                query["OpsItemIds"] = request.OpsItemIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteOpsItems",
+                Version = "2019-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteOpsItemsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes O\\\&amp;M Items.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteOpsItemsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteOpsItemsResponse
+        /// </returns>
+        public DeleteOpsItemsResponse DeleteOpsItems(DeleteOpsItemsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteOpsItemsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes O\\\&amp;M Items.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteOpsItemsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteOpsItemsResponse
+        /// </returns>
+        public async Task<DeleteOpsItemsResponse> DeleteOpsItemsAsync(DeleteOpsItemsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteOpsItemsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes a common parameter.</para>
         /// </summary>
         /// 
@@ -4103,6 +4231,158 @@ namespace AlibabaCloud.SDK.Oos20190601
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GenerateExecutionPolicyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates an O\\\&amp;M item.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateOpsItemRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateOpsItemResponse
+        /// </returns>
+        public GenerateOpsItemResponse GenerateOpsItemWithOptions(GenerateOpsItemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigurationId))
+            {
+                query["ConfigurationId"] = request.ConfigurationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Data))
+            {
+                query["Data"] = request.Data;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSource))
+            {
+                query["DataSource"] = request.DataSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenerateOpsItem",
+                Version = "2019-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenerateOpsItemResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates an O\\\&amp;M item.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateOpsItemRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateOpsItemResponse
+        /// </returns>
+        public async Task<GenerateOpsItemResponse> GenerateOpsItemWithOptionsAsync(GenerateOpsItemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigurationId))
+            {
+                query["ConfigurationId"] = request.ConfigurationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Data))
+            {
+                query["Data"] = request.Data;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSource))
+            {
+                query["DataSource"] = request.DataSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenerateOpsItem",
+                Version = "2019-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenerateOpsItemResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates an O\\\&amp;M item.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateOpsItemRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateOpsItemResponse
+        /// </returns>
+        public GenerateOpsItemResponse GenerateOpsItem(GenerateOpsItemRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GenerateOpsItemWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates an O\\\&amp;M item.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateOpsItemRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateOpsItemResponse
+        /// </returns>
+        public async Task<GenerateOpsItemResponse> GenerateOpsItemAsync(GenerateOpsItemRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GenerateOpsItemWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7307,374 +7587,6 @@ namespace AlibabaCloud.SDK.Oos20190601
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListExecutionsWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>获取仓库信息</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// ListGitRepositoriesRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// ListGitRepositoriesResponse
-        /// </returns>
-        public ListGitRepositoriesResponse ListGitRepositoriesWithOptions(ListGitRepositoriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
-            {
-                query["ClientToken"] = request.ClientToken;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrgId))
-            {
-                query["OrgId"] = request.OrgId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrgName))
-            {
-                query["OrgName"] = request.OrgName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
-            {
-                query["Owner"] = request.Owner;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
-            {
-                query["PageNumber"] = request.PageNumber;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["PageSize"] = request.PageSize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Platform))
-            {
-                query["Platform"] = request.Platform;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListGitRepositories",
-                Version = "2019-06-01",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListGitRepositoriesResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>获取仓库信息</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// ListGitRepositoriesRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// ListGitRepositoriesResponse
-        /// </returns>
-        public async Task<ListGitRepositoriesResponse> ListGitRepositoriesWithOptionsAsync(ListGitRepositoriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
-            {
-                query["ClientToken"] = request.ClientToken;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrgId))
-            {
-                query["OrgId"] = request.OrgId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrgName))
-            {
-                query["OrgName"] = request.OrgName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
-            {
-                query["Owner"] = request.Owner;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
-            {
-                query["PageNumber"] = request.PageNumber;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["PageSize"] = request.PageSize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Platform))
-            {
-                query["Platform"] = request.Platform;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListGitRepositories",
-                Version = "2019-06-01",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListGitRepositoriesResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>获取仓库信息</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// ListGitRepositoriesRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// ListGitRepositoriesResponse
-        /// </returns>
-        public ListGitRepositoriesResponse ListGitRepositories(ListGitRepositoriesRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return ListGitRepositoriesWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>获取仓库信息</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// ListGitRepositoriesRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// ListGitRepositoriesResponse
-        /// </returns>
-        public async Task<ListGitRepositoriesResponse> ListGitRepositoriesAsync(ListGitRepositoriesRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await ListGitRepositoriesWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>获取仓库文件与目录信息</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// ListGitRepositoryContentsRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// ListGitRepositoryContentsResponse
-        /// </returns>
-        public ListGitRepositoryContentsResponse ListGitRepositoryContentsWithOptions(ListGitRepositoryContentsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Branch))
-            {
-                query["Branch"] = request.Branch;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
-            {
-                query["ClientToken"] = request.ClientToken;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentType))
-            {
-                query["ContentType"] = request.ContentType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrgId))
-            {
-                query["OrgId"] = request.OrgId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
-            {
-                query["Owner"] = request.Owner;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
-            {
-                query["Path"] = request.Path;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Platform))
-            {
-                query["Platform"] = request.Platform;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepoFullName))
-            {
-                query["RepoFullName"] = request.RepoFullName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepoId))
-            {
-                query["RepoId"] = request.RepoId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListGitRepositoryContents",
-                Version = "2019-06-01",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListGitRepositoryContentsResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>获取仓库文件与目录信息</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// ListGitRepositoryContentsRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// ListGitRepositoryContentsResponse
-        /// </returns>
-        public async Task<ListGitRepositoryContentsResponse> ListGitRepositoryContentsWithOptionsAsync(ListGitRepositoryContentsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Branch))
-            {
-                query["Branch"] = request.Branch;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
-            {
-                query["ClientToken"] = request.ClientToken;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentType))
-            {
-                query["ContentType"] = request.ContentType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrgId))
-            {
-                query["OrgId"] = request.OrgId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
-            {
-                query["Owner"] = request.Owner;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
-            {
-                query["Path"] = request.Path;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Platform))
-            {
-                query["Platform"] = request.Platform;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepoFullName))
-            {
-                query["RepoFullName"] = request.RepoFullName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepoId))
-            {
-                query["RepoId"] = request.RepoId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListGitRepositoryContents",
-                Version = "2019-06-01",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListGitRepositoryContentsResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>获取仓库文件与目录信息</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// ListGitRepositoryContentsRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// ListGitRepositoryContentsResponse
-        /// </returns>
-        public ListGitRepositoryContentsResponse ListGitRepositoryContents(ListGitRepositoryContentsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return ListGitRepositoryContentsWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>获取仓库文件与目录信息</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// ListGitRepositoryContentsRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// ListGitRepositoryContentsResponse
-        /// </returns>
-        public async Task<ListGitRepositoryContentsResponse> ListGitRepositoryContentsAsync(ListGitRepositoryContentsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await ListGitRepositoryContentsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
