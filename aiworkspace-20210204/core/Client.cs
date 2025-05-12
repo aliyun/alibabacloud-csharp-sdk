@@ -6477,7 +6477,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取配置</para>
+        /// <para>Obtains a workspace configuration item.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6531,7 +6531,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取配置</para>
+        /// <para>Obtains a workspace configuration item.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6585,7 +6585,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取配置</para>
+        /// <para>Obtains a workspace configuration item.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6604,7 +6604,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取配置</para>
+        /// <para>Obtains a workspace configuration item.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8723,7 +8723,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取配置</para>
+        /// <para>Obtains a list of workspace configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8781,7 +8781,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取配置</para>
+        /// <para>Obtains a list of workspace configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8839,7 +8839,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取配置</para>
+        /// <para>Obtains a list of workspace configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8858,7 +8858,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取配置</para>
+        /// <para>Obtains a list of workspace configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13999,7 +13999,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新配置</para>
+        /// <para>Updates or adds a workspace configuration item.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14057,7 +14057,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新配置</para>
+        /// <para>Updates or adds a workspace configuration item.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14115,7 +14115,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新配置</para>
+        /// <para>Updates or adds a workspace configuration item.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14134,7 +14134,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新配置</para>
+        /// <para>Updates or adds a workspace configuration item.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14153,7 +14153,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新配置</para>
+        /// <para>Updates or adds workspace configurations in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14199,7 +14199,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新配置</para>
+        /// <para>Updates or adds workspace configurations in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14245,7 +14245,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新配置</para>
+        /// <para>Updates or adds workspace configurations in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14264,7 +14264,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新配置</para>
+        /// <para>Updates or adds workspace configurations in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">

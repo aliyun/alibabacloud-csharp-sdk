@@ -38,6 +38,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string FileCreateTime { get; set; }
 
+        [NameInMap("FileFingerPrint")]
+        [Validation(Required=false)]
+        public string FileFingerPrint { get; set; }
+
         [NameInMap("FileName")]
         [Validation(Required=false)]
         public string FileName { get; set; }

@@ -82,7 +82,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <summary>
         /// <para>The framework of the model. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Pytorch -XGBoost</description></item>
+        /// <item><description>Pytorch </description></item>
+        /// <item><description>XGBoost</description></item>
         /// <item><description>Keras</description></item>
         /// <item><description>Caffe</description></item>
         /// <item><description>Alink</description></item>
