@@ -595,7 +595,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application service.</para>
+        /// <para>Creates an application service to obtain the inference capabilities of large models.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -671,7 +671,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application service.</para>
+        /// <para>Creates an application service to obtain the inference capabilities of large models.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -747,7 +747,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application service.</para>
+        /// <para>Creates an application service to obtain the inference capabilities of large models.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -766,7 +766,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application service.</para>
+        /// <para>Creates an application service to obtain the inference capabilities of large models.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11577,6 +11577,136 @@ namespace AlibabaCloud.SDK.Eas20210701
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateGatewayWithOptionsAsync(GatewayId, ClusterId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the specific fields of a service group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateGroupResponse
+        /// </returns>
+        public UpdateGroupResponse UpdateGroupWithOptions(string ClusterId, string GroupName, UpdateGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrafficMode))
+            {
+                body["TrafficMode"] = request.TrafficMode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateGroup",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(GroupName),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the specific fields of a service group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateGroupResponse
+        /// </returns>
+        public async Task<UpdateGroupResponse> UpdateGroupWithOptionsAsync(string ClusterId, string GroupName, UpdateGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrafficMode))
+            {
+                body["TrafficMode"] = request.TrafficMode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateGroup",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(GroupName),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the specific fields of a service group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateGroupResponse
+        /// </returns>
+        public UpdateGroupResponse UpdateGroup(string ClusterId, string GroupName, UpdateGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateGroupWithOptions(ClusterId, GroupName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the specific fields of a service group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateGroupResponse
+        /// </returns>
+        public async Task<UpdateGroupResponse> UpdateGroupAsync(string ClusterId, string GroupName, UpdateGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateGroupWithOptionsAsync(ClusterId, GroupName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

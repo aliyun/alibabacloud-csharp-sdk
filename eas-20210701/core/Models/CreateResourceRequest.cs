@@ -67,12 +67,16 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string EcsInstanceType { get; set; }
 
         /// <summary>
-        /// <para>The custom tag.</para>
+        /// <para>The labels.</para>
         /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]
         public Dictionary<string, string> Labels { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>MyResource</para>
+        /// </summary>
         [NameInMap("ResourceName")]
         [Validation(Required=false)]
         public string ResourceName { get; set; }
@@ -126,7 +130,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public List<CreateResourceRequestSelfManagedResourceOptionsNodeTolerations> NodeTolerations { get; set; }
             public class CreateResourceRequestSelfManagedResourceOptionsNodeTolerations : TeaModel {
                 /// <summary>
-                /// <para>The result.</para>
+                /// <para>The effect.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>PreferNoSchedule</description></item>
