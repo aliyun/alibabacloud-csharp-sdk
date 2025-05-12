@@ -334,7 +334,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DeviceName { get; set; }
 
             /// <summary>
-            /// <para>The product ID.</para>
+            /// <para>The product ID (PID).</para>
             /// 
             /// <b>Example:</b>
             /// <para>0x55b1</para>
@@ -347,16 +347,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The peripheral type.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>usbKey</description></item>
-            /// <item><description>other</description></item>
-            /// <item><description>graphicsTablet</description></item>
-            /// <item><description>printer</description></item>
-            /// <item><description>cardReader</description></item>
-            /// <item><description>scanner</description></item>
-            /// <item><description>storage</description></item>
-            /// <item><description>camera</description></item>
-            /// <item><description>adb</description></item>
-            /// <item><description>networkInterfaceCard: the NIC device.</description></item>
+            /// <item><description>usbKey: UKeys.</description></item>
+            /// <item><description>other: other peripheral devices.</description></item>
+            /// <item><description>graphicsTablet: graphics tablets.</description></item>
+            /// <item><description>printer: printers.</description></item>
+            /// <item><description>cardReader: card readers.</description></item>
+            /// <item><description>scanner: scanners.</description></item>
+            /// <item><description>storage: storage devices.</description></item>
+            /// <item><description>camera: web cameras.</description></item>
+            /// <item><description>adb: Android Debug Bridge (ADB) devices.</description></item>
+            /// <item><description>networkInterfaceCard: NIC devices.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

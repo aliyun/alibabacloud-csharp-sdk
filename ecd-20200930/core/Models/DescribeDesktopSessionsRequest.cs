@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// <para>The ID the end user. It is the same as EndUserId. Either one of these two parameters is required.</para>
+        /// <para>The user ID. This parameter functions the same as the <c>EndUserId</c> parameter. You only need to include one of them in your request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alice</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndUserIdFilter { get; set; }
 
         /// <summary>
-        /// <para>The ID of the office network.</para>
+        /// <para>The office network ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou+dir-363353****</para>

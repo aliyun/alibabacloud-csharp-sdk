@@ -435,7 +435,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The peripheral type.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>usbKey: UKeys</description></item>
+            /// <item><description>usbKey: UKeys.</description></item>
             /// <item><description>other: other peripheral devices.</description></item>
             /// <item><description>graphicsTablet: graphics tablets.</description></item>
             /// <item><description>cardReader: card readers.</description></item>
@@ -481,9 +481,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The redirection type.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>deviceRedirect: device redirection</description></item>
+            /// <item><description>deviceRedirect: device redirection.</description></item>
             /// <item><description>usbRedirect: USB redirection.</description></item>
-            /// <item><description>off: any type of redirection.</description></item>
+            /// <item><description>off: redirection disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

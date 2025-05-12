@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDesktopTypesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details of cloud desktop types.</para>
+        /// <para>The specifications.</para>
         /// </summary>
         [NameInMap("DesktopTypes")]
         [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public float? GpuCount { get; set; }
 
             /// <summary>
-            /// <para>The GPU memory size. Unit: MB. This parameter applies to GPU-enabled cloud computers only.</para>
+            /// <para>The GPU memory size. For GPU-accelerated cloud computers, this return value is significant. Unit: MB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2048</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string InstanceTypeFamily { get; set; }
 
             /// <summary>
-            /// <para>The number of sessions supported by the current specification.</para>
+            /// <para>The number of sessions supported by the specification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -117,14 +117,19 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string MemorySize { get; set; }
 
             /// <summary>
-            /// <para>The array of sales modes.</para>
+            /// <para>The sales modes of the specifications.</para>
             /// </summary>
             [NameInMap("Scopes")]
             [Validation(Required=false)]
             public List<string> Scopes { get; set; }
 
             /// <summary>
-            /// <para>The stock status.</para>
+            /// <para>The inventory status of the specification.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Insufficient</description></item>
+            /// <item><description>Sufficient</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Sufficient</para>

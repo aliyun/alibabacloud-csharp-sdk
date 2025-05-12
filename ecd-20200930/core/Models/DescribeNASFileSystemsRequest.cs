@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeNASFileSystemsRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the NAS file system.</para>
+        /// <para>The IDs of the NAS file systems.</para>
         /// 
         /// <b>Example:</b>
         /// <para>04f314****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to filter NAS file systems that only support the user profile management (UPM) feature.</para>
+        /// <para>Specifies whether to include only NAS file systems that support the User Profile Management (UPM) feature in the query results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workspace.</para>
+        /// <para>The ID of the office network.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou+dir-363353****</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

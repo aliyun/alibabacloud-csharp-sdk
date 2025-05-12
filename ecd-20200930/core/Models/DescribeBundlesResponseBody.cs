@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeBundlesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the cloud computer templates.</para>
+        /// <para>The cloud computer templates.</para>
         /// </summary>
         [NameInMap("Bundles")]
         [Validation(Required=false)]
@@ -73,11 +73,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The category of the data disk. Valid values:</para>
+            /// <para>The category of the data disk.</para>
+            /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>cloud_efficiency: ultra disk</description></item>
-            /// <item><description>cloud_auto: SSD</description></item>
-            /// <item><description>cloud_essd: ESSD (supported by specific specifications)</description></item>
+            /// <item><description>cloud_efficiency: the ultra disk</description></item>
+            /// <item><description>cloud_auto: the standard SSD.</description></item>
+            /// <item><description>cloud_essd: the ESSD. Take note that only specific cloud computer types support ESSDs.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -425,11 +426,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string StockState { get; set; }
 
             /// <summary>
-            /// <para>The category of the system disk. Valid values:</para>
+            /// <para>The category of the system disk.</para>
+            /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>cloud_efficiency: ultra disk</description></item>
-            /// <item><description>cloud_auto: SSD</description></item>
-            /// <item><description>cloud_essd: ESSD (supported by specific specifications)</description></item>
+            /// <item><description>cloud_efficiency: the ultra disk</description></item>
+            /// <item><description>cloud_auto: the standard SSD.</description></item>
+            /// <item><description>cloud_essd: the Enterprise SSD (ESSD). Take note that only specific cloud computer types support ESSDs.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeImageModifiedRecordsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the image modification record.</para>
+        /// <para>The image change records.</para>
         /// </summary>
         [NameInMap("ImageModifiedRecords")]
         [Validation(Required=false)]

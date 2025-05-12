@@ -5604,7 +5604,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建无地域策略</para>
+        /// <para>Creates a center policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6046,7 +6046,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建无地域策略</para>
+        /// <para>Creates a center policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6488,7 +6488,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建无地域策略</para>
+        /// <para>Creates a center policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6506,7 +6506,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建无地域策略</para>
+        /// <para>Creates a center policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19397,6 +19397,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["ResellerOwnerUid"] = request.ResellerOwnerUid;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceSpecs))
+            {
+                query["ResourceSpecs"] = request.ResourceSpecs;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
             {
                 query["ResourceType"] = request.ResourceType;
@@ -19466,6 +19470,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResellerOwnerUid))
             {
                 query["ResellerOwnerUid"] = request.ResellerOwnerUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceSpecs))
+            {
+                query["ResourceSpecs"] = request.ResourceSpecs;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
             {
@@ -25081,7 +25089,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The cloud computer must be in the Running state.</para>
+        /// <para>The cloud computer must be in the Running state. The ticket obtained by calling this operation will expire in 10 minutes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25164,7 +25172,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The cloud computer must be in the Running state.</para>
+        /// <para>The cloud computer must be in the Running state. The ticket obtained by calling this operation will expire in 10 minutes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25247,7 +25255,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The cloud computer must be in the Running state.</para>
+        /// <para>The cloud computer must be in the Running state. The ticket obtained by calling this operation will expire in 10 minutes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25270,7 +25278,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The cloud computer must be in the Running state.</para>
+        /// <para>The cloud computer must be in the Running state. The ticket obtained by calling this operation will expire in 10 minutes.</para>
         /// </description>
         /// 
         /// <param name="request">

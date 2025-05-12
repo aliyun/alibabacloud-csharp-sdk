@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string AdHostname { get; set; }
 
         /// <summary>
-        /// <para>The hostname of the backup domain controller.</para>
+        /// <para>The hostname of the secondary domain controller.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dc002</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string BackupDCHostname { get; set; }
 
         /// <summary>
-        /// <para>The DNS address of the backup domain controller.</para>
+        /// <para>The IP address of the DNS server corresponding to the secondary domain controller.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.2.100</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string BackupDns { get; set; }
 
         /// <summary>
-        /// <para>Details of the IP addresses of the Domain Name System (DNS) servers that correspond to the enterprise AD system. You can specify only one IP address.</para>
+        /// <para>The IP addresses of the DNS servers corresponding to the enterprise ADs. You can specify only one DNS IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>127.0.<em>.</em></para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteName { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The DNS address of the subdomain in the enterprise AD domain. You can specify only one DNS address. If you configure <c>SubDomainName</c> and leave this parameter empty, the value is the same as that of the enterprise AD domain.</para>
+        /// <para>The IP addresses of the DNS servers corresponding to the enterprise AD subdomains. You can specify only one DNS IP address. If you specify <c>SubDomainName</c> and leave this parameter empty, the value is the same as that of the enterprise AD domain.</para>
         /// 
         /// <b>Example:</b>
         /// <para>127.0.<em>.</em></para>

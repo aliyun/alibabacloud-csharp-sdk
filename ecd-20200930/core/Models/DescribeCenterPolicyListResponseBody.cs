@@ -488,7 +488,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string EndUserApplyAdminCoordinate { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether end users in the same workspace can share cloud computers.</para>
+            /// <para>Indicates whether end users in the same office network can share cloud computers.</para>
             /// 
             /// <b>Example:</b>
             /// <para>off</para>
@@ -518,7 +518,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Html5Access { get; set; }
 
             /// <summary>
-            /// <para>The file transfer policy of the HTML5 client.</para>
+            /// <para>The file transfer feature on the web client.</para>
             /// 
             /// <b>Example:</b>
             /// <para>off</para>
@@ -619,7 +619,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? MemorySingleRateLimit { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the Restart button is displayed in the DesktopAssistant menu when end users connect to cloud computers from mobile clients (Android clients and iOS clients).</para>
+            /// <para>Indicates whether the Restart button is displayed in the DesktopAssistant menu when end users connect to cloud computers from Android clients.</para>
             /// <remarks>
             /// <para> This feature applies to only mobile clients of version 7.4.0 or later.</para>
             /// </remarks>
@@ -632,7 +632,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string MobileRestart { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the Stop button is displayed in the DesktopAssistant menu when end users connect to cloud computers from mobile clients (Android clients and iOS clients).</para>
+            /// <para>Indicates whether the Stop button is displayed in the DesktopAssistant menu when end users connect to cloud computers from Android clients.</para>
             /// <remarks>
             /// <para> This feature applies to only mobile clients of version 7.4.0 or later.</para>
             /// </remarks>
@@ -1107,7 +1107,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>The average bitrate for video encoding. Valid values: 1000 to 50000.</para>
+            /// <para>The average bitrate for video encoding. Unit: Kbit/s. Valid values: 1000 to 50000.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -1137,7 +1137,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? VideoEncMinQP { get; set; }
 
             /// <summary>
-            /// <para>The peak bitrate for video encoding. Valid values: 1000 to 50000.</para>
+            /// <para>The peak bitrate for video encoding. Unit: Kbit/s. Valid values: 1000 to 50000.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2000</para>

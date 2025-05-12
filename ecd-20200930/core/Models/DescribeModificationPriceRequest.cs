@@ -83,6 +83,24 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public long? ResellerOwnerUid { get; set; }
 
+        [NameInMap("ResourceSpecs")]
+        [Validation(Required=false)]
+        public List<DescribeModificationPriceRequestResourceSpecs> ResourceSpecs { get; set; }
+        public class DescribeModificationPriceRequestResourceSpecs : TeaModel {
+            [NameInMap("DesktopId")]
+            [Validation(Required=false)]
+            public string DesktopId { get; set; }
+
+            [NameInMap("RootDiskSizeGib")]
+            [Validation(Required=false)]
+            public int? RootDiskSizeGib { get; set; }
+
+            [NameInMap("UserDiskSizeGib")]
+            [Validation(Required=false)]
+            public int? UserDiskSizeGib { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The resource type. The required parameters depend on the resource type.</para>
         /// <list type="bullet">

@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The business type.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: public cloud.</description></item>
+        /// <item><description>1: public cloud</description></item>
         /// <item><description>8: commercial edition.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>

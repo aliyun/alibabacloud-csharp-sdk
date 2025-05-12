@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The details of the cloud computer policies.</para>
+        /// <para>The cloud computer policies.</para>
         /// </summary>
         [NameInMap("DescribePolicyGroups")]
         [Validation(Required=false)]

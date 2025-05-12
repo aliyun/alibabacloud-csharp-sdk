@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Policy { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance to which the ACL applies, such as an office network ID or a cloud computer ID.</para>
+            /// <para>The ID of the instance to which the ACL applies. You can specify an office network ID or a cloud computer ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecd-fsafeweh***</para>

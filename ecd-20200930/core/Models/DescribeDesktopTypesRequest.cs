@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? CpuCount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud computer pool when you change instance types of cloud computers. If you specify this parameter, the information about whether the instance type is compatible with the cloud computer pool is included in the response.</para>
+        /// <para>The ID of the cloud computer share you want to modify. If this parameter is provided, the response will include compatibility information for the specified specification.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dg-abcdefg****</para>
@@ -50,151 +50,35 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopIdForModify { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the instance types of cloud computers.</para>
+        /// <para>The specification ID.</para>
         /// <remarks>
-        /// <para> If the values of the <c>InstanceTypeFamily</c> and <c>DesktopTypeId</c> parameters are empty, all instance types of cloud computers are queried.</para>
+        /// <para> If both <c>InstanceTypeFamily</c> and <c>DesktopTypeId</c> are empty, all cloud computer specifications will be queried.</para>
         /// </remarks>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>eds.hf.4c8g</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>ecd.basic.large</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>ecd.advanced.large</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>ecd.basic.small</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>ecd.graphics.2xlarge</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>eds.hf.8c16g</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>eds.hf.12c24g</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>eds.general.8c16g</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>eds.general.16c32g</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>ecd.advanced.xlarge</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>eds.graphics.16c1t4</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>ecd.graphics.xlarge</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>ecd.performance.2xlarge</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>eds.general.8c32g</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>eds.general.2c2g</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>eds.general.2c4g</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>eds.graphics.24c1t4</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>eds.general.4c8g</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>eds.general.4c16g</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>eds.general.2c8g</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
+        /// <item><description>eds.enterprise_office.4c8g</description></item>
+        /// <item><description>eds.hf.4c8g</description></item>
+        /// <item><description>ecd.basic.large</description></item>
+        /// <item><description>ecd.advanced.large</description></item>
+        /// <item><description>eds.enterprise_office.8c16g</description></item>
+        /// <item><description>ecd.basic.small</description></item>
+        /// <item><description>ecd.graphics.2xlarge</description></item>
+        /// <item><description>eds.hf.8c16g</description></item>
+        /// <item><description>eds.hf.12c24g</description></item>
+        /// <item><description>eds.general.8c16g</description></item>
+        /// <item><description>eds.general.16c32g</description></item>
+        /// <item><description>ecd.advanced.xlarge</description></item>
+        /// <item><description>eds.graphics.16c1t4</description></item>
+        /// <item><description>ecd.graphics.xlarge</description></item>
+        /// <item><description>ecd.performance.2xlarge</description></item>
+        /// <item><description>eds.general.8c32g</description></item>
+        /// <item><description>eds.general.2c2g</description></item>
+        /// <item><description>eds.general.2c4g</description></item>
+        /// <item><description>eds.graphics.24c1t4</description></item>
+        /// <item><description>eds.general.4c8g</description></item>
+        /// <item><description>eds.enterprise_office.2c4g</description></item>
+        /// <item><description>eds.general.4c16g</description></item>
+        /// <item><description>eds.general.2c8g</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -205,7 +89,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopTypeId { get; set; }
 
         /// <summary>
-        /// <para>The array of specifications.</para>
+        /// <para>The specification IDs.</para>
         /// </summary>
         [NameInMap("DesktopTypeIdList")]
         [Validation(Required=false)]
@@ -222,7 +106,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public float? GpuCount { get; set; }
 
         /// <summary>
-        /// <para>The type of the pre-installed GPU driver. Valid values:</para>
+        /// <para>The GPU driver type.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>T4</description></item>
         /// <item><description>A10</description></item>
@@ -248,60 +133,20 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? GpuMemory { get; set; }
 
         /// <summary>
-        /// <para>The name of the instance family.</para>
+        /// <para>The name of the specification family.</para>
         /// <remarks>
-        /// <para> If the values of the <c>InstanceTypeFamily</c> and <c>DesktopTypeId</c> parameters are empty, all instance families of cloud computers are queried.</para>
+        /// <para> If both <c>InstanceTypeFamily</c> and <c>DesktopTypeId</c> are empty, all specification families will be queried.</para>
         /// </remarks>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>ecd.advanced</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>eds.graphics</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>ecd.basic</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>eds.hf</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>ecd.graphics</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>eds.general</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>ecd.performance</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
+        /// <item><description>ecd.advanced</description></item>
+        /// <item><description>eds.graphics</description></item>
+        /// <item><description>ecd.basic</description></item>
+        /// <item><description>eds.enterprise_office</description></item>
+        /// <item><description>eds.hf</description></item>
+        /// <item><description>ecd.graphics</description></item>
+        /// <item><description>eds.general</description></item>
+        /// <item><description>ecd.performance</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -322,10 +167,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MemorySize { get; set; }
 
         /// <summary>
-        /// <para>The sort criterion. If left empty, the entries will be in descending order based on the creation time. Valid values:</para>
+        /// <para>The sorting field. If this parameter is not provided, results are sorted by creation time in descending order.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Memory: sort by memory size</description></item>
-        /// <item><description>Cpu: sort by number of CPU cores</description></item>
+        /// <item><description>Memory: sorts by memory size.</description></item>
+        /// <item><description>Cpu: sorts by the number of vCPUs.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -346,7 +192,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OrderType { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -357,10 +203,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The sales mode. Valid values:</para>
+        /// <para>The sales mode of the specification.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>MonthPackage: monthly subscription</description></item>
-        /// <item><description>FastBuy: fast buy</description></item>
+        /// <item><description>MonthPackage: the monthly subscription mode.</description></item>
+        /// <item><description>FastBuy: the quick purchase mode.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -371,10 +218,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Scope { get; set; }
 
         /// <summary>
-        /// <para>The sort order. Valid values:</para>
+        /// <para>The sorting order.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ASC: in ascending order [default]</description></item>
-        /// <item><description>DESC: in descending order</description></item>
+        /// <item><description>ASC (default): the ascending order.</description></item>
+        /// <item><description>DESC: the descending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -385,7 +233,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string SortType { get; set; }
 
         /// <summary>
-        /// <para>The number of sessions supported.</para>
+        /// <para>The number of sessions supported by the specification.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -396,7 +244,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is not publicly available.</para>
+        /// <para> This parameter is not publicly available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

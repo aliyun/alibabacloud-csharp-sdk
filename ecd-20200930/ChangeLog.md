@@ -1,3 +1,7 @@
+2025-05-12 Version: 4.8.8
+- Update API DescribeModificationPrice: add request parameters ResourceSpecs.
+
+
 2025-04-28 Version: 4.8.7
 - Update API CreateCloudDriveService: add request parameters ResellerOwnerUid.
 - Update API CreateDesktopGroup: add request parameters ResellerOwnerUid.

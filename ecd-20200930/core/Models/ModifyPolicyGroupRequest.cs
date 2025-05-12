@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string AppContentProtection { get; set; }
 
         /// <summary>
-        /// <para>The client IP address whitelist.</para>
+        /// <para>The client IP address whitelists.</para>
         /// </summary>
         [NameInMap("AuthorizeAccessPolicyRule")]
         [Validation(Required=false)]
         public List<ModifyPolicyGroupRequestAuthorizeAccessPolicyRule> AuthorizeAccessPolicyRule { get; set; }
         public class ModifyPolicyGroupRequestAuthorizeAccessPolicyRule : TeaModel {
             /// <summary>
-            /// <para>The client CIDR block from which end users can connect to cloud computers. The value is an IPv4 CIDR block.</para>
+            /// <para>The client CIDR block. Specify an IPv4 CIDR block.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -327,16 +327,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The peripheral type.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>usbKey</description></item>
-            /// <item><description>other</description></item>
-            /// <item><description>graphicsTablet</description></item>
-            /// <item><description>printer</description></item>
-            /// <item><description>cardReader</description></item>
-            /// <item><description>scanner</description></item>
-            /// <item><description>storage</description></item>
-            /// <item><description>camera</description></item>
-            /// <item><description>adb</description></item>
-            /// <item><description>networkInterfaceCard: the NIC device</description></item>
+            /// <item><description>usbKey: UKeys</description></item>
+            /// <item><description>other: other peripheral devices.</description></item>
+            /// <item><description>graphicsTablet: graphics tablets.</description></item>
+            /// <item><description>printer: printers.</description></item>
+            /// <item><description>cardReader: card readers.</description></item>
+            /// <item><description>scanner: scanners.</description></item>
+            /// <item><description>storage: storage devices.</description></item>
+            /// <item><description>camera: web cameras.</description></item>
+            /// <item><description>adb: Android Debug Bridge (ADB) device</description></item>
+            /// <item><description>networkInterfaceCard: NIC devices.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -375,7 +375,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>Valid values:</para>
             /// <list type="bullet">
             /// <item><description>deviceRedirect: device redirection</description></item>
-            /// <item><description>usbRedirect: USB redirection</description></item>
+            /// <item><description>usbRedirect: USB redirection.</description></item>
             /// <item><description>off: redirection disabled</description></item>
             /// </list>
             /// 
@@ -404,14 +404,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DomainList { get; set; }
 
         /// <summary>
-        /// <para>The details of the domain name resolution rules.</para>
+        /// <para>The domain resolution rules.</para>
         /// </summary>
         [NameInMap("DomainResolveRule")]
         [Validation(Required=false)]
         public List<ModifyPolicyGroupRequestDomainResolveRule> DomainResolveRule { get; set; }
         public class ModifyPolicyGroupRequestDomainResolveRule : TeaModel {
             /// <summary>
-            /// <para>The description of domain name resolution rule.</para>
+            /// <para>The policy description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>description policy</para>
@@ -431,7 +431,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Domain { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to allow the domain name resolution rule.</para>
+            /// <para>The resolution policy.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
             /// <item><description>allow</description></item>
@@ -841,14 +841,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RemoteCoordinate { get; set; }
 
         /// <summary>
-        /// <para>The client IP addresses that you want to delete from the whitelist.</para>
+        /// <para>The client IP address whitelists that you want to delete.</para>
         /// </summary>
         [NameInMap("RevokeAccessPolicyRule")]
         [Validation(Required=false)]
         public List<ModifyPolicyGroupRequestRevokeAccessPolicyRule> RevokeAccessPolicyRule { get; set; }
         public class ModifyPolicyGroupRequestRevokeAccessPolicyRule : TeaModel {
             /// <summary>
-            /// <para>The client CIDR block that you want to delete. After it is deleted, end users cannot connect to cloud computers from the CIDR block. The value is an IPv4 CIDR block.</para>
+            /// <para>The client CIDR block that you want to delete. Specify an IPv4 CIDR block.</para>
             /// 
             /// <b>Example:</b>
             /// <para>47.100.XX.XX/16</para>
@@ -858,7 +858,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CidrIp { get; set; }
 
             /// <summary>
-            /// <para>The description of the client IP addresses that you want to delete from the whitelist.</para>
+            /// <para>The description of the client IP address whitelist that you want to delete.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -1295,14 +1295,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string WatermarkType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to provide the AI Assistant function in the DesktopAssistant when the cloud computer is accessed from the Alibaba Cloud Workspace desktop clients (including the Windows client and the macOS client).</para>
-        /// <remarks>
-        /// <para>Desktop clients of V7.7 and higher versions required.</para>
-        /// </remarks>
+        /// <para>Specifies whether to display the Xiaoying AI Assistant entry in the DesktopAssistant menu.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>off: the AI Aisstant function is not provided.</description></item>
-        /// <item><description>on: the AI Aisstant function is provided.</description></item>
+        /// <item><description>off: does not display the Xiaoying AI Assistant entry in the DesktopAssistant menu.</description></item>
+        /// <item><description>on: displays the Xiaoying AI Assistant entry in the DesktopAssistant menu.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
