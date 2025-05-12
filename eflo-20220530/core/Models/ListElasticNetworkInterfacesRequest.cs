@@ -107,6 +107,20 @@ namespace AlibabaCloud.SDK.Eflo20220530.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<ListElasticNetworkInterfacesRequestTag> Tag { get; set; }
+        public class ListElasticNetworkInterfacesRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The type of the variable.</para>
         /// <para>Valid value:</para>

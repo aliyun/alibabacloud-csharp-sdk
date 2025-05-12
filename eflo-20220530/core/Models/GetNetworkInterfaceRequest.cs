@@ -33,7 +33,6 @@ namespace AlibabaCloud.SDK.Eflo20220530.Models
 
         /// <summary>
         /// <para>Subnet of Lingjun</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>subnet-f3zfzmnc</para>

@@ -297,6 +297,20 @@ namespace AlibabaCloud.SDK.Eflo20220530.Models
 
                 }
 
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
+                public List<ListNetworkInterfacesResponseBodyContentDataTags> Tags { get; set; }
+                public class ListNetworkInterfacesResponseBodyContentDataTags : TeaModel {
+                    [NameInMap("TagKey")]
+                    [Validation(Required=false)]
+                    public string TagKey { get; set; }
+
+                    [NameInMap("TagValue")]
+                    [Validation(Required=false)]
+                    public string TagValue { get; set; }
+
+                }
+
                 /// <summary>
                 /// <para>The tenant ID.</para>
                 /// 

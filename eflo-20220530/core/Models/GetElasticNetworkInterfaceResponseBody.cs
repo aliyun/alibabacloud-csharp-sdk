@@ -386,6 +386,20 @@ namespace AlibabaCloud.SDK.Eflo20220530.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<GetElasticNetworkInterfaceResponseBodyContentTags> Tags { get; set; }
+            public class GetElasticNetworkInterfaceResponseBodyContentTags : TeaModel {
+                [NameInMap("TagKey")]
+                [Validation(Required=false)]
+                public string TagKey { get; set; }
+
+                [NameInMap("TagValue")]
+                [Validation(Required=false)]
+                public string TagValue { get; set; }
+
+            }
+
             /// <summary>
             /// <para>NIC Type</para>
             /// <para>Valid value:</para>
