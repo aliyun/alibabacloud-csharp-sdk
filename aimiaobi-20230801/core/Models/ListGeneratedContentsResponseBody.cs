@@ -69,6 +69,32 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public string DeviceId { get; set; }
 
+            [NameInMap("FileAttr")]
+            [Validation(Required=false)]
+            public ListGeneratedContentsResponseBodyDataFileAttr FileAttr { get; set; }
+            public class ListGeneratedContentsResponseBodyDataFileAttr : TeaModel {
+                [NameInMap("FileName")]
+                [Validation(Required=false)]
+                public string FileName { get; set; }
+
+                [NameInMap("Height")]
+                [Validation(Required=false)]
+                public int? Height { get; set; }
+
+                [NameInMap("TmpUrl")]
+                [Validation(Required=false)]
+                public string TmpUrl { get; set; }
+
+                [NameInMap("Width")]
+                [Validation(Required=false)]
+                public int? Width { get; set; }
+
+            }
+
+            [NameInMap("FileKey")]
+            [Validation(Required=false)]
+            public string FileKey { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>10</para>

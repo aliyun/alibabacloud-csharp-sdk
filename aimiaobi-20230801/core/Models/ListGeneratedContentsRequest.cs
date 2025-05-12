@@ -35,6 +35,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public int? Current { get; set; }
 
+        [NameInMap("DataType")]
+        [Validation(Required=false)]
+        public string DataType { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>2024-01-04 11:46:07</para>

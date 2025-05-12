@@ -9165,6 +9165,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             {
                 body["Current"] = request.Current;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataType))
+            {
+                body["DataType"] = request.DataType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 body["EndTime"] = request.EndTime;
@@ -9240,6 +9244,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Current))
             {
                 body["Current"] = request.Current;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataType))
+            {
+                body["DataType"] = request.DataType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
