@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         /// <item><description>selectdb_pre_public_intl: subscription commodity on the international site (alibabacloud.com)</description></item>
         /// <item><description>selectdb_go_public_cn: pay-as-you-go commodity on the China site (aliyun.com)</description></item>
         /// <item><description>selectdb_go_public_intl: pay-as-you-go commodity on the international site (alibabacloud.com)</description></item>
-        /// <item><description>selectdb_pre_public_cn: subscription commodity on the China site (aliyun.com).</description></item>
+        /// <item><description>selectdb_pre_public_cn: subscription commodity on the China site (aliyun.com)</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -83,6 +83,10 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         [NameInMap("DbInstanceId")]
         [Validation(Required=false)]
         public string DbInstanceId { get; set; }
+
+        [NameInMap("ModifyClusterChargeType")]
+        [Validation(Required=false)]
+        public bool? ModifyClusterChargeType { get; set; }
 
         /// <summary>
         /// <para>The size of the reserved cache.</para>

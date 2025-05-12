@@ -31,6 +31,11 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 
         /// <summary>
         /// <para>The attribute type of the instance. Set this parameter to DBInstanceDescription.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>MaintainTime</description></item>
+        /// <item><description>DBInstanceDescription</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

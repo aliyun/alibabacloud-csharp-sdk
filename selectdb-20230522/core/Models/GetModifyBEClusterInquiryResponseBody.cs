@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             [Validation(Required=false)]
             public string Currency { get; set; }
 
+            [NameInMap("RefundAmount")]
+            [Validation(Required=false)]
+            public string RefundAmount { get; set; }
+
             /// <summary>
             /// <para>The amount of money.</para>
             /// 

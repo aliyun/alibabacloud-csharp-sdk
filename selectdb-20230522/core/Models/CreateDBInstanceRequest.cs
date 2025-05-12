@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class CreateDBInstanceRequest : TeaModel {
+        [NameInMap("AddVPCIPs")]
+        [Validation(Required=false)]
+        public string AddVPCIPs { get; set; }
+
         /// <summary>
         /// <para>The reserved cache size.</para>
         /// <para>This parameter is required.</para>
@@ -56,12 +60,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string ConnectionString { get; set; }
 
         /// <summary>
-        /// <para>The specifications of the instance. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>selectdb.xlarge</b>: 4 CPU cores and 32 GB of memory</description></item>
-        /// <item><description><b>selectdb.2xlarge</b>: 8 CPU cores and 64 GB of memory</description></item>
-        /// <item><description><b>selectdb.4xlarge</b>: 16 CPU cores and 128 GB of memory</description></item>
-        /// </list>
+        /// <para>The instance type. You can call the <a href="https://help.aliyun.com/document_detail/2853363.html">DescribeAllDBInstanceClass</a> operation to query instance types.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -81,6 +80,17 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         [Validation(Required=false)]
         public string DBInstanceDescription { get; set; }
 
+        /// <summary>
+        /// <para>The deployment method of the instance.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>multi_az</description></item>
+        /// <item><description>single_az</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>single_az</para>
+        /// </summary>
         [NameInMap("DeployScheme")]
         [Validation(Required=false)]
         public string DeployScheme { get; set; }
@@ -96,7 +106,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The database engine version of the instance. Default value: <b>2.4</b>.</para>
+        /// <para>The database engine version of the instance. Default value: <b>3.0</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -107,6 +117,13 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
+        /// <para>The configurations of multi-zone deployment.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>This parameter takes effect and is required only when DeployScheme is set to multi_az.</description></item>
+        /// </list>
+        /// 
         /// <b>if can be null:</b>
         /// <c>false</c>
         /// </summary>
@@ -114,10 +131,19 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         [Validation(Required=false)]
         public List<CreateDBInstanceRequestMultiZone> MultiZone { get; set; }
         public class CreateDBInstanceRequestMultiZone : TeaModel {
+            /// <summary>
+            /// <para>The vSwitch IDs.</para>
+            /// </summary>
             [NameInMap("VSwitchIds")]
             [Validation(Required=false)]
             public List<string> VSwitchIds { get; set; }
 
+            /// <summary>
+            /// <para>The zone ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou-k</para>
+            /// </summary>
             [NameInMap("ZoneId")]
             [Validation(Required=false)]
             public string ZoneId { get; set; }
@@ -206,10 +232,10 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         }
 
         /// <summary>
-        /// <para>The subscription duration of the instance.</para>
+        /// <para>The subscription duration of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Valid values when Period is set to Year: 1, 2, 3, and 5 (integer)</description></item>
-        /// <item><description>Valid values when Period is set to Month: 1 to 9 (integer)</description></item>
+        /// <item><description>If Period is set to Year, valid values of UsedTime are 1, 2, 3, 4, and 5.</description></item>
+        /// <item><description>If Period is set to Month, valid values of UsedTime are 1 to 12.</description></item>
         /// </list>
         /// <remarks>
         /// <para> This parameter takes effect and is required only when <b>ChargeType</b> is set to <b>Prepaid</b>.</para>
