@@ -46,6 +46,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 [Validation(Required=false)]
                 public string Cpu { get; set; }
 
+                [NameInMap("duration")]
+                [Validation(Required=false)]
+                public int? Duration { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>/tmp/sysom/java-profiler</para>
@@ -77,6 +81,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 [NameInMap("mem")]
                 [Validation(Required=false)]
                 public string Mem { get; set; }
+
+                [NameInMap("pid")]
+                [Validation(Required=false)]
+                public int? Pid { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
@@ -113,6 +121,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             [NameInMap("op")]
             [Validation(Required=false)]
             public string Op { get; set; }
+
+            [NameInMap("region")]
+            [Validation(Required=false)]
+            public string Region { get; set; }
 
             /// <summary>
             /// <b>Example:</b>

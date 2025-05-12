@@ -67,6 +67,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 
             }
 
+            [NameInMap("kernel_version")]
+            [Validation(Required=false)]
+            public string KernelVersion { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>x86</para>

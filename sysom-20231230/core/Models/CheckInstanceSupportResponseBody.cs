@@ -8,10 +8,8 @@ using Tea;
 
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
-    public class GetRangeScoreResponseBody : TeaModel {
+    public class CheckInstanceSupportResponseBody : TeaModel {
         /// <summary>
-        /// <para>代表资源一级ID的资源属性字段</para>
-        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -21,57 +19,51 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 
         [NameInMap("data")]
         [Validation(Required=false)]
-        public List<GetRangeScoreResponseBodyData> Data { get; set; }
-        public class GetRangeScoreResponseBodyData : TeaModel {
+        public List<CheckInstanceSupportResponseBodyData> Data { get; set; }
+        public class CheckInstanceSupportResponseBodyData : TeaModel {
             /// <summary>
             /// <b>Example:</b>
-            /// <para>1725797727754</para>
+            /// <para>i-wz9d00ut2ska3mlyhn6j</para>
             /// </summary>
-            [NameInMap("time")]
+            [NameInMap("instance")]
             [Validation(Required=false)]
-            public long? Time { get; set; }
+            public string Instance { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>saturation</para>
+            /// <para>instance not found in ecs</para>
             /// </summary>
-            [NameInMap("type")]
+            [NameInMap("reason")]
             [Validation(Required=false)]
-            public string Type { get; set; }
+            public string Reason { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>100</para>
+            /// <para>true</para>
             /// </summary>
-            [NameInMap("value")]
+            [NameInMap("support")]
             [Validation(Required=false)]
-            public long? Value { get; set; }
+            public bool? Support { get; set; }
 
         }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>&quot;&quot;</para>
+        /// <para>SysomOpenAPIAssumeRoleException: EntityNotExist.Role The role not exists: acs:ram::xxxxx:role/aliyunserviceroleforsysom</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>35F91AAB-5FDF-5A22-B211-C7C6B00817D0</para>
+        /// <para>2D693121-C925-5154-8DF6-C09A8B369822</para>
         /// </summary>
-        [NameInMap("request_id")]
+        [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>2</para>
-        /// </summary>
-        [NameInMap("total")]
-        [Validation(Required=false)]
-        public float? Total { get; set; }
 
     }
 

@@ -19,56 +19,32 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 
         [NameInMap("data")]
         [Validation(Required=false)]
-        public ListInstanceHealthResponseBodyData Data { get; set; }
+        public List<ListInstanceHealthResponseBodyData> Data { get; set; }
         public class ListInstanceHealthResponseBodyData : TeaModel {
             [NameInMap("images")]
             [Validation(Required=false)]
             public List<string> Images { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>i-wz9d00ut2ska3mlyhn6j</para>
-            /// </summary>
             [NameInMap("instance")]
             [Validation(Required=false)]
             public string Instance { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>default</para>
-            /// </summary>
             [NameInMap("namespace")]
             [Validation(Required=false)]
             public string Namespace { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>test-pod</para>
-            /// </summary>
             [NameInMap("pod")]
             [Validation(Required=false)]
             public string Pod { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>cn-shenzhen</para>
-            /// </summary>
             [NameInMap("region_id")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>100</para>
-            /// </summary>
             [NameInMap("score")]
             [Validation(Required=false)]
             public float? Score { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>Running</para>
-            /// </summary>
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }

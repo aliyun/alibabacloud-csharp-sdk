@@ -27,19 +27,19 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             /// </summary>
             [NameInMap("created_at")]
             [Validation(Required=false)]
-            public float? CreatedAt { get; set; }
+            public long? CreatedAt { get; set; }
 
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1</para>
-            /// </summary>
-            [NameInMap("id")]
+            [NameInMap("diag_status")]
             [Validation(Required=false)]
-            public string Id { get; set; }
+            public int? DiagStatus { get; set; }
+
+            [NameInMap("end_at")]
+            [Validation(Required=false)]
+            public long? EndAt { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
@@ -53,35 +53,45 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             [Validation(Required=false)]
             public string Item { get; set; }
 
+            [NameInMap("level")]
+            [Validation(Required=false)]
+            public string Level { get; set; }
+
+            [NameInMap("namespace")]
+            [Validation(Required=false)]
+            public string Namespace { get; set; }
+
             [NameInMap("opts")]
             [Validation(Required=false)]
-            public ListAbnormalyEventsResponseBodyDataOpts Opts { get; set; }
+            public List<ListAbnormalyEventsResponseBodyDataOpts> Opts { get; set; }
             public class ListAbnormalyEventsResponseBodyDataOpts : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>diagnose</para>
-                /// </summary>
                 [NameInMap("label")]
                 [Validation(Required=false)]
                 public string Label { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>&quot;{\&quot;service_name\&quot;: \&quot;oomcheck\&quot;, \&quot;params\&quot;: {\&quot;auto_initial\&quot;: true, \&quot;instance\&quot;: \&quot;i-wz9d00ut2ska3mlyhn6i\&quot;, \&quot;region\&quot;: \&quot;cn-shenzhen\&quot;, \&quot;uuid\&quot;: \&quot;24576d0c-a19d-49dd-8a64-3867440fd7a6\&quot;, \&quot;is_history\&quot;: 1}}&quot;</para>
-                /// </summary>
-                [NameInMap("params")]
+                [NameInMap("result")]
                 [Validation(Required=false)]
-                public string Params { get; set; }
+                public ListAbnormalyEventsResponseBodyDataOptsResult Result { get; set; }
+                public class ListAbnormalyEventsResponseBodyDataOptsResult : TeaModel {
+                    [NameInMap("status")]
+                    [Validation(Required=false)]
+                    public string Status { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>realtime</para>
-                /// </summary>
+                    [NameInMap("url")]
+                    [Validation(Required=false)]
+                    public string Url { get; set; }
+
+                }
+
                 [NameInMap("type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
             }
+
+            [NameInMap("pod")]
+            [Validation(Required=false)]
+            public string Pod { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
@@ -99,11 +109,19 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             [Validation(Required=false)]
             public string Type { get; set; }
 
+            [NameInMap("uuid")]
+            [Validation(Required=false)]
+            public string Uuid { get; set; }
+
         }
 
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
+
+        [NameInMap("total")]
+        [Validation(Required=false)]
+        public int? Total { get; set; }
 
     }
 
