@@ -1,3 +1,6 @@
+2025-05-12 Version: 3.5.1
+- Generated csharp 2019-06-01 for oos.
+
 2025-05-09 Version: 3.5.0
 - Support API DeleteOpsItems.
 - Support API GenerateOpsItem.
