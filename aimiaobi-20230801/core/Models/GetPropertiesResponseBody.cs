@@ -181,6 +181,24 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
             }
 
+            [NameInMap("SearchSourceList")]
+            [Validation(Required=false)]
+            public List<GetPropertiesResponseBodyDataSearchSourceList> SearchSourceList { get; set; }
+            public class GetPropertiesResponseBodyDataSearchSourceList : TeaModel {
+                [NameInMap("Code")]
+                [Validation(Required=false)]
+                public string Code { get; set; }
+
+                [NameInMap("DatasetName")]
+                [Validation(Required=false)]
+                public string DatasetName { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+            }
+
             [NameInMap("SearchSources")]
             [Validation(Required=false)]
             public List<GetPropertiesResponseBodyDataSearchSources> SearchSources { get; set; }
