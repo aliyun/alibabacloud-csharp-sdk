@@ -121,6 +121,10 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         [Validation(Required=false)]
         public string Scene { get; set; }
 
+        [NameInMap("TemplateConfig")]
+        [Validation(Required=false)]
+        public string TemplateConfig { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
