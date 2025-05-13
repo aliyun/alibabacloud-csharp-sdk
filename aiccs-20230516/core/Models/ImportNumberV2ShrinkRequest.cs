@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>38</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("FailReturn")]
         [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>89</para>
+        /// <para>92</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
