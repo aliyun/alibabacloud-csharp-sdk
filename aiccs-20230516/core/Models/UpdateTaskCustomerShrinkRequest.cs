@@ -10,9 +10,8 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
 {
     public class UpdateTaskCustomerShrinkRequest : TeaModel {
         /// <summary>
-        /// 外呼客户
-        /// 
-        /// This parameter is required.
+        /// <para>外呼客户</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Customers")]
         [Validation(Required=false)]
@@ -31,9 +30,11 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// 任务ID
+        /// <para>任务ID</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>59</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

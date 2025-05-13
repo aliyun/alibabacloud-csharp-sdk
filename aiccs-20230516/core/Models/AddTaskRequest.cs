@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
 {
     public class AddTaskRequest : TeaModel {
         /// <summary>
-        /// 外呼时间
+        /// <para>外呼时间</para>
         /// </summary>
         [NameInMap("CallTimeList")]
         [Validation(Required=false)]
@@ -23,37 +23,51 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
         }
 
         /// <summary>
-        /// 回调地址
+        /// <para>回调地址</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>示例值示例值示例值</para>
         /// </summary>
         [NameInMap("CallbackUrl")]
         [Validation(Required=false)]
         public string CallbackUrl { get; set; }
 
         /// <summary>
-        /// 当发送闪信配置为1时，闪信模板ID必填
+        /// <para>当发送闪信配置为1时，闪信模板ID必填</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>96</para>
         /// </summary>
         [NameInMap("FlashSmsTemplateId")]
         [Validation(Required=false)]
         public long? FlashSmsTemplateId { get; set; }
 
         /// <summary>
-        /// 发送闪信配置
+        /// <para>发送闪信配置</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("FlashSmsType")]
         [Validation(Required=false)]
         public long? FlashSmsType { get; set; }
 
         /// <summary>
-        /// 并发数
+        /// <para>并发数</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>99</para>
         /// </summary>
         [NameInMap("MaxConcurrency")]
         [Validation(Required=false)]
         public long? MaxConcurrency { get; set; }
 
         /// <summary>
-        /// 任务名称
+        /// <para>任务名称</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>示例值示例值示例值</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -64,56 +78,74 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// 播放间隔时长
+        /// <para>播放间隔时长</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>89</para>
         /// </summary>
         [NameInMap("PlaySleepVal")]
         [Validation(Required=false)]
         public long? PlaySleepVal { get; set; }
 
         /// <summary>
-        /// 录音播放次数
+        /// <para>录音播放次数</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>51</para>
         /// </summary>
         [NameInMap("PlayTimes")]
         [Validation(Required=false)]
         public long? PlayTimes { get; set; }
 
         /// <summary>
-        /// 重呼配置
+        /// <para>重呼配置</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>53</para>
         /// </summary>
         [NameInMap("RecallType")]
         [Validation(Required=false)]
         public long? RecallType { get; set; }
 
         /// <summary>
-        /// 录音地址
+        /// <para>录音地址</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>示例值</para>
         /// </summary>
         [NameInMap("RecordPath")]
         [Validation(Required=false)]
         public string RecordPath { get; set; }
 
         /// <summary>
-        /// 重呼次数
+        /// <para>重呼次数</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>37</para>
         /// </summary>
         [NameInMap("RepeatCount")]
         [Validation(Required=false)]
         public long? RepeatCount { get; set; }
 
         /// <summary>
-        /// 重呼间隔
+        /// <para>重呼间隔</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>14</para>
         /// </summary>
         [NameInMap("RepeatInterval")]
         [Validation(Required=false)]
         public long? RepeatInterval { get; set; }
 
         /// <summary>
-        /// 重呼条件
+        /// <para>重呼条件</para>
         /// </summary>
         [NameInMap("RepeatReason")]
         [Validation(Required=false)]
         public List<string> RepeatReason { get; set; }
 
         /// <summary>
-        /// 重呼时间
+        /// <para>重呼时间</para>
         /// </summary>
         [NameInMap("RepeatTimes")]
         [Validation(Required=false)]
@@ -128,21 +160,24 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// 短信发送规则
+        /// <para>短信发送规则</para>
         /// </summary>
         [NameInMap("SendSmsPlan")]
         [Validation(Required=false)]
         public List<AddTaskRequestSendSmsPlan> SendSmsPlan { get; set; }
         public class AddTaskRequestSendSmsPlan : TeaModel {
             /// <summary>
-            /// 意向标签
+            /// <para>意向标签</para>
             /// </summary>
             [NameInMap("IntentTags")]
             [Validation(Required=false)]
             public List<string> IntentTags { get; set; }
 
             /// <summary>
-            /// 短信模板ID
+            /// <para>短信模板ID</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>71</para>
             /// </summary>
             [NameInMap("SmsTemplateId")]
             [Validation(Required=false)]
@@ -151,30 +186,41 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
         }
 
         /// <summary>
-        /// 任务启动日期
+        /// <para>任务启动日期</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2022-09-16</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
         /// <summary>
-        /// 任务类型
+        /// <para>任务类型</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]
         public long? TaskType { get; set; }
 
         /// <summary>
-        /// 话术模板ID
+        /// <para>话术模板ID</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>17</para>
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public long? TemplateId { get; set; }
 
         /// <summary>
-        /// 话术模板类型
+        /// <para>话术模板类型</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TemplateType")]
         [Validation(Required=false)]

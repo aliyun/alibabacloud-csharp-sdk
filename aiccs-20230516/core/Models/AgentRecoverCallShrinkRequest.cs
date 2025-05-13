@@ -10,35 +10,47 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
 {
     public class AgentRecoverCallShrinkRequest : TeaModel {
         /// <summary>
-        /// 坐席ID
+        /// <para>坐席ID</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5</para>
         /// </summary>
         [NameInMap("AgentId")]
         [Validation(Required=false)]
         public long? AgentId { get; set; }
 
         /// <summary>
-        /// 坐席标签
+        /// <para>坐席标签</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>abc</para>
         /// </summary>
         [NameInMap("AgentTag")]
         [Validation(Required=false)]
         public string AgentTag { get; set; }
 
         /// <summary>
-        /// 查询开始导入时间
+        /// <para>查询开始导入时间</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2020-03-06 10:10:10</para>
         /// </summary>
         [NameInMap("BeginImportTime")]
         [Validation(Required=false)]
         public string BeginImportTime { get; set; }
 
         /// <summary>
-        /// 查询结束导入时间
+        /// <para>查询结束导入时间</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2021-03-06 10:10:10</para>
         /// </summary>
         [NameInMap("EndImportTime")]
         [Validation(Required=false)]
         public string EndImportTime { get; set; }
 
         /// <summary>
-        /// 号码列表
+        /// <para>号码列表</para>
         /// </summary>
         [NameInMap("Numbers")]
         [Validation(Required=false)]
@@ -57,7 +69,7 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// 用户自定义标签列表
+        /// <para>用户自定义标签列表</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

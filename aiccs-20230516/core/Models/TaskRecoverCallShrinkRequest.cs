@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
 {
     public class TaskRecoverCallShrinkRequest : TeaModel {
         /// <summary>
-        /// 查询开始导入时间
+        /// <para>查询开始导入时间</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>&quot;2023-01-09 18:58:19&quot;</para>
         /// </summary>
         [NameInMap("BeginImportTime")]
         [Validation(Required=false)]
         public string BeginImportTime { get; set; }
 
         /// <summary>
-        /// 查询结束导入时间
+        /// <para>查询结束导入时间</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>&quot;2023-01-09 18:58:19&quot;</para>
         /// </summary>
         [NameInMap("EndImportTime")]
         [Validation(Required=false)]
         public string EndImportTime { get; set; }
 
         /// <summary>
-        /// 号码列表
+        /// <para>号码列表</para>
         /// </summary>
         [NameInMap("Numbers")]
         [Validation(Required=false)]
@@ -43,16 +49,18 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// 用户自定义标签列表
+        /// <para>用户自定义标签列表</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public string TagsShrink { get; set; }
 
         /// <summary>
-        /// 任务ID
+        /// <para>任务ID</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>93</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

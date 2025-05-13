@@ -8,10 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Aiccs20230516.Models
 {
-    public class TaskCancelCallShrinkRequest : TeaModel {
-        [NameInMap("Numbers")]
+    public class ImportNumberV2ShrinkRequest : TeaModel {
+        [NameInMap("Customers")]
         [Validation(Required=false)]
-        public string NumbersShrink { get; set; }
+        public string CustomersShrink { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>38</para>
+        /// </summary>
+        [NameInMap("FailReturn")]
+        [Validation(Required=false)]
+        public long? FailReturn { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>示例值</para>
+        /// </summary>
+        [NameInMap("OutId")]
+        [Validation(Required=false)]
+        public string OutId { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
@@ -25,16 +41,9 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("Tags")]
-        [Validation(Required=false)]
-        public string TagsShrink { get; set; }
-
         /// <summary>
-        /// <para>任务ID</para>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>30</para>
+        /// <para>89</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

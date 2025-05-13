@@ -14,14 +14,20 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// 页码
+        /// <para>页码</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>24</para>
         /// </summary>
         [NameInMap("PageNo")]
         [Validation(Required=false)]
         public long? PageNo { get; set; }
 
         /// <summary>
-        /// 每页条数
+        /// <para>每页条数</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>97</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -36,35 +42,50 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// 短信签名
+        /// <para>短信签名</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>114ah23m</para>
         /// </summary>
         [NameInMap("Sign")]
         [Validation(Required=false)]
         public string Sign { get; set; }
 
         /// <summary>
-        /// 短信类型
+        /// <para>短信类型</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>42</para>
         /// </summary>
         [NameInMap("SmsType")]
         [Validation(Required=false)]
         public long? SmsType { get; set; }
 
         /// <summary>
-        /// 模板状态
+        /// <para>模板状态</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>92</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public long? Status { get; set; }
 
         /// <summary>
-        /// 模板ID
+        /// <para>模板ID</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>83</para>
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public long? TemplateId { get; set; }
 
         /// <summary>
-        /// 模板类型
+        /// <para>模板类型</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>19</para>
         /// </summary>
         [NameInMap("TemplateType")]
         [Validation(Required=false)]

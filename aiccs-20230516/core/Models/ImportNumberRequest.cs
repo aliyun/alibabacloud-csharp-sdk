@@ -10,40 +10,67 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
 {
     public class ImportNumberRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Customers")]
         [Validation(Required=false)]
         public List<ImportNumberRequestCustomers> Customers { get; set; }
         public class ImportNumberRequestCustomers : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para><a href="http://test.com">http://test.com</a></para>
+            /// </summary>
             [NameInMap("ClientUrl")]
             [Validation(Required=false)]
             public string ClientUrl { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>13541251222,18665214444</para>
+            /// </summary>
             [NameInMap("Number")]
             [Validation(Required=false)]
             public string Number { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>示例值</para>
+            /// </summary>
             [NameInMap("NumberMD5")]
             [Validation(Required=false)]
             public string NumberMD5 { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>{&quot;testt&quot;:&quot;123&quot;}</para>
+            /// </summary>
             [NameInMap("Properties")]
             [Validation(Required=false)]
             public Dictionary<string, object> Properties { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>tag1</para>
+            /// </summary>
             [NameInMap("Tag")]
             [Validation(Required=false)]
             public string Tag { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("FailReturn")]
         [Validation(Required=false)]
         public long? FailReturn { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("OutId")]
         [Validation(Required=false)]
@@ -62,7 +89,10 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>92</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

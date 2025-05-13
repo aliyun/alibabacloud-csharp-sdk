@@ -8,56 +8,64 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Aiccs20230516.Models
 {
-    public class UpdateTaskCustomerRequest : TeaModel {
-        /// <summary>
-        /// <para>外呼客户</para>
-        /// <para>This parameter is required.</para>
-        /// </summary>
+    public class ImportNumberV2Request : TeaModel {
         [NameInMap("Customers")]
         [Validation(Required=false)]
-        public List<UpdateTaskCustomerRequestCustomers> Customers { get; set; }
-        public class UpdateTaskCustomerRequestCustomers : TeaModel {
+        public List<ImportNumberV2RequestCustomers> Customers { get; set; }
+        public class ImportNumberV2RequestCustomers : TeaModel {
             /// <summary>
-            /// <para>是否取消外呼 0否，1是</para>
-            /// 
             /// <b>Example:</b>
-            /// <para>0</para>
+            /// <para>示例值示例值</para>
             /// </summary>
-            [NameInMap("Cancel")]
+            [NameInMap("ClientUrl")]
             [Validation(Required=false)]
-            public long? Cancel { get; set; }
+            public string ClientUrl { get; set; }
 
             /// <summary>
-            /// <para>电话号码</para>
-            /// 
             /// <b>Example:</b>
-            /// <para>13661109390</para>
+            /// <para>示例值示例值</para>
             /// </summary>
             [NameInMap("Number")]
             [Validation(Required=false)]
             public string Number { get; set; }
 
             /// <summary>
-            /// <para>需根据具体任务参数要求传输</para>
-            /// 
             /// <b>Example:</b>
-            /// <para>{&quot;test&quot;:&quot;234&quot;}</para>
+            /// <para>示例值示例值</para>
             /// </summary>
+            [NameInMap("NumberMD5")]
+            [Validation(Required=false)]
+            public string NumberMD5 { get; set; }
+
             [NameInMap("Properties")]
             [Validation(Required=false)]
             public Dictionary<string, object> Properties { get; set; }
 
             /// <summary>
-            /// <para>用户自定义标签</para>
-            /// 
             /// <b>Example:</b>
-            /// <para>tag1</para>
+            /// <para>示例值示例值</para>
             /// </summary>
             [NameInMap("Tag")]
             [Validation(Required=false)]
             public string Tag { get; set; }
 
         }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>38</para>
+        /// </summary>
+        [NameInMap("FailReturn")]
+        [Validation(Required=false)]
+        public long? FailReturn { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>示例值</para>
+        /// </summary>
+        [NameInMap("OutId")]
+        [Validation(Required=false)]
+        public string OutId { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
@@ -72,11 +80,8 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>任务ID</para>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>59</para>
+        /// <para>89</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

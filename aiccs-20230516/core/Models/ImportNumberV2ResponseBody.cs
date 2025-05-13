@@ -8,10 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Aiccs20230516.Models
 {
-    public class TaskCallInfoResponseBody : TeaModel {
+    public class ImportNumberV2ResponseBody : TeaModel {
+        [NameInMap("AccessDeniedDetail")]
+        [Validation(Required=false)]
+        public string AccessDeniedDetail { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
-        /// <para>15</para>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -19,7 +23,7 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>示例值示例值示例值</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -27,37 +31,53 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
 
         [NameInMap("Model")]
         [Validation(Required=false)]
-        public TaskCallInfoResponseBodyModel Model { get; set; }
-        public class TaskCallInfoResponseBodyModel : TeaModel {
+        public ImportNumberV2ResponseBodyModel Model { get; set; }
+        public class ImportNumberV2ResponseBodyModel : TeaModel {
             /// <summary>
             /// <b>Example:</b>
-            /// <para>75</para>
+            /// <para>74</para>
             /// </summary>
-            [NameInMap("FinishTotal")]
+            [NameInMap("BatchId")]
             [Validation(Required=false)]
-            public long? FinishTotal { get; set; }
+            public long? BatchId { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>59</para>
+            /// <para>200</para>
             /// </summary>
-            [NameInMap("Total")]
+            [NameInMap("Code")]
             [Validation(Required=false)]
-            public long? Total { get; set; }
+            public long? Code { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>3</para>
+            /// <para>示例值示例值</para>
             /// </summary>
-            [NameInMap("UnCallTotal")]
+            [NameInMap("Data")]
             [Validation(Required=false)]
-            public long? UnCallTotal { get; set; }
+            public string Data { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>58</para>
+            /// </summary>
+            [NameInMap("ImportNum")]
+            [Validation(Required=false)]
+            public long? ImportNum { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>示例值示例值</para>
+            /// </summary>
+            [NameInMap("Message")]
+            [Validation(Required=false)]
+            public string Message { get; set; }
 
         }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para>8EFC6D10-307B-1ECA-A8C6-7CBDF776AAD2</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -69,11 +89,11 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public string Success { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>62</para>
+        /// <para>98</para>
         /// </summary>
         [NameInMap("Timestamp")]
         [Validation(Required=false)]

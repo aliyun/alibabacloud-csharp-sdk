@@ -10,23 +10,31 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
 {
     public class TaskCallChatsRequest : TeaModel {
         /// <summary>
-        /// 坐席ID
+        /// <para>坐席ID</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>72</para>
         /// </summary>
         [NameInMap("AgentId")]
         [Validation(Required=false)]
         public long? AgentId { get; set; }
 
         /// <summary>
-        /// 坐席标签
+        /// <para>坐席标签</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AA</para>
         /// </summary>
         [NameInMap("AgentTag")]
         [Validation(Required=false)]
         public string AgentTag { get; set; }
 
         /// <summary>
-        /// 外呼ID
+        /// <para>外呼ID</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>9b2eb6b8-7a27-4357-b5ec-104450086e24</para>
         /// </summary>
         [NameInMap("CallId")]
         [Validation(Required=false)]
@@ -45,7 +53,10 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// 任务ID
+        /// <para>任务ID</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>26</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

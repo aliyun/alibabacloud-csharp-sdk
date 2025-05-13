@@ -30,9 +30,11 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
         public List<string> Tags { get; set; }
 
         /// <summary>
-        /// 任务ID
+        /// <para>任务ID</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

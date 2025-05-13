@@ -10,18 +10,19 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
 {
     public class AddBlacklistShrinkRequest : TeaModel {
         /// <summary>
-        /// 有效天数
+        /// <para>有效天数</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("ExpiredDay")]
         [Validation(Required=false)]
         public string ExpiredDay { get; set; }
 
         /// <summary>
-        /// 号码列表
-        /// 
-        /// This parameter is required.
+        /// <para>号码列表</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Numbers")]
         [Validation(Required=false)]
@@ -32,9 +33,11 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// 备注
+        /// <para>备注</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>示例值</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]

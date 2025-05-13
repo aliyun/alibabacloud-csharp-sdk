@@ -22,7 +22,10 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// 必须空参
+        /// <para>必须空参</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9</para>
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

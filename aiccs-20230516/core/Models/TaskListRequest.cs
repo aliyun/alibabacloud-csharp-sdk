@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
 {
     public class TaskListRequest : TeaModel {
         /// <summary>
-        /// 创建时间
+        /// <para>创建时间</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2023-04-05 12:11:11</para>
         /// </summary>
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// 最后外呼时间
+        /// <para>最后外呼时间</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2023-04-05 12:11:11</para>
         /// </summary>
         [NameInMap("LastCallTime")]
         [Validation(Required=false)]
@@ -36,14 +42,20 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// 任务状态。1 未启用，2 启用中，4 已停止
+        /// <para>任务状态。1 未启用，2 启用中，4 已停止</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public long? Status { get; set; }
 
         /// <summary>
-        /// 任务ID
+        /// <para>任务ID</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
