@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class AlertRuleQuery : TeaModel {
+        [NameInMap("checkAfterDataComplete")]
+        [Validation(Required=false)]
+        public bool? CheckAfterDataComplete { get; set; }
+
         [NameInMap("duration")]
         [Validation(Required=false)]
         public long? Duration { get; set; }
@@ -33,6 +37,32 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public List<AlertRuleQueryQueries> Queries { get; set; }
         public class AlertRuleQueryQueries : TeaModel {
+            [NameInMap("apmAlertMetricId")]
+            [Validation(Required=false)]
+            public string ApmAlertMetricId { get; set; }
+
+            [NameInMap("apmFilters")]
+            [Validation(Required=false)]
+            public List<AlertRuleQueryQueriesApmFilters> ApmFilters { get; set; }
+            public class AlertRuleQueryQueriesApmFilters : TeaModel {
+                [NameInMap("dim")]
+                [Validation(Required=false)]
+                public string Dim { get; set; }
+
+                [NameInMap("type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+                [NameInMap("value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
+            [NameInMap("apmGroupBy")]
+            [Validation(Required=false)]
+            public List<string> ApmGroupBy { get; set; }
+
             [NameInMap("duration")]
             [Validation(Required=false)]
             public long? Duration { get; set; }
@@ -46,7 +76,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
             /// <summary>
             /// <para>查询表达式</para>
-            /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("expr")]
             [Validation(Required=false)]
@@ -71,7 +100,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// </summary>
             [NameInMap("window")]
             [Validation(Required=false)]
-            public string Window { get; set; }
+            public long? Window { get; set; }
 
         }
 

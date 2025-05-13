@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string Dim { get; set; }
 
+        [NameInMap("dimDisabled")]
+        [Validation(Required=false)]
+        public bool? DimDisabled { get; set; }
+
         [NameInMap("displayNameCn")]
         [Validation(Required=false)]
         public string DisplayNameCn { get; set; }
@@ -24,6 +28,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [NameInMap("hidden")]
         [Validation(Required=false)]
         public bool? Hidden { get; set; }
+
+        [NameInMap("labelDisabled")]
+        [Validation(Required=false)]
+        public bool? LabelDisabled { get; set; }
 
         [NameInMap("opt")]
         [Validation(Required=false)]

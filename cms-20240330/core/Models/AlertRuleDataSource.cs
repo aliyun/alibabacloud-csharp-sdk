@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class AlertRuleDataSource : TeaModel {
+        [NameInMap("appType")]
+        [Validation(Required=false)]
+        public string AppType { get; set; }
+
         [NameInMap("dsList")]
         [Validation(Required=false)]
         public List<AlertRuleDataSourceDsList> DsList { get; set; }
@@ -41,6 +45,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [NameInMap("namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
+
+        [NameInMap("regionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         /// <summary>
         /// <para>数据源类型</para>

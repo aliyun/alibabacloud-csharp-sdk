@@ -13,6 +13,28 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("effectTimeRange")]
+        [Validation(Required=false)]
+        public MaintainWindowForModifyEffectTimeRange EffectTimeRange { get; set; }
+        public class MaintainWindowForModifyEffectTimeRange : TeaModel {
+            [NameInMap("dayInWeek")]
+            [Validation(Required=false)]
+            public List<int?> DayInWeek { get; set; }
+
+            [NameInMap("endTimeInMinute")]
+            [Validation(Required=false)]
+            public int? EndTimeInMinute { get; set; }
+
+            [NameInMap("startTimeInMinute")]
+            [Validation(Required=false)]
+            public int? StartTimeInMinute { get; set; }
+
+            [NameInMap("timeZone")]
+            [Validation(Required=false)]
+            public string TimeZone { get; set; }
+
+        }
+
         [NameInMap("effective")]
         [Validation(Required=false)]
         public string Effective { get; set; }

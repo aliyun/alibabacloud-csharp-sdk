@@ -92,6 +92,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string NodataAlertLevel { get; set; }
 
+        [NameInMap("relation")]
+        [Validation(Required=false)]
+        public string Relation { get; set; }
+
         /// <summary>
         /// <para>规则条件类型，可选值：SLS_CONDITION</para>
         /// <para>This parameter is required.</para>

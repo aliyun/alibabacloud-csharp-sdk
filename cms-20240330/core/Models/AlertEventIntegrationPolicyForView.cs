@@ -40,6 +40,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string IntegrationSetting { get; set; }
 
+        [NameInMap("token")]
+        [Validation(Required=false)]
+        public string Token { get; set; }
+
         [NameInMap("transformerSetting")]
         [Validation(Required=false)]
         public List<TransformAction> TransformerSetting { get; set; }
