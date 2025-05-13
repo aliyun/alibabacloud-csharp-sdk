@@ -287,6 +287,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         [Validation(Required=false)]
         public string Parameters { get; set; }
 
+        [NameInMap("Priority")]
+        [Validation(Required=false)]
+        public int? Priority { get; set; }
+
         /// <summary>
         /// <para>The maximum number of tasks that can be queued. Default value: 10000. This parameter is an advanced configuration item of the MapReduce job.</para>
         /// 

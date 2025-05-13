@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class DeleteAppGroupRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to delete the jobs in the application group. Valid values:</para>
+        /// <para>true: deletes the jobs in the application group.
+        /// false: does not delete the jobs in the application group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -18,6 +22,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public bool? DeleteJobs { get; set; }
 
         /// <summary>
+        /// <para>The ID of the application. You can obtain the ID of the application on the Application Management page in the SchedulerX console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +33,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string GroupId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the namespace. You can obtain the ID of the namespace on the Namespace page in the SchedulerX console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +44,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string Namespace { get; set; }
 
         /// <summary>
+        /// <para>The ID of the region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

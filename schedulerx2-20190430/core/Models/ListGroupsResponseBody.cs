@@ -9,40 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class ListGroupsResponseBody : TeaModel {
-        [NameInMap("AccessDeniedDetail")]
-        [Validation(Required=false)]
-        public ListGroupsResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
-        public class ListGroupsResponseBodyAccessDeniedDetail : TeaModel {
-            [NameInMap("AuthAction")]
-            [Validation(Required=false)]
-            public string AuthAction { get; set; }
-
-            [NameInMap("AuthPrincipalDisplayName")]
-            [Validation(Required=false)]
-            public string AuthPrincipalDisplayName { get; set; }
-
-            [NameInMap("AuthPrincipalOwnerId")]
-            [Validation(Required=false)]
-            public string AuthPrincipalOwnerId { get; set; }
-
-            [NameInMap("AuthPrincipalType")]
-            [Validation(Required=false)]
-            public string AuthPrincipalType { get; set; }
-
-            [NameInMap("EncodedDiagnosticMessage")]
-            [Validation(Required=false)]
-            public string EncodedDiagnosticMessage { get; set; }
-
-            [NameInMap("NoPermissionType")]
-            [Validation(Required=false)]
-            public string NoPermissionType { get; set; }
-
-            [NameInMap("PolicyType")]
-            [Validation(Required=false)]
-            public string PolicyType { get; set; }
-
-        }
-
         /// <summary>
         /// <para>The HTTP status code.</para>
         /// 
@@ -54,7 +20,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The information about the applications.</para>
+        /// <para>The applications.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -126,6 +92,16 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 [NameInMap("GroupId")]
                 [Validation(Required=false)]
                 public string GroupId { get; set; }
+
+                /// <summary>
+                /// <para>The ID of the namespace.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1a72ecb1-b4cc-400a-a71b-20cdec9b****</para>
+                /// </summary>
+                [NameInMap("Namespace")]
+                [Validation(Required=false)]
+                public string Namespace { get; set; }
 
             }
 

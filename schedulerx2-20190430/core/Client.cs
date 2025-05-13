@@ -923,6 +923,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            {
+                query["Priority"] = request.Priority;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -1107,6 +1111,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            {
+                query["Priority"] = request.Priority;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -2074,6 +2082,134 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除命名空间</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteNamespaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNamespaceResponse
+        /// </returns>
+        public DeleteNamespaceResponse DeleteNamespaceWithOptions(DeleteNamespaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteNamespace",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteNamespaceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除命名空间</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteNamespaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNamespaceResponse
+        /// </returns>
+        public async Task<DeleteNamespaceResponse> DeleteNamespaceWithOptionsAsync(DeleteNamespaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteNamespace",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteNamespaceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除命名空间</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteNamespaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNamespaceResponse
+        /// </returns>
+        public DeleteNamespaceResponse DeleteNamespace(DeleteNamespaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteNamespaceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除命名空间</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteNamespaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNamespaceResponse
+        /// </returns>
+        public async Task<DeleteNamespaceResponse> DeleteNamespaceAsync(DeleteNamespaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteNamespaceWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3266,7 +3402,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The configuration of the alert. The value is a JSON string. For more information, see \<em>\<em>the additional information about response parameters below this table\</em>\</em>.</para>
+        /// <para>The configuration of the alert. The value is a JSON string. For more information, see \\<em>\\<em>the additional information about response parameters below this table\\</em>\\</em>.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3316,7 +3452,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The configuration of the alert. The value is a JSON string. For more information, see \<em>\<em>the additional information about response parameters below this table\</em>\</em>.</para>
+        /// <para>The configuration of the alert. The value is a JSON string. For more information, see \\<em>\\<em>the additional information about response parameters below this table\\</em>\\</em>.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3366,7 +3502,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The configuration of the alert. The value is a JSON string. For more information, see \<em>\<em>the additional information about response parameters below this table\</em>\</em>.</para>
+        /// <para>The configuration of the alert. The value is a JSON string. For more information, see \\<em>\\<em>the additional information about response parameters below this table\\</em>\\</em>.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3384,7 +3520,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The configuration of the alert. The value is a JSON string. For more information, see \<em>\<em>the additional information about response parameters below this table\</em>\</em>.</para>
+        /// <para>The configuration of the alert. The value is a JSON string. For more information, see \\<em>\\<em>the additional information about response parameters below this table\\</em>\\</em>.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4718,6 +4854,158 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取任务脚本历史列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListJobScriptHistoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListJobScriptHistoryResponse
+        /// </returns>
+        public ListJobScriptHistoryResponse ListJobScriptHistoryWithOptions(ListJobScriptHistoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceSource))
+            {
+                query["NamespaceSource"] = request.NamespaceSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListJobScriptHistory",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListJobScriptHistoryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取任务脚本历史列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListJobScriptHistoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListJobScriptHistoryResponse
+        /// </returns>
+        public async Task<ListJobScriptHistoryResponse> ListJobScriptHistoryWithOptionsAsync(ListJobScriptHistoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceSource))
+            {
+                query["NamespaceSource"] = request.NamespaceSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListJobScriptHistory",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListJobScriptHistoryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取任务脚本历史列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListJobScriptHistoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListJobScriptHistoryResponse
+        /// </returns>
+        public ListJobScriptHistoryResponse ListJobScriptHistory(ListJobScriptHistoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListJobScriptHistoryWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取任务脚本历史列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListJobScriptHistoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListJobScriptHistoryResponse
+        /// </returns>
+        public async Task<ListJobScriptHistoryResponse> ListJobScriptHistoryAsync(ListJobScriptHistoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListJobScriptHistoryWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries jobs.</para>
         /// </summary>
         /// 
@@ -5154,6 +5442,166 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListWorkflowInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取机器详细信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReadSchedulerxDesignateDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReadSchedulerxDesignateDetailResponse
+        /// </returns>
+        public ReadSchedulerxDesignateDetailResponse ReadSchedulerxDesignateDetailWithOptions(ReadSchedulerxDesignateDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesignateType))
+            {
+                query["DesignateType"] = request.DesignateType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceSource))
+            {
+                query["NamespaceSource"] = request.NamespaceSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReadSchedulerxDesignateDetail",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReadSchedulerxDesignateDetailResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取机器详细信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReadSchedulerxDesignateDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReadSchedulerxDesignateDetailResponse
+        /// </returns>
+        public async Task<ReadSchedulerxDesignateDetailResponse> ReadSchedulerxDesignateDetailWithOptionsAsync(ReadSchedulerxDesignateDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesignateType))
+            {
+                query["DesignateType"] = request.DesignateType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceSource))
+            {
+                query["NamespaceSource"] = request.NamespaceSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReadSchedulerxDesignateDetail",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReadSchedulerxDesignateDetailResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取机器详细信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReadSchedulerxDesignateDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReadSchedulerxDesignateDetailResponse
+        /// </returns>
+        public ReadSchedulerxDesignateDetailResponse ReadSchedulerxDesignateDetail(ReadSchedulerxDesignateDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ReadSchedulerxDesignateDetailWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取机器详细信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReadSchedulerxDesignateDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReadSchedulerxDesignateDetailResponse
+        /// </returns>
+        public async Task<ReadSchedulerxDesignateDetailResponse> ReadSchedulerxDesignateDetailAsync(ReadSchedulerxDesignateDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ReadSchedulerxDesignateDetailWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6078,7 +6526,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The additional information that is returned.</para>
+        /// <para>Updates the application group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6111,6 +6559,14 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
             {
                 query["MaxConcurrency"] = request.MaxConcurrency;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MonitorConfigJson))
+            {
+                query["MonitorConfigJson"] = request.MonitorConfigJson;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MonitorContactsJson))
+            {
+                query["MonitorContactsJson"] = request.MonitorContactsJson;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
             {
                 query["Namespace"] = request.Namespace;
@@ -6140,7 +6596,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The additional information that is returned.</para>
+        /// <para>Updates the application group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6173,6 +6629,14 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
             {
                 query["MaxConcurrency"] = request.MaxConcurrency;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MonitorConfigJson))
+            {
+                query["MonitorConfigJson"] = request.MonitorConfigJson;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MonitorContactsJson))
+            {
+                query["MonitorContactsJson"] = request.MonitorContactsJson;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
             {
                 query["Namespace"] = request.Namespace;
@@ -6202,7 +6666,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The additional information that is returned.</para>
+        /// <para>Updates the application group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6220,7 +6684,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The additional information that is returned.</para>
+        /// <para>Updates the application group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6255,6 +6719,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            {
+                query["Priority"] = request.Priority;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -6443,6 +6911,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            {
+                query["Priority"] = request.Priority;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -6646,6 +7118,318 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新任务执行脚本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateJobScriptRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateJobScriptResponse
+        /// </returns>
+        public UpdateJobScriptResponse UpdateJobScriptWithOptions(UpdateJobScriptRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                body["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                body["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceSource))
+            {
+                body["NamespaceSource"] = request.NamespaceSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptContent))
+            {
+                body["ScriptContent"] = request.ScriptContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionDescription))
+            {
+                body["VersionDescription"] = request.VersionDescription;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateJobScript",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateJobScriptResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新任务执行脚本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateJobScriptRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateJobScriptResponse
+        /// </returns>
+        public async Task<UpdateJobScriptResponse> UpdateJobScriptWithOptionsAsync(UpdateJobScriptRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                body["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                body["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceSource))
+            {
+                body["NamespaceSource"] = request.NamespaceSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptContent))
+            {
+                body["ScriptContent"] = request.ScriptContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionDescription))
+            {
+                body["VersionDescription"] = request.VersionDescription;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateJobScript",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateJobScriptResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新任务执行脚本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateJobScriptRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateJobScriptResponse
+        /// </returns>
+        public UpdateJobScriptResponse UpdateJobScript(UpdateJobScriptRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateJobScriptWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新任务执行脚本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateJobScriptRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateJobScriptResponse
+        /// </returns>
+        public async Task<UpdateJobScriptResponse> UpdateJobScriptAsync(UpdateJobScriptRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateJobScriptWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新命名空间</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateNamespaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateNamespaceResponse
+        /// </returns>
+        public UpdateNamespaceResponse UpdateNamespaceWithOptions(UpdateNamespaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceName))
+            {
+                query["NamespaceName"] = request.NamespaceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateNamespace",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateNamespaceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新命名空间</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateNamespaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateNamespaceResponse
+        /// </returns>
+        public async Task<UpdateNamespaceResponse> UpdateNamespaceWithOptionsAsync(UpdateNamespaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceName))
+            {
+                query["NamespaceName"] = request.NamespaceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateNamespace",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateNamespaceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新命名空间</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateNamespaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateNamespaceResponse
+        /// </returns>
+        public UpdateNamespaceResponse UpdateNamespace(UpdateNamespaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateNamespaceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新命名空间</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateNamespaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateNamespaceResponse
+        /// </returns>
+        public async Task<UpdateNamespaceResponse> UpdateNamespaceAsync(UpdateNamespaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateNamespaceWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

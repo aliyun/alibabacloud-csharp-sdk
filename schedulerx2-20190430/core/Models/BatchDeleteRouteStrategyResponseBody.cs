@@ -9,41 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class BatchDeleteRouteStrategyResponseBody : TeaModel {
-        [NameInMap("AccessDeniedDetail")]
-        [Validation(Required=false)]
-        public BatchDeleteRouteStrategyResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
-        public class BatchDeleteRouteStrategyResponseBodyAccessDeniedDetail : TeaModel {
-            [NameInMap("AuthAction")]
-            [Validation(Required=false)]
-            public string AuthAction { get; set; }
-
-            [NameInMap("AuthPrincipalDisplayName")]
-            [Validation(Required=false)]
-            public string AuthPrincipalDisplayName { get; set; }
-
-            [NameInMap("AuthPrincipalOwnerId")]
-            [Validation(Required=false)]
-            public string AuthPrincipalOwnerId { get; set; }
-
-            [NameInMap("AuthPrincipalType")]
-            [Validation(Required=false)]
-            public string AuthPrincipalType { get; set; }
-
-            [NameInMap("EncodedDiagnosticMessage")]
-            [Validation(Required=false)]
-            public string EncodedDiagnosticMessage { get; set; }
-
-            [NameInMap("NoPermissionType")]
-            [Validation(Required=false)]
-            public string NoPermissionType { get; set; }
-
-            [NameInMap("PolicyType")]
-            [Validation(Required=false)]
-            public string PolicyType { get; set; }
-
-        }
-
         /// <summary>
+        /// <para>The HTTP status code that is returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -52,6 +20,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public int? Code { get; set; }
 
         /// <summary>
+        /// <para>The additional information that is returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>job is not existed, jobId=162837</para>
         /// </summary>
@@ -60,6 +30,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>704A2A61-3681-5568-92F7-2DFCC53F33D1</para>
         /// </summary>
@@ -68,6 +40,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>true: The request was successful.
+        /// false: The request failed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

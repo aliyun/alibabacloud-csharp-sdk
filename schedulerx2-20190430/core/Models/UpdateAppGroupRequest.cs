@@ -51,6 +51,30 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public int? MaxConcurrency { get; set; }
 
         /// <summary>
+        /// <para>The configuration of the alert. The value is a JSON string. For more information about this parameter, see <b>Additional information about request parameters</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{
+        ///     &quot;sendChannel&quot;: &quot;ding,sms,mail,phone&quot;,
+        ///     &quot;alarmType&quot;: &quot;Contacts&quot;,
+        ///     &quot;webhookIsAtAll&quot;: false
+        /// }</para>
+        /// </summary>
+        [NameInMap("MonitorConfigJson")]
+        [Validation(Required=false)]
+        public string MonitorConfigJson { get; set; }
+
+        /// <summary>
+        /// <para>The configuration of alert contacts. The value is a JSON string.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;userName&quot;:&quot;Tom&quot;,&quot;userPhone&quot;:&quot;89756******&quot;},{&quot;userName&quot;:&quot;Bob&quot;,&quot;ding&quot;:&quot;<a href="http://www.example.com%22%7D%5D">http://www.example.com&quot;}]</a></para>
+        /// </summary>
+        [NameInMap("MonitorContactsJson")]
+        [Validation(Required=false)]
+        public string MonitorContactsJson { get; set; }
+
+        /// <summary>
         /// <para>The ID of the namespace. You can obtain the ID of the namespace on the Namespace page in the SchedulerX console.</para>
         /// <para>This parameter is required.</para>
         /// 

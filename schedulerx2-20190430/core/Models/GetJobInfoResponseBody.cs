@@ -9,40 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class GetJobInfoResponseBody : TeaModel {
-        [NameInMap("AccessDeniedDetail")]
-        [Validation(Required=false)]
-        public GetJobInfoResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
-        public class GetJobInfoResponseBodyAccessDeniedDetail : TeaModel {
-            [NameInMap("AuthAction")]
-            [Validation(Required=false)]
-            public string AuthAction { get; set; }
-
-            [NameInMap("AuthPrincipalDisplayName")]
-            [Validation(Required=false)]
-            public string AuthPrincipalDisplayName { get; set; }
-
-            [NameInMap("AuthPrincipalOwnerId")]
-            [Validation(Required=false)]
-            public string AuthPrincipalOwnerId { get; set; }
-
-            [NameInMap("AuthPrincipalType")]
-            [Validation(Required=false)]
-            public string AuthPrincipalType { get; set; }
-
-            [NameInMap("EncodedDiagnosticMessage")]
-            [Validation(Required=false)]
-            public string EncodedDiagnosticMessage { get; set; }
-
-            [NameInMap("NoPermissionType")]
-            [Validation(Required=false)]
-            public string NoPermissionType { get; set; }
-
-            [NameInMap("PolicyType")]
-            [Validation(Required=false)]
-            public string PolicyType { get; set; }
-
-        }
-
         /// <summary>
         /// <para>The HTTP status code.</para>
         /// 
@@ -110,11 +76,11 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 /// <summary>
                 /// <para>The execution mode of the job. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Stand-alone operation</b></description></item>
-                /// <item><description><b>Broadcast run</b></description></item>
-                /// <item><description><b>Visual MapReduce</b></description></item>
-                /// <item><description><b>MapReduce</b></description></item>
-                /// <item><description><b>Shard run</b></description></item>
+                /// <item><description><b>Stand-alone operation</b>: standalone</description></item>
+                /// <item><description><b>Broadcast run</b>: broadcast</description></item>
+                /// <item><description><b>Visual MapReduce</b>: parallel</description></item>
+                /// <item><description><b>MapReduce</b>: batch</description></item>
+                /// <item><description><b>Shard run</b>: sharding</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

@@ -9,40 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class GetWorkFlowResponseBody : TeaModel {
-        [NameInMap("AccessDeniedDetail")]
-        [Validation(Required=false)]
-        public GetWorkFlowResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
-        public class GetWorkFlowResponseBodyAccessDeniedDetail : TeaModel {
-            [NameInMap("AuthAction")]
-            [Validation(Required=false)]
-            public string AuthAction { get; set; }
-
-            [NameInMap("AuthPrincipalDisplayName")]
-            [Validation(Required=false)]
-            public string AuthPrincipalDisplayName { get; set; }
-
-            [NameInMap("AuthPrincipalOwnerId")]
-            [Validation(Required=false)]
-            public string AuthPrincipalOwnerId { get; set; }
-
-            [NameInMap("AuthPrincipalType")]
-            [Validation(Required=false)]
-            public string AuthPrincipalType { get; set; }
-
-            [NameInMap("EncodedDiagnosticMessage")]
-            [Validation(Required=false)]
-            public string EncodedDiagnosticMessage { get; set; }
-
-            [NameInMap("NoPermissionType")]
-            [Validation(Required=false)]
-            public string NoPermissionType { get; set; }
-
-            [NameInMap("PolicyType")]
-            [Validation(Required=false)]
-            public string PolicyType { get; set; }
-
-        }
-
         /// <summary>
         /// <para>Error codes</para>
         /// 
@@ -77,6 +43,14 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                [NameInMap("GroupId")]
+                [Validation(Required=false)]
+                public string GroupId { get; set; }
+
+                [NameInMap("MaxConcurrency")]
+                [Validation(Required=false)]
+                public string MaxConcurrency { get; set; }
+
                 /// <summary>
                 /// <para>The name of the workflow.</para>
                 /// 
@@ -86,6 +60,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("Namespace")]
+                [Validation(Required=false)]
+                public string Namespace { get; set; }
 
                 /// <summary>
                 /// <para>The status of the workflow.</para>

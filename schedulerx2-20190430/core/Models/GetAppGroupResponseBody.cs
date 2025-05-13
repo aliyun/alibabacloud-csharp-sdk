@@ -9,40 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class GetAppGroupResponseBody : TeaModel {
-        [NameInMap("AccessDeniedDetail")]
-        [Validation(Required=false)]
-        public GetAppGroupResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
-        public class GetAppGroupResponseBodyAccessDeniedDetail : TeaModel {
-            [NameInMap("AuthAction")]
-            [Validation(Required=false)]
-            public string AuthAction { get; set; }
-
-            [NameInMap("AuthPrincipalDisplayName")]
-            [Validation(Required=false)]
-            public string AuthPrincipalDisplayName { get; set; }
-
-            [NameInMap("AuthPrincipalOwnerId")]
-            [Validation(Required=false)]
-            public string AuthPrincipalOwnerId { get; set; }
-
-            [NameInMap("AuthPrincipalType")]
-            [Validation(Required=false)]
-            public string AuthPrincipalType { get; set; }
-
-            [NameInMap("EncodedDiagnosticMessage")]
-            [Validation(Required=false)]
-            public string EncodedDiagnosticMessage { get; set; }
-
-            [NameInMap("NoPermissionType")]
-            [Validation(Required=false)]
-            public string NoPermissionType { get; set; }
-
-            [NameInMap("PolicyType")]
-            [Validation(Required=false)]
-            public string PolicyType { get; set; }
-
-        }
-
         /// <summary>
         /// <para>The HTTP status code that is returned.</para>
         /// 
@@ -131,7 +97,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
             public int? MaxJobs { get; set; }
 
             /// <summary>
-            /// <para>The configuration of the alert. The value is a JSON string. For more information, see <b>the additional information about response parameters below this table.</b></para>
+            /// <para>The alert notification configurations.</para>
+            /// <remarks>
+            /// <para> For more information about this parameter, see the following <b>additional information about request parameters</b>.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;sendChannel&quot;:&quot;sms,mail,ding&quot;}</para>
@@ -139,6 +108,29 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
             [NameInMap("MonitorConfigJson")]
             [Validation(Required=false)]
             public string MonitorConfigJson { get; set; }
+
+            /// <summary>
+            /// <para>The alert contact configurations.</para>
+            /// <remarks>
+            /// <para> For more information about this parameter, see the following <b>additional information about request parameters</b>.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>[ {&quot;name&quot;: &quot;Peter&quot;}, {&quot;name&quot;: &quot;Paul&quot;} ]</para>
+            /// </summary>
+            [NameInMap("MonitorContactsJson")]
+            [Validation(Required=false)]
+            public string MonitorContactsJson { get; set; }
+
+            /// <summary>
+            /// <para>The ID of the namespace.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</para>
+            /// </summary>
+            [NameInMap("Namespace")]
+            [Validation(Required=false)]
+            public string Namespace { get; set; }
 
         }
 

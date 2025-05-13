@@ -8,9 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
-    public class DeleteWorkflowRequest : TeaModel {
+    public class ListJobScriptHistoryRequest : TeaModel {
         /// <summary>
-        /// <para>The application group ID. You can obtain the application group ID on the Application Management page in the SchedulerX console.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testSchedulerx.defaultGroup</para>
@@ -20,19 +20,26 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</para>
+        /// <para>92583</para>
+        /// </summary>
+        [NameInMap("JobId")]
+        [Validation(Required=false)]
+        public long? JobId { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4F68ABED-AC31-4412-9297-D9A8F0401108</para>
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The source of the namespace. This parameter is required only for a special third party.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>schedulerx</para>
         /// </summary>
@@ -41,7 +48,6 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string NamespaceSource { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,17 +56,6 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
-
-        /// <summary>
-        /// <para>The workflow ID.</para>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>111</para>
-        /// </summary>
-        [NameInMap("WorkflowId")]
-        [Validation(Required=false)]
-        public long? WorkflowId { get; set; }
 
     }
 

@@ -8,9 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
-    public class DeleteWorkflowRequest : TeaModel {
+    public class UpdateJobScriptRequest : TeaModel {
         /// <summary>
-        /// <para>The application group ID. You can obtain the application group ID on the Application Management page in the SchedulerX console.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testSchedulerx.defaultGroup</para>
@@ -20,7 +20,16 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>301</para>
+        /// </summary>
+        [NameInMap("JobId")]
+        [Validation(Required=false)]
+        public long? JobId { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,8 +40,6 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The source of the namespace. This parameter is required only for a special third party.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>schedulerx</para>
         /// </summary>
@@ -41,7 +48,6 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string NamespaceSource { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,16 +57,13 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        /// <summary>
-        /// <para>The workflow ID.</para>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>111</para>
-        /// </summary>
-        [NameInMap("WorkflowId")]
+        [NameInMap("ScriptContent")]
         [Validation(Required=false)]
-        public long? WorkflowId { get; set; }
+        public string ScriptContent { get; set; }
+
+        [NameInMap("VersionDescription")]
+        [Validation(Required=false)]
+        public string VersionDescription { get; set; }
 
     }
 
