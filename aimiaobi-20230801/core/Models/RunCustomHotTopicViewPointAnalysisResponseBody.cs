@@ -79,6 +79,40 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public RunCustomHotTopicViewPointAnalysisResponseBodyPayloadOutput Output { get; set; }
             public class RunCustomHotTopicViewPointAnalysisResponseBodyPayloadOutput : TeaModel {
+                [NameInMap("Articles")]
+                [Validation(Required=false)]
+                public List<RunCustomHotTopicViewPointAnalysisResponseBodyPayloadOutputArticles> Articles { get; set; }
+                public class RunCustomHotTopicViewPointAnalysisResponseBodyPayloadOutputArticles : TeaModel {
+                    [NameInMap("Author")]
+                    [Validation(Required=false)]
+                    public string Author { get; set; }
+
+                    [NameInMap("Content")]
+                    [Validation(Required=false)]
+                    public string Content { get; set; }
+
+                    [NameInMap("PubTime")]
+                    [Validation(Required=false)]
+                    public string PubTime { get; set; }
+
+                    [NameInMap("Source")]
+                    [Validation(Required=false)]
+                    public string Source { get; set; }
+
+                    [NameInMap("Summary")]
+                    [Validation(Required=false)]
+                    public string Summary { get; set; }
+
+                    [NameInMap("Title")]
+                    [Validation(Required=false)]
+                    public string Title { get; set; }
+
+                    [NameInMap("Url")]
+                    [Validation(Required=false)]
+                    public string Url { get; set; }
+
+                }
+
                 [NameInMap("AskUser")]
                 [Validation(Required=false)]
                 public List<string> AskUser { get; set; }
