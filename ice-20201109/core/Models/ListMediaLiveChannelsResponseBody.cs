@@ -640,6 +640,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 }
 
                 /// <summary>
+                /// <para>视频转码方式（普通转码、窄带高清转码等）</para>
+                /// </summary>
+                [NameInMap("VideoCodecType")]
+                [Validation(Required=false)]
+                public string VideoCodecType { get; set; }
+
+                /// <summary>
                 /// <para>The width of the video in pixels.</para>
                 /// 
                 /// <b>Example:</b>

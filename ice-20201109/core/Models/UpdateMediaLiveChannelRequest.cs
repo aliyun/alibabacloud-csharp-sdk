@@ -603,6 +603,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             }
 
+            [NameInMap("VideoCodecType")]
+            [Validation(Required=false)]
+            public string VideoCodecType { get; set; }
+
             /// <summary>
             /// <para>The width of the output. Valid values: 0 to 2000. If you set it to 0 or leave it empty, the width automatically adapts to the specified height to maintain the original aspect ratio.</para>
             /// 
