@@ -1041,6 +1041,10 @@ namespace AlibabaCloud.SDK.Eflo20220530
             {
                 body["ResourceGroupId"] = request.ResourceGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                body["Tag"] = request.Tag;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -1111,6 +1115,10 @@ namespace AlibabaCloud.SDK.Eflo20220530
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 body["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                body["Tag"] = request.Tag;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -8428,6 +8436,10 @@ namespace AlibabaCloud.SDK.Eflo20220530
             {
                 body["ResourceGroupId"] = request.ResourceGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                body["Tag"] = request.Tag;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -8505,6 +8517,10 @@ namespace AlibabaCloud.SDK.Eflo20220530
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 body["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                body["Tag"] = request.Tag;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
