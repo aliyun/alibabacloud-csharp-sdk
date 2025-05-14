@@ -135,6 +135,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public string GDNStatus { get; set; }
 
+            [NameInMap("Labels")]
+            [Validation(Required=false)]
+            public DescribeGlobalDatabaseNetworksResponseBodyItemsLabels Labels { get; set; }
+            public class DescribeGlobalDatabaseNetworksResponseBodyItemsLabels : TeaModel {
+                [NameInMap("GDNVersion")]
+                [Validation(Required=false)]
+                public string GDNVersion { get; set; }
+
+            }
+
         }
 
         /// <summary>

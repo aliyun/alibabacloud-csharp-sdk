@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        [NameInMap("Force")]
+        [Validation(Required=false)]
+        public bool? Force { get; set; }
+
         /// <summary>
         /// <para>The ID of the GDN.</para>
         /// <para>This parameter is required.</para>

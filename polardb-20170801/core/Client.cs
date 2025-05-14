@@ -3998,6 +3998,198 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建全球数据网络</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateGlobalDataNetworkRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGlobalDataNetworkResponse
+        /// </returns>
+        public CreateGlobalDataNetworkResponse CreateGlobalDataNetworkWithOptions(CreateGlobalDataNetworkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationFileSystemPath))
+            {
+                query["DestinationFileSystemPath"] = request.DestinationFileSystemPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationId))
+            {
+                query["DestinationId"] = request.DestinationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationRegion))
+            {
+                query["DestinationRegion"] = request.DestinationRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationType))
+            {
+                query["DestinationType"] = request.DestinationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FreezeSourceDuringSync))
+            {
+                query["FreezeSourceDuringSync"] = request.FreezeSourceDuringSync;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceFileSystemPath))
+            {
+                query["SourceFileSystemPath"] = request.SourceFileSystemPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                query["SourceId"] = request.SourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegion))
+            {
+                query["SourceRegion"] = request.SourceRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["SourceType"] = request.SourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateGlobalDataNetwork",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateGlobalDataNetworkResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建全球数据网络</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateGlobalDataNetworkRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGlobalDataNetworkResponse
+        /// </returns>
+        public async Task<CreateGlobalDataNetworkResponse> CreateGlobalDataNetworkWithOptionsAsync(CreateGlobalDataNetworkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationFileSystemPath))
+            {
+                query["DestinationFileSystemPath"] = request.DestinationFileSystemPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationId))
+            {
+                query["DestinationId"] = request.DestinationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationRegion))
+            {
+                query["DestinationRegion"] = request.DestinationRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationType))
+            {
+                query["DestinationType"] = request.DestinationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FreezeSourceDuringSync))
+            {
+                query["FreezeSourceDuringSync"] = request.FreezeSourceDuringSync;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceFileSystemPath))
+            {
+                query["SourceFileSystemPath"] = request.SourceFileSystemPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                query["SourceId"] = request.SourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegion))
+            {
+                query["SourceRegion"] = request.SourceRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["SourceType"] = request.SourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateGlobalDataNetwork",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateGlobalDataNetworkResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建全球数据网络</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateGlobalDataNetworkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGlobalDataNetworkResponse
+        /// </returns>
+        public CreateGlobalDataNetworkResponse CreateGlobalDataNetwork(CreateGlobalDataNetworkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateGlobalDataNetworkWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建全球数据网络</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateGlobalDataNetworkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGlobalDataNetworkResponse
+        /// </returns>
+        public async Task<CreateGlobalDataNetworkResponse> CreateGlobalDataNetworkAsync(CreateGlobalDataNetworkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateGlobalDataNetworkWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a global database network (GDN).</para>
         /// </summary>
         /// 
@@ -4033,6 +4225,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GDNDescription))
             {
                 query["GDNDescription"] = request.GDNDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GDNVersion))
+            {
+                query["GDNVersion"] = request.GDNVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -4114,6 +4310,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GDNDescription))
             {
                 query["GDNDescription"] = request.GDNDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GDNVersion))
+            {
+                query["GDNVersion"] = request.GDNVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -6574,6 +6774,126 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteDatabaseWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DeleteGlobalDataNetwork</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteGlobalDataNetworkRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteGlobalDataNetworkResponse
+        /// </returns>
+        public DeleteGlobalDataNetworkResponse DeleteGlobalDataNetworkWithOptions(DeleteGlobalDataNetworkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkId))
+            {
+                query["NetworkId"] = request.NetworkId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteGlobalDataNetwork",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteGlobalDataNetworkResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DeleteGlobalDataNetwork</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteGlobalDataNetworkRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteGlobalDataNetworkResponse
+        /// </returns>
+        public async Task<DeleteGlobalDataNetworkResponse> DeleteGlobalDataNetworkWithOptionsAsync(DeleteGlobalDataNetworkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkId))
+            {
+                query["NetworkId"] = request.NetworkId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteGlobalDataNetwork",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteGlobalDataNetworkResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DeleteGlobalDataNetwork</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteGlobalDataNetworkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteGlobalDataNetworkResponse
+        /// </returns>
+        public DeleteGlobalDataNetworkResponse DeleteGlobalDataNetwork(DeleteGlobalDataNetworkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteGlobalDataNetworkWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DeleteGlobalDataNetwork</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteGlobalDataNetworkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteGlobalDataNetworkResponse
+        /// </returns>
+        public async Task<DeleteGlobalDataNetworkResponse> DeleteGlobalDataNetworkAsync(DeleteGlobalDataNetworkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteGlobalDataNetworkWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -13798,6 +14118,134 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDetachedBackupsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeGlobalDataNetworkList</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGlobalDataNetworkListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGlobalDataNetworkListResponse
+        /// </returns>
+        public DescribeGlobalDataNetworkListResponse DescribeGlobalDataNetworkListWithOptions(DescribeGlobalDataNetworkListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeGlobalDataNetworkList",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeGlobalDataNetworkListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeGlobalDataNetworkList</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGlobalDataNetworkListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGlobalDataNetworkListResponse
+        /// </returns>
+        public async Task<DescribeGlobalDataNetworkListResponse> DescribeGlobalDataNetworkListWithOptionsAsync(DescribeGlobalDataNetworkListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeGlobalDataNetworkList",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeGlobalDataNetworkListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeGlobalDataNetworkList</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGlobalDataNetworkListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGlobalDataNetworkListResponse
+        /// </returns>
+        public DescribeGlobalDataNetworkListResponse DescribeGlobalDataNetworkList(DescribeGlobalDataNetworkListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeGlobalDataNetworkListWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeGlobalDataNetworkList</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGlobalDataNetworkListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGlobalDataNetworkListResponse
+        /// </returns>
+        public async Task<DescribeGlobalDataNetworkListResponse> DescribeGlobalDataNetworkListAsync(DescribeGlobalDataNetworkListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeGlobalDataNetworkListWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -27290,6 +27738,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["DBClusterId"] = request.DBClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["Force"] = request.Force;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GDNId))
             {
                 query["GDNId"] = request.GDNId;
@@ -27362,6 +27814,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["Force"] = request.Force;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GDNId))
             {

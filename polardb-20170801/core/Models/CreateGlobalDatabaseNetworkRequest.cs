@@ -46,6 +46,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string GDNDescription { get; set; }
 
+        [NameInMap("GDNVersion")]
+        [Validation(Required=false)]
+        public string GDNVersion { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
