@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class AddConnectableClusterRequest : TeaModel {
         /// <summary>
+        /// <para>请求体。</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{     &quot;instanceId&quot;:&quot;es-cn-09k1rgid9000g****&quot; }</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Body { get; set; }
 
         /// <summary>
+        /// <para>5A2CFF0E-5718-45B5-9D4D-70B3FF\<em>\</em>\<em>\</em></para>
+        /// 
         /// <b>Example:</b>
         /// <para>5A2CFF0E-5718-45B5-9D4D-70B3FF****</para>
         /// </summary>

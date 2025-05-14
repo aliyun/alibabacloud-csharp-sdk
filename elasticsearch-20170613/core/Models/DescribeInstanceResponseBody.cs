@@ -271,9 +271,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [Validation(Required=false)]
             public bool? EnablePublic { get; set; }
 
-            [NameInMap("endtime")]
+            [NameInMap("endTime")]
             [Validation(Required=false)]
-            public long? Endtime { get; set; }
+            public long? EndTime { get; set; }
 
             /// <summary>
             /// <b>Example:</b>

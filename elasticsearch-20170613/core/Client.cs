@@ -170,6 +170,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ActivateZonesWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Connects Elasticsearch clusters.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddConnectableClusterRequest
         /// </param>
@@ -212,6 +217,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<AddConnectableClusterResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Connects Elasticsearch clusters.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddConnectableClusterRequest
         /// </param>
@@ -254,6 +264,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<AddConnectableClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Connects Elasticsearch clusters.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddConnectableClusterRequest
         /// </param>
@@ -268,6 +283,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return AddConnectableClusterWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Connects Elasticsearch clusters.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddConnectableClusterRequest
         /// </param>
