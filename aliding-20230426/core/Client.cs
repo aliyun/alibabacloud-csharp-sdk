@@ -823,6 +823,210 @@ namespace AlibabaCloud.SDK.Aliding20230426
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>新增数据表</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// AddMultiDimTableRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// AddMultiDimTableHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddMultiDimTableResponse
+        /// </returns>
+        public AddMultiDimTableResponse AddMultiDimTableWithOptions(AddMultiDimTableRequest tmpReq, AddMultiDimTableHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AddMultiDimTableShrinkRequest request = new AddMultiDimTableShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            AddMultiDimTableShrinkHeaders headers = new AddMultiDimTableShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Fields))
+            {
+                request.FieldsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Fields, "Fields", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseId))
+            {
+                body["BaseId"] = request.BaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FieldsShrink))
+            {
+                body["Fields"] = request.FieldsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddMultiDimTable",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/table/addMultiDimTable",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddMultiDimTableResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增数据表</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// AddMultiDimTableRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// AddMultiDimTableHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddMultiDimTableResponse
+        /// </returns>
+        public async Task<AddMultiDimTableResponse> AddMultiDimTableWithOptionsAsync(AddMultiDimTableRequest tmpReq, AddMultiDimTableHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AddMultiDimTableShrinkRequest request = new AddMultiDimTableShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            AddMultiDimTableShrinkHeaders headers = new AddMultiDimTableShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Fields))
+            {
+                request.FieldsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Fields, "Fields", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseId))
+            {
+                body["BaseId"] = request.BaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FieldsShrink))
+            {
+                body["Fields"] = request.FieldsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddMultiDimTable",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/table/addMultiDimTable",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddMultiDimTableResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增数据表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddMultiDimTableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddMultiDimTableResponse
+        /// </returns>
+        public AddMultiDimTableResponse AddMultiDimTable(AddMultiDimTableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            AddMultiDimTableHeaders headers = new AddMultiDimTableHeaders();
+            return AddMultiDimTableWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增数据表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddMultiDimTableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddMultiDimTableResponse
+        /// </returns>
+        public async Task<AddMultiDimTableResponse> AddMultiDimTableAsync(AddMultiDimTableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            AddMultiDimTableHeaders headers = new AddMultiDimTableHeaders();
+            return await AddMultiDimTableWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>添加文件权限</para>
         /// </summary>
         /// 
@@ -6987,6 +7191,226 @@ namespace AlibabaCloud.SDK.Aliding20230426
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建字段</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateMultiDimTableFieldRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// CreateMultiDimTableFieldHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMultiDimTableFieldResponse
+        /// </returns>
+        public CreateMultiDimTableFieldResponse CreateMultiDimTableFieldWithOptions(CreateMultiDimTableFieldRequest tmpReq, CreateMultiDimTableFieldHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateMultiDimTableFieldShrinkRequest request = new CreateMultiDimTableFieldShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            CreateMultiDimTableFieldShrinkHeaders headers = new CreateMultiDimTableFieldShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Property))
+            {
+                request.PropertyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Property, "Property", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseId))
+            {
+                body["BaseId"] = request.BaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PropertyShrink))
+            {
+                body["Property"] = request.PropertyShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SheetIdOrName))
+            {
+                body["SheetIdOrName"] = request.SheetIdOrName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMultiDimTableField",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/table/createMultiDimTableField",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateMultiDimTableFieldResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建字段</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateMultiDimTableFieldRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// CreateMultiDimTableFieldHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMultiDimTableFieldResponse
+        /// </returns>
+        public async Task<CreateMultiDimTableFieldResponse> CreateMultiDimTableFieldWithOptionsAsync(CreateMultiDimTableFieldRequest tmpReq, CreateMultiDimTableFieldHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateMultiDimTableFieldShrinkRequest request = new CreateMultiDimTableFieldShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            CreateMultiDimTableFieldShrinkHeaders headers = new CreateMultiDimTableFieldShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Property))
+            {
+                request.PropertyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Property, "Property", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseId))
+            {
+                body["BaseId"] = request.BaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PropertyShrink))
+            {
+                body["Property"] = request.PropertyShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SheetIdOrName))
+            {
+                body["SheetIdOrName"] = request.SheetIdOrName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMultiDimTableField",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/table/createMultiDimTableField",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateMultiDimTableFieldResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建字段</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMultiDimTableFieldRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMultiDimTableFieldResponse
+        /// </returns>
+        public CreateMultiDimTableFieldResponse CreateMultiDimTableField(CreateMultiDimTableFieldRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            CreateMultiDimTableFieldHeaders headers = new CreateMultiDimTableFieldHeaders();
+            return CreateMultiDimTableFieldWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建字段</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMultiDimTableFieldRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMultiDimTableFieldResponse
+        /// </returns>
+        public async Task<CreateMultiDimTableFieldResponse> CreateMultiDimTableFieldAsync(CreateMultiDimTableFieldRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            CreateMultiDimTableFieldHeaders headers = new CreateMultiDimTableFieldHeaders();
+            return await CreateMultiDimTableFieldWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>新增或更新表单实例</para>
         /// </summary>
         /// 
@@ -12463,6 +12887,406 @@ namespace AlibabaCloud.SDK.Aliding20230426
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>删除字段</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DeleteMultiDimTableFieldRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// DeleteMultiDimTableFieldHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMultiDimTableFieldResponse
+        /// </returns>
+        public DeleteMultiDimTableFieldResponse DeleteMultiDimTableFieldWithOptions(DeleteMultiDimTableFieldRequest tmpReq, DeleteMultiDimTableFieldHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteMultiDimTableFieldShrinkRequest request = new DeleteMultiDimTableFieldShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            DeleteMultiDimTableFieldShrinkHeaders headers = new DeleteMultiDimTableFieldShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseId))
+            {
+                body["BaseId"] = request.BaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FieldIdOrName))
+            {
+                body["FieldIdOrName"] = request.FieldIdOrName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SheetIdOrName))
+            {
+                body["SheetIdOrName"] = request.SheetIdOrName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMultiDimTableField",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/table/deleteMultiDimTableField",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteMultiDimTableFieldResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除字段</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DeleteMultiDimTableFieldRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// DeleteMultiDimTableFieldHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMultiDimTableFieldResponse
+        /// </returns>
+        public async Task<DeleteMultiDimTableFieldResponse> DeleteMultiDimTableFieldWithOptionsAsync(DeleteMultiDimTableFieldRequest tmpReq, DeleteMultiDimTableFieldHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteMultiDimTableFieldShrinkRequest request = new DeleteMultiDimTableFieldShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            DeleteMultiDimTableFieldShrinkHeaders headers = new DeleteMultiDimTableFieldShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseId))
+            {
+                body["BaseId"] = request.BaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FieldIdOrName))
+            {
+                body["FieldIdOrName"] = request.FieldIdOrName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SheetIdOrName))
+            {
+                body["SheetIdOrName"] = request.SheetIdOrName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMultiDimTableField",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/table/deleteMultiDimTableField",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteMultiDimTableFieldResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除字段</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMultiDimTableFieldRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMultiDimTableFieldResponse
+        /// </returns>
+        public DeleteMultiDimTableFieldResponse DeleteMultiDimTableField(DeleteMultiDimTableFieldRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            DeleteMultiDimTableFieldHeaders headers = new DeleteMultiDimTableFieldHeaders();
+            return DeleteMultiDimTableFieldWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除字段</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMultiDimTableFieldRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMultiDimTableFieldResponse
+        /// </returns>
+        public async Task<DeleteMultiDimTableFieldResponse> DeleteMultiDimTableFieldAsync(DeleteMultiDimTableFieldRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            DeleteMultiDimTableFieldHeaders headers = new DeleteMultiDimTableFieldHeaders();
+            return await DeleteMultiDimTableFieldWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除多行记录</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DeleteMultiDimTableRecordsRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// DeleteMultiDimTableRecordsHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMultiDimTableRecordsResponse
+        /// </returns>
+        public DeleteMultiDimTableRecordsResponse DeleteMultiDimTableRecordsWithOptions(DeleteMultiDimTableRecordsRequest tmpReq, DeleteMultiDimTableRecordsHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteMultiDimTableRecordsShrinkRequest request = new DeleteMultiDimTableRecordsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            DeleteMultiDimTableRecordsShrinkHeaders headers = new DeleteMultiDimTableRecordsShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RecordIds))
+            {
+                request.RecordIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RecordIds, "RecordIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseId))
+            {
+                body["BaseId"] = request.BaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordIdsShrink))
+            {
+                body["RecordIds"] = request.RecordIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SheetIdOrName))
+            {
+                body["SheetIdOrName"] = request.SheetIdOrName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMultiDimTableRecords",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/table/deleteMultiDimTableRecords",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteMultiDimTableRecordsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除多行记录</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DeleteMultiDimTableRecordsRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// DeleteMultiDimTableRecordsHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMultiDimTableRecordsResponse
+        /// </returns>
+        public async Task<DeleteMultiDimTableRecordsResponse> DeleteMultiDimTableRecordsWithOptionsAsync(DeleteMultiDimTableRecordsRequest tmpReq, DeleteMultiDimTableRecordsHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteMultiDimTableRecordsShrinkRequest request = new DeleteMultiDimTableRecordsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            DeleteMultiDimTableRecordsShrinkHeaders headers = new DeleteMultiDimTableRecordsShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RecordIds))
+            {
+                request.RecordIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RecordIds, "RecordIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseId))
+            {
+                body["BaseId"] = request.BaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordIdsShrink))
+            {
+                body["RecordIds"] = request.RecordIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SheetIdOrName))
+            {
+                body["SheetIdOrName"] = request.SheetIdOrName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMultiDimTableRecords",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/table/deleteMultiDimTableRecords",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteMultiDimTableRecordsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除多行记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMultiDimTableRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMultiDimTableRecordsResponse
+        /// </returns>
+        public DeleteMultiDimTableRecordsResponse DeleteMultiDimTableRecords(DeleteMultiDimTableRecordsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            DeleteMultiDimTableRecordsHeaders headers = new DeleteMultiDimTableRecordsHeaders();
+            return DeleteMultiDimTableRecordsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除多行记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMultiDimTableRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMultiDimTableRecordsResponse
+        /// </returns>
+        public async Task<DeleteMultiDimTableRecordsResponse> DeleteMultiDimTableRecordsAsync(DeleteMultiDimTableRecordsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            DeleteMultiDimTableRecordsHeaders headers = new DeleteMultiDimTableRecordsHeaders();
+            return await DeleteMultiDimTableRecordsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>删除文件权限</para>
         /// </summary>
         /// 
@@ -13971,6 +14795,210 @@ namespace AlibabaCloud.SDK.Aliding20230426
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             DeleteWorkspaceMembersHeaders headers = new DeleteWorkspaceMembersHeaders();
             return await DeleteWorkspaceMembersWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询块元素</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DocBlocksQueryRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// DocBlocksQueryHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DocBlocksQueryResponse
+        /// </returns>
+        public DocBlocksQueryResponse DocBlocksQueryWithOptions(DocBlocksQueryRequest tmpReq, DocBlocksQueryHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DocBlocksQueryShrinkRequest request = new DocBlocksQueryShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            DocBlocksQueryShrinkHeaders headers = new DocBlocksQueryShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BlockType))
+            {
+                body["BlockType"] = request.BlockType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocKey))
+            {
+                body["DocKey"] = request.DocKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndIndex))
+            {
+                body["EndIndex"] = request.EndIndex;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartIndex))
+            {
+                body["StartIndex"] = request.StartIndex;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DocBlocksQuery",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/documents/docBlocksQuery",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DocBlocksQueryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询块元素</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DocBlocksQueryRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// DocBlocksQueryHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DocBlocksQueryResponse
+        /// </returns>
+        public async Task<DocBlocksQueryResponse> DocBlocksQueryWithOptionsAsync(DocBlocksQueryRequest tmpReq, DocBlocksQueryHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DocBlocksQueryShrinkRequest request = new DocBlocksQueryShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            DocBlocksQueryShrinkHeaders headers = new DocBlocksQueryShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BlockType))
+            {
+                body["BlockType"] = request.BlockType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocKey))
+            {
+                body["DocKey"] = request.DocKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndIndex))
+            {
+                body["EndIndex"] = request.EndIndex;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartIndex))
+            {
+                body["StartIndex"] = request.StartIndex;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DocBlocksQuery",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/documents/docBlocksQuery",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DocBlocksQueryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询块元素</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DocBlocksQueryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DocBlocksQueryResponse
+        /// </returns>
+        public DocBlocksQueryResponse DocBlocksQuery(DocBlocksQueryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            DocBlocksQueryHeaders headers = new DocBlocksQueryHeaders();
+            return DocBlocksQueryWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询块元素</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DocBlocksQueryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DocBlocksQueryResponse
+        /// </returns>
+        public async Task<DocBlocksQueryResponse> DocBlocksQueryAsync(DocBlocksQueryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            DocBlocksQueryHeaders headers = new DocBlocksQueryHeaders();
+            return await DocBlocksQueryWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -27799,6 +28827,210 @@ namespace AlibabaCloud.SDK.Aliding20230426
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             InsertColumnsBeforeHeaders headers = new InsertColumnsBeforeHeaders();
             return await InsertColumnsBeforeWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增记录</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// InsertMultiDimTableRecordRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// InsertMultiDimTableRecordHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertMultiDimTableRecordResponse
+        /// </returns>
+        public InsertMultiDimTableRecordResponse InsertMultiDimTableRecordWithOptions(InsertMultiDimTableRecordRequest tmpReq, InsertMultiDimTableRecordHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            InsertMultiDimTableRecordShrinkRequest request = new InsertMultiDimTableRecordShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            InsertMultiDimTableRecordShrinkHeaders headers = new InsertMultiDimTableRecordShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Records))
+            {
+                request.RecordsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Records, "Records", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseId))
+            {
+                body["BaseId"] = request.BaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordsShrink))
+            {
+                body["Records"] = request.RecordsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SheetIdOrName))
+            {
+                body["SheetIdOrName"] = request.SheetIdOrName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "InsertMultiDimTableRecord",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/table/insertMultiDimTableRecord",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<InsertMultiDimTableRecordResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增记录</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// InsertMultiDimTableRecordRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// InsertMultiDimTableRecordHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertMultiDimTableRecordResponse
+        /// </returns>
+        public async Task<InsertMultiDimTableRecordResponse> InsertMultiDimTableRecordWithOptionsAsync(InsertMultiDimTableRecordRequest tmpReq, InsertMultiDimTableRecordHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            InsertMultiDimTableRecordShrinkRequest request = new InsertMultiDimTableRecordShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            InsertMultiDimTableRecordShrinkHeaders headers = new InsertMultiDimTableRecordShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Records))
+            {
+                request.RecordsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Records, "Records", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseId))
+            {
+                body["BaseId"] = request.BaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordsShrink))
+            {
+                body["Records"] = request.RecordsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SheetIdOrName))
+            {
+                body["SheetIdOrName"] = request.SheetIdOrName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "InsertMultiDimTableRecord",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/table/insertMultiDimTableRecord",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<InsertMultiDimTableRecordResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InsertMultiDimTableRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertMultiDimTableRecordResponse
+        /// </returns>
+        public InsertMultiDimTableRecordResponse InsertMultiDimTableRecord(InsertMultiDimTableRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            InsertMultiDimTableRecordHeaders headers = new InsertMultiDimTableRecordHeaders();
+            return InsertMultiDimTableRecordWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InsertMultiDimTableRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertMultiDimTableRecordResponse
+        /// </returns>
+        public async Task<InsertMultiDimTableRecordResponse> InsertMultiDimTableRecordAsync(InsertMultiDimTableRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            InsertMultiDimTableRecordHeaders headers = new InsertMultiDimTableRecordHeaders();
+            return await InsertMultiDimTableRecordWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -45995,6 +47227,626 @@ namespace AlibabaCloud.SDK.Aliding20230426
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             UpdateMeetingRoomGroupHeaders headers = new UpdateMeetingRoomGroupHeaders();
             return await UpdateMeetingRoomGroupWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新数据表</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateMultiDimTableRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// UpdateMultiDimTableHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMultiDimTableResponse
+        /// </returns>
+        public UpdateMultiDimTableResponse UpdateMultiDimTableWithOptions(UpdateMultiDimTableRequest tmpReq, UpdateMultiDimTableHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateMultiDimTableShrinkRequest request = new UpdateMultiDimTableShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            UpdateMultiDimTableShrinkHeaders headers = new UpdateMultiDimTableShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseId))
+            {
+                body["BaseId"] = request.BaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SheetIdOrName))
+            {
+                body["SheetIdOrName"] = request.SheetIdOrName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMultiDimTable",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/table/updateMultiDimTable",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateMultiDimTableResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新数据表</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateMultiDimTableRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// UpdateMultiDimTableHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMultiDimTableResponse
+        /// </returns>
+        public async Task<UpdateMultiDimTableResponse> UpdateMultiDimTableWithOptionsAsync(UpdateMultiDimTableRequest tmpReq, UpdateMultiDimTableHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateMultiDimTableShrinkRequest request = new UpdateMultiDimTableShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            UpdateMultiDimTableShrinkHeaders headers = new UpdateMultiDimTableShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseId))
+            {
+                body["BaseId"] = request.BaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SheetIdOrName))
+            {
+                body["SheetIdOrName"] = request.SheetIdOrName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMultiDimTable",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/table/updateMultiDimTable",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateMultiDimTableResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新数据表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMultiDimTableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMultiDimTableResponse
+        /// </returns>
+        public UpdateMultiDimTableResponse UpdateMultiDimTable(UpdateMultiDimTableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            UpdateMultiDimTableHeaders headers = new UpdateMultiDimTableHeaders();
+            return UpdateMultiDimTableWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新数据表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMultiDimTableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMultiDimTableResponse
+        /// </returns>
+        public async Task<UpdateMultiDimTableResponse> UpdateMultiDimTableAsync(UpdateMultiDimTableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            UpdateMultiDimTableHeaders headers = new UpdateMultiDimTableHeaders();
+            return await UpdateMultiDimTableWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新字段</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateMultiDimTableFieldRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// UpdateMultiDimTableFieldHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMultiDimTableFieldResponse
+        /// </returns>
+        public UpdateMultiDimTableFieldResponse UpdateMultiDimTableFieldWithOptions(UpdateMultiDimTableFieldRequest tmpReq, UpdateMultiDimTableFieldHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateMultiDimTableFieldShrinkRequest request = new UpdateMultiDimTableFieldShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            UpdateMultiDimTableFieldShrinkHeaders headers = new UpdateMultiDimTableFieldShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Property))
+            {
+                request.PropertyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Property, "Property", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseId))
+            {
+                body["BaseId"] = request.BaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FieldIdOrName))
+            {
+                body["FieldIdOrName"] = request.FieldIdOrName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PropertyShrink))
+            {
+                body["Property"] = request.PropertyShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SheetIdOrName))
+            {
+                body["SheetIdOrName"] = request.SheetIdOrName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMultiDimTableField",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/table/updateMultiDimTableField",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateMultiDimTableFieldResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新字段</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateMultiDimTableFieldRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// UpdateMultiDimTableFieldHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMultiDimTableFieldResponse
+        /// </returns>
+        public async Task<UpdateMultiDimTableFieldResponse> UpdateMultiDimTableFieldWithOptionsAsync(UpdateMultiDimTableFieldRequest tmpReq, UpdateMultiDimTableFieldHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateMultiDimTableFieldShrinkRequest request = new UpdateMultiDimTableFieldShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            UpdateMultiDimTableFieldShrinkHeaders headers = new UpdateMultiDimTableFieldShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Property))
+            {
+                request.PropertyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Property, "Property", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseId))
+            {
+                body["BaseId"] = request.BaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FieldIdOrName))
+            {
+                body["FieldIdOrName"] = request.FieldIdOrName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PropertyShrink))
+            {
+                body["Property"] = request.PropertyShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SheetIdOrName))
+            {
+                body["SheetIdOrName"] = request.SheetIdOrName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMultiDimTableField",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/table/updateMultiDimTableField",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateMultiDimTableFieldResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新字段</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMultiDimTableFieldRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMultiDimTableFieldResponse
+        /// </returns>
+        public UpdateMultiDimTableFieldResponse UpdateMultiDimTableField(UpdateMultiDimTableFieldRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            UpdateMultiDimTableFieldHeaders headers = new UpdateMultiDimTableFieldHeaders();
+            return UpdateMultiDimTableFieldWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新字段</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMultiDimTableFieldRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMultiDimTableFieldResponse
+        /// </returns>
+        public async Task<UpdateMultiDimTableFieldResponse> UpdateMultiDimTableFieldAsync(UpdateMultiDimTableFieldRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            UpdateMultiDimTableFieldHeaders headers = new UpdateMultiDimTableFieldHeaders();
+            return await UpdateMultiDimTableFieldWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新多行记录</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateMultiDimTableRecordsRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// UpdateMultiDimTableRecordsHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMultiDimTableRecordsResponse
+        /// </returns>
+        public UpdateMultiDimTableRecordsResponse UpdateMultiDimTableRecordsWithOptions(UpdateMultiDimTableRecordsRequest tmpReq, UpdateMultiDimTableRecordsHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateMultiDimTableRecordsShrinkRequest request = new UpdateMultiDimTableRecordsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            UpdateMultiDimTableRecordsShrinkHeaders headers = new UpdateMultiDimTableRecordsShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RecordIds))
+            {
+                request.RecordIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RecordIds, "RecordIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseId))
+            {
+                body["BaseId"] = request.BaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordIdsShrink))
+            {
+                body["RecordIds"] = request.RecordIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SheetIdOrName))
+            {
+                body["SheetIdOrName"] = request.SheetIdOrName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMultiDimTableRecords",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/table/updateMultiDimTableRecords",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateMultiDimTableRecordsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新多行记录</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateMultiDimTableRecordsRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// UpdateMultiDimTableRecordsHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMultiDimTableRecordsResponse
+        /// </returns>
+        public async Task<UpdateMultiDimTableRecordsResponse> UpdateMultiDimTableRecordsWithOptionsAsync(UpdateMultiDimTableRecordsRequest tmpReq, UpdateMultiDimTableRecordsHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateMultiDimTableRecordsShrinkRequest request = new UpdateMultiDimTableRecordsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            UpdateMultiDimTableRecordsShrinkHeaders headers = new UpdateMultiDimTableRecordsShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RecordIds))
+            {
+                request.RecordIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RecordIds, "RecordIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseId))
+            {
+                body["BaseId"] = request.BaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordIdsShrink))
+            {
+                body["RecordIds"] = request.RecordIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SheetIdOrName))
+            {
+                body["SheetIdOrName"] = request.SheetIdOrName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMultiDimTableRecords",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/table/updateMultiDimTableRecords",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateMultiDimTableRecordsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新多行记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMultiDimTableRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMultiDimTableRecordsResponse
+        /// </returns>
+        public UpdateMultiDimTableRecordsResponse UpdateMultiDimTableRecords(UpdateMultiDimTableRecordsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            UpdateMultiDimTableRecordsHeaders headers = new UpdateMultiDimTableRecordsHeaders();
+            return UpdateMultiDimTableRecordsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新多行记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMultiDimTableRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMultiDimTableRecordsResponse
+        /// </returns>
+        public async Task<UpdateMultiDimTableRecordsResponse> UpdateMultiDimTableRecordsAsync(UpdateMultiDimTableRecordsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            UpdateMultiDimTableRecordsHeaders headers = new UpdateMultiDimTableRecordsHeaders();
+            return await UpdateMultiDimTableRecordsWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
