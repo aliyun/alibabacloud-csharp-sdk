@@ -339,6 +339,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string PublicIpv6Address { get; set; }
 
+            [NameInMap("QosRuleId")]
+            [Validation(Required=false)]
+            public string QosRuleId { get; set; }
+
             /// <summary>
             /// <para>The progress of instance data backup or restoration.</para>
             /// 

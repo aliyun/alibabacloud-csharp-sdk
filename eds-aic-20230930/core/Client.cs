@@ -3645,6 +3645,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["OfficeSiteIds"] = request.OfficeSiteIds;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosRuleIds))
+            {
+                query["QosRuleIds"] = request.QosRuleIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaleMode))
             {
                 query["SaleMode"] = request.SaleMode;
@@ -3750,6 +3754,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteIds))
             {
                 query["OfficeSiteIds"] = request.OfficeSiteIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosRuleIds))
+            {
+                query["QosRuleIds"] = request.QosRuleIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaleMode))
             {
@@ -4412,6 +4420,126 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeCloudPhoneNodesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询显示设置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDisplayConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDisplayConfigResponse
+        /// </returns>
+        public DescribeDisplayConfigResponse DescribeDisplayConfigWithOptions(DescribeDisplayConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidInstanceIds))
+            {
+                body["AndroidInstanceIds"] = request.AndroidInstanceIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDisplayConfig",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDisplayConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询显示设置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDisplayConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDisplayConfigResponse
+        /// </returns>
+        public async Task<DescribeDisplayConfigResponse> DescribeDisplayConfigWithOptionsAsync(DescribeDisplayConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidInstanceIds))
+            {
+                body["AndroidInstanceIds"] = request.AndroidInstanceIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDisplayConfig",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDisplayConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询显示设置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDisplayConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDisplayConfigResponse
+        /// </returns>
+        public DescribeDisplayConfigResponse DescribeDisplayConfig(DescribeDisplayConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDisplayConfigWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询显示设置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDisplayConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDisplayConfigResponse
+        /// </returns>
+        public async Task<DescribeDisplayConfigResponse> DescribeDisplayConfigAsync(DescribeDisplayConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDisplayConfigWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7576,6 +7704,146 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyCloudPhoneNodeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改显示设置</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ModifyDisplayConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDisplayConfigResponse
+        /// </returns>
+        public ModifyDisplayConfigResponse ModifyDisplayConfigWithOptions(ModifyDisplayConfigRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyDisplayConfigShrinkRequest request = new ModifyDisplayConfigShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DisplayConfig))
+            {
+                request.DisplayConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DisplayConfig, "DisplayConfig", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidInstanceIds))
+            {
+                body["AndroidInstanceIds"] = request.AndroidInstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayConfigShrink))
+            {
+                body["DisplayConfig"] = request.DisplayConfigShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyDisplayConfig",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyDisplayConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改显示设置</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ModifyDisplayConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDisplayConfigResponse
+        /// </returns>
+        public async Task<ModifyDisplayConfigResponse> ModifyDisplayConfigWithOptionsAsync(ModifyDisplayConfigRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyDisplayConfigShrinkRequest request = new ModifyDisplayConfigShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DisplayConfig))
+            {
+                request.DisplayConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DisplayConfig, "DisplayConfig", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidInstanceIds))
+            {
+                body["AndroidInstanceIds"] = request.AndroidInstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayConfigShrink))
+            {
+                body["DisplayConfig"] = request.DisplayConfigShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyDisplayConfig",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyDisplayConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改显示设置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDisplayConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDisplayConfigResponse
+        /// </returns>
+        public ModifyDisplayConfigResponse ModifyDisplayConfig(ModifyDisplayConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyDisplayConfigWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改显示设置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDisplayConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDisplayConfigResponse
+        /// </returns>
+        public async Task<ModifyDisplayConfigResponse> ModifyDisplayConfigAsync(ModifyDisplayConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyDisplayConfigWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
