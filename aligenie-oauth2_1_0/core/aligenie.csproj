@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>AlibabaCloud.SDK.AliGenieoauth2_1_0</AssemblyName>
-    <Version>1.1.0</Version>
+    <Version>1.1.1</Version>
     <LangVersion>5</LangVersion>
     <Authors>Alibaba Cloud</Authors>
     <Description>Alibaba Cloud AliGenie (oauth2_1_0) SDK Library for .NET</Description>
