@@ -2823,7 +2823,7 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取ECS规格列表</para>
+        /// <para>Queries a list of specifications of ECS instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2885,7 +2885,7 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取ECS规格列表</para>
+        /// <para>Queries a list of specifications of ECS instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2947,7 +2947,7 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取ECS规格列表</para>
+        /// <para>Queries a list of specifications of ECS instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2966,7 +2966,7 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取ECS规格列表</para>
+        /// <para>Queries a list of specifications of ECS instances.</para>
         /// </summary>
         /// 
         /// <param name="request">

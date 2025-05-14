@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
             public string OptionType { get; set; }
 
             /// <summary>
-            /// <para>The custom dataset mount options. Only OSS is supported. You cannot specify OptionType at the same time. For more information, see <a href="https://help.aliyun.com/zh/pai/user-guide/read-and-write-dataset-data">DSW mount configurations</a>.</para>
+            /// <para>The custom dataset mount options. Only OSS is supported. You cannot specify OptionType at the same time. For more information, see <a href="https://www.alibabacloud.com/help/en/pai/user-guide/read-and-write-dataset-data">DSW mount configurations</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
