@@ -30,6 +30,18 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public DescribeApplicationSlbsResponseBodyData Data { get; set; }
         public class DescribeApplicationSlbsResponseBodyData : TeaModel {
+            [NameInMap("AppId")]
+            [Validation(Required=false)]
+            public string AppId { get; set; }
+
+            [NameInMap("AppName")]
+            [Validation(Required=false)]
+            public string AppName { get; set; }
+
+            [NameInMap("ClusterId")]
+            [Validation(Required=false)]
+            public string ClusterId { get; set; }
+
             /// <summary>
             /// <para>The configurations of the Internet-facing SLB instance.</para>
             /// </summary>

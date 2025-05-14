@@ -52,6 +52,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string AppName { get; set; }
 
+            [NameInMap("ApplicationEnableGreyTagRoute")]
+            [Validation(Required=false)]
+            public bool? ApplicationEnableGreyTagRoute { get; set; }
+
+            [NameInMap("ApplicationUpdateStrategy")]
+            [Validation(Required=false)]
+            public string ApplicationUpdateStrategy { get; set; }
+
             /// <summary>
             /// <para>The approval ID of the change order.</para>
             /// 

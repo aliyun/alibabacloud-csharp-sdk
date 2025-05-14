@@ -145,6 +145,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string PackageVersion { get; set; }
 
+            [NameInMap("PackageVersionId")]
+            [Validation(Required=false)]
+            public string PackageVersionId { get; set; }
+
             /// <summary>
             /// <para>The total number of instances.</para>
             /// 
