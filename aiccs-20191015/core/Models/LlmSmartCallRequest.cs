@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public string CallerNumber { get; set; }
 
+        [NameInMap("Extension")]
+        [Validation(Required=false)]
+        public string Extension { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>222356****</para>
