@@ -1,3 +1,9 @@
+2025-05-14 Version: 3.0.3
+- Update API CreateFeatureView: add request parameters body.Fields.$.Transform.
+- Update API GetFeatureView: add response parameters Body.Fields.$.Transform.
+- Update API ListFeatureViewFieldRelationships: add response parameters Body.Relationships.$.Models.$.FeatureAliasName.
+
+
 2024-12-19 Version: 3.0.2
 - Generated csharp 2023-06-21 for PaiFeatureStore.
 

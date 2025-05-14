@@ -27,6 +27,14 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             public class ListFeatureViewFieldRelationshipsResponseBodyRelationshipsModels : TeaModel {
                 /// <summary>
                 /// <b>Example:</b>
+                /// <para>f1</para>
+                /// </summary>
+                [NameInMap("FeatureAliasName")]
+                [Validation(Required=false)]
+                public string FeatureAliasName { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
                 /// <para>3</para>
                 /// </summary>
                 [NameInMap("ModelId")]
