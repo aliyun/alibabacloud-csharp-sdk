@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClustersForRegionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the clusters returned.</para>
+        /// <para>The information about the queried clusters.</para>
         /// </summary>
         [NameInMap("clusters")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClustersV1ResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried cluster(s) details.</para>
+        /// <para>The queried cluster details.</para>
         /// </summary>
         [NameInMap("clusters")]
         [Validation(Required=false)]
@@ -402,7 +402,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string SubnetCidr { get; set; }
 
             /// <summary>
-            /// <para>The resource labels of the cluster.</para>
+            /// <para>The resource tags of the cluster.</para>
             /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]

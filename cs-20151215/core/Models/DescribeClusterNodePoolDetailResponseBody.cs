@@ -9,6 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClusterNodePoolDetailResponseBody : TeaModel {
+        [NameInMap("auto_mode")]
+        [Validation(Required=false)]
+        public DescribeClusterNodePoolDetailResponseBodyAutoMode AutoMode { get; set; }
+        public class DescribeClusterNodePoolDetailResponseBodyAutoMode : TeaModel {
+            [NameInMap("enable")]
+            [Validation(Required=false)]
+            public bool? Enable { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The auto scaling configuration of the node pool.</para>
         /// </summary>
@@ -651,7 +661,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>【The field is deprecated】Please use the parameter security_hardening_os instead.</para>
+            /// <para>[<b>Deprecated</b>] Please use the parameter security_hardening_os instead.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>

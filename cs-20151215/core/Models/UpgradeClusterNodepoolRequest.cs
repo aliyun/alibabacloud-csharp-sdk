@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class UpgradeClusterNodepoolRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the OS image that is used by the nodes.</para>
+        /// <para>The ID of the OS image used by the nodes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aliyun_2_1903_x64_20G_alibase_20200529.vhd</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The Kubernetes version that is used by the nodes. You can call the <a href="https://help.aliyun.com/document_detail/2667899.html">DescribeKubernetesVersionMetadata</a> operation to query the Kubernetes version of the cluster returned in the current_version parameter.</para>
+        /// <para>The Kubernetes version used by the nodes. You can call the <a href="https://help.aliyun.com/document_detail/2667899.html">DescribeKubernetesVersionMetadata</a> operation and get the Kubernetes version of the current cluster in the current_version field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.22.15-aliyun.1</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string KubernetesVersion { get; set; }
 
         /// <summary>
-        /// <para>The nodes that you want to update. If you do not specify this parameter, all nodes in the node pool are updated by default.</para>
+        /// <para>The nodes you want to update. If you do not specify this parameter, all nodes in the node pool are updated by default.</para>
         /// </summary>
         [NameInMap("node_names")]
         [Validation(Required=false)]
         public List<string> NodeNames { get; set; }
 
         /// <summary>
-        /// <para>The rotation configuration.</para>
+        /// <para>The rolling update configuration.</para>
         /// </summary>
         [NameInMap("rolling_policy")]
         [Validation(Required=false)]
@@ -64,10 +64,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public int? MaxParallelism { get; set; }
 
             /// <summary>
-            /// <para>The policy that is used to pause the update. Valid values:</para>
+            /// <para>The policy used to pause the update. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>FirstBatch: pauses the update after the first batch is completed.</description></item>
-            /// <item><description>EveryBatch: pauses after each batch is completed.</description></item>
+            /// <item><description>FirstBatch: pauses after the first batch is updated.</description></item>
+            /// <item><description>EveryBatch: pauses after each batch is updated.</description></item>
             /// <item><description>NotPause: does not pause.</description></item>
             /// </list>
             /// 
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>The runtime type. You can call the <a href="https://help.aliyun.com/document_detail/2667899.html">DescribeKubernetesVersionMetadata</a> operation to query the runtime information returned in the runtime parameter.</para>
+        /// <para>The runtime type. You can call the <a href="https://help.aliyun.com/document_detail/2667899.html">DescribeKubernetesVersionMetadata</a> operation and get the runtime information in the runtime field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>containerd</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string RuntimeType { get; set; }
 
         /// <summary>
-        /// <para>The version of the container runtime that is used by the nodes. You can call the <a href="https://help.aliyun.com/document_detail/2667899.html">DescribeKubernetesVersionMetadata</a> operation to query the runtime version returned in the runtime parameter.</para>
+        /// <para>The version of the container runtime used by the nodes. You can call the <a href="https://help.aliyun.com/document_detail/2667899.html">DescribeKubernetesVersionMetadata</a> operation and get the runtime version in the runtime field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.5.10</para>
@@ -103,8 +103,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>Specifies whether to perform the update by replacing the system disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: updates by replacing the system disk.</description></item>
-        /// <item><description>false: does not update by replacing the system disk.</description></item>
+        /// <item><description>true: replaces the system disk.</description></item>
+        /// <item><description>false: does not replace the system disk.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 

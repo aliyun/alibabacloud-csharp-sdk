@@ -16,6 +16,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public List<DescribeClusterNodePoolsResponseBodyNodepools> Nodepools { get; set; }
         public class DescribeClusterNodePoolsResponseBodyNodepools : TeaModel {
+            [NameInMap("auto_mode")]
+            [Validation(Required=false)]
+            public DescribeClusterNodePoolsResponseBodyNodepoolsAutoMode AutoMode { get; set; }
+            public class DescribeClusterNodePoolsResponseBodyNodepoolsAutoMode : TeaModel {
+                [NameInMap("enable")]
+                [Validation(Required=false)]
+                public bool? Enable { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The configurations of auto scaling.</para>
             /// </summary>

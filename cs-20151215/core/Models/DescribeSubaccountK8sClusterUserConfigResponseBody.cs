@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeSubaccountK8sClusterUserConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The cluster kubeconfig file. For more information about the content of the kubeconfig file, see <a href="https://help.aliyun.com/document_detail/86494.html">Configure cluster credentials</a>.</para>
+        /// <para>The cluster kubeconfig file. For more information about how to view the kubeconfig file content, see <a href="https://help.aliyun.com/document_detail/86494.html">Configure cluster credentials</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

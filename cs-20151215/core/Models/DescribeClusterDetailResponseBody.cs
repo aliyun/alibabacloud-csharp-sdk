@@ -368,10 +368,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string InitVersion { get; set; }
 
         /// <summary>
-        /// <para>The IP protocol stack of the cluster. Valid values:</para>
+        /// <para>The IP stack of the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ipv4: creates a cluster that supports only the IPv4 protocol stack.</description></item>
-        /// <item><description>dual: creates a cluster that supports IPv4/IPv6 dual-stack.</description></item>
+        /// <item><description>ipv4: The cluster is an IPv4 cluster.</description></item>
+        /// <item><description>dual: The cluster is an IPv4/IPv6 dual-stack cluster.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -641,7 +641,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string SubnetCidr { get; set; }
 
         /// <summary>
-        /// <para>The resource labels of the cluster.</para>
+        /// <para>The resource tags of the cluster.</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]

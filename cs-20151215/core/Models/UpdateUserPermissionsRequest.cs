@@ -102,9 +102,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>The authorization method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>apply</c>: updates all permissions of the RAM user or RAM role. If you use this method, the existing permissions of the RAM user or RAM role on the cluster are overwritten. You must specify all the permissions that you want to grant to the RAM user or RAM role in the request parameters when you call the operation.</description></item>
-        /// <item><description><c>delete</c>: revokes the specified permissions from the RAM user or RAM role. If you use this method, only the permissions that you specify are revoked, while other permissions of the RAM user or RAM role on the cluster are not affected.</description></item>
-        /// <item><description><c>patch</c>: grants the specified permissions to the RAM user or role. If you use this method, only the permissions that you specify are granted, while other permissions of the RAM user or RAM role on the cluster are not affected.</description></item>
+        /// <item><description><c>apply</c>: The global update mode. Overwrites all existing permissions of the RAM user or RAM role on the cluster. You must specify all the permissions you want to grant to the RAM user or RAM role in the request parameters when you call this operation.</description></item>
+        /// <item><description><c>delete</c>: The deletion mode. Revokes only the cluster permissions specified in the request, preserving other existing permissions of the RAM user or RAM role.</description></item>
+        /// <item><description><c>patch</c>: The incremental mode. Adds only the cluster permissions specified in the request, preserving other existing permissions of the RAM user or RAM role.</description></item>
         /// </list>
         /// <para>Default value: <c>apply</c>.</para>
         /// 
