@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
-        public string StartTime { get; set; }
+        public long? StartTime { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         /// </summary>
         [NameInMap("TotalTime")]
         [Validation(Required=false)]
-        public string TotalTime { get; set; }
+        public long? TotalTime { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

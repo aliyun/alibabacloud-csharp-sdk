@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>AlibabaCloud.SDK.Mts20140618</AssemblyName>
-    <Version>3.0.3</Version>
+    <Version>4.0.0</Version>
     <LangVersion>5</LangVersion>
     <Authors>Alibaba Cloud</Authors>
     <Description>Alibaba Cloud ApsaraVideo for Media Processing (20140618) SDK Library for .NET</Description>
