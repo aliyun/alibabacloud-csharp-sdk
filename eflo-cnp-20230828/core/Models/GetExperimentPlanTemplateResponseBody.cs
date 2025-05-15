@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
 {
-    public class GetExperimentPlanResponseBody : TeaModel {
+    public class GetExperimentPlanTemplateResponseBody : TeaModel {
         /// <summary>
         /// <para>Access denied information</para>
         /// 
@@ -24,42 +24,102 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public GetExperimentPlanResponseBodyData Data { get; set; }
-        public class GetExperimentPlanResponseBodyData : TeaModel {
+        public GetExperimentPlanTemplateResponseBodyData Data { get; set; }
+        public class GetExperimentPlanTemplateResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Creation time</para>
+            /// <para>Creation Time</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2024-07-07 02:08:54</para>
+            /// <para>2024-11-29 02:16:35</para>
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Plan ID</para>
+            /// <para>Primary account UID</para>
             /// 
             /// <b>Example:</b>
-            /// <para>189</para>
+            /// <para>12312312312312</para>
             /// </summary>
-            [NameInMap("PlanId")]
+            [NameInMap("CreatorUid")]
             [Validation(Required=false)]
-            public long? PlanId { get; set; }
+            public long? CreatorUid { get; set; }
 
             /// <summary>
-            /// <para>Test plan pipeline</para>
+            /// <para>Whether deleted</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
-            [NameInMap("PlanPipeline")]
+            [NameInMap("IsDelete")]
             [Validation(Required=false)]
-            public List<GetExperimentPlanResponseBodyDataPlanPipeline> PlanPipeline { get; set; }
-            public class GetExperimentPlanResponseBodyDataPlanPipeline : TeaModel {
+            public int? IsDelete { get; set; }
+
+            /// <summary>
+            /// <para>Privacy Level</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>private</para>
+            /// </summary>
+            [NameInMap("PrivacyLevel")]
+            [Validation(Required=false)]
+            public string PrivacyLevel { get; set; }
+
+            /// <summary>
+            /// <para>Template Code</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>464086216</para>
+            /// </summary>
+            [NameInMap("TemplateCode")]
+            [Validation(Required=false)]
+            public long? TemplateCode { get; set; }
+
+            /// <summary>
+            /// <para>Template Description</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
+            [NameInMap("TemplateDescription")]
+            [Validation(Required=false)]
+            public string TemplateDescription { get; set; }
+
+            /// <summary>
+            /// <para>Template ID</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>17615126</para>
+            /// </summary>
+            [NameInMap("TemplateId")]
+            [Validation(Required=false)]
+            public long? TemplateId { get; set; }
+
+            /// <summary>
+            /// <para>Template Name</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Test</para>
+            /// </summary>
+            [NameInMap("TemplateName")]
+            [Validation(Required=false)]
+            public string TemplateName { get; set; }
+
+            /// <summary>
+            /// <para>Template Pipeline</para>
+            /// </summary>
+            [NameInMap("TemplatePipelineParam")]
+            [Validation(Required=false)]
+            public List<GetExperimentPlanTemplateResponseBodyDataTemplatePipelineParam> TemplatePipelineParam { get; set; }
+            public class GetExperimentPlanTemplateResponseBodyDataTemplatePipelineParam : TeaModel {
                 /// <summary>
                 /// <para>Configured environment parameters</para>
                 /// </summary>
                 [NameInMap("EnvParams")]
                 [Validation(Required=false)]
-                public GetExperimentPlanResponseBodyDataPlanPipelineEnvParams EnvParams { get; set; }
-                public class GetExperimentPlanResponseBodyDataPlanPipelineEnvParams : TeaModel {
+                public GetExperimentPlanTemplateResponseBodyDataTemplatePipelineParamEnvParams EnvParams { get; set; }
+                public class GetExperimentPlanTemplateResponseBodyDataTemplatePipelineParamEnvParams : TeaModel {
                     /// <summary>
                     /// <para>CPU allocation</para>
                     /// 
@@ -98,7 +158,7 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
                     public string GpuDriverVersion { get; set; }
 
                     /// <summary>
-                    /// <para>Number of GPUs allocated</para>
+                    /// <para>GPU allocation</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>8</para>
@@ -108,7 +168,7 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
                     public int? GpuPerWorker { get; set; }
 
                     /// <summary>
-                    /// <para>Memory GB allocation</para>
+                    /// <para>Allocated memory in GB</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>500</para>
@@ -142,23 +202,23 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
                     /// </summary>
                     [NameInMap("ResourceNodes")]
                     [Validation(Required=false)]
-                    public List<GetExperimentPlanResponseBodyDataPlanPipelineEnvParamsResourceNodes> ResourceNodes { get; set; }
-                    public class GetExperimentPlanResponseBodyDataPlanPipelineEnvParamsResourceNodes : TeaModel {
+                    public List<GetExperimentPlanTemplateResponseBodyDataTemplatePipelineParamEnvParamsResourceNodes> ResourceNodes { get; set; }
+                    public class GetExperimentPlanTemplateResponseBodyDataTemplatePipelineParamEnvParamsResourceNodes : TeaModel {
                         /// <summary>
                         /// <para>Node name</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>ods_galaxy_gateway_tickets</para>
+                        /// <para>exclusive_coud</para>
                         /// </summary>
                         [NameInMap("NodeName")]
                         [Validation(Required=false)]
                         public string NodeName { get; set; }
 
                         /// <summary>
-                        /// <para>Requested CPU</para>
+                        /// <para>当前请求的cpu</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>90</para>
+                        /// <para>10</para>
                         /// </summary>
                         [NameInMap("RequestCPU")]
                         [Validation(Required=false)]
@@ -168,17 +228,17 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
                         /// <para>Requested GPU</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>8</para>
+                        /// <para>10</para>
                         /// </summary>
                         [NameInMap("RequestGPU")]
                         [Validation(Required=false)]
                         public int? RequestGPU { get; set; }
 
                         /// <summary>
-                        /// <para>Memory of the current request</para>
+                        /// <para>Requested memory</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>500</para>
+                        /// <para>1024</para>
                         /// </summary>
                         [NameInMap("RequestMemory")]
                         [Validation(Required=false)]
@@ -188,7 +248,7 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
                         /// <para>Total CPU</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>90</para>
+                        /// <para>100</para>
                         /// </summary>
                         [NameInMap("TotalCPU")]
                         [Validation(Required=false)]
@@ -198,7 +258,7 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
                         /// <para>Total GPU</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>8</para>
+                        /// <para>100</para>
                         /// </summary>
                         [NameInMap("TotalGPU")]
                         [Validation(Required=false)]
@@ -208,7 +268,7 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
                         /// <para>Total memory</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>500</para>
+                        /// <para>2048</para>
                         /// </summary>
                         [NameInMap("TotalMemory")]
                         [Validation(Required=false)]
@@ -217,7 +277,7 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
                     }
 
                     /// <summary>
-                    /// <para>Shared memory GB allocation</para>
+                    /// <para>Shared memory in GB</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>500</para>
@@ -239,7 +299,7 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
                 }
 
                 /// <summary>
-                /// <para>Node order number</para>
+                /// <para>Node sequence number</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -247,26 +307,6 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
                 [NameInMap("PipelineOrder")]
                 [Validation(Required=false)]
                 public int? PipelineOrder { get; set; }
-
-                /// <summary>
-                /// <para>Resource ID</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>36</para>
-                /// </summary>
-                [NameInMap("ResourceId")]
-                [Validation(Required=false)]
-                public long? ResourceId { get; set; }
-
-                /// <summary>
-                /// <para>Resource name</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>PPU</para>
-                /// </summary>
-                [NameInMap("ResourceName")]
-                [Validation(Required=false)]
-                public string ResourceName { get; set; }
 
                 /// <summary>
                 /// <para>Usage scenario, e.g., &quot;baseline&quot;</para>
@@ -289,14 +329,14 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
                 /// <para>Workload ID</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>14</para>
+                /// <para>13</para>
                 /// </summary>
                 [NameInMap("WorkloadId")]
                 [Validation(Required=false)]
                 public long? WorkloadId { get; set; }
 
                 /// <summary>
-                /// <para>Workload name</para>
+                /// <para>Workload Name</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -308,83 +348,24 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
             }
 
             /// <summary>
-            /// <para>Resource group ID</para>
+            /// <para>Update Time</para>
             /// 
             /// <b>Example:</b>
-            /// <para>rg-acfmvmpzi7lmxhq</para>
-            /// </summary>
-            [NameInMap("ResourceGroupId")]
-            [Validation(Required=false)]
-            public string ResourceGroupId { get; set; }
-
-            /// <summary>
-            /// <para>Associated resource ID</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>260860230684</para>
-            /// </summary>
-            [NameInMap("ResourceId")]
-            [Validation(Required=false)]
-            public long? ResourceId { get; set; }
-
-            /// <summary>
-            /// <para>The tag.</para>
-            /// </summary>
-            [NameInMap("Tags")]
-            [Validation(Required=false)]
-            public List<GetExperimentPlanResponseBodyDataTags> Tags { get; set; }
-            public class GetExperimentPlanResponseBodyDataTags : TeaModel {
-                /// <summary>
-                /// <para>The tag key.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>acs:testLXP:test-quota40-19</para>
-                /// </summary>
-                [NameInMap("TagKey")]
-                [Validation(Required=false)]
-                public string TagKey { get; set; }
-
-                /// <summary>
-                /// <para>The tag value.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>000088aabb0019e4</para>
-                /// </summary>
-                [NameInMap("TagValue")]
-                [Validation(Required=false)]
-                public string TagValue { get; set; }
-
-            }
-
-            /// <summary>
-            /// <para>Associated test plan template ID</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>2162</para>
-            /// </summary>
-            [NameInMap("TemplateId")]
-            [Validation(Required=false)]
-            public long? TemplateId { get; set; }
-
-            /// <summary>
-            /// <para>Associated test plan template name</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>MM</para>
-            /// </summary>
-            [NameInMap("TemplateName")]
-            [Validation(Required=false)]
-            public string TemplateName { get; set; }
-
-            /// <summary>
-            /// <para>Update time</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>2024-07-07 02:08:54</para>
+            /// <para>2024-10-22 10:18:10</para>
             /// </summary>
             [NameInMap("UpdateTime")]
             [Validation(Required=false)]
             public string UpdateTime { get; set; }
+
+            /// <summary>
+            /// <para>Version ID</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("VersionId")]
+            [Validation(Required=false)]
+            public long? VersionId { get; set; }
 
         }
 
@@ -392,14 +373,14 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
         /// <para>Request ID</para>
         /// 
         /// <b>Example:</b>
-        /// <para>6DBAC169-93D1-5DCD-8109-30FB623B3197</para>
+        /// <para>5514CB39-B7C0-5B89-8534-2DE1E0F2B7AB</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total count of the query</para>
+        /// <para>Total</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

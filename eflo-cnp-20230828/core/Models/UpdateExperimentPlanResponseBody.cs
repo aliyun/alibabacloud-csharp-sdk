@@ -8,12 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
 {
-    public class DeleteExperimentPlanTemplateResponseBody : TeaModel {
+    public class UpdateExperimentPlanResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Access denied information</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
+        [NameInMap("AccessDeniedDetail")]
+        [Validation(Required=false)]
+        public string AccessDeniedDetail { get; set; }
+
         /// <summary>
         /// <para>Data</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[]</para>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -23,14 +33,14 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
         /// <para>Request ID</para>
         /// 
         /// <b>Example:</b>
-        /// <para>4D3FD55F-3BCD-5914-9B74-A1F4961327E7</para>
+        /// <para>5514CB39-B7C0-5B89-8534-2DE1E0F2B7AB</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total Count</para>
+        /// <para>Total</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

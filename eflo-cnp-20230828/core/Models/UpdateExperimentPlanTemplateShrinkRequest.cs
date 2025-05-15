@@ -8,27 +8,25 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
 {
-    public class GetExperimentRequest : TeaModel {
+    public class UpdateExperimentPlanTemplateShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Experiment ID</para>
+        /// <para>Template code</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>234</para>
+        /// <para>349623</para>
         /// </summary>
-        [NameInMap("ExperimentId")]
+        [NameInMap("TemplateId")]
         [Validation(Required=false)]
-        public long? ExperimentId { get; set; }
+        public long? TemplateId { get; set; }
 
         /// <summary>
-        /// <para>Resource Group Id</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rg-sdsmfg23</para>
+        /// <para>Template pipeline</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
-        [NameInMap("ResourceGroupId")]
+        [NameInMap("TemplatePipeline")]
         [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
+        public string TemplatePipelineShrink { get; set; }
 
     }
 

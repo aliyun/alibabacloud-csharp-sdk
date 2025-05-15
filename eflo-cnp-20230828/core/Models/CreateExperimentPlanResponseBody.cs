@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total count of the query</para>
+        /// <para>Total count</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

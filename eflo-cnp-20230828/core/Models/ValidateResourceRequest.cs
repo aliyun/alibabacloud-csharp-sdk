@@ -11,6 +11,7 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
     public class ValidateResourceRequest : TeaModel {
         /// <summary>
         /// <para>Resource ID</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ehpc-sh-ouypm5aucy</para>

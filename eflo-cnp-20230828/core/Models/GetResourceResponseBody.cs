@@ -236,16 +236,6 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
             public long? ResourceId { get; set; }
 
             /// <summary>
-            /// <para>Cluster name</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>ecs.g6.4xlarge</para>
-            /// </summary>
-            [NameInMap("ResourceName")]
-            [Validation(Required=false)]
-            public string ResourceName { get; set; }
-
-            /// <summary>
             /// <para>List of resource nodes</para>
             /// </summary>
             [NameInMap("ResourceNodes")]

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
 {
     public class GetWorkloadRequest : TeaModel {
         /// <summary>
+        /// <para>Workload ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

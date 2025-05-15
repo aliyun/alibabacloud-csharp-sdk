@@ -11,6 +11,7 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
     public class GetResourceRequest : TeaModel {
         /// <summary>
         /// <para>The cluster ID of Lingjun</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ehpc-bj-uo8f26cpmo</para>

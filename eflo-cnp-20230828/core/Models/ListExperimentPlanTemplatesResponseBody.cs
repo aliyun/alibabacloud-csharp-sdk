@@ -57,6 +57,16 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
             public string PrivacyLevel { get; set; }
 
             /// <summary>
+            /// <para>The template code.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>475315534</para>
+            /// </summary>
+            [NameInMap("TemplateCode")]
+            [Validation(Required=false)]
+            public long? TemplateCode { get; set; }
+
+            /// <summary>
             /// <para>Template description</para>
             /// 
             /// <b>Example:</b>
@@ -111,6 +121,26 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
                     public int? CpuPerWorker { get; set; }
 
                     /// <summary>
+                    /// <para>Cuda Version</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1.0.0</para>
+                    /// </summary>
+                    [NameInMap("CudaVersion")]
+                    [Validation(Required=false)]
+                    public string CudaVersion { get; set; }
+
+                    /// <summary>
+                    /// <para>The version of the GPU driver.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1.0.0</para>
+                    /// </summary>
+                    [NameInMap("GpuDriverVersion")]
+                    [Validation(Required=false)]
+                    public string GpuDriverVersion { get; set; }
+
+                    /// <summary>
                     /// <para>GPU allocation</para>
                     /// 
                     /// <b>Example:</b>
@@ -129,6 +159,26 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
                     [NameInMap("MemoryPerWorker")]
                     [Validation(Required=false)]
                     public int? MemoryPerWorker { get; set; }
+
+                    /// <summary>
+                    /// <para>NCCL Version</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1.0.0</para>
+                    /// </summary>
+                    [NameInMap("NCCLVersion")]
+                    [Validation(Required=false)]
+                    public string NCCLVersion { get; set; }
+
+                    /// <summary>
+                    /// <para>PyTorch Version</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1.0.0</para>
+                    /// </summary>
+                    [NameInMap("PyTorchVersion")]
+                    [Validation(Required=false)]
+                    public string PyTorchVersion { get; set; }
 
                     /// <summary>
                     /// <para>Allocated shared memory in GB</para>

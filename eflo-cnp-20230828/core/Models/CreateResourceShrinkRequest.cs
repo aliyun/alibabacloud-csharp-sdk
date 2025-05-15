@@ -21,6 +21,7 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
 
         /// <summary>
         /// <para>Cluster ID</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ehpc-sh-fj71c0ycfw</para>
@@ -31,6 +32,7 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
 
         /// <summary>
         /// <para>Cluster Name</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tre-1-ppu</para>
@@ -40,34 +42,16 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <para>Cluster Type</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>ACK</para>
-        /// </summary>
-        [NameInMap("ClusterType")]
-        [Validation(Required=false)]
-        public string ClusterType { get; set; }
-
-        /// <summary>
         /// <para>Machine Types</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("MachineTypes")]
         [Validation(Required=false)]
         public string MachineTypesShrink { get; set; }
 
         /// <summary>
-        /// <para>Resource Type</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>ACK</para>
-        /// </summary>
-        [NameInMap("ResourceType")]
-        [Validation(Required=false)]
-        public string ResourceType { get; set; }
-
-        /// <summary>
         /// <para>User Access Parameters</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UserAccessParam")]
         [Validation(Required=false)]

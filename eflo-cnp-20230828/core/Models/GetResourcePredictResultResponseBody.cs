@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
 {
     public class GetResourcePredictResultResponseBody : TeaModel {
         /// <summary>
+        /// <para>Data</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
         public long? Data { get; set; }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5514CB39-B7C0-5B89-8534-2DE1E0F2B7AB</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>total</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

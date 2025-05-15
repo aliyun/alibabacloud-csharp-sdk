@@ -29,6 +29,16 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
         [Validation(Required=false)]
         public long? PlanId { get; set; }
 
+        /// <summary>
+        /// <para>资源组id</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-uo8f26cpmo</para>
+        /// </summary>
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
     }
 
 }

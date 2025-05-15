@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
 {
     public class GetWorkloadResponseBody : TeaModel {
         /// <summary>
+        /// <para>Access Denied Information</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
+        /// <summary>
+        /// <para>Data</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetWorkloadResponseBodyData Data { get; set; }
         public class GetWorkloadResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Default CPU Allocation per Worker</para>
+            /// 
             /// <b>Example:</b>
             /// <para>90</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
             public int? DefaultCpuPerWorker { get; set; }
 
             /// <summary>
+            /// <para>Default GPU Allocation per Worker</para>
+            /// 
             /// <b>Example:</b>
             /// <para>8</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
             public int? DefaultGpuPerWorker { get; set; }
 
             /// <summary>
+            /// <para>Default Memory (GB) Allocation per Worker</para>
+            /// 
             /// <b>Example:</b>
             /// <para>500</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
             public int? DefaultMemoryPerWorker { get; set; }
 
             /// <summary>
+            /// <para>Default Shared Memory (GB) Allocation</para>
+            /// 
             /// <b>Example:</b>
             /// <para>500</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
             public int? DefaultShareMemory { get; set; }
 
             /// <summary>
+            /// <para>Workload Cluster, e.g., AI, GPU</para>
+            /// 
             /// <b>Example:</b>
             /// <para>AI</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
             public string Family { get; set; }
 
             /// <summary>
+            /// <para>Training Job Type</para>
+            /// 
             /// <b>Example:</b>
             /// <para>PyTorchJob</para>
             /// </summary>
@@ -69,11 +86,16 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
             [Validation(Required=false)]
             public string JobKind { get; set; }
 
+            /// <summary>
+            /// <para>Parameter Settings</para>
+            /// </summary>
             [NameInMap("ParamSettings")]
             [Validation(Required=false)]
             public List<GetWorkloadResponseBodyDataParamSettings> ParamSettings { get; set; }
             public class GetWorkloadResponseBodyDataParamSettings : TeaModel {
                 /// <summary>
+                /// <para>Default Parameter Value</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
                 /// </summary>
@@ -81,11 +103,19 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
                 [Validation(Required=false)]
                 public string DefaultValue { get; set; }
 
+                /// <summary>
+                /// <para>Parameter Description</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>number</para>
+                /// </summary>
                 [NameInMap("ParamDesc")]
                 [Validation(Required=false)]
                 public string ParamDesc { get; set; }
 
                 /// <summary>
+                /// <para>Parameter Name</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>ITERATION</para>
                 /// </summary>
@@ -94,6 +124,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
                 public string ParamName { get; set; }
 
                 /// <summary>
+                /// <para>Parameter Regular Expression</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>[0-9]+</para>
                 /// </summary>
@@ -102,6 +134,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
                 public string ParamRegex { get; set; }
 
                 /// <summary>
+                /// <para>Parameter type</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>number</para>
                 /// </summary>
@@ -110,6 +144,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
                 public string ParamType { get; set; }
 
                 /// <summary>
+                /// <para>Parameter Value</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
                 /// </summary>
@@ -120,6 +156,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
             }
 
             /// <summary>
+            /// <para>Workload Usage Scenario</para>
+            /// 
             /// <b>Example:</b>
             /// <para>NLP-LLM</para>
             /// </summary>
@@ -128,6 +166,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
             public string Scene { get; set; }
 
             /// <summary>
+            /// <para>Scope Identifier for Workload Usage</para>
+            /// 
             /// <b>Example:</b>
             /// <para>common</para>
             /// </summary>
@@ -135,11 +175,16 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
             [Validation(Required=false)]
             public string Scope { get; set; }
 
+            /// <summary>
+            /// <para>Static Configuration</para>
+            /// </summary>
             [NameInMap("StaticConfig")]
             [Validation(Required=false)]
             public GetWorkloadResponseBodyDataStaticConfig StaticConfig { get; set; }
             public class GetWorkloadResponseBodyDataStaticConfig : TeaModel {
                 /// <summary>
+                /// <para>Framework</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>PyTorch</para>
                 /// </summary>
@@ -148,6 +193,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
                 public string FrameWork { get; set; }
 
                 /// <summary>
+                /// <para>Operating System</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>linux</para>
                 /// </summary>
@@ -156,6 +203,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
                 public string Os { get; set; }
 
                 /// <summary>
+                /// <para>Parameter Volume</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>7B</para>
                 /// </summary>
@@ -164,6 +213,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
                 public string Parameters { get; set; }
 
                 /// <summary>
+                /// <para>Software Stack</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>python</para>
                 /// </summary>
@@ -174,6 +225,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
             }
 
             /// <summary>
+            /// <para>Version ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -182,6 +235,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
             public long? VersionId { get; set; }
 
             /// <summary>
+            /// <para>Workload Description</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -190,6 +245,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
             public string WorkloadDescription { get; set; }
 
             /// <summary>
+            /// <para>Workload ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>13</para>
             /// </summary>
@@ -198,6 +255,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
             public long? WorkloadId { get; set; }
 
             /// <summary>
+            /// <para>Workload Name</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -206,6 +265,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
             public string WorkloadName { get; set; }
 
             /// <summary>
+            /// <para>Workload Type</para>
+            /// 
             /// <b>Example:</b>
             /// <para>AI</para>
             /// </summary>
@@ -216,6 +277,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
         }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>E67E2E4C-2B47-5C55-AA17-1D771E070AEF</para>
         /// </summary>
@@ -224,6 +287,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>total</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>

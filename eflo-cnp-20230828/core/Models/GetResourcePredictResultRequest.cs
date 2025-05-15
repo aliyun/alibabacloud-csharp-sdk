@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
 {
     public class GetResourcePredictResultRequest : TeaModel {
         /// <summary>
+        /// <para>Resource ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>36</para>
         /// </summary>
@@ -18,6 +20,9 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
         public long? ResourceId { get; set; }
 
         /// <summary>
+        /// <para>Template ID</para>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>315797</para>
         /// </summary>

@@ -10,6 +10,9 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
 {
     public class GetExperimentResultDataRequest : TeaModel {
         /// <summary>
+        /// <para>Experiment ID</para>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>234</para>
         /// </summary>
@@ -18,6 +21,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
         public long? ExperimentId { get; set; }
 
         /// <summary>
+        /// <para>Hostname</para>
+        /// 
         /// <b>Example:</b>
         /// <para>iZj6ccwd7zwfms7hzaz2riZ</para>
         /// </summary>
@@ -26,6 +31,18 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
         public string Hostname { get; set; }
 
         /// <summary>
+        /// <para>Resource Group Id</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-sfjgskdfj3k4</para>
+        /// </summary>
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
+        /// <summary>
+        /// <para>Workload Type</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AI</para>
         /// </summary>

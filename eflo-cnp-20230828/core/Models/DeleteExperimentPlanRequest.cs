@@ -8,17 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
 {
-    public class DeleteExperimentPlanTemplateRequest : TeaModel {
+    public class DeleteExperimentPlanRequest : TeaModel {
         /// <summary>
-        /// <para>Template ID</para>
+        /// <para>Plan ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>346527</para>
+        /// <para>189</para>
         /// </summary>
-        [NameInMap("TemplateId")]
+        [NameInMap("PlanId")]
         [Validation(Required=false)]
-        public long? TemplateId { get; set; }
+        public long? PlanId { get; set; }
 
     }
 

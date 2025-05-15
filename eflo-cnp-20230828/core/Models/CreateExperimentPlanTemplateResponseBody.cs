@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
 {
     public class CreateExperimentPlanTemplateResponseBody : TeaModel {
         /// <summary>
+        /// <para>Access Denied Detail</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
+        /// <summary>
+        /// <para>Data</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateExperimentPlanTemplateResponseBodyData Data { get; set; }
         public class CreateExperimentPlanTemplateResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Creation Time</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-11-19T02:01:05Z</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>Primary Account UID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>12312312312312</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
             public long? CreatorUid { get; set; }
 
             /// <summary>
+            /// <para>Is Deleted</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
             public int? IsDelete { get; set; }
 
             /// <summary>
+            /// <para>Privacy Level</para>
+            /// 
             /// <b>Example:</b>
             /// <para>private</para>
             /// </summary>
@@ -53,11 +66,29 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
             [Validation(Required=false)]
             public string PrivacyLevel { get; set; }
 
+            /// <summary>
+            /// <para>Template Code</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("TemplateCode")]
+            [Validation(Required=false)]
+            public long? TemplateCode { get; set; }
+
+            /// <summary>
+            /// <para>Template Description</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
             [NameInMap("TemplateDescription")]
             [Validation(Required=false)]
             public string TemplateDescription { get; set; }
 
             /// <summary>
+            /// <para>Template ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>17615126</para>
             /// </summary>
@@ -65,19 +96,33 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
             [Validation(Required=false)]
             public long? TemplateId { get; set; }
 
+            /// <summary>
+            /// <para>Template Name</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
             [NameInMap("TemplateName")]
             [Validation(Required=false)]
             public string TemplateName { get; set; }
 
+            /// <summary>
+            /// <para>Template Pipeline</para>
+            /// </summary>
             [NameInMap("TemplatePipelineParam")]
             [Validation(Required=false)]
             public List<CreateExperimentPlanTemplateResponseBodyDataTemplatePipelineParam> TemplatePipelineParam { get; set; }
             public class CreateExperimentPlanTemplateResponseBodyDataTemplatePipelineParam : TeaModel {
+                /// <summary>
+                /// <para>Configured Environment Parameters</para>
+                /// </summary>
                 [NameInMap("EnvParams")]
                 [Validation(Required=false)]
                 public CreateExperimentPlanTemplateResponseBodyDataTemplatePipelineParamEnvParams EnvParams { get; set; }
                 public class CreateExperimentPlanTemplateResponseBodyDataTemplatePipelineParamEnvParams : TeaModel {
                     /// <summary>
+                    /// <para>CPU Allocation</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>90</para>
                     /// </summary>
@@ -96,7 +141,7 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
                     public string CudaVersion { get; set; }
 
                     /// <summary>
-                    /// <para>GpuDriverVersion</para>
+                    /// <para>GPU Driver Version</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1.0.0</para>
@@ -106,6 +151,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
                     public string GpuDriverVersion { get; set; }
 
                     /// <summary>
+                    /// <para>GPU Allocation</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>8</para>
                     /// </summary>
@@ -114,6 +161,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
                     public int? GpuPerWorker { get; set; }
 
                     /// <summary>
+                    /// <para>Memory (GB) Allocation</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>500</para>
                     /// </summary>
@@ -122,7 +171,7 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
                     public int? MemoryPerWorker { get; set; }
 
                     /// <summary>
-                    /// <para>NCCLVersion</para>
+                    /// <para>NCCL Version</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1.0.0</para>
@@ -132,7 +181,7 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
                     public string NCCLVersion { get; set; }
 
                     /// <summary>
-                    /// <para>PyTorchVersion</para>
+                    /// <para>PyTorch Version</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1.0.0</para>
@@ -142,6 +191,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
                     public string PyTorchVersion { get; set; }
 
                     /// <summary>
+                    /// <para>Shared Memory (GB) Allocation</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>500</para>
                     /// </summary>
@@ -150,6 +201,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
                     public int? ShareMemory { get; set; }
 
                     /// <summary>
+                    /// <para>Number of Nodes</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
                     /// </summary>
@@ -160,6 +213,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
                 }
 
                 /// <summary>
+                /// <para>Pipeline Order</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -168,6 +223,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
                 public int? PipelineOrder { get; set; }
 
                 /// <summary>
+                /// <para>Usage Scenario, e.g., &quot;baseline&quot;</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>baseline</para>
                 /// </summary>
@@ -175,11 +232,16 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
                 [Validation(Required=false)]
                 public string Scene { get; set; }
 
+                /// <summary>
+                /// <para>Configured Workload Parameters</para>
+                /// </summary>
                 [NameInMap("SettingParams")]
                 [Validation(Required=false)]
                 public Dictionary<string, string> SettingParams { get; set; }
 
                 /// <summary>
+                /// <para>Workload ID</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>13</para>
                 /// </summary>
@@ -188,6 +250,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
                 public long? WorkloadId { get; set; }
 
                 /// <summary>
+                /// <para>Workload Name</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
                 /// </summary>
@@ -198,6 +262,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
             }
 
             /// <summary>
+            /// <para>Update Time</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2023-10-16T01:58Z</para>
             /// </summary>
@@ -206,6 +272,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
+            /// <para>Version ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -216,6 +284,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
         }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5514CB39-B7C0-5B89-8534-2DE1E0F2B7AB</para>
         /// </summary>
@@ -224,6 +294,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>total</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>

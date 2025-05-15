@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
 {
     public class ChangeResourceGroupRequest : TeaModel {
         /// <summary>
+        /// <para>Region Id</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        /// <summary>
         /// <para>The resource group id.</para>
         /// <para>This parameter is required.</para>
         /// 

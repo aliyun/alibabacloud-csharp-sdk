@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
 {
     public class GetExperimentResultDataResponseBody : TeaModel {
         /// <summary>
+        /// <para>Access Denied Details</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
+        /// <summary>
+        /// <para>Data</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<GetExperimentResultDataResponseBodyData> Data { get; set; }
         public class GetExperimentResultDataResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Number of GPUs</para>
+            /// 
             /// <b>Example:</b>
             /// <para>8</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
             public string GpuNum { get; set; }
 
             /// <summary>
+            /// <para>Host IP</para>
+            /// 
             /// <b>Example:</b>
             /// <para>p-jt-waf-app1</para>
             /// </summary>
@@ -37,12 +46,15 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
             [Validation(Required=false)]
             public string Hostname { get; set; }
 
+            /// <summary>
+            /// <para>List of Metrics Information</para>
+            /// </summary>
             [NameInMap("MetricsInfos")]
             [Validation(Required=false)]
             public List<GetExperimentResultDataResponseBodyDataMetricsInfos> MetricsInfos { get; set; }
             public class GetExperimentResultDataResponseBodyDataMetricsInfos : TeaModel {
                 /// <summary>
-                /// <para>gpu</para>
+                /// <para>GPU</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8</para>
@@ -52,7 +64,7 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
                 public string GpuNum { get; set; }
 
                 /// <summary>
-                /// <para>iteration</para>
+                /// <para>Iteration</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -72,6 +84,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
                 public double? Tflops { get; set; }
 
                 /// <summary>
+                /// <para>Operation Timestamp</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1715393860</para>
                 /// </summary>
@@ -80,6 +94,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
                 public long? Timestamp { get; set; }
 
                 /// <summary>
+                /// <para>Metric Value</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>126</para>
                 /// </summary>
@@ -90,6 +106,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
             }
 
             /// <summary>
+            /// <para>Pod Name</para>
+            /// 
             /// <b>Example:</b>
             /// <para>hzs-forge-sdxl-online-7ff4d86444-pc95h</para>
             /// </summary>
@@ -100,6 +118,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
         }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>C1D34EC2-AB13-56F4-8322-F15AE563EA04</para>
         /// </summary>
@@ -108,6 +128,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Total Count of Queries</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>

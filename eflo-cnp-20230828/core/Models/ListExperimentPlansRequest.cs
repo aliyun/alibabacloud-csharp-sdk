@@ -57,6 +57,16 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
+        /// <para>Resource ID</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>189</para>
+        /// </summary>
+        [NameInMap("ResourceId")]
+        [Validation(Required=false)]
+        public long? ResourceId { get; set; }
+
+        /// <summary>
         /// <para>Resource</para>
         /// </summary>
         [NameInMap("ResourceName")]
@@ -82,6 +92,45 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
         [NameInMap("StartTimeOrder")]
         [Validation(Required=false)]
         public string StartTimeOrder { get; set; }
+
+        /// <summary>
+        /// <para>The tags.</para>
+        /// </summary>
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<ListExperimentPlansRequestTag> Tag { get; set; }
+        public class ListExperimentPlansRequestTag : TeaModel {
+            /// <summary>
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>owner</para>
+            /// </summary>
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            /// <summary>
+            /// <para>Tag value</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
+        /// <summary>
+        /// <para>Template Id</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>96</para>
+        /// </summary>
+        [NameInMap("TemplateId")]
+        [Validation(Required=false)]
+        public long? TemplateId { get; set; }
 
     }
 

@@ -8,65 +8,34 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
 {
-    public class CreateExperimentPlanTemplateRequest : TeaModel {
+    public class UpdateExperimentPlanTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>Privacy Level</para>
+        /// <para>Template code</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>private</para>
-        /// </summary>
-        [NameInMap("PrivacyLevel")]
-        [Validation(Required=false)]
-        public string PrivacyLevel { get; set; }
-
-        /// <summary>
-        /// <para>Template Description</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>The template installs jdk and tomcat on a new ECS instance.</para>
-        /// </summary>
-        [NameInMap("TemplateDescription")]
-        [Validation(Required=false)]
-        public string TemplateDescription { get; set; }
-
-        /// <summary>
-        /// <para>Template ID</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>4724</para>
+        /// <para>349623</para>
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public long? TemplateId { get; set; }
 
         /// <summary>
-        /// <para>Template Name</para>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>test</para>
-        /// </summary>
-        [NameInMap("TemplateName")]
-        [Validation(Required=false)]
-        public string TemplateName { get; set; }
-
-        /// <summary>
-        /// <para>Template Pipeline</para>
+        /// <para>Template pipeline</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TemplatePipeline")]
         [Validation(Required=false)]
-        public List<CreateExperimentPlanTemplateRequestTemplatePipeline> TemplatePipeline { get; set; }
-        public class CreateExperimentPlanTemplateRequestTemplatePipeline : TeaModel {
+        public List<UpdateExperimentPlanTemplateRequestTemplatePipeline> TemplatePipeline { get; set; }
+        public class UpdateExperimentPlanTemplateRequestTemplatePipeline : TeaModel {
             /// <summary>
-            /// <para>Configured Environment Parameters</para>
+            /// <para>Configured environment parameters</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("EnvParams")]
             [Validation(Required=false)]
-            public CreateExperimentPlanTemplateRequestTemplatePipelineEnvParams EnvParams { get; set; }
-            public class CreateExperimentPlanTemplateRequestTemplatePipelineEnvParams : TeaModel {
+            public UpdateExperimentPlanTemplateRequestTemplatePipelineEnvParams EnvParams { get; set; }
+            public class UpdateExperimentPlanTemplateRequestTemplatePipelineEnvParams : TeaModel {
                 /// <summary>
                 /// <para>CPU allocation count</para>
                 /// <para>This parameter is required.</para>
@@ -79,7 +48,7 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
                 public int? CpuPerWorker { get; set; }
 
                 /// <summary>
-                /// <para>CUDA Version</para>
+                /// <para>CUDA version</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.0.0</para>
@@ -89,7 +58,7 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
                 public string CudaVersion { get; set; }
 
                 /// <summary>
-                /// <para>GPU Driver Version</para>
+                /// <para>GPU driver version</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.0.0</para>
@@ -110,7 +79,7 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
                 public int? GpuPerWorker { get; set; }
 
                 /// <summary>
-                /// <para>Memory (GB) allocation count</para>
+                /// <para>Memory GB allocation count</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -121,7 +90,7 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
                 public int? MemoryPerWorker { get; set; }
 
                 /// <summary>
-                /// <para>NCCL Version</para>
+                /// <para>NCCL version</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.0.0</para>
@@ -131,7 +100,7 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
                 public string NCCLVersion { get; set; }
 
                 /// <summary>
-                /// <para>PyTorch Version</para>
+                /// <para>PyTorch version</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.0.0</para>
@@ -141,7 +110,7 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
                 public string PyTorchVersion { get; set; }
 
                 /// <summary>
-                /// <para>Shared Memory (GB) allocation count</para>
+                /// <para>Shared memory GB allocation count</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -165,7 +134,7 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
             }
 
             /// <summary>
-            /// <para>Node Order Number</para>
+            /// <para>Node order number</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -176,7 +145,7 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
             public int? PipelineOrder { get; set; }
 
             /// <summary>
-            /// <para>Usage Scenario, e.g., &quot;baseline&quot;</para>
+            /// <para>Usage scenario, e.g., &quot;baseline&quot;</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -187,7 +156,7 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
             public string Scene { get; set; }
 
             /// <summary>
-            /// <para>Configured Workload Parameters</para>
+            /// <para>Configured workload parameters</para>
             /// </summary>
             [NameInMap("SettingParams")]
             [Validation(Required=false)]
@@ -205,7 +174,7 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
             public long? WorkloadId { get; set; }
 
             /// <summary>
-            /// <para>Workload Name</para>
+            /// <para>Workload name</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

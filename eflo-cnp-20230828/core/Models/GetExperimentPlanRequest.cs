@@ -11,6 +11,7 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
     public class GetExperimentPlanRequest : TeaModel {
         /// <summary>
         /// <para>Plan ID</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>189</para>

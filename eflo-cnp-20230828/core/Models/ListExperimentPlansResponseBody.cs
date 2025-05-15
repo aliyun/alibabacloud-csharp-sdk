@@ -74,6 +74,16 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
+            /// <para>The resource ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>189</para>
+            /// </summary>
+            [NameInMap("ResourceId")]
+            [Validation(Required=false)]
+            public long? ResourceId { get; set; }
+
+            /// <summary>
             /// <para>Associated Resource Name</para>
             /// 
             /// <b>Example:</b>
@@ -92,6 +102,35 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public string StartTime { get; set; }
+
+            /// <summary>
+            /// <para>The tag.</para>
+            /// </summary>
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<ListExperimentPlansResponseBodyDataTags> Tags { get; set; }
+            public class ListExperimentPlansResponseBodyDataTags : TeaModel {
+                /// <summary>
+                /// <para>The tag key.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>owner</para>
+                /// </summary>
+                [NameInMap("TagKey")]
+                [Validation(Required=false)]
+                public string TagKey { get; set; }
+
+                /// <summary>
+                /// <para>The tag value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
+                /// </summary>
+                [NameInMap("TagValue")]
+                [Validation(Required=false)]
+                public string TagValue { get; set; }
+
+            }
 
             /// <summary>
             /// <para>Associated Test Plan Template ID</para>

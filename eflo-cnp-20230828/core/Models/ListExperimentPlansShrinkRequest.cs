@@ -57,6 +57,16 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
+        /// <para>Resource ID</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>189</para>
+        /// </summary>
+        [NameInMap("ResourceId")]
+        [Validation(Required=false)]
+        public long? ResourceId { get; set; }
+
+        /// <summary>
         /// <para>Resource</para>
         /// </summary>
         [NameInMap("ResourceName")]
@@ -82,6 +92,23 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
         [NameInMap("StartTimeOrder")]
         [Validation(Required=false)]
         public string StartTimeOrder { get; set; }
+
+        /// <summary>
+        /// <para>The tags.</para>
+        /// </summary>
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public string TagShrink { get; set; }
+
+        /// <summary>
+        /// <para>Template Id</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>96</para>
+        /// </summary>
+        [NameInMap("TemplateId")]
+        [Validation(Required=false)]
+        public long? TemplateId { get; set; }
 
     }
 

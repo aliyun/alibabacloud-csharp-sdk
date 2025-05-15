@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
 {
     public class ListWorkloadsRequest : TeaModel {
         /// <summary>
+        /// <para>Scope</para>
+        /// 
         /// <b>Example:</b>
         /// <para>common</para>
         /// </summary>

@@ -21,6 +21,7 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
 
         /// <summary>
         /// <para>Cluster ID</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ehpc-sh-fj71c0ycfw</para>
@@ -31,6 +32,7 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
 
         /// <summary>
         /// <para>Cluster Name</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tre-1-ppu</para>
@@ -40,17 +42,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <para>Cluster Type</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>ACK</para>
-        /// </summary>
-        [NameInMap("ClusterType")]
-        [Validation(Required=false)]
-        public string ClusterType { get; set; }
-
-        /// <summary>
         /// <para>Machine Types</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("MachineTypes")]
         [Validation(Required=false)]
@@ -68,6 +61,7 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
 
             /// <summary>
             /// <para>CPU Information</para>
+            /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2x Intel Saphhire Rapid 8469C 48C CPU</para>
@@ -88,6 +82,7 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
 
             /// <summary>
             /// <para>GPU Information</para>
+            /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8x NVIDIA SXM4 80GB A100 GPU</para>
@@ -159,17 +154,8 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
         }
 
         /// <summary>
-        /// <para>Resource Type</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>ACK</para>
-        /// </summary>
-        [NameInMap("ResourceType")]
-        [Validation(Required=false)]
-        public string ResourceType { get; set; }
-
-        /// <summary>
         /// <para>User Access Parameters</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UserAccessParam")]
         [Validation(Required=false)]
@@ -177,6 +163,7 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
         public class CreateResourceRequestUserAccessParam : TeaModel {
             /// <summary>
             /// <para>User ID</para>
+            /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dev</para>
@@ -187,6 +174,7 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
 
             /// <summary>
             /// <para>User Key</para>
+            /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -197,6 +185,7 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
 
             /// <summary>
             /// <para>Endpoint</para>
+            /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -207,6 +196,7 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828.Models
 
             /// <summary>
             /// <para>Workspace ID</para>
+            /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1245688643</para>
