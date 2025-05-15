@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public long? Id { get; set; }
 
+        [NameInMap("InstanceMode")]
+        [Validation(Required=false)]
+        public string InstanceMode { get; set; }
+
         /// <summary>
         /// <para>The name of the workflow.</para>
         /// <para>This parameter is required.</para>

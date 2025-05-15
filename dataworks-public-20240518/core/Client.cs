@@ -28368,6 +28368,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             {
                 body["Id"] = request.Id;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceMode))
+            {
+                body["InstanceMode"] = request.InstanceMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 body["Name"] = request.Name;
@@ -28480,6 +28484,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
                 body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceMode))
+            {
+                body["InstanceMode"] = request.InstanceMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
