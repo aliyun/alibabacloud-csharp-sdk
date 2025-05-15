@@ -133,6 +133,18 @@ namespace AlibabaCloud.SDK.Eflo20220530.Models
             [Validation(Required=false)]
             public string ZoneId { get; set; }
 
+            [NameInMap("hdeniIpv6SipQuota")]
+            [Validation(Required=false)]
+            public int? HdeniIpv6SipQuota { get; set; }
+
+            [NameInMap("hdeniSipQuota")]
+            [Validation(Required=false)]
+            public int? HdeniSipQuota { get; set; }
+
+            [NameInMap("leniIpv6SipQuota")]
+            [Validation(Required=false)]
+            public int? LeniIpv6SipQuota { get; set; }
+
         }
 
         /// <summary>
