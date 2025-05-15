@@ -2327,6 +2327,138 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>删除指定自定义文体</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteStyleLearningResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteStyleLearningResultResponse
+        /// </returns>
+        public DeleteStyleLearningResultResponse DeleteStyleLearningResultWithOptions(DeleteStyleLearningResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentKey))
+            {
+                query["AgentKey"] = request.AgentKey;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteStyleLearningResult",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteStyleLearningResultResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除指定自定义文体</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteStyleLearningResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteStyleLearningResultResponse
+        /// </returns>
+        public async Task<DeleteStyleLearningResultResponse> DeleteStyleLearningResultWithOptionsAsync(DeleteStyleLearningResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentKey))
+            {
+                query["AgentKey"] = request.AgentKey;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteStyleLearningResult",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteStyleLearningResultResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除指定自定义文体</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteStyleLearningResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteStyleLearningResultResponse
+        /// </returns>
+        public DeleteStyleLearningResultResponse DeleteStyleLearningResult(DeleteStyleLearningResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteStyleLearningResultWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除指定自定义文体</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteStyleLearningResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteStyleLearningResultResponse
+        /// </returns>
+        public async Task<DeleteStyleLearningResultResponse> DeleteStyleLearningResultAsync(DeleteStyleLearningResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteStyleLearningResultWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>从链接中提取文档内容</para>
         /// </summary>
         /// 

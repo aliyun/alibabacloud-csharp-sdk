@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public string Content { get; set; }
 
+            [NameInMap("HtmlContent")]
+            [Validation(Required=false)]
+            public string HtmlContent { get; set; }
+
             [NameInMap("Response")]
             [Validation(Required=false)]
             public QueryAuditTaskResponseBodyDataResponse Response { get; set; }
@@ -154,6 +158,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [NameInMap("TaskStatus")]
             [Validation(Required=false)]
             public int? TaskStatus { get; set; }
+
+            [NameInMap("Title")]
+            [Validation(Required=false)]
+            public string Title { get; set; }
 
         }
 
