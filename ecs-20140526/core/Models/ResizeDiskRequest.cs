@@ -40,15 +40,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <list type="bullet">
         /// <item><description><para>Basic disk (cloud): 20 to 500.</para>
         /// </description></item>
-        /// <item><description><para>ESSD (cloud_essd): The valid values vary based on the performance level of the ESSD. To query the performance level of an ESSD, call the DescribeDisks operation to query disk information and check the PerformanceLevel value in the response.</para>
+        /// <item><description><para>ESSD (cloud_essd): The valid values vary based on the performance level of the ESSD.</para>
         /// <list type="bullet">
-        /// <item><description>PL0 ESSD: 1 to 2048.</description></item>
-        /// <item><description>PL1 ESSD: 20 to 2048.</description></item>
-        /// <item><description>PL2 ESSD: 461 to 2048.</description></item>
-        /// <item><description>PL3 ESSD: 1261 to 2048.</description></item>
+        /// <item><description>Valid values when SystemDisk.PerformanceLevel is set to PL0: 1 to 2048.</description></item>
+        /// <item><description>Valid values when SystemDisk.PerformanceLevel is set to PL1: 20 to 2048.</description></item>
+        /// <item><description>Valid values when SystemDisk.PerformanceLevel is set to PL2: 461 to 2048.</description></item>
+        /// <item><description>Valid values when SystemDisk.PerformanceLevel is set to PL3: 1261 to 2048.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>ESSD AutoPL disk (cloud_auto): 1 to 2048.</para>
+        /// <item><description><para>ESSD AutoPL disk: 1 to 2048.</para>
         /// </description></item>
         /// <item><description><para>Other disk categories: 20 to 2048.</para>
         /// </description></item>

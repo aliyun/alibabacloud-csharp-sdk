@@ -99,6 +99,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationDataDisk> DataDisk { get; set; }
             public class CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationDataDisk : TeaModel {
                 /// <summary>
+                /// <para>The ID of the automatic snapshot policy to apply to data disk N.</para>
+                /// <para>When you specify this parameter, take note of the following items:</para>
+                /// <list type="bullet">
+                /// <item><description>This parameter takes effect only when the AutoProvisioningGroupType parameter is set to instant.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>sp-bp67acfmxazb4p****</para>
                 /// </summary>
@@ -128,7 +134,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <list type="bullet">
                 /// <item><description>cloud_efficiency: utra disk.</description></item>
                 /// <item><description>cloud_ssd: standard SSD.</description></item>
-                /// <item><description>cloud_essd: enterprise SSD (ESSD).</description></item>
+                /// <item><description>cloud_essd: ESSD.</description></item>
                 /// <item><description>cloud: basic disk.</description></item>
                 /// </list>
                 /// <para>For I/O optimized instances, the default value is cloud_efficiency. For non-I/O optimized instances, the default value is cloud.</para>
@@ -178,7 +184,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Device { get; set; }
 
                 /// <summary>
-                /// <para>The name of data disk N. The name must be 2 to 128 characters in length The name must start with a letter but cannot start with <c>http://</c> or <c>https://</c>. The name can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).</para>
+                /// <para>The name of data disk N. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with <c>http://</c> or <c>https://</c>. The name can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).</para>
                 /// <para>This parameter is left empty by default.</para>
                 /// <para>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</para>
                 /// 
@@ -207,7 +213,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <item><description>true: encrypts system disk N.</description></item>
                 /// <item><description>false: does not encrypt system disk N.</description></item>
                 /// </list>
-                /// <para>Default value: false.</para>
+                /// <para>Default value: false. Valid values:</para>
                 /// <para>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</para>
                 /// 
                 /// <b>Example:</b>
@@ -246,7 +252,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string PerformanceLevel { get; set; }
 
                 /// <summary>
-                /// <para>The provisioned read/write IOPS of the ESSD AutoPL disk to use as data disk N. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</para>
+                /// <para>The provisioned read/write IOPS of the ESSD AutoPL disk to use as the system disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</para>
                 /// <para>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</para>
                 /// <remarks>
                 /// <para> This parameter is available only if you set LaunchConfiguration.DataDisk.N.Category to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</para>
@@ -554,6 +560,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationSystemDisk SystemDisk { get; set; }
             public class CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationSystemDisk : TeaModel {
                 /// <summary>
+                /// <para>The ID of the automatic snapshot policy to apply to the system disk.</para>
+                /// <para>When you specify this parameter, take note of the following items:</para>
+                /// <list type="bullet">
+                /// <item><description>This parameter takes effect only when the AutoProvisioningGroupType parameter is set to instant.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>sp-bp67acfmxazb4p****</para>
                 /// </summary>
@@ -603,7 +615,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <item><description>true: encrypts system disk N.</description></item>
                 /// <item><description>false: does not encrypt system disk N.</description></item>
                 /// </list>
-                /// <para>Default value: false.</para>
+                /// <para>Default value: false. Valid values:</para>
                 /// <para>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</para>
                 /// 
                 /// <b>Example:</b>
@@ -614,7 +626,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Encrypted { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the KMS key to use for the system disk.</para>
+                /// <para>The ID of the KMS key to use for system disk N.</para>
                 /// <para>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</para>
                 /// 
                 /// <b>Example:</b>
@@ -625,7 +637,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string KMSKeyId { get; set; }
 
                 /// <summary>
-                /// <para>The provisioned read/write IOPS of the ESSD AutoPL disk to use as data disk N. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</para>
+                /// <para>The provisioned read/write IOPS of the ESSD AutoPL disk to use as the system disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</para>
                 /// <para>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</para>
                 /// <remarks>
                 /// <para> This parameter is available only if you set LaunchConfiguration.SystemDisk.Category to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</para>
@@ -776,11 +788,24 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public int? AutoRenewPeriod { get; set; }
 
+            /// <summary>
+            /// <para>The image options.</para>
+            /// <para>When you specify this parameter, take note of the following items:</para>
+            /// <list type="bullet">
+            /// <item><description>This parameter takes effect only when the AutoProvisioningGroupType parameter is set to instant.</description></item>
+            /// </list>
+            /// </summary>
             [NameInMap("ImageOptions")]
             [Validation(Required=false)]
             public CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationImageOptions ImageOptions { get; set; }
             public class CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationImageOptions : TeaModel {
                 /// <summary>
+                /// <para>Indicates whether the instance that uses the image supports logons of the ecs-user user. Valid value:</para>
+                /// <list type="bullet">
+                /// <item><description>true: The instance that uses the image supports logons of the ecs-user user.</description></item>
+                /// <item><description>false: The instance that uses the image does not support logons of the ecs-user user.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
                 /// </summary>
@@ -813,6 +838,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string PeriodUnit { get; set; }
 
             /// <summary>
+            /// <para>The protection period of the preemptible instance. Unit: hours. Default value: 1. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</description></item>
+            /// <item><description>0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for one hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</description></item>
+            /// </list>
+            /// <para>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. The preemptible instance is billed by second. We recommend that you specify an appropriate protection period based on your business requirements.</para>
+            /// <para>When you specify this parameter, take note of the following items:</para>
+            /// <list type="bullet">
+            /// <item><description>This parameter takes effect only when the AutoProvisioningGroupType parameter is set to instant.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -821,6 +857,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? SpotDuration { get; set; }
 
             /// <summary>
+            /// <para>The interruption event of the preemptible instances. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Terminate: The instance is released.</description></item>
+            /// <item><description>Stop: The instance is stopped in economical mode.</description></item>
+            /// </list>
+            /// <para>For information about the economical mode, see <a href="https://help.aliyun.com/zh/ecs/user-guide/economical-mode?spm=a2c4g.11186623.0.0.58796e1dJaYlK0">Economical mode</a>.</para>
+            /// <para>Default value: Terminate.</para>
+            /// <para>When you specify this parameter, take note of the following items:</para>
+            /// <list type="bullet">
+            /// <item><description>This parameter takes effect only when the AutoProvisioningGroupType parameter is set to instant.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>Terminate</para>
             /// </summary>

@@ -105,10 +105,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The category of the data disk. Valid values:</para>
+        /// <para>The category of the data disk. Valid values for different disk categories:</para>
         /// <list type="bullet">
         /// <item><description>cloud: basic disk</description></item>
-        /// <item><description>cloud_efficiency: ultra disk</description></item>
+        /// <item><description>cloud_efficiency: utra disk</description></item>
         /// <item><description>cloud_ssd: standard SSD</description></item>
         /// <item><description>cloud_essd: ESSD</description></item>
         /// <item><description>cloud_auto: ESSD AutoPL disk</description></item>
@@ -118,6 +118,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>elastic_ephemeral_disk_premium: premium elastic ephemeral disk</description></item>
         /// </list>
         /// <para>Default value: cloud.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>cloud_regional_disk_auto</description></item>
+        /// <item><description>elastic_ephemeral_disk_standard</description></item>
+        /// <item><description>elastic_ephemeral_disk_premium</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>cloud_ssd</para>
@@ -275,7 +281,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The size of the data disk. Unit: GiB. This parameter is required. Valid values:</para>
+        /// <para>The disk size. Unit: GiB. This parameter is required. Valid values for different disk categories:</para>
         /// <list type="bullet">
         /// <item><description><para>Valid values when DiskCategory is set to cloud: 5 to 2000.</para>
         /// </description></item>

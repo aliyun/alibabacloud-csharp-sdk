@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>true: forcefully deletes the custom image, regardless of whether the image is being used by instances.</description></item>
         /// <item><description>false: verifies that the custom image is not being used by instances and then deletes the image.</description></item>
         /// </list>
-        /// <para>Default value: false.</para>
+        /// <para>Default value: false</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

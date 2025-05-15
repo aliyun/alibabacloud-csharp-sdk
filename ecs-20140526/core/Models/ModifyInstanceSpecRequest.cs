@@ -77,10 +77,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to allow cross-cluster instance type upgrade. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: force attaches the disk to the instance.</description></item>
-        /// <item><description>false: does not force attach the disk to the instance.</description></item>
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
         /// </list>
-        /// <para>Default value: false. Valid values:</para>
+        /// <para>Default value: false.</para>
         /// <para>When you set <c>AllowMigrateAcrossZone</c> to true and upgrade the instance based on the returned information, take note of the following items:</para>
         /// <para>Instance that resides in the classic network:</para>
         /// <list type="bullet">
@@ -99,10 +99,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to submit an asynchronous request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: force attaches the disk to the instance.</description></item>
-        /// <item><description>false: does not force attach the disk to the instance.</description></item>
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
         /// </list>
-        /// <para>Default value: false. Valid values:</para>
+        /// <para>Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -237,11 +237,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <remarks>
         /// <para> This parameter is not publicly available.</para>
         /// </remarks>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Online</description></item>
-        /// <item><description>Offline</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>

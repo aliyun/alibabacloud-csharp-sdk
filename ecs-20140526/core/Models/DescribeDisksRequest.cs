@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string AutoSnapshotPolicyId { get; set; }
 
         /// <summary>
-        /// <para>The category of the disk. Valid values:</para>
+        /// <para>The disk category. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>all: all disk categories</description></item>
         /// <item><description>cloud: basic disk</description></item>
@@ -67,6 +67,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>cloud_ssd: standard SSD</description></item>
         /// <item><description>cloud_essd: Enterprise SSD (ESSD)</description></item>
         /// <item><description>cloud_auto: ESSD AutoPL disk</description></item>
+        /// <item><description>cloud_regional_disk_auto: Regional ESSD</description></item>
         /// <item><description>local_ssd_pro: I/O-intensive local disk</description></item>
         /// <item><description>local_hdd_pro: throughput-intensive local disk</description></item>
         /// <item><description>cloud_essd_entry: ESSD Entry disk</description></item>

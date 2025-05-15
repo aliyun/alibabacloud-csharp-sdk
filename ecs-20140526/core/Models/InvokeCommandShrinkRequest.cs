@@ -367,6 +367,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string WindowsPasswordName { get; set; }
 
+        [NameInMap("WorkingDir")]
+        [Validation(Required=false)]
+        public string WorkingDir { get; set; }
+
     }
 
 }

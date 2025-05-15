@@ -80,6 +80,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
+                [NameInMap("ResourceGroupId")]
+                [Validation(Required=false)]
+                public string ResourceGroupId { get; set; }
+
                 /// <summary>
                 /// <para>The ID of the storage set.</para>
                 /// 
@@ -109,6 +113,26 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [NameInMap("StorageSetPartitionNumber")]
                 [Validation(Required=false)]
                 public int? StorageSetPartitionNumber { get; set; }
+
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
+                public DescribeStorageSetsResponseBodyStorageSetsStorageSetTags Tags { get; set; }
+                public class DescribeStorageSetsResponseBodyStorageSetsStorageSetTags : TeaModel {
+                    [NameInMap("Tag")]
+                    [Validation(Required=false)]
+                    public List<DescribeStorageSetsResponseBodyStorageSetsStorageSetTagsTag> Tag { get; set; }
+                    public class DescribeStorageSetsResponseBodyStorageSetsStorageSetTagsTag : TeaModel {
+                        [NameInMap("Key")]
+                        [Validation(Required=false)]
+                        public string Key { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                }
 
                 /// <summary>
                 /// <para>The ID of the zone to which the storage set belongs.</para>
