@@ -5351,6 +5351,142 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>妙读获得文档字数</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetFileContentLengthRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFileContentLengthResponse
+        /// </returns>
+        public GetFileContentLengthResponse GetFileContentLengthWithOptions(GetFileContentLengthRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocName))
+            {
+                body["DocName"] = request.DocName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileUrl))
+            {
+                body["FileUrl"] = request.FileUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetFileContentLength",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetFileContentLengthResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>妙读获得文档字数</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetFileContentLengthRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFileContentLengthResponse
+        /// </returns>
+        public async Task<GetFileContentLengthResponse> GetFileContentLengthWithOptionsAsync(GetFileContentLengthRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocName))
+            {
+                body["DocName"] = request.DocName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileUrl))
+            {
+                body["FileUrl"] = request.FileUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetFileContentLength",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetFileContentLengthResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>妙读获得文档字数</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetFileContentLengthRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFileContentLengthResponse
+        /// </returns>
+        public GetFileContentLengthResponse GetFileContentLength(GetFileContentLengthRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetFileContentLengthWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>妙读获得文档字数</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetFileContentLengthRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFileContentLengthResponse
+        /// </returns>
+        public async Task<GetFileContentLengthResponse> GetFileContentLengthAsync(GetFileContentLengthRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetFileContentLengthWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>文档管理-查询详情。</para>
         /// </summary>
         /// 
@@ -13239,6 +13375,174 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>妙读生成书籍脑图</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunBookBrainmapRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunBookBrainmapResponse
+        /// </returns>
+        public RunBookBrainmapResponse RunBookBrainmapWithOptions(RunBookBrainmapRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CleanCache))
+            {
+                body["CleanCache"] = request.CleanCache;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocId))
+            {
+                body["DocId"] = request.DocId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeNumber))
+            {
+                body["NodeNumber"] = request.NodeNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prompt))
+            {
+                body["Prompt"] = request.Prompt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["SessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WordNumber))
+            {
+                body["WordNumber"] = request.WordNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunBookBrainmap",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunBookBrainmapResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>妙读生成书籍脑图</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunBookBrainmapRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunBookBrainmapResponse
+        /// </returns>
+        public async Task<RunBookBrainmapResponse> RunBookBrainmapWithOptionsAsync(RunBookBrainmapRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CleanCache))
+            {
+                body["CleanCache"] = request.CleanCache;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocId))
+            {
+                body["DocId"] = request.DocId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeNumber))
+            {
+                body["NodeNumber"] = request.NodeNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prompt))
+            {
+                body["Prompt"] = request.Prompt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["SessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WordNumber))
+            {
+                body["WordNumber"] = request.WordNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunBookBrainmap",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunBookBrainmapResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>妙读生成书籍脑图</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunBookBrainmapRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunBookBrainmapResponse
+        /// </returns>
+        public RunBookBrainmapResponse RunBookBrainmap(RunBookBrainmapRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RunBookBrainmapWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>妙读生成书籍脑图</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunBookBrainmapRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunBookBrainmapResponse
+        /// </returns>
+        public async Task<RunBookBrainmapResponse> RunBookBrainmapAsync(RunBookBrainmapRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RunBookBrainmapWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>书籍导读接口</para>
         /// </summary>
         /// 
@@ -14820,6 +15124,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             {
                 body["DocId"] = request.DocId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prompt))
+            {
+                body["Prompt"] = request.Prompt;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
             {
                 body["SessionId"] = request.SessionId;
@@ -14869,6 +15177,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocId))
             {
                 body["DocId"] = request.DocId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prompt))
+            {
+                body["Prompt"] = request.Prompt;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
             {

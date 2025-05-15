@@ -8,16 +8,32 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
-    public class RunDocSmartCardRequest : TeaModel {
+    public class RunBookBrainmapRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("CleanCache")]
+        [Validation(Required=false)]
+        public bool? CleanCache { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>84ufBYEeLMZOjRFo84HJ7ySL3Efr55</para>
+        /// <para>12345</para>
         /// </summary>
         [NameInMap("DocId")]
         [Validation(Required=false)]
         public string DocId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
+        [NameInMap("NodeNumber")]
+        [Validation(Required=false)]
+        public int? NodeNumber { get; set; }
 
         [NameInMap("Prompt")]
         [Validation(Required=false)]
@@ -34,10 +50,18 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string SessionId { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>20</para>
+        /// </summary>
+        [NameInMap("WordNumber")]
+        [Validation(Required=false)]
+        public int? WordNumber { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>llm-2setzb9x4ewsd</para>
+        /// <para>llm-hx72jf15gqyobvd9</para>
         /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]

@@ -8,30 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
-    public class RunDocSmartCardRequest : TeaModel {
+    public class GetFileContentLengthRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>84ufBYEeLMZOjRFo84HJ7ySL3Efr55</para>
+        /// <para>test.pdf</para>
         /// </summary>
-        [NameInMap("DocId")]
+        [NameInMap("DocName")]
         [Validation(Required=false)]
-        public string DocId { get; set; }
-
-        [NameInMap("Prompt")]
-        [Validation(Required=false)]
-        public string Prompt { get; set; }
+        public string DocName { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>3f7045e099474ba28ceca1b4eb6d6e21</para>
+        /// <para><a href="https://xxx/test.pdf">https://xxx/test.pdf</a></para>
         /// </summary>
-        [NameInMap("SessionId")]
+        [NameInMap("FileUrl")]
         [Validation(Required=false)]
-        public string SessionId { get; set; }
+        public string FileUrl { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

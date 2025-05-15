@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
-    public class GetInterveneGlobalReplyResponseBody : TeaModel {
+    public class GetFileContentLengthResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>0</para>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -19,33 +19,15 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public GetInterveneGlobalReplyResponseBodyData Data { get; set; }
-        public class GetInterveneGlobalReplyResponseBodyData : TeaModel {
-            [NameInMap("Code")]
+        public GetFileContentLengthResponseBodyData Data { get; set; }
+        public class GetFileContentLengthResponseBodyData : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1024</para>
+            /// </summary>
+            [NameInMap("WordNum")]
             [Validation(Required=false)]
-            public int? Code { get; set; }
-
-            [NameInMap("ReplyMessagList")]
-            [Validation(Required=false)]
-            public List<GetInterveneGlobalReplyResponseBodyDataReplyMessagList> ReplyMessagList { get; set; }
-            public class GetInterveneGlobalReplyResponseBodyDataReplyMessagList : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>success</para>
-                /// </summary>
-                [NameInMap("Message")]
-                [Validation(Required=false)]
-                public string Message { get; set; }
-
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>namespace_qa_query</para>
-                /// </summary>
-                [NameInMap("ReplyType")]
-                [Validation(Required=false)]
-                public string ReplyType { get; set; }
-
-            }
+            public long? WordNum { get; set; }
 
         }
 
@@ -67,7 +49,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>3f7045e099474ba28ceca1b4eb6d6e21</para>
+        /// <para>DD656AF9-0839-521A-A3D2-F320009F9C87</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -75,7 +57,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>True</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

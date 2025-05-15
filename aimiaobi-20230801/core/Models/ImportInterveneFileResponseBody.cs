@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public ImportInterveneFileResponseBodyData Data { get; set; }
         public class ImportInterveneFileResponseBodyData : TeaModel {
+            [NameInMap("Code")]
+            [Validation(Required=false)]
+            public int? Code { get; set; }
+
             [NameInMap("FailIdList")]
             [Validation(Required=false)]
             public List<string> FailIdList { get; set; }

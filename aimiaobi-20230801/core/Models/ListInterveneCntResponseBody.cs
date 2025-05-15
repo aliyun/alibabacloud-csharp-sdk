@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public List<object> CntList { get; set; }
 
+            [NameInMap("Code")]
+            [Validation(Required=false)]
+            public int? Code { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>10</para>

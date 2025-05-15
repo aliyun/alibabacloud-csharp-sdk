@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public ExportIntervenesResponseBodyData Data { get; set; }
         public class ExportIntervenesResponseBodyData : TeaModel {
+            [NameInMap("Code")]
+            [Validation(Required=false)]
+            public int? Code { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para><a href="http://xxx/xxx.xls">http://xxx/xxx.xls</a></para>

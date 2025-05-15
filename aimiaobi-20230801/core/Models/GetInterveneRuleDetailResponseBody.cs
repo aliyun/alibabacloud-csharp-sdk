@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public GetInterveneRuleDetailResponseBodyData Data { get; set; }
         public class GetInterveneRuleDetailResponseBodyData : TeaModel {
+            [NameInMap("Code")]
+            [Validation(Required=false)]
+            public int? Code { get; set; }
+
             [NameInMap("InterveneRuleDetail")]
             [Validation(Required=false)]
             public GetInterveneRuleDetailResponseBodyDataInterveneRuleDetail InterveneRuleDetail { get; set; }
