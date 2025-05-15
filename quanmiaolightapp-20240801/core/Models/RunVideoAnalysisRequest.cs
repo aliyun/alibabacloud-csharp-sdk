@@ -113,6 +113,50 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
 
         }
 
+        [NameInMap("videoCaptionInfo")]
+        [Validation(Required=false)]
+        public RunVideoAnalysisRequestVideoCaptionInfo VideoCaptionInfo { get; set; }
+        public class RunVideoAnalysisRequestVideoCaptionInfo : TeaModel {
+            [NameInMap("videoCaptions")]
+            [Validation(Required=false)]
+            public List<RunVideoAnalysisRequestVideoCaptionInfoVideoCaptions> VideoCaptions { get; set; }
+            public class RunVideoAnalysisRequestVideoCaptionInfoVideoCaptions : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>10000</para>
+                /// </summary>
+                [NameInMap("endTime")]
+                [Validation(Required=false)]
+                public long? EndTime { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>张三</para>
+                /// </summary>
+                [NameInMap("speaker")]
+                [Validation(Required=false)]
+                public string Speaker { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1000</para>
+                /// </summary>
+                [NameInMap("startTime")]
+                [Validation(Required=false)]
+                public long? StartTime { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>你好</para>
+                /// </summary>
+                [NameInMap("text")]
+                [Validation(Required=false)]
+                public string Text { get; set; }
+
+            }
+
+        }
+
         [NameInMap("videoExtraInfo")]
         [Validation(Required=false)]
         public string VideoExtraInfo { get; set; }

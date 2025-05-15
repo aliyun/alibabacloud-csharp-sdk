@@ -199,6 +199,14 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
 
                         /// <summary>
                         /// <b>Example:</b>
+                        /// <para>张三</para>
+                        /// </summary>
+                        [NameInMap("speaker")]
+                        [Validation(Required=false)]
+                        public string Speaker { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
                         /// <para>0</para>
                         /// </summary>
                         [NameInMap("startTime")]

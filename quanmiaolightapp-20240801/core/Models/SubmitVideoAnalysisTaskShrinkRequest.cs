@@ -81,6 +81,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
         [Validation(Required=false)]
         public string TextProcessTasksShrink { get; set; }
 
+        [NameInMap("videoCaptionInfo")]
+        [Validation(Required=false)]
+        public string VideoCaptionInfoShrink { get; set; }
+
         [NameInMap("videoExtraInfo")]
         [Validation(Required=false)]
         public string VideoExtraInfo { get; set; }
