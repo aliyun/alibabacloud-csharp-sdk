@@ -50,6 +50,10 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
 
         }
 
+        [NameInMap("LensCode")]
+        [Validation(Required=false)]
+        public string LensCode { get; set; }
+
         /// <summary>
         /// <para>The region ID.</para>
         /// 
