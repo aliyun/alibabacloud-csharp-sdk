@@ -10,13 +10,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class UpdateConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The category of the configuration item. Supported categories:</para>
+        /// <para>The category of the configuration item. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>CommonResourceConfig</description></item>
         /// <item><description>DLCAutoRecycle</description></item>
         /// <item><description>DLCPriorityConfig</description></item>
         /// <item><description>DSWPriorityConfig</description></item>
         /// <item><description>QuotaMaximumDuration</description></item>
+        /// <item><description>CommonTagConfig</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -27,12 +28,13 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string CategoryName { get; set; }
 
         /// <summary>
-        /// <para>The key of the configuration item. Supported keys:</para>
+        /// <para>The key of the configuration item. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>tempStoragePath: Temporary storage path. This key can be used only when CategoryName is set to CommonResourceConfig.</description></item>
         /// <item><description>isAutoRecycle: Automatic recycle configuration. This key can be used only when CategoryName is set to DLCAutoRecycle.</description></item>
         /// <item><description>priorityConfig: Priority configuration. This key can be used only when CategoryName is set to DLCPriorityConfig or DSWPriorityConfig.</description></item>
-        /// <item><description>quotaMaximumDuration Maximum run time of DLC jobs for a quota. This key can be used only when CategoryName is set to QuotaMaximumDuration.</description></item>
+        /// <item><description>quotaMaximumDuration: Maximum run time of DLC jobs for a quota. This key can be used only when CategoryName is set to QuotaMaximumDuration.</description></item>
+        /// <item><description>predefinedTags: Preset tags of the workspace. Created resources must include tags.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -60,7 +62,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public List<UpdateConfigRequestLabels> Labels { get; set; }
         public class UpdateConfigRequestLabels : TeaModel {
             /// <summary>
-            /// <para>The key of the tag.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>key1</para>
@@ -70,7 +72,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>value1</para>

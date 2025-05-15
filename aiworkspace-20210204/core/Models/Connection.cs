@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             [Validation(Required=false)]
             public string ModelType { get; set; }
 
+            [NameInMap("ToolCall")]
+            [Validation(Required=false)]
+            public bool? ToolCall { get; set; }
+
         }
 
         [NameInMap("ResourceMeta")]
