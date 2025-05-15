@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string CurrentPage { get; set; }
 
+        [NameInMap("DataType")]
+        [Validation(Required=false)]
+        public string DataType { get; set; }
+
         /// <summary>
         /// <para>The domain name in outbound connections.</para>
         /// 
@@ -57,6 +61,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
+
+        [NameInMap("IsAITraffic")]
+        [Validation(Required=false)]
+        public string IsAITraffic { get; set; }
 
         /// <summary>
         /// <para>The language of the content within the request. Valid values:</para>

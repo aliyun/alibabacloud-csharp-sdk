@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public long? Quota { get; set; }
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>C6C3B72B********E95FB0A161</para>

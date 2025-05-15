@@ -9035,6 +9035,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["CurrentPage"] = request.CurrentPage;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataType))
+            {
+                query["DataType"] = request.DataType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
             {
                 query["Domain"] = request.Domain;
@@ -9042,6 +9046,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsAITraffic))
+            {
+                query["IsAITraffic"] = request.IsAITraffic;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
@@ -9117,6 +9125,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["CurrentPage"] = request.CurrentPage;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataType))
+            {
+                query["DataType"] = request.DataType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
             {
                 query["Domain"] = request.Domain;
@@ -9124,6 +9136,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsAITraffic))
+            {
+                query["IsAITraffic"] = request.IsAITraffic;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
