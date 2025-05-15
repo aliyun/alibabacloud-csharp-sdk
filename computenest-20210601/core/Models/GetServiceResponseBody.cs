@@ -686,14 +686,29 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         [Validation(Required=false)]
         public string SupplierUrl { get; set; }
 
+        /// <summary>
+        /// <para>Contact information of the service provider</para>
+        /// </summary>
         [NameInMap("SupportContacts")]
         [Validation(Required=false)]
         public List<GetServiceResponseBodySupportContacts> SupportContacts { get; set; }
         public class GetServiceResponseBodySupportContacts : TeaModel {
+            /// <summary>
+            /// <para>The type of contact information.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Email</para>
+            /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
+            /// <summary>
+            /// <para>The value of contact information.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="mailto:supplier@example.com">supplier@example.com</a></para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
