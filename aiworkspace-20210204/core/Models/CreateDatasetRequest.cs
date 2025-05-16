@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class CreateDatasetRequest : TeaModel {
         /// <summary>
-        /// <para>The visibility of the workspace. Valid values:</para>
+        /// <para>The workspace accessibility. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PRIVATE (default): The workspace is visible only to you and the administrator of the workspace.</description></item>
-        /// <item><description>PUBLIC: The workspace is visible to all users.</description></item>
+        /// <item><description>PRIVATE: The workspace is accessible only to you and the administrator of the workspace. This is the default value.</description></item>
+        /// <item><description>PUBLIC: The workspace is accessible to all users.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public long? DataSize { get; set; }
 
         /// <summary>
-        /// <para>The type of the data source. Valid values:</para>
+        /// <para>The data source type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>OSS: Object Storage Service (OSS).</description></item>
         /// <item><description>NAS: File Storage NAS (NAS).</description></item>
@@ -86,32 +86,32 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <para>The dataset configurations to be imported to a storage, such as OSS, NAS, or Cloud Parallel File Storage (CPFS).</para>
         /// <para><b>OSS</b></para>
         /// <para>{\
-        /// &quot;region&quot;: &quot;${region}&quot;,// The region ID\
-        /// &quot;bucket&quot;: &quot;${bucket}&quot;,//The bucket name\
-        /// &quot;path&quot;: &quot;${path}&quot; // The file path\
+        /// &quot;region&quot;: &quot;${region}&quot;,// The region ID.\
+        /// &quot;bucket&quot;: &quot;${bucket}&quot;,//The bucket name.\
+        /// &quot;path&quot;: &quot;${path}&quot; // The file path.\
         /// }\</para>
         /// <para><b>NAS</b></para>
         /// <para>{\
-        /// &quot;region&quot;: &quot;${region}&quot;,// The region ID\
-        /// &quot;fileSystemId&quot;: &quot;${file_system_id}&quot;, // The file system ID\
-        /// &quot;path&quot;: &quot;${path}&quot;, // The file system path\
-        /// &quot;mountTarget&quot;: &quot;${mount_target}&quot; // The mount point of the file system\
+        /// &quot;region&quot;: &quot;${region}&quot;,// The region ID.\
+        /// &quot;fileSystemId&quot;: &quot;${file_system_id}&quot;, // The file system ID.\
+        /// &quot;path&quot;: &quot;${path}&quot;, // The file system path.\
+        /// &quot;mountTarget&quot;: &quot;${mount_target}&quot; // The mount point of the file system.\
         /// }\</para>
         /// <para><b>CPFS</b></para>
         /// <para>{\
-        /// &quot;region&quot;: &quot;${region}&quot;,// The region ID\
-        /// &quot;fileSystemId&quot;: &quot;${file_system_id}&quot;, // The file system ID\
-        /// &quot;protocolServiceId&quot;:&quot;${protocol_service_id}&quot;, // The file system protocol service\
-        /// &quot;exportId&quot;: &quot;${export_id}&quot;, // The file system export directory\
-        /// &quot;path&quot;: &quot;${path}&quot;, // The file system path\
+        /// &quot;region&quot;: &quot;${region}&quot;,// The region ID.\
+        /// &quot;fileSystemId&quot;: &quot;${file_system_id}&quot;, // The file system ID.\
+        /// &quot;protocolServiceId&quot;:&quot;${protocol_service_id}&quot;, // The file system protocol service.\
+        /// &quot;exportId&quot;: &quot;${export_id}&quot;, // The file system export directory.\
+        /// &quot;path&quot;: &quot;${path}&quot;, // The file system path.\
         /// }\</para>
         /// <para><b>CPFS for Lingjun</b></para>
         /// <para>{\
-        /// &quot;region&quot;: &quot;${region}&quot;,// The region ID\
-        /// &quot;fileSystemId&quot;: &quot;${file_system_id}&quot;, // The file system ID\
-        /// &quot;path&quot;: &quot;${path}&quot;, // The file system path\
-        /// &quot;mountTarget&quot;: &quot;${mount_target}&quot; // The mount point of the file system, CPFS for Lingjun only\
-        /// &quot;isVpcMount&quot;: boolean, // Whether the mount point is a virtual private cloud (VPC) mount point, CPFS for Lingjun only\
+        /// &quot;region&quot;: &quot;${region}&quot;,// The region ID.\
+        /// &quot;fileSystemId&quot;: &quot;${file_system_id}&quot;, // The file system ID.\
+        /// &quot;path&quot;: &quot;${path}&quot;, // The file system path.\
+        /// &quot;mountTarget&quot;: &quot;${mount_target}&quot; // The mount point of the file system, CPFS for Lingjun only.\
+        /// &quot;isVpcMount&quot;: boolean, // Whether the mount point is a virtual private cloud (VPC) mount point, CPFS for Lingjun only.\
         /// }\</para>
         /// 
         /// <b>Example:</b>
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ProviderType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the source dataset of the labeled dataset.</para>
+        /// <para>The ID of the source dataset for the labeled dataset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d-bvfasdfxxxxj8o411</para>
@@ -224,7 +224,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string SourceDatasetId { get; set; }
 
         /// <summary>
-        /// <para>The version of the source dataset of the labeled dataset.</para>
+        /// <para>The version of the source dataset for the labeled dataset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v2</para>
@@ -234,11 +234,11 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string SourceDatasetVersion { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data source.</para>
+        /// <para>The data source ID.</para>
         /// <list type="bullet">
-        /// <item><description>If SourceType is set to USER, the value of SourceId can be a custom string.</description></item>
+        /// <item><description>If SourceType is set to USER, the value of SourceId is a custom string.</description></item>
         /// <item><description>If SourceType is set to ITAG, the value of SourceId is the ID of the labeling job of iTAG.</description></item>
-        /// <item><description>If SourceType is set to PAI_PUBLIC_DATASET, the value of SourceId is empty by default.</description></item>
+        /// <item><description>If SourceType is set to PAI_PUBLIC_DATASET, SourceId is empty by default.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -249,9 +249,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string SourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the data source. Default value: USER. Valid values:</para>
+        /// <para>The type of the data source. Default value: USER.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PAI-PUBLIC-DATASET: a public dataset of Platform for AI (PAI).</description></item>
+        /// <item><description>PAI_PUBLIC_DATASET: a public dataset of PAI.</description></item>
         /// <item><description>ITAG: a dataset generated from a labeling job of iTAG.</description></item>
         /// <item><description>USER: a dataset registered by a user.</description></item>
         /// </list>
@@ -266,8 +267,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <summary>
         /// <para>The URI of the data source.</para>
         /// <list type="bullet">
-        /// <item><description>Value format when DataSourceType is set to OSS: <c>oss://bucket.endpoint/object</c>.</description></item>
-        /// <item><description>Value formats when DataSourceType is set to NAS: General-purpose NAS: <c>nas://&lt;nasfisid&gt;.region/subpath/to/dir/</c>. CPFS 1.0: <c>nas://&lt;cpfs-fsid&gt;.region/subpath/to/dir/</c>. CPFS 2.0: <c>nas://&lt;cpfs-fsid&gt;.region/&lt;protocolserviceid&gt;/</c>. You can distinguish CPFS 1.0 and CPFS 2.0 file systems based on the format of the file system ID: The ID for CPFS 1.0 is in the cpfs-&lt;8-bit ASCII characters&gt; format. The ID for CPFS 2.0 is in the cpfs-&lt;16-bit ASCII characters&gt; format.</description></item>
+        /// <item><description>Value format if DataSourceType is set to OSS: <c>oss://bucket.endpoint/object</c>.</description></item>
+        /// <item><description>Value formats if DataSourceType is set to NAS: General-purpose NAS: <c>nas://&lt;nasfisid&gt;.region/subpath/to/dir/</c>. CPFS 1.0: <c>nas://&lt;cpfs-fsid&gt;.region/subpath/to/dir/</c>. CPFS 2.0: <c>nas://&lt;cpfs-fsid&gt;.region/&lt;protocolserviceid&gt;/</c>. You can distinguish CPFS 1.0 and CPFS 2.0 file systems based on the format of the file system ID: The ID for CPFS 1.0 is in the cpfs-&lt;8-bit ASCII characters&gt; format. The ID for CPFS 2.0 is in the cpfs-&lt;16-bit ASCII characters&gt; format.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

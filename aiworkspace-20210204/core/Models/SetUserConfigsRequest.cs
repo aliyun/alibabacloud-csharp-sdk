@@ -17,7 +17,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public List<SetUserConfigsRequestConfigs> Configs { get; set; }
         public class SetUserConfigsRequestConfigs : TeaModel {
             /// <summary>
-            /// <para>The category. Currently, only DataPrivacyConfig is supported.</para>
+            /// <para>The category. Only DataPrivacyConfig is supported.</para>
+            /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DataPrivacyConfig</para>
@@ -28,6 +29,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
             /// <summary>
             /// <para>The key of the configuration item.</para>
+            /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>customizePAIAssumedRole</para>
@@ -38,6 +40,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
             /// <summary>
             /// <para>The value of the configuration item.</para>
+            /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>role</para>
@@ -47,7 +50,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string ConfigValue { get; set; }
 
             /// <summary>
-            /// <para>The scope. Currently, subUser and owner are supported.</para>
+            /// <para>The scope. Valid values: subUser and owner.</para>
+            /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>owner</para>

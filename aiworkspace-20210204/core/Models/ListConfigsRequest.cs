@@ -17,6 +17,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <item><description>DLCPriorityConfig</description></item>
         /// <item><description>DSWPriorityConfig</description></item>
         /// <item><description>QuotaMaximumDuration</description></item>
+        /// <item><description>CommonTagConfig</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -32,7 +33,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <item><description>tempStoragePath: Temporary storage path. This key can be used only when CategoryName is set to CommonResourceConfig.</description></item>
         /// <item><description>isAutoRecycle: Automatic recycle configuration. This key can be used only when CategoryName is set to DLCAutoRecycle.</description></item>
         /// <item><description>priorityConfig: Priority configuration. This key can be used only when CategoryName is set to DLCPriorityConfig or DSWPriorityConfig.</description></item>
-        /// <item><description>quotaMaximumDuration Maximum run time of DLC jobs for a quota. This key can be used only when CategoryName is set to QuotaMaximumDuration.</description></item>
+        /// <item><description>quotaMaximumDuration: Maximum run time of DLC jobs for a quota. This key can be used only when CategoryName is set to QuotaMaximumDuration.</description></item>
+        /// <item><description>predefinedTags: The predefined tags of the workspace. All created resources must have tags</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

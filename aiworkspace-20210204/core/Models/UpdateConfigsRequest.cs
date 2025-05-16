@@ -24,6 +24,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             /// <item><description>DLCPriorityConfig</description></item>
             /// <item><description>DSWPriorityConfig</description></item>
             /// <item><description>QuotaMaximumDuration</description></item>
+            /// <item><description>CommonTagConfig</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -38,8 +39,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             /// <list type="bullet">
             /// <item><description>tempStoragePath: Temporary storage path. This key can be used only when CategoryName is set to CommonResourceConfig.</description></item>
             /// <item><description>isAutoRecycle: Automatic recycle configuration. This key can be used only when CategoryName is set to DLCAutoRecycle.</description></item>
-            /// <item><description>priorityConfig: Priority configuration. This key can be used only when CategoryName is set to DLCPriorityConfig or DSWPriorityConfig.</description></item>
-            /// <item><description>quotaMaximumDuration Maximum run time of DLC jobs for a quota. This key can be used only when CategoryName is set to QuotaMaximumDuration.</description></item>
+            /// <item><description>tempStoragePath: Temporary storage path. This key can be used only when CategoryName is set to CommonResourceConfig.</description></item>
+            /// <item><description>quotaMaximumDuration: Maximum run time of DLC jobs for a quota. This key can be used only when CategoryName is set to QuotaMaximumDuration.</description></item>
+            /// <item><description>predefinedTags: The predefined tags of the workspace. All created resources must have tags.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -51,6 +53,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
             /// <summary>
             /// <para>The value of the configuration item.</para>
+            /// <list type="bullet">
+            /// <item><description>When ConfigKey is predefinedTags, the ConfigValue follows this format: [{&quot;Type&quot;:&quot;Tag&quot;,&quot;Key&quot;:&quot;Key1&quot;,&quot;Value&quot;:&quot;{&quot;Products&quot;:&quot;DLC,DSW,EAS&quot;,&quot;Values&quot;:&quot;value1,value2,value3&quot;}&quot;}]. &quot;Products&quot; indicates the products that use the predefined tags.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>oss://test/s/</para>
@@ -67,7 +72,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public List<UpdateConfigsRequestConfigsLabels> Labels { get; set; }
             public class UpdateConfigsRequestConfigsLabels : TeaModel {
                 /// <summary>
-                /// <para>The key of the tag.</para>
+                /// <para>The tag key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>key1</para>

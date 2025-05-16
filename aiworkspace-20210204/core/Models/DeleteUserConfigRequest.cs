@@ -19,6 +19,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string ConfigKey { get; set; }
 
+        /// <summary>
+        /// <para>The scope. Valid values: subUser and owner.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>subUser</para>
+        /// </summary>
         [NameInMap("Scope")]
         [Validation(Required=false)]
         public string Scope { get; set; }

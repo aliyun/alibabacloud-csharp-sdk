@@ -979,6 +979,200 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建连接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateConnectionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConnectionResponse
+        /// </returns>
+        public CreateConnectionResponse CreateConnectionWithOptions(CreateConnectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Accessibility))
+            {
+                body["Accessibility"] = request.Accessibility;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Configs))
+            {
+                body["Configs"] = request.Configs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionName))
+            {
+                body["ConnectionName"] = request.ConnectionName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionType))
+            {
+                body["ConnectionType"] = request.ConnectionType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Models))
+            {
+                body["Models"] = request.Models;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceMeta))
+            {
+                body["ResourceMeta"] = request.ResourceMeta;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Secrets))
+            {
+                body["Secrets"] = request.Secrets;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateConnection",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/connections",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateConnectionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建连接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateConnectionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConnectionResponse
+        /// </returns>
+        public async Task<CreateConnectionResponse> CreateConnectionWithOptionsAsync(CreateConnectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Accessibility))
+            {
+                body["Accessibility"] = request.Accessibility;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Configs))
+            {
+                body["Configs"] = request.Configs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionName))
+            {
+                body["ConnectionName"] = request.ConnectionName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionType))
+            {
+                body["ConnectionType"] = request.ConnectionType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Models))
+            {
+                body["Models"] = request.Models;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceMeta))
+            {
+                body["ResourceMeta"] = request.ResourceMeta;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Secrets))
+            {
+                body["Secrets"] = request.Secrets;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateConnection",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/connections",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateConnectionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建连接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateConnectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConnectionResponse
+        /// </returns>
+        public CreateConnectionResponse CreateConnection(CreateConnectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateConnectionWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建连接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateConnectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConnectionResponse
+        /// </returns>
+        public async Task<CreateConnectionResponse> CreateConnectionAsync(CreateConnectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateConnectionWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a dataset.</para>
         /// </summary>
         /// 
@@ -4129,6 +4323,108 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Deletes a connection.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConnectionResponse
+        /// </returns>
+        public DeleteConnectionResponse DeleteConnectionWithOptions(string ConnectionId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteConnection",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/connections/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ConnectionId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteConnectionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a connection.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConnectionResponse
+        /// </returns>
+        public async Task<DeleteConnectionResponse> DeleteConnectionWithOptionsAsync(string ConnectionId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteConnection",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/connections/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ConnectionId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteConnectionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a connection.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteConnectionResponse
+        /// </returns>
+        public DeleteConnectionResponse DeleteConnection(string ConnectionId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteConnectionWithOptions(ConnectionId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a connection.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteConnectionResponse
+        /// </returns>
+        public async Task<DeleteConnectionResponse> DeleteConnectionAsync(string ConnectionId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteConnectionWithOptionsAsync(ConnectionId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes a dataset.</para>
         /// </summary>
         /// 
@@ -6631,6 +6927,136 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取连接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetConnectionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConnectionResponse
+        /// </returns>
+        public GetConnectionResponse GetConnectionWithOptions(string ConnectionId, GetConnectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptOption))
+            {
+                query["EncryptOption"] = request.EncryptOption;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetConnection",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/connections/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ConnectionId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetConnectionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取连接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetConnectionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConnectionResponse
+        /// </returns>
+        public async Task<GetConnectionResponse> GetConnectionWithOptionsAsync(string ConnectionId, GetConnectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptOption))
+            {
+                query["EncryptOption"] = request.EncryptOption;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetConnection",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/connections/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ConnectionId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetConnectionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取连接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetConnectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConnectionResponse
+        /// </returns>
+        public GetConnectionResponse GetConnection(string ConnectionId, GetConnectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetConnectionWithOptions(ConnectionId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取连接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetConnectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConnectionResponse
+        /// </returns>
+        public async Task<GetConnectionResponse> GetConnectionAsync(string ConnectionId, GetConnectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetConnectionWithOptionsAsync(ConnectionId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Obtains a dataset.</para>
         /// </summary>
         /// 
@@ -8881,6 +9307,252 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListConfigsWithOptionsAsync(WorkspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists connections.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListConnectionsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConnectionsResponse
+        /// </returns>
+        public ListConnectionsResponse ListConnectionsWithOptions(ListConnectionsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListConnectionsShrinkRequest request = new ListConnectionsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ConnectionIds))
+            {
+                request.ConnectionIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ConnectionIds, "ConnectionIds", "simple");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ConnectionTypes))
+            {
+                request.ConnectionTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ConnectionTypes, "ConnectionTypes", "simple");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ModelTypes))
+            {
+                request.ModelTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ModelTypes, "ModelTypes", "simple");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionIdsShrink))
+            {
+                query["ConnectionIds"] = request.ConnectionIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionName))
+            {
+                query["ConnectionName"] = request.ConnectionName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionTypesShrink))
+            {
+                query["ConnectionTypes"] = request.ConnectionTypesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptOption))
+            {
+                query["EncryptOption"] = request.EncryptOption;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Model))
+            {
+                query["Model"] = request.Model;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelTypesShrink))
+            {
+                query["ModelTypes"] = request.ModelTypesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                query["SortBy"] = request.SortBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToolCall))
+            {
+                query["ToolCall"] = request.ToolCall;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListConnections",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/connections",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListConnectionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists connections.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListConnectionsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConnectionsResponse
+        /// </returns>
+        public async Task<ListConnectionsResponse> ListConnectionsWithOptionsAsync(ListConnectionsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListConnectionsShrinkRequest request = new ListConnectionsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ConnectionIds))
+            {
+                request.ConnectionIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ConnectionIds, "ConnectionIds", "simple");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ConnectionTypes))
+            {
+                request.ConnectionTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ConnectionTypes, "ConnectionTypes", "simple");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ModelTypes))
+            {
+                request.ModelTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ModelTypes, "ModelTypes", "simple");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionIdsShrink))
+            {
+                query["ConnectionIds"] = request.ConnectionIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionName))
+            {
+                query["ConnectionName"] = request.ConnectionName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionTypesShrink))
+            {
+                query["ConnectionTypes"] = request.ConnectionTypesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptOption))
+            {
+                query["EncryptOption"] = request.EncryptOption;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Model))
+            {
+                query["Model"] = request.Model;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelTypesShrink))
+            {
+                query["ModelTypes"] = request.ModelTypesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                query["SortBy"] = request.SortBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToolCall))
+            {
+                query["ToolCall"] = request.ToolCall;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListConnections",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/connections",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListConnectionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists connections.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListConnectionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConnectionsResponse
+        /// </returns>
+        public ListConnectionsResponse ListConnections(ListConnectionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListConnectionsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists connections.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListConnectionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConnectionsResponse
+        /// </returns>
+        public async Task<ListConnectionsResponse> ListConnectionsAsync(ListConnectionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListConnectionsWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -14287,6 +14959,160 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateConfigsWithOptionsAsync(WorkspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a connection.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateConnectionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConnectionResponse
+        /// </returns>
+        public UpdateConnectionResponse UpdateConnectionWithOptions(string ConnectionId, UpdateConnectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Configs))
+            {
+                body["Configs"] = request.Configs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Models))
+            {
+                body["Models"] = request.Models;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Secrets))
+            {
+                body["Secrets"] = request.Secrets;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateConnection",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/connections/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ConnectionId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateConnectionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a connection.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateConnectionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConnectionResponse
+        /// </returns>
+        public async Task<UpdateConnectionResponse> UpdateConnectionWithOptionsAsync(string ConnectionId, UpdateConnectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Configs))
+            {
+                body["Configs"] = request.Configs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Models))
+            {
+                body["Models"] = request.Models;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Secrets))
+            {
+                body["Secrets"] = request.Secrets;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateConnection",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/connections/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ConnectionId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateConnectionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a connection.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateConnectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConnectionResponse
+        /// </returns>
+        public UpdateConnectionResponse UpdateConnection(string ConnectionId, UpdateConnectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateConnectionWithOptions(ConnectionId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a connection.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateConnectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConnectionResponse
+        /// </returns>
+        public async Task<UpdateConnectionResponse> UpdateConnectionAsync(string ConnectionId, UpdateConnectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateConnectionWithOptionsAsync(ConnectionId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

@@ -10,12 +10,13 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class DeleteConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The category of the configuration item. Supported categories:</para>
+        /// <para>The category of the configuration item. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>CommonResourceConfig</description></item>
         /// <item><description>DLCAutoRecycle - DLCPriorityConfig</description></item>
         /// <item><description>DSWPriorityConfig</description></item>
         /// <item><description>QuotaMaximumDuration</description></item>
+        /// <item><description>CommonTagConfig</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

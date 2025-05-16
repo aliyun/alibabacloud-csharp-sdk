@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ApprovalStatus { get; set; }
 
         /// <summary>
-        /// <para>Compression Configuration</para>
+        /// <para>The compression configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public Dictionary<string, object> CompressionSpec { get; set; }
 
         /// <summary>
-        /// <para>Evaluation Configuration</para>
+        /// <para>The evaluation configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public Dictionary<string, object> EvaluationSpec { get; set; }
 
         /// <summary>
-        /// <para>Other information.</para>
+        /// <para>The additional information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public Dictionary<string, object> ExtraInfo { get; set; }
 
         /// <summary>
-        /// <para>The format of the model. Valid values:</para>
+        /// <para>The model format. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>OfflineModel</description></item>
         /// <item><description>SavedModel</description></item>
@@ -80,9 +80,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string FormatType { get; set; }
 
         /// <summary>
-        /// <para>The framework of the model. Valid values:</para>
+        /// <para>The model framework. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Pytorch </description></item>
+        /// <item><description>Pytorch</description></item>
         /// <item><description>XGBoost</description></item>
         /// <item><description>Keras</description></item>
         /// <item><description>Caffe</description></item>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string FrameworkType { get; set; }
 
         /// <summary>
-        /// <para>Describes how to apply to downstream inference services. For example, describes the processor and container of EAS. Example: <c>{ &quot;processor&quot;: &quot;tensorflow_gpu_1.12&quot; }</c></para>
+        /// <para>Describes how to apply to downstream inference services. For example, describe the processor and container of EAS. Example: <c>{ &quot;processor&quot;: &quot;tensorflow_gpu_1.12&quot; }</c></para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public Dictionary<string, object> InferenceSpec { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The labels.</para>
         /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]
@@ -154,21 +154,21 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Options { get; set; }
 
         /// <summary>
-        /// <para>The source ID.</para>
+        /// <para>The ID of the model source.</para>
         /// <list type="bullet">
-        /// <item><description>If the source type is Custom, this field is not limited.</description></item>
-        /// <item><description>If the source is PAIFlow or TrainingService, the format is:</description></item>
+        /// <item><description>If SourceType is set to Custom, this parameter is not limited.</description></item>
+        /// <item><description>If SourceType is set to PAIFlow or TrainingService, the ID of the model source is in the following format:</description></item>
         /// </list>
         /// <!---->
         /// 
         /// <pre><c>region=&lt;region_id&gt;,workspaceId=&lt;workspace_id&gt;,kind=&lt;kind&gt;,id=&lt;id&gt;
         /// </c></pre>
-        /// <para>Where,</para>
+        /// <para>Take note of the following parameters:</para>
         /// <list type="bullet">
-        /// <item><description>region is the region ID.</description></item>
-        /// <item><description>workspaceId is the ID of the workspace.</description></item>
-        /// <item><description>kind is the type. Valid values: PipelineRun (PAIFlow) and ServiceJob (training service).</description></item>
-        /// <item><description>id: a unique identifier.</description></item>
+        /// <item><description>region indicates the region ID.</description></item>
+        /// <item><description>workspaceId indicates the workspace ID.</description></item>
+        /// <item><description>kind indicates the type. Valid values: PipelineRun (PAIFlow) and ServiceJob (training service).</description></item>
+        /// <item><description>id indicates the unique identifier.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <list type="bullet">
         /// <item><description>Custom (default)</description></item>
         /// <item><description>PAIFlow</description></item>
-        /// <item><description>TrainingService: PAI training service.</description></item>
+        /// <item><description>TrainingService: the Platform for AI (PAI) training service.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>The training configurations. Used for fine-tuning and incremental training.</para>
+        /// <para>The training configurations, which is used for fine-tuning and incremental training.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <para>The URI of the model version, which is the location where the model is stored. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>The HTTP(S) address of the model. Example: <c>https://myweb.com/mymodel.tar.gz</c>.</description></item>
-        /// <item><description>The OSS path of the model, in the format of <c>oss://&lt;bucket&gt;.&lt;endpoint&gt;/object</c>. For endpoint, see <a href="https://help.aliyun.com/document_detail/31837.html">OSS regions and endpoints</a>. Example: <c>oss://mybucket.oss-cn-beijing.aliyuncs.com/mypath/</c>.</description></item>
+        /// <item><description>The OSS path of the model, in the format of <c>oss://&lt;bucket&gt;.&lt;endpoint&gt;/object</c>. For information about endpoints, see <a href="https://help.aliyun.com/document_detail/31837.html">OSS regions and endpoints</a>. Example: <c>oss://mybucket.oss-cn-beijing.aliyuncs.com/mypath/</c>.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -219,14 +219,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Uri { get; set; }
 
         /// <summary>
-        /// <para>The version descriptions.</para>
+        /// <para>The version description.</para>
         /// </summary>
         [NameInMap("VersionDescription")]
         [Validation(Required=false)]
         public string VersionDescription { get; set; }
 
         /// <summary>
-        /// <para>The model version, which is unique for each model. If left empty, the first version is <b>0.1.0</b> by default. After that, the version number is increased by 1 in sequence. For example, the second version number is <b>0.2.0</b>. A version number consists of a major version number, a minor version number, and a stage version number, separated by periods (.). Among them: the major version number and minor version number are numeric. The stage version number begins with a digit and can include numbers, underscores, and letters. For example, the version number is 1.1.0 or 2.3.4_beta.</para>
+        /// <para>The model version, which is unique for each model. If you leave this parameter empty, the first version is <b>0.1.0</b> by default. After that, the minor version number is increased by 1 in sequence. For example, the second version number is <b>0.2.0</b>. A version number consists of a major version number, a minor version number, and a stage version number, separated by periods (.). The major version number and minor version number are numeric. The stage version number begins with a digit and can include numbers, underscores, and letters. For example, the version number is 1.1.0 or 2.3.4_beta.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.1.0</para>
