@@ -105,12 +105,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The category of the data disk. Valid values for different disk categories:</para>
+        /// <para>The category of the data disk. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>cloud: basic disk</description></item>
-        /// <item><description>cloud_efficiency: utra disk</description></item>
+        /// <item><description>cloud_efficiency: ultra disk</description></item>
         /// <item><description>cloud_ssd: standard SSD</description></item>
-        /// <item><description>cloud_essd: ESSD</description></item>
+        /// <item><description>cloud_essd: Enterprise SSD (ESSD)</description></item>
         /// <item><description>cloud_auto: ESSD AutoPL disk</description></item>
         /// <item><description>cloud_essd_entry: ESSD Entry disk</description></item>
         /// <item><description>cloud_regional_disk_auto: Regional ESSD</description></item>
@@ -118,12 +118,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>elastic_ephemeral_disk_premium: premium elastic ephemeral disk</description></item>
         /// </list>
         /// <para>Default value: cloud.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>cloud_regional_disk_auto</description></item>
-        /// <item><description>elastic_ephemeral_disk_standard</description></item>
-        /// <item><description>elastic_ephemeral_disk_premium</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>cloud_ssd</para>
@@ -238,8 +232,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PerformanceLevel { get; set; }
 
         /// <summary>
-        /// <para>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</para>
-        /// <para>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}</para>
+        /// <para>The provisioned read/write IOPS per ESSD AutoPL disk. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Capacity (GiB) ≤ 3: not configurable.</description></item>
+        /// <item><description>Capacity (GiB) ≥ 4: [0, min{(1,000</description></item>
+        /// </list>
+        /// <para>IOPS/GiB × Capacity - Baseline IOPS), 50,000}].</para>
+        /// <para>Baseline IOPS = max{min{1,800 + 50 × Capacity, 50,000}, 3,000}.</para>
         /// <remarks>
         /// <para> This parameter is available only if you set <c>DiskCategory</c> to <c>cloud_auto</c>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</para>
         /// </remarks>
@@ -281,7 +280,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The disk size. Unit: GiB. This parameter is required. Valid values for different disk categories:</para>
+        /// <para>The disk size. Unit: GiB. You must specify this parameter. Valid values for different disk categories:</para>
         /// <list type="bullet">
         /// <item><description><para>Valid values when DiskCategory is set to cloud: 5 to 2000.</para>
         /// </description></item>
