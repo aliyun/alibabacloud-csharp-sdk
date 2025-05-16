@@ -48,18 +48,39 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             [Validation(Required=false)]
             public string CreateTimeStart { get; set; }
 
+            /// <summary>
+            /// <para>Job diagnosis and analysis list.</para>
+            /// </summary>
             [NameInMap("Diagnosis")]
             [Validation(Required=false)]
             public List<ListJobsRequestJobFilterDiagnosis> Diagnosis { get; set; }
             public class ListJobsRequestJobFilterDiagnosis : TeaModel {
+                /// <summary>
+                /// <para>Job diagnosis threshold comparator.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>greater</para>
+                /// </summary>
                 [NameInMap("Operator")]
                 [Validation(Required=false)]
                 public string Operator { get; set; }
 
+                /// <summary>
+                /// <para>Job diagnosis and analysis metrics</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>run_duration</para>
+                /// </summary>
                 [NameInMap("Option")]
                 [Validation(Required=false)]
                 public string Option { get; set; }
 
+                /// <summary>
+                /// <para>Job diagnosis threshold.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>24</para>
+                /// </summary>
                 [NameInMap("Threshold")]
                 [Validation(Required=false)]
                 public string Threshold { get; set; }

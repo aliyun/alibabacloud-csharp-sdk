@@ -463,10 +463,23 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         [Validation(Required=false)]
         public string MaxCount { get; set; }
 
+        /// <summary>
+        /// <para>The monitoring details of the cluster.</para>
+        /// </summary>
         [NameInMap("MonitorSpec")]
         [Validation(Required=false)]
         public GetClusterResponseBodyMonitorSpec MonitorSpec { get; set; }
         public class GetClusterResponseBodyMonitorSpec : TeaModel {
+            /// <summary>
+            /// <para>Indicates whether the monitoring component of compute nodes is enabled for the cluster. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true</description></item>
+            /// <item><description>false</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("EnableComputeLoadMonitor")]
             [Validation(Required=false)]
             public bool? EnableComputeLoadMonitor { get; set; }
@@ -493,10 +506,23 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// <para>The scheduler specifications of the cluster.</para>
+        /// </summary>
         [NameInMap("SchedulerSpec")]
         [Validation(Required=false)]
         public GetClusterResponseBodySchedulerSpec SchedulerSpec { get; set; }
         public class GetClusterResponseBodySchedulerSpec : TeaModel {
+            /// <summary>
+            /// <para>Indicates whether the topology awareness feature is enabled for the cluster. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true</description></item>
+            /// <item><description>false</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("EnableTopologyAwareness")]
             [Validation(Required=false)]
             public bool? EnableTopologyAwareness { get; set; }

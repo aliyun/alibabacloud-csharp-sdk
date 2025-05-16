@@ -176,22 +176,49 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
 
                 }
 
+                /// <summary>
+                /// <para>Actual resource usage of the job program</para>
+                /// </summary>
                 [NameInMap("ResourcesActualOccupied")]
                 [Validation(Required=false)]
                 public ListJobsResponseBodyJobsJobSpecResourcesActualOccupied ResourcesActualOccupied { get; set; }
                 public class ListJobsResponseBodyJobsJobSpecResourcesActualOccupied : TeaModel {
+                    /// <summary>
+                    /// <para>Number of CPU cores.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>4</para>
+                    /// </summary>
                     [NameInMap("Cores")]
                     [Validation(Required=false)]
                     public string Cores { get; set; }
 
+                    /// <summary>
+                    /// <para>Number of CPUs</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>0</para>
+                    /// </summary>
                     [NameInMap("Gpus")]
                     [Validation(Required=false)]
                     public string Gpus { get; set; }
 
+                    /// <summary>
+                    /// <para>Number of memory.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>982MB</para>
+                    /// </summary>
                     [NameInMap("Memory")]
                     [Validation(Required=false)]
                     public string Memory { get; set; }
 
+                    /// <summary>
+                    /// <para>Number of compute nodes.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>2</para>
+                    /// </summary>
                     [NameInMap("Nodes")]
                     [Validation(Required=false)]
                     public string Nodes { get; set; }
@@ -208,6 +235,12 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
                 [Validation(Required=false)]
                 public string RunasUser { get; set; }
 
+                /// <summary>
+                /// <para>Job start time.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1724122486</para>
+                /// </summary>
                 [NameInMap("StartTime")]
                 [Validation(Required=false)]
                 public string StartTime { get; set; }

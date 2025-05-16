@@ -163,6 +163,12 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             [Validation(Required=false)]
             public string RamRole { get; set; }
 
+            /// <summary>
+            /// <para>Preset node pool ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rnp-756vlp7a</para>
+            /// </summary>
             [NameInMap("ReservedNodePoolId")]
             [Validation(Required=false)]
             public string ReservedNodePoolId { get; set; }

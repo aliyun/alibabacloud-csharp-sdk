@@ -8,22 +8,23 @@ using Tea;
 
 namespace AlibabaCloud.SDK.EHPC20240730.Models
 {
-    public class UpdateClusterResponseBody : TeaModel {
+    public class AttachNodesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>04F0F334-1335-436C-A1D7-6C044FE7****</para>
+        /// <para>2263XXXX-XXXX-XXXX-XXXX-XXXX2448XXXX</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Request result, possible values: </para>
+        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: request succeeded </description></item>
-        /// <item><description>false: request failed</description></item>
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -1,3 +1,7 @@
+2025-05-16 Version: 2.1.0
+- Support API AttachNodes.
+
+
 2025-02-12 Version: 2.0.4
 - Update API CreateNodes: add param ReservedNodePoolId.
 - Update API GetQueue: update response param.

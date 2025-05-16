@@ -42,6 +42,12 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         [Validation(Required=false)]
         public int? Count { get; set; }
 
+        /// <summary>
+        /// <para>Deployment set ID. You can obtain the deployment set ID through <a href="https://help.aliyun.com/document_detail/91313.html">DescribeDeploymentSets</a>. Currently, only deployment sets with a low network latency strategy are supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ds-bp1frxuzdg87zh4pzq****</para>
+        /// </summary>
         [NameInMap("DeploymentSetId")]
         [Validation(Required=false)]
         public string DeploymentSetId { get; set; }
@@ -110,6 +116,12 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         [Validation(Required=false)]
         public string RamRole { get; set; }
 
+        /// <summary>
+        /// <para>Preset node pool ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rnp-756vlp7a</para>
+        /// </summary>
         [NameInMap("ReservedNodePoolId")]
         [Validation(Required=false)]
         public string ReservedNodePoolId { get; set; }

@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public int? MaxCount { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the queues in the cluster. The number of queues can be 0 to 8.</para>
+        /// <para>The queues in the cluster. The number of queues can be 0 to 8.</para>
         /// </summary>
         [NameInMap("Queues")]
         [Validation(Required=false)]
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>The configurations of shared storage in the cluster.</para>
+        /// <para>The shared storage resources of the cluster.</para>
         /// </summary>
         [NameInMap("SharedStorages")]
         [Validation(Required=false)]

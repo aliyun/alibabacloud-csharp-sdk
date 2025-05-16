@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
 {
     public class GetAddonResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the addon.</para>
+        /// <para>The information about the addon.</para>
         /// </summary>
         [NameInMap("Addon")]
         [Validation(Required=false)]

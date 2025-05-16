@@ -64,8 +64,8 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             /// <summary>
             /// <para>Specifies whether to enable auto scale-out for the queue. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description>true: deletion protection is enabled.</description></item>
+            /// <item><description>false: disables ASM.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             public bool? EnableScaleOut { get; set; }
 
             /// <summary>
-            /// <para>The hostname prefix of the compute nodes in the queue.</para>
+            /// <para>The hostname prefix of the added compute nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>compute</para>

@@ -8,40 +8,35 @@ using Tea;
 
 namespace AlibabaCloud.SDK.EHPC20240730.Models
 {
-    public class ListUsersRequest : TeaModel {
+    public class AttachNodesShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ehpc-hz-FYUr32****</para>
+        /// <para>ehpc-hz-xxxxxxx</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the page to return.</para>
-        /// <para>Pages start from page 1.</para>
-        /// <para>Default value: 1.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>The compute node information.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
-        [NameInMap("PageNumber")]
+        [NameInMap("ComputeNode")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public string ComputeNodeShrink { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 50.</para>
-        /// <para>Default value: 10.</para>
+        /// <para>The name of the queue to which the instance is to be added.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10</para>
+        /// <para>comp</para>
         /// </summary>
-        [NameInMap("PageSize")]
+        [NameInMap("QueueName")]
         [Validation(Required=false)]
-        public int? PageSize { get; set; }
+        public string QueueName { get; set; }
 
     }
 
