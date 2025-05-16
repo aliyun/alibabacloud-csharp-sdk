@@ -11,15 +11,13 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
     public class ListTextbookAssistantGradeVolumesResponseBody : TeaModel {
         [NameInMap("data")]
         [Validation(Required=false)]
-        public ListTextbookAssistantGradeVolumesResponseBodyData Data { get; set; }
+        public List<ListTextbookAssistantGradeVolumesResponseBodyData> Data { get; set; }
         public class ListTextbookAssistantGradeVolumesResponseBodyData : TeaModel {
             [NameInMap("gradeVolumes")]
             [Validation(Required=false)]
             public List<ListTextbookAssistantGradeVolumesResponseBodyDataGradeVolumes> GradeVolumes { get; set; }
             public class ListTextbookAssistantGradeVolumesResponseBodyDataGradeVolumes : TeaModel {
                 /// <summary>
-                /// <para>This parameter is required.</para>
-                /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
                 /// </summary>
@@ -28,8 +26,6 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 public string Grade { get; set; }
 
                 /// <summary>
-                /// <para>This parameter is required.</para>
-                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -40,8 +36,6 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             }
 
             /// <summary>
-            /// <para>This parameter is required.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>人教版</para>
             /// </summary>

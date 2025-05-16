@@ -13,15 +13,23 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         [Validation(Required=false)]
         public string EssayOutline { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("essayRequirements")]
         [Validation(Required=false)]
         public string EssayRequirements { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("essayTopic")]
         [Validation(Required=false)]
         public string EssayTopic { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>essay</para>
         /// </summary>
@@ -38,6 +46,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? EssayWordCount { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -46,6 +56,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? Grade { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>streaming</para>
         /// </summary>
@@ -54,6 +66,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ResponseMode { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxxxxxxx</para>
         /// </summary>

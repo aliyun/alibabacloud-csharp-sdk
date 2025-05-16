@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ChatId { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>How much is this?</para>
         /// </summary>
@@ -42,6 +44,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string QuestionId { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>How to inquire about the price</para>
         /// </summary>
@@ -50,6 +54,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string QuestionInfo { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>sreaming</para>
         /// </summary>
@@ -58,6 +64,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ResponseMode { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>How much is this?</para>
         /// </summary>
@@ -66,6 +74,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string UserAnswer { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxxxxx</para>
         /// </summary>

@@ -41,6 +41,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string EssayTopic { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>essay</para>
         /// </summary>
