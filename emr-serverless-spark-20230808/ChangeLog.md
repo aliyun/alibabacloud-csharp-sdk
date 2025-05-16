@@ -1,3 +1,6 @@
+2025-05-16 Version: 1.8.4
+- Generated csharp 2023-08-08 for emr-serverless-spark.
+
 2025-05-06 Version: 1.8.3
 - Generated csharp 2023-08-08 for emr-serverless-spark.
 
