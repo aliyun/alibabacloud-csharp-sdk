@@ -2325,6 +2325,150 @@ namespace AlibabaCloud.SDK.Domain20180208
             return await QueryExchangeRateWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询导出的抢注域名</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryExportDomainExpireSnatchsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryExportDomainExpireSnatchsResponse
+        /// </returns>
+        public QueryExportDomainExpireSnatchsResponse QueryExportDomainExpireSnatchsWithOptions(QueryExportDomainExpireSnatchsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentId))
+            {
+                query["CurrentId"] = request.CurrentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryExportDomainExpireSnatchs",
+                Version = "2018-02-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryExportDomainExpireSnatchsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询导出的抢注域名</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryExportDomainExpireSnatchsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryExportDomainExpireSnatchsResponse
+        /// </returns>
+        public async Task<QueryExportDomainExpireSnatchsResponse> QueryExportDomainExpireSnatchsWithOptionsAsync(QueryExportDomainExpireSnatchsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentId))
+            {
+                query["CurrentId"] = request.CurrentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryExportDomainExpireSnatchs",
+                Version = "2018-02-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryExportDomainExpireSnatchsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询导出的抢注域名</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryExportDomainExpireSnatchsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryExportDomainExpireSnatchsResponse
+        /// </returns>
+        public QueryExportDomainExpireSnatchsResponse QueryExportDomainExpireSnatchs(QueryExportDomainExpireSnatchsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryExportDomainExpireSnatchsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询导出的抢注域名</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryExportDomainExpireSnatchsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryExportDomainExpireSnatchsResponse
+        /// </returns>
+        public async Task<QueryExportDomainExpireSnatchsResponse> QueryExportDomainExpireSnatchsAsync(QueryExportDomainExpireSnatchsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryExportDomainExpireSnatchsWithOptionsAsync(request, runtime);
+        }
+
         /// <param name="request">
         /// QueryPurchasedDomainsRequest
         /// </param>
