@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public string ExecutionTime { get; set; }
 
+        [NameInMap("FlinkResourceId")]
+        [Validation(Required=false)]
+        public string FlinkResourceId { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>pairec-cn-***test</para>

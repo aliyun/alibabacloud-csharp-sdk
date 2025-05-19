@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class CheckInstanceResourcesRequest : TeaModel {
+        [NameInMap("ResourceId")]
+        [Validation(Required=false)]
+        public string ResourceId { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

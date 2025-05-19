@@ -53,6 +53,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             [Validation(Required=false)]
             public string ExecutionTime { get; set; }
 
+            [NameInMap("FlinkResourceId")]
+            [Validation(Required=false)]
+            public string FlinkResourceId { get; set; }
+
+            [NameInMap("FlinkResourceName")]
+            [Validation(Required=false)]
+            public string FlinkResourceName { get; set; }
+
             [NameInMap("GmtCreateTime")]
             [Validation(Required=false)]
             public string GmtCreateTime { get; set; }
