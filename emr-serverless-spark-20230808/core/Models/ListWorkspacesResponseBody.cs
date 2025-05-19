@@ -251,6 +251,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 [Validation(Required=false)]
                 public string MaxResource { get; set; }
 
+                [NameInMap("orderId")]
+                [Validation(Required=false)]
+                public string OrderId { get; set; }
+
                 /// <summary>
                 /// <para>The status of the subscription quota. Valid values:</para>
                 /// <list type="bullet">

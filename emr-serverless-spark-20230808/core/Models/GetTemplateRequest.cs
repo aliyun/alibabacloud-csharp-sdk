@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("templateBizId")]
+        [Validation(Required=false)]
+        public string TemplateBizId { get; set; }
+
         /// <summary>
         /// <para>The template type.</para>
         /// <para>Valid values:</para>

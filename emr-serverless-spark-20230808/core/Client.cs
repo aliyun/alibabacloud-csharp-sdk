@@ -678,6 +678,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             {
                 body["name"] = request.Name;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublicEndpointEnabled))
+            {
+                body["publicEndpointEnabled"] = request.PublicEndpointEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueName))
             {
                 body["queueName"] = request.QueueName;
@@ -765,6 +769,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublicEndpointEnabled))
+            {
+                body["publicEndpointEnabled"] = request.PublicEndpointEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueName))
             {
@@ -2135,6 +2143,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             {
                 query["regionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateBizId))
+            {
+                query["templateBizId"] = request.TemplateBizId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateType))
             {
                 query["templateType"] = request.TemplateType;
@@ -2184,6 +2196,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["regionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateBizId))
+            {
+                query["templateBizId"] = request.TemplateBizId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateType))
             {

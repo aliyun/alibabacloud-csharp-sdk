@@ -229,6 +229,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            [NameInMap("publicEndpointEnabled")]
+            [Validation(Required=false)]
+            public bool? PublicEndpointEnabled { get; set; }
+
             /// <summary>
             /// <para>The name of the queue that is used to run the session.</para>
             /// 

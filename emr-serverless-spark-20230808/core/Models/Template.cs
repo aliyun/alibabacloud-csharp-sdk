@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class Template : TeaModel {
+        [NameInMap("bizId")]
+        [Validation(Required=false)]
+        public string BizId { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -38,12 +42,20 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public string GmtModified { get; set; }
 
+        [NameInMap("isDefault")]
+        [Validation(Required=false)]
+        public bool? IsDefault { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("modifier")]
         [Validation(Required=false)]
         public long? Modifier { get; set; }
+
+        [NameInMap("name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
 
         [NameInMap("sparkConf")]
         [Validation(Required=false)]
