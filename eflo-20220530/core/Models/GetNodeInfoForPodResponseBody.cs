@@ -46,6 +46,10 @@ namespace AlibabaCloud.SDK.Eflo20220530.Models
             [Validation(Required=false)]
             public string ClusterId { get; set; }
 
+            [NameInMap("HdeniIpv6SipQuota")]
+            [Validation(Required=false)]
+            public int? HdeniIpv6SipQuota { get; set; }
+
             /// <summary>
             /// <para>Lingjun Gaomi network interface controller quota</para>
             /// 
@@ -55,6 +59,14 @@ namespace AlibabaCloud.SDK.Eflo20220530.Models
             [NameInMap("HdeniQuota")]
             [Validation(Required=false)]
             public int? HdeniQuota { get; set; }
+
+            [NameInMap("HdeniSipQuota")]
+            [Validation(Required=false)]
+            public int? HdeniSipQuota { get; set; }
+
+            [NameInMap("LeniIpv6SipQuota")]
+            [Validation(Required=false)]
+            public int? LeniIpv6SipQuota { get; set; }
 
             /// <summary>
             /// <para>Lingjun Elastic Network Interface quota, including system type</para>
@@ -132,18 +144,6 @@ namespace AlibabaCloud.SDK.Eflo20220530.Models
             [NameInMap("ZoneId")]
             [Validation(Required=false)]
             public string ZoneId { get; set; }
-
-            [NameInMap("hdeniIpv6SipQuota")]
-            [Validation(Required=false)]
-            public int? HdeniIpv6SipQuota { get; set; }
-
-            [NameInMap("hdeniSipQuota")]
-            [Validation(Required=false)]
-            public int? HdeniSipQuota { get; set; }
-
-            [NameInMap("leniIpv6SipQuota")]
-            [Validation(Required=false)]
-            public int? LeniIpv6SipQuota { get; set; }
 
         }
 
