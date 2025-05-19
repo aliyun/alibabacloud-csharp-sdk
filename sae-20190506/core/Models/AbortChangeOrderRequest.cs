@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string ChangeOrderId { get; set; }
 
+        [NameInMap("Rollback")]
+        [Validation(Required=false)]
+        public bool? Rollback { get; set; }
+
     }
 
 }

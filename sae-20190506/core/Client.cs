@@ -193,6 +193,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["ChangeOrderId"] = request.ChangeOrderId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rollback))
+            {
+                query["Rollback"] = request.Rollback;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -238,6 +242,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChangeOrderId))
             {
                 query["ChangeOrderId"] = request.ChangeOrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rollback))
+            {
+                query["Rollback"] = request.Rollback;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3201,6 +3209,410 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建或者更新泳道</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateOrUpdateSwimmingLaneRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOrUpdateSwimmingLaneResponse
+        /// </returns>
+        public CreateOrUpdateSwimmingLaneResponse CreateOrUpdateSwimmingLaneWithOptions(CreateOrUpdateSwimmingLaneRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateOrUpdateSwimmingLaneShrinkRequest request = new CreateOrUpdateSwimmingLaneShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AppEntryRule))
+            {
+                request.AppEntryRuleShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AppEntryRule, "AppEntryRule", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MseGatewayEntryRule))
+            {
+                request.MseGatewayEntryRuleShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MseGatewayEntryRule, "MseGatewayEntryRule", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppEntryRuleShrink))
+            {
+                query["AppEntryRule"] = request.AppEntryRuleShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CanaryModel))
+            {
+                query["CanaryModel"] = request.CanaryModel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
+            {
+                query["Enable"] = request.Enable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LaneId))
+            {
+                query["LaneId"] = request.LaneId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LaneName))
+            {
+                query["LaneName"] = request.LaneName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LaneTag))
+            {
+                query["LaneTag"] = request.LaneTag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MseGatewayEntryRuleShrink))
+            {
+                query["MseGatewayEntryRule"] = request.MseGatewayEntryRuleShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateOrUpdateSwimmingLane",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v1/cas/gray/createOrUpdateSwimmingLane",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateOrUpdateSwimmingLaneResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建或者更新泳道</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateOrUpdateSwimmingLaneRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOrUpdateSwimmingLaneResponse
+        /// </returns>
+        public async Task<CreateOrUpdateSwimmingLaneResponse> CreateOrUpdateSwimmingLaneWithOptionsAsync(CreateOrUpdateSwimmingLaneRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateOrUpdateSwimmingLaneShrinkRequest request = new CreateOrUpdateSwimmingLaneShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AppEntryRule))
+            {
+                request.AppEntryRuleShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AppEntryRule, "AppEntryRule", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MseGatewayEntryRule))
+            {
+                request.MseGatewayEntryRuleShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MseGatewayEntryRule, "MseGatewayEntryRule", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppEntryRuleShrink))
+            {
+                query["AppEntryRule"] = request.AppEntryRuleShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CanaryModel))
+            {
+                query["CanaryModel"] = request.CanaryModel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
+            {
+                query["Enable"] = request.Enable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LaneId))
+            {
+                query["LaneId"] = request.LaneId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LaneName))
+            {
+                query["LaneName"] = request.LaneName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LaneTag))
+            {
+                query["LaneTag"] = request.LaneTag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MseGatewayEntryRuleShrink))
+            {
+                query["MseGatewayEntryRule"] = request.MseGatewayEntryRuleShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateOrUpdateSwimmingLane",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v1/cas/gray/createOrUpdateSwimmingLane",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateOrUpdateSwimmingLaneResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建或者更新泳道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateOrUpdateSwimmingLaneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOrUpdateSwimmingLaneResponse
+        /// </returns>
+        public CreateOrUpdateSwimmingLaneResponse CreateOrUpdateSwimmingLane(CreateOrUpdateSwimmingLaneRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateOrUpdateSwimmingLaneWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建或者更新泳道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateOrUpdateSwimmingLaneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOrUpdateSwimmingLaneResponse
+        /// </returns>
+        public async Task<CreateOrUpdateSwimmingLaneResponse> CreateOrUpdateSwimmingLaneAsync(CreateOrUpdateSwimmingLaneRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateOrUpdateSwimmingLaneWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建或者更新泳道组</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateOrUpdateSwimmingLaneGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOrUpdateSwimmingLaneGroupResponse
+        /// </returns>
+        public CreateOrUpdateSwimmingLaneGroupResponse CreateOrUpdateSwimmingLaneGroupWithOptions(CreateOrUpdateSwimmingLaneGroupRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateOrUpdateSwimmingLaneGroupShrinkRequest request = new CreateOrUpdateSwimmingLaneGroupShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AppIds))
+            {
+                request.AppIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AppIds, "AppIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppIdsShrink))
+            {
+                query["AppIds"] = request.AppIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntryAppId))
+            {
+                query["EntryAppId"] = request.EntryAppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntryAppType))
+            {
+                query["EntryAppType"] = request.EntryAppType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
+            {
+                query["GroupName"] = request.GroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SwimVersion))
+            {
+                query["SwimVersion"] = request.SwimVersion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateOrUpdateSwimmingLaneGroup",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v1/cas/gray/createOrUpdateSwimmingLaneGroup",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateOrUpdateSwimmingLaneGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建或者更新泳道组</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateOrUpdateSwimmingLaneGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOrUpdateSwimmingLaneGroupResponse
+        /// </returns>
+        public async Task<CreateOrUpdateSwimmingLaneGroupResponse> CreateOrUpdateSwimmingLaneGroupWithOptionsAsync(CreateOrUpdateSwimmingLaneGroupRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateOrUpdateSwimmingLaneGroupShrinkRequest request = new CreateOrUpdateSwimmingLaneGroupShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AppIds))
+            {
+                request.AppIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AppIds, "AppIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppIdsShrink))
+            {
+                query["AppIds"] = request.AppIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntryAppId))
+            {
+                query["EntryAppId"] = request.EntryAppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntryAppType))
+            {
+                query["EntryAppType"] = request.EntryAppType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
+            {
+                query["GroupName"] = request.GroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SwimVersion))
+            {
+                query["SwimVersion"] = request.SwimVersion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateOrUpdateSwimmingLaneGroup",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v1/cas/gray/createOrUpdateSwimmingLaneGroup",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateOrUpdateSwimmingLaneGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建或者更新泳道组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateOrUpdateSwimmingLaneGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOrUpdateSwimmingLaneGroupResponse
+        /// </returns>
+        public CreateOrUpdateSwimmingLaneGroupResponse CreateOrUpdateSwimmingLaneGroup(CreateOrUpdateSwimmingLaneGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateOrUpdateSwimmingLaneGroupWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建或者更新泳道组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateOrUpdateSwimmingLaneGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOrUpdateSwimmingLaneGroupResponse
+        /// </returns>
+        public async Task<CreateOrUpdateSwimmingLaneGroupResponse> CreateOrUpdateSwimmingLaneGroupAsync(CreateOrUpdateSwimmingLaneGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateOrUpdateSwimmingLaneGroupWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Null</para>
         /// </summary>
         /// 
@@ -4869,6 +5281,144 @@ namespace AlibabaCloud.SDK.Sae20190506
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteSecretWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除泳道组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSwimmingLaneGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSwimmingLaneGroupResponse
+        /// </returns>
+        public DeleteSwimmingLaneGroupResponse DeleteSwimmingLaneGroupWithOptions(DeleteSwimmingLaneGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSwimmingLaneGroup",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v1/cas/gray/deleteSwimmingLaneGroup",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSwimmingLaneGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除泳道组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSwimmingLaneGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSwimmingLaneGroupResponse
+        /// </returns>
+        public async Task<DeleteSwimmingLaneGroupResponse> DeleteSwimmingLaneGroupWithOptionsAsync(DeleteSwimmingLaneGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSwimmingLaneGroup",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v1/cas/gray/deleteSwimmingLaneGroup",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSwimmingLaneGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除泳道组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSwimmingLaneGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSwimmingLaneGroupResponse
+        /// </returns>
+        public DeleteSwimmingLaneGroupResponse DeleteSwimmingLaneGroup(DeleteSwimmingLaneGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteSwimmingLaneGroupWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除泳道组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSwimmingLaneGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSwimmingLaneGroupResponse
+        /// </returns>
+        public async Task<DeleteSwimmingLaneGroupResponse> DeleteSwimmingLaneGroupAsync(DeleteSwimmingLaneGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteSwimmingLaneGroupWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -9805,6 +10355,152 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询泳道详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSwimmingLaneRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSwimmingLaneResponse
+        /// </returns>
+        public DescribeSwimmingLaneResponse DescribeSwimmingLaneWithOptions(DescribeSwimmingLaneRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LaneId))
+            {
+                query["LaneId"] = request.LaneId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSwimmingLane",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v1/cas/gray/describeSwimmingLane",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSwimmingLaneResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询泳道详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSwimmingLaneRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSwimmingLaneResponse
+        /// </returns>
+        public async Task<DescribeSwimmingLaneResponse> DescribeSwimmingLaneWithOptionsAsync(DescribeSwimmingLaneRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LaneId))
+            {
+                query["LaneId"] = request.LaneId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSwimmingLane",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v1/cas/gray/describeSwimmingLane",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSwimmingLaneResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询泳道详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSwimmingLaneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSwimmingLaneResponse
+        /// </returns>
+        public DescribeSwimmingLaneResponse DescribeSwimmingLane(DescribeSwimmingLaneRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DescribeSwimmingLaneWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询泳道详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSwimmingLaneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSwimmingLaneResponse
+        /// </returns>
+        public async Task<DescribeSwimmingLaneResponse> DescribeSwimmingLaneAsync(DescribeSwimmingLaneRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DescribeSwimmingLaneWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Query web applications.</para>
         /// </summary>
         /// 
@@ -12581,6 +13277,274 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询所有泳道组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAllSwimmingLaneGroupsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAllSwimmingLaneGroupsResponse
+        /// </returns>
+        public ListAllSwimmingLaneGroupsResponse ListAllSwimmingLaneGroupsWithOptions(ListAllSwimmingLaneGroupsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAllSwimmingLaneGroups",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v1/cas/gray/listSwimmingLaneGroups",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAllSwimmingLaneGroupsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询所有泳道组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAllSwimmingLaneGroupsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAllSwimmingLaneGroupsResponse
+        /// </returns>
+        public async Task<ListAllSwimmingLaneGroupsResponse> ListAllSwimmingLaneGroupsWithOptionsAsync(ListAllSwimmingLaneGroupsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAllSwimmingLaneGroups",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v1/cas/gray/listSwimmingLaneGroups",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAllSwimmingLaneGroupsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询所有泳道组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAllSwimmingLaneGroupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAllSwimmingLaneGroupsResponse
+        /// </returns>
+        public ListAllSwimmingLaneGroupsResponse ListAllSwimmingLaneGroups(ListAllSwimmingLaneGroupsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListAllSwimmingLaneGroupsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询所有泳道组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAllSwimmingLaneGroupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAllSwimmingLaneGroupsResponse
+        /// </returns>
+        public async Task<ListAllSwimmingLaneGroupsResponse> ListAllSwimmingLaneGroupsAsync(ListAllSwimmingLaneGroupsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListAllSwimmingLaneGroupsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询所有泳道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAllSwimmingLanesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAllSwimmingLanesResponse
+        /// </returns>
+        public ListAllSwimmingLanesResponse ListAllSwimmingLanesWithOptions(ListAllSwimmingLanesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAllSwimmingLanes",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v1/cas/gray/listSwimmingLanes",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAllSwimmingLanesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询所有泳道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAllSwimmingLanesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAllSwimmingLanesResponse
+        /// </returns>
+        public async Task<ListAllSwimmingLanesResponse> ListAllSwimmingLanesWithOptionsAsync(ListAllSwimmingLanesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAllSwimmingLanes",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v1/cas/gray/listSwimmingLanes",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAllSwimmingLanesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询所有泳道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAllSwimmingLanesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAllSwimmingLanesResponse
+        /// </returns>
+        public ListAllSwimmingLanesResponse ListAllSwimmingLanes(ListAllSwimmingLanesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListAllSwimmingLanesWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询所有泳道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAllSwimmingLanesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAllSwimmingLanesResponse
+        /// </returns>
+        public async Task<ListAllSwimmingLanesResponse> ListAllSwimmingLanesAsync(ListAllSwimmingLanesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListAllSwimmingLanesWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the events that occurred in an application.</para>
         /// </summary>
         /// 
@@ -15109,6 +16073,282 @@ namespace AlibabaCloud.SDK.Sae20190506
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListSecretsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询泳道可选的网关路由</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSwimmingLaneGatewayRoutesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSwimmingLaneGatewayRoutesResponse
+        /// </returns>
+        public ListSwimmingLaneGatewayRoutesResponse ListSwimmingLaneGatewayRoutesWithOptions(ListSwimmingLaneGatewayRoutesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayUniqueId))
+            {
+                query["GatewayUniqueId"] = request.GatewayUniqueId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSwimmingLaneGatewayRoutes",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v1/cas/gray/listSwimmingLaneGatewayRoutes",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSwimmingLaneGatewayRoutesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询泳道可选的网关路由</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSwimmingLaneGatewayRoutesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSwimmingLaneGatewayRoutesResponse
+        /// </returns>
+        public async Task<ListSwimmingLaneGatewayRoutesResponse> ListSwimmingLaneGatewayRoutesWithOptionsAsync(ListSwimmingLaneGatewayRoutesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayUniqueId))
+            {
+                query["GatewayUniqueId"] = request.GatewayUniqueId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSwimmingLaneGatewayRoutes",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v1/cas/gray/listSwimmingLaneGatewayRoutes",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSwimmingLaneGatewayRoutesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询泳道可选的网关路由</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSwimmingLaneGatewayRoutesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSwimmingLaneGatewayRoutesResponse
+        /// </returns>
+        public ListSwimmingLaneGatewayRoutesResponse ListSwimmingLaneGatewayRoutes(ListSwimmingLaneGatewayRoutesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListSwimmingLaneGatewayRoutesWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询泳道可选的网关路由</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSwimmingLaneGatewayRoutesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSwimmingLaneGatewayRoutesResponse
+        /// </returns>
+        public async Task<ListSwimmingLaneGatewayRoutesResponse> ListSwimmingLaneGatewayRoutesAsync(ListSwimmingLaneGatewayRoutesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListSwimmingLaneGatewayRoutesWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询所有泳道标签列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSwimmingLaneGroupTagsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSwimmingLaneGroupTagsResponse
+        /// </returns>
+        public ListSwimmingLaneGroupTagsResponse ListSwimmingLaneGroupTagsWithOptions(ListSwimmingLaneGroupTagsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSwimmingLaneGroupTags",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v1/cas/gray/listSwimmingLaneGroupTags",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSwimmingLaneGroupTagsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询所有泳道标签列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSwimmingLaneGroupTagsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSwimmingLaneGroupTagsResponse
+        /// </returns>
+        public async Task<ListSwimmingLaneGroupTagsResponse> ListSwimmingLaneGroupTagsWithOptionsAsync(ListSwimmingLaneGroupTagsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSwimmingLaneGroupTags",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v1/cas/gray/listSwimmingLaneGroupTags",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSwimmingLaneGroupTagsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询所有泳道标签列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSwimmingLaneGroupTagsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSwimmingLaneGroupTagsResponse
+        /// </returns>
+        public ListSwimmingLaneGroupTagsResponse ListSwimmingLaneGroupTags(ListSwimmingLaneGroupTagsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListSwimmingLaneGroupTagsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询所有泳道标签列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSwimmingLaneGroupTagsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSwimmingLaneGroupTagsResponse
+        /// </returns>
+        public async Task<ListSwimmingLaneGroupTagsResponse> ListSwimmingLaneGroupTagsAsync(ListSwimmingLaneGroupTagsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListSwimmingLaneGroupTagsWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -20847,6 +22087,160 @@ namespace AlibabaCloud.SDK.Sae20190506
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateSecretWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新泳道的启用属性</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSwimmingLaneEnableAttributeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSwimmingLaneEnableAttributeResponse
+        /// </returns>
+        public UpdateSwimmingLaneEnableAttributeResponse UpdateSwimmingLaneEnableAttributeWithOptions(UpdateSwimmingLaneEnableAttributeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
+            {
+                query["Enable"] = request.Enable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LaneId))
+            {
+                query["LaneId"] = request.LaneId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateSwimmingLaneEnableAttribute",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v1/cas/gray/updateSwimmingLaneEnableAttribute",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateSwimmingLaneEnableAttributeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新泳道的启用属性</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSwimmingLaneEnableAttributeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSwimmingLaneEnableAttributeResponse
+        /// </returns>
+        public async Task<UpdateSwimmingLaneEnableAttributeResponse> UpdateSwimmingLaneEnableAttributeWithOptionsAsync(UpdateSwimmingLaneEnableAttributeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
+            {
+                query["Enable"] = request.Enable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LaneId))
+            {
+                query["LaneId"] = request.LaneId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateSwimmingLaneEnableAttribute",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v1/cas/gray/updateSwimmingLaneEnableAttribute",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateSwimmingLaneEnableAttributeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新泳道的启用属性</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSwimmingLaneEnableAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSwimmingLaneEnableAttributeResponse
+        /// </returns>
+        public UpdateSwimmingLaneEnableAttributeResponse UpdateSwimmingLaneEnableAttribute(UpdateSwimmingLaneEnableAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateSwimmingLaneEnableAttributeWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新泳道的启用属性</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSwimmingLaneEnableAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSwimmingLaneEnableAttributeResponse
+        /// </returns>
+        public async Task<UpdateSwimmingLaneEnableAttributeResponse> UpdateSwimmingLaneEnableAttributeAsync(UpdateSwimmingLaneEnableAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateSwimmingLaneEnableAttributeWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
