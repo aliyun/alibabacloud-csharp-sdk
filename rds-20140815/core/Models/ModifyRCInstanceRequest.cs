@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
+        [NameInMap("AutoUseCoupon")]
+        [Validation(Required=false)]
+        public bool? AutoUseCoupon { get; set; }
+
         /// <summary>
         /// <para>The type of the change that you want to perform on the instance. Valid values:</para>
         /// <remarks>
@@ -76,6 +80,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
         public string InstanceType { get; set; }
+
+        [NameInMap("PromotionCode")]
+        [Validation(Required=false)]
+        public string PromotionCode { get; set; }
 
         [NameInMap("RebootTime")]
         [Validation(Required=false)]

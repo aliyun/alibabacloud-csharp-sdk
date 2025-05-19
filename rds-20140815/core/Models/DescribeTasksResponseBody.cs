@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribeTasksResponseBodyItemsTaskProgressInfo> TaskProgressInfo { get; set; }
             public class DescribeTasksResponseBodyItemsTaskProgressInfo : TeaModel {
                 /// <summary>
-                /// <para>The start time of the task. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC .</para>
+                /// <para>The start time of the task. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-11-20T01:00Z</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// <para>The estimated end time of the task.</para>
                 /// <remarks>
-                /// <para>In most cases, this parameter is empty.</para>
+                /// <para> In most cases, this parameter is empty.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string FinishTime { get; set; }
 
                 /// <summary>
-                /// <para>The progress of the task in percentage.</para>
+                /// <para>The task progress in percentage.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// <para>The description of the task progress.</para>
                 /// <remarks>
-                /// <para>If no progress description is provided for the task, this parameter is empty.</para>
+                /// <para> If no progress description is provided for the task, this parameter is empty.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// <para>The error code that is returned when an error occurs.</para>
                 /// <remarks>
-                /// <para>This parameter is returned only when an error occurs.</para>
+                /// <para> This parameter is returned only when an error occurs.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string TaskErrorMessage { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the task.</para>
+                /// <para>The task ID. You can use one of the following methods to obtain the task ID:</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3472xxxxx</para>
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A103039D-B1B2-4C57-B989-7D7C0DA95426</para>
@@ -220,7 +220,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned entries.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>40</para>

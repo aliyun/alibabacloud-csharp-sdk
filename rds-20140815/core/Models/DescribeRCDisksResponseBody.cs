@@ -19,9 +19,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>The category of the disk. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>cloud_efficiency</b>: ultra disk</description></item>
-            /// <item><description><b>cloud_ssd</b>: standard SSD</description></item>
-            /// <item><description><b>cloud_essd</b>: ESSD</description></item>
+            /// <item><description><b>cloud_efficiency</b>: ultra disk.</description></item>
+            /// <item><description><b>cloud_ssd</b>: standard SSD.</description></item>
+            /// <item><description><b>cloud_essd</b>: ESSD.</description></item>
             /// <item><description><b>cloud_auto</b>: Premium ESSD</description></item>
             /// </list>
             /// 
@@ -280,6 +280,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [NameInMap("StorageSetId")]
             [Validation(Required=false)]
             public string StorageSetId { get; set; }
+
+            [NameInMap("Tag")]
+            [Validation(Required=false)]
+            public List<DescribeRCDisksResponseBodyDisksTag> Tag { get; set; }
+            public class DescribeRCDisksResponseBodyDisksTag : TeaModel {
+                [NameInMap("TagKey")]
+                [Validation(Required=false)]
+                public string TagKey { get; set; }
+
+                [NameInMap("TagValue")]
+                [Validation(Required=false)]
+                public string TagValue { get; set; }
+
+            }
 
             /// <summary>
             /// <para>The disk type. Valid values:</para>

@@ -23,8 +23,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enables the feature. Make sure that your account balance is sufficient.</description></item>
-        /// <item><description><b>false</b>: disables the feature. An unpaid order is generated.</description></item>
+        /// <item><description><b>true</b>: enables the feature. Make sure that your account balance is sufficient when you enable automatic payment.</description></item>
+        /// <item><description><b>false</b>: does not automatically complete the payment. An unpaid order is generated.</description></item>
         /// </list>
         /// <remarks>
         /// <para> Default value: true. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.</para>

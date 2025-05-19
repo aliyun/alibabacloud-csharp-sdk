@@ -11428,6 +11428,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
             {
                 query["Size"] = request.Size;
@@ -11435,6 +11439,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnapshotId))
             {
                 query["SnapshotId"] = request.SnapshotId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
             {
@@ -11522,6 +11530,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
             {
                 query["Size"] = request.Size;
@@ -11529,6 +11541,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnapshotId))
             {
                 query["SnapshotId"] = request.SnapshotId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
             {
@@ -41007,8 +41023,16 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询RDS Custom实例被DDos攻击的数量</para>
+        /// <para>Queries the number of DDos attacks on an RDS Custom for SQL Server instance and monitors the security status of the instance in real time to assess potential security risks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>SQL Server</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to ApsaraDB RDS Custom</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeRCInstanceDdosCountRequest
@@ -41057,8 +41081,16 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询RDS Custom实例被DDos攻击的数量</para>
+        /// <para>Queries the number of DDos attacks on an RDS Custom for SQL Server instance and monitors the security status of the instance in real time to assess potential security risks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>SQL Server</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to ApsaraDB RDS Custom</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeRCInstanceDdosCountRequest
@@ -41107,8 +41139,16 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询RDS Custom实例被DDos攻击的数量</para>
+        /// <para>Queries the number of DDos attacks on an RDS Custom for SQL Server instance and monitors the security status of the instance in real time to assess potential security risks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>SQL Server</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to ApsaraDB RDS Custom</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeRCInstanceDdosCountRequest
@@ -41125,8 +41165,16 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询RDS Custom实例被DDos攻击的数量</para>
+        /// <para>Queries the number of DDos attacks on an RDS Custom for SQL Server instance and monitors the security status of the instance in real time to assess potential security risks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>SQL Server</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to ApsaraDB RDS Custom</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeRCInstanceDdosCountRequest
@@ -41383,8 +41431,19 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询RDS Custom实例的公网IP</para>
+        /// <para>Queries the protection information about an RDS Custom for SQL Server instance and the details of the Anti-DDoS Origin instance to which the RDS Custom instance is added.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>SQL Server</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to ApsaraDB RDS Custom</a></para>
+        /// <remarks>
+        /// <para> If one or more assets of the current Alibaba Cloud account are added to an <a href="https://help.aliyun.com/document_detail/63643.html">Anti-DDoS Origin instance</a>, you can call the DescribeRCInstanceIpAddress operation to query the DDoS mitigation information and the details of the Anti-DDoS Origin instance. The information and the details include the basic protection threshold and traffic scrubbing threshold for the assets, DDoS mitigation status of the assets, ID of the instance, and the mitigation status of the instance.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeRCInstanceIpAddressRequest
@@ -41461,8 +41520,19 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询RDS Custom实例的公网IP</para>
+        /// <para>Queries the protection information about an RDS Custom for SQL Server instance and the details of the Anti-DDoS Origin instance to which the RDS Custom instance is added.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>SQL Server</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to ApsaraDB RDS Custom</a></para>
+        /// <remarks>
+        /// <para> If one or more assets of the current Alibaba Cloud account are added to an <a href="https://help.aliyun.com/document_detail/63643.html">Anti-DDoS Origin instance</a>, you can call the DescribeRCInstanceIpAddress operation to query the DDoS mitigation information and the details of the Anti-DDoS Origin instance. The information and the details include the basic protection threshold and traffic scrubbing threshold for the assets, DDoS mitigation status of the assets, ID of the instance, and the mitigation status of the instance.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeRCInstanceIpAddressRequest
@@ -41539,8 +41609,19 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询RDS Custom实例的公网IP</para>
+        /// <para>Queries the protection information about an RDS Custom for SQL Server instance and the details of the Anti-DDoS Origin instance to which the RDS Custom instance is added.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>SQL Server</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to ApsaraDB RDS Custom</a></para>
+        /// <remarks>
+        /// <para> If one or more assets of the current Alibaba Cloud account are added to an <a href="https://help.aliyun.com/document_detail/63643.html">Anti-DDoS Origin instance</a>, you can call the DescribeRCInstanceIpAddress operation to query the DDoS mitigation information and the details of the Anti-DDoS Origin instance. The information and the details include the basic protection threshold and traffic scrubbing threshold for the assets, DDoS mitigation status of the assets, ID of the instance, and the mitigation status of the instance.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeRCInstanceIpAddressRequest
@@ -41557,8 +41638,19 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询RDS Custom实例的公网IP</para>
+        /// <para>Queries the protection information about an RDS Custom for SQL Server instance and the details of the Anti-DDoS Origin instance to which the RDS Custom instance is added.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>SQL Server</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to ApsaraDB RDS Custom</a></para>
+        /// <remarks>
+        /// <para> If one or more assets of the current Alibaba Cloud account are added to an <a href="https://help.aliyun.com/document_detail/63643.html">Anti-DDoS Origin instance</a>, you can call the DescribeRCInstanceIpAddress operation to query the DDoS mitigation information and the details of the Anti-DDoS Origin instance. The information and the details include the basic protection threshold and traffic scrubbing threshold for the assets, DDoS mitigation status of the assets, ID of the instance, and the mitigation status of the instance.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeRCInstanceIpAddressRequest
@@ -47231,12 +47323,16 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeTasks operation to query the tasks that are running on an instance.</para>
+        /// <para>Queries the tasks in the Waiting or Executing state on an ApsaraDB RDS for SQL Server instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is phased out.</para>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>SQL Server</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2627863.html">DescribeHistoryTasks</a> operation to query the tasks on an ApsaraDB RDS for MySQL or ApsaraDB RDS for PostgreSQL instance</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -47318,12 +47414,16 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeTasks operation to query the tasks that are running on an instance.</para>
+        /// <para>Queries the tasks in the Waiting or Executing state on an ApsaraDB RDS for SQL Server instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is phased out.</para>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>SQL Server</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2627863.html">DescribeHistoryTasks</a> operation to query the tasks on an ApsaraDB RDS for MySQL or ApsaraDB RDS for PostgreSQL instance</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -47405,12 +47505,16 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeTasks operation to query the tasks that are running on an instance.</para>
+        /// <para>Queries the tasks in the Waiting or Executing state on an ApsaraDB RDS for SQL Server instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is phased out.</para>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>SQL Server</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2627863.html">DescribeHistoryTasks</a> operation to query the tasks on an ApsaraDB RDS for MySQL or ApsaraDB RDS for PostgreSQL instance</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -47428,12 +47532,16 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeTasks operation to query the tasks that are running on an instance.</para>
+        /// <para>Queries the tasks in the Waiting or Executing state on an ApsaraDB RDS for SQL Server instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is phased out.</para>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>SQL Server</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2627863.html">DescribeHistoryTasks</a> operation to query the tasks on an ApsaraDB RDS for MySQL or ApsaraDB RDS for PostgreSQL instance</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -64931,6 +65039,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["AutoPay"] = request.AutoPay;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoUseCoupon))
+            {
+                query["AutoUseCoupon"] = request.AutoUseCoupon;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
             {
                 query["Direction"] = request.Direction;
@@ -64946,6 +65058,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
             {
                 query["InstanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionCode))
+            {
+                query["PromotionCode"] = request.PromotionCode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RebootTime))
             {
@@ -65016,6 +65132,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["AutoPay"] = request.AutoPay;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoUseCoupon))
+            {
+                query["AutoUseCoupon"] = request.AutoUseCoupon;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
             {
                 query["Direction"] = request.Direction;
@@ -65031,6 +65151,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
             {
                 query["InstanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionCode))
+            {
+                query["PromotionCode"] = request.PromotionCode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RebootTime))
             {
@@ -65294,6 +65418,23 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// <para>Modifies the billing method of an RDS Custom instance or cloud disks. You can call this operation to change the billing method of instances between pay-as-you-go and subscription.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you are familiar with the subscription and pay-as-you-go billing methods and pricing of RDS Custom.</description></item>
+        /// <item><description>The instances must be in the <b>Running</b> or <b>Stopped</b> state, and you have no overdue payments for the instances.</description></item>
+        /// <item><description>The disk is in the <b>In_use</b> state and the billing method of the disk has not been changed within the previous 15 minutes.</description></item>
+        /// <item><description>After you change the billing method, the payment is automatically completed. Make sure that the balance in your account is sufficient. Otherwise, your order becomes invalid and is canceled.</description></item>
+        /// </list>
+        /// <h3><a href="#"></a>Considerations</h3>
+        /// <para>For more information, see the following documentation:</para>
+        /// <list type="bullet">
+        /// <item><description><a href="https://help.aliyun.com/document_detail/2878542.html">Change the billing method of an instance</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/2878547.html">Change the billing method of a disk</a></description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyRCInstanceChargeTypeRequest
         /// </param>
@@ -65391,6 +65532,23 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// <summary>
         /// <para>Modifies the billing method of an RDS Custom instance or cloud disks. You can call this operation to change the billing method of instances between pay-as-you-go and subscription.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you are familiar with the subscription and pay-as-you-go billing methods and pricing of RDS Custom.</description></item>
+        /// <item><description>The instances must be in the <b>Running</b> or <b>Stopped</b> state, and you have no overdue payments for the instances.</description></item>
+        /// <item><description>The disk is in the <b>In_use</b> state and the billing method of the disk has not been changed within the previous 15 minutes.</description></item>
+        /// <item><description>After you change the billing method, the payment is automatically completed. Make sure that the balance in your account is sufficient. Otherwise, your order becomes invalid and is canceled.</description></item>
+        /// </list>
+        /// <h3><a href="#"></a>Considerations</h3>
+        /// <para>For more information, see the following documentation:</para>
+        /// <list type="bullet">
+        /// <item><description><a href="https://help.aliyun.com/document_detail/2878542.html">Change the billing method of an instance</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/2878547.html">Change the billing method of a disk</a></description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyRCInstanceChargeTypeRequest
@@ -65490,6 +65648,23 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// <para>Modifies the billing method of an RDS Custom instance or cloud disks. You can call this operation to change the billing method of instances between pay-as-you-go and subscription.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you are familiar with the subscription and pay-as-you-go billing methods and pricing of RDS Custom.</description></item>
+        /// <item><description>The instances must be in the <b>Running</b> or <b>Stopped</b> state, and you have no overdue payments for the instances.</description></item>
+        /// <item><description>The disk is in the <b>In_use</b> state and the billing method of the disk has not been changed within the previous 15 minutes.</description></item>
+        /// <item><description>After you change the billing method, the payment is automatically completed. Make sure that the balance in your account is sufficient. Otherwise, your order becomes invalid and is canceled.</description></item>
+        /// </list>
+        /// <h3><a href="#"></a>Considerations</h3>
+        /// <para>For more information, see the following documentation:</para>
+        /// <list type="bullet">
+        /// <item><description><a href="https://help.aliyun.com/document_detail/2878542.html">Change the billing method of an instance</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/2878547.html">Change the billing method of a disk</a></description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyRCInstanceChargeTypeRequest
         /// </param>
@@ -65507,6 +65682,23 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// <summary>
         /// <para>Modifies the billing method of an RDS Custom instance or cloud disks. You can call this operation to change the billing method of instances between pay-as-you-go and subscription.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that you are familiar with the subscription and pay-as-you-go billing methods and pricing of RDS Custom.</description></item>
+        /// <item><description>The instances must be in the <b>Running</b> or <b>Stopped</b> state, and you have no overdue payments for the instances.</description></item>
+        /// <item><description>The disk is in the <b>In_use</b> state and the billing method of the disk has not been changed within the previous 15 minutes.</description></item>
+        /// <item><description>After you change the billing method, the payment is automatically completed. Make sure that the balance in your account is sufficient. Otherwise, your order becomes invalid and is canceled.</description></item>
+        /// </list>
+        /// <h3><a href="#"></a>Considerations</h3>
+        /// <para>For more information, see the following documentation:</para>
+        /// <list type="bullet">
+        /// <item><description><a href="https://help.aliyun.com/document_detail/2878542.html">Change the billing method of an instance</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/2878547.html">Change the billing method of a disk</a></description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyRCInstanceChargeTypeRequest
@@ -73983,6 +74175,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["AutoRenew"] = request.AutoRenew;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoUseCoupon))
+            {
+                query["AutoUseCoupon"] = request.AutoUseCoupon;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -74062,6 +74258,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodUnit))
             {
                 query["PeriodUnit"] = request.PeriodUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionCode))
+            {
+                query["PromotionCode"] = request.PromotionCode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -74184,6 +74384,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["AutoRenew"] = request.AutoRenew;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoUseCoupon))
+            {
+                query["AutoUseCoupon"] = request.AutoUseCoupon;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -74263,6 +74467,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodUnit))
             {
                 query["PeriodUnit"] = request.PeriodUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionCode))
+            {
+                query["PromotionCode"] = request.PromotionCode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {

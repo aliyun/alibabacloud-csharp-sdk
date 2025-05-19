@@ -12,11 +12,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enables the feature. You must make sure that your account balance is sufficient.</description></item>
-        /// <item><description><b>false</b>: disables the feature. An unpaid order is generated.</description></item>
+        /// <item><description><b>true</b> (default): enables automatic payment. Make sure that your account balance is sufficient.</description></item>
+        /// <item><description><b>false</b>: does not automatically complete the payment. An unpaid order is generated.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> Default value: true. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.</para>
+        /// <para> If your account balance is insufficient, you can set the parameter to false. In this case, an unpaid order is generated. You can complete the payment in the Expenses and Costs console.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The disk description. The description must be 2 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>. By default, this parameter is left empty.</para>
+        /// <para>The disk description. The description must be 2 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -54,12 +54,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The category of the data disk. Valid values:</para>
+        /// <para>The data disk type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cloud_efficiency</b>: ultra disk.</description></item>
-        /// <item><description><b>cloud_ssd</b>: standard SSD.</description></item>
-        /// <item><description><b>cloud_essd</b>: ESSD.</description></item>
-        /// <item><description><b>cloud_auto</b>: ESSD AutoPL disk.</description></item>
+        /// <item><description><b>cloud_efficiency</b>: ultra disk</description></item>
+        /// <item><description><b>cloud_ssd</b>: standard SSD</description></item>
+        /// <item><description><b>cloud_essd</b>: ESSD</description></item>
+        /// <item><description><b>cloud_auto</b> (default): Premium ESSD</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -71,7 +71,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// <para>The name of the data disk. The name must be 2 to 128 characters in length and can contain letters and digits. The name can contain colons (:), underscores (_), periods (.), and hyphens (-).</para>
-        /// <para>By default, this parameter is left empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ZStack-Hybrid-Test-ECS-Instance</para>
@@ -101,10 +100,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The performance level (PL) of the disk if the disk is an ESSD. Valid values:</para>
+        /// <para>The performance level (PL) of ESSDs. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>PL0</b>: A single ESSD delivers up to 10,000 random read/write IOPS.</description></item>
-        /// <item><description><b>PL1</b> (default): A single ESSD can deliver up to 50,000 random read/write IOPS.</description></item>
+        /// <item><description><b>PL1: An ESSD delivers up to 50,000 random read/write IOPS.</b></description></item>
         /// <item><description><b>PL2</b>: A single ESSD delivers up to 100,000 random read/write IOPS.</description></item>
         /// <item><description><b>PL3</b>: A single ESSD delivers up to 1,000,000 random read/write IOPS.</description></item>
         /// </list>
@@ -148,14 +147,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         /// <summary>
         /// <para>The disk size. Unit: GiB. This parameter is required. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Valid values if you set DiskCategory to <b>cloud_essd_entry</b>: 10 to 32768.</para>
+        /// <item><description><para>Valid values if you set DiskCategory to <b>cloud_efficiency</b>: 20 to 32768.</para>
         /// </description></item>
         /// <item><description><para>Valid values if you set DiskCategory to <b>cloud_ssd</b>: 20 to 32768.</para>
         /// </description></item>
-        /// <item><description><para>Valid values if you set DiskCategory to <b>cloud_essd</b>: depend on the value of PerformanceLevel.</para>
+        /// <item><description><para>Valid values if you set DiskCategory to <b>cloud_auto</b>: 1 to 65536.</para>
+        /// </description></item>
+        /// <item><description><para>Valid values when DiskCategory is set to cloud_essd: depending on the value of <b>PerformanceLevel</b>.****</para>
         /// <list type="bullet">
         /// <item><description>Valid values if PerformanceLevel is set to PL0: 1 to 65536</description></item>
         /// <item><description>Valid values if PerformanceLevel is set to PL1: 20 to 65536</description></item>
@@ -163,14 +168,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <item><description>Valid values if PerformanceLevel is set to PL3: 1261 to 65536</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>Valid values if you set DiskCategory to <b>cloud_auto</b>: 1 to 65536.</para>
-        /// </description></item>
         /// </list>
-        /// <para>If <c>SnapshotId</c> is specified, the following limits apply to <c>SnapshotId</c> and <c>Size</c>:</para>
-        /// <list type="bullet">
-        /// <item><description>If the size of the snapshot specified by <c>SnapshotId</c> is larger than the value of <c>Size</c>, the size of the created disk is equal to the size of the snapshot.</description></item>
-        /// <item><description>If the size of the snapshot specified by <c>SnapshotId</c> is smaller than the value of <c>Size</c>, the size of the created disk is equal to the value of <c>Size</c>.</description></item>
-        /// </list>
+        /// <para>If <b>SnapshotId</b> is specified and the size of the corresponding snapshot is greater than the <b>Size</b> value, the size of the created disk is the same as that of the snapshot. If the snapshot size is less than the <b>Size</b> value, the size of the created disk is equal to the <b>Size</b> value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2000</para>
@@ -180,11 +179,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? Size { get; set; }
 
         /// <summary>
-        /// <para>The snapshot that you want to use to create the disk. Snapshots that were created on or before July 15, 2013 cannot be used to create disks. The following limits apply to <c>SnapshotId</c> and <c>Size</c>:</para>
+        /// <para>The snapshot that you want to use to create the disk.</para>
         /// <list type="bullet">
-        /// <item><description>If the size of the snapshot specified by <c>SnapshotId</c> is larger than the value of <c>Size</c>, the size of the created disk is equal to the specified snapshot size.</description></item>
-        /// <item><description>If the size of the snapshot specified by <c>SnapshotId</c> is smaller than the value of <c>Size</c>, the size of the created disk is equal to the value of <c>Size</c>.</description></item>
+        /// <item><description>If the size of the snapshot specified by <b>SnapshotId</b> is greater than the value of <b>Size</b>, the size of the created disk is equal to the specified snapshot size. If the snapshot size is less than the <b>Size</b> value, the size of the created disk is equal to the <b>Size</b> value.</description></item>
         /// <item><description>You cannot create elastic ephemeral disks from snapshots.</description></item>
+        /// <item><description>Snapshots that were created on or before July 15, 2013 cannot be used to create disks.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -193,6 +192,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("SnapshotId")]
         [Validation(Required=false)]
         public string SnapshotId { get; set; }
+
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<CreateRCDiskRequestTag> Tag { get; set; }
+        public class CreateRCDiskRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
         /// <summary>
         /// <para>The zone ID.</para>

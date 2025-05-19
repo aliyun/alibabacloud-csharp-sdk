@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <list type="bullet">
             /// <item><description>The name must be <b>2 to 255</b> characters in length.</description></item>
             /// <item><description>The name can contain letters, digits, underscores (_), and hyphens (-) and must start with a letter.</description></item>
-            /// <item><description>The name cannot start with <c>http://</c> or <c>https://</c>.</description></item>
+            /// <item><description>Does not start with <c>http://</c> or <c>https://</c>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string DBInstanceDescription { get; set; }
 
             /// <summary>
-            /// <para>The storage capacity of the unit node that you want to create. Unit: GB You can adjust the storage capacity in increments of 5 GB. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a>. You can also call the DescribeAvailableResource operation to query the storage capacity range that is supported by the new instance type.</para>
+            /// <para>The storage capacity of the unit node that you want to create. Unit: GB. You can adjust the storage capacity in increments of 5 GB. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a>. You can also call the DescribeAvailableResource operation to query the storage capacity range that is supported by the new instance type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -159,17 +159,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public long? DBInstanceStorage { get; set; }
 
             /// <summary>
-            /// <para>The storage type of the instance. Valid values:</para>
+            /// <para>The storage type of the new instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>local_ssd</b>: local SSD. This is the recommended storage type.</description></item>
-            /// <item><description><b>cloud_ssd</b>: standard SSD. This storage type is not recommended. Standard SSDs are no longer available for purchase in some Alibaba Cloud regions.</description></item>
-            /// <item><description><b>cloud_essd</b>: PL1 ESSD</description></item>
-            /// <item><description><b>cloud_essd2</b>: PL2 ESSD</description></item>
-            /// <item><description><b>cloud_essd3</b>: PL3 ESSD</description></item>
+            /// <item><description><b>local_ssd</b>: Premium Local SSD (recommended)</description></item>
+            /// <item><description><b>cloud_ssd</b>: standard SSD. This storage type is not recommended. Standard SSDs are no longer available for purchase in specific Alibaba Cloud regions.</description></item>
+            /// <item><description><b>cloud_essd</b>: Enterprise SSD (ESSD) of performance level 1 (PL1).</description></item>
+            /// <item><description><b>cloud_essd2</b>: ESSD of PL2.</description></item>
+            /// <item><description><b>cloud_essd3</b>: ESSD of PL3.</description></item>
             /// </list>
             /// <para>The default value of this parameter is determined by the instance type specified by the <b>DBInstanceClass</b> parameter.</para>
             /// <list type="bullet">
-            /// <item><description>If the instance type specifies the local SSD storage type, the default value of this parameter is <b>local_ssd</b>.</description></item>
+            /// <item><description>If the instance type specifies the Premium Local SSD storage type, the default value of this parameter is <b>local_ssd</b>.</description></item>
             /// <item><description>If the instance type specifies the cloud disk storage type, the default value of this parameter is <b>cloud_essd</b>.</description></item>
             /// </list>
             /// 

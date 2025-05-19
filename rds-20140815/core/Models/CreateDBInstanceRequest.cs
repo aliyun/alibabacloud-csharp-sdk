@@ -127,13 +127,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BpeEnabled { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the I/O burst feature of general ESSDs. Valid values:</para>
+        /// <para>Specifies whether to enable the I/O burst feature of Premium ESSDs. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b></description></item>
         /// <item><description><b>false</b></description></item>
         /// </list>
         /// <remarks>
-        /// <para> For more information about the I/O burst feature of general ESSDs, see <a href="https://help.aliyun.com/document_detail/2340501.html">What are general ESSDs?</a></para>
+        /// <para> For more information about the I/O burst feature of general ESSDs, see <a href="https://help.aliyun.com/document_detail/2340501.html">What are Premium ESSDs?</a></para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -194,13 +194,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the data archiving feature of general ESSDs. Valid values:</para>
+        /// <para>Specifies whether to enable the data archiving feature of Premium ESSDs. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b></description></item>
         /// <item><description><b>false</b></description></item>
         /// </list>
         /// <remarks>
-        /// <para> For more information about the data archiving feature of general ESSDs, see <a href="https://help.aliyun.com/document_detail/2701832.html">Use the data archiving feature of general ESSDs</a>.</para>
+        /// <para> For more information about the data archiving feature of Premium ESSDs, see <a href="https://help.aliyun.com/document_detail/2701832.html">Use the data archiving feature</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -309,8 +309,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The storage type of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>local_ssd</b>: local SSD. This is the recommended storage type.</description></item>
-        /// <item><description><b>general_essd</b>: general Enterprise SSD (ESSD). This is the recommended storage type.</description></item>
+        /// <item><description><b>local_ssd</b>: Premium Local SSD (recommended)</description></item>
+        /// <item><description><b>general_essd</b>: Premium Enterprise SSD (ESSD) (recommend)</description></item>
         /// <item><description><b>cloud_essd</b>: PL1 ESSD</description></item>
         /// <item><description><b>cloud_essd2</b>: PL2 ESSD</description></item>
         /// <item><description><b>cloud_essd3</b>: PL3 ESSD</description></item>
@@ -318,11 +318,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// </list>
         /// <para>The default value of this parameter is determined by the instance type specified by the <b>DBInstanceClass</b> parameter.</para>
         /// <list type="bullet">
-        /// <item><description>If the instance type specifies the local SSD storage type, the default value of this parameter is <b>local_ssd</b>.</description></item>
-        /// <item><description>If the instance type specifies the standard SSD or ESSD storage type, the default value of this parameter is <b>cloud_essd</b>.</description></item>
+        /// <item><description>If the instance type specifies the Premium Local SSD storage type, the default value of this parameter is <b>local_ssd</b>.</description></item>
+        /// <item><description>If the instance type specifies the cloud disk storage type, the default value of this parameter is <b>cloud_essd</b>.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> Serverless instances support only PL1 ESSDs and general ESSDs.</para>
+        /// <para> Serverless instances support only PL1 ESSDs and Premium ESSDs.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -360,27 +360,29 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBParamGroupId { get; set; }
 
         /// <summary>
-        /// <para>The time zone of the instance. This parameter takes effect only when you set the <b>Engine</b> parameter to <b>MySQL</b> or <b>PostgreSQL</b>.</para>
+        /// <para>The time zone of the instance. This parameter takes effect only when you set <b>Engine</b> to <b>MySQL</b> or <b>PostgreSQL</b>.</para>
         /// <list type="bullet">
-        /// <item><description><para>If you set <b>Engine</b> to <b>MySQL</b>:</para>
+        /// <item><description><para><b>Engine</b> is set to <b>MySQL</b>:</para>
         /// <list type="bullet">
-        /// <item><description>The time zone of the instance is in UTC. Valid values: <b>-12:59</b> to <b>+13:00</b>.</description></item>
-        /// <item><description>If the instance uses local SSDs, you can specify the name of the time zone. Example: Asia/Hong_Kong. For more information, see <a href="https://help.aliyun.com/document_detail/297356.html">Time zones</a>.</description></item>
+        /// <item><description>This time zone is in UTC. Valid values: \<em>\</em>-12:59\<em>\</em> to <b>+13:00</b>.</description></item>
+        /// <item><description>If the instance uses Premium Local SSDs, you can specify the name of the time zone. For example, you can specify the Asia/Hong_Kong time zone. For more information, see <a href="https://help.aliyun.com/document_detail/297356.html">Time zones</a>.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>If you set <b>Engine</b> to <b>PostgreSQL</b>:</para>
+        /// <item><description><para><b>Engine</b> is set to <b>PostgreSQL</b>.</para>
         /// <list type="bullet">
-        /// <item><description>The time zone of the instance is not in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/297356.html">Time zones</a>.</description></item>
-        /// <item><description>You can specify this parameter only when the instance runs PostgreSQL with standard SSDs or ESSDs.</description></item>
+        /// <item><description>This time zone is not in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/297356.html">Time zones</a>.</description></item>
+        /// <item><description>You can configure this parameter only when the RDS instance uses cloud disks.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>You can specify the time zone when you create a primary instance. You cannot specify the time zone when you create a read-only instance. Read-only instances inherit the time zone of their primary instance.</description></item>
-        /// <item><description>If you do not specify this parameter, the system automatically assigns the default time zone of the region in which the instance resides.</description></item>
-        /// </list>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>You can specify the time zone when you create a primary instance. You cannot specify the time zone when you create a read-only instance. Read-only instances inherit the time zone of their primary instance.</para>
+        /// </description></item>
+        /// <item><description><para>If you do not specify this parameter, the system automatically assigns the default time zone of the region in which the instance resides.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>+08:00</para>
@@ -470,12 +472,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The database engine version of the instance. Valid values:</para>
+        /// <para>The database engine version of the instance.</para>
         /// <list type="bullet">
         /// <item><description><para>Regular RDS instance</para>
         /// <list type="bullet">
         /// <item><description>Valid values when you set Engine to MySQL: <b>5.5</b>, <b>5.6</b>, <b>5.7</b>, and <b>8.0</b></description></item>
-        /// <item><description>Valid values when you set Engine to SQLServer: <b>08r2_ent_ha</b> (cloud disks, discontinued), <b>2008r2</b> (local disks, discontinued), <b>2012</b> (SQL Server EE Basic), <b>2012_ent_ha</b>, <b>2012_std_ha</b>, <b>2012_web</b>, <b>2014_ent_ha</b>, <b>2014_std_ha</b>, <b>2016_ent_ha</b>, <b>2016_std_ha</b>, <b>2016_web</b>, <b>2017_ent</b>, <b>2017_std_ha</b>, <b>2017_web</b>, <b>2019_ent</b>, <b>2019_std_ha</b>, <b>2019_web</b>, <b>2022_ent</b>, <b>2022_std_ha</b>, and <b>2022_web</b></description></item>
+        /// <item><description>Valid values when you set Engine to SQLServer: <b>08r2_ent_ha</b>(cloud disks, discontinued), <b>2008r2</b>(premium local disks, discontinued), <b>2012</b>(SQL Server EE Basic), <b>2012_ent_ha</b>, <b>2012_std_ha</b>, <b>2012_web</b>, <b>2014_ent_ha</b>, <b>2014_std_ha</b>, <b>2016_ent_ha</b>, <b>2016_std_ha</b>, <b>2016_web</b>, <b>2017_ent</b>, <b>2017_std_ha</b>, <b>2017_web</b>, <b>2019_ent</b>, <b>2019_std_ha</b>, <b>2019_web</b>, <b>2022_ent</b>, <b>2022_std_ha</b>, and <b>2022_web</b></description></item>
         /// <item><description>Valid values when you set Engine to PostgreSQL: <b>10.0</b>, <b>11.0</b>, <b>12.0</b>, <b>13.0</b>, <b>14.0</b>, <b>15.0</b>, <b>16.0</b>, and <b>17.0</b></description></item>
         /// <item><description>Valid values when you set Engine to MariaDB: <b>10.3</b> and <b>10.6</b></description></item>
         /// </list>
@@ -534,13 +536,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceNetworkType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the I/O acceleration feature of general ESSDs. Valid values:</para>
+        /// <para>Specifies whether to enable Buffer Pool Extension (BPE) of Premium ESSDs. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: enabled</description></item>
-        /// <item><description><b>0</b>: disabled</description></item>
+        /// <item><description><b>1</b>: enables BPE.</description></item>
+        /// <item><description><b>0</b>: disables BPE.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> For more information about the I/O acceleration feature of general ESSDs, see <a href="https://help.aliyun.com/document_detail/2527067.html">Introduction</a>.</para>
+        /// <para> For more information about Buffer Pool Extension(BPE) of Premium ESSDs, see <a href="https://help.aliyun.com/document_detail/2527067.html">Buffer Pool Extension(BPE)</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -551,13 +553,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string IoAccelerationEnabled { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the write optimization feature. Valid values:</para>
+        /// <para>The switch of the 16K atomic write function. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>optimized</b></description></item>
         /// <item><description><b>none</b> (default)</description></item>
         /// </list>
         /// <remarks>
-        /// <para> For more information about the write optimization feature, see <a href="https://help.aliyun.com/document_detail/2858761.html">Write optimization</a>.</para>
+        /// <para> For more information, see <a href="https://help.aliyun.com/document_detail/2858761.html">Use the 16K atomic write feature</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
