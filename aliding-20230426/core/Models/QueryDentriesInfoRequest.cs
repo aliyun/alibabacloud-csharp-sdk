@@ -8,39 +8,35 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
-    public class CreateMultiDimTableFieldRequest : TeaModel {
+    public class QueryDentriesInfoRequest : TeaModel {
+        [NameInMap("AppIdsForAppProperties")]
+        [Validation(Required=false)]
+        public List<string> AppIdsForAppProperties { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>r1R7q3QmWew5lo02fxB7noNyJxxxxxx</para>
+        /// <para>140901622636</para>
         /// </summary>
-        [NameInMap("BaseId")]
+        [NameInMap("DentryId")]
         [Validation(Required=false)]
-        public string BaseId { get; set; }
+        public string DentryId { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>22443475065</para>
         /// </summary>
-        [NameInMap("Name")]
+        [NameInMap("SpaceId")]
         [Validation(Required=false)]
-        public string Name { get; set; }
-
-        [NameInMap("Property")]
-        [Validation(Required=false)]
-        public Dictionary<string, object> Property { get; set; }
-
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
-        [NameInMap("SheetIdOrName")]
-        [Validation(Required=false)]
-        public string SheetIdOrName { get; set; }
+        public string SpaceId { get; set; }
 
         [NameInMap("TenantContext")]
         [Validation(Required=false)]
-        public CreateMultiDimTableFieldRequestTenantContext TenantContext { get; set; }
-        public class CreateMultiDimTableFieldRequestTenantContext : TeaModel {
+        public QueryDentriesInfoRequestTenantContext TenantContext { get; set; }
+        public class QueryDentriesInfoRequestTenantContext : TeaModel {
             /// <summary>
             /// <b>Example:</b>
             /// <para>xxxxxx</para>
@@ -55,11 +51,19 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>text</para>
+        /// <para>urv3ZIAtcmmIgQzHq08YcAiEiE</para>
         /// </summary>
-        [NameInMap("Type")]
+        [NameInMap("UnionId")]
         [Validation(Required=false)]
-        public string Type { get; set; }
+        public string UnionId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("WithThumbnail")]
+        [Validation(Required=false)]
+        public bool? WithThumbnail { get; set; }
 
     }
 

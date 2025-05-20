@@ -19,16 +19,25 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string BaseId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("Records")]
         [Validation(Required=false)]
         public List<InsertMultiDimTableRecordRequestRecords> Records { get; set; }
         public class InsertMultiDimTableRecordRequestRecords : TeaModel {
+            /// <summary>
+            /// <para>This parameter is required.</para>
+            /// </summary>
             [NameInMap("Fields")]
             [Validation(Required=false)]
             public Dictionary<string, object> Fields { get; set; }
 
         }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("SheetIdOrName")]
         [Validation(Required=false)]
         public string SheetIdOrName { get; set; }

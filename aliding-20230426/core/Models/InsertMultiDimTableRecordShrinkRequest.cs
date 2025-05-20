@@ -19,10 +19,16 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string BaseId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("Records")]
         [Validation(Required=false)]
         public string RecordsShrink { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("SheetIdOrName")]
         [Validation(Required=false)]
         public string SheetIdOrName { get; set; }

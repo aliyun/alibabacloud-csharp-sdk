@@ -23,6 +23,9 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public List<AddMultiDimTableRequestFields> Fields { get; set; }
         public class AddMultiDimTableRequestFields : TeaModel {
+            /// <summary>
+            /// <para>This parameter is required.</para>
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
@@ -32,6 +35,8 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             public Dictionary<string, object> Property { get; set; }
 
             /// <summary>
+            /// <para>This parameter is required.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>text</para>
             /// </summary>

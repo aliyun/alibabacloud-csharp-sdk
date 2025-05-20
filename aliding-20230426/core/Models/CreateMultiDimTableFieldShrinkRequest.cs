@@ -42,6 +42,8 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         public string TenantContextShrink { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>text</para>
         /// </summary>
