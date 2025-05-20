@@ -8,18 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mseap20210118.Models
 {
-    public class DescribeAgreementStatusResponseBody : TeaModel {
+    public class SendNotificationForPartnerResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>10aa40008e081ad7b1fb50bffc3a70b1</para>
+        /// <para>11111111111111111111111</para>
         /// </summary>
-        [NameInMap("AgreementCode")]
+        [NameInMap("ErrorMsg")]
         [Validation(Required=false)]
-        public string AgreementCode { get; set; }
+        public string ErrorMsg { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>6254E13A-A79F-5786-9C75-7590727342C9</para>
+        /// <para>0A011920166449C2FAAE8D179E1704C5</para>
+        /// </summary>
+        [NameInMap("MsgId")]
+        [Validation(Required=false)]
+        public string MsgId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1940A84F-6D90-5764-9119-6279970C6FF5</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -27,19 +35,11 @@ namespace AlibabaCloud.SDK.Mseap20210118.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>0</para>
+        /// <para>True</para>
         /// </summary>
-        [NameInMap("Status")]
+        [NameInMap("Success")]
         [Validation(Required=false)]
-        public int? Status { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1219541161213057</para>
-        /// </summary>
-        [NameInMap("UserId")]
-        [Validation(Required=false)]
-        public string UserId { get; set; }
+        public bool? Success { get; set; }
 
     }
 

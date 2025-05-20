@@ -8,14 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mseap20210118.Models
 {
-    public class BusinessLicenseOcrResponse : TeaModel {
+    public class PushRpaTaskResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
+        [NameInMap("statusCode")]
+        [Validation(Required=false)]
+        public int? StatusCode { get; set; }
+
         [NameInMap("body")]
-        [Validation(Required=true)]
-        public BusinessLicenseOcrResponseBody Body { get; set; }
+        [Validation(Required=false)]
+        public PushRpaTaskResponseBody Body { get; set; }
 
     }
 

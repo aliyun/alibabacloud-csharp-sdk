@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mseap20210118.Models
 {
-    public class UpdateAgreementStatusResponse : TeaModel {
+    public class GetVariableResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Mseap20210118.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public UpdateAgreementStatusResponseBody Body { get; set; }
+        public GetVariableResponseBody Body { get; set; }
 
     }
 
