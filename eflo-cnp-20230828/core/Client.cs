@@ -183,6 +183,158 @@ namespace AlibabaCloud.SDK.Eflo_cnp20230828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>deleteSlrEfloCnpForDeleting</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckServiceLinkedRoleEfloCnpForDeletingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckServiceLinkedRoleEfloCnpForDeletingResponse
+        /// </returns>
+        public CheckServiceLinkedRoleEfloCnpForDeletingResponse CheckServiceLinkedRoleEfloCnpForDeletingWithOptions(CheckServiceLinkedRoleEfloCnpForDeletingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
+            {
+                query["AccountId"] = request.AccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeletionTaskId))
+            {
+                query["DeletionTaskId"] = request.DeletionTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleArn))
+            {
+                query["RoleArn"] = request.RoleArn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SPIRegionId))
+            {
+                query["SPIRegionId"] = request.SPIRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceName))
+            {
+                query["ServiceName"] = request.ServiceName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckServiceLinkedRoleEfloCnpForDeleting",
+                Version = "2023-08-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CheckServiceLinkedRoleEfloCnpForDeletingResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>deleteSlrEfloCnpForDeleting</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckServiceLinkedRoleEfloCnpForDeletingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckServiceLinkedRoleEfloCnpForDeletingResponse
+        /// </returns>
+        public async Task<CheckServiceLinkedRoleEfloCnpForDeletingResponse> CheckServiceLinkedRoleEfloCnpForDeletingWithOptionsAsync(CheckServiceLinkedRoleEfloCnpForDeletingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
+            {
+                query["AccountId"] = request.AccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeletionTaskId))
+            {
+                query["DeletionTaskId"] = request.DeletionTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleArn))
+            {
+                query["RoleArn"] = request.RoleArn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SPIRegionId))
+            {
+                query["SPIRegionId"] = request.SPIRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceName))
+            {
+                query["ServiceName"] = request.ServiceName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckServiceLinkedRoleEfloCnpForDeleting",
+                Version = "2023-08-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CheckServiceLinkedRoleEfloCnpForDeletingResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>deleteSlrEfloCnpForDeleting</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckServiceLinkedRoleEfloCnpForDeletingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckServiceLinkedRoleEfloCnpForDeletingResponse
+        /// </returns>
+        public CheckServiceLinkedRoleEfloCnpForDeletingResponse CheckServiceLinkedRoleEfloCnpForDeleting(CheckServiceLinkedRoleEfloCnpForDeletingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CheckServiceLinkedRoleEfloCnpForDeletingWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>deleteSlrEfloCnpForDeleting</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckServiceLinkedRoleEfloCnpForDeletingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckServiceLinkedRoleEfloCnpForDeletingResponse
+        /// </returns>
+        public async Task<CheckServiceLinkedRoleEfloCnpForDeletingResponse> CheckServiceLinkedRoleEfloCnpForDeletingAsync(CheckServiceLinkedRoleEfloCnpForDeletingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CheckServiceLinkedRoleEfloCnpForDeletingWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Create Experiment Plan</para>
         /// </summary>
         /// 
