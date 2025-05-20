@@ -2946,6 +2946,10 @@ namespace AlibabaCloud.SDK.Mns_open20220119
             {
                 query["PushType"] = request.PushType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StsRoleArn))
+            {
+                query["StsRoleArn"] = request.StsRoleArn;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscriptionName))
             {
                 query["SubscriptionName"] = request.SubscriptionName;
@@ -3021,6 +3025,10 @@ namespace AlibabaCloud.SDK.Mns_open20220119
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PushType))
             {
                 query["PushType"] = request.PushType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StsRoleArn))
+            {
+                query["StsRoleArn"] = request.StsRoleArn;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscriptionName))
             {

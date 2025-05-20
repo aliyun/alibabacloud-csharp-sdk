@@ -114,6 +114,10 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         [Validation(Required=false)]
         public string PushType { get; set; }
 
+        [NameInMap("StsRoleArn")]
+        [Validation(Required=false)]
+        public string StsRoleArn { get; set; }
+
         /// <summary>
         /// <para>The name of the subscription.</para>
         /// <para>This parameter is required.</para>
