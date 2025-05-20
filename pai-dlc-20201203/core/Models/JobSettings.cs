@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public Dictionary<string, object> AdvancedSettings { get; set; }
 
+        [NameInMap("AllocateAllRDMADevices")]
+        [Validation(Required=false)]
+        public bool? AllocateAllRDMADevices { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>166924</para>

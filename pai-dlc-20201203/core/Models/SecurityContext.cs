@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class SecurityContext : TeaModel {
+        [NameInMap("Capabilities")]
+        [Validation(Required=false)]
+        public SecurityContextCapabilities Capabilities { get; set; }
+
+        [NameInMap("Privileged")]
+        [Validation(Required=false)]
+        public bool? Privileged { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>1000</para>

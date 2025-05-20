@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public AssignNodeSpec AssignNodeSpec { get; set; }
 
+        [NameInMap("AutoScalingSpec")]
+        [Validation(Required=false)]
+        public AutoScalingSpec AutoScalingSpec { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>ecs.c6.large</para>
@@ -37,6 +41,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public ImageConfig ImageConfig { get; set; }
 
+        [NameInMap("IsCheif")]
+        [Validation(Required=false)]
+        public bool? IsCheif { get; set; }
+
+        [NameInMap("LocalMountSpecs")]
+        [Validation(Required=false)]
+        public List<LocalMountSpec> LocalMountSpecs { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>1</para>
@@ -48,6 +60,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [NameInMap("ResourceConfig")]
         [Validation(Required=false)]
         public ResourceConfig ResourceConfig { get; set; }
+
+        [NameInMap("RestartPolicy")]
+        [Validation(Required=false)]
+        public string RestartPolicy { get; set; }
+
+        [NameInMap("ServiceSpec")]
+        [Validation(Required=false)]
+        public ServiceSpec ServiceSpec { get; set; }
 
         [NameInMap("SpotSpec")]
         [Validation(Required=false)]
