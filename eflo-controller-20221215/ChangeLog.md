@@ -2,6 +2,10 @@
 - Update API UpdateNodeGroup: add request parameters ImageId.
 
 
+2025-05-20 Version: 2.6.1
+- Update API UpdateNodeGroup: add request parameters ImageId.
+
+
 2025-04-25 Version: 2.6.0
 - Support API CreateVsc.
 - Support API DeleteVsc.
