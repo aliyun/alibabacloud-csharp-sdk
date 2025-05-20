@@ -47,6 +47,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             [Validation(Required=false)]
             public string ClientCfg { get; set; }
 
+            [NameInMap("Protocol")]
+            [Validation(Required=false)]
+            public string Protocol { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>08573be80f944d95ac812e019e3655a8</para>
