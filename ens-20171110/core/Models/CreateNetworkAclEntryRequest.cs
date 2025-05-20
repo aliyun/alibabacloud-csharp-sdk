@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("DestinationCidrBlock")]
+        [Validation(Required=false)]
+        public string DestinationCidrBlock { get; set; }
+
         /// <summary>
         /// <para>The direction in which the rule is applied. Valid values:</para>
         /// <list type="bullet">

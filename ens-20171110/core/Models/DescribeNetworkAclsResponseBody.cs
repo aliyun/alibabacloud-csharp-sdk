@@ -180,6 +180,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                [NameInMap("DestinationCidrBlock")]
+                [Validation(Required=false)]
+                public string DestinationCidrBlock { get; set; }
+
                 /// <summary>
                 /// <para>The ID of the inbound rule.</para>
                 /// 
