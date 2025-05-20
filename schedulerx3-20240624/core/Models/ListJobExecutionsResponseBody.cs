@@ -187,6 +187,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 [Validation(Required=false)]
                 public int? TimeType { get; set; }
 
+                [NameInMap("TotalTokens")]
+                [Validation(Required=false)]
+                public int? TotalTokens { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>1</para>

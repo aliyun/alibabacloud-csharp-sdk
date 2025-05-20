@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [Validation(Required=false)]
         public string Event { get; set; }
 
+        [NameInMap("EventType")]
+        [Validation(Required=false)]
+        public string EventType { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>1310630367761285120</para>
