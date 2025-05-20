@@ -117,6 +117,14 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
         [Validation(Required=false)]
         public RunVideoAnalysisRequestVideoCaptionInfo VideoCaptionInfo { get; set; }
         public class RunVideoAnalysisRequestVideoCaptionInfo : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>oss:// | http://</para>
+            /// </summary>
+            [NameInMap("videoCaptionFileUrl")]
+            [Validation(Required=false)]
+            public string VideoCaptionFileUrl { get; set; }
+
             [NameInMap("videoCaptions")]
             [Validation(Required=false)]
             public List<RunVideoAnalysisRequestVideoCaptionInfoVideoCaptions> VideoCaptions { get; set; }
