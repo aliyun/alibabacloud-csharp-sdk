@@ -39,6 +39,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             [Validation(Required=false)]
             public string Az { get; set; }
 
+            /// <summary>
+            /// <para>Whether file storage mounting is supported</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>False</para>
+            /// </summary>
             [NameInMap("FileSystemMountEnabled")]
             [Validation(Required=false)]
             public bool? FileSystemMountEnabled { get; set; }

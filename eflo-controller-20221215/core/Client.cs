@@ -1427,7 +1427,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Vsc</para>
+        /// <para>Create Vsc</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1491,7 +1491,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Vsc</para>
+        /// <para>Create Vsc</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1555,7 +1555,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Vsc</para>
+        /// <para>Create Vsc</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1573,7 +1573,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Vsc</para>
+        /// <para>Create Vsc</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1859,7 +1859,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Vsc</para>
+        /// <para>Delete Vsc</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1907,7 +1907,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Vsc</para>
+        /// <para>Delete Vsc</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1955,7 +1955,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Vsc</para>
+        /// <para>Delete Vsc</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1973,7 +1973,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Vsc</para>
+        /// <para>Delete Vsc</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3023,7 +3023,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单个Vsc详情</para>
+        /// <para>Get details of a single Vsc</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3065,7 +3065,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单个Vsc详情</para>
+        /// <para>Get details of a single Vsc</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3107,7 +3107,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单个Vsc详情</para>
+        /// <para>Get details of a single Vsc</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3125,7 +3125,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单个Vsc详情</para>
+        /// <para>Get details of a single Vsc</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5081,7 +5081,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Vsc列表</para>
+        /// <para>Query Vsc List</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5151,7 +5151,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Vsc列表</para>
+        /// <para>Query Vsc List</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5221,7 +5221,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Vsc列表</para>
+        /// <para>Query Vsc List</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5239,7 +5239,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Vsc列表</para>
+        /// <para>Query Vsc List</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6783,6 +6783,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
             {
                 body["FileSystemMountEnabled"] = request.FileSystemMountEnabled;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                body["ImageId"] = request.ImageId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyPairName))
             {
                 body["KeyPairName"] = request.KeyPairName;
@@ -6845,6 +6849,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemMountEnabled))
             {
                 body["FileSystemMountEnabled"] = request.FileSystemMountEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                body["ImageId"] = request.ImageId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyPairName))
             {

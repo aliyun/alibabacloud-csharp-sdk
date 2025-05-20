@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class DeleteVscRequest : TeaModel {
         /// <summary>
+        /// <para>Idempotent parameter</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The VscId to be deleted</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

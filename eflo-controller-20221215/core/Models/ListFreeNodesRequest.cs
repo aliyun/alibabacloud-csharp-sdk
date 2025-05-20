@@ -49,6 +49,9 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// <para>return array of operating states</para>
+        /// </summary>
         [NameInMap("OperatingStates")]
         [Validation(Required=false)]
         public List<string> OperatingStates { get; set; }

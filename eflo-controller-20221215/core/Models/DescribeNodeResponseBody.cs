@@ -119,7 +119,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ExpiredTime { get; set; }
 
         /// <summary>
-        /// <para>是否支持文件存储挂载</para>
+        /// <para>Whether file storage mounting is supported</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>False</para>
         /// </summary>
         [NameInMap("FileSystemMountEnabled")]
         [Validation(Required=false)]

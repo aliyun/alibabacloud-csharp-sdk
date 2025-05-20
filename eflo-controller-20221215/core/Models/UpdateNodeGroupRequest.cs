@@ -9,9 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class UpdateNodeGroupRequest : TeaModel {
+        /// <summary>
+        /// <para>Whether file storage mounting is supported</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>True</para>
+        /// </summary>
         [NameInMap("FileSystemMountEnabled")]
         [Validation(Required=false)]
         public bool? FileSystemMountEnabled { get; set; }
+
+        /// <summary>
+        /// <para>节点组的默认镜像id，如果不设置，那么就不会改变。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>i123847249284734</para>
+        /// </summary>
+        [NameInMap("ImageId")]
+        [Validation(Required=false)]
+        public string ImageId { get; set; }
 
         /// <summary>
         /// <para>The name of the key pair.</para>

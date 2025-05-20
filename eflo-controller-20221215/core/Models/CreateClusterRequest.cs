@@ -492,6 +492,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         [Validation(Required=false)]
         public List<CreateClusterRequestNodeGroups> NodeGroups { get; set; }
         public class CreateClusterRequestNodeGroups : TeaModel {
+            /// <summary>
+            /// <para>Whether file system mounting is supported</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>False</para>
+            /// </summary>
             [NameInMap("FileSystemMountEnabled")]
             [Validation(Required=false)]
             public bool? FileSystemMountEnabled { get; set; }
