@@ -977,6 +977,136 @@ namespace AlibabaCloud.SDK.Searchplat20240529
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>多模态向量化</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMultiModalEmbeddingRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMultiModalEmbeddingResponse
+        /// </returns>
+        public GetMultiModalEmbeddingResponse GetMultiModalEmbeddingWithOptions(string workspaceName, string serviceId, GetMultiModalEmbeddingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Input))
+            {
+                body["input"] = request.Input;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMultiModalEmbedding",
+                Version = "2024-05-29",
+                Protocol = "HTTPS",
+                Pathname = "/v3/openapi/workspaces/" + workspaceName + "/multi-modal-embedding/" + serviceId,
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMultiModalEmbeddingResponse>(Execute(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>多模态向量化</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMultiModalEmbeddingRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMultiModalEmbeddingResponse
+        /// </returns>
+        public async Task<GetMultiModalEmbeddingResponse> GetMultiModalEmbeddingWithOptionsAsync(string workspaceName, string serviceId, GetMultiModalEmbeddingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Input))
+            {
+                body["input"] = request.Input;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMultiModalEmbedding",
+                Version = "2024-05-29",
+                Protocol = "HTTPS",
+                Pathname = "/v3/openapi/workspaces/" + workspaceName + "/multi-modal-embedding/" + serviceId,
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMultiModalEmbeddingResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>多模态向量化</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMultiModalEmbeddingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMultiModalEmbeddingResponse
+        /// </returns>
+        public GetMultiModalEmbeddingResponse GetMultiModalEmbedding(string workspaceName, string serviceId, GetMultiModalEmbeddingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetMultiModalEmbeddingWithOptions(workspaceName, serviceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>多模态向量化</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMultiModalEmbeddingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMultiModalEmbeddingResponse
+        /// </returns>
+        public async Task<GetMultiModalEmbeddingResponse> GetMultiModalEmbeddingAsync(string workspaceName, string serviceId, GetMultiModalEmbeddingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetMultiModalEmbeddingWithOptionsAsync(workspaceName, serviceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取推理结果</para>
         /// </summary>
         /// 
