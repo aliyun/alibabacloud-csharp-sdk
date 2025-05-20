@@ -119,6 +119,12 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public string Expiration { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether a password is specified for the share link.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("has_pwd")]
         [Validation(Required=false)]
         public bool? HasPwd { get; set; }

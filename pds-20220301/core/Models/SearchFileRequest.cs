@@ -20,6 +20,14 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         public string DriveId { get; set; }
 
         /// <summary>
+        /// <para>The field that is used to return additional information about files. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>dir_size: returns the statistics on each subfolder in the response.</description></item>
+        /// <item><description>id_path: returns the id_path value of each child subject in the response.</description></item>
+        /// <item><description>name_path: returns the name_path value of each child subject in the response.</description></item>
+        /// </list>
+        /// <para>You can specify multiple fields by separating them with commas (,). Example: &quot;id_path,name_path,dir_size&quot;.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>url,thumbnail</para>
         /// </summary>

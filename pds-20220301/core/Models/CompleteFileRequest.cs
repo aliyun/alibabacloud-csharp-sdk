@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class CompleteFileRequest : TeaModel {
+        [NameInMap("crc64_hash")]
+        [Validation(Required=false)]
+        public string Crc64Hash { get; set; }
+
         /// <summary>
         /// <para>The drive ID.</para>
         /// <para>This parameter is required.</para>
