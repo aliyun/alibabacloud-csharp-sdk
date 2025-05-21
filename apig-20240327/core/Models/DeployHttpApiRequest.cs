@@ -9,6 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class DeployHttpApiRequest : TeaModel {
+        [NameInMap("httpApiConfig")]
+        [Validation(Required=false)]
+        public DeployHttpApiRequestHttpApiConfig HttpApiConfig { get; set; }
+        public class DeployHttpApiRequestHttpApiConfig : TeaModel {
+            [NameInMap("gatewayId")]
+            [Validation(Required=false)]
+            public string GatewayId { get; set; }
+
+            [NameInMap("routeIds")]
+            [Validation(Required=false)]
+            public List<string> RouteIds { get; set; }
+
+        }
+
         /// <summary>
         /// <para>Rest API deployment configuration. Required when deploying an HTTP API as a Rest API.</para>
         /// </summary>
@@ -131,6 +145,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
             }
+
+            [NameInMap("gatewayId")]
+            [Validation(Required=false)]
+            public string GatewayId { get; set; }
+
+            [NameInMap("operationIds")]
+            [Validation(Required=false)]
+            public List<string> OperationIds { get; set; }
 
             /// <summary>
             /// <para>Historical version number. If this field is specified, the publication information will be based on the historical version information.</para>

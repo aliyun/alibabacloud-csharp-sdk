@@ -101,6 +101,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
         }
 
+        [NameInMap("gatewayStatus")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> GatewayStatus { get; set; }
+
         [NameInMap("match")]
         [Validation(Required=false)]
         public HttpRouteMatch Match { get; set; }

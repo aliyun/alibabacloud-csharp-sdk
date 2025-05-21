@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string GatewayId { get; set; }
 
+        [NameInMap("gatewayType")]
+        [Validation(Required=false)]
+        public string GatewayType { get; set; }
+
         /// <summary>
         /// <para>The domain name keyword for fuzzy search.</para>
         /// 

@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public long? CreateTimestamp { get; set; }
 
+        [NameInMap("deployConfigs")]
+        [Validation(Required=false)]
+        public List<HttpApiDeployConfig> DeployConfigs { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>获取用户信息</para>
@@ -29,6 +33,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("enableAuth")]
         [Validation(Required=false)]
         public bool? EnableAuth { get; set; }
@@ -76,6 +84,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [NameInMap("response")]
         [Validation(Required=false)]
         public HttpApiResponseContract Response { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Deployed</para>
+        /// </summary>
+        [NameInMap("status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
 
     }
 

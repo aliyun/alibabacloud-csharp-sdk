@@ -59,6 +59,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string EnvironmentId { get; set; }
 
+        [NameInMap("forDeploy")]
+        [Validation(Required=false)]
+        public bool? ForDeploy { get; set; }
+
         /// <summary>
         /// <para>The ID of the Cloud-native API Gateway instance.</para>
         /// 

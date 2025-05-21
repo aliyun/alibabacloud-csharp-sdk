@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string BasePath { get; set; }
 
+        [NameInMap("deployCntMap")]
+        [Validation(Required=false)]
+        public Dictionary<string, HttpApiApiInfoDeployCntMapValue> DeployCntMap { get; set; }
+
         [NameInMap("deployConfigs")]
         [Validation(Required=false)]
         public List<HttpApiDeployConfig> DeployConfigs { get; set; }
@@ -220,6 +224,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
         }
+
+        [NameInMap("gatewayId")]
+        [Validation(Required=false)]
+        public string GatewayId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

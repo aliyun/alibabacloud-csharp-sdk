@@ -29,6 +29,24 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public List<string> CustomDomainIds { get; set; }
 
+        [NameInMap("customDomainInfos")]
+        [Validation(Required=false)]
+        public List<HttpApiDeployConfigCustomDomainInfos> CustomDomainInfos { get; set; }
+        public class HttpApiDeployConfigCustomDomainInfos : TeaModel {
+            [NameInMap("domainId")]
+            [Validation(Required=false)]
+            public string DomainId { get; set; }
+
+            [NameInMap("name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("protocol")]
+            [Validation(Required=false)]
+            public string Protocol { get; set; }
+
+        }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>env-xxx</para>
@@ -36,6 +54,22 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [NameInMap("environmentId")]
         [Validation(Required=false)]
         public string EnvironmentId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>gw-xx</para>
+        /// </summary>
+        [NameInMap("gatewayId")]
+        [Validation(Required=false)]
+        public string GatewayId { get; set; }
+
+        [NameInMap("gatewayInfo")]
+        [Validation(Required=false)]
+        public GatewayInfo GatewayInfo { get; set; }
+
+        [NameInMap("mock")]
+        [Validation(Required=false)]
+        public HttpApiMockContract Mock { get; set; }
 
         [NameInMap("policyConfigs")]
         [Validation(Required=false)]
@@ -68,6 +102,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Type { get; set; }
 
         }
+
+        [NameInMap("routeBackend")]
+        [Validation(Required=false)]
+        public Backend RouteBackend { get; set; }
 
         [NameInMap("serviceConfigs")]
         [Validation(Required=false)]
@@ -104,6 +142,28 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [NameInMap("weight")]
             [Validation(Required=false)]
             public long? Weight { get; set; }
+
+        }
+
+        [NameInMap("subDomains")]
+        [Validation(Required=false)]
+        public List<HttpApiDeployConfigSubDomains> SubDomains { get; set; }
+        public class HttpApiDeployConfigSubDomains : TeaModel {
+            [NameInMap("domainId")]
+            [Validation(Required=false)]
+            public string DomainId { get; set; }
+
+            [NameInMap("name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("networkType")]
+            [Validation(Required=false)]
+            public string NetworkType { get; set; }
+
+            [NameInMap("protocol")]
+            [Validation(Required=false)]
+            public string Protocol { get; set; }
 
         }
 

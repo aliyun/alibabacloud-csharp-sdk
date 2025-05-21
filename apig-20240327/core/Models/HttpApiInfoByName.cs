@@ -11,6 +11,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
     public class HttpApiInfoByName : TeaModel {
         /// <summary>
         /// <b>Example:</b>
+        /// <para>gw-xx</para>
+        /// </summary>
+        [NameInMap("GatewayId")]
+        [Validation(Required=false)]
+        public string GatewayId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>test-api</para>
         /// </summary>
         [NameInMap("name")]

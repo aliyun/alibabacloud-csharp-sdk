@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public AuthConfig AuthConfig { get; set; }
 
+        [NameInMap("deployConfigs")]
+        [Validation(Required=false)]
+        public List<HttpApiDeployConfig> DeployConfigs { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>获取用户信息</para>

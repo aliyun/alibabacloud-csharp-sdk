@@ -90,6 +90,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 [Validation(Required=false)]
                 public string GatewayId { get; set; }
 
+                [NameInMap("gatewayType")]
+                [Validation(Required=false)]
+                public string GatewayType { get; set; }
+
+                [NameInMap("legacy")]
+                [Validation(Required=false)]
+                public bool? Legacy { get; set; }
+
                 /// <summary>
                 /// <para>The ingress addresses of the instance.</para>
                 /// </summary>

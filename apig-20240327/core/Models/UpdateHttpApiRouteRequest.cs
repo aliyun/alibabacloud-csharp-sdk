@@ -98,6 +98,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
         }
 
+        [NameInMap("deployConfigs")]
+        [Validation(Required=false)]
+        public List<HttpApiDeployConfig> DeployConfigs { get; set; }
+
         /// <summary>
         /// <para>The route description.</para>
         /// 

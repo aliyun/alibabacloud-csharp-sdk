@@ -67,6 +67,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public CreateHttpApiRequestIngressConfig IngressConfig { get; set; }
         public class CreateHttpApiRequestIngressConfig : TeaModel {
+            [NameInMap("clusterId")]
+            [Validation(Required=false)]
+            public string ClusterId { get; set; }
+
             /// <summary>
             /// <para>The environment ID.</para>
             /// 
@@ -97,6 +101,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [Validation(Required=false)]
             public bool? OverrideIngressIp { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The source ID.</para>
             /// 
@@ -105,6 +111,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// </summary>
             [NameInMap("sourceId")]
             [Validation(Required=false)]
+            [Obsolete]
             public string SourceId { get; set; }
 
             /// <summary>

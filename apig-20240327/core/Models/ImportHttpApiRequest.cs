@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ImportHttpApiRequest : TeaModel {
+        [NameInMap("deployConfigs")]
+        [Validation(Required=false)]
+        public HttpApiDeployConfig DeployConfigs { get; set; }
+
         /// <summary>
         /// <para>The API description, which cannot exceed 255 bytes in length. If you do not specify a description, a description is extracted from the definition file.</para>
         /// 
@@ -28,6 +32,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [NameInMap("dryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
+
+        [NameInMap("mcpRouteId")]
+        [Validation(Required=false)]
+        public string McpRouteId { get; set; }
 
         /// <summary>
         /// <para>The API name. If you do not specify a name, a name is extracted from the definition file. If a name and a versioning configuration already exist, the existing API definition is updated based on the strategy field.</para>

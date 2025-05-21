@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string GatewayNameLike { get; set; }
 
+        [NameInMap("gatewayType")]
+        [Validation(Required=false)]
+        public string GatewayType { get; set; }
+
         /// <summary>
         /// <para>Environment name, fuzzy search.</para>
         /// 

@@ -19,6 +19,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string EnvironmentId { get; set; }
 
+        [NameInMap("gatewayId")]
+        [Validation(Required=false)]
+        public string GatewayId { get; set; }
+
+        [NameInMap("operationId")]
+        [Validation(Required=false)]
+        public string OperationId { get; set; }
+
         /// <summary>
         /// <para>Route ID. This must be provided when publishing the route of an HTTP API.</para>
         /// 

@@ -19,6 +19,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string ConsumerAuthorizationRuleId { get; set; }
 
+        [NameInMap("forDeploy")]
+        [Validation(Required=false)]
+        public bool? ForDeploy { get; set; }
+
+        [NameInMap("gatewayId")]
+        [Validation(Required=false)]
+        public string GatewayId { get; set; }
+
         /// <summary>
         /// <para>List interfaces by Method.</para>
         /// 

@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public bool? ForceHttps { get; set; }
 
+        [NameInMap("gatewayType")]
+        [Validation(Required=false)]
+        public string GatewayType { get; set; }
+
         /// <summary>
         /// <para>The HTTP/2 configuration.</para>
         /// <para>Valid values:</para>
