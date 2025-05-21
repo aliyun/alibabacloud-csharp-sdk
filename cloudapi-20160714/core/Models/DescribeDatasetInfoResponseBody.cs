@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public string DatasetType { get; set; }
 
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+
             /// <summary>
             /// <para>The last modification time (UTC) of the dataset.</para>
             /// 

@@ -22,7 +22,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         /// <summary>
         /// <para>The name of the dataset.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NewDatasetName</para>
@@ -30,6 +29,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [NameInMap("DatasetName")]
         [Validation(Required=false)]
         public string DatasetName { get; set; }
+
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
 
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
