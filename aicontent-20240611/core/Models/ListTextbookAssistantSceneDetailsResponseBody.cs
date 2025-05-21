@@ -105,6 +105,10 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 
             }
 
+            [NameInMap("sceneTranslate")]
+            [Validation(Required=false)]
+            public string SceneTranslate { get; set; }
+
             [NameInMap("sentenceList")]
             [Validation(Required=false)]
             public List<ListTextbookAssistantSceneDetailsResponseBodyDataSentenceList> SentenceList { get; set; }

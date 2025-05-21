@@ -51,6 +51,66 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 
                 }
 
+                [NameInMap("unit")]
+                [Validation(Required=false)]
+                public List<ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnit> Unit { get; set; }
+                public class ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnit : TeaModel {
+                    [NameInMap("directoryId")]
+                    [Validation(Required=false)]
+                    public string DirectoryId { get; set; }
+
+                    [NameInMap("directoryName")]
+                    [Validation(Required=false)]
+                    public string DirectoryName { get; set; }
+
+                    [NameInMap("section")]
+                    [Validation(Required=false)]
+                    public List<ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnitSection> Section { get; set; }
+                    public class ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnitSection : TeaModel {
+                        [NameInMap("children")]
+                        [Validation(Required=false)]
+                        public object Children { get; set; }
+
+                        [NameInMap("directoryId")]
+                        [Validation(Required=false)]
+                        public string DirectoryId { get; set; }
+
+                        [NameInMap("directoryName")]
+                        [Validation(Required=false)]
+                        public string DirectoryName { get; set; }
+
+                        [NameInMap("topic")]
+                        [Validation(Required=false)]
+                        public List<ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnitSectionTopic> Topic { get; set; }
+                        public class ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnitSectionTopic : TeaModel {
+                            [NameInMap("labelId")]
+                            [Validation(Required=false)]
+                            public string LabelId { get; set; }
+
+                            [NameInMap("labelName")]
+                            [Validation(Required=false)]
+                            public string LabelName { get; set; }
+
+                        }
+
+                    }
+
+                    [NameInMap("topic")]
+                    [Validation(Required=false)]
+                    public List<ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnitTopic> Topic { get; set; }
+                    public class ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnitTopic : TeaModel {
+                        [NameInMap("labelId")]
+                        [Validation(Required=false)]
+                        public string LabelId { get; set; }
+
+                        [NameInMap("labelName")]
+                        [Validation(Required=false)]
+                        public string LabelName { get; set; }
+
+                    }
+
+                }
+
             }
 
             [NameInMap("editionInfo")]

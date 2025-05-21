@@ -71,9 +71,9 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 [Validation(Required=false)]
                 public List<string> SceneImageList { get; set; }
 
-                [NameInMap("sceneTransLate")]
+                [NameInMap("sceneTranslate")]
                 [Validation(Required=false)]
-                public string SceneTransLate { get; set; }
+                public string SceneTranslate { get; set; }
 
             }
 
