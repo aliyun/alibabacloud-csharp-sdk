@@ -236,6 +236,26 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
+                public DescribeDisksResponseBodyDisksDisksTags Tags { get; set; }
+                public class DescribeDisksResponseBodyDisksDisksTags : TeaModel {
+                    [NameInMap("Tags")]
+                    [Validation(Required=false)]
+                    public List<DescribeDisksResponseBodyDisksDisksTagsTags> Tags { get; set; }
+                    public class DescribeDisksResponseBodyDisksDisksTagsTags : TeaModel {
+                        [NameInMap("Key")]
+                        [Validation(Required=false)]
+                        public string Key { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                }
+
                 /// <summary>
                 /// <para>The type of the cloud disk or local disk. Valid values:</para>
                 /// <list type="bullet">
