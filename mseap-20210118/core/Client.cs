@@ -1151,6 +1151,142 @@ namespace AlibabaCloud.SDK.Mseap20210118
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>合作伙伴获取用户跨平台信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPlatformUserInfoForPartnerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPlatformUserInfoForPartnerResponse
+        /// </returns>
+        public GetPlatformUserInfoForPartnerResponse GetPlatformUserInfoForPartnerWithOptions(GetPlatformUserInfoForPartnerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlatformType))
+            {
+                query["PlatformType"] = request.PlatformType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetPlatformUserInfoForPartner",
+                Version = "2021-01-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetPlatformUserInfoForPartnerResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>合作伙伴获取用户跨平台信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPlatformUserInfoForPartnerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPlatformUserInfoForPartnerResponse
+        /// </returns>
+        public async Task<GetPlatformUserInfoForPartnerResponse> GetPlatformUserInfoForPartnerWithOptionsAsync(GetPlatformUserInfoForPartnerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlatformType))
+            {
+                query["PlatformType"] = request.PlatformType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetPlatformUserInfoForPartner",
+                Version = "2021-01-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetPlatformUserInfoForPartnerResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>合作伙伴获取用户跨平台信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPlatformUserInfoForPartnerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPlatformUserInfoForPartnerResponse
+        /// </returns>
+        public GetPlatformUserInfoForPartnerResponse GetPlatformUserInfoForPartner(GetPlatformUserInfoForPartnerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetPlatformUserInfoForPartnerWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>合作伙伴获取用户跨平台信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPlatformUserInfoForPartnerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPlatformUserInfoForPartnerResponse
+        /// </returns>
+        public async Task<GetPlatformUserInfoForPartnerResponse> GetPlatformUserInfoForPartnerAsync(GetPlatformUserInfoForPartnerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetPlatformUserInfoForPartnerWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取代理</para>
         /// </summary>
         /// 
