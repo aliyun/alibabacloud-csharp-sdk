@@ -463,6 +463,28 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
             [Validation(Required=false)]
             public bool? Enabled { get; set; }
 
+            [NameInMap("levelEnabled")]
+            [Validation(Required=false)]
+            public bool? LevelEnabled { get; set; }
+
+            [NameInMap("levels")]
+            [Validation(Required=false)]
+            public List<GetAICoachScriptResponseBodyScoreConfigLevels> Levels { get; set; }
+            public class GetAICoachScriptResponseBodyScoreConfigLevels : TeaModel {
+                [NameInMap("max")]
+                [Validation(Required=false)]
+                public int? Max { get; set; }
+
+                [NameInMap("min")]
+                [Validation(Required=false)]
+                public int? Min { get; set; }
+
+                [NameInMap("name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+            }
+
             [NameInMap("passScore")]
             [Validation(Required=false)]
             public string PassScore { get; set; }
@@ -580,6 +602,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
             [NameInMap("pointDeductionRuleEnabled")]
             [Validation(Required=false)]
             public bool? PointDeductionRuleEnabled { get; set; }
+
+            [NameInMap("similarPronunciationScoringEnabled")]
+            [Validation(Required=false)]
+            public bool? SimilarPronunciationScoringEnabled { get; set; }
 
             /// <summary>
             /// <b>Example:</b>

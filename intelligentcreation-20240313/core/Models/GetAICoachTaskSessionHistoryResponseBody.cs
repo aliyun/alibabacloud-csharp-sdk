@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
             [Validation(Required=false)]
             public string AudioUrl { get; set; }
 
+            [NameInMap("dateLabel")]
+            [Validation(Required=false)]
+            public string DateLabel { get; set; }
+
             [NameInMap("evaluationFeedback")]
             [Validation(Required=false)]
             public string EvaluationFeedback { get; set; }
