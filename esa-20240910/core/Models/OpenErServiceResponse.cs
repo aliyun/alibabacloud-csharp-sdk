@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ESA20240910.Models
 {
-    public class DeleteRoutineRelatedRouteResponse : TeaModel {
+    public class OpenErServiceResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public DeleteRoutineRelatedRouteResponseBody Body { get; set; }
+        public OpenErServiceResponseBody Body { get; set; }
 
     }
 

@@ -7709,150 +7709,6 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a route to map a URL to a routine so that the routine can be triggered to respond to requests destined for the URL.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// CreateRoutineRelatedRouteRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// CreateRoutineRelatedRouteResponse
-        /// </returns>
-        public CreateRoutineRelatedRouteResponse CreateRoutineRelatedRouteWithOptions(CreateRoutineRelatedRouteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ByPass))
-            {
-                body["ByPass"] = request.ByPass;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
-            {
-                body["Name"] = request.Name;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Route))
-            {
-                body["Route"] = request.Route;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
-            {
-                body["SiteId"] = request.SiteId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CreateRoutineRelatedRoute",
-                Version = "2024-09-10",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CreateRoutineRelatedRouteResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Adds a route to map a URL to a routine so that the routine can be triggered to respond to requests destined for the URL.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// CreateRoutineRelatedRouteRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// CreateRoutineRelatedRouteResponse
-        /// </returns>
-        public async Task<CreateRoutineRelatedRouteResponse> CreateRoutineRelatedRouteWithOptionsAsync(CreateRoutineRelatedRouteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ByPass))
-            {
-                body["ByPass"] = request.ByPass;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
-            {
-                body["Name"] = request.Name;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Route))
-            {
-                body["Route"] = request.Route;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
-            {
-                body["SiteId"] = request.SiteId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CreateRoutineRelatedRoute",
-                Version = "2024-09-10",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CreateRoutineRelatedRouteResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Adds a route to map a URL to a routine so that the routine can be triggered to respond to requests destined for the URL.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// CreateRoutineRelatedRouteRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// CreateRoutineRelatedRouteResponse
-        /// </returns>
-        public CreateRoutineRelatedRouteResponse CreateRoutineRelatedRoute(CreateRoutineRelatedRouteRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return CreateRoutineRelatedRouteWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Adds a route to map a URL to a routine so that the routine can be triggered to respond to requests destined for the URL.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// CreateRoutineRelatedRouteRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// CreateRoutineRelatedRouteResponse
-        /// </returns>
-        public async Task<CreateRoutineRelatedRouteResponse> CreateRoutineRelatedRouteAsync(CreateRoutineRelatedRouteRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await CreateRoutineRelatedRouteWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
         /// <para>新增边缘函数路由配置</para>
         /// </summary>
         /// 
@@ -14371,150 +14227,6 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a route that is associated with a routine.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// DeleteRoutineRelatedRouteRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// DeleteRoutineRelatedRouteResponse
-        /// </returns>
-        public DeleteRoutineRelatedRouteResponse DeleteRoutineRelatedRouteWithOptions(DeleteRoutineRelatedRouteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
-            {
-                body["Name"] = request.Name;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Route))
-            {
-                body["Route"] = request.Route;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteId))
-            {
-                body["RouteId"] = request.RouteId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
-            {
-                body["SiteId"] = request.SiteId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DeleteRoutineRelatedRoute",
-                Version = "2024-09-10",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DeleteRoutineRelatedRouteResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Deletes a route that is associated with a routine.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// DeleteRoutineRelatedRouteRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// DeleteRoutineRelatedRouteResponse
-        /// </returns>
-        public async Task<DeleteRoutineRelatedRouteResponse> DeleteRoutineRelatedRouteWithOptionsAsync(DeleteRoutineRelatedRouteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
-            {
-                body["Name"] = request.Name;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Route))
-            {
-                body["Route"] = request.Route;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteId))
-            {
-                body["RouteId"] = request.RouteId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
-            {
-                body["SiteId"] = request.SiteId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DeleteRoutineRelatedRoute",
-                Version = "2024-09-10",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DeleteRoutineRelatedRouteResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Deletes a route that is associated with a routine.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// DeleteRoutineRelatedRouteRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// DeleteRoutineRelatedRouteResponse
-        /// </returns>
-        public DeleteRoutineRelatedRouteResponse DeleteRoutineRelatedRoute(DeleteRoutineRelatedRouteRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DeleteRoutineRelatedRouteWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Deletes a route that is associated with a routine.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// DeleteRoutineRelatedRouteRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// DeleteRoutineRelatedRouteResponse
-        /// </returns>
-        public async Task<DeleteRoutineRelatedRouteResponse> DeleteRoutineRelatedRouteAsync(DeleteRoutineRelatedRouteRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DeleteRoutineRelatedRouteWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
         /// <para>删除边缘函数路由配置</para>
         /// </summary>
         /// 
@@ -17449,6 +17161,158 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeRatePlanInstanceStatusWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询站点离线日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSiteLogsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSiteLogsResponse
+        /// </returns>
+        public DescribeSiteLogsResponse DescribeSiteLogsWithOptions(DescribeSiteLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSiteLogs",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSiteLogsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询站点离线日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSiteLogsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSiteLogsResponse
+        /// </returns>
+        public async Task<DescribeSiteLogsResponse> DescribeSiteLogsWithOptionsAsync(DescribeSiteLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSiteLogs",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSiteLogsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询站点离线日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSiteLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSiteLogsResponse
+        /// </returns>
+        public DescribeSiteLogsResponse DescribeSiteLogs(DescribeSiteLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeSiteLogsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询站点离线日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSiteLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSiteLogsResponse
+        /// </returns>
+        public async Task<DescribeSiteLogsResponse> DescribeSiteLogsAsync(DescribeSiteLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeSiteLogsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -34171,6 +34035,134 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>OpenErService</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OpenErServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenErServiceResponse
+        /// </returns>
+        public OpenErServiceResponse OpenErServiceWithOptions(OpenErServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OpenErService",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OpenErServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>OpenErService</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OpenErServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenErServiceResponse
+        /// </returns>
+        public async Task<OpenErServiceResponse> OpenErServiceWithOptionsAsync(OpenErServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OpenErService",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OpenErServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>OpenErService</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OpenErServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenErServiceResponse
+        /// </returns>
+        public OpenErServiceResponse OpenErService(OpenErServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return OpenErServiceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>OpenErService</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OpenErServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenErServiceResponse
+        /// </returns>
+        public async Task<OpenErServiceResponse> OpenErServiceAsync(OpenErServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await OpenErServiceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Prefetches cache.</para>
         /// </summary>
         /// 
@@ -40768,6 +40760,10 @@ namespace AlibabaCloud.SDK.ESA20240910
             {
                 query["AddRealClientIpHeader"] = request.AddRealClientIpHeader;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealClientIpHeaderName))
+            {
+                query["RealClientIpHeaderName"] = request.RealClientIpHeaderName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
             {
                 query["SiteId"] = request.SiteId;
@@ -40821,6 +40817,10 @@ namespace AlibabaCloud.SDK.ESA20240910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddRealClientIpHeader))
             {
                 query["AddRealClientIpHeader"] = request.AddRealClientIpHeader;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealClientIpHeaderName))
+            {
+                query["RealClientIpHeaderName"] = request.RealClientIpHeaderName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
             {

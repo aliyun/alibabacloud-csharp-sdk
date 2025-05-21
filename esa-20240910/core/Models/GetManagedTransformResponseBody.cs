@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string AddRealClientIpHeader { get; set; }
 
+        [NameInMap("RealClientIpHeaderName")]
+        [Validation(Required=false)]
+        public string RealClientIpHeaderName { get; set; }
+
         /// <summary>
         /// <para>Request ID.</para>
         /// 
