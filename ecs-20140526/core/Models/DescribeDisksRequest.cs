@@ -77,6 +77,23 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>ephemeral_ssd: retired local SSD</description></item>
         /// </list>
         /// <para>Default value: all.</para>
+        /// <para>Enumerated values:</para>
+        /// <list type="bullet">
+        /// <item><description>all: all disks categories</description></item>
+        /// <item><description>cloud_efficiency: ultra disk</description></item>
+        /// <item><description>cloud_ssd: standard SSD</description></item>
+        /// <item><description>local_ssd_pro: I/O-intensive local disk</description></item>
+        /// <item><description>ephemeral: retired local disk</description></item>
+        /// <item><description>cloud_essd_entry: ESSD Entry disk</description></item>
+        /// <item><description>elastic_ephemeral_disk_premium: premium elastic ephemeral disk</description></item>
+        /// <item><description>cloud: basic disk</description></item>
+        /// <item><description>ephemeral_ssd: retired local SSD</description></item>
+        /// <item><description>cloud_auto: ESSD AutoPL disk</description></item>
+        /// <item><description>cloud_regional_disk_auto: Regional ESSD</description></item>
+        /// <item><description>cloud_essd: ESSD</description></item>
+        /// <item><description>elastic_ephemeral_disk_standard: standard elastic ephemeral disk</description></item>
+        /// <item><description>local_hdd_pro: throughput-intensive local disk</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>all</para>

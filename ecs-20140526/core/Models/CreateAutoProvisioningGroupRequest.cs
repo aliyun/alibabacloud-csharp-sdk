@@ -800,7 +800,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public CreateAutoProvisioningGroupRequestLaunchConfigurationImageOptions ImageOptions { get; set; }
             public class CreateAutoProvisioningGroupRequestLaunchConfigurationImageOptions : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether the instance that uses the image supports logons of the ecs-user user. Valid value:</para>
+                /// <para>Specifies whether the instance that uses the image supports logons of the ecs-user user. Valid value:</para>
                 /// <list type="bullet">
                 /// <item><description>true: The instance that uses the image supports logons of the ecs-user user.</description></item>
                 /// <item><description>false: The instance that uses the image does not support logons of the ecs-user user.</description></item>
@@ -838,10 +838,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string PeriodUnit { get; set; }
 
             /// <summary>
-            /// <para>The protection period of the preemptible instance. Unit: hours. Default value: 1. Valid values:</para>
+            /// <para>The protection period of the preemptible instance. Unit: hours. Default value: 1. Valid values: Valid values:</para>
             /// <list type="bullet">
             /// <item><description>1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</description></item>
-            /// <item><description>0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for one hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</description></item>
+            /// <item><description>0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</description></item>
             /// </list>
             /// <para>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. The preemptible instance is billed by second. We recommend that you specify an appropriate protection period based on your business requirements.</para>
             /// <para>When you specify this parameter, take note of the following items:</para>
@@ -862,7 +862,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <item><description>Terminate: The instance is released.</description></item>
             /// <item><description>Stop: The instance is stopped in economical mode.</description></item>
             /// </list>
-            /// <para>For information about the economical mode, see <a href="https://help.aliyun.com/zh/ecs/user-guide/economical-mode?spm=a2c4g.11186623.0.0.58796e1dJaYlK0">Economical mode</a>.</para>
+            /// <para>For information about the economical mode, see <a href="https://help.aliyun.com/document_detail/63353.html">Economical mode</a>.</para>
             /// <para>Default value: Terminate.</para>
             /// <para>When you specify this parameter, take note of the following items:</para>
             /// <list type="bullet">

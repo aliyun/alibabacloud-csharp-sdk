@@ -111,6 +111,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public bool? EnableSriov { get; set; }
 
+            [NameInMap("VirtualFunctionQuantity")]
+            [Validation(Required=false)]
+            public int? VirtualFunctionQuantity { get; set; }
+
+            [NameInMap("VirtualFunctionTotalQueueNumber")]
+            [Validation(Required=false)]
+            public int? VirtualFunctionTotalQueueNumber { get; set; }
+
         }
 
         /// <summary>

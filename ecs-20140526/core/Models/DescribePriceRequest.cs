@@ -422,9 +422,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PriceUnit { get; set; }
 
         /// <summary>
-        /// <para>Recurrence rules for the time-segmented assurance of the elasticity assurance.</para>
+        /// <para>The assurance schedules of the time-segmented elasticity assurance.</para>
         /// <remarks>
-        /// <para> The time-segmented assurance of the elasticity assurance is available only in specific regions and to specific users. To use this feature, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</para>
+        /// <para> Time-segmented elasticity assurances are available only in specific regions and to specific users. To use time-segmented elasticity assurances, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("RecurrenceRules")]
@@ -432,7 +432,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<DescribePriceRequestRecurrenceRules> RecurrenceRules { get; set; }
         public class DescribePriceRequestRecurrenceRules : TeaModel {
             /// <summary>
-            /// <para>The time when the time-segmented assurance ends. The value must be on the hour.</para>
+            /// <para>The end time of the assurance period for the capacity reservation of the time-segmented elasticity assurance. Specify an on-the-hour point in time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -442,14 +442,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? EndHour { get; set; }
 
             /// <summary>
-            /// <para>The type of the recurrence rule. Valid values:</para>
+            /// <para>The type of the assurance schedule. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Daily</description></item>
             /// <item><description>Weekly</description></item>
             /// <item><description>Monthly</description></item>
             /// </list>
             /// <remarks>
-            /// <para> If this parameter is specified, specify <c>RecurrenceType</c> and <c>RecurrenceValue</c>.</para>
+            /// <para> If you specify this parameter, you must specify <c>RecurrenceType</c> and <c>RecurrenceValue</c>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -460,14 +460,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string RecurrenceType { get; set; }
 
             /// <summary>
-            /// <para>The recurrency value of the time-segmented assurance.</para>
+            /// <para>The days of the week or month on which the capacity reservation of the time-segmented elasticity assurance takes effect or the interval, in number of days, at which the capacity reservation takes effect.</para>
             /// <list type="bullet">
-            /// <item><description>If you set <c>RecurrenceType</c> to <c>Daily</c>, you can set RecurrenceValue to only one value. Valid values: 1 to 31. The time-segmented assurance is performed every few days.</description></item>
-            /// <item><description>If you set <c>RecurrenceType</c> to <c>Weekly</c>, you can set RecurrenceValue to one or more values. Separate the values with commas (,). The values that correspond to Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday are 0, 1, 2, 3, 4, 5, and 6. For example, <c>1,2</c> indicates that the time-segmented assurance is performed on Monday and Tuesday of every week.</description></item>
-            /// <item><description>If you set <c>RecurrenceType</c> to <c>Monthly</c>, you can set RecurrenceValue to two values in the <c>A-B</c> format. Valid values of A and B: 1 to 31. B must be greater than or equal to A. For example, <c>1-5</c> indicates that the time-segmented assurance is performed from the 1st to the 5th of each month.</description></item>
+            /// <item><description>If you set <c>RecurrenceType</c> to <c>Daily</c>, you can specify only one value. Valid values: 1 to 31. The value specifies that the capacity reservation takes effect every few days.</description></item>
+            /// <item><description>If you set <c>RecurrenceType</c> to <c>Weekly</c>, you can specify multiple values. Separate the values with commas (,). Valid values: 0, 1, 2, 3, 4, 5, and 6, which specify Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday, respectively. Example: <c>1,2</c>, which specifies that the capacity reservation takes effect on Monday and Tuesday.</description></item>
+            /// <item><description>If you set <c>RecurrenceType</c> to <c>Monthly</c>, you can specify two values in the <c>A-B</c> format. Valid values of A and B: 1 to 31. B must be greater than or equal to A. Example: <c>1-5</c>, which specifies that the capacity reservation takes effect every day from the first day up to the fifth day of each month.</description></item>
             /// </list>
             /// <remarks>
-            /// <para> If this parameter is specified, you must specify <c>RecurrenceType</c> and <c>RecurrenceValue</c>.</para>
+            /// <para> If you specify this parameter, you must specify <c>RecurrenceType</c> and <c>RecurrenceValue</c>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -478,9 +478,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string RecurrenceValue { get; set; }
 
             /// <summary>
-            /// <para>The time when the time-segmented assurance takes effect. The value must be on the hour.</para>
+            /// <para>The start time of the assurance period for the capacity reservation of the time-segmented elasticity assurance. Specify an on-the-hour point in time.</para>
             /// <remarks>
-            /// <para> You must specify both StartHour and EndHour. The EndHour time must be at least 4 hours later than the StartHour time.</para>
+            /// <para> You must specify both StartHour and EndHour. The EndHour value must be at least 4 hours later than the StartHour value.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

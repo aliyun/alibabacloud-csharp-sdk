@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     /// <para>The number of threads per CPU core.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>4</para>
+                    /// <para>2</para>
                     /// </summary>
                     [NameInMap("ThreadsPerCore")]
                     [Validation(Required=false)]
