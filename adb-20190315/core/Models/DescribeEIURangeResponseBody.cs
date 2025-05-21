@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public DescribeEIURangeResponseBodyEIUInfo EIUInfo { get; set; }
         public class DescribeEIURangeResponseBodyEIUInfo : TeaModel {
+            [NameInMap("DefaultReservedNodeSize")]
+            [Validation(Required=false)]
+            public string DefaultReservedNodeSize { get; set; }
+
             /// <summary>
             /// <para>The suggested value for the number of EIUs.</para>
             /// 
@@ -52,6 +56,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             [NameInMap("MinValue")]
             [Validation(Required=false)]
             public string MinValue { get; set; }
+
+            [NameInMap("ReservedNodeSizeRange")]
+            [Validation(Required=false)]
+            public List<string> ReservedNodeSizeRange { get; set; }
 
             /// <summary>
             /// <para>A reserved parameter.</para>

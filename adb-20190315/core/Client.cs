@@ -12182,7 +12182,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the monitoring information about tables.</para>
+        /// <para>Queries the information about skewed tables for an AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12264,7 +12264,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the monitoring information about tables.</para>
+        /// <para>Queries the information about skewed tables for an AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12346,7 +12346,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the monitoring information about tables.</para>
+        /// <para>Queries the information about skewed tables for an AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12364,7 +12364,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the monitoring information about tables.</para>
+        /// <para>Queries the information about skewed tables for an AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19907,6 +19907,10 @@ namespace AlibabaCloud.SDK.Adb20190315
             {
                 query["DBClusterId"] = request.DBClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -20004,6 +20008,10 @@ namespace AlibabaCloud.SDK.Adb20190315
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -22646,7 +22654,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例分片数目</para>
+        /// <para>Changes the number of shards for an AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22724,7 +22732,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例分片数目</para>
+        /// <para>Changes the number of shards for an AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22802,7 +22810,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例分片数目</para>
+        /// <para>Changes the number of shards for an AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22820,7 +22828,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例分片数目</para>
+        /// <para>Changes the number of shards for an AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">

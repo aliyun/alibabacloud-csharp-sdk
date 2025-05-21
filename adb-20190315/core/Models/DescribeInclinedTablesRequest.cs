@@ -10,25 +10,34 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeInclinedTablesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cluster.</para>
+        /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>am-bpxxxxxxxx47</para>
+        /// <para>am-k2jofo4pi5zhd****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        /// <summary>
+        /// <para>The language in which you want to send requests and receive messages. Default value: zh. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>zh</para>
+        /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The order in which queries are sorted in the JSON format based on the specified fields. Specify the fields used to sort the queries and the order type.</para>
+        /// <para>The order by which to sort query results. Specify the parameter value in the JSON format.</para>
         /// <para>Example:</para>
-        /// <pre><c>
-        /// [
+        /// <pre><c>[
         /// 
         ///     {
         /// 
@@ -40,9 +49,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// 
         /// ]
         /// </c></pre>
-        /// <para>In the preceding code, Field indicates the field used to sort queries. Set the value of Field to Name.</para>
-        /// <para>Type indicates the order type. Valid values of Type: Desc and Asc. A value of Desc indicates a descending order. A value of Asc indicates an ascending order.</para>
-        /// <para>Both fields are not case-sensitive.</para>
+        /// <para>Field specifies the field by which to sort the query results. Set the value to Name. Type specifies the sorting order. Valid values: Desc and Asc.</para>
+        /// <para>Field and Type are case-insensitive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[      {          &quot;Field&quot;:&quot;Name&quot;,          &quot;Type&quot;:&quot;Asc&quot;      }  ]</para>
@@ -60,7 +68,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -70,11 +78,11 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values:</para>
+        /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>30</description></item>
-        /// <item><description>50</description></item>
-        /// <item><description>100</description></item>
+        /// <item><description>30；</description></item>
+        /// <item><description>50；</description></item>
+        /// <item><description>100；</description></item>
         /// </list>
         /// <para>Default value: 30.</para>
         /// 
@@ -85,6 +93,15 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-zhangjiakou</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -100,8 +117,8 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// <summary>
         /// <para>The type of the table. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>FactTable</description></item>
-        /// <item><description>DimensionTable</description></item>
+        /// <item><description><b>FactTable</b>: the partitioned table.</description></item>
+        /// <item><description><b>DimensionTable</b>: the dimension table.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
