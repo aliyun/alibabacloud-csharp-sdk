@@ -117,6 +117,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
         }
 
+        [NameInMap("onlyChangeConfig")]
+        [Validation(Required=false)]
+        public bool? OnlyChangeConfig { get; set; }
+
         /// <summary>
         /// <para>The protocols that are used to access the API.</para>
         /// </summary>

@@ -8095,6 +8095,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             {
                 body["ingressConfig"] = request.IngressConfig;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OnlyChangeConfig))
+            {
+                body["onlyChangeConfig"] = request.OnlyChangeConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Protocols))
             {
                 body["protocols"] = request.Protocols;
@@ -8172,6 +8176,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IngressConfig))
             {
                 body["ingressConfig"] = request.IngressConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OnlyChangeConfig))
+            {
+                body["onlyChangeConfig"] = request.OnlyChangeConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Protocols))
             {
