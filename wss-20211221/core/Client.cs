@@ -37,6 +37,11 @@ namespace AlibabaCloud.SDK.Wss20211221
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>多商品组合下单</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// CreateMultiOrderRequest
         /// </param>
@@ -92,6 +97,11 @@ namespace AlibabaCloud.SDK.Wss20211221
             return TeaModel.ToObject<CreateMultiOrderResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>多商品组合下单</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// CreateMultiOrderRequest
         /// </param>
@@ -147,6 +157,11 @@ namespace AlibabaCloud.SDK.Wss20211221
             return TeaModel.ToObject<CreateMultiOrderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>多商品组合下单</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateMultiOrderRequest
         /// </param>
@@ -160,6 +175,11 @@ namespace AlibabaCloud.SDK.Wss20211221
             return CreateMultiOrderWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>多商品组合下单</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateMultiOrderRequest
         /// </param>

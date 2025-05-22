@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             [Validation(Required=false)]
             public bool? AutoRenew { get; set; }
 
+            [NameInMap("BuyChange")]
+            [Validation(Required=false)]
+            public bool? BuyChange { get; set; }
+
             [NameInMap("Components")]
             [Validation(Required=false)]
             public List<CreateMultiOrderShrinkRequestOrderItemsComponents> Components { get; set; }
