@@ -67,6 +67,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("ResourceInstanceAccessStatus")]
+        [Validation(Required=false)]
+        public string ResourceInstanceAccessStatus { get; set; }
+
         /// <summary>
         /// <para>The ID of the instance.</para>
         /// 

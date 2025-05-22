@@ -241,6 +241,52 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public int? Status { get; set; }
 
+            [NameInMap("SubStatus")]
+            [Validation(Required=false)]
+            public string SubStatus { get; set; }
+
+            [NameInMap("SubStatusDetails")]
+            [Validation(Required=false)]
+            public List<DescribeCloudResourceAccessPortDetailsResponseBodyAccessPortDetailsSubStatusDetails> SubStatusDetails { get; set; }
+            public class DescribeCloudResourceAccessPortDetailsResponseBodyAccessPortDetailsSubStatusDetails : TeaModel {
+                [NameInMap("AppliedType")]
+                [Validation(Required=false)]
+                public string AppliedType { get; set; }
+
+                [NameInMap("CertId")]
+                [Validation(Required=false)]
+                public string CertId { get; set; }
+
+                [NameInMap("CertName")]
+                [Validation(Required=false)]
+                public string CertName { get; set; }
+
+                [NameInMap("CommonName")]
+                [Validation(Required=false)]
+                public string CommonName { get; set; }
+
+                [NameInMap("Domain")]
+                [Validation(Required=false)]
+                public string Domain { get; set; }
+
+                [NameInMap("ExpireTime")]
+                [Validation(Required=false)]
+                public long? ExpireTime { get; set; }
+
+                [NameInMap("ProductCertId")]
+                [Validation(Required=false)]
+                public string ProductCertId { get; set; }
+
+                [NameInMap("ProductCertName")]
+                [Validation(Required=false)]
+                public string ProductCertName { get; set; }
+
+                [NameInMap("ReasonCode")]
+                [Validation(Required=false)]
+                public string ReasonCode { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The version of the Transport Layer Security (TLS) protocol. Valid values:</para>
             /// <list type="bullet">

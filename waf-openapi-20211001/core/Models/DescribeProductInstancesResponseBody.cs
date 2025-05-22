@@ -16,6 +16,32 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public List<DescribeProductInstancesResponseBodyProductInstances> ProductInstances { get; set; }
         public class DescribeProductInstancesResponseBodyProductInstances : TeaModel {
+            [NameInMap("AccessInstanceId")]
+            [Validation(Required=false)]
+            public string AccessInstanceId { get; set; }
+
+            [NameInMap("AccessPortAndProtocols")]
+            [Validation(Required=false)]
+            public List<DescribeProductInstancesResponseBodyProductInstancesAccessPortAndProtocols> AccessPortAndProtocols { get; set; }
+            public class DescribeProductInstancesResponseBodyProductInstancesAccessPortAndProtocols : TeaModel {
+                [NameInMap("CertificateIds")]
+                [Validation(Required=false)]
+                public List<string> CertificateIds { get; set; }
+
+                [NameInMap("Port")]
+                [Validation(Required=false)]
+                public int? Port { get; set; }
+
+                [NameInMap("Protocol")]
+                [Validation(Required=false)]
+                public string Protocol { get; set; }
+
+            }
+
+            [NameInMap("AccessPorts")]
+            [Validation(Required=false)]
+            public List<int?> AccessPorts { get; set; }
+
             /// <summary>
             /// <para>The ID of the Alibaba Cloud account to which the resource belongs.</para>
             /// 
@@ -25,6 +51,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [NameInMap("OwnerUserId")]
             [Validation(Required=false)]
             public string OwnerUserId { get; set; }
+
+            [NameInMap("ResourceInstanceAccessStatus")]
+            [Validation(Required=false)]
+            public string ResourceInstanceAccessStatus { get; set; }
+
+            [NameInMap("ResourceInstanceEdition")]
+            [Validation(Required=false)]
+            public string ResourceInstanceEdition { get; set; }
 
             /// <summary>
             /// <para>The ID of the instance.</para>
@@ -96,6 +130,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 [Validation(Required=false)]
                 public List<DescribeProductInstancesResponseBodyProductInstancesResourcePortsCertificates> Certificates { get; set; }
                 public class DescribeProductInstancesResponseBodyProductInstancesResourcePortsCertificates : TeaModel {
+                    [NameInMap("AppliedType")]
+                    [Validation(Required=false)]
+                    public string AppliedType { get; set; }
+
                     /// <summary>
                     /// <para>The ID of the certificate.</para>
                     /// 
@@ -115,6 +153,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                     [NameInMap("CertificateName")]
                     [Validation(Required=false)]
                     public string CertificateName { get; set; }
+
+                    [NameInMap("Domain")]
+                    [Validation(Required=false)]
+                    public string Domain { get; set; }
 
                 }
 
