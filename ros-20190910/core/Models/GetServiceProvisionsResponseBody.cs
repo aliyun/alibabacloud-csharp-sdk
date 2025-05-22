@@ -40,6 +40,24 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [Validation(Required=false)]
             public bool? AutoEnableService { get; set; }
 
+            [NameInMap("CommodityProvisions")]
+            [Validation(Required=false)]
+            public List<GetServiceProvisionsResponseBodyServiceProvisionsCommodityProvisions> CommodityProvisions { get; set; }
+            public class GetServiceProvisionsResponseBodyServiceProvisionsCommodityProvisions : TeaModel {
+                [NameInMap("CommodityCode")]
+                [Validation(Required=false)]
+                public string CommodityCode { get; set; }
+
+                [NameInMap("EnableURL")]
+                [Validation(Required=false)]
+                public string EnableURL { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The names of the services on which the service that is queried depends.</para>
             /// </summary>

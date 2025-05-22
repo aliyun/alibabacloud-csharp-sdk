@@ -555,8 +555,13 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建AI任务</para>
+        /// <para>Create AI Task</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API allows users to create an AI task based on the specified task type, covering a range of capabilities from natural language understanding to resource stack deployment. Users need to provide the task type and any required parameters, and the API will return a unique TaskId for tracking the status and results of the task.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAITaskRequest
@@ -611,8 +616,13 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建AI任务</para>
+        /// <para>Create AI Task</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API allows users to create an AI task based on the specified task type, covering a range of capabilities from natural language understanding to resource stack deployment. Users need to provide the task type and any required parameters, and the API will return a unique TaskId for tracking the status and results of the task.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAITaskRequest
@@ -667,8 +677,13 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建AI任务</para>
+        /// <para>Create AI Task</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API allows users to create an AI task based on the specified task type, covering a range of capabilities from natural language understanding to resource stack deployment. Users need to provide the task type and any required parameters, and the API will return a unique TaskId for tracking the status and results of the task.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAITaskRequest
@@ -685,8 +700,13 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建AI任务</para>
+        /// <para>Create AI Task</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API allows users to create an AI task based on the specified task type, covering a range of capabilities from natural language understanding to resource stack deployment. Users need to provide the task type and any required parameters, and the API will return a unique TaskId for tracking the status and results of the task.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAITaskRequest
@@ -4265,6 +4285,11 @@ namespace AlibabaCloud.SDK.ROS20190910
             return await DetectStackDriftWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>对资源栈组进行偏差检测</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// DetectStackGroupDriftRequest
         /// </param>
@@ -4320,6 +4345,11 @@ namespace AlibabaCloud.SDK.ROS20190910
             return TeaModel.ToObject<DetectStackGroupDriftResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>对资源栈组进行偏差检测</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// DetectStackGroupDriftRequest
         /// </param>
@@ -4375,6 +4405,11 @@ namespace AlibabaCloud.SDK.ROS20190910
             return TeaModel.ToObject<DetectStackGroupDriftResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>对资源栈组进行偏差检测</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DetectStackGroupDriftRequest
         /// </param>
@@ -4388,6 +4423,11 @@ namespace AlibabaCloud.SDK.ROS20190910
             return DetectStackGroupDriftWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>对资源栈组进行偏差检测</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DetectStackGroupDriftRequest
         /// </param>
@@ -5055,7 +5095,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定AI任务信息</para>
+        /// <para>Queries the information about an AI task by task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5101,7 +5141,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定AI任务信息</para>
+        /// <para>Queries the information about an AI task by task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5147,7 +5187,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定AI任务信息</para>
+        /// <para>Queries the information about an AI task by task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5165,7 +5205,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定AI任务信息</para>
+        /// <para>Queries the information about an AI task by task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8899,7 +8939,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定AITask事件列表</para>
+        /// <para>Queries the events of an AI task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8949,7 +8989,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定AITask事件列表</para>
+        /// <para>Queries the events of an AI task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8999,7 +9039,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定AITask事件列表</para>
+        /// <para>Queries the events of an AI task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9017,7 +9057,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定AITask事件列表</para>
+        /// <para>Queries the events of an AI task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9035,7 +9075,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询AI任务列表</para>
+        /// <para>Queries a list of AI tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9089,7 +9129,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询AI任务列表</para>
+        /// <para>Queries a list of AI tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9143,7 +9183,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询AI任务列表</para>
+        /// <para>Queries a list of AI tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9161,7 +9201,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询AI任务列表</para>
+        /// <para>Queries a list of AI tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13209,6 +13249,11 @@ namespace AlibabaCloud.SDK.ROS20190910
             return await RegisterResourceTypeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改资源栈的删除保护属性</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SetDeletionProtectionRequest
         /// </param>
@@ -13254,6 +13299,11 @@ namespace AlibabaCloud.SDK.ROS20190910
             return TeaModel.ToObject<SetDeletionProtectionResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改资源栈的删除保护属性</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SetDeletionProtectionRequest
         /// </param>
@@ -13299,6 +13349,11 @@ namespace AlibabaCloud.SDK.ROS20190910
             return TeaModel.ToObject<SetDeletionProtectionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改资源栈的删除保护属性</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SetDeletionProtectionRequest
         /// </param>
@@ -13312,6 +13367,11 @@ namespace AlibabaCloud.SDK.ROS20190910
             return SetDeletionProtectionWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改资源栈的删除保护属性</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SetDeletionProtectionRequest
         /// </param>

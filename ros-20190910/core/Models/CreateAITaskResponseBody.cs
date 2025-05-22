@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class CreateAITaskResponseBody : TeaModel {
         /// <summary>
+        /// <para>Error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Forbidden</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>You are not authorized to complete this action.</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>B288A0BE-D927-4888-B0F7-B35EF84B6E6F</para>
         /// </summary>
@@ -42,6 +50,12 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the call was successful. Values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Call succeeded.</description></item>
+        /// <item><description>false: Call failed.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string Success { get; set; }
 
         /// <summary>
+        /// <para>AI task ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>t-asas*****</para>
         /// </summary>
