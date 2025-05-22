@@ -37,6 +37,24 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [Validation(Required=false)]
             public string CustomData { get; set; }
 
+            [NameInMap("ResponseInfo")]
+            [Validation(Required=false)]
+            public UpdateServiceInstanceAttributeRequestLicenseDataResponseInfo ResponseInfo { get; set; }
+            public class UpdateServiceInstanceAttributeRequestLicenseDataResponseInfo : TeaModel {
+                [NameInMap("ErrorCode")]
+                [Validation(Required=false)]
+                public string ErrorCode { get; set; }
+
+                [NameInMap("ErrorMessage")]
+                [Validation(Required=false)]
+                public string ErrorMessage { get; set; }
+
+                [NameInMap("UpdateResponse")]
+                [Validation(Required=false)]
+                public bool? UpdateResponse { get; set; }
+
+            }
+
         }
 
         /// <summary>
