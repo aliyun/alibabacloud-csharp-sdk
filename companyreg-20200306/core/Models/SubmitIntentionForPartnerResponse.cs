@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Companyreg20200306.Models
 {
-    public class QueryCommodityConfigResponse : TeaModel {
+    public class SubmitIntentionForPartnerResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Companyreg20200306.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public QueryCommodityConfigResponseBody Body { get; set; }
+        public SubmitIntentionForPartnerResponseBody Body { get; set; }
 
     }
 

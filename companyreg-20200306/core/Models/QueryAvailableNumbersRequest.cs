@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Companyreg20200306.Models
 {
     public class QueryAvailableNumbersRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
+        /// </summary>
         [NameInMap("BizType")]
         [Validation(Required=false)]
         public string BizType { get; set; }

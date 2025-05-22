@@ -8,22 +8,24 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Companyreg20200306.Models
 {
-    public class CloseIntentionForPartnerResponseBody : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>NoPermission</para>
-        /// </summary>
-        [NameInMap("ErrorCode")]
-        [Validation(Required=false)]
-        public string ErrorCode { get; set; }
-
+    public class SubmitIntentionForPartnerResponseBody : TeaModel {
         [NameInMap("ErrorMsg")]
         [Validation(Required=false)]
         public string ErrorMsg { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>4674B06A-B57F-5922-890C-D23D17C5BD21</para>
+        /// <para>I20211223101045000001</para>
+        /// </summary>
+        [NameInMap("IntentionBizId")]
+        [Validation(Required=false)]
+        public string IntentionBizId { get; set; }
+
+        /// <summary>
+        /// <para>Id of the request</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6A603AA0-73BA-52B3-AC7D-0F846ECF7A9D</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

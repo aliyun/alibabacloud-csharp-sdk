@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Companyreg20200306.Models
 {
-    public class ListUserIntentionsRequest : TeaModel {
+    public class SubmitIntentionForPartnerRequest : TeaModel {
         [NameInMap("Area")]
         [Validation(Required=false)]
         public string Area { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>esp.companyreg_cloud</para>
+        /// <para>esp.isp</para>
         /// </summary>
         [NameInMap("BizType")]
         [Validation(Required=false)]
@@ -23,63 +23,63 @@ namespace AlibabaCloud.SDK.Companyreg20200306.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>esp.bookkeeping,esp.bookkeeping_cloud</para>
+        /// <para>lingjun</para>
         /// </summary>
-        [NameInMap("BizTypes")]
+        [NameInMap("Channel")]
         [Validation(Required=false)]
-        public string BizTypes { get; set; }
+        public string Channel { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>I20210917170147000001</para>
+        /// <para>Server</para>
         /// </summary>
-        [NameInMap("IntentionBizId")]
+        [NameInMap("CommodityType")]
         [Validation(Required=false)]
-        public string IntentionBizId { get; set; }
+        public string CommodityType { get; set; }
+
+        [NameInMap("ContactName")]
+        [Validation(Required=false)]
+        public string ContactName { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>ceshi</para>
         /// </summary>
-        [NameInMap("PageNum")]
+        [NameInMap("Description")]
         [Validation(Required=false)]
-        public int? PageNum { get; set; }
+        public string Description { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>20</para>
+        /// <para>{\&quot;beianServiceNumber\&quot;:\&quot;9969c666-0935-4c5b-8042-926ff546e39f\&quot;}</para>
         /// </summary>
-        [NameInMap("PageSize")]
+        [NameInMap("ExtInfo")]
         [Validation(Required=false)]
-        public int? PageSize { get; set; }
+        public string ExtInfo { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>UpdateTime</para>
+        /// <para>country</para>
         /// </summary>
-        [NameInMap("SortFiled")]
+        [NameInMap("Grade")]
         [Validation(Required=false)]
-        public string SortFiled { get; set; }
+        public int? Grade { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>desc</para>
+        /// <para>18704330000</para>
         /// </summary>
-        [NameInMap("SortOrder")]
+        [NameInMap("Mobile")]
         [Validation(Required=false)]
-        public string SortOrder { get; set; }
+        public string Mobile { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>37</para>
+        /// <para>1212312312312</para>
         /// </summary>
-        [NameInMap("Status")]
+        [NameInMap("UserId")]
         [Validation(Required=false)]
-        public int? Status { get; set; }
-
-        [NameInMap("WithExtInfo")]
-        [Validation(Required=false)]
-        public bool? WithExtInfo { get; set; }
+        public string UserId { get; set; }
 
     }
 

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Companyreg20200306.Models
 {
     public class RejectUserSolutionResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>NoPermission</para>
+        /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
@@ -17,10 +21,18 @@ namespace AlibabaCloud.SDK.Companyreg20200306.Models
         [Validation(Required=false)]
         public string ErrorMsg { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>717711FB-F887-597B-8121-B77437E89B97</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>True</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

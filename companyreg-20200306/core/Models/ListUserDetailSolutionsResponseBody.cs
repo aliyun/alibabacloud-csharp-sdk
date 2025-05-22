@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Companyreg20200306.Models
 {
     public class ListUserDetailSolutionsResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>5</para>
+        /// </summary>
         [NameInMap("CurrentPageNum")]
         [Validation(Required=false)]
         public int? CurrentPageNum { get; set; }
@@ -17,34 +21,66 @@ namespace AlibabaCloud.SDK.Companyreg20200306.Models
         [Validation(Required=false)]
         public List<ListUserDetailSolutionsResponseBodyData> Data { get; set; }
         public class ListUserDetailSolutionsResponseBodyData : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>S20211222161651000001</para>
+            /// </summary>
             [NameInMap("BizId")]
             [Validation(Required=false)]
             public string BizId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>esp.wangwen</para>
+            /// </summary>
             [NameInMap("BizType")]
             [Validation(Required=false)]
             public string BizType { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>15556223433</para>
+            /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>P20211222161651000001</para>
+            /// </summary>
             [NameInMap("DeliveryOrderBizId")]
             [Validation(Required=false)]
             public string DeliveryOrderBizId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>{}</para>
+            /// </summary>
             [NameInMap("ExtInfo")]
             [Validation(Required=false)]
             public string ExtInfo { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>A20211222161651000001</para>
+            /// </summary>
             [NameInMap("IntentionAssignBizId")]
             [Validation(Required=false)]
             public string IntentionAssignBizId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>I20211222161651000001</para>
+            /// </summary>
             [NameInMap("IntentionBizId")]
             [Validation(Required=false)]
             public string IntentionBizId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>jinsan</para>
+            /// </summary>
             [NameInMap("PartnerCode")]
             [Validation(Required=false)]
             public string PartnerCode { get; set; }
@@ -53,32 +89,60 @@ namespace AlibabaCloud.SDK.Companyreg20200306.Models
             [Validation(Required=false)]
             public string Reason { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>15556223433</para>
+            /// </summary>
             [NameInMap("UpdateTime")]
             [Validation(Required=false)]
             public long? UpdateTime { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1219541161213057</para>
+            /// </summary>
             [NameInMap("UserId")]
             [Validation(Required=false)]
             public string UserId { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>20</para>
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2174AA97-56FB-50FA-B243-0460B9E4CE0C</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("TotalItemNum")]
         [Validation(Required=false)]
         public int? TotalItemNum { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("TotalPageNum")]
         [Validation(Required=false)]
         public int? TotalPageNum { get; set; }
