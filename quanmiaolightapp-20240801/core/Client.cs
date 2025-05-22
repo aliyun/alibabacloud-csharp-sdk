@@ -1123,6 +1123,136 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>热点新闻推荐</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// HotNewsRecommendRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// HotNewsRecommendResponse
+        /// </returns>
+        public HotNewsRecommendResponse HotNewsRecommendWithOptions(string workspaceId, HotNewsRecommendRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prompt))
+            {
+                body["prompt"] = request.Prompt;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "HotNewsRecommend",
+                Version = "2024-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/quanmiao/lightapp/hotNewsRecommend",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<HotNewsRecommendResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>热点新闻推荐</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// HotNewsRecommendRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// HotNewsRecommendResponse
+        /// </returns>
+        public async Task<HotNewsRecommendResponse> HotNewsRecommendWithOptionsAsync(string workspaceId, HotNewsRecommendRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prompt))
+            {
+                body["prompt"] = request.Prompt;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "HotNewsRecommend",
+                Version = "2024-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/quanmiao/lightapp/hotNewsRecommend",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<HotNewsRecommendResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>热点新闻推荐</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// HotNewsRecommendRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// HotNewsRecommendResponse
+        /// </returns>
+        public HotNewsRecommendResponse HotNewsRecommend(string workspaceId, HotNewsRecommendRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return HotNewsRecommendWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>热点新闻推荐</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// HotNewsRecommendRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// HotNewsRecommendResponse
+        /// </returns>
+        public async Task<HotNewsRecommendResponse> HotNewsRecommendAsync(string workspaceId, HotNewsRecommendRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await HotNewsRecommendWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取挖掘分析结果明细列表</para>
         /// </summary>
         /// 
