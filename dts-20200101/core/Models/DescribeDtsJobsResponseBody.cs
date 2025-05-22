@@ -653,6 +653,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             [Validation(Required=false)]
             public DescribeDtsJobsResponseBodyDtsJobListFullDataCheckStatus FullDataCheckStatus { get; set; }
             public class DescribeDtsJobsResponseBodyDtsJobListFullDataCheckStatus : TeaModel {
+                [NameInMap("CanSwitch")]
+                [Validation(Required=false)]
+                public bool? CanSwitch { get; set; }
+
                 /// <summary>
                 /// <para>The error message returned if the task failed.</para>
                 /// 
@@ -916,6 +920,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
                 [NameInMap("IncDataCheck")]
                 [Validation(Required=false)]
                 public bool? IncDataCheck { get; set; }
+
+                [NameInMap("StructureDataCheck")]
+                [Validation(Required=false)]
+                public bool? StructureDataCheck { get; set; }
 
                 /// <summary>
                 /// <para>Indicates whether schema migration or schema synchronization is performed. Valid values:</para>
@@ -1748,6 +1756,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
                 [Validation(Required=false)]
                 public DescribeDtsJobsResponseBodyDtsJobListReverseJobFullDataCheckStatus FullDataCheckStatus { get; set; }
                 public class DescribeDtsJobsResponseBodyDtsJobListReverseJobFullDataCheckStatus : TeaModel {
+                    [NameInMap("CanSwitch")]
+                    [Validation(Required=false)]
+                    public bool? CanSwitch { get; set; }
+
                     /// <summary>
                     /// <para>The error message returned if the task failed.</para>
                     /// 
@@ -1936,6 +1948,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
                     [NameInMap("IncDataCheck")]
                     [Validation(Required=false)]
                     public bool? IncDataCheck { get; set; }
+
+                    [NameInMap("StructureDataCheck")]
+                    [Validation(Required=false)]
+                    public bool? StructureDataCheck { get; set; }
 
                     /// <summary>
                     /// <para>Indicates whether initial schema synchronization is performed. Valid values:</para>
@@ -2256,6 +2272,28 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
+                [NameInMap("StructureDataCheckStatus")]
+                [Validation(Required=false)]
+                public DescribeDtsJobsResponseBodyDtsJobListReverseJobStructureDataCheckStatus StructureDataCheckStatus { get; set; }
+                public class DescribeDtsJobsResponseBodyDtsJobListReverseJobStructureDataCheckStatus : TeaModel {
+                    [NameInMap("ErrorMessage")]
+                    [Validation(Required=false)]
+                    public string ErrorMessage { get; set; }
+
+                    [NameInMap("Percent")]
+                    [Validation(Required=false)]
+                    public string Percent { get; set; }
+
+                    [NameInMap("Progress")]
+                    [Validation(Required=false)]
+                    public string Progress { get; set; }
+
+                    [NameInMap("Status")]
+                    [Validation(Required=false)]
+                    public string Status { get; set; }
+
+                }
+
                 /// <summary>
                 /// <para>The state of initial schema synchronization.</para>
                 /// </summary>
@@ -2440,6 +2478,28 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
+            [NameInMap("StructureDataCheckStatus")]
+            [Validation(Required=false)]
+            public DescribeDtsJobsResponseBodyDtsJobListStructureDataCheckStatus StructureDataCheckStatus { get; set; }
+            public class DescribeDtsJobsResponseBodyDtsJobListStructureDataCheckStatus : TeaModel {
+                [NameInMap("ErrorMessage")]
+                [Validation(Required=false)]
+                public string ErrorMessage { get; set; }
+
+                [NameInMap("Percent")]
+                [Validation(Required=false)]
+                public string Percent { get; set; }
+
+                [NameInMap("Progress")]
+                [Validation(Required=false)]
+                public string Progress { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+            }
 
             /// <summary>
             /// <para>The state of schema migration or initial schema synchronization.</para>
