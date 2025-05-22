@@ -4467,6 +4467,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             {
                 query["Param"] = request.ParamShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealLoginUserUid))
+            {
+                query["RealLoginUserUid"] = request.RealLoginUserUid;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelatedUserListShrink))
             {
                 query["RelatedUserList"] = request.RelatedUserListShrink;
@@ -4539,6 +4543,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamShrink))
             {
                 query["Param"] = request.ParamShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealLoginUserUid))
+            {
+                query["RealLoginUserUid"] = request.RealLoginUserUid;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelatedUserListShrink))
             {
