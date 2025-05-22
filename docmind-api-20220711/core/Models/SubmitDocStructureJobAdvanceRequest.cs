@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Docmind_api20220711.Models
         [Validation(Required=false)]
         public string OssEndpoint { get; set; }
 
+        [NameInMap("PageIndex")]
+        [Validation(Required=false)]
+        public string PageIndex { get; set; }
+
         [NameInMap("StructureType")]
         [Validation(Required=false)]
         public string StructureType { get; set; }

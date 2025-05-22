@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Docmind_api20220711.Models
             [Validation(Required=false)]
             public int? ParagraphCount { get; set; }
 
+            [NameInMap("Processing")]
+            [Validation(Required=false)]
+            public float? Processing { get; set; }
+
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }

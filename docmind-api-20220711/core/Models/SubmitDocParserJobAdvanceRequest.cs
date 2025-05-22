@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Docmind_api20220711.Models
         [Validation(Required=false)]
         public bool? LlmEnhancement { get; set; }
 
+        [NameInMap("Option")]
+        [Validation(Required=false)]
+        public string Option { get; set; }
+
         [NameInMap("OssBucket")]
         [Validation(Required=false)]
         public string OssBucket { get; set; }
@@ -48,6 +52,10 @@ namespace AlibabaCloud.SDK.Docmind_api20220711.Models
         [NameInMap("OssEndpoint")]
         [Validation(Required=false)]
         public string OssEndpoint { get; set; }
+
+        [NameInMap("PageIndex")]
+        [Validation(Required=false)]
+        public string PageIndex { get; set; }
 
     }
 
