@@ -263,6 +263,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                                     [Validation(Required=false)]
                                     public int? From { get; set; }
 
+                                    [NameInMap("IsMatch")]
+                                    [Validation(Required=false)]
+                                    public bool? IsMatch { get; set; }
+
                                     /// <summary>
                                     /// <b>Example:</b>
                                     /// <para>2</para>
@@ -348,6 +352,14 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                         }
 
                     }
+
+                    [NameInMap("MachineHitResult")]
+                    [Validation(Required=false)]
+                    public int? MachineHitResult { get; set; }
+
+                    [NameInMap("ReviewHitResult")]
+                    [Validation(Required=false)]
+                    public int? ReviewHitResult { get; set; }
 
                     [NameInMap("ReviewInfo")]
                     [Validation(Required=false)]
