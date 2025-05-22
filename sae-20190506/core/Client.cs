@@ -972,6 +972,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["Envs"] = request.Envs;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuConfig))
+            {
+                query["GpuConfig"] = request.GpuConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImagePullSecrets))
             {
                 query["ImagePullSecrets"] = request.ImagePullSecrets;
@@ -1316,6 +1320,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Envs))
             {
                 query["Envs"] = request.Envs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuConfig))
+            {
+                query["GpuConfig"] = request.GpuConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImagePullSecrets))
             {
@@ -4879,6 +4887,144 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>删除实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteInstancesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstancesResponse
+        /// </returns>
+        public DeleteInstancesResponse DeleteInstancesWithOptions(DeleteInstancesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
+            {
+                query["InstanceIds"] = request.InstanceIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteInstances",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v1/sam/app/deleteInstances",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteInstancesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteInstancesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstancesResponse
+        /// </returns>
+        public async Task<DeleteInstancesResponse> DeleteInstancesWithOptionsAsync(DeleteInstancesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
+            {
+                query["InstanceIds"] = request.InstanceIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteInstances",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v1/sam/app/deleteInstances",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteInstancesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstancesResponse
+        /// </returns>
+        public DeleteInstancesResponse DeleteInstances(DeleteInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteInstancesWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstancesResponse
+        /// </returns>
+        public async Task<DeleteInstancesResponse> DeleteInstancesAsync(DeleteInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteInstancesWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Delete a job template.</para>
         /// </summary>
         /// 
@@ -5975,6 +6121,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["Envs"] = request.Envs;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuConfig))
+            {
+                query["GpuConfig"] = request.GpuConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImagePullSecrets))
             {
                 query["ImagePullSecrets"] = request.ImagePullSecrets;
@@ -6316,6 +6466,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Envs))
             {
                 query["Envs"] = request.Envs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuConfig))
+            {
+                query["GpuConfig"] = request.GpuConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImagePullSecrets))
             {

@@ -40,6 +40,26 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string CpuStrategy { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>L1</para>
+        /// </summary>
+        [NameInMap("CpuUtilLevel")]
+        [Validation(Required=false)]
+        public string CpuUtilLevel { get; set; }
+
+        [NameInMap("CpuUtilMetrics")]
+        [Validation(Required=false)]
+        public List<float?> CpuUtilMetrics { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("EnableCpuIdle")]
+        [Validation(Required=false)]
+        public bool? EnableCpuIdle { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +68,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [NameInMap("EnvType")]
         [Validation(Required=false)]
         public string EnvType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>30</para>
+        /// </summary>
+        [NameInMap("EphemeralStorageGiB")]
+        [Validation(Required=false)]
+        public long? EphemeralStorageGiB { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -141,6 +169,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>std</para>
+        /// </summary>
+        [NameInMap("NewSaeVersion")]
+        [Validation(Required=false)]
+        public string NewSaeVersion { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
         [NameInMap("NoneLoadInstanceCount")]
@@ -164,6 +200,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>haiguang</para>
+        /// </summary>
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public string ResourceType { get; set; }
 
     }
 

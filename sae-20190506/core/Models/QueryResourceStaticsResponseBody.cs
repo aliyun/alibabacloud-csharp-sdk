@@ -94,6 +94,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [Validation(Required=false)]
                 public float? EphemeralStorage { get; set; }
 
+                [NameInMap("GpuA10")]
+                [Validation(Required=false)]
+                public float? GpuA10 { get; set; }
+
+                [NameInMap("GpuPpu810e")]
+                [Validation(Required=false)]
+                public float? GpuPpu810e { get; set; }
+
                 [NameInMap("IdleCpu")]
                 [Validation(Required=false)]
                 public float? IdleCpu { get; set; }
