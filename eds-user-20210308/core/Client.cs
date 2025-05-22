@@ -1132,7 +1132,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除资源组</para>
+        /// <para>Deletes a resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1178,7 +1178,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除资源组</para>
+        /// <para>Deletes a resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1224,7 +1224,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除资源组</para>
+        /// <para>Deletes a resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1242,7 +1242,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除资源组</para>
+        /// <para>Deletes a resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">

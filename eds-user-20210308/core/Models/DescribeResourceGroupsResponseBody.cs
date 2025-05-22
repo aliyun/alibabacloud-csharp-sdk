@@ -21,6 +21,24 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [Validation(Required=false)]
         public List<DescribeResourceGroupsResponseBodyResourceGroup> ResourceGroup { get; set; }
         public class DescribeResourceGroupsResponseBodyResourceGroup : TeaModel {
+            [NameInMap("AppRules")]
+            [Validation(Required=false)]
+            public List<DescribeResourceGroupsResponseBodyResourceGroupAppRules> AppRules { get; set; }
+            public class DescribeResourceGroupsResponseBodyResourceGroupAppRules : TeaModel {
+                [NameInMap("Id")]
+                [Validation(Required=false)]
+                public string Id { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public int? Type { get; set; }
+
+            }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>3</para>
@@ -87,6 +105,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             [Validation(Required=false)]
             public List<DescribeResourceGroupsResponseBodyResourceGroupTimers> Timers { get; set; }
             public class DescribeResourceGroupsResponseBodyResourceGroupTimers : TeaModel {
+                [NameInMap("BindStatus")]
+                [Validation(Required=false)]
+                public string BindStatus { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>t-asdzx0mbjhg***</para>
@@ -98,6 +120,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("TimerStatus")]
+                [Validation(Required=false)]
+                public string TimerStatus { get; set; }
 
             }
 
