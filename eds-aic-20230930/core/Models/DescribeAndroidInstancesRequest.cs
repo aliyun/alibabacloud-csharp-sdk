@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string AndroidInstanceName { get; set; }
 
+        [NameInMap("AppManagePolicyId")]
+        [Validation(Required=false)]
+        public string AppManagePolicyId { get; set; }
+
         [NameInMap("AuthorizedUserId")]
         [Validation(Required=false)]
         public string AuthorizedUserId { get; set; }

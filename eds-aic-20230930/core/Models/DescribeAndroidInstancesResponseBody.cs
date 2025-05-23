@@ -86,6 +86,20 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string AppInstanceId { get; set; }
 
+            [NameInMap("AppManagePolicy")]
+            [Validation(Required=false)]
+            public DescribeAndroidInstancesResponseBodyInstanceModelAppManagePolicy AppManagePolicy { get; set; }
+            public class DescribeAndroidInstancesResponseBodyInstanceModelAppManagePolicy : TeaModel {
+                [NameInMap("AppManagePolicyId")]
+                [Validation(Required=false)]
+                public string AppManagePolicyId { get; set; }
+
+                [NameInMap("AppManagePolicyName")]
+                [Validation(Required=false)]
+                public string AppManagePolicyName { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The ID of the user to whom the instance is assigned.</para>
             /// 
