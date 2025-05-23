@@ -3303,6 +3303,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryName))
+            {
+                body["CategoryName"] = request.CategoryName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryType))
             {
                 body["CategoryType"] = request.CategoryType;
@@ -3361,6 +3365,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryName))
+            {
+                body["CategoryName"] = request.CategoryName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryType))
             {
                 body["CategoryType"] = request.CategoryType;

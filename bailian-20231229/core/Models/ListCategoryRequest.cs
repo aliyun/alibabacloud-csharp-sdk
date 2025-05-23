@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class ListCategoryRequest : TeaModel {
+        [NameInMap("CategoryName")]
+        [Validation(Required=false)]
+        public string CategoryName { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
