@@ -50,6 +50,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public int? BaselineCredit { get; set; }
 
+                [NameInMap("Clock")]
+                [Validation(Required=false)]
+                public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeClock Clock { get; set; }
+                public class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeClock : TeaModel {
+                    [NameInMap("PtpSupport")]
+                    [Validation(Required=false)]
+                    public string PtpSupport { get; set; }
+
+                }
+
                 /// <summary>
                 /// <para>The CPU architecture. Valid values:</para>
                 /// <list type="bullet">
