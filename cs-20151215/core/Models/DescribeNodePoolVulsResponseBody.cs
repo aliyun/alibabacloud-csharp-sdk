@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeNodePoolVulsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The node pool vulnerabilities.</para>
+        /// <para>The vulnerability list of all node pools.</para>
         /// </summary>
         [NameInMap("vul_records")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string NodeName { get; set; }
 
             /// <summary>
-            /// <para>A list of vulnerabilities.</para>
+            /// <para>The list of vulnerabilities.</para>
             /// </summary>
             [NameInMap("vul_list")]
             [Validation(Required=false)]
@@ -101,7 +101,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>Whether the Cloud Security CVE Remediation Service has been purchased</para>
+        /// <para>Indicates whether the CVE vulnerability patching service provided by Security Center is purchased.</para>
+        /// <list type="bullet">
+        /// <item><description>true: yes</description></item>
+        /// <item><description>false: no</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

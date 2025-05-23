@@ -1804,6 +1804,10 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["api_audiences"] = request.ApiAudiences;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuditLogConfig))
+            {
+                body["audit_log_config"] = request.AuditLogConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
             {
                 body["auto_renew"] = request.AutoRenew;
@@ -2250,6 +2254,10 @@ namespace AlibabaCloud.SDK.CS20151215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiAudiences))
             {
                 body["api_audiences"] = request.ApiAudiences;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuditLogConfig))
+            {
+                body["audit_log_config"] = request.AuditLogConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
             {
@@ -2855,7 +2863,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建集群巡检配置</para>
+        /// <para>Configures cluster inspection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2909,7 +2917,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建集群巡检配置</para>
+        /// <para>Configures cluster inspection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2963,7 +2971,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建集群巡检配置</para>
+        /// <para>Configures cluster inspection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2982,7 +2990,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建集群巡检配置</para>
+        /// <para>Configures cluster inspection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4373,7 +4381,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除集群巡检配置</para>
+        /// <para>Deletes cluster inspection configurations.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4409,7 +4417,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除集群巡检配置</para>
+        /// <para>Deletes cluster inspection configurations.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4445,7 +4453,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除集群巡检配置</para>
+        /// <para>Deletes cluster inspection configurations.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4460,7 +4468,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除集群巡检配置</para>
+        /// <para>Deletes cluster inspection configurations.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4605,15 +4613,18 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes nodes from a Container Service for Kubernetes (ACK) cluster. When you remove nodes, you can specify whether to release the Elastic Compute Service (ECS) instances and drain the nodes. When you remove nodes, pods on the nodes are migrated. This may adversely affect your businesses. We recommend that you back up data and perform this operation during off-peak hours.</para>
+        /// <para>Removes nodes from a Container Service for Kubernetes (ACK) cluster when they are no longer required through the DeleteClusterNodes interface. When removing nodes, you can specify whether to release the Elastic Compute Service (ECS) instances and drain the nodes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.</para>
+        /// <para>  Use this API or the <a href="https://cs.console.aliyun.com">ACK console</a> for node removal. Do not remove a node by running the <c>kubectl delete node</c> command.</para>
         /// <list type="bullet">
-        /// <item><description>The operation may have unexpected risks. Back up the data before you perform this operation.</description></item>
-        /// <item><description>When you remove a node, the system sets the status of the node to Unschedulable.</description></item>
+        /// <item><description>Never directly release or remove ECS instances through the ECS or Auto Scaling console/APIs. Renew subscription ECS instances before they expire. Violations may cause node termination and removal from the ACK console.</description></item>
+        /// <item><description>If a node pool has the Expected Nodes parameter configured, the node pool automatically scales other ECS instances to maintain the expected number of nodes.</description></item>
+        /// <item><description>When you remove a node, the pods on the node are migrated to other nodes. To prevent service interruptions, remove nodes during off-peak hours. Unexpected risks may arise during node removal. Back up the data in advance.</description></item>
+        /// <item><description>ACK drains the node during node removal. Make sure that other nodes in the cluster have sufficient resources to host the evicted pods.</description></item>
+        /// <item><description>To ensure the pods on the node you want to remove can be successfully scheduled to other nodes, check whether the node affinity rules and scheduling policies of the pods meet the requirements.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4668,15 +4679,18 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes nodes from a Container Service for Kubernetes (ACK) cluster. When you remove nodes, you can specify whether to release the Elastic Compute Service (ECS) instances and drain the nodes. When you remove nodes, pods on the nodes are migrated. This may adversely affect your businesses. We recommend that you back up data and perform this operation during off-peak hours.</para>
+        /// <para>Removes nodes from a Container Service for Kubernetes (ACK) cluster when they are no longer required through the DeleteClusterNodes interface. When removing nodes, you can specify whether to release the Elastic Compute Service (ECS) instances and drain the nodes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.</para>
+        /// <para>  Use this API or the <a href="https://cs.console.aliyun.com">ACK console</a> for node removal. Do not remove a node by running the <c>kubectl delete node</c> command.</para>
         /// <list type="bullet">
-        /// <item><description>The operation may have unexpected risks. Back up the data before you perform this operation.</description></item>
-        /// <item><description>When you remove a node, the system sets the status of the node to Unschedulable.</description></item>
+        /// <item><description>Never directly release or remove ECS instances through the ECS or Auto Scaling console/APIs. Renew subscription ECS instances before they expire. Violations may cause node termination and removal from the ACK console.</description></item>
+        /// <item><description>If a node pool has the Expected Nodes parameter configured, the node pool automatically scales other ECS instances to maintain the expected number of nodes.</description></item>
+        /// <item><description>When you remove a node, the pods on the node are migrated to other nodes. To prevent service interruptions, remove nodes during off-peak hours. Unexpected risks may arise during node removal. Back up the data in advance.</description></item>
+        /// <item><description>ACK drains the node during node removal. Make sure that other nodes in the cluster have sufficient resources to host the evicted pods.</description></item>
+        /// <item><description>To ensure the pods on the node you want to remove can be successfully scheduled to other nodes, check whether the node affinity rules and scheduling policies of the pods meet the requirements.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4731,15 +4745,18 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes nodes from a Container Service for Kubernetes (ACK) cluster. When you remove nodes, you can specify whether to release the Elastic Compute Service (ECS) instances and drain the nodes. When you remove nodes, pods on the nodes are migrated. This may adversely affect your businesses. We recommend that you back up data and perform this operation during off-peak hours.</para>
+        /// <para>Removes nodes from a Container Service for Kubernetes (ACK) cluster when they are no longer required through the DeleteClusterNodes interface. When removing nodes, you can specify whether to release the Elastic Compute Service (ECS) instances and drain the nodes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.</para>
+        /// <para>  Use this API or the <a href="https://cs.console.aliyun.com">ACK console</a> for node removal. Do not remove a node by running the <c>kubectl delete node</c> command.</para>
         /// <list type="bullet">
-        /// <item><description>The operation may have unexpected risks. Back up the data before you perform this operation.</description></item>
-        /// <item><description>When you remove a node, the system sets the status of the node to Unschedulable.</description></item>
+        /// <item><description>Never directly release or remove ECS instances through the ECS or Auto Scaling console/APIs. Renew subscription ECS instances before they expire. Violations may cause node termination and removal from the ACK console.</description></item>
+        /// <item><description>If a node pool has the Expected Nodes parameter configured, the node pool automatically scales other ECS instances to maintain the expected number of nodes.</description></item>
+        /// <item><description>When you remove a node, the pods on the node are migrated to other nodes. To prevent service interruptions, remove nodes during off-peak hours. Unexpected risks may arise during node removal. Back up the data in advance.</description></item>
+        /// <item><description>ACK drains the node during node removal. Make sure that other nodes in the cluster have sufficient resources to host the evicted pods.</description></item>
+        /// <item><description>To ensure the pods on the node you want to remove can be successfully scheduled to other nodes, check whether the node affinity rules and scheduling policies of the pods meet the requirements.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4759,15 +4776,18 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes nodes from a Container Service for Kubernetes (ACK) cluster. When you remove nodes, you can specify whether to release the Elastic Compute Service (ECS) instances and drain the nodes. When you remove nodes, pods on the nodes are migrated. This may adversely affect your businesses. We recommend that you back up data and perform this operation during off-peak hours.</para>
+        /// <para>Removes nodes from a Container Service for Kubernetes (ACK) cluster when they are no longer required through the DeleteClusterNodes interface. When removing nodes, you can specify whether to release the Elastic Compute Service (ECS) instances and drain the nodes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.</para>
+        /// <para>  Use this API or the <a href="https://cs.console.aliyun.com">ACK console</a> for node removal. Do not remove a node by running the <c>kubectl delete node</c> command.</para>
         /// <list type="bullet">
-        /// <item><description>The operation may have unexpected risks. Back up the data before you perform this operation.</description></item>
-        /// <item><description>When you remove a node, the system sets the status of the node to Unschedulable.</description></item>
+        /// <item><description>Never directly release or remove ECS instances through the ECS or Auto Scaling console/APIs. Renew subscription ECS instances before they expire. Violations may cause node termination and removal from the ACK console.</description></item>
+        /// <item><description>If a node pool has the Expected Nodes parameter configured, the node pool automatically scales other ECS instances to maintain the expected number of nodes.</description></item>
+        /// <item><description>When you remove a node, the pods on the node are migrated to other nodes. To prevent service interruptions, remove nodes during off-peak hours. Unexpected risks may arise during node removal. Back up the data in advance.</description></item>
+        /// <item><description>ACK drains the node during node removal. Make sure that other nodes in the cluster have sufficient resources to host the evicted pods.</description></item>
+        /// <item><description>To ensure the pods on the node you want to remove can be successfully scheduled to other nodes, check whether the node affinity rules and scheduling policies of the pods meet the requirements.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7780,9 +7800,10 @@ namespace AlibabaCloud.SDK.CS20151215
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
-        /// <para> The default validity period of a kubeconfig file is 3 years. 180 days before a kubeconfig file expires, you can renew it in the Container Service for Kubernetes (ACK) console or by calling API operations. After a kubeconfig file is renewed, the kubeconfig file is valid for 3 years. The previous kubeconfig file still remains valid until expiration. We recommend that you renew your kubeconfig file at the earliest opportunity.</para>
-        /// </remarks>
+        /// <para>  The default validity period of a kubeconfig file is 3 years. 180 days before a kubeconfig file expires, you can renew it in the Container Service for Kubernetes (ACK) console or by calling API operations. After a kubeconfig file is renewed, the kubeconfig file is valid for 3 years. The previous kubeconfig file still remains valid until expiration. We recommend that you renew your kubeconfig file at the earliest opportunity.</para>
+        /// <list type="bullet">
+        /// <item><description>We recommend that you keep kubeconfig files confidential and revoke kubeconfig files that are not in use. This helps prevent data leaks caused by the disclosure of kubeconfig files.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -7837,9 +7858,10 @@ namespace AlibabaCloud.SDK.CS20151215
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
-        /// <para> The default validity period of a kubeconfig file is 3 years. 180 days before a kubeconfig file expires, you can renew it in the Container Service for Kubernetes (ACK) console or by calling API operations. After a kubeconfig file is renewed, the kubeconfig file is valid for 3 years. The previous kubeconfig file still remains valid until expiration. We recommend that you renew your kubeconfig file at the earliest opportunity.</para>
-        /// </remarks>
+        /// <para>  The default validity period of a kubeconfig file is 3 years. 180 days before a kubeconfig file expires, you can renew it in the Container Service for Kubernetes (ACK) console or by calling API operations. After a kubeconfig file is renewed, the kubeconfig file is valid for 3 years. The previous kubeconfig file still remains valid until expiration. We recommend that you renew your kubeconfig file at the earliest opportunity.</para>
+        /// <list type="bullet">
+        /// <item><description>We recommend that you keep kubeconfig files confidential and revoke kubeconfig files that are not in use. This helps prevent data leaks caused by the disclosure of kubeconfig files.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -7894,9 +7916,10 @@ namespace AlibabaCloud.SDK.CS20151215
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
-        /// <para> The default validity period of a kubeconfig file is 3 years. 180 days before a kubeconfig file expires, you can renew it in the Container Service for Kubernetes (ACK) console or by calling API operations. After a kubeconfig file is renewed, the kubeconfig file is valid for 3 years. The previous kubeconfig file still remains valid until expiration. We recommend that you renew your kubeconfig file at the earliest opportunity.</para>
-        /// </remarks>
+        /// <para>  The default validity period of a kubeconfig file is 3 years. 180 days before a kubeconfig file expires, you can renew it in the Container Service for Kubernetes (ACK) console or by calling API operations. After a kubeconfig file is renewed, the kubeconfig file is valid for 3 years. The previous kubeconfig file still remains valid until expiration. We recommend that you renew your kubeconfig file at the earliest opportunity.</para>
+        /// <list type="bullet">
+        /// <item><description>We recommend that you keep kubeconfig files confidential and revoke kubeconfig files that are not in use. This helps prevent data leaks caused by the disclosure of kubeconfig files.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -7920,9 +7943,10 @@ namespace AlibabaCloud.SDK.CS20151215
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
-        /// <para> The default validity period of a kubeconfig file is 3 years. 180 days before a kubeconfig file expires, you can renew it in the Container Service for Kubernetes (ACK) console or by calling API operations. After a kubeconfig file is renewed, the kubeconfig file is valid for 3 years. The previous kubeconfig file still remains valid until expiration. We recommend that you renew your kubeconfig file at the earliest opportunity.</para>
-        /// </remarks>
+        /// <para>  The default validity period of a kubeconfig file is 3 years. 180 days before a kubeconfig file expires, you can renew it in the Container Service for Kubernetes (ACK) console or by calling API operations. After a kubeconfig file is renewed, the kubeconfig file is valid for 3 years. The previous kubeconfig file still remains valid until expiration. We recommend that you renew your kubeconfig file at the earliest opportunity.</para>
+        /// <list type="bullet">
+        /// <item><description>We recommend that you keep kubeconfig files confidential and revoke kubeconfig files that are not in use. This helps prevent data leaks caused by the disclosure of kubeconfig files.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -13260,10 +13284,9 @@ namespace AlibabaCloud.SDK.CS20151215
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Precautions</em>*:</para>
+        /// <para>  If you use a Resource Access Management (RAM) account to call this operation, make sure it has permissions to modify cluster authorization information for other RAM users or RAM roles. Otherwise, the <c>StatusForbidden</c> or <c>ForbiddenGrantPermissions</c> error code is returned. For more information, see <a href="https://help.aliyun.com/document_detail/119035.html">Use a RAM user to grant RBAC permissions to other RAM users</a>.</para>
         /// <list type="bullet">
-        /// <item><description>If you use a Resource Access Management (RAM) user to call the operation, make sure that the RAM user has the permissions to modify the permissions of other RAM users or RAM roles. Otherwise, the <c>StatusForbidden</c> or <c>ForbiddenGrantPermissions</c> error code is returned after you call the operation. For more information, see <a href="https://help.aliyun.com/document_detail/119035.html">Use a RAM user to grant RBAC permissions to other RAM users</a>.</description></item>
-        /// <item><description>If you update full permissions, the existing permissions of the RAM user or RAM role on the cluster are overwritten. You must specify all the permissions that you want to grant to the RAM user or RAM role in the request parameters when you call the operation.</description></item>
+        /// <item><description>This operation overwrites all existing cluster permissions for the target RAM user or RAM role. You must specify all the permissions you want to grant to the RAM user or RAM role in the request.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13310,10 +13333,9 @@ namespace AlibabaCloud.SDK.CS20151215
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Precautions</em>*:</para>
+        /// <para>  If you use a Resource Access Management (RAM) account to call this operation, make sure it has permissions to modify cluster authorization information for other RAM users or RAM roles. Otherwise, the <c>StatusForbidden</c> or <c>ForbiddenGrantPermissions</c> error code is returned. For more information, see <a href="https://help.aliyun.com/document_detail/119035.html">Use a RAM user to grant RBAC permissions to other RAM users</a>.</para>
         /// <list type="bullet">
-        /// <item><description>If you use a Resource Access Management (RAM) user to call the operation, make sure that the RAM user has the permissions to modify the permissions of other RAM users or RAM roles. Otherwise, the <c>StatusForbidden</c> or <c>ForbiddenGrantPermissions</c> error code is returned after you call the operation. For more information, see <a href="https://help.aliyun.com/document_detail/119035.html">Use a RAM user to grant RBAC permissions to other RAM users</a>.</description></item>
-        /// <item><description>If you update full permissions, the existing permissions of the RAM user or RAM role on the cluster are overwritten. You must specify all the permissions that you want to grant to the RAM user or RAM role in the request parameters when you call the operation.</description></item>
+        /// <item><description>This operation overwrites all existing cluster permissions for the target RAM user or RAM role. You must specify all the permissions you want to grant to the RAM user or RAM role in the request.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13360,10 +13382,9 @@ namespace AlibabaCloud.SDK.CS20151215
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Precautions</em>*:</para>
+        /// <para>  If you use a Resource Access Management (RAM) account to call this operation, make sure it has permissions to modify cluster authorization information for other RAM users or RAM roles. Otherwise, the <c>StatusForbidden</c> or <c>ForbiddenGrantPermissions</c> error code is returned. For more information, see <a href="https://help.aliyun.com/document_detail/119035.html">Use a RAM user to grant RBAC permissions to other RAM users</a>.</para>
         /// <list type="bullet">
-        /// <item><description>If you use a Resource Access Management (RAM) user to call the operation, make sure that the RAM user has the permissions to modify the permissions of other RAM users or RAM roles. Otherwise, the <c>StatusForbidden</c> or <c>ForbiddenGrantPermissions</c> error code is returned after you call the operation. For more information, see <a href="https://help.aliyun.com/document_detail/119035.html">Use a RAM user to grant RBAC permissions to other RAM users</a>.</description></item>
-        /// <item><description>If you update full permissions, the existing permissions of the RAM user or RAM role on the cluster are overwritten. You must specify all the permissions that you want to grant to the RAM user or RAM role in the request parameters when you call the operation.</description></item>
+        /// <item><description>This operation overwrites all existing cluster permissions for the target RAM user or RAM role. You must specify all the permissions you want to grant to the RAM user or RAM role in the request.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13388,10 +13409,9 @@ namespace AlibabaCloud.SDK.CS20151215
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Precautions</em>*:</para>
+        /// <para>  If you use a Resource Access Management (RAM) account to call this operation, make sure it has permissions to modify cluster authorization information for other RAM users or RAM roles. Otherwise, the <c>StatusForbidden</c> or <c>ForbiddenGrantPermissions</c> error code is returned. For more information, see <a href="https://help.aliyun.com/document_detail/119035.html">Use a RAM user to grant RBAC permissions to other RAM users</a>.</para>
         /// <list type="bullet">
-        /// <item><description>If you use a Resource Access Management (RAM) user to call the operation, make sure that the RAM user has the permissions to modify the permissions of other RAM users or RAM roles. Otherwise, the <c>StatusForbidden</c> or <c>ForbiddenGrantPermissions</c> error code is returned after you call the operation. For more information, see <a href="https://help.aliyun.com/document_detail/119035.html">Use a RAM user to grant RBAC permissions to other RAM users</a>.</description></item>
-        /// <item><description>If you update full permissions, the existing permissions of the RAM user or RAM role on the cluster are overwritten. You must specify all the permissions that you want to grant to the RAM user or RAM role in the request parameters when you call the operation.</description></item>
+        /// <item><description>This operation overwrites all existing cluster permissions for the target RAM user or RAM role. You must specify all the permissions you want to grant to the RAM user or RAM role in the request.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13411,7 +13431,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs a component by specifying the name and version of the component. To enhance Kubernetes capabilities, you can install a variety of components in Container Service for Kubernetes (ACK) clusters, such as fully-managed core components and application, logging and monitoring, network, storage, and security group components.</para>
+        /// <para>为了增强Kubernetes能力，ACK集群支持了多种组件，例如托管的核心组件，应用、日志和监控、网络、存储、安全组件等。您可以调用InstallClusterAddons接口，通过组件名称和版本安装组件。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13452,7 +13472,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs a component by specifying the name and version of the component. To enhance Kubernetes capabilities, you can install a variety of components in Container Service for Kubernetes (ACK) clusters, such as fully-managed core components and application, logging and monitoring, network, storage, and security group components.</para>
+        /// <para>为了增强Kubernetes能力，ACK集群支持了多种组件，例如托管的核心组件，应用、日志和监控、网络、存储、安全组件等。您可以调用InstallClusterAddons接口，通过组件名称和版本安装组件。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13493,7 +13513,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs a component by specifying the name and version of the component. To enhance Kubernetes capabilities, you can install a variety of components in Container Service for Kubernetes (ACK) clusters, such as fully-managed core components and application, logging and monitoring, network, storage, and security group components.</para>
+        /// <para>为了增强Kubernetes能力，ACK集群支持了多种组件，例如托管的核心组件，应用、日志和监控、网络、存储、安全组件等。您可以调用InstallClusterAddons接口，通过组件名称和版本安装组件。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13512,7 +13532,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs a component by specifying the name and version of the component. To enhance Kubernetes capabilities, you can install a variety of components in Container Service for Kubernetes (ACK) clusters, such as fully-managed core components and application, logging and monitoring, network, storage, and security group components.</para>
+        /// <para>为了增强Kubernetes能力，ACK集群支持了多种组件，例如托管的核心组件，应用、日志和监控、网络、存储、安全组件等。您可以调用InstallClusterAddons接口，通过组件名称和版本安装组件。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13941,7 +13961,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取巡检报告列表</para>
+        /// <para>Obtains the details of the cluster inspection report.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13991,7 +14011,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取巡检报告列表</para>
+        /// <para>Obtains the details of the cluster inspection report.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14041,7 +14061,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取巡检报告列表</para>
+        /// <para>Obtains the details of the cluster inspection report.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14060,7 +14080,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取巡检报告列表</para>
+        /// <para>Obtains the details of the cluster inspection report.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14743,7 +14763,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Container Service for Kubernetes (ACK) Pro clusters are developed based on ACK Basic clusters. ACK Pro clusters provide all benefits of ACK managed clusters, such as fully-managed control planes and control plane high availability. In addition, ACK Pro clusters provide you with enhanced reliability, security, and schedulability. ACK Pro clusters are covered by the SLA that supports compensation clauses. ACK Pro clusters are suitable for large-scale businesses that require high stability and security in production environments. We recommend that you migrate from ACK Basic clusters to ACK Pro clusters.</para>
+        /// <para>The Container Service for Kubernetes (ACK) managed Pro cluster type is developed based on the ACK managed Basic cluster type. It inherits all benefits of ACK managed clusters, such as fully-managed control planes and control plane high availability. It further enhances reliability, security, scheduling capabilities, and offers service level agreement (SLA)-backed guarantees, making it ideal for enterprise customers with large-scale production workloads requiring high stability and security. You can call the MigrateCluster operation to migrate an ACK managed Basic cluster to an ACK managed Pro cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14793,7 +14813,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Container Service for Kubernetes (ACK) Pro clusters are developed based on ACK Basic clusters. ACK Pro clusters provide all benefits of ACK managed clusters, such as fully-managed control planes and control plane high availability. In addition, ACK Pro clusters provide you with enhanced reliability, security, and schedulability. ACK Pro clusters are covered by the SLA that supports compensation clauses. ACK Pro clusters are suitable for large-scale businesses that require high stability and security in production environments. We recommend that you migrate from ACK Basic clusters to ACK Pro clusters.</para>
+        /// <para>The Container Service for Kubernetes (ACK) managed Pro cluster type is developed based on the ACK managed Basic cluster type. It inherits all benefits of ACK managed clusters, such as fully-managed control planes and control plane high availability. It further enhances reliability, security, scheduling capabilities, and offers service level agreement (SLA)-backed guarantees, making it ideal for enterprise customers with large-scale production workloads requiring high stability and security. You can call the MigrateCluster operation to migrate an ACK managed Basic cluster to an ACK managed Pro cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14843,7 +14863,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Container Service for Kubernetes (ACK) Pro clusters are developed based on ACK Basic clusters. ACK Pro clusters provide all benefits of ACK managed clusters, such as fully-managed control planes and control plane high availability. In addition, ACK Pro clusters provide you with enhanced reliability, security, and schedulability. ACK Pro clusters are covered by the SLA that supports compensation clauses. ACK Pro clusters are suitable for large-scale businesses that require high stability and security in production environments. We recommend that you migrate from ACK Basic clusters to ACK Pro clusters.</para>
+        /// <para>The Container Service for Kubernetes (ACK) managed Pro cluster type is developed based on the ACK managed Basic cluster type. It inherits all benefits of ACK managed clusters, such as fully-managed control planes and control plane high availability. It further enhances reliability, security, scheduling capabilities, and offers service level agreement (SLA)-backed guarantees, making it ideal for enterprise customers with large-scale production workloads requiring high stability and security. You can call the MigrateCluster operation to migrate an ACK managed Basic cluster to an ACK managed Pro cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14862,7 +14882,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Container Service for Kubernetes (ACK) Pro clusters are developed based on ACK Basic clusters. ACK Pro clusters provide all benefits of ACK managed clusters, such as fully-managed control planes and control plane high availability. In addition, ACK Pro clusters provide you with enhanced reliability, security, and schedulability. ACK Pro clusters are covered by the SLA that supports compensation clauses. ACK Pro clusters are suitable for large-scale businesses that require high stability and security in production environments. We recommend that you migrate from ACK Basic clusters to ACK Pro clusters.</para>
+        /// <para>The Container Service for Kubernetes (ACK) managed Pro cluster type is developed based on the ACK managed Basic cluster type. It inherits all benefits of ACK managed clusters, such as fully-managed control planes and control plane high availability. It further enhances reliability, security, scheduling capabilities, and offers service level agreement (SLA)-backed guarantees, making it ideal for enterprise customers with large-scale production workloads requiring high stability and security. You can call the MigrateCluster operation to migrate an ACK managed Basic cluster to an ACK managed Pro cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16113,7 +16133,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>When you use Container Service for Kubernetes (ACK) for the first time, you must activate ACK by using an Alibaba Cloud account or RAM user with the required permissions and complete ACK authorization.</para>
+        /// <para>When using Container Service for Kubernetes (ACK) for the first time, you must call the OpenAckService operation to activate the service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16167,7 +16187,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>When you use Container Service for Kubernetes (ACK) for the first time, you must activate ACK by using an Alibaba Cloud account or RAM user with the required permissions and complete ACK authorization.</para>
+        /// <para>When using Container Service for Kubernetes (ACK) for the first time, you must call the OpenAckService operation to activate the service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16221,7 +16241,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>When you use Container Service for Kubernetes (ACK) for the first time, you must activate ACK by using an Alibaba Cloud account or RAM user with the required permissions and complete ACK authorization.</para>
+        /// <para>When using Container Service for Kubernetes (ACK) for the first time, you must call the OpenAckService operation to activate the service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16248,7 +16268,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>When you use Container Service for Kubernetes (ACK) for the first time, you must activate ACK by using an Alibaba Cloud account or RAM user with the required permissions and complete ACK authorization.</para>
+        /// <para>When using Container Service for Kubernetes (ACK) for the first time, you must call the OpenAckService operation to activate the service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -17817,7 +17837,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发起集群巡检</para>
+        /// <para>Triggers a cluster inspection and generates a report.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17863,7 +17883,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发起集群巡检</para>
+        /// <para>Triggers a cluster inspection and generates a report.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17909,7 +17929,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发起集群巡检</para>
+        /// <para>Triggers a cluster inspection and generates a report.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17928,7 +17948,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发起集群巡检</para>
+        /// <para>Triggers a cluster inspection and generates a report.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19787,7 +19807,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新集群巡检配置</para>
+        /// <para>Modifies cluster inspection configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19841,7 +19861,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新集群巡检配置</para>
+        /// <para>Modifies cluster inspection configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19895,7 +19915,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新集群巡检配置</para>
+        /// <para>Modifies cluster inspection configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19914,7 +19934,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新集群巡检配置</para>
+        /// <para>Modifies cluster inspection configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20891,7 +20911,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the UpgradeCluster operation to upgrade a cluster by cluster ID.</para>
+        /// <para>Outdated Kubernetes versions may have security and stability issues. We recommend that you update the Kubernetes version of your cluster at the earliest opportunity to enjoy the new features of the new Kubernetes version. You can call the UpgradeCluster operation to manually upgrade a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -20964,7 +20984,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the UpgradeCluster operation to upgrade a cluster by cluster ID.</para>
+        /// <para>Outdated Kubernetes versions may have security and stability issues. We recommend that you update the Kubernetes version of your cluster at the earliest opportunity to enjoy the new features of the new Kubernetes version. You can call the UpgradeCluster operation to manually upgrade a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -21037,7 +21057,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the UpgradeCluster operation to upgrade a cluster by cluster ID.</para>
+        /// <para>Outdated Kubernetes versions may have security and stability issues. We recommend that you update the Kubernetes version of your cluster at the earliest opportunity to enjoy the new features of the new Kubernetes version. You can call the UpgradeCluster operation to manually upgrade a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -21067,7 +21087,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the UpgradeCluster operation to upgrade a cluster by cluster ID.</para>
+        /// <para>Outdated Kubernetes versions may have security and stability issues. We recommend that you update the Kubernetes version of your cluster at the earliest opportunity to enjoy the new features of the new Kubernetes version. You can call the UpgradeCluster operation to manually upgrade a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>

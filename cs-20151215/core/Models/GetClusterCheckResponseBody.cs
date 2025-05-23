@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string CheckId { get; set; }
 
         /// <summary>
-        /// <para>The list of check items.</para>
+        /// <para>A list of check items.</para>
         /// </summary>
         [NameInMap("check_items")]
         [Validation(Required=false)]

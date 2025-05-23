@@ -34,10 +34,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterSpec { get; set; }
 
         /// <summary>
+        /// <para>The type of the instance.</para>
         /// <list type="bullet">
         /// <item><description><c>Kubernetes</c>: ACK dedicated cluster.</description></item>
         /// <item><description><c>ManagedKubernetes</c>: ACK managed cluster. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless Basic clusters, ACK Serverless Pro clusters, ACK Edge Basic clusters, ACK Edge Pro clusters, and ACK Lingjun Pro clusters.</description></item>
-        /// <item><description><c>ExternalKubernetes</c>: registered cluster.</description></item>
+        /// <item><description><c>ExternalKubernetes</c>: registered cluster</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,7 +50,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// <para>The cluster name.</para>
-        /// <para>The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>cluster-demo</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the returned page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

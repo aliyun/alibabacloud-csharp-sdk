@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <list type="bullet">
             /// <item><description><c>cluster</c>: indicates that the permissions are scoped to a cluster.</description></item>
             /// <item><description><c>namespace</c>: indicates that the permissions are scoped to a namespace of a cluster.</description></item>
-            /// <item><description><c>console</c>: indicates that the permissions are scoped to all clusters. This value was displayed only in the console.</description></item>
+            /// <item><description><c>console</c>: indicates that the permissions are scoped to all clusters.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

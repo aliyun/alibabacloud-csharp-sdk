@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class UpdateClusterInspectConfigResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>49511F2D-D56A-5C24-B9AE-C8491E09B***</para>
         /// </summary>

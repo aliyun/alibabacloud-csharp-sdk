@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DeleteClusterNodesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to remove all pods from the nodes that you want to remove. Valid values:</para>
+        /// <para>Specifies whether to remove all pods from the nodes you want to remove. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: removes all pods from the nodes that you want to remove.</description></item>
-        /// <item><description><c>false</c>: does not remove pods from the nodes that you want to remove.</description></item>
+        /// <item><description><c>true</c>: removes all pods automatically.</description></item>
+        /// <item><description><c>false</c>: skips removing pods.</description></item>
         /// </list>
-        /// <para>Default value: <c>false</c>.</para>
+        /// <para>Default value: <c>false</c></para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? DrainNode { get; set; }
 
         /// <summary>
-        /// <para>The list of nodes to be removed. You need to specify the name of the nodes used in the cluster, for example, <c>cn-hangzhou.192.168.0.70</c>.</para>
+        /// <para>The list of nodes to remove. You must specify the node names used in the cluster, for example, <c>cn-hangzhou.192.168.xx.xx</c>.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("nodes")]
@@ -33,15 +33,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<string> Nodes { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to release the Elastic Compute Service (ECS) instances. Valid values:</para>
+        /// <para>Specifies whether to release the ECS instances. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><c>true</c>: releases the ECS instances.</description></item>
-        /// <item><description><c>false</c>: does not release the ECS instances.</description></item>
+        /// <item><description><c>false</c>: retains the ECS instances.</description></item>
         /// </list>
-        /// <para>Default value: <c>false</c>.</para>
-        /// <remarks>
-        /// <para> You cannot release subscription ECS instances.</para>
-        /// </remarks>
+        /// <para>Default value: <c>false</c></para>
+        /// <para>**</para>
+        /// <para><b>Notes</b> Unsupported for subscription ECS instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

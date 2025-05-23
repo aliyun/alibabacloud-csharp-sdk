@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClusterVulsResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array of vulnerabilities.</para>
+        /// <para>The list of vulnerabilities.</para>
         /// </summary>
         [NameInMap("vul_records")]
         [Validation(Required=false)]

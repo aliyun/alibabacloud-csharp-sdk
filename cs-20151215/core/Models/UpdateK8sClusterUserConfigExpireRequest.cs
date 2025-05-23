@@ -10,10 +10,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class UpdateK8sClusterUserConfigExpireRequest : TeaModel {
         /// <summary>
-        /// <para>The validity period of the kubeconfig file. Unit: hours.</para>
-        /// <remarks>
-        /// <para>The value of expire_hour must be greater than 0 and equal to or smaller than 876000 (100 years).</para>
-        /// </remarks>
+        /// <para>Specifies the expiration time of the kubeconfig file. Unit: hours.</para>
+        /// <para>Valid values: [1, 1876000]. The maximum value is 100 years.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,7 +22,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? ExpireHour { get; set; }
 
         /// <summary>
-        /// <para>The user ID.</para>
+        /// <para>The RAM user ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

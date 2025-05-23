@@ -53,13 +53,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Template { get; set; }
 
         /// <summary>
-        /// <para>The type of template. You can set the parameter to a custom value.</para>
+        /// <para>The template type.</para>
         /// <list type="bullet">
         /// <item><description>If the parameter is set to <c>kubernetes</c>, the template is displayed on the Templates page in the console.</description></item>
-        /// <item><description>If you set the parameter to <c>compose</c>, the template is not displayed in the console.</description></item>
+        /// <item><description>If this parameter is not specified or the value is set to another value, the template is not displayed on the Orchestration Template page in the console.</description></item>
         /// </list>
         /// <para>We recommend that you set the parameter to <c>kubernetes</c>.</para>
-        /// <para>Default value: <c>compose</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>kubernetes</para>

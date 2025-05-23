@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class CreateClusterInspectConfigRequest : TeaModel {
+        /// <summary>
+        /// <para>The list of disabled inspection items.</para>
+        /// </summary>
         [NameInMap("disabledCheckItems")]
         [Validation(Required=false)]
         public List<string> DisabledCheckItems { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable cluster inspection.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +28,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
+        /// <para>The inspection period defined using RFC5545 Recurrence Rule. You must specify BYHOUR and BYMINUTE. Only FREQ=DAILY is supported. COUNT or UNTIL is not supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

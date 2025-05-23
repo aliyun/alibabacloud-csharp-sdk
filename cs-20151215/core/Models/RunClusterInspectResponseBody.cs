@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class RunClusterInspectResponseBody : TeaModel {
         /// <summary>
+        /// <para>The inspection report ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5d6557c983064c45bed62ab2a2119cc7</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ReportId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0AB4D067-4DD7-5471-B90A-FCC564BC3337</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The inspection task ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>T-67d7ec016ce37c0106000***</para>
         /// </summary>

@@ -37,11 +37,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>After you set <c>cluster_type</c> to <c>ManagedKubernetes</c> and configure the <c>profile</c> parameter, you can further specify the edition of the cluster. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><c>ack.pro.small</c>: ACK Pro cluster.</description></item>
-            /// <item><description><c>ack.standard</c>: ACK Basic cluster. If you leave the parameter empty, ACK Basic cluster is selected.</description></item>
-            /// </list>
+            /// <para>The specification of the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ack.standard</para>
@@ -51,11 +47,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ClusterSpec { get; set; }
 
             /// <summary>
-            /// <list type="bullet">
-            /// <item><description><c>Kubernetes</c>: ACK dedicated cluster.</description></item>
-            /// <item><description><c>ManagedKubernetes</c>: ACK managed cluster. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless Basic clusters, ACK Serverless Pro clusters, ACK Edge Basic clusters, ACK Edge Pro clusters, and ACK Lingjun Pro clusters.</description></item>
-            /// <item><description><c>ExternalKubernetes</c>: registered cluster.</description></item>
-            /// </list>
+            /// <para>The type of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Kubernetes</para>
@@ -75,7 +67,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ContainerCidr { get; set; }
 
             /// <summary>
-            /// <para>The time when the cluster was created.</para>
+            /// <para>The time at which the instance is created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-08-20T10:51:29+08:00</para>
@@ -95,7 +87,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string CurrentVersion { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable cluster deletion protection. If this option is enabled, the cluster cannot be deleted in the ACK console or by calling API operations. Valid values:</para>
+            /// <para>Specifies whether to enable cluster deletion protection. If you enable this option, the cluster cannot be deleted in the console or by calling API operations. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><c>true</c>: enables deletion protection for the cluster. This way, the cluster cannot be deleted in the ACK console or by calling API operations.</description></item>
             /// <item><description><c>false</c>: disables deletion protection for the cluster. This way, the cluster can be deleted in the ACK console or by calling API operations.</description></item>
@@ -130,8 +122,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ExternalLoadbalancerId { get; set; }
 
             /// <summary>
-            /// <para>The Kubernetes version of the cluster. The Kubernetes versions supported by ACK are the same as the Kubernetes versions supported by open source Kubernetes. We recommend that you specify the latest Kubernetes version. If you do not configure this parameter, the latest Kubernetes version is used.</para>
-            /// <para>You can create clusters that run the latest two Kubernetes versions in the ACK console. You can call the API operation to create clusters of other Kubernetes versions. For more information about the Kubernetes versions supported by ACK, see <a href="https://help.aliyun.com/document_detail/185269.html">Release notes for Kubernetes versions</a>.</para>
+            /// <para>The version of the cluster. For more information about the Kubernetes versions supported by ACK, see <a href="https://help.aliyun.com/document_detail/185269.html">Release notes for Kubernetes versions</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.16.9-aliyun.1</para>
@@ -143,8 +134,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>The IP stack of the cluster. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ipv4: The cluster is an IPv4 cluster.</description></item>
-            /// <item><description>dual: The cluster is a dual-stack cluster.</description></item>
+            /// <item><description>ipv4: creates a cluster that supports only the IPv4 protocol stack.</description></item>
+            /// <item><description>dual: creates a cluster that supports IPv4/IPv6 dual-stack.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -183,7 +174,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
             /// <summary>
             /// <para>The cluster name.</para>
-            /// <para>The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).</para>
             /// 
             /// <b>Example:</b>
             /// <para>cluster-demo</para>
@@ -277,13 +267,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? PrivateZone { get; set; }
 
             /// <summary>
-            /// <para>The cluster identifier. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><c>Default</c>: ACK managed cluster. ACK managed clusters include ACK Basic clusters and ACK Pro clusters.</description></item>
-            /// <item><description><c>Edge</c>: ACK Edge cluster. ACK Edge clusters include ACK Edge Basic clusters and ACK Edge Pro clusters.</description></item>
-            /// <item><description><c>Serverless</c>: ACK Serverless cluster. ACK Serverless clusters include ACK Serverless Basic clusters and ACK Serverless Pro clusters.</description></item>
-            /// <item><description><c>Lingjun</c>: ACK Lingjun Pro cluster.</description></item>
-            /// </list>
+            /// <para>The subtype of the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Default</para>
@@ -293,9 +277,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Profile { get; set; }
 
             /// <summary>
-            /// <para>The Kube-proxy mode. Valid values:</para>
+            /// <para>The kube-proxy mode.</para>
             /// <list type="bullet">
-            /// <item><description><c>iptables</c>: a mature and stable kube-proxy mode that uses iptables rules to conduct Service discovery and load balancing. The performance of this mode is limited by the size of the cluster. This mode is suitable for clusters that run a small number of Services.</description></item>
+            /// <item><description><c>iptables</c>: a mature and stable mode that uses iptables rules to conduct service discovery and load balancing. The performance of this mode is limited by the size of the cluster. This mode is suitable for clusters that run a small number of Services.</description></item>
             /// <item><description><c>ipvs</c>: provides high performance and uses IP Virtual Server (IPVS). This allows you to configure service discovery and load balancing. This mode is suitable for clusters that are required to run a large number of services. We recommend that you use this mode in scenarios that require high load balancing performance.</description></item>
             /// </list>
             /// 
@@ -384,14 +368,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>Tis parameter is deprecated. Use the container_cidr parameter to obtain the pod CIDR block. The pod CIDR block. It must be a valid and private CIDR block, and must be one of the following CIDR blocks or their subnets:</para>
-            /// <list type="bullet">
-            /// <item><description>10.0.0.0/8</description></item>
-            /// <item><description>172.16-31.0.0/12-16</description></item>
-            /// <item><description>192.168.0.0/16</description></item>
-            /// </list>
-            /// <para>The pod CIDR block cannot overlap with the CIDR block of the VPC in which the cluster is deployed and the CIDR blocks of existing clusters in the VPC. You cannot modify the pod CIDR block after you create the cluster.</para>
-            /// <para>For more information about the network planning of Container Service for Kubernetes (ACK) clusters, see <a href="https://help.aliyun.com/document_detail/86500.html">Plan CIDR blocks for an ACK cluster</a>.</para>
+            /// <para>This parameter is deprecated. Use the container_cidr parameter to obtain the pod CIDR block.</para>
             /// 
             /// <b>Example:</b>
             /// <para>172.21.0.0/16</para>
@@ -402,7 +379,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string SubnetCidr { get; set; }
 
             /// <summary>
-            /// <para>The resource tags of the cluster.</para>
+            /// <para>The label of the cluster.</para>
             /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
@@ -429,7 +406,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Updated { get; set; }
 
             /// <summary>
-            /// <para>The ID of the VPC where the cluster is deployed. This parameter is required when you create a cluster.</para>
+            /// <para>The ID of the virtual private cloud (VPC) that is used by the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-2vcg932hsxsxuqbgl****</para>
@@ -441,7 +418,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The IDs of the vSwitches. You can select one to three vSwitches when you create a cluster. To ensure the high availability of the cluster, we recommend that you select vSwitches in different zones.</para>
+            /// <para>The ID of the vSwitch in the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-2vc41xuumx5z2rdma****,vsw-2vc41xuumx5z2rdma****</para>

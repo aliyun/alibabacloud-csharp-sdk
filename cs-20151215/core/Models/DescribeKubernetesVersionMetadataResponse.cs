@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public List<DescribeKubernetesVersionMetadataResponseBodyImages> Images { get; set; }
             public class DescribeKubernetesVersionMetadataResponseBodyImages : TeaModel {
                 /// <summary>
-                /// <para>The image ID.</para>
+                /// <para>The ID of the image.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>centos_7_7_x64_20G_alibase_20200426.vhd</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string ImageName { get; set; }
 
                 /// <summary>
-                /// <para>The OS platform. Valid values:</para>
+                /// <para>The OS platform. You can obtain the terminal ID by calling one of the following operations:</para>
                 /// <list type="bullet">
                 /// <item><description><c>AliyunLinux</c></description></item>
                 /// <item><description><c>CentOS</c></description></item>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string OsVersion { get; set; }
 
                 /// <summary>
-                /// <para>The type of OS distribution that you want to use. To specify the node OS, we recommend that you use this parameter. Valid values:</para>
+                /// <para>The type of operating system distribution that you want to use. We recommend that you use this parameter to specify the node operating system. You can obtain the terminal ID by calling one of the following operations:</para>
                 /// <list type="bullet">
                 /// <item><description><c>CentOS</c></description></item>
                 /// <item><description><c>AliyunLinux</c></description></item>
@@ -212,7 +212,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? Creatable { get; set; }
 
             /// <summary>
-            /// <para>The list of available versions for updates.</para>
+            /// <para>The list of available Kubernetes versions for updates.</para>
             /// </summary>
             [NameInMap("upgradable_versions")]
             [Validation(Required=false)]

@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>After you set <c>cluster_type</c> to <c>ManagedKubernetes</c> and configure the <c>profile</c> parameter, you can further specify the edition of the cluster.</para>
+        /// <para>The edition of the cluster</para>
         /// <list type="bullet">
-        /// <item><description><c>ack.pro.small</c>: Pro.</description></item>
-        /// <item><description><c>ack.standard</c>: Basic. If you leave the parameter empty, the Basic edition is selected.</description></item>
+        /// <item><description><c>ack.pro.small</c>: the Pro edition.</description></item>
+        /// <item><description><c>ack.standard</c>: the Basic edition.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,9 +44,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterSpec { get; set; }
 
         /// <summary>
+        /// <para>The type of the instance.</para>
         /// <list type="bullet">
         /// <item><description><c>Kubernetes</c>: ACK dedicated cluster.</description></item>
-        /// <item><description><c>ManagedKubernetes</c>: ACK managed cluster. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless clusters (Basic and Pro), ACK Edge clusters (Basic and Pro), and ACK Lingjun clusters (Pro).</description></item>
+        /// <item><description><c>ManagedKubernetes</c>: ACK managed cluster. ACK managed clusters include ACK managed Basic clusters, ACK managed Pro clusters, ACK Serverless Pro clusters, ACK Serverless Basic clusters, ACK Edge Pro clusters, ACK Edge Basic clusters, and ACK Lingjun Pro clusters.</description></item>
         /// <item><description><c>ExternalKubernetes</c>: registered cluster.</description></item>
         /// </list>
         /// 
@@ -58,7 +59,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterType { get; set; }
 
         /// <summary>
-        /// <para>The CIDR block of the pod. The configuration of the Flannel network plug-in.</para>
+        /// <para>The pod CIDR block. The configuration of the Flannel network plug-in.</para>
         /// 
         /// <b>Example:</b>
         /// <para>172.20.0.0/16</para>
@@ -135,7 +136,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string DeploymentsetId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the image.</para>
+            /// <para>The image ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aliyun_3_x64_20G_alibase_20240819.vhd</para>
@@ -182,7 +183,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string NodePortRange { get; set; }
 
             /// <summary>
-            /// <para>The subscription duration.</para>
+            /// <para>The subscription duration of nodes in the node pool.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -314,7 +315,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Created { get; set; }
 
         /// <summary>
-        /// <para>The current Kubernetes version of the cluster. For more information about the Kubernetes versions supported by ACK, see <a href="https://help.aliyun.com/document_detail/185269.html">Release notes for Kubernetes versions</a>.</para>
+        /// <para>The Kubernetes version of the cluster. For more information about the Kubernetes versions supported by ACK, see <a href="https://help.aliyun.com/document_detail/185269.html">Release notes for Kubernetes versions</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.16.6-aliyun.1</para>
@@ -409,8 +410,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string MetaData { get; set; }
 
         /// <summary>
-        /// <para>The name of the cluster.</para>
-        /// <para>The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).</para>
+        /// <para>The cluster name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cluster-demo</para>
@@ -430,7 +430,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string NetworkMode { get; set; }
 
         /// <summary>
-        /// <para>The Kubernetes version to which the cluster can be updated.</para>
+        /// <para>The Kubernetes version to which the cluster can be upgraded.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.18.8-aliyun.1</para>
@@ -440,7 +440,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string NextVersion { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of IP addresses that can be assigned to nodes. This number is determined by the node CIDR block. This parameter takes effect only if the cluster uses Flannel network plug-in.</para>
+        /// <para>This parameter is available only for Flannel.</para>
+        /// <para>The subnet mask length of the node CIDR block. This parameter indicates the maximum number of IP addresses that can be assigned to nodes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>26</para>
@@ -516,7 +517,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? PrivateZone { get; set; }
 
         /// <summary>
-        /// <para>If you set <c>cluster_type</c> to <c>ManagedKubernetes</c>, an ACK managed cluster is created. In this case, you can further specify the cluster edition.</para>
+        /// <para>The subtype of the cluster.</para>
         /// <list type="bullet">
         /// <item><description><c>Default</c>. ACK managed cluster. ACK managed clusters include ACK Basic clusters and ACK Pro clusters.</description></item>
         /// <item><description><c>Edge</c>: ACK Edge cluster. ACK Edge clusters include ACK Edge Basic clusters and ACK Edge Pro clusters.</description></item>
@@ -576,7 +577,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>The CIDR block of the service network.</para>
+        /// <para>The Service CIDR block.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -623,14 +624,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The pod CIDR block. It must be a valid and private CIDR block, and must be one of the following CIDR blocks or their subnets:</para>
-        /// <list type="bullet">
-        /// <item><description>10.0.0.0/8</description></item>
-        /// <item><description>172.16-31.0.0/12-16</description></item>
-        /// <item><description>192.168.0.0/16</description></item>
-        /// </list>
-        /// <para>The pod CIDR block cannot overlap with the CIDR block of the VPC in which the cluster is deployed and the CIDR blocks of existing clusters in the VPC. You cannot modify the pod CIDR block after you create the cluster.</para>
-        /// <para>For more information about the network planning of ACK clusters, see <a href="https://help.aliyun.com/document_detail/186964.html">Plan CIDR blocks for an ACK cluster</a>.</para>
+        /// <para>The pod CIDR block.</para>
         /// 
         /// <b>Example:</b>
         /// <para>172.20.0.0/16</para>
@@ -641,7 +635,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string SubnetCidr { get; set; }
 
         /// <summary>
-        /// <para>The resource tags of the cluster.</para>
+        /// <para>The resource labels of the cluster.</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]

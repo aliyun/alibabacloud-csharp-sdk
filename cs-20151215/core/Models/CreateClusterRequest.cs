@@ -54,6 +54,20 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string ApiAudiences { get; set; }
 
+        [NameInMap("audit_log_config")]
+        [Validation(Required=false)]
+        public CreateClusterRequestAuditLogConfig AuditLogConfig { get; set; }
+        public class CreateClusterRequestAuditLogConfig : TeaModel {
+            [NameInMap("enabled")]
+            [Validation(Required=false)]
+            public bool? Enabled { get; set; }
+
+            [NameInMap("sls_project_name")]
+            [Validation(Required=false)]
+            public string SlsProjectName { get; set; }
+
+        }
+
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>

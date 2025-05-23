@@ -10,11 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeAddonResponseBody : TeaModel {
         /// <summary>
-        /// <para>Architectures supported by the component. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>amd64</description></item>
-        /// <item><description>arm64</description></item>
-        /// </list>
+        /// <para>The CPU architecture supported by the component.</para>
         /// </summary>
         [NameInMap("architecture")]
         [Validation(Required=false)]
@@ -71,7 +67,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The latest version of the component.</para>
+        /// <para>The latest version information of the component.</para>
         /// </summary>
         [NameInMap("newer_versions")]
         [Validation(Required=false)]
@@ -89,6 +85,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
             /// <summary>
             /// <para>Indicates whether the component can be updated to the version.</para>
+            /// <list type="bullet">
+            /// <item><description>true: yes</description></item>
+            /// <item><description>false: no</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? Upgradable { get; set; }
 
             /// <summary>
-            /// <para>The version number.</para>
+            /// <para>The latest version number of the component.</para>
             /// 
             /// <b>Example:</b>
             /// <para>v1.9.3.10-7dfca203-aliyun</para>
@@ -110,13 +110,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>Operations supported by the component. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Install</description></item>
-        /// <item><description>Upgrade</description></item>
-        /// <item><description>Modify</description></item>
-        /// <item><description>Uninstall</description></item>
-        /// </list>
+        /// <para>The operations supported by the component.</para>
         /// </summary>
         [NameInMap("supported_actions")]
         [Validation(Required=false)]
