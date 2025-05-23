@@ -69,6 +69,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public long? Id { get; set; }
 
+            [NameInMap("IgnoreContentAuditWords")]
+            [Validation(Required=false)]
+            public string IgnoreContentAuditWords { get; set; }
+
             [NameInMap("KeywordList")]
             [Validation(Required=false)]
             public List<string> KeywordList { get; set; }
