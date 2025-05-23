@@ -125,6 +125,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public string SortBy { get; set; }
 
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
         /// <summary>
         /// <para>The ID of the task for which the instance is generated.</para>
         /// 
