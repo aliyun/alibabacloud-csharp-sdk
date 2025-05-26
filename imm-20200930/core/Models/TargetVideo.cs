@@ -51,6 +51,44 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
             }
 
+            [NameInMap("Desensitization")]
+            [Validation(Required=false)]
+            public TargetVideoFilterVideoDesensitization Desensitization { get; set; }
+            public class TargetVideoFilterVideoDesensitization : TeaModel {
+                [NameInMap("Face")]
+                [Validation(Required=false)]
+                public TargetVideoFilterVideoDesensitizationFace Face { get; set; }
+                public class TargetVideoFilterVideoDesensitizationFace : TeaModel {
+                    [NameInMap("Confidence")]
+                    [Validation(Required=false)]
+                    public float? Confidence { get; set; }
+
+                    [NameInMap("MinSize")]
+                    [Validation(Required=false)]
+                    public int? MinSize { get; set; }
+
+                }
+
+                [NameInMap("LicensePlate")]
+                [Validation(Required=false)]
+                public TargetVideoFilterVideoDesensitizationLicensePlate LicensePlate { get; set; }
+                public class TargetVideoFilterVideoDesensitizationLicensePlate : TeaModel {
+                    [NameInMap("Confidence")]
+                    [Validation(Required=false)]
+                    public float? Confidence { get; set; }
+
+                    [NameInMap("MinSize")]
+                    [Validation(Required=false)]
+                    public int? MinSize { get; set; }
+
+                }
+
+            }
+
+            [NameInMap("Speed")]
+            [Validation(Required=false)]
+            public float? Speed { get; set; }
+
             [NameInMap("Watermarks")]
             [Validation(Required=false)]
             public List<TargetVideoFilterVideoWatermarks> Watermarks { get; set; }
