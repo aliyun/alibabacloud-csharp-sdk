@@ -41,9 +41,15 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public ImageConfig ImageConfig { get; set; }
 
+        /// <term><b>Obsolete</b></term>
         [NameInMap("IsCheif")]
         [Validation(Required=false)]
+        [Obsolete]
         public bool? IsCheif { get; set; }
+
+        [NameInMap("IsChief")]
+        [Validation(Required=false)]
+        public bool? IsChief { get; set; }
 
         [NameInMap("LocalMountSpecs")]
         [Validation(Required=false)]
