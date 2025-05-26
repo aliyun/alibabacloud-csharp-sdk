@@ -101,6 +101,56 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string ResetType { get; set; }
 
+            [NameInMap("SegmentTimers")]
+            [Validation(Required=false)]
+            public List<ModifyTimerGroupRequestConfigTimersSegmentTimers> SegmentTimers { get; set; }
+            public class ModifyTimerGroupRequestConfigTimersSegmentTimers : TeaModel {
+                [NameInMap("EndCronExpression")]
+                [Validation(Required=false)]
+                public string EndCronExpression { get; set; }
+
+                [NameInMap("Enforce")]
+                [Validation(Required=false)]
+                public bool? Enforce { get; set; }
+
+                [NameInMap("Interval")]
+                [Validation(Required=false)]
+                public int? Interval { get; set; }
+
+                [NameInMap("NotificationTime")]
+                [Validation(Required=false)]
+                public int? NotificationTime { get; set; }
+
+                [NameInMap("OperationType")]
+                [Validation(Required=false)]
+                public string OperationType { get; set; }
+
+                [NameInMap("ProcessWhitelist")]
+                [Validation(Required=false)]
+                public List<string> ProcessWhitelist { get; set; }
+
+                [NameInMap("ResetType")]
+                [Validation(Required=false)]
+                public string ResetType { get; set; }
+
+                [NameInMap("StartCronExpression")]
+                [Validation(Required=false)]
+                public string StartCronExpression { get; set; }
+
+                [NameInMap("TimerOrder")]
+                [Validation(Required=false)]
+                public int? TimerOrder { get; set; }
+
+                [NameInMap("Timezone")]
+                [Validation(Required=false)]
+                public string Timezone { get; set; }
+
+                [NameInMap("TriggerType")]
+                [Validation(Required=false)]
+                public string TriggerType { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The scheduled task type.</para>
             /// <para>Valid value:</para>

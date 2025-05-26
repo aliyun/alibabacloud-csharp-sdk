@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public int? Amount { get; set; }
 
+        [NameInMap("AppRuleId")]
+        [Validation(Required=false)]
+        public string AppRuleId { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to enable automatic payment.</para>
         /// 

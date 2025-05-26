@@ -654,6 +654,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             }
 
+            [NameInMap("UserGroupName")]
+            [Validation(Required=false)]
+            public string UserGroupName { get; set; }
+
             /// <summary>
             /// <para>The user\&quot;s organizational unit path.</para>
             /// 

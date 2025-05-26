@@ -724,6 +724,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string TimerGroupId { get; set; }
 
+        [NameInMap("UserGroupName")]
+        [Validation(Required=false)]
+        public string UserGroupName { get; set; }
+
         [NameInMap("UserOuPath")]
         [Validation(Required=false)]
         public string UserOuPath { get; set; }
