@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 
             [NameInMap("Transform")]
             [Validation(Required=false)]
-            public GetFeatureViewResponseBodyFieldsTransform Transform { get; set; }
+            public List<GetFeatureViewResponseBodyFieldsTransform> Transform { get; set; }
             public class GetFeatureViewResponseBodyFieldsTransform : TeaModel {
                 [NameInMap("Input")]
                 [Validation(Required=false)]
@@ -67,10 +67,6 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 
                 }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("LLMConfigId")]
                 [Validation(Required=false)]
                 public int? LLMConfigId { get; set; }

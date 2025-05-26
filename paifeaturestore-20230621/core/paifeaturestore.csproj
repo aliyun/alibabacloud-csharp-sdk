@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>AlibabaCloud.SDK.PaiFeatureStore20230621</AssemblyName>
-    <Version>3.1.0</Version>
+    <Version>4.0.0</Version>
     <LangVersion>5</LangVersion>
     <Authors>Alibaba Cloud</Authors>
     <Description>Alibaba Cloud PaiFeatureStore (20230621) SDK Library for .NET</Description>
