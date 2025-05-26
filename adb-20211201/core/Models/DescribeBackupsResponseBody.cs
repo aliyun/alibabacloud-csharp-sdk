@@ -58,6 +58,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [Validation(Required=false)]
                 public string BackupMethod { get; set; }
 
+                [NameInMap("BackupRegion")]
+                [Validation(Required=false)]
+                public string BackupRegion { get; set; }
+
                 /// <summary>
                 /// <para>The size of the backup set. Unit: bytes.</para>
                 /// 
@@ -101,6 +105,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [NameInMap("DBClusterId")]
                 [Validation(Required=false)]
                 public string DBClusterId { get; set; }
+
+                [NameInMap("ParentBackupId")]
+                [Validation(Required=false)]
+                public string ParentBackupId { get; set; }
 
             }
 

@@ -78,6 +78,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("Remote")]
+        [Validation(Required=false)]
+        public bool? Remote { get; set; }
+
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
