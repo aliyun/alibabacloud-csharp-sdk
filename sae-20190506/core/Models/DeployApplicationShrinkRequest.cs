@@ -766,6 +766,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string SlsConfigs { get; set; }
 
+        [NameInMap("StartupProbe")]
+        [Validation(Required=false)]
+        public string StartupProbe { get; set; }
+
         [NameInMap("SwimlanePvtzDiscoverySvc")]
         [Validation(Required=false)]
         public string SwimlanePvtzDiscoverySvc { get; set; }

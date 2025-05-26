@@ -1116,6 +1116,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["SlsConfigs"] = request.SlsConfigs;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartupProbe))
+            {
+                query["StartupProbe"] = request.StartupProbe;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TerminationGracePeriodSeconds))
             {
                 query["TerminationGracePeriodSeconds"] = request.TerminationGracePeriodSeconds;
@@ -1464,6 +1468,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlsConfigs))
             {
                 query["SlsConfigs"] = request.SlsConfigs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartupProbe))
+            {
+                query["StartupProbe"] = request.StartupProbe;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TerminationGracePeriodSeconds))
             {
@@ -6257,6 +6265,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["SlsConfigs"] = request.SlsConfigs;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartupProbe))
+            {
+                query["StartupProbe"] = request.StartupProbe;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TerminationGracePeriodSeconds))
             {
                 query["TerminationGracePeriodSeconds"] = request.TerminationGracePeriodSeconds;
@@ -6602,6 +6614,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlsConfigs))
             {
                 query["SlsConfigs"] = request.SlsConfigs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartupProbe))
+            {
+                query["StartupProbe"] = request.StartupProbe;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TerminationGracePeriodSeconds))
             {

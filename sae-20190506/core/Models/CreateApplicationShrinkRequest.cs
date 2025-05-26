@@ -554,6 +554,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string SlsConfigs { get; set; }
 
+        [NameInMap("StartupProbe")]
+        [Validation(Required=false)]
+        public string StartupProbe { get; set; }
+
         /// <summary>
         /// <para>30</para>
         /// 
