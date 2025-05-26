@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class SenderStatisticsDetailByParamResponseBody : TeaModel {
         /// <summary>
-        /// <para>The start position of the next page. The return value of the NextStart parameter indicates the start position of the next page. If you want to obtain more records, specify the return value in the next request.</para>
+        /// <para>Used for pagination. If there are more results, set this returned value to the NextStart in the next request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>90f0243616#203#a***@example.net-1658817689#a***@example.net.247141122178</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string NextStart { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Request ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>B5AB8EBB-EE64-4BB2-B085-B92CC5DEDC41</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The response parameters.</para>
+        /// <para>Detailed records</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             public List<SenderStatisticsDetailByParamResponseBodyDataMailDetail> MailDetail { get; set; }
             public class SenderStatisticsDetailByParamResponseBodyDataMailDetail : TeaModel {
                 /// <summary>
-                /// <para>The sender address.</para>
+                /// <para>Sending address</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>s***@example.net</para>
@@ -51,12 +51,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 public string AccountName { get; set; }
 
                 /// <summary>
-                /// <para>Detailed classification of error causes:</para>
-                /// <list type="bullet">
-                /// <item><description>SendOk</description></item>
-                /// <item><description>SmtpNxBox</description></item>
-                /// </list>
-                /// <para>etc.</para>
+                /// <para>Detailed classification of error reasons: - SendOk - SmtpNxBox
+                /// etc.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SendOk</para>
@@ -66,7 +62,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 public string ErrorClassification { get; set; }
 
                 /// <summary>
-                /// <para>The most recent update time.</para>
+                /// <para>Update time</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-04-28T17:11Z</para>
@@ -76,7 +72,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 public string LastUpdateTime { get; set; }
 
                 /// <summary>
-                /// <para>The details of the email.</para>
+                /// <para>Delivery detail information</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>250 Send Mail OK</para>
@@ -86,7 +82,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 public string Message { get; set; }
 
                 /// <summary>
-                /// <para>The delivery status. Valid values: 0: successful, 2 invalid email address, 3: spam, and 4: failed.</para>
+                /// <para>Delivery status: 0 Success, 2 Invalid Address, 3 Spam, 4 Other Failures</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -96,7 +92,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 public int? Status { get; set; }
 
                 /// <summary>
-                /// <para>the subject of email.</para>
+                /// <para>Email subject</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test subject</para>
@@ -106,7 +102,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 public string Subject { get; set; }
 
                 /// <summary>
-                /// <para>The recipient address.</para>
+                /// <para>Recipient address</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>b***@example.net</para>
@@ -116,7 +112,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 public string ToAddress { get; set; }
 
                 /// <summary>
-                /// <para>The most recent update time (timestamp format)</para>
+                /// <para>UTC formatted update time</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1619601108</para>

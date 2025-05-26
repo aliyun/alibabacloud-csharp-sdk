@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class QueryInvalidAddressRequest : TeaModel {
         /// <summary>
+        /// <para>End time, with a span from the start time that cannot exceed 30 days, in the format yyyy-MM-dd.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2019-09-29</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>Keyword. If not provided, it represents all invalid addresses.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>info</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string KeyWord { get; set; }
 
         /// <summary>
+        /// <para>Number of items per request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? Length { get; set; }
 
         /// <summary>
+        /// <para>Request starting position.</para>
+        /// 
         /// <b>Example:</b>
         /// <hr>
         /// </summary>
@@ -54,6 +62,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>Start time, which cannot be earlier than 30 days ago, in the format yyyy-MM-dd.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2019-09-29</para>
         /// </summary>

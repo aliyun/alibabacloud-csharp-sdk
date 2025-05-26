@@ -22,6 +22,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>Target address</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test1***@example.net</para>
         /// </summary>

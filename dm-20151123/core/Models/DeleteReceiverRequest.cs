@@ -14,11 +14,11 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the recipient list.</para>
+        /// <para>Receiver list ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1453</para>
+        /// <para>144adfa772cfe47631de7e86d7da13ae</para>
         /// </summary>
         [NameInMap("ReceiverId")]
         [Validation(Required=false)]

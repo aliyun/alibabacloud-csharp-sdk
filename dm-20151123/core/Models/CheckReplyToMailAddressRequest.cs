@@ -9,11 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class CheckReplyToMailAddressRequest : TeaModel {
+        /// <summary>
+        /// <para>Language.</para>
+        /// <para>en is English, and any other value or an empty value defaults to Chinese.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>无</para>
+        /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>Sender Address ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +36,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>Region</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>

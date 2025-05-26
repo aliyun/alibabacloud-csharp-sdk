@@ -10,13 +10,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class CheckDomainResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status of the domain name. Indicates whether the domain name is verified and available.</para>
+        /// <para>Domain status. Indicates whether the verification was successful, with values as follows:</para>
         /// <list type="bullet">
-        /// <item><description>0: indicates that the domain name is verified and available.</description></item>
-        /// <item><description>1: indicates that the domain name fails to be verified and is unavailable.</description></item>
-        /// <item><description>2: indicates that the domain name is available, but not filed or configured with a CNAME record.</description></item>
-        /// <item><description>3: indicates that the domain name is available but not filed.</description></item>
-        /// <item><description>4: indicates that the domain name is available but not configured with a CNAME record.</description></item>
+        /// <item><description><b>0</b>: Available, verified successfully</description></item>
+        /// <item><description><b>1</b>: Unavailable, verification failed</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -27,7 +24,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? DomainStatus { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Request ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>F0B82E83-A1D9-4FE6-97D2-F4B231F80B02</para>

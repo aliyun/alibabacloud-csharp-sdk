@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class QueryMailAddressByParamRequest : TeaModel {
+        /// <summary>
+        /// <para>Email address, length 1-60, supports numbers, letters, ., -, @.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>账号+@+域名</para>
+        /// </summary>
         [NameInMap("KeyWord")]
         [Validation(Required=false)]
         public string KeyWord { get; set; }
@@ -18,6 +24,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>Current page number, default: 1</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +34,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? PageNo { get; set; }
 
         /// <summary>
+        /// <para>Page size, default: 10</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -42,6 +52,12 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>Type of sending address. Values:</para>
+        /// <list type="bullet">
+        /// <item><description>batch: bulk email</description></item>
+        /// <item><description>trigger: triggered email</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>batch</para>
         /// </summary>

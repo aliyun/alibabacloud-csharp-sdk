@@ -9,11 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class DeleteIpfilterByEdmIdRequest : TeaModel {
+        /// <summary>
+        /// <para>Deprecated, kept for historical compatibility.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("FromType")]
         [Validation(Required=false)]
         public int? FromType { get; set; }
 
         /// <summary>
+        /// <para>Record ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10120</para>
         /// </summary>

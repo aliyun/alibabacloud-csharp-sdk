@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class CreateMailAddressRequest : TeaModel {
         /// <summary>
+        /// <para>Sender\&quot;s email address</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="mailto:test1@example.com">test1@example.com</a></para>
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
@@ -21,8 +25,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>Reply-to address</para>
+        /// 
         /// <b>Example:</b>
-        /// <para><a href="mailto:reply@aliyun.com">reply@aliyun.com</a></para>
+        /// <para><a href="mailto:test2@example.com">test2@example.com</a></para>
         /// </summary>
         [NameInMap("ReplyAddress")]
         [Validation(Required=false)]
@@ -37,6 +43,13 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>Type of sending. Values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>batch: Bulk emails</para>
+        /// </description></item>
+        /// <item><description><para>trigger: Triggered emails</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

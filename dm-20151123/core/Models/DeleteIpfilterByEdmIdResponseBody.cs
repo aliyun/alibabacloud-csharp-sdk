@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class DeleteIpfilterByEdmIdResponseBody : TeaModel {
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>E3DFF97B-00CF-5333-8125-3D6819471984</para>
         /// </summary>

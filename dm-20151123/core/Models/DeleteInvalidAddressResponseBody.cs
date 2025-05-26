@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class DeleteInvalidAddressResponseBody : TeaModel {
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2D086F6-xxxx-xxxx-xxxx-006DED011A85</para>
         /// </summary>

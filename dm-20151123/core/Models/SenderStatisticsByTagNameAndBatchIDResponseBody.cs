@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class SenderStatisticsByTagNameAndBatchIDResponseBody : TeaModel {
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10A1AD70-E48E-476D-98D9-39BD92193837</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Total count</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -25,6 +29,9 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
 
+        /// <summary>
+        /// <para>Data records</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public SenderStatisticsByTagNameAndBatchIDResponseBodyData Data { get; set; }
@@ -34,6 +41,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             public List<SenderStatisticsByTagNameAndBatchIDResponseBodyDataStat> Stat { get; set; }
             public class SenderStatisticsByTagNameAndBatchIDResponseBodyDataStat : TeaModel {
                 /// <summary>
+                /// <para>Creation time</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2021-07-02</para>
                 /// </summary>
@@ -42,6 +51,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
+                /// <para>Failure count</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -50,6 +61,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 public string FaildCount { get; set; }
 
                 /// <summary>
+                /// <para>Request count</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>4</para>
                 /// </summary>
@@ -58,6 +71,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 public string RequestCount { get; set; }
 
                 /// <summary>
+                /// <para>Success rate</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>100.00%</para>
                 /// </summary>
@@ -66,6 +81,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 public string SucceededPercent { get; set; }
 
                 /// <summary>
+                /// <para>Success count</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>4</para>
                 /// </summary>
@@ -74,6 +91,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 public string SuccessCount { get; set; }
 
                 /// <summary>
+                /// <para>Invalid count</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -82,6 +101,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 public string UnavailableCount { get; set; }
 
                 /// <summary>
+                /// <para>Unavailability rate</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0%</para>
                 /// </summary>

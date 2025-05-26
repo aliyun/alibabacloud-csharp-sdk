@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class UpdateIpProtectionRequest : TeaModel {
         /// <summary>
+        /// <para>IP protection switch, On: 1 Off: 0</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>

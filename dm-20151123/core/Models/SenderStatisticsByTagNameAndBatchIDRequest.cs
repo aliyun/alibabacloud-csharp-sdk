@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class SenderStatisticsByTagNameAndBatchIDRequest : TeaModel {
         /// <summary>
+        /// <para>Sending address. If not filled, it represents all addresses.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string AccountName { get; set; }
 
         /// <summary>
+        /// <para>End time, which cannot exceed 7 days from the start time, in the format yyyy-MM-dd.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>Start time, in the format yyyy-MM-dd.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +54,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string StartTime { get; set; }
 
         /// <summary>
+        /// <para>Email tag. If not filled, it represents all tags.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
         /// </summary>

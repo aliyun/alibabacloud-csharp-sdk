@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class SenderStatisticsDetailByParamRequest : TeaModel {
         /// <summary>
-        /// <para>Sending address. Not filled in represents all addresses.</para>
+        /// <para>Sending address. If not filled, it represents all addresses.</para>
+        /// <remarks>
+        /// <para><b>AccountName</b>, <b>TagName</b>, and <b>ToAddress</b> can all be left unfilled. If any are filled, only one of these parameters can be passed; you cannot pass a combination of two or more.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>s***@example.net</para>
@@ -20,7 +23,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The end time. The difference between the start time and the end time cannot exceed 30 days. Format: yyyy-MM-dd.</para>
+        /// <para>End time. The span between start and end times cannot exceed 30 days, format: yyyy-MM-dd HH:mm.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-04-29 00:00</para>
@@ -30,7 +33,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return in the request. Valid values: 1 to 100.</para>
+        /// <para>Specifies the number of results to return in this request. Range is 1~100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -40,7 +43,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? Length { get; set; }
 
         /// <summary>
-        /// <para>The start position of the next page. The offset for the request. If you want to obtain more records, specify the return value of the NextStart parameter for this parameter.</para>
+        /// <para>Used for pagination. Specifies the offset for this request. If there are more results, set this returned value to the NextStart in the next request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>90f0243616#203#a***@example.net-1658817837#a***@example.net.247475288187</para>
@@ -62,7 +65,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The start time. The start time can be up to 30 days earlier than the current time. Format: yyyy-MM-dd.</para>
+        /// <para>Start time. The span between start and end times cannot exceed 30 days, format: yyyy-MM-dd HH:mm</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-04-28 00:00</para>
@@ -72,7 +75,13 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The delivery status. If you leave this parameter empty, all states are included. Valid values: 0: successful, 2 invalid email address, 3: spam, and 4: failed.</para>
+        /// <para>Delivery result. If not filled, it represents all statuses. Values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: Success</description></item>
+        /// <item><description>2: Invalid Address</description></item>
+        /// <item><description>3: Spam</description></item>
+        /// <item><description>4: Failure</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -82,7 +91,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? Status { get; set; }
 
         /// <summary>
-        /// <para>The email tag. If you leave this parameter empty, all email tags are included.</para>
+        /// <para>Email tag. If not filled, it represents all tags.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EmailQuestionnaireHelioscam</para>
@@ -92,7 +101,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string TagName { get; set; }
 
         /// <summary>
-        /// <para>The recipient address. If you leave this parameter empty, all recipient addresses are included.</para>
+        /// <para>Recipient address. If not filled, it represents all recipient addresses.</para>
         /// 
         /// <b>Example:</b>
         /// <para>b***@example.net</para>

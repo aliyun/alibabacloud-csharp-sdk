@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class QueryTagByParamResponseBody : TeaModel {
         /// <summary>
+        /// <para>Current page number</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>Page size</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10A1AD70-E48E-476D-98D9-39BD92193837</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Total count</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -41,6 +49,9 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
 
+        /// <summary>
+        /// <para>Data records</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public QueryTagByParamResponseBodyData Data { get; set; }
@@ -49,11 +60,19 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             [Validation(Required=false)]
             public List<QueryTagByParamResponseBodyDataTag> Tag { get; set; }
             public class QueryTagByParamResponseBodyDataTag : TeaModel {
+                /// <summary>
+                /// <para>Tag description</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test description</para>
+                /// </summary>
                 [NameInMap("TagDescription")]
                 [Validation(Required=false)]
                 public string TagDescription { get; set; }
 
                 /// <summary>
+                /// <para>Tag ID</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>52366</para>
                 /// </summary>
@@ -62,6 +81,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 public string TagId { get; set; }
 
                 /// <summary>
+                /// <para>Tag name</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>hellopal</para>
                 /// </summary>

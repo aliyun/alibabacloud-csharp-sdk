@@ -21,27 +21,33 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// <para>Tag Description</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test description</para>
+        /// </summary>
         [NameInMap("TagDescription")]
         [Validation(Required=false)]
         public string TagDescription { get; set; }
 
         /// <summary>
-        /// <para>The ID of the tag.</para>
+        /// <para>Tag ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>123</para>
+        /// <para>100674</para>
         /// </summary>
         [NameInMap("TagId")]
         [Validation(Required=false)]
         public int? TagId { get; set; }
 
         /// <summary>
-        /// <para>The name of the tag.</para>
+        /// <para>Tag Name</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>vme</para>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("TagName")]
         [Validation(Required=false)]

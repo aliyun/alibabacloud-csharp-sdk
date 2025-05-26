@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class CheckDomainRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the domain name.</para>
+        /// <para>Domain ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

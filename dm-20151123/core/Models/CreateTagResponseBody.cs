@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class CreateTagResponseBody : TeaModel {
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10A1AD70-E48E-476D-98D9-39BD92193837</para>
         /// </summary>
@@ -18,8 +20,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Tag ID</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>xxxx</para>
+        /// <para>91141</para>
         /// </summary>
         [NameInMap("TagId")]
         [Validation(Required=false)]

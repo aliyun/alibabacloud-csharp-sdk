@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class QueryTagByParamRequest : TeaModel {
         /// <summary>
+        /// <para>Tag name, length 1-50, defaults to all tags if not specified.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1aTag</para>
         /// </summary>
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>Page number</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -30,6 +34,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? PageNo { get; set; }
 
         /// <summary>
+        /// <para>Page size</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

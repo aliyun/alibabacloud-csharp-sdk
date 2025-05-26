@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class QueryReceiverDetailRequest : TeaModel {
         /// <summary>
+        /// <para>Recipient address, length 0-50</para>
+        /// 
         /// <b>Example:</b>
         /// <para>b***@example.net</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string KeyWord { get; set; }
 
         /// <summary>
+        /// <para>Starting position for the next item, default: 0</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -30,6 +34,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>Number of items per page, default: 10</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -38,6 +44,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Recipient list ID (returned when creating a recipient list using the CreateReceiver API).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

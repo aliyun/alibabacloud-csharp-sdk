@@ -21,15 +21,22 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// <para>Tag description</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test description</para>
+        /// </summary>
         [NameInMap("TagDescription")]
         [Validation(Required=false)]
         public string TagDescription { get; set; }
 
         /// <summary>
+        /// <para>Tag name. Limitations: 1-50 characters, allowing English letters, numbers, and underscores.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>vme</para>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("TagName")]
         [Validation(Required=false)]
