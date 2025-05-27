@@ -168,6 +168,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
             }
 
+            [NameInMap("Throttling")]
+            [Validation(Required=false)]
+            public int? Throttling { get; set; }
+
         }
 
         /// <summary>
