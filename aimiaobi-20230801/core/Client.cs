@@ -15404,6 +15404,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             {
                 body["DocId"] = request.DocId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelName))
+            {
+                body["ModelName"] = request.ModelName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
             {
                 body["Query"] = request.Query;
@@ -15465,6 +15469,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocId))
             {
                 body["DocId"] = request.DocId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelName))
+            {
+                body["ModelName"] = request.ModelName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
             {
