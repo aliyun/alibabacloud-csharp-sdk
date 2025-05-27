@@ -5881,6 +5881,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
                 request.MobilesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Mobiles, "Mobiles", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptType))
+            {
+                query["EncryptType"] = request.EncryptType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MobilesShrink))
             {
                 query["Mobiles"] = request.MobilesShrink;
@@ -5933,6 +5937,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
                 request.MobilesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Mobiles, "Mobiles", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptType))
+            {
+                query["EncryptType"] = request.EncryptType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MobilesShrink))
             {
                 query["Mobiles"] = request.MobilesShrink;

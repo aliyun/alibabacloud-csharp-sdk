@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>AlibabaCloud.SDK.Dysmsapi20170525</AssemblyName>
-    <Version>3.2.0</Version>
+    <Version>3.2.1</Version>
     <LangVersion>5</LangVersion>
     <Authors>Alibaba Cloud</Authors>
     <Description>Alibaba Cloud Dysmsapi (20170525) SDK Library for .NET</Description>

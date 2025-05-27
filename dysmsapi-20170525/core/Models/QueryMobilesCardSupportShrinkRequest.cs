@@ -10,6 +10,17 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class QueryMobilesCardSupportShrinkRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>NORMAL</para>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
+        [NameInMap("EncryptType")]
+        [Validation(Required=false)]
+        public string EncryptType { get; set; }
+
+        /// <summary>
         /// <para>The list of mobile phone numbers.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
