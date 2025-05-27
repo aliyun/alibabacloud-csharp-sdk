@@ -9287,6 +9287,10 @@ namespace AlibabaCloud.SDK.Adb20190315
             {
                 query["DBClusterStatus"] = request.DBClusterStatus;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterVersion))
+            {
+                query["DBClusterVersion"] = request.DBClusterVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBVersion))
             {
                 query["DBVersion"] = request.DBVersion;
@@ -9376,6 +9380,10 @@ namespace AlibabaCloud.SDK.Adb20190315
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterStatus))
             {
                 query["DBClusterStatus"] = request.DBClusterStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterVersion))
+            {
+                query["DBClusterVersion"] = request.DBClusterVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBVersion))
             {

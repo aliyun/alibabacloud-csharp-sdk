@@ -56,6 +56,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public string DBClusterStatus { get; set; }
 
+        [NameInMap("DBClusterVersion")]
+        [Validation(Required=false)]
+        public string DBClusterVersion { get; set; }
+
         /// <summary>
         /// <para>The version of the cluster. Set the value to <b>3.0</b>.</para>
         /// 

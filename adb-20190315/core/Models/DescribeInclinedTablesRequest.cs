@@ -80,9 +80,9 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// <summary>
         /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>30；</description></item>
-        /// <item><description>50；</description></item>
-        /// <item><description>100；</description></item>
+        /// <item><description>30</description></item>
+        /// <item><description>50</description></item>
+        /// <item><description>100</description></item>
         /// </list>
         /// <para>Default value: 30.</para>
         /// 
