@@ -40,6 +40,24 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [Validation(Required=false)]
             public bool? AutoEnableService { get; set; }
 
+            [NameInMap("CommodityProvisions")]
+            [Validation(Required=false)]
+            public List<GetServiceProvisionsResponseBodyServiceProvisionsCommodityProvisions> CommodityProvisions { get; set; }
+            public class GetServiceProvisionsResponseBodyServiceProvisionsCommodityProvisions : TeaModel {
+                [NameInMap("CommodityCode")]
+                [Validation(Required=false)]
+                public string CommodityCode { get; set; }
+
+                [NameInMap("EnableURL")]
+                [Validation(Required=false)]
+                public string EnableURL { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The URL that points to the activation page of the service.</para>
             /// <remarks>
