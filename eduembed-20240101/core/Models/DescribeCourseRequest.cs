@@ -8,16 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.EduEmbed20240101.Models
 {
-    public class DescribeLabRequest : TeaModel {
+    public class DescribeCourseRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>875</para>
         /// </summary>
-        [NameInMap("LabId")]
+        [NameInMap("CourseId")]
         [Validation(Required=false)]
-        public long? LabId { get; set; }
+        public long? CourseId { get; set; }
 
     }
 

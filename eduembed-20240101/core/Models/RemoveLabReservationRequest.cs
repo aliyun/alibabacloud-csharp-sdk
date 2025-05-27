@@ -14,7 +14,10 @@ namespace AlibabaCloud.SDK.EduEmbed20240101.Models
         public long? AccountId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("LabReservationId")]
         [Validation(Required=false)]

@@ -8,23 +8,15 @@ using Tea;
 
 namespace AlibabaCloud.SDK.EduEmbed20240101.Models
 {
-    public class PageListLabReservationsRequest : TeaModel {
-        [NameInMap("AccountId")]
+    public class ListCoursesRequest : TeaModel {
+        [NameInMap("Id")]
         [Validation(Required=false)]
-        public long? AccountId { get; set; }
+        public List<long?> Id { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1</para>
-        /// </summary>
         [NameInMap("Page")]
         [Validation(Required=false)]
         public long? Page { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>20</para>
-        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
