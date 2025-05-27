@@ -5527,6 +5527,142 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取Rebalance详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRebalanceInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRebalanceInfoResponse
+        /// </returns>
+        public ListRebalanceInfoResponse ListRebalanceInfoWithOptions(ListRebalanceInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumerId))
+            {
+                query["ConsumerId"] = request.ConsumerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListRebalanceInfo",
+                Version = "2019-09-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListRebalanceInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取Rebalance详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRebalanceInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRebalanceInfoResponse
+        /// </returns>
+        public async Task<ListRebalanceInfoResponse> ListRebalanceInfoWithOptionsAsync(ListRebalanceInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumerId))
+            {
+                query["ConsumerId"] = request.ConsumerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListRebalanceInfo",
+                Version = "2019-09-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListRebalanceInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取Rebalance详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRebalanceInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRebalanceInfoResponse
+        /// </returns>
+        public ListRebalanceInfoResponse ListRebalanceInfo(ListRebalanceInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListRebalanceInfoWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取Rebalance详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRebalanceInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRebalanceInfoResponse
+        /// </returns>
+        public async Task<ListRebalanceInfoResponse> ListRebalanceInfoAsync(ListRebalanceInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListRebalanceInfoWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the tags that are attached to a specified resource.</para>
         /// </summary>
         /// 
