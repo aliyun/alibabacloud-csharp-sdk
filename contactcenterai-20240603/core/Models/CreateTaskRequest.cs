@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
 {
     public class CreateTaskRequest : TeaModel {
+        [NameInMap("callBackUrl")]
+        [Validation(Required=false)]
+        public string CallBackUrl { get; set; }
+
         [NameInMap("categoryTags")]
         [Validation(Required=false)]
         public List<CreateTaskRequestCategoryTags> CategoryTags { get; set; }

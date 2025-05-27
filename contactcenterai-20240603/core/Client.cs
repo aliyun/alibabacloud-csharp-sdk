@@ -657,6 +657,10 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallBackUrl))
+            {
+                body["callBackUrl"] = request.CallBackUrl;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryTags))
             {
                 body["categoryTags"] = request.CategoryTags;
@@ -751,6 +755,10 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallBackUrl))
+            {
+                body["callBackUrl"] = request.CallBackUrl;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryTags))
             {
                 body["categoryTags"] = request.CategoryTags;
