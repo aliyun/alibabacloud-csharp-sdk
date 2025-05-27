@@ -10,30 +10,44 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DeleteCustomizeRuleRequest : TeaModel {
         /// <summary>
-        /// The region in which the service is deployed.
+        /// <para>The region in which the service is deployed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the account that you switch from the management account.
+        /// <para>The ID of the account that you switch from the management account.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>113091674488****</para>
         /// </summary>
         [NameInMap("RoleFor")]
         [Validation(Required=false)]
         public long? RoleFor { get; set; }
 
         /// <summary>
-        /// The type of the view. Valid values:
-        /// - 0: the current Alibaba Cloud account
-        /// - 1: the global account
+        /// <para>The type of the view. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: the current Alibaba Cloud account</description></item>
+        /// <item><description>1: the global account</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("RoleType")]
         [Validation(Required=false)]
         public int? RoleType { get; set; }
 
         /// <summary>
-        /// The ID of the rule.
+        /// <para>The ID of the rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123456789</para>
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]

@@ -10,35 +10,50 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DescribeCustomizeRuleTestHistogramResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The return value for the request.
+        /// <para>The return value for the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123456</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeCustomizeRuleTestHistogramResponseBodyData> Data { get; set; }
         public class DescribeCustomizeRuleTestHistogramResponseBodyData : TeaModel {
             /// <summary>
-            /// The number of alerts that are generated in the query time range.
+            /// <para>The number of alerts that are generated in the query time range.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>125</para>
             /// </summary>
             [NameInMap("Count")]
             [Validation(Required=false)]
             public long? Count { get; set; }
 
             /// <summary>
-            /// The start of the time range for querying alerts. The value is a UNIX timestamp. Unit: seconds.
+            /// <para>The start of the time range for querying alerts. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1599897188</para>
             /// </summary>
             [NameInMap("From")]
             [Validation(Required=false)]
             public long? From { get; set; }
 
             /// <summary>
-            /// The end of the time range for querying alerts. The value is a UNIX timestamp. Unit: seconds.
+            /// <para>The end of the time range for querying alerts. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1599997188</para>
             /// </summary>
             [NameInMap("To")]
             [Validation(Required=false)]
@@ -47,24 +62,34 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9AAA9ED9-78F4-5021-86DC-D51C7511****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
-        /// *   true
-        /// *   false
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

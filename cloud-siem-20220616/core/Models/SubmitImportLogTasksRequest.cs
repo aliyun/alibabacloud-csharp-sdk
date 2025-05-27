@@ -10,79 +10,109 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class SubmitImportLogTasksRequest : TeaModel {
         /// <summary>
-        /// The accounts that you want to add. The value is a JSON array. Valid values:
+        /// <para>The accounts that you want to add. The value is a JSON array. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>AccountId: the IDs of the accounts.</para>
+        /// </description></item>
+        /// <item><description><para>Imported: specifies whether to add the accounts. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: no</description></item>
+        /// <item><description>1: yes</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
         /// 
-        /// *   AccountId: the IDs of the accounts.
-        /// 
-        /// *   Imported: specifies whether to add the accounts. Valid values:
-        /// 
-        ///     *   0: no
-        ///     *   1: yes
+        /// <b>Example:</b>
+        /// <para>[{&quot;AccountId&quot;:&quot;123123&quot;,&quot;Imported&quot;:1}]</para>
         /// </summary>
         [NameInMap("Accounts")]
         [Validation(Required=false)]
         public string Accounts { get; set; }
 
         /// <summary>
-        /// Specifies whether to automatically add the account for which the logging feature is configured. Valid values:
+        /// <para>Specifies whether to automatically add the account for which the logging feature is configured. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: yes</description></item>
+        /// <item><description>0: no</description></item>
+        /// </list>
         /// 
-        /// *   1: yes
-        /// *   0: no
+        /// <b>Example:</b>
+        /// <para>[&quot;cloud_siem_qcloud_cfw_alert_log&quot;]</para>
         /// </summary>
         [NameInMap("AutoImported")]
         [Validation(Required=false)]
         public int? AutoImported { get; set; }
 
         /// <summary>
-        /// The code that is used for multi-cloud environments. Valid values:
+        /// <para>The code that is used for multi-cloud environments. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>qcloud: Tencent Cloud</description></item>
+        /// <item><description>aliyun: Alibaba Cloud</description></item>
+        /// <item><description>hcloud: Huawei Cloud</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   qcloud: Tencent Cloud
-        /// *   aliyun: Alibaba Cloud
-        /// *   hcloud: Huawei Cloud
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>hcloud</para>
         /// </summary>
         [NameInMap("CloudCode")]
         [Validation(Required=false)]
         public string CloudCode { get; set; }
 
         /// <summary>
-        /// The logs that you want to collect. The value is a JSON array.
+        /// <para>The logs that you want to collect. The value is a JSON array.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;cloud_siem_qcloud_cfw_alert_log&quot;]</para>
         /// </summary>
         [NameInMap("LogCodes")]
         [Validation(Required=false)]
         public string LogCodes { get; set; }
 
         /// <summary>
-        /// The code of the service.
+        /// <para>The code of the service.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>qcloud_waf</para>
         /// </summary>
         [NameInMap("ProdCode")]
         [Validation(Required=false)]
         public string ProdCode { get; set; }
 
         /// <summary>
-        /// The data management center of the threat analysis feature. Specify this parameter based on the region where your assets reside. Valid values:
+        /// <para>The data management center of the threat analysis feature. Specify this parameter based on the region where your assets reside. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>cn-hangzhou: Your assets reside in regions inside China.</description></item>
+        /// <item><description>ap-southeast-1: Your assets reside in regions outside China.</description></item>
+        /// </list>
         /// 
-        /// *   cn-hangzhou: Your assets reside in regions inside China.
-        /// *   ap-southeast-1: Your assets reside in regions outside China.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the account that you switch from the management account.
+        /// <para>The ID of the account that you switch from the management account.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>113091674488****</para>
         /// </summary>
         [NameInMap("RoleFor")]
         [Validation(Required=false)]
         public long? RoleFor { get; set; }
 
         /// <summary>
-        /// The type of the view. Valid values:
-        /// - 0: the current Alibaba Cloud account
-        /// - 1: the global account
+        /// <para>The type of the view. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: the current Alibaba Cloud account</description></item>
+        /// <item><description>1: the global account</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("RoleType")]
         [Validation(Required=false)]

@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class SubmitImportLogTasksResponseBody : TeaModel {
         /// <summary>
-        /// The data returned.
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public SubmitImportLogTasksResponseBodyData Data { get; set; }
         public class SubmitImportLogTasksResponseBodyData : TeaModel {
             /// <summary>
-            /// The number of log collection tasks that are submitted.
+            /// <para>The number of log collection tasks that are submitted.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("Count")]
             [Validation(Required=false)]
@@ -26,7 +29,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6276D891-*****-55B2-87B9-74D413F7****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

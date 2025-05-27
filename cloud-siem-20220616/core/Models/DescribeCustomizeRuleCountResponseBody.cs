@@ -10,98 +10,140 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DescribeCustomizeRuleCountResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code that is returned.
+        /// <para>The HTTP status code that is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The data returned.
+        /// <para>The data returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123456</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeCustomizeRuleCountResponseBodyData Data { get; set; }
         public class DescribeCustomizeRuleCountResponseBodyData : TeaModel {
             /// <summary>
-            /// 同类聚合规则数。
+            /// <para>同类聚合规则数。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3</para>
             /// </summary>
             [NameInMap("AggregationRuleNum")]
             [Validation(Required=false)]
             public int? AggregationRuleNum { get; set; }
 
             /// <summary>
-            /// 自定义规则数。
+            /// <para>自定义规则数。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("CustomizeRuleNum")]
             [Validation(Required=false)]
             public int? CustomizeRuleNum { get; set; }
 
             /// <summary>
-            /// 专家规则数。
+            /// <para>专家规则数。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>7</para>
             /// </summary>
             [NameInMap("ExpertRuleNum")]
             [Validation(Required=false)]
             public int? ExpertRuleNum { get; set; }
 
             /// <summary>
-            /// 图计算规则数。
+            /// <para>图计算规则数。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("GraphComputingRuleNum")]
             [Validation(Required=false)]
             public int? GraphComputingRuleNum { get; set; }
 
             /// <summary>
-            /// The number of rules that are used to identify high-risk threats.
+            /// <para>The number of rules that are used to identify high-risk threats.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>12</para>
             /// </summary>
             [NameInMap("HighRuleNum")]
             [Validation(Required=false)]
             public int? HighRuleNum { get; set; }
 
             /// <summary>
-            /// The total number of rules.
+            /// <para>The total number of rules.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
             /// </summary>
             [NameInMap("InUseRuleNum")]
             [Validation(Required=false)]
             public int? InUseRuleNum { get; set; }
 
             /// <summary>
-            /// The number of rules that are used to identify low-risk threats.
+            /// <para>The number of rules that are used to identify low-risk threats.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3</para>
             /// </summary>
             [NameInMap("LowRuleNum")]
             [Validation(Required=false)]
             public int? LowRuleNum { get; set; }
 
             /// <summary>
-            /// The number of rules that are used to identify medium-risk threats.
+            /// <para>The number of rules that are used to identify medium-risk threats.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5</para>
             /// </summary>
             [NameInMap("MediumRuleNum")]
             [Validation(Required=false)]
             public int? MediumRuleNum { get; set; }
 
             /// <summary>
-            /// 预定义规则数。
+            /// <para>预定义规则数。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("PredefinedRuleNum")]
             [Validation(Required=false)]
             public int? PredefinedRuleNum { get; set; }
 
             /// <summary>
-            /// 告警透传规则数。
+            /// <para>告警透传规则数。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3</para>
             /// </summary>
             [NameInMap("SingleAlertRuleNum")]
             [Validation(Required=false)]
             public int? SingleAlertRuleNum { get; set; }
 
             /// <summary>
-            /// 总规则数。
+            /// <para>总规则数。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("TotalRuleNum")]
             [Validation(Required=false)]
             public int? TotalRuleNum { get; set; }
 
             /// <summary>
-            /// 不产生事件规则数。
+            /// <para>不产生事件规则数。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3</para>
             /// </summary>
             [NameInMap("UnEventRuleNum")]
             [Validation(Required=false)]
@@ -110,24 +152,34 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9AAA9ED9-78F4-5021-86DC-D51C7511****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
-        /// *   true
-        /// *   false
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DescribeProdCountResponseBody : TeaModel {
         /// <summary>
-        /// The data returned.
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -21,7 +21,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public int? AliyunImportedCount { get; set; }
 
             /// <summary>
-            /// The number of Alibaba Cloud services.
+            /// <para>The number of Alibaba Cloud services.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>19</para>
             /// </summary>
             [NameInMap("AliyunProdCount")]
             [Validation(Required=false)]
@@ -32,7 +35,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public int? HcloudImportedCount { get; set; }
 
             /// <summary>
-            /// The number of Huawei Cloud services.
+            /// <para>The number of Huawei Cloud services.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("HcloudProdCount")]
             [Validation(Required=false)]
@@ -42,6 +48,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             [Validation(Required=false)]
             public int? IdcImportedCount { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2</para>
+            /// </summary>
             [NameInMap("IdcProdCount")]
             [Validation(Required=false)]
             public int? IdcProdCount { get; set; }
@@ -51,7 +61,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public int? QcloudImportedCount { get; set; }
 
             /// <summary>
-            /// The number of Tencent Cloud services.
+            /// <para>The number of Tencent Cloud services.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("QcloudProdCount")]
             [Validation(Required=false)]
@@ -60,7 +73,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6276D891-*****-55B2-87B9-74D413F7****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

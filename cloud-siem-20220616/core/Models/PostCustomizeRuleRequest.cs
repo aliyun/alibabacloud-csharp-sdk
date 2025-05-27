@@ -10,163 +10,232 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class PostCustomizeRuleRequest : TeaModel {
         /// <summary>
-        /// The risk type.
+        /// <para>The risk type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>WEBSHELL</para>
         /// </summary>
         [NameInMap("AlertType")]
         [Validation(Required=false)]
         public string AlertType { get; set; }
 
         /// <summary>
-        /// The internal code of the risk type.
+        /// <para>The internal code of the risk type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>${siem_rule_type_process_abnormal_command}</para>
         /// </summary>
         [NameInMap("AlertTypeMds")]
         [Validation(Required=false)]
         public string AlertTypeMds { get; set; }
 
         /// <summary>
-        /// att&ck.
+        /// <para>att&amp;ck.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>T1595.002 Vulnerability Scanning</para>
         /// </summary>
         [NameInMap("AttCk")]
         [Validation(Required=false)]
         public string AttCk { get; set; }
 
         /// <summary>
-        /// The extended information about event generation. If eventTransferType is set to allToSingle, the value of this parameter indicates the length and unit of the alert aggregation window.
+        /// <para>The extended information about event generation. If eventTransferType is set to allToSingle, the value of this parameter indicates the length and unit of the alert aggregation window.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;time&quot;:&quot;1&quot;,&quot;unit&quot;:&quot;MINUTE&quot;}</para>
         /// </summary>
         [NameInMap("EventTransferExt")]
         [Validation(Required=false)]
         public string EventTransferExt { get; set; }
 
         /// <summary>
-        /// Specifies whether to convert an alert to an event. Valid values:
+        /// <para>Specifies whether to convert an alert to an event. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: no</description></item>
+        /// <item><description>1: yes</description></item>
+        /// </list>
         /// 
-        /// *   0: no
-        /// *   1: yes
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("EventTransferSwitch")]
         [Validation(Required=false)]
         public int? EventTransferSwitch { get; set; }
 
         /// <summary>
-        /// The event generation method. Valid values:
+        /// <para>The event generation method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>default: The default method is used.</description></item>
+        /// <item><description>singleToSingle: The system generates an event for each alert.</description></item>
+        /// <item><description>allToSingle: The system generates an event for alerts within a period of time.</description></item>
+        /// </list>
         /// 
-        /// *   default: The default method is used.
-        /// *   singleToSingle: The system generates an event for each alert.
-        /// *   allToSingle: The system generates an event for alerts within a period of time.
+        /// <b>Example:</b>
+        /// <para>allToSingle</para>
         /// </summary>
         [NameInMap("EventTransferType")]
         [Validation(Required=false)]
         public string EventTransferType { get; set; }
 
         /// <summary>
-        /// The ID of the rule.
+        /// <para>The ID of the rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123456789</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public long? Id { get; set; }
 
         /// <summary>
-        /// The log source of the rule.
+        /// <para>The log source of the rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cloud_siem_aegis_sas_alert</para>
         /// </summary>
         [NameInMap("LogSource")]
         [Validation(Required=false)]
         public string LogSource { get; set; }
 
         /// <summary>
-        /// The internal code of the log source.
+        /// <para>The internal code of the log source.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>${sas.cloudsiem.prod.cloud_siem_aegis_sas_alert}</para>
         /// </summary>
         [NameInMap("LogSourceMds")]
         [Validation(Required=false)]
         public string LogSourceMds { get; set; }
 
         /// <summary>
-        /// The log type of the rule.
+        /// <para>The log type of the rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ALERT_ACTIVITY</para>
         /// </summary>
         [NameInMap("LogType")]
         [Validation(Required=false)]
         public string LogType { get; set; }
 
         /// <summary>
-        /// The internal code of the log type.
+        /// <para>The internal code of the log type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>${security_event_config.event_name.webshellName_clientav}</para>
         /// </summary>
         [NameInMap("LogTypeMds")]
         [Validation(Required=false)]
         public string LogTypeMds { get; set; }
 
         /// <summary>
-        /// The window length of the rule.
+        /// <para>The window length of the rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;time&quot;:&quot;1&quot;,&quot;unit&quot;:&quot;HOUR&quot;}</para>
         /// </summary>
         [NameInMap("QueryCycle")]
         [Validation(Required=false)]
         public string QueryCycle { get; set; }
 
         /// <summary>
-        /// The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
+        /// <para>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>cn-hangzhou: Your assets reside in regions in China.</description></item>
+        /// <item><description>ap-southeast-1: Your assets reside in regions outside China.</description></item>
+        /// </list>
         /// 
-        /// *   cn-hangzhou: Your assets reside in regions in China.
-        /// *   ap-southeast-1: Your assets reside in regions outside China.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the account that you switch from the management account.
+        /// <para>The ID of the account that you switch from the management account.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>113091674488****</para>
         /// </summary>
         [NameInMap("RoleFor")]
         [Validation(Required=false)]
         public long? RoleFor { get; set; }
 
         /// <summary>
-        /// The type of the view. Valid values:
-        /// - 0: the current Alibaba Cloud account
-        /// - 1: the global account
+        /// <para>The type of the view. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: the current Alibaba Cloud account</description></item>
+        /// <item><description>1: the global account</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("RoleType")]
         [Validation(Required=false)]
         public int? RoleType { get; set; }
 
         /// <summary>
-        /// The query condition of the rule. The value is in the JSON format.
+        /// <para>The query condition of the rule. The value is in the JSON format.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[[{&quot;not&quot;:false,&quot;left&quot;:&quot;alert_name&quot;,&quot;operator&quot;:&quot;=&quot;,&quot;right&quot;:&quot;WEBSHELL&quot;}]]</para>
         /// </summary>
         [NameInMap("RuleCondition")]
         [Validation(Required=false)]
         public string RuleCondition { get; set; }
 
         /// <summary>
-        /// The description of the rule.
+        /// <para>The description of the rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>this rule is for waf scan</para>
         /// </summary>
         [NameInMap("RuleDesc")]
         [Validation(Required=false)]
         public string RuleDesc { get; set; }
 
         /// <summary>
-        /// The log aggregation field of the rule. The value is a JSON string.
+        /// <para>The log aggregation field of the rule. The value is a JSON string.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;asset_id&quot;]</para>
         /// </summary>
         [NameInMap("RuleGroup")]
         [Validation(Required=false)]
         public string RuleGroup { get; set; }
 
         /// <summary>
-        /// The name of the rule.
+        /// <para>The name of the rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>waf_scan</para>
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]
         public string RuleName { get; set; }
 
         /// <summary>
-        /// The threshold configuration of the rule. The value is in the JSON format.
+        /// <para>The threshold configuration of the rule. The value is in the JSON format.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;aggregateFunction&quot;:&quot;count&quot;,&quot;aggregateFunctionName&quot;:&quot;count&quot;,&quot;field&quot;:&quot;activity_name&quot;,&quot;operator&quot;:&quot;&lt;=&quot;,&quot;value&quot;:1}</para>
         /// </summary>
         [NameInMap("RuleThreshold")]
         [Validation(Required=false)]
         public string RuleThreshold { get; set; }
 
         /// <summary>
-        /// The risk level. Valid values:
+        /// <para>The risk level. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>serious: high</description></item>
+        /// <item><description>suspicious: medium</description></item>
+        /// <item><description>remind: low</description></item>
+        /// </list>
         /// 
-        /// *   serious: high
-        /// *   suspicious: medium
-        /// *   remind: low
+        /// <b>Example:</b>
+        /// <para>remind</para>
         /// </summary>
         [NameInMap("ThreatLevel")]
         [Validation(Required=false)]

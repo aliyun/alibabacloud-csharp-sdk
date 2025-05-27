@@ -10,10 +10,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class EnableServiceForCloudSiemRequest : TeaModel {
         /// <summary>
-        /// The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
+        /// <para>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>cn-hangzhou: Your assets reside in regions in China.</description></item>
+        /// <item><description>ap-southeast-1: Your assets reside in regions outside China.</description></item>
+        /// </list>
         /// 
-        /// *   cn-hangzhou: Your assets reside in regions in China.
-        /// *   ap-southeast-1: Your assets reside in regions outside China.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

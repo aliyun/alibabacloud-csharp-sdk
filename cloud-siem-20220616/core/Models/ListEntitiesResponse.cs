@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
-    public class SubmitJobsResponse : TeaModel {
+    public class ListEntitiesResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public SubmitJobsResponseBody Body { get; set; }
+        public ListEntitiesResponseBody Body { get; set; }
 
     }
 

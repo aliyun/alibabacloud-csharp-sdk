@@ -10,31 +10,41 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class GetCapacityResponseBody : TeaModel {
         /// <summary>
-        /// The information about the storage capacity.
+        /// <para>The information about the storage capacity.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetCapacityResponseBodyData Data { get; set; }
         public class GetCapacityResponseBodyData : TeaModel {
             /// <summary>
-            /// Indicates whether the Logstores for the threat analysis feature exist on the user side. Valid values:
+            /// <para>Indicates whether the Logstores for the threat analysis feature exist on the user side. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: The logs are in the normal state. The log analysis feature is available.</description></item>
+            /// <item><description>false: The logs are being cleared. The log analysis feature is unavailable.</description></item>
+            /// </list>
             /// 
-            /// *   true: The logs are in the normal state. The log analysis feature is available.
-            /// *   false: The logs are being cleared. The log analysis feature is unavailable.
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("ExistLogStore")]
             [Validation(Required=false)]
             public bool? ExistLogStore { get; set; }
 
             /// <summary>
-            /// The purchased storage capacity of the threat analysis feature. Unit: GB.
+            /// <para>The purchased storage capacity of the threat analysis feature. Unit: GB.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>9000</para>
             /// </summary>
             [NameInMap("PreservedCapacity")]
             [Validation(Required=false)]
             public long? PreservedCapacity { get; set; }
 
             /// <summary>
-            /// The billable storage capacity of the threat analysis feature. Unit: GB.
+            /// <para>The billable storage capacity of the threat analysis feature. Unit: GB.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("UsedCapacity")]
             [Validation(Required=false)]
@@ -43,7 +53,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>27D27DCB-D76B-5064-8B3B-0900DEF7****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

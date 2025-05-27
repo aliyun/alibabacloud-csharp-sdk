@@ -10,25 +10,32 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class ListDataSourceTypesResponseBody : TeaModel {
         /// <summary>
-        /// The data returned.
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListDataSourceTypesResponseBodyData> Data { get; set; }
         public class ListDataSourceTypesResponseBodyData : TeaModel {
             /// <summary>
-            /// The code of the third-party cloud service.
+            /// <para>The code of the third-party cloud service.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>hcloud</para>
             /// </summary>
             [NameInMap("CloudCode")]
             [Validation(Required=false)]
             public string CloudCode { get; set; }
 
             /// <summary>
-            /// The type of the data source. Valid values:
+            /// <para>The type of the data source. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>obs: Huawei Cloud Object Storage Service (OBS)</description></item>
+            /// <item><description>wafApi: download API of Tencent Cloud Web Application Firewall (WAF)</description></item>
+            /// <item><description>ckafka: Tencent Cloud Kafka (CKafka)</description></item>
+            /// </list>
             /// 
-            /// *   obs: Huawei Cloud Object Storage Service (OBS)
-            /// *   wafApi: download API of Tencent Cloud Web Application Firewall (WAF)
-            /// *   ckafka: Tencent Cloud Kafka (CKafka)
+            /// <b>Example:</b>
+            /// <para>obs</para>
             /// </summary>
             [NameInMap("DataSourceType")]
             [Validation(Required=false)]
@@ -37,7 +44,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6276D891-*****-55B2-87B9-74D413F7****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

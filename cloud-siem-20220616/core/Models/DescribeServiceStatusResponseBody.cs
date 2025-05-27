@@ -10,17 +10,24 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DescribeServiceStatusResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether the threat analysis feature is authorized to access the resource directory. Valid values:
+        /// <para>Indicates whether the threat analysis feature is authorized to access the resource directory. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
-        /// *   true
-        /// *   false
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public bool? Data { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6276D891-*****-55B2-87B9-74D413F7****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

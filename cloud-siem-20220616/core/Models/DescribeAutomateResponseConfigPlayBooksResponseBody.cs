@@ -10,53 +10,75 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DescribeAutomateResponseConfigPlayBooksResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The data returned.
+        /// <para>The data returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123456</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeAutomateResponseConfigPlayBooksResponseBodyData> Data { get; set; }
         public class DescribeAutomateResponseConfigPlayBooksResponseBodyData : TeaModel {
             /// <summary>
-            /// The description of the playbook.
+            /// <para>The description of the playbook.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Waf Block IP</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The display name of the playbook.
+            /// <para>The display name of the playbook.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>WafBlockIP</para>
             /// </summary>
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// The unique identifier name of the playbook.
+            /// <para>The unique identifier name of the playbook.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>WafBlockIP</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The input parameter template of the playbook. Valid values:
+            /// <para>The input parameter template of the playbook. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>template-ip: IP address</description></item>
+            /// <item><description>template-process: process</description></item>
+            /// <item><description>template-filee: file</description></item>
+            /// </list>
             /// 
-            /// *   template-ip: IP address
-            /// *   template-process: process
-            /// *   template-filee: file
+            /// <b>Example:</b>
+            /// <para>template-ip</para>
             /// </summary>
             [NameInMap("ParamType")]
             [Validation(Required=false)]
             public string ParamType { get; set; }
 
             /// <summary>
-            /// The UUID of the playbook.
+            /// <para>The UUID of the playbook.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>system_aliyun_clb_process_book</para>
             /// </summary>
             [NameInMap("Uuid")]
             [Validation(Required=false)]
@@ -65,24 +87,34 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9AAA9ED9-78F4-5021-86DC-D51C7511****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
-        /// *   true
-        /// *   false
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

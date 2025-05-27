@@ -10,17 +10,24 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class RestoreCapacityResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether the release command has been sent. Valid values:
+        /// <para>Indicates whether the release command has been sent. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The command has been sent and the storage space is being released.</description></item>
+        /// <item><description>false: The command failed to be sent.</description></item>
+        /// </list>
         /// 
-        /// *   true: The command has been sent and the storage space is being released.
-        /// *   false: The command failed to be sent.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public bool? Data { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6276D891-58D4-55B2-87B9-74D413F7****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

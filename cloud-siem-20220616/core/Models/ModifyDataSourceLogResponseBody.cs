@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class ModifyDataSourceLogResponseBody : TeaModel {
         /// <summary>
-        /// The data returned.
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ModifyDataSourceLogResponseBodyData Data { get; set; }
         public class ModifyDataSourceLogResponseBodyData : TeaModel {
             /// <summary>
-            /// The number of logs that are modified. The value 1 indicates that the modification is successful, and a value less than or equal to 0 indicates that the modification failed.
+            /// <para>The number of logs that are modified. The value 1 indicates that the modification is successful, and a value less than or equal to 0 indicates that the modification failed.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Count")]
             [Validation(Required=false)]
             public int? Count { get; set; }
 
             /// <summary>
-            /// The ID of the log. The ID is an MD5 hash value that is calculated by the threat analysis feature based on specific parameters.
+            /// <para>The ID of the log. The ID is an MD5 hash value that is calculated by the threat analysis feature based on specific parameters.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>220ba97c9d1fdb0b9c7e8c7ca328d7ea</para>
             /// </summary>
             [NameInMap("LogInstanceId")]
             [Validation(Required=false)]
@@ -33,7 +39,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6276D891-*****-55B2-87B9-74D413F7****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

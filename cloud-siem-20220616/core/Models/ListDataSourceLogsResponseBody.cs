@@ -10,81 +10,106 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class ListDataSourceLogsResponseBody : TeaModel {
         /// <summary>
-        /// The data returned.
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListDataSourceLogsResponseBodyData Data { get; set; }
         public class ListDataSourceLogsResponseBodyData : TeaModel {
             /// <summary>
-            /// The ID of the cloud account.
+            /// <para>The ID of the cloud account.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>123xxxxxxx</para>
             /// </summary>
             [NameInMap("AccountId")]
             [Validation(Required=false)]
             public string AccountId { get; set; }
 
             /// <summary>
-            /// The code that is used for multi-cloud environments. Valid values:
+            /// <para>The code that is used for multi-cloud environments. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>qcloud: Tencent Cloud</description></item>
+            /// <item><description>aliyun: Alibaba Cloud</description></item>
+            /// <item><description>hcloud: Huawei Cloud</description></item>
+            /// </list>
             /// 
-            /// *   qcloud: Tencent Cloud
-            /// *   aliyun: Alibaba Cloud
-            /// *   hcloud: Huawei Cloud
+            /// <b>Example:</b>
+            /// <para>hcloud</para>
             /// </summary>
             [NameInMap("CloudCode")]
             [Validation(Required=false)]
             public string CloudCode { get; set; }
 
             /// <summary>
-            /// The ID of the data source. The value is obtained after the threat analysis feature calculates the MD5 hash value of a parameter.
+            /// <para>The ID of the data source. The value is obtained after the threat analysis feature calculates the MD5 hash value of a parameter.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>220ba97c9d1fdb0b9c7e8c7ca328d7ea</para>
             /// </summary>
             [NameInMap("DataSourceInstanceId")]
             [Validation(Required=false)]
             public string DataSourceInstanceId { get; set; }
 
             /// <summary>
-            /// The logs of the data source.
+            /// <para>The logs of the data source.</para>
             /// </summary>
             [NameInMap("DataSourceInstanceLogs")]
             [Validation(Required=false)]
             public List<ListDataSourceLogsResponseBodyDataDataSourceInstanceLogs> DataSourceInstanceLogs { get; set; }
             public class ListDataSourceLogsResponseBodyDataDataSourceInstanceLogs : TeaModel {
                 /// <summary>
-                /// The code of the log.
+                /// <para>The code of the log.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cloud_siem_waf_xxxxx</para>
                 /// </summary>
                 [NameInMap("LogCode")]
                 [Validation(Required=false)]
                 public string LogCode { get; set; }
 
                 /// <summary>
-                /// The ID of the log. The value is obtained after the threat analysis feature calculates the MD5 hash value of a parameter.
+                /// <para>The ID of the log. The value is obtained after the threat analysis feature calculates the MD5 hash value of a parameter.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>220ba97c9d1fdb0b9c7e8c7ca328d7ea</para>
                 /// </summary>
                 [NameInMap("LogInstanceId")]
                 [Validation(Required=false)]
                 public string LogInstanceId { get; set; }
 
                 /// <summary>
-                /// The display code of the log.
+                /// <para>The display code of the log.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>${siem.prod.cloud_siem_waf_xxxxx}</para>
                 /// </summary>
                 [NameInMap("LogMdsCode")]
                 [Validation(Required=false)]
                 public string LogMdsCode { get; set; }
 
                 /// <summary>
-                /// The parameters of the log.
+                /// <para>The parameters of the log.</para>
                 /// </summary>
                 [NameInMap("LogParams")]
                 [Validation(Required=false)]
                 public List<ListDataSourceLogsResponseBodyDataDataSourceInstanceLogsLogParams> LogParams { get; set; }
                 public class ListDataSourceLogsResponseBodyDataDataSourceInstanceLogsLogParams : TeaModel {
                     /// <summary>
-                    /// The parameter code of the log.
+                    /// <para>The parameter code of the log.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>region_code</para>
                     /// </summary>
                     [NameInMap("ParaCode")]
                     [Validation(Required=false)]
                     public string ParaCode { get; set; }
 
                     /// <summary>
-                    /// The parameter value of the log.
+                    /// <para>The parameter value of the log.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>ap-guangzhou</para>
                     /// </summary>
                     [NameInMap("ParaValue")]
                     [Validation(Required=false)]
@@ -93,10 +118,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 }
 
                 /// <summary>
-                /// Indicates whether the task for which logs are collected is enabled. Valid values:
+                /// <para>Indicates whether the task for which logs are collected is enabled. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>1: yes</description></item>
+                /// <item><description>0: no</description></item>
+                /// </list>
                 /// 
-                /// *   1: yes
-                /// *   0: no
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("TaskStatus")]
                 [Validation(Required=false)]
@@ -105,21 +134,30 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             }
 
             /// <summary>
-            /// The name of the data source.
+            /// <para>The name of the data source.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>waf kafka</para>
             /// </summary>
             [NameInMap("DataSourceInstanceName")]
             [Validation(Required=false)]
             public string DataSourceInstanceName { get; set; }
 
             /// <summary>
-            /// The remarks of the data source.
+            /// <para>The remarks of the data source.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>waf kafka</para>
             /// </summary>
             [NameInMap("DataSourceInstanceRemark")]
             [Validation(Required=false)]
             public string DataSourceInstanceRemark { get; set; }
 
             /// <summary>
-            /// The ID of the Alibaba Cloud account.
+            /// <para>The ID of the Alibaba Cloud account.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>123XXXXXXXX</para>
             /// </summary>
             [NameInMap("SubUserId")]
             [Validation(Required=false)]
@@ -128,7 +166,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6276D891-*****-55B2-87B9-74D413F7****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

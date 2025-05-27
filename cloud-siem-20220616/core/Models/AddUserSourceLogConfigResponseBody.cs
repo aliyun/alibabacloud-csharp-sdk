@@ -10,63 +10,87 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class AddUserSourceLogConfigResponseBody : TeaModel {
         /// <summary>
-        /// The data returned.
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public AddUserSourceLogConfigResponseBodyData Data { get; set; }
         public class AddUserSourceLogConfigResponseBodyData : TeaModel {
             /// <summary>
-            /// The display details of the Logstore.
+            /// <para>The display details of the Logstore.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-shanghai.siem-project.siem-logstore</para>
             /// </summary>
             [NameInMap("DiplayLine")]
             [Validation(Required=false)]
             public string DiplayLine { get; set; }
 
             /// <summary>
-            /// Indicates whether the details of added logs are returned. Valid values: true false
+            /// <para>Indicates whether the details of added logs are returned. Valid values: true false</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("Displayed")]
             [Validation(Required=false)]
             public bool? Displayed { get; set; }
 
             /// <summary>
-            /// Indicates whether the logs are added to the threat analysis feature. Valid values: true false
+            /// <para>Indicates whether the logs are added to the threat analysis feature. Valid values: true false</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("Imported")]
             [Validation(Required=false)]
             public bool? Imported { get; set; }
 
             /// <summary>
-            /// The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.
+            /// <para>The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>123XXXXXXXXX</para>
             /// </summary>
             [NameInMap("MainUserId")]
             [Validation(Required=false)]
             public long? MainUserId { get; set; }
 
             /// <summary>
-            /// The log code.
+            /// <para>The log code.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cloud_siem_aegis_proc</para>
             /// </summary>
             [NameInMap("SourceLogCode")]
             [Validation(Required=false)]
             public string SourceLogCode { get; set; }
 
             /// <summary>
-            /// The code of the cloud service.
+            /// <para>The code of the cloud service.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>sas</para>
             /// </summary>
             [NameInMap("SourceProdCode")]
             [Validation(Required=false)]
             public string SourceProdCode { get; set; }
 
             /// <summary>
-            /// The ID of the Alibaba Cloud account that can be used to perform operations supported by the threat analysis feature.
+            /// <para>The ID of the Alibaba Cloud account that can be used to perform operations supported by the threat analysis feature.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>123XXXXXXXX</para>
             /// </summary>
             [NameInMap("SubUserId")]
             [Validation(Required=false)]
             public long? SubUserId { get; set; }
 
             /// <summary>
-            /// The username of the Alibaba Cloud account that can be used to perform operations supported by the threat analysis feature.
+            /// <para>The username of the Alibaba Cloud account that can be used to perform operations supported by the threat analysis feature.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>sas_account_xxx</para>
             /// </summary>
             [NameInMap("SubUserName")]
             [Validation(Required=false)]
@@ -75,7 +99,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6276D891-*****-55B2-87B9-74D413F7****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
