@@ -93,6 +93,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         [Validation(Required=false)]
                         public int? Iops { get; set; }
 
+                        [NameInMap("KMSKeyId")]
+                        [Validation(Required=false)]
+                        public string KMSKeyId { get; set; }
+
                         [NameInMap("PerformanceLevel")]
                         [Validation(Required=false)]
                         public string PerformanceLevel { get; set; }
@@ -259,6 +263,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             [NameInMap("Encrypted")]
                             [Validation(Required=false)]
                             public string Encrypted { get; set; }
+
+                            [NameInMap("KMSKeyId")]
+                            [Validation(Required=false)]
+                            public string KMSKeyId { get; set; }
 
                             /// <summary>
                             /// <para>The performance level of the ESSD to use as a data disk. This parameter is returned only when the value of <c>Category</c> is cloud_essd. Valid values:</para>

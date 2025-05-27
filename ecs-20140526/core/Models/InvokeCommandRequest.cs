@@ -367,6 +367,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string WindowsPasswordName { get; set; }
 
+        /// <summary>
+        /// <para>The execution path of the command on ECS instances. The value can be up to 200 characters in length.</para>
+        /// <list type="bullet">
+        /// <item><description>If you do not specify this parameter, the execution path specified when the command is created is used.</description></item>
+        /// <item><description>This execution path is applicable only to this task. The execution path of the command is not changed.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>/home/user</para>
+        /// </summary>
         [NameInMap("WorkingDir")]
         [Validation(Required=false)]
         public string WorkingDir { get; set; }
