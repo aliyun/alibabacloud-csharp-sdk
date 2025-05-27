@@ -1619,6 +1619,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
             {
                 body["outputFormat"] = request.OutputFormat;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTrace))
+            {
+                body["sourceTrace"] = request.SourceTrace;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
             {
                 body["tags"] = request.TagsShrink;
@@ -1706,6 +1710,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputFormat))
             {
                 body["outputFormat"] = request.OutputFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTrace))
+            {
+                body["sourceTrace"] = request.SourceTrace;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
             {
@@ -4121,6 +4129,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
             {
                 body["outputFormat"] = request.OutputFormat;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTrace))
+            {
+                body["sourceTrace"] = request.SourceTrace;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
             {
                 body["tags"] = request.TagsShrink;
@@ -4216,6 +4228,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputFormat))
             {
                 body["outputFormat"] = request.OutputFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTrace))
+            {
+                body["sourceTrace"] = request.SourceTrace;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
             {

@@ -56,6 +56,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
         [Validation(Required=false)]
         public string OutputFormat { get; set; }
 
+        [NameInMap("sourceTrace")]
+        [Validation(Required=false)]
+        public bool? SourceTrace { get; set; }
+
         /// <summary>
         /// <para>业务标签体系，用于对文本内容进行分类和分析。</para>
         /// </summary>

@@ -47,6 +47,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
             [Validation(Required=false)]
             public string OriginResponse { get; set; }
 
+            [NameInMap("sourceList")]
+            [Validation(Required=false)]
+            public List<string> SourceList { get; set; }
+
         }
 
         /// <summary>

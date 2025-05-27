@@ -99,6 +99,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
 
                 }
 
+                [NameInMap("reasonContent")]
+                [Validation(Required=false)]
+                public string ReasonContent { get; set; }
+
                 [NameInMap("text")]
                 [Validation(Required=false)]
                 public string Text { get; set; }
