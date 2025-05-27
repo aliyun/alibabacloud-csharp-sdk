@@ -2707,6 +2707,138 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>发现EventSource(例如：Mysql)的Schema和SimpleData</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DiscoverEventSourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DiscoverEventSourceResponse
+        /// </returns>
+        public DiscoverEventSourceResponse DiscoverEventSourceWithOptions(DiscoverEventSourceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DiscoverEventSourceShrinkRequest request = new DiscoverEventSourceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SourceMySQLParameters))
+            {
+                request.SourceMySQLParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceMySQLParameters, "SourceMySQLParameters", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceMySQLParametersShrink))
+            {
+                body["SourceMySQLParameters"] = request.SourceMySQLParametersShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DiscoverEventSource",
+                Version = "2020-04-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DiscoverEventSourceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发现EventSource(例如：Mysql)的Schema和SimpleData</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DiscoverEventSourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DiscoverEventSourceResponse
+        /// </returns>
+        public async Task<DiscoverEventSourceResponse> DiscoverEventSourceWithOptionsAsync(DiscoverEventSourceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DiscoverEventSourceShrinkRequest request = new DiscoverEventSourceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SourceMySQLParameters))
+            {
+                request.SourceMySQLParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceMySQLParameters, "SourceMySQLParameters", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceMySQLParametersShrink))
+            {
+                body["SourceMySQLParameters"] = request.SourceMySQLParametersShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DiscoverEventSource",
+                Version = "2020-04-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DiscoverEventSourceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发现EventSource(例如：Mysql)的Schema和SimpleData</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DiscoverEventSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DiscoverEventSourceResponse
+        /// </returns>
+        public DiscoverEventSourceResponse DiscoverEventSource(DiscoverEventSourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DiscoverEventSourceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发现EventSource(例如：Mysql)的Schema和SimpleData</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DiscoverEventSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DiscoverEventSourceResponse
+        /// </returns>
+        public async Task<DiscoverEventSourceResponse> DiscoverEventSourceAsync(DiscoverEventSourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DiscoverEventSourceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Enables an event rule.</para>
         /// </summary>
         /// 
@@ -6221,6 +6353,138 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await TestEventPatternWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>检查EventSource配置是否可用</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// TestEventSourceConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TestEventSourceConfigResponse
+        /// </returns>
+        public TestEventSourceConfigResponse TestEventSourceConfigWithOptions(TestEventSourceConfigRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            TestEventSourceConfigShrinkRequest request = new TestEventSourceConfigShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SourceMySQLParameters))
+            {
+                request.SourceMySQLParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceMySQLParameters, "SourceMySQLParameters", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceMySQLParametersShrink))
+            {
+                body["SourceMySQLParameters"] = request.SourceMySQLParametersShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TestEventSourceConfig",
+                Version = "2020-04-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TestEventSourceConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>检查EventSource配置是否可用</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// TestEventSourceConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TestEventSourceConfigResponse
+        /// </returns>
+        public async Task<TestEventSourceConfigResponse> TestEventSourceConfigWithOptionsAsync(TestEventSourceConfigRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            TestEventSourceConfigShrinkRequest request = new TestEventSourceConfigShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SourceMySQLParameters))
+            {
+                request.SourceMySQLParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceMySQLParameters, "SourceMySQLParameters", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceMySQLParametersShrink))
+            {
+                body["SourceMySQLParameters"] = request.SourceMySQLParametersShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TestEventSourceConfig",
+                Version = "2020-04-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TestEventSourceConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>检查EventSource配置是否可用</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TestEventSourceConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TestEventSourceConfigResponse
+        /// </returns>
+        public TestEventSourceConfigResponse TestEventSourceConfig(TestEventSourceConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return TestEventSourceConfigWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>检查EventSource配置是否可用</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TestEventSourceConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TestEventSourceConfigResponse
+        /// </returns>
+        public async Task<TestEventSourceConfigResponse> TestEventSourceConfigAsync(TestEventSourceConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await TestEventSourceConfigWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
