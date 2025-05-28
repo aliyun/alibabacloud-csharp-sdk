@@ -28,6 +28,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             [Validation(Required=false)]
             public string DeadLetterTargetTopic { get; set; }
 
+            [NameInMap("fixedIntervalRetryTime")]
+            [Validation(Required=false)]
+            public int? FixedIntervalRetryTime { get; set; }
+
             /// <summary>
             /// <para>The maximum number of retries.</para>
             /// 
