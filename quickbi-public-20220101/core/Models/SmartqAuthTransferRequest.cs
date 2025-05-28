@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class SmartqAuthTransferRequest : TeaModel {
         /// <summary>
+        /// <para>Source user ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string OriginUserId { get; set; }
 
         /// <summary>
+        /// <para>Target user ID array, separated by English commas.</para>
+        /// <remarks>
+        /// <para>Warning: The number of user IDs cannot exceed 100.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

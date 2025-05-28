@@ -10,14 +10,18 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class UpdateEmbeddedStatusResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>D787E1A3-A93C-424A-B626-C2B05DF8D885</para>
+        /// <para>D78*********DF8D885</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The number of works that are opened or closed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +30,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public int? Result { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

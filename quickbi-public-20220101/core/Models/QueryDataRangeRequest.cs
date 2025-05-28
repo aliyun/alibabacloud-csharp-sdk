@@ -9,11 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryDataRangeRequest : TeaModel {
+        /// <summary>
+        /// <para>Name, for fuzzy search.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
+        /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
+        /// <para>Data range type:</para>
+        /// <list type="bullet">
+        /// <item><description>llmCube: LlmCube resource.</description></item>
+        /// <item><description>llmCubeTheme: Analysis theme.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class SaveFavoritesRequest : TeaModel {
         /// <summary>
-        /// <para>The user ID of the collection. The user ID is the UserID of the Quick BI, not the UID of Alibaba Cloud.</para>
+        /// <para>The user ID of the person who favorites the work. This user ID is the UserID of Quick BI, not the UID of Alibaba Cloud.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string UserId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the collection.</para>
+        /// <para>The ID of the work being favorited.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -26,6 +26,9 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         [Validation(Required=false)]
         public ListByUserGroupIdResponseBodyResult Result { get; set; }
         public class ListByUserGroupIdResponseBodyResult : TeaModel {
+            /// <summary>
+            /// <para>List of failed user groups.</para>
+            /// </summary>
             [NameInMap("FailedUserGroupIds")]
             [Validation(Required=false)]
             public List<string> FailedUserGroupIds { get; set; }

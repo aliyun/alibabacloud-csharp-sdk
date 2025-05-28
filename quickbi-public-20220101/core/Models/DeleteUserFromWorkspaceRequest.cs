@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class DeleteUserFromWorkspaceRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the user to be deleted. Note that this UserID is for Quick BI, not the Alibaba Cloud UID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string UserId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

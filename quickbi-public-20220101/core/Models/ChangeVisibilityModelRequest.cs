@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class ChangeVisibilityModelRequest : TeaModel {
         /// <summary>
-        /// <para>The number of menus that are successfully modified.</para>
+        /// <para>The ID of the BI portal.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string DataPortalId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <para>The menu ID of the BI portal leaf node.</para>
         /// <list type="bullet">
-        /// <item><description>true: The request was successful.</description></item>
-        /// <item><description>false: The request failed.</description></item>
+        /// <item><description>The directory menu cannot be authorized.</description></item>
+        /// <item><description>You can upload multiple parameters at a time. Separate multiple IDs with commas (,). The maximum number of parameters that can be modified at a time is 100.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -36,6 +36,11 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string MenuIds { get; set; }
 
         /// <summary>
+        /// <para>Whether only authorization is visible. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Only the authorization is visible.</description></item>
+        /// <item><description>false: Both are visible.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

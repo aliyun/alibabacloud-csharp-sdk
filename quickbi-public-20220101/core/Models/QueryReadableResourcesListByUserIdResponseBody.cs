@@ -46,11 +46,16 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            /// <summary>
+            /// <para>The directory structure in which the work is located.</para>
+            /// </summary>
             [NameInMap("Directory")]
             [Validation(Required=false)]
             public QueryReadableResourcesListByUserIdResponseBodyResultDirectory Directory { get; set; }
             public class QueryReadableResourcesListByUserIdResponseBodyResultDirectory : TeaModel {
                 /// <summary>
+                /// <para>The ID of the directory.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>e4276ea5-b232-4fb1-8f0f-efcee4a2****</para>
                 /// </summary>
@@ -58,11 +63,19 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
+                /// <summary>
+                /// <para>The name of the directory.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Test directory</para>
+                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
+                /// <para>The hierarchical structure of the directory ID, which is separated with \&quot;/\&quot;.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>e4276ea5-b232-4fb1-8f0f-efcee4a2****</para>
                 /// </summary>
@@ -70,6 +83,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 [Validation(Required=false)]
                 public string PathId { get; set; }
 
+                /// <summary>
+                /// <para>The hierarchical structure of the directory name, which is separated with \&quot;/\&quot;.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Test directory</para>
+                /// </summary>
                 [NameInMap("PathName")]
                 [Validation(Required=false)]
                 public string PathName { get; set; }
@@ -87,6 +106,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string ModifyName { get; set; }
 
             /// <summary>
+            /// <para>The timestamp of the modification time in milliseconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1611023338000</para>
             /// </summary>
@@ -169,6 +190,9 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 
             /// <summary>
             /// <para>The name of the work.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Company Region Table</para>
             /// </summary>
             [NameInMap("WorkName")]
             [Validation(Required=false)]

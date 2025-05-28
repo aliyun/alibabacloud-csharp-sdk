@@ -65,6 +65,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public QueryWorksByWorkspaceResponseBodyResultDataDirectory Directory { get; set; }
                 public class QueryWorksByWorkspaceResponseBodyResultDataDirectory : TeaModel {
                     /// <summary>
+                    /// <para>The ID of the directory.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>83d37ba6-d909-48a2-a517-f4d05c3a****</para>
                     /// </summary>
@@ -72,6 +74,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                     [Validation(Required=false)]
                     public string Id { get; set; }
 
+                    /// <summary>
+                    /// <para>The name of the directory.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>The name of the directory.</para>
+                    /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
@@ -148,10 +156,22 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 [Validation(Required=false)]
                 public string OwnerName { get; set; }
 
+                /// <summary>
+                /// <para>Is it public</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
                 [NameInMap("PublicFlag")]
                 [Validation(Required=false)]
                 public bool? PublicFlag { get; set; }
 
+                /// <summary>
+                /// <para>Deadline for the public release of the report</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1721366354000</para>
+                /// </summary>
                 [NameInMap("PublicInvalidTime")]
                 [Validation(Required=false)]
                 public long? PublicInvalidTime { get; set; }

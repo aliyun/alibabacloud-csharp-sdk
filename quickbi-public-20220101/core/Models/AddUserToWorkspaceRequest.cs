@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class AddUserToWorkspaceRequest : TeaModel {
         /// <summary>
+        /// <para>The preset space role ID. Value range:</para>
+        /// <list type="bullet">
+        /// <item><description>25: Space Administrator</description></item>
+        /// <item><description>26: Space Developer</description></item>
+        /// <item><description>27: Space Analyst</description></item>
+        /// <item><description>30: Space Viewer</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +27,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public long? RoleId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the Quick BI user to be added.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +38,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string UserId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

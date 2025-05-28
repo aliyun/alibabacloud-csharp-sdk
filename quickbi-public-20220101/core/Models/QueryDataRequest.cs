@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>{ &quot;area&quot;: [&quot;华东&quot;, &quot;华北&quot;],  &quot;shopping_date&quot;: &quot;2019Q1&quot;,  }</para>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("Conditions")]
         [Validation(Required=false)]

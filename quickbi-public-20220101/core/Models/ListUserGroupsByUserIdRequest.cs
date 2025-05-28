@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class ListUserGroupsByUserIdRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the user group.</para>
+        /// <para>The ID of the user. The UserID of the Quick BI is used instead of the UID of Alibaba Cloud.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

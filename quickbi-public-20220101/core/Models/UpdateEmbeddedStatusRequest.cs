@@ -10,6 +10,11 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class UpdateEmbeddedStatusRequest : TeaModel {
         /// <summary>
+        /// <para>Whether to enable the embedding feature for the work. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: enables embedding.</description></item>
+        /// <item><description>false: disables embedding.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +25,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public bool? ThirdPartAuthFlag { get; set; }
 
         /// <summary>
+        /// <para>The ID of the work.</para>
+        /// <list type="bullet">
+        /// <item><description>Batch modification is supported. Separate multiple values with commas (,).</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

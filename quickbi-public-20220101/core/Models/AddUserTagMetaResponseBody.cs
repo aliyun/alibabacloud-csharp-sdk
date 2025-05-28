@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class AddUserTagMetaResponseBody : TeaModel {
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>D787E1A3-A93C-424A-B626-C2B05DF8D885</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Returns the ID of the successfully added tag.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0822a7d9-<b><b>-</b></b>-****-f20163ab9b0d</para>
         /// </summary>
@@ -26,6 +30,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string Result { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Value range:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The request succeeded </description></item>
+        /// <item><description>false: The request failed</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

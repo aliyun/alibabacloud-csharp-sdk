@@ -70,14 +70,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string Column { get; set; }
 
                 /// <summary>
-                /// <para>字段的数据类型。一般有：</para>
-                /// <list type="bullet">
-                /// <item><description>number：数值</description></item>
-                /// <item><description>string：字符串</description></item>
-                /// <item><description>date：日期</description></item>
-                /// <item><description>time：时间</description></item>
-                /// <item><description>datetime：日期时间</description></item>
-                /// </list>
+                /// <para>The keyword of the sensitive field type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>string</para>
@@ -136,7 +129,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>SELECT COMPANY_T_1_.<c>area</c> AS D_AREA_2_, COMPANY_T_1_.<c>city</c> AS D_CITY_3_, SUM(COMPANY_T_1_.<c>profit_amt</c>) AS D_PROFIT_4_ FROM <c>quickbi_test</c>.<c>company_sales_record_copy</c> AS COMPANY_T_1_ WHERE COMPANY_T_1_.<c>area</c> LIKE \&quot;%华东%\&quot; GROUP BY COMPANY_T_1_.<c>area</c>, COMPANY_T_1_.<c>city</c> HAVING SUM(COMPANY_T_1_.<c>order_amt</c>) &gt; 1 LIMIT 0, 10</para>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("Sql")]
             [Validation(Required=false)]

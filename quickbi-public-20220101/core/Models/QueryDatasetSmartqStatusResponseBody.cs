@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryDatasetSmartqStatusResponseBody : TeaModel {
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7c7223ae-****-3c744528014b</para>
         /// </summary>
@@ -18,6 +20,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Result of the API execution. Possible values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Request succeeded</description></item>
+        /// <item><description>false: Request failed</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -26,6 +34,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public bool? Result { get; set; }
 
         /// <summary>
+        /// <para>是否请求成功。取值范围：</para>
+        /// <list type="bullet">
+        /// <item><description>true：请求成功</description></item>
+        /// <item><description>false：请求失败</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

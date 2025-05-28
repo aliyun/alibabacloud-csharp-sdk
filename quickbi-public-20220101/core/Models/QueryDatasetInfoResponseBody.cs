@@ -222,6 +222,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string Expression { get; set; }
 
                 /// <summary>
+                /// <b>if can be null:</b>
+                /// <c>true</c>
+                /// </summary>
+                [NameInMap("ExpressionV2")]
+                [Validation(Required=false)]
+                public string ExpressionV2 { get; set; }
+
+                /// <summary>
                 /// <para>Expression for a calculated dimension; valid only for calculated dimensions.</para>
                 /// 
                 /// <b>Example:</b>
@@ -430,6 +438,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 [NameInMap("Expression")]
                 [Validation(Required=false)]
                 public string Expression { get; set; }
+
+                /// <summary>
+                /// <b>if can be null:</b>
+                /// <c>true</c>
+                /// </summary>
+                [NameInMap("ExpressionV2")]
+                [Validation(Required=false)]
+                public string ExpressionV2 { get; set; }
 
                 /// <summary>
                 /// <para>The type of the measure. Valid values:</para>

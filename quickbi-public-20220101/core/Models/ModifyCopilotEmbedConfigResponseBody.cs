@@ -10,14 +10,22 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class ModifyCopilotEmbedConfigResponseBody : TeaModel {
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>4BAA4694-CC27-555F-B15A-688AA9289FEE</para>
+        /// <para>4BAA469******A9289FEE</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Returns the result of the API execution. Possible values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Execution succeeded</description></item>
+        /// <item><description>false: Execution failed</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -26,6 +34,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public bool? Result { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Possible values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The request was successful</description></item>
+        /// <item><description>false: The request failed</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

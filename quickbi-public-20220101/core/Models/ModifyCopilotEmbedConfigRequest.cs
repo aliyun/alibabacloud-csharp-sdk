@@ -9,11 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class ModifyCopilotEmbedConfigRequest : TeaModel {
+        /// <summary>
+        /// <para>Agent nickname.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>smartq</para>
+        /// </summary>
         [NameInMap("AgentName")]
         [Validation(Required=false)]
         public string AgentName { get; set; }
 
         /// <summary>
+        /// <para>Embedding ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +31,11 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string CopilotId { get; set; }
 
         /// <summary>
+        /// <para>Data range.</para>
+        /// <remarks>
+        /// <para>Notice: The parameter type is jsonString, and only one switch between analysis themes and query resources can be effective. When the all-select switch is true, it takes precedence. It is recommended to pass only one parameter, with other notes</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>Map&lt;String,Object&gt; data=new HashMap&lt;&gt;();
         ///         data.put(&quot;allTheme&quot;,true);
@@ -36,6 +48,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         [Validation(Required=false)]
         public string DataRange { get; set; }
 
+        /// <summary>
+        /// <para>Module name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>smartq</para>
+        /// </summary>
         [NameInMap("ModuleName")]
         [Validation(Required=false)]
         public string ModuleName { get; set; }

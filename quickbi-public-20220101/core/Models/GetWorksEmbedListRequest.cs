@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <para>Report name (fuzzy match)</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test dataset</para>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
@@ -43,11 +43,11 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <para>Report type</para>
         /// <list type="bullet">
         /// <item><description>page, Dashboard</description></item>
-        /// <item><description>screen, Visualization Screen</description></item>
-        /// <item><description>report, Workbooks</description></item>
-        /// <item><description>ANALYSIS, Ad Hoc Analysis</description></item>
-        /// <item><description>dashboardOfflineQuery, Downloads</description></item>
-        /// <item><description>dataForm, Forms</description></item>
+        /// <item><description>screen, Data Screen</description></item>
+        /// <item><description>report, Spreadsheet</description></item>
+        /// <item><description>ANALYSIS, Ad-hoc Analysis</description></item>
+        /// <item><description>dashboardOfflineQuery, Self-service Data Retrieval</description></item>
+        /// <item><description>dataForm, Data Entry Form</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

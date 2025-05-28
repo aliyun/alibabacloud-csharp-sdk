@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <para>Keyword for the user\&quot;s nickname.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试pop用户</para>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public long? RoleId { get; set; }
 
         /// <summary>
-        /// <para>Workspace ID.</para>
+        /// <para>The ID of the workspace. This parameter is optional. If you do not set this parameter, the roles of all workspaces are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>726bee5a-****-43e1-9a8e-b550f0120f35</para>

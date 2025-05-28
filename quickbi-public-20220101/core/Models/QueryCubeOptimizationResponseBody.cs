@@ -19,6 +19,9 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The query results are returned.</para>
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<QueryCubeOptimizationResponseBodyResult> Result { get; set; }

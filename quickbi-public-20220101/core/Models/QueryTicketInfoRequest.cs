@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryTicketInfoRequest : TeaModel {
         /// <summary>
-        /// <para>Obtains the details of a specified ticket for a report that is not embedded in the report.</para>
+        /// <para>The value of the bill.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

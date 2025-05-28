@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class DeleteTicketRequest : TeaModel {
         /// <summary>
-        /// <para>Deletes a specified ticket from an embedded report.</para>
+        /// <para>The value of the third-party embedded ticket, which is the <c>accessTicket</c> in the URL.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

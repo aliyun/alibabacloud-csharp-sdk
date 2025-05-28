@@ -19,6 +19,9 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The result returned.</para>
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<QueryComponentPerformanceResponseBodyResult> Result { get; set; }
@@ -55,6 +58,9 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 
             /// <summary>
             /// <para>The name of the add-on.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("ComponentName")]
             [Validation(Required=false)]
@@ -252,6 +258,9 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 
             /// <summary>
             /// <para>The name of the group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("WorkspaceName")]
             [Validation(Required=false)]

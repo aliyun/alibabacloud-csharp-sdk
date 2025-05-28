@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <item><description>offline_download: Self-service data retrieval</description></item>
                 /// <item><description>resource_package: Resource package management</description></item>
                 /// <item><description>organization_ask: Organization identification code (AK/SK)</description></item>
-                /// <item><description>developer_openapi: Open API</description></item>
+                /// <item><description>developer_openapi: OpenAPI</description></item>
                 /// <item><description>data_service: Data service</description></item>
                 /// <item><description>admin_authorize3rd: Embedded analysis</description></item>
                 /// <item><description>component_manage: Custom component</description></item>

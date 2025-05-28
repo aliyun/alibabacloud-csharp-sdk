@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryCopilotEmbedConfigRequest : TeaModel {
         /// <summary>
+        /// <para>Name of the embedded configuration module, supports fuzzy search.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>06-ELive</para>
         /// </summary>
