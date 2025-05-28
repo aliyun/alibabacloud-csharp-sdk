@@ -1,3 +1,7 @@
+2025-05-28 Version: 3.1.2
+- Update API GetService: add response parameters Body.ComplianceMetadata.
+
+
 2025-05-27 Version: 3.1.1
 - Update API GetServiceProvisions: add response parameters Body.ServiceProvisions.$.CommodityProvisions.
 
