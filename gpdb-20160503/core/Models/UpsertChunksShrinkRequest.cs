@@ -92,6 +92,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("ShouldReplaceFile")]
+        [Validation(Required=false)]
+        public bool? ShouldReplaceFile { get; set; }
+
         /// <summary>
         /// <para>List of split documents.</para>
         /// </summary>

@@ -92,6 +92,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("ShouldReplaceFile")]
+        [Validation(Required=false)]
+        public bool? ShouldReplaceFile { get; set; }
+
         /// <summary>
         /// <para>List of split documents.</para>
         /// </summary>
@@ -109,6 +113,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [NameInMap("Content")]
             [Validation(Required=false)]
             public string Content { get; set; }
+
+            [NameInMap("Filter")]
+            [Validation(Required=false)]
+            public string Filter { get; set; }
+
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public string Id { get; set; }
 
             /// <summary>
             /// <para>Metadata.</para>

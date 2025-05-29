@@ -2329,6 +2329,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["BackupId"] = request.BackupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CacheStorageSize))
+            {
+                query["CacheStorageSize"] = request.CacheStorageSize;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -2551,6 +2555,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupId))
             {
                 query["BackupId"] = request.BackupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CacheStorageSize))
+            {
+                query["CacheStorageSize"] = request.CacheStorageSize;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -29906,6 +29914,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["TopK"] = request.TopK;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UrlExpiration))
+            {
+                query["UrlExpiration"] = request.UrlExpiration;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseFullTextRetrieval))
             {
                 query["UseFullTextRetrieval"] = request.UseFullTextRetrieval;
@@ -30035,6 +30047,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopK))
             {
                 query["TopK"] = request.TopK;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UrlExpiration))
+            {
+                query["UrlExpiration"] = request.UrlExpiration;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseFullTextRetrieval))
             {
@@ -32166,6 +32182,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["DBInstanceId"] = request.DBInstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dimension))
+            {
+                query["Dimension"] = request.Dimension;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
@@ -32231,6 +32251,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
             {
                 query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dimension))
+            {
+                query["Dimension"] = request.Dimension;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
@@ -33242,6 +33266,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CacheStorageSize))
+            {
+                query["CacheStorageSize"] = request.CacheStorageSize;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceClass))
             {
                 query["DBInstanceClass"] = request.DBInstanceClass;
@@ -33289,6 +33317,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SegStorageType))
             {
                 query["SegStorageType"] = request.SegStorageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerlessResource))
+            {
+                query["ServerlessResource"] = request.ServerlessResource;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageSize))
             {
@@ -33342,6 +33374,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CacheStorageSize))
+            {
+                query["CacheStorageSize"] = request.CacheStorageSize;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceClass))
             {
                 query["DBInstanceClass"] = request.DBInstanceClass;
@@ -33389,6 +33425,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SegStorageType))
             {
                 query["SegStorageType"] = request.SegStorageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerlessResource))
+            {
+                query["ServerlessResource"] = request.ServerlessResource;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageSize))
             {
@@ -34323,6 +34363,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShouldReplaceFile))
+            {
+                query["ShouldReplaceFile"] = request.ShouldReplaceFile;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TextChunksShrink))
             {
@@ -34405,6 +34449,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShouldReplaceFile))
+            {
+                query["ShouldReplaceFile"] = request.ShouldReplaceFile;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TextChunksShrink))

@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 [Validation(Required=false)]
                 public string AvailabilityValue { get; set; }
 
+                [NameInMap("CacheStorageSize")]
+                [Validation(Required=false)]
+                public string CacheStorageSize { get; set; }
+
                 /// <summary>
                 /// <para>Access mode, with the following values:</para>
                 /// <list type="bullet">

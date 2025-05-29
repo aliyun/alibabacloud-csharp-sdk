@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class UpgradeDBInstanceRequest : TeaModel {
+        [NameInMap("CacheStorageSize")]
+        [Validation(Required=false)]
+        public string CacheStorageSize { get; set; }
+
         /// <summary>
         /// <para>This parameter is no longer used.</para>
         /// 
@@ -142,6 +146,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [NameInMap("SegStorageType")]
         [Validation(Required=false)]
         public string SegStorageType { get; set; }
+
+        [NameInMap("ServerlessResource")]
+        [Validation(Required=false)]
+        public string ServerlessResource { get; set; }
 
         /// <summary>
         /// <para>The storage capacity of each compute node. Unit: GB. Valid values: 50 to 6000, in 50 increments.</para>

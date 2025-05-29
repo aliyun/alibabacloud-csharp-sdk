@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        [NameInMap("Dimension")]
+        [Validation(Required=false)]
+        public int? Dimension { get; set; }
+
         [NameInMap("Input")]
         [Validation(Required=false)]
         public List<string> Input { get; set; }

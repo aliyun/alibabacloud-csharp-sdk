@@ -262,6 +262,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public int? TopK { get; set; }
 
+        [NameInMap("UrlExpiration")]
+        [Validation(Required=false)]
+        public string UrlExpiration { get; set; }
+
         /// <summary>
         /// <para>Whether to use full-text retrieval (dual recall). Default is false, which means only vector retrieval is used.</para>
         /// 

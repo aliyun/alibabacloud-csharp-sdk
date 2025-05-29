@@ -36,6 +36,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string BackupId { get; set; }
 
+        [NameInMap("CacheStorageSize")]
+        [Validation(Required=false)]
+        public string CacheStorageSize { get; set; }
+
         /// <summary>
         /// <para>Idempotence check. For more information, see <a href="https://help.aliyun.com/document_detail/327176.html">How to Ensure Idempotence</a>.</para>
         /// 
