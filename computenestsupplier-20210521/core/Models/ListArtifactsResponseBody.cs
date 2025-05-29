@@ -87,6 +87,20 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>Permission fields are applicable to container image artifact and Helm Chart artifact They can only change from Automatic to Public. Options:</para>
+            /// <list type="bullet">
+            /// <item><description>Public</description></item>
+            /// <item><description>Automatic</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Public</para>
+            /// </summary>
+            [NameInMap("PermissionType")]
+            [Validation(Required=false)]
+            public string PermissionType { get; set; }
+
+            /// <summary>
             /// <para>The ID of the resource group.</para>
             /// 
             /// <b>Example:</b>

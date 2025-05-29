@@ -37,18 +37,39 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [Validation(Required=false)]
             public string CustomData { get; set; }
 
+            /// <summary>
+            /// <para>Mock response info.</para>
+            /// </summary>
             [NameInMap("ResponseInfo")]
             [Validation(Required=false)]
             public UpdateServiceInstanceAttributeRequestLicenseDataResponseInfo ResponseInfo { get; set; }
             public class UpdateServiceInstanceAttributeRequestLicenseDataResponseInfo : TeaModel {
+                /// <summary>
+                /// <para>Mock error code.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>EntityNotExist.Service</para>
+                /// </summary>
                 [NameInMap("ErrorCode")]
                 [Validation(Required=false)]
                 public string ErrorCode { get; set; }
 
+                /// <summary>
+                /// <para>Mock error message.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>The provided parameter &quot;ServiceId&quot; is invalid.</para>
+                /// </summary>
                 [NameInMap("ErrorMessage")]
                 [Validation(Required=false)]
                 public string ErrorMessage { get; set; }
 
+                /// <summary>
+                /// <para>if you want mock response, please open this option.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
                 [NameInMap("UpdateResponse")]
                 [Validation(Required=false)]
                 public bool? UpdateResponse { get; set; }
