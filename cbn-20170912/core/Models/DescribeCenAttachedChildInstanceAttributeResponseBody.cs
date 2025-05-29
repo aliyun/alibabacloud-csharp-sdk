@@ -171,6 +171,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public string ChildInstanceType { get; set; }
 
+        [NameInMap("ManagedService")]
+        [Validation(Required=false)]
+        public string ManagedService { get; set; }
+
         /// <summary>
         /// <para>The ID of the request.</para>
         /// 

@@ -37,6 +37,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
+        /// <summary>
+        /// <para>Whether to force delete the traffic marking policy. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>false</b> (default): checks whether there is a traffic classification rule before deleting the traffic marking policy. If there is, the traffic marking policy cannot be deleted and an error is returned.</description></item>
+        /// <item><description><b>true</b>: When you delete a traffic marking policy, all traffic classification rules are deleted by default.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("Force")]
         [Validation(Required=false)]
         public bool? Force { get; set; }

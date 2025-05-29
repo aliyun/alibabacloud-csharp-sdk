@@ -106,6 +106,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
+            [NameInMap("ManagedService")]
+            [Validation(Required=false)]
+            public string ManagedService { get; set; }
+
             /// <summary>
             /// <para>The entity that pays the fees of the network instance. Valid values:</para>
             /// <list type="bullet">
