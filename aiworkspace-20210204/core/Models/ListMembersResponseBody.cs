@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             [Validation(Required=false)]
             public string AccountName { get; set; }
 
+            [NameInMap("AccountType")]
+            [Validation(Required=false)]
+            public string AccountType { get; set; }
+
             /// <summary>
             /// <para>The display name of the member.</para>
             /// 
