@@ -332,6 +332,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public int? Memory { get; set; }
 
+        [NameInMap("NetworkOptions")]
+        [Validation(Required=false)]
+        public DescribeInstanceAttributeResponseBodyNetworkOptions NetworkOptions { get; set; }
+        public class DescribeInstanceAttributeResponseBodyNetworkOptions : TeaModel {
+            [NameInMap("EnableJumboFrame")]
+            [Validation(Required=false)]
+            public bool? EnableJumboFrame { get; set; }
+
+            [NameInMap("EnableNetworkEncryption")]
+            [Validation(Required=false)]
+            public bool? EnableNetworkEncryption { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The reason why the instance was locked. Valid values:</para>
         /// <list type="bullet">

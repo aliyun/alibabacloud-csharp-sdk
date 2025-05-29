@@ -264,6 +264,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             [Validation(Required=false)]
                             public string Encrypted { get; set; }
 
+                            /// <summary>
+                            /// <para>The ID of the KMS key used for the data disk.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>0e478b7a-4262-4802-b8cb-00d3fb40****</para>
+                            /// </summary>
                             [NameInMap("KMSKeyId")]
                             [Validation(Required=false)]
                             public string KMSKeyId { get; set; }

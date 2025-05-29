@@ -121,6 +121,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public int? Iops { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the KMS key to use for the system disk.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0e478b7a-4262-4802-b8cb-00d3fb40****</para>
+            /// </summary>
             [NameInMap("KMSKeyId")]
             [Validation(Required=false)]
             public string KMSKeyId { get; set; }
@@ -247,7 +253,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string AutoSnapshotPolicyId { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the performance burst feature for data disk N. Valid values:</para>
+            /// <para>Specifies whether to enable the performance burst feature for the system disk. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true</description></item>
             /// <item><description>false</description></item>
@@ -263,12 +269,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The category of data disk N. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>cloud: basic disk.</description></item>
-            /// <item><description>cloud_efficiency: ultra disk.</description></item>
-            /// <item><description>cloud_ssd: standard SSD.</description></item>
-            /// <item><description>cloud_auto: ESSD AutoPL disk.</description></item>
-            /// <item><description>cloud_essd: ESSD.</description></item>
-            /// <item><description>cloud_essd_entry: ESSD Entry disk.</description></item>
+            /// <item><description>cloud: basic disk</description></item>
+            /// <item><description>cloud_efficiency: utra disk</description></item>
+            /// <item><description>cloud_ssd: standard SSD</description></item>
+            /// <item><description>cloud_auto: Enterprise SSD (ESSD) AutoPL disk.</description></item>
+            /// <item><description>cloud_essd: ESSD</description></item>
+            /// <item><description>cloud_essd_entry: ESSD Entry disk</description></item>
             /// </list>
             /// <para>For I/O optimized instances, the default value is cloud_efficiency. For non-I/O optimized instances, the default value is cloud.</para>
             /// 
@@ -280,7 +286,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Category { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to release data disk N when the instance is released. Valid values:</para>
+            /// <para>Specifies whether to release data disk N when the associated instance is released. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true</description></item>
             /// <item><description>false</description></item>
@@ -322,7 +328,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Device { get; set; }
 
             /// <summary>
-            /// <para>The name of data disk N. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <c>http://</c> or <c>https://</c>. The name can contain digits, letters, colons (:), underscores (_), and hyphens (-).</para>
+            /// <para>The name of data disk N. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <c>http://</c> or <c>https://</c>. can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
             /// 
             /// <b>Example:</b>
             /// <para>testDataDiskName</para>
@@ -341,6 +347,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public string Encrypted { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the KMS key used for the data disk.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0e478b7a-4262-4802-b8cb-00d****</para>
+            /// </summary>
             [NameInMap("KMSKeyId")]
             [Validation(Required=false)]
             public string KMSKeyId { get; set; }
@@ -348,10 +360,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The performance level of the ESSD to use as data disk N. The value of N must be the same as that in <c>DataDisk.N.Category</c> when DataDisk.N.Category is set to cloud_essd. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</description></item>
-            /// <item><description>PL1 (default): A single ESSD can deliver up to 50,000 random read/write IOPS.</description></item>
-            /// <item><description>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</description></item>
-            /// <item><description>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</description></item>
+            /// <item><description>PL0: A single ESSD can deliver up to 10000 random read/write IOPS.</description></item>
+            /// <item><description>PL1 (default): A single ESSD can deliver up to 50000 random read/write IOPS.</description></item>
+            /// <item><description>PL2: A single ESSD can deliver up to 100000 random read/write IOPS.</description></item>
+            /// <item><description>PL3: A single ESSD can deliver up to 1000000 random read/write IOPS.</description></item>
             /// </list>
             /// <para>For information about ESSD performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</para>
             /// 
@@ -379,11 +391,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The size of data disk N. Valid values of N: 1 to 16. Unit: GiB. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Valid values if you set DataDisk.N.Category to cloud: 5 to 2000.</para>
+            /// <item><description><para>Valid values if DataDisk.N.Category is set to cloud: 5 to 2000.</para>
             /// </description></item>
-            /// <item><description><para>Valid values if you set DataDisk.N.Category to cloud_efficiency: 20 to 32768.</para>
+            /// <item><description><para>Valid values if DataDisk.N.Category is set to cloud_efficiency: 20 to 32768.</para>
             /// </description></item>
-            /// <item><description><para>Valid values if you set DataDisk.N.Category to cloud_ssd: 20 to 32768.</para>
+            /// <item><description><para>Valid values when DataDisk.N.Category is set to cloud_ssd: 20 to 32768.</para>
             /// </description></item>
             /// <item><description><para>Valid values if you set DataDisk.N.Category to cloud_essd: vary based on the <c>DataDisk.N.PerformanceLevel</c> value.</para>
             /// <list type="bullet">
@@ -409,7 +421,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <para>The ID of the snapshot to use to create data disk N. Valid values of N: 1 to 16. When <c>DataDisk.N.SnapshotId</c> is specified, <c>DataDisk.N.Size</c> is ignored. The data disk is created with the size of the specified snapshot.</para>
-            /// <para>Use snapshots created after July 15, 2013. Otherwise, an error is returned and your request is rejected.</para>
+            /// <para>Use snapshots created on or after July 15, 2013. Otherwise, an error is returned and your request is rejected.</para>
             /// 
             /// <b>Example:</b>
             /// <para>s-bp17441ohwka0yuh****</para>

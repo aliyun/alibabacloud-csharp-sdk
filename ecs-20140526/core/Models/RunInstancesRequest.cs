@@ -579,7 +579,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>Specifies whether to enable the performance burst feature for data disk N. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: enables the performance burst feature for the data disk.</description></item>
+            /// <item><description>true: enables the performance burst feature for the system disk.</description></item>
             /// <item><description>false: disables the performance burst feature for the data disk.</description></item>
             /// </list>
             /// <remarks>
@@ -596,7 +596,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The category of data disk N. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>cloud_efficiency: ultra disk.</para>
+            /// <item><description><para>cloud_efficiency: utra disk.</para>
             /// </description></item>
             /// <item><description><para>cloud_ssd: standard SSD.</para>
             /// </description></item>
@@ -606,13 +606,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// </description></item>
             /// <item><description><para>cloud_auto: ESSD AutoPL disk.</para>
             /// </description></item>
+            /// <item><description><para>cloud_regional_disk_auto: Regional ESSD.</para>
+            /// </description></item>
             /// <item><description><para>cloud_essd_entry: ESSD Entry disk.</para>
             /// <para>**</para>
             /// <para><b>Note</b> This parameter can be set to <c>cloud_essd_entry</c> only when <c>InstanceType</c> is set to <c>ecs.u1</c> or <c>ecs.e</c>.</para>
             /// </description></item>
             /// <item><description><para>elastic_ephemeral_disk_standard: standard elastic ephemeral disk.</para>
             /// </description></item>
-            /// <item><description><para>elastic_ephemeral_disk_premium: premium elastic ephemeral disk.</para>
+            /// <item><description><para>elastic_ephemeral_disk_premium: premium elastic ephemeral disk</para>
             /// </description></item>
             /// </list>
             /// <para>For I/O optimized instances, the default value is cloud_efficiency. For non-I/O optimized instances, the default value is cloud.</para>
@@ -656,8 +658,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <item><description>From the 26th data disk on: /dev/xvd<c>[aa-zz]</c>. For example, the 26th data disk is named /dev/xvdaa, the 27th data disk is named /dev/xvdab, and so on.</description></item>
             /// </list>
             /// <remarks>
-            /// <para> This parameter is applicable to scenarios in which a full image is used to create instances. A full image is an image that contains an operating system, application software, and business data. For these scenarios, you can set this parameter to the mount point of data disk N in the full image and modify <c>DataDisk.N.Size</c> and <c>DataDisk.N.Category</c> to change the category and size of data disk N created based on the image.</para>
             /// </remarks>
+            /// <list type="bullet">
+            /// <item><description><para>This parameter is applicable to scenarios in which a full image is used to create instances. A full image is an image that contains an operating system, application software, and business data. For these scenarios, you can set this parameter to the mount point of data disk N in the full image and modify <c>DataDisk.N.Size</c> and <c>DataDisk.N.Category</c> to change the category and size of data disk N created based on the image.</para>
+            /// </description></item>
+            /// <item><description><para>When you use a full image to create an ECS instance, the data disks in the image are created as the first N data disks of the instance.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>/dev/xvdb</para>
@@ -707,7 +714,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Encrypted { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Key Management Service (KMS) key to use for data disk N.</para>
+            /// <para>The ID of the KMS key used for the data disk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0e478b7a-4262-4802-b8cb-00d3fb40****</para>
@@ -719,10 +726,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The performance level of the ESSD to use as data disk N. The value of N must be the same as that in <c>DataDisk.N.Category</c> when DataDisk.N.Category is set to cloud_essd. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</description></item>
-            /// <item><description>PL1 (default): A single ESSD can deliver up to 50,000 random read/write IOPS.</description></item>
-            /// <item><description>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</description></item>
-            /// <item><description>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</description></item>
+            /// <item><description>PL0: A single ESSD can deliver up to 10000 random read/write IOPS.</description></item>
+            /// <item><description>PL1 (default): A single ESSD can deliver up to 50000 random read/write IOPS.</description></item>
+            /// <item><description>PL2: A single ESSD can deliver up to 100000 random read/write IOPS.</description></item>
+            /// <item><description>PL3: A single ESSD can deliver up to 1000000 random read/write IOPS.</description></item>
             /// </list>
             /// <para>For information about ESSD performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</para>
             /// 
@@ -782,7 +789,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <para>The ID of the snapshot to use to create data disk N. Valid values of N: 1 to 16.</para>
-            /// <para>When <c>DataDisk.N.SnapshotId</c> is specified, <c>DataDisk.N.Size</c> is ignored. The data disk is created with the size of the specified snapshot. Use snapshots created after July 15, 2013. Otherwise, an error is returned and your request is rejected.</para>
+            /// <para>When <c>DataDisk.N.SnapshotId</c> is specified, <c>DataDisk.N.Size</c> is ignored. The data disk is created with the size of the specified snapshot. Use snapshots created on or after July 15, 2013. Otherwise, an error is returned and your request is rejected.</para>
             /// 
             /// <b>Example:</b>
             /// <para>s-bp17441ohwka0yuh****</para>
