@@ -314,6 +314,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string Envs { get; set; }
 
+            [NameInMap("GpuCount")]
+            [Validation(Required=false)]
+            public string GpuCount { get; set; }
+
+            [NameInMap("GpuType")]
+            [Validation(Required=false)]
+            public string GpuType { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>10</para>

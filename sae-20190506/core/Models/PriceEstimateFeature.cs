@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class PriceEstimateFeature : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("AppCount")]
+        [Validation(Required=false)]
+        public long? AppCount { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
