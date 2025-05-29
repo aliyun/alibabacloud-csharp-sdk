@@ -137,6 +137,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
 
                 }
 
+                [NameInMap("category")]
+                [Validation(Required=false)]
+                public string Category { get; set; }
+
                 [NameInMap("hotTopicSummaries")]
                 [Validation(Required=false)]
                 public List<RunHotTopicChatResponseBodyPayloadOutputHotTopicSummaries> HotTopicSummaries { get; set; }
@@ -217,6 +221,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
 
                     }
 
+                    [NameInMap("pubTime")]
+                    [Validation(Required=false)]
+                    public string PubTime { get; set; }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>xxx</para>
@@ -225,7 +233,19 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
                     [Validation(Required=false)]
                     public string TextSummary { get; set; }
 
+                    [NameInMap("url")]
+                    [Validation(Required=false)]
+                    public string Url { get; set; }
+
                 }
+
+                [NameInMap("keyword")]
+                [Validation(Required=false)]
+                public string Keyword { get; set; }
+
+                [NameInMap("location")]
+                [Validation(Required=false)]
+                public string Location { get; set; }
 
                 [NameInMap("multimodalMedias")]
                 [Validation(Required=false)]
