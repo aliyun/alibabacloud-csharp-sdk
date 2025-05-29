@@ -97,6 +97,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string CreationTime { get; set; }
 
+        [NameInMap("EgressIp")]
+        [Validation(Required=false)]
+        public string EgressIp { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>cn-xxx.ecr.aliyuncs.com</para>
