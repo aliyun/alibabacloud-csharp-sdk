@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             [Validation(Required=false)]
             public string CreatedAt { get; set; }
 
+            [NameInMap("CustomerClassification")]
+            [Validation(Required=false)]
+            public string CustomerClassification { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>0</para>
