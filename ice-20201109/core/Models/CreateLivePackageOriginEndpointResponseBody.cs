@@ -113,6 +113,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string LastModified { get; set; }
 
+            [NameInMap("LivePackagingConfig")]
+            [Validation(Required=false)]
+            public LivePackagingConfig LivePackagingConfig { get; set; }
+
             /// <summary>
             /// <para>The playlist name.</para>
             /// 

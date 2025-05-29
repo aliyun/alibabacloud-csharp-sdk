@@ -3832,7 +3832,7 @@ namespace AlibabaCloud.SDK.ICE20201109
         /// <para>This API operation is mainly used to configure origin settings, security policies including the IP address blacklist and whitelist and authorization code, and time shifting settings for channels. Before you create an origin endpoint, you must create a live package channel group and channel. After you create the endpoint, the endpoint URL and other configuration details are returned.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// CreateLivePackageOriginEndpointRequest
         /// </param>
         /// <param name="runtime">
@@ -3842,9 +3842,15 @@ namespace AlibabaCloud.SDK.ICE20201109
         /// <returns>
         /// CreateLivePackageOriginEndpointResponse
         /// </returns>
-        public CreateLivePackageOriginEndpointResponse CreateLivePackageOriginEndpointWithOptions(CreateLivePackageOriginEndpointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateLivePackageOriginEndpointResponse CreateLivePackageOriginEndpointWithOptions(CreateLivePackageOriginEndpointRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateLivePackageOriginEndpointShrinkRequest request = new CreateLivePackageOriginEndpointShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LivePackagingConfig))
+            {
+                request.LivePackagingConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LivePackagingConfig, "LivePackagingConfig", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -3878,6 +3884,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpWhitelist))
             {
                 body["IpWhitelist"] = request.IpWhitelist;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LivePackagingConfigShrink))
+            {
+                body["LivePackagingConfig"] = request.LivePackagingConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManifestName))
             {
@@ -3922,7 +3932,7 @@ namespace AlibabaCloud.SDK.ICE20201109
         /// <para>This API operation is mainly used to configure origin settings, security policies including the IP address blacklist and whitelist and authorization code, and time shifting settings for channels. Before you create an origin endpoint, you must create a live package channel group and channel. After you create the endpoint, the endpoint URL and other configuration details are returned.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// CreateLivePackageOriginEndpointRequest
         /// </param>
         /// <param name="runtime">
@@ -3932,9 +3942,15 @@ namespace AlibabaCloud.SDK.ICE20201109
         /// <returns>
         /// CreateLivePackageOriginEndpointResponse
         /// </returns>
-        public async Task<CreateLivePackageOriginEndpointResponse> CreateLivePackageOriginEndpointWithOptionsAsync(CreateLivePackageOriginEndpointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateLivePackageOriginEndpointResponse> CreateLivePackageOriginEndpointWithOptionsAsync(CreateLivePackageOriginEndpointRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateLivePackageOriginEndpointShrinkRequest request = new CreateLivePackageOriginEndpointShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LivePackagingConfig))
+            {
+                request.LivePackagingConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LivePackagingConfig, "LivePackagingConfig", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -3968,6 +3984,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpWhitelist))
             {
                 body["IpWhitelist"] = request.IpWhitelist;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LivePackagingConfigShrink))
+            {
+                body["LivePackagingConfig"] = request.LivePackagingConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManifestName))
             {
@@ -14080,6 +14100,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             GenerateAIAgentCallShrinkRequest request = new GenerateAIAgentCallShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AgentConfig))
+            {
+                request.AgentConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AgentConfig, "AgentConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ChatSyncConfig))
             {
                 request.ChatSyncConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ChatSyncConfig, "ChatSyncConfig", "json");
@@ -14092,6 +14116,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AIAgentId))
             {
                 query["AIAgentId"] = request.AIAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentConfigShrink))
+            {
+                query["AgentConfig"] = request.AgentConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatSyncConfigShrink))
             {
@@ -14163,6 +14191,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             GenerateAIAgentCallShrinkRequest request = new GenerateAIAgentCallShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AgentConfig))
+            {
+                request.AgentConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AgentConfig, "AgentConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ChatSyncConfig))
             {
                 request.ChatSyncConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ChatSyncConfig, "ChatSyncConfig", "json");
@@ -14175,6 +14207,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AIAgentId))
             {
                 query["AIAgentId"] = request.AIAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentConfigShrink))
+            {
+                query["AgentConfig"] = request.AgentConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatSyncConfigShrink))
             {
@@ -22995,6 +23031,134 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListAIAgentInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>罗列用户电话资源接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAIAgentPhoneNumberRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAIAgentPhoneNumberResponse
+        /// </returns>
+        public ListAIAgentPhoneNumberResponse ListAIAgentPhoneNumberWithOptions(ListAIAgentPhoneNumberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAIAgentPhoneNumber",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAIAgentPhoneNumberResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>罗列用户电话资源接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAIAgentPhoneNumberRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAIAgentPhoneNumberResponse
+        /// </returns>
+        public async Task<ListAIAgentPhoneNumberResponse> ListAIAgentPhoneNumberWithOptionsAsync(ListAIAgentPhoneNumberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAIAgentPhoneNumber",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAIAgentPhoneNumberResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>罗列用户电话资源接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAIAgentPhoneNumberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAIAgentPhoneNumberResponse
+        /// </returns>
+        public ListAIAgentPhoneNumberResponse ListAIAgentPhoneNumber(ListAIAgentPhoneNumberRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListAIAgentPhoneNumberWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>罗列用户电话资源接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAIAgentPhoneNumberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAIAgentPhoneNumberResponse
+        /// </returns>
+        public async Task<ListAIAgentPhoneNumberResponse> ListAIAgentPhoneNumberAsync(ListAIAgentPhoneNumberRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListAIAgentPhoneNumberWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -36746,6 +36910,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             StartAIAgentInstanceShrinkRequest request = new StartAIAgentInstanceShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AgentConfig))
+            {
+                request.AgentConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AgentConfig, "AgentConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ChatSyncConfig))
             {
                 request.ChatSyncConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ChatSyncConfig, "ChatSyncConfig", "json");
@@ -36762,6 +36930,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AIAgentId))
             {
                 query["AIAgentId"] = request.AIAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentConfigShrink))
+            {
+                query["AgentConfig"] = request.AgentConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatSyncConfigShrink))
             {
@@ -36827,6 +36999,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             StartAIAgentInstanceShrinkRequest request = new StartAIAgentInstanceShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AgentConfig))
+            {
+                request.AgentConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AgentConfig, "AgentConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ChatSyncConfig))
             {
                 request.ChatSyncConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ChatSyncConfig, "ChatSyncConfig", "json");
@@ -36843,6 +37019,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AIAgentId))
             {
                 query["AIAgentId"] = request.AIAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentConfigShrink))
+            {
+                query["AgentConfig"] = request.AgentConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatSyncConfigShrink))
             {
@@ -36927,6 +37107,178 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StartAIAgentInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建一个智能体实例，返回智能体所在的频道、频道内名称以及进入频道所需的token。</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// StartAIAgentOutboundCallRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartAIAgentOutboundCallResponse
+        /// </returns>
+        public StartAIAgentOutboundCallResponse StartAIAgentOutboundCallWithOptions(StartAIAgentOutboundCallRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            StartAIAgentOutboundCallShrinkRequest request = new StartAIAgentOutboundCallShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Config))
+            {
+                request.ConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Config, "Config", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AIAgentId))
+            {
+                query["AIAgentId"] = request.AIAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CalledNumber))
+            {
+                query["CalledNumber"] = request.CalledNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerNumber))
+            {
+                query["CallerNumber"] = request.CallerNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigShrink))
+            {
+                query["Config"] = request.ConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                query["SessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartAIAgentOutboundCall",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartAIAgentOutboundCallResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建一个智能体实例，返回智能体所在的频道、频道内名称以及进入频道所需的token。</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// StartAIAgentOutboundCallRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartAIAgentOutboundCallResponse
+        /// </returns>
+        public async Task<StartAIAgentOutboundCallResponse> StartAIAgentOutboundCallWithOptionsAsync(StartAIAgentOutboundCallRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            StartAIAgentOutboundCallShrinkRequest request = new StartAIAgentOutboundCallShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Config))
+            {
+                request.ConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Config, "Config", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AIAgentId))
+            {
+                query["AIAgentId"] = request.AIAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CalledNumber))
+            {
+                query["CalledNumber"] = request.CalledNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerNumber))
+            {
+                query["CallerNumber"] = request.CallerNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigShrink))
+            {
+                query["Config"] = request.ConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                query["SessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartAIAgentOutboundCall",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartAIAgentOutboundCallResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建一个智能体实例，返回智能体所在的频道、频道内名称以及进入频道所需的token。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartAIAgentOutboundCallRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartAIAgentOutboundCallResponse
+        /// </returns>
+        public StartAIAgentOutboundCallResponse StartAIAgentOutboundCall(StartAIAgentOutboundCallRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return StartAIAgentOutboundCallWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建一个智能体实例，返回智能体所在的频道、频道内名称以及进入频道所需的token。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartAIAgentOutboundCallRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartAIAgentOutboundCallResponse
+        /// </returns>
+        public async Task<StartAIAgentOutboundCallResponse> StartAIAgentOutboundCallAsync(StartAIAgentOutboundCallRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await StartAIAgentOutboundCallWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -38075,6 +38427,194 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StopRtcRobotInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交视频送审任务</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitAIAgentVideoAuditTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitAIAgentVideoAuditTaskResponse
+        /// </returns>
+        public SubmitAIAgentVideoAuditTaskResponse SubmitAIAgentVideoAuditTaskWithOptions(SubmitAIAgentVideoAuditTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitAIAgentVideoAuditTaskShrinkRequest request = new SubmitAIAgentVideoAuditTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CallbackConfig))
+            {
+                request.CallbackConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CallbackConfig, "CallbackConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CapturePolicies))
+            {
+                request.CapturePoliciesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CapturePolicies, "CapturePolicies", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Input))
+            {
+                request.InputShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Input, "Input", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AIAgentId))
+            {
+                query["AIAgentId"] = request.AIAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuditInterval))
+            {
+                query["AuditInterval"] = request.AuditInterval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackConfigShrink))
+            {
+                query["CallbackConfig"] = request.CallbackConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CapturePoliciesShrink))
+            {
+                query["CapturePolicies"] = request.CapturePoliciesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputShrink))
+            {
+                query["Input"] = request.InputShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitAIAgentVideoAuditTask",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitAIAgentVideoAuditTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交视频送审任务</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitAIAgentVideoAuditTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitAIAgentVideoAuditTaskResponse
+        /// </returns>
+        public async Task<SubmitAIAgentVideoAuditTaskResponse> SubmitAIAgentVideoAuditTaskWithOptionsAsync(SubmitAIAgentVideoAuditTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitAIAgentVideoAuditTaskShrinkRequest request = new SubmitAIAgentVideoAuditTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CallbackConfig))
+            {
+                request.CallbackConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CallbackConfig, "CallbackConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CapturePolicies))
+            {
+                request.CapturePoliciesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CapturePolicies, "CapturePolicies", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Input))
+            {
+                request.InputShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Input, "Input", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AIAgentId))
+            {
+                query["AIAgentId"] = request.AIAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuditInterval))
+            {
+                query["AuditInterval"] = request.AuditInterval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackConfigShrink))
+            {
+                query["CallbackConfig"] = request.CallbackConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CapturePoliciesShrink))
+            {
+                query["CapturePolicies"] = request.CapturePoliciesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputShrink))
+            {
+                query["Input"] = request.InputShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitAIAgentVideoAuditTask",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitAIAgentVideoAuditTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交视频送审任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitAIAgentVideoAuditTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitAIAgentVideoAuditTaskResponse
+        /// </returns>
+        public SubmitAIAgentVideoAuditTaskResponse SubmitAIAgentVideoAuditTask(SubmitAIAgentVideoAuditTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitAIAgentVideoAuditTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交视频送审任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitAIAgentVideoAuditTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitAIAgentVideoAuditTaskResponse
+        /// </returns>
+        public async Task<SubmitAIAgentVideoAuditTaskResponse> SubmitAIAgentVideoAuditTaskAsync(SubmitAIAgentVideoAuditTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitAIAgentVideoAuditTaskWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -45003,11 +45543,19 @@ namespace AlibabaCloud.SDK.ICE20201109
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             UpdateAIAgentInstanceShrinkRequest request = new UpdateAIAgentInstanceShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AgentConfig))
+            {
+                request.AgentConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AgentConfig, "AgentConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TemplateConfig))
             {
                 request.TemplateConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TemplateConfig, "TemplateConfig", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentConfigShrink))
+            {
+                query["AgentConfig"] = request.AgentConfigShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -45065,11 +45613,19 @@ namespace AlibabaCloud.SDK.ICE20201109
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             UpdateAIAgentInstanceShrinkRequest request = new UpdateAIAgentInstanceShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AgentConfig))
+            {
+                request.AgentConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AgentConfig, "AgentConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TemplateConfig))
             {
                 request.TemplateConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TemplateConfig, "TemplateConfig", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentConfigShrink))
+            {
+                query["AgentConfig"] = request.AgentConfigShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -46760,7 +47316,7 @@ namespace AlibabaCloud.SDK.ICE20201109
         /// <para>You can call this operation to modify the origin protocol, set the number of days that time-shifted content is available, define playlist names, and configure the IP address blacklist and whitelist, allowing for fine-grained control over streaming media distribution. Some parameters are required. You must configure IpWhitelist, AuthorizationCode, or both.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// UpdateLivePackageOriginEndpointRequest
         /// </param>
         /// <param name="runtime">
@@ -46770,9 +47326,15 @@ namespace AlibabaCloud.SDK.ICE20201109
         /// <returns>
         /// UpdateLivePackageOriginEndpointResponse
         /// </returns>
-        public UpdateLivePackageOriginEndpointResponse UpdateLivePackageOriginEndpointWithOptions(UpdateLivePackageOriginEndpointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public UpdateLivePackageOriginEndpointResponse UpdateLivePackageOriginEndpointWithOptions(UpdateLivePackageOriginEndpointRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateLivePackageOriginEndpointShrinkRequest request = new UpdateLivePackageOriginEndpointShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LivePackagingConfig))
+            {
+                request.LivePackagingConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LivePackagingConfig, "LivePackagingConfig", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationCode))
             {
@@ -46801,6 +47363,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpWhitelist))
             {
                 body["IpWhitelist"] = request.IpWhitelist;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LivePackagingConfigShrink))
+            {
+                body["LivePackagingConfig"] = request.LivePackagingConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManifestName))
             {
@@ -46844,7 +47410,7 @@ namespace AlibabaCloud.SDK.ICE20201109
         /// <para>You can call this operation to modify the origin protocol, set the number of days that time-shifted content is available, define playlist names, and configure the IP address blacklist and whitelist, allowing for fine-grained control over streaming media distribution. Some parameters are required. You must configure IpWhitelist, AuthorizationCode, or both.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// UpdateLivePackageOriginEndpointRequest
         /// </param>
         /// <param name="runtime">
@@ -46854,9 +47420,15 @@ namespace AlibabaCloud.SDK.ICE20201109
         /// <returns>
         /// UpdateLivePackageOriginEndpointResponse
         /// </returns>
-        public async Task<UpdateLivePackageOriginEndpointResponse> UpdateLivePackageOriginEndpointWithOptionsAsync(UpdateLivePackageOriginEndpointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<UpdateLivePackageOriginEndpointResponse> UpdateLivePackageOriginEndpointWithOptionsAsync(UpdateLivePackageOriginEndpointRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateLivePackageOriginEndpointShrinkRequest request = new UpdateLivePackageOriginEndpointShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LivePackagingConfig))
+            {
+                request.LivePackagingConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LivePackagingConfig, "LivePackagingConfig", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationCode))
             {
@@ -46885,6 +47457,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpWhitelist))
             {
                 body["IpWhitelist"] = request.IpWhitelist;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LivePackagingConfigShrink))
+            {
+                body["LivePackagingConfig"] = request.LivePackagingConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManifestName))
             {

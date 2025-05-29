@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string AIAgentId { get; set; }
 
+        [NameInMap("AgentConfig")]
+        [Validation(Required=false)]
+        public AIAgentConfig AgentConfig { get; set; }
+
         /// <summary>
         /// <para>同步聊天记录配置。</para>
         /// </summary>
@@ -64,8 +68,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string SessionId { get; set; }
 
+        /// <term><b>Obsolete</b></term>
         [NameInMap("TemplateConfig")]
         [Validation(Required=false)]
+        [Obsolete]
         public AIAgentTemplateConfig TemplateConfig { get; set; }
 
         /// <summary>

@@ -8,12 +8,12 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
-    public class UpdateLivePackageOriginEndpointRequest : TeaModel {
+    public class CreateLivePackageOriginEndpointShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The authorization code. It can be up to 200 characters in length. You must configure AuthorizationCode, IpWhitelist, or both. Format: [A-Za-z0-9-_.]+</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Abc123Def456</para>
+        /// <para>AbcDef123</para>
         /// </summary>
         [NameInMap("AuthorizationCode")]
         [Validation(Required=false)]
@@ -29,6 +29,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [NameInMap("ChannelName")]
         [Validation(Required=false)]
         public string ChannelName { get; set; }
+
+        /// <summary>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><b><b>0311a423d11a5f7dee713535</b></b></para>
+        /// </summary>
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
 
         /// <summary>
         /// <para>The endpoint description.</para>
@@ -60,10 +70,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>The IP address blacklist. It supports subnet masks. Separate multiple IP addresses with commas (,).</para>
+        /// <para>The IP address blacklist. It supports subnet masks. 0.0.0.0/0 is not allowed. It can be up to 1,000 characters in length. Separate multiple IP addresses with commas (,).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>103.0.0.0/8</para>
+        /// <para>103.21.222.1/32,192.168.100.0/24</para>
         /// </summary>
         [NameInMap("IpBlacklist")]
         [Validation(Required=false)]
@@ -73,7 +83,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         /// <para>The IP address whitelist. It supports subnet masks. 0.0.0.0/0 is not allowed. It can be up to 1,000 characters in length. Separate multiple IP addresses with commas (,). You must configure AuthorizationCode, IpWhitelist, or both.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>192.168.1.0/24,10.0.0.1</para>
+        /// <para>192.168.1.0/24,10.0.0.1/24</para>
         /// </summary>
         [NameInMap("IpWhitelist")]
         [Validation(Required=false)]
@@ -81,7 +91,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         [NameInMap("LivePackagingConfig")]
         [Validation(Required=false)]
-        public LivePackagingConfig LivePackagingConfig { get; set; }
+        public string LivePackagingConfigShrink { get; set; }
 
         /// <summary>
         /// <para>The playlist name. Default value: manifest.</para>
@@ -94,7 +104,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string ManifestName { get; set; }
 
         /// <summary>
-        /// <para>The protocol. Only HLS is supported.</para>
+        /// <para>The distribution protocol.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -105,10 +115,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Protocol { get; set; }
 
         /// <summary>
-        /// <para>The number of days that time-shifted content is available. Maximum value: 30.</para>
+        /// <para>The number of days that time-shifted content is available. Maximum value: 30. Default value: 0, which indicates that time shifting is not supported.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>5</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TimeshiftVision")]
         [Validation(Required=false)]

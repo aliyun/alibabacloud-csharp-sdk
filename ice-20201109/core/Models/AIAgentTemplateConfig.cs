@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public AIAgentTemplateConfigAvatarChat3D AvatarChat3D { get; set; }
         public class AIAgentTemplateConfigAvatarChat3D : TeaModel {
+            [NameInMap("AsrHotWords")]
+            [Validation(Required=false)]
+            public List<string> AsrHotWords { get; set; }
+
             [NameInMap("AsrLanguageId")]
             [Validation(Required=false)]
             public string AsrLanguageId { get; set; }
@@ -28,6 +32,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("BailianAppParams")]
             [Validation(Required=false)]
             public string BailianAppParams { get; set; }
+
+            [NameInMap("CharBreak")]
+            [Validation(Required=false)]
+            public bool? CharBreak { get; set; }
 
             [NameInMap("EnableIntelligentSegment")]
             [Validation(Required=false)]
@@ -125,6 +133,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public AIAgentTemplateConfigVisionChat VisionChat { get; set; }
         public class AIAgentTemplateConfigVisionChat : TeaModel {
+            [NameInMap("AsrHotWords")]
+            [Validation(Required=false)]
+            public List<string> AsrHotWords { get; set; }
+
             [NameInMap("AsrLanguageId")]
             [Validation(Required=false)]
             public string AsrLanguageId { get; set; }
@@ -136,6 +148,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("BailianAppParams")]
             [Validation(Required=false)]
             public string BailianAppParams { get; set; }
+
+            [NameInMap("CharBreak")]
+            [Validation(Required=false)]
+            public bool? CharBreak { get; set; }
 
             [NameInMap("EnableIntelligentSegment")]
             [Validation(Required=false)]
@@ -233,6 +249,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public AIAgentTemplateConfigVoiceChat VoiceChat { get; set; }
         public class AIAgentTemplateConfigVoiceChat : TeaModel {
+            [NameInMap("AsrHotWords")]
+            [Validation(Required=false)]
+            public List<string> AsrHotWords { get; set; }
+
             [NameInMap("AsrLanguageId")]
             [Validation(Required=false)]
             public string AsrLanguageId { get; set; }
@@ -252,6 +272,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("BailianAppParams")]
             [Validation(Required=false)]
             public string BailianAppParams { get; set; }
+
+            [NameInMap("CharBreak")]
+            [Validation(Required=false)]
+            public bool? CharBreak { get; set; }
 
             [NameInMap("EnableIntelligentSegment")]
             [Validation(Required=false)]

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class UpdateAIAgentInstanceShrinkRequest : TeaModel {
+        [NameInMap("AgentConfig")]
+        [Validation(Required=false)]
+        public string AgentConfigShrink { get; set; }
+
         /// <summary>
         /// <para>The ID of the AI agent that you want to update.</para>
         /// <para>This parameter is required.</para>
@@ -20,11 +24,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The template configurations of the AI agent. The configurations are merged with the template configurations that are used to start the AI agent. For more information, see the definition of TemplateConfig.</para>
         /// </summary>
         [NameInMap("TemplateConfig")]
         [Validation(Required=false)]
+        [Obsolete]
         public string TemplateConfigShrink { get; set; }
 
         /// <summary>

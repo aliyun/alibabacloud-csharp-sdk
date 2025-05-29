@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
-    public class UpdateLivePackageOriginEndpointRequest : TeaModel {
+    public class UpdateLivePackageOriginEndpointShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The authorization code. It can be up to 200 characters in length. You must configure AuthorizationCode, IpWhitelist, or both. Format: [A-Za-z0-9-_.]+</para>
         /// 
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         [NameInMap("LivePackagingConfig")]
         [Validation(Required=false)]
-        public LivePackagingConfig LivePackagingConfig { get; set; }
+        public string LivePackagingConfigShrink { get; set; }
 
         /// <summary>
         /// <para>The playlist name. Default value: manifest.</para>

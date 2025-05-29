@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public DescribeAIAgentInstanceResponseBodyInstance Instance { get; set; }
         public class DescribeAIAgentInstanceResponseBodyInstance : TeaModel {
+            [NameInMap("AgentConfig")]
+            [Validation(Required=false)]
+            public AIAgentConfig AgentConfig { get; set; }
+
             /// <summary>
             /// <para>The URL of the call log file.</para>
             /// 
@@ -50,6 +54,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The template configurations of the AI agent.</para>
             /// 
@@ -58,6 +64,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// </summary>
             [NameInMap("TemplateConfig")]
             [Validation(Required=false)]
+            [Obsolete]
             public AIAgentTemplateConfig TemplateConfig { get; set; }
 
             /// <summary>

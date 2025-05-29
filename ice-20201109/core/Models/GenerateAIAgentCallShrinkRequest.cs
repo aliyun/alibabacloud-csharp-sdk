@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string AIAgentId { get; set; }
 
+        [NameInMap("AgentConfig")]
+        [Validation(Required=false)]
+        public string AgentConfigShrink { get; set; }
+
         [NameInMap("ChatSyncConfig")]
         [Validation(Required=false)]
         public string ChatSyncConfigShrink { get; set; }
@@ -42,11 +46,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string SessionId { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The template configurations of the AI agent. The specified configurations are merged with the template configurations that are specified in the console. If you do not specify this parameter, the system uses the default configurations for an AI agent created in the console.</para>
         /// </summary>
         [NameInMap("TemplateConfig")]
         [Validation(Required=false)]
+        [Obsolete]
         public string TemplateConfigShrink { get; set; }
 
         /// <summary>
