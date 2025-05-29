@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ImportHttpApiRequest : TeaModel {
+        /// <summary>
+        /// <para>The deployment configuration.</para>
+        /// </summary>
         [NameInMap("deployConfigs")]
         [Validation(Required=false)]
         public HttpApiDeployConfig DeployConfigs { get; set; }
@@ -33,6 +36,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
+        /// <summary>
+        /// <para>The MCP route ID.</para>
+        /// </summary>
         [NameInMap("mcpRouteId")]
         [Validation(Required=false)]
         public string McpRouteId { get; set; }
@@ -68,7 +74,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string SpecContentBase64 { get; set; }
 
         /// <summary>
-        /// <para>The download URL of the API definition file. You can download the file over the Internet or by using an Object Storage Service (OSS) internal download URL that belongs to the current region. You must obtain the required permissions to download the file. For OSS URLs that are not publicly readable, refer to <a href="https://help.aliyun.com/zh/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects">https://help.aliyun.com/zh/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects</a> to specify URLs that provide download permissions. Currently, only OSS URLs are supported.</para>
+        /// <para>The download URL of the API definition file. You can download the file over the Internet or by using an Object Storage Service (OSS) internal download URL that belongs to the current region. You must obtain the required permissions to download the file. For OSS URLs that are not publicly readable, refer to <a href="https://help.aliyun.com/document_detail/39607.html">Download objects using presigned URLs</a> to specify URLs that provide download permissions. Currently, only OSS URLs are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://my-bucket.oss-cn-hangzhou.aliyuncs.com/my-api/api.yaml">https://my-bucket.oss-cn-hangzhou.aliyuncs.com/my-api/api.yaml</a></para>
@@ -121,7 +127,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <list type="bullet">
         /// <item><description>SpectOnly: All configurations in the file take effect.</description></item>
         /// <item><description>SpecFirst: The file takes precedence. New APIs are created and existing ones are updated. APIs not included in the file remain unchanged.</description></item>
-        /// <item><description>ExistFirst (default): The existing APIs take precedence. New APIs are created but existing ones remain unchanged.</description></item>
+        /// <item><description>ExistFirst (default): The existing APIs take precedence. New APIs are created but existing ones remain unchanged. If this parameter is not specified, the ExistFirst policy takes effect.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -142,7 +148,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string TargetHttpApiId { get; set; }
 
         /// <summary>
-        /// <para>Version configuration.</para>
+        /// <para>The API versioning configuration. If versioning is enabled for an API and the version and name of an API to be imported are the same as those of the existing API, the existing API is updated by this import. If versioning is not enabled for an API and the name of an API to be imported are the same as that of the existing API, the existing API is updated by this import.</para>
         /// </summary>
         [NameInMap("versionConfig")]
         [Validation(Required=false)]

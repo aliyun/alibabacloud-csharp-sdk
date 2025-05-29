@@ -1183,6 +1183,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             {
                 body["match"] = request.Match;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.McpRouteConfig))
+            {
+                body["mcpRouteConfig"] = request.McpRouteConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 body["name"] = request.Name;
@@ -1252,6 +1256,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Match))
             {
                 body["match"] = request.Match;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.McpRouteConfig))
+            {
+                body["mcpRouteConfig"] = request.McpRouteConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
