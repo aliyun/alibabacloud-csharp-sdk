@@ -58,6 +58,9 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 
             /// <summary>
             /// <para>whether or not support file system mount</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>False</para>
             /// </summary>
             [NameInMap("FileSystemMountEnabled")]
             [Validation(Required=false)]

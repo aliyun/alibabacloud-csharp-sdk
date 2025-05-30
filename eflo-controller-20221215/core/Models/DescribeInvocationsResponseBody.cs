@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                         /// </list>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>NodeNotExists：</para>
+                        /// <para>NodeNotExists</para>
                         /// </summary>
                         [NameInMap("ErrorCode")]
                         [Validation(Required=false)]

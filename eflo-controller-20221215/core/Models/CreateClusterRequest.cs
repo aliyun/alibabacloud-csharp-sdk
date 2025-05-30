@@ -522,6 +522,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             [Validation(Required=false)]
             public string KeyPairName { get; set; }
 
+            [NameInMap("LoginPassword")]
+            [Validation(Required=false)]
+            public string LoginPassword { get; set; }
+
             /// <summary>
             /// <para>Machine type</para>
             /// 

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public bool? FileSystemMountEnabled { get; set; }
 
         /// <summary>
-        /// <para>节点组的默认镜像id，如果不设置，那么就不会改变。</para>
+        /// <para>The default image ID of a node group remains unchanged if not explicitly set.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i123847249284734</para>
@@ -38,6 +38,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         [NameInMap("KeyPairName")]
         [Validation(Required=false)]
         public string KeyPairName { get; set; }
+
+        /// <summary>
+        /// <para>节点组内机器的登录密码</para>
+        /// </summary>
+        [NameInMap("LoginPassword")]
+        [Validation(Required=false)]
+        public string LoginPassword { get; set; }
 
         /// <summary>
         /// <para>Node group name</para>

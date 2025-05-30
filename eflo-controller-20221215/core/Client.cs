@@ -1991,7 +1991,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cluster Details</para>
+        /// <para>查询灵骏集群详情。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2033,7 +2033,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cluster Details</para>
+        /// <para>查询灵骏集群详情。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2075,7 +2075,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cluster Details</para>
+        /// <para>查询灵骏集群详情。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2093,7 +2093,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cluster Details</para>
+        /// <para>查询灵骏集群详情。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6791,6 +6791,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
             {
                 body["KeyPairName"] = request.KeyPairName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoginPassword))
+            {
+                body["LoginPassword"] = request.LoginPassword;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewNodeGroupName))
             {
                 body["NewNodeGroupName"] = request.NewNodeGroupName;
@@ -6857,6 +6861,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyPairName))
             {
                 body["KeyPairName"] = request.KeyPairName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoginPassword))
+            {
+                body["LoginPassword"] = request.LoginPassword;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewNodeGroupName))
             {
