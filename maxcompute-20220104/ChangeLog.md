@@ -1,3 +1,6 @@
+2025-05-30 Version: 1.5.1
+- Generated csharp 2022-01-04 for MaxCompute.
+
 2025-04-23 Version: 1.5.0
 - Support API QueryTunnelMetric.
 - Support API QueryTunnelMetricDetail.

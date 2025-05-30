@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public double? CuSnapshot { get; set; }
 
                 /// <summary>
-                /// <para>The total number of used compute units (CUs).</para>
+                /// <para>The amount of resources consumed by the job. This parameter is returned only for jobs that are complete.Unit: 100\*Core\*s.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public double? MemorySnapshot { get; set; }
 
                 /// <summary>
-                /// <para>The total memory usage.</para>
+                /// <para>The number of memory consumed by the job. This parameter is returned only for jobs that are complete.Unit: MB\*s.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>40</para>

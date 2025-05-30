@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class GetJobInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetJobInfoResponseBodyData Data { get; set; }
         public class GetJobInfoResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>CPU usage of the job at the snapshot time. Unit: Core.</para>
+            /// <para>The amount of resources consumed by the job. This parameter is returned only for jobs that are complete.Unit: 100\*Core\*s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public long? CuUsage { get; set; }
 
             /// <summary>
-            /// <para>The time when the job was finished.</para>
+            /// <para>The end time of the job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1672112913</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public long? EndAtTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the upstream node.</para>
+            /// <para>The ID of the ancestor node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>node_4</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string ExtNodeId { get; set; }
 
             /// <summary>
-            /// <para>The account ID of the task owner.</para>
+            /// <para>The Alibaba Cloud account ID of the task owner.</para>
             /// 
             /// <b>Example:</b>
             /// <para>duty_2</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string ExtPlantFrom { get; set; }
 
             /// <summary>
-            /// <para>The amount of scanned data for the job. Unit: byte.</para>
+            /// <para>The amount of data scanned by the job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public double? InputBytes { get; set; }
 
             /// <summary>
-            /// <para>The instance ID.</para>
+            /// <para>The job ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20230410****60gg</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The account that commits the job.</para>
+            /// <para>The owner of the job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALIYUN$7632***@aliyun.com</para>
@@ -97,14 +97,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string JobOwner { get; set; }
 
             /// <summary>
-            /// <para>The list of sub-status of the job.</para>
+            /// <para>The substatuses of the job lifecycle.</para>
             /// </summary>
             [NameInMap("jobSubStatusList")]
             [Validation(Required=false)]
             public List<GetJobInfoResponseBodyDataJobSubStatusList> JobSubStatusList { get; set; }
             public class GetJobInfoResponseBodyDataJobSubStatusList : TeaModel {
                 /// <summary>
-                /// <para>The code of the sub-status.</para>
+                /// <para>The encoding of the substatus.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1010</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public int? Code { get; set; }
 
                 /// <summary>
-                /// <para>The description of the sub-status.</para>
+                /// <para>The description of the substatus.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Waiting for scheduling</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The start time of the sub-status.</para>
+                /// <para>The start time of the substatus.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-03-05 00:04:15.717364 +0800</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string JobType { get; set; }
 
             /// <summary>
-            /// <para>Memory usage of the job at the snapshot time. Unit: MB.</para>
+            /// <para>The number of memory consumed by the job. This parameter is returned only for jobs that are complete.Unit: MB\*s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>40</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public long? Priority { get; set; }
 
             /// <summary>
-            /// <para>The name of the project.</para>
+            /// <para>The project name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dp_cdm_prod</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string Project { get; set; }
 
             /// <summary>
-            /// <para>The nickname of the computing Quota used by the job.</para>
+            /// <para>The nickname of the computing quota that is used by the job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>os_bigdata</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string QuotaNickname { get; set; }
 
             /// <summary>
-            /// <para>The type of the quota.</para>
+            /// <para>The quota type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>subscription</para>
@@ -206,10 +206,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The start time of the job.</para>
-            /// <remarks>
-            /// <para>The time when the job received the first batch of computing resources.</para>
-            /// </remarks>
+            /// <para>The start time, which is the time when the job received the first batch of computing resources. For jobs that run for a short period of time or do not consume computing resources, such as the jobs that involve DDL statements, the job submission time is used instead.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1672112113</para>
@@ -219,7 +216,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public long? RunningAtTime { get; set; }
 
             /// <summary>
-            /// <para>The running duration, which is the duration from the runningAtTime to the snapshotTime of the job. Unit: seconds (s).</para>
+            /// <para>The execution duration, which is the duration from the start time to the end time of the job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>800</para>
@@ -229,7 +226,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public long? RunningTime { get; set; }
 
             /// <summary>
-            /// <para>The intelligent diagnostics results.</para>
+            /// <para>The intelligent diagnostics result.</para>
             /// </summary>
             [NameInMap("sceneResults")]
             [Validation(Required=false)]
@@ -295,7 +292,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             }
 
             /// <summary>
-            /// <para>The signature of the SQL job.</para>
+            /// <para>The signature of the SQL job. You can use the signature to find the instances on which each time an SQL statement is executed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20c1efb4a7caca1865f4aa784bb500efae74af04</para>
@@ -305,7 +302,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string Signature { get; set; }
 
             /// <summary>
-            /// <para>The status of the job.</para>
+            /// <para>The job status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>running</para>
@@ -315,7 +312,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The time when the job was committed.</para>
+            /// <para>The time when the job was submitted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1672112013</para>
@@ -335,7 +332,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string TenantId { get; set; }
 
             /// <summary>
-            /// <para>The interval from the time when the job was submitted to the snapshotTime .Unit: seconds (s).</para>
+            /// <para>The total duration from the time a job is submitted to the time the job is terminated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>900</para>
@@ -345,7 +342,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public long? TotalTime { get; set; }
 
             /// <summary>
-            /// <para>The duration from the time the job is submitted to the time the job starts to run. Unit: seconds (s).</para>
+            /// <para>The wait time, which is the duration from the time the job is submitted to the time the job starts to run.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>

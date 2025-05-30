@@ -382,6 +382,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await CreateComputeQuotaPlanWithOptionsAsync(nickname, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CreateMmsDataSource</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateMmsDataSourceRequest
         /// </param>
@@ -435,6 +440,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<CreateMmsDataSourceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CreateMmsDataSource</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateMmsDataSourceRequest
         /// </param>
@@ -488,6 +498,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<CreateMmsDataSourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CreateMmsDataSource</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateMmsDataSourceRequest
         /// </param>
@@ -502,6 +517,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return CreateMmsDataSourceWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CreateMmsDataSource</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateMmsDataSourceRequest
         /// </param>
@@ -1616,6 +1636,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await DeleteMmsDataSourceWithOptionsAsync(sourceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除迁移计划</para>
+        /// </summary>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -1647,6 +1672,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<DeleteMmsJobResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除迁移计划</para>
+        /// </summary>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -1678,6 +1708,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<DeleteMmsJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除迁移计划</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// DeleteMmsJobResponse
         /// </returns>
@@ -1688,6 +1723,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return DeleteMmsJobWithOptions(sourceId, jobId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除迁移计划</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// DeleteMmsJobResponse
         /// </returns>
@@ -2172,7 +2212,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get basic information about a single job.</para>
+        /// <para>Queries the basic information about a job.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2208,7 +2248,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get basic information about a single job.</para>
+        /// <para>Queries the basic information about a job.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2244,7 +2284,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get basic information about a single job.</para>
+        /// <para>Queries the basic information about a job.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2259,7 +2299,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get basic information about a single job.</para>
+        /// <para>Queries the basic information about a job.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2454,6 +2494,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await GetJobResourceUsageWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetMmsAsyncTask</para>
+        /// </summary>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -2485,6 +2530,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetMmsAsyncTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetMmsAsyncTask</para>
+        /// </summary>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -2516,6 +2566,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetMmsAsyncTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetMmsAsyncTask</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// GetMmsAsyncTaskResponse
         /// </returns>
@@ -2526,6 +2581,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return GetMmsAsyncTaskWithOptions(sourceId, asyncTaskId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetMmsAsyncTask</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// GetMmsAsyncTaskResponse
         /// </returns>
@@ -2536,6 +2596,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await GetMmsAsyncTaskWithOptionsAsync(sourceId, asyncTaskId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据源</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetMmsDataSourceRequest
         /// </param>
@@ -2581,6 +2646,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetMmsDataSourceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据源</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetMmsDataSourceRequest
         /// </param>
@@ -2626,6 +2696,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetMmsDataSourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据源</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetMmsDataSourceRequest
         /// </param>
@@ -2640,6 +2715,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return GetMmsDataSourceWithOptions(sourceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据源</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetMmsDataSourceRequest
         /// </param>
@@ -2654,6 +2734,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await GetMmsDataSourceWithOptionsAsync(sourceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetMmsDb</para>
+        /// </summary>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -2685,6 +2770,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetMmsDbResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetMmsDb</para>
+        /// </summary>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -2716,6 +2806,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetMmsDbResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetMmsDb</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// GetMmsDbResponse
         /// </returns>
@@ -2726,6 +2821,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return GetMmsDbWithOptions(sourceId, dbId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetMmsDb</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// GetMmsDbResponse
         /// </returns>
@@ -2736,6 +2836,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await GetMmsDbWithOptionsAsync(sourceId, dbId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetMmsFetchMetadataJob</para>
+        /// </summary>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -2767,6 +2872,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetMmsFetchMetadataJobResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetMmsFetchMetadataJob</para>
+        /// </summary>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -2798,6 +2908,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetMmsFetchMetadataJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetMmsFetchMetadataJob</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// GetMmsFetchMetadataJobResponse
         /// </returns>
@@ -2808,6 +2923,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return GetMmsFetchMetadataJobWithOptions(sourceId, scanId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetMmsFetchMetadataJob</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// GetMmsFetchMetadataJobResponse
         /// </returns>
@@ -2818,6 +2938,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await GetMmsFetchMetadataJobWithOptionsAsync(sourceId, scanId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取迁移计划</para>
+        /// </summary>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -2849,6 +2974,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetMmsJobResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取迁移计划</para>
+        /// </summary>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -2880,6 +3010,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetMmsJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取迁移计划</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// GetMmsJobResponse
         /// </returns>
@@ -2890,6 +3025,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return GetMmsJobWithOptions(sourceId, jobId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取迁移计划</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// GetMmsJobResponse
         /// </returns>
@@ -2900,6 +3040,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await GetMmsJobWithOptionsAsync(sourceId, jobId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetMmsPartition</para>
+        /// </summary>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -2931,6 +3076,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetMmsPartitionResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetMmsPartition</para>
+        /// </summary>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -2962,6 +3112,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetMmsPartitionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetMmsPartition</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// GetMmsPartitionResponse
         /// </returns>
@@ -2972,6 +3127,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return GetMmsPartitionWithOptions(sourceId, partitionId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetMmsPartition</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// GetMmsPartitionResponse
         /// </returns>
@@ -2982,6 +3142,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await GetMmsPartitionWithOptionsAsync(sourceId, partitionId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetMmsTable</para>
+        /// </summary>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -3013,6 +3178,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetMmsTableResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetMmsTable</para>
+        /// </summary>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -3044,6 +3214,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetMmsTableResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetMmsTable</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// GetMmsTableResponse
         /// </returns>
@@ -3054,6 +3229,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return GetMmsTableWithOptions(sourceId, tableId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetMmsTable</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// GetMmsTableResponse
         /// </returns>
@@ -3064,6 +3244,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await GetMmsTableWithOptionsAsync(sourceId, tableId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetMmsTask</para>
+        /// </summary>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -3095,6 +3280,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetMmsTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetMmsTask</para>
+        /// </summary>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -3126,6 +3316,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetMmsTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetMmsTask</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// GetMmsTaskResponse
         /// </returns>
@@ -3136,6 +3331,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return GetMmsTaskWithOptions(sourceId, taskId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetMmsTask</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// GetMmsTaskResponse
         /// </returns>
@@ -6190,6 +6390,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await ListJobSnapshotInfosWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListMmsDataSources</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListMmsDataSourcesRequest
         /// </param>
@@ -6247,6 +6452,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<ListMmsDataSourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListMmsDataSources</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListMmsDataSourcesRequest
         /// </param>
@@ -6304,6 +6514,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<ListMmsDataSourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListMmsDataSources</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListMmsDataSourcesRequest
         /// </param>
@@ -6318,6 +6533,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return ListMmsDataSourcesWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListMmsDataSources</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListMmsDataSourcesRequest
         /// </param>
@@ -6506,6 +6726,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await ListMmsDbsWithOptionsAsync(sourceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListMmsJobs</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListMmsJobsRequest
         /// </param>
@@ -6583,6 +6808,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<ListMmsJobsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListMmsJobs</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListMmsJobsRequest
         /// </param>
@@ -6660,6 +6890,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<ListMmsJobsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListMmsJobs</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListMmsJobsRequest
         /// </param>
@@ -6674,6 +6909,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return ListMmsJobsWithOptions(sourceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListMmsJobs</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListMmsJobsRequest
         /// </param>
@@ -6688,6 +6928,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await ListMmsJobsWithOptionsAsync(sourceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取元数据-分区</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// ListMmsPartitionsRequest
         /// </param>
@@ -6775,6 +7020,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<ListMmsPartitionsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取元数据-分区</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// ListMmsPartitionsRequest
         /// </param>
@@ -6862,6 +7112,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<ListMmsPartitionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取元数据-分区</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListMmsPartitionsRequest
         /// </param>
@@ -6876,6 +7131,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return ListMmsPartitionsWithOptions(sourceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取元数据-分区</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListMmsPartitionsRequest
         /// </param>
@@ -6890,6 +7150,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await ListMmsPartitionsWithOptionsAsync(sourceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListMmsTables</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// ListMmsTablesRequest
         /// </param>
@@ -6981,6 +7246,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<ListMmsTablesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListMmsTables</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// ListMmsTablesRequest
         /// </param>
@@ -7072,6 +7342,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<ListMmsTablesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListMmsTables</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListMmsTablesRequest
         /// </param>
@@ -7086,6 +7361,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return ListMmsTablesWithOptions(sourceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListMmsTables</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListMmsTablesRequest
         /// </param>
@@ -7100,6 +7380,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await ListMmsTablesWithOptionsAsync(sourceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListMmsTaskLogs</para>
+        /// </summary>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -7131,6 +7416,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<ListMmsTaskLogsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListMmsTaskLogs</para>
+        /// </summary>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -7162,6 +7452,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<ListMmsTaskLogsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListMmsTaskLogs</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// ListMmsTaskLogsResponse
         /// </returns>
@@ -7172,6 +7467,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return ListMmsTaskLogsWithOptions(sourceId, taskId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListMmsTaskLogs</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// ListMmsTaskLogsResponse
         /// </returns>
@@ -7182,6 +7482,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await ListMmsTaskLogsWithOptionsAsync(sourceId, taskId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListMmsTasks</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListMmsTasksRequest
         /// </param>
@@ -7263,6 +7568,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<ListMmsTasksResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListMmsTasks</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListMmsTasksRequest
         /// </param>
@@ -7344,6 +7654,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<ListMmsTasksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListMmsTasks</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListMmsTasksRequest
         /// </param>
@@ -7358,6 +7673,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return ListMmsTasksWithOptions(sourceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListMmsTasks</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListMmsTasksRequest
         /// </param>
@@ -9856,6 +10176,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await QueryTunnelMetricDetailWithOptionsAsync(metric, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>RetryMmsJob</para>
+        /// </summary>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -9887,6 +10212,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<RetryMmsJobResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>RetryMmsJob</para>
+        /// </summary>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -9918,6 +10248,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<RetryMmsJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>RetryMmsJob</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// RetryMmsJobResponse
         /// </returns>
@@ -9928,6 +10263,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return RetryMmsJobWithOptions(sourceId, jobId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>RetryMmsJob</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// RetryMmsJobResponse
         /// </returns>
@@ -9938,6 +10278,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await RetryMmsJobWithOptionsAsync(sourceId, jobId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>StartMmsJob</para>
+        /// </summary>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -9969,6 +10314,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<StartMmsJobResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>StartMmsJob</para>
+        /// </summary>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -10000,6 +10350,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<StartMmsJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>StartMmsJob</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// StartMmsJobResponse
         /// </returns>
@@ -10010,6 +10365,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return StartMmsJobWithOptions(sourceId, jobId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>StartMmsJob</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// StartMmsJobResponse
         /// </returns>
@@ -10020,6 +10380,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await StartMmsJobWithOptionsAsync(sourceId, jobId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>StopMmsJob</para>
+        /// </summary>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -10051,6 +10416,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<StopMmsJobResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>StopMmsJob</para>
+        /// </summary>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -10082,6 +10452,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<StopMmsJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>StopMmsJob</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// StopMmsJobResponse
         /// </returns>
@@ -10092,6 +10467,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return StopMmsJobWithOptions(sourceId, jobId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>StopMmsJob</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// StopMmsJobResponse
         /// </returns>
