@@ -84,14 +84,7 @@ namespace AlibabaCloud.SDK.AIPodcast20250228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<PodcastTaskResultQueryResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<PodcastTaskResultQueryResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<PodcastTaskResultQueryResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -141,14 +134,7 @@ namespace AlibabaCloud.SDK.AIPodcast20250228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<PodcastTaskResultQueryResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<PodcastTaskResultQueryResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<PodcastTaskResultQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -262,14 +248,7 @@ namespace AlibabaCloud.SDK.AIPodcast20250228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<PodcastTaskSubmitResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<PodcastTaskSubmitResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<PodcastTaskSubmitResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -345,14 +324,7 @@ namespace AlibabaCloud.SDK.AIPodcast20250228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<PodcastTaskSubmitResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<PodcastTaskSubmitResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<PodcastTaskSubmitResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>

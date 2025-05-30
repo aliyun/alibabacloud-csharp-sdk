@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.AIPodcast20250228.Models
         [Validation(Required=false)]
         public PodcastTaskResultQueryResponseBodyData Data { get; set; }
         public class PodcastTaskResultQueryResponseBodyData : TeaModel {
+            [NameInMap("extraResult")]
+            [Validation(Required=false)]
+            public object ExtraResult { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>{
