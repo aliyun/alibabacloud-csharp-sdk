@@ -215,6 +215,10 @@ namespace AlibabaCloud.SDK.AIPodcast20250228
             {
                 body["fileUrls"] = request.FileUrlsShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLang))
+            {
+                body["sourceLang"] = request.SourceLang;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Text))
             {
                 body["text"] = request.Text;
@@ -290,6 +294,10 @@ namespace AlibabaCloud.SDK.AIPodcast20250228
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileUrlsShrink))
             {
                 body["fileUrls"] = request.FileUrlsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLang))
+            {
+                body["sourceLang"] = request.SourceLang;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Text))
             {

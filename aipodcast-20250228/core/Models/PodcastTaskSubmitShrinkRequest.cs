@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.AIPodcast20250228.Models
         [Validation(Required=false)]
         public string FileUrlsShrink { get; set; }
 
+        [NameInMap("sourceLang")]
+        [Validation(Required=false)]
+        public string SourceLang { get; set; }
+
         [NameInMap("text")]
         [Validation(Required=false)]
         public string Text { get; set; }
