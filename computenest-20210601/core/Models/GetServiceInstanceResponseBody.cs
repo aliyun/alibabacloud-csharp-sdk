@@ -491,6 +491,10 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             [Validation(Required=false)]
             public string DeployType { get; set; }
 
+            [NameInMap("OperationMetadata")]
+            [Validation(Required=false)]
+            public string OperationMetadata { get; set; }
+
             /// <summary>
             /// <para>The time when the service version was published.</para>
             /// 
