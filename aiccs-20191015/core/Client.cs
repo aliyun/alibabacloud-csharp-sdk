@@ -15266,9 +15266,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             {
                 query["PromptParam"] = request.PromptParamShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionTimeout))
+            {
+                query["SessionTimeout"] = request.SessionTimeout;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartWordParamShrink))
             {
                 query["StartWordParam"] = request.StartWordParamShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TtsSpeed))
+            {
+                query["TtsSpeed"] = request.TtsSpeed;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TtsVoiceCode))
+            {
+                query["TtsVoiceCode"] = request.TtsVoiceCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TtsVolume))
+            {
+                query["TtsVolume"] = request.TtsVolume;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -15350,9 +15366,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             {
                 query["PromptParam"] = request.PromptParamShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionTimeout))
+            {
+                query["SessionTimeout"] = request.SessionTimeout;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartWordParamShrink))
             {
                 query["StartWordParam"] = request.StartWordParamShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TtsSpeed))
+            {
+                query["TtsSpeed"] = request.TtsSpeed;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TtsVoiceCode))
+            {
+                query["TtsVoiceCode"] = request.TtsVoiceCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TtsVolume))
+            {
+                query["TtsVolume"] = request.TtsVolume;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

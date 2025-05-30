@@ -57,9 +57,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public string PromptParamShrink { get; set; }
 
+        [NameInMap("SessionTimeout")]
+        [Validation(Required=false)]
+        public int? SessionTimeout { get; set; }
+
         [NameInMap("StartWordParam")]
         [Validation(Required=false)]
         public string StartWordParamShrink { get; set; }
+
+        [NameInMap("TtsSpeed")]
+        [Validation(Required=false)]
+        public int? TtsSpeed { get; set; }
+
+        [NameInMap("TtsVoiceCode")]
+        [Validation(Required=false)]
+        public string TtsVoiceCode { get; set; }
+
+        [NameInMap("TtsVolume")]
+        [Validation(Required=false)]
+        public int? TtsVolume { get; set; }
 
     }
 
