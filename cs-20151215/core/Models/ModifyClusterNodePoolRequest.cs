@@ -291,6 +291,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public ModifyClusterNodePoolRequestManagementAutoRepairPolicy AutoRepairPolicy { get; set; }
             public class ModifyClusterNodePoolRequestManagementAutoRepairPolicy : TeaModel {
+                [NameInMap("approval_required")]
+                [Validation(Required=false)]
+                public bool? ApprovalRequired { get; set; }
+
                 /// <summary>
                 /// <para>Specifies whether ACK is allowed to automatically restart nodes after repairing the nodes. Valid values:</para>
                 /// <list type="bullet">

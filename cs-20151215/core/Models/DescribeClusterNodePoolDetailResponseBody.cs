@@ -363,6 +363,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public DescribeClusterNodePoolDetailResponseBodyManagementAutoRepairPolicy AutoRepairPolicy { get; set; }
             public class DescribeClusterNodePoolDetailResponseBodyManagementAutoRepairPolicy : TeaModel {
+                [NameInMap("approval_required")]
+                [Validation(Required=false)]
+                public bool? ApprovalRequired { get; set; }
+
                 /// <summary>
                 /// <para>Whether to allow restarting nodes.</para>
                 /// 
