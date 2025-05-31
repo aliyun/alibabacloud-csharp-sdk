@@ -26,6 +26,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string AppInstanceGroupId { get; set; }
 
+            [NameInMap("AppInstanceId")]
+            [Validation(Required=false)]
+            public string AppInstanceId { get; set; }
+
+            [NameInMap("ErrorCode")]
+            [Validation(Required=false)]
+            public string ErrorCode { get; set; }
+
             /// <summary>
             /// <para>The ID of the cloud phone instance.</para>
             /// 
@@ -35,6 +43,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
+
+            [NameInMap("PersistentAppInstanceId")]
+            [Validation(Required=false)]
+            public string PersistentAppInstanceId { get; set; }
 
             /// <summary>
             /// <para>The ID of the task.</para>

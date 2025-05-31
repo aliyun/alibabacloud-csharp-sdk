@@ -9186,6 +9186,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["SaleMode"] = request.SaleMode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SettingResetType))
+            {
+                query["SettingResetType"] = request.SettingResetType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -9236,6 +9240,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaleMode))
             {
                 query["SaleMode"] = request.SaleMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SettingResetType))
+            {
+                query["SettingResetType"] = request.SettingResetType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

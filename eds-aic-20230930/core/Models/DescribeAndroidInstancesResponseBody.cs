@@ -431,6 +431,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
             }
 
+            [NameInMap("VSwitchId")]
+            [Validation(Required=false)]
+            public string VSwitchId { get; set; }
+
+            [NameInMap("ZoneId")]
+            [Validation(Required=false)]
+            public string ZoneId { get; set; }
+
         }
 
         /// <summary>

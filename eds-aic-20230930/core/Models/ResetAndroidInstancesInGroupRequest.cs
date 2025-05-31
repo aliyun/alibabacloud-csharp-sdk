@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string SaleMode { get; set; }
 
+        [NameInMap("SettingResetType")]
+        [Validation(Required=false)]
+        public int? SettingResetType { get; set; }
+
     }
 
 }

@@ -114,6 +114,20 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string NetworkId { get; set; }
 
+            [NameInMap("NetworkInfos")]
+            [Validation(Required=false)]
+            public List<DescribeCloudPhoneNodesResponseBodyNodeModelNetworkInfos> NetworkInfos { get; set; }
+            public class DescribeCloudPhoneNodesResponseBodyNodeModelNetworkInfos : TeaModel {
+                [NameInMap("NetworkId")]
+                [Validation(Required=false)]
+                public string NetworkId { get; set; }
+
+                [NameInMap("VSwitchId")]
+                [Validation(Required=false)]
+                public string VSwitchId { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The matrix ID.</para>
             /// 
