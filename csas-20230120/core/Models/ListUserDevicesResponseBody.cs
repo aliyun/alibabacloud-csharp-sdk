@@ -149,6 +149,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public string Mac { get; set; }
 
+            [NameInMap("MatchDeviceGroupIds")]
+            [Validation(Required=false)]
+            public List<string> MatchDeviceGroupIds { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>16</para>

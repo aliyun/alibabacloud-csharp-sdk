@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public string DeviceBelong { get; set; }
 
+        [NameInMap("DeviceGroupId")]
+        [Validation(Required=false)]
+        public string DeviceGroupId { get; set; }
+
         [NameInMap("DeviceStatuses")]
         [Validation(Required=false)]
         public List<string> DeviceStatuses { get; set; }

@@ -855,6 +855,190 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建加速策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateEnterpriseAcceleratePolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEnterpriseAcceleratePolicyResponse
+        /// </returns>
+        public CreateEnterpriseAcceleratePolicyResponse CreateEnterpriseAcceleratePolicyWithOptions(CreateEnterpriseAcceleratePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccelerationType))
+            {
+                body["AccelerationType"] = request.AccelerationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            {
+                body["Priority"] = request.Priority;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowInClient))
+            {
+                body["ShowInClient"] = request.ShowInClient;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpstreamHost))
+            {
+                body["UpstreamHost"] = request.UpstreamHost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpstreamPort))
+            {
+                body["UpstreamPort"] = request.UpstreamPort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpstreamType))
+            {
+                body["UpstreamType"] = request.UpstreamType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserAttributeGroup))
+            {
+                body["UserAttributeGroup"] = request.UserAttributeGroup;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateEnterpriseAcceleratePolicy",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateEnterpriseAcceleratePolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建加速策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateEnterpriseAcceleratePolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEnterpriseAcceleratePolicyResponse
+        /// </returns>
+        public async Task<CreateEnterpriseAcceleratePolicyResponse> CreateEnterpriseAcceleratePolicyWithOptionsAsync(CreateEnterpriseAcceleratePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccelerationType))
+            {
+                body["AccelerationType"] = request.AccelerationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            {
+                body["Priority"] = request.Priority;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowInClient))
+            {
+                body["ShowInClient"] = request.ShowInClient;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpstreamHost))
+            {
+                body["UpstreamHost"] = request.UpstreamHost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpstreamPort))
+            {
+                body["UpstreamPort"] = request.UpstreamPort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpstreamType))
+            {
+                body["UpstreamType"] = request.UpstreamType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserAttributeGroup))
+            {
+                body["UserAttributeGroup"] = request.UserAttributeGroup;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateEnterpriseAcceleratePolicy",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateEnterpriseAcceleratePolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建加速策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateEnterpriseAcceleratePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEnterpriseAcceleratePolicyResponse
+        /// </returns>
+        public CreateEnterpriseAcceleratePolicyResponse CreateEnterpriseAcceleratePolicy(CreateEnterpriseAcceleratePolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateEnterpriseAcceleratePolicyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建加速策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateEnterpriseAcceleratePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEnterpriseAcceleratePolicyResponse
+        /// </returns>
+        public async Task<CreateEnterpriseAcceleratePolicyResponse> CreateEnterpriseAcceleratePolicyAsync(CreateEnterpriseAcceleratePolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateEnterpriseAcceleratePolicyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>创建自定义身份源部门</para>
         /// </summary>
         /// 
@@ -983,8 +1167,13 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建内网访问应用</para>
+        /// <para>Creates an office application within the current Alibaba Cloud account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>By default, you can create a maximum of 500 office applications.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreatePrivateAccessApplicationRequest
@@ -1077,8 +1266,13 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建内网访问应用</para>
+        /// <para>Creates an office application within the current Alibaba Cloud account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>By default, you can create a maximum of 500 office applications.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreatePrivateAccessApplicationRequest
@@ -1171,8 +1365,13 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建内网访问应用</para>
+        /// <para>Creates an office application within the current Alibaba Cloud account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>By default, you can create a maximum of 500 office applications.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreatePrivateAccessApplicationRequest
@@ -1189,8 +1388,13 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建内网访问应用</para>
+        /// <para>Creates an office application within the current Alibaba Cloud account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>By default, you can create a maximum of 500 office applications.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreatePrivateAccessApplicationRequest
@@ -2359,7 +2563,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建文件水印提取任务</para>
+        /// <para>Creates a digital watermark extraction task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2437,7 +2641,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建文件水印提取任务</para>
+        /// <para>Creates a digital watermark extraction task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2515,7 +2719,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建文件水印提取任务</para>
+        /// <para>Creates a digital watermark extraction task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2533,7 +2737,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建文件水印提取任务</para>
+        /// <para>Creates a digital watermark extraction task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3183,6 +3387,126 @@ namespace AlibabaCloud.SDK.Csas20230120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteIdpDepartmentWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DeleteOtpConfig</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteOtpConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteOtpConfigResponse
+        /// </returns>
+        public DeleteOtpConfigResponse DeleteOtpConfigWithOptions(DeleteOtpConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Username))
+            {
+                body["Username"] = request.Username;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteOtpConfig",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteOtpConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DeleteOtpConfig</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteOtpConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteOtpConfigResponse
+        /// </returns>
+        public async Task<DeleteOtpConfigResponse> DeleteOtpConfigWithOptionsAsync(DeleteOtpConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Username))
+            {
+                body["Username"] = request.Username;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteOtpConfig",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteOtpConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DeleteOtpConfig</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteOtpConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteOtpConfigResponse
+        /// </returns>
+        public DeleteOtpConfigResponse DeleteOtpConfig(DeleteOtpConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteOtpConfigWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DeleteOtpConfig</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteOtpConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteOtpConfigResponse
+        /// </returns>
+        public async Task<DeleteOtpConfigResponse> DeleteOtpConfigAsync(DeleteOtpConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteOtpConfigWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5311,7 +5635,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询内网访问应用详情</para>
+        /// <para>Queries the details of the office applications that belong to the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5349,7 +5673,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询内网访问应用详情</para>
+        /// <para>Queries the details of the office applications that belong to the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5387,7 +5711,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询内网访问应用详情</para>
+        /// <para>Queries the details of the office applications that belong to the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5405,7 +5729,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询内网访问应用详情</para>
+        /// <para>Queries the details of the office applications that belong to the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12201,7 +12525,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改内网访问应用</para>
+        /// <para>Modifies the office applications of the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12299,7 +12623,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改内网访问应用</para>
+        /// <para>Modifies the office applications of the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12397,7 +12721,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改内网访问应用</para>
+        /// <para>Modifies the office applications of the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12415,7 +12739,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改内网访问应用</para>
+        /// <para>Modifies the office applications of the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">

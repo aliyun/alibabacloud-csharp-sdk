@@ -8,12 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Csas20230120.Models
 {
-    public class UpdatePrivateAccessApplicationResponseBody : TeaModel {
+    public class CreateEnterpriseAcceleratePolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>FD724DBC-CD76-5235-BF76-59C51B73296D</para>
+        /// <para>2CABFEBB-0CE7-575E-833A-266F75D46713</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

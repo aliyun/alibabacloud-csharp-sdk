@@ -8,12 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Csas20230120.Models
 {
-    public class UpdatePrivateAccessApplicationResponseBody : TeaModel {
+    public class DeleteOtpConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>FD724DBC-CD76-5235-BF76-59C51B73296D</para>
+        /// <para>54A4055A-343D-583E-9EAC-D12231148A68</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
