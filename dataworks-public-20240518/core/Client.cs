@@ -5174,7 +5174,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>支持用户指定自己的文件（比如jar，py，arhive，file等）创建数据开发资源文件</para>
+        /// <para>Creates a resource file in DataStudio. The following types are supported: JAR, Archive, File, and Python.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5260,7 +5260,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>支持用户指定自己的文件（比如jar，py，arhive，file等）创建数据开发资源文件</para>
+        /// <para>Creates a resource file in DataStudio. The following types are supported: JAR, Archive, File, and Python.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5346,7 +5346,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>支持用户指定自己的文件（比如jar，py，arhive，file等）创建数据开发资源文件</para>
+        /// <para>Creates a resource file in DataStudio. The following types are supported: JAR, Archive, File, and Python.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5364,7 +5364,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>支持用户指定自己的文件（比如jar，py，arhive，file等）创建数据开发资源文件</para>
+        /// <para>Creates a resource file in DataStudio. The following types are supported: JAR, Archive, File, and Python.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12944,6 +12944,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             return await GetDeploymentPackageWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a file.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetFileRequest
         /// </param>
@@ -12993,6 +12998,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             return TeaModel.ToObject<GetFileResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a file.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetFileRequest
         /// </param>
@@ -13042,6 +13052,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             return TeaModel.ToObject<GetFileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a file.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetFileRequest
         /// </param>
@@ -13055,6 +13070,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             return GetFileWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a file.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetFileRequest
         /// </param>
@@ -13068,6 +13088,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             return await GetFileWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a file version.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetFileVersionRequest
         /// </param>
@@ -13117,6 +13142,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             return TeaModel.ToObject<GetFileVersionResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a file version.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetFileVersionRequest
         /// </param>
@@ -13166,6 +13196,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             return TeaModel.ToObject<GetFileVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a file version.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetFileVersionRequest
         /// </param>
@@ -13179,6 +13214,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             return GetFileVersionWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a file version.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetFileVersionRequest
         /// </param>
@@ -13430,7 +13470,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取扩展点触发时的数据快照</para>
+        /// <para>Queries the data snapshot of an extension point based on the ID of a message in DataWorks OpenEvent when the related extension point event is triggered.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13476,7 +13516,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取扩展点触发时的数据快照</para>
+        /// <para>Queries the data snapshot of an extension point based on the ID of a message in DataWorks OpenEvent when the related extension point event is triggered.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13522,7 +13562,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取扩展点触发时的数据快照</para>
+        /// <para>Queries the data snapshot of an extension point based on the ID of a message in DataWorks OpenEvent when the related extension point event is triggered.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13540,7 +13580,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取扩展点触发时的数据快照</para>
+        /// <para>Queries the data snapshot of an extension point based on the ID of a message in DataWorks OpenEvent when the related extension point event is triggered.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19572,7 +19612,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取待发布的文件版本列表</para>
+        /// <para>Queries a list of versions of files to be deployed.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -19664,7 +19704,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取待发布的文件版本列表</para>
+        /// <para>Queries a list of versions of files to be deployed.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -19756,7 +19796,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取待发布的文件版本列表</para>
+        /// <para>Queries a list of versions of files to be deployed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19774,7 +19814,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取待发布的文件版本列表</para>
+        /// <para>Queries a list of versions of files to be deployed.</para>
         /// </summary>
         /// 
         /// <param name="request">

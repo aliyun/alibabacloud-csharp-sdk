@@ -9,15 +9,28 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListDeploymentPackageFilesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The pagination information.</para>
+        /// </summary>
         [NameInMap("PagingInfo")]
         [Validation(Required=false)]
         public ListDeploymentPackageFilesResponseBodyPagingInfo PagingInfo { get; set; }
         public class ListDeploymentPackageFilesResponseBodyPagingInfo : TeaModel {
+            /// <summary>
+            /// <para>The details of the versions of the files to be deployed.</para>
+            /// </summary>
             [NameInMap("DeploymentPackageFiles")]
             [Validation(Required=false)]
             public List<ListDeploymentPackageFilesResponseBodyPagingInfoDeploymentPackageFiles> DeploymentPackageFiles { get; set; }
             public class ListDeploymentPackageFilesResponseBodyPagingInfoDeploymentPackageFiles : TeaModel {
                 /// <summary>
+                /// <para>The change type, which is an integer. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>0: addition</description></item>
+                /// <item><description>1: update</description></item>
+                /// <item><description>2: deletion</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -25,11 +38,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 [Validation(Required=false)]
                 public int? ChangeType { get; set; }
 
+                /// <summary>
+                /// <para>The comment for committing.</para>
+                /// </summary>
                 [NameInMap("Comment")]
                 [Validation(Required=false)]
                 public string Comment { get; set; }
 
                 /// <summary>
+                /// <para>The time for committing.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2025-04-10 15:55:47</para>
                 /// </summary>
@@ -38,6 +56,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string CommitTime { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the Alibaba Cloud account used by the user who committed the file.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>446***</para>
                 /// </summary>
@@ -46,6 +66,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string CommitUser { get; set; }
 
                 /// <summary>
+                /// <para>The name of the Alibaba Cloud account used by the user who committed the file.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>user***</para>
                 /// </summary>
@@ -54,6 +76,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string CommitUserName { get; set; }
 
                 /// <summary>
+                /// <para>The file ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>520246913</para>
                 /// </summary>
@@ -62,6 +86,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? FileId { get; set; }
 
                 /// <summary>
+                /// <para>The name of the file of the current version.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>bak_part_basc_person_relation_all_da</para>
                 /// </summary>
@@ -70,6 +96,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string FileName { get; set; }
 
                 /// <summary>
+                /// <para>The file type. The code for files varies based on the file type. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks nodes</a>.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>13</para>
                 /// </summary>
@@ -78,6 +106,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public int? FileType { get; set; }
 
                 /// <summary>
+                /// <para>The file version.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>34</para>
                 /// </summary>
@@ -86,6 +116,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? FileVersion { get; set; }
 
                 /// <summary>
+                /// <para>The unique ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>650433503</para>
                 /// </summary>
@@ -94,6 +126,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? Id { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether the version is a version in the production environment of the scheduling system.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
                 /// </summary>
@@ -102,6 +136,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public bool? IsSameAsProductionVersion { get; set; }
 
                 /// <summary>
+                /// <para>The scheduling property configurations of the node that corresponds to the file, which is a JSON string.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>{
                 ///     &quot;tagList&quot;: [],
@@ -156,6 +192,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string NodeConfiguration { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the auto triggered node that corresponds to the file.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>700005008419</para>
                 /// </summary>
@@ -164,6 +202,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? NodeId { get; set; }
 
                 /// <summary>
+                /// <para>The workspace ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>27595</para>
                 /// </summary>
@@ -171,11 +211,26 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 [Validation(Required=false)]
                 public long? ProjectId { get; set; }
 
+                /// <summary>
+                /// <para>The test status in the development environment.</para>
+                /// </summary>
                 [NameInMap("SmokeTestStatus")]
                 [Validation(Required=false)]
                 public string SmokeTestStatus { get; set; }
 
                 /// <summary>
+                /// <para>The status of the code for the file of the current version. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>10: committing</description></item>
+                /// <item><description>11: committed to the development environment of the scheduling system</description></item>
+                /// <item><description>20: review passed</description></item>
+                /// <item><description>21: review failed</description></item>
+                /// <item><description>80: deployment package creation succeeded</description></item>
+                /// <item><description>100: deploying</description></item>
+                /// <item><description>101: deployed to the production environment</description></item>
+                /// <item><description>200: cancelled</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
                 /// </summary>
@@ -184,6 +239,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public int? Status { get; set; }
 
                 /// <summary>
+                /// <para>The DataWorks tenant ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>639415964191360</para>
                 /// </summary>
@@ -192,6 +249,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? TenantId { get; set; }
 
                 /// <summary>
+                /// <para>The module to which the file belongs. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>NORMAL: The file is used for DataStudio.</description></item>
+                /// <item><description>MANUAL: The file is used for a manually triggered node.</description></item>
+                /// <item><description>MANUAL_BIZ: The file is used for a manually triggered workflow.</description></item>
+                /// <item><description>SKIP: The file is used for a dry-run node in DataStudio.</description></item>
+                /// <item><description>ADHOCQUERY: The file is used for an ad hoc query.</description></item>
+                /// <item><description>COMPONENT: The file is used for a script template.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>NORMAL</para>
                 /// </summary>
@@ -202,6 +269,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
+            /// <para>The page number. Pages start from page 1.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -210,6 +279,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
+            /// <para>The number of entries per page. Default value: 10.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -218,6 +289,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
+            /// <para>The total number of entries returned.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -228,6 +301,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-EFG****</para>
         /// </summary>
