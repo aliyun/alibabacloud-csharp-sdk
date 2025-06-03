@@ -167,6 +167,18 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string HttpsForceCode { get; set; }
 
+        [NameInMap("HttpsNoSniDeny")]
+        [Validation(Required=false)]
+        public string HttpsNoSniDeny { get; set; }
+
+        [NameInMap("HttpsSniVerify")]
+        [Validation(Required=false)]
+        public string HttpsSniVerify { get; set; }
+
+        [NameInMap("HttpsSniWhitelist")]
+        [Validation(Required=false)]
+        public string HttpsSniWhitelist { get; set; }
+
         /// <summary>
         /// <para>Request ID.</para>
         /// 

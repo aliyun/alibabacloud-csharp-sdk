@@ -42,6 +42,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string Objects { get; set; }
 
+        [NameInMap("SiteIds")]
+        [Validation(Required=false)]
+        public string SiteIds { get; set; }
+
         /// <summary>
         /// <para>The time when the policy takes effect.</para>
         /// <para>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>

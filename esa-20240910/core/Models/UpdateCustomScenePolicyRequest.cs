@@ -34,7 +34,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>The IDs of the websites that you want to associate with the policy. Separate multiple IDs with commas (,).</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456****</para>
@@ -53,6 +52,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [NameInMap("PolicyId")]
         [Validation(Required=false)]
         public long? PolicyId { get; set; }
+
+        [NameInMap("SiteIds")]
+        [Validation(Required=false)]
+        public string SiteIds { get; set; }
 
         /// <summary>
         /// <para>The time when the policy takes effect.</para>
