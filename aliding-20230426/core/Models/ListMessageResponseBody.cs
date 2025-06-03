@@ -9,26 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class ListMessageResponseBody : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>[]</para>
-        /// </summary>
-        [NameInMap("data")]
+        [NameInMap("messages")]
         [Validation(Required=false)]
-        public List<ListMessageResponseBodyData> Data { get; set; }
-        public class ListMessageResponseBodyData : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>[]</para>
-            /// </summary>
+        public List<ListMessageResponseBodyMessages> Messages { get; set; }
+        public class ListMessageResponseBodyMessages : TeaModel {
             [NameInMap("content")]
             [Validation(Required=false)]
-            public List<ListMessageResponseBodyDataContent> Content { get; set; }
-            public class ListMessageResponseBodyDataContent : TeaModel {
+            public ListMessageResponseBodyMessagesContent Content { get; set; }
+            public class ListMessageResponseBodyMessagesContent : TeaModel {
                 [NameInMap("cardCallback")]
                 [Validation(Required=false)]
-                public ListMessageResponseBodyDataContentCardCallback CardCallback { get; set; }
-                public class ListMessageResponseBodyDataContentCardCallback : TeaModel {
+                public ListMessageResponseBodyMessagesContentCardCallback CardCallback { get; set; }
+                public class ListMessageResponseBodyMessagesContentCardCallback : TeaModel {
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>{}</para>
@@ -39,34 +31,18 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
                     /// <summary>
                     /// <b>Example:</b>
-                    /// <para>templateId123</para>
+                    /// <para>aliding_messageId123</para>
                     /// </summary>
-                    [NameInMap("templateId")]
+                    [NameInMap("relatedMessageId")]
                     [Validation(Required=false)]
-                    public string TemplateId { get; set; }
-
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>012345</para>
-                    /// </summary>
-                    [NameInMap("userId")]
-                    [Validation(Required=false)]
-                    public string UserId { get; set; }
+                    public string RelatedMessageId { get; set; }
 
                 }
 
                 [NameInMap("dingCard")]
                 [Validation(Required=false)]
-                public ListMessageResponseBodyDataContentDingCard DingCard { get; set; }
-                public class ListMessageResponseBodyDataContentDingCard : TeaModel {
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>卡片描述</para>
-                    /// </summary>
-                    [NameInMap("cardDesc")]
-                    [Validation(Required=false)]
-                    public string CardDesc { get; set; }
-
+                public ListMessageResponseBodyMessagesContentDingCard DingCard { get; set; }
+                public class ListMessageResponseBodyMessagesContentDingCard : TeaModel {
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>{}</para>
@@ -76,6 +52,8 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
                     public string Content { get; set; }
 
                     /// <summary>
+                    /// <para>This parameter is required.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>basic_card_schema</para>
                     /// </summary>
@@ -101,36 +79,140 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
                 }
 
-                [NameInMap("imageUrl")]
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>{}</para>
+                /// </summary>
+                [NameInMap("dingNormalCard")]
                 [Validation(Required=false)]
-                public ListMessageResponseBodyDataContentImageUrl ImageUrl { get; set; }
-                public class ListMessageResponseBodyDataContentImageUrl : TeaModel {
+                public ListMessageResponseBodyMessagesContentDingNormalCard DingNormalCard { get; set; }
+                public class ListMessageResponseBodyMessagesContentDingNormalCard : TeaModel {
                     /// <summary>
                     /// <b>Example:</b>
-                    /// <para>auto</para>
+                    /// <para>{}</para>
                     /// </summary>
-                    [NameInMap("detail")]
+                    [NameInMap("cardData")]
                     [Validation(Required=false)]
-                    public string Detail { get; set; }
+                    public ListMessageResponseBodyMessagesContentDingNormalCardCardData CardData { get; set; }
+                    public class ListMessageResponseBodyMessagesContentDingNormalCardCardData : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>{}</para>
+                        /// </summary>
+                        [NameInMap("cardParamMap")]
+                        [Validation(Required=false)]
+                        public Dictionary<string, object> CardParamMap { get; set; }
 
-                    [NameInMap("imageDesc")]
-                    [Validation(Required=false)]
-                    public string ImageDesc { get; set; }
+                    }
 
                     /// <summary>
                     /// <b>Example:</b>
-                    /// <para><a href="https://img.alicdn.com/1234.png">https://img.alicdn.com/1234.png</a></para>
+                    /// <para>templateId1</para>
                     /// </summary>
-                    [NameInMap("url")]
+                    [NameInMap("cardTemplateId")]
                     [Validation(Required=false)]
-                    public string Url { get; set; }
+                    public string CardTemplateId { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>{}</para>
+                    /// </summary>
+                    [NameInMap("cardUpdateOptions")]
+                    [Validation(Required=false)]
+                    public ListMessageResponseBodyMessagesContentDingNormalCardCardUpdateOptions CardUpdateOptions { get; set; }
+                    public class ListMessageResponseBodyMessagesContentDingNormalCardCardUpdateOptions : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>{}</para>
+                        /// </summary>
+                        [NameInMap("updateCardDataByKey")]
+                        [Validation(Required=false)]
+                        public bool? UpdateCardDataByKey { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>{}</para>
+                        /// </summary>
+                        [NameInMap("updatePrivateDataByKey")]
+                        [Validation(Required=false)]
+                        public bool? UpdatePrivateDataByKey { get; set; }
+
+                    }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>{}</para>
+                    /// </summary>
+                    [NameInMap("dynamicDataSourceConfigs")]
+                    [Validation(Required=false)]
+                    public List<ListMessageResponseBodyMessagesContentDingNormalCardDynamicDataSourceConfigs> DynamicDataSourceConfigs { get; set; }
+                    public class ListMessageResponseBodyMessagesContentDingNormalCardDynamicDataSourceConfigs : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>{}</para>
+                        /// </summary>
+                        [NameInMap("constParams")]
+                        [Validation(Required=false)]
+                        public Dictionary<string, object> ConstParams { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>dynamicDataSourceId1</para>
+                        /// </summary>
+                        [NameInMap("dynamicDataSourceId")]
+                        [Validation(Required=false)]
+                        public string DynamicDataSourceId { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>{}</para>
+                        /// </summary>
+                        [NameInMap("pullConfig")]
+                        [Validation(Required=false)]
+                        public ListMessageResponseBodyMessagesContentDingNormalCardDynamicDataSourceConfigsPullConfig PullConfig { get; set; }
+                        public class ListMessageResponseBodyMessagesContentDingNormalCardDynamicDataSourceConfigsPullConfig : TeaModel {
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>3</para>
+                            /// </summary>
+                            [NameInMap("interval")]
+                            [Validation(Required=false)]
+                            public int? Interval { get; set; }
+
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>NONE</para>
+                            /// </summary>
+                            [NameInMap("pullStrategy")]
+                            [Validation(Required=false)]
+                            public string PullStrategy { get; set; }
+
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>SECONDS</para>
+                            /// </summary>
+                            [NameInMap("timeUnit")]
+                            [Validation(Required=false)]
+                            public string TimeUnit { get; set; }
+
+                        }
+
+                    }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>{}</para>
+                    /// </summary>
+                    [NameInMap("privateData")]
+                    [Validation(Required=false)]
+                    public Dictionary<string, Dictionary<string, object>> PrivateData { get; set; }
 
                 }
 
                 [NameInMap("markdown")]
                 [Validation(Required=false)]
-                public ListMessageResponseBodyDataContentMarkdown Markdown { get; set; }
-                public class ListMessageResponseBodyDataContentMarkdown : TeaModel {
+                public ListMessageResponseBodyMessagesContentMarkdown Markdown { get; set; }
+                public class ListMessageResponseBodyMessagesContentMarkdown : TeaModel {
                     /// <summary>
                     /// <b>Example:</b>
                     /// <ol>
@@ -144,10 +226,202 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
                 }
 
+                [NameInMap("structView")]
+                [Validation(Required=false)]
+                public ListMessageResponseBodyMessagesContentStructView StructView { get; set; }
+                public class ListMessageResponseBodyMessagesContentStructView : TeaModel {
+                    [NameInMap("parts")]
+                    [Validation(Required=false)]
+                    public List<ListMessageResponseBodyMessagesContentStructViewParts> Parts { get; set; }
+                    public class ListMessageResponseBodyMessagesContentStructViewParts : TeaModel {
+                        [NameInMap("append")]
+                        [Validation(Required=false)]
+                        public bool? Append { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>{}</para>
+                        /// </summary>
+                        [NameInMap("dataPart")]
+                        [Validation(Required=false)]
+                        public ListMessageResponseBodyMessagesContentStructViewPartsDataPart DataPart { get; set; }
+                        public class ListMessageResponseBodyMessagesContentStructViewPartsDataPart : TeaModel {
+                            [NameInMap("data")]
+                            [Validation(Required=false)]
+                            public object Data { get; set; }
+
+                        }
+
+                        [NameInMap("finish")]
+                        [Validation(Required=false)]
+                        public bool? Finish { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>这是正文内容部分</para>
+                        /// </summary>
+                        [NameInMap("partDesc")]
+                        [Validation(Required=false)]
+                        public string PartDesc { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>artifactId123</para>
+                        /// </summary>
+                        [NameInMap("partId")]
+                        [Validation(Required=false)]
+                        public string PartId { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>{}</para>
+                        /// </summary>
+                        [NameInMap("reasonPart")]
+                        [Validation(Required=false)]
+                        public ListMessageResponseBodyMessagesContentStructViewPartsReasonPart ReasonPart { get; set; }
+                        public class ListMessageResponseBodyMessagesContentStructViewPartsReasonPart : TeaModel {
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>123123</para>
+                            /// </summary>
+                            [NameInMap("reason")]
+                            [Validation(Required=false)]
+                            public string Reason { get; set; }
+
+                        }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>{}</para>
+                        /// </summary>
+                        [NameInMap("recommendPart")]
+                        [Validation(Required=false)]
+                        public ListMessageResponseBodyMessagesContentStructViewPartsRecommendPart RecommendPart { get; set; }
+                        public class ListMessageResponseBodyMessagesContentStructViewPartsRecommendPart : TeaModel {
+                            [NameInMap("recommends")]
+                            [Validation(Required=false)]
+                            public List<ListMessageResponseBodyMessagesContentStructViewPartsRecommendPartRecommends> Recommends { get; set; }
+                            public class ListMessageResponseBodyMessagesContentStructViewPartsRecommendPartRecommends : TeaModel {
+                                [NameInMap("mobileUrl")]
+                                [Validation(Required=false)]
+                                public string MobileUrl { get; set; }
+
+                                [NameInMap("text")]
+                                [Validation(Required=false)]
+                                public string Text { get; set; }
+
+                                [NameInMap("url")]
+                                [Validation(Required=false)]
+                                public string Url { get; set; }
+
+                            }
+
+                        }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>{}</para>
+                        /// </summary>
+                        [NameInMap("referencePart")]
+                        [Validation(Required=false)]
+                        public ListMessageResponseBodyMessagesContentStructViewPartsReferencePart ReferencePart { get; set; }
+                        public class ListMessageResponseBodyMessagesContentStructViewPartsReferencePart : TeaModel {
+                            [NameInMap("references")]
+                            [Validation(Required=false)]
+                            public List<ListMessageResponseBodyMessagesContentStructViewPartsReferencePartReferences> References { get; set; }
+                            public class ListMessageResponseBodyMessagesContentStructViewPartsReferencePartReferences : TeaModel {
+                                /// <summary>
+                                /// <b>Example:</b>
+                                /// <para>0</para>
+                                /// </summary>
+                                [NameInMap("index")]
+                                [Validation(Required=false)]
+                                public string Index { get; set; }
+
+                                /// <summary>
+                                /// <b>Example:</b>
+                                /// <para>mcp是....</para>
+                                /// </summary>
+                                [NameInMap("name")]
+                                [Validation(Required=false)]
+                                public string Name { get; set; }
+
+                                /// <summary>
+                                /// <b>Example:</b>
+                                /// <para>ata</para>
+                                /// </summary>
+                                [NameInMap("sourceCode")]
+                                [Validation(Required=false)]
+                                public string SourceCode { get; set; }
+
+                                [NameInMap("sourceIcon")]
+                                [Validation(Required=false)]
+                                public string SourceIcon { get; set; }
+
+                                /// <summary>
+                                /// <b>Example:</b>
+                                /// <para>摘要</para>
+                                /// </summary>
+                                [NameInMap("summary")]
+                                [Validation(Required=false)]
+                                public string Summary { get; set; }
+
+                                /// <summary>
+                                /// <b>Example:</b>
+                                /// <para>《mcp原理介绍》</para>
+                                /// </summary>
+                                [NameInMap("title")]
+                                [Validation(Required=false)]
+                                public string Title { get; set; }
+
+                                /// <summary>
+                                /// <b>Example:</b>
+                                /// <para><a href="https://taobao.com">https://taobao.com</a></para>
+                                /// </summary>
+                                [NameInMap("url")]
+                                [Validation(Required=false)]
+                                public string Url { get; set; }
+
+                            }
+
+                        }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>{}</para>
+                        /// </summary>
+                        [NameInMap("textPart")]
+                        [Validation(Required=false)]
+                        public ListMessageResponseBodyMessagesContentStructViewPartsTextPart TextPart { get; set; }
+                        public class ListMessageResponseBodyMessagesContentStructViewPartsTextPart : TeaModel {
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>123123</para>
+                            /// </summary>
+                            [NameInMap("text")]
+                            [Validation(Required=false)]
+                            public string Text { get; set; }
+
+                        }
+
+                        /// <summary>
+                        /// <para>This parameter is required.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>textPart</para>
+                        /// </summary>
+                        [NameInMap("type")]
+                        [Validation(Required=false)]
+                        public string Type { get; set; }
+
+                    }
+
+                }
+
                 [NameInMap("text")]
                 [Validation(Required=false)]
-                public ListMessageResponseBodyDataContentText Text { get; set; }
-                public class ListMessageResponseBodyDataContentText : TeaModel {
+                public ListMessageResponseBodyMessagesContentText Text { get; set; }
+                public class ListMessageResponseBodyMessagesContentText : TeaModel {
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>你好！</para>
@@ -159,14 +433,24 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
                 }
 
                 /// <summary>
+                /// <para>This parameter is required.</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>text</para>
+                /// <para>枚举字段，可为：text,markdown,cardCallback,dingCard,agentArtifact,dingNormalCard</para>
                 /// </summary>
                 [NameInMap("type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
             }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>这是一张小猫钓鱼图</para>
+            /// </summary>
+            [NameInMap("contentDesc")]
+            [Validation(Required=false)]
+            public string ContentDesc { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
@@ -178,27 +462,11 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>messageId123</para>
+            /// <para>messageId1</para>
             /// </summary>
             [NameInMap("id")]
             [Validation(Required=false)]
             public string Id { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>{}</para>
-            /// </summary>
-            [NameInMap("metadata")]
-            [Validation(Required=false)]
-            public Dictionary<string, object> Metadata { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>thread.message</para>
-            /// </summary>
-            [NameInMap("object")]
-            [Validation(Required=false)]
-            public string Object { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
@@ -210,7 +478,7 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>runId123</para>
+            /// <para>runId1</para>
             /// </summary>
             [NameInMap("runId")]
             [Validation(Required=false)]
@@ -218,21 +486,13 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>threadId123</para>
+            /// <para>threadId1</para>
             /// </summary>
             [NameInMap("threadId")]
             [Validation(Required=false)]
             public string ThreadId { get; set; }
 
         }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>list</para>
-        /// </summary>
-        [NameInMap("object")]
-        [Validation(Required=false)]
-        public string Object { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

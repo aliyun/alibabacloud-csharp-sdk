@@ -36,14 +36,20 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         public string RunId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>threadId123</para>
+        /// <para>agentKey1</para>
         /// </summary>
-        [NameInMap("threadId")]
+        [NameInMap("sourceIdOfOriginalAssistantId")]
         [Validation(Required=false)]
-        public string ThreadId { get; set; }
+        public string SourceIdOfOriginalAssistantId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("sourceTypeOfOriginalAssistantId")]
+        [Validation(Required=false)]
+        public string SourceTypeOfOriginalAssistantId { get; set; }
 
     }
 

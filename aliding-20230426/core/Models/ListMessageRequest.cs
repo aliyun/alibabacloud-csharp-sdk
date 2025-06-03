@@ -37,11 +37,11 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>assistantId</para>
+        /// <para>assistantId2</para>
         /// </summary>
-        [NameInMap("originalAssistantid")]
+        [NameInMap("originalAssistantId")]
         [Validation(Required=false)]
-        public string OriginalAssistantid { get; set; }
+        public string OriginalAssistantId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -50,6 +50,22 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [NameInMap("runId")]
         [Validation(Required=false)]
         public string RunId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>agentKey1</para>
+        /// </summary>
+        [NameInMap("sourceIdOfOriginalAssistantId")]
+        [Validation(Required=false)]
+        public string SourceIdOfOriginalAssistantId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("sourceTypeOfOriginalAssistantId")]
+        [Validation(Required=false)]
+        public string SourceTypeOfOriginalAssistantId { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

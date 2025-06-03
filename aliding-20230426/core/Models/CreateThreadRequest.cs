@@ -21,19 +21,23 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>{}</para>
-        /// </summary>
-        [NameInMap("metadata")]
-        [Validation(Required=false)]
-        public Dictionary<string, object> Metadata { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
         /// <para>assistantId</para>
         /// </summary>
         [NameInMap("originalAssistantId")]
         [Validation(Required=false)]
         public string OriginalAssistantId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>agentKey1</para>
+        /// </summary>
+        [NameInMap("sourceIdOfOriginalAssistantId")]
+        [Validation(Required=false)]
+        public string SourceIdOfOriginalAssistantId { get; set; }
+
+        [NameInMap("sourceTypeOfOriginalAssistantId")]
+        [Validation(Required=false)]
+        public int? SourceTypeOfOriginalAssistantId { get; set; }
 
     }
 

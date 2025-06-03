@@ -67,14 +67,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>{}</para>
-                /// </summary>
-                [NameInMap("metadata")]
-                [Validation(Required=false)]
-                public Dictionary<string, object> Metadata { get; set; }
-
-                /// <summary>
-                /// <b>Example:</b>
                 /// <para>能力名称</para>
                 /// </summary>
                 [NameInMap("name")]
@@ -84,22 +76,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             }
 
         }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>id1</para>
-        /// </summary>
-        [NameInMap("id")]
-        [Validation(Required=false)]
-        public string Id { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>{}</para>
-        /// </summary>
-        [NameInMap("metadata")]
-        [Validation(Required=false)]
-        public Dictionary<string, object> Metadata { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
