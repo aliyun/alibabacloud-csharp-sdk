@@ -498,6 +498,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string PolicyGroupId { get; set; }
 
+            [NameInMap("PolicyGroupIdList")]
+            [Validation(Required=false)]
+            public List<string> PolicyGroupIdList { get; set; }
+
             /// <summary>
             /// <para>The name of the applied policy.</para>
             /// 
@@ -507,6 +511,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("PolicyGroupName")]
             [Validation(Required=false)]
             public string PolicyGroupName { get; set; }
+
+            [NameInMap("PolicyGroupNameList")]
+            [Validation(Required=false)]
+            public List<string> PolicyGroupNameList { get; set; }
 
             /// <summary>
             /// <para>The protocol type.</para>
