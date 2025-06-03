@@ -1,0 +1,37 @@
+2025-06-03 Version: 1.0.0
+- Support API GetTableMetaInfo.
+- Support API GetTaskDetail.
+- Support API ListAppDownloadHistory.
+- Support API PopCreateTask.
+- Support API PopDownloadTemplate.
+- Support API PopEditTask.
+- Support API SingleScriptSyncTranslate.
+- Delete API CreateFileJob.
+- Update API CreateSurveyJob: add request parameters body.autoConfirm.
+- Update API CreateSurveyJob: add request parameters body.ossObjectName.
+- Update API CreateSurveyJob: add request parameters body.projectId.
+- Update API CreateSurveyJob: add response parameters Body.Message.
+- Update API CreateSurveyJob: add response parameters Body.RequestId.
+- Update API CreateSurveyJobOffline: add request parameters body.autoConfirm.
+- Update API CreateSurveyJobOffline: add response parameters Body.Message.
+- Update API CreateSurveyJobOffline: add response parameters Body.RequestId.
+- Update API DescribeMigrationJobCount: add request parameters body.batchTaskGroupId.
+- Update API DescribeMigrationJobCount: add request parameters body.cutoverPlanId.
+- Update API DescribeMigrationJobCount: add request parameters body.outSideId.
+- Update API DescribeMigrationJobCount: add request parameters body.surveyResourceId.
+- Update API DescribeMigrationJobCount: add request parameters body.tagList.
+- Update API DescribeMigrationJobCount: add request parameters body.usedType.
+- Update API DescribeSurveyResourceTag: add request parameters body.
+- Update API DescribeSurveyResourceTag: add request The number of query or body parameters has changed from zero to many.
+- Update API ListMigrationJobs: add request parameters body.batchTaskGroupId.
+- Update API ListMigrationJobs: add request parameters body.cutoverPlanId.
+- Update API ListMigrationJobs: add request parameters body.outSideId.
+- Update API ListMigrationJobs: add request parameters body.surveyResourceId.
+- Update API ListMigrationJobs: add request parameters body.tagList.
+- Update API ListMigrationJobs: add request parameters body.usedType.
+- Update API ListSurveyJobs: add request parameters body.pageNum.
+- Update API ListSurveyJobs: add request parameters body.pageSize.
+- Update API ListSurveyJobs: add request parameters body.region.
+- Update API ListSurveyJobs: add request parameters body.surveyRange.
+
+
