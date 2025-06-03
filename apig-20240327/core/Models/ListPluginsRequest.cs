@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string GatewayType { get; set; }
 
+        [NameInMap("includeBuiltinAiGateway")]
+        [Validation(Required=false)]
+        public bool? IncludeBuiltinAiGateway { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>1</para>

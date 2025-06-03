@@ -6421,6 +6421,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             {
                 query["gatewayType"] = request.GatewayType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeBuiltinAiGateway))
+            {
+                query["includeBuiltinAiGateway"] = request.IncludeBuiltinAiGateway;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["pageNumber"] = request.PageNumber;
@@ -6498,6 +6502,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayType))
             {
                 query["gatewayType"] = request.GatewayType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeBuiltinAiGateway))
+            {
+                query["includeBuiltinAiGateway"] = request.IncludeBuiltinAiGateway;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
