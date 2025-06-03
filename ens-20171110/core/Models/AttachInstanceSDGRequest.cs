@@ -17,6 +17,28 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
 
+        [NameInMap("LoadOpt")]
+        [Validation(Required=false)]
+        public AttachInstanceSDGRequestLoadOpt LoadOpt { get; set; }
+        public class AttachInstanceSDGRequestLoadOpt : TeaModel {
+            [NameInMap("BlockRwSplit")]
+            [Validation(Required=false)]
+            public bool? BlockRwSplit { get; set; }
+
+            [NameInMap("BlockRwSplitSize")]
+            [Validation(Required=false)]
+            public int? BlockRwSplitSize { get; set; }
+
+            [NameInMap("Cache")]
+            [Validation(Required=false)]
+            public bool? Cache { get; set; }
+
+            [NameInMap("CacheSize")]
+            [Validation(Required=false)]
+            public int? CacheSize { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The ID of the SDG.</para>
         /// <para>This parameter is required.</para>

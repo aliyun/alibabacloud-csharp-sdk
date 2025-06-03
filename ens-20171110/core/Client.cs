@@ -1437,10 +1437,18 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 request.InstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceIds, "InstanceIds", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LoadOpt))
+            {
+                request.LoadOptShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LoadOpt, "LoadOpt", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdsShrink))
             {
                 query["InstanceIds"] = request.InstanceIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoadOptShrink))
+            {
+                query["LoadOpt"] = request.LoadOptShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SDGId))
             {
@@ -1489,10 +1497,18 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 request.InstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceIds, "InstanceIds", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LoadOpt))
+            {
+                request.LoadOptShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LoadOpt, "LoadOpt", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdsShrink))
             {
                 query["InstanceIds"] = request.InstanceIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoadOptShrink))
+            {
+                query["LoadOpt"] = request.LoadOptShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SDGId))
             {

@@ -16,6 +16,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public List<DescribeSDGDeploymentStatusResponseBodyDeploymentStatus> DeploymentStatus { get; set; }
         public class DescribeSDGDeploymentStatusResponseBodyDeploymentStatus : TeaModel {
+            [NameInMap("BlockRwSplitSize")]
+            [Validation(Required=false)]
+            public int? BlockRwSplitSize { get; set; }
+
+            [NameInMap("CacheSize")]
+            [Validation(Required=false)]
+            public int? CacheSize { get; set; }
+
             /// <summary>
             /// <para>The ID of the AIC instance.</para>
             /// 

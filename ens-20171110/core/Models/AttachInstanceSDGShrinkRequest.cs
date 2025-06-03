@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string InstanceIdsShrink { get; set; }
 
+        [NameInMap("LoadOpt")]
+        [Validation(Required=false)]
+        public string LoadOptShrink { get; set; }
+
         /// <summary>
         /// <para>The ID of the SDG.</para>
         /// <para>This parameter is required.</para>
