@@ -99,6 +99,36 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
         }
 
+        [NameInMap("BgColor")]
+        [Validation(Required=false)]
+        public StartStreamingOutShrinkRequestBgColor BgColor { get; set; }
+        public class StartStreamingOutShrinkRequestBgColor : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>255</para>
+            /// </summary>
+            [NameInMap("B")]
+            [Validation(Required=false)]
+            public int? B { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>255</para>
+            /// </summary>
+            [NameInMap("G")]
+            [Validation(Required=false)]
+            public int? G { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>255</para>
+            /// </summary>
+            [NameInMap("R")]
+            [Validation(Required=false)]
+            public int? R { get; set; }
+
+        }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -794,6 +824,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [NameInMap("StartWithoutChannelWaitTime")]
         [Validation(Required=false)]
         public int? StartWithoutChannelWaitTime { get; set; }
+
+        [NameInMap("SubHighResolutionStream")]
+        [Validation(Required=false)]
+        public bool? SubHighResolutionStream { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

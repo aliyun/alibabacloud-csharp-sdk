@@ -100,6 +100,36 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
         }
 
+        [NameInMap("BgColor")]
+        [Validation(Required=false)]
+        public StartCloudRecordRequestBgColor BgColor { get; set; }
+        public class StartCloudRecordRequestBgColor : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>255</para>
+            /// </summary>
+            [NameInMap("B")]
+            [Validation(Required=false)]
+            public int? B { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>255</para>
+            /// </summary>
+            [NameInMap("G")]
+            [Validation(Required=false)]
+            public int? G { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>255</para>
+            /// </summary>
+            [NameInMap("R")]
+            [Validation(Required=false)]
+            public int? R { get; set; }
+
+        }
+
         /// <summary>
         /// <para>channelName</para>
         /// <para>This parameter is required.</para>
@@ -878,6 +908,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public int? Vendor { get; set; }
 
         }
+
+        [NameInMap("SubHighResolutionStream")]
+        [Validation(Required=false)]
+        public bool? SubHighResolutionStream { get; set; }
 
         /// <summary>
         /// <para>taskId</para>

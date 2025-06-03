@@ -312,6 +312,14 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             [Validation(Required=false)]
             public bool? DiarizationEnabled { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>b401a5da78e94xxxxc3129425c78b6a5</para>
+            /// </summary>
+            [NameInMap("PhraseId")]
+            [Validation(Required=false)]
+            public string PhraseId { get; set; }
+
             [NameInMap("SpeakerCount")]
             [Validation(Required=false)]
             public int? SpeakerCount { get; set; }

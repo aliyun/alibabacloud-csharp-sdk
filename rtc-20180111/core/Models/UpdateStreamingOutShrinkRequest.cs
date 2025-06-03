@@ -99,6 +99,36 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
         }
 
+        [NameInMap("BgColor")]
+        [Validation(Required=false)]
+        public UpdateStreamingOutShrinkRequestBgColor BgColor { get; set; }
+        public class UpdateStreamingOutShrinkRequestBgColor : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>255</para>
+            /// </summary>
+            [NameInMap("B")]
+            [Validation(Required=false)]
+            public int? B { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>255</para>
+            /// </summary>
+            [NameInMap("G")]
+            [Validation(Required=false)]
+            public int? G { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>255</para>
+            /// </summary>
+            [NameInMap("R")]
+            [Validation(Required=false)]
+            public int? R { get; set; }
+
+        }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -254,6 +284,14 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public int? Zone { get; set; }
 
         }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
+        [NameInMap("CropMode")]
+        [Validation(Required=false)]
+        public int? CropMode { get; set; }
 
         [NameInMap("Images")]
         [Validation(Required=false)]
@@ -732,6 +770,36 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
                 public string WhiteboardId { get; set; }
 
             }
+
+        }
+
+        [NameInMap("RegionColor")]
+        [Validation(Required=false)]
+        public UpdateStreamingOutShrinkRequestRegionColor RegionColor { get; set; }
+        public class UpdateStreamingOutShrinkRequestRegionColor : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>255</para>
+            /// </summary>
+            [NameInMap("B")]
+            [Validation(Required=false)]
+            public int? B { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>255</para>
+            /// </summary>
+            [NameInMap("G")]
+            [Validation(Required=false)]
+            public int? G { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>255</para>
+            /// </summary>
+            [NameInMap("R")]
+            [Validation(Required=false)]
+            public int? R { get; set; }
 
         }
 
