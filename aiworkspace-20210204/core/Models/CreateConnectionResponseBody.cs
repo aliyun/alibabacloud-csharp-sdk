@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class CreateConnectionResponseBody : TeaModel {
         /// <summary>
+        /// <para>The connection ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>conn-pai9m***mi47</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ConnectionId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5A14FA81-DD4E-******-6343FE44B941</para>
         /// </summary>

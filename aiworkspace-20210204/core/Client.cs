@@ -979,7 +979,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建连接</para>
+        /// <para>Creates a connection. This API is used to connect Platform for AI (PAI) to customer models and databases in LangStudio and multimodal dataset search scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1057,7 +1057,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建连接</para>
+        /// <para>Creates a connection. This API is used to connect Platform for AI (PAI) to customer models and databases in LangStudio and multimodal dataset search scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1135,7 +1135,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建连接</para>
+        /// <para>Creates a connection. This API is used to connect Platform for AI (PAI) to customer models and databases in LangStudio and multimodal dataset search scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1154,7 +1154,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建连接</para>
+        /// <para>Creates a connection. This API is used to connect Platform for AI (PAI) to customer models and databases in LangStudio and multimodal dataset search scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1216,6 +1216,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Edition))
+            {
+                body["Edition"] = request.Edition;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImportInfo))
             {
@@ -1350,6 +1354,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Edition))
+            {
+                body["Edition"] = request.Edition;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImportInfo))
             {
@@ -6927,7 +6935,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取连接</para>
+        /// <para>Obtains the connection details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6973,7 +6981,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取连接</para>
+        /// <para>Obtains the connection details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7019,7 +7027,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取连接</para>
+        /// <para>Obtains the connection details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7038,7 +7046,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取连接</para>
+        /// <para>Obtains the connection details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15141,6 +15149,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             {
                 body["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Edition))
+            {
+                body["Edition"] = request.Edition;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MountAccessReadWriteRoleIdList))
             {
                 body["MountAccessReadWriteRoleIdList"] = request.MountAccessReadWriteRoleIdList;
@@ -15198,6 +15210,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Edition))
+            {
+                body["Edition"] = request.Edition;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MountAccessReadWriteRoleIdList))
             {

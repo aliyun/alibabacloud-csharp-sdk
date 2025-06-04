@@ -51,6 +51,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>BASIC</para>
+        /// </summary>
+        [NameInMap("Edition")]
+        [Validation(Required=false)]
+        public string Edition { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>2021-01-30T12:51:33.028Z</para>
         /// </summary>
         [NameInMap("GmtCreateTime")]
