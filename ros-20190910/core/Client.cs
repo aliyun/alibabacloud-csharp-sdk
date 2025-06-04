@@ -841,6 +841,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             {
                 query["Tags"] = request.Tags;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaintResources))
+            {
+                query["TaintResources"] = request.TaintResources;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
                 query["TemplateId"] = request.TemplateId;
@@ -1009,6 +1013,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
             {
                 query["Tags"] = request.Tags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaintResources))
+            {
+                query["TaintResources"] = request.TaintResources;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
@@ -12845,6 +12853,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             {
                 query["StackPolicyURL"] = request.StackPolicyURL;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaintResources))
+            {
+                query["TaintResources"] = request.TaintResources;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
                 query["TemplateId"] = request.TemplateId;
@@ -12957,6 +12969,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StackPolicyURL))
             {
                 query["StackPolicyURL"] = request.StackPolicyURL;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaintResources))
+            {
+                query["TaintResources"] = request.TaintResources;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
@@ -14614,6 +14630,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             {
                 query["Tags"] = request.Tags;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaintResources))
+            {
+                query["TaintResources"] = request.TaintResources;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
                 query["TemplateId"] = request.TemplateId;
@@ -14751,6 +14771,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
             {
                 query["Tags"] = request.Tags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaintResources))
+            {
+                query["TaintResources"] = request.TaintResources;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {

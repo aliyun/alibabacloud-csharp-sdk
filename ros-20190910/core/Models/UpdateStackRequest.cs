@@ -293,6 +293,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         }
 
+        [NameInMap("TaintResources")]
+        [Validation(Required=false)]
+        public List<string> TaintResources { get; set; }
+
         [NameInMap("TemplateBody")]
         [Validation(Required=false)]
         public string TemplateBody { get; set; }
