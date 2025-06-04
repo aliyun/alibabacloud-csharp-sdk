@@ -66,8 +66,6 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? ExecutorBlockStrategy { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>testJobVoidHandler</para>
         /// </summary>
@@ -142,6 +140,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [NameInMap("RouteStrategy")]
         [Validation(Required=false)]
         public int? RouteStrategy { get; set; }
+
+        [NameInMap("Script")]
+        [Validation(Required=false)]
+        public string Script { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

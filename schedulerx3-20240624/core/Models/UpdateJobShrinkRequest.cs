@@ -139,6 +139,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [Validation(Required=false)]
         public int? RouteStrategy { get; set; }
 
+        [NameInMap("Script")]
+        [Validation(Required=false)]
+        public string Script { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>1716902187</para>

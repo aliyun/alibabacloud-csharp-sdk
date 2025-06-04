@@ -458,6 +458,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
             {
                 body["RouteStrategy"] = request.RouteStrategy;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Script))
+            {
+                body["Script"] = request.Script;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 body["StartTime"] = request.StartTime;
@@ -593,6 +597,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteStrategy))
             {
                 body["RouteStrategy"] = request.RouteStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Script))
+            {
+                body["Script"] = request.Script;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
@@ -1443,6 +1451,150 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetDesigateInfoWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取任务执行的详细信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetJobExecutionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobExecutionResponse
+        /// </returns>
+        public GetJobExecutionResponse GetJobExecutionWithOptions(GetJobExecutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                query["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobExecutionId))
+            {
+                query["JobExecutionId"] = request.JobExecutionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MseSessionId))
+            {
+                query["MseSessionId"] = request.MseSessionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetJobExecution",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetJobExecutionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取任务执行的详细信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetJobExecutionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobExecutionResponse
+        /// </returns>
+        public async Task<GetJobExecutionResponse> GetJobExecutionWithOptionsAsync(GetJobExecutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                query["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobExecutionId))
+            {
+                query["JobExecutionId"] = request.JobExecutionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MseSessionId))
+            {
+                query["MseSessionId"] = request.MseSessionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetJobExecution",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetJobExecutionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取任务执行的详细信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetJobExecutionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobExecutionResponse
+        /// </returns>
+        public GetJobExecutionResponse GetJobExecution(GetJobExecutionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetJobExecutionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取任务执行的详细信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetJobExecutionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobExecutionResponse
+        /// </returns>
+        public async Task<GetJobExecutionResponse> GetJobExecutionAsync(GetJobExecutionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetJobExecutionWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2721,6 +2873,11 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
             return await ListJobExecutionsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取任务列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListJobsRequest
         /// </param>
@@ -2754,6 +2911,11 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
             return TeaModel.ToObject<ListJobsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取任务列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListJobsRequest
         /// </param>
@@ -2787,6 +2949,11 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
             return TeaModel.ToObject<ListJobsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取任务列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListJobsRequest
         /// </param>
@@ -2800,6 +2967,11 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
             return ListJobsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取任务列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListJobsRequest
         /// </param>
@@ -4822,6 +4994,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
             {
                 body["RouteStrategy"] = request.RouteStrategy;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Script))
+            {
+                body["Script"] = request.Script;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 body["StartTime"] = request.StartTime;
@@ -4953,6 +5129,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteStrategy))
             {
                 body["RouteStrategy"] = request.RouteStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Script))
+            {
+                body["Script"] = request.Script;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
