@@ -193,7 +193,6 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         /// <remarks>
         /// <para> If you want to create an empty knowledge base, you can use an empty category. Set this parameter to DATA_CENTER_CATEGORY. And specify the ID of an empty category for the <c>CategoryIds</c> parameter.</para>
         /// </remarks>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DATA_CENTER_FILE</para>

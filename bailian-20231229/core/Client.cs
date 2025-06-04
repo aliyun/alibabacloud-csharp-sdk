@@ -3837,6 +3837,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             {
                 query["DocumentStatus"] = request.DocumentStatus;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableNameLike))
+            {
+                query["EnableNameLike"] = request.EnableNameLike;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IndexId))
             {
                 query["IndexId"] = request.IndexId;
@@ -3906,6 +3910,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocumentStatus))
             {
                 query["DocumentStatus"] = request.DocumentStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableNameLike))
+            {
+                query["EnableNameLike"] = request.EnableNameLike;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IndexId))
             {
