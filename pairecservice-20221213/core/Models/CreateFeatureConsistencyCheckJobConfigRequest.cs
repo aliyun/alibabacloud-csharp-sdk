@@ -219,6 +219,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public int? PredictWorkerMemory { get; set; }
 
+        [NameInMap("ResourceConfig")]
+        [Validation(Required=false)]
+        public string ResourceConfig { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
