@@ -182,6 +182,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 [Validation(Required=false)]
                 public long? Id { get; set; }
 
+                [NameInMap("ResponseRuleType")]
+                [Validation(Required=false)]
+                public string ResponseRuleType { get; set; }
+
                 /// <summary>
                 /// <para>The name of the automated response rule.</para>
                 /// 

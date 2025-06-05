@@ -8988,6 +8988,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResponseRuleType))
+            {
+                body["ResponseRuleType"] = request.ResponseRuleType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
             {
                 body["RoleFor"] = request.RoleFor;
@@ -9073,6 +9077,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResponseRuleType))
+            {
+                body["ResponseRuleType"] = request.ResponseRuleType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
             {

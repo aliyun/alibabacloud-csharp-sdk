@@ -94,6 +94,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("ResponseRuleType")]
+        [Validation(Required=false)]
+        public string ResponseRuleType { get; set; }
+
         /// <summary>
         /// <para>The ID of the account that you switch from the management account.</para>
         /// 
