@@ -1421,6 +1421,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await CreateSchemeTaskConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI CreateSkillGroupConfig is deprecated
+        /// 
         /// <param name="request">
         /// CreateSkillGroupConfigRequest
         /// </param>
@@ -1431,6 +1435,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// CreateSkillGroupConfigResponse
         /// </returns>
+        [Obsolete("OpenAPI CreateSkillGroupConfig is deprecated")]
+        // Deprecated
         public CreateSkillGroupConfigResponse CreateSkillGroupConfigWithOptions(CreateSkillGroupConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1462,6 +1468,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<CreateSkillGroupConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI CreateSkillGroupConfig is deprecated
+        /// 
         /// <param name="request">
         /// CreateSkillGroupConfigRequest
         /// </param>
@@ -1472,6 +1482,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// CreateSkillGroupConfigResponse
         /// </returns>
+        [Obsolete("OpenAPI CreateSkillGroupConfig is deprecated")]
+        // Deprecated
         public async Task<CreateSkillGroupConfigResponse> CreateSkillGroupConfigWithOptionsAsync(CreateSkillGroupConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1503,6 +1515,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<CreateSkillGroupConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI CreateSkillGroupConfig is deprecated
+        /// 
         /// <param name="request">
         /// CreateSkillGroupConfigRequest
         /// </param>
@@ -1510,12 +1526,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// CreateSkillGroupConfigResponse
         /// </returns>
+        [Obsolete("OpenAPI CreateSkillGroupConfig is deprecated")]
+        // Deprecated
         public CreateSkillGroupConfigResponse CreateSkillGroupConfig(CreateSkillGroupConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateSkillGroupConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI CreateSkillGroupConfig is deprecated
+        /// 
         /// <param name="request">
         /// CreateSkillGroupConfigRequest
         /// </param>
@@ -1523,6 +1545,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// CreateSkillGroupConfigResponse
         /// </returns>
+        [Obsolete("OpenAPI CreateSkillGroupConfig is deprecated")]
+        // Deprecated
         public async Task<CreateSkillGroupConfigResponse> CreateSkillGroupConfigAsync(CreateSkillGroupConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3241,6 +3265,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await DeleteSchemeTaskConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DeleteSkillGroupConfig is deprecated
+        /// 
         /// <param name="request">
         /// DeleteSkillGroupConfigRequest
         /// </param>
@@ -3251,6 +3279,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// DeleteSkillGroupConfigResponse
         /// </returns>
+        [Obsolete("OpenAPI DeleteSkillGroupConfig is deprecated")]
+        // Deprecated
         public DeleteSkillGroupConfigResponse DeleteSkillGroupConfigWithOptions(DeleteSkillGroupConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3282,6 +3312,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<DeleteSkillGroupConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DeleteSkillGroupConfig is deprecated
+        /// 
         /// <param name="request">
         /// DeleteSkillGroupConfigRequest
         /// </param>
@@ -3292,6 +3326,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// DeleteSkillGroupConfigResponse
         /// </returns>
+        [Obsolete("OpenAPI DeleteSkillGroupConfig is deprecated")]
+        // Deprecated
         public async Task<DeleteSkillGroupConfigResponse> DeleteSkillGroupConfigWithOptionsAsync(DeleteSkillGroupConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3323,6 +3359,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<DeleteSkillGroupConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DeleteSkillGroupConfig is deprecated
+        /// 
         /// <param name="request">
         /// DeleteSkillGroupConfigRequest
         /// </param>
@@ -3330,12 +3370,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// DeleteSkillGroupConfigResponse
         /// </returns>
+        [Obsolete("OpenAPI DeleteSkillGroupConfig is deprecated")]
+        // Deprecated
         public DeleteSkillGroupConfigResponse DeleteSkillGroupConfig(DeleteSkillGroupConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteSkillGroupConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DeleteSkillGroupConfig is deprecated
+        /// 
         /// <param name="request">
         /// DeleteSkillGroupConfigRequest
         /// </param>
@@ -3343,6 +3389,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// DeleteSkillGroupConfigResponse
         /// </returns>
+        [Obsolete("OpenAPI DeleteSkillGroupConfig is deprecated")]
+        // Deprecated
         public async Task<DeleteSkillGroupConfigResponse> DeleteSkillGroupConfigAsync(DeleteSkillGroupConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5569,6 +5617,134 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await GetRulesCountListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取质检任务配置详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSchemeTaskConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSchemeTaskConfigResponse
+        /// </returns>
+        public GetSchemeTaskConfigResponse GetSchemeTaskConfigWithOptions(GetSchemeTaskConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                query["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSchemeTaskConfig",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSchemeTaskConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取质检任务配置详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSchemeTaskConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSchemeTaskConfigResponse
+        /// </returns>
+        public async Task<GetSchemeTaskConfigResponse> GetSchemeTaskConfigWithOptionsAsync(GetSchemeTaskConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                query["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                query["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSchemeTaskConfig",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSchemeTaskConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取质检任务配置详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSchemeTaskConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSchemeTaskConfigResponse
+        /// </returns>
+        public GetSchemeTaskConfigResponse GetSchemeTaskConfig(GetSchemeTaskConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetSchemeTaskConfigWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取质检任务配置详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSchemeTaskConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSchemeTaskConfigResponse
+        /// </returns>
+        public async Task<GetSchemeTaskConfigResponse> GetSchemeTaskConfigAsync(GetSchemeTaskConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetSchemeTaskConfigWithOptionsAsync(request, runtime);
+        }
+
         /// <term><b>Deprecated</b></term>
         /// 
         /// OpenAPI GetScoreInfo is deprecated
@@ -5701,6 +5877,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await GetScoreInfoWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetSkillGroupConfig is deprecated
+        /// 
         /// <param name="request">
         /// GetSkillGroupConfigRequest
         /// </param>
@@ -5711,6 +5891,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// GetSkillGroupConfigResponse
         /// </returns>
+        [Obsolete("OpenAPI GetSkillGroupConfig is deprecated")]
+        // Deprecated
         public GetSkillGroupConfigResponse GetSkillGroupConfigWithOptions(GetSkillGroupConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5742,6 +5924,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<GetSkillGroupConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetSkillGroupConfig is deprecated
+        /// 
         /// <param name="request">
         /// GetSkillGroupConfigRequest
         /// </param>
@@ -5752,6 +5938,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// GetSkillGroupConfigResponse
         /// </returns>
+        [Obsolete("OpenAPI GetSkillGroupConfig is deprecated")]
+        // Deprecated
         public async Task<GetSkillGroupConfigResponse> GetSkillGroupConfigWithOptionsAsync(GetSkillGroupConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5783,6 +5971,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<GetSkillGroupConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetSkillGroupConfig is deprecated
+        /// 
         /// <param name="request">
         /// GetSkillGroupConfigRequest
         /// </param>
@@ -5790,12 +5982,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// GetSkillGroupConfigResponse
         /// </returns>
+        [Obsolete("OpenAPI GetSkillGroupConfig is deprecated")]
+        // Deprecated
         public GetSkillGroupConfigResponse GetSkillGroupConfig(GetSkillGroupConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetSkillGroupConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetSkillGroupConfig is deprecated
+        /// 
         /// <param name="request">
         /// GetSkillGroupConfigRequest
         /// </param>
@@ -5803,6 +6001,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// GetSkillGroupConfigResponse
         /// </returns>
+        [Obsolete("OpenAPI GetSkillGroupConfig is deprecated")]
+        // Deprecated
         public async Task<GetSkillGroupConfigResponse> GetSkillGroupConfigAsync(GetSkillGroupConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7561,6 +7761,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await ListSessionGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI ListSkillGroupConfig is deprecated
+        /// 
         /// <param name="request">
         /// ListSkillGroupConfigRequest
         /// </param>
@@ -7571,6 +7775,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// ListSkillGroupConfigResponse
         /// </returns>
+        [Obsolete("OpenAPI ListSkillGroupConfig is deprecated")]
+        // Deprecated
         public ListSkillGroupConfigResponse ListSkillGroupConfigWithOptions(ListSkillGroupConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7602,6 +7808,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<ListSkillGroupConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI ListSkillGroupConfig is deprecated
+        /// 
         /// <param name="request">
         /// ListSkillGroupConfigRequest
         /// </param>
@@ -7612,6 +7822,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// ListSkillGroupConfigResponse
         /// </returns>
+        [Obsolete("OpenAPI ListSkillGroupConfig is deprecated")]
+        // Deprecated
         public async Task<ListSkillGroupConfigResponse> ListSkillGroupConfigWithOptionsAsync(ListSkillGroupConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7643,6 +7855,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<ListSkillGroupConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI ListSkillGroupConfig is deprecated
+        /// 
         /// <param name="request">
         /// ListSkillGroupConfigRequest
         /// </param>
@@ -7650,12 +7866,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// ListSkillGroupConfigResponse
         /// </returns>
+        [Obsolete("OpenAPI ListSkillGroupConfig is deprecated")]
+        // Deprecated
         public ListSkillGroupConfigResponse ListSkillGroupConfig(ListSkillGroupConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListSkillGroupConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI ListSkillGroupConfig is deprecated
+        /// 
         /// <param name="request">
         /// ListSkillGroupConfigRequest
         /// </param>
@@ -7663,6 +7885,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// ListSkillGroupConfigResponse
         /// </returns>
+        [Obsolete("OpenAPI ListSkillGroupConfig is deprecated")]
+        // Deprecated
         public async Task<ListSkillGroupConfigResponse> ListSkillGroupConfigAsync(ListSkillGroupConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10401,6 +10625,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await UpdateSchemeTaskConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI UpdateSkillGroupConfig is deprecated
+        /// 
         /// <param name="request">
         /// UpdateSkillGroupConfigRequest
         /// </param>
@@ -10411,6 +10639,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// UpdateSkillGroupConfigResponse
         /// </returns>
+        [Obsolete("OpenAPI UpdateSkillGroupConfig is deprecated")]
+        // Deprecated
         public UpdateSkillGroupConfigResponse UpdateSkillGroupConfigWithOptions(UpdateSkillGroupConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10442,6 +10672,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<UpdateSkillGroupConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI UpdateSkillGroupConfig is deprecated
+        /// 
         /// <param name="request">
         /// UpdateSkillGroupConfigRequest
         /// </param>
@@ -10452,6 +10686,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// UpdateSkillGroupConfigResponse
         /// </returns>
+        [Obsolete("OpenAPI UpdateSkillGroupConfig is deprecated")]
+        // Deprecated
         public async Task<UpdateSkillGroupConfigResponse> UpdateSkillGroupConfigWithOptionsAsync(UpdateSkillGroupConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10483,6 +10719,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<UpdateSkillGroupConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI UpdateSkillGroupConfig is deprecated
+        /// 
         /// <param name="request">
         /// UpdateSkillGroupConfigRequest
         /// </param>
@@ -10490,12 +10730,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// UpdateSkillGroupConfigResponse
         /// </returns>
+        [Obsolete("OpenAPI UpdateSkillGroupConfig is deprecated")]
+        // Deprecated
         public UpdateSkillGroupConfigResponse UpdateSkillGroupConfig(UpdateSkillGroupConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateSkillGroupConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI UpdateSkillGroupConfig is deprecated
+        /// 
         /// <param name="request">
         /// UpdateSkillGroupConfigRequest
         /// </param>
@@ -10503,6 +10749,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// UpdateSkillGroupConfigResponse
         /// </returns>
+        [Obsolete("OpenAPI UpdateSkillGroupConfig is deprecated")]
+        // Deprecated
         public async Task<UpdateSkillGroupConfigResponse> UpdateSkillGroupConfigAsync(UpdateSkillGroupConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
