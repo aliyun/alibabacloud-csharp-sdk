@@ -43,6 +43,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             [Validation(Required=false)]
             public string ConfigValue { get; set; }
 
+            [NameInMap("GmtCreateTime")]
+            [Validation(Required=false)]
+            public string GmtCreateTime { get; set; }
+
+            [NameInMap("GmtModifiedTime")]
+            [Validation(Required=false)]
+            public string GmtModifiedTime { get; set; }
+
             /// <summary>
             /// <para>The tags of the configuration item.</para>
             /// </summary>
