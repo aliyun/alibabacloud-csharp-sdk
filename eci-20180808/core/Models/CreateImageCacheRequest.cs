@@ -244,6 +244,19 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         [Validation(Required=false)]
         public string InsecureRegistry { get; set; }
 
+        /// <summary>
+        /// <para>The operating system of the image. Default value: Linux. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Linux</description></item>
+        /// <item><description>Windows</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>Windows instances are in invitational preview. To use the operating system, submit a ticket.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Linux</para>
+        /// </summary>
         [NameInMap("OsType")]
         [Validation(Required=false)]
         public string OsType { get; set; }

@@ -1703,6 +1703,10 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         [Validation(Required=false)]
         public bool? Ipv6GatewayBandwidthEnable { get; set; }
 
+        [NameInMap("MaxPendingMinute")]
+        [Validation(Required=false)]
+        public int? MaxPendingMinute { get; set; }
+
         /// <summary>
         /// <para>The memory size that you want to allocate to the instance. Unit: GiB.</para>
         /// 
@@ -1739,25 +1743,6 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
         [NameInMap("OsType")]
         [Validation(Required=false)]
         public string OsType { get; set; }
-
-        /// <summary>
-        /// <para>The options that you can configure when you enable the overhead reservation feature.</para>
-        /// </summary>
-        [NameInMap("OverheadReservationOption")]
-        [Validation(Required=false)]
-        public CreateContainerGroupRequestOverheadReservationOption OverheadReservationOption { get; set; }
-        public class CreateContainerGroupRequestOverheadReservationOption : TeaModel {
-            /// <summary>
-            /// <para>Specify whether to enable the overhead reservation feature. Default: false. Valid values: true and false. After you enable the overhead reservation feature, the system automatically adds the overhead to the specification of the elastic container instance, and then adjusts the specification of the instance upward to the most approximate specification. You are charged based on the new specification after the adjustment.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>true</para>
-            /// </summary>
-            [NameInMap("EnableOverheadReservation")]
-            [Validation(Required=false)]
-            public bool? EnableOverheadReservation { get; set; }
-
-        }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]

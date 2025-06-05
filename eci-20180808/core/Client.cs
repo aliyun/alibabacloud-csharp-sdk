@@ -767,6 +767,10 @@ namespace AlibabaCloud.SDK.Eci20180808
             {
                 query["Ipv6GatewayBandwidthEnable"] = request.Ipv6GatewayBandwidthEnable;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxPendingMinute))
+            {
+                query["MaxPendingMinute"] = request.MaxPendingMinute;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Memory))
             {
                 query["Memory"] = request.Memory;
@@ -778,10 +782,6 @@ namespace AlibabaCloud.SDK.Eci20180808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OsType))
             {
                 query["OsType"] = request.OsType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OverheadReservationOption))
-            {
-                query["OverheadReservationOption"] = request.OverheadReservationOption;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -1136,6 +1136,10 @@ namespace AlibabaCloud.SDK.Eci20180808
             {
                 query["Ipv6GatewayBandwidthEnable"] = request.Ipv6GatewayBandwidthEnable;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxPendingMinute))
+            {
+                query["MaxPendingMinute"] = request.MaxPendingMinute;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Memory))
             {
                 query["Memory"] = request.Memory;
@@ -1147,10 +1151,6 @@ namespace AlibabaCloud.SDK.Eci20180808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OsType))
             {
                 query["OsType"] = request.OsType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OverheadReservationOption))
-            {
-                query["OverheadReservationOption"] = request.OverheadReservationOption;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {

@@ -931,6 +931,16 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
 
             }
 
+            /// <summary>
+            /// <para>The Domain Name System (DNS) policy. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>None: uses the DNS that is specified by DnsConfig.</description></item>
+            /// <item><description>Default: uses the DNS that is specified for the runtime environment.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>None</para>
+            /// </summary>
             [NameInMap("DnsPolicy")]
             [Validation(Required=false)]
             public string DnsPolicy { get; set; }

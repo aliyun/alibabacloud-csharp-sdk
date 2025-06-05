@@ -1,3 +1,7 @@
+2025-06-05 Version: 1.1.4
+- Update API CreateContainerGroup: add request parameters MaxPendingMinute.
+
+
 2024-10-16 Version: 1.1.3
 - Update API DescribeRegions: update response param.
 

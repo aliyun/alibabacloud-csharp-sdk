@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried regions.</para>
+        /// <para>The list of regions.</para>
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public List<DescribeRegionsResponseBodyRegions> Regions { get; set; }
         public class DescribeRegionsResponseBodyRegions : TeaModel {
             /// <summary>
-            /// <para>The recommended zones. Recommended zones are zones that have relatively sufficient resources in the current region.</para>
+            /// <para>The list of recommended zones.</para>
             /// </summary>
             [NameInMap("RecommendZones")]
             [Validation(Required=false)]
@@ -43,6 +43,9 @@ namespace AlibabaCloud.SDK.Eci20180808.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            /// <summary>
+            /// <para>The list of unavailable zones.</para>
+            /// </summary>
             [NameInMap("UnavailableZones")]
             [Validation(Required=false)]
             public List<string> UnavailableZones { get; set; }
