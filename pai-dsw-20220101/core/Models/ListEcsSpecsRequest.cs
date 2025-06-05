@@ -58,6 +58,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public string ResourceType { get; set; }
+
         /// <summary>
         /// <para>The field by which the query results are sorted. Set the value to gmtCreate.</para>
         /// 

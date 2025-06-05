@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
 
                     /// <summary>
                     /// <b>Example:</b>
-                    /// <para>S</para>
+                    /// <para>sub</para>
                     /// </summary>
                     [NameInMap("Type")]
                     [Validation(Required=false)]

@@ -393,6 +393,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
 
         }
 
+        [NameInMap("OversoldType")]
+        [Validation(Required=false)]
+        public string OversoldType { get; set; }
+
         /// <summary>
         /// <para>The priority based on which resources are allocated to instances. Valid values: 1 to 9.</para>
         /// <list type="bullet">

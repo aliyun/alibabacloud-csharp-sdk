@@ -261,6 +261,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
             {
                 body["Labels"] = request.Labels;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldType))
+            {
+                body["OversoldType"] = request.OversoldType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
             {
                 body["Priority"] = request.Priority;
@@ -390,6 +394,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Labels))
             {
                 body["Labels"] = request.Labels;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldType))
+            {
+                body["OversoldType"] = request.OversoldType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
             {
@@ -2859,6 +2867,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
             {
                 query["SortBy"] = request.SortBy;
@@ -2920,6 +2932,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
             {
@@ -3947,6 +3963,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
             {
                 body["InstanceName"] = request.InstanceName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldType))
+            {
+                body["OversoldType"] = request.OversoldType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
             {
                 body["Priority"] = request.Priority;
@@ -4076,6 +4096,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 body["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OversoldType))
+            {
+                body["OversoldType"] = request.OversoldType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
             {
