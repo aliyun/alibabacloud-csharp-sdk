@@ -122,6 +122,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
                 }
 
+                [NameInMap("InnerResult")]
+                [Validation(Required=false)]
+                public string InnerResult { get; set; }
+
                 /// <summary>
                 /// <para>The ID of the database instance.</para>
                 /// 

@@ -86,6 +86,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             [Validation(Required=false)]
             public long? Timestamp { get; set; }
 
+            [NameInMap("TotalSqlSize")]
+            [Validation(Required=false)]
+            public long? TotalSqlSize { get; set; }
+
         }
 
         /// <summary>
