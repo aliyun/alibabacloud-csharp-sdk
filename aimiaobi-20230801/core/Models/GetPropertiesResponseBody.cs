@@ -181,6 +181,50 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
             }
 
+            [NameInMap("MiaosouConfig")]
+            [Validation(Required=false)]
+            public GetPropertiesResponseBodyDataMiaosouConfig MiaosouConfig { get; set; }
+            public class GetPropertiesResponseBodyDataMiaosouConfig : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("MaxDocSize")]
+                [Validation(Required=false)]
+                public long? MaxDocSize { get; set; }
+
+                [NameInMap("ModelInfos")]
+                [Validation(Required=false)]
+                public List<GetPropertiesResponseBodyDataMiaosouConfigModelInfos> ModelInfos { get; set; }
+                public class GetPropertiesResponseBodyDataMiaosouConfigModelInfos : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>quanmiao-max</para>
+                    /// </summary>
+                    [NameInMap("ModelId")]
+                    [Validation(Required=false)]
+                    public string ModelId { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>全妙-Max</para>
+                    /// </summary>
+                    [NameInMap("ModelName")]
+                    [Validation(Required=false)]
+                    public string ModelName { get; set; }
+
+                }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("UseDocSize")]
+                [Validation(Required=false)]
+                public long? UseDocSize { get; set; }
+
+            }
+
             [NameInMap("SearchSourceList")]
             [Validation(Required=false)]
             public List<GetPropertiesResponseBodyDataSearchSourceList> SearchSourceList { get; set; }

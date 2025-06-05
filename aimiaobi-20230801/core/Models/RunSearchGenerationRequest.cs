@@ -223,6 +223,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public RunSearchGenerationRequestChatConfig ChatConfig { get; set; }
         public class RunSearchGenerationRequestChatConfig : TeaModel {
+            [NameInMap("EnableThinking")]
+            [Validation(Required=false)]
+            public bool? EnableThinking { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>concise</para>
