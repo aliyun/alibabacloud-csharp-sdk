@@ -18,12 +18,18 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         public Dictionary<string, object> Params { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>a1d033dd-xxxx-49cf-b49b-2068081bb551</para>
         /// </summary>
         [NameInMap("SkillId")]
         [Validation(Required=false)]
         public string SkillId { get; set; }
+
+        [NameInMap("Stream")]
+        [Validation(Required=false)]
+        public bool? Stream { get; set; }
 
     }
 
