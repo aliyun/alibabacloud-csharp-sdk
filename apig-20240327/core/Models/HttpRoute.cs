@@ -109,6 +109,46 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public HttpRouteMatch Match { get; set; }
 
+        [NameInMap("mcpServerInfo")]
+        [Validation(Required=false)]
+        public HttpRouteMcpServerInfo McpServerInfo { get; set; }
+        public class HttpRouteMcpServerInfo : TeaModel {
+            [NameInMap("createFromType")]
+            [Validation(Required=false)]
+            public string CreateFromType { get; set; }
+
+            [NameInMap("importInstanceId")]
+            [Validation(Required=false)]
+            public string ImportInstanceId { get; set; }
+
+            [NameInMap("importMcpServerId")]
+            [Validation(Required=false)]
+            public string ImportMcpServerId { get; set; }
+
+            [NameInMap("importNamespace")]
+            [Validation(Required=false)]
+            public string ImportNamespace { get; set; }
+
+            [NameInMap("mcpRouteConfig")]
+            [Validation(Required=false)]
+            public HttpRouteMcpServerInfoMcpRouteConfig McpRouteConfig { get; set; }
+            public class HttpRouteMcpServerInfoMcpRouteConfig : TeaModel {
+                [NameInMap("exposedUriPath")]
+                [Validation(Required=false)]
+                public string ExposedUriPath { get; set; }
+
+                [NameInMap("protocol")]
+                [Validation(Required=false)]
+                public string Protocol { get; set; }
+
+            }
+
+            [NameInMap("mcpServerConfig")]
+            [Validation(Required=false)]
+            public string McpServerConfig { get; set; }
+
+        }
+
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
