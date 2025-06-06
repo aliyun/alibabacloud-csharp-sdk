@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public string AlertTitleEn { get; set; }
 
+        [NameInMap("NacDemotionPolicyIds")]
+        [Validation(Required=false)]
+        public List<string> NacDemotionPolicyIds { get; set; }
+
         [NameInMap("NoticeContent")]
         [Validation(Required=false)]
         public string NoticeContent { get; set; }

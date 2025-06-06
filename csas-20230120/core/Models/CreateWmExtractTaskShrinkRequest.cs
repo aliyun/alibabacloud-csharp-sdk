@@ -52,6 +52,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public string Filename { get; set; }
 
+        [NameInMap("IsClientEmbed")]
+        [Validation(Required=false)]
+        public bool? IsClientEmbed { get; set; }
+
         /// <summary>
         /// <para>The watermark parameter for videos that specifies whether to use the long video watermark SDK. Default value: false. Valid values:</para>
         /// <list type="bullet">

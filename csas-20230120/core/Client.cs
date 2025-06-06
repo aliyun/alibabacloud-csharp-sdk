@@ -1039,6 +1039,146 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建加速对象</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateEnterpriseAccelerateTargetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEnterpriseAccelerateTargetResponse
+        /// </returns>
+        public CreateEnterpriseAccelerateTargetResponse CreateEnterpriseAccelerateTargetWithOptions(CreateEnterpriseAccelerateTargetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EapId))
+            {
+                body["EapId"] = request.EapId;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Target))
+            {
+                bodyFlat["Target"] = request.Target;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateEnterpriseAccelerateTarget",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateEnterpriseAccelerateTargetResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建加速对象</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateEnterpriseAccelerateTargetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEnterpriseAccelerateTargetResponse
+        /// </returns>
+        public async Task<CreateEnterpriseAccelerateTargetResponse> CreateEnterpriseAccelerateTargetWithOptionsAsync(CreateEnterpriseAccelerateTargetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EapId))
+            {
+                body["EapId"] = request.EapId;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Target))
+            {
+                bodyFlat["Target"] = request.Target;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateEnterpriseAccelerateTarget",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateEnterpriseAccelerateTargetResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建加速对象</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateEnterpriseAccelerateTargetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEnterpriseAccelerateTargetResponse
+        /// </returns>
+        public CreateEnterpriseAccelerateTargetResponse CreateEnterpriseAccelerateTarget(CreateEnterpriseAccelerateTargetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateEnterpriseAccelerateTargetWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建加速对象</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateEnterpriseAccelerateTargetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEnterpriseAccelerateTargetResponse
+        /// </returns>
+        public async Task<CreateEnterpriseAccelerateTargetResponse> CreateEnterpriseAccelerateTargetAsync(CreateEnterpriseAccelerateTargetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateEnterpriseAccelerateTargetWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>创建自定义身份源部门</para>
         /// </summary>
         /// 
@@ -2590,6 +2730,10 @@ namespace AlibabaCloud.SDK.Csas20230120
             {
                 query["CsvControl"] = request.CsvControlShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsClientEmbed))
+            {
+                query["IsClientEmbed"] = request.IsClientEmbed;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocumentIsCapture))
             {
@@ -2667,6 +2811,10 @@ namespace AlibabaCloud.SDK.Csas20230120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CsvControlShrink))
             {
                 query["CsvControl"] = request.CsvControlShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsClientEmbed))
+            {
+                query["IsClientEmbed"] = request.IsClientEmbed;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocumentIsCapture))
@@ -3259,6 +3407,266 @@ namespace AlibabaCloud.SDK.Csas20230120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteDynamicRouteWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除加速策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteEnterpriseAcceleratePolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEnterpriseAcceleratePolicyResponse
+        /// </returns>
+        public DeleteEnterpriseAcceleratePolicyResponse DeleteEnterpriseAcceleratePolicyWithOptions(DeleteEnterpriseAcceleratePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EapId))
+            {
+                body["EapId"] = request.EapId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteEnterpriseAcceleratePolicy",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteEnterpriseAcceleratePolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除加速策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteEnterpriseAcceleratePolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEnterpriseAcceleratePolicyResponse
+        /// </returns>
+        public async Task<DeleteEnterpriseAcceleratePolicyResponse> DeleteEnterpriseAcceleratePolicyWithOptionsAsync(DeleteEnterpriseAcceleratePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EapId))
+            {
+                body["EapId"] = request.EapId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteEnterpriseAcceleratePolicy",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteEnterpriseAcceleratePolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除加速策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteEnterpriseAcceleratePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEnterpriseAcceleratePolicyResponse
+        /// </returns>
+        public DeleteEnterpriseAcceleratePolicyResponse DeleteEnterpriseAcceleratePolicy(DeleteEnterpriseAcceleratePolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteEnterpriseAcceleratePolicyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除加速策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteEnterpriseAcceleratePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEnterpriseAcceleratePolicyResponse
+        /// </returns>
+        public async Task<DeleteEnterpriseAcceleratePolicyResponse> DeleteEnterpriseAcceleratePolicyAsync(DeleteEnterpriseAcceleratePolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteEnterpriseAcceleratePolicyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除加速对象</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteEnterpriseAccelerateTargetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEnterpriseAccelerateTargetResponse
+        /// </returns>
+        public DeleteEnterpriseAccelerateTargetResponse DeleteEnterpriseAccelerateTargetWithOptions(DeleteEnterpriseAccelerateTargetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EapId))
+            {
+                body["EapId"] = request.EapId;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Target))
+            {
+                bodyFlat["Target"] = request.Target;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteEnterpriseAccelerateTarget",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteEnterpriseAccelerateTargetResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除加速对象</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteEnterpriseAccelerateTargetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEnterpriseAccelerateTargetResponse
+        /// </returns>
+        public async Task<DeleteEnterpriseAccelerateTargetResponse> DeleteEnterpriseAccelerateTargetWithOptionsAsync(DeleteEnterpriseAccelerateTargetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EapId))
+            {
+                body["EapId"] = request.EapId;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Target))
+            {
+                bodyFlat["Target"] = request.Target;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteEnterpriseAccelerateTarget",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteEnterpriseAccelerateTargetResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除加速对象</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteEnterpriseAccelerateTargetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEnterpriseAccelerateTargetResponse
+        /// </returns>
+        public DeleteEnterpriseAccelerateTargetResponse DeleteEnterpriseAccelerateTarget(DeleteEnterpriseAccelerateTargetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteEnterpriseAccelerateTargetWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除加速对象</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteEnterpriseAccelerateTargetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEnterpriseAccelerateTargetResponse
+        /// </returns>
+        public async Task<DeleteEnterpriseAccelerateTargetResponse> DeleteEnterpriseAccelerateTargetAsync(DeleteEnterpriseAccelerateTargetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteEnterpriseAccelerateTargetWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4527,6 +4935,246 @@ namespace AlibabaCloud.SDK.Csas20230120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DetachPolicy2ApprovalProcessWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>禁用加速策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableEnterpriseAcceleratePolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableEnterpriseAcceleratePolicyResponse
+        /// </returns>
+        public DisableEnterpriseAcceleratePolicyResponse DisableEnterpriseAcceleratePolicyWithOptions(DisableEnterpriseAcceleratePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EapId))
+            {
+                body["EapId"] = request.EapId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableEnterpriseAcceleratePolicy",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableEnterpriseAcceleratePolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>禁用加速策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableEnterpriseAcceleratePolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableEnterpriseAcceleratePolicyResponse
+        /// </returns>
+        public async Task<DisableEnterpriseAcceleratePolicyResponse> DisableEnterpriseAcceleratePolicyWithOptionsAsync(DisableEnterpriseAcceleratePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EapId))
+            {
+                body["EapId"] = request.EapId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableEnterpriseAcceleratePolicy",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableEnterpriseAcceleratePolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>禁用加速策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableEnterpriseAcceleratePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableEnterpriseAcceleratePolicyResponse
+        /// </returns>
+        public DisableEnterpriseAcceleratePolicyResponse DisableEnterpriseAcceleratePolicy(DisableEnterpriseAcceleratePolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DisableEnterpriseAcceleratePolicyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>禁用加速策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableEnterpriseAcceleratePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableEnterpriseAcceleratePolicyResponse
+        /// </returns>
+        public async Task<DisableEnterpriseAcceleratePolicyResponse> DisableEnterpriseAcceleratePolicyAsync(DisableEnterpriseAcceleratePolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DisableEnterpriseAcceleratePolicyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启用加速策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableEnterpriseAcceleratePolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableEnterpriseAcceleratePolicyResponse
+        /// </returns>
+        public EnableEnterpriseAcceleratePolicyResponse EnableEnterpriseAcceleratePolicyWithOptions(EnableEnterpriseAcceleratePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EapId))
+            {
+                body["EapId"] = request.EapId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableEnterpriseAcceleratePolicy",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableEnterpriseAcceleratePolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启用加速策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableEnterpriseAcceleratePolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableEnterpriseAcceleratePolicyResponse
+        /// </returns>
+        public async Task<EnableEnterpriseAcceleratePolicyResponse> EnableEnterpriseAcceleratePolicyWithOptionsAsync(EnableEnterpriseAcceleratePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EapId))
+            {
+                body["EapId"] = request.EapId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableEnterpriseAcceleratePolicy",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableEnterpriseAcceleratePolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启用加速策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableEnterpriseAcceleratePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableEnterpriseAcceleratePolicyResponse
+        /// </returns>
+        public EnableEnterpriseAcceleratePolicyResponse EnableEnterpriseAcceleratePolicy(EnableEnterpriseAcceleratePolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return EnableEnterpriseAcceleratePolicyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启用加速策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableEnterpriseAcceleratePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableEnterpriseAcceleratePolicyResponse
+        /// </returns>
+        public async Task<EnableEnterpriseAcceleratePolicyResponse> EnableEnterpriseAcceleratePolicyAsync(EnableEnterpriseAcceleratePolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await EnableEnterpriseAcceleratePolicyWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6419,6 +7067,134 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>批量导入加速对象异步任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ImportEnterpriseAccelerateTargetsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportEnterpriseAccelerateTargetsResponse
+        /// </returns>
+        public ImportEnterpriseAccelerateTargetsResponse ImportEnterpriseAccelerateTargetsWithOptions(ImportEnterpriseAccelerateTargetsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EapId))
+            {
+                body["EapId"] = request.EapId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileUrl))
+            {
+                body["FileUrl"] = request.FileUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImportEnterpriseAccelerateTargets",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImportEnterpriseAccelerateTargetsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量导入加速对象异步任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ImportEnterpriseAccelerateTargetsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportEnterpriseAccelerateTargetsResponse
+        /// </returns>
+        public async Task<ImportEnterpriseAccelerateTargetsResponse> ImportEnterpriseAccelerateTargetsWithOptionsAsync(ImportEnterpriseAccelerateTargetsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EapId))
+            {
+                body["EapId"] = request.EapId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileUrl))
+            {
+                body["FileUrl"] = request.FileUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImportEnterpriseAccelerateTargets",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImportEnterpriseAccelerateTargetsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量导入加速对象异步任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ImportEnterpriseAccelerateTargetsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportEnterpriseAccelerateTargetsResponse
+        /// </returns>
+        public ImportEnterpriseAccelerateTargetsResponse ImportEnterpriseAccelerateTargets(ImportEnterpriseAccelerateTargetsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ImportEnterpriseAccelerateTargetsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量导入加速对象异步任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ImportEnterpriseAccelerateTargetsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportEnterpriseAccelerateTargetsResponse
+        /// </returns>
+        public async Task<ImportEnterpriseAccelerateTargetsResponse> ImportEnterpriseAccelerateTargetsAsync(ImportEnterpriseAccelerateTargetsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ImportEnterpriseAccelerateTargetsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>批量查询内网访问策略的应用</para>
         /// </summary>
         /// 
@@ -7427,7 +8203,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询动态策略处置流程</para>
+        /// <para>Batch Query Dynamic Policy Disposal Processes</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7465,7 +8241,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询动态策略处置流程</para>
+        /// <para>Batch Query Dynamic Policy Disposal Processes</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7503,7 +8279,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询动态策略处置流程</para>
+        /// <para>Batch Query Dynamic Policy Disposal Processes</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7521,7 +8297,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询动态策略处置流程</para>
+        /// <para>Batch Query Dynamic Policy Disposal Processes</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7741,6 +8517,342 @@ namespace AlibabaCloud.SDK.Csas20230120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListDynamicRoutesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询加速策略日志列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEnterpriseAccelerateLogsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEnterpriseAccelerateLogsResponse
+        /// </returns>
+        public ListEnterpriseAccelerateLogsResponse ListEnterpriseAccelerateLogsWithOptions(ListEnterpriseAccelerateLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEnterpriseAccelerateLogs",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEnterpriseAccelerateLogsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询加速策略日志列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEnterpriseAccelerateLogsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEnterpriseAccelerateLogsResponse
+        /// </returns>
+        public async Task<ListEnterpriseAccelerateLogsResponse> ListEnterpriseAccelerateLogsWithOptionsAsync(ListEnterpriseAccelerateLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEnterpriseAccelerateLogs",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEnterpriseAccelerateLogsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询加速策略日志列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEnterpriseAccelerateLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEnterpriseAccelerateLogsResponse
+        /// </returns>
+        public ListEnterpriseAccelerateLogsResponse ListEnterpriseAccelerateLogs(ListEnterpriseAccelerateLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListEnterpriseAccelerateLogsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询加速策略日志列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEnterpriseAccelerateLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEnterpriseAccelerateLogsResponse
+        /// </returns>
+        public async Task<ListEnterpriseAccelerateLogsResponse> ListEnterpriseAccelerateLogsAsync(ListEnterpriseAccelerateLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListEnterpriseAccelerateLogsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询加速策略列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEnterpriseAcceleratePoliciesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEnterpriseAcceleratePoliciesResponse
+        /// </returns>
+        public ListEnterpriseAcceleratePoliciesResponse ListEnterpriseAcceleratePoliciesWithOptions(ListEnterpriseAcceleratePoliciesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEnterpriseAcceleratePolicies",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEnterpriseAcceleratePoliciesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询加速策略列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEnterpriseAcceleratePoliciesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEnterpriseAcceleratePoliciesResponse
+        /// </returns>
+        public async Task<ListEnterpriseAcceleratePoliciesResponse> ListEnterpriseAcceleratePoliciesWithOptionsAsync(ListEnterpriseAcceleratePoliciesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEnterpriseAcceleratePolicies",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEnterpriseAcceleratePoliciesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询加速策略列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEnterpriseAcceleratePoliciesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEnterpriseAcceleratePoliciesResponse
+        /// </returns>
+        public ListEnterpriseAcceleratePoliciesResponse ListEnterpriseAcceleratePolicies(ListEnterpriseAcceleratePoliciesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListEnterpriseAcceleratePoliciesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询加速策略列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEnterpriseAcceleratePoliciesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEnterpriseAcceleratePoliciesResponse
+        /// </returns>
+        public async Task<ListEnterpriseAcceleratePoliciesResponse> ListEnterpriseAcceleratePoliciesAsync(ListEnterpriseAcceleratePoliciesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListEnterpriseAcceleratePoliciesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询加速对象列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEnterpriseAccelerateTargetsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEnterpriseAccelerateTargetsResponse
+        /// </returns>
+        public ListEnterpriseAccelerateTargetsResponse ListEnterpriseAccelerateTargetsWithOptions(ListEnterpriseAccelerateTargetsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEnterpriseAccelerateTargets",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEnterpriseAccelerateTargetsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询加速对象列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEnterpriseAccelerateTargetsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEnterpriseAccelerateTargetsResponse
+        /// </returns>
+        public async Task<ListEnterpriseAccelerateTargetsResponse> ListEnterpriseAccelerateTargetsWithOptionsAsync(ListEnterpriseAccelerateTargetsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEnterpriseAccelerateTargets",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEnterpriseAccelerateTargetsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询加速对象列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEnterpriseAccelerateTargetsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEnterpriseAccelerateTargetsResponse
+        /// </returns>
+        public ListEnterpriseAccelerateTargetsResponse ListEnterpriseAccelerateTargets(ListEnterpriseAccelerateTargetsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListEnterpriseAccelerateTargetsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询加速对象列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEnterpriseAccelerateTargetsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEnterpriseAccelerateTargetsResponse
+        /// </returns>
+        public async Task<ListEnterpriseAccelerateTargetsResponse> ListEnterpriseAccelerateTargetsAsync(ListEnterpriseAccelerateTargetsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListEnterpriseAccelerateTargetsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -10829,6 +11941,206 @@ namespace AlibabaCloud.SDK.Csas20230120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await LookupWmInfoMappingWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改加速策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyEnterpriseAcceleratePolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyEnterpriseAcceleratePolicyResponse
+        /// </returns>
+        public ModifyEnterpriseAcceleratePolicyResponse ModifyEnterpriseAcceleratePolicyWithOptions(ModifyEnterpriseAcceleratePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccelerationType))
+            {
+                body["AccelerationType"] = request.AccelerationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EapId))
+            {
+                body["EapId"] = request.EapId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OnTls))
+            {
+                body["OnTls"] = request.OnTls;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            {
+                body["Priority"] = request.Priority;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowInClient))
+            {
+                body["ShowInClient"] = request.ShowInClient;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpstreamHost))
+            {
+                body["UpstreamHost"] = request.UpstreamHost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpstreamPort))
+            {
+                body["UpstreamPort"] = request.UpstreamPort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpstreamType))
+            {
+                body["UpstreamType"] = request.UpstreamType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserAttributeGroup))
+            {
+                body["UserAttributeGroup"] = request.UserAttributeGroup;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyEnterpriseAcceleratePolicy",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyEnterpriseAcceleratePolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改加速策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyEnterpriseAcceleratePolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyEnterpriseAcceleratePolicyResponse
+        /// </returns>
+        public async Task<ModifyEnterpriseAcceleratePolicyResponse> ModifyEnterpriseAcceleratePolicyWithOptionsAsync(ModifyEnterpriseAcceleratePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccelerationType))
+            {
+                body["AccelerationType"] = request.AccelerationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EapId))
+            {
+                body["EapId"] = request.EapId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OnTls))
+            {
+                body["OnTls"] = request.OnTls;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            {
+                body["Priority"] = request.Priority;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowInClient))
+            {
+                body["ShowInClient"] = request.ShowInClient;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpstreamHost))
+            {
+                body["UpstreamHost"] = request.UpstreamHost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpstreamPort))
+            {
+                body["UpstreamPort"] = request.UpstreamPort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpstreamType))
+            {
+                body["UpstreamType"] = request.UpstreamType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserAttributeGroup))
+            {
+                body["UserAttributeGroup"] = request.UserAttributeGroup;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyEnterpriseAcceleratePolicy",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyEnterpriseAcceleratePolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改加速策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyEnterpriseAcceleratePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyEnterpriseAcceleratePolicyResponse
+        /// </returns>
+        public ModifyEnterpriseAcceleratePolicyResponse ModifyEnterpriseAcceleratePolicy(ModifyEnterpriseAcceleratePolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyEnterpriseAcceleratePolicyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改加速策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyEnterpriseAcceleratePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyEnterpriseAcceleratePolicyResponse
+        /// </returns>
+        public async Task<ModifyEnterpriseAcceleratePolicyResponse> ModifyEnterpriseAcceleratePolicyAsync(ModifyEnterpriseAcceleratePolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyEnterpriseAcceleratePolicyWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Deprecated</b></term>
