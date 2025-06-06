@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Devs20230714.Models
 {
-    public class ToolsetSpec : TeaModel {
-        [NameInMap("schema")]
+    public class MCPInstallationConfig : TeaModel {
+        [NameInMap("mcpServers")]
         [Validation(Required=false)]
-        public ToolsetSchema Schema { get; set; }
+        public MCPServerInstallationConfig McpServers { get; set; }
 
     }
 

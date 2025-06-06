@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Devs20230714.Models
 {
-    public class ToolsetSpec : TeaModel {
-        [NameInMap("schema")]
+    public class UpdateToolsetRequest : TeaModel {
+        [NameInMap("body")]
         [Validation(Required=false)]
-        public ToolsetSchema Schema { get; set; }
+        public Toolset Body { get; set; }
 
     }
 

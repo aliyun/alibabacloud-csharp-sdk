@@ -73,6 +73,10 @@ namespace AlibabaCloud.SDK.Devs20230714.Models
                 [Validation(Required=false)]
                 public string AuthType { get; set; }
 
+                [NameInMap("disableURLInternet")]
+                [Validation(Required=false)]
+                public bool? DisableURLInternet { get; set; }
+
                 [NameInMap("dsableURLInternet")]
                 [Validation(Required=false)]
                 public bool? DsableURLInternet { get; set; }
@@ -224,6 +228,10 @@ namespace AlibabaCloud.SDK.Devs20230714.Models
             [NameInMap("srcOssRegion")]
             [Validation(Required=false)]
             public string SrcOssRegion { get; set; }
+
+            [NameInMap("syncStrategy")]
+            [Validation(Required=false)]
+            public string SyncStrategy { get; set; }
 
         }
 

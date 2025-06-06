@@ -8,15 +8,15 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Devs20230714.Models
 {
-    public class DeployModelScopeModelInput : TeaModel {
+    public class DeploySGLangModelInput : TeaModel {
         [NameInMap("accountID")]
         [Validation(Required=false)]
         public string AccountID { get; set; }
 
         [NameInMap("concurrencyConfig")]
         [Validation(Required=false)]
-        public DeployModelScopeModelInputConcurrencyConfig ConcurrencyConfig { get; set; }
-        public class DeployModelScopeModelInputConcurrencyConfig : TeaModel {
+        public DeploySGLangModelInputConcurrencyConfig ConcurrencyConfig { get; set; }
+        public class DeploySGLangModelInputConcurrencyConfig : TeaModel {
             [NameInMap("reservedConcurrency")]
             [Validation(Required=false)]
             public int? ReservedConcurrency { get; set; }
@@ -45,8 +45,8 @@ namespace AlibabaCloud.SDK.Devs20230714.Models
 
         [NameInMap("gpuConfig")]
         [Validation(Required=false)]
-        public DeployModelScopeModelInputGpuConfig GpuConfig { get; set; }
-        public class DeployModelScopeModelInputGpuConfig : TeaModel {
+        public DeploySGLangModelInputGpuConfig GpuConfig { get; set; }
+        public class DeploySGLangModelInputGpuConfig : TeaModel {
             [NameInMap("gpuMemorySize")]
             [Validation(Required=false)]
             public int? GpuMemorySize { get; set; }
@@ -59,16 +59,16 @@ namespace AlibabaCloud.SDK.Devs20230714.Models
 
         [NameInMap("httpTrigger")]
         [Validation(Required=false)]
-        public DeployModelScopeModelInputHttpTrigger HttpTrigger { get; set; }
-        public class DeployModelScopeModelInputHttpTrigger : TeaModel {
+        public DeploySGLangModelInputHttpTrigger HttpTrigger { get; set; }
+        public class DeploySGLangModelInputHttpTrigger : TeaModel {
             [NameInMap("qualifier")]
             [Validation(Required=false)]
             public string Qualifier { get; set; }
 
             [NameInMap("triggerConfig")]
             [Validation(Required=false)]
-            public DeployModelScopeModelInputHttpTriggerTriggerConfig TriggerConfig { get; set; }
-            public class DeployModelScopeModelInputHttpTriggerTriggerConfig : TeaModel {
+            public DeploySGLangModelInputHttpTriggerTriggerConfig TriggerConfig { get; set; }
+            public class DeploySGLangModelInputHttpTriggerTriggerConfig : TeaModel {
                 [NameInMap("authType")]
                 [Validation(Required=false)]
                 public string AuthType { get; set; }
@@ -99,8 +99,8 @@ namespace AlibabaCloud.SDK.Devs20230714.Models
 
         [NameInMap("logConfig")]
         [Validation(Required=false)]
-        public DeployModelScopeModelInputLogConfig LogConfig { get; set; }
-        public class DeployModelScopeModelInputLogConfig : TeaModel {
+        public DeploySGLangModelInputLogConfig LogConfig { get; set; }
+        public class DeploySGLangModelInputLogConfig : TeaModel {
             [NameInMap("enableInstanceMetrics")]
             [Validation(Required=false)]
             public bool? EnableInstanceMetrics { get; set; }
@@ -129,8 +129,54 @@ namespace AlibabaCloud.SDK.Devs20230714.Models
 
         [NameInMap("modelConfig")]
         [Validation(Required=false)]
-        public DeployModelScopeModelInputModelConfig ModelConfig { get; set; }
-        public class DeployModelScopeModelInputModelConfig : TeaModel {
+        public DeploySGLangModelInputModelConfig ModelConfig { get; set; }
+        public class DeploySGLangModelInputModelConfig : TeaModel {
+            [NameInMap("fmkSGLangConfig")]
+            [Validation(Required=false)]
+            public DeploySGLangModelInputModelConfigFmkSGLangConfig FmkSGLangConfig { get; set; }
+            public class DeploySGLangModelInputModelConfigFmkSGLangConfig : TeaModel {
+                [NameInMap("apiKey")]
+                [Validation(Required=false)]
+                public string ApiKey { get; set; }
+
+                [NameInMap("chatTemplate")]
+                [Validation(Required=false)]
+                public string ChatTemplate { get; set; }
+
+                [NameInMap("dtype")]
+                [Validation(Required=false)]
+                public string Dtype { get; set; }
+
+                [NameInMap("fullTextPostfix")]
+                [Validation(Required=false)]
+                public string FullTextPostfix { get; set; }
+
+                [NameInMap("loadFormat")]
+                [Validation(Required=false)]
+                public string LoadFormat { get; set; }
+
+                [NameInMap("maxRunningRequests")]
+                [Validation(Required=false)]
+                public int? MaxRunningRequests { get; set; }
+
+                [NameInMap("maxTotalTokens")]
+                [Validation(Required=false)]
+                public int? MaxTotalTokens { get; set; }
+
+                [NameInMap("memFractionStatic")]
+                [Validation(Required=false)]
+                public float? MemFractionStatic { get; set; }
+
+                [NameInMap("quantization")]
+                [Validation(Required=false)]
+                public string Quantization { get; set; }
+
+                [NameInMap("servedModelName")]
+                [Validation(Required=false)]
+                public string ServedModelName { get; set; }
+
+            }
+
             [NameInMap("framework")]
             [Validation(Required=false)]
             public string Framework { get; set; }
@@ -190,15 +236,29 @@ namespace AlibabaCloud.SDK.Devs20230714.Models
 
         [NameInMap("nasConfig")]
         [Validation(Required=false)]
-        public DeployModelScopeModelInputNasConfig NasConfig { get; set; }
-        public class DeployModelScopeModelInputNasConfig : TeaModel {
+        public DeploySGLangModelInputNasConfig NasConfig { get; set; }
+        public class DeploySGLangModelInputNasConfig : TeaModel {
             [NameInMap("groupId")]
             [Validation(Required=false)]
             public int? GroupId { get; set; }
 
             [NameInMap("mountPoints")]
             [Validation(Required=false)]
-            public List<string> MountPoints { get; set; }
+            public List<DeploySGLangModelInputNasConfigMountPoints> MountPoints { get; set; }
+            public class DeploySGLangModelInputNasConfigMountPoints : TeaModel {
+                [NameInMap("enableTLS")]
+                [Validation(Required=false)]
+                public bool? EnableTLS { get; set; }
+
+                [NameInMap("mountDir")]
+                [Validation(Required=false)]
+                public string MountDir { get; set; }
+
+                [NameInMap("serverAddr")]
+                [Validation(Required=false)]
+                public string ServerAddr { get; set; }
+
+            }
 
             [NameInMap("userId")]
             [Validation(Required=false)]
@@ -216,16 +276,16 @@ namespace AlibabaCloud.SDK.Devs20230714.Models
 
         [NameInMap("provisionConfig")]
         [Validation(Required=false)]
-        public DeployModelScopeModelInputProvisionConfig ProvisionConfig { get; set; }
-        public class DeployModelScopeModelInputProvisionConfig : TeaModel {
+        public DeploySGLangModelInputProvisionConfig ProvisionConfig { get; set; }
+        public class DeploySGLangModelInputProvisionConfig : TeaModel {
             [NameInMap("alwaysAllocateGPU")]
             [Validation(Required=false)]
             public bool? AlwaysAllocateGPU { get; set; }
 
             [NameInMap("scheduledActions")]
             [Validation(Required=false)]
-            public List<DeployModelScopeModelInputProvisionConfigScheduledActions> ScheduledActions { get; set; }
-            public class DeployModelScopeModelInputProvisionConfigScheduledActions : TeaModel {
+            public List<DeploySGLangModelInputProvisionConfigScheduledActions> ScheduledActions { get; set; }
+            public class DeploySGLangModelInputProvisionConfigScheduledActions : TeaModel {
                 [NameInMap("endTime")]
                 [Validation(Required=false)]
                 public string EndTime { get; set; }
@@ -283,8 +343,8 @@ namespace AlibabaCloud.SDK.Devs20230714.Models
 
         [NameInMap("vpcConfig")]
         [Validation(Required=false)]
-        public DeployModelScopeModelInputVpcConfig VpcConfig { get; set; }
-        public class DeployModelScopeModelInputVpcConfig : TeaModel {
+        public DeploySGLangModelInputVpcConfig VpcConfig { get; set; }
+        public class DeploySGLangModelInputVpcConfig : TeaModel {
             [NameInMap("securityGroupId")]
             [Validation(Required=false)]
             public string SecurityGroupId { get; set; }

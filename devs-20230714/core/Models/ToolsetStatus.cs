@@ -9,9 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Devs20230714.Models
 {
     public class ToolsetStatus : TeaModel {
-        [NameInMap("tools")]
+        [NameInMap("observedGeneration")]
         [Validation(Required=false)]
-        public Dictionary<string, Tool> Tools { get; set; }
+        public long? ObservedGeneration { get; set; }
+
+        [NameInMap("observedTime")]
+        [Validation(Required=false)]
+        public string ObservedTime { get; set; }
+
+        [NameInMap("outputs")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> Outputs { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Installed</para>
+        /// </summary>
+        [NameInMap("phase")]
+        [Validation(Required=false)]
+        public string Phase { get; set; }
 
     }
 

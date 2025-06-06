@@ -17,6 +17,14 @@ namespace AlibabaCloud.SDK.Devs20230714.Models
         [Validation(Required=false)]
         public List<string> Languages { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>./src</para>
+        /// </summary>
+        [NameInMap("rootPath")]
+        [Validation(Required=false)]
+        public string RootPath { get; set; }
+
         [NameInMap("steps")]
         [Validation(Required=false)]
         public List<object> Steps { get; set; }

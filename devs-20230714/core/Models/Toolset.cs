@@ -47,6 +47,10 @@ namespace AlibabaCloud.SDK.Devs20230714.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("spec")]
+        [Validation(Required=false)]
+        public ToolsetSpec Spec { get; set; }
+
         [NameInMap("status")]
         [Validation(Required=false)]
         public ToolsetStatus Status { get; set; }

@@ -13,6 +13,50 @@ namespace AlibabaCloud.SDK.Devs20230714.Models
         [Validation(Required=false)]
         public string AccountID { get; set; }
 
+        [NameInMap("asyncInvokeConfig")]
+        [Validation(Required=false)]
+        public DeployCustomContainerInputAsyncInvokeConfig AsyncInvokeConfig { get; set; }
+        public class DeployCustomContainerInputAsyncInvokeConfig : TeaModel {
+            [NameInMap("asyncTask")]
+            [Validation(Required=false)]
+            public bool? AsyncTask { get; set; }
+
+            [NameInMap("destinationConfig")]
+            [Validation(Required=false)]
+            public DeployCustomContainerInputAsyncInvokeConfigDestinationConfig DestinationConfig { get; set; }
+            public class DeployCustomContainerInputAsyncInvokeConfigDestinationConfig : TeaModel {
+                [NameInMap("onFailure")]
+                [Validation(Required=false)]
+                public DeployCustomContainerInputAsyncInvokeConfigDestinationConfigOnFailure OnFailure { get; set; }
+                public class DeployCustomContainerInputAsyncInvokeConfigDestinationConfigOnFailure : TeaModel {
+                    [NameInMap("destination")]
+                    [Validation(Required=false)]
+                    public string Destination { get; set; }
+
+                }
+
+                [NameInMap("onSuccess")]
+                [Validation(Required=false)]
+                public DeployCustomContainerInputAsyncInvokeConfigDestinationConfigOnSuccess OnSuccess { get; set; }
+                public class DeployCustomContainerInputAsyncInvokeConfigDestinationConfigOnSuccess : TeaModel {
+                    [NameInMap("destination")]
+                    [Validation(Required=false)]
+                    public string Destination { get; set; }
+
+                }
+
+            }
+
+            [NameInMap("maxAsyncEventAgeInSeconds")]
+            [Validation(Required=false)]
+            public long? MaxAsyncEventAgeInSeconds { get; set; }
+
+            [NameInMap("maxAsyncRetryAttempts")]
+            [Validation(Required=false)]
+            public long? MaxAsyncRetryAttempts { get; set; }
+
+        }
+
         [NameInMap("concurrencyConfig")]
         [Validation(Required=false)]
         public DeployCustomContainerInputConcurrencyConfig ConcurrencyConfig { get; set; }
@@ -115,6 +159,10 @@ namespace AlibabaCloud.SDK.Devs20230714.Models
             [Validation(Required=false)]
             public int? Port { get; set; }
 
+            [NameInMap("role")]
+            [Validation(Required=false)]
+            public string Role { get; set; }
+
         }
 
         [NameInMap("description")]
@@ -162,6 +210,10 @@ namespace AlibabaCloud.SDK.Devs20230714.Models
                 [NameInMap("authType")]
                 [Validation(Required=false)]
                 public string AuthType { get; set; }
+
+                [NameInMap("disableURLInternet")]
+                [Validation(Required=false)]
+                public bool? DisableURLInternet { get; set; }
 
                 [NameInMap("dsableURLInternet")]
                 [Validation(Required=false)]
@@ -253,6 +305,10 @@ namespace AlibabaCloud.SDK.Devs20230714.Models
             [Validation(Required=false)]
             public string SrcOssRegion { get; set; }
 
+            [NameInMap("syncStrategy")]
+            [Validation(Required=false)]
+            public string SyncStrategy { get; set; }
+
         }
 
         /// <summary>
@@ -283,6 +339,38 @@ namespace AlibabaCloud.SDK.Devs20230714.Models
         [NameInMap("originalName")]
         [Validation(Required=false)]
         public string OriginalName { get; set; }
+
+        [NameInMap("ossMountConfig")]
+        [Validation(Required=false)]
+        public DeployCustomContainerInputOssMountConfig OssMountConfig { get; set; }
+        public class DeployCustomContainerInputOssMountConfig : TeaModel {
+            [NameInMap("mountPoints")]
+            [Validation(Required=false)]
+            public List<DeployCustomContainerInputOssMountConfigMountPoints> MountPoints { get; set; }
+            public class DeployCustomContainerInputOssMountConfigMountPoints : TeaModel {
+                [NameInMap("bucketName")]
+                [Validation(Required=false)]
+                public string BucketName { get; set; }
+
+                [NameInMap("bucketPath")]
+                [Validation(Required=false)]
+                public string BucketPath { get; set; }
+
+                [NameInMap("endpoint")]
+                [Validation(Required=false)]
+                public string Endpoint { get; set; }
+
+                [NameInMap("mountDir")]
+                [Validation(Required=false)]
+                public string MountDir { get; set; }
+
+                [NameInMap("readOnly")]
+                [Validation(Required=false)]
+                public bool? ReadOnly { get; set; }
+
+            }
+
+        }
 
         [NameInMap("projectName")]
         [Validation(Required=false)]
