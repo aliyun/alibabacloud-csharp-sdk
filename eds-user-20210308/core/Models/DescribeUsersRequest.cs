@@ -102,6 +102,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [Validation(Required=false)]
         public string SolutionId { get; set; }
 
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public int? Status { get; set; }
+
     }
 
 }

@@ -189,6 +189,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
                 [Validation(Required=false)]
                 public string OrgName { get; set; }
 
+                [NameInMap("OrgNamePath")]
+                [Validation(Required=false)]
+                public string OrgNamePath { get; set; }
+
             }
 
             /// <summary>
