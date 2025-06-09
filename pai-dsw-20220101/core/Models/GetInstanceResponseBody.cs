@@ -1046,6 +1046,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [Validation(Required=false)]
         public string TerminalUrl { get; set; }
 
+        [NameInMap("UserCommandId")]
+        [Validation(Required=false)]
+        public string UserCommandId { get; set; }
+
         /// <summary>
         /// <para>The user ID.</para>
         /// 

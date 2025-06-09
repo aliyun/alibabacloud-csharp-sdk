@@ -255,6 +255,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [Validation(Required=false)]
         public bool? DisassociateDriver { get; set; }
 
+        [NameInMap("DisassociateEnvironmentVariables")]
+        [Validation(Required=false)]
+        public bool? DisassociateEnvironmentVariables { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to delete the associated forward information.</para>
         /// 
@@ -264,6 +268,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [NameInMap("DisassociateForwardInfos")]
         [Validation(Required=false)]
         public bool? DisassociateForwardInfos { get; set; }
+
+        [NameInMap("DisassociateUserCommand")]
+        [Validation(Required=false)]
+        public bool? DisassociateUserCommand { get; set; }
 
         /// <summary>
         /// <para>Specifies whether to delete the associated user VPC.</para>
@@ -301,6 +309,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [NameInMap("EcsSpec")]
         [Validation(Required=false)]
         public string EcsSpec { get; set; }
+
+        [NameInMap("EnvironmentVariables")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> EnvironmentVariables { get; set; }
 
         /// <summary>
         /// <para>The Base64-encoded account and password for the user‘s private image. The password will be hidden.</para>
@@ -423,6 +435,22 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
             [NameInMap("SharedMemory")]
             [Validation(Required=false)]
             public string SharedMemory { get; set; }
+
+        }
+
+        [NameInMap("UserCommand")]
+        [Validation(Required=false)]
+        public UpdateInstanceRequestUserCommand UserCommand { get; set; }
+        public class UpdateInstanceRequestUserCommand : TeaModel {
+            [NameInMap("OnStart")]
+            [Validation(Required=false)]
+            public UpdateInstanceRequestUserCommandOnStart OnStart { get; set; }
+            public class UpdateInstanceRequestUserCommandOnStart : TeaModel {
+                [NameInMap("Content")]
+                [Validation(Required=false)]
+                public string Content { get; set; }
+
+            }
 
         }
 

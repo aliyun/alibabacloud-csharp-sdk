@@ -519,6 +519,22 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
 
         }
 
+        [NameInMap("UserCommand")]
+        [Validation(Required=false)]
+        public CreateInstanceRequestUserCommand UserCommand { get; set; }
+        public class CreateInstanceRequestUserCommand : TeaModel {
+            [NameInMap("OnStart")]
+            [Validation(Required=false)]
+            public CreateInstanceRequestUserCommandOnStart OnStart { get; set; }
+            public class CreateInstanceRequestUserCommandOnStart : TeaModel {
+                [NameInMap("Content")]
+                [Validation(Required=false)]
+                public string Content { get; set; }
+
+            }
+
+        }
+
         /// <summary>
         /// <para>The ID of the instance owner. Valid values: Alibaba Cloud account and RAM user.</para>
         /// 
