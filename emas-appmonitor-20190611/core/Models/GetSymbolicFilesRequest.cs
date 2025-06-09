@@ -28,6 +28,10 @@ namespace AlibabaCloud.SDK.Emas_appmonitor20190611.Models
         [Validation(Required=false)]
         public string AppVersion { get; set; }
 
+        [NameInMap("BuildId")]
+        [Validation(Required=false)]
+        public string BuildId { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>1743523199999</para>
