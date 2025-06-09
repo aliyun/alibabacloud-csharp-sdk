@@ -105,6 +105,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public long? GmtModified { get; set; }
 
+            [NameInMap("Resource")]
+            [Validation(Required=false)]
+            public string Resource { get; set; }
+
             /// <summary>
             /// <para>The ID of the protection rule.</para>
             /// 

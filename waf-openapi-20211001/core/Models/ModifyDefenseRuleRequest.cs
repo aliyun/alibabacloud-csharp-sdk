@@ -48,6 +48,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("Resource")]
+        [Validation(Required=false)]
+        public string Resource { get; set; }
+
         /// <summary>
         /// <para>The ID of the Alibaba Cloud resource group.</para>
         /// 
