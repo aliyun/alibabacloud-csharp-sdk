@@ -3037,6 +3037,10 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["count"] = request.Count;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EfloNodeGroup))
+            {
+                body["eflo_node_group"] = request.EfloNodeGroup;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HostNetwork))
             {
                 body["host_network"] = request.HostNetwork;
@@ -3130,6 +3134,10 @@ namespace AlibabaCloud.SDK.CS20151215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Count))
             {
                 body["count"] = request.Count;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EfloNodeGroup))
+            {
+                body["eflo_node_group"] = request.EfloNodeGroup;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HostNetwork))
             {

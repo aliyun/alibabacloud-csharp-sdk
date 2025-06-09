@@ -145,6 +145,20 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Obsolete]
         public long? Count { get; set; }
 
+        [NameInMap("eflo_node_group")]
+        [Validation(Required=false)]
+        public CreateClusterNodePoolRequestEfloNodeGroup EfloNodeGroup { get; set; }
+        public class CreateClusterNodePoolRequestEfloNodeGroup : TeaModel {
+            [NameInMap("cluster_id")]
+            [Validation(Required=false)]
+            public string ClusterId { get; set; }
+
+            [NameInMap("group_id")]
+            [Validation(Required=false)]
+            public string GroupId { get; set; }
+
+        }
+
         /// <summary>
         /// <para>Specifies whether to set the network type of the pod to host network.</para>
         /// <list type="bullet">
