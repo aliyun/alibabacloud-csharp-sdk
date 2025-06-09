@@ -265,7 +265,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>代表资源状态的资源属性字段</para>
+        /// <para>The status of the log download task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>running</para>

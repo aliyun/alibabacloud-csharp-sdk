@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class CreateLogStoreRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to record the <b>public IP address</b> and <b>log receiving time</b>. Default value: false. Valid values:</para>
+        /// <para>Specifies whether to record the <b>public IP address</b> and the <b>log receiving time</b>. Default value: false. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true********</description></item>
-        /// <item><description>false********</description></item>
+        /// <item><description>true: records the public IP address and the log receiving time. If you set this parameter to true, Simple Log Service automatically adds the public IP address of the device from which the log is collected and the time when Simple Log Service receives the log to the Tag field of the collected log.</description></item>
+        /// <item><description>false: does not record the public IP address or log receiving time.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public EncryptConf EncryptConf { get; set; }
 
         /// <summary>
-        /// <para>The retention period of data in the hot storage tier of the Logstore. Valid values: 7 to 3000. Unit: days.</para>
+        /// <para>The data retention period for the hot storage tier. Unit: days. Minimum value: 7. The value of this parameter cannot exceed the value of ttl. If you set this parameter to -1, all data is stored in the hot storage tier.</para>
         /// <para>After the retention period that is specified for the hot storage tier elapses, the data is moved to the Infrequent Access (IA) storage tier. For more information, see <a href="https://help.aliyun.com/document_detail/308645.html">Enable hot and cold-tiered storage for a Logstore</a>.</para>
         /// 
         /// <b>Example:</b>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public int? HotTtl { get; set; }
 
         /// <summary>
-        /// <para>The retention period of data in the IA storage tier of the Logstore. You must set this parameter to at least 30 days. After the data retention period that you specify for the IA storage tier elapses, the data is moved to the Archive storage tier.</para>
+        /// <para>The data retention period for the IA storage tier. You must set this parameter to at least 30 days. After the data retention period that you specify for the IA storage tier elapses, the data is moved to the Archive storage tier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <list type="bullet">
         /// <item><description>The name must be unique in a project.</description></item>
         /// <item><description>The name can contain only lowercase letters, digits, hyphens (-), and underscores (_).</description></item>
-        /// <item><description>The name must start and end with a lowercase letter or a digit.</description></item>
+        /// <item><description>The name must start and end with a lowercase letter or digit.</description></item>
         /// <item><description>The name must be 3 to 63 characters in length.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -112,8 +112,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <summary>
         /// <para>The type of the Logstore. Simple Log Service provides two types of Logstores: Standard Logstores and Query Logstores. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>standard</b>: Standard Logstore. This type of Logstore supports the log analysis feature and is suitable for scenarios such as real-time monitoring and interactive analysis. You can also use this type of Logstore to build a comprehensive observability system.</description></item>
-        /// <item><description><b>query</b>: Query Logstore. This type of Logstore supports high-performance queries. The index traffic fee of a Query Logstore is approximately half that of a Standard Logstore. Query Logstores do not support SQL analysis. Query Logstores are suitable for scenarios in which the amount of data is large, the log retention period is long, or log analysis is not required. If logs are stored for weeks or months, the log retention period is considered long.</description></item>
+        /// <item><description><b>standard</b>: Standard Logstore. This type of Logstore supports the log analysis feature and is suitable for scenarios such as real-time monitoring and interactive analysis. You can use this type of Logstore to build a comprehensive observability system.</description></item>
+        /// <item><description><b>query</b>: Query Logstore. This type of Logstore supports high-performance query operations. The index traffic fee of a Query Logstore is approximately half that of a Standard Logstore. Query Logstores do not support SQL analysis. Query Logstores are suitable for scenarios in which the amount of data is large, the data retention period is long, or log analysis is not required. Data retention periods of weeks or months are considered long.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -123,6 +123,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string Mode { get; set; }
 
+        /// <summary>
+        /// <para>IngestProcessor ID</para>
+        /// </summary>
         [NameInMap("processorId")]
         [Validation(Required=false)]
         public string ProcessorId { get; set; }
@@ -156,7 +159,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string TelemetryType { get; set; }
 
         /// <summary>
-        /// <para>The retention period of data. Unit: days. Valid values: 1 to 3000. If you set this parameter to 3650, data is permanently stored.</para>
+        /// <para>The data retention period. Unit: days. Valid values: 1 to 3650. If you set this parameter to 3650, data is permanently stored.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -28,6 +28,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public long? Offset { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return. Default value: 10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>

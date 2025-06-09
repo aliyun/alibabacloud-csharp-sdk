@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class GetAgentInstanceConfigResponseBody : TeaModel {
+        [NameInMap("attributes")]
+        [Validation(Required=false)]
+        public string Attributes { get; set; }
+
         [NameInMap("config")]
         [Validation(Required=false)]
         public string Config { get; set; }
 
-        [NameInMap("configMatcher")]
+        [NameInMap("configType")]
         [Validation(Required=false)]
-        public string ConfigMatcher { get; set; }
-
-        [NameInMap("configName")]
-        [Validation(Required=false)]
-        public string ConfigName { get; set; }
+        public string ConfigType { get; set; }
 
         [NameInMap("createTime")]
         [Validation(Required=false)]
         public long? CreateTime { get; set; }
 
-        [NameInMap("isGray")]
+        [NameInMap("grayConfigs")]
         [Validation(Required=false)]
-        public bool? IsGray { get; set; }
+        public List<Dictionary<string, string>> GrayConfigs { get; set; }
 
         [NameInMap("lastModifyTime")]
         [Validation(Required=false)]

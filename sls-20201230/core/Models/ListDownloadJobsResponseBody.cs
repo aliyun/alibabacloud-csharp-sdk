@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public int? Count { get; set; }
 
+        /// <summary>
+        /// <para>The log download tasks.</para>
+        /// </summary>
         [NameInMap("results")]
         [Validation(Required=false)]
         public List<ListDownloadJobsResponseBodyResults> Results { get; set; }
@@ -275,6 +278,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The task status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>running</para>
             /// </summary>

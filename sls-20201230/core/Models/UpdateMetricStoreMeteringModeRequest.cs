@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class UpdateMetricStoreMeteringModeRequest : TeaModel {
         /// <summary>
+        /// <para>The billing mode. Default value: ChargeByFunction. Valid values: ChargeByFunction and ChargeByDataIngest.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

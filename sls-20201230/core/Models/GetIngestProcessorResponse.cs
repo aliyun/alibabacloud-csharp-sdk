@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
-    public class UpdateRdsExternalStoreResponse : TeaModel {
+    public class GetIngestProcessorResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [NameInMap("statusCode")]
         [Validation(Required=false)]
         public int? StatusCode { get; set; }
+
+        [NameInMap("body")]
+        [Validation(Required=false)]
+        public IngestProcessor Body { get; set; }
 
     }
 

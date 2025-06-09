@@ -19,6 +19,14 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public bool? AutoSplit { get; set; }
 
+        [NameInMap("hot_ttl")]
+        [Validation(Required=false)]
+        public int? HotTtl { get; set; }
+
+        [NameInMap("infrequentAccessTTL")]
+        [Validation(Required=false)]
+        public int? InfrequentAccessTTL { get; set; }
+
         /// <summary>
         /// <para>The maximum number of shards into which existing shards can be automatically split. This parameter is valid only when you set the autoSplit parameter to true.</para>
         /// 

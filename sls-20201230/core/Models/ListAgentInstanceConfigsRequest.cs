@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ListAgentInstanceConfigsRequest : TeaModel {
+        [NameInMap("attributes")]
+        [Validation(Required=false)]
+        public string Attributes { get; set; }
+
+        [NameInMap("configType")]
+        [Validation(Required=false)]
+        public string ConfigType { get; set; }
+
         [NameInMap("offset")]
         [Validation(Required=false)]
         public long? Offset { get; set; }

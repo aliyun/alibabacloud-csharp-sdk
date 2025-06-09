@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <item><description>project</description></item>
         /// <item><description>logstore</description></item>
         /// <item><description>dashboard</description></item>
-        /// <item><description>MachineGroup</description></item>
-        /// <item><description>LogtailConfig</description></item>
+        /// <item><description>machinegroup</description></item>
+        /// <item><description>logtailconfig</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

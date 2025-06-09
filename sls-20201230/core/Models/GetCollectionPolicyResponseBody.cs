@@ -71,10 +71,18 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             [Validation(Required=false)]
             public GetCollectionPolicyResponseBodyCollectionPolicyDataConfig DataConfig { get; set; }
             public class GetCollectionPolicyResponseBodyCollectionPolicyDataConfig : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>&quot;&quot;</para>
+                /// </summary>
                 [NameInMap("dataProject")]
                 [Validation(Required=false)]
                 public string DataProject { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>cn-beijing</para>
+                /// </summary>
                 [NameInMap("dataRegion")]
                 [Validation(Required=false)]
                 public string DataRegion { get; set; }
@@ -89,6 +97,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             [Validation(Required=false)]
             public bool? Enabled { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("internalPolicy")]
             [Validation(Required=false)]
             public bool? InternalPolicy { get; set; }
@@ -113,6 +125,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
                 [Validation(Required=false)]
                 public string ResourceMode { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>{&quot;tag1&quot;:&quot;value1&quot;,&quot;tag2&quot;:&quot;value2&quot;}</para>
+                /// </summary>
                 [NameInMap("resourceTags")]
                 [Validation(Required=false)]
                 public Dictionary<string, object> ResourceTags { get; set; }
@@ -127,6 +143,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             [Validation(Required=false)]
             public string PolicyName { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>148***********50</para>
+            /// </summary>
             [NameInMap("policyUid")]
             [Validation(Required=false)]
             public string PolicyUid { get; set; }
@@ -143,6 +163,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             [Validation(Required=false)]
             public GetCollectionPolicyResponseBodyCollectionPolicyResourceDirectory ResourceDirectory { get; set; }
             public class GetCollectionPolicyResponseBodyCollectionPolicyResourceDirectory : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>all,custom</para>
+                /// </summary>
                 [NameInMap("accountGroupType")]
                 [Validation(Required=false)]
                 public string AccountGroupType { get; set; }

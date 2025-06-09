@@ -29,6 +29,14 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public long? CreateTime { get; set; }
 
+        [NameInMap("hot_ttl")]
+        [Validation(Required=false)]
+        public int? HotTtl { get; set; }
+
+        [NameInMap("infrequentAccessTTL")]
+        [Validation(Required=false)]
+        public int? InfrequentAccessTTL { get; set; }
+
         /// <summary>
         /// <para>The last update time. The value is a UNIX timestamp.</para>
         /// 

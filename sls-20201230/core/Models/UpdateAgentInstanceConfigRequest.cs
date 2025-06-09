@@ -12,20 +12,20 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
-        [NameInMap("config")]
+        [NameInMap("attributes")]
         [Validation(Required=false)]
-        public string Config { get; set; }
+        public string Attributes { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
-        [NameInMap("configMatcher")]
+        [NameInMap("config")]
         [Validation(Required=false)]
-        public string ConfigMatcher { get; set; }
+        public string Config { get; set; }
 
-        [NameInMap("isGray")]
+        [NameInMap("grayConfigs")]
         [Validation(Required=false)]
-        public bool? IsGray { get; set; }
+        public string GrayConfigs { get; set; }
 
     }
 

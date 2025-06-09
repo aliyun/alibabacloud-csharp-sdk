@@ -1,3 +1,49 @@
+2025-06-09 Version: 5.8.0
+- Support API CallAiTools.
+- Support API CreateMaxComputeExport.
+- Support API DeleteIngestProcessor.
+- Support API DeleteMaxComputeExport.
+- Support API GetIngestProcessor.
+- Support API GetMaxComputeExport.
+- Support API ListAiTools.
+- Support API ListIngestProcessors.
+- Support API ListMaxComputeExports.
+- Support API PutIngestProcessor.
+- Support API StartMaxComputeExport.
+- Support API StopMaxComputeExport.
+- Support API UpdateLogStoreProcessor.
+- Support API UpdateMaxComputeExport.
+- Support API UpdateMetricStoreProcessor.
+- Update API CreateAgentInstanceConfig: add request parameters body.attributes.
+- Update API CreateAgentInstanceConfig: add request parameters body.configType.
+- Update API CreateAgentInstanceConfig: add request parameters body.grayConfigs.
+- Update API CreateMetricStore: add request parameters body.hot_ttl.
+- Update API CreateMetricStore: add request parameters body.infrequentAccessTTL.
+- Update API CreateProject: add request parameters body.recycleBinEnabled.
+- Update API DeleteAgentInstanceConfig: add request parameters configType.
+- Update API DeleteAgentInstanceConfig: add request parameters attributes.
+- Update API DeleteProject: add request parameters forceDelete.
+- Update API GetAgentInstanceConfig: add request parameters configType.
+- Update API GetAgentInstanceConfig: add request parameters attributes.
+- Update API GetAgentInstanceConfig: add response parameters Body.attributes.
+- Update API GetAgentInstanceConfig: add response parameters Body.configType.
+- Update API GetAgentInstanceConfig: add response parameters Body.grayConfigs.
+- Update API GetMetricStore: add response parameters Body.hot_ttl.
+- Update API GetMetricStore: add response parameters Body.infrequentAccessTTL.
+- Update API ListAgentInstanceConfigs: add request parameters attributes.
+- Update API ListAgentInstanceConfigs: add request parameters configType.
+- Update API ListDashboard: add request parameters dashboardName.
+- Update API ListDashboard: add request parameters displayName.
+- Update API ListDashboard: add request parameters tags.
+- Update API ListDashboard: add response parameters Body.dashboardItems.$.description.
+- Update API UpdateAgentInstanceConfig: add request parameters configType.
+- Update API UpdateAgentInstanceConfig: add request parameters attributes.
+- Update API UpdateAgentInstanceConfig: add request parameters body.grayConfigs.
+- Update API UpdateMetricStore: add request parameters body.hot_ttl.
+- Update API UpdateMetricStore: add request parameters body.infrequentAccessTTL.
+- Update API UpdateProject: add request parameters body.recycleBinEnabled.
+
+
 2024-12-09 Version: 5.7.0
 - Support API CreateAgentInstanceConfig.
 - Support API DeleteAgentInstanceConfig.

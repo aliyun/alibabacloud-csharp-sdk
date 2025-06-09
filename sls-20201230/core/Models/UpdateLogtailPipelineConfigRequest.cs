@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <summary>
         /// <para>The output plug-ins.</para>
         /// <remarks>
-        /// <para> You can use only one Simple Log Service output plug-in.</para>
+        /// <para> You can configure only one output plug-in.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -46,8 +46,6 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// <para>The global settings.</para>
-        /// <para>**</para>
-        /// <hr>
         /// </summary>
         [NameInMap("global")]
         [Validation(Required=false)]
@@ -77,14 +75,14 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <summary>
         /// <para>The processing plug-ins.</para>
         /// <remarks>
-        /// <para> Logtail supports native plug-ins and extended plug-ins for data processing. For more information, see <a href="https://help.aliyun.com/document_detail/64957.html">Logtail plug-ins overview</a>.</para>
+        /// <para> Logtail plug-ins for data processing are classified into native plug-ins and extended plug-ins. For more information, see <a href="https://help.aliyun.com/document_detail/64957.html">Overview of Logtail plug-ins for data processing</a>.</para>
         /// </remarks>
         /// <remarks>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description><para>You can use native plug-ins only to collect text logs.</para>
         /// </description></item>
-        /// <item><description><para>You cannot add native plug-ins and extended plug-ins at the same time.</para>
+        /// <item><description><para>You cannot add native plug-ins and extended plug-ins at a time.</para>
         /// </description></item>
         /// <item><description><para>When you add native plug-ins, take note of the following items:</para>
         /// <list type="bullet">

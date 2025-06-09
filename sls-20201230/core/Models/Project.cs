@@ -32,6 +32,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string LastModifyTime { get; set; }
 
+        [NameInMap("location")]
+        [Validation(Required=false)]
+        public string Location { get; set; }
+
         [NameInMap("owner")]
         [Validation(Required=false)]
         public string Owner { get; set; }
@@ -46,6 +50,14 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [NameInMap("quota")]
         [Validation(Required=false)]
         public Dictionary<string, object> Quota { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("recycleBinEnabled")]
+        [Validation(Required=false)]
+        public bool? RecycleBinEnabled { get; set; }
 
         [NameInMap("region")]
         [Validation(Required=false)]

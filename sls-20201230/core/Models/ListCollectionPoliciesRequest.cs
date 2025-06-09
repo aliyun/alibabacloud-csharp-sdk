@@ -50,6 +50,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string PolicyName { get; set; }
 
         /// <summary>
+        /// <para>The code of the service.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>oss</para>
         /// </summary>

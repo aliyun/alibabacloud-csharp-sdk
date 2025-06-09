@@ -11,6 +11,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
     public class UpdateOSSHDFSExportRequest : TeaModel {
         /// <summary>
         /// <para>The configuration details of the job.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("configuration")]
         [Validation(Required=false)]
@@ -25,6 +26,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// <para>The display name of the job.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ali-test-oss-hdfs-job</para>

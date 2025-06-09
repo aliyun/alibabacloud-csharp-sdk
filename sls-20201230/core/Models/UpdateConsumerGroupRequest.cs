@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public bool? Order { get; set; }
 
         /// <summary>
-        /// <para>The timeout period. If Simple Log Service does not receive heartbeats from a consumer within the timeout period, Simple Log Service deletes the consumer. Unit: seconds.</para>
+        /// <para>The timeout period. If Simple Log Service does not receive heartbeats from a consumer within the timeout period, Simple Log Service deletes the consumer. Unit: seconds</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>

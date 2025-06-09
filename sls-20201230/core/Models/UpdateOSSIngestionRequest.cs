@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class UpdateOSSIngestionRequest : TeaModel {
         /// <summary>
-        /// <para>The configurations of the OSS data import job.</para>
+        /// <para>The configuration of the OSS data import job.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("configuration")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public OSSIngestionConfiguration Configuration { get; set; }
 
         /// <summary>
-        /// <para>The description of the OSS data import job.</para>
+        /// <para>The description of the Object Storage Service (OSS) data import job.</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]

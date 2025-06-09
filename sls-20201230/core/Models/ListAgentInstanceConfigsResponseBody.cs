@@ -11,7 +11,17 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
     public class ListAgentInstanceConfigsResponseBody : TeaModel {
         [NameInMap("configs")]
         [Validation(Required=false)]
-        public List<string> Configs { get; set; }
+        public List<ListAgentInstanceConfigsResponseBodyConfigs> Configs { get; set; }
+        public class ListAgentInstanceConfigsResponseBodyConfigs : TeaModel {
+            [NameInMap("attributes")]
+            [Validation(Required=false)]
+            public string Attributes { get; set; }
+
+            [NameInMap("configType")]
+            [Validation(Required=false)]
+            public string ConfigType { get; set; }
+
+        }
 
         [NameInMap("size")]
         [Validation(Required=false)]

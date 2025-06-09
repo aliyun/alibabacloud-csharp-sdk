@@ -10,11 +10,27 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class MaxComputeExportConfigurationSink : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>1800</para>
+        /// </summary>
+        [NameInMap("bufferInterval")]
+        [Validation(Required=false)]
+        public string BufferInterval { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("fields")]
         [Validation(Required=false)]
         public List<string> Fields { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("filterInvalid")]
+        [Validation(Required=false)]
+        public bool? FilterInvalid { get; set; }
 
         /// <term><b>Obsolete</b></term>
         /// 
@@ -81,8 +97,6 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string OdpsTable { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para><a href="http://dt.cn-hangzhou.maxcompute.aliyun-inc.com">http://dt.cn-hangzhou.maxcompute.aliyun-inc.com</a></para>
         /// </summary>
@@ -106,6 +120,14 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [NameInMap("partitionTimeFormat")]
         [Validation(Required=false)]
         public string PartitionTimeFormat { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>StrfTimeFormat</para>
+        /// </summary>
+        [NameInMap("timeFormatType")]
+        [Validation(Required=false)]
+        public string TimeFormatType { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public int? Offset { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: 500. Default value: 500.</para>
+        /// <para>The number of entries per page. Maximum value: 500. Default value: 200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

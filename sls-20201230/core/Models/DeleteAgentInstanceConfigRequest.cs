@@ -9,9 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class DeleteAgentInstanceConfigRequest : TeaModel {
-        [NameInMap("isGray")]
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
+        [NameInMap("attributes")]
         [Validation(Required=false)]
-        public bool? IsGray { get; set; }
+        public string Attributes { get; set; }
 
     }
 

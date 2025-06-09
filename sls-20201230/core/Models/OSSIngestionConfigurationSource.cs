@@ -116,6 +116,14 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("tagPackId")]
+        [Validation(Required=false)]
+        public bool? TagPackId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para><b>time</b></para>
         /// </summary>
         [NameInMap("timeField")]
