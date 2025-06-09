@@ -172,6 +172,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             [Validation(Required=false)]
             public int? Parallelism { get; set; }
 
+            [NameInMap("Priority")]
+            [Validation(Required=false)]
+            public int? Priority { get; set; }
+
             /// <summary>
             /// <para>The root task IDs.</para>
             /// </summary>

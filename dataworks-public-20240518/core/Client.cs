@@ -6304,6 +6304,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             return await CreateWorkflowDefinitionWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建工作流实例</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// CreateWorkflowInstancesRequest
         /// </param>
@@ -6391,6 +6396,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             return TeaModel.ToObject<CreateWorkflowInstancesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建工作流实例</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// CreateWorkflowInstancesRequest
         /// </param>
@@ -6478,6 +6488,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             return TeaModel.ToObject<CreateWorkflowInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建工作流实例</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateWorkflowInstancesRequest
         /// </param>
@@ -6491,6 +6506,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             return CreateWorkflowInstancesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建工作流实例</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateWorkflowInstancesRequest
         /// </param>
@@ -28838,6 +28858,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             return await UpdateAlertRuleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a workflow.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateBusinessRequest
         /// </param>
@@ -28895,6 +28920,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             return TeaModel.ToObject<UpdateBusinessResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a workflow.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateBusinessRequest
         /// </param>
@@ -28952,6 +28982,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             return TeaModel.ToObject<UpdateBusinessResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a workflow.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateBusinessRequest
         /// </param>
@@ -28965,6 +29000,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             return UpdateBusinessWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a workflow.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateBusinessRequest
         /// </param>
