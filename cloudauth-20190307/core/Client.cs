@@ -2309,6 +2309,126 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return await DeleteFaceVerifyResultWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>图片要素核验获取认证结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCardVerifyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCardVerifyResponse
+        /// </returns>
+        public DescribeCardVerifyResponse DescribeCardVerifyWithOptions(DescribeCardVerifyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertifyId))
+            {
+                query["CertifyId"] = request.CertifyId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeCardVerify",
+                Version = "2019-03-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeCardVerifyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>图片要素核验获取认证结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCardVerifyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCardVerifyResponse
+        /// </returns>
+        public async Task<DescribeCardVerifyResponse> DescribeCardVerifyWithOptionsAsync(DescribeCardVerifyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertifyId))
+            {
+                query["CertifyId"] = request.CertifyId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeCardVerify",
+                Version = "2019-03-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeCardVerifyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>图片要素核验获取认证结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCardVerifyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCardVerifyResponse
+        /// </returns>
+        public DescribeCardVerifyResponse DescribeCardVerify(DescribeCardVerifyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeCardVerifyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>图片要素核验获取认证结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCardVerifyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCardVerifyResponse
+        /// </returns>
+        public async Task<DescribeCardVerifyResponse> DescribeCardVerifyAsync(DescribeCardVerifyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeCardVerifyWithOptionsAsync(request, runtime);
+        }
+
         /// <param name="request">
         /// DescribeDeviceInfoRequest
         /// </param>
@@ -4407,6 +4527,198 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             }
             Id2MetaVerifyWithOCRResponse id2MetaVerifyWithOCRResp = await Id2MetaVerifyWithOCRWithOptionsAsync(id2MetaVerifyWithOCRReq, runtime);
             return id2MetaVerifyWithOCRResp;
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>图片核验发起认证请求</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InitCardVerifyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InitCardVerifyResponse
+        /// </returns>
+        public InitCardVerifyResponse InitCardVerifyWithOptions(InitCardVerifyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackToken))
+            {
+                query["CallbackToken"] = request.CallbackToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackUrl))
+            {
+                query["CallbackUrl"] = request.CallbackUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CardPageNumber))
+            {
+                query["CardPageNumber"] = request.CardPageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CardType))
+            {
+                query["CardType"] = request.CardType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocScanMode))
+            {
+                query["DocScanMode"] = request.DocScanMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
+            {
+                query["MerchantBizId"] = request.MerchantBizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetaInfo))
+            {
+                query["MetaInfo"] = request.MetaInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Model))
+            {
+                query["Model"] = request.Model;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PictureSave))
+            {
+                query["PictureSave"] = request.PictureSave;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VerifyMeta))
+            {
+                query["VerifyMeta"] = request.VerifyMeta;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "InitCardVerify",
+                Version = "2019-03-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<InitCardVerifyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>图片核验发起认证请求</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InitCardVerifyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InitCardVerifyResponse
+        /// </returns>
+        public async Task<InitCardVerifyResponse> InitCardVerifyWithOptionsAsync(InitCardVerifyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackToken))
+            {
+                query["CallbackToken"] = request.CallbackToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackUrl))
+            {
+                query["CallbackUrl"] = request.CallbackUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CardPageNumber))
+            {
+                query["CardPageNumber"] = request.CardPageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CardType))
+            {
+                query["CardType"] = request.CardType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocScanMode))
+            {
+                query["DocScanMode"] = request.DocScanMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
+            {
+                query["MerchantBizId"] = request.MerchantBizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetaInfo))
+            {
+                query["MetaInfo"] = request.MetaInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Model))
+            {
+                query["Model"] = request.Model;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PictureSave))
+            {
+                query["PictureSave"] = request.PictureSave;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VerifyMeta))
+            {
+                query["VerifyMeta"] = request.VerifyMeta;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "InitCardVerify",
+                Version = "2019-03-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<InitCardVerifyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>图片核验发起认证请求</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InitCardVerifyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InitCardVerifyResponse
+        /// </returns>
+        public InitCardVerifyResponse InitCardVerify(InitCardVerifyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return InitCardVerifyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>图片核验发起认证请求</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InitCardVerifyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InitCardVerifyResponse
+        /// </returns>
+        public async Task<InitCardVerifyResponse> InitCardVerifyAsync(InitCardVerifyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await InitCardVerifyWithOptionsAsync(request, runtime);
         }
 
         /// <param name="request">
