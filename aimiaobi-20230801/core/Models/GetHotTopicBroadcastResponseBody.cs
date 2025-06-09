@@ -261,6 +261,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 [Validation(Required=false)]
                 public int? OutputToken { get; set; }
 
+                [NameInMap("PubTime")]
+                [Validation(Required=false)]
+                public string PubTime { get; set; }
+
                 [NameInMap("Summary")]
                 [Validation(Required=false)]
                 public GetHotTopicBroadcastResponseBodyDataDataSummary Summary { get; set; }
@@ -312,6 +316,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 [NameInMap("TextSummary")]
                 [Validation(Required=false)]
                 public string TextSummary { get; set; }
+
+                [NameInMap("Url")]
+                [Validation(Required=false)]
+                public string Url { get; set; }
 
             }
 
