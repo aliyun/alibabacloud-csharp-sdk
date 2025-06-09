@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The log download tasks.</para>
+        /// <para>Array, to return a list of log download tasks.</para>
         /// </summary>
         [NameInMap("results")]
         [Validation(Required=false)]
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>任务执行细节</para>
+            /// <para>The execution details.</para>
             /// </summary>
             [NameInMap("executionDetails")]
             [Validation(Required=false)]

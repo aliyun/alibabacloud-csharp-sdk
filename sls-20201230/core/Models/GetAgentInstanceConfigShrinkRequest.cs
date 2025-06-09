@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
-    public class DeleteAgentInstanceConfigRequest : TeaModel {
+    public class GetAgentInstanceConfigShrinkRequest : TeaModel {
         [NameInMap("attributes")]
         [Validation(Required=false)]
-        public Dictionary<string, string> Attributes { get; set; }
+        public string AttributesShrink { get; set; }
 
     }
 

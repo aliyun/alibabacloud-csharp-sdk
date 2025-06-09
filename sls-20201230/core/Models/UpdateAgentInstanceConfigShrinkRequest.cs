@@ -8,30 +8,21 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
-    public class GetAgentInstanceConfigResponseBody : TeaModel {
+    public class UpdateAgentInstanceConfigShrinkRequest : TeaModel {
         [NameInMap("attributes")]
         [Validation(Required=false)]
-        public Dictionary<string, string> Attributes { get; set; }
+        public string AttributesShrink { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("config")]
         [Validation(Required=false)]
         public string Config { get; set; }
 
-        [NameInMap("configType")]
-        [Validation(Required=false)]
-        public string ConfigType { get; set; }
-
-        [NameInMap("createTime")]
-        [Validation(Required=false)]
-        public long? CreateTime { get; set; }
-
         [NameInMap("grayConfigs")]
         [Validation(Required=false)]
         public List<AgentInstanceConfigGrayConfigs> GrayConfigs { get; set; }
-
-        [NameInMap("lastModifyTime")]
-        [Validation(Required=false)]
-        public long? LastModifyTime { get; set; }
 
     }
 

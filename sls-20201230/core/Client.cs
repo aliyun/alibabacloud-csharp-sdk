@@ -5610,7 +5610,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         /// <para>DeleteAgentInstanceConfig</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// DeleteAgentInstanceConfigRequest
         /// </param>
         /// <param name="headers">
@@ -5623,13 +5623,19 @@ namespace AlibabaCloud.SDK.Sls20201230
         /// <returns>
         /// DeleteAgentInstanceConfigResponse
         /// </returns>
-        public DeleteAgentInstanceConfigResponse DeleteAgentInstanceConfigWithOptions(string configType, DeleteAgentInstanceConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteAgentInstanceConfigResponse DeleteAgentInstanceConfigWithOptions(string configType, DeleteAgentInstanceConfigRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Attributes))
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteAgentInstanceConfigShrinkRequest request = new DeleteAgentInstanceConfigShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Attributes))
             {
-                query["attributes"] = request.Attributes;
+                request.AttributesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Attributes, "attributes", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttributesShrink))
+            {
+                query["attributes"] = request.AttributesShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5656,7 +5662,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         /// <para>DeleteAgentInstanceConfig</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// DeleteAgentInstanceConfigRequest
         /// </param>
         /// <param name="headers">
@@ -5669,13 +5675,19 @@ namespace AlibabaCloud.SDK.Sls20201230
         /// <returns>
         /// DeleteAgentInstanceConfigResponse
         /// </returns>
-        public async Task<DeleteAgentInstanceConfigResponse> DeleteAgentInstanceConfigWithOptionsAsync(string configType, DeleteAgentInstanceConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteAgentInstanceConfigResponse> DeleteAgentInstanceConfigWithOptionsAsync(string configType, DeleteAgentInstanceConfigRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Attributes))
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteAgentInstanceConfigShrinkRequest request = new DeleteAgentInstanceConfigShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Attributes))
             {
-                query["attributes"] = request.Attributes;
+                request.AttributesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Attributes, "attributes", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttributesShrink))
+            {
+                query["attributes"] = request.AttributesShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -9974,7 +9986,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         /// <para>GetAgentInstanceConfig</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// GetAgentInstanceConfigRequest
         /// </param>
         /// <param name="headers">
@@ -9987,13 +9999,19 @@ namespace AlibabaCloud.SDK.Sls20201230
         /// <returns>
         /// GetAgentInstanceConfigResponse
         /// </returns>
-        public GetAgentInstanceConfigResponse GetAgentInstanceConfigWithOptions(string configType, GetAgentInstanceConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetAgentInstanceConfigResponse GetAgentInstanceConfigWithOptions(string configType, GetAgentInstanceConfigRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Attributes))
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetAgentInstanceConfigShrinkRequest request = new GetAgentInstanceConfigShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Attributes))
             {
-                query["attributes"] = request.Attributes;
+                request.AttributesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Attributes, "attributes", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttributesShrink))
+            {
+                query["attributes"] = request.AttributesShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -10020,7 +10038,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         /// <para>GetAgentInstanceConfig</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// GetAgentInstanceConfigRequest
         /// </param>
         /// <param name="headers">
@@ -10033,13 +10051,19 @@ namespace AlibabaCloud.SDK.Sls20201230
         /// <returns>
         /// GetAgentInstanceConfigResponse
         /// </returns>
-        public async Task<GetAgentInstanceConfigResponse> GetAgentInstanceConfigWithOptionsAsync(string configType, GetAgentInstanceConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetAgentInstanceConfigResponse> GetAgentInstanceConfigWithOptionsAsync(string configType, GetAgentInstanceConfigRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Attributes))
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetAgentInstanceConfigShrinkRequest request = new GetAgentInstanceConfigShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Attributes))
             {
-                query["attributes"] = request.Attributes;
+                request.AttributesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Attributes, "attributes", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttributesShrink))
+            {
+                query["attributes"] = request.AttributesShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -16193,10 +16217,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Attributes))
-            {
-                query["attributes"] = request.Attributes;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigType))
             {
                 query["configType"] = request.ConfigType;
@@ -16251,10 +16271,6 @@ namespace AlibabaCloud.SDK.Sls20201230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Attributes))
-            {
-                query["attributes"] = request.Attributes;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigType))
             {
                 query["configType"] = request.ConfigType;
@@ -18013,7 +18029,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举下载任务</para>
+        /// <para>Queries a list of log download tasks in a project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18070,7 +18086,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举下载任务</para>
+        /// <para>Queries a list of log download tasks in a project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18127,7 +18143,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举下载任务</para>
+        /// <para>Queries a list of log download tasks in a project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18146,7 +18162,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举下载任务</para>
+        /// <para>Queries a list of log download tasks in a project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24732,7 +24748,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         /// <para>UpdateAgentInstanceConfig</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// UpdateAgentInstanceConfigRequest
         /// </param>
         /// <param name="headers">
@@ -24745,13 +24761,19 @@ namespace AlibabaCloud.SDK.Sls20201230
         /// <returns>
         /// UpdateAgentInstanceConfigResponse
         /// </returns>
-        public UpdateAgentInstanceConfigResponse UpdateAgentInstanceConfigWithOptions(string configType, UpdateAgentInstanceConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public UpdateAgentInstanceConfigResponse UpdateAgentInstanceConfigWithOptions(string configType, UpdateAgentInstanceConfigRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Attributes))
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateAgentInstanceConfigShrinkRequest request = new UpdateAgentInstanceConfigShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Attributes))
             {
-                query["attributes"] = request.Attributes;
+                request.AttributesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Attributes, "attributes", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttributesShrink))
+            {
+                query["attributes"] = request.AttributesShrink;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
@@ -24788,7 +24810,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         /// <para>UpdateAgentInstanceConfig</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// UpdateAgentInstanceConfigRequest
         /// </param>
         /// <param name="headers">
@@ -24801,13 +24823,19 @@ namespace AlibabaCloud.SDK.Sls20201230
         /// <returns>
         /// UpdateAgentInstanceConfigResponse
         /// </returns>
-        public async Task<UpdateAgentInstanceConfigResponse> UpdateAgentInstanceConfigWithOptionsAsync(string configType, UpdateAgentInstanceConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<UpdateAgentInstanceConfigResponse> UpdateAgentInstanceConfigWithOptionsAsync(string configType, UpdateAgentInstanceConfigRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Attributes))
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateAgentInstanceConfigShrinkRequest request = new UpdateAgentInstanceConfigShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Attributes))
             {
-                query["attributes"] = request.Attributes;
+                request.AttributesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Attributes, "attributes", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttributesShrink))
+            {
+                query["attributes"] = request.AttributesShrink;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))

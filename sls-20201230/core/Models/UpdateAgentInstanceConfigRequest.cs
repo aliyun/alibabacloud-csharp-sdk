@@ -9,12 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class UpdateAgentInstanceConfigRequest : TeaModel {
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
         [NameInMap("attributes")]
         [Validation(Required=false)]
-        public string Attributes { get; set; }
+        public Dictionary<string, string> Attributes { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
@@ -25,7 +22,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         [NameInMap("grayConfigs")]
         [Validation(Required=false)]
-        public string GrayConfigs { get; set; }
+        public List<AgentInstanceConfigGrayConfigs> GrayConfigs { get; set; }
 
     }
 
