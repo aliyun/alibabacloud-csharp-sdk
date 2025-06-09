@@ -597,6 +597,168 @@ namespace AlibabaCloud.SDK.Sae20190506
             return await BatchStopApplicationsWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a Network Load Balancer (NLB) instance with an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BindNlbRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindNlbResponse
+        /// </returns>
+        public BindNlbResponse BindNlbWithOptions(BindNlbRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddressType))
+            {
+                query["AddressType"] = request.AddressType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Listeners))
+            {
+                query["Listeners"] = request.Listeners;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NlbId))
+            {
+                query["NlbId"] = request.NlbId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneMappings))
+            {
+                query["ZoneMappings"] = request.ZoneMappings;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BindNlb",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v1/sam/app/nlb",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BindNlbResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a Network Load Balancer (NLB) instance with an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BindNlbRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindNlbResponse
+        /// </returns>
+        public async Task<BindNlbResponse> BindNlbWithOptionsAsync(BindNlbRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddressType))
+            {
+                query["AddressType"] = request.AddressType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Listeners))
+            {
+                query["Listeners"] = request.Listeners;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NlbId))
+            {
+                query["NlbId"] = request.NlbId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneMappings))
+            {
+                query["ZoneMappings"] = request.ZoneMappings;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BindNlb",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v1/sam/app/nlb",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BindNlbResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a Network Load Balancer (NLB) instance with an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BindNlbRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindNlbResponse
+        /// </returns>
+        public BindNlbResponse BindNlb(BindNlbRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return BindNlbWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a Network Load Balancer (NLB) instance with an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BindNlbRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindNlbResponse
+        /// </returns>
+        public async Task<BindNlbResponse> BindNlbAsync(BindNlbRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await BindNlbWithOptionsAsync(request, headers, runtime);
+        }
+
         /// <param name="request">
         /// BindSlbRequest
         /// </param>
@@ -7519,6 +7681,136 @@ namespace AlibabaCloud.SDK.Sae20190506
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DescribeApplicationInstancesWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Network Load Balancer (NLB) instances bound to an application and their listeners.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApplicationNlbsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApplicationNlbsResponse
+        /// </returns>
+        public DescribeApplicationNlbsResponse DescribeApplicationNlbsWithOptions(DescribeApplicationNlbsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApplicationNlbs",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v1/sam/app/nlb",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApplicationNlbsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Network Load Balancer (NLB) instances bound to an application and their listeners.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApplicationNlbsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApplicationNlbsResponse
+        /// </returns>
+        public async Task<DescribeApplicationNlbsResponse> DescribeApplicationNlbsWithOptionsAsync(DescribeApplicationNlbsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApplicationNlbs",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v1/sam/app/nlb",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApplicationNlbsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Network Load Balancer (NLB) instances bound to an application and their listeners.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApplicationNlbsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApplicationNlbsResponse
+        /// </returns>
+        public DescribeApplicationNlbsResponse DescribeApplicationNlbs(DescribeApplicationNlbsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DescribeApplicationNlbsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Network Load Balancer (NLB) instances bound to an application and their listeners.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApplicationNlbsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApplicationNlbsResponse
+        /// </returns>
+        public async Task<DescribeApplicationNlbsResponse> DescribeApplicationNlbsAsync(DescribeApplicationNlbsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DescribeApplicationNlbsWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

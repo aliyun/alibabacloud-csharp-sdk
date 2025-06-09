@@ -589,6 +589,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
                     }
 
+                    [NameInMap("TimeZone")]
+                    [Validation(Required=false)]
+                    public string TimeZone { get; set; }
+
                 }
 
                 /// <summary>
