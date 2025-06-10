@@ -46981,6 +46981,198 @@ namespace AlibabaCloud.SDK.Aliding20230426
             return await UnsubscribeEventWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <param name="tmpReq">
+        /// UpdateConvExtensionRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// UpdateConvExtensionHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConvExtensionResponse
+        /// </returns>
+        public UpdateConvExtensionResponse UpdateConvExtensionWithOptions(UpdateConvExtensionRequest tmpReq, UpdateConvExtensionHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateConvExtensionShrinkRequest request = new UpdateConvExtensionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            UpdateConvExtensionShrinkHeaders headers = new UpdateConvExtensionShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.StaffIdList))
+            {
+                request.StaffIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.StaffIdList, "StaffIdList", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MobileUrl))
+            {
+                body["MobileUrl"] = request.MobileUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PcUrl))
+            {
+                body["PcUrl"] = request.PcUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StaffIdListShrink))
+            {
+                body["StaffIdList"] = request.StaffIdListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemUid))
+            {
+                body["SystemUid"] = request.SystemUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateConvExtension",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/conversation/updateConvExtension",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateConvExtensionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <param name="tmpReq">
+        /// UpdateConvExtensionRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// UpdateConvExtensionHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConvExtensionResponse
+        /// </returns>
+        public async Task<UpdateConvExtensionResponse> UpdateConvExtensionWithOptionsAsync(UpdateConvExtensionRequest tmpReq, UpdateConvExtensionHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateConvExtensionShrinkRequest request = new UpdateConvExtensionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            UpdateConvExtensionShrinkHeaders headers = new UpdateConvExtensionShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.StaffIdList))
+            {
+                request.StaffIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.StaffIdList, "StaffIdList", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MobileUrl))
+            {
+                body["MobileUrl"] = request.MobileUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PcUrl))
+            {
+                body["PcUrl"] = request.PcUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StaffIdListShrink))
+            {
+                body["StaffIdList"] = request.StaffIdListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemUid))
+            {
+                body["SystemUid"] = request.SystemUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateConvExtension",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/conversation/updateConvExtension",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateConvExtensionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// UpdateConvExtensionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConvExtensionResponse
+        /// </returns>
+        public UpdateConvExtensionResponse UpdateConvExtension(UpdateConvExtensionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            UpdateConvExtensionHeaders headers = new UpdateConvExtensionHeaders();
+            return UpdateConvExtensionWithOptions(request, headers, runtime);
+        }
+
+        /// <param name="request">
+        /// UpdateConvExtensionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConvExtensionResponse
+        /// </returns>
+        public async Task<UpdateConvExtensionResponse> UpdateConvExtensionAsync(UpdateConvExtensionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            UpdateConvExtensionHeaders headers = new UpdateConvExtensionHeaders();
+            return await UpdateConvExtensionWithOptionsAsync(request, headers, runtime);
+        }
+
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>更新表单数据</para>
