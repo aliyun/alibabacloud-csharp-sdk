@@ -16982,6 +16982,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["Scope"] = request.Scope;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScopeSet))
+            {
+                query["ScopeSet"] = request.ScopeSet;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortType))
             {
                 query["SortType"] = request.SortType;
@@ -17096,6 +17100,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scope))
             {
                 query["Scope"] = request.Scope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScopeSet))
+            {
+                query["ScopeSet"] = request.ScopeSet;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortType))
             {

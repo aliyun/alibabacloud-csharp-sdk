@@ -217,6 +217,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string Scope { get; set; }
 
+        [NameInMap("ScopeSet")]
+        [Validation(Required=false)]
+        public List<string> ScopeSet { get; set; }
+
         /// <summary>
         /// <para>The sorting order.</para>
         /// <para>Valid values:</para>
