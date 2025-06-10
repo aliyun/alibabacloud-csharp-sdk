@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListRepoSyncTaskRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageNo { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The repository name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -44,6 +51,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RepoName { get; set; }
 
         /// <summary>
+        /// <para>The name of the namespace to which the repository belongs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ns</para>
         /// </summary>
@@ -65,6 +74,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string SyncRecordId { get; set; }
 
         /// <summary>
+        /// <para>The image tag.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>nginx</para>
         /// </summary>

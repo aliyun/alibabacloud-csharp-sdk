@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class GetRepoTagScanStatusRequest : TeaModel {
         /// <summary>
+        /// <para>The image digest.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>67bfbcc12b67936ec7f867927817cbb071832b873dbcaed312a1930ba5f1d529</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Digest { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the image repository.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>crr-uf082u9dg8do****</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RepoId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the image scan task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>838152F9-F725-5A52-A344-8972D65AC045</para>
         /// </summary>
@@ -48,6 +55,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string ScanType { get; set; }
 
         /// <summary>
+        /// <para>The image tag.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

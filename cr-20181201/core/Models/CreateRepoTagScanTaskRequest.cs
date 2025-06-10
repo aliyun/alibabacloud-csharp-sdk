@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Digest { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The ID of the Container Registry instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string ScanType { get; set; }
 
         /// <summary>
-        /// <para>The version of the image.</para>
+        /// <para>The image version.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API request is successful. Valid values:</para>
+        /// <para>Indicates whether the API request was successful. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><c>true</c>: successful</description></item>
         /// <item><description><c>false</c>: failed</description></item>
@@ -64,21 +64,21 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The queried baseline risks.</para>
+        /// <para>The scanned baseline risks.</para>
         /// </summary>
         [NameInMap("ScanBaselines")]
         [Validation(Required=false)]
         public List<ListScanBaselineByTaskResponseBodyScanBaselines> ScanBaselines { get; set; }
         public class ListScanBaselineByTaskResponseBodyScanBaselines : TeaModel {
             /// <summary>
-            /// <para>The category of the baseline risk.</para>
+            /// <para>The category to which the baseline risk belongs.</para>
             /// </summary>
             [NameInMap("BaselineClassAlias")]
             [Validation(Required=false)]
             public string BaselineClassAlias { get; set; }
 
             /// <summary>
-            /// <para>The suggestion on handling the baseline risk.</para>
+            /// <para>Suggestions about how to fix the baseline risk.</para>
             /// </summary>
             [NameInMap("BaselineDetailAdvice")]
             [Validation(Required=false)]
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string BaselineNameAlias { get; set; }
 
             /// <summary>
-            /// <para>The name of the baseline risk.</para>
+            /// <para>The key of the baseline name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ak_leak</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string BaselineNameLevel { get; set; }
 
             /// <summary>
-            /// <para>The time when the image was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1695090008000</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the image was first scanned.</para>
+            /// <para>The time of the first scan.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-04-10 15:33:26</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public long? FirstScanTime { get; set; }
 
             /// <summary>
-            /// <para>The quantity of baseline risks whose severity is high.</para>
+            /// <para>High risk quantity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public int? HighRiskItemCount { get; set; }
 
             /// <summary>
-            /// <para>The quantity of baseline risks whose severity is low.</para>
+            /// <para>Low risk quantity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public int? LowRiskItemCount { get; set; }
 
             /// <summary>
-            /// <para>The quantity of baseline risks whose severity is medium.</para>
+            /// <para>Medium risk quantity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string ScanTaskId { get; set; }
 
             /// <summary>
-            /// <para>The time when the image was updated.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1684220824226</para>

@@ -29,11 +29,17 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("DefaultRepoConfiguration")]
+        [Validation(Required=false)]
+        public RepoConfiguration DefaultRepoConfiguration { get; set; }
+
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// <para>The default type of repositories. Valid values:</para>
+        /// <para>The default type of repositories in the namespace. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PUBLIC: The repositories are public repositories.</description></item>
-        /// <item><description>PRIVATE: The repositories are private repositories.</description></item>
+        /// <item><description>PUBLIC: public repositories.</description></item>
+        /// <item><description>PRIVATE: private repositories.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -41,6 +47,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         /// </summary>
         [NameInMap("DefaultRepoType")]
         [Validation(Required=false)]
+        [Obsolete]
         public string DefaultRepoType { get; set; }
 
         /// <summary>

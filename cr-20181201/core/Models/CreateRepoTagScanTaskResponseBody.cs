@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <para>Indicates whether the API request is successful. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><c>true</c>: The request is successful.</description></item>
         /// <item><description><c>false</c>: The request fails.</description></item>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? IsSuccess { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BC648259-91A7-4502-BED3-EDF64361FA83</para>

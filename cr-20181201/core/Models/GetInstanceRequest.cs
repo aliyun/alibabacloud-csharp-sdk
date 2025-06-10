@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class GetInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the Container Registry instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

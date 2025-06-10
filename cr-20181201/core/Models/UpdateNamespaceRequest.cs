@@ -19,6 +19,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public bool? AutoCreateRepo { get; set; }
 
+        [NameInMap("DefaultRepoConfiguration")]
+        [Validation(Required=false)]
+        public RepoConfiguration DefaultRepoConfiguration { get; set; }
+
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The default type of the repository. Valid values:</para>
         /// <list type="bullet">
@@ -31,6 +37,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         /// </summary>
         [NameInMap("DefaultRepoType")]
         [Validation(Required=false)]
+        [Obsolete]
         public string DefaultRepoType { get; set; }
 
         /// <summary>

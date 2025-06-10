@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class CreateBuildRecordByRecordRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the image building record.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string BuildRecordId { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the image repository.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

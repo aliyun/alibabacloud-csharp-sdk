@@ -2330,7 +2330,7 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <para>Creates a namespace of image repositories.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// CreateNamespaceRequest
         /// </param>
         /// <param name="runtime">
@@ -2340,13 +2340,23 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <returns>
         /// CreateNamespaceResponse
         /// </returns>
-        public CreateNamespaceResponse CreateNamespaceWithOptions(CreateNamespaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateNamespaceResponse CreateNamespaceWithOptions(CreateNamespaceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateNamespaceShrinkRequest request = new CreateNamespaceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DefaultRepoConfiguration))
+            {
+                request.DefaultRepoConfigurationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DefaultRepoConfiguration, "DefaultRepoConfiguration", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoCreateRepo))
             {
                 query["AutoCreateRepo"] = request.AutoCreateRepo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultRepoConfigurationShrink))
+            {
+                query["DefaultRepoConfiguration"] = request.DefaultRepoConfigurationShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultRepoType))
             {
@@ -2384,7 +2394,7 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <para>Creates a namespace of image repositories.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// CreateNamespaceRequest
         /// </param>
         /// <param name="runtime">
@@ -2394,13 +2404,23 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <returns>
         /// CreateNamespaceResponse
         /// </returns>
-        public async Task<CreateNamespaceResponse> CreateNamespaceWithOptionsAsync(CreateNamespaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateNamespaceResponse> CreateNamespaceWithOptionsAsync(CreateNamespaceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateNamespaceShrinkRequest request = new CreateNamespaceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DefaultRepoConfiguration))
+            {
+                request.DefaultRepoConfigurationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DefaultRepoConfiguration, "DefaultRepoConfiguration", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoCreateRepo))
             {
                 query["AutoCreateRepo"] = request.AutoCreateRepo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultRepoConfigurationShrink))
+            {
+                query["DefaultRepoConfiguration"] = request.DefaultRepoConfigurationShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultRepoType))
             {
@@ -3513,6 +3533,11 @@ namespace AlibabaCloud.SDK.Cr20181201
             return await CreateRepoTagWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an image scan task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateRepoTagScanTaskRequest
         /// </param>
@@ -3570,6 +3595,11 @@ namespace AlibabaCloud.SDK.Cr20181201
             return TeaModel.ToObject<CreateRepoTagScanTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an image scan task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateRepoTagScanTaskRequest
         /// </param>
@@ -3627,6 +3657,11 @@ namespace AlibabaCloud.SDK.Cr20181201
             return TeaModel.ToObject<CreateRepoTagScanTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an image scan task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateRepoTagScanTaskRequest
         /// </param>
@@ -3640,6 +3675,11 @@ namespace AlibabaCloud.SDK.Cr20181201
             return CreateRepoTagScanTaskWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an image scan task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateRepoTagScanTaskRequest
         /// </param>
@@ -8631,6 +8671,11 @@ namespace AlibabaCloud.SDK.Cr20181201
             return await GetRepoTagWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the scanning status of an image tag.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetRepoTagScanStatusRequest
         /// </param>
@@ -8688,6 +8733,11 @@ namespace AlibabaCloud.SDK.Cr20181201
             return TeaModel.ToObject<GetRepoTagScanStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the scanning status of an image tag.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetRepoTagScanStatusRequest
         /// </param>
@@ -8745,6 +8795,11 @@ namespace AlibabaCloud.SDK.Cr20181201
             return TeaModel.ToObject<GetRepoTagScanStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the scanning status of an image tag.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetRepoTagScanStatusRequest
         /// </param>
@@ -8758,6 +8813,11 @@ namespace AlibabaCloud.SDK.Cr20181201
             return GetRepoTagScanStatusWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the scanning status of an image tag.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetRepoTagScanStatusRequest
         /// </param>
@@ -10905,7 +10965,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>cri-94klsruryslx****</para>
+        /// <para>Queries namespaces in a Container Registry instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10963,7 +11023,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>cri-94klsruryslx****</para>
+        /// <para>Queries namespaces in a Container Registry instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11021,7 +11081,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>cri-94klsruryslx****</para>
+        /// <para>Queries namespaces in a Container Registry instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11039,7 +11099,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>cri-94klsruryslx****</para>
+        /// <para>Queries namespaces in a Container Registry instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11657,7 +11717,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Indicates whether automatic link is used.</para>
+        /// <para>Queries image synchronization tasks in an image repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11723,7 +11783,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Indicates whether automatic link is used.</para>
+        /// <para>Queries image synchronization tasks in an image repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11789,7 +11849,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Indicates whether automatic link is used.</para>
+        /// <para>Queries image synchronization tasks in an image repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11807,7 +11867,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Indicates whether automatic link is used.</para>
+        /// <para>Queries image synchronization tasks in an image repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14512,7 +14572,7 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <para>Updates a namespace.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// UpdateNamespaceRequest
         /// </param>
         /// <param name="runtime">
@@ -14522,13 +14582,23 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <returns>
         /// UpdateNamespaceResponse
         /// </returns>
-        public UpdateNamespaceResponse UpdateNamespaceWithOptions(UpdateNamespaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public UpdateNamespaceResponse UpdateNamespaceWithOptions(UpdateNamespaceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateNamespaceShrinkRequest request = new UpdateNamespaceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DefaultRepoConfiguration))
+            {
+                request.DefaultRepoConfigurationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DefaultRepoConfiguration, "DefaultRepoConfiguration", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoCreateRepo))
             {
                 query["AutoCreateRepo"] = request.AutoCreateRepo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultRepoConfigurationShrink))
+            {
+                query["DefaultRepoConfiguration"] = request.DefaultRepoConfigurationShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultRepoType))
             {
@@ -14566,7 +14636,7 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <para>Updates a namespace.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// UpdateNamespaceRequest
         /// </param>
         /// <param name="runtime">
@@ -14576,13 +14646,23 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <returns>
         /// UpdateNamespaceResponse
         /// </returns>
-        public async Task<UpdateNamespaceResponse> UpdateNamespaceWithOptionsAsync(UpdateNamespaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<UpdateNamespaceResponse> UpdateNamespaceWithOptionsAsync(UpdateNamespaceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateNamespaceShrinkRequest request = new UpdateNamespaceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DefaultRepoConfiguration))
+            {
+                request.DefaultRepoConfigurationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DefaultRepoConfiguration, "DefaultRepoConfiguration", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoCreateRepo))
             {
                 query["AutoCreateRepo"] = request.AutoCreateRepo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultRepoConfigurationShrink))
+            {
+                query["DefaultRepoConfiguration"] = request.DefaultRepoConfigurationShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultRepoType))
             {

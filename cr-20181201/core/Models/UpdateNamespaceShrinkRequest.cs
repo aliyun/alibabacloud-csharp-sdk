@@ -8,9 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cr20181201.Models
 {
-    public class CreateNamespaceRequest : TeaModel {
+    public class UpdateNamespaceShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to automatically create an image repository in the namespace.</para>
+        /// <para>Specifies whether to automatically create a repository when an image is pushed to the namespace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -21,19 +21,19 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 
         [NameInMap("DefaultRepoConfiguration")]
         [Validation(Required=false)]
-        public RepoConfiguration DefaultRepoConfiguration { get; set; }
+        public string DefaultRepoConfigurationShrink { get; set; }
 
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The default type of the repositories that are automatically created in the namespace. Valid values:</para>
+        /// <para>The default type of the repository. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>PUBLIC</c>: public repositories</description></item>
-        /// <item><description><c>PRIVATE</c>: private repositories.</description></item>
+        /// <item><description><c>PUBLIC</c>: The repository is a public repository.</description></item>
+        /// <item><description><c>PRIVATE</c>: The repository is a private repository.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>PUBLIC</para>
+        /// <para>PRIVATE</para>
         /// </summary>
         [NameInMap("DefaultRepoType")]
         [Validation(Required=false)]
@@ -45,18 +45,18 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cri-xkx6vujuhay0****</para>
+        /// <para>cri-kmsiwlxxdcva****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the namespace. The name must be 2 to 120 characters in length, and can contain lowercase letters, digits, and the following delimiters: underscores (_), hyphens (-), and periods (.). The name cannot start or end with a delimiter.</para>
+        /// <para>The name of the namespace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>namespace1</para>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("NamespaceName")]
         [Validation(Required=false)]

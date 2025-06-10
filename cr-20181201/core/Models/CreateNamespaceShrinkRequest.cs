@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cr20181201.Models
 {
-    public class CreateNamespaceRequest : TeaModel {
+    public class CreateNamespaceShrinkRequest : TeaModel {
         /// <summary>
         /// <para>Specifies whether to automatically create an image repository in the namespace.</para>
         /// 
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 
         [NameInMap("DefaultRepoConfiguration")]
         [Validation(Required=false)]
-        public RepoConfiguration DefaultRepoConfiguration { get; set; }
+        public string DefaultRepoConfigurationShrink { get; set; }
 
         /// <term><b>Obsolete</b></term>
         /// 

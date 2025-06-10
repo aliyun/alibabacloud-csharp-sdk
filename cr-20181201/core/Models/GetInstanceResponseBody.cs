@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The time when the instance was created.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1571926439000</para>
         /// </summary>
@@ -26,6 +28,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public long? CreateTime { get; set; }
 
         /// <summary>
+        /// <para>The ID of the Container Registry instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cri-xkx6vujuhay0****</para>
         /// </summary>
@@ -44,6 +48,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceIssue { get; set; }
 
         /// <summary>
+        /// <para>The name of the instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>shanghai-instance1</para>
         /// </summary>
@@ -62,6 +68,18 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceSpecification { get; set; }
 
         /// <summary>
+        /// <para>The status of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>PENDING</c>: The instance is being initialized.</description></item>
+        /// <item><description><c>INIT_ERROR</c>: The instance failed to be initialized.</description></item>
+        /// <item><description><c>STARTING</c>: The instance is being started.</description></item>
+        /// <item><description><c>RUNNING</c>: The instance is running.</description></item>
+        /// <item><description><c>STOPPING</c>: The instance is being stopped.</description></item>
+        /// <item><description><c>STOPPED</c>: The instance is stopped.</description></item>
+        /// <item><description><c>DELETING</c>: The instance is being deleted.</description></item>
+        /// <item><description><c>DELETED</c>: The instance is deleted.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>RUNNING</para>
         /// </summary>
@@ -70,6 +88,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceStatus { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: The request is successful.</description></item>
+        /// <item><description><c>false</c>: The request fails.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -78,6 +102,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? IsSuccess { get; set; }
 
         /// <summary>
+        /// <para>The time when the instance was last modified.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1571926560000</para>
         /// </summary>
@@ -86,6 +112,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public long? ModifiedTime { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6EF34B18-4228-470C-860C-D28597CF010E</para>
         /// </summary>
@@ -94,6 +122,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the resource group to which the instance belongs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rg-acfmv36i4isx****</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListNamespaceRequest : TeaModel {
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The namespace name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-namespace</para>
@@ -31,7 +31,11 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string NamespaceName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the namespace.</para>
+        /// <para>The status of the namespace. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>NORMAL</c></description></item>
+        /// <item><description><c>DELETING</c></description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>NORMAL</para>
@@ -41,7 +45,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string NamespaceStatus { get; set; }
 
         /// <summary>
-        /// <para>The list of namespaces.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -51,7 +55,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

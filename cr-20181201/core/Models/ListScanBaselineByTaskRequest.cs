@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListScanBaselineByTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The image digest.</para>
+        /// <para>The digest value of the image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sha256:1c89806cfaf66d2990e2cf1131ebd56ff24b133745a33abf1228*************</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Digest { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The ID of the Container Registry instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cri-***********</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The severity of the risk.</para>
+        /// <para>The level of the baseline risk.</para>
         /// 
         /// <b>Example:</b>
         /// <para>High</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The repository ID.</para>
+        /// <para>The ID of the image repository.</para>
         /// 
         /// <b>Example:</b>
         /// <para>crr-**************</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string ScanTaskId { get; set; }
 
         /// <summary>
-        /// <para>The image tag.</para>
+        /// <para>The image version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.1.36</para>
