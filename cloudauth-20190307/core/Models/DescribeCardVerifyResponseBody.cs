@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             [Validation(Required=false)]
             public string CardInfo { get; set; }
 
+            [NameInMap("FaceDetail")]
+            [Validation(Required=false)]
+            public string FaceDetail { get; set; }
+
             [NameInMap("OcrCardInfo")]
             [Validation(Required=false)]
             public string OcrCardInfo { get; set; }
