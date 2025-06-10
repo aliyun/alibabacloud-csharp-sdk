@@ -9263,6 +9263,214 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>新增站点视频处理配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVideoProcessingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVideoProcessingResponse
+        /// </returns>
+        public CreateVideoProcessingResponse CreateVideoProcessingWithOptions(CreateVideoProcessingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlvSeekEnd))
+            {
+                query["FlvSeekEnd"] = request.FlvSeekEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlvSeekStart))
+            {
+                query["FlvSeekStart"] = request.FlvSeekStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlvVideoSeekMode))
+            {
+                query["FlvVideoSeekMode"] = request.FlvVideoSeekMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mp4SeekEnd))
+            {
+                query["Mp4SeekEnd"] = request.Mp4SeekEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mp4SeekStart))
+            {
+                query["Mp4SeekStart"] = request.Mp4SeekStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rule))
+            {
+                query["Rule"] = request.Rule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleEnable))
+            {
+                query["RuleEnable"] = request.RuleEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sequence))
+            {
+                query["Sequence"] = request.Sequence;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteVersion))
+            {
+                query["SiteVersion"] = request.SiteVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoSeekEnable))
+            {
+                query["VideoSeekEnable"] = request.VideoSeekEnable;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateVideoProcessing",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateVideoProcessingResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增站点视频处理配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVideoProcessingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVideoProcessingResponse
+        /// </returns>
+        public async Task<CreateVideoProcessingResponse> CreateVideoProcessingWithOptionsAsync(CreateVideoProcessingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlvSeekEnd))
+            {
+                query["FlvSeekEnd"] = request.FlvSeekEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlvSeekStart))
+            {
+                query["FlvSeekStart"] = request.FlvSeekStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlvVideoSeekMode))
+            {
+                query["FlvVideoSeekMode"] = request.FlvVideoSeekMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mp4SeekEnd))
+            {
+                query["Mp4SeekEnd"] = request.Mp4SeekEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mp4SeekStart))
+            {
+                query["Mp4SeekStart"] = request.Mp4SeekStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rule))
+            {
+                query["Rule"] = request.Rule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleEnable))
+            {
+                query["RuleEnable"] = request.RuleEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sequence))
+            {
+                query["Sequence"] = request.Sequence;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteVersion))
+            {
+                query["SiteVersion"] = request.SiteVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoSeekEnable))
+            {
+                query["VideoSeekEnable"] = request.VideoSeekEnable;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateVideoProcessing",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateVideoProcessingResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增站点视频处理配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVideoProcessingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVideoProcessingResponse
+        /// </returns>
+        public CreateVideoProcessingResponse CreateVideoProcessing(CreateVideoProcessingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateVideoProcessingWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增站点视频处理配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVideoProcessingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVideoProcessingResponse
+        /// </returns>
+        public async Task<CreateVideoProcessingResponse> CreateVideoProcessingAsync(CreateVideoProcessingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateVideoProcessingWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Create WAF Rule</para>
         /// </summary>
         /// 
@@ -15159,6 +15367,134 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteUserDeliveryTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除站点视频处理配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteVideoProcessingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVideoProcessingResponse
+        /// </returns>
+        public DeleteVideoProcessingResponse DeleteVideoProcessingWithOptions(DeleteVideoProcessingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteVideoProcessing",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteVideoProcessingResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除站点视频处理配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteVideoProcessingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVideoProcessingResponse
+        /// </returns>
+        public async Task<DeleteVideoProcessingResponse> DeleteVideoProcessingWithOptionsAsync(DeleteVideoProcessingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteVideoProcessing",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteVideoProcessingResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除站点视频处理配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteVideoProcessingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVideoProcessingResponse
+        /// </returns>
+        public DeleteVideoProcessingResponse DeleteVideoProcessing(DeleteVideoProcessingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteVideoProcessingWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除站点视频处理配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteVideoProcessingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVideoProcessingResponse
+        /// </returns>
+        public async Task<DeleteVideoProcessingResponse> DeleteVideoProcessingAsync(DeleteVideoProcessingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteVideoProcessingWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -26057,6 +26393,134 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询站点视频处理配置详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVideoProcessingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVideoProcessingResponse
+        /// </returns>
+        public GetVideoProcessingResponse GetVideoProcessingWithOptions(GetVideoProcessingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetVideoProcessing",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetVideoProcessingResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询站点视频处理配置详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVideoProcessingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVideoProcessingResponse
+        /// </returns>
+        public async Task<GetVideoProcessingResponse> GetVideoProcessingWithOptionsAsync(GetVideoProcessingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetVideoProcessing",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetVideoProcessingResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询站点视频处理配置详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVideoProcessingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVideoProcessingResponse
+        /// </returns>
+        public GetVideoProcessingResponse GetVideoProcessing(GetVideoProcessingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetVideoProcessingWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询站点视频处理配置详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVideoProcessingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVideoProcessingResponse
+        /// </returns>
+        public async Task<GetVideoProcessingResponse> GetVideoProcessingAsync(GetVideoProcessingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetVideoProcessingWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>This interface is used to obtain the application key (AppKey) for the BOT behavior detection feature in the site\&quot;s Web Application Firewall (WAF). The key is typically used for authentication and data exchange with the WAF service.</para>
         /// </summary>
         /// 
@@ -32727,6 +33191,174 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询站点视频处理配置列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVideoProcessingsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVideoProcessingsResponse
+        /// </returns>
+        public ListVideoProcessingsResponse ListVideoProcessingsWithOptions(ListVideoProcessingsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigType))
+            {
+                query["ConfigType"] = request.ConfigType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteVersion))
+            {
+                query["SiteVersion"] = request.SiteVersion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVideoProcessings",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVideoProcessingsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询站点视频处理配置列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVideoProcessingsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVideoProcessingsResponse
+        /// </returns>
+        public async Task<ListVideoProcessingsResponse> ListVideoProcessingsWithOptionsAsync(ListVideoProcessingsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigType))
+            {
+                query["ConfigType"] = request.ConfigType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteVersion))
+            {
+                query["SiteVersion"] = request.SiteVersion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVideoProcessings",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVideoProcessingsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询站点视频处理配置列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVideoProcessingsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVideoProcessingsResponse
+        /// </returns>
+        public ListVideoProcessingsResponse ListVideoProcessings(ListVideoProcessingsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListVideoProcessingsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询站点视频处理配置列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVideoProcessingsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVideoProcessingsResponse
+        /// </returns>
+        public async Task<ListVideoProcessingsResponse> ListVideoProcessingsAsync(ListVideoProcessingsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListVideoProcessingsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>List WAF Managed Rules</para>
         /// </summary>
         /// 
@@ -38143,7 +38775,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify site CNAME flattening configuration</para>
+        /// <para>Modifies the CNAME flattening configuration of a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38189,7 +38821,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify site CNAME flattening configuration</para>
+        /// <para>Modifies the CNAME flattening configuration of a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38235,7 +38867,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify site CNAME flattening configuration</para>
+        /// <para>Modifies the CNAME flattening configuration of a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38253,7 +38885,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify site CNAME flattening configuration</para>
+        /// <para>Modifies the CNAME flattening configuration of a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42231,6 +42863,10 @@ namespace AlibabaCloud.SDK.ESA20240910
             {
                 query["Ttl"] = request.Ttl;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -42327,6 +42963,10 @@ namespace AlibabaCloud.SDK.ESA20240910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ttl))
             {
                 query["Ttl"] = request.Ttl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -44779,6 +45419,214 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateUserDeliveryTaskStatusWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改站点视频处理配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateVideoProcessingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateVideoProcessingResponse
+        /// </returns>
+        public UpdateVideoProcessingResponse UpdateVideoProcessingWithOptions(UpdateVideoProcessingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlvSeekEnd))
+            {
+                query["FlvSeekEnd"] = request.FlvSeekEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlvSeekStart))
+            {
+                query["FlvSeekStart"] = request.FlvSeekStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlvVideoSeekMode))
+            {
+                query["FlvVideoSeekMode"] = request.FlvVideoSeekMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mp4SeekEnd))
+            {
+                query["Mp4SeekEnd"] = request.Mp4SeekEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mp4SeekStart))
+            {
+                query["Mp4SeekStart"] = request.Mp4SeekStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rule))
+            {
+                query["Rule"] = request.Rule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleEnable))
+            {
+                query["RuleEnable"] = request.RuleEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sequence))
+            {
+                query["Sequence"] = request.Sequence;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoSeekEnable))
+            {
+                query["VideoSeekEnable"] = request.VideoSeekEnable;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateVideoProcessing",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateVideoProcessingResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改站点视频处理配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateVideoProcessingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateVideoProcessingResponse
+        /// </returns>
+        public async Task<UpdateVideoProcessingResponse> UpdateVideoProcessingWithOptionsAsync(UpdateVideoProcessingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlvSeekEnd))
+            {
+                query["FlvSeekEnd"] = request.FlvSeekEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlvSeekStart))
+            {
+                query["FlvSeekStart"] = request.FlvSeekStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlvVideoSeekMode))
+            {
+                query["FlvVideoSeekMode"] = request.FlvVideoSeekMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mp4SeekEnd))
+            {
+                query["Mp4SeekEnd"] = request.Mp4SeekEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mp4SeekStart))
+            {
+                query["Mp4SeekStart"] = request.Mp4SeekStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rule))
+            {
+                query["Rule"] = request.Rule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleEnable))
+            {
+                query["RuleEnable"] = request.RuleEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sequence))
+            {
+                query["Sequence"] = request.Sequence;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoSeekEnable))
+            {
+                query["VideoSeekEnable"] = request.VideoSeekEnable;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateVideoProcessing",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateVideoProcessingResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改站点视频处理配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateVideoProcessingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateVideoProcessingResponse
+        /// </returns>
+        public UpdateVideoProcessingResponse UpdateVideoProcessing(UpdateVideoProcessingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateVideoProcessingWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改站点视频处理配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateVideoProcessingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateVideoProcessingResponse
+        /// </returns>
+        public async Task<UpdateVideoProcessingResponse> UpdateVideoProcessingAsync(UpdateVideoProcessingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateVideoProcessingWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

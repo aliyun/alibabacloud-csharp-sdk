@@ -335,6 +335,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public int? Ttl { get; set; }
 
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
+
     }
 
 }

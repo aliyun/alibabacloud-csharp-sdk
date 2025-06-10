@@ -8,12 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ESA20240910.Models
 {
-    public class UpdateCnameFlatteningResponseBody : TeaModel {
+    public class UpdateVideoProcessingResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>CB1A380B-09F0-41BB-280B-72F8FD6DA2FE</para>
+        /// <para>3558df77-8a7a-4060-a900-2d7949403836</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
