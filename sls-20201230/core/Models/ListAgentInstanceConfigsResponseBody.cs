@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public class ListAgentInstanceConfigsResponseBodyConfigs : TeaModel {
             [NameInMap("attributes")]
             [Validation(Required=false)]
-            public string Attributes { get; set; }
+            public Dictionary<string, string> Attributes { get; set; }
 
             [NameInMap("configType")]
             [Validation(Required=false)]
