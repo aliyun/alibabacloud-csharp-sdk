@@ -5606,6 +5606,158 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取指定机器基本信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReadSchedulerxDesignateInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReadSchedulerxDesignateInfoResponse
+        /// </returns>
+        public ReadSchedulerxDesignateInfoResponse ReadSchedulerxDesignateInfoWithOptions(ReadSchedulerxDesignateInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceSource))
+            {
+                query["NamespaceSource"] = request.NamespaceSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReadSchedulerxDesignateInfo",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReadSchedulerxDesignateInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定机器基本信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReadSchedulerxDesignateInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReadSchedulerxDesignateInfoResponse
+        /// </returns>
+        public async Task<ReadSchedulerxDesignateInfoResponse> ReadSchedulerxDesignateInfoWithOptionsAsync(ReadSchedulerxDesignateInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceSource))
+            {
+                query["NamespaceSource"] = request.NamespaceSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReadSchedulerxDesignateInfo",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReadSchedulerxDesignateInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定机器基本信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReadSchedulerxDesignateInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReadSchedulerxDesignateInfoResponse
+        /// </returns>
+        public ReadSchedulerxDesignateInfoResponse ReadSchedulerxDesignateInfo(ReadSchedulerxDesignateInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ReadSchedulerxDesignateInfoWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定机器基本信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReadSchedulerxDesignateInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReadSchedulerxDesignateInfoResponse
+        /// </returns>
+        public async Task<ReadSchedulerxDesignateInfoResponse> ReadSchedulerxDesignateInfoAsync(ReadSchedulerxDesignateInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ReadSchedulerxDesignateInfoWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Reruns a job to obtain the historical data of the job. You can call this operation only in the professional edition.</para>
         /// </summary>
         /// 
