@@ -10,38 +10,75 @@ namespace AlibabaCloud.SDK.Imageprocess20200320.Models
 {
     public class RunCTRegistrationAdvanceRequest : TeaModel {
         /// <summary>
-        /// DICOM。
+        /// <para>DICOM。</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DICOM</para>
         /// </summary>
         [NameInMap("DataFormat")]
         [Validation(Required=false)]
         public string DataFormat { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>HTTP_FILES</para>
+        /// </summary>
         [NameInMap("DataSourceType")]
         [Validation(Required=false)]
         public string DataSourceType { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("FloatingList")]
         [Validation(Required=false)]
         public List<RunCTRegistrationAdvanceRequestFloatingList> FloatingList { get; set; }
         public class RunCTRegistrationAdvanceRequestFloatingList : TeaModel {
+            /// <summary>
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="https://medclients-sh.oss-cn-shanghai.aliyuncs.com/demo/registration/flt/34_P18.4.1.dcm">https://medclients-sh.oss-cn-shanghai.aliyuncs.com/demo/registration/flt/34_P18.4.1.dcm</a></para>
+            /// </summary>
             [NameInMap("FloatingURL")]
             [Validation(Required=false)]
             public Stream FloatingURLObject { get; set; }
 
         }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7ff51bfe-e73d-11ea-827d-506b4b3f3cf6</para>
+        /// </summary>
         [NameInMap("OrgId")]
         [Validation(Required=false)]
         public string OrgId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("OrgName")]
         [Validation(Required=false)]
         public string OrgName { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("ReferenceList")]
         [Validation(Required=false)]
         public List<RunCTRegistrationAdvanceRequestReferenceList> ReferenceList { get; set; }
         public class RunCTRegistrationAdvanceRequestReferenceList : TeaModel {
+            /// <summary>
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="https://medclients-sh.oss-cn-shanghai.aliyuncs.com/demo/registration/ref/33_P18.4.1.dcm">https://medclients-sh.oss-cn-shanghai.aliyuncs.com/demo/registration/ref/33_P18.4.1.dcm</a></para>
+            /// </summary>
             [NameInMap("ReferenceURL")]
             [Validation(Required=false)]
             public Stream ReferenceURLObject { get; set; }
