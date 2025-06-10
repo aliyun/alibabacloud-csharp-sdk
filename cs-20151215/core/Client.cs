@@ -1808,6 +1808,10 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["audit_log_config"] = request.AuditLogConfig;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoMode))
+            {
+                body["auto_mode"] = request.AutoMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
             {
                 body["auto_renew"] = request.AutoRenew;
@@ -2258,6 +2262,10 @@ namespace AlibabaCloud.SDK.CS20151215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuditLogConfig))
             {
                 body["audit_log_config"] = request.AuditLogConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoMode))
+            {
+                body["auto_mode"] = request.AutoMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
             {
@@ -3029,6 +3037,10 @@ namespace AlibabaCloud.SDK.CS20151215
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoMode))
+            {
+                body["auto_mode"] = request.AutoMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoScaling))
             {
                 body["auto_scaling"] = request.AutoScaling;
@@ -3127,6 +3139,10 @@ namespace AlibabaCloud.SDK.CS20151215
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoMode))
+            {
+                body["auto_mode"] = request.AutoMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoScaling))
             {
                 body["auto_scaling"] = request.AutoScaling;

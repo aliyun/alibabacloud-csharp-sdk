@@ -9,6 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class CreateClusterNodePoolRequest : TeaModel {
+        [NameInMap("auto_mode")]
+        [Validation(Required=false)]
+        public CreateClusterNodePoolRequestAutoMode AutoMode { get; set; }
+        public class CreateClusterNodePoolRequestAutoMode : TeaModel {
+            [NameInMap("enable")]
+            [Validation(Required=false)]
+            public bool? Enable { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The configurations of auto scaling.</para>
         /// </summary>

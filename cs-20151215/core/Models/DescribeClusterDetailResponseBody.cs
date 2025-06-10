@@ -9,6 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClusterDetailResponseBody : TeaModel {
+        [NameInMap("auto_mode")]
+        [Validation(Required=false)]
+        public DescribeClusterDetailResponseBodyAutoMode AutoMode { get; set; }
+        public class DescribeClusterDetailResponseBodyAutoMode : TeaModel {
+            [NameInMap("enable")]
+            [Validation(Required=false)]
+            public bool? Enable { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The domain name of the cluster.</para>
         /// 

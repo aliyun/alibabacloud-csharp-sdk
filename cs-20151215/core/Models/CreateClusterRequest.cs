@@ -68,6 +68,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         }
 
+        [NameInMap("auto_mode")]
+        [Validation(Required=false)]
+        public CreateClusterRequestAutoMode AutoMode { get; set; }
+        public class CreateClusterRequestAutoMode : TeaModel {
+            [NameInMap("enable")]
+            [Validation(Required=false)]
+            public bool? Enable { get; set; }
+
+        }
+
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
