@@ -9,6 +9,34 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeRenderingInstanceResponseBody : TeaModel {
+        [NameInMap("AdditionalIngresses")]
+        [Validation(Required=false)]
+        public List<DescribeRenderingInstanceResponseBodyAdditionalIngresses> AdditionalIngresses { get; set; }
+        public class DescribeRenderingInstanceResponseBodyAdditionalIngresses : TeaModel {
+            [NameInMap("Hostname")]
+            [Validation(Required=false)]
+            public string Hostname { get; set; }
+
+            [NameInMap("Isp")]
+            [Validation(Required=false)]
+            public string Isp { get; set; }
+
+            [NameInMap("PortMappings")]
+            [Validation(Required=false)]
+            public List<DescribeRenderingInstanceResponseBodyAdditionalIngressesPortMappings> PortMappings { get; set; }
+            public class DescribeRenderingInstanceResponseBodyAdditionalIngressesPortMappings : TeaModel {
+                [NameInMap("ExternalPort")]
+                [Validation(Required=false)]
+                public string ExternalPort { get; set; }
+
+                [NameInMap("InternalPort")]
+                [Validation(Required=false)]
+                public string InternalPort { get; set; }
+
+            }
+
+        }
+
         [NameInMap("ConfigInfo")]
         [Validation(Required=false)]
         public DescribeRenderingInstanceResponseBodyConfigInfo ConfigInfo { get; set; }
@@ -108,6 +136,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [NameInMap("Hostname")]
         [Validation(Required=false)]
         public string Hostname { get; set; }
+
+        [NameInMap("Isp")]
+        [Validation(Required=false)]
+        public string Isp { get; set; }
 
         [NameInMap("PortMappings")]
         [Validation(Required=false)]
