@@ -6385,6 +6385,200 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取挂载列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPluginAttachmentsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPluginAttachmentsResponse
+        /// </returns>
+        public ListPluginAttachmentsResponse ListPluginAttachmentsWithOptions(ListPluginAttachmentsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttachResourceId))
+            {
+                query["attachResourceId"] = request.AttachResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttachResourceType))
+            {
+                query["attachResourceType"] = request.AttachResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttachResourceTypes))
+            {
+                query["attachResourceTypes"] = request.AttachResourceTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvironmentId))
+            {
+                query["environmentId"] = request.EnvironmentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                query["gatewayId"] = request.GatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PluginId))
+            {
+                query["pluginId"] = request.PluginId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithParentResource))
+            {
+                query["withParentResource"] = request.WithParentResource;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListPluginAttachments",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/plugin-attachments",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListPluginAttachmentsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取挂载列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPluginAttachmentsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPluginAttachmentsResponse
+        /// </returns>
+        public async Task<ListPluginAttachmentsResponse> ListPluginAttachmentsWithOptionsAsync(ListPluginAttachmentsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttachResourceId))
+            {
+                query["attachResourceId"] = request.AttachResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttachResourceType))
+            {
+                query["attachResourceType"] = request.AttachResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttachResourceTypes))
+            {
+                query["attachResourceTypes"] = request.AttachResourceTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvironmentId))
+            {
+                query["environmentId"] = request.EnvironmentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                query["gatewayId"] = request.GatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PluginId))
+            {
+                query["pluginId"] = request.PluginId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithParentResource))
+            {
+                query["withParentResource"] = request.WithParentResource;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListPluginAttachments",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/plugin-attachments",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListPluginAttachmentsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取挂载列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPluginAttachmentsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPluginAttachmentsResponse
+        /// </returns>
+        public ListPluginAttachmentsResponse ListPluginAttachments(ListPluginAttachmentsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListPluginAttachmentsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取挂载列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPluginAttachmentsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPluginAttachmentsResponse
+        /// </returns>
+        public async Task<ListPluginAttachmentsResponse> ListPluginAttachmentsAsync(ListPluginAttachmentsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListPluginAttachmentsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>ListPlugins</para>
         /// </summary>
         /// 
