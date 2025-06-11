@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string Category { get; set; }
 
+        [NameInMap("CategoryChangePaused")]
+        [Validation(Required=false)]
+        public bool? CategoryChangePaused { get; set; }
+
         /// <summary>
         /// <para>The components of the message template.</para>
         /// <remarks>

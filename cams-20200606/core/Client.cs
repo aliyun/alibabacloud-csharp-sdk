@@ -2126,6 +2126,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             {
                 body["Category"] = request.Category;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryChangePaused))
+            {
+                body["CategoryChangePaused"] = request.CategoryChangePaused;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComponentsShrink))
             {
                 body["Components"] = request.ComponentsShrink;
@@ -2225,6 +2229,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
             {
                 body["Category"] = request.Category;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryChangePaused))
+            {
+                body["CategoryChangePaused"] = request.CategoryChangePaused;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComponentsShrink))
             {
@@ -7363,6 +7371,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             {
                 body["Category"] = request.Category;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryChangePaused))
+            {
+                body["CategoryChangePaused"] = request.CategoryChangePaused;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComponentsShrink))
             {
                 body["Components"] = request.ComponentsShrink;
@@ -7459,6 +7471,10 @@ namespace AlibabaCloud.SDK.Cams20200606
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
             {
                 body["Category"] = request.Category;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryChangePaused))
+            {
+                body["CategoryChangePaused"] = request.CategoryChangePaused;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComponentsShrink))
             {
@@ -7563,6 +7579,190 @@ namespace AlibabaCloud.SDK.Cams20200606
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyChatappTemplateWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改模板上的一些属性</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyChatappTemplatePropertiesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyChatappTemplatePropertiesResponse
+        /// </returns>
+        public ModifyChatappTemplatePropertiesResponse ModifyChatappTemplatePropertiesWithOptions(ModifyChatappTemplatePropertiesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowSend))
+            {
+                query["AllowSend"] = request.AllowSend;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryChangePaused))
+            {
+                query["CategoryChangePaused"] = request.CategoryChangePaused;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustSpaceId))
+            {
+                query["CustSpaceId"] = request.CustSpaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateCode))
+            {
+                query["TemplateCode"] = request.TemplateCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateType))
+            {
+                query["TemplateType"] = request.TemplateType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyChatappTemplateProperties",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyChatappTemplatePropertiesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改模板上的一些属性</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyChatappTemplatePropertiesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyChatappTemplatePropertiesResponse
+        /// </returns>
+        public async Task<ModifyChatappTemplatePropertiesResponse> ModifyChatappTemplatePropertiesWithOptionsAsync(ModifyChatappTemplatePropertiesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowSend))
+            {
+                query["AllowSend"] = request.AllowSend;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryChangePaused))
+            {
+                query["CategoryChangePaused"] = request.CategoryChangePaused;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustSpaceId))
+            {
+                query["CustSpaceId"] = request.CustSpaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateCode))
+            {
+                query["TemplateCode"] = request.TemplateCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateType))
+            {
+                query["TemplateType"] = request.TemplateType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyChatappTemplateProperties",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyChatappTemplatePropertiesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改模板上的一些属性</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyChatappTemplatePropertiesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyChatappTemplatePropertiesResponse
+        /// </returns>
+        public ModifyChatappTemplatePropertiesResponse ModifyChatappTemplateProperties(ModifyChatappTemplatePropertiesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyChatappTemplatePropertiesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改模板上的一些属性</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyChatappTemplatePropertiesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyChatappTemplatePropertiesResponse
+        /// </returns>
+        public async Task<ModifyChatappTemplatePropertiesResponse> ModifyChatappTemplatePropertiesAsync(ModifyChatappTemplatePropertiesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyChatappTemplatePropertiesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

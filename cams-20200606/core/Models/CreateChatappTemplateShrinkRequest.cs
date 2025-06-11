@@ -9,6 +9,8 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class CreateChatappTemplateShrinkRequest : TeaModel {
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>Specifies whether to allow Facebook to automatically change the directory of the template. If you set this parameter to true, the review success rate of the template is improved. This parameter is valid only when TemplateType is set to WHATSAPP.</para>
         /// 
@@ -17,6 +19,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// </summary>
         [NameInMap("AllowCategoryChange")]
         [Validation(Required=false)]
+        [Obsolete]
         public bool? AllowCategoryChange { get; set; }
 
         /// <summary>
@@ -46,6 +49,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [NameInMap("Category")]
         [Validation(Required=false)]
         public string Category { get; set; }
+
+        [NameInMap("CategoryChangePaused")]
+        [Validation(Required=false)]
+        public bool? CategoryChangePaused { get; set; }
 
         /// <summary>
         /// <para>The components of the message template.</para>

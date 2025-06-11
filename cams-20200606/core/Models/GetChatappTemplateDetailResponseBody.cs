@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public GetChatappTemplateDetailResponseBodyData Data { get; set; }
         public class GetChatappTemplateDetailResponseBodyData : TeaModel {
+            [NameInMap("AllowSend")]
+            [Validation(Required=false)]
+            public bool? AllowSend { get; set; }
+
             /// <summary>
             /// <para>The review status of the message template. Valid values:</para>
             /// <list type="bullet">
@@ -88,6 +92,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             [NameInMap("Category")]
             [Validation(Required=false)]
             public string Category { get; set; }
+
+            [NameInMap("CategoryChangePaused")]
+            [Validation(Required=false)]
+            public bool? CategoryChangePaused { get; set; }
 
             /// <summary>
             /// <para>The components of the message template.</para>

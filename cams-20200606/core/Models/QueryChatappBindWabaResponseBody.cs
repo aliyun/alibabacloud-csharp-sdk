@@ -111,6 +111,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string Id { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>Y</para>
+            /// </summary>
+            [NameInMap("MarketingMessageLiteStatus")]
+            [Validation(Required=false)]
+            public string MarketingMessageLiteStatus { get; set; }
+
+            /// <summary>
             /// <para>The namespace of the message template.</para>
             /// 
             /// <b>Example:</b>
