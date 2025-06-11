@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeDefenseRuleRequest : TeaModel {
+        [NameInMap("DefenseType")]
+        [Validation(Required=false)]
+        public string DefenseType { get; set; }
+
         /// <summary>
         /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
         /// <remarks>
