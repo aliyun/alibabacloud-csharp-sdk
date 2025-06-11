@@ -13103,6 +13103,158 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>编辑指定guid的元数据业务知识</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EditMetaKnowledgeAssetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EditMetaKnowledgeAssetResponse
+        /// </returns>
+        public EditMetaKnowledgeAssetResponse EditMetaKnowledgeAssetWithOptions(EditMetaKnowledgeAssetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssetDescription))
+            {
+                query["AssetDescription"] = request.AssetDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColumnName))
+            {
+                query["ColumnName"] = request.ColumnName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbId))
+            {
+                query["DbId"] = request.DbId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
+            {
+                query["TableName"] = request.TableName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableSchemaName))
+            {
+                query["TableSchemaName"] = request.TableSchemaName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EditMetaKnowledgeAsset",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EditMetaKnowledgeAssetResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>编辑指定guid的元数据业务知识</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EditMetaKnowledgeAssetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EditMetaKnowledgeAssetResponse
+        /// </returns>
+        public async Task<EditMetaKnowledgeAssetResponse> EditMetaKnowledgeAssetWithOptionsAsync(EditMetaKnowledgeAssetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssetDescription))
+            {
+                query["AssetDescription"] = request.AssetDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColumnName))
+            {
+                query["ColumnName"] = request.ColumnName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbId))
+            {
+                query["DbId"] = request.DbId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
+            {
+                query["TableName"] = request.TableName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableSchemaName))
+            {
+                query["TableSchemaName"] = request.TableSchemaName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EditMetaKnowledgeAsset",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EditMetaKnowledgeAssetResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>编辑指定guid的元数据业务知识</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EditMetaKnowledgeAssetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EditMetaKnowledgeAssetResponse
+        /// </returns>
+        public EditMetaKnowledgeAssetResponse EditMetaKnowledgeAsset(EditMetaKnowledgeAssetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return EditMetaKnowledgeAssetWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>编辑指定guid的元数据业务知识</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EditMetaKnowledgeAssetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EditMetaKnowledgeAssetResponse
+        /// </returns>
+        public async Task<EditMetaKnowledgeAssetResponse> EditMetaKnowledgeAssetAsync(EditMetaKnowledgeAssetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await EditMetaKnowledgeAssetWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>You can call this operation to enable a user that has been disabled in Data Management (DMS) Enterprise.</para>
         /// </summary>
         /// 
@@ -22123,6 +22275,142 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetTableDesignProjectInfoWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定guid的元数据知识</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTableKnowledgeInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTableKnowledgeInfoResponse
+        /// </returns>
+        public GetTableKnowledgeInfoResponse GetTableKnowledgeInfoWithOptions(GetTableKnowledgeInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbId))
+            {
+                query["DbId"] = request.DbId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
+            {
+                query["TableName"] = request.TableName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableSchemaName))
+            {
+                query["TableSchemaName"] = request.TableSchemaName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTableKnowledgeInfo",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTableKnowledgeInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定guid的元数据知识</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTableKnowledgeInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTableKnowledgeInfoResponse
+        /// </returns>
+        public async Task<GetTableKnowledgeInfoResponse> GetTableKnowledgeInfoWithOptionsAsync(GetTableKnowledgeInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbId))
+            {
+                query["DbId"] = request.DbId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
+            {
+                query["TableName"] = request.TableName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableSchemaName))
+            {
+                query["TableSchemaName"] = request.TableSchemaName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTableKnowledgeInfo",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTableKnowledgeInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定guid的元数据知识</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTableKnowledgeInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTableKnowledgeInfoResponse
+        /// </returns>
+        public GetTableKnowledgeInfoResponse GetTableKnowledgeInfo(GetTableKnowledgeInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetTableKnowledgeInfoWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定guid的元数据知识</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTableKnowledgeInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTableKnowledgeInfoResponse
+        /// </returns>
+        public async Task<GetTableKnowledgeInfoResponse> GetTableKnowledgeInfoAsync(GetTableKnowledgeInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetTableKnowledgeInfoWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -32335,6 +32623,150 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListStandardGroupsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取表字段信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTableColumnsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTableColumnsResponse
+        /// </returns>
+        public ListTableColumnsResponse ListTableColumnsWithOptions(ListTableColumnsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbId))
+            {
+                query["DbId"] = request.DbId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
+            {
+                query["TableName"] = request.TableName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableSchemaName))
+            {
+                query["TableSchemaName"] = request.TableSchemaName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTableColumns",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTableColumnsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取表字段信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTableColumnsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTableColumnsResponse
+        /// </returns>
+        public async Task<ListTableColumnsResponse> ListTableColumnsWithOptionsAsync(ListTableColumnsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbId))
+            {
+                query["DbId"] = request.DbId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
+            {
+                query["TableName"] = request.TableName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableSchemaName))
+            {
+                query["TableSchemaName"] = request.TableSchemaName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTableColumns",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTableColumnsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取表字段信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTableColumnsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTableColumnsResponse
+        /// </returns>
+        public ListTableColumnsResponse ListTableColumns(ListTableColumnsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListTableColumnsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取表字段信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTableColumnsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTableColumnsResponse
+        /// </returns>
+        public async Task<ListTableColumnsResponse> ListTableColumnsAsync(ListTableColumnsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListTableColumnsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

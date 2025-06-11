@@ -8,38 +8,42 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
-    public class DescribeDifyAttributeRequest : TeaModel {
+    public class ListTableColumnsRequest : TeaModel {
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>92748163-af62-4ca4-ad85-1****</para>
+        /// <para>123</para>
         /// </summary>
-        [NameInMap("AppUuid")]
+        [NameInMap("DbId")]
         [Validation(Required=false)]
-        public string AppUuid { get; set; }
+        public int? DbId { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100g_customer</para>
+        /// </summary>
+        [NameInMap("TableName")]
+        [Validation(Required=false)]
+        public string TableName { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>ETnLKlblzczshOTUbOCzxxxx</para>
+        /// <para>dbo</para>
         /// </summary>
-        [NameInMap("ClientToken")]
+        [NameInMap("TableSchemaName")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public string TableSchemaName { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// <para>3***</para>
         /// </summary>
-        [NameInMap("DataRegion")]
+        [NameInMap("Tid")]
         [Validation(Required=false)]
-        public string DataRegion { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>339170706****</para>
-        /// </summary>
-        [NameInMap("WorkspaceId")]
-        [Validation(Required=false)]
-        public string WorkspaceId { get; set; }
+        public long? Tid { get; set; }
 
     }
 
