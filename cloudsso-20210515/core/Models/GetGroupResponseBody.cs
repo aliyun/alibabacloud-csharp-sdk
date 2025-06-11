@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string ProvisionType { get; set; }
 
             /// <summary>
-            /// <para>The time when the information about the group was modified.</para>
+            /// <para>The time when information about the group was modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-11-01T02:38:27Z</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>768F908D-A66A-5A5D-816C-20C93CBBFEE3</para>

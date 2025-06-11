@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 
         /// <summary>
         /// <para>The X.509 certificate in the PEM format.</para>
-        /// <para>The certificate is provided by the SAML IdP.</para>
+        /// <para>The certificate is provided by the SAML identity provider (IdP).</para>
         /// 
         /// <b>Example:</b>
         /// <para>MIIC8DCCAdigAwIBAgIQP9eomUYGeoND****</para>

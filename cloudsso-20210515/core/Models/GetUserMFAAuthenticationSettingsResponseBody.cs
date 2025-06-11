@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class GetUserMFAAuthenticationSettingsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5B598B62-85E6-5792-9DF1-246D251B07DA</para>
@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <summary>
         /// <para>Indicates whether MFA is enabled for the user. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Enabled: MFA is enabled for the user.</description></item>
-        /// <item><description>Disabled: MFA is disabled for the user.</description></item>
+        /// <item><description>Enabled</description></item>
+        /// <item><description>Disabled</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

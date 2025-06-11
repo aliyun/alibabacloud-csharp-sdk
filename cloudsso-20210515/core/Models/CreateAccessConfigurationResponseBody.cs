@@ -57,7 +57,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The initial web page that is displayed after a CloudSSO user accesses an account in your resource directory by using the access configuration.</para>
+            /// <para>The initial web page</para>
+            /// <para>that is displayed after a CloudSSO user uses the access configuration to access an account in your resource directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://cloudsso.console.aliyun.com">https://cloudsso.console.aliyun.com</a></para>
@@ -67,7 +68,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string RelayState { get; set; }
 
             /// <summary>
-            /// <para>The duration of a session in which a CloudSSO user accesses an account in your resource directory by using the access configuration.</para>
+            /// <para>The duration of a session</para>
+            /// <para>in which a CloudSSO user uses the access configuration to access an account in your resource directory.</para>
             /// <para>Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
@@ -78,11 +80,25 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public int? SessionDuration { get; set; }
 
             /// <summary>
-            /// <para>The status notification.</para>
+            /// <para>The status notifications.</para>
             /// </summary>
             [NameInMap("StatusNotifications")]
             [Validation(Required=false)]
             public List<string> StatusNotifications { get; set; }
+
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<CreateAccessConfigurationResponseBodyAccessConfigurationTags> Tags { get; set; }
+            public class CreateAccessConfigurationResponseBodyAccessConfigurationTags : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
 
             /// <summary>
             /// <para>The time when the information about the access configuration was modified.</para>
@@ -97,7 +113,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A3A41736-A050-50B6-ABC5-590F376A0044</para>

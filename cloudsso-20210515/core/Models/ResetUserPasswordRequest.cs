@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <para>The password must contain the following types of characters: uppercase letters, lowercase letters, digits, and special characters.</para>
         /// <para>The password must be 8 to 32 characters in length.</para>
         /// <remarks>
-        /// <para> If you set <c>GenerateRandomPassword</c> to <c>False</c>, you must specify <c>Password</c> .</para>
+        /// <para> If you set <c>GenerateRandomPassword</c> to <c>False</c>, you must specify <c>Password</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

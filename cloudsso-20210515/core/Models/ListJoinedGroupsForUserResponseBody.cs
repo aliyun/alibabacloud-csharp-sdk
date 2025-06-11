@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <summary>
         /// <para>Indicates whether the queried entries are truncated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The queried entries are truncated.</description></item>
-        /// <item><description>false: The queried entries are not truncated.</description></item>
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string GroupName { get; set; }
 
             /// <summary>
-            /// <para>The time when the user was added to the user group.</para>
+            /// <para>The time when the user was added to the group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-11-01T06:58:18Z</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             /// <para>The type of the group. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Manual: The group is manually created.</description></item>
-            /// <item><description>Synchronized: The user is synchronized from an external identity provider (IdP).</description></item>
+            /// <item><description>Synchronized: The group is synchronized from an external identity provider (IdP).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -107,9 +107,9 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is returned for the next page.</para>
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
         /// <remarks>
-        /// <para> This parameter is returned only when the value of <c>IsTruncated</c> is <c>true</c>.</para>
+        /// <para> This parameter is returned only when the <c>IsTruncated</c> parameter is <c>true</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E9BBB45F-7877-5DE9-96A5-20E6CFA48929</para>

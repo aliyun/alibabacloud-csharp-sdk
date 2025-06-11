@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 
         /// <summary>
         /// <para>The filter condition.</para>
-        /// <para>Specify the value in the <c>&lt;Attribute&gt; &lt;Operator&gt; &lt;Value&gt;</c> format. The value is not case sensitive. You can set <c>&lt;Attribute&gt;</c> only to <c>GroupName</c> and <c>&lt;Operator&gt;</c> only to <c>eq</c> or <c>sw</c>. The value eq indicates Equals. The value sw indicates Starts With.</para>
+        /// <para>You must specify the value in the <c>&lt;Attribute&gt; &lt;Operator&gt; &lt;Value&gt;</c> format. The value is not case-sensitive. You can set <c>&lt;Attribute&gt;</c> only to <c>GroupName</c> and <c>&lt;Operator&gt;</c> only to <c>eq</c> or <c>sw</c>. The value eq indicates Equals, and the value sw indicates Start With.</para>
         /// <para>For example, if you set Filter to GroupName sw test, the operation queries the groups whose names start with test. If you set Filter to GroupName eq testgroup, the operation queries the group whose name is testgroup.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string Filter { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// <para>Valid values: 1 to 100.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -44,8 +44,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token to return for the next page. If this is your first time to call this operation, you do not need to specify <c>NextToken</c>.</para>
-        /// <para>When you call this operation for the first time, if the total number of entries to return exceeds the value of <c>MaxResults</c>, the entries are truncated. Only the entries that match the value of <c>MaxResults</c> are returned, and the excess entries are not returned. In this case, the value of the response parameter <c>IsTruncated</c> is <c>true</c>, and <c>NextToken</c> is returned. In the next call, you can use the value of <c>NextToken</c> and maintain the settings of the other request parameters to query the excess entries. You can repeat the call until the value of <c>IsTruncated</c> becomes <c>false</c>. This way, all entries are returned.</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <c>NextToken</c>.</para>
+        /// <para>When you call this operation for the first time, if the total number of entries to return is larger than the value of the <c>MaxResults</c> parameter, the entries are truncated. The system returns entries based on the value of the <c>MaxResults</c> parameter, and does not return the excess entries. In this case, the value of the response parameter <c>IsTruncated</c> is <c>true</c>, and the <c>NextToken</c> parameter is returned. In the next call, you can use the value of the <c>NextToken</c> parameter and maintain the settings of the other request parameters to query the excess entries. You can repeat the call until the value of <c>IsTruncated</c> becomes <c>false</c>. This way, all entries are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>K1c3o9K7pFxoTtxH1Nm7MMLb7zrDGvftYBQBPDVv7AD3a8yhRb3Mk8L9ivmN6bFSjfkZNTAg3h4****</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <para>The type of the group. The type can be used to filter groups. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Manual: The group is manually created.</description></item>
-        /// <item><description>Synchronized: The group is synchronized from an external identity provider (IdP).</description></item>
+        /// <item><description>Synchronized: The group is synchronized from an external IdP.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

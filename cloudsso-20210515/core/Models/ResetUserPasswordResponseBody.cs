@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string NewPassword { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F44F02EC-70D1-5E51-8E8E-FA9AC4EF952A</para>

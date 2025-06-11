@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AA6A9E4B-8A61-59E1-AA87-F61CA18258A3</para>

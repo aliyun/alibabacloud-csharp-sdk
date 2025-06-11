@@ -41,7 +41,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string NewDescription { get; set; }
 
         /// <summary>
-        /// <para>The new initial web page that is displayed after a CloudSSO user accesses an account in your resource directory by using the access configuration.</para>
+        /// <para>The new initial web page</para>
+        /// <para>that is displayed after a CloudSSO user accesses an account in your resource directory by using the access configuration.</para>
         /// <para>The web page must be a page of the Alibaba Cloud Management Console.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +53,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string NewRelayState { get; set; }
 
         /// <summary>
-        /// <para>The new duration of a session in which a CloudSSO user accesses an account in your resource directory by using the access configuration.</para>
+        /// <para>The new duration of a session</para>
+        /// <para>in which a CloudSSO user accesses an account in your resource directory by using the access configuration.</para>
         /// <para>Unit: seconds.</para>
         /// <para>Valid values: 900 to 43200. The value 900 indicates 15 minutes. The value 43200 indicates 12 hours.</para>
         /// 

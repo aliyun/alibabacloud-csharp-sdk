@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 
         /// <summary>
         /// <para>The display name of the user.</para>
-        /// <para>The name can be up to 256 characters in length.</para>
+        /// <para>The display name can be up to 256 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Alice</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 
         /// <summary>
         /// <para>The first name of the user.</para>
-        /// <para>The name can be up to 64 characters in length.</para>
+        /// <para>The first name can be up to 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Alice</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 
         /// <summary>
         /// <para>The last name of the user.</para>
-        /// <para>The name can be up to 64 characters in length.</para>
+        /// <para>The last name can be up to 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Lee</para>
@@ -77,8 +77,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <summary>
         /// <para>The status of the user. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Enabled: The logon of the user is enabled. This is the default value.</description></item>
-        /// <item><description>Disabled: The logon of the user is disabled.</description></item>
+        /// <item><description>Enabled (default)</description></item>
+        /// <item><description>Disabled</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -88,10 +88,24 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<CreateUserRequestTags> Tags { get; set; }
+        public class CreateUserRequestTags : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         /// <summary>
-        /// <para>The name of the user. The name must be unique within the directory. The name cannot be changed.</para>
-        /// <para>The name can contain numbers, letters, and the following special characters: <c>@_-.</c></para>
-        /// <para>The name can be up to 64 characters in length.</para>
+        /// <para>The username of the user. The username must be unique within the directory. and cannot be changed.</para>
+        /// <para>The username can contain digits, letters, and the following special characters: <c>@_-.</c></para>
+        /// <para>The username can be up to 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Alice</para>

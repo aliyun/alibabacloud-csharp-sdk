@@ -17,10 +17,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public GetLoginPreferenceResponseBodyLoginPreference LoginPreference { get; set; }
         public class GetLoginPreferenceResponseBodyLoginPreference : TeaModel {
             /// <summary>
-            /// <para>Whether the user can obtain program access credentials on the portal after logging in. Values: </para>
+            /// <para>Indicates whether a user can obtain the application access credential after logon to the portal. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>True: Yes. </description></item>
-            /// <item><description>False (default): No.</description></item>
+            /// <item><description>True</description></item>
+            /// <item><description>False (default)</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

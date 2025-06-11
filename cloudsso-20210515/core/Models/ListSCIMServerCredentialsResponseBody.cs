@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class ListSCIMServerCredentialsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FE4B7037-C315-5DD5-826E-57A87950BCD1</para>
@@ -79,8 +79,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             /// <summary>
             /// <para>The status of the SCIM credential. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Enabled: The SCIM credential is enabled.</description></item>
-            /// <item><description>Disabled: The SCIM credential is disabled.</description></item>
+            /// <item><description>Enabled</description></item>
+            /// <item><description>Disabled</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

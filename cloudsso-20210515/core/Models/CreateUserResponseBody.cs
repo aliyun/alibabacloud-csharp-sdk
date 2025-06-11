@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class CreateUserResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F6F90F3D-4502-5877-B80B-97476F6AE2CC</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public CreateUserResponseBodyUser User { get; set; }
         public class CreateUserResponseBodyUser : TeaModel {
             /// <summary>
-            /// <para>The time when the user was created.</para>
+            /// <para>The time when the user was created. The value is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-10-26T03:03:42Z</para>
@@ -103,8 +103,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             /// <summary>
             /// <para>The status of the user. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Enabled: The logon of the user is enabled.</description></item>
-            /// <item><description>Disabled: The logon of the user is disabled.</description></item>
+            /// <item><description>Enabled</description></item>
+            /// <item><description>Disabled</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -114,8 +114,22 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<CreateUserResponseBodyUserTags> Tags { get; set; }
+            public class CreateUserResponseBodyUserTags : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
             /// <summary>
-            /// <para>The time when the user was modified.</para>
+            /// <para>The time when the information about the user was modified. The value is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-10-26T03:03:42Z</para>
@@ -135,7 +149,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string UserId { get; set; }
 
             /// <summary>
-            /// <para>The name of the user.</para>
+            /// <para>The username of the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Alice</para>

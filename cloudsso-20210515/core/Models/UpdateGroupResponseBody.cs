@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             /// <para>The type of the group. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Manual: The group is manually created.</description></item>
-            /// <item><description>Synchronized: The user is synchronized from an external identity provider (IdP).</description></item>
+            /// <item><description>Synchronized: The group is synchronized from an external identity provider (IdP).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string ProvisionType { get; set; }
 
             /// <summary>
-            /// <para>The time when the information about the group was modified.</para>
+            /// <para>The time when the group was modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-11-01T06:06:11Z</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F723DE01-6276-5DC4-9B1F-9CBE3E1748B2</para>

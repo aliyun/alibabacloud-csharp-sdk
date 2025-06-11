@@ -57,7 +57,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The initial web page that is displayed after a CloudSSO user accesses an account in your resource directory by using the access configuration.</para>
+            /// <para>The initial web page</para>
+            /// <para>that is displayed after a CloudSSO user uses the access configuration to access an account in your resource directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://cloudsso.console.aliyun.com">https://cloudsso.console.aliyun.com</a></para>
@@ -67,7 +68,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string RelayState { get; set; }
 
             /// <summary>
-            /// <para>The duration of a session in which a CloudSSO user accesses an account in your resource directory by using the access configuration.</para>
+            /// <para>The duration of a session</para>
+            /// <para>in which a CloudSSO user uses the access configuration to access an account in your resource directory.</para>
             /// <para>Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
@@ -78,11 +80,25 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public int? SessionDuration { get; set; }
 
             /// <summary>
-            /// <para>The status notification.</para>
+            /// <para>The status notifications.</para>
             /// </summary>
             [NameInMap("StatusNotifications")]
             [Validation(Required=false)]
             public List<string> StatusNotifications { get; set; }
+
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<ListAccessConfigurationsResponseBodyAccessConfigurationsTags> Tags { get; set; }
+            public class ListAccessConfigurationsResponseBodyAccessConfigurationsTags : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
 
             /// <summary>
             /// <para>The time when the information about the access configuration was modified.</para>
@@ -99,8 +115,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <summary>
         /// <para>Indicates whether the queried entries are truncated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The queried entries are truncated.</description></item>
-        /// <item><description>false: The queried entries are not truncated.</description></item>
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -111,7 +127,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public bool? IsTruncated { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -121,9 +137,9 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is returned for the next page.</para>
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
         /// <remarks>
-        /// <para> This parameter is returned only when the <c>IsTruncated</c> parameter is set to <c>true</c>.</para>
+        /// <para> This parameter is returned only when the value of the <c>IsTruncated</c> parameter is <c>true</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -134,7 +150,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2BC0CBAC-45E1-5BD3-BF6E-F69D1D5391C2</para>

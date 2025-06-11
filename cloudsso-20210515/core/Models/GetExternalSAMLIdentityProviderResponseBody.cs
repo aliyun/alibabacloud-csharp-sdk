@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class GetExternalSAMLIdentityProviderResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>96D1E5FF-0301-5636-8D33-071E033CFB82</para>
@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public GetExternalSAMLIdentityProviderResponseBodySAMLIdentityProviderConfiguration SAMLIdentityProviderConfiguration { get; set; }
         public class GetExternalSAMLIdentityProviderResponseBodySAMLIdentityProviderConfiguration : TeaModel {
             /// <summary>
-            /// <para>The Binding method for initiating a SAML request. Values:</para>
+            /// <para>The binding for sending SAML requests. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Post: Initiate the SAML request using the Post method. </description></item>
-            /// <item><description>Redirect: Initiate the SAML request using the Redirect method.</description></item>
+            /// <item><description>Post: HTTP Post bindings.</description></item>
+            /// <item><description>Redirect: HTTP Redirect bindings.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string BindingType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the SAML signing certificate.</para>
+            /// <para>The SAML signing certificates.</para>
             /// </summary>
             [NameInMap("CertificateIds")]
             [Validation(Required=false)]
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string EncodedMetadataDocument { get; set; }
 
             /// <summary>
-            /// <para>The entity ID of the IdP.</para>
+            /// <para>The ID of the IdP.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://www.okta.com/exk3qwgtjhetR2Od">http://www.okta.com/exk3qwgtjhetR2Od</a>****</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string LoginUrl { get; set; }
 
             /// <summary>
-            /// <para>The status of SSO logon. Valid values:</para>
+            /// <para>Indicates whether SSO is enabled. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Enabled</description></item>
             /// <item><description>Disabled</description></item>
@@ -121,8 +121,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             /// <summary>
             /// <para>Indicates whether CloudSSO needs to sign SAML requests. The requests are sent when users log on to the CloudSSO user portal to initiate SAML-based SSO. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: yes</description></item>
-            /// <item><description>false: no (default)</description></item>
+            /// <item><description>true:</description></item>
+            /// <item><description>false (default)</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

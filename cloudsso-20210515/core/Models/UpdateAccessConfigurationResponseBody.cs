@@ -57,7 +57,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The initial web page that is displayed after a CloudSSO user accesses an account in your resource directory by using the access configuration.</para>
+            /// <para>The initial web page</para>
+            /// <para>that is displayed after a CloudSSO user accesses an account in your resource directory by using the access configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://cloudsso.console.aliyun.com">https://cloudsso.console.aliyun.com</a></para>
@@ -67,7 +68,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string RelayState { get; set; }
 
             /// <summary>
-            /// <para>The duration of a session in which a CloudSSO user accesses an account in your resource directory by using the access configuration.</para>
+            /// <para>The duration of a session</para>
+            /// <para>in which a CloudSSO user accesses an account in your resource directory by using the access configuration.</para>
             /// <para>Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
@@ -78,7 +80,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public int? SessionDuration { get; set; }
 
             /// <summary>
-            /// <para>The status notification.</para>
+            /// <para>The status notifications.</para>
             /// </summary>
             [NameInMap("StatusNotifications")]
             [Validation(Required=false)]
@@ -97,7 +99,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9B13E4EE-3853-5852-9165-597C32AD8FB7</para>

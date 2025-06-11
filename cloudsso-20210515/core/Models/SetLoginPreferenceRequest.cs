@@ -9,6 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class SetLoginPreferenceRequest : TeaModel {
+        /// <summary>
+        /// <para>Specifies whether to allow a user to obtain the application access credential after logon to the portal. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>True</description></item>
+        /// <item><description>False (default)</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>True</para>
+        /// </summary>
         [NameInMap("AllowUserToGetCredentials")]
         [Validation(Required=false)]
         public bool? AllowUserToGetCredentials { get; set; }

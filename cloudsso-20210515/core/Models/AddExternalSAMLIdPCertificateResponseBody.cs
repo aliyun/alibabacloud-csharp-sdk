@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string CertificateId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12B3E332-DD16-515B-B695-39BA233AA172</para>

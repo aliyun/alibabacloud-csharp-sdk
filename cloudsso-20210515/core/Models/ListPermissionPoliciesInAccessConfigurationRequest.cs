@@ -32,8 +32,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <summary>
         /// <para>The type of the policy. The type can be used to filter policies. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>System: system policy</description></item>
-        /// <item><description>Inline: inline policy</description></item>
+        /// <item><description>System: system policy.</description></item>
+        /// <item><description>Inline: inline policy.</description></item>
         /// </list>
         /// <para>If you do not specify this parameter, all types of policies are queried.</para>
         /// 

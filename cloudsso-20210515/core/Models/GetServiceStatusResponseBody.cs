@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class GetServiceStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ADADC31D-90EE-5459-99B0-D83DF07769A3</para>
@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether you have permissions to enable CloudSSO. Valid values:</para>
+            /// <para>Indicates whether you have the permissions to enable CloudSSO. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Success: You have permissions to enable CloudSSO.</description></item>
-            /// <item><description>Failed: You do not have permissions to enable CloudSSO.</description></item>
+            /// <item><description>Success: You have the permissions to enable CloudSSO.</description></item>
+            /// <item><description>Failed: You do not have the permissions to enable CloudSSO.</description></item>
             /// </list>
             /// <remarks>
             /// <para> The value of this parameter is returned only if the value of <c>Status</c> is <c>Disabled</c>.</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string PrerequisiteCheckResult { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region.</para>
+            /// <para>The region IDs.</para>
             /// </summary>
             [NameInMap("RegionsInUse")]
             [Validation(Required=false)]

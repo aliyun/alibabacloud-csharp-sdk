@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class GetDirectorySAMLServiceProviderInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4632107D-BCE1-5A96-B30B-182EE0709625</para>
@@ -36,10 +36,34 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             [Validation(Required=false)]
             public string AcsUrl { get; set; }
 
+            /// <summary>
+            /// <para>The signature algorithm supported by the AuthNRequest initiated by Alibaba Cloud. Value:</para>
+            /// <list type="bullet">
+            /// <item><description><para>rsa-sha256</para>
+            /// </description></item>
+            /// <item><description><para>rsa-sha1</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rsa-sha256</para>
+            /// </summary>
             [NameInMap("AuthnSignAlgo")]
             [Validation(Required=false)]
             public string AuthnSignAlgo { get; set; }
 
+            /// <summary>
+            /// <para>The certificate type used by Alibaba Cloud for signing during the SSO process. Value:</para>
+            /// <list type="bullet">
+            /// <item><description><para>self-signed: Use a self-signed certificate.</para>
+            /// </description></item>
+            /// <item><description><para>public: Use a certificate issued by CA.</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>public</para>
+            /// </summary>
             [NameInMap("CertificateType")]
             [Validation(Required=false)]
             public string CertificateType { get; set; }
@@ -74,6 +98,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             [Validation(Required=false)]
             public string EntityId { get; set; }
 
+            /// <summary>
+            /// <para>Whether to support Assertion encryption on the IdP side.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("SupportEncryptedAssertion")]
             [Validation(Required=false)]
             public bool? SupportEncryptedAssertion { get; set; }

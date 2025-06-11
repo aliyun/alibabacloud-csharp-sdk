@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class UpdateUserResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F44F02EC-70D1-5E51-8E8E-FA9AC4EF952A</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public UpdateUserResponseBodyUser User { get; set; }
         public class UpdateUserResponseBodyUser : TeaModel {
             /// <summary>
-            /// <para>The time when the user was created.</para>
+            /// <para>The time when the user was created. The value is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-10-26T03:03:42Z</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The time when the information about the user was modified.</para>
+            /// <para>The time when the information about the user was modified. The value is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-10-26T07:32:32Z</para>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string UserId { get; set; }
 
             /// <summary>
-            /// <para>The name of the user.</para>
+            /// <para>The username of the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Alice</para>

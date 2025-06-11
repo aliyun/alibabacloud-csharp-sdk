@@ -43,7 +43,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>The initial web page that is displayed after a CloudSSO user accesses an account in your resource directory by using the access configuration.</para>
+        /// <para>The initial web page</para>
+        /// <para>that is displayed after a CloudSSO user uses the access configuration to access an account in your resource directory.</para>
         /// <para>The web page must be a page of the Alibaba Cloud Management Console. By default, this parameter is empty, which indicates that the initial web page is the homepage of the Alibaba Cloud Management Console.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +55,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string RelayState { get; set; }
 
         /// <summary>
-        /// <para>The duration of a session in which a CloudSSO user accesses an account in your resource directory by using the access configuration.</para>
+        /// <para>The duration of a session</para>
+        /// <para>in which a CloudSSO user uses the access configuration to access an account in your resource directory.</para>
         /// <para>Unit: seconds.</para>
         /// <para>Valid values: 900 to 43200. The value 900 indicates 15 minutes. The value 43200 indicates 12 hours.</para>
         /// <para>Default value: 3600. The value indicates 1 hour.</para>
@@ -65,6 +67,20 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         [NameInMap("SessionDuration")]
         [Validation(Required=false)]
         public int? SessionDuration { get; set; }
+
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<CreateAccessConfigurationRequestTags> Tags { get; set; }
+        public class CreateAccessConfigurationRequestTags : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
     }
 

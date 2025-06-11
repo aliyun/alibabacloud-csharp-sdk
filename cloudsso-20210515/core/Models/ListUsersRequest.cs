@@ -82,6 +82,20 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<ListUsersRequestTags> Tags { get; set; }
+        public class ListUsersRequestTags : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
     }
 
 }

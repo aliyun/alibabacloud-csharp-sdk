@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class GetMFAAuthenticationStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status of MFA. Valid values:</para>
+        /// <para>Indicates whether MFA is enabled for users. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Enabled</description></item>
         /// <item><description>Disabled</description></item>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string MFAAuthenticationStatus { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5E688346-DF1A-5537-9BFC-8A9974D29586</para>

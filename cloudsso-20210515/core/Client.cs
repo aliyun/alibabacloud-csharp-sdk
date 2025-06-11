@@ -369,7 +369,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot add a user to a group that is synchronized by using SCIM.
-        /// This topic provides an example of how to add the user <c>u-00q8wbq42wiltcrk****</c> to the group <c>g-00jqzghi2n3o5hkh****</c>.</para>
+        /// This topic provides an example on how to add the user <c>u-00q8wbq42wiltcrk****</c> to the group <c>g-00jqzghi2n3o5hkh****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -425,7 +425,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot add a user to a group that is synchronized by using SCIM.
-        /// This topic provides an example of how to add the user <c>u-00q8wbq42wiltcrk****</c> to the group <c>g-00jqzghi2n3o5hkh****</c>.</para>
+        /// This topic provides an example on how to add the user <c>u-00q8wbq42wiltcrk****</c> to the group <c>g-00jqzghi2n3o5hkh****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -481,7 +481,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot add a user to a group that is synchronized by using SCIM.
-        /// This topic provides an example of how to add the user <c>u-00q8wbq42wiltcrk****</c> to the group <c>g-00jqzghi2n3o5hkh****</c>.</para>
+        /// This topic provides an example on how to add the user <c>u-00q8wbq42wiltcrk****</c> to the group <c>g-00jqzghi2n3o5hkh****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -505,7 +505,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot add a user to a group that is synchronized by using SCIM.
-        /// This topic provides an example of how to add the user <c>u-00q8wbq42wiltcrk****</c> to the group <c>g-00jqzghi2n3o5hkh****</c>.</para>
+        /// This topic provides an example on how to add the user <c>u-00q8wbq42wiltcrk****</c> to the group <c>g-00jqzghi2n3o5hkh****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -898,6 +898,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
             {
                 query["SessionDuration"] = request.SessionDuration;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -961,6 +965,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionDuration))
             {
                 query["SessionDuration"] = request.SessionDuration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1036,10 +1044,11 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <h3><a href="#"></a>Operation description</h3>
         /// <para>A directory is a CloudSSO instance. Before you can use CloudSSO, you must create a directory. The directory is used to manage all CloudSSO resources.
         /// To create a directory, you must select a region. Alibaba Cloud stores data in the directory only in the region that you select. However, you can deploy Alibaba Cloud resources including Elastic Compute Service (ECS) instances and ApsaraDB RDS instances in other regions. You can also use your cloud account for logons and access the Alibaba Cloud resources in other regions. You can select a region to create a directory based on your security compliance requirements and the geographic location of specific users. If you do not have strict security compliance requirements, we recommend that you select a region that is the closest to the geographical location of the specific users. This way, access to cloud resources is accelerated. You can create the CloudSSO directory in the China (Shanghai), China (Hong Kong), US (Silicon Valley), or Germany (Frankfurt) region.
         /// This topic provides an example on how to create a directory named <c>example</c> in the China (Shanghai) region.</para>
-        /// <h2>Limits</h2>
+        /// <h3><a href="#"></a>Limits</h3>
         /// <list type="bullet">
         /// <item><description>You can create only one directory for a management account.</description></item>
         /// <item><description>If you want to change the region of a directory, you must delete the directory and then create a directory in a different region.</description></item>
@@ -1090,10 +1099,11 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <h3><a href="#"></a>Operation description</h3>
         /// <para>A directory is a CloudSSO instance. Before you can use CloudSSO, you must create a directory. The directory is used to manage all CloudSSO resources.
         /// To create a directory, you must select a region. Alibaba Cloud stores data in the directory only in the region that you select. However, you can deploy Alibaba Cloud resources including Elastic Compute Service (ECS) instances and ApsaraDB RDS instances in other regions. You can also use your cloud account for logons and access the Alibaba Cloud resources in other regions. You can select a region to create a directory based on your security compliance requirements and the geographic location of specific users. If you do not have strict security compliance requirements, we recommend that you select a region that is the closest to the geographical location of the specific users. This way, access to cloud resources is accelerated. You can create the CloudSSO directory in the China (Shanghai), China (Hong Kong), US (Silicon Valley), or Germany (Frankfurt) region.
         /// This topic provides an example on how to create a directory named <c>example</c> in the China (Shanghai) region.</para>
-        /// <h2>Limits</h2>
+        /// <h3><a href="#"></a>Limits</h3>
         /// <list type="bullet">
         /// <item><description>You can create only one directory for a management account.</description></item>
         /// <item><description>If you want to change the region of a directory, you must delete the directory and then create a directory in a different region.</description></item>
@@ -1144,10 +1154,11 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <h3><a href="#"></a>Operation description</h3>
         /// <para>A directory is a CloudSSO instance. Before you can use CloudSSO, you must create a directory. The directory is used to manage all CloudSSO resources.
         /// To create a directory, you must select a region. Alibaba Cloud stores data in the directory only in the region that you select. However, you can deploy Alibaba Cloud resources including Elastic Compute Service (ECS) instances and ApsaraDB RDS instances in other regions. You can also use your cloud account for logons and access the Alibaba Cloud resources in other regions. You can select a region to create a directory based on your security compliance requirements and the geographic location of specific users. If you do not have strict security compliance requirements, we recommend that you select a region that is the closest to the geographical location of the specific users. This way, access to cloud resources is accelerated. You can create the CloudSSO directory in the China (Shanghai), China (Hong Kong), US (Silicon Valley), or Germany (Frankfurt) region.
         /// This topic provides an example on how to create a directory named <c>example</c> in the China (Shanghai) region.</para>
-        /// <h2>Limits</h2>
+        /// <h3><a href="#"></a>Limits</h3>
         /// <list type="bullet">
         /// <item><description>You can create only one directory for a management account.</description></item>
         /// <item><description>If you want to change the region of a directory, you must delete the directory and then create a directory in a different region.</description></item>
@@ -1174,10 +1185,11 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <h3><a href="#"></a>Operation description</h3>
         /// <para>A directory is a CloudSSO instance. Before you can use CloudSSO, you must create a directory. The directory is used to manage all CloudSSO resources.
         /// To create a directory, you must select a region. Alibaba Cloud stores data in the directory only in the region that you select. However, you can deploy Alibaba Cloud resources including Elastic Compute Service (ECS) instances and ApsaraDB RDS instances in other regions. You can also use your cloud account for logons and access the Alibaba Cloud resources in other regions. You can select a region to create a directory based on your security compliance requirements and the geographic location of specific users. If you do not have strict security compliance requirements, we recommend that you select a region that is the closest to the geographical location of the specific users. This way, access to cloud resources is accelerated. You can create the CloudSSO directory in the China (Shanghai), China (Hong Kong), US (Silicon Valley), or Germany (Frankfurt) region.
         /// This topic provides an example on how to create a directory named <c>example</c> in the China (Shanghai) region.</para>
-        /// <h2>Limits</h2>
+        /// <h3><a href="#"></a>Limits</h3>
         /// <list type="bullet">
         /// <item><description>You can create only one directory for a management account.</description></item>
         /// <item><description>If you want to change the region of a directory, you must delete the directory and then create a directory in a different region.</description></item>
@@ -1355,7 +1367,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Cross-domain Identity Management (SCIM) credential.</para>
+        /// <para>Creates a System for Cross-domain Identity Management (SCIM) credential.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1403,7 +1415,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Cross-domain Identity Management (SCIM) credential.</para>
+        /// <para>Creates a System for Cross-domain Identity Management (SCIM) credential.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1451,7 +1463,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Cross-domain Identity Management (SCIM) credential.</para>
+        /// <para>Creates a System for Cross-domain Identity Management (SCIM) credential.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1475,7 +1487,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Cross-domain Identity Management (SCIM) credential.</para>
+        /// <para>Creates a System for Cross-domain Identity Management (SCIM) credential.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1548,6 +1560,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
             {
@@ -1623,6 +1639,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
             {
@@ -2088,9 +2108,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to delete the access configuration whose ID is <c>ac-001j9mcm3k7335bc****</c>.</para>
-        /// <h2>Prerequisites</h2>
+        /// <h3><a href="#"></a>Prerequisites</h3>
         /// <para>The access configuration that you want to delete is de-provisioned from the accounts in your resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/338352.html">DeprovisionAccessConfiguration</a>.</para>
+        /// <h3><a href="#"></a>Operation description</h3>
+        /// <para>This topic provides an example on how to delete the access configuration whose ID is <c>ac-001j9mcm3k7335bc****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2145,9 +2166,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to delete the access configuration whose ID is <c>ac-001j9mcm3k7335bc****</c>.</para>
-        /// <h2>Prerequisites</h2>
+        /// <h3><a href="#"></a>Prerequisites</h3>
         /// <para>The access configuration that you want to delete is de-provisioned from the accounts in your resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/338352.html">DeprovisionAccessConfiguration</a>.</para>
+        /// <h3><a href="#"></a>Operation description</h3>
+        /// <para>This topic provides an example on how to delete the access configuration whose ID is <c>ac-001j9mcm3k7335bc****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2202,9 +2224,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to delete the access configuration whose ID is <c>ac-001j9mcm3k7335bc****</c>.</para>
-        /// <h2>Prerequisites</h2>
+        /// <h3><a href="#"></a>Prerequisites</h3>
         /// <para>The access configuration that you want to delete is de-provisioned from the accounts in your resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/338352.html">DeprovisionAccessConfiguration</a>.</para>
+        /// <h3><a href="#"></a>Operation description</h3>
+        /// <para>This topic provides an example on how to delete the access configuration whose ID is <c>ac-001j9mcm3k7335bc****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2227,9 +2250,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to delete the access configuration whose ID is <c>ac-001j9mcm3k7335bc****</c>.</para>
-        /// <h2>Prerequisites</h2>
+        /// <h3><a href="#"></a>Prerequisites</h3>
         /// <para>The access configuration that you want to delete is de-provisioned from the accounts in your resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/338352.html">DeprovisionAccessConfiguration</a>.</para>
+        /// <h3><a href="#"></a>Operation description</h3>
+        /// <para>This topic provides an example on how to delete the access configuration whose ID is <c>ac-001j9mcm3k7335bc****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2252,8 +2276,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to delete a directory whose ID is <c>d-00fc2p61****</c>.</para>
-        /// <h2>Prerequisites</h2>
+        /// <h3><a href="#"></a>Prerequisites</h3>
         /// <para>No resources are contained in the directory that you want to delete.</para>
         /// <list type="bullet">
         /// <item><description>Access permissions on the accounts in your resource directory are removed from all users and groups. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</description></item>
@@ -2261,8 +2284,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <item><description>Groups are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341821.html">DeleteGroup</a>.</description></item>
         /// <item><description>Access configurations are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/336907.html">DeleteAccessConfiguration</a>.</description></item>
         /// <item><description>System for Cross-domain Identity Management (SCIM) credentials are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341842.html">DeleteSCIMServerCredential</a>.</description></item>
-        /// <item><description>SSO logon configurations are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341573.html">ClearExternalSAMLIdentityProvider</a>.</description></item>
+        /// <item><description>Single sign-on (SSO) logon configurations are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341573.html">ClearExternalSAMLIdentityProvider</a>.</description></item>
         /// </list>
+        /// <h3><a href="#"></a>Operation description</h3>
+        /// <para>This topic provides an example on how to delete a directory whose ID is <c>d-00fc2p61****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2309,8 +2334,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to delete a directory whose ID is <c>d-00fc2p61****</c>.</para>
-        /// <h2>Prerequisites</h2>
+        /// <h3><a href="#"></a>Prerequisites</h3>
         /// <para>No resources are contained in the directory that you want to delete.</para>
         /// <list type="bullet">
         /// <item><description>Access permissions on the accounts in your resource directory are removed from all users and groups. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</description></item>
@@ -2318,8 +2342,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <item><description>Groups are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341821.html">DeleteGroup</a>.</description></item>
         /// <item><description>Access configurations are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/336907.html">DeleteAccessConfiguration</a>.</description></item>
         /// <item><description>System for Cross-domain Identity Management (SCIM) credentials are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341842.html">DeleteSCIMServerCredential</a>.</description></item>
-        /// <item><description>SSO logon configurations are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341573.html">ClearExternalSAMLIdentityProvider</a>.</description></item>
+        /// <item><description>Single sign-on (SSO) logon configurations are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341573.html">ClearExternalSAMLIdentityProvider</a>.</description></item>
         /// </list>
+        /// <h3><a href="#"></a>Operation description</h3>
+        /// <para>This topic provides an example on how to delete a directory whose ID is <c>d-00fc2p61****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2366,8 +2392,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to delete a directory whose ID is <c>d-00fc2p61****</c>.</para>
-        /// <h2>Prerequisites</h2>
+        /// <h3><a href="#"></a>Prerequisites</h3>
         /// <para>No resources are contained in the directory that you want to delete.</para>
         /// <list type="bullet">
         /// <item><description>Access permissions on the accounts in your resource directory are removed from all users and groups. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</description></item>
@@ -2375,8 +2400,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <item><description>Groups are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341821.html">DeleteGroup</a>.</description></item>
         /// <item><description>Access configurations are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/336907.html">DeleteAccessConfiguration</a>.</description></item>
         /// <item><description>System for Cross-domain Identity Management (SCIM) credentials are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341842.html">DeleteSCIMServerCredential</a>.</description></item>
-        /// <item><description>SSO logon configurations are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341573.html">ClearExternalSAMLIdentityProvider</a>.</description></item>
+        /// <item><description>Single sign-on (SSO) logon configurations are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341573.html">ClearExternalSAMLIdentityProvider</a>.</description></item>
         /// </list>
+        /// <h3><a href="#"></a>Operation description</h3>
+        /// <para>This topic provides an example on how to delete a directory whose ID is <c>d-00fc2p61****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2399,8 +2426,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to delete a directory whose ID is <c>d-00fc2p61****</c>.</para>
-        /// <h2>Prerequisites</h2>
+        /// <h3><a href="#"></a>Prerequisites</h3>
         /// <para>No resources are contained in the directory that you want to delete.</para>
         /// <list type="bullet">
         /// <item><description>Access permissions on the accounts in your resource directory are removed from all users and groups. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</description></item>
@@ -2408,8 +2434,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <item><description>Groups are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341821.html">DeleteGroup</a>.</description></item>
         /// <item><description>Access configurations are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/336907.html">DeleteAccessConfiguration</a>.</description></item>
         /// <item><description>System for Cross-domain Identity Management (SCIM) credentials are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341842.html">DeleteSCIMServerCredential</a>.</description></item>
-        /// <item><description>SSO logon configurations are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341573.html">ClearExternalSAMLIdentityProvider</a>.</description></item>
+        /// <item><description>Single sign-on (SSO) logon configurations are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341573.html">ClearExternalSAMLIdentityProvider</a>.</description></item>
         /// </list>
+        /// <h3><a href="#"></a>Operation description</h3>
+        /// <para>This topic provides an example on how to delete a directory whose ID is <c>d-00fc2p61****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2432,13 +2460,15 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot delete a group that is synchronized by using SCIM.</para>
-        /// <h2>Prerequisites</h2>
+        /// <h3><a href="#"></a>Prerequisites</h3>
         /// <para>The group that you want to delete is not associated with the following resources. If the group is associated with the resources, the deletion fails.</para>
         /// <list type="bullet">
         /// <item><description>Users: You must remove users from the group. For more information, see <a href="https://help.aliyun.com/document_detail/335116.html">RemoveUserFromGroup</a>.</description></item>
         /// <item><description>Access permissions: You must remove the access permissions on the accounts in your resource directory from the group. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</description></item>
         /// </list>
+        /// <h3><a href="#"></a>Operation description</h3>
+        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot delete a group that is synchronized by using SCIM.
+        /// This topic provides an example on how to delete the group <c>g-00jqzghi2n3o5hkh****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2489,13 +2519,15 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot delete a group that is synchronized by using SCIM.</para>
-        /// <h2>Prerequisites</h2>
+        /// <h3><a href="#"></a>Prerequisites</h3>
         /// <para>The group that you want to delete is not associated with the following resources. If the group is associated with the resources, the deletion fails.</para>
         /// <list type="bullet">
         /// <item><description>Users: You must remove users from the group. For more information, see <a href="https://help.aliyun.com/document_detail/335116.html">RemoveUserFromGroup</a>.</description></item>
         /// <item><description>Access permissions: You must remove the access permissions on the accounts in your resource directory from the group. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</description></item>
         /// </list>
+        /// <h3><a href="#"></a>Operation description</h3>
+        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot delete a group that is synchronized by using SCIM.
+        /// This topic provides an example on how to delete the group <c>g-00jqzghi2n3o5hkh****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2546,13 +2578,15 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot delete a group that is synchronized by using SCIM.</para>
-        /// <h2>Prerequisites</h2>
+        /// <h3><a href="#"></a>Prerequisites</h3>
         /// <para>The group that you want to delete is not associated with the following resources. If the group is associated with the resources, the deletion fails.</para>
         /// <list type="bullet">
         /// <item><description>Users: You must remove users from the group. For more information, see <a href="https://help.aliyun.com/document_detail/335116.html">RemoveUserFromGroup</a>.</description></item>
         /// <item><description>Access permissions: You must remove the access permissions on the accounts in your resource directory from the group. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</description></item>
         /// </list>
+        /// <h3><a href="#"></a>Operation description</h3>
+        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot delete a group that is synchronized by using SCIM.
+        /// This topic provides an example on how to delete the group <c>g-00jqzghi2n3o5hkh****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2575,13 +2609,15 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot delete a group that is synchronized by using SCIM.</para>
-        /// <h2>Prerequisites</h2>
+        /// <h3><a href="#"></a>Prerequisites</h3>
         /// <para>The group that you want to delete is not associated with the following resources. If the group is associated with the resources, the deletion fails.</para>
         /// <list type="bullet">
         /// <item><description>Users: You must remove users from the group. For more information, see <a href="https://help.aliyun.com/document_detail/335116.html">RemoveUserFromGroup</a>.</description></item>
         /// <item><description>Access permissions: You must remove the access permissions on the accounts in your resource directory from the group. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</description></item>
         /// </list>
+        /// <h3><a href="#"></a>Operation description</h3>
+        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot delete a group that is synchronized by using SCIM.
+        /// This topic provides an example on how to delete the group <c>g-00jqzghi2n3o5hkh****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2604,7 +2640,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to unbind the MFA device <c>mfa-00ujhet8pycljj7j****</c> from the user <c>u-00q8wbq42wiltcrk****</c>.</para>
+        /// <para>This topic provides an example on how to unbind the MFA device whose ID is <c>mfa-00ujhet8pycljj7j****</c> from the user whose ID is <c>u-00q8wbq42wiltcrk****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2659,7 +2695,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to unbind the MFA device <c>mfa-00ujhet8pycljj7j****</c> from the user <c>u-00q8wbq42wiltcrk****</c>.</para>
+        /// <para>This topic provides an example on how to unbind the MFA device whose ID is <c>mfa-00ujhet8pycljj7j****</c> from the user whose ID is <c>u-00q8wbq42wiltcrk****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2714,7 +2750,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to unbind the MFA device <c>mfa-00ujhet8pycljj7j****</c> from the user <c>u-00q8wbq42wiltcrk****</c>.</para>
+        /// <para>This topic provides an example on how to unbind the MFA device whose ID is <c>mfa-00ujhet8pycljj7j****</c> from the user whose ID is <c>u-00q8wbq42wiltcrk****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2737,7 +2773,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to unbind the MFA device <c>mfa-00ujhet8pycljj7j****</c> from the user <c>u-00q8wbq42wiltcrk****</c>.</para>
+        /// <para>This topic provides an example on how to unbind the MFA device whose ID is <c>mfa-00ujhet8pycljj7j****</c> from the user whose ID is <c>u-00q8wbq42wiltcrk****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2755,7 +2791,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Cross-domain Identity Management (SCIM) credential.</para>
+        /// <para>Deletes a System for Cross-domain Identity Management (SCIM) credential.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2807,7 +2843,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Cross-domain Identity Management (SCIM) credential.</para>
+        /// <para>Deletes a System for Cross-domain Identity Management (SCIM) credential.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2859,7 +2895,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Cross-domain Identity Management (SCIM) credential.</para>
+        /// <para>Deletes a System for Cross-domain Identity Management (SCIM) credential.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2883,7 +2919,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Cross-domain Identity Management (SCIM) credential.</para>
+        /// <para>Deletes a System for Cross-domain Identity Management (SCIM) credential.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2912,14 +2948,16 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot delete a user that is synchronized by using SCIM.</para>
-        /// <h2>Prerequisites</h2>
-        /// <para>The user that you want to delete is not associated with the following resources. If the user is associated with the resources, the deletion fails.</para>
+        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <para>Before you delete a user, make sure that the user is not associated with the following resources. Otherwise, the deletion fails.</para>
         /// <list type="bullet">
-        /// <item><description>Multi-factor authentication (MFA) devices: You must unbind the MFA devices from the user. For more information, see <a href="https://help.aliyun.com/document_detail/341675.html">DeleteMFADeviceForUser</a>.</description></item>
+        /// <item><description>Multi-factor authentication (MFA) devices: You must delete the MFA devices bound to the user. For more information, see <a href="https://help.aliyun.com/document_detail/341675.html">DeleteMFADeviceForUser</a>.</description></item>
         /// <item><description>Access permissions: You must remove the access permissions on the accounts in your resource directory from the user. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</description></item>
         /// <item><description>Groups: You must remove the user from groups. For more information, see <a href="https://help.aliyun.com/document_detail/335116.html">RemoveUserFromGroup</a>.</description></item>
         /// </list>
+        /// <h3><a href="#"></a>Precautions</h3>
+        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot delete a user that is synchronized by using SCIM.
+        /// This topic provides an example on how to delete the user whose ID is <c>u-00q8wbq42wiltcrk****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2970,14 +3008,16 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot delete a user that is synchronized by using SCIM.</para>
-        /// <h2>Prerequisites</h2>
-        /// <para>The user that you want to delete is not associated with the following resources. If the user is associated with the resources, the deletion fails.</para>
+        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <para>Before you delete a user, make sure that the user is not associated with the following resources. Otherwise, the deletion fails.</para>
         /// <list type="bullet">
-        /// <item><description>Multi-factor authentication (MFA) devices: You must unbind the MFA devices from the user. For more information, see <a href="https://help.aliyun.com/document_detail/341675.html">DeleteMFADeviceForUser</a>.</description></item>
+        /// <item><description>Multi-factor authentication (MFA) devices: You must delete the MFA devices bound to the user. For more information, see <a href="https://help.aliyun.com/document_detail/341675.html">DeleteMFADeviceForUser</a>.</description></item>
         /// <item><description>Access permissions: You must remove the access permissions on the accounts in your resource directory from the user. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</description></item>
         /// <item><description>Groups: You must remove the user from groups. For more information, see <a href="https://help.aliyun.com/document_detail/335116.html">RemoveUserFromGroup</a>.</description></item>
         /// </list>
+        /// <h3><a href="#"></a>Precautions</h3>
+        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot delete a user that is synchronized by using SCIM.
+        /// This topic provides an example on how to delete the user whose ID is <c>u-00q8wbq42wiltcrk****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3028,14 +3068,16 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot delete a user that is synchronized by using SCIM.</para>
-        /// <h2>Prerequisites</h2>
-        /// <para>The user that you want to delete is not associated with the following resources. If the user is associated with the resources, the deletion fails.</para>
+        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <para>Before you delete a user, make sure that the user is not associated with the following resources. Otherwise, the deletion fails.</para>
         /// <list type="bullet">
-        /// <item><description>Multi-factor authentication (MFA) devices: You must unbind the MFA devices from the user. For more information, see <a href="https://help.aliyun.com/document_detail/341675.html">DeleteMFADeviceForUser</a>.</description></item>
+        /// <item><description>Multi-factor authentication (MFA) devices: You must delete the MFA devices bound to the user. For more information, see <a href="https://help.aliyun.com/document_detail/341675.html">DeleteMFADeviceForUser</a>.</description></item>
         /// <item><description>Access permissions: You must remove the access permissions on the accounts in your resource directory from the user. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</description></item>
         /// <item><description>Groups: You must remove the user from groups. For more information, see <a href="https://help.aliyun.com/document_detail/335116.html">RemoveUserFromGroup</a>.</description></item>
         /// </list>
+        /// <h3><a href="#"></a>Precautions</h3>
+        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot delete a user that is synchronized by using SCIM.
+        /// This topic provides an example on how to delete the user whose ID is <c>u-00q8wbq42wiltcrk****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3058,14 +3100,16 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot delete a user that is synchronized by using SCIM.</para>
-        /// <h2>Prerequisites</h2>
-        /// <para>The user that you want to delete is not associated with the following resources. If the user is associated with the resources, the deletion fails.</para>
+        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <para>Before you delete a user, make sure that the user is not associated with the following resources. Otherwise, the deletion fails.</para>
         /// <list type="bullet">
-        /// <item><description>Multi-factor authentication (MFA) devices: You must unbind the MFA devices from the user. For more information, see <a href="https://help.aliyun.com/document_detail/341675.html">DeleteMFADeviceForUser</a>.</description></item>
+        /// <item><description>Multi-factor authentication (MFA) devices: You must delete the MFA devices bound to the user. For more information, see <a href="https://help.aliyun.com/document_detail/341675.html">DeleteMFADeviceForUser</a>.</description></item>
         /// <item><description>Access permissions: You must remove the access permissions on the accounts in your resource directory from the user. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</description></item>
         /// <item><description>Groups: You must remove the user from groups. For more information, see <a href="https://help.aliyun.com/document_detail/335116.html">RemoveUserFromGroup</a>.</description></item>
         /// </list>
+        /// <h3><a href="#"></a>Precautions</h3>
+        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot delete a user that is synchronized by using SCIM.
+        /// This topic provides an example on how to delete the user whose ID is <c>u-00q8wbq42wiltcrk****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3906,7 +3950,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation only if your account belongs to the management account that is used to enable a resource directory and has permissions to enable CloudSSO. For more information, see <a href="https://help.aliyun.com/document_detail/262819.html">Enable CloudSSO</a>.
+        /// <para>You can call this operation only if your account belongs to the management account that is used to enable a resource directory and has the permissions to enable CloudSSO. For more information, see <a href="https://help.aliyun.com/document_detail/262819.html">Enable CloudSSO</a>.
         /// If you call this operation, you agree to the <a href="https://www.alibabacloud.com/help/doc-detail/42416.htm">Alibaba Cloud International Website Product Terms of Service</a>.</para>
         /// </description>
         /// 
@@ -3945,7 +3989,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation only if your account belongs to the management account that is used to enable a resource directory and has permissions to enable CloudSSO. For more information, see <a href="https://help.aliyun.com/document_detail/262819.html">Enable CloudSSO</a>.
+        /// <para>You can call this operation only if your account belongs to the management account that is used to enable a resource directory and has the permissions to enable CloudSSO. For more information, see <a href="https://help.aliyun.com/document_detail/262819.html">Enable CloudSSO</a>.
         /// If you call this operation, you agree to the <a href="https://www.alibabacloud.com/help/doc-detail/42416.htm">Alibaba Cloud International Website Product Terms of Service</a>.</para>
         /// </description>
         /// 
@@ -3984,7 +4028,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation only if your account belongs to the management account that is used to enable a resource directory and has permissions to enable CloudSSO. For more information, see <a href="https://help.aliyun.com/document_detail/262819.html">Enable CloudSSO</a>.
+        /// <para>You can call this operation only if your account belongs to the management account that is used to enable a resource directory and has the permissions to enable CloudSSO. For more information, see <a href="https://help.aliyun.com/document_detail/262819.html">Enable CloudSSO</a>.
         /// If you call this operation, you agree to the <a href="https://www.alibabacloud.com/help/doc-detail/42416.htm">Alibaba Cloud International Website Product Terms of Service</a>.</para>
         /// </description>
         /// 
@@ -4004,7 +4048,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation only if your account belongs to the management account that is used to enable a resource directory and has permissions to enable CloudSSO. For more information, see <a href="https://help.aliyun.com/document_detail/262819.html">Enable CloudSSO</a>.
+        /// <para>You can call this operation only if your account belongs to the management account that is used to enable a resource directory and has the permissions to enable CloudSSO. For more information, see <a href="https://help.aliyun.com/document_detail/262819.html">Enable CloudSSO</a>.
         /// If you call this operation, you agree to the <a href="https://www.alibabacloud.com/help/doc-detail/42416.htm">Alibaba Cloud International Website Product Terms of Service</a>.</para>
         /// </description>
         /// 
@@ -4024,7 +4068,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the information about the access configuration whose ID is <c>ac-00ccule7tadaijxc****</c>.</para>
+        /// <para>This topic provides an example on how to query information about the access configuration whose ID is <c>ac-00ccule7tadaijxc****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4075,7 +4119,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the information about the access configuration whose ID is <c>ac-00ccule7tadaijxc****</c>.</para>
+        /// <para>This topic provides an example on how to query information about the access configuration whose ID is <c>ac-00ccule7tadaijxc****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4126,7 +4170,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the information about the access configuration whose ID is <c>ac-00ccule7tadaijxc****</c>.</para>
+        /// <para>This topic provides an example on how to query information about the access configuration whose ID is <c>ac-00ccule7tadaijxc****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4149,7 +4193,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the information about the access configuration whose ID is <c>ac-00ccule7tadaijxc****</c>.</para>
+        /// <para>This topic provides an example on how to query information about the access configuration whose ID is <c>ac-00ccule7tadaijxc****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4313,7 +4357,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>During SAML 2.0-based single sign-on (SSO) logon, CloudSSO is an SP, and the identity management system of an enterprise is an identity provider (IdP).
-        /// This topic provides an example on how to query the information about the SP within the directory <c>d-00fc2p61****</c>.</para>
+        /// This topic provides an example on how to query information about the SP within the directory <c>d-00fc2p61****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4361,7 +4405,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>During SAML 2.0-based single sign-on (SSO) logon, CloudSSO is an SP, and the identity management system of an enterprise is an identity provider (IdP).
-        /// This topic provides an example on how to query the information about the SP within the directory <c>d-00fc2p61****</c>.</para>
+        /// This topic provides an example on how to query information about the SP within the directory <c>d-00fc2p61****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4409,7 +4453,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>During SAML 2.0-based single sign-on (SSO) logon, CloudSSO is an SP, and the identity management system of an enterprise is an identity provider (IdP).
-        /// This topic provides an example on how to query the information about the SP within the directory <c>d-00fc2p61****</c>.</para>
+        /// This topic provides an example on how to query information about the SP within the directory <c>d-00fc2p61****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4433,7 +4477,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>During SAML 2.0-based single sign-on (SSO) logon, CloudSSO is an SP, and the identity management system of an enterprise is an identity provider (IdP).
-        /// This topic provides an example on how to query the information about the SP within the directory <c>d-00fc2p61****</c>.</para>
+        /// This topic provides an example on how to query information about the SP within the directory <c>d-00fc2p61****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4736,7 +4780,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the information about the group <c>g-00jqzghi2n3o5hkh****</c> in the directory <c>d-00fc2p61****</c>.</para>
+        /// <para>This topic provides an example on how to query information about the group <c>g-00jqzghi2n3o5hkh****</c> in the directory <c>d-00fc2p61****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4787,7 +4831,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the information about the group <c>g-00jqzghi2n3o5hkh****</c> in the directory <c>d-00fc2p61****</c>.</para>
+        /// <para>This topic provides an example on how to query information about the group <c>g-00jqzghi2n3o5hkh****</c> in the directory <c>d-00fc2p61****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4838,7 +4882,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the information about the group <c>g-00jqzghi2n3o5hkh****</c> in the directory <c>d-00fc2p61****</c>.</para>
+        /// <para>This topic provides an example on how to query information about the group <c>g-00jqzghi2n3o5hkh****</c> in the directory <c>d-00fc2p61****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4861,7 +4905,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the information about the group <c>g-00jqzghi2n3o5hkh****</c> in the directory <c>d-00fc2p61****</c>.</para>
+        /// <para>This topic provides an example on how to query information about the group <c>g-00jqzghi2n3o5hkh****</c> in the directory <c>d-00fc2p61****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5004,8 +5048,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you enable username-password logon for CloudSSO users, you can also configure MFA for the users.
-        /// This topic provides an example on how to query the MFA setting of all CloudSSO users that belong to the directory named <c>00q8wbq42wiltcrk****</c>.</para>
+        /// <para>If you enable username-password logon for CloudSSO users, you can query the MFA setting for the users.
+        /// This topic provides an example on how to query the MFA setting of all CloudSSO users that belong to the directory named <c>u-00q8wbq42wiltcrk****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5052,8 +5096,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you enable username-password logon for CloudSSO users, you can also configure MFA for the users.
-        /// This topic provides an example on how to query the MFA setting of all CloudSSO users that belong to the directory named <c>00q8wbq42wiltcrk****</c>.</para>
+        /// <para>If you enable username-password logon for CloudSSO users, you can query the MFA setting for the users.
+        /// This topic provides an example on how to query the MFA setting of all CloudSSO users that belong to the directory named <c>u-00q8wbq42wiltcrk****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5100,8 +5144,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you enable username-password logon for CloudSSO users, you can also configure MFA for the users.
-        /// This topic provides an example on how to query the MFA setting of all CloudSSO users that belong to the directory named <c>00q8wbq42wiltcrk****</c>.</para>
+        /// <para>If you enable username-password logon for CloudSSO users, you can query the MFA setting for the users.
+        /// This topic provides an example on how to query the MFA setting of all CloudSSO users that belong to the directory named <c>u-00q8wbq42wiltcrk****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5124,8 +5168,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you enable username-password logon for CloudSSO users, you can also configure MFA for the users.
-        /// This topic provides an example on how to query the MFA setting of all CloudSSO users that belong to the directory named <c>00q8wbq42wiltcrk****</c>.</para>
+        /// <para>If you enable username-password logon for CloudSSO users, you can query the MFA setting for the users.
+        /// This topic provides an example on how to query the MFA setting of all CloudSSO users that belong to the directory named <c>u-00q8wbq42wiltcrk****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5149,7 +5193,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation is no longer maintained and updated. You can call the <a href="https://help.aliyun.com/document_detail/611286.html">GetMFAAuthenticationSettingInfo</a> operation to query more detailed information.
+        /// <para> This operation is no longer maintained and updated. You can call the <a href="https://help.aliyun.com/document_detail/611286.html">GetMFAAuthenticationSettingInfo</a> operation to query more detailed information.
         /// This topic provides an example on how to query the MFA setting of the users that belong to the directory named <c>d-00fc2p61****</c>. The returned result shows that MFA is enabled for all the users.</para>
         /// </remarks>
         /// </description>
@@ -5199,7 +5243,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation is no longer maintained and updated. You can call the <a href="https://help.aliyun.com/document_detail/611286.html">GetMFAAuthenticationSettingInfo</a> operation to query more detailed information.
+        /// <para> This operation is no longer maintained and updated. You can call the <a href="https://help.aliyun.com/document_detail/611286.html">GetMFAAuthenticationSettingInfo</a> operation to query more detailed information.
         /// This topic provides an example on how to query the MFA setting of the users that belong to the directory named <c>d-00fc2p61****</c>. The returned result shows that MFA is enabled for all the users.</para>
         /// </remarks>
         /// </description>
@@ -5249,7 +5293,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation is no longer maintained and updated. You can call the <a href="https://help.aliyun.com/document_detail/611286.html">GetMFAAuthenticationSettingInfo</a> operation to query more detailed information.
+        /// <para> This operation is no longer maintained and updated. You can call the <a href="https://help.aliyun.com/document_detail/611286.html">GetMFAAuthenticationSettingInfo</a> operation to query more detailed information.
         /// This topic provides an example on how to query the MFA setting of the users that belong to the directory named <c>d-00fc2p61****</c>. The returned result shows that MFA is enabled for all the users.</para>
         /// </remarks>
         /// </description>
@@ -5275,7 +5319,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation is no longer maintained and updated. You can call the <a href="https://help.aliyun.com/document_detail/611286.html">GetMFAAuthenticationSettingInfo</a> operation to query more detailed information.
+        /// <para> This operation is no longer maintained and updated. You can call the <a href="https://help.aliyun.com/document_detail/611286.html">GetMFAAuthenticationSettingInfo</a> operation to query more detailed information.
         /// This topic provides an example on how to query the MFA setting of the users that belong to the directory named <c>d-00fc2p61****</c>. The returned result shows that MFA is enabled for all the users.</para>
         /// </remarks>
         /// </description>
@@ -5300,7 +5344,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to check whether MFA is enabled for users in the directory whose ID is <c>00fc2p61****</c>. The returned result shows that MFA is in the Enabled state.</para>
+        /// <para>This topic provides an example on how to check whether MFA is enabled for users in the directory whose ID is <c>d-00fc2p61****</c>. The returned result shows that MFA is in the Enabled state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5347,7 +5391,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to check whether MFA is enabled for users in the directory whose ID is <c>00fc2p61****</c>. The returned result shows that MFA is in the Enabled state.</para>
+        /// <para>This topic provides an example on how to check whether MFA is enabled for users in the directory whose ID is <c>d-00fc2p61****</c>. The returned result shows that MFA is in the Enabled state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5394,7 +5438,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to check whether MFA is enabled for users in the directory whose ID is <c>00fc2p61****</c>. The returned result shows that MFA is in the Enabled state.</para>
+        /// <para>This topic provides an example on how to check whether MFA is enabled for users in the directory whose ID is <c>d-00fc2p61****</c>. The returned result shows that MFA is in the Enabled state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5417,7 +5461,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to check whether MFA is enabled for users in the directory whose ID is <c>00fc2p61****</c>. The returned result shows that MFA is in the Enabled state.</para>
+        /// <para>This topic provides an example on how to check whether MFA is enabled for users in the directory whose ID is <c>d-00fc2p61****</c>. The returned result shows that MFA is in the Enabled state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7583,6 +7627,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
             {
                 query["StatusNotifications"] = request.StatusNotifications;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -7645,6 +7693,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatusNotifications))
             {
                 query["StatusNotifications"] = request.StatusNotifications;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -9493,6 +9545,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
             {
                 query["Status"] = request.Status;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -9559,6 +9615,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -10116,7 +10176,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot remove a user from a group that is synchronized by using SCIM.<br>This topic provides an example on how to remove the user <c>u-00q8wbq42wiltcrk****</c> from the group <c>g-00jqzghi2n3o5hkh****</c>.</para>
+        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot remove a user from a group that is synchronized by using SCIM.
+        /// This topic provides an example on how to remove the user <c>u-00q8wbq42wiltcrk****</c> from the group <c>g-00jqzghi2n3o5hkh****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10171,7 +10232,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot remove a user from a group that is synchronized by using SCIM.<br>This topic provides an example on how to remove the user <c>u-00q8wbq42wiltcrk****</c> from the group <c>g-00jqzghi2n3o5hkh****</c>.</para>
+        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot remove a user from a group that is synchronized by using SCIM.
+        /// This topic provides an example on how to remove the user <c>u-00q8wbq42wiltcrk****</c> from the group <c>g-00jqzghi2n3o5hkh****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10226,7 +10288,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot remove a user from a group that is synchronized by using SCIM.<br>This topic provides an example on how to remove the user <c>u-00q8wbq42wiltcrk****</c> from the group <c>g-00jqzghi2n3o5hkh****</c>.</para>
+        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot remove a user from a group that is synchronized by using SCIM.
+        /// This topic provides an example on how to remove the user <c>u-00q8wbq42wiltcrk****</c> from the group <c>g-00jqzghi2n3o5hkh****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10249,7 +10312,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot remove a user from a group that is synchronized by using SCIM.<br>This topic provides an example on how to remove the user <c>u-00q8wbq42wiltcrk****</c> from the group <c>g-00jqzghi2n3o5hkh****</c>.</para>
+        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot remove a user from a group that is synchronized by using SCIM.
+        /// This topic provides an example on how to remove the user <c>u-00q8wbq42wiltcrk****</c> from the group <c>g-00jqzghi2n3o5hkh****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10272,9 +10336,9 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you forget your password or your password expires or is at risk, you must contact a CloudSSO administrator to reset your password.</para>
+        /// <para>If a user forgets the password, the password expires, or the password poses security risks, a CloudSSO administrator can reset the password for the user.</para>
         /// <remarks>
-        /// <para> After you enable SSO logon, your password cannot be reset.
+        /// <para> After you enable single sign-on (SSO) logon, the password of a user cannot be reset.
         /// This topic provides an example on how to reset the password of the user <c>u-00q8wbq42wiltcrk****</c>. The new password is automatically generated by the system.</para>
         /// </remarks>
         /// </description>
@@ -10339,9 +10403,9 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you forget your password or your password expires or is at risk, you must contact a CloudSSO administrator to reset your password.</para>
+        /// <para>If a user forgets the password, the password expires, or the password poses security risks, a CloudSSO administrator can reset the password for the user.</para>
         /// <remarks>
-        /// <para> After you enable SSO logon, your password cannot be reset.
+        /// <para> After you enable single sign-on (SSO) logon, the password of a user cannot be reset.
         /// This topic provides an example on how to reset the password of the user <c>u-00q8wbq42wiltcrk****</c>. The new password is automatically generated by the system.</para>
         /// </remarks>
         /// </description>
@@ -10406,9 +10470,9 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you forget your password or your password expires or is at risk, you must contact a CloudSSO administrator to reset your password.</para>
+        /// <para>If a user forgets the password, the password expires, or the password poses security risks, a CloudSSO administrator can reset the password for the user.</para>
         /// <remarks>
-        /// <para> After you enable SSO logon, your password cannot be reset.
+        /// <para> After you enable single sign-on (SSO) logon, the password of a user cannot be reset.
         /// This topic provides an example on how to reset the password of the user <c>u-00q8wbq42wiltcrk****</c>. The new password is automatically generated by the system.</para>
         /// </remarks>
         /// </description>
@@ -10433,9 +10497,9 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you forget your password or your password expires or is at risk, you must contact a CloudSSO administrator to reset your password.</para>
+        /// <para>If a user forgets the password, the password expires, or the password poses security risks, a CloudSSO administrator can reset the password for the user.</para>
         /// <remarks>
-        /// <para> After you enable SSO logon, your password cannot be reset.
+        /// <para> After you enable single sign-on (SSO) logon, the password of a user cannot be reset.
         /// This topic provides an example on how to reset the password of the user <c>u-00q8wbq42wiltcrk****</c>. The new password is automatically generated by the system.</para>
         /// </remarks>
         /// </description>
@@ -10596,11 +10660,11 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>During SAML 2.0-based single sign-on (SSO) logon, CloudSSO is an SP, and the identity management system of an enterprise is an IdP.
+        /// <para>During SAML 2.0-based single sign-on (SSO) logon, CloudSSO is a service provider (SP), and the identity management system of an enterprise is an IdP.
         /// You can use one of the following methods to configure a SAML IdP. You can obtain the required metadata file or parameter values from your IdP.</para>
         /// <list type="bullet">
-        /// <item><description>Use the metadata file. You can specify the <c>EncodedMetadataDocument</c> parameter to upload the metadata file.</description></item>
-        /// <item><description>Manually configure the IdP. You can manually specify the following parameters for your IdP: <c>EntityId</c>, <c>LoginUrl</c>, <c>WantRequestSigned</c>, and <c>X509Certificate</c>.
+        /// <item><description>Use the metadata file: You can specify the <c>EncodedMetadataDocument</c> parameter to upload the metadata file.</description></item>
+        /// <item><description>Manually configure the IdP: You can manually specify the following parameters for your IdP: <c>EntityId</c>, <c>LoginUrl</c>, <c>WantRequestSigned</c>, and <c>X509Certificate</c>.
         /// If you have configured a SAML IdP, the existing configurations are replaced after you call this operation.</description></item>
         /// <item><description>If the IdP is configured by using the metadata file, all existing configurations are replaced with new configurations.</description></item>
         /// <item><description>If the IdP is manually configured, the original parameter values that are different from the new parameter values are replaced.<remarks>
@@ -10683,11 +10747,11 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>During SAML 2.0-based single sign-on (SSO) logon, CloudSSO is an SP, and the identity management system of an enterprise is an IdP.
+        /// <para>During SAML 2.0-based single sign-on (SSO) logon, CloudSSO is a service provider (SP), and the identity management system of an enterprise is an IdP.
         /// You can use one of the following methods to configure a SAML IdP. You can obtain the required metadata file or parameter values from your IdP.</para>
         /// <list type="bullet">
-        /// <item><description>Use the metadata file. You can specify the <c>EncodedMetadataDocument</c> parameter to upload the metadata file.</description></item>
-        /// <item><description>Manually configure the IdP. You can manually specify the following parameters for your IdP: <c>EntityId</c>, <c>LoginUrl</c>, <c>WantRequestSigned</c>, and <c>X509Certificate</c>.
+        /// <item><description>Use the metadata file: You can specify the <c>EncodedMetadataDocument</c> parameter to upload the metadata file.</description></item>
+        /// <item><description>Manually configure the IdP: You can manually specify the following parameters for your IdP: <c>EntityId</c>, <c>LoginUrl</c>, <c>WantRequestSigned</c>, and <c>X509Certificate</c>.
         /// If you have configured a SAML IdP, the existing configurations are replaced after you call this operation.</description></item>
         /// <item><description>If the IdP is configured by using the metadata file, all existing configurations are replaced with new configurations.</description></item>
         /// <item><description>If the IdP is manually configured, the original parameter values that are different from the new parameter values are replaced.<remarks>
@@ -10770,11 +10834,11 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>During SAML 2.0-based single sign-on (SSO) logon, CloudSSO is an SP, and the identity management system of an enterprise is an IdP.
+        /// <para>During SAML 2.0-based single sign-on (SSO) logon, CloudSSO is a service provider (SP), and the identity management system of an enterprise is an IdP.
         /// You can use one of the following methods to configure a SAML IdP. You can obtain the required metadata file or parameter values from your IdP.</para>
         /// <list type="bullet">
-        /// <item><description>Use the metadata file. You can specify the <c>EncodedMetadataDocument</c> parameter to upload the metadata file.</description></item>
-        /// <item><description>Manually configure the IdP. You can manually specify the following parameters for your IdP: <c>EntityId</c>, <c>LoginUrl</c>, <c>WantRequestSigned</c>, and <c>X509Certificate</c>.
+        /// <item><description>Use the metadata file: You can specify the <c>EncodedMetadataDocument</c> parameter to upload the metadata file.</description></item>
+        /// <item><description>Manually configure the IdP: You can manually specify the following parameters for your IdP: <c>EntityId</c>, <c>LoginUrl</c>, <c>WantRequestSigned</c>, and <c>X509Certificate</c>.
         /// If you have configured a SAML IdP, the existing configurations are replaced after you call this operation.</description></item>
         /// <item><description>If the IdP is configured by using the metadata file, all existing configurations are replaced with new configurations.</description></item>
         /// <item><description>If the IdP is manually configured, the original parameter values that are different from the new parameter values are replaced.<remarks>
@@ -10805,11 +10869,11 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>During SAML 2.0-based single sign-on (SSO) logon, CloudSSO is an SP, and the identity management system of an enterprise is an IdP.
+        /// <para>During SAML 2.0-based single sign-on (SSO) logon, CloudSSO is a service provider (SP), and the identity management system of an enterprise is an IdP.
         /// You can use one of the following methods to configure a SAML IdP. You can obtain the required metadata file or parameter values from your IdP.</para>
         /// <list type="bullet">
-        /// <item><description>Use the metadata file. You can specify the <c>EncodedMetadataDocument</c> parameter to upload the metadata file.</description></item>
-        /// <item><description>Manually configure the IdP. You can manually specify the following parameters for your IdP: <c>EntityId</c>, <c>LoginUrl</c>, <c>WantRequestSigned</c>, and <c>X509Certificate</c>.
+        /// <item><description>Use the metadata file: You can specify the <c>EncodedMetadataDocument</c> parameter to upload the metadata file.</description></item>
+        /// <item><description>Manually configure the IdP: You can manually specify the following parameters for your IdP: <c>EntityId</c>, <c>LoginUrl</c>, <c>WantRequestSigned</c>, and <c>X509Certificate</c>.
         /// If you have configured a SAML IdP, the existing configurations are replaced after you call this operation.</description></item>
         /// <item><description>If the IdP is configured by using the metadata file, all existing configurations are replaced with new configurations.</description></item>
         /// <item><description>If the IdP is manually configured, the original parameter values that are different from the new parameter values are replaced.<remarks>
@@ -11291,7 +11355,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables Cross-domain Identity Management (SCIM) synchronization.</para>
+        /// <para>Enables or disables System for Cross-domain Identity Management (SCIM) synchronization.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -11347,7 +11411,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables Cross-domain Identity Management (SCIM) synchronization.</para>
+        /// <para>Enables or disables System for Cross-domain Identity Management (SCIM) synchronization.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -11403,7 +11467,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables Cross-domain Identity Management (SCIM) synchronization.</para>
+        /// <para>Enables or disables System for Cross-domain Identity Management (SCIM) synchronization.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -11431,7 +11495,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables Cross-domain Identity Management (SCIM) synchronization.</para>
+        /// <para>Enables or disables System for Cross-domain Identity Management (SCIM) synchronization.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -11640,7 +11704,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you change the name of a directory, the URL that is used to log on to the Cloud SSO user portal is changed. You must notify the Cloud SSO users of the correct URL. 
+        /// <para>After you change the name of a directory, the URL that is used to log on to the CloudSSO user portal is changed. You must notify the CloudSSO users of the correct URL.
         /// This topic provides an example on how to change the name of a directory to <c>new-example</c>.</para>
         /// </description>
         /// 
@@ -11692,7 +11756,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you change the name of a directory, the URL that is used to log on to the Cloud SSO user portal is changed. You must notify the Cloud SSO users of the correct URL. 
+        /// <para>After you change the name of a directory, the URL that is used to log on to the CloudSSO user portal is changed. You must notify the CloudSSO users of the correct URL.
         /// This topic provides an example on how to change the name of a directory to <c>new-example</c>.</para>
         /// </description>
         /// 
@@ -11744,7 +11808,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you change the name of a directory, the URL that is used to log on to the Cloud SSO user portal is changed. You must notify the Cloud SSO users of the correct URL. 
+        /// <para>After you change the name of a directory, the URL that is used to log on to the CloudSSO user portal is changed. You must notify the CloudSSO users of the correct URL.
         /// This topic provides an example on how to change the name of a directory to <c>new-example</c>.</para>
         /// </description>
         /// 
@@ -11768,7 +11832,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you change the name of a directory, the URL that is used to log on to the Cloud SSO user portal is changed. You must notify the Cloud SSO users of the correct URL. 
+        /// <para>After you change the name of a directory, the URL that is used to log on to the CloudSSO user portal is changed. You must notify the CloudSSO users of the correct URL.
         /// This topic provides an example on how to change the name of a directory to <c>new-example</c>.</para>
         /// </description>
         /// 
@@ -11787,15 +11851,15 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies information about a group.</para>
+        /// <para>Modifies the information about a group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can modify <c>GroupName</c> and <c>Description</c> for a group.</para>
         /// <remarks>
-        /// <para> If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify the information about a group that is synchronized by using SCIM.
-        /// This topic provides an example on how to change the name of the group <c>g-00jqzghi2n3o5hkh****</c> to <c>NewTestGroup</c>.</para>
+        /// <para> If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify information about a group that is synchronized by using SCIM.
+        /// This topic provides an example on how to modify the name of the group <c>g-00jqzghi2n3o5hkh****</c> to <c>NewTestGroup</c>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -11850,15 +11914,15 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies information about a group.</para>
+        /// <para>Modifies the information about a group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can modify <c>GroupName</c> and <c>Description</c> for a group.</para>
         /// <remarks>
-        /// <para> If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify the information about a group that is synchronized by using SCIM.
-        /// This topic provides an example on how to change the name of the group <c>g-00jqzghi2n3o5hkh****</c> to <c>NewTestGroup</c>.</para>
+        /// <para> If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify information about a group that is synchronized by using SCIM.
+        /// This topic provides an example on how to modify the name of the group <c>g-00jqzghi2n3o5hkh****</c> to <c>NewTestGroup</c>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -11913,15 +11977,15 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies information about a group.</para>
+        /// <para>Modifies the information about a group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can modify <c>GroupName</c> and <c>Description</c> for a group.</para>
         /// <remarks>
-        /// <para> If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify the information about a group that is synchronized by using SCIM.
-        /// This topic provides an example on how to change the name of the group <c>g-00jqzghi2n3o5hkh****</c> to <c>NewTestGroup</c>.</para>
+        /// <para> If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify information about a group that is synchronized by using SCIM.
+        /// This topic provides an example on how to modify the name of the group <c>g-00jqzghi2n3o5hkh****</c> to <c>NewTestGroup</c>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -11940,15 +12004,15 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies information about a group.</para>
+        /// <para>Modifies the information about a group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can modify <c>GroupName</c> and <c>Description</c> for a group.</para>
         /// <remarks>
-        /// <para> If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify the information about a group that is synchronized by using SCIM.
-        /// This topic provides an example on how to change the name of the group <c>g-00jqzghi2n3o5hkh****</c> to <c>NewTestGroup</c>.</para>
+        /// <para> If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify information about a group that is synchronized by using SCIM.
+        /// This topic provides an example on how to modify the name of the group <c>g-00jqzghi2n3o5hkh****</c> to <c>NewTestGroup</c>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -12291,7 +12355,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables a Cross-domain Identity Management (SCIM) credential.</para>
+        /// <para>Enables or disables a System for Cross-domain Identity Management (SCIM) credential.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12346,7 +12410,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables a Cross-domain Identity Management (SCIM) credential.</para>
+        /// <para>Enables or disables a System for Cross-domain Identity Management (SCIM) credential.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12401,7 +12465,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables a Cross-domain Identity Management (SCIM) credential.</para>
+        /// <para>Enables or disables a System for Cross-domain Identity Management (SCIM) credential.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12424,7 +12488,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables a Cross-domain Identity Management (SCIM) credential.</para>
+        /// <para>Enables or disables a System for Cross-domain Identity Management (SCIM) credential.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12454,8 +12518,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <description>
         /// <para>You can modify <c>FirstName</c>, <c>LastName</c>, <c>DisplayName</c>, <c>Email</c>, and <c>Description</c> for a user. You cannot modify <c>UserName</c> for a user.</para>
         /// <remarks>
-        /// <para> If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify the information about a user that is synchronized by using SCIM.
-        /// This topic provides an example on how to change the email address of the user whose ID is <c>u-00q8wbq42wiltcrk****</c> to <c>AliceLee@example.com</c>.</para>
+        /// <para> If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify information about a user that is synchronized by using SCIM.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -12529,8 +12592,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <description>
         /// <para>You can modify <c>FirstName</c>, <c>LastName</c>, <c>DisplayName</c>, <c>Email</c>, and <c>Description</c> for a user. You cannot modify <c>UserName</c> for a user.</para>
         /// <remarks>
-        /// <para> If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify the information about a user that is synchronized by using SCIM.
-        /// This topic provides an example on how to change the email address of the user whose ID is <c>u-00q8wbq42wiltcrk****</c> to <c>AliceLee@example.com</c>.</para>
+        /// <para> If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify information about a user that is synchronized by using SCIM.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -12604,8 +12666,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <description>
         /// <para>You can modify <c>FirstName</c>, <c>LastName</c>, <c>DisplayName</c>, <c>Email</c>, and <c>Description</c> for a user. You cannot modify <c>UserName</c> for a user.</para>
         /// <remarks>
-        /// <para> If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify the information about a user that is synchronized by using SCIM.
-        /// This topic provides an example on how to change the email address of the user whose ID is <c>u-00q8wbq42wiltcrk****</c> to <c>AliceLee@example.com</c>.</para>
+        /// <para> If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify information about a user that is synchronized by using SCIM.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -12631,8 +12692,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <description>
         /// <para>You can modify <c>FirstName</c>, <c>LastName</c>, <c>DisplayName</c>, <c>Email</c>, and <c>Description</c> for a user. You cannot modify <c>UserName</c> for a user.</para>
         /// <remarks>
-        /// <para> If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify the information about a user that is synchronized by using SCIM.
-        /// This topic provides an example on how to change the email address of the user whose ID is <c>u-00q8wbq42wiltcrk****</c> to <c>AliceLee@example.com</c>.</para>
+        /// <para> If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify information about a user that is synchronized by using SCIM.</para>
         /// </remarks>
         /// </description>
         /// 

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class SetExternalSAMLIdentityProviderRequest : TeaModel {
         /// <summary>
-        /// <para>The Binding method for initiating a SAML request. Values:</para>
+        /// <para>The binding for sending SAML requests. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Post: Initiate the SAML request using the Post method. </description></item>
-        /// <item><description>Redirect: Initiate the SAML request using the Redirect method.</description></item>
+        /// <item><description>Post: HTTP Post bindings.</description></item>
+        /// <item><description>Redirect: HTTP Redirect bindings.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -78,8 +78,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <summary>
         /// <para>Specifies whether CloudSSO needs to sign SAML requests. The requests are sent when users log on to the CloudSSO user portal to initiate SAML-based SSO. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: yes</description></item>
-        /// <item><description>false: no (default)</description></item>
+        /// <item><description>true</description></item>
+        /// <item><description>false (default)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
