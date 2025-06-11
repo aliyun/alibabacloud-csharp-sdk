@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class ModifyBackupPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The retention period for the backup data. Valid values: 7 to 730. Unit: day.</para>
+        /// <para>The retention period for the backup data. Valid values: 7 to 730. Unit: days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>

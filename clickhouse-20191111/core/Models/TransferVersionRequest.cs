@@ -20,6 +20,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        /// <summary>
+        /// <para>The time window during which write operations are stopped.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2025-02-08T00:00:00+08:00,2025-02-12T00:00:00+08:00</para>
+        /// </summary>
         [NameInMap("DisableWriteWindows")]
         [Validation(Required=false)]
         public string DisableWriteWindows { get; set; }
@@ -87,6 +93,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         [Validation(Required=false)]
         public string SourceAccount { get; set; }
 
+        /// <summary>
+        /// <para>The name of the self-managed ClickHouse cluster. You can execute the <c>SELECT * FROM system.clusters</c> statement to query the cluster name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>default</para>
+        /// </summary>
         [NameInMap("SourceClusterName")]
         [Validation(Required=false)]
         public string SourceClusterName { get; set; }
@@ -102,6 +114,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         [Validation(Required=false)]
         public string SourcePassword { get; set; }
 
+        /// <summary>
+        /// <para>The endpoint and TCP port of the self-managed ClickHouse cluster.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>192.168.0.4:9000,192.168.0.5:9000,192.168.0.6:9000</para>
+        /// </summary>
         [NameInMap("SourceShards")]
         [Validation(Required=false)]
         public string SourceShards { get; set; }

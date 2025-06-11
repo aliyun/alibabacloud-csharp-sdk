@@ -198,6 +198,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
                 [Validation(Required=false)]
                 public long? DBNodeStorage { get; set; }
 
+                /// <summary>
+                /// <para>The engine version of the cluster.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>23.8</para>
+                /// </summary>
                 [NameInMap("DbVersion")]
                 [Validation(Required=false)]
                 public string DbVersion { get; set; }
@@ -330,6 +336,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
+                /// <summary>
+                /// <para>The time window during which write operations are stopped for specification changes.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2025-02-08T00:00:00+08:00,2025-02-12T00:00:00+08:00</para>
+                /// </summary>
                 [NameInMap("ScaleOutDisableWriteWindows")]
                 [Validation(Required=false)]
                 public string ScaleOutDisableWriteWindows { get; set; }

@@ -10,6 +10,11 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class ModifyAccountDescriptionRequest : TeaModel {
         /// <summary>
+        /// <para>The new description of the database account.</para>
+        /// <list type="bullet">
+        /// <item><description>The value cannot start with http:// or https://.</description></item>
+        /// <item><description>The value must be 0 to 256 characters in length.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +25,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string AccountDescription { get; set; }
 
         /// <summary>
+        /// <para>The name of the database account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +36,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string AccountName { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

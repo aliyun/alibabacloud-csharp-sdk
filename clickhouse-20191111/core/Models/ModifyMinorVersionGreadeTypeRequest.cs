@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class ModifyMinorVersionGreadeTypeRequest : TeaModel {
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The update type. If you set the parameter to <b>false</b>, you perform the manual update.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

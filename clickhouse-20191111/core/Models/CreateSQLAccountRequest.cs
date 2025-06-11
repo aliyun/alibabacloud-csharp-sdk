@@ -15,6 +15,9 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// <item><description>The description cannot start with http:// or https://.</description></item>
         /// <item><description>The description can be up to 256 characters in length or be an empty string.</description></item>
         /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Used for test</para>
         /// </summary>
         [NameInMap("AccountDescription")]
         [Validation(Required=false)]
@@ -25,7 +28,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// <list type="bullet">
         /// <item><description>The name must be unique in the cluster.</description></item>
         /// <item><description>The name can contain lowercase letters, digits, or underscores (_).</description></item>
-        /// <item><description>The name must start with a lowercase letter and end with a lowercase letter or a digit.</description></item>
+        /// <item><description>The name must start with a lowercase letter and end with a lowercase letter or digit.</description></item>
         /// <item><description>The name must be 2 to 64 characters in length.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>

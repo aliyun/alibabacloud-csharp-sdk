@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class ModifyDBClusterResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the cluster.</para>
+        /// <para>The clusters.</para>
         /// </summary>
         [NameInMap("DBCluster")]
         [Validation(Required=false)]

@@ -26,6 +26,22 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             [Validation(Required=false)]
             public string AliUid { get; set; }
 
+            [NameInMap("AppointmentElectZookeeperDisableWrite")]
+            [Validation(Required=false)]
+            public bool? AppointmentElectZookeeperDisableWrite { get; set; }
+
+            [NameInMap("AppointmentElectZookeeperTime")]
+            [Validation(Required=false)]
+            public string AppointmentElectZookeeperTime { get; set; }
+
+            [NameInMap("AppointmentRestartNodeList")]
+            [Validation(Required=false)]
+            public string AppointmentRestartNodeList { get; set; }
+
+            [NameInMap("AppointmentRestartNodeTime")]
+            [Validation(Required=false)]
+            public string AppointmentRestartNodeTime { get; set; }
+
             /// <summary>
             /// <para>The scheduled restart time. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in Coordinated Universal Time (UTC).</para>
             /// 
@@ -37,6 +53,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string AppointmentRestartTime { get; set; }
 
             /// <summary>
+            /// <para>The major engine versions available for upgrades.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{&quot;MajorVersion&quot;:&quot;MinorVersion&quot;}</para>
             /// </summary>

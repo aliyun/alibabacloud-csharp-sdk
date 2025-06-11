@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class CreateBackupPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The backup retention period. The default retention period is seven days. Valid values: 7 to 730. Unit: days.</para>
+        /// <para>The backup retention period. The default retention period is seven days. Valid values: 7 to 730. Unit: day.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>

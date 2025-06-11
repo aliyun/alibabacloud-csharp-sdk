@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DescribeAccountsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The database accounts.</para>
+        /// </summary>
         [NameInMap("Accounts")]
         [Validation(Required=false)]
         public DescribeAccountsResponseBodyAccounts Accounts { get; set; }
@@ -18,6 +21,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public List<DescribeAccountsResponseBodyAccountsAccount> Account { get; set; }
             public class DescribeAccountsResponseBodyAccountsAccount : TeaModel {
                 /// <summary>
+                /// <para>The description of the database account.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
                 /// </summary>
@@ -26,6 +31,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
                 public string AccountDescription { get; set; }
 
                 /// <summary>
+                /// <para>The name of the database account.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
                 /// </summary>
@@ -34,6 +41,17 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
                 public string AccountName { get; set; }
 
                 /// <summary>
+                /// <para>The state of the database account. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Creating</b></description></item>
+                /// <item><description><b>Available</b></description></item>
+                /// <item><description><b>AuthorityModifying</b></description></item>
+                /// <item><description><b>Deleting</b></description></item>
+                /// </list>
+                /// <remarks>
+                /// <para> Only XML-configured database accounts can be in the <b>AuthorityModifying</b> state.</para>
+                /// </remarks>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Creating</para>
                 /// </summary>
@@ -42,6 +60,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
                 public string AccountStatus { get; set; }
 
                 /// <summary>
+                /// <para>The type of the database account. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Super</b>: privileged account</description></item>
+                /// <item><description><b>Normal</b>: standard account</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Super</para>
                 /// </summary>
@@ -50,6 +74,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
                 public string AccountType { get; set; }
 
                 /// <summary>
+                /// <para>The configuration mode of the database account.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>SQL</para>
                 /// </summary>
@@ -62,6 +88,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -70,6 +98,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>
@@ -78,6 +108,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F5178C10-1407-4987-9133-DE4DC9119F75</para>
         /// </summary>
@@ -86,6 +118,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

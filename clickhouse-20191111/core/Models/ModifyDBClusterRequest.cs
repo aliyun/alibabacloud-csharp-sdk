@@ -14,7 +14,6 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// <list type="bullet">
         /// <item><description><para>Valid values when the cluster is of Single-replica Edition:</para>
         /// <list type="bullet">
-        /// <item><description><b>S4-NEW</b></description></item>
         /// <item><description><b>S8</b></description></item>
         /// <item><description><b>S16</b></description></item>
         /// <item><description><b>S32</b></description></item>
@@ -24,7 +23,6 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// </description></item>
         /// <item><description><para>Valid values when the cluster is of Double-replica Edition:</para>
         /// <list type="bullet">
-        /// <item><description><b>C4-NEW</b></description></item>
         /// <item><description><b>C8</b></description></item>
         /// <item><description><b>C16</b></description></item>
         /// <item><description><b>C32</b></description></item>
@@ -83,6 +81,15 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string DBNodeStorage { get; set; }
 
         /// <summary>
+        /// <para>The storage type of the cluster. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>CloudESSD</b>: The cluster uses an Enterprise SSD (ESSD) of performance level 1 (PL1).</description></item>
+        /// <item><description><b>CloudESSD_PL2</b>: The cluster uses an ESSD of PL2.</description></item>
+        /// <item><description><b>CloudESSD_PL3</b>: The cluster uses an ESSD of PL3.</description></item>
+        /// <item><description><b>CloudEfficiency</b>: The cluster uses an ultra disk.</description></item>
+        /// <item><description><b>CloudSSD</b>: The cluster uses a standard SSD.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>CloudESSD</para>
         /// </summary>
@@ -90,6 +97,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         [Validation(Required=false)]
         public string DbNodeStorageType { get; set; }
 
+        /// <summary>
+        /// <para>The time window during which write operations are stopped. Separate the start time and end time with commas (,). Specify the time in the ISO 8601 standard.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2024-07-09T20:00:00+08:00,2024-07-09T21:00:00+08:00</para>
+        /// </summary>
         [NameInMap("DisableWriteWindows")]
         [Validation(Required=false)]
         public string DisableWriteWindows { get; set; }
@@ -103,7 +116,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
