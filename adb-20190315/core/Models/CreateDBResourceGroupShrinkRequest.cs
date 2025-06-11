@@ -8,13 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
-    public class ModifyDBResourceGroupShrinkRequest : TeaModel {
-        /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>123e4567-e89b-12d3-a456-t7241****</para>
-        /// </summary>
+    public class CreateDBResourceGroupShrinkRequest : TeaModel {
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
@@ -41,12 +35,21 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        [NameInMap("Engine")]
+        [Validation(Required=false)]
+        public string Engine { get; set; }
+
         [NameInMap("EngineParams")]
         [Validation(Required=false)]
         public string EngineParamsShrink { get; set; }
 
         /// <summary>
         /// <para>The name of the resource group.</para>
+        /// <list type="bullet">
+        /// <item><description>The name can be up to 255 characters in length.</description></item>
+        /// <item><description>The name must start with an uppercase letter or a digit.</description></item>
+        /// <item><description>The name can contain uppercase letters, digits, hyphens (-), and underscores (_).</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -59,15 +62,12 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// <summary>
         /// <para>The query execution mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>interactive</b></description></item>
+        /// <item><description><b>interactive</b> (default)</description></item>
         /// <item><description><b>batch</b></description></item>
         /// </list>
-        /// <remarks>
-        /// <para> For more information, see <a href="https://help.aliyun.com/document_detail/189502.html">Query execution modes</a>.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>batch</para>
+        /// <para>interactive</para>
         /// </summary>
         [NameInMap("GroupType")]
         [Validation(Required=false)]
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("NodeNum")]
         [Validation(Required=false)]
@@ -110,13 +110,6 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
-
-        /// <summary>
-        /// <para>The database accounts with which to associate the resource group. They can be standard accounts or privileged accounts.</para>
-        /// </summary>
-        [NameInMap("PoolUserList")]
-        [Validation(Required=false)]
-        public string PoolUserListShrink { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]

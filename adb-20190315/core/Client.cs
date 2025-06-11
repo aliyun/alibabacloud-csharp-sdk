@@ -2071,7 +2071,7 @@ namespace AlibabaCloud.SDK.Adb20190315
         /// <para>This operation is applicable only for elastic clusters of 32 cores or more.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// CreateDBResourceGroupRequest
         /// </param>
         /// <param name="runtime">
@@ -2081,17 +2081,39 @@ namespace AlibabaCloud.SDK.Adb20190315
         /// <returns>
         /// CreateDBResourceGroupResponse
         /// </returns>
-        public CreateDBResourceGroupResponse CreateDBResourceGroupWithOptions(CreateDBResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateDBResourceGroupResponse CreateDBResourceGroupWithOptions(CreateDBResourceGroupRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateDBResourceGroupShrinkRequest request = new CreateDBResourceGroupShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EngineParams))
+            {
+                request.EngineParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EngineParams, "EngineParams", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterMode))
+            {
+                query["ClusterMode"] = request.ClusterMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterSizeResource))
+            {
+                query["ClusterSizeResource"] = request.ClusterSizeResource;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Engine))
+            {
+                query["Engine"] = request.Engine;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineParamsShrink))
+            {
+                query["EngineParams"] = request.EngineParamsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
             {
@@ -2100,6 +2122,22 @@ namespace AlibabaCloud.SDK.Adb20190315
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupType))
             {
                 query["GroupType"] = request.GroupType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxClusterCount))
+            {
+                query["MaxClusterCount"] = request.MaxClusterCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxComputeResource))
+            {
+                query["MaxComputeResource"] = request.MaxComputeResource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinClusterCount))
+            {
+                query["MinClusterCount"] = request.MinClusterCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinComputeResource))
+            {
+                query["MinComputeResource"] = request.MinComputeResource;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeNum))
             {
@@ -2151,7 +2189,7 @@ namespace AlibabaCloud.SDK.Adb20190315
         /// <para>This operation is applicable only for elastic clusters of 32 cores or more.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// CreateDBResourceGroupRequest
         /// </param>
         /// <param name="runtime">
@@ -2161,17 +2199,39 @@ namespace AlibabaCloud.SDK.Adb20190315
         /// <returns>
         /// CreateDBResourceGroupResponse
         /// </returns>
-        public async Task<CreateDBResourceGroupResponse> CreateDBResourceGroupWithOptionsAsync(CreateDBResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateDBResourceGroupResponse> CreateDBResourceGroupWithOptionsAsync(CreateDBResourceGroupRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateDBResourceGroupShrinkRequest request = new CreateDBResourceGroupShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EngineParams))
+            {
+                request.EngineParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EngineParams, "EngineParams", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterMode))
+            {
+                query["ClusterMode"] = request.ClusterMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterSizeResource))
+            {
+                query["ClusterSizeResource"] = request.ClusterSizeResource;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Engine))
+            {
+                query["Engine"] = request.Engine;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineParamsShrink))
+            {
+                query["EngineParams"] = request.EngineParamsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
             {
@@ -2180,6 +2240,22 @@ namespace AlibabaCloud.SDK.Adb20190315
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupType))
             {
                 query["GroupType"] = request.GroupType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxClusterCount))
+            {
+                query["MaxClusterCount"] = request.MaxClusterCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxComputeResource))
+            {
+                query["MaxComputeResource"] = request.MaxComputeResource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinClusterCount))
+            {
+                query["MinClusterCount"] = request.MinClusterCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinComputeResource))
+            {
+                query["MinComputeResource"] = request.MinComputeResource;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeNum))
             {
@@ -8095,6 +8171,10 @@ namespace AlibabaCloud.SDK.Adb20190315
             {
                 query["DBClusterId"] = request.DBClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Engine))
+            {
+                query["Engine"] = request.Engine;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -8156,6 +8236,10 @@ namespace AlibabaCloud.SDK.Adb20190315
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Engine))
+            {
+                query["Engine"] = request.Engine;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -23065,6 +23149,10 @@ namespace AlibabaCloud.SDK.Adb20190315
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ModifyDBResourceGroupShrinkRequest request = new ModifyDBResourceGroupShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EngineParams))
+            {
+                request.EngineParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EngineParams, "EngineParams", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PoolUserList))
             {
                 request.PoolUserListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PoolUserList, "PoolUserList", "json");
@@ -23074,9 +23162,21 @@ namespace AlibabaCloud.SDK.Adb20190315
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterMode))
+            {
+                query["ClusterMode"] = request.ClusterMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterSizeResource))
+            {
+                query["ClusterSizeResource"] = request.ClusterSizeResource;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineParamsShrink))
+            {
+                query["EngineParams"] = request.EngineParamsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
             {
@@ -23085,6 +23185,22 @@ namespace AlibabaCloud.SDK.Adb20190315
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupType))
             {
                 query["GroupType"] = request.GroupType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxClusterCount))
+            {
+                query["MaxClusterCount"] = request.MaxClusterCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxComputeResource))
+            {
+                query["MaxComputeResource"] = request.MaxComputeResource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinClusterCount))
+            {
+                query["MinClusterCount"] = request.MinClusterCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinComputeResource))
+            {
+                query["MinComputeResource"] = request.MinComputeResource;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeNum))
             {
@@ -23158,6 +23274,10 @@ namespace AlibabaCloud.SDK.Adb20190315
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ModifyDBResourceGroupShrinkRequest request = new ModifyDBResourceGroupShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EngineParams))
+            {
+                request.EngineParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EngineParams, "EngineParams", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PoolUserList))
             {
                 request.PoolUserListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PoolUserList, "PoolUserList", "json");
@@ -23167,9 +23287,21 @@ namespace AlibabaCloud.SDK.Adb20190315
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterMode))
+            {
+                query["ClusterMode"] = request.ClusterMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterSizeResource))
+            {
+                query["ClusterSizeResource"] = request.ClusterSizeResource;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineParamsShrink))
+            {
+                query["EngineParams"] = request.EngineParamsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
             {
@@ -23178,6 +23310,22 @@ namespace AlibabaCloud.SDK.Adb20190315
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupType))
             {
                 query["GroupType"] = request.GroupType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxClusterCount))
+            {
+                query["MaxClusterCount"] = request.MaxClusterCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxComputeResource))
+            {
+                query["MaxComputeResource"] = request.MaxComputeResource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinClusterCount))
+            {
+                query["MinClusterCount"] = request.MinClusterCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinComputeResource))
+            {
+                query["MinComputeResource"] = request.MinComputeResource;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeNum))
             {

@@ -26,6 +26,18 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public List<DescribeDBResourceGroupResponseBodyGroupsInfo> GroupsInfo { get; set; }
         public class DescribeDBResourceGroupResponseBodyGroupsInfo : TeaModel {
+            [NameInMap("ClusterMode")]
+            [Validation(Required=false)]
+            public string ClusterMode { get; set; }
+
+            [NameInMap("ClusterSizeResource")]
+            [Validation(Required=false)]
+            public string ClusterSizeResource { get; set; }
+
+            [NameInMap("ConnectionString")]
+            [Validation(Required=false)]
+            public string ConnectionString { get; set; }
+
             /// <summary>
             /// <para>The time when the resource group was created.</para>
             /// 
@@ -35,6 +47,18 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
+
+            [NameInMap("ElasticMinComputeResource")]
+            [Validation(Required=false)]
+            public string ElasticMinComputeResource { get; set; }
+
+            [NameInMap("Engine")]
+            [Validation(Required=false)]
+            public string Engine { get; set; }
+
+            [NameInMap("EngineParams")]
+            [Validation(Required=false)]
+            public Dictionary<string, object> EngineParams { get; set; }
 
             /// <summary>
             /// <para>The name of the resource group.</para>
@@ -80,6 +104,22 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             [Validation(Required=false)]
             public string GroupUsers { get; set; }
 
+            [NameInMap("MaxClusterCount")]
+            [Validation(Required=false)]
+            public int? MaxClusterCount { get; set; }
+
+            [NameInMap("MaxComputeResource")]
+            [Validation(Required=false)]
+            public string MaxComputeResource { get; set; }
+
+            [NameInMap("MinClusterCount")]
+            [Validation(Required=false)]
+            public int? MinClusterCount { get; set; }
+
+            [NameInMap("MinComputeResource")]
+            [Validation(Required=false)]
+            public string MinComputeResource { get; set; }
+
             /// <summary>
             /// <para>The number of nodes. Each node provides 16 cores and 64 GB memory.</para>
             /// 
@@ -89,6 +129,18 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             [NameInMap("NodeNum")]
             [Validation(Required=false)]
             public int? NodeNum { get; set; }
+
+            [NameInMap("Port")]
+            [Validation(Required=false)]
+            public string Port { get; set; }
+
+            [NameInMap("RunningClusterCount")]
+            [Validation(Required=false)]
+            public int? RunningClusterCount { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
 
             /// <summary>
             /// <para>The time when the resource group was updated.</para>

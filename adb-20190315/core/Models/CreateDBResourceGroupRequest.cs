@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("ClusterMode")]
+        [Validation(Required=false)]
+        public string ClusterMode { get; set; }
+
+        [NameInMap("ClusterSizeResource")]
+        [Validation(Required=false)]
+        public string ClusterSizeResource { get; set; }
+
         /// <summary>
         /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
         /// <remarks>
@@ -26,6 +34,14 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
+
+        [NameInMap("Engine")]
+        [Validation(Required=false)]
+        public string Engine { get; set; }
+
+        [NameInMap("EngineParams")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> EngineParams { get; set; }
 
         /// <summary>
         /// <para>The name of the resource group.</para>
@@ -56,6 +72,22 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [NameInMap("GroupType")]
         [Validation(Required=false)]
         public string GroupType { get; set; }
+
+        [NameInMap("MaxClusterCount")]
+        [Validation(Required=false)]
+        public int? MaxClusterCount { get; set; }
+
+        [NameInMap("MaxComputeResource")]
+        [Validation(Required=false)]
+        public string MaxComputeResource { get; set; }
+
+        [NameInMap("MinClusterCount")]
+        [Validation(Required=false)]
+        public int? MinClusterCount { get; set; }
+
+        [NameInMap("MinComputeResource")]
+        [Validation(Required=false)]
+        public string MinComputeResource { get; set; }
 
         /// <summary>
         /// <para>The number of nodes. Default value: 0.</para>

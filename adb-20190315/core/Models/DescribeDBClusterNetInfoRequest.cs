@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        [NameInMap("Engine")]
+        [Validation(Required=false)]
+        public string Engine { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
