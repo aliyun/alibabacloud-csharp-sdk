@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class InsertMediaToSearchLibRequest : TeaModel {
+        [NameInMap("ImagesInput")]
+        [Validation(Required=false)]
+        public string ImagesInput { get; set; }
+
         /// <summary>
         /// <para>The URL of the video, audio, or image file that you want to import to the search library.</para>
         /// <para>Note: Make sure that you specify a correct file name and the bucket in which the file resides is in the same region where this operation is called. Otherwise, the file cannot be found or the operation may fail.</para>

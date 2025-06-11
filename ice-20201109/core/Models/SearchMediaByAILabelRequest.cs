@@ -54,6 +54,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string MultimodalSearchType { get; set; }
 
+        [NameInMap("Namespace")]
+        [Validation(Required=false)]
+        public string Namespace { get; set; }
+
         /// <summary>
         /// <para>The page number. Default value: 1.</para>
         /// 

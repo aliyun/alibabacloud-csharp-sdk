@@ -512,6 +512,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     [Validation(Required=false)]
                     public string Height { get; set; }
 
+                    [NameInMap("ImagesInput")]
+                    [Validation(Required=false)]
+                    public string ImagesInput { get; set; }
+
                     /// <summary>
                     /// <para>The time when the file was last modified.</para>
                     /// 
@@ -709,6 +713,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [Validation(Required=false)]
                 public string ModifiedTime { get; set; }
 
+                [NameInMap("Namespace")]
+                [Validation(Required=false)]
+                public string Namespace { get; set; }
+
                 /// <summary>
                 /// <para>The custom ID of the media asset. The ID is a string that contains 6 to 64 characters. Only letters, digits, hyphens (-), and underscores (_) are supported. Each custom ID is unique.</para>
                 /// 
@@ -795,6 +803,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [NameInMap("UserData")]
                 [Validation(Required=false)]
                 public string UserData { get; set; }
+
+                [NameInMap("VisionDescription")]
+                [Validation(Required=false)]
+                public string VisionDescription { get; set; }
 
             }
 

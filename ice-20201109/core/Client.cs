@@ -23968,6 +23968,10 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImagesInput))
+            {
+                query["ImagesInput"] = request.ImagesInput;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Input))
             {
                 query["Input"] = request.Input;
@@ -24026,6 +24030,10 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImagesInput))
+            {
+                query["ImagesInput"] = request.ImagesInput;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Input))
             {
                 query["Input"] = request.Input;
@@ -36373,6 +36381,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             {
                 query["MultimodalSearchType"] = request.MultimodalSearchType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
             {
                 query["PageNo"] = request.PageNo;
@@ -36455,6 +36467,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MultimodalSearchType))
             {
                 query["MultimodalSearchType"] = request.MultimodalSearchType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
             {
@@ -36581,6 +36597,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             {
                 query["MediaType"] = request.MediaType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
             {
                 query["PageNo"] = request.PageNo;
@@ -36651,6 +36671,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaType))
             {
                 query["MediaType"] = request.MediaType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
             {
@@ -36760,6 +36784,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             {
                 query["MediaType"] = request.MediaType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
             {
                 query["PageNo"] = request.PageNo;
@@ -36821,6 +36849,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaType))
             {
                 query["MediaType"] = request.MediaType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
             {
@@ -36921,6 +36953,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             {
                 query["MediaType"] = request.MediaType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
             {
                 query["PageNo"] = request.PageNo;
@@ -36983,6 +37019,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaType))
             {
                 query["MediaType"] = request.MediaType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
             {
