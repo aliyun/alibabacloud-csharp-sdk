@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
                 [Validation(Required=false)]
                 public string Role { get; set; }
 
+                [NameInMap("roleName")]
+                [Validation(Required=false)]
+                public string RoleName { get; set; }
+
                 [NameInMap("speechRate")]
                 [Validation(Required=false)]
                 public int? SpeechRate { get; set; }
