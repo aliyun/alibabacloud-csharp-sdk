@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("SetId")]
             [Validation(Required=false)]
-            public int? SetId { get; set; }
+            public string SetId { get; set; }
 
             /// <summary>
             /// <b>Example:</b>

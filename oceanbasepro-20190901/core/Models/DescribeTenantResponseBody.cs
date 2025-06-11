@@ -679,6 +679,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 [Validation(Required=false)]
                 public int? InternetRpcPort { get; set; }
 
+                [NameInMap("InternetSqlPort")]
+                [Validation(Required=false)]
+                public int? InternetSqlPort { get; set; }
+
                 /// <summary>
                 /// <para>The intranet address for accessing the tenant.</para>
                 /// 

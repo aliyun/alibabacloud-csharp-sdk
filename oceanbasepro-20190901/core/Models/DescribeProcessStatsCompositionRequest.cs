@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("MergeDynamicSql")]
+        [Validation(Required=false)]
+        public bool? MergeDynamicSql { get; set; }
+
         /// <summary>
         /// <para>The IP address of the server.</para>
         /// 

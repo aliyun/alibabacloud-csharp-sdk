@@ -56,6 +56,14 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public long? OutlineId { get; set; }
 
+            [NameInMap("SqlText")]
+            [Validation(Required=false)]
+            public string SqlText { get; set; }
+
+            [NameInMap("SqlTextConcurrentNum")]
+            [Validation(Required=false)]
+            public long? SqlTextConcurrentNum { get; set; }
+
             /// <summary>
             /// <para>The name of the tenant. The tenant name must start with a letter or an underscore (<em>), and contain 2 to 20 characters, which can be uppercase letters, lowercase letters, digits, and underscores (</em>). It cannot be set to sys.</para>
             /// 

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class BatchKillProcessListRequest : TeaModel {
+        [NameInMap("ByObSessionId")]
+        [Validation(Required=false)]
+        public bool? ByObSessionId { get; set; }
+
         /// <summary>
         /// <para>The ID of the OceanBase cluster.</para>
         /// <para>This parameter is required.</para>

@@ -77,6 +77,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         [Validation(Required=false)]
         public string SearchKey { get; set; }
 
+        [NameInMap("WithOBCloudInstances")]
+        [Validation(Required=false)]
+        public bool? WithOBCloudInstances { get; set; }
+
     }
 
 }

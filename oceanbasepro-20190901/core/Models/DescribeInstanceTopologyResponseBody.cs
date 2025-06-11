@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 [Validation(Required=false)]
                 public int? NodeNum { get; set; }
 
+                [NameInMap("OnlineNodeNum")]
+                [Validation(Required=false)]
+                public long? OnlineNodeNum { get; set; }
+
                 /// <summary>
                 /// <para>The type of the read-only replica.</para>
                 /// 

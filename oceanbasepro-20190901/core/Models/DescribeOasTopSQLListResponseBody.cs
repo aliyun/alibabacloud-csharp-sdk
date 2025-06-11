@@ -330,6 +330,20 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public double? CpuPercentage { get; set; }
 
+            [NameInMap("CustomColumns")]
+            [Validation(Required=false)]
+            public DescribeOasTopSQLListResponseBodyDataCustomColumns CustomColumns { get; set; }
+            public class DescribeOasTopSQLListResponseBodyDataCustomColumns : TeaModel {
+                [NameInMap("Expression")]
+                [Validation(Required=false)]
+                public string Expression { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The name of the database.</para>
             /// 
@@ -527,6 +541,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [NameInMap("MissPlans")]
             [Validation(Required=false)]
             public double? MissPlans { get; set; }
+
+            [NameInMap("ObDbId")]
+            [Validation(Required=false)]
+            public string ObDbId { get; set; }
 
             /// <summary>
             /// <para>Remote plan percentage during the execution period.</para>

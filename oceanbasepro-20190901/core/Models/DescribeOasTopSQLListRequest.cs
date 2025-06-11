@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
+        [NameInMap("CustomColumns")]
+        [Validation(Required=false)]
+        public string CustomColumns { get; set; }
+
         /// <summary>
         /// <para>The name of the database.</para>
         /// 

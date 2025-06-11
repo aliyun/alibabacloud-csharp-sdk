@@ -77,6 +77,14 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 public string Database { get; set; }
 
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
+                [NameInMap("DynamicSql")]
+                [Validation(Required=false)]
+                public string DynamicSql { get; set; }
+
+                /// <summary>
                 /// <para>The definition of this parameter varies based on whether the SQL statement is executed.</para>
                 /// <list type="bullet">
                 /// <item><description>When the request is accepted and the result is not returned to the client, this parameter indicates the time interval between the time when the request is accepted and the current time, in seconds.</description></item>
@@ -100,6 +108,150 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 [Validation(Required=false)]
                 public string PlanId { get; set; }
 
+                [NameInMap("ProcessSqlLists")]
+                [Validation(Required=false)]
+                public List<DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlLists> ProcessSqlLists { get; set; }
+                public class DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlLists : TeaModel {
+                    [NameInMap("ClientIp")]
+                    [Validation(Required=false)]
+                    public string ClientIp { get; set; }
+
+                    [NameInMap("Command")]
+                    [Validation(Required=false)]
+                    public string Command { get; set; }
+
+                    [NameInMap("CpuTime")]
+                    [Validation(Required=false)]
+                    public long? CpuTime { get; set; }
+
+                    [NameInMap("Database")]
+                    [Validation(Required=false)]
+                    public string Database { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>true</para>
+                    /// </summary>
+                    [NameInMap("DynamicSql")]
+                    [Validation(Required=false)]
+                    public string DynamicSql { get; set; }
+
+                    [NameInMap("ExecuteTime")]
+                    [Validation(Required=false)]
+                    public long? ExecuteTime { get; set; }
+
+                    [NameInMap("PlanId")]
+                    [Validation(Required=false)]
+                    public string PlanId { get; set; }
+
+                    [NameInMap("ProcessSqlList")]
+                    [Validation(Required=false)]
+                    public List<DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlListsProcessSqlList> ProcessSqlList { get; set; }
+                    public class DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlListsProcessSqlList : TeaModel {
+                        [NameInMap("ClientIp")]
+                        [Validation(Required=false)]
+                        public string ClientIp { get; set; }
+
+                        [NameInMap("Command")]
+                        [Validation(Required=false)]
+                        public string Command { get; set; }
+
+                        [NameInMap("CpuTime")]
+                        [Validation(Required=false)]
+                        public long? CpuTime { get; set; }
+
+                        [NameInMap("Database")]
+                        [Validation(Required=false)]
+                        public string Database { get; set; }
+
+                        [NameInMap("DynamicSql")]
+                        [Validation(Required=false)]
+                        public string DynamicSql { get; set; }
+
+                        [NameInMap("ExecuteTime")]
+                        [Validation(Required=false)]
+                        public long? ExecuteTime { get; set; }
+
+                        [NameInMap("PlanId")]
+                        [Validation(Required=false)]
+                        public string PlanId { get; set; }
+
+                        [NameInMap("ProxySessId")]
+                        [Validation(Required=false)]
+                        public string ProxySessId { get; set; }
+
+                        [NameInMap("ServerIp")]
+                        [Validation(Required=false)]
+                        public string ServerIp { get; set; }
+
+                        [NameInMap("SessionId")]
+                        [Validation(Required=false)]
+                        public long? SessionId { get; set; }
+
+                        [NameInMap("SqlId")]
+                        [Validation(Required=false)]
+                        public string SqlId { get; set; }
+
+                        [NameInMap("SqlText")]
+                        [Validation(Required=false)]
+                        public string SqlText { get; set; }
+
+                        [NameInMap("Status")]
+                        [Validation(Required=false)]
+                        public string Status { get; set; }
+
+                        [NameInMap("TenantId")]
+                        [Validation(Required=false)]
+                        public string TenantId { get; set; }
+
+                        [NameInMap("TraceId")]
+                        [Validation(Required=false)]
+                        public string TraceId { get; set; }
+
+                        [NameInMap("User")]
+                        [Validation(Required=false)]
+                        public string User { get; set; }
+
+                    }
+
+                    [NameInMap("ProxySessId")]
+                    [Validation(Required=false)]
+                    public string ProxySessId { get; set; }
+
+                    [NameInMap("ServerIp")]
+                    [Validation(Required=false)]
+                    public string ServerIp { get; set; }
+
+                    [NameInMap("SessionId")]
+                    [Validation(Required=false)]
+                    public long? SessionId { get; set; }
+
+                    [NameInMap("SqlId")]
+                    [Validation(Required=false)]
+                    public string SqlId { get; set; }
+
+                    [NameInMap("SqlText")]
+                    [Validation(Required=false)]
+                    public string SqlText { get; set; }
+
+                    [NameInMap("Status")]
+                    [Validation(Required=false)]
+                    public string Status { get; set; }
+
+                    [NameInMap("TenantId")]
+                    [Validation(Required=false)]
+                    public string TenantId { get; set; }
+
+                    [NameInMap("TraceId")]
+                    [Validation(Required=false)]
+                    public string TraceId { get; set; }
+
+                    [NameInMap("User")]
+                    [Validation(Required=false)]
+                    public string User { get; set; }
+
+                }
+
                 /// <summary>
                 /// <para>The session ID of the client. If an OceanBase Database Proxy (ODP) is used for connection, the session ID of the ODP is returned.</para>
                 /// 
@@ -119,6 +271,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 [NameInMap("ServerIp")]
                 [Validation(Required=false)]
                 public string ServerIp { get; set; }
+
+                [NameInMap("ServerSn")]
+                [Validation(Required=false)]
+                public string ServerSn { get; set; }
 
                 /// <summary>
                 /// <para>The ID of the session.</para>

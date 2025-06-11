@@ -339,6 +339,54 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public long? Mem { get; set; }
 
+            [NameInMap("Migratable")]
+            [Validation(Required=false)]
+            public bool? Migratable { get; set; }
+
+            [NameInMap("MigrationInfo")]
+            [Validation(Required=false)]
+            public DescribeInstancesResponseBodyInstancesMigrationInfo MigrationInfo { get; set; }
+            public class DescribeInstancesResponseBodyInstancesMigrationInfo : TeaModel {
+                [NameInMap("CheckResult")]
+                [Validation(Required=false)]
+                public DescribeInstancesResponseBodyInstancesMigrationInfoCheckResult CheckResult { get; set; }
+                public class DescribeInstancesResponseBodyInstancesMigrationInfoCheckResult : TeaModel {
+                    [NameInMap("Code")]
+                    [Validation(Required=false)]
+                    public string Code { get; set; }
+
+                    [NameInMap("CodeName")]
+                    [Validation(Required=false)]
+                    public string CodeName { get; set; }
+
+                    [NameInMap("Level")]
+                    [Validation(Required=false)]
+                    public string Level { get; set; }
+
+                    [NameInMap("Module")]
+                    [Validation(Required=false)]
+                    public string Module { get; set; }
+
+                    [NameInMap("ModuleName")]
+                    [Validation(Required=false)]
+                    public string ModuleName { get; set; }
+
+                    [NameInMap("SubModule")]
+                    [Validation(Required=false)]
+                    public string SubModule { get; set; }
+
+                    [NameInMap("SubModuleName")]
+                    [Validation(Required=false)]
+                    public string SubModuleName { get; set; }
+
+                }
+
+                [NameInMap("Migratable")]
+                [Validation(Required=false)]
+                public bool? Migratable { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The version of the OceanBase Database RedHat Package Managerment (RPM) package.</para>
             /// 

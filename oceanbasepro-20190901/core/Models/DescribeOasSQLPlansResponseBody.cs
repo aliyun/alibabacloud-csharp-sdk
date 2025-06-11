@@ -486,6 +486,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 [Validation(Required=false)]
                 public string SqlId { get; set; }
 
+                [NameInMap("SqlText")]
+                [Validation(Required=false)]
+                public string SqlText { get; set; }
+
                 /// <summary>
                 /// <para>Whether a full table scan is performed.</para>
                 /// 
