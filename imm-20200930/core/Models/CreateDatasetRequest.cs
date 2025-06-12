@@ -106,6 +106,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string TemplateId { get; set; }
 
+        [NameInMap("WorkflowParameters")]
+        [Validation(Required=false)]
+        public List<WorkflowParameter> WorkflowParameters { get; set; }
+
     }
 
 }

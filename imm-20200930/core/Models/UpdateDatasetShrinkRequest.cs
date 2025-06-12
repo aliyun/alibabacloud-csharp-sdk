@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class UpdateDatasetRequest : TeaModel {
+    public class UpdateDatasetShrinkRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>10</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         [NameInMap("WorkflowParameters")]
         [Validation(Required=false)]
-        public List<WorkflowParameter> WorkflowParameters { get; set; }
+        public string WorkflowParametersShrink { get; set; }
 
     }
 
