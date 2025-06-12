@@ -4,6 +4,12 @@
 - Update API UpdateInstanceSettings: add request parameters force.
 
 
+2025-06-12 Version: 2.0.3
+- Update API InstallUserPlugins: add request parameters force.
+- Update API ListInstance: add request parameters status.
+- Update API UpdateInstanceSettings: add request parameters force.
+
+
 2025-05-14 Version: 2.0.2
 - Generated csharp 2017-06-13 for elasticsearch.
 
