@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class CreateRoleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information of the RAM role.</para>
+        /// <para>The information about the RAM role.</para>
         /// </summary>
         [NameInMap("Role")]
         [Validation(Required=false)]
         public CreateRoleResponseBodyRole Role { get; set; }
         public class CreateRoleResponseBodyRole : TeaModel {
             /// <summary>
-            /// <para>The Alibaba Cloud Resource Name (ARN) of the role.</para>
+            /// <para>The Alibaba Cloud Resource Name (ARN) of the RAM role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acs:ram::123456789012****:role/ECSAdmin</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public string AssumeRolePolicyDocument { get; set; }
 
             /// <summary>
-            /// <para>The time when the RAM user was created.</para>
+            /// <para>The time when the RAM role was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2015-01-23T12:33:18Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The maximum session duration of the RAM role.</para>
+            /// <para>The maximum session time of the RAM role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3600</para>

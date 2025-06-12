@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 
         /// <summary>
         /// <para>The new description of the RAM user group.</para>
-        /// <para>The comments must be 1 to 128 characters in length.</para>
+        /// <para>The new description must be 1 to 128 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NewDev-Team</para>

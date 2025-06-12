@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         public bool? IsTruncated { get; set; }
 
         /// <summary>
-        /// <para>The marker. This parameter is returned only if the value of <c>IsTruncated</c> is <c>true</c>. If the value of IsTruncated is <c>true</c>, you can call this operation again and set <c>marker</c> to obtain the truncated part.</para>
+        /// <para>The marker. This parameter is returned only if the value of <c>IsTruncated</c> is <c>true</c>. If the parameter is returned, you can call this operation again and set this parameter to obtain the truncated part.````</para>
         /// 
         /// <b>Example:</b>
         /// <para>EXAMPLE</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         public string Marker { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4B450CA1-36E8-4AA2-8461-86B42BF4CC4E</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of the RAM users.</para>
+        /// <para>The information about the RAM users.</para>
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]

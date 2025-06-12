@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class DeleteRoleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>898FAB24-7509-43EE-A287-086FE4C44394</para>

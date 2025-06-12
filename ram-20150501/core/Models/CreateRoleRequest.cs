@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The maximum session duration of the RAM role.</para>
+        /// <para>The maximum session time of the RAM role.</para>
         /// <para>Valid values: 3600 to 43200. Unit: seconds. Default value: 3600.</para>
         /// <para>If you do not specify this parameter, the default value is used.</para>
         /// 
@@ -55,6 +55,35 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         [NameInMap("RoleName")]
         [Validation(Required=false)]
         public string RoleName { get; set; }
+
+        /// <summary>
+        /// <para>The tags.</para>
+        /// </summary>
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<CreateRoleRequestTag> Tag { get; set; }
+        public class CreateRoleRequestTag : TeaModel {
+            /// <summary>
+            /// <para>The key of the tag.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>k1</para>
+            /// </summary>
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            /// <summary>
+            /// <para>The value of the tag.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>v1</para>
+            /// </summary>
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
     }
 

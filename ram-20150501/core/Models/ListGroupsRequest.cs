@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class ListGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>The <c>marker</c>. If part of a previous response is truncated, you can use this parameter to obtain the truncated part.</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.``</para>
+        /// <para>When you call the operation for the first time, if the total number of returned entries exceeds the value of <c>MaxItems</c>, the entries are truncated. The system returns entries based on the value of <c>MaxItems</c> and does not return the excess entries. In this case, the value of the response parameter <c>IsTruncated</c> is <c>true</c>, and <c>Marker</c> is returned. In the next call, you can use the value of <c>Marker</c> and maintain the settings of the other request parameters to query the excess entries. You can repeat the call until the value of <c>IsTruncated</c> becomes <c>false</c>. This way, all entries are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EXAMPLE</para>
@@ -20,8 +21,9 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         public string Marker { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return. If a response is truncated because it reaches the value of <c>MaxItems</c>, the value of <c>IsTruncated</c> is <c>true</c>.</para>
-        /// <para>Valid values: 1 to 1000. Default value: 100.</para>
+        /// <para>The number of entries per page.</para>
+        /// <para>Valid values: 1 to 100.</para>
+        /// <para>Default value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

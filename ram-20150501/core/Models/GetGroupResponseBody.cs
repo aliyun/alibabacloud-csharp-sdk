@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class GetGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information of the RAM user group.</para>
+        /// <para>The information about the RAM user group.</para>
         /// </summary>
         [NameInMap("Group")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public string GroupName { get; set; }
 
             /// <summary>
-            /// <para>The time when the information of the RAM user group was updated.</para>
+            /// <para>The modification time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2015-02-11T03:15:21Z</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D4065824-E422-3ED6-68B1-1AF7D5C7804C</para>

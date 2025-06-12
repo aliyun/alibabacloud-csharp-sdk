@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class DeleteAccessKeyRequest : TeaModel {
         /// <summary>
-        /// <para>The AccessKey ID in the AccessKey pair that you want to delete.</para>
+        /// <para>The AccessKey ID in the AccessKey pair that you want to delete.``</para>
         /// 
         /// <b>Example:</b>
         /// <para>0wNEpMMlzy7s****</para>

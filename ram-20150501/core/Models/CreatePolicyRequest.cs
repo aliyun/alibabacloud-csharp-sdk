@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 
         /// <summary>
         /// <para>The name of the policy.</para>
-        /// <para>The name must be 1 to 128 characters in length, and can contain letters, digits, and hyphens (-).</para>
+        /// <para>The name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>View-ECS-instances-in-a-specific-region</para>
@@ -42,6 +42,35 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         [NameInMap("PolicyName")]
         [Validation(Required=false)]
         public string PolicyName { get; set; }
+
+        /// <summary>
+        /// <para>The tags.</para>
+        /// </summary>
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<CreatePolicyRequestTag> Tag { get; set; }
+        public class CreatePolicyRequestTag : TeaModel {
+            /// <summary>
+            /// <para>The key of the tag.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>owner</para>
+            /// </summary>
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            /// <summary>
+            /// <para>The value of the tag.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>alice</para>
+            /// </summary>
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
     }
 

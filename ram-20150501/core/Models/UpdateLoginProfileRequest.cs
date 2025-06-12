@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class UpdateLoginProfileRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether an MFA device must be attached to the RAM user upon logon.</para>
+        /// <para>Specifies whether a multi-factor authentication (MFA) device must be bound to the RAM user upon logon.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the RAM user must change the password upon logon.</para>
+        /// <para>Specifies whether the RAM user has to change the password upon logon.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

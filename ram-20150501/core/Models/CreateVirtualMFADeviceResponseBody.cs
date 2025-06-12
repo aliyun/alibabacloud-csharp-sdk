@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class CreateVirtualMFADeviceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information of the MFA device.</para>
+        /// <para>The information about the MFA device.</para>
         /// </summary>
         [NameInMap("VirtualMFADevice")]
         [Validation(Required=false)]

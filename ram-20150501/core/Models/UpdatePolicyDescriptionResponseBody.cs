@@ -59,8 +59,8 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             /// <summary>
             /// <para>The type of the policy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Custom: custom policy</description></item>
-            /// <item><description>System: system policy</description></item>
+            /// <item><description>Custom</description></item>
+            /// <item><description>System</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7572DEBD-0ECE-518E-8682-D8CB82F8FE8E</para>

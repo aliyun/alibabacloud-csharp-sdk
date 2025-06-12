@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         public bool? IsTruncated { get; set; }
 
         /// <summary>
-        /// <para>The marker. This parameter is returned only if the value of <c>IsTruncated</c> is <c>true</c>. If the value is <c>true</c>, you can call this operation again and set the <c>Marker</c> parameter to obtain the truncated part.</para>
+        /// <para>The marker. This parameter is returned only if the value of <c>IsTruncated</c> is <c>true</c>. If the parameter is returned, you can call this operation again and set this parameter to obtain the truncated part.````</para>
         /// 
         /// <b>Example:</b>
         /// <para>EXAMPLE</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         public string Marker { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7B8A4E7D-6CFF-471D-84DF-195A7A241ECB</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information of RAM roles.</para>
+        /// <para>The information about the RAM roles.</para>
         /// </summary>
         [NameInMap("Roles")]
         [Validation(Required=false)]
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
                 public string Arn { get; set; }
 
                 /// <summary>
-                /// <para>The time when the RAM role was created.</para>
+                /// <para>The creation time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2015-01-23T12:33:18Z</para>
@@ -111,7 +111,42 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
                 public string RoleName { get; set; }
 
                 /// <summary>
-                /// <para>The time when the RAM role was modified.</para>
+                /// <para>The tags.</para>
+                /// </summary>
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
+                public ListRolesResponseBodyRolesRoleTags Tags { get; set; }
+                public class ListRolesResponseBodyRolesRoleTags : TeaModel {
+                    [NameInMap("Tag")]
+                    [Validation(Required=false)]
+                    public List<ListRolesResponseBodyRolesRoleTagsTag> Tag { get; set; }
+                    public class ListRolesResponseBodyRolesRoleTagsTag : TeaModel {
+                        /// <summary>
+                        /// <para>The key of the tag.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>owner</para>
+                        /// </summary>
+                        [NameInMap("TagKey")]
+                        [Validation(Required=false)]
+                        public string TagKey { get; set; }
+
+                        /// <summary>
+                        /// <para>The value of the tag.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>alice</para>
+                        /// </summary>
+                        [NameInMap("TagValue")]
+                        [Validation(Required=false)]
+                        public string TagValue { get; set; }
+
+                    }
+
+                }
+
+                /// <summary>
+                /// <para>The update time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2015-01-23T12:33:18Z</para>

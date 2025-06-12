@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         /// <summary>
         /// <para>The new email address of the RAM user.</para>
         /// <remarks>
-        /// <para> This parameter can be returned only on the China site (aliyun.com).</para>
+        /// <para> This parameter applies only to the China site (aliyun.com).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         /// <para>The new mobile phone number of the RAM user.</para>
         /// <para>Format: \<Country code>-\<Mobile phone number>.</para>
         /// <remarks>
-        /// <para> This parameter can be returned only on the China site (aliyun.com).</para>
+        /// <para> This parameter applies only to the China site (aliyun.com).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

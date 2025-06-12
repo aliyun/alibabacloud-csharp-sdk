@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class GetPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information of the default policy version.</para>
+        /// <para>The information about the default policy version.</para>
         /// </summary>
         [NameInMap("DefaultPolicyVersion")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public bool? IsDefaultVersion { get; set; }
 
             /// <summary>
-            /// <para>The script of the default policy version.</para>
+            /// <para>The document of the policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{ &quot;Statement&quot;: [{ &quot;Action&quot;: [&quot;oss:<em>&quot;], &quot;Effect&quot;: &quot;Allow&quot;, &quot;Resource&quot;: [&quot;acs:oss:</em>:<em>:</em>&quot;]}], &quot;Version&quot;: &quot;1&quot;}</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         }
 
         /// <summary>
-        /// <para>The basic information of the policy.</para>
+        /// <para>The basic information about the policy.</para>
         /// </summary>
         [NameInMap("Policy")]
         [Validation(Required=false)]
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public string CreateDate { get; set; }
 
             /// <summary>
-            /// <para>The default version ID of the policy.</para>
+            /// <para>The default version of the policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>v1</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>697852FB-50D7-44D9-9774-530C31EAC572</para>

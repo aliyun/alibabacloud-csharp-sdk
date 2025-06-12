@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class CreateAccessKeyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information of the AccessKey pair.</para>
+        /// <para>The information about the AccessKey pair.</para>
         /// </summary>
         [NameInMap("AccessKey")]
         [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>

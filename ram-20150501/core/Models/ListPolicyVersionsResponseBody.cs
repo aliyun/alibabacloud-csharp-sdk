@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class ListPolicyVersionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of the policy versions.</para>
+        /// <para>The information about the policy versions.</para>
         /// </summary>
         [NameInMap("PolicyVersions")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
                 public string CreateDate { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the version is the default version.</para>
+                /// <para>Indicates whether the policy version is the default version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
                 public bool? IsDefaultVersion { get; set; }
 
                 /// <summary>
-                /// <para>The script of the policy.</para>
+                /// <para>The document of the policy.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{ &quot;Statement&quot;: [{ &quot;Action&quot;: [&quot;oss:<em>&quot;], &quot;Effect&quot;: &quot;Allow&quot;, &quot;Resource&quot;: [&quot;acs:oss:</em>:<em>:</em>&quot;]}], &quot;Version&quot;: &quot;1&quot;}</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
                 public string PolicyDocument { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the version.</para>
+                /// <para>The ID of the policy version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>v3</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7B8A4E7D-6CFF-471D-84DF-195A7A241ECB</para>

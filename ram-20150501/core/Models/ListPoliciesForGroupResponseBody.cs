@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class ListPoliciesForGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of the policies that are attached to the RAM user group.</para>
+        /// <para>The information about the policies.</para>
         /// </summary>
         [NameInMap("Policies")]
         [Validation(Required=false)]
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7B8A4E7D-6CFF-471D-84DF-195A7A241ECB</para>

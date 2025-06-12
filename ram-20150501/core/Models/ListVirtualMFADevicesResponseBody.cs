@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class ListVirtualMFADevicesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of MFA devices.</para>
+        /// <para>The information about the MFA devices.</para>
         /// </summary>
         [NameInMap("VirtualMFADevices")]
         [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
                 public string SerialNumber { get; set; }
 
                 /// <summary>
-                /// <para>The basic information of the RAM user to which the MFA device is attached.</para>
+                /// <para>The basic information about the Resource Access Management (RAM) user to which the MFA device is bound.</para>
                 /// </summary>
                 [NameInMap("User")]
                 [Validation(Required=false)]

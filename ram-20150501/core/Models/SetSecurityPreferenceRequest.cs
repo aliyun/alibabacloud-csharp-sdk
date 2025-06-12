@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         /// <summary>
         /// <para>Specifies whether RAM users can change their passwords. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: RAM users can change their passwords. This is the default value.</description></item>
-        /// <item><description>false: RAM users cannot change their passwords.</description></item>
+        /// <item><description>true (default)</description></item>
+        /// <item><description>false</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,8 +26,8 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         /// <summary>
         /// <para>Specifies whether RAM users can manage their AccessKey pairs. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: RAM users can manage their AccessKey pairs.</description></item>
-        /// <item><description>false: RAM users cannot manage their AccessKey pairs. This is the default value.</description></item>
+        /// <item><description>true</description></item>
+        /// <item><description>false (default)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -40,8 +40,8 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         /// <summary>
         /// <para>Specifies whether RAM users can manage their MFA devices. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: RAM users can manage their MFA devices. This is the default value.</description></item>
-        /// <item><description>false: RAM users cannot manage their MFA devices.</description></item>
+        /// <item><description>true (default)</description></item>
+        /// <item><description>false</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,8 +54,8 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         /// <summary>
         /// <para>Specifies whether RAM users can manage their public keys. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: RAM users can manage their public keys.</description></item>
-        /// <item><description>false: RAM users cannot manage their public keys. This is the default value.</description></item>
+        /// <item><description>true</description></item>
+        /// <item><description>false (default)</description></item>
         /// </list>
         /// <remarks>
         /// <para> This parameter is valid only for the Japan site.</para>
@@ -71,8 +71,8 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         /// <summary>
         /// <para>Specifies whether to remember the multi-factor authentication (MFA) devices of Resource Access Management (RAM) users for seven days. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: remembers the MFA devices of RAM users for seven days.</description></item>
-        /// <item><description>false: does not remember the MFA devices of RAM users for seven days.</description></item>
+        /// <item><description>true</description></item>
+        /// <item><description>false (default)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

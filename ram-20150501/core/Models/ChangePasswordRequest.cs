@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class ChangePasswordRequest : TeaModel {
         /// <summary>
-        /// <para>The new password that is used to log on to the Alibaba Cloud Management Console.</para>
+        /// <para>The new password that is used to log on to the console.</para>
         /// <para>The password must meet the complexity requirements. For more information, see <a href="https://help.aliyun.com/document_detail/28739.html">SetPasswordPolicy</a>.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         public string NewPassword { get; set; }
 
         /// <summary>
-        /// <para>The old password that is used to log on to the Alibaba Cloud Management Console.</para>
+        /// <para>The old password that is used to log on to the console.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12****</para>

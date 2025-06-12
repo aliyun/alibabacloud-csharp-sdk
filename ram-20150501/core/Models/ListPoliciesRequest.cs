@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class ListPoliciesRequest : TeaModel {
         /// <summary>
-        /// <para>The <c>Marker</c>. If part of a previous response is truncated, you can use this parameter to obtain the truncated part.</para>
+        /// <para>The <c>marker</c>. If part of a previous response is truncated, you can use this parameter to obtain the truncated part.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EXAMPLE</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         public int? MaxItems { get; set; }
 
         /// <summary>
-        /// <para>The type of the <c>Policy</c>. Valid values: <c>System</c> and <c>Custom</c>. If you do not specify the parameter, all policies are returned.</para>
+        /// <para>The type of the policies. Valid values: <c>System</c> and <c>Custom</c>. If you do not specify the parameter, all policies are returned.``</para>
         /// 
         /// <b>Example:</b>
         /// <para>System</para>
@@ -39,6 +39,35 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         [NameInMap("PolicyType")]
         [Validation(Required=false)]
         public string PolicyType { get; set; }
+
+        /// <summary>
+        /// <para>The tags.</para>
+        /// </summary>
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<ListPoliciesRequestTag> Tag { get; set; }
+        public class ListPoliciesRequestTag : TeaModel {
+            /// <summary>
+            /// <para>The key of the tag.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>owner</para>
+            /// </summary>
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            /// <summary>
+            /// <para>The value of the tag.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>alice</para>
+            /// </summary>
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
     }
 

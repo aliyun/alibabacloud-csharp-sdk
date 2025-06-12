@@ -10,18 +10,17 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class GetPasswordPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The policy to manage passwords.</para>
+        /// <para>The password policy.</para>
         /// </summary>
         [NameInMap("PasswordPolicy")]
         [Validation(Required=false)]
         public GetPasswordPolicyResponseBodyPasswordPolicy PasswordPolicy { get; set; }
         public class GetPasswordPolicyResponseBodyPasswordPolicy : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the password has expired.</para>
-            /// <para>Valid values: <c>true</c> and <c>false</c>. Default value: <c>false</c>.</para>
+            /// <para>Indicates whether a password expires. Valid values: <c>true</c> and <c>false</c>. Default value: <c>false</c>. If the parameter is unspecified, the default value false is returned.</para>
             /// <list type="bullet">
-            /// <item><description>If the value of this parameter is <c>true</c>, the parent Alibaba Cloud account must reset the password before the RAM user can log on to the console.</description></item>
-            /// <item><description>If the value of this parameter is <c>false</c>, the RAM user can change the password and then log on to the console.</description></item>
+            /// <item><description>If this parameter is set to <c>true</c>, the Alibaba Cloud account to which the RAM users belong must reset the password before the RAM users can log on to the Alibaba Cloud Management Console.</description></item>
+            /// <item><description>If this parameter is set to <c>false</c>, the RAM users can change the passwords after the passwords expire and then log on to the Alibaba Cloud Management Console.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -42,7 +41,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public int? MaxLoginAttemps { get; set; }
 
             /// <summary>
-            /// <para>The number of days for which a password is valid. Default value: 0. The default value indicates that the password never expires.</para>
+            /// <para>The number of days for which a password is valid. If you reset a password, the password validity period restarts. Default value: 0. The default value indicates that the password never expires.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -52,7 +51,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public int? MaxPasswordAge { get; set; }
 
             /// <summary>
-            /// <para>The minimum required number of characters in a password.</para>
+            /// <para>The minimum number of characters in a password.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -62,7 +61,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public int? MinimumPasswordLength { get; set; }
 
             /// <summary>
-            /// <para>The number of previous passwords that the user is prevented from reusing. Default value: 0. The default value indicates that the RAM user is not prevented from reusing previous passwords</para>
+            /// <para>The number of previous passwords that a RAM user is prevented from reusing. Default value: 0. The default value indicates that the RAM user can reuse previous passwords.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -114,7 +113,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>

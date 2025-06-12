@@ -30,6 +30,35 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         [Validation(Required=false)]
         public int? MaxItems { get; set; }
 
+        /// <summary>
+        /// <para>The tags.</para>
+        /// </summary>
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<ListRolesRequestTag> Tag { get; set; }
+        public class ListRolesRequestTag : TeaModel {
+            /// <summary>
+            /// <para>The key of the tag.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>owner</para>
+            /// </summary>
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            /// <summary>
+            /// <para>The value of the tag.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>alice</para>
+            /// </summary>
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
     }
 
 }

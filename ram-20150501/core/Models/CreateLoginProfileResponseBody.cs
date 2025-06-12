@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         public CreateLoginProfileResponseBodyLoginProfile LoginProfile { get; set; }
         public class CreateLoginProfileResponseBodyLoginProfile : TeaModel {
             /// <summary>
-            /// <para>The time when the logon configurations were created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2015-01-23T12:33:18Z</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public string CreateDate { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether an MFA device must be attached to the RAM user upon logon.</para>
+            /// <para>Indicates whether an MFA device must be bound to the RAM user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         public bool? IsTruncated { get; set; }
 
         /// <summary>
-        /// <para>The marker. This parameter is returned only if the value of <c>IsTruncated</c> is <c>true</c>. If the value of IsTruncated is <c>true</c>, you can call this operation again and set <c>Marker</c> to obtain the truncated part.</para>
+        /// <para>The marker. This parameter is returned only if the value of <c>IsTruncated</c> is <c>true</c>. If the parameter is returned, you can call this operation again and set <c>Marker</c> to obtain the truncated part.``</para>
         /// 
         /// <b>Example:</b>
         /// <para>EXAMPLE</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         public string Marker { get; set; }
 
         /// <summary>
-        /// <para>The list of policies.</para>
+        /// <para>The information about the policies.</para>
         /// </summary>
         [NameInMap("Policies")]
         [Validation(Required=false)]
@@ -101,6 +101,41 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
                 public string PolicyType { get; set; }
 
                 /// <summary>
+                /// <para>The tags.</para>
+                /// </summary>
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
+                public ListPoliciesResponseBodyPoliciesPolicyTags Tags { get; set; }
+                public class ListPoliciesResponseBodyPoliciesPolicyTags : TeaModel {
+                    [NameInMap("Tag")]
+                    [Validation(Required=false)]
+                    public List<ListPoliciesResponseBodyPoliciesPolicyTagsTag> Tag { get; set; }
+                    public class ListPoliciesResponseBodyPoliciesPolicyTagsTag : TeaModel {
+                        /// <summary>
+                        /// <para>The key of the tag.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>owner</para>
+                        /// </summary>
+                        [NameInMap("TagKey")]
+                        [Validation(Required=false)]
+                        public string TagKey { get; set; }
+
+                        /// <summary>
+                        /// <para>The value of the tag.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>alice</para>
+                        /// </summary>
+                        [NameInMap("TagValue")]
+                        [Validation(Required=false)]
+                        public string TagValue { get; set; }
+
+                    }
+
+                }
+
+                /// <summary>
                 /// <para>The time when the policy was modified.</para>
                 /// 
                 /// <b>Example:</b>
@@ -115,7 +150,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7B8A4E7D-6CFF-471D-84DF-195A7A241ECB</para>

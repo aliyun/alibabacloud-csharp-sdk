@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class UnbindMFADeviceRequest : TeaModel {
+        /// <summary>
+        /// <para>Specifies the username.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>zhangq****</para>
+        /// </summary>
         [NameInMap("UserName")]
         [Validation(Required=false)]
         public string UserName { get; set; }

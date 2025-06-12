@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class CreateUserResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             /// <summary>
             /// <para>The email address of the RAM user.</para>
             /// <remarks>
-            /// <para> This parameter can be returned only on the China site (aliyun.com).</para>
+            /// <para> This parameter applies only to the China site (aliyun.com).</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             /// <summary>
             /// <para>The mobile phone number of the RAM user.</para>
             /// <remarks>
-            /// <para> This parameter can be returned only on the China site (aliyun.com).</para>
+            /// <para> This parameter applies only to the China site (aliyun.com).</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public string UserId { get; set; }
 
             /// <summary>
-            /// <para>The username of the RAM user.</para>
+            /// <para>The name of the RAM user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alice</para>

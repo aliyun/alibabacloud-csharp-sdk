@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class ListEntitiesForPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of the RAM user groups.</para>
+        /// <para>The information about the Resource Access Management (RAM) user groups.</para>
         /// </summary>
         [NameInMap("Groups")]
         [Validation(Required=false)]
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7B8A4E7D-6CFF-471D-84DF-195A7A241ECB</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information of RAM roles.</para>
+        /// <para>The information about the RAM roles.</para>
         /// </summary>
         [NameInMap("Roles")]
         [Validation(Required=false)]
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
                 public string Arn { get; set; }
 
                 /// <summary>
-                /// <para>The time when the policy was attached to the RAM user.</para>
+                /// <para>The time when the policy was attached to the RAM role.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2015-01-23T12:33:18Z</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         }
 
         /// <summary>
-        /// <para>The list of the RAM users to which the policy is attached.</para>
+        /// <para>The information about the RAM users.</para>
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]

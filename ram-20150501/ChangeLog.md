@@ -1,3 +1,9 @@
+2025-06-12 Version: 1.2.0
+- Support API ListTagResources.
+- Support API TagResources.
+- Support API UntagResources.
+
+
 2025-01-08 Version: 1.1.1
 - Update API DeletePolicy: add param CascadingDelete.
 

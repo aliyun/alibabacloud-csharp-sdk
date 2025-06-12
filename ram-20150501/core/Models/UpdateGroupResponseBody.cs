@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class UpdateGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information of the RAM user group.</para>
+        /// <para>The information about the RAM user group.</para>
         /// </summary>
         [NameInMap("Group")]
         [Validation(Required=false)]
         public UpdateGroupResponseBodyGroup Group { get; set; }
         public class UpdateGroupResponseBodyGroup : TeaModel {
             /// <summary>
-            /// <para>The description of the RAM user group.</para>
+            /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NewDev-Team</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public string Comments { get; set; }
 
             /// <summary>
-            /// <para>The time when the RAM user group was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2015-01-23T12:33:18Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public string GroupId { get; set; }
 
             /// <summary>
-            /// <para>The new name of the RAM user group.</para>
+            /// <para>The name of the RAM user group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NewDev-Team</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public string GroupName { get; set; }
 
             /// <summary>
-            /// <para>The time when the information of the RAM user group was updated.</para>
+            /// <para>The modification time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2015-01-23T12:33:18Z</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EC6647CC-0A36-EC7A-BA72-CC81BF3DE182</para>

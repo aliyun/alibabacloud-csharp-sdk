@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class ListGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of the RAM user groups.</para>
+        /// <para>The information about the RAM user groups.</para>
         /// </summary>
         [NameInMap("Groups")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public List<ListGroupsResponseBodyGroupsGroup> Group { get; set; }
             public class ListGroupsResponseBodyGroupsGroup : TeaModel {
                 /// <summary>
-                /// <para>The description of the RAM user group.</para>
+                /// <para>The description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Dev-Team</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
                 public string Comments { get; set; }
 
                 /// <summary>
-                /// <para>The time when the RAM user group was created.</para>
+                /// <para>The creation time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2015-01-23T12:33:18Z</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
                 public string GroupName { get; set; }
 
                 /// <summary>
-                /// <para>The time when the information of the RAM user group was updated.</para>
+                /// <para>The update time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2015-01-23T12:33:18Z</para>
@@ -75,7 +75,11 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the response is truncated.</para>
+        /// <para>Indicates whether the response is truncated. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -85,7 +89,10 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         public bool? IsTruncated { get; set; }
 
         /// <summary>
-        /// <para>The marker. This parameter is returned only if the value of <c>IsTruncated</c> is <c>true</c>. If <c>true</c> is returned, you can call this operation again and set the <c>Marker</c> parameter to obtain the truncated part.</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// <remarks>
+        /// <para> This parameter is returned only when <c>IsTruncated</c> is <c>true</c>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>EXAMPLE</para>

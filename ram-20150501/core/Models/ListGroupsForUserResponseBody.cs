@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class ListGroupsForUserResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of the RAM user groups.</para>
+        /// <para>The information about the RAM user groups.</para>
         /// </summary>
         [NameInMap("Groups")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public List<ListGroupsForUserResponseBodyGroupsGroup> Group { get; set; }
             public class ListGroupsForUserResponseBodyGroupsGroup : TeaModel {
                 /// <summary>
-                /// <para>The description of the RAM user group.</para>
+                /// <para>The description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Dev-Team</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
                 public string GroupName { get; set; }
 
                 /// <summary>
-                /// <para>The time when the RAM user joined the RAM user group.</para>
+                /// <para>The time when the RAM user was added to the RAM user group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2015-01-23T12:33:18Z</para>

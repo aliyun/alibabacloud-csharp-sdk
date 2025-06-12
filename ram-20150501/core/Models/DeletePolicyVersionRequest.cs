@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         public string PolicyName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the policy version.</para>
+        /// <para>The ID of the policy version that you want to delete.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v3</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class GetUserMFAInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the MFA device that is attached to the RAM user.</para>
+        /// <para>The information about the MFA device that is bound to the RAM user.</para>
         /// </summary>
         [NameInMap("MFADevice")]
         [Validation(Required=false)]
@@ -29,8 +29,8 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             /// <summary>
             /// <para>The type of the MFA device. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>VMFA: virtual MFA device</description></item>
-            /// <item><description>U2F: Universal 2nd Factor (U2F) security key</description></item>
+            /// <item><description>VMFA: virtual MFA device.</description></item>
+            /// <item><description>U2F: Universal 2nd Factor (U2F) security key.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>

@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
     public class CreateVirtualMFADeviceRequest : TeaModel {
         /// <summary>
         /// <para>The name of the MFA device.</para>
-        /// <para>The name must be 1 to 64 characters in length and can contain letters, digits, periods (.), and hyphens (-).</para>
+        /// <para>The name must be 1 to 64 characters in length, and can contain letters, digits, periods (.), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>device001</para>

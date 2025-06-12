@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class GetUserMFAInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The username of the RAM user.</para>
+        /// <para>The name of the RAM user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

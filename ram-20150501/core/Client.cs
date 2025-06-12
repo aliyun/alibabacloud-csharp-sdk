@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a RAM user to a RAM user group.</para>
+        /// <para>Adds a Resource Access Management (RAM) user to a RAM user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a RAM user to a RAM user group.</para>
+        /// <para>Adds a Resource Access Management (RAM) user to a RAM user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a RAM user to a RAM user group.</para>
+        /// <para>Adds a Resource Access Management (RAM) user to a RAM user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a RAM user to a RAM user group.</para>
+        /// <para>Adds a Resource Access Management (RAM) user to a RAM user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Attaches a policy to a RAM user group.</para>
+        /// <para>Attaches a policy to a Resource Access Management (RAM) user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Attaches a policy to a RAM user group.</para>
+        /// <para>Attaches a policy to a Resource Access Management (RAM) user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -267,7 +267,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Attaches a policy to a RAM user group.</para>
+        /// <para>Attaches a policy to a Resource Access Management (RAM) user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -285,7 +285,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Attaches a policy to a RAM user group.</para>
+        /// <para>Attaches a policy to a Resource Access Management (RAM) user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -303,7 +303,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Attaches a policy to a RAM role.</para>
+        /// <para>Attaches a policy to a Resource Access Management (RAM) role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -353,7 +353,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Attaches a policy to a RAM role.</para>
+        /// <para>Attaches a policy to a Resource Access Management (RAM) role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -403,7 +403,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Attaches a policy to a RAM role.</para>
+        /// <para>Attaches a policy to a Resource Access Management (RAM) role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -421,7 +421,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Attaches a policy to a RAM role.</para>
+        /// <para>Attaches a policy to a Resource Access Management (RAM) role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -439,7 +439,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Attaches a policy to a RAM user.</para>
+        /// <para>Attaches a policy to a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -489,7 +489,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Attaches a policy to a RAM user.</para>
+        /// <para>Attaches a policy to a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -539,7 +539,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Attaches a policy to a RAM user.</para>
+        /// <para>Attaches a policy to a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -557,7 +557,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Attaches a policy to a RAM user.</para>
+        /// <para>Attaches a policy to a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -573,6 +573,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return await AttachPolicyToUserWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds a multi-factor authentication (MFA) device to a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BindMFADeviceRequest
         /// </param>
@@ -622,6 +627,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<BindMFADeviceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds a multi-factor authentication (MFA) device to a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BindMFADeviceRequest
         /// </param>
@@ -671,6 +681,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<BindMFADeviceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds a multi-factor authentication (MFA) device to a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BindMFADeviceRequest
         /// </param>
@@ -684,6 +699,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return BindMFADeviceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds a multi-factor authentication (MFA) device to a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BindMFADeviceRequest
         /// </param>
@@ -697,10 +717,15 @@ namespace AlibabaCloud.SDK.Ram20150501
             return await BindMFADeviceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the password that is used to log on to the console for a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> This operation is available only for RAM users. Before you call this operation, make sure that <c>AllowUserToChangePassword</c> in <a href="https://help.aliyun.com/document_detail/43765.html">SetSecurityPreference</a> is set to <c>True</c>. The value True indicates that RAM users can change their passwords.</para>
+        /// <para> This operation is available only for RAM users. Before you call this operation, make sure that <c>AllowUserToChangePassword</c> in <a href="https://help.aliyun.com/document_detail/43765.html">SetSecurityPreference</a> is set to <c>True</c>. The value True indicates that RAM users can manage their passwords.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -745,10 +770,15 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<ChangePasswordResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the password that is used to log on to the console for a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> This operation is available only for RAM users. Before you call this operation, make sure that <c>AllowUserToChangePassword</c> in <a href="https://help.aliyun.com/document_detail/43765.html">SetSecurityPreference</a> is set to <c>True</c>. The value True indicates that RAM users can change their passwords.</para>
+        /// <para> This operation is available only for RAM users. Before you call this operation, make sure that <c>AllowUserToChangePassword</c> in <a href="https://help.aliyun.com/document_detail/43765.html">SetSecurityPreference</a> is set to <c>True</c>. The value True indicates that RAM users can manage their passwords.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -793,10 +823,15 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<ChangePasswordResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the password that is used to log on to the console for a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> This operation is available only for RAM users. Before you call this operation, make sure that <c>AllowUserToChangePassword</c> in <a href="https://help.aliyun.com/document_detail/43765.html">SetSecurityPreference</a> is set to <c>True</c>. The value True indicates that RAM users can change their passwords.</para>
+        /// <para> This operation is available only for RAM users. Before you call this operation, make sure that <c>AllowUserToChangePassword</c> in <a href="https://help.aliyun.com/document_detail/43765.html">SetSecurityPreference</a> is set to <c>True</c>. The value True indicates that RAM users can manage their passwords.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -813,10 +848,15 @@ namespace AlibabaCloud.SDK.Ram20150501
             return ChangePasswordWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the password that is used to log on to the console for a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> This operation is available only for RAM users. Before you call this operation, make sure that <c>AllowUserToChangePassword</c> in <a href="https://help.aliyun.com/document_detail/43765.html">SetSecurityPreference</a> is set to <c>True</c>. The value True indicates that RAM users can change their passwords.</para>
+        /// <para> This operation is available only for RAM users. Before you call this operation, make sure that <c>AllowUserToChangePassword</c> in <a href="https://help.aliyun.com/document_detail/43765.html">SetSecurityPreference</a> is set to <c>True</c>. The value True indicates that RAM users can manage their passwords.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -833,6 +873,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return await ChangePasswordWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the alias of an Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ClearAccountAliasRequest
         /// </param>
@@ -861,6 +906,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<ClearAccountAliasResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the alias of an Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ClearAccountAliasRequest
         /// </param>
@@ -889,6 +939,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<ClearAccountAliasResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the alias of an Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// ClearAccountAliasResponse
         /// </returns>
@@ -898,6 +953,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return ClearAccountAliasWithOptions(runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the alias of an Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// ClearAccountAliasResponse
         /// </returns>
@@ -907,6 +967,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return await ClearAccountAliasWithOptionsAsync(runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an AccessKey pair for a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateAccessKeyRequest
         /// </param>
@@ -944,6 +1009,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<CreateAccessKeyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an AccessKey pair for a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateAccessKeyRequest
         /// </param>
@@ -981,6 +1051,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<CreateAccessKeyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an AccessKey pair for a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateAccessKeyRequest
         /// </param>
@@ -994,6 +1069,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return CreateAccessKeyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an AccessKey pair for a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateAccessKeyRequest
         /// </param>
@@ -1137,7 +1217,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables console logon for a RAM user.</para>
+        /// <para>Enables console logon for a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1191,7 +1271,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables console logon for a RAM user.</para>
+        /// <para>Enables console logon for a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1245,7 +1325,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables console logon for a RAM user.</para>
+        /// <para>Enables console logon for a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1263,7 +1343,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables console logon for a RAM user.</para>
+        /// <para>Enables console logon for a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1290,7 +1370,7 @@ namespace AlibabaCloud.SDK.Ram20150501
         /// This topic provides an example on how to create a custom policy to query Elastic Compute Service (ECS) instances in a specific region.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// CreatePolicyRequest
         /// </param>
         /// <param name="runtime">
@@ -1300,9 +1380,15 @@ namespace AlibabaCloud.SDK.Ram20150501
         /// <returns>
         /// CreatePolicyResponse
         /// </returns>
-        public CreatePolicyResponse CreatePolicyWithOptions(CreatePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreatePolicyResponse CreatePolicyWithOptions(CreatePolicyRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreatePolicyShrinkRequest request = new CreatePolicyShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
+            {
+                request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "Tag", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -1315,6 +1401,10 @@ namespace AlibabaCloud.SDK.Ram20150501
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyName))
             {
                 query["PolicyName"] = request.PolicyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagShrink))
+            {
+                query["Tag"] = request.TagShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1346,7 +1436,7 @@ namespace AlibabaCloud.SDK.Ram20150501
         /// This topic provides an example on how to create a custom policy to query Elastic Compute Service (ECS) instances in a specific region.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// CreatePolicyRequest
         /// </param>
         /// <param name="runtime">
@@ -1356,9 +1446,15 @@ namespace AlibabaCloud.SDK.Ram20150501
         /// <returns>
         /// CreatePolicyResponse
         /// </returns>
-        public async Task<CreatePolicyResponse> CreatePolicyWithOptionsAsync(CreatePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreatePolicyResponse> CreatePolicyWithOptionsAsync(CreatePolicyRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreatePolicyShrinkRequest request = new CreatePolicyShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
+            {
+                request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "Tag", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -1371,6 +1467,10 @@ namespace AlibabaCloud.SDK.Ram20150501
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyName))
             {
                 query["PolicyName"] = request.PolicyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagShrink))
+            {
+                query["Tag"] = request.TagShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1439,6 +1539,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return await CreatePolicyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a version for a policy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreatePolicyVersionRequest
         /// </param>
@@ -1488,6 +1593,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<CreatePolicyVersionResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a version for a policy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreatePolicyVersionRequest
         /// </param>
@@ -1537,6 +1647,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<CreatePolicyVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a version for a policy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreatePolicyVersionRequest
         /// </param>
@@ -1550,6 +1665,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return CreatePolicyVersionWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a version for a policy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreatePolicyVersionRequest
         /// </param>
@@ -1565,16 +1685,16 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a RAM role.</para>
+        /// <para>Creates a Resource Access Management (RAM) role.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h3><a href="#"></a>Operation description</h3>
         /// <para>For more information about RAM roles, see <a href="https://help.aliyun.com/document_detail/93689.html">Overview of RAM roles</a>.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// CreateRoleRequest
         /// </param>
         /// <param name="runtime">
@@ -1584,9 +1704,15 @@ namespace AlibabaCloud.SDK.Ram20150501
         /// <returns>
         /// CreateRoleResponse
         /// </returns>
-        public CreateRoleResponse CreateRoleWithOptions(CreateRoleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateRoleResponse CreateRoleWithOptions(CreateRoleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateRoleShrinkRequest request = new CreateRoleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
+            {
+                request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "Tag", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssumeRolePolicyDocument))
             {
@@ -1603,6 +1729,10 @@ namespace AlibabaCloud.SDK.Ram20150501
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleName))
             {
                 query["RoleName"] = request.RoleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagShrink))
+            {
+                query["Tag"] = request.TagShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1625,16 +1755,16 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a RAM role.</para>
+        /// <para>Creates a Resource Access Management (RAM) role.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h3><a href="#"></a>Operation description</h3>
         /// <para>For more information about RAM roles, see <a href="https://help.aliyun.com/document_detail/93689.html">Overview of RAM roles</a>.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// CreateRoleRequest
         /// </param>
         /// <param name="runtime">
@@ -1644,9 +1774,15 @@ namespace AlibabaCloud.SDK.Ram20150501
         /// <returns>
         /// CreateRoleResponse
         /// </returns>
-        public async Task<CreateRoleResponse> CreateRoleWithOptionsAsync(CreateRoleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateRoleResponse> CreateRoleWithOptionsAsync(CreateRoleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateRoleShrinkRequest request = new CreateRoleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
+            {
+                request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "Tag", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssumeRolePolicyDocument))
             {
@@ -1663,6 +1799,10 @@ namespace AlibabaCloud.SDK.Ram20150501
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleName))
             {
                 query["RoleName"] = request.RoleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagShrink))
+            {
+                query["Tag"] = request.TagShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1685,12 +1825,12 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a RAM role.</para>
+        /// <para>Creates a Resource Access Management (RAM) role.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h3><a href="#"></a>Operation description</h3>
         /// <para>For more information about RAM roles, see <a href="https://help.aliyun.com/document_detail/93689.html">Overview of RAM roles</a>.</para>
         /// </description>
         /// 
@@ -1709,12 +1849,12 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a RAM role.</para>
+        /// <para>Creates a Resource Access Management (RAM) role.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h3><a href="#"></a>Operation description</h3>
         /// <para>For more information about RAM roles, see <a href="https://help.aliyun.com/document_detail/93689.html">Overview of RAM roles</a>.</para>
         /// </description>
         /// 
@@ -1903,6 +2043,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return await CreateUserWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a multi-factor authentication (MFA) device.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateVirtualMFADeviceRequest
         /// </param>
@@ -1940,6 +2085,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<CreateVirtualMFADeviceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a multi-factor authentication (MFA) device.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateVirtualMFADeviceRequest
         /// </param>
@@ -1977,6 +2127,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<CreateVirtualMFADeviceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a multi-factor authentication (MFA) device.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateVirtualMFADeviceRequest
         /// </param>
@@ -1990,6 +2145,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return CreateVirtualMFADeviceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a multi-factor authentication (MFA) device.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateVirtualMFADeviceRequest
         /// </param>
@@ -2123,6 +2283,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return await DecodeDiagnosticMessageWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an AccessKey pair of a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteAccessKeyRequest
         /// </param>
@@ -2164,6 +2329,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<DeleteAccessKeyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an AccessKey pair of a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteAccessKeyRequest
         /// </param>
@@ -2205,6 +2375,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<DeleteAccessKeyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an AccessKey pair of a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteAccessKeyRequest
         /// </param>
@@ -2218,6 +2393,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return DeleteAccessKeyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an AccessKey pair of a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteAccessKeyRequest
         /// </param>
@@ -2231,6 +2411,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return await DeleteAccessKeyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Resource Access Management (RAM) user group.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you delete a RAM user group, make sure that no policies are attached to the group and no RAM users are included in the group.</para>
@@ -2273,6 +2458,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<DeleteGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Resource Access Management (RAM) user group.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you delete a RAM user group, make sure that no policies are attached to the group and no RAM users are included in the group.</para>
@@ -2315,6 +2505,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<DeleteGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Resource Access Management (RAM) user group.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you delete a RAM user group, make sure that no policies are attached to the group and no RAM users are included in the group.</para>
@@ -2333,6 +2528,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return DeleteGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Resource Access Management (RAM) user group.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you delete a RAM user group, make sure that no policies are attached to the group and no RAM users are included in the group.</para>
@@ -2351,6 +2551,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return await DeleteGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables console logon for a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteLoginProfileRequest
         /// </param>
@@ -2388,6 +2593,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<DeleteLoginProfileResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables console logon for a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteLoginProfileRequest
         /// </param>
@@ -2425,6 +2635,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<DeleteLoginProfileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables console logon for a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteLoginProfileRequest
         /// </param>
@@ -2438,6 +2653,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return DeleteLoginProfileWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables console logon for a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteLoginProfileRequest
         /// </param>
@@ -2451,6 +2671,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return await DeleteLoginProfileWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a policy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeletePolicyRequest
         /// </param>
@@ -2492,6 +2717,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<DeletePolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a policy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeletePolicyRequest
         /// </param>
@@ -2533,6 +2763,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<DeletePolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a policy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeletePolicyRequest
         /// </param>
@@ -2546,6 +2781,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return DeletePolicyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a policy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeletePolicyRequest
         /// </param>
@@ -2559,6 +2799,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return await DeletePolicyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a policy version.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeletePolicyVersionRequest
         /// </param>
@@ -2600,6 +2845,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<DeletePolicyVersionResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a policy version.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeletePolicyVersionRequest
         /// </param>
@@ -2641,6 +2891,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<DeletePolicyVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a policy version.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeletePolicyVersionRequest
         /// </param>
@@ -2654,6 +2909,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return DeletePolicyVersionWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a policy version.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeletePolicyVersionRequest
         /// </param>
@@ -2667,6 +2927,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return await DeletePolicyVersionWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Resource Access Management (RAM) role.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteRoleRequest
         /// </param>
@@ -2704,6 +2969,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<DeleteRoleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Resource Access Management (RAM) role.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteRoleRequest
         /// </param>
@@ -2741,6 +3011,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<DeleteRoleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Resource Access Management (RAM) role.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteRoleRequest
         /// </param>
@@ -2754,6 +3029,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return DeleteRoleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Resource Access Management (RAM) role.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteRoleRequest
         /// </param>
@@ -2767,6 +3047,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return await DeleteRoleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you delete a RAM user, make sure that no policies are attached to the RAM user and that the RAM user does not belong to any groups.</para>
@@ -2809,6 +3094,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<DeleteUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you delete a RAM user, make sure that no policies are attached to the RAM user and that the RAM user does not belong to any groups.</para>
@@ -2851,6 +3141,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<DeleteUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you delete a RAM user, make sure that no policies are attached to the RAM user and that the RAM user does not belong to any groups.</para>
@@ -2869,6 +3164,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return DeleteUserWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you delete a RAM user, make sure that no policies are attached to the RAM user and that the RAM user does not belong to any groups.</para>
@@ -2887,6 +3187,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return await DeleteUserWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a multi-factor authentication (MFA) device.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteVirtualMFADeviceRequest
         /// </param>
@@ -2924,6 +3229,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<DeleteVirtualMFADeviceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a multi-factor authentication (MFA) device.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteVirtualMFADeviceRequest
         /// </param>
@@ -2961,6 +3271,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<DeleteVirtualMFADeviceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a multi-factor authentication (MFA) device.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteVirtualMFADeviceRequest
         /// </param>
@@ -2974,6 +3289,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return DeleteVirtualMFADeviceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a multi-factor authentication (MFA) device.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteVirtualMFADeviceRequest
         /// </param>
@@ -2989,7 +3309,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detaches a policy from a RAM user group.</para>
+        /// <para>Detaches a policy from a Resource Access Management (RAM) user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3039,7 +3359,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detaches a policy from a RAM user group.</para>
+        /// <para>Detaches a policy from a Resource Access Management (RAM) user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3089,7 +3409,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detaches a policy from a RAM user group.</para>
+        /// <para>Detaches a policy from a Resource Access Management (RAM) user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3107,7 +3427,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detaches a policy from a RAM user group.</para>
+        /// <para>Detaches a policy from a Resource Access Management (RAM) user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3125,7 +3445,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detaches a policy from a RAM role.</para>
+        /// <para>Detaches a policy from a Resource Access Management (RAM) role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3175,7 +3495,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detaches a policy from a RAM role.</para>
+        /// <para>Detaches a policy from a Resource Access Management (RAM) role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3225,7 +3545,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detaches a policy from a RAM role.</para>
+        /// <para>Detaches a policy from a Resource Access Management (RAM) role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3243,7 +3563,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detaches a policy from a RAM role.</para>
+        /// <para>Detaches a policy from a Resource Access Management (RAM) role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3261,7 +3581,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detaches a policy from a RAM user.</para>
+        /// <para>Detaches a policy from a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3311,7 +3631,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detaches a policy from a RAM user.</para>
+        /// <para>Detaches a policy from a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3361,7 +3681,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detaches a policy from a RAM user.</para>
+        /// <para>Detaches a policy from a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3379,7 +3699,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detaches a policy from a RAM user.</para>
+        /// <para>Detaches a policy from a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3503,6 +3823,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return await GetAccessKeyLastUsedWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the alias of an Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetAccountAliasRequest
         /// </param>
@@ -3531,6 +3856,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<GetAccountAliasResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the alias of an Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetAccountAliasRequest
         /// </param>
@@ -3559,6 +3889,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<GetAccountAliasResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the alias of an Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// GetAccountAliasResponse
         /// </returns>
@@ -3568,6 +3903,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return GetAccountAliasWithOptions(runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the alias of an Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// GetAccountAliasResponse
         /// </returns>
@@ -3579,7 +3919,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a RAM user group.</para>
+        /// <para>Queries information about a Resource Access Management (RAM) user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3621,7 +3961,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a RAM user group.</para>
+        /// <para>Queries information about a Resource Access Management (RAM) user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3663,7 +4003,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a RAM user group.</para>
+        /// <para>Queries information about a Resource Access Management (RAM) user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3681,7 +4021,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a RAM user group.</para>
+        /// <para>Queries information about a Resource Access Management (RAM) user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3697,6 +4037,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return await GetGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the logon configurations of a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetLoginProfileRequest
         /// </param>
@@ -3734,6 +4079,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<GetLoginProfileResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the logon configurations of a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetLoginProfileRequest
         /// </param>
@@ -3771,6 +4121,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<GetLoginProfileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the logon configurations of a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetLoginProfileRequest
         /// </param>
@@ -3784,6 +4139,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return GetLoginProfileWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the logon configurations of a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetLoginProfileRequest
         /// </param>
@@ -3797,6 +4157,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return await GetLoginProfileWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the password policy of Resource Access Management (RAM) users, including the password strength.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetPasswordPolicyRequest
         /// </param>
@@ -3825,6 +4190,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<GetPasswordPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the password policy of Resource Access Management (RAM) users, including the password strength.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetPasswordPolicyRequest
         /// </param>
@@ -3853,6 +4223,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<GetPasswordPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the password policy of Resource Access Management (RAM) users, including the password strength.</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// GetPasswordPolicyResponse
         /// </returns>
@@ -3862,6 +4237,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return GetPasswordPolicyWithOptions(runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the password policy of Resource Access Management (RAM) users, including the password strength.</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// GetPasswordPolicyResponse
         /// </returns>
@@ -3873,7 +4253,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a policy.</para>
+        /// <para>Queries information about a policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3919,7 +4299,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a policy.</para>
+        /// <para>Queries information about a policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3965,7 +4345,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a policy.</para>
+        /// <para>Queries information about a policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3983,7 +4363,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a policy.</para>
+        /// <para>Queries information about a policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4001,7 +4381,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a policy version.</para>
+        /// <para>Queries the information about a policy version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4051,7 +4431,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a policy version.</para>
+        /// <para>Queries the information about a policy version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4101,7 +4481,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a policy version.</para>
+        /// <para>Queries the information about a policy version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4119,7 +4499,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a policy version.</para>
+        /// <para>Queries the information about a policy version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4137,7 +4517,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information of a RAM role.</para>
+        /// <para>Queries information about a Resource Access Management (RAM) role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4179,7 +4559,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information of a RAM role.</para>
+        /// <para>Queries information about a Resource Access Management (RAM) role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4221,7 +4601,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information of a RAM role.</para>
+        /// <para>Queries information about a Resource Access Management (RAM) role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4239,7 +4619,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information of a RAM role.</para>
+        /// <para>Queries information about a Resource Access Management (RAM) role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4255,6 +4635,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return await GetRoleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the security preferences.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetSecurityPreferenceRequest
         /// </param>
@@ -4283,6 +4668,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<GetSecurityPreferenceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the security preferences.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetSecurityPreferenceRequest
         /// </param>
@@ -4311,6 +4701,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<GetSecurityPreferenceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the security preferences.</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// GetSecurityPreferenceResponse
         /// </returns>
@@ -4320,6 +4715,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return GetSecurityPreferenceWithOptions(runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the security preferences.</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// GetSecurityPreferenceResponse
         /// </returns>
@@ -4331,12 +4731,12 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a RAM user.</para>
+        /// <para>Queries information about a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the information about the RAM user <c>alice</c>.</para>
+        /// <para>This topic provides an example on how to query information about the RAM user <c>alice</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4378,12 +4778,12 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a RAM user.</para>
+        /// <para>Queries information about a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the information about the RAM user <c>alice</c>.</para>
+        /// <para>This topic provides an example on how to query information about the RAM user <c>alice</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4425,12 +4825,12 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a RAM user.</para>
+        /// <para>Queries information about a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the information about the RAM user <c>alice</c>.</para>
+        /// <para>This topic provides an example on how to query information about the RAM user <c>alice</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4448,12 +4848,12 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a RAM user.</para>
+        /// <para>Queries information about a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the information about the RAM user <c>alice</c>.</para>
+        /// <para>This topic provides an example on how to query information about the RAM user <c>alice</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4469,6 +4869,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return await GetUserWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the multi-factor authentication (MFA) device that is bound to a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetUserMFAInfoRequest
         /// </param>
@@ -4506,6 +4911,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<GetUserMFAInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the multi-factor authentication (MFA) device that is bound to a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetUserMFAInfoRequest
         /// </param>
@@ -4543,6 +4953,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<GetUserMFAInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the multi-factor authentication (MFA) device that is bound to a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetUserMFAInfoRequest
         /// </param>
@@ -4556,6 +4971,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return GetUserMFAInfoWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the multi-factor authentication (MFA) device that is bound to a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetUserMFAInfoRequest
         /// </param>
@@ -4571,7 +4991,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of all AccessKey pairs that belong to a RAM user.</para>
+        /// <para>Queries all AccessKey pairs that belong to a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4613,7 +5033,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of all AccessKey pairs that belong to a RAM user.</para>
+        /// <para>Queries all AccessKey pairs that belong to a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4655,7 +5075,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of all AccessKey pairs that belong to a RAM user.</para>
+        /// <para>Queries all AccessKey pairs that belong to a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4673,7 +5093,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of all AccessKey pairs that belong to a RAM user.</para>
+        /// <para>Queries all AccessKey pairs that belong to a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4819,7 +5239,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries RAM user groups.</para>
+        /// <para>Queries Resource Access Management (RAM) user groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4865,7 +5285,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries RAM user groups.</para>
+        /// <para>Queries Resource Access Management (RAM) user groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4911,7 +5331,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries RAM user groups.</para>
+        /// <para>Queries Resource Access Management (RAM) user groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4929,7 +5349,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries RAM user groups.</para>
+        /// <para>Queries Resource Access Management (RAM) user groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4952,6 +5372,7 @@ namespace AlibabaCloud.SDK.Ram20150501
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <h3><a href="#"></a></h3>
         /// <para>This topic provides an example on how to query the RAM user groups to which the RAM user <c>Alice</c> belongs. The response shows that <c>Alice</c> belongs to the RAM user group named <c>Dev-Team</c>.</para>
         /// </description>
         /// 
@@ -4999,6 +5420,7 @@ namespace AlibabaCloud.SDK.Ram20150501
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <h3><a href="#"></a></h3>
         /// <para>This topic provides an example on how to query the RAM user groups to which the RAM user <c>Alice</c> belongs. The response shows that <c>Alice</c> belongs to the RAM user group named <c>Dev-Team</c>.</para>
         /// </description>
         /// 
@@ -5046,6 +5468,7 @@ namespace AlibabaCloud.SDK.Ram20150501
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <h3><a href="#"></a></h3>
         /// <para>This topic provides an example on how to query the RAM user groups to which the RAM user <c>Alice</c> belongs. The response shows that <c>Alice</c> belongs to the RAM user group named <c>Dev-Team</c>.</para>
         /// </description>
         /// 
@@ -5069,6 +5492,7 @@ namespace AlibabaCloud.SDK.Ram20150501
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <h3><a href="#"></a></h3>
         /// <para>This topic provides an example on how to query the RAM user groups to which the RAM user <c>Alice</c> belongs. The response shows that <c>Alice</c> belongs to the RAM user group named <c>Dev-Team</c>.</para>
         /// </description>
         /// 
@@ -5090,7 +5514,7 @@ namespace AlibabaCloud.SDK.Ram20150501
         /// <para>Queries a list of policies.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListPoliciesRequest
         /// </param>
         /// <param name="runtime">
@@ -5100,9 +5524,15 @@ namespace AlibabaCloud.SDK.Ram20150501
         /// <returns>
         /// ListPoliciesResponse
         /// </returns>
-        public ListPoliciesResponse ListPoliciesWithOptions(ListPoliciesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListPoliciesResponse ListPoliciesWithOptions(ListPoliciesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListPoliciesShrinkRequest request = new ListPoliciesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
+            {
+                request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "Tag", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Marker))
             {
@@ -5115,6 +5545,10 @@ namespace AlibabaCloud.SDK.Ram20150501
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyType))
             {
                 query["PolicyType"] = request.PolicyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagShrink))
+            {
+                query["Tag"] = request.TagShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5140,7 +5574,7 @@ namespace AlibabaCloud.SDK.Ram20150501
         /// <para>Queries a list of policies.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListPoliciesRequest
         /// </param>
         /// <param name="runtime">
@@ -5150,9 +5584,15 @@ namespace AlibabaCloud.SDK.Ram20150501
         /// <returns>
         /// ListPoliciesResponse
         /// </returns>
-        public async Task<ListPoliciesResponse> ListPoliciesWithOptionsAsync(ListPoliciesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListPoliciesResponse> ListPoliciesWithOptionsAsync(ListPoliciesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListPoliciesShrinkRequest request = new ListPoliciesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
+            {
+                request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "Tag", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Marker))
             {
@@ -5165,6 +5605,10 @@ namespace AlibabaCloud.SDK.Ram20150501
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyType))
             {
                 query["PolicyType"] = request.PolicyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagShrink))
+            {
+                query["Tag"] = request.TagShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5223,7 +5667,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the policies that are attached to a RAM user group.</para>
+        /// <para>Queries the policies that are attached to a Resource Access Management (RAM) user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5265,7 +5709,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the policies that are attached to a RAM user group.</para>
+        /// <para>Queries the policies that are attached to a Resource Access Management (RAM) user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5307,7 +5751,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the policies that are attached to a RAM user group.</para>
+        /// <para>Queries the policies that are attached to a Resource Access Management (RAM) user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5325,7 +5769,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the policies that are attached to a RAM user group.</para>
+        /// <para>Queries the policies that are attached to a Resource Access Management (RAM) user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5343,7 +5787,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the policies that are attached to a RAM role.</para>
+        /// <para>Queries the policies that are attached to a Resource Access Management (RAM) role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5385,7 +5829,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the policies that are attached to a RAM role.</para>
+        /// <para>Queries the policies that are attached to a Resource Access Management (RAM) role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5427,7 +5871,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the policies that are attached to a RAM role.</para>
+        /// <para>Queries the policies that are attached to a Resource Access Management (RAM) role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5445,7 +5889,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the policies that are attached to a RAM role.</para>
+        /// <para>Queries the policies that are attached to a Resource Access Management (RAM) role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5739,10 +6183,10 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of all RAM roles.</para>
+        /// <para>Queries all Resource Access Management (RAM) roles.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListRolesRequest
         /// </param>
         /// <param name="runtime">
@@ -5752,9 +6196,15 @@ namespace AlibabaCloud.SDK.Ram20150501
         /// <returns>
         /// ListRolesResponse
         /// </returns>
-        public ListRolesResponse ListRolesWithOptions(ListRolesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListRolesResponse ListRolesWithOptions(ListRolesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListRolesShrinkRequest request = new ListRolesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
+            {
+                request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "Tag", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Marker))
             {
@@ -5763,6 +6213,10 @@ namespace AlibabaCloud.SDK.Ram20150501
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxItems))
             {
                 query["MaxItems"] = request.MaxItems;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagShrink))
+            {
+                query["Tag"] = request.TagShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5785,10 +6239,10 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of all RAM roles.</para>
+        /// <para>Queries all Resource Access Management (RAM) roles.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListRolesRequest
         /// </param>
         /// <param name="runtime">
@@ -5798,9 +6252,15 @@ namespace AlibabaCloud.SDK.Ram20150501
         /// <returns>
         /// ListRolesResponse
         /// </returns>
-        public async Task<ListRolesResponse> ListRolesWithOptionsAsync(ListRolesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListRolesResponse> ListRolesWithOptionsAsync(ListRolesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListRolesShrinkRequest request = new ListRolesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
+            {
+                request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "Tag", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Marker))
             {
@@ -5809,6 +6269,10 @@ namespace AlibabaCloud.SDK.Ram20150501
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxItems))
             {
                 query["MaxItems"] = request.MaxItems;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagShrink))
+            {
+                query["Tag"] = request.TagShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5831,7 +6295,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of all RAM roles.</para>
+        /// <para>Queries all Resource Access Management (RAM) roles.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5849,7 +6313,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of all RAM roles.</para>
+        /// <para>Queries all Resource Access Management (RAM) roles.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5863,6 +6327,178 @@ namespace AlibabaCloud.SDK.Ram20150501
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListRolesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags that are added to resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
+        public ListTagResourcesResponse ListTagResourcesWithOptions(ListTagResourcesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListTagResourcesShrinkRequest request = new ListTagResourcesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ResourceNames))
+            {
+                request.ResourceNamesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceNames, "ResourceNames", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
+            {
+                request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "Tag", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceNamesShrink))
+            {
+                query["ResourceNames"] = request.ResourceNamesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagShrink))
+            {
+                query["Tag"] = request.TagShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTagResources",
+                Version = "2015-05-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTagResourcesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags that are added to resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
+        public async Task<ListTagResourcesResponse> ListTagResourcesWithOptionsAsync(ListTagResourcesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListTagResourcesShrinkRequest request = new ListTagResourcesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ResourceNames))
+            {
+                request.ResourceNamesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceNames, "ResourceNames", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
+            {
+                request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "Tag", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceNamesShrink))
+            {
+                query["ResourceNames"] = request.ResourceNamesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagShrink))
+            {
+                query["Tag"] = request.TagShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTagResources",
+                Version = "2015-05-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags that are added to resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
+        public ListTagResourcesResponse ListTagResources(ListTagResourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListTagResourcesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags that are added to resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
+        public async Task<ListTagResourcesResponse> ListTagResourcesAsync(ListTagResourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListTagResourcesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5993,6 +6629,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return await ListUsersWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Resource Access Management (RAM) users in a RAM user group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListUsersForGroupRequest
         /// </param>
@@ -6038,6 +6679,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<ListUsersForGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Resource Access Management (RAM) users in a RAM user group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListUsersForGroupRequest
         /// </param>
@@ -6083,6 +6729,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<ListUsersForGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Resource Access Management (RAM) users in a RAM user group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListUsersForGroupRequest
         /// </param>
@@ -6096,6 +6747,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return ListUsersForGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Resource Access Management (RAM) users in a RAM user group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListUsersForGroupRequest
         /// </param>
@@ -6111,7 +6767,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of all multi-factor authentication (MFA) devices.</para>
+        /// <para>Queries multi-factor authentication (MFA) devices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6144,7 +6800,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of all multi-factor authentication (MFA) devices.</para>
+        /// <para>Queries multi-factor authentication (MFA) devices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6177,7 +6833,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of all multi-factor authentication (MFA) devices.</para>
+        /// <para>Queries multi-factor authentication (MFA) devices.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6191,7 +6847,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of all multi-factor authentication (MFA) devices.</para>
+        /// <para>Queries multi-factor authentication (MFA) devices.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6203,6 +6859,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return await ListVirtualMFADevicesWithOptionsAsync(runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a Resource Access Management (RAM) user from a RAM user group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RemoveUserFromGroupRequest
         /// </param>
@@ -6244,6 +6905,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<RemoveUserFromGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a Resource Access Management (RAM) user from a RAM user group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RemoveUserFromGroupRequest
         /// </param>
@@ -6285,6 +6951,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<RemoveUserFromGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a Resource Access Management (RAM) user from a RAM user group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RemoveUserFromGroupRequest
         /// </param>
@@ -6298,6 +6969,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return RemoveUserFromGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a Resource Access Management (RAM) user from a RAM user group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RemoveUserFromGroupRequest
         /// </param>
@@ -6313,7 +6989,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to specify an alias for an Alibaba Cloud account.</para>
+        /// <para>Configures an alias for an Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6355,7 +7031,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to specify an alias for an Alibaba Cloud account.</para>
+        /// <para>Configures an alias for an Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6397,7 +7073,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to specify an alias for an Alibaba Cloud account.</para>
+        /// <para>Configures an alias for an Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6415,7 +7091,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to specify an alias for an Alibaba Cloud account.</para>
+        /// <para>Configures an alias for an Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6433,7 +7109,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the default version of a policy.</para>
+        /// <para>Specifies a version for a policy as the default version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6479,7 +7155,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the default version of a policy.</para>
+        /// <para>Specifies a version for a policy as the default version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6525,7 +7201,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the default version of a policy.</para>
+        /// <para>Specifies a version for a policy as the default version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6543,7 +7219,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the default version of a policy.</para>
+        /// <para>Specifies a version for a policy as the default version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6559,6 +7235,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return await SetDefaultPolicyVersionWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures the password policy for Resource Access Management (RAM) users, including the password strength.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SetPasswordPolicyRequest
         /// </param>
@@ -6628,6 +7309,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<SetPasswordPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures the password policy for Resource Access Management (RAM) users, including the password strength.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SetPasswordPolicyRequest
         /// </param>
@@ -6697,6 +7383,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<SetPasswordPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures the password policy for Resource Access Management (RAM) users, including the password strength.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SetPasswordPolicyRequest
         /// </param>
@@ -6710,6 +7401,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return SetPasswordPolicyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures the password policy for Resource Access Management (RAM) users, including the password strength.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SetPasswordPolicyRequest
         /// </param>
@@ -6893,7 +7589,163 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detaches a multi-factor authentication (MFA) device from a RAM user.</para>
+        /// <para>Adds tags to resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// TagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
+        public TagResourcesResponse TagResourcesWithOptions(TagResourcesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            TagResourcesShrinkRequest request = new TagResourcesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ResourceNames))
+            {
+                request.ResourceNamesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceNames, "ResourceNames", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
+            {
+                request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "Tag", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceNamesShrink))
+            {
+                query["ResourceNames"] = request.ResourceNamesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagShrink))
+            {
+                query["Tag"] = request.TagShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TagResources",
+                Version = "2015-05-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TagResourcesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds tags to resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// TagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
+        public async Task<TagResourcesResponse> TagResourcesWithOptionsAsync(TagResourcesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            TagResourcesShrinkRequest request = new TagResourcesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ResourceNames))
+            {
+                request.ResourceNamesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceNames, "ResourceNames", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
+            {
+                request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "Tag", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceNamesShrink))
+            {
+                query["ResourceNames"] = request.ResourceNamesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagShrink))
+            {
+                query["Tag"] = request.TagShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TagResources",
+                Version = "2015-05-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TagResourcesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds tags to resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
+        public TagResourcesResponse TagResources(TagResourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return TagResourcesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds tags to resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
+        public async Task<TagResourcesResponse> TagResourcesAsync(TagResourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await TagResourcesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbinds a multi-factor authentication (MFA) device from a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6935,7 +7787,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detaches a multi-factor authentication (MFA) device from a RAM user.</para>
+        /// <para>Unbinds a multi-factor authentication (MFA) device from a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6977,7 +7829,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detaches a multi-factor authentication (MFA) device from a RAM user.</para>
+        /// <para>Unbinds a multi-factor authentication (MFA) device from a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6995,7 +7847,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detaches a multi-factor authentication (MFA) device from a RAM user.</para>
+        /// <para>Unbinds a multi-factor authentication (MFA) device from a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7011,6 +7863,175 @@ namespace AlibabaCloud.SDK.Ram20150501
             return await UnbindMFADeviceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes tags from resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UntagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
+        public UntagResourcesResponse UntagResourcesWithOptions(UntagResourcesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UntagResourcesShrinkRequest request = new UntagResourcesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ResourceNames))
+            {
+                request.ResourceNamesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceNames, "ResourceNames", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TagKeys))
+            {
+                request.TagKeysShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TagKeys, "TagKeys", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.All))
+            {
+                query["All"] = request.All;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceNamesShrink))
+            {
+                query["ResourceNames"] = request.ResourceNamesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagKeysShrink))
+            {
+                query["TagKeys"] = request.TagKeysShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UntagResources",
+                Version = "2015-05-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UntagResourcesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes tags from resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UntagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
+        public async Task<UntagResourcesResponse> UntagResourcesWithOptionsAsync(UntagResourcesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UntagResourcesShrinkRequest request = new UntagResourcesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ResourceNames))
+            {
+                request.ResourceNamesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceNames, "ResourceNames", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TagKeys))
+            {
+                request.TagKeysShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TagKeys, "TagKeys", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.All))
+            {
+                query["All"] = request.All;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceNamesShrink))
+            {
+                query["ResourceNames"] = request.ResourceNamesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagKeysShrink))
+            {
+                query["TagKeys"] = request.TagKeysShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UntagResources",
+                Version = "2015-05-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UntagResourcesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes tags from resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
+        public UntagResourcesResponse UntagResources(UntagResourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UntagResourcesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes tags from resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
+        public async Task<UntagResourcesResponse> UntagResourcesAsync(UntagResourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UntagResourcesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the status of an AccessKey pair that belongs to a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateAccessKeyRequest
         /// </param>
@@ -7056,6 +8077,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<UpdateAccessKeyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the status of an AccessKey pair that belongs to a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateAccessKeyRequest
         /// </param>
@@ -7101,6 +8127,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<UpdateAccessKeyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the status of an AccessKey pair that belongs to a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateAccessKeyRequest
         /// </param>
@@ -7114,6 +8145,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return UpdateAccessKeyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the status of an AccessKey pair that belongs to a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateAccessKeyRequest
         /// </param>
@@ -7129,7 +8165,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a RAM user group.</para>
+        /// <para>Modifies a Resource Access Management (RAM) user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7179,7 +8215,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a RAM user group.</para>
+        /// <para>Modifies a Resource Access Management (RAM) user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7229,7 +8265,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a RAM user group.</para>
+        /// <para>Modifies a Resource Access Management (RAM) user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7247,7 +8283,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a RAM user group.</para>
+        /// <para>Modifies a Resource Access Management (RAM) user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7263,6 +8299,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return await UpdateGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the logon configurations of a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateLoginProfileRequest
         /// </param>
@@ -7312,6 +8353,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<UpdateLoginProfileResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the logon configurations of a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateLoginProfileRequest
         /// </param>
@@ -7361,6 +8407,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<UpdateLoginProfileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the logon configurations of a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateLoginProfileRequest
         /// </param>
@@ -7374,6 +8425,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return UpdateLoginProfileWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the logon configurations of a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateLoginProfileRequest
         /// </param>
@@ -7394,6 +8450,7 @@ namespace AlibabaCloud.SDK.Ram20150501
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <h3><a href="#"></a></h3>
         /// <para>You can call this operation to modify only the description of a custom policy. You cannot modify the description of a system policy.</para>
         /// </description>
         /// 
@@ -7445,6 +8502,7 @@ namespace AlibabaCloud.SDK.Ram20150501
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <h3><a href="#"></a></h3>
         /// <para>You can call this operation to modify only the description of a custom policy. You cannot modify the description of a system policy.</para>
         /// </description>
         /// 
@@ -7496,6 +8554,7 @@ namespace AlibabaCloud.SDK.Ram20150501
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <h3><a href="#"></a></h3>
         /// <para>You can call this operation to modify only the description of a custom policy. You cannot modify the description of a system policy.</para>
         /// </description>
         /// 
@@ -7519,6 +8578,7 @@ namespace AlibabaCloud.SDK.Ram20150501
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <h3><a href="#"></a></h3>
         /// <para>You can call this operation to modify only the description of a custom policy. You cannot modify the description of a system policy.</para>
         /// </description>
         /// 
@@ -7537,12 +8597,12 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the description of a RAM role.</para>
+        /// <para>Modifies information about a Resource Access Management (RAM) role.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example to show how to change the description of ECSAdmin to ECS administrator.</para>
+        /// <para>This topic provides an example on how to change the description of <c>ECSAdmin</c> to <c>ECS administrator</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7596,12 +8656,12 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the description of a RAM role.</para>
+        /// <para>Modifies information about a Resource Access Management (RAM) role.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example to show how to change the description of ECSAdmin to ECS administrator.</para>
+        /// <para>This topic provides an example on how to change the description of <c>ECSAdmin</c> to <c>ECS administrator</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7655,12 +8715,12 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the description of a RAM role.</para>
+        /// <para>Modifies information about a Resource Access Management (RAM) role.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example to show how to change the description of ECSAdmin to ECS administrator.</para>
+        /// <para>This topic provides an example on how to change the description of <c>ECSAdmin</c> to <c>ECS administrator</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7678,12 +8738,12 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the description of a RAM role.</para>
+        /// <para>Modifies information about a Resource Access Management (RAM) role.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example to show how to change the description of ECSAdmin to ECS administrator.</para>
+        /// <para>This topic provides an example on how to change the description of <c>ECSAdmin</c> to <c>ECS administrator</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7699,6 +8759,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return await UpdateRoleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies information about a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This topic provides an example on how to change the name of a RAM user from <c>zhangq****</c> to <c>xiaoq****</c>.</para>
@@ -7761,6 +8826,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<UpdateUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies information about a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This topic provides an example on how to change the name of a RAM user from <c>zhangq****</c> to <c>xiaoq****</c>.</para>
@@ -7823,6 +8893,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return TeaModel.ToObject<UpdateUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies information about a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This topic provides an example on how to change the name of a RAM user from <c>zhangq****</c> to <c>xiaoq****</c>.</para>
@@ -7841,6 +8916,11 @@ namespace AlibabaCloud.SDK.Ram20150501
             return UpdateUserWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies information about a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This topic provides an example on how to change the name of a RAM user from <c>zhangq****</c> to <c>xiaoq****</c>.</para>
