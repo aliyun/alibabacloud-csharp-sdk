@@ -93,6 +93,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public int? Size { get; set; }
 
+        [NameInMap("status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
         /// <summary>
         /// <para>The header of the response.</para>
         /// 

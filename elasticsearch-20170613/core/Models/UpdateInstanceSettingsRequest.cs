@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("force")]
+        [Validation(Required=false)]
+        public bool? Force { get; set; }
+
         [NameInMap("updateStrategy")]
         [Validation(Required=false)]
         public string UpdateStrategy { get; set; }

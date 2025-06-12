@@ -9165,9 +9165,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public InstallUserPluginsResponse InstallUserPluginsWithOptions(string InstanceId, InstallUserPluginsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["force"] = request.Force;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -9206,9 +9212,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<InstallUserPluginsResponse> InstallUserPluginsWithOptionsAsync(string InstanceId, InstallUserPluginsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["force"] = request.Force;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -12870,6 +12882,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 query["size"] = request.Size;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
             {
                 query["tags"] = request.Tags;
@@ -12955,6 +12971,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
             {
                 query["size"] = request.Size;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
             {
@@ -23356,6 +23376,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 query["clientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["force"] = request.Force;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateStrategy))
             {
                 query["updateStrategy"] = request.UpdateStrategy;
@@ -23412,6 +23436,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["clientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["force"] = request.Force;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateStrategy))
             {
