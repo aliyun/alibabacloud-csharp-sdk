@@ -866,6 +866,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 
             }
 
+            [NameInMap("ManualTaskId")]
+            [Validation(Required=false)]
+            public string ManualTaskId { get; set; }
+
             /// <summary>
             /// <para>The results of image moderation parameters such as the label parameter and the confidence parameter, which are an array structure.</para>
             /// </summary>
@@ -903,6 +907,12 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 [Validation(Required=false)]
                 public string Label { get; set; }
 
+                /// <summary>
+                /// <para>Risk Level</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>high</para>
+                /// </summary>
                 [NameInMap("RiskLevel")]
                 [Validation(Required=false)]
                 public string RiskLevel { get; set; }

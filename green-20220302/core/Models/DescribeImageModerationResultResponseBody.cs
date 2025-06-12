@@ -56,6 +56,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             [Validation(Required=false)]
             public int? FrameNum { get; set; }
 
+            [NameInMap("ManualTaskId")]
+            [Validation(Required=false)]
+            public string ManualTaskId { get; set; }
+
             /// <summary>
             /// <para>The reqId field returned by the Image Async Moderation API.</para>
             /// 
@@ -103,6 +107,12 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 [Validation(Required=false)]
                 public string Label { get; set; }
 
+                /// <summary>
+                /// <para>Risk Level</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>high</para>
+                /// </summary>
                 [NameInMap("RiskLevel")]
                 [Validation(Required=false)]
                 public string RiskLevel { get; set; }

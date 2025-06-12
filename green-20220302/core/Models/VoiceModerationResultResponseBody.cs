@@ -46,6 +46,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             [Validation(Required=false)]
             public string LiveId { get; set; }
 
+            [NameInMap("ManualTaskId")]
+            [Validation(Required=false)]
+            public string ManualTaskId { get; set; }
+
             /// <summary>
             /// <para>Risk Level.</para>
             /// 
@@ -63,6 +67,12 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             [Validation(Required=false)]
             public List<VoiceModerationResultResponseBodyDataSliceDetails> SliceDetails { get; set; }
             public class VoiceModerationResultResponseBodyDataSliceDetails : TeaModel {
+                /// <summary>
+                /// <para>The description of the labels.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>no risk</para>
+                /// </summary>
                 [NameInMap("Descriptions")]
                 [Validation(Required=false)]
                 public string Descriptions { get; set; }

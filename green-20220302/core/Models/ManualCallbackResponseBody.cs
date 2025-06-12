@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 {
     public class ManualCallbackResponseBody : TeaModel {
         /// <summary>
+        /// <para>Error code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public int? Code { get; set; }
 
         /// <summary>
+        /// <para>Message information</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
         /// </summary>
@@ -26,7 +30,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>ID of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>

@@ -134,6 +134,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             [Validation(Required=false)]
             public string DataId { get; set; }
 
+            [NameInMap("ManualTaskId")]
+            [Validation(Required=false)]
+            public string ManualTaskId { get; set; }
+
             /// <summary>
             /// <para>The results.</para>
             /// </summary>

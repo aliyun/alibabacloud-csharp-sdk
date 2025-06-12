@@ -36,6 +36,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             [Validation(Required=false)]
             public string DataId { get; set; }
 
+            [NameInMap("ManualTaskId")]
+            [Validation(Required=false)]
+            public string ManualTaskId { get; set; }
+
             /// <summary>
             /// <para>The risk labels, confidence scores, and other parameters of image detection results, in an array structure.</para>
             /// </summary>

@@ -40,6 +40,12 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 [Validation(Required=false)]
                 public List<VideoModerationResultResponseBodyDataAudioResultAudioSummarys> AudioSummarys { get; set; }
                 public class VideoModerationResultResponseBodyDataAudioResultAudioSummarys : TeaModel {
+                    /// <summary>
+                    /// <para>The description of the labels.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>no risk</para>
+                    /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
@@ -83,6 +89,12 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 [Validation(Required=false)]
                 public List<VideoModerationResultResponseBodyDataAudioResultSliceDetails> SliceDetails { get; set; }
                 public class VideoModerationResultResponseBodyDataAudioResultSliceDetails : TeaModel {
+                    /// <summary>
+                    /// <para>The description of the labels.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>no risk</para>
+                    /// </summary>
                     [NameInMap("Descriptions")]
                     [Validation(Required=false)]
                     public string Descriptions { get; set; }
@@ -330,44 +342,95 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 
                         }
 
+                        /// <summary>
+                        /// <para>Returns logo information when the video contains a logo.</para>
+                        /// </summary>
                         [NameInMap("LogoData")]
                         [Validation(Required=false)]
                         public List<VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoData> LogoData { get; set; }
                         public class VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoData : TeaModel {
+                            /// <summary>
+                            /// <para>The location of the logo.</para>
+                            /// </summary>
                             [NameInMap("Location")]
                             [Validation(Required=false)]
                             public VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoDataLocation Location { get; set; }
                             public class VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoDataLocation : TeaModel {
+                                /// <summary>
+                                /// <para>The height of the text area. Unit: pixels.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>111</para>
+                                /// </summary>
                                 [NameInMap("H")]
                                 [Validation(Required=false)]
                                 public int? H { get; set; }
 
+                                /// <summary>
+                                /// <para>The width of the text area. Unit: pixels.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>111</para>
+                                /// </summary>
                                 [NameInMap("W")]
                                 [Validation(Required=false)]
                                 public int? W { get; set; }
 
+                                /// <summary>
+                                /// <para>The distance from the top-left corner of the text area to the y-axis, with the top-left corner of the image as the origin. Unit: pixels.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>111</para>
+                                /// </summary>
                                 [NameInMap("X")]
                                 [Validation(Required=false)]
                                 public int? X { get; set; }
 
+                                /// <summary>
+                                /// <para>The distance from the top-left corner of the text area to the x-axis, with the top-left corner of the image as the origin. Unit: pixels.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>222</para>
+                                /// </summary>
                                 [NameInMap("Y")]
                                 [Validation(Required=false)]
                                 public int? Y { get; set; }
 
                             }
 
+                            /// <summary>
+                            /// <para>Logo information.</para>
+                            /// </summary>
                             [NameInMap("Logo")]
                             [Validation(Required=false)]
                             public List<VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoDataLogo> Logo { get; set; }
                             public class VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoDataLogo : TeaModel {
+                                /// <summary>
+                                /// <para>Confidence score, ranging from 0 to 100, with two decimal places.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>99.10</para>
+                                /// </summary>
                                 [NameInMap("confidence")]
                                 [Validation(Required=false)]
                                 public long? Confidence { get; set; }
 
+                                /// <summary>
+                                /// <para>label</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>pt_logotoSocialNetwork</para>
+                                /// </summary>
                                 [NameInMap("label")]
                                 [Validation(Required=false)]
                                 public string Label { get; set; }
 
+                                /// <summary>
+                                /// <para>Logo name.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>**logo</para>
+                                /// </summary>
                                 [NameInMap("name")]
                                 [Validation(Required=false)]
                                 public string Name { get; set; }
@@ -506,6 +569,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             [NameInMap("LiveId")]
             [Validation(Required=false)]
             public string LiveId { get; set; }
+
+            [NameInMap("ManualTaskId")]
+            [Validation(Required=false)]
+            public string ManualTaskId { get; set; }
 
             /// <summary>
             /// <para>Risk Level.</para>
