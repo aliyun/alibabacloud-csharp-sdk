@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=false)]
         public string IdentifyNum { get; set; }
 
+        [NameInMap("ImageContext")]
+        [Validation(Required=false)]
+        public string ImageContext { get; set; }
+
         [NameInMap("ImageFile")]
         [Validation(Required=false)]
         public Stream ImageFileObject { get; set; }

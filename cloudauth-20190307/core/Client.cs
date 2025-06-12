@@ -2035,6 +2035,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
                 query["UserName"] = request.UserName;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageContext))
+            {
+                body["ImageContext"] = request.ImageContext;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageFile))
             {
                 body["ImageFile"] = request.ImageFile;
@@ -2137,6 +2141,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
                 query["UserName"] = request.UserName;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageContext))
+            {
+                body["ImageContext"] = request.ImageContext;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageFile))
             {
                 body["ImageFile"] = request.ImageFile;
