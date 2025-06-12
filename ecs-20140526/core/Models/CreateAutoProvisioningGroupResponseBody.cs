@@ -87,8 +87,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <para>The bidding policy for the pay-as-you-go instance. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>NoSpot: The instance is a regular pay-as-you-go instance.</description></item>
-                /// <item><description>SpotWithPriceLimit: The instance is a preemptible instance for which you specify the maximum hourly price.</description></item>
-                /// <item><description>SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is used as the bid price.</description></item>
+                /// <item><description>SpotWithPriceLimit: The instance is a spot instance for which you specify the maximum hourly price.</description></item>
+                /// <item><description>SpotAsPriceGo: The instance is a spot instance for which the market price at the time of purchase is used as the bid price.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The error message returned for the instance. A return value of success indicates that the operation was successful. For more information, see the &quot;Error codes&quot; section of this topic.</para>
+                /// <para>The error message returned for the instance. The return value <c>success</c> indicates that the operation is successful. For more information, see the &quot;Error codes&quot; section of this topic.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>success</para>

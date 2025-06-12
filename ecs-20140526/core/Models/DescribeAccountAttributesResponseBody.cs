@@ -27,9 +27,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <item><description>max-security-groups: the maximum number of security groups.</description></item>
                 /// <item><description>max-elastic-network-interfaces: the maximum number of ENIs.</description></item>
                 /// <item><description>max-postpaid-instance-vcpu-count: the maximum number of vCPUs for pay-as-you-go instances.</description></item>
-                /// <item><description>max-spot-instance-vcpu-count: the maximum number of vCPUs for preemptible instances.</description></item>
+                /// <item><description>max-spot-instance-vcpu-count: the maximum number of vCPUs for spot instances.</description></item>
                 /// <item><description>used-postpaid-instance-vcpu-count: the number of vCPUs that were allocated to pay-as-you-go instances.</description></item>
-                /// <item><description>used-spot-instance-vcpu-count: the number of vCPUs that were allocated to preemptible instances.</description></item>
+                /// <item><description>used-spot-instance-vcpu-count: the number of vCPUs that were allocated to spot instances.</description></item>
                 /// <item><description>max-postpaid-yundisk-capacity: the maximum capacity of pay-as-you-go data disks. (The value is deprecated.)</description></item>
                 /// <item><description>used-postpaid-yundisk-capacity: the capacity of pay-as-you-go data disks that were created. (The value is deprecated.)</description></item>
                 /// <item><description>max-dedicated-hosts: the maximum number of dedicated hosts.</description></item>

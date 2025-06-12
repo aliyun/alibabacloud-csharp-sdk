@@ -284,7 +284,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <list type="bullet">
         /// <item><description>financial: The instance is locked due to overdue payments.</description></item>
         /// <item><description>security: The instance is locked due to security reasons.</description></item>
-        /// <item><description>recycling: The preemptible instance is locked and pending release.</description></item>
+        /// <item><description>recycling: The spot instance is locked and pending release.</description></item>
         /// <item><description>dedicatedhostfinancial: The instance is locked due to overdue payments for the dedicated host.</description></item>
         /// <item><description>refunded: The instance is locked because a refund is made for the instance.</description></item>
         /// </list>

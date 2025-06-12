@@ -351,7 +351,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <list type="bullet">
         /// <item><description>financial: The dedicated host was locked due to overdue payments.</description></item>
         /// <item><description>security: The instance was locked due to security reasons.</description></item>
-        /// <item><description>recycling: The preemptible instance was locked and pending release.</description></item>
+        /// <item><description>recycling: The spot instance was locked and pending release.</description></item>
         /// <item><description>dedicatedhostfinancial: The instance was locked due to overdue payments for the dedicated host.</description></item>
         /// <item><description>refunded: The instance was locked because a refund was made for the instance.</description></item>
         /// </list>
@@ -369,7 +369,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <list type="bullet">
                 /// <item><description>financial: The instance was locked due to overdue payments.</description></item>
                 /// <item><description>security: The instance was locked due to security reasons.</description></item>
-                /// <item><description>recycling: The preemptible instance was locked and pending release.</description></item>
+                /// <item><description>recycling: The spot instance was locked and pending release.</description></item>
                 /// <item><description>dedicatedhostfinancial: The instance was locked due to overdue payments for the dedicated host.</description></item>
                 /// <item><description>refunded: The instance was locked because a refund is made for the instance.</description></item>
                 /// </list>

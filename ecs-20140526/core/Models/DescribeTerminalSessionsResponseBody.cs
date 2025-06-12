@@ -91,6 +91,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         [Validation(Required=false)]
                         public string EndTime { get; set; }
 
+                        [NameInMap("FailedDetail")]
+                        [Validation(Required=false)]
+                        public string FailedDetail { get; set; }
+
                         /// <summary>
                         /// <para>The instance ID.</para>
                         /// 

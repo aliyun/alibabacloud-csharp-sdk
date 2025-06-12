@@ -838,12 +838,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string PeriodUnit { get; set; }
 
             /// <summary>
-            /// <para>The protection period of the preemptible instance. Unit: hours. Default value: 1. Valid values: Valid values:</para>
+            /// <para>The protection period of the spot instance. Unit: hours. Default value: 1. Valid values: Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</description></item>
-            /// <item><description>0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</description></item>
+            /// <item><description>1: After a spot instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</description></item>
+            /// <item><description>0: After a spot instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</description></item>
             /// </list>
-            /// <para>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. The preemptible instance is billed by second. We recommend that you specify an appropriate protection period based on your business requirements.</para>
+            /// <para>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. The spot instance is billed by second. We recommend that you specify an appropriate protection period based on your business requirements.</para>
             /// <para>When you specify this parameter, take note of the following items:</para>
             /// <list type="bullet">
             /// <item><description>This parameter takes effect only when the AutoProvisioningGroupType parameter is set to instant.</description></item>
@@ -857,7 +857,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? SpotDuration { get; set; }
 
             /// <summary>
-            /// <para>The interruption event of the preemptible instances. Valid values:</para>
+            /// <para>The interruption event of the spot instances. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Terminate: The instance is released.</description></item>
             /// <item><description>Stop: The instance is stopped in economical mode.</description></item>
@@ -943,7 +943,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The type of supplemental instances. When the sum of the <c>PayAsYouGoTargetCapacity</c> and <c>SpotTargetCapacity</c> values is smaller than the <c>TotalTargetCapacity</c> value, the auto provisioning group creates instances of the specified type to meet the total target capacity. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>PayAsYouGo: pay-as-you-go</description></item>
-        /// <item><description>Spot: preemptible instance</description></item>
+        /// <item><description>Spot: spot instance</description></item>
         /// </list>
         /// <para>Default value: Spot.</para>
         /// 
@@ -1072,7 +1072,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>The maximum price of preemptible instances in extended configuration N.</para>
+            /// <para>The maximum price of spot instances in extended configuration N.</para>
             /// <remarks>
             /// <para> If you specify one or more <c>LaunchTemplateConfig.N.*</c> parameters, you must also specify <c>LaunchTemplateConfig.N.MaxPrice</c>.</para>
             /// </remarks>
@@ -1165,7 +1165,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string LaunchTemplateVersion { get; set; }
 
         /// <summary>
-        /// <para>The maximum price of preemptible instances in the auto provisioning group.</para>
+        /// <para>The maximum price of spot instances in the auto provisioning group.</para>
         /// <remarks>
         /// <para> When both <c>MaxSpotPrice</c> and <c>LaunchTemplateConfig.N.MaxPrice</c> are specified, the smaller one of the two parameter values is used.</para>
         /// </remarks>
@@ -1329,7 +1329,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The policy for creating preemptible instances. Valid values:</para>
+        /// <para>The policy for creating spot instances. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>lowest-price: cost optimization policy. The auto provisioning group selects the lowest-priced instance type to create instances.</description></item>
         /// <item><description>diversified: balanced distribution policy. The auto provisioning group creates instances in zones that are specified in extended configurations and then evenly distributes the instances across the zones.</description></item>
@@ -1345,10 +1345,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SpotAllocationStrategy { get; set; }
 
         /// <summary>
-        /// <para>The operation to be performed on the preemptible instance when it is interrupted. Valid values:</para>
+        /// <para>The operation to be performed on the spot instance when it is interrupted. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>stop: stops the preemptible instance.</description></item>
-        /// <item><description>terminate: releases the preemptible instance.</description></item>
+        /// <item><description>stop: stops the spot instance.</description></item>
+        /// <item><description>terminate: releases the spot instance.</description></item>
         /// </list>
         /// <para>Default value: terminate.</para>
         /// 
@@ -1360,7 +1360,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SpotInstanceInterruptionBehavior { get; set; }
 
         /// <summary>
-        /// <para>The number of preemptible instances of the lowest-priced instance type to be created by the auto provisioning group. This parameter takes effect when <c>SpotAllocationStrategy</c> is set to <c>lowest-price</c>.</para>
+        /// <para>The number of spot instances of the lowest-priced instance type to be created by the auto provisioning group. This parameter takes effect when <c>SpotAllocationStrategy</c> is set to <c>lowest-price</c>.</para>
         /// <para>The value must be smaller than the N value specified in <c>LaunchTemplateConfig.N</c>.</para>
         /// 
         /// <b>Example:</b>
@@ -1371,7 +1371,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? SpotInstancePoolsToUseCount { get; set; }
 
         /// <summary>
-        /// <para>The target capacity of preemptible instances in the auto provisioning group. The value must be less than or equal to the <c>TotalTargetCapacity</c> value.</para>
+        /// <para>The target capacity of spot instances in the auto provisioning group. The value must be less than or equal to the <c>TotalTargetCapacity</c> value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -1468,7 +1468,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The total target capacity of the auto provisioning group. The value must be a positive integer.</para>
-        /// <para>The total target capacity of the auto provisioning group must be greater than or equal to the sum of the target capacity of pay-as-you-go instances specified by <c>PayAsYouGoTargetCapacity</c> and the target capacity of preemptible instances specified by <c>SpotTargetCapacity</c>.</para>
+        /// <para>The total target capacity of the auto provisioning group must be greater than or equal to the sum of the target capacity of pay-as-you-go instances specified by <c>PayAsYouGoTargetCapacity</c> and the target capacity of spot instances specified by <c>SpotTargetCapacity</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

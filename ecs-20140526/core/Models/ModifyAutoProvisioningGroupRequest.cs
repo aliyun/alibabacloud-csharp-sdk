@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The type of supplemental instances. When the sum of the PayAsYouGoTargetCapacity and SpotTargetCapacity values is smaller than the TotalTargetCapacity value, the auto-provisioning group creates instances of the specified type to meet the target capacity. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>PayAsYouGo: pay-as-you-go instances</description></item>
-        /// <item><description>Spot: preemptible instances</description></item>
+        /// <item><description>Spot: spot instances</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>The maximum price of preemptible instances in extended configuration N.</para>
+            /// <para>The maximum price of spot instances in extended configuration N.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The maximum price of preemptible instances in the auto-provisioning group.</para>
+        /// <para>The maximum price of spot instances in the auto-provisioning group.</para>
         /// <remarks>
         /// <para>When both the MaxSpotPrice and LaunchTemplateConfig.N.MaxPrice parameters are specified, the smaller one of the two parameter values is used. The LaunchTemplateConfig.N.MaxPrice parameter is specified when the auto-provisioning group is created, and cannot be modified.</para>
         /// </remarks>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The target capacity of preemptible instances in the auto-provisioning group. Valid values: Set this parameter to a value smaller than the TotalTargetCapacity value.</para>
+        /// <para>The target capacity of spot instances in the auto-provisioning group. Valid values: Set this parameter to a value smaller than the TotalTargetCapacity value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The total target capacity of the auto-provisioning group. The value must be a positive integer.</para>
-        /// <para>The total target capacity of the auto-provisioning group must be greater than or equal to the sum of the target capacity of pay-as-you-go instances specified by the PayAsYouGoTargetCapacity parameter as well as the target capacity of preemptible instances specified by the SpotTargetCapacity parameter.</para>
+        /// <para>The total target capacity of the auto-provisioning group must be greater than or equal to the sum of the target capacity of pay-as-you-go instances specified by the PayAsYouGoTargetCapacity parameter as well as the target capacity of spot instances specified by the SpotTargetCapacity parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>70</para>

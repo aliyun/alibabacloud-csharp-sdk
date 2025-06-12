@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string IoOptimized { get; set; }
 
         /// <summary>
-        /// <para>The network type of the preemptible instance. Valid values:</para>
+        /// <para>The network type of the spot instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>classic: classic network</description></item>
         /// <item><description>vpc: Virtual Private Cloud (VPC)</description></item>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The zone ID of the preemptible instance.</para>
+        /// <para>The zone ID of the spot instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -116,12 +116,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The protection period of the preemptible instance. Unit: hours. Default value: 1. Valid values:</para>
+        /// <para>The protection period of the spot instance. Unit: hours. Default value: 1. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</description></item>
-        /// <item><description>0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</description></item>
+        /// <item><description>1: After a spot instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</description></item>
+        /// <item><description>0: After a spot instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</description></item>
         /// </list>
-        /// <para>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Preemptible instances are billed by second. We recommend that you specify a protection period based on your business requirements.</para>
+        /// <para>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Spot instances are billed by second. We recommend that you specify a protection period based on your business requirements.</para>
         /// <remarks>
         /// <para> This parameter takes effect only if you set SpotStrategy to SpotWithPriceLimit or SpotAsPriceGo.</para>
         /// </remarks>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The spot price (market price) of the preemptible instance.</para>
+        /// <para>The spot price (market price) of the spot instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-g</para>

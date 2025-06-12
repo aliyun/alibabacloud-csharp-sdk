@@ -46,6 +46,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        [NameInMap("PasswordName")]
+        [Validation(Required=false)]
+        public string PasswordName { get; set; }
+
         /// <summary>
         /// <para>The port number of the ECS instance. The port is used to forward data. After this parameter is configured, Cloud Assistant Agent forwards data to the specified port. For example, you can set this parameter to 22 for data forwarding over SSH.</para>
         /// <para>This parameter is empty by default, which indicates that no port is configured to forward data.</para>

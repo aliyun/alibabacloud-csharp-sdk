@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string LaunchTemplateVersion { get; set; }
 
                 /// <summary>
-                /// <para>The maximum price of preemptible instances in the auto provisioning group.</para>
+                /// <para>The maximum price of spot  instances in the auto provisioning group.</para>
                 /// <remarks>
                 /// <para> When both the MaxSpotPrice and LaunchTemplateConfig.N.MaxPrice parameters are specified, the smaller one of the two parameter values is used.</para>
                 /// </remarks>
@@ -224,14 +224,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The policy related to preemptible instances.</para>
+                /// <para>The policy related to spot instances.</para>
                 /// </summary>
                 [NameInMap("SpotOptions")]
                 [Validation(Required=false)]
                 public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupSpotOptions SpotOptions { get; set; }
                 public class DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupSpotOptions : TeaModel {
                     /// <summary>
-                    /// <para>The policy for creating preemptible instances. Valid values:</para>
+                    /// <para>The policy for creating spot instances. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description>lowest-price: cost optimization policy. This policy indicates that the lowest-priced instance type is used to create instances.</description></item>
                     /// <item><description>diversified: balanced distribution policy. This policy indicates that instances are created evenly across multiple zones specified in the extended configuration.</description></item>
@@ -245,10 +245,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string AllocationStrategy { get; set; }
 
                     /// <summary>
-                    /// <para>The action to be performed after the excess preemptible instances are stopped. Valid values:</para>
+                    /// <para>The action to be performed after the excess spot instances are stopped. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>stop: retains the excess preemptible instances in the stopped state.</description></item>
-                    /// <item><description>terminate: releases the excess preemptible instances.</description></item>
+                    /// <item><description>stop: retains the excess spot instances in the stopped state.</description></item>
+                    /// <item><description>terminate: releases the excess spot instances.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -354,7 +354,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     /// <para>The type of supplemental instances. When the sum of the <c>PayAsYouGoTargetCapacity</c> and <c>SpotTargetCapacity</c> values is less than the <c>TotalTargetCapacity</c> value, the auto provisioning group creates instances of the specified billing method to meet the target capacity. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description>PayAsYouGo: pay-as-you-go instances.</description></item>
-                    /// <item><description>Spot: preemptible instances.</description></item>
+                    /// <item><description>Spot: spot instances.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -375,7 +375,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public float? PayAsYouGoTargetCapacity { get; set; }
 
                     /// <summary>
-                    /// <para>The target capacity of preemptible instances that the auto provisioning group provisions.</para>
+                    /// <para>The target capacity of spot instances that the auto provisioning group provisions.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>20</para>

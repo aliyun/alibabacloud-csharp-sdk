@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSpotPriceHistoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance type of the preemptible instance.</para>
+        /// <para>The instance type of the spot instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CNY</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Currency { get; set; }
 
         /// <summary>
-        /// <para>The network type of the preemptible instance.</para>
+        /// <para>The network type of the spot instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? NextOffset { get; set; }
 
         /// <summary>
-        /// <para>The instance type of the preemptible instance.</para>
+        /// <para>The instance type of the spot instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The zone ID of the preemptible instance.</para>
+        /// <para>The zone ID of the spot instance.</para>
         /// </summary>
         [NameInMap("SpotPrices")]
         [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeSpotPriceHistoryResponseBodySpotPricesSpotPriceType> SpotPriceType { get; set; }
             public class DescribeSpotPriceHistoryResponseBodySpotPricesSpotPriceType : TeaModel {
                 /// <summary>
-                /// <para>The instance type of the preemptible instance.</para>
+                /// <para>The instance type of the spot instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ecs.g5.large</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string InstanceType { get; set; }
 
                 /// <summary>
-                /// <para>Details about the price history of the preemptible instance.</para>
+                /// <para>Details about the price history of the spot instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>optimized</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string IoOptimized { get; set; }
 
                 /// <summary>
-                /// <para>Queries the price history of a preemptible instance within the last 30 days.</para>
+                /// <para>Queries the price history of a spot instance within the last 30 days.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string NetworkType { get; set; }
 
                 /// <summary>
-                /// <para>The price for a pay-as-you-go instance that has the same configuration as the specified preemptible instance.</para>
+                /// <para>The price for a pay-as-you-go instance that has the same configuration as the specified spot instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.354</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public float? OriginPrice { get; set; }
 
                 /// <summary>
-                /// <para>The price for a pay-as-you-go instance that has the same configurations as the preemptible instance.</para>
+                /// <para>The price for a pay-as-you-go instance that has the same configurations as the spot instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.036</para>

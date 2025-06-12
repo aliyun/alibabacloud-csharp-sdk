@@ -999,7 +999,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         /// <list type="bullet">
                         /// <item><description>financial: The instance was locked due to overdue payments.</description></item>
                         /// <item><description>security: The instance was locked due to security reasons.</description></item>
-                        /// <item><description>recycling: The preemptible instance was locked and pending release.</description></item>
+                        /// <item><description>recycling: The spot instance was locked and pending release.</description></item>
                         /// <item><description>dedicatedhostfinancial: The instance was locked due to overdue payments for the dedicated host.</description></item>
                         /// <item><description>refunded: The instance was locked because a refund was made for the instance.</description></item>
                         /// </list>
@@ -1196,12 +1196,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string SerialNumber { get; set; }
 
                 /// <summary>
-                /// <para>The protection period of the preemptible instance. Unit: hours. Valid values:</para>
+                /// <para>The protection period of the spot instance. Unit: hours. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</description></item>
-                /// <item><description>0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</description></item>
+                /// <item><description>1: After a spot instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</description></item>
+                /// <item><description>0: After a spot instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</description></item>
                 /// </list>
-                /// <para>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Preemptible instances are billed by second. We recommend that you specify a protection period based on your business requirements.</para>
+                /// <para>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Spot instances are billed by second. We recommend that you specify a protection period based on your business requirements.</para>
                 /// <remarks>
                 /// <para> This parameter is returned when SpotStrategy is set to SpotWithPriceLimit or SpotAsPriceGo.</para>
                 /// </remarks>
@@ -1214,9 +1214,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public int? SpotDuration { get; set; }
 
                 /// <summary>
-                /// <para>The interruption mode of the preemptible instance when the system initiates a preemptible instance interruption operation. Valid values:</para>
+                /// <para>The interruption mode of the spot instance when the system initiates a spot instance interruption operation. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Terminate: releases the preemptible instance.</description></item>
+                /// <item><description>Terminate: releases the spot instance.</description></item>
                 /// <item><description>Stop: stops the instance in economical mode.</description></item>
                 /// </list>
                 /// 
@@ -1241,8 +1241,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <para>The bidding policy for the pay-as-you-go instance. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>NoSpot: The instance is a regular pay-as-you-go instance.</description></item>
-                /// <item><description>SpotWithPriceLimit: The instance is a preemptible instance with a user-defined maximum hourly price.</description></item>
-                /// <item><description>SpotAsPriceGo: The instance is a preemptible instance for which the market price is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</description></item>
+                /// <item><description>SpotWithPriceLimit: The instance is a spot instance with a user-defined maximum hourly price.</description></item>
+                /// <item><description>SpotAsPriceGo: The instance is a spot instance for which the market price is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

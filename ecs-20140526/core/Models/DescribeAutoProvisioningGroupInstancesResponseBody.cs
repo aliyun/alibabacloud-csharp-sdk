@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public bool? IoOptimized { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the instance is a preemptible instance.</para>
+                /// <para>Indicates whether the instance is a spot instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>

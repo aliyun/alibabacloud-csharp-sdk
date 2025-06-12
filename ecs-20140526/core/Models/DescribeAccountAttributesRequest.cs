@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </description></item>
         /// <item><description><para>max-postpaid-instance-vcpu-count: the maximum number of vCPUs for pay-as-you-go instances.</para>
         /// </description></item>
-        /// <item><description><para>max-spot-instance-vcpu-count: the maximum number of vCPUs for preemptible instances.</para>
+        /// <item><description><para>max-spot-instance-vcpu-count: the maximum number of vCPUs for spot instances.</para>
         /// </description></item>
         /// <item><description><para>used-postpaid-instance-vcpu-count: the number of vCPUs that have been allocated to pay-as-you-go instances.</para>
         /// </description></item>
-        /// <item><description><para>used-spot-instance-vcpu-count: the number of vCPUs that have been allocated to preemptible instances.</para>
+        /// <item><description><para>used-spot-instance-vcpu-count: the number of vCPUs that have been allocated to spot instances.</para>
         /// </description></item>
         /// <item><description><para>max-postpaid-yundisk-capacity: the maximum capacity of pay-as-you-go data disks. (The value is deprecated.)</para>
         /// </description></item>

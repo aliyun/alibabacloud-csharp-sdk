@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string CommodityCode { get; set; }
 
                 /// <summary>
-                /// <para>The billing method of the instance.</para>
+                /// <para>The billing method of the instances.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PostPaid</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string InstanceChargeType { get; set; }
 
                 /// <summary>
-                /// <para>The name of the instance type.</para>
+                /// <para>The details of the instance type.</para>
                 /// </summary>
                 [NameInMap("InstanceType")]
                 [Validation(Required=false)]
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// <para>The network type of the instance.</para>
+                /// <para>The network type of the ECS instances.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public int? Priority { get; set; }
 
                 /// <summary>
-                /// <para>The region ID of the instance type.</para>
+                /// <para>The ID of the region in which the instance type is available.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The scenarios in which the instance type is recommended.</para>
+                /// <para>The scenario in which the instance type is recommended.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CREATE</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Scene { get; set; }
 
                 /// <summary>
-                /// <para>The bidding policy for the preemptible instance.</para>
+                /// <para>The bidding policy for the spot instances.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>NoSpot</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string ZoneId { get; set; }
 
                 /// <summary>
-                /// <para>The details of the zones where the instance types resides.</para>
+                /// <para>The details of the zones in which the instance type is available.</para>
                 /// </summary>
                 [NameInMap("Zones")]
                 [Validation(Required=false)]
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceTypeZonesZone> Zone { get; set; }
                     public class DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceTypeZonesZone : TeaModel {
                         /// <summary>
-                        /// <para>The details of network types of instance types.</para>
+                        /// <para>The details of the network types of the instance type.</para>
                         /// </summary>
                         [NameInMap("NetworkTypes")]
                         [Validation(Required=false)]
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         }
 
                         /// <summary>
-                        /// <para>The ID of the zone where the instance type is available.</para>
+                        /// <para>The ID of the zone in which the instance type is available.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>cn-hangzhou-h</para>
@@ -212,7 +212,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>

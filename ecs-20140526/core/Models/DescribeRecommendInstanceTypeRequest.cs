@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeRecommendInstanceTypeRequest : TeaModel {
         /// <summary>
-        /// <para>The number of vCPUs of the instance.</para>
+        /// <para>The number of vCPU cores of the instance type.</para>
         /// <remarks>
-        /// <para>If you specify both <c>Cores</c> and <c>Memory</c>, the system returns all instance types that match the values of the parameters.</para>
+        /// <para> If you specify both <c>Cores</c> and <c>Memory</c>, the system returns all instance types that match the values of the parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? Cores { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the ECS instance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>. Valid values:</para>
+        /// <para>The billing method of ECS instances. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>PrePaid: subscription</description></item>
         /// <item><description>PostPaid: pay-as-you-go</description></item>
@@ -40,9 +40,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The level of the instance family. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>EntryLevel</description></item>
-        /// <item><description>EnterpriseLevel</description></item>
-        /// <item><description>CreditEntryLevel For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Burstable instance families</a>.</description></item>
+        /// <item><description>EntryLevel: entry level.</description></item>
+        /// <item><description>EnterpriseLevel: enterprise level.</description></item>
+        /// <item><description>CreditEntryLevel: credit-based entry level. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Burstable instance families</a>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -53,9 +53,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceFamilyLevel { get; set; }
 
         /// <summary>
-        /// <para>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the most recent instance type list.</para>
+        /// <para>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the most recent instance type list.</para>
         /// <remarks>
-        /// <para>If you specify <c>InstanceType</c>, the <c>Cores</c> and <c>Memory</c> parameters are ignored.</para>
+        /// <para> If you specify <c>InstanceType</c>, you cannot specify <c>Cores</c> or <c>Memory</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>Specifies the instance families from which the alternative instance types are selected. You can specify up to 10 instance families.</para>
+        /// <para>The instance families from which the alternative instance types are selected. You can specify up to 10 instance families.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs.hfg6</para>
@@ -76,10 +76,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> InstanceTypeFamily { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the instance is I/O optimized. The IoOptimized parameter cannot be specified when the instance is not I/O optimized. Valid values:</para>
+        /// <para>Specifies whether instances of the instance type are I/O optimized. You cannot specify IoOptimized if the instance type supports only non-I/O optimized instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>optimized: The instance is I/O optimized.</description></item>
-        /// <item><description>none: The instance is not I/O optimized.</description></item>
+        /// <item><description>optimized: The instances are I/O optimized.</description></item>
+        /// <item><description>none: The instances are non-I/O optimized.</description></item>
         /// </list>
         /// <para>Default value: optimized.</para>
         /// <para>If you query alternative instance types for retired instance types, this parameter is set to none by default.</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string IoOptimized { get; set; }
 
         /// <summary>
-        /// <para>The maximum hourly price for pay-as-you-go instances or preemptible instances.</para>
+        /// <para>The maximum hourly price for pay-as-you-go instances or spot instances.</para>
         /// <remarks>
         /// <para> This parameter takes effect only when <c>SpotStrategy</c> is set to <c>SpotWithPriceLimit</c>.</para>
         /// </remarks>
@@ -105,9 +105,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public float? MaxPrice { get; set; }
 
         /// <summary>
-        /// <para>The memory size of the instance. Unit: GiB.</para>
+        /// <para>The memory size of the instance type. Unit: GiB.</para>
         /// <remarks>
-        /// <para>If you specify both <c>Cores</c> and <c>Memory</c>, the system returns all instance types that match the values of the parameters.</para>
+        /// <para> If you specify both <c>Cores</c> and <c>Memory</c>, the system returns all instance types that match the values of the parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public float? Memory { get; set; }
 
         /// <summary>
-        /// <para>The network type of the instance. Valid values:</para>
+        /// <para>The network type of ECS instances. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>classic</description></item>
         /// <item><description>vpc</description></item>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies the scenarios in which instance types are recommended. Valid values:</para>
+        /// <para>The scenario in which instance types are recommended. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>UPGRADE: instance type upgrade or downgrade</description></item>
         /// <item><description>CREATE: instance creation</description></item>
@@ -192,11 +192,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Scene { get; set; }
 
         /// <summary>
-        /// <para>The bidding policy of the preemptible instance. Valid values:</para>
+        /// <para>The bidding policy of spot instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>NoSpot: The instance is a regular pay-as-you-go instance.</description></item>
-        /// <item><description>SpotWithPriceLimit: The instance is a preemptible instance for which you can specify the maximum hourly price.</description></item>
-        /// <item><description>SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</description></item>
+        /// <item><description>NoSpot: The instances are regular pay-as-you-go instances.</description></item>
+        /// <item><description>SpotWithPriceLimit: The instances are created as spot instances for which you can specify the maximum hourly price.</description></item>
+        /// <item><description>SpotAsPriceGo: The instances are spot instances for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</description></item>
         /// </list>
         /// <remarks>
         /// <para> If you specify <c>SpotStrategy</c>, you must set <c>InstanceChargeType</c> to <c>PostPaid</c>.</para>
@@ -214,8 +214,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The category of the system disk. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>cloud_efficiency: ultra disk</description></item>
-        /// <item><description>cloud_ssd: SSD</description></item>
-        /// <item><description>cloud_essd: ESSD</description></item>
+        /// <item><description>cloud_ssd: standard SSD</description></item>
+        /// <item><description>cloud_essd: Enterprise SSD (ESSD)</description></item>
         /// <item><description>cloud: basic disk</description></item>
         /// </list>
         /// <para>For non-I/O optimized instances, the default value is cloud.</para>
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The zone ID. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</para>
-        /// <para>We recommend that you set the value of ZoneMatchMode to Include, which is the default value. This way, the system recommends instance types that are available in the zone specified by the ZoneId parameter based on priority. The system also recommends instance types that are available in other zones within the same region.</para>
+        /// <para>We recommend that you set ZoneMatchMode to Include, which is the default value. This way, the system recommends instance types that are available in the zone specified by ZoneId based on the priority policy. The system also recommends instance types that are available in other zones within the same region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-f</para>
@@ -242,10 +242,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to recommend only instance types in the zone specified by ZoneId. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Strict: recommends only instance types that are available in zones specified by the ZoneId parameter.</description></item>
-        /// <item><description>Include: recommends instance types that are available in zones specified by the ZoneId parameter and other zones within the same region.</description></item>
+        /// <item><description>Strict: recommends only instance types that are available in the zone specified by ZoneId.</description></item>
+        /// <item><description>Include: recommends instance types that are available in the zone specified by ZoneId and instance types that are available in other zones within the same region.</description></item>
         /// </list>
-        /// <para>If <c>ZoneId</c> is specified, the default value of this parameter is Strict. This value indicates that only alternative instance types in the zone specified by ZoneId are recommended.</para>
+        /// <para>If <c>ZoneId</c> is specified, the default value of this parameter is Strict, which indicates that only instance types in the zone specified by ZoneId are recommended.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Strict</para>
