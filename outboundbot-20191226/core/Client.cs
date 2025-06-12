@@ -9809,6 +9809,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await GetAsrServerInfoWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取系统策略配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetBaseStrategyPeriodRequest
         /// </param>
@@ -9850,6 +9855,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<GetBaseStrategyPeriodResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取系统策略配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetBaseStrategyPeriodRequest
         /// </param>
@@ -9891,6 +9901,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<GetBaseStrategyPeriodResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取系统策略配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetBaseStrategyPeriodRequest
         /// </param>
@@ -9904,6 +9919,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return GetBaseStrategyPeriodWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取系统策略配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetBaseStrategyPeriodRequest
         /// </param>
@@ -9991,6 +10011,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await GetConcurrentConversationQuotaWithOptionsAsync(runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetContactBlockList</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetContactBlockListRequest
         /// </param>
@@ -10040,6 +10065,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<GetContactBlockListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetContactBlockList</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetContactBlockListRequest
         /// </param>
@@ -10089,6 +10119,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<GetContactBlockListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetContactBlockList</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetContactBlockListRequest
         /// </param>
@@ -10102,6 +10137,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return GetContactBlockListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetContactBlockList</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetContactBlockListRequest
         /// </param>
@@ -10115,6 +10155,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await GetContactBlockListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetContactWhiteList</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetContactWhiteListRequest
         /// </param>
@@ -10164,6 +10209,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<GetContactWhiteListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetContactWhiteList</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetContactWhiteListRequest
         /// </param>
@@ -10213,6 +10263,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<GetContactWhiteListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetContactWhiteList</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetContactWhiteListRequest
         /// </param>
@@ -10226,6 +10281,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return GetContactWhiteListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetContactWhiteList</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetContactWhiteListRequest
         /// </param>
@@ -10555,6 +10615,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await GetEmptyNumberNoMoreCallsInfoWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取上传信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetJobDataUploadParamsRequest
         /// </param>
@@ -10608,6 +10673,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<GetJobDataUploadParamsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取上传信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetJobDataUploadParamsRequest
         /// </param>
@@ -10661,6 +10731,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<GetJobDataUploadParamsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取上传信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetJobDataUploadParamsRequest
         /// </param>
@@ -10674,6 +10749,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return GetJobDataUploadParamsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取上传信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetJobDataUploadParamsRequest
         /// </param>
@@ -17281,6 +17361,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await ModifyOutboundCallNumberWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改场景</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyScriptRequest
         /// </param>
@@ -17330,6 +17415,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelConfig))
+            {
+                query["LabelConfig"] = request.LabelConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LongWaitEnable))
             {
@@ -17406,6 +17495,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ModifyScriptResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改场景</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyScriptRequest
         /// </param>
@@ -17455,6 +17549,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelConfig))
+            {
+                query["LabelConfig"] = request.LabelConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LongWaitEnable))
             {
@@ -17531,6 +17629,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ModifyScriptResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改场景</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyScriptRequest
         /// </param>
@@ -17544,6 +17647,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return ModifyScriptWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改场景</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyScriptRequest
         /// </param>

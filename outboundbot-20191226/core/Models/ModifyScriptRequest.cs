@@ -66,6 +66,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("LabelConfig")]
+        [Validation(Required=false)]
+        public string LabelConfig { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>true</para>
