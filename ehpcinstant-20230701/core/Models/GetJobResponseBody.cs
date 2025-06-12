@@ -275,6 +275,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 
                         }
 
+                        [NameInMap("InstanceTypes")]
+                        [Validation(Required=false)]
+                        public List<string> InstanceTypes { get; set; }
+
                         /// <summary>
                         /// <b>Example:</b>
                         /// <para>4</para>
@@ -316,6 +320,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                             [NameInMap("Script")]
                             [Validation(Required=false)]
                             public string Script { get; set; }
+
+                            [NameInMap("UserName")]
+                            [Validation(Required=false)]
+                            public string UserName { get; set; }
 
                         }
 

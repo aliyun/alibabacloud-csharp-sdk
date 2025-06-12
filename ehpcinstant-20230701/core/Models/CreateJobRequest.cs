@@ -39,6 +39,14 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 
             }
 
+            [NameInMap("Pool")]
+            [Validation(Required=false)]
+            public string Pool { get; set; }
+
+            [NameInMap("Priority")]
+            [Validation(Required=false)]
+            public int? Priority { get; set; }
+
             [NameInMap("Tag")]
             [Validation(Required=false)]
             public List<CreateJobRequestDeploymentPolicyTag> Tag { get; set; }
@@ -193,6 +201,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 
                     }
 
+                    [NameInMap("InstanceTypes")]
+                    [Validation(Required=false)]
+                    public List<string> InstanceTypes { get; set; }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>4</para>
@@ -217,6 +229,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                         [NameInMap("AppId")]
                         [Validation(Required=false)]
                         public string AppId { get; set; }
+
+                        [NameInMap("Arg")]
+                        [Validation(Required=false)]
+                        public List<string> Arg { get; set; }
 
                         [NameInMap("Command")]
                         [Validation(Required=false)]
@@ -282,6 +298,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                         [Validation(Required=false)]
                         public string Image { get; set; }
 
+                        [NameInMap("Password")]
+                        [Validation(Required=false)]
+                        public string Password { get; set; }
+
                         /// <summary>
                         /// <b>Example:</b>
                         /// <para>ZWNobyBoZWxsbyBlY3Mh</para>
@@ -321,6 +341,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                     [NameInMap("MountPath")]
                     [Validation(Required=false)]
                     public string MountPath { get; set; }
+
+                    [NameInMap("ReadOnly")]
+                    [Validation(Required=false)]
+                    public bool? ReadOnly { get; set; }
 
                     /// <summary>
                     /// <b>Example:</b>
