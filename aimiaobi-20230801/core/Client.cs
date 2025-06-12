@@ -2751,6 +2751,134 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>导出-自定义数据源-选题视角分析任务结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExportCustomSourceAnalysisTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExportCustomSourceAnalysisTaskResponse
+        /// </returns>
+        public ExportCustomSourceAnalysisTaskResponse ExportCustomSourceAnalysisTaskWithOptions(ExportCustomSourceAnalysisTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExportCustomSourceAnalysisTask",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExportCustomSourceAnalysisTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导出-自定义数据源-选题视角分析任务结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExportCustomSourceAnalysisTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExportCustomSourceAnalysisTaskResponse
+        /// </returns>
+        public async Task<ExportCustomSourceAnalysisTaskResponse> ExportCustomSourceAnalysisTaskWithOptionsAsync(ExportCustomSourceAnalysisTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExportCustomSourceAnalysisTask",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExportCustomSourceAnalysisTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导出-自定义数据源-选题视角分析任务结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExportCustomSourceAnalysisTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExportCustomSourceAnalysisTaskResponse
+        /// </returns>
+        public ExportCustomSourceAnalysisTaskResponse ExportCustomSourceAnalysisTask(ExportCustomSourceAnalysisTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ExportCustomSourceAnalysisTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导出-自定义数据源-选题视角分析任务结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExportCustomSourceAnalysisTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExportCustomSourceAnalysisTaskResponse
+        /// </returns>
+        public async Task<ExportCustomSourceAnalysisTaskResponse> ExportCustomSourceAnalysisTaskAsync(ExportCustomSourceAnalysisTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ExportCustomSourceAnalysisTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>文档管理-导出。</para>
         /// </summary>
         /// 
@@ -4383,6 +4511,134 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetCustomHotTopicBroadcastJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取自定义数据源-选题视角分析任务结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCustomSourceTopicAnalysisTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCustomSourceTopicAnalysisTaskResponse
+        /// </returns>
+        public GetCustomSourceTopicAnalysisTaskResponse GetCustomSourceTopicAnalysisTaskWithOptions(GetCustomSourceTopicAnalysisTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCustomSourceTopicAnalysisTask",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCustomSourceTopicAnalysisTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取自定义数据源-选题视角分析任务结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCustomSourceTopicAnalysisTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCustomSourceTopicAnalysisTaskResponse
+        /// </returns>
+        public async Task<GetCustomSourceTopicAnalysisTaskResponse> GetCustomSourceTopicAnalysisTaskWithOptionsAsync(GetCustomSourceTopicAnalysisTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCustomSourceTopicAnalysisTask",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCustomSourceTopicAnalysisTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取自定义数据源-选题视角分析任务结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCustomSourceTopicAnalysisTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCustomSourceTopicAnalysisTaskResponse
+        /// </returns>
+        public GetCustomSourceTopicAnalysisTaskResponse GetCustomSourceTopicAnalysisTask(GetCustomSourceTopicAnalysisTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetCustomSourceTopicAnalysisTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取自定义数据源-选题视角分析任务结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCustomSourceTopicAnalysisTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCustomSourceTopicAnalysisTaskResponse
+        /// </returns>
+        public async Task<GetCustomSourceTopicAnalysisTaskResponse> GetCustomSourceTopicAnalysisTaskAsync(GetCustomSourceTopicAnalysisTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetCustomSourceTopicAnalysisTaskWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -20139,6 +20395,170 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SubmitCustomHotTopicBroadcastJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>从自定义数据源提交选题热点分析</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitCustomSourceTopicAnalysisRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitCustomSourceTopicAnalysisResponse
+        /// </returns>
+        public SubmitCustomSourceTopicAnalysisResponse SubmitCustomSourceTopicAnalysisWithOptions(SubmitCustomSourceTopicAnalysisRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitCustomSourceTopicAnalysisShrinkRequest request = new SubmitCustomSourceTopicAnalysisShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.News))
+            {
+                request.NewsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.News, "News", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileType))
+            {
+                body["FileType"] = request.FileType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileUrl))
+            {
+                body["FileUrl"] = request.FileUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxTopicSize))
+            {
+                body["MaxTopicSize"] = request.MaxTopicSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewsShrink))
+            {
+                body["News"] = request.NewsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitCustomSourceTopicAnalysis",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitCustomSourceTopicAnalysisResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>从自定义数据源提交选题热点分析</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitCustomSourceTopicAnalysisRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitCustomSourceTopicAnalysisResponse
+        /// </returns>
+        public async Task<SubmitCustomSourceTopicAnalysisResponse> SubmitCustomSourceTopicAnalysisWithOptionsAsync(SubmitCustomSourceTopicAnalysisRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitCustomSourceTopicAnalysisShrinkRequest request = new SubmitCustomSourceTopicAnalysisShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.News))
+            {
+                request.NewsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.News, "News", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileType))
+            {
+                body["FileType"] = request.FileType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileUrl))
+            {
+                body["FileUrl"] = request.FileUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxTopicSize))
+            {
+                body["MaxTopicSize"] = request.MaxTopicSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewsShrink))
+            {
+                body["News"] = request.NewsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitCustomSourceTopicAnalysis",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitCustomSourceTopicAnalysisResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>从自定义数据源提交选题热点分析</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitCustomSourceTopicAnalysisRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitCustomSourceTopicAnalysisResponse
+        /// </returns>
+        public SubmitCustomSourceTopicAnalysisResponse SubmitCustomSourceTopicAnalysis(SubmitCustomSourceTopicAnalysisRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitCustomSourceTopicAnalysisWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>从自定义数据源提交选题热点分析</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitCustomSourceTopicAnalysisRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitCustomSourceTopicAnalysisResponse
+        /// </returns>
+        public async Task<SubmitCustomSourceTopicAnalysisResponse> SubmitCustomSourceTopicAnalysisAsync(SubmitCustomSourceTopicAnalysisRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitCustomSourceTopicAnalysisWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
