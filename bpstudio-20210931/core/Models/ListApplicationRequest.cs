@@ -71,6 +71,10 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
         [Validation(Required=false)]
         public string ResourceId { get; set; }
 
+        [NameInMap("ShowHide")]
+        [Validation(Required=false)]
+        public bool? ShowHide { get; set; }
+
         /// <summary>
         /// <para>The status of the applications to be returned.</para>
         /// 
