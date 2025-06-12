@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.BailianModelOnChip20240816.Models
         [Validation(Required=false)]
         public DeviceRegisterResponseBodyData Data { get; set; }
         public class DeviceRegisterResponseBodyData : TeaModel {
+            [NameInMap("appId")]
+            [Validation(Required=false)]
+            public string AppId { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>991fa52b7935aaa33536e05d4f4b5003</para>
@@ -36,14 +40,6 @@ namespace AlibabaCloud.SDK.BailianModelOnChip20240816.Models
             [NameInMap("nonce")]
             [Validation(Required=false)]
             public string Nonce { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>el3SzmCU2p0x4RBc</para>
-            /// </summary>
-            [NameInMap("productKey")]
-            [Validation(Required=false)]
-            public string ProductKey { get; set; }
 
             /// <summary>
             /// <b>Example:</b>

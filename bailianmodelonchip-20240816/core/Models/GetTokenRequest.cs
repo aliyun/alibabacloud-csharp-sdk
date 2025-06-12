@@ -11,6 +11,13 @@ namespace AlibabaCloud.SDK.BailianModelOnChip20240816.Models
     public class GetTokenRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// </summary>
+        [NameInMap("appId")]
+        [Validation(Required=false)]
+        public string AppId { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5b504f84b69b9a73d3a21a2cff05e190</para>
@@ -28,16 +35,6 @@ namespace AlibabaCloud.SDK.BailianModelOnChip20240816.Models
         [NameInMap("nonce")]
         [Validation(Required=false)]
         public string Nonce { get; set; }
-
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>el3SzmCU2p0x4RBc</para>
-        /// </summary>
-        [NameInMap("productKey")]
-        [Validation(Required=false)]
-        public string ProductKey { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
