@@ -383,6 +383,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 [Validation(Required=false)]
                 public string OffsiteAgentOriginatorNumbers { get; set; }
 
+                [NameInMap("OutsideNumberReleaseReason")]
+                [Validation(Required=false)]
+                public string OutsideNumberReleaseReason { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -486,6 +490,16 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 [NameInMap("StartTime")]
                 [Validation(Required=false)]
                 public long? StartTime { get; set; }
+
+                [NameInMap("SummaryIndex")]
+                [Validation(Required=false)]
+                public ListCallDetailRecordsV2ResponseBodyDataListSummaryIndex SummaryIndex { get; set; }
+                public class ListCallDetailRecordsV2ResponseBodyDataListSummaryIndex : TeaModel {
+                    [NameInMap("Keywords")]
+                    [Validation(Required=false)]
+                    public string Keywords { get; set; }
+
+                }
 
                 /// <summary>
                 /// <b>Example:</b>

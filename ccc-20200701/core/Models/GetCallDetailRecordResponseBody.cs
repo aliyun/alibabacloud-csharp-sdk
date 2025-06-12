@@ -351,6 +351,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 
             }
 
+            [NameInMap("OutsideNumberReleaseReason")]
+            [Validation(Required=false)]
+            public string OutsideNumberReleaseReason { get; set; }
+
             [NameInMap("QueueEvents")]
             [Validation(Required=false)]
             public List<GetCallDetailRecordResponseBodyDataQueueEvents> QueueEvents { get; set; }

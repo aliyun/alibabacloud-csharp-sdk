@@ -37,6 +37,18 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 [Validation(Required=false)]
                 public string Number { get; set; }
 
+                [NameInMap("Provider")]
+                [Validation(Required=false)]
+                public string Provider { get; set; }
+
+                [NameInMap("ProviderCode")]
+                [Validation(Required=false)]
+                public string ProviderCode { get; set; }
+
+                [NameInMap("ProviderDisplayName")]
+                [Validation(Required=false)]
+                public string ProviderDisplayName { get; set; }
+
                 [NameInMap("Province")]
                 [Validation(Required=false)]
                 public string Province { get; set; }

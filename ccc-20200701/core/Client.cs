@@ -105,14 +105,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AbortCampaignResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AbortCampaignResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AbortCampaignResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -158,14 +151,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AbortCampaignResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AbortCampaignResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AbortCampaignResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -242,14 +228,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AcceptChatResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AcceptChatResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AcceptChatResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -290,14 +269,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AcceptChatResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AcceptChatResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AcceptChatResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -373,14 +345,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AddBlacklistCallTaggingResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AddBlacklistCallTaggingResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AddBlacklistCallTaggingResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -430,14 +395,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AddBlacklistCallTaggingResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AddBlacklistCallTaggingResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AddBlacklistCallTaggingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -529,14 +487,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AddCasesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AddCasesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AddCasesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -592,14 +543,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AddCasesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AddCasesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AddCasesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -688,14 +632,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AddFeedbackResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AddFeedbackResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AddFeedbackResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -748,14 +685,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AddFeedbackResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AddFeedbackResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AddFeedbackResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -830,14 +760,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AddNumbersToSkillGroupResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AddNumbersToSkillGroupResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AddNumbersToSkillGroupResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -886,14 +809,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AddNumbersToSkillGroupResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AddNumbersToSkillGroupResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AddNumbersToSkillGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -964,14 +880,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AddPersonalNumbersToUserResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AddPersonalNumbersToUserResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AddPersonalNumbersToUserResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -1016,14 +925,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AddPersonalNumbersToUserResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AddPersonalNumbersToUserResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AddPersonalNumbersToUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -1094,14 +996,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AddPhoneNumberToSkillGroupsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AddPhoneNumberToSkillGroupsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AddPhoneNumberToSkillGroupsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -1146,14 +1041,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AddPhoneNumberToSkillGroupsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AddPhoneNumberToSkillGroupsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AddPhoneNumberToSkillGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -1232,14 +1120,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AddPhoneNumbersResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AddPhoneNumbersResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AddPhoneNumbersResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -1292,14 +1173,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AddPhoneNumbersResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AddPhoneNumbersResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AddPhoneNumbersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -1380,14 +1254,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AddSchemaPropertyResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AddSchemaPropertyResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AddSchemaPropertyResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="tmpReq">
@@ -1442,14 +1309,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AddSchemaPropertyResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AddSchemaPropertyResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AddSchemaPropertyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -1520,14 +1380,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AddSkillGroupsToUserResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AddSkillGroupsToUserResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AddSkillGroupsToUserResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -1572,14 +1425,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AddSkillGroupsToUserResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AddSkillGroupsToUserResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AddSkillGroupsToUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -1662,14 +1508,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AddTicketTaskResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AddTicketTaskResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AddTicketTaskResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -1726,14 +1565,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AddTicketTaskResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AddTicketTaskResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AddTicketTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -1804,14 +1636,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AddUsersToSkillGroupResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AddUsersToSkillGroupResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AddUsersToSkillGroupResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -1856,14 +1681,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AddUsersToSkillGroupResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AddUsersToSkillGroupResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AddUsersToSkillGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -1938,14 +1756,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AnalyzeConversationResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AnalyzeConversationResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AnalyzeConversationResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -1994,14 +1805,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AnalyzeConversationResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AnalyzeConversationResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AnalyzeConversationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -2076,14 +1880,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AnswerCallResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AnswerCallResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AnswerCallResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -2132,14 +1929,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AnswerCallResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AnswerCallResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AnswerCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -2223,14 +2013,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AppendCasesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AppendCasesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AppendCasesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -2288,14 +2071,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AppendCasesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AppendCasesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AppendCasesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -2390,14 +2166,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AssignUsersResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AssignUsersResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AssignUsersResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Deprecated</b></term>
@@ -2456,14 +2225,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AssignUsersResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AssignUsersResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AssignUsersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Deprecated</b></term>
@@ -2558,14 +2320,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<BargeInCallResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<BargeInCallResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<BargeInCallResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -2622,14 +2377,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<BargeInCallResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<BargeInCallResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<BargeInCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -2756,14 +2504,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<BlindTransferResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<BlindTransferResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<BlindTransferResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -2864,14 +2605,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<BlindTransferResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<BlindTransferResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<BlindTransferResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -2966,14 +2700,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<BridgeRtcCallResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<BridgeRtcCallResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<BridgeRtcCallResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -3042,14 +2769,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<BridgeRtcCallResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<BridgeRtcCallResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<BridgeRtcCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -3124,14 +2844,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CancelAttendedTransferResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CancelAttendedTransferResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CancelAttendedTransferResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -3180,14 +2893,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CancelAttendedTransferResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CancelAttendedTransferResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CancelAttendedTransferResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -3258,14 +2964,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ChangeVisibilityResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ChangeVisibilityResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ChangeVisibilityResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -3310,14 +3009,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ChangeVisibilityResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ChangeVisibilityResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ChangeVisibilityResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -3400,14 +3092,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ChangeWorkModeResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ChangeWorkModeResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ChangeWorkModeResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -3464,14 +3149,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ChangeWorkModeResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ChangeWorkModeResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ChangeWorkModeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -3542,14 +3220,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ClaimChatResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ClaimChatResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ClaimChatResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -3594,14 +3265,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ClaimChatResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ClaimChatResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ClaimChatResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -3684,14 +3348,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CoachCallResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CoachCallResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CoachCallResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -3748,14 +3405,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CoachCallResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CoachCallResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CoachCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -3834,14 +3484,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CommitContactFlowResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CommitContactFlowResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CommitContactFlowResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -3894,14 +3537,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CommitContactFlowResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CommitContactFlowResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CommitContactFlowResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -3976,14 +3612,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CompleteAttendedTransferResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CompleteAttendedTransferResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CompleteAttendedTransferResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -4032,14 +3661,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CompleteAttendedTransferResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CompleteAttendedTransferResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CompleteAttendedTransferResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -4118,14 +3740,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateAudioFileResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateAudioFileResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateAudioFileResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -4178,14 +3793,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateAudioFileResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateAudioFileResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateAudioFileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -4260,14 +3868,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateCallSummaryResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateCallSummaryResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateCallSummaryResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -4316,14 +3917,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateCallSummaryResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateCallSummaryResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateCallSummaryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -4395,14 +3989,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateCallTagsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateCallTagsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateCallTagsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4448,14 +4035,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateCallTagsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateCallTagsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateCallTagsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4599,14 +4179,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateCampaignResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateCampaignResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateCampaignResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4714,14 +4287,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateCampaignResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateCampaignResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateCampaignResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4802,14 +4368,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateChatMediaUrlResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateChatMediaUrlResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateChatMediaUrlResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -4854,14 +4413,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateChatMediaUrlResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateChatMediaUrlResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateChatMediaUrlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -4940,14 +4492,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateContactFlowResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateContactFlowResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateContactFlowResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -5000,14 +4545,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateContactFlowResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateContactFlowResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateContactFlowResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -5085,14 +4623,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateCustomCallTaggingResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateCustomCallTaggingResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateCustomCallTaggingResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Deprecated</b></term>
@@ -5144,14 +4675,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateCustomCallTaggingResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateCustomCallTaggingResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateCustomCallTaggingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Deprecated</b></term>
@@ -5252,14 +4776,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateInstanceResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateInstanceResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateInstanceResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -5312,14 +4829,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateInstanceResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateInstanceResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -5404,14 +4914,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateSchemaResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateSchemaResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateSchemaResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="tmpReq">
@@ -5470,14 +4973,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateSchemaResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateSchemaResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateSchemaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -5556,14 +5052,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateSkillGroupResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateSkillGroupResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateSkillGroupResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -5616,14 +5105,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateSkillGroupResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateSkillGroupResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateSkillGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -5710,14 +5192,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateTicketResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateTicketResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateTicketResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -5778,14 +5253,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateTicketResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateTicketResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateTicketResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -5892,14 +5360,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateUserResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateUserResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateUserResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -5980,14 +5441,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateUserResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateUserResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -6054,14 +5508,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteAudioFileResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteAudioFileResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteAudioFileResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -6102,14 +5549,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteAudioFileResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteAudioFileResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteAudioFileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -6181,14 +5621,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteCallTagResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteCallTagResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteCallTagResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -6234,14 +5667,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteCallTagResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteCallTagResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteCallTagResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -6318,14 +5744,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteContactFlowResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteContactFlowResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteContactFlowResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -6366,14 +5785,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteContactFlowResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteContactFlowResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteContactFlowResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -6445,14 +5857,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteCustomCallTaggingResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteCustomCallTaggingResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteCustomCallTaggingResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -6498,14 +5903,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteCustomCallTaggingResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteCustomCallTaggingResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteCustomCallTaggingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -6590,14 +5988,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteDocumentResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteDocumentResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteDocumentResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -6646,14 +6037,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteDocumentResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteDocumentResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteDocumentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -6734,14 +6118,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteDocumentsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteDocumentsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteDocumentsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="tmpReq">
@@ -6796,14 +6173,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteDocumentsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteDocumentsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteDocumentsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -6866,14 +6236,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteInstanceResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteInstanceResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteInstanceResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -6910,14 +6273,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteInstanceResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteInstanceResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -6988,14 +6344,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteSchemaResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteSchemaResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteSchemaResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -7040,14 +6389,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteSchemaResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteSchemaResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteSchemaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -7122,14 +6464,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteSchemaPropertyResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteSchemaPropertyResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteSchemaPropertyResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -7178,14 +6513,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteSchemaPropertyResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteSchemaPropertyResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteSchemaPropertyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -7256,14 +6584,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteSkillGroupResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteSkillGroupResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteSkillGroupResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -7308,14 +6629,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteSkillGroupResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteSkillGroupResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteSkillGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -7382,14 +6696,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteTicketResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteTicketResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteTicketResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -7430,14 +6737,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteTicketResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteTicketResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteTicketResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -7504,14 +6804,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteTicketTemplateResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteTicketTemplateResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteTicketTemplateResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -7552,14 +6845,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteTicketTemplateResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteTicketTemplateResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteTicketTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -7634,14 +6920,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DisableSchemaPropertyResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DisableSchemaPropertyResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DisableSchemaPropertyResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -7690,14 +6969,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DisableSchemaPropertyResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DisableSchemaPropertyResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DisableSchemaPropertyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -7764,14 +7036,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DisableTicketTemplateResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DisableTicketTemplateResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DisableTicketTemplateResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -7812,14 +7077,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DisableTicketTemplateResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DisableTicketTemplateResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DisableTicketTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -7890,14 +7148,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DiscardEditingContactFlowResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DiscardEditingContactFlowResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DiscardEditingContactFlowResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -7942,14 +7193,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DiscardEditingContactFlowResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DiscardEditingContactFlowResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DiscardEditingContactFlowResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -8024,14 +7268,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<EnableSchemaPropertyResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<EnableSchemaPropertyResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<EnableSchemaPropertyResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -8080,14 +7317,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<EnableSchemaPropertyResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<EnableSchemaPropertyResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<EnableSchemaPropertyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -8154,14 +7384,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<EnableTicketTemplateResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<EnableTicketTemplateResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<EnableTicketTemplateResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -8202,14 +7425,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<EnableTicketTemplateResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<EnableTicketTemplateResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<EnableTicketTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -8280,14 +7496,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<EndConferenceResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<EndConferenceResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<EndConferenceResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -8332,14 +7541,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<EndConferenceResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<EndConferenceResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<EndConferenceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -8410,14 +7612,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ExportContactFlowResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ExportContactFlowResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ExportContactFlowResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -8462,14 +7657,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ExportContactFlowResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ExportContactFlowResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ExportContactFlowResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -8543,14 +7731,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ExportCustomCallTaggingResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ExportCustomCallTaggingResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ExportCustomCallTaggingResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Deprecated</b></term>
@@ -8598,14 +7779,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ExportCustomCallTaggingResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ExportCustomCallTaggingResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ExportCustomCallTaggingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Deprecated</b></term>
@@ -8703,14 +7877,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ExportDoNotCallNumbersResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ExportDoNotCallNumbersResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ExportDoNotCallNumbersResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -8760,14 +7927,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ExportDoNotCallNumbersResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ExportDoNotCallNumbersResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ExportDoNotCallNumbersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -8852,14 +8012,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<FinishTicketTaskResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<FinishTicketTaskResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<FinishTicketTaskResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -8908,14 +8061,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<FinishTicketTaskResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<FinishTicketTaskResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<FinishTicketTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -8979,14 +8125,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetAccessChannelOfStagingResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetAccessChannelOfStagingResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetAccessChannelOfStagingResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -9024,14 +8163,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetAccessChannelOfStagingResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetAccessChannelOfStagingResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetAccessChannelOfStagingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -9113,14 +8245,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetAudioFileResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetAudioFileResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetAudioFileResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -9166,14 +8291,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetAudioFileResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetAudioFileResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetAudioFileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -9250,14 +8368,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetAudioFileDownloadUrlResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetAudioFileDownloadUrlResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetAudioFileDownloadUrlResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -9298,14 +8409,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetAudioFileDownloadUrlResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetAudioFileDownloadUrlResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetAudioFileDownloadUrlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -9372,14 +8476,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetAudioFileUploadParametersResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetAudioFileUploadParametersResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetAudioFileUploadParametersResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -9420,14 +8517,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetAudioFileUploadParametersResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetAudioFileUploadParametersResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetAudioFileUploadParametersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -9456,6 +8546,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await GetAudioFileUploadParametersWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通话记录详情</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetCallDetailRecordRequest
         /// </param>
@@ -9494,16 +8589,14 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetCallDetailRecordResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetCallDetailRecordResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetCallDetailRecordResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通话记录详情</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetCallDetailRecordRequest
         /// </param>
@@ -9542,16 +8635,14 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetCallDetailRecordResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetCallDetailRecordResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetCallDetailRecordResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通话记录详情</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetCallDetailRecordRequest
         /// </param>
@@ -9565,6 +8656,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return GetCallDetailRecordWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通话记录详情</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetCallDetailRecordRequest
         /// </param>
@@ -9621,14 +8717,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetCampaignResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetCampaignResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetCampaignResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -9674,14 +8763,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetCampaignResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetCampaignResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetCampaignResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -9758,14 +8840,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetCaseFileUploadUrlResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetCaseFileUploadUrlResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetCaseFileUploadUrlResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -9806,14 +8881,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetCaseFileUploadUrlResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetCaseFileUploadUrlResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetCaseFileUploadUrlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -9884,14 +8952,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetChatMediaUrlResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetChatMediaUrlResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetChatMediaUrlResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -9936,14 +8997,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetChatMediaUrlResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetChatMediaUrlResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetChatMediaUrlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -10006,14 +9060,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetChatRoutingProfileResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetChatRoutingProfileResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetChatRoutingProfileResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -10050,14 +9097,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetChatRoutingProfileResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetChatRoutingProfileResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetChatRoutingProfileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -10128,14 +9168,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetContactFlowResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetContactFlowResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetContactFlowResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -10180,14 +9213,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetContactFlowResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetContactFlowResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetContactFlowResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -10259,14 +9285,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetConversationDetailResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetConversationDetailResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetConversationDetailResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -10312,14 +9331,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetConversationDetailResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetConversationDetailResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetConversationDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -10396,14 +9408,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetDataChannelCredentialsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetDataChannelCredentialsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetDataChannelCredentialsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -10444,14 +9449,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetDataChannelCredentialsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetDataChannelCredentialsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetDataChannelCredentialsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -10523,14 +9521,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetDoNotCallFileUploadParametersResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetDoNotCallFileUploadParametersResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetDoNotCallFileUploadParametersResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -10576,14 +9567,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetDoNotCallFileUploadParametersResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetDoNotCallFileUploadParametersResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetDoNotCallFileUploadParametersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -10664,14 +9648,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetDocumentUploadParametersResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetDocumentUploadParametersResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetDocumentUploadParametersResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -10716,14 +9693,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetDocumentUploadParametersResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetDocumentUploadParametersResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetDocumentUploadParametersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -10795,14 +9765,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetEarlyMediaRecordingResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetEarlyMediaRecordingResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetEarlyMediaRecordingResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -10848,14 +9811,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetEarlyMediaRecordingResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetEarlyMediaRecordingResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetEarlyMediaRecordingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -10940,14 +9896,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetHistoricalCallerReportResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetHistoricalCallerReportResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetHistoricalCallerReportResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -10996,14 +9945,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetHistoricalCallerReportResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetHistoricalCallerReportResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetHistoricalCallerReportResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -11067,14 +10009,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetHistoricalCampaignReportResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetHistoricalCampaignReportResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetHistoricalCampaignReportResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -11112,14 +10047,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetHistoricalCampaignReportResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetHistoricalCampaignReportResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetHistoricalCampaignReportResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -11204,14 +10132,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetHistoricalInstanceReportResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetHistoricalInstanceReportResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetHistoricalInstanceReportResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -11260,14 +10181,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetHistoricalInstanceReportResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetHistoricalInstanceReportResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetHistoricalInstanceReportResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -11330,14 +10244,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetInstanceResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetInstanceResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetInstanceResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -11374,14 +10281,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetInstanceResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetInstanceResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -11456,14 +10356,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetInstanceTrendingReportResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetInstanceTrendingReportResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetInstanceTrendingReportResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -11512,14 +10405,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetInstanceTrendingReportResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetInstanceTrendingReportResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetInstanceTrendingReportResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -11586,14 +10472,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetIvrTrackingSummaryResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetIvrTrackingSummaryResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetIvrTrackingSummaryResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -11634,14 +10513,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetIvrTrackingSummaryResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetIvrTrackingSummaryResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetIvrTrackingSummaryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -11712,14 +10584,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetLoginDetailsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetLoginDetailsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetLoginDetailsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -11764,14 +10629,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetLoginDetailsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetLoginDetailsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetLoginDetailsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -11842,14 +10700,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetMonoRecordingResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetMonoRecordingResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetMonoRecordingResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -11894,14 +10745,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetMonoRecordingResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetMonoRecordingResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetMonoRecordingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -11968,14 +10812,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetMultiChannelRecordingResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetMultiChannelRecordingResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetMultiChannelRecordingResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -12016,14 +10853,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetMultiChannelRecordingResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetMultiChannelRecordingResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetMultiChannelRecordingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -12090,14 +10920,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetNumberLocationResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetNumberLocationResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetNumberLocationResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -12138,14 +10961,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetNumberLocationResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetNumberLocationResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetNumberLocationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -12209,14 +11025,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetRealtimeCampaignStatsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetRealtimeCampaignStatsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetRealtimeCampaignStatsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -12254,14 +11063,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetRealtimeCampaignStatsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetRealtimeCampaignStatsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetRealtimeCampaignStatsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -12338,14 +11140,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetRealtimeInstanceStatesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetRealtimeInstanceStatesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetRealtimeInstanceStatesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -12386,14 +11181,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetRealtimeInstanceStatesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetRealtimeInstanceStatesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetRealtimeInstanceStatesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -12464,14 +11252,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetSchemaResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetSchemaResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetSchemaResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -12516,14 +11297,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetSchemaResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetSchemaResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetSchemaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -12595,14 +11369,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetSkillGroupResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetSkillGroupResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetSkillGroupResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -12648,14 +11415,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetSkillGroupResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetSkillGroupResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetSkillGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -12732,14 +11492,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetSummaryTemplateResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetSummaryTemplateResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetSummaryTemplateResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -12780,14 +11533,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetSummaryTemplateResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetSummaryTemplateResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetSummaryTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -12854,14 +11600,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetTicketResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetTicketResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetTicketResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -12902,14 +11641,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetTicketResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetTicketResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetTicketResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -13012,14 +11744,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetTicketSummaryReportResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetTicketSummaryReportResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetTicketSummaryReportResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -13096,14 +11821,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetTicketSummaryReportResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetTicketSummaryReportResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetTicketSummaryReportResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -13174,14 +11892,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetTicketTemplateResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetTicketTemplateResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetTicketTemplateResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -13226,14 +11937,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetTicketTemplateResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetTicketTemplateResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetTicketTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -13300,14 +12004,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetTurnCredentialsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetTurnCredentialsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetTurnCredentialsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -13348,14 +12045,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetTurnCredentialsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetTurnCredentialsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetTurnCredentialsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -13418,14 +12108,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetTurnServerListResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetTurnServerListResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetTurnServerListResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -13462,14 +12145,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetTurnServerListResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetTurnServerListResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetTurnServerListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -13533,14 +12209,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetUploadAudioDataParamsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetUploadAudioDataParamsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetUploadAudioDataParamsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -13578,14 +12247,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetUploadAudioDataParamsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetUploadAudioDataParamsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetUploadAudioDataParamsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -13666,14 +12328,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetUserResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetUserResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetUserResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -13718,14 +12373,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetUserResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetUserResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -13789,14 +12437,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetVideoResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetVideoResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetVideoResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -13834,14 +12475,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetVideoResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetVideoResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetVideoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -13926,14 +12560,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetVisitorLoginDetailsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetVisitorLoginDetailsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetVisitorLoginDetailsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -13982,14 +12609,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetVisitorLoginDetailsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetVisitorLoginDetailsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetVisitorLoginDetailsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -14056,14 +12676,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetVoicemailRecordingResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetVoicemailRecordingResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetVoicemailRecordingResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -14104,14 +12717,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetVoicemailRecordingResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetVoicemailRecordingResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetVoicemailRecordingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -14194,14 +12800,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<HoldCallResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<HoldCallResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<HoldCallResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -14258,14 +12857,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<HoldCallResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<HoldCallResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<HoldCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -14332,14 +12924,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ImportAdminsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ImportAdminsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ImportAdminsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -14380,14 +12965,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ImportAdminsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ImportAdminsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ImportAdminsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -14458,14 +13036,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ImportContactFlowResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ImportContactFlowResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ImportContactFlowResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -14510,14 +13081,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ImportContactFlowResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ImportContactFlowResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ImportContactFlowResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -14600,14 +13164,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ImportCorpNumbersResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ImportCorpNumbersResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ImportCorpNumbersResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -14664,14 +13221,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ImportCorpNumbersResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ImportCorpNumbersResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ImportCorpNumbersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -14749,14 +13299,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ImportCustomCallTaggingResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ImportCustomCallTaggingResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ImportCustomCallTaggingResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Deprecated</b></term>
@@ -14808,14 +13351,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ImportCustomCallTaggingResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ImportCustomCallTaggingResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ImportCustomCallTaggingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Deprecated</b></term>
@@ -14917,14 +13453,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ImportDoNotCallNumbersResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ImportDoNotCallNumbersResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ImportDoNotCallNumbersResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -14978,14 +13507,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ImportDoNotCallNumbersResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ImportDoNotCallNumbersResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ImportDoNotCallNumbersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -15070,14 +13592,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ImportDocumentsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ImportDocumentsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ImportDocumentsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -15126,14 +13641,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ImportDocumentsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ImportDocumentsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ImportDocumentsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -15252,14 +13760,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<InitiateAttendedTransferResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<InitiateAttendedTransferResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<InitiateAttendedTransferResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -15352,14 +13853,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<InitiateAttendedTransferResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<InitiateAttendedTransferResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<InitiateAttendedTransferResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -15442,14 +13936,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<InterceptCallResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<InterceptCallResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<InterceptCallResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -15506,14 +13993,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<InterceptCallResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<InterceptCallResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<InterceptCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -15596,14 +14076,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<LaunchAuthenticationResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<LaunchAuthenticationResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<LaunchAuthenticationResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -15660,14 +14133,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<LaunchAuthenticationResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<LaunchAuthenticationResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<LaunchAuthenticationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -15766,14 +14232,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<LaunchSurveyResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<LaunchSurveyResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<LaunchSurveyResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -15846,14 +14305,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<LaunchSurveyResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<LaunchSurveyResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<LaunchSurveyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -15928,14 +14380,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListAgentStateLogsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListAgentStateLogsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListAgentStateLogsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -15984,14 +14429,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListAgentStateLogsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListAgentStateLogsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListAgentStateLogsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -16089,14 +14527,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListAgentStatesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListAgentStatesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListAgentStatesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Deprecated</b></term>
@@ -16168,14 +14599,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListAgentStatesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListAgentStatesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListAgentStatesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Deprecated</b></term>
@@ -16267,14 +14691,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListAgentSummaryReportsSinceMidnightResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListAgentSummaryReportsSinceMidnightResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListAgentSummaryReportsSinceMidnightResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Deprecated</b></term>
@@ -16318,14 +14735,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListAgentSummaryReportsSinceMidnightResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListAgentSummaryReportsSinceMidnightResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListAgentSummaryReportsSinceMidnightResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Deprecated</b></term>
@@ -16411,14 +14821,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListAttemptsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListAttemptsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListAttemptsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -16456,14 +14859,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListAttemptsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListAttemptsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListAttemptsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -16557,14 +14953,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListAudioFilesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListAudioFilesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListAudioFilesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -16622,14 +15011,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListAudioFilesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListAudioFilesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListAudioFilesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -16711,14 +15093,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListBlacklistCallTaggingsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListBlacklistCallTaggingsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListBlacklistCallTaggingsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -16764,14 +15139,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListBlacklistCallTaggingsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListBlacklistCallTaggingsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListBlacklistCallTaggingsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -16860,14 +15228,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListBriefSkillGroupsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListBriefSkillGroupsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListBriefSkillGroupsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -16920,14 +15281,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListBriefSkillGroupsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListBriefSkillGroupsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListBriefSkillGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -17070,14 +15424,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListCallDetailRecordsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListCallDetailRecordsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListCallDetailRecordsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -17194,14 +15541,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListCallDetailRecordsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListCallDetailRecordsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListCallDetailRecordsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -17230,6 +15570,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ListCallDetailRecordsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通话记录列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListCallDetailRecordsV2Request
         /// </param>
@@ -17368,16 +15713,14 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListCallDetailRecordsV2Response>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListCallDetailRecordsV2Response>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListCallDetailRecordsV2Response>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通话记录列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListCallDetailRecordsV2Request
         /// </param>
@@ -17516,16 +15859,14 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListCallDetailRecordsV2Response>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListCallDetailRecordsV2Response>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListCallDetailRecordsV2Response>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通话记录列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListCallDetailRecordsV2Request
         /// </param>
@@ -17539,6 +15880,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ListCallDetailRecordsV2WithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通话记录列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListCallDetailRecordsV2Request
         /// </param>
@@ -17596,14 +15942,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListCallSummariesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListCallSummariesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListCallSummariesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="tmpReq">
@@ -17650,14 +15989,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListCallSummariesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListCallSummariesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListCallSummariesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -17733,14 +16065,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListCallTagsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListCallTagsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListCallTagsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -17790,14 +16115,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListCallTagsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListCallTagsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListCallTagsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -17871,14 +16189,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListCampaignTrendingReportResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListCampaignTrendingReportResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListCampaignTrendingReportResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -17916,14 +16227,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListCampaignTrendingReportResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListCampaignTrendingReportResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListCampaignTrendingReportResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -18037,14 +16341,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListCampaignsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListCampaignsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListCampaignsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -18122,14 +16419,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListCampaignsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListCampaignsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListCampaignsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -18227,14 +16517,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListCasesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListCasesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListCasesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -18296,14 +16579,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListCasesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListCasesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListCasesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -18384,14 +16660,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListCategoriesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListCategoriesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListCategoriesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -18436,14 +16705,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListCategoriesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListCategoriesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListCategoriesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -18506,14 +16768,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListCommonTicketFieldsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListCommonTicketFieldsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListCommonTicketFieldsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -18550,14 +16805,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListCommonTicketFieldsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListCommonTicketFieldsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListCommonTicketFieldsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -18628,14 +16876,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListConfigItemsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListConfigItemsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListConfigItemsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -18680,14 +16921,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListConfigItemsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListConfigItemsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListConfigItemsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -18770,14 +17004,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListContactFlowsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListContactFlowsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListContactFlowsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -18834,14 +17061,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListContactFlowsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListContactFlowsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListContactFlowsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -18931,14 +17151,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListCustomCallTaggingResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListCustomCallTaggingResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListCustomCallTaggingResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Deprecated</b></term>
@@ -19002,14 +17215,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListCustomCallTaggingResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListCustomCallTaggingResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListCustomCallTaggingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Deprecated</b></term>
@@ -19098,14 +17304,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListDevicesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListDevicesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListDevicesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -19146,14 +17345,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListDevicesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListDevicesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListDevicesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -19237,14 +17429,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListDoNotCallNumbersResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListDoNotCallNumbersResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListDoNotCallNumbersResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -19302,14 +17487,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListDoNotCallNumbersResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListDoNotCallNumbersResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListDoNotCallNumbersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -19412,14 +17590,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListDocumentsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListDocumentsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListDocumentsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="tmpReq">
@@ -19486,14 +17657,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListDocumentsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListDocumentsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListDocumentsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -19572,14 +17736,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListFlashSmsApplicationsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListFlashSmsApplicationsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListFlashSmsApplicationsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -19632,14 +17789,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListFlashSmsApplicationsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListFlashSmsApplicationsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListFlashSmsApplicationsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -19710,14 +17860,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListFlashSmsTemplatesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListFlashSmsTemplatesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListFlashSmsTemplatesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -19762,14 +17905,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListFlashSmsTemplatesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListFlashSmsTemplatesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListFlashSmsTemplatesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -19853,14 +17989,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListGroupChatMessagesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListGroupChatMessagesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListGroupChatMessagesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -19918,14 +18047,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListGroupChatMessagesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListGroupChatMessagesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListGroupChatMessagesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -20028,14 +18150,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListHistoricalAgentReportResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListHistoricalAgentReportResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListHistoricalAgentReportResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -20102,14 +18217,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListHistoricalAgentReportResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListHistoricalAgentReportResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListHistoricalAgentReportResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -20207,14 +18315,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListHistoricalAgentSkillGroupReportResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListHistoricalAgentSkillGroupReportResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListHistoricalAgentSkillGroupReportResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -20286,14 +18387,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListHistoricalAgentSkillGroupReportResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListHistoricalAgentSkillGroupReportResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListHistoricalAgentSkillGroupReportResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -20392,14 +18486,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListHistoricalSkillGroupReportResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListHistoricalSkillGroupReportResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListHistoricalSkillGroupReportResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -20462,14 +18549,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListHistoricalSkillGroupReportResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListHistoricalSkillGroupReportResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListHistoricalSkillGroupReportResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -20536,14 +18616,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListInstancesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListInstancesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListInstancesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -20584,14 +18657,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListInstancesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListInstancesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -20658,14 +18724,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListInstancesOfUserResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListInstancesOfUserResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListInstancesOfUserResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -20706,14 +18765,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListInstancesOfUserResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListInstancesOfUserResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListInstancesOfUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -20796,14 +18848,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListIntervalAgentReportResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListIntervalAgentReportResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListIntervalAgentReportResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -20860,14 +18905,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListIntervalAgentReportResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListIntervalAgentReportResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListIntervalAgentReportResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -20931,14 +18969,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListIntervalAgentSkillGroupReportResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListIntervalAgentSkillGroupReportResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListIntervalAgentSkillGroupReportResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -20976,14 +19007,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListIntervalAgentSkillGroupReportResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListIntervalAgentSkillGroupReportResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListIntervalAgentSkillGroupReportResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -21068,14 +19092,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListIntervalInstanceReportResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListIntervalInstanceReportResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListIntervalInstanceReportResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -21124,14 +19141,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListIntervalInstanceReportResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListIntervalInstanceReportResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListIntervalInstanceReportResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -21214,14 +19224,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListIntervalSkillGroupReportResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListIntervalSkillGroupReportResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListIntervalSkillGroupReportResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -21278,14 +19281,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListIntervalSkillGroupReportResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListIntervalSkillGroupReportResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListIntervalSkillGroupReportResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -21360,14 +19356,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListIvrTrackingDetailsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListIvrTrackingDetailsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListIvrTrackingDetailsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -21416,14 +19405,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListIvrTrackingDetailsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListIvrTrackingDetailsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListIvrTrackingDetailsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -21517,14 +19499,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListLegacyAgentEventLogsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListLegacyAgentEventLogsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListLegacyAgentEventLogsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Deprecated</b></term>
@@ -21592,14 +19567,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListLegacyAgentEventLogsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListLegacyAgentEventLogsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListLegacyAgentEventLogsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Deprecated</b></term>
@@ -21715,14 +19683,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListLegacyAgentStatusLogsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListLegacyAgentStatusLogsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListLegacyAgentStatusLogsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Deprecated</b></term>
@@ -21790,14 +19751,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListLegacyAgentStatusLogsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListLegacyAgentStatusLogsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListLegacyAgentStatusLogsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Deprecated</b></term>
@@ -21903,14 +19857,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListLegacyAppraiseLogsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListLegacyAppraiseLogsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListLegacyAppraiseLogsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -21968,14 +19915,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListLegacyAppraiseLogsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListLegacyAppraiseLogsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListLegacyAppraiseLogsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -22073,14 +20013,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListLegacyQueueEventLogsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListLegacyQueueEventLogsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListLegacyQueueEventLogsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -22142,14 +20075,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListLegacyQueueEventLogsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListLegacyQueueEventLogsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListLegacyQueueEventLogsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -22226,14 +20152,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListMonoRecordingsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListMonoRecordingsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListMonoRecordingsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -22274,14 +20193,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListMonoRecordingsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListMonoRecordingsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListMonoRecordingsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -22348,14 +20260,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListMultiChannelRecordingsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListMultiChannelRecordingsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListMultiChannelRecordingsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -22396,14 +20301,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListMultiChannelRecordingsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListMultiChannelRecordingsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListMultiChannelRecordingsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -22432,6 +20330,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ListMultiChannelRecordingsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>该坐席可用的外呼号码列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListOutboundNumbersOfUserRequest
         /// </param>
@@ -22482,16 +20385,14 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListOutboundNumbersOfUserResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListOutboundNumbersOfUserResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListOutboundNumbersOfUserResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>该坐席可用的外呼号码列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListOutboundNumbersOfUserRequest
         /// </param>
@@ -22542,16 +20443,14 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListOutboundNumbersOfUserResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListOutboundNumbersOfUserResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListOutboundNumbersOfUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>该坐席可用的外呼号码列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListOutboundNumbersOfUserRequest
         /// </param>
@@ -22565,6 +20464,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ListOutboundNumbersOfUserWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>该坐席可用的外呼号码列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListOutboundNumbersOfUserRequest
         /// </param>
@@ -22632,14 +20536,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListPersonalNumbersOfUserResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListPersonalNumbersOfUserResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListPersonalNumbersOfUserResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -22696,14 +20593,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListPersonalNumbersOfUserResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListPersonalNumbersOfUserResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListPersonalNumbersOfUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -22791,14 +20681,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListPhoneNumbersResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListPhoneNumbersResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListPhoneNumbersResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -22860,14 +20743,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListPhoneNumbersResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListPhoneNumbersResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListPhoneNumbersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -22964,14 +20840,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListPhoneNumbersOfSkillGroupResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListPhoneNumbersOfSkillGroupResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListPhoneNumbersOfSkillGroupResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -23032,14 +20901,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListPhoneNumbersOfSkillGroupResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListPhoneNumbersOfSkillGroupResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListPhoneNumbersOfSkillGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -23102,14 +20964,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListPrivilegesOfUserResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListPrivilegesOfUserResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListPrivilegesOfUserResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -23146,14 +21001,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListPrivilegesOfUserResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListPrivilegesOfUserResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListPrivilegesOfUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -23228,14 +21076,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListRamUsersResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListRamUsersResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListRamUsersResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -23284,14 +21125,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListRamUsersResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListRamUsersResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListRamUsersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -23400,14 +21234,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListRealtimeAgentStatesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListRealtimeAgentStatesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListRealtimeAgentStatesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -23490,14 +21317,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListRealtimeAgentStatesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListRealtimeAgentStatesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListRealtimeAgentStatesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -23578,14 +21398,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListRealtimeSkillGroupStatesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListRealtimeSkillGroupStatesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListRealtimeSkillGroupStatesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -23640,14 +21453,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListRealtimeSkillGroupStatesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListRealtimeSkillGroupStatesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListRealtimeSkillGroupStatesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -23732,14 +21538,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListRecentCallDetailRecordsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListRecentCallDetailRecordsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListRecentCallDetailRecordsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -23798,14 +21597,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListRecentCallDetailRecordsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListRecentCallDetailRecordsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListRecentCallDetailRecordsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -23868,14 +21660,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListRolesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListRolesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListRolesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -23912,14 +21697,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListRolesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListRolesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListRolesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -23989,14 +21767,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListSkillGroupStatesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListSkillGroupStatesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListSkillGroupStatesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Deprecated</b></term>
@@ -24040,14 +21811,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListSkillGroupStatesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListSkillGroupStatesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListSkillGroupStatesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Deprecated</b></term>
@@ -24139,14 +21903,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListSkillGroupSummaryReportsSinceMidnightResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListSkillGroupSummaryReportsSinceMidnightResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListSkillGroupSummaryReportsSinceMidnightResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Deprecated</b></term>
@@ -24190,14 +21947,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListSkillGroupSummaryReportsSinceMidnightResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListSkillGroupSummaryReportsSinceMidnightResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListSkillGroupSummaryReportsSinceMidnightResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Deprecated</b></term>
@@ -24298,14 +22048,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListSkillGroupsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListSkillGroupsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListSkillGroupsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -24358,14 +22101,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListSkillGroupsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListSkillGroupsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListSkillGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -24448,14 +22184,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListSkillLevelsOfUserResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListSkillLevelsOfUserResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListSkillLevelsOfUserResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -24512,14 +22241,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListSkillLevelsOfUserResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListSkillLevelsOfUserResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListSkillLevelsOfUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -24594,14 +22316,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListSmsMetadataResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListSmsMetadataResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListSmsMetadataResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -24650,14 +22365,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListSmsMetadataResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListSmsMetadataResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListSmsMetadataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -24724,14 +22432,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListTicketTasksResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListTicketTasksResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListTicketTasksResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -24772,14 +22473,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListTicketTasksResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListTicketTasksResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListTicketTasksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -24862,14 +22556,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListTicketTemplatesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListTicketTemplatesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListTicketTemplatesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -24926,14 +22613,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListTicketTemplatesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListTicketTemplatesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListTicketTemplatesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -25052,14 +22732,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListTicketsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListTicketsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListTicketsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -25152,14 +22825,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListTicketsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListTicketsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListTicketsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -25235,14 +22901,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListUnassignedNumbersResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListUnassignedNumbersResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListUnassignedNumbersResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -25292,14 +22951,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListUnassignedNumbersResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListUnassignedNumbersResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListUnassignedNumbersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -25392,14 +23044,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListUserLevelsOfSkillGroupResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListUserLevelsOfSkillGroupResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListUserLevelsOfSkillGroupResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -25456,14 +23101,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListUserLevelsOfSkillGroupResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListUserLevelsOfSkillGroupResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListUserLevelsOfSkillGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -25542,14 +23180,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListUsersResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListUsersResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListUsersResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -25602,14 +23233,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListUsersResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListUsersResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListUsersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -25709,14 +23333,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListVisitorChatMessagesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListVisitorChatMessagesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListVisitorChatMessagesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -25790,14 +23407,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListVisitorChatMessagesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListVisitorChatMessagesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListVisitorChatMessagesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -25898,14 +23508,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListVoicemailsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListVoicemailsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListVoicemailsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -25970,14 +23573,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListVoicemailsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListVoicemailsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListVoicemailsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -26044,14 +23640,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListWaitingChatsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListWaitingChatsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListWaitingChatsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -26092,14 +23681,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListWaitingChatsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListWaitingChatsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListWaitingChatsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -26198,14 +23780,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<MakeCallResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<MakeCallResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<MakeCallResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -26278,14 +23853,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<MakeCallResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<MakeCallResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<MakeCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -26368,14 +23936,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ModifyAudioFileResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ModifyAudioFileResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ModifyAudioFileResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -26432,14 +23993,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ModifyAudioFileResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ModifyAudioFileResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ModifyAudioFileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -26519,14 +24073,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ModifyCustomCallTaggingResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ModifyCustomCallTaggingResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ModifyCustomCallTaggingResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -26580,14 +24127,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ModifyCustomCallTaggingResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ModifyCustomCallTaggingResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ModifyCustomCallTaggingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -26664,14 +24204,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ModifyInstanceResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ModifyInstanceResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ModifyInstanceResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -26712,14 +24245,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ModifyInstanceResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ModifyInstanceResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ModifyInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -26794,14 +24320,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ModifyPhoneNumberResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ModifyPhoneNumberResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ModifyPhoneNumberResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -26850,14 +24369,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ModifyPhoneNumberResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ModifyPhoneNumberResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ModifyPhoneNumberResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -26932,14 +24444,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ModifySkillGroupResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ModifySkillGroupResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ModifySkillGroupResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -26988,14 +24493,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ModifySkillGroupResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ModifySkillGroupResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ModifySkillGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -27066,14 +24564,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ModifySkillLevelsOfUserResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ModifySkillLevelsOfUserResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ModifySkillLevelsOfUserResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -27118,14 +24609,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ModifySkillLevelsOfUserResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ModifySkillLevelsOfUserResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ModifySkillLevelsOfUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -27224,14 +24708,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ModifyUserResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ModifyUserResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ModifyUserResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -27304,14 +24781,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ModifyUserResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ModifyUserResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ModifyUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -27382,14 +24852,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ModifyUserLevelsOfSkillGroupResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ModifyUserLevelsOfSkillGroupResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ModifyUserLevelsOfSkillGroupResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -27434,14 +24897,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ModifyUserLevelsOfSkillGroupResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ModifyUserLevelsOfSkillGroupResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ModifyUserLevelsOfSkillGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -27520,14 +24976,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<MonitorCallResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<MonitorCallResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<MonitorCallResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -27580,14 +25029,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<MonitorCallResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<MonitorCallResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<MonitorCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -27666,14 +25108,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<MuteCallResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<MuteCallResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<MuteCallResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -27726,14 +25161,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<MuteCallResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<MuteCallResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<MuteCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -27805,14 +25233,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<PauseCampaignResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<PauseCampaignResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<PauseCampaignResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -27858,14 +25279,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<PauseCampaignResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<PauseCampaignResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<PauseCampaignResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -27950,14 +25364,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<PickOutboundNumbersResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<PickOutboundNumbersResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<PickOutboundNumbersResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -28006,14 +25413,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<PickOutboundNumbersResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<PickOutboundNumbersResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<PickOutboundNumbersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -28084,14 +25484,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<PollUserStatusResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<PollUserStatusResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<PollUserStatusResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -28136,14 +25529,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<PollUserStatusResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<PollUserStatusResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<PollUserStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -28215,14 +25601,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ProcessAliMeCallbackOfStagingResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ProcessAliMeCallbackOfStagingResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ProcessAliMeCallbackOfStagingResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -28268,14 +25647,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ProcessAliMeCallbackOfStagingResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ProcessAliMeCallbackOfStagingResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ProcessAliMeCallbackOfStagingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -28376,14 +25748,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ProcessCustomIMCallbackResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ProcessCustomIMCallbackResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ProcessCustomIMCallbackResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -28448,14 +25813,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ProcessCustomIMCallbackResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ProcessCustomIMCallbackResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ProcessCustomIMCallbackResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -28526,14 +25884,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<PublishContactFlowResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<PublishContactFlowResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<PublishContactFlowResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -28578,14 +25929,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<PublishContactFlowResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<PublishContactFlowResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<PublishContactFlowResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -28660,14 +26004,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ReadyForServiceResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ReadyForServiceResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ReadyForServiceResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -28716,14 +26053,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ReadyForServiceResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ReadyForServiceResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ReadyForServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -28814,14 +26144,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RedialCallResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RedialCallResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RedialCallResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -28886,14 +26209,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RedialCallResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RedialCallResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RedialCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -28968,14 +26284,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RegisterDeviceResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RegisterDeviceResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RegisterDeviceResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -29024,14 +26333,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RegisterDeviceResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RegisterDeviceResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RegisterDeviceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -29106,14 +26408,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RegisterDevicesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RegisterDevicesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RegisterDevicesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -29162,14 +26457,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RegisterDevicesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RegisterDevicesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RegisterDevicesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -29236,14 +26524,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RejectChatResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RejectChatResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RejectChatResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -29284,14 +26565,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RejectChatResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RejectChatResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RejectChatResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -29362,14 +26636,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RejectTicketResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RejectTicketResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RejectTicketResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -29414,14 +26681,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RejectTicketResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RejectTicketResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RejectTicketResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -29500,14 +26760,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ReleaseCallResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ReleaseCallResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ReleaseCallResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -29560,14 +26813,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ReleaseCallResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ReleaseCallResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ReleaseCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -29646,14 +26892,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ReleaseChatResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ReleaseChatResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ReleaseChatResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -29706,14 +26945,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ReleaseChatResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ReleaseChatResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ReleaseChatResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -29789,14 +27021,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RemoveBlacklistCallTaggingResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RemoveBlacklistCallTaggingResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RemoveBlacklistCallTaggingResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -29846,14 +27071,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RemoveBlacklistCallTaggingResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RemoveBlacklistCallTaggingResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RemoveBlacklistCallTaggingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -29935,14 +27153,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RemoveDoNotCallNumbersResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RemoveDoNotCallNumbersResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RemoveDoNotCallNumbersResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -29988,14 +27199,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RemoveDoNotCallNumbersResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RemoveDoNotCallNumbersResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RemoveDoNotCallNumbersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -30076,14 +27280,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RemovePersonalNumbersFromUserResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RemovePersonalNumbersFromUserResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RemovePersonalNumbersFromUserResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -30128,14 +27325,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RemovePersonalNumbersFromUserResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RemovePersonalNumbersFromUserResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RemovePersonalNumbersFromUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -30206,14 +27396,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RemovePhoneNumberFromSkillGroupsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RemovePhoneNumberFromSkillGroupsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RemovePhoneNumberFromSkillGroupsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -30258,14 +27441,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RemovePhoneNumberFromSkillGroupsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RemovePhoneNumberFromSkillGroupsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RemovePhoneNumberFromSkillGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -30336,14 +27512,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RemovePhoneNumbersResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RemovePhoneNumbersResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RemovePhoneNumbersResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -30388,14 +27557,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RemovePhoneNumbersResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RemovePhoneNumbersResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RemovePhoneNumbersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -30466,14 +27628,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RemovePhoneNumbersFromSkillGroupResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RemovePhoneNumbersFromSkillGroupResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RemovePhoneNumbersFromSkillGroupResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -30518,14 +27673,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RemovePhoneNumbersFromSkillGroupResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RemovePhoneNumbersFromSkillGroupResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RemovePhoneNumbersFromSkillGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -30596,14 +27744,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RemoveSkillGroupsFromUserResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RemoveSkillGroupsFromUserResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RemoveSkillGroupsFromUserResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -30648,14 +27789,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RemoveSkillGroupsFromUserResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RemoveSkillGroupsFromUserResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RemoveSkillGroupsFromUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -30734,14 +27868,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RemoveUsersResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RemoveUsersResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RemoveUsersResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -30794,14 +27921,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RemoveUsersResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RemoveUsersResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RemoveUsersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -30872,14 +27992,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RemoveUsersFromSkillGroupResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RemoveUsersFromSkillGroupResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RemoveUsersFromSkillGroupResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -30924,14 +28037,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RemoveUsersFromSkillGroupResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RemoveUsersFromSkillGroupResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RemoveUsersFromSkillGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -31002,14 +28108,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ResetAgentStateResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ResetAgentStateResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ResetAgentStateResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -31054,14 +28153,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ResetAgentStateResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ResetAgentStateResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ResetAgentStateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -31132,14 +28224,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ResetUserPasswordResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ResetUserPasswordResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ResetUserPasswordResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -31184,14 +28269,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ResetUserPasswordResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ResetUserPasswordResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ResetUserPasswordResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -31263,14 +28341,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RestoreArchivedRecordingsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RestoreArchivedRecordingsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RestoreArchivedRecordingsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -31316,14 +28387,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RestoreArchivedRecordingsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RestoreArchivedRecordingsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RestoreArchivedRecordingsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -31404,14 +28468,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ResubmitTicketResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ResubmitTicketResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ResubmitTicketResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -31456,14 +28513,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ResubmitTicketResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ResubmitTicketResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ResubmitTicketResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -31535,14 +28585,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ResumeCampaignResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ResumeCampaignResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ResumeCampaignResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -31588,14 +28631,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ResumeCampaignResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ResumeCampaignResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ResumeCampaignResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -31684,14 +28720,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RetrieveCallResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RetrieveCallResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RetrieveCallResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -31744,14 +28773,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RetrieveCallResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RetrieveCallResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RetrieveCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -31830,14 +28852,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<SaveDocumentResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<SaveDocumentResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<SaveDocumentResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -31890,14 +28905,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<SaveDocumentResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<SaveDocumentResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<SaveDocumentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -31980,14 +28988,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<SaveRTCStatsV2Response>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<SaveRTCStatsV2Response>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<SaveRTCStatsV2Response>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -32044,14 +29045,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<SaveRTCStatsV2Response>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<SaveRTCStatsV2Response>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<SaveRTCStatsV2Response>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -32146,14 +29140,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<SaveTerminalLogResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<SaveTerminalLogResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<SaveTerminalLogResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -32222,14 +29209,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<SaveTerminalLogResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<SaveTerminalLogResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<SaveTerminalLogResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -32312,14 +29292,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<SaveWebRTCStatsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<SaveWebRTCStatsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<SaveWebRTCStatsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -32376,14 +29349,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<SaveWebRTCStatsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<SaveWebRTCStatsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<SaveWebRTCStatsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -32462,14 +29428,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<SaveWebRtcInfoResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<SaveWebRtcInfoResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<SaveWebRtcInfoResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -32522,14 +29481,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<SaveWebRtcInfoResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<SaveWebRtcInfoResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<SaveWebRtcInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -32612,14 +29564,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<SendDtmfSignalingResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<SendDtmfSignalingResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<SendDtmfSignalingResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -32676,14 +29621,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<SendDtmfSignalingResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<SendDtmfSignalingResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<SendDtmfSignalingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -32766,14 +29704,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<SignInGroupResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<SignInGroupResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<SignInGroupResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -32830,14 +29761,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<SignInGroupResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<SignInGroupResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<SignInGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -32908,14 +29832,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<SignOutGroupResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<SignOutGroupResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<SignOutGroupResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -32960,14 +29877,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<SignOutGroupResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<SignOutGroupResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<SignOutGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -33054,14 +29964,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<StartBack2BackCallResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<StartBack2BackCallResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<StartBack2BackCallResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -33122,14 +30025,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<StartBack2BackCallResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<StartBack2BackCallResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<StartBack2BackCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -33210,14 +30106,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<StartChatResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<StartChatResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<StartChatResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="tmpReq">
@@ -33272,14 +30161,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<StartChatResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<StartChatResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<StartChatResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -33358,14 +30240,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<StartConferenceResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<StartConferenceResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<StartConferenceResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -33418,14 +30293,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<StartConferenceResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<StartConferenceResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<StartConferenceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -33492,14 +30360,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<StartEditContactFlowResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<StartEditContactFlowResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<StartEditContactFlowResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -33540,14 +30401,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<StartEditContactFlowResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<StartEditContactFlowResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<StartEditContactFlowResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -33642,14 +30496,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<StartPredictiveCallResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<StartPredictiveCallResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<StartPredictiveCallResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -33718,14 +30565,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<StartPredictiveCallResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<StartPredictiveCallResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<StartPredictiveCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -33805,14 +30645,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<StartPrivacyCallResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<StartPrivacyCallResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<StartPrivacyCallResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -33866,14 +30699,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<StartPrivacyCallResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<StartPrivacyCallResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<StartPrivacyCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -33955,14 +30781,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<SubmitCampaignResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<SubmitCampaignResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<SubmitCampaignResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -34008,14 +30827,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<SubmitCampaignResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<SubmitCampaignResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<SubmitCampaignResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -34100,14 +30912,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<SwitchToConferenceResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<SwitchToConferenceResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<SwitchToConferenceResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -34156,14 +30961,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<SwitchToConferenceResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<SwitchToConferenceResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<SwitchToConferenceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -34238,14 +31036,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<TakeBreakResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<TakeBreakResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<TakeBreakResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -34294,14 +31085,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<TakeBreakResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<TakeBreakResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<TakeBreakResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -34372,14 +31156,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<TerminateTicketResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<TerminateTicketResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<TerminateTicketResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -34424,14 +31201,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<TerminateTicketResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<TerminateTicketResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<TerminateTicketResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -34510,14 +31280,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<TransferTicketTaskResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<TransferTicketTaskResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<TransferTicketTaskResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -34570,14 +31333,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<TransferTicketTaskResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<TransferTicketTaskResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<TransferTicketTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -34656,14 +31412,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UnmuteCallResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UnmuteCallResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UnmuteCallResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -34716,14 +31465,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UnmuteCallResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UnmuteCallResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UnmuteCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -34795,14 +31537,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UnregisterDeviceResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UnregisterDeviceResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UnregisterDeviceResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -34848,14 +31583,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UnregisterDeviceResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UnregisterDeviceResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UnregisterDeviceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -34936,14 +31664,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpdateCallSummaryResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpdateCallSummaryResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpdateCallSummaryResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -34988,14 +31709,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpdateCallSummaryResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpdateCallSummaryResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpdateCallSummaryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -35091,14 +31805,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpdateCampaignResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpdateCampaignResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpdateCampaignResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -35168,14 +31875,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpdateCampaignResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpdateCampaignResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpdateCampaignResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -35252,14 +31952,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpdateChatRoutingProfileResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpdateChatRoutingProfileResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpdateChatRoutingProfileResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -35300,14 +31993,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpdateChatRoutingProfileResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpdateChatRoutingProfileResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpdateChatRoutingProfileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -35382,14 +32068,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpdateConfigItemsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpdateConfigItemsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpdateConfigItemsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -35438,14 +32117,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpdateConfigItemsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpdateConfigItemsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpdateConfigItemsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -35526,14 +32198,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpdateSchemaPropertyResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpdateSchemaPropertyResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpdateSchemaPropertyResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="tmpReq">
@@ -35588,14 +32253,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpdateSchemaPropertyResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpdateSchemaPropertyResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpdateSchemaPropertyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -35674,14 +32332,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpdateTicketResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpdateTicketResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpdateTicketResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -35734,14 +32385,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpdateTicketResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpdateTicketResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpdateTicketResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -35812,14 +32456,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<WithdrawTicketResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<WithdrawTicketResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<WithdrawTicketResponse>(CallApi(params_, req, runtime));
         }
 
         /// <param name="request">
@@ -35864,14 +32501,7 @@ namespace AlibabaCloud.SDK.CCC20200701
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<WithdrawTicketResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<WithdrawTicketResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<WithdrawTicketResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <param name="request">
