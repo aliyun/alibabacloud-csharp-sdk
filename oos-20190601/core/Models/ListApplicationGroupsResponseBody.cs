@@ -76,6 +76,14 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            [NameInMap("ErrorDetail")]
+            [Validation(Required=false)]
+            public string ErrorDetail { get; set; }
+
+            [NameInMap("ErrorType")]
+            [Validation(Required=false)]
+            public string ErrorType { get; set; }
+
             /// <summary>
             /// <para>The tag key.</para>
             /// 
