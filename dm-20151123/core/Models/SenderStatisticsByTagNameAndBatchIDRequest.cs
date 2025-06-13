@@ -19,6 +19,14 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
+        [NameInMap("DedicatedIp")]
+        [Validation(Required=false)]
+        public string DedicatedIp { get; set; }
+
+        [NameInMap("DedicatedIpPoolId")]
+        [Validation(Required=false)]
+        public string DedicatedIpPoolId { get; set; }
+
         /// <summary>
         /// <para>End time, which cannot exceed 7 days from the start time, in the format yyyy-MM-dd.</para>
         /// <para>This parameter is required.</para>
@@ -29,6 +37,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
+
+        [NameInMap("Esp")]
+        [Validation(Required=false)]
+        public string Esp { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]

@@ -22,6 +22,14 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
+        [NameInMap("DedicatedIp")]
+        [Validation(Required=false)]
+        public string DedicatedIp { get; set; }
+
+        [NameInMap("DedicatedIpPoolId")]
+        [Validation(Required=false)]
+        public string DedicatedIpPoolId { get; set; }
+
         /// <summary>
         /// <para>End time, the span between start and end time cannot exceed 7 days. Format: yyyy-MM-dd.</para>
         /// <para>This parameter is required.</para>
@@ -32,6 +40,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
+
+        [NameInMap("Esp")]
+        [Validation(Required=false)]
+        public string Esp { get; set; }
 
         /// <summary>
         /// <para>For the first query, set to 0; for subsequent queries, fixed at 1. 1 indicates pagination in ascending order by time. (This field is deprecated)</para>

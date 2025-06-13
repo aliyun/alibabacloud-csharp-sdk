@@ -69,6 +69,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public int? Total { get; set; }
 
+        [NameInMap("TotalPages")]
+        [Validation(Required=false)]
+        public string TotalPages { get; set; }
+
         /// <summary>
         /// <para>Tracking data records</para>
         /// </summary>
