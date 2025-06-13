@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
                 [Validation(Required=false)]
                 public string Region { get; set; }
 
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
                 /// <summary>
                 /// <para>The ID of the VPC peer.</para>
                 /// 

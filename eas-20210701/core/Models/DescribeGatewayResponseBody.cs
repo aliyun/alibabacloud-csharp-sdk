@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class DescribeGatewayResponseBody : TeaModel {
+        [NameInMap("ChargeType")]
+        [Validation(Required=false)]
+        public string ChargeType { get; set; }
+
         /// <summary>
         /// <para>The time when the private gateway was created. The time is displayed in UTC.</para>
         /// 

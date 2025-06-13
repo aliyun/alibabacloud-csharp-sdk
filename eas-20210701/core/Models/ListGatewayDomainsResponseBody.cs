@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public List<ListGatewayDomainsResponseBodyCustomDomains> CustomDomains { get; set; }
         public class ListGatewayDomainsResponseBodyCustomDomains : TeaModel {
+            [NameInMap("CertificateEndDate")]
+            [Validation(Required=false)]
+            public string CertificateEndDate { get; set; }
+
             /// <summary>
             /// <para>The ID of the SSL certificate bound to the domain name. Obtain the certificate ID after you upload or purchase a certificate in the <a href="https://yundunnext.console.aliyun.com/?spm=5176.2020520163.console-base_help.2.4b3baJixaJixOc%5C&p=cas">Certificate Management Service</a> console.</para>
             /// 
@@ -25,6 +29,22 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             [NameInMap("CertificateId")]
             [Validation(Required=false)]
             public string CertificateId { get; set; }
+
+            [NameInMap("CertificateName")]
+            [Validation(Required=false)]
+            public string CertificateName { get; set; }
+
+            [NameInMap("CertificateStartDate")]
+            [Validation(Required=false)]
+            public string CertificateStartDate { get; set; }
+
+            [NameInMap("CertificateStatus")]
+            [Validation(Required=false)]
+            public string CertificateStatus { get; set; }
+
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public string CreateTime { get; set; }
 
             /// <summary>
             /// <para>The custom domain name.</para>
@@ -50,6 +70,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
+
+            [NameInMap("UpdateTime")]
+            [Validation(Required=false)]
+            public string UpdateTime { get; set; }
 
         }
 
