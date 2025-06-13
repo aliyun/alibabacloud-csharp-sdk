@@ -33,6 +33,28 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 [Validation(Required=false)]
                 public List<string> KeywordHitLibs { get; set; }
 
+                [NameInMap("ManualMachineConfig")]
+                [Validation(Required=false)]
+                public GetServiceConfigResponseBodyDataCustomServiceConfManualMachineConfig ManualMachineConfig { get; set; }
+                public class GetServiceConfigResponseBodyDataCustomServiceConfManualMachineConfig : TeaModel {
+                    [NameInMap("AuditRiskLevels")]
+                    [Validation(Required=false)]
+                    public List<string> AuditRiskLevels { get; set; }
+
+                    [NameInMap("CallbackId")]
+                    [Validation(Required=false)]
+                    public long? CallbackId { get; set; }
+
+                    [NameInMap("Enable")]
+                    [Validation(Required=false)]
+                    public bool? Enable { get; set; }
+
+                    [NameInMap("ManualService")]
+                    [Validation(Required=false)]
+                    public string ManualService { get; set; }
+
+                }
+
                 [NameInMap("SimilarTextHitLibs")]
                 [Validation(Required=false)]
                 public List<string> SimilarTextHitLibs { get; set; }

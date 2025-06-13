@@ -33,6 +33,26 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             [Validation(Required=false)]
             public List<GetScanResultResponseBodyDataItems> Items { get; set; }
             public class GetScanResultResponseBodyDataItems : TeaModel {
+                [NameInMap("ApiLabels")]
+                [Validation(Required=false)]
+                public string ApiLabels { get; set; }
+
+                [NameInMap("ApiRequestTime")]
+                [Validation(Required=false)]
+                public string ApiRequestTime { get; set; }
+
+                [NameInMap("ApiRiskLevel")]
+                [Validation(Required=false)]
+                public string ApiRiskLevel { get; set; }
+
+                [NameInMap("ApiService")]
+                [Validation(Required=false)]
+                public string ApiService { get; set; }
+
+                [NameInMap("ApiTaskId")]
+                [Validation(Required=false)]
+                public string ApiTaskId { get; set; }
+
                 [NameInMap("AttackLevel")]
                 [Validation(Required=false)]
                 public string AttackLevel { get; set; }
@@ -125,6 +145,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 [Validation(Required=false)]
                 public string Labels { get; set; }
 
+                [NameInMap("ManualOnly")]
+                [Validation(Required=false)]
+                public bool? ManualOnly { get; set; }
+
                 [NameInMap("NoLabels")]
                 [Validation(Required=false)]
                 public List<string> NoLabels { get; set; }
@@ -165,6 +189,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 [Validation(Required=false)]
                 public string RequestTime { get; set; }
 
+                [NameInMap("ResourceType")]
+                [Validation(Required=false)]
+                public string ResourceType { get; set; }
+
                 [NameInMap("Result")]
                 [Validation(Required=false)]
                 public List<GetScanResultResponseBodyDataItemsResult> Result { get; set; }
@@ -190,6 +218,26 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                     public string Label { get; set; }
 
                 }
+
+                [NameInMap("ReviewLabels")]
+                [Validation(Required=false)]
+                public string ReviewLabels { get; set; }
+
+                [NameInMap("ReviewRiskLevel")]
+                [Validation(Required=false)]
+                public string ReviewRiskLevel { get; set; }
+
+                [NameInMap("ReviewTime")]
+                [Validation(Required=false)]
+                public string ReviewTime { get; set; }
+
+                [NameInMap("ReviewUid")]
+                [Validation(Required=false)]
+                public string ReviewUid { get; set; }
+
+                [NameInMap("Reviewed")]
+                [Validation(Required=false)]
+                public bool? Reviewed { get; set; }
 
                 [NameInMap("RiskLevel")]
                 [Validation(Required=false)]

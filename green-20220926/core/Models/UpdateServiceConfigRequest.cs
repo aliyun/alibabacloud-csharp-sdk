@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public string KeywordHitLibs { get; set; }
 
+        [NameInMap("ManualMachineConfig")]
+        [Validation(Required=false)]
+        public string ManualMachineConfig { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>

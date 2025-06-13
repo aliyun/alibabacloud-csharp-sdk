@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public string Feedback { get; set; }
 
+        [NameInMap("Labels")]
+        [Validation(Required=false)]
+        public string Labels { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>46232656-984E-****-A648-B1D0667B6C3E</para>
@@ -40,6 +44,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
+
+        [NameInMap("RiskLevel")]
+        [Validation(Required=false)]
+        public string RiskLevel { get; set; }
 
     }
 
