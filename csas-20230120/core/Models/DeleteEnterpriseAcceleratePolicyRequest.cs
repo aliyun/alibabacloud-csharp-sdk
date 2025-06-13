@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class DeleteEnterpriseAcceleratePolicyRequest : TeaModel {
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>eap-6edfb9d722ef8429</para>
         /// </summary>

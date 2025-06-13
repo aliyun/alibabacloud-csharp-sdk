@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class ListEnterpriseAccelerateTargetsRequest : TeaModel {
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public long? CurrentPage { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>eap-424ba3f47660425c</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string EapId { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

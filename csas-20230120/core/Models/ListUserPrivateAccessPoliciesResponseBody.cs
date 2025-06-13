@@ -95,6 +95,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public long? Priority { get; set; }
 
+            [NameInMap("TrustedProcessGroupIds")]
+            [Validation(Required=false)]
+            public List<string> TrustedProcessGroupIds { get; set; }
+
+            [NameInMap("TrustedSoftwareIds")]
+            [Validation(Required=false)]
+            public List<string> TrustedSoftwareIds { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>Custom</para>

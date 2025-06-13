@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class ListEnterpriseAcceleratePoliciesRequest : TeaModel {
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

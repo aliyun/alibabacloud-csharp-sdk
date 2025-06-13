@@ -1617,6 +1617,18 @@ namespace AlibabaCloud.SDK.Csas20230120
             {
                 body["TriggerTemplateId"] = request.TriggerTemplateId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrustedProcessGroupIds))
+            {
+                bodyFlat["TrustedProcessGroupIds"] = request.TrustedProcessGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrustedProcessStatus))
+            {
+                body["TrustedProcessStatus"] = request.TrustedProcessStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrustedSoftwareIds))
+            {
+                bodyFlat["TrustedSoftwareIds"] = request.TrustedSoftwareIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupIds))
             {
                 bodyFlat["UserGroupIds"] = request.UserGroupIds;
@@ -1716,6 +1728,18 @@ namespace AlibabaCloud.SDK.Csas20230120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerTemplateId))
             {
                 body["TriggerTemplateId"] = request.TriggerTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrustedProcessGroupIds))
+            {
+                bodyFlat["TrustedProcessGroupIds"] = request.TrustedProcessGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrustedProcessStatus))
+            {
+                body["TrustedProcessStatus"] = request.TrustedProcessStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrustedSoftwareIds))
+            {
+                bodyFlat["TrustedSoftwareIds"] = request.TrustedSoftwareIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupIds))
             {
@@ -14139,6 +14163,18 @@ namespace AlibabaCloud.SDK.Csas20230120
             {
                 body["TriggerTemplateId"] = request.TriggerTemplateId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrustedProcessGroupIds))
+            {
+                bodyFlat["TrustedProcessGroupIds"] = request.TrustedProcessGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrustedProcessStatus))
+            {
+                body["TrustedProcessStatus"] = request.TrustedProcessStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrustedSoftwareIds))
+            {
+                bodyFlat["TrustedSoftwareIds"] = request.TrustedSoftwareIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupIds))
             {
                 bodyFlat["UserGroupIds"] = request.UserGroupIds;
@@ -14242,6 +14278,18 @@ namespace AlibabaCloud.SDK.Csas20230120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerTemplateId))
             {
                 body["TriggerTemplateId"] = request.TriggerTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrustedProcessGroupIds))
+            {
+                bodyFlat["TrustedProcessGroupIds"] = request.TrustedProcessGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrustedProcessStatus))
+            {
+                body["TrustedProcessStatus"] = request.TrustedProcessStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrustedSoftwareIds))
+            {
+                bodyFlat["TrustedSoftwareIds"] = request.TrustedSoftwareIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupIds))
             {

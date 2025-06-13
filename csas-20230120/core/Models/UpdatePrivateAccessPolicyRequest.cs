@@ -131,6 +131,26 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public string TriggerTemplateId { get; set; }
 
+        /// <summary>
+        /// <b>if can be null:</b>
+        /// <c>false</c>
+        /// </summary>
+        [NameInMap("TrustedProcessGroupIds")]
+        [Validation(Required=false)]
+        public List<string> TrustedProcessGroupIds { get; set; }
+
+        [NameInMap("TrustedProcessStatus")]
+        [Validation(Required=false)]
+        public string TrustedProcessStatus { get; set; }
+
+        /// <summary>
+        /// <b>if can be null:</b>
+        /// <c>false</c>
+        /// </summary>
+        [NameInMap("TrustedSoftwareIds")]
+        [Validation(Required=false)]
+        public List<string> TrustedSoftwareIds { get; set; }
+
         [NameInMap("UserGroupIds")]
         [Validation(Required=false)]
         public List<string> UserGroupIds { get; set; }

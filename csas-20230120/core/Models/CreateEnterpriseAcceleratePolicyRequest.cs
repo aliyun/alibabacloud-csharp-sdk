@@ -42,6 +42,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public int? ShowInClient { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12.34.56.XX</para>
         /// </summary>
@@ -50,6 +52,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string UpstreamHost { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1000</para>
         /// </summary>
@@ -58,6 +62,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public int? UpstreamPort { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ga</para>
         /// </summary>
@@ -65,6 +71,9 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public string UpstreamType { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("UserAttributeGroup")]
         [Validation(Required=false)]
         public string UserAttributeGroup { get; set; }
