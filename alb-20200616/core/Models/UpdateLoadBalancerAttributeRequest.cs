@@ -59,15 +59,16 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string LoadBalancerName { get; set; }
 
         /// <summary>
-        /// <para>The configuration read-only mode.</para>
+        /// <para>The configuration read-only mode settings.</para>
         /// </summary>
         [NameInMap("ModificationProtectionConfig")]
         [Validation(Required=false)]
         public UpdateLoadBalancerAttributeRequestModificationProtectionConfig ModificationProtectionConfig { get; set; }
         public class UpdateLoadBalancerAttributeRequestModificationProtectionConfig : TeaModel {
             /// <summary>
-            /// <para>It must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</para>
-            /// <para>This parameter takes effect only when <b>ModificationProtectionStatus</b> is set to <b>ConsoleProtection</b>.</para>
+            /// <para>The reason for enabling the configuration read-only mode.</para>
+            /// <para>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</para>
+            /// <para>This parameter takes effect only when <b>Status</b> is set to <b>ConsoleProtection</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -77,13 +78,13 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string Reason { get; set; }
 
             /// <summary>
-            /// <para>The status of the configuration read-only mode. Valid values:</para>
+            /// <para>Specifies whether to enable the configuration read-only mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>NonProtection</b>: disables the configuration read-only mode. In this case, you cannot specify <b>ModificationProtectionReason</b>. If you specify <b>ModificationProtectionReason</b>, the value of the parameter is cleared.</description></item>
-            /// <item><description><b>ConsoleProtection</b>: enables the configuration read-only mode. In this case, you can specify <b>ModificationProtectionReason</b>.</description></item>
+            /// <item><description><b>NonProtection</b>: disables the configuration read-only mode. In this case, the value of the <b>Reason</b> parameter that you specify does not take effect. If you set the value of <b>Reason</b>, the value is cleared.</description></item>
+            /// <item><description><b>ConsoleProtection</b>: enables the configuration read-only mode. In this case, the value of the <b>Reason</b> parameter that you specify takes effect.****</description></item>
             /// </list>
             /// <remarks>
-            /// <para>If you set this parameter to <b>ConsoleProtection</b>, you cannot use the ALB console to modify instance configurations. However, you can call API operations to modify instance configurations.</para>
+            /// <para> If the parameter is set to <b>ConsoleProtection</b>, the configuration read-only mode is enabled. You cannot modify the configurations of the ALB instance in the ALB console. However, you can call API operations to modify the configurations of the ALB instance.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

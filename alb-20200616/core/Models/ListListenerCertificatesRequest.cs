@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class ListListenerCertificatesRequest : TeaModel {
         /// <summary>
-        /// <para>The certificate IDs.</para>
+        /// <para>The certificates.</para>
         /// </summary>
         [NameInMap("CertificateIds")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string ListenerId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return. Valid values: <b>1 to 100</b>. Default value: <b>20</b>.</para>
+        /// <para>The number of entries to return in each call. Valid values: <b>1 to 100</b>. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

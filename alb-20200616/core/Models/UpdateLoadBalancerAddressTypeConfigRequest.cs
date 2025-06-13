@@ -84,10 +84,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string AllocationId { get; set; }
 
             /// <summary>
-            /// <para>The type of EIP. Valid values:</para>
+            /// <para>The type of the EIP. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Common</b>: an EIP.</description></item>
-            /// <item><description><b>Anycast</b>: an Anycast EIP.</description></item>
+            /// <item><description>Common (default): indicates an EIP</description></item>
+            /// <item><description>Anycast: indicates an Anycast EIP</description></item>
             /// </list>
             /// <remarks>
             /// <para> For more information about the regions in which ALB supports Anycast EIPs, see <a href="https://help.aliyun.com/document_detail/460727.html">Limits</a>.</para>

@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The forwarding rules.</para>
+        /// <para>The forwarding rules. You can specify at most 100 forwarding rules in each call.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RuleIds")]

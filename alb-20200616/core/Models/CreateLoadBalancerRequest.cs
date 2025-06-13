@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class CreateLoadBalancerRequest : TeaModel {
         /// <summary>
-        /// <para>The mode in which IP addresses are allocated. Default value: Dynamic. Valid values:</para>
+        /// <para>The mode in which IP addresses are allocated to the ALB instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Fixed</b>: The ALB instance uses a static IP address.</description></item>
-        /// <item><description><b>Dynamic</b> (default): The system dynamically allocates an IP address to each zone of the ALB instance.</description></item>
+        /// <item><description><b>Fixed</b> (default): a fixed IP address is assigned to the ALB instance in each zone.</description></item>
+        /// <item><description><b>Dynamic</b>: IP addresses are dynamically allocated to the ALB instance in each zone.</description></item>
         /// </list>
+        /// <remarks>
+        /// <para> Starting from 00:00:00 on February 25, 2025 (UTC+8), when you call this operation to create an ALB instance, the instance is automatically the <a href="https://help.aliyun.com/document_detail/2864070.html">upgraded version</a> regardless of the mode you specify. Upgraded ALB instances no longer differentiate between IP modes. Instead, they globally auto-scale IP addresses for providing load balancing services. The ALB instances you created before this date and time are not affected.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>Dynamic</para>
@@ -113,7 +116,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string BandwidthPackageId { get; set; }
 
             /// <summary>
-            /// <para>The billing method of the ALB instance.</para>
+            /// <para>The billing method of the instance.</para>
             /// <para>Set the value to <b>PostPay</b>, which specifies the pay-as-you-go billing method.</para>
             /// <para>This parameter is required.</para>
             /// 
@@ -154,16 +157,17 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string LoadBalancerName { get; set; }
 
         /// <summary>
-        /// <para>The configuration of the configuration read-only mode.</para>
+        /// <para>The configuration read-only mode settings.</para>
         /// </summary>
         [NameInMap("ModificationProtectionConfig")]
         [Validation(Required=false)]
         public CreateLoadBalancerRequestModificationProtectionConfig ModificationProtectionConfig { get; set; }
         public class CreateLoadBalancerRequestModificationProtectionConfig : TeaModel {
             /// <summary>
-            /// <para>The reason for enabling the configuration read-only mode. The reason must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The reason must start with a letter.</para>
+            /// <para>The reason for enabling the configuration read-only mode.</para>
+            /// <para>The reason must be 2 to 128 characters in length, can contain letters, digits, periods (.), underscores (_), and hyphens (-), and must start with a letter.</para>
             /// <remarks>
-            /// <para>This parameter takes effect only if <c>Status</c> is set to <b>ConsoleProtection</b>.</para>
+            /// <para> This parameter takes effect only when <b>Status</b> is set to <b>ConsoleProtection</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -176,11 +180,11 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <summary>
             /// <para>Specifies whether to enable the configuration read-only mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>NonProtection</b>: disables the configuration read-only mode. In this case, you cannot specify ModificationProtectionReason. If you specify ModificationProtectionReason, the value of the parameter is cleared.</description></item>
-            /// <item><description><b>ConsoleProtection</b>: enables the configuration read-only mode. In this case, you can specify ModificationProtectionReason.</description></item>
+            /// <item><description><b>NonProtection</b>: Disables the configuration read-only mode. In this case, the value of the <b>Reason</b> parameter that you specify does not take effect. If you specify <b>Reason</b>, the value of the parameter is cleared.</description></item>
+            /// <item><description><b>ConsoleProtection</b>: Enables the configuration read-only mode. In this case, the value of the <b>Reason</b> parameter that you specify takes effect.****</description></item>
             /// </list>
             /// <remarks>
-            /// <para>If you set this parameter to <b>ConsoleProtection</b>, you cannot use the ALB console to modify instance configurations. However, you can call API operations to modify instance configurations.</para>
+            /// <para> If the parameter is set to <b>ConsoleProtection</b>, the configuration read-only mode is enabled. You cannot modify the configurations of the ALB instance in the ALB console. However, you can call API operations to modify the configurations of the ALB instance.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

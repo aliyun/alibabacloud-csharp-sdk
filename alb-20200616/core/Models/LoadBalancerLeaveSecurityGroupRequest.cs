@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string LoadBalancerId { get; set; }
 
         /// <summary>
-        /// <para>The security IDs.</para>
+        /// <para>The security group IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SecurityGroupIds")]

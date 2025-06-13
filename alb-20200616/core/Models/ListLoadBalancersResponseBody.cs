@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public ListLoadBalancersResponseBodyLoadBalancersLoadBalancerBillingConfig LoadBalancerBillingConfig { get; set; }
             public class ListLoadBalancersResponseBodyLoadBalancersLoadBalancerBillingConfig : TeaModel {
                 /// <summary>
-                /// <para>The billing method. Valid values:</para>
+                /// <para>The billing method. Valid value:</para>
                 /// <para>Only <b>PostPay</b> may be returned, which indicates the pay-as-you-go billing method.</para>
                 /// 
                 /// <b>Example:</b>
@@ -286,7 +286,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string LoadBalancerStatus { get; set; }
 
             /// <summary>
-            /// <para>The configuration of modification protection.</para>
+            /// <para>The configuration read-only mode settings.</para>
             /// </summary>
             [NameInMap("ModificationProtectionConfig")]
             [Validation(Required=false)]
@@ -295,7 +295,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 /// <summary>
                 /// <para>The reason why the configuration read-only mode is enabled.</para>
                 /// <para>The reason must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</para>
-                /// <para>This parameter is available only if the <b>ModificationProtectionStatus</b> parameter is set to <b>ConsoleProtection</b>.</para>
+                /// <para>This parameter takes effect only if <b>Status</b> is set to <b>ConsoleProtection</b>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Test Reason</para>
@@ -305,13 +305,13 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public string Reason { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the configuration read-only mode is enabled for the ALB instance. Valid values:</para>
+                /// <para>Indicates whether the configuration read-only mode is enabled. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>NonProtection</b>: Modification protection is disabled. In this case, you cannot set the ModificationProtectionReason parameter. If the ModificationProtectionReason parameter is specified, the value is cleared.</description></item>
-                /// <item><description><b>ConsoleProtection</b>: Modification protection is enabled. In this case, you can set the ModificationProtectionReason parameter.</description></item>
+                /// <item><description><b>NonProtection</b>: The configuration read-only mode is disabled. In this case, <b>Reason</b> is not returned. If <b>Reason</b> is set, the value is cleared.</description></item>
+                /// <item><description><b>ConsoleProtection</b>: The configuration read-only mode is enabled. In this case, <b>Reason</b> is returned.****</description></item>
                 /// </list>
                 /// <remarks>
-                /// <para> If the value is <b>ConsoleProtection</b>, modification protection is enabled. You cannot modify the configurations of the ALB instance in the ALB console. However, you can call API operations to modify the configurations of the ALB instance.</para>
+                /// <para> If the value is <b>ConsoleProtection</b>, the configuration read-only mode is enabled. You cannot modify the configurations of the ALB instance in the ALB console. However, you can call API operations to modify the configurations of the ALB instance.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -332,6 +332,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
+
+            [NameInMap("SecurityGroupIds")]
+            [Validation(Required=false)]
+            public List<string> SecurityGroupIds { get; set; }
 
             /// <summary>
             /// <para>The information about the tags.</para>

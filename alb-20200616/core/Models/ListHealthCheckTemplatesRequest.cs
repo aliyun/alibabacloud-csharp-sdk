@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public List<string> HealthCheckTemplateNames { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
+        /// <para>The number of entries to return in each call. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -47,6 +47,12 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// <para>The resource group ID. You can filter the query results based on the specified ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-atstuj3rtop****</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }

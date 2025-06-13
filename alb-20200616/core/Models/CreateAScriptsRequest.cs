@@ -87,6 +87,24 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             }
 
             /// <summary>
+            /// <para>可编程脚本执行位置</para>
+            /// <list type="bullet">
+            /// <item><description><para>RequestHead（默认值）：请求方向规则执行前</para>
+            /// </description></item>
+            /// <item><description><para>RequestFoot：请求方向规则执行后</para>
+            /// </description></item>
+            /// <item><description><para>ResponseHead：响应方向规则执行前</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>RequestFoot</para>
+            /// </summary>
+            [NameInMap("Position")]
+            [Validation(Required=false)]
+            public string Position { get; set; }
+
+            /// <summary>
             /// <para>The content of the AScript rule.</para>
             /// <para>This parameter is required.</para>
             /// 

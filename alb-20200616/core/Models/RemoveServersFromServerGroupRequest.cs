@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string ServerGroupId { get; set; }
 
         /// <summary>
-        /// <para>The server group. You can add at most 200 backend servers to the server group.</para>
+        /// <para>The backend servers to be removed. You can specify up to 200 backend servers.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Servers")]
@@ -70,14 +70,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public int? Port { get; set; }
 
             /// <summary>
-            /// <para>The ID of the server group.</para>
+            /// <para>The backend server ID.</para>
             /// <list type="bullet">
             /// <item><description>If the server group is of the <b>Instance</b> type, set ServerId to the ID of a resource of the <b>Ecs</b>, <b>Eni</b>, or <b>Eci</b> type.</description></item>
-            /// <item><description>If the server group is of the <b>Ip</b> type, set ServerId to IP addresses.</description></item>
-            /// <item><description>If the server group is of the <b>Fc</b>, set ServerId to the Alibaba Cloud Resource Name (ARN) of a function.</description></item>
+            /// <item><description>If the server group is of the <b>Ip</b> type, set this parameter to IP addresses.</description></item>
+            /// <item><description>If the server group is of the <b>Fc</b> type, set ServerId to the Alibaba Cloud Resource Name (ARN) of a function.</description></item>
             /// </list>
             /// <remarks>
-            /// <para> You can call the ListServerGroups operation to query information about the server group type so that you can set ServerId to a proper value.<a href="~~213627~~"></a></para>
+            /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2254862.html">ListServerGroups</a> operation to query information about the server group type so that you can set ServerId to a proper value.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string ServerId { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the elastic network interface (ENI) in exclusive mode.</para>
+            /// <para>The IP address of the elastic network interface (ENI) in inclusive mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.1.1</para>
@@ -101,11 +101,11 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <summary>
             /// <para>The type of the backend server. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Ecs</b>: ECS instance</description></item>
+            /// <item><description><b>Ecs</b>: Elastic Compute Service (ECS) instance</description></item>
             /// <item><description><b>Eni</b>: ENI</description></item>
             /// <item><description><b>Eci</b>: elastic container instance</description></item>
             /// <item><description><b>Ip</b>: IP address</description></item>
-            /// <item><description><b>Fc</b>: Function Compute</description></item>
+            /// <item><description><b>Fc</b>: Function Compute instance</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 

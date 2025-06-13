@@ -178,8 +178,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public bool? Http2Enabled { get; set; }
 
         /// <summary>
-        /// <para>The timeout period of an idle connection. Unit: seconds. Valid values: <b>1 to 60</b>.</para>
-        /// <para>If no request is received within the specified timeout period, ALB closes the current connection. When another request is received, ALB establishes a new connection.</para>
+        /// <para>The timeout period for idle connections. Unit: seconds. Valid values: <b>1 to 60</b></para>
+        /// <para>If no requests are received within the specified timeout period, ALB closes the current connection. When another request is received, ALB establishes a new connection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>

@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public UpdateRuleAttributeRequestRuleActionsCorsConfig CorsConfig { get; set; }
             public class UpdateRuleAttributeRequestRuleActionsCorsConfig : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether to allow credentials to be carried in CORS requests. Valid values:</para>
+                /// <para>Specifies whether credentials can be carried in CORS requests. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>on</b></description></item>
                 /// <item><description><b>off</b></description></item>
@@ -164,14 +164,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             }
 
             /// <summary>
-            /// <para>The configurations of the server groups.</para>
+            /// <para>The configuration of the server groups.</para>
             /// </summary>
             [NameInMap("ForwardGroupConfig")]
             [Validation(Required=false)]
             public UpdateRuleAttributeRequestRuleActionsForwardGroupConfig ForwardGroupConfig { get; set; }
             public class UpdateRuleAttributeRequestRuleActionsForwardGroupConfig : TeaModel {
                 /// <summary>
-                /// <para>The configuration of session persistence.</para>
+                /// <para>The configuration of session persistence for server groups.</para>
                 /// </summary>
                 [NameInMap("ServerGroupStickySession")]
                 [Validation(Required=false)]
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     /// <summary>
                     /// <para>Specifies whether to enable session persistence. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>true</b>: enables session persistence.</description></item>
+                    /// <item><description><b>true</b></description></item>
                     /// <item><description><b>false</b> (default)</description></item>
                     /// </list>
                     /// 
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     public bool? Enabled { get; set; }
 
                     /// <summary>
-                    /// <para>The timeout period of sessions. Unit: seconds Valid values: 1 to 86400.</para>
+                    /// <para>The timeout period for sessions. Unit: seconds. Valid values: 1 to 86400.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2</para>
@@ -248,8 +248,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 /// <summary>
                 /// <para>Specifies whether to overwrite the request header values. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b>: overwrites the request header.</description></item>
-                /// <item><description><b>false</b> (default): does not overwrite the request header.</description></item>
+                /// <item><description><b>true</b></description></item>
+                /// <item><description><b>false</b> (default)</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -262,7 +262,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 /// <summary>
                 /// <para>The key of the header. The key must be 1 to 40 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The header keys specified by <b>InsertHeaderConfig</b> must be unique.</para>
                 /// <remarks>
-                /// <para>The following header keys are not supported: <c>slb-id</c>, <c>slb-ip</c>, <c>x-forwarded-for</c>, <c>x-forwarded-proto</c>, <c>x-forwarded-eip</c>, <c>x-forwarded-port</c>, <c>x-forwarded-client-srcport</c>, <c>connection</c>, <c>upgrade</c>, <c>content-length</c>, <c>transfer-encoding</c>, <c>keep-alive</c>, <c>te</c>, <c>host</c>, <c>cookie</c>, <c>remoteip</c>, and <c>authority</c>. The header keys are not case-sensitive.</para>
+                /// <para> You cannot specify the following header keys: <c>slb-id</c>, <c>slb-ip</c>, <c>x-forwarded-for</c>, <c>x-forwarded-proto</c>, <c>x-forwarded-eip</c>, <c>x-forwarded-port</c>, <c>x-forwarded-client-srcport</c>, <c>x-forwarded-host</c>, <c>connection</c>, <c>upgrade</c>, <c>content-length</c>, <c>transfer-encoding</c>, <c>keep-alive</c>, <c>te</c>, <c>host</c>, <c>cookie</c>, <c>remoteip</c>, and <c>authority</c>. The header keys are case-insensitive.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -284,7 +284,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 /// <item><description><b>SLBPort</b>: the listener port of the ALB instance.</description></item>
                 /// </list>
                 /// </description></item>
-                /// <item><description><para>If <b>ValueType</b> is set to <b>UserDefined</b>, you can specify a custom value. The value must be 1 to 128 characters in length, and can contain asterisks (\*), question marks (?), and printable characters whose ASCII values are <c>larger than or equal to 32 and smaller than 127</c>. It cannot start or end with a space character.</para>
+                /// <item><description><para>If <b>ValueType</b> is set to <b>UserDefined</b>, a custom header value is supported. The header value must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are <c>greater than or equal to 32 and lower than 127</c>. You can use asterisks (\*) and question marks (?) as wildcard characters. Quotation marks (<c>&quot;</c>) are not supported. The header value cannot start or end with a space character, or end with a backslash (<c>\\</c>).</para>
                 /// </description></item>
                 /// <item><description><para>If <b>ValueType</b> is set to <b>ReferenceHeader</b>, you can reference a value from request headers. The value must be 1 to 128 characters in length, and can contain lowercase letters, digits, hyphens (-), and underscores (_).</para>
                 /// </description></item>
@@ -315,7 +315,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             }
 
             /// <summary>
-            /// <para>The priority of the action. Valid values: <b>1 to 50000</b>. A smaller value specifies a higher priority. The actions of a forwarding rule are applied in descending order of priority. This parameter is required. The priority of each action within a forwarding rule must be unique. You can specify at most 20 forwarding rule priorities.</para>
+            /// <para>The priority of the action. Valid values: <b>1 to 50000</b>. A smaller value specifies a higher priority. The actions of a forwarding rule are applied in descending order of priority. This parameter cannot be left empty. The priority of each action within a forwarding rule must be unique. You can specify up to 20 forwarding rule priorities.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -325,7 +325,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public int? Order { get; set; }
 
             /// <summary>
-            /// <para>The configuration of the redirect action. You can specify at most 20 redirect actions.</para>
+            /// <para>The configuration of the redirect action. You can specify up to 20 redirect actions.</para>
             /// </summary>
             [NameInMap("RedirectConfig")]
             [Validation(Required=false)]
@@ -339,9 +339,9 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 /// <item><description><para>If you want to specify a custom value, make sure that the following requirements are met:</para>
                 /// <list type="bullet">
                 /// <item><description>The hostname must be 3 to 128 characters in length, and can contain lowercase letters, digits, hyphens (-), periods (.), asterisks (\*), and question marks (?).</description></item>
-                /// <item><description>The hostname must contain at least one period (.) but cannot start or end with a period (.).</description></item>
+                /// <item><description>The hostname contains at least one period (.) but does not start or end with a period (.).</description></item>
                 /// <item><description>The rightmost domain label can contain only letters and wildcard characters. It cannot contain digits or hyphens (-).</description></item>
-                /// <item><description>Other domain labels cannot start or end with a hyphen (-).</description></item>
+                /// <item><description>The domain labels do not start or end with a hyphen (-).</description></item>
                 /// <item><description>You can use asterisks (\*) and question marks (?) anywhere in a domain label as wildcard characters.</description></item>
                 /// </list>
                 /// </description></item>
@@ -371,8 +371,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 /// </description></item>
                 /// <item><description><para>If you want to specify a custom value, make sure that the following requirements are met:</para>
                 /// <list type="bullet">
-                /// <item><description>The URL must be 1 to 128 characters in length,</description></item>
-                /// <item><description>The URL must start with a forward slash (/) and can contain letters, digits, and the following special characters: <c>$ - _ .+ / &amp; ~ @ :</c>. It cannot contain the following special characters: <c>&quot; % # ; ! ( ) [ ]^ , &quot;</c>. You can use asterisks (\*) and question marks (?) as wildcard characters.</description></item>
+                /// <item><description>The header value must be 1 to 128 characters in length.</description></item>
+                /// <item><description>It must start with a forward slash (/) and can contain letters, digits, and the following special characters: <c>$ - _ . + / &amp; ~ @ :</c>. It does not contain the following special characters: <c>% # ; ! ( ) [ ] ^ , \\ &quot;</c>. You can use asterisks (\*) and question marks (?) as wildcard characters.</description></item>
                 /// </list>
                 /// </description></item>
                 /// </list>
@@ -405,7 +405,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 /// <item><description><b>HTTP</b> or <b>HTTPS</b>.</description></item>
                 /// </list>
                 /// <remarks>
-                /// <para>HTTPS listeners support only HTTPS redirects.</para>
+                /// <para> HTTPS listeners support only HTTPS redirects.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -416,14 +416,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public string Protocol { get; set; }
 
                 /// <summary>
-                /// <para>The query string to which requests are redirected. Valid values:</para>
+                /// <para>The query string of the URL to which requests are forwarded. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><para>Default value: <b>${query}</b>. \<em>\</em>${host}**, <b>${protocol}</b>, and **${port}\<em>\</em> are also supported. Each variable can be specified only once. The preceding variables can be used at the same time or combined with a custom value.</para>
                 /// </description></item>
                 /// <item><description><para>If you want to specify a custom value, make sure that the following requirements are met:</para>
                 /// <list type="bullet">
-                /// <item><description>The query string must be 1 to 128 characters in length.</description></item>
-                /// <item><description>The query string can contain printable characters, but cannot contain space characters, the special characters <c># [ ] { } \\ | &lt; &gt; &amp;</c>, or uppercase letters.</description></item>
+                /// <item><description>The header value must be 1 to 128 characters in length.</description></item>
+                /// <item><description>It can contain printable characters, excluding space characters, the special characters <c># [ ] { } \\ | &lt; &gt; &quot;</c>, and uppercase letters.</description></item>
                 /// </list>
                 /// </description></item>
                 /// </list>
@@ -447,7 +447,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 /// <summary>
                 /// <para>The key of the header to be removed. The header key must be 1 to 40 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The header keys specified in RemoveHeader must be unique.</para>
                 /// <list type="bullet">
-                /// <item><description>If Direction is set to Request, the following request header keys are not supported: <c>slb-id</c>, <c>slb-ip</c>, <c>x-forwarded-for</c>, <c>x-forwarded-proto</c>, <c>x-forwarded-eip</c>, <c>x-forwarded-port</c>, <c>x-forwarded-client-srcport</c>, <c>connection</c>, <c>upgrade</c>, <c>content-length</c>, <c>transfer-encoding</c>, <c>keep-alive</c>, <c>te</c>, <c>host</c>, <c>cookie</c>, <c>remoteip</c>, and <c>authority</c>. The header keys are not case-sensitive.</description></item>
+                /// <item><description>If Direction is set to Request, the following request headers cannot be removed: <c>slb-id</c>, <c>slb-ip</c>, <c>x-forwarded-for</c>, <c>x-forwarded-proto</c>, <c>x-forwarded-eip</c>, <c>x-forwarded-port</c>, <c>x-forwarded-client-srcport</c>, <c>x-forwarded-host</c>, <c>connection</c>, <c>upgrade</c>, <c>content-length</c>, <c>transfer-encoding</c>, <c>keep-alive</c>, <c>te</c>, <c>host</c>, <c>cookie</c>, <c>remoteip</c>, and <c>authority</c>. Request headers are not case-sensitive.</description></item>
                 /// <item><description>If Direction is set to Response, the following header keys are not supported: <c>connection</c>, <c>upgrade</c>, <c>content-length</c>, and <c>transfer-encoding</c>. The header keys are not case-sensitive.</description></item>
                 /// </list>
                 /// 
@@ -477,7 +477,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 /// <item><description>The hostname must be 3 to 128 characters in length, and can contain lowercase letters, digits, hyphens (-), periods (.), asterisks (\*), and question marks (?).</description></item>
                 /// <item><description>The hostname contains at least one period (.) but does not start or end with a period (.).</description></item>
                 /// <item><description>The rightmost domain label can contain only letters and wildcard characters. It cannot contain digits or hyphens (-).</description></item>
-                /// <item><description>Other domain labels cannot start or end with a hyphen (-). You can use asterisks (\*) and question marks (?) anywhere in a domain label as wildcard characters.</description></item>
+                /// <item><description>The domain labels do not start or end with a hyphen (-). You can use asterisks (\*) and question marks (?) anywhere in a domain label as wildcard characters.</description></item>
                 /// </list>
                 /// </description></item>
                 /// </list>
@@ -496,8 +496,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 /// </description></item>
                 /// <item><description><para>If you want to specify a custom value, make sure that the following requirements are met:</para>
                 /// <list type="bullet">
-                /// <item><description>The URL must be 1 to 128 characters in length,</description></item>
-                /// <item><description>The URL must start with a forward slash (/) and can contain letters, digits, and the following special characters: <c>$ - _ .+ / &amp; ~ @ :</c>. It cannot contain the following special characters: <c>&quot; % # ; ! ( ) [ ]^ , &quot;</c>. You can use asterisks (\*) and question marks (?) as wildcard characters.</description></item>
+                /// <item><description>The header value must be 1 to 128 characters in length.</description></item>
+                /// <item><description>It must start with a forward slash (/) and can contain letters, digits, and the following special characters: <c>$ - _ . + / &amp; ~ @ :</c>. It does not contain the following special characters: <c>% # ; ! ( ) [ ] ^ , \\ &quot;</c>. You can use asterisks (\*) and question marks (?) as wildcard characters.</description></item>
                 /// </list>
                 /// </description></item>
                 /// </list>
@@ -516,8 +516,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 /// </description></item>
                 /// <item><description><para>If you want to specify a custom value, make sure that the following requirements are met:</para>
                 /// <list type="bullet">
-                /// <item><description>The query string must be 1 to 128 characters in length.</description></item>
-                /// <item><description>The query string can contain printable characters, but cannot contain space characters, the special characters <c># [ ] { } \\ | &lt; &gt; &amp;</c>, or uppercase letters.</description></item>
+                /// <item><description>The header value must be 1 to 128 characters in length.</description></item>
+                /// <item><description>It can contain printable characters, excluding space characters, the special characters <c># [ ] { } \\ | &lt; &gt; &quot;</c>, and uppercase letters.</description></item>
                 /// </list>
                 /// </description></item>
                 /// </list>
@@ -539,9 +539,9 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public UpdateRuleAttributeRequestRuleActionsTrafficLimitConfig TrafficLimitConfig { get; set; }
             public class UpdateRuleAttributeRequestRuleActionsTrafficLimitConfig : TeaModel {
                 /// <summary>
-                /// <para>The number of requests per IP address. Value range: <b>1 to 1000000</b>.</para>
+                /// <para>The number of requests per IP address. Value range: <b>1 to 1,000,000</b>.</para>
                 /// <remarks>
-                /// <para>If both the <b>QPS</b> and <b>PerIpQps</b> parameters are specified, make sure that the value of the <b>QPS</b> parameter is smaller than the value of the PerIpQps parameter.</para>
+                /// <para> If both the <b>QPS</b> and <b>PerIpQps</b> parameters are specified, make sure that the value of the <b>QPS</b> parameter is smaller than the value of the PerIpQps parameter.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -552,7 +552,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public int? PerIpQps { get; set; }
 
                 /// <summary>
-                /// <para>The queries per second (QPS). Value range: <b>1 to 1000000</b>.</para>
+                /// <para>The number of queries per second (QPS). Value range: <b>1 to 1,000,000</b>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -578,7 +578,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public UpdateRuleAttributeRequestRuleActionsTrafficMirrorConfigMirrorGroupConfig MirrorGroupConfig { get; set; }
                 public class UpdateRuleAttributeRequestRuleActionsTrafficMirrorConfigMirrorGroupConfig : TeaModel {
                     /// <summary>
-                    /// <para>The server group to which network traffic is mirrored.</para>
+                    /// <para>The server group to which traffic is mirrored.</para>
                     /// </summary>
                     [NameInMap("ServerGroupTuples")]
                     [Validation(Required=false)]
@@ -614,14 +614,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             }
 
             /// <summary>
-            /// <para>The type of the task. You can specify at most 11 types of action. Valid values:</para>
+            /// <para>The type of the task. You can specify up to 11 types of action. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ForwardGroup</b>: forwards requests to multiple vServer groups.</description></item>
+            /// <item><description><b>ForwardGroup</b>: forwards a request to multiple vServer groups.</description></item>
             /// <item><description><b>Redirect</b>: redirects requests.</description></item>
             /// <item><description><b>FixedResponse</b>: returns a fixed response.</description></item>
             /// <item><description><b>Rewrite</b>: rewrites requests.</description></item>
             /// <item><description><b>InsertHeader</b>: inserts a header.</description></item>
-            /// <item><description><b>RemoveHeader</b>: removes headers.</description></item>
+            /// <item><description><b>RemoveHeader</b>: deletes the header of a request.</description></item>
             /// <item><description><b>TrafficLimit</b>: throttles traffic.</description></item>
             /// <item><description><b>trafficMirror</b>: mirrors network traffic.</description></item>
             /// <item><description><b>Cors</b>: forwards requests based on CORS.</description></item>
@@ -642,7 +642,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         }
 
         /// <summary>
-        /// <para>The match condition of the forwarding rule.</para>
+        /// <para>The match conditions of the forwarding rule.</para>
         /// </summary>
         [NameInMap("RuleConditions")]
         [Validation(Required=false)]
@@ -663,7 +663,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public List<UpdateRuleAttributeRequestRuleConditionsCookieConfigValues> Values { get; set; }
                 public class UpdateRuleAttributeRequestRuleConditionsCookieConfigValues : TeaModel {
                     /// <summary>
-                    /// <para>The cookie key. The cookie key must be 1 to 100 characters in length, and can contain lowercase letters, printable ASCII characters, asterisks (\*), and question marks (?). It cannot contain space characters or the following special characters: <c># [ ] { } \\ | &lt; &gt; &amp;</c>.</para>
+                    /// <para>The cookie key. The key must be 1 to 100 characters in length, and can contain printable characters such as lowercase letters, asterisks (\*), and question marks (?). The key cannot contain uppercase letters, space characters, or the following special characters: <c># [ ] { } \\ | &lt; &gt; &amp; &quot; ;</c>.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>test</para>
@@ -694,7 +694,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public UpdateRuleAttributeRequestRuleConditionsHeaderConfig HeaderConfig { get; set; }
             public class UpdateRuleAttributeRequestRuleConditionsHeaderConfig : TeaModel {
                 /// <summary>
-                /// <para>The key of the response header. The header key must be 1 to 40 characters in length, and can contain letters, digits, hyphens (-), and underscores (_). Cookie and Host are not supported.</para>
+                /// <para>The header key. The header key must be 1 to 40 characters in length, and can contain letters, digits, hyphens (-), and underscores (_). Cookie and Host are not supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Port</para>
@@ -713,7 +713,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             }
 
             /// <summary>
-            /// <para>The configurations of the hosts.</para>
+            /// <para>The configuration of the hosts.</para>
             /// </summary>
             [NameInMap("HostConfig")]
             [Validation(Required=false)]
@@ -745,14 +745,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             }
 
             /// <summary>
-            /// <para>The configurations of the forwarding URL.</para>
+            /// <para>The configuration of the forwarding URL.</para>
             /// </summary>
             [NameInMap("PathConfig")]
             [Validation(Required=false)]
             public UpdateRuleAttributeRequestRuleConditionsPathConfig PathConfig { get; set; }
             public class UpdateRuleAttributeRequestRuleConditionsPathConfig : TeaModel {
                 /// <summary>
-                /// <para>The URLs to which requests are forwarded.</para>
+                /// <para>The forwarding URLs.</para>
                 /// </summary>
                 [NameInMap("Values")]
                 [Validation(Required=false)]
@@ -761,21 +761,21 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             }
 
             /// <summary>
-            /// <para>The configurations of the query strings.</para>
+            /// <para>The configuration of the query strings.</para>
             /// </summary>
             [NameInMap("QueryStringConfig")]
             [Validation(Required=false)]
             public UpdateRuleAttributeRequestRuleConditionsQueryStringConfig QueryStringConfig { get; set; }
             public class UpdateRuleAttributeRequestRuleConditionsQueryStringConfig : TeaModel {
                 /// <summary>
-                /// <para>The query strings. You can specify at most 20 query strings.</para>
+                /// <para>The query strings. You can specify up to 20 query strings.</para>
                 /// </summary>
                 [NameInMap("Values")]
                 [Validation(Required=false)]
                 public List<UpdateRuleAttributeRequestRuleConditionsQueryStringConfigValues> Values { get; set; }
                 public class UpdateRuleAttributeRequestRuleConditionsQueryStringConfigValues : TeaModel {
                     /// <summary>
-                    /// <para>The key of the query string. The key must be 1 to 100 characters in length, and can contain lowercase letters, printable ASCII characters, asterisks (\*), and question marks (?). It cannot contain space characters or the following special characters: <c># [ ] { } \\ | &lt; &gt; &amp;</c>.</para>
+                    /// <para>The key of the query string. The key must be 1 to 100 characters in length, and can contain printable characters such as lowercase letters, asterisks (\*), and question marks (?). The key cannot contain uppercase letters, space characters, or the following special characters: <c># [ ] { } \\ | &lt; &gt; &amp; &quot;</c>.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>test</para>
@@ -785,7 +785,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     public string Key { get; set; }
 
                     /// <summary>
-                    /// <para>The value of the query string. The value must be 1 to 128 characters in length, and can contain lowercase letters, printable ASCII characters, asterisks (\*), and question marks (?). It cannot contain space characters or the following special characters: <c># [ ] { } \\ | &lt; &gt; &amp;</c>.</para>
+                    /// <para>The value of the query string. The value must be 1 to 128 characters in length, and can contain printable characters such as lowercase letters, asterisks (\*), and question marks (?). The value cannot contain uppercase letters, space characters, or the following special characters: <c># [ ] { } \\ | &lt; &gt; &amp; &quot;</c>.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>test</para>
@@ -808,8 +808,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 /// <summary>
                 /// <para>The header key.</para>
                 /// <list type="bullet">
-                /// <item><description>The header key must be 1 to 40 characters in length.</description></item>
-                /// <item><description>The header key can contain lowercase letters, digits, hyphens (-), and underscores (_).</description></item>
+                /// <item><description>The key must be 1 to 40 characters in length.</description></item>
+                /// <item><description>It can contain letters, digits, hyphens (-), and underscores (_).</description></item>
                 /// <item><description>Cookie and Host are not supported.</description></item>
                 /// </list>
                 /// 
@@ -830,7 +830,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             }
 
             /// <summary>
-            /// <para>The configurations of the response status codes.</para>
+            /// <para>The configuration of the response status codes.</para>
             /// </summary>
             [NameInMap("ResponseStatusCodeConfig")]
             [Validation(Required=false)]
@@ -846,7 +846,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             }
 
             /// <summary>
-            /// <para>Traffic matching based on source IP addresses. You can specify at most five IP addresses, including CIDR blocks.</para>
+            /// <para>Traffic matching based on source IP addresses. You can specify up to five IP addresses, including CIDR blocks.</para>
             /// </summary>
             [NameInMap("SourceIpConfig")]
             [Validation(Required=false)]
@@ -862,15 +862,15 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             }
 
             /// <summary>
-            /// <para>The type of forwarding rule. You can specify at most seven types of forwarding rule. Valid values:</para>
+            /// <para>The type of forwarding rule. You can specify up to seven types of forwarding rule. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Host</b>: Requests are forwarded based on hosts.</description></item>
-            /// <item><description><b>Path</b>: Requests are forwarded based on paths.</description></item>
+            /// <item><description><b>Path</b>: Requests are forwarded based on URLs.</description></item>
             /// <item><description><b>Header</b>: Requests are forwarded based on HTTP headers.</description></item>
             /// <item><description><b>QueryString</b>: Requests are forwarded based on query strings.</description></item>
             /// <item><description><b>Method</b>: Requests are forwarded based on request methods.</description></item>
             /// <item><description><b>Cookie</b>: Requests are forwarded based on cookies.</description></item>
-            /// <item><description><b>SourceIp</b>: Responses are forwarded based on source IP addresses.</description></item>
+            /// <item><description><b>SourceIp</b>: Requests are forwarded based on source IP addresses.</description></item>
             /// <item><description><b>ResponseHeader</b>: Requests are forwarded based on HTTP response headers.</description></item>
             /// <item><description><b>ResponseStatusCode</b>: Requests are forwarded based on response status codes.</description></item>
             /// </list>

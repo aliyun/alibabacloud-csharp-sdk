@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class GetListenerHealthStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The health check status of the server groups that are associated with the listener.</para>
+        /// <para>The health check status of the server groups associated with the listener.</para>
         /// </summary>
         [NameInMap("ListenerHealthStatus")]
         [Validation(Required=false)]
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     public int? Port { get; set; }
 
                     /// <summary>
-                    /// <para>The cause of the abnormal state.</para>
+                    /// <para>The cause for the unhealthy state of the backend servers.</para>
                     /// </summary>
                     [NameInMap("Reason")]
                     [Validation(Required=false)]
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                         /// <item><description><b>SEND_REQUEST_FAILED</b>: ALB failed to send a request to the backend server.</description></item>
                         /// <item><description><b>SEND_REQUEST_TIMEOUT</b>: ALB failed to send a request to the backend server within the specified period of time.</description></item>
                         /// <item><description><b>RESPONSE_FORMAT_ERROR</b>: The format of the response from the backend server is invalid.</description></item>
-                        /// <item><description><b>RESPONSE_FORMAT_ERROR</b>: The HTTP status code returned from the backend server is not the expected one.</description></item>
+                        /// <item><description><b>RESPONSE_MISMATCH</b>: The HTTP status code returned from the backend server is not the expected one.</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -288,7 +288,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     public int? Port { get; set; }
 
                     /// <summary>
-                    /// <para>The cause of the abnormal state.</para>
+                    /// <para>The cause for the unhealthy state of the backend servers.</para>
                     /// </summary>
                     [NameInMap("Reason")]
                     [Validation(Required=false)]
@@ -322,7 +322,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                         public string ExpectedResponse { get; set; }
 
                         /// <summary>
-                        /// <para>The reason why the value of <b>Status</b> is Unhealthy. Only HTTP and HTTPS listeners support this parameter.</para>
+                        /// <para>The reason why the value of <b>Status</b> is Unhealthy. Only forwarding rules for HTTP and HTTPS listeners support this parameter.</para>
                         /// <list type="bullet">
                         /// <item><description><b>CONNECT_TIMEOUT</b>: ALB failed to connect to the backend server within the specified period of time.</description></item>
                         /// <item><description><b>CONNECT_FAILED</b>: ALB failed to connect to the backend server.</description></item>
@@ -331,7 +331,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                         /// <item><description><b>SEND_REQUEST_FAILED</b>: ALB failed to send a request to the backend server.</description></item>
                         /// <item><description><b>SEND_REQUEST_TIMEOUT</b>: ALB failed to send a request to the backend server within the specified period of time.</description></item>
                         /// <item><description><b>RESPONSE_FORMAT_ERROR</b>: The format of the response from the backend server is invalid.</description></item>
-                        /// <item><description><b>RESPONSE_FORMAT_ERROR</b>: The HTTP status code returned from the backend server is not the expected one.</description></item>
+                        /// <item><description><b>RESPONSE_MISMATCH</b>: The HTTP status code returned from the backend server is not the expected one.</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
