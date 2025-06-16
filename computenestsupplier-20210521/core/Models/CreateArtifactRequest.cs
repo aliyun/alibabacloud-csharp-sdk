@@ -235,6 +235,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [Validation(Required=false)]
             public string SourceImageId { get; set; }
 
+            [NameInMap("SystemDiskSize")]
+            [Validation(Required=false)]
+            public long? SystemDiskSize { get; set; }
+
         }
 
         /// <summary>
