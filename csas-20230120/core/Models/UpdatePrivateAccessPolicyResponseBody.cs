@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class UpdatePrivateAccessPolicyResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of this request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5FEF5CFA-14CC-5DE5-BD1F-AFFE0996E71D</para>
         /// </summary>

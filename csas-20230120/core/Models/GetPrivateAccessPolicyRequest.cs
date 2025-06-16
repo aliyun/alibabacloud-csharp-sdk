@@ -10,6 +10,11 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class GetPrivateAccessPolicyRequest : TeaModel {
         /// <summary>
+        /// <para>Intranet access policy ID. The value can be obtained from:</para>
+        /// <list type="bullet">
+        /// <item><description><a href="~~ListPrivateAccessPolices~~">ListPrivateAccessPolices</a>: Query multiple intranet access policies in bulk.</description></item>
+        /// <item><description><a href="~~CreatePrivateAccessPolicy~~">CreatePrivateAccessPolicy</a>: Create an intranet access policy.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

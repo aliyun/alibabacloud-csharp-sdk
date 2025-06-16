@@ -221,14 +221,30 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public string TriggerTemplateId { get; set; }
 
+            /// <summary>
+            /// <para>List of trusted process group IDs.</para>
+            /// </summary>
             [NameInMap("TrustedProcessGroupIds")]
             [Validation(Required=false)]
             public List<string> TrustedProcessGroupIds { get; set; }
 
+            /// <summary>
+            /// <para>Trusted process switch status. Values: </para>
+            /// <list type="bullet">
+            /// <item><description><b>Enabled</b>: On.</description></item>
+            /// <item><description><b>Disabled</b>: Off.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Enabled</para>
+            /// </summary>
             [NameInMap("TrustedProcessStatus")]
             [Validation(Required=false)]
             public string TrustedProcessStatus { get; set; }
 
+            /// <summary>
+            /// <para>List of trusted software IDs.</para>
+            /// </summary>
             [NameInMap("TrustedSoftwareIds")]
             [Validation(Required=false)]
             public List<string> TrustedSoftwareIds { get; set; }

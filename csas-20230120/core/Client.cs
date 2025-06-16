@@ -2322,7 +2322,7 @@ namespace AlibabaCloud.SDK.Csas20230120
         /// <para>创建数字水印暗水印透明底图</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// CreateWmBaseImageRequest
         /// </param>
         /// <param name="runtime">
@@ -2332,13 +2332,23 @@ namespace AlibabaCloud.SDK.Csas20230120
         /// <returns>
         /// CreateWmBaseImageResponse
         /// </returns>
-        public CreateWmBaseImageResponse CreateWmBaseImageWithOptions(CreateWmBaseImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateWmBaseImageResponse CreateWmBaseImageWithOptions(CreateWmBaseImageRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateWmBaseImageShrinkRequest request = new CreateWmBaseImageShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ImageControl))
+            {
+                request.ImageControlShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ImageControl, "ImageControl", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Height))
             {
                 body["Height"] = request.Height;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageControlShrink))
+            {
+                body["ImageControl"] = request.ImageControlShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Opacity))
             {
@@ -2392,7 +2402,7 @@ namespace AlibabaCloud.SDK.Csas20230120
         /// <para>创建数字水印暗水印透明底图</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// CreateWmBaseImageRequest
         /// </param>
         /// <param name="runtime">
@@ -2402,13 +2412,23 @@ namespace AlibabaCloud.SDK.Csas20230120
         /// <returns>
         /// CreateWmBaseImageResponse
         /// </returns>
-        public async Task<CreateWmBaseImageResponse> CreateWmBaseImageWithOptionsAsync(CreateWmBaseImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateWmBaseImageResponse> CreateWmBaseImageWithOptionsAsync(CreateWmBaseImageRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateWmBaseImageShrinkRequest request = new CreateWmBaseImageShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ImageControl))
+            {
+                request.ImageControlShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ImageControl, "ImageControl", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Height))
             {
                 body["Height"] = request.Height;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageControlShrink))
+            {
+                body["ImageControl"] = request.ImageControlShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Opacity))
             {
@@ -6419,7 +6439,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询内网访问策略详情</para>
+        /// <para>Query Intranet Access Policy Details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6457,7 +6477,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询内网访问策略详情</para>
+        /// <para>Query Intranet Access Policy Details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6495,7 +6515,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询内网访问策略详情</para>
+        /// <para>Query Intranet Access Policy Details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6513,7 +6533,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询内网访问策略详情</para>
+        /// <para>Query Intranet Access Policy Details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11633,7 +11653,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询用户零信任策略</para>
+        /// <para>List query of user zero trust policies</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11671,7 +11691,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询用户零信任策略</para>
+        /// <para>List query of user zero trust policies</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11709,7 +11729,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询用户零信任策略</para>
+        /// <para>List query of user zero trust policies</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11727,7 +11747,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询用户零信任策略</para>
+        /// <para>List query of user zero trust policies</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14093,7 +14113,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改内网访问策略</para>
+        /// <para>Modify Private Access Policy</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14209,7 +14229,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改内网访问策略</para>
+        /// <para>Modify Private Access Policy</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14325,7 +14345,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改内网访问策略</para>
+        /// <para>Modify Private Access Policy</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14343,7 +14363,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改内网访问策略</para>
+        /// <para>Modify Private Access Policy</para>
         /// </summary>
         /// 
         /// <param name="request">
