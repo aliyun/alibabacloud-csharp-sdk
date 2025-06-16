@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <para>Detailed description of the load balancer, for easier management and identification.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试负载均衡器描述</para>
+        /// <para>Load balancer description</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public int? ConsecutiveUp { get; set; }
 
             /// <summary>
-            /// <para>Expected status codes, such as <c>200,202</c>, indicating successful HTTP responses.</para>
+            /// <para>Expected status codes, such as <c>200,202</c>, which are successful HTTP responses.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public bool? FollowRedirects { get; set; }
 
             /// <summary>
-            /// <para>Header information included in the probe, which is the HTTP header.</para>
+            /// <para>Header information included in the probe, which is an HTTP header.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public object Header { get; set; }
 
             /// <summary>
-            /// <para>Monitoring interval, such as <c>60</c> seconds, representing the frequency of checks.</para>
+            /// <para>Monitoring interval, such as <c>60</c> seconds, which is the frequency of checks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -171,8 +171,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public string Method { get; set; }
 
+            [NameInMap("MonitoringRegion")]
+            [Validation(Required=false)]
+            public string MonitoringRegion { get; set; }
+
             /// <summary>
-            /// <para>Monitor check path, such as <c>/healthcheck</c>, which is the HTTP request path.</para>
+            /// <para>Monitor check path, such as <c>/healthcheck</c>, which is an HTTP request path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/health</para>
@@ -244,7 +248,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public CreateLoadBalancerRequestRandomSteering RandomSteering { get; set; }
         public class CreateLoadBalancerRequestRandomSteering : TeaModel {
             /// <summary>
-            /// <para>Default weight for round-robin, used for all pools that do not have a specific weight set. The value range is an integer between 0 and 100.</para>
+            /// <para>Default weight for all pools that do not have individual weights specified. The value range is an integer between 0 and 100.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -430,7 +434,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RuleEnable { get; set; }
 
             /// <summary>
-            /// <para>Rule name. This parameter does not need to be set when adding global configurations.</para>
+            /// <para>The name of the rule. This parameter does not need to be set when adding global configurations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rule_1</para>
@@ -440,7 +444,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RuleName { get; set; }
 
             /// <summary>
-            /// <para>The execution order of the rule. It can be left blank, in which case the rules will be executed in the order they appear in the list. If specified, it should be an integer greater than 0, with higher values indicating a higher priority for execution.</para>
+            /// <para>The execution order of the rule. It can be left blank, in which case the rules will be executed in the order they appear in the list. If specified, it must be a positive integer, with higher values indicating higher priority.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -494,7 +498,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>Load balancing strategy.</para>
         /// <list type="bullet">
-        /// <item><description>geo: Geographic strategy.</description></item>
+        /// <item><description>geo: Geographical strategy.</description></item>
         /// <item><description>random: Weighted round-robin.</description></item>
         /// <item><description>order: Primary and backup method.</description></item>
         /// </list>
@@ -508,7 +512,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SteeringPolicy { get; set; }
 
         /// <summary>
-        /// <para>Address pools corresponding to secondary regions. When multiple secondary regions share a set of address pools, the keys can be concatenated with commas.</para>
+        /// <para>Address pools corresponding to secondary regions. When multiple secondary regions share the same set of address pools, the keys can be concatenated with commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;AL,MO&quot;: [92298024898****],&quot;CN-SH,CN-SX,CN-SC&quot;:[92304347804****,92843536908****]}</para>

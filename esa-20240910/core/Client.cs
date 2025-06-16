@@ -5654,7 +5654,7 @@ namespace AlibabaCloud.SDK.ESA20240910
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Through this API, users can configure load balancing services according to their business needs, including but not limited to adaptive routing, weighted round-robin, rule matching, health checks, and other settings, to achieve effective traffic management and optimization.</para>
+        /// <para>Through this API, users can configure load balancing services according to their business needs, including but not limited to adaptive routing, weighted round-robin, rule matching, health checks, and more, to achieve effective traffic management and optimization.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5779,7 +5779,7 @@ namespace AlibabaCloud.SDK.ESA20240910
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Through this API, users can configure load balancing services according to their business needs, including but not limited to adaptive routing, weighted round-robin, rule matching, health checks, and other settings, to achieve effective traffic management and optimization.</para>
+        /// <para>Through this API, users can configure load balancing services according to their business needs, including but not limited to adaptive routing, weighted round-robin, rule matching, health checks, and more, to achieve effective traffic management and optimization.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5904,7 +5904,7 @@ namespace AlibabaCloud.SDK.ESA20240910
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Through this API, users can configure load balancing services according to their business needs, including but not limited to adaptive routing, weighted round-robin, rule matching, health checks, and other settings, to achieve effective traffic management and optimization.</para>
+        /// <para>Through this API, users can configure load balancing services according to their business needs, including but not limited to adaptive routing, weighted round-robin, rule matching, health checks, and more, to achieve effective traffic management and optimization.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5927,7 +5927,7 @@ namespace AlibabaCloud.SDK.ESA20240910
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Through this API, users can configure load balancing services according to their business needs, including but not limited to adaptive routing, weighted round-robin, rule matching, health checks, and other settings, to achieve effective traffic management and optimization.</para>
+        /// <para>Through this API, users can configure load balancing services according to their business needs, including but not limited to adaptive routing, weighted round-robin, rule matching, health checks, and more, to achieve effective traffic management and optimization.</para>
         /// </description>
         /// 
         /// <param name="request">

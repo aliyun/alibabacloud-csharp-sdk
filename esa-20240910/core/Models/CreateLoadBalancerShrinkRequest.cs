@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <para>Detailed description of the load balancer, for easier management and identification.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试负载均衡器描述</para>
+        /// <para>Load balancer description</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>Load balancing strategy.</para>
         /// <list type="bullet">
-        /// <item><description>geo: Geographic strategy.</description></item>
+        /// <item><description>geo: Geographical strategy.</description></item>
         /// <item><description>random: Weighted round-robin.</description></item>
         /// <item><description>order: Primary and backup method.</description></item>
         /// </list>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SteeringPolicy { get; set; }
 
         /// <summary>
-        /// <para>Address pools corresponding to secondary regions. When multiple secondary regions share a set of address pools, the keys can be concatenated with commas.</para>
+        /// <para>Address pools corresponding to secondary regions. When multiple secondary regions share the same set of address pools, the keys can be concatenated with commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;AL,MO&quot;: [92298024898****],&quot;CN-SH,CN-SX,CN-SC&quot;:[92304347804****,92843536908****]}</para>

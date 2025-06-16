@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateLoadBalancerRequest : TeaModel {
         /// <summary>
-        /// <para>Configuration for failover across pools.</para>
+        /// <para>Configuration for fallback across pools.</para>
         /// </summary>
         [NameInMap("AdaptiveRouting")]
         [Validation(Required=false)]
         public UpdateLoadBalancerRequestAdaptiveRouting AdaptiveRouting { get; set; }
         public class UpdateLoadBalancerRequestAdaptiveRouting : TeaModel {
             /// <summary>
-            /// <para>Whether to failover across pools.</para>
+            /// <para>Whether to fallback across pools.</para>
             /// <list type="bullet">
             /// <item><description>true: Yes.</description></item>
             /// <item><description>false: No.</description></item>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <para>Detailed description of the load balancer, for easier management and identification.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>负载均衡器描述</para>
+        /// <para>Load balancer description</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -170,6 +170,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public string Method { get; set; }
 
+            [NameInMap("MonitoringRegion")]
+            [Validation(Required=false)]
+            public string MonitoringRegion { get; set; }
+
             /// <summary>
             /// <para>Monitor check path, such as /healthcheck, which is the HTTP request path.</para>
             /// 
@@ -201,7 +205,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public int? Timeout { get; set; }
 
             /// <summary>
-            /// <para>Monitor protocol type, such as HTTP, used for health checks. When set to \&quot;off\&quot;, no check is performed.</para>
+            /// <para>Monitor protocol type, such as HTTP, used for health checks. When set to \&quot;off\&quot;, no checks are performed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HTTP</para>
@@ -220,7 +224,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public UpdateLoadBalancerRequestRandomSteering RandomSteering { get; set; }
         public class UpdateLoadBalancerRequestRandomSteering : TeaModel {
             /// <summary>
-            /// <para>The default round-robin weight, used for all pools that do not have a specific weight set. Value range: integers between 0-100.</para>
+            /// <para>Default round-robin weight, used for all pools that do not have a separately specified weight. Value range: integers between 0-100.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -230,7 +234,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public int? DefaultWeight { get; set; }
 
             /// <summary>
-            /// <para>Weight configuration for each backend server pool, where the key is the pool ID and the value is the weight coefficient. The weight coefficient represents the proportion of relative traffic distribution.</para>
+            /// <para>Weight configuration for each backend server pool, where the key is the pool ID and the value is the weight factor. The weight factor represents the proportion of relative traffic distribution.</para>
             /// </summary>
             [NameInMap("PoolWeights")]
             [Validation(Required=false)]
@@ -370,7 +374,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <para>Rule content, using conditional expressions to match user requests. This parameter does not need to be set when adding global configurations. There are two usage scenarios:</para>
             /// <list type="bullet">
             /// <item><description>Match all incoming requests: Set the value to true</description></item>
-            /// <item><description>Match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</description></item>
+            /// <item><description>Match specific requests: Set the value to a custom expression, e.g., (http.host eq \&quot;video.example.com\&quot;)</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -405,7 +409,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RuleName { get; set; }
 
             /// <summary>
-            /// <para>The execution order of the rule. It can be left empty, in which case the rules will be executed in the order they appear in the list. If specified, it must be a positive integer, with higher values indicating higher priority.</para>
+            /// <para>The execution order of the rule. It can be left blank, in which case the rules will be executed in the order they appear in the list. If specified, it must be a positive integer, with higher values indicating higher priority.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -467,7 +471,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SteeringPolicy { get; set; }
 
         /// <summary>
-        /// <para>Address pool corresponding to the secondary region. When multiple secondary regions share the same address pool, the keys can be concatenated with commas.</para>
+        /// <para>Address pool corresponding to the secondary region. When multiple secondary regions share the same address pool, the regions can be concatenated with commas as the key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;AL,MO&quot;: [92298024898****],&quot;CN-SH,CN-SX,CN-SC&quot;:[92304347804****,92843536908****]}</para>

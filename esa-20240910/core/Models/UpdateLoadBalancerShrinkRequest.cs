@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateLoadBalancerShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Configuration for failover across pools.</para>
+        /// <para>Configuration for fallback across pools.</para>
         /// </summary>
         [NameInMap("AdaptiveRouting")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <para>Detailed description of the load balancer, for easier management and identification.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>负载均衡器描述</para>
+        /// <para>Load balancer description</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SteeringPolicy { get; set; }
 
         /// <summary>
-        /// <para>Address pool corresponding to the secondary region. When multiple secondary regions share the same address pool, the keys can be concatenated with commas.</para>
+        /// <para>Address pool corresponding to the secondary region. When multiple secondary regions share the same address pool, the regions can be concatenated with commas as the key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;AL,MO&quot;: [92298024898****],&quot;CN-SH,CN-SX,CN-SC&quot;:[92304347804****,92843536908****]}</para>

@@ -169,6 +169,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public string Method { get; set; }
 
+            [NameInMap("MonitoringRegion")]
+            [Validation(Required=false)]
+            public string MonitoringRegion { get; set; }
+
             /// <summary>
             /// <para>Path.</para>
             /// 

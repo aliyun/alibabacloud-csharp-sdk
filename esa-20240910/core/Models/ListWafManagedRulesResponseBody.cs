@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <para>Name of the managed rule.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>SQL注入</para>
+            /// <para>SQL injection</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
