@@ -2751,6 +2751,134 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>导出智能审核报告</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExportAuditContentResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExportAuditContentResultResponse
+        /// </returns>
+        public ExportAuditContentResultResponse ExportAuditContentResultWithOptions(ExportAuditContentResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExportAuditContentResult",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExportAuditContentResultResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导出智能审核报告</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExportAuditContentResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExportAuditContentResultResponse
+        /// </returns>
+        public async Task<ExportAuditContentResultResponse> ExportAuditContentResultWithOptionsAsync(ExportAuditContentResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExportAuditContentResult",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExportAuditContentResultResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导出智能审核报告</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExportAuditContentResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExportAuditContentResultResponse
+        /// </returns>
+        public ExportAuditContentResultResponse ExportAuditContentResult(ExportAuditContentResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ExportAuditContentResultWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导出智能审核报告</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExportAuditContentResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExportAuditContentResultResponse
+        /// </returns>
+        public async Task<ExportAuditContentResultResponse> ExportAuditContentResultAsync(ExportAuditContentResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ExportAuditContentResultWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>导出-自定义数据源-选题视角分析任务结果</para>
         /// </summary>
         /// 
@@ -7271,6 +7399,134 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询智能审核结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSmartAuditResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSmartAuditResultResponse
+        /// </returns>
+        public GetSmartAuditResultResponse GetSmartAuditResultWithOptions(GetSmartAuditResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSmartAuditResult",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSmartAuditResultResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询智能审核结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSmartAuditResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSmartAuditResultResponse
+        /// </returns>
+        public async Task<GetSmartAuditResultResponse> GetSmartAuditResultWithOptionsAsync(GetSmartAuditResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSmartAuditResult",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSmartAuditResultResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询智能审核结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSmartAuditResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSmartAuditResultResponse
+        /// </returns>
+        public GetSmartAuditResultResponse GetSmartAuditResult(GetSmartAuditResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetSmartAuditResultWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询智能审核结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSmartAuditResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSmartAuditResultResponse
+        /// </returns>
+        public async Task<GetSmartAuditResultResponse> GetSmartAuditResultAsync(GetSmartAuditResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetSmartAuditResultWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询一键成片剪辑任务</para>
         /// </summary>
         /// 
@@ -8779,6 +9035,142 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListAsyncTasksWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取审核维度列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAuditContentErrorTypesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAuditContentErrorTypesResponse
+        /// </returns>
+        public ListAuditContentErrorTypesResponse ListAuditContentErrorTypesWithOptions(ListAuditContentErrorTypesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAuditContentErrorTypes",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAuditContentErrorTypesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取审核维度列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAuditContentErrorTypesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAuditContentErrorTypesResponse
+        /// </returns>
+        public async Task<ListAuditContentErrorTypesResponse> ListAuditContentErrorTypesWithOptionsAsync(ListAuditContentErrorTypesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAuditContentErrorTypes",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAuditContentErrorTypesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取审核维度列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAuditContentErrorTypesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAuditContentErrorTypesResponse
+        /// </returns>
+        public ListAuditContentErrorTypesResponse ListAuditContentErrorTypes(ListAuditContentErrorTypesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListAuditContentErrorTypesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取审核维度列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAuditContentErrorTypesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAuditContentErrorTypesResponse
+        /// </returns>
+        public async Task<ListAuditContentErrorTypesResponse> ListAuditContentErrorTypesAsync(ListAuditContentErrorTypesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListAuditContentErrorTypesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -21379,6 +21771,154 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SubmitEnterpriseVocAnalysisTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交智能审核</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitSmartAuditRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitSmartAuditResponse
+        /// </returns>
+        public SubmitSmartAuditResponse SubmitSmartAuditWithOptions(SubmitSmartAuditRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitSmartAuditShrinkRequest request = new SubmitSmartAuditShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SubCodes))
+            {
+                request.SubCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SubCodes, "SubCodes", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubCodesShrink))
+            {
+                body["SubCodes"] = request.SubCodesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Text))
+            {
+                body["Text"] = request.Text;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitSmartAudit",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitSmartAuditResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交智能审核</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitSmartAuditRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitSmartAuditResponse
+        /// </returns>
+        public async Task<SubmitSmartAuditResponse> SubmitSmartAuditWithOptionsAsync(SubmitSmartAuditRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitSmartAuditShrinkRequest request = new SubmitSmartAuditShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SubCodes))
+            {
+                request.SubCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SubCodes, "SubCodes", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubCodesShrink))
+            {
+                body["SubCodes"] = request.SubCodesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Text))
+            {
+                body["Text"] = request.Text;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitSmartAudit",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitSmartAuditResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交智能审核</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitSmartAuditRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitSmartAuditResponse
+        /// </returns>
+        public SubmitSmartAuditResponse SubmitSmartAudit(SubmitSmartAuditRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitSmartAuditWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交智能审核</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitSmartAuditRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitSmartAuditResponse
+        /// </returns>
+        public async Task<SubmitSmartAuditResponse> SubmitSmartAuditAsync(SubmitSmartAuditRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitSmartAuditWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
