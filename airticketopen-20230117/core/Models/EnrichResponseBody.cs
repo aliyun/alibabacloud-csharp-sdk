@@ -441,6 +441,20 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 
                 }
 
+                [NameInMap("solution_attribute")]
+                [Validation(Required=false)]
+                public EnrichResponseBodyDataSolutionListSolutionAttribute SolutionAttribute { get; set; }
+                public class EnrichResponseBodyDataSolutionListSolutionAttribute : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>1</para>
+                    /// </summary>
+                    [NameInMap("supply_source_type")]
+                    [Validation(Required=false)]
+                    public string SupplySourceType { get; set; }
+
+                }
+
                 /// <summary>
                 /// <para>solution ID</para>
                 /// 
