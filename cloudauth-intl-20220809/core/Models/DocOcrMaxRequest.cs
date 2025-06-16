@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string IdOcrPictureUrl { get; set; }
 
+        [NameInMap("IdSpoof")]
+        [Validation(Required=false)]
+        public string IdSpoof { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>0</para>

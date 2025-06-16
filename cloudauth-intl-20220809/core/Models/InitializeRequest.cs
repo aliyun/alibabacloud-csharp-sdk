@@ -153,6 +153,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string Ocr { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("Pages")]
+        [Validation(Required=false)]
+        public string Pages { get; set; }
+
         [NameInMap("ProcedurePriority")]
         [Validation(Required=false)]
         public string ProcedurePriority { get; set; }

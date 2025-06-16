@@ -1568,6 +1568,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 body["IdOcrPictureUrl"] = request.IdOcrPictureUrl;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdSpoof))
+            {
+                body["IdSpoof"] = request.IdSpoof;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdThreshold))
             {
                 body["IdThreshold"] = request.IdThreshold;
@@ -1649,6 +1653,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdOcrPictureUrl))
             {
                 body["IdOcrPictureUrl"] = request.IdOcrPictureUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdSpoof))
+            {
+                body["IdSpoof"] = request.IdSpoof;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdThreshold))
             {
@@ -3030,6 +3038,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["Ocr"] = request.Ocr;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Pages))
+            {
+                query["Pages"] = request.Pages;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProcedurePriority))
             {
                 query["ProcedurePriority"] = request.ProcedurePriority;
@@ -3219,6 +3231,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ocr))
             {
                 query["Ocr"] = request.Ocr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Pages))
+            {
+                query["Pages"] = request.Pages;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProcedurePriority))
             {
