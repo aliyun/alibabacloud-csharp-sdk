@@ -10,10 +10,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class AllocateVpcIpv6CidrRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the IPv6 address pool. Set the value to <b>custom</b>.</para>
-        /// <remarks>
-        /// <para> This parameter is required.</para>
-        /// </remarks>
+        /// <para>The type of the IPv6 address pool. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>aliyun</b> (default): IPv6 CIDR block is allocated by the system.</para>
+        /// </description></item>
+        /// <item><description><para><b>custom</b>: custom IPv6 CIDR block.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>custom</para>
@@ -48,17 +51,19 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The type of IPv6 CIDR block. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>BGP</b> (default)</description></item>
-        /// <item><description><b>ChinaMobile</b></description></item>
-        /// <item><description><b>ChinaUnicom</b></description></item>
-        /// <item><description><b>ChinaTelecom</b></description></item>
-        /// </list>
-        /// <remarks>
-        /// </remarks>
+        /// <item><description><b>BGP</b> (default): BGP (Multi-ISP)</description></item>
+        /// <item><description><b>BGP_International</b>: BGP (Multi-ISP) International</description></item>
+        /// <item><description><b>ChinaMobile</b>: China Mobile (Single-ISP)</description></item>
+        /// <item><description><b>ChinaUnicom</b>: China Unicom (Single-ISP)</description></item>
+        /// <item><description><b>ChinaTelecom</b>: China Telecom (Single-ISP)</description></item>
+        /// <item><description><b>ChinaMobile_L2</b>: China Mobile (Single-ISP)_L2</description></item>
+        /// <item><description><b>ChinaUnicom_L2</b>: China Unicom (Single-ISP)_L2</description></item>
+        /// <item><description><b>ChinaTelecom_L2</b>: China Telecom (Single-ISP)_L2<remarks>
         /// <list type="bullet">
-        /// <item><description><para>If your Alibaba Cloud account is allowed to use single-ISP bandwidth, valid values are: <b>ChinaTelecom</b>, <b>ChinaUnicom</b>, and <b>ChinaMobile</b>.</para>
-        /// </description></item>
-        /// <item><description><para>You can reserve only one IPv6 CIDR block of each type. After a reserved IPv6 CIDR block of a type is allocated to a VPC, you can reserve another IPv6 CIDR of the type.</para>
+        /// <item><description>If your account is included in the whitelist, you can set this parameter to one of the following values: <b>ChinaTelecom</b>, <b>ChinaUnicom</b>, <b>ChinaMobile</b>, <b>ChinaTelecom_L2</b>, <b>ChinaUnicom_L2</b>, <b>ChinaMobile_L2</b>, and <b>BGP_International</b>.</description></item>
+        /// <item><description>You can reserve only one IPv6 CIDR block of each type. You can reserve another IPv6 CIDR block only after the existing one is allocated to a VPC.</description></item>
+        /// </list>
+        /// </remarks>
         /// </description></item>
         /// </list>
         /// 

@@ -81,6 +81,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public string DestinationPortRange { get; set; }
 
+            [NameInMap("IpVersion")]
+            [Validation(Required=false)]
+            public string IpVersion { get; set; }
+
             /// <summary>
             /// <para>The priority of the outbound rule. A smaller value indicates a higher priority. The maximum value of <b>N</b> is <b>10</b>. You can configure up to 10 outbound rules for a filter.</para>
             /// 
@@ -175,6 +179,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [NameInMap("DestinationPortRange")]
             [Validation(Required=false)]
             public string DestinationPortRange { get; set; }
+
+            [NameInMap("IpVersion")]
+            [Validation(Required=false)]
+            public string IpVersion { get; set; }
 
             /// <summary>
             /// <para>The priority of the inbound rule. A smaller value indicates a higher priority. The maximum value of <b>N</b> is <b>10</b>. You can configure up to 10 inbound rules for a filter.</para>

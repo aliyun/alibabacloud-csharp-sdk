@@ -97,9 +97,18 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the Alibaba Cloud account to which the IPv6 gateway belongs.</para>
+        /// <remarks>
+        /// <para> This value is of the Long type. In some languages, the precision may be lost. Use this value with caution.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2546073170691****</para>
+        /// </summary>
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
-        public string OwnerId { get; set; }
+        public long? OwnerId { get; set; }
 
         /// <summary>
         /// <para>The ID of the region where the IPv6 gateway is deployed.</para>

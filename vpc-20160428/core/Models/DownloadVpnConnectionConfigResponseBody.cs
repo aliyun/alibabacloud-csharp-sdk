@@ -26,6 +26,42 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfig VpnConnectionConfig { get; set; }
         public class DownloadVpnConnectionConfigResponseBodyVpnConnectionConfig : TeaModel {
+            [NameInMap("BgpConfigs")]
+            [Validation(Required=false)]
+            public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigBgpConfigs BgpConfigs { get; set; }
+            public class DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigBgpConfigs : TeaModel {
+                [NameInMap("BgpConfig")]
+                [Validation(Required=false)]
+                public List<DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigBgpConfigsBgpConfig> BgpConfig { get; set; }
+                public class DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigBgpConfigsBgpConfig : TeaModel {
+                    [NameInMap("LocalAsn")]
+                    [Validation(Required=false)]
+                    public string LocalAsn { get; set; }
+
+                    [NameInMap("LocalBgpIp")]
+                    [Validation(Required=false)]
+                    public string LocalBgpIp { get; set; }
+
+                    [NameInMap("PeerAsn")]
+                    [Validation(Required=false)]
+                    public string PeerAsn { get; set; }
+
+                    [NameInMap("PeerBgpIp")]
+                    [Validation(Required=false)]
+                    public string PeerBgpIp { get; set; }
+
+                    [NameInMap("TunnelCidr")]
+                    [Validation(Required=false)]
+                    public string TunnelCidr { get; set; }
+
+                    [NameInMap("TunnelId")]
+                    [Validation(Required=false)]
+                    public string TunnelId { get; set; }
+
+                }
+
+            }
+
             /// <summary>
             /// <para>The configurations of Phase 1 negotiations.</para>
             /// </summary>

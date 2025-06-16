@@ -80,6 +80,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string CustomerGatewayId { get; set; }
 
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to immediately start IPsec negotiations. Valid values:</para>
         /// <list type="bullet">

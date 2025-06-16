@@ -113,6 +113,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public bool? Compress { get; set; }
 
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to enable two-factor authentication. To enable two-factor authentication, you need to specify <b>IDaaSInstanceId</b>, <b>IDaaSRegionId</b>, and <b>IDaaSApplicationId</b>. Valid values:</para>
         /// <list type="bullet">

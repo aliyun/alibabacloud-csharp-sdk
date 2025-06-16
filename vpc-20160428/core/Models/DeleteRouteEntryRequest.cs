@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string DestinationCidrBlock { get; set; }
 
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
         /// <summary>
         /// <para>The ID of the next hop.</para>
         /// <list type="bullet">

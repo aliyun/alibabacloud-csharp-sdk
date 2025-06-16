@@ -133,6 +133,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         }
 
+        [NameInMap("VpcId")]
+        [Validation(Required=false)]
+        public string VpcId { get; set; }
+
     }
 
 }

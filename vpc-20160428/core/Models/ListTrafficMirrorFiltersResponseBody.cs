@@ -121,6 +121,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string DestinationPortRange { get; set; }
 
+                [NameInMap("IpVersion")]
+                [Validation(Required=false)]
+                public string IpVersion { get; set; }
+
                 /// <summary>
                 /// <para>The priority of the outbound rule. A smaller value indicates a higher priority.</para>
                 /// 
@@ -259,6 +263,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [NameInMap("DestinationPortRange")]
                 [Validation(Required=false)]
                 public string DestinationPortRange { get; set; }
+
+                [NameInMap("IpVersion")]
+                [Validation(Required=false)]
+                public string IpVersion { get; set; }
 
                 /// <summary>
                 /// <para>The priority of the inbound rule. A smaller value indicates a higher priority.</para>

@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
                 [NameInMap("OwnerId")]
                 [Validation(Required=false)]
-                public string OwnerId { get; set; }
+                public long? OwnerId { get; set; }
 
                 /// <summary>
                 /// <para>The ID of the region in which the IPv6 gateway is deployed.</para>
