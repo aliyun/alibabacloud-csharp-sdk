@@ -42,6 +42,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         }
 
+        [NameInMap("CreationTime")]
+        [Validation(Required=false)]
+        public string CreationTime { get; set; }
+
         /// <summary>
         /// <para>The configuration information about the DHCP options set.</para>
         /// </summary>
