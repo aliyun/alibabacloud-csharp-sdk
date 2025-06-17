@@ -1,3 +1,6 @@
+2025-06-17 Version: 2.0.4
+- Generated csharp 2023-01-17 for airticketOpen.
+
 2025-06-16 Version: 2.0.3
 - Update API Enrich: add response parameters Body.data.solution_list.$.solution_attribute.
 - Update API Search: add response parameters Body.data.solution_list.$.solution_attribute.
