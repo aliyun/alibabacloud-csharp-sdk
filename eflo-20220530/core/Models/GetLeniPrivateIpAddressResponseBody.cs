@@ -116,6 +116,12 @@ namespace AlibabaCloud.SDK.Eflo20220530.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            /// <summary>
+            /// <para>Resource group instance ID</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rg-acfmzzka6bnjvbi</para>
+            /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }

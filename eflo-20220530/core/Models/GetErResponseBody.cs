@@ -673,14 +673,29 @@ namespace AlibabaCloud.SDK.Eflo20220530.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// <para>List of Tags</para>
+            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<GetErResponseBodyContentTags> Tags { get; set; }
             public class GetErResponseBodyContentTags : TeaModel {
+                /// <summary>
+                /// <para>The tag key.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>key</para>
+                /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
+                /// <summary>
+                /// <para>The tag value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>value</para>
+                /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]
                 public string TagValue { get; set; }

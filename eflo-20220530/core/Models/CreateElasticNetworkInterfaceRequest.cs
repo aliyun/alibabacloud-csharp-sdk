@@ -60,6 +60,12 @@ namespace AlibabaCloud.SDK.Eflo20220530.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The Resource GroupId.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmxhucx5ewuwy</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
@@ -74,14 +80,29 @@ namespace AlibabaCloud.SDK.Eflo20220530.Models
         [Validation(Required=false)]
         public string SecurityGroupId { get; set; }
 
+        /// <summary>
+        /// <para>The resource tags.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateElasticNetworkInterfaceRequestTag> Tag { get; set; }
         public class CreateElasticNetworkInterfaceRequestTag : TeaModel {
+            /// <summary>
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>testKey</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>testValue</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

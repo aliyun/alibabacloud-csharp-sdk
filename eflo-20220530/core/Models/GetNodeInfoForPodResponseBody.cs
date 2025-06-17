@@ -46,6 +46,12 @@ namespace AlibabaCloud.SDK.Eflo20220530.Models
             [Validation(Required=false)]
             public string ClusterId { get; set; }
 
+            /// <summary>
+            /// <para>Lingjun Hdeni Network Interface IPV6 address Quota</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
             [NameInMap("HdeniIpv6SipQuota")]
             [Validation(Required=false)]
             public int? HdeniIpv6SipQuota { get; set; }
@@ -60,10 +66,22 @@ namespace AlibabaCloud.SDK.Eflo20220530.Models
             [Validation(Required=false)]
             public int? HdeniQuota { get; set; }
 
+            /// <summary>
+            /// <para>Lingjun Hdeni Network Interface IPV4 address Quota</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
             [NameInMap("HdeniSipQuota")]
             [Validation(Required=false)]
             public int? HdeniSipQuota { get; set; }
 
+            /// <summary>
+            /// <para>Lingjun Elastic Network Interface IPV6 address Quota</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
             [NameInMap("LeniIpv6SipQuota")]
             [Validation(Required=false)]
             public int? LeniIpv6SipQuota { get; set; }
