@@ -360,6 +360,10 @@ namespace AlibabaCloud.SDK.Dm20151123
             {
                 query["Headers"] = request.Headers;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpPoolId))
+            {
+                query["IpPoolId"] = request.IpPoolId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
@@ -453,6 +457,10 @@ namespace AlibabaCloud.SDK.Dm20151123
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Headers))
             {
                 query["Headers"] = request.Headers;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpPoolId))
+            {
+                query["IpPoolId"] = request.IpPoolId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
@@ -6850,6 +6858,10 @@ namespace AlibabaCloud.SDK.Dm20151123
             {
                 query["HtmlBody"] = request.HtmlBody;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpPoolId))
+            {
+                query["IpPoolId"] = request.IpPoolId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
@@ -6959,6 +6971,10 @@ namespace AlibabaCloud.SDK.Dm20151123
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HtmlBody))
             {
                 query["HtmlBody"] = request.HtmlBody;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpPoolId))
+            {
+                query["IpPoolId"] = request.IpPoolId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {

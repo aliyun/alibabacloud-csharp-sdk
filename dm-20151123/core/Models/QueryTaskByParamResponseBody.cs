@@ -80,6 +80,14 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
+                [NameInMap("IpPoolId")]
+                [Validation(Required=false)]
+                public string IpPoolId { get; set; }
+
+                [NameInMap("IpPoolName")]
+                [Validation(Required=false)]
+                public string IpPoolName { get; set; }
+
                 /// <summary>
                 /// <para>Receiver\&quot;s name.</para>
                 /// 
