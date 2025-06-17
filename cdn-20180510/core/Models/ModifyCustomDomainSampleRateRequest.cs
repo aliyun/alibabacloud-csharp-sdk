@@ -16,9 +16,9 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
-        [NameInMap("DomainName")]
+        [NameInMap("DomainNames")]
         [Validation(Required=false)]
-        public string DomainName { get; set; }
+        public string DomainNames { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

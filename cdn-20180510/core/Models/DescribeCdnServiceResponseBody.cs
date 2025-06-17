@@ -33,6 +33,14 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public string ChangingChargeType { get; set; }
 
+        [NameInMap("ChangingDynamicBillingType")]
+        [Validation(Required=false)]
+        public string ChangingDynamicBillingType { get; set; }
+
+        [NameInMap("DynamicBillingType")]
+        [Validation(Required=false)]
+        public string DynamicBillingType { get; set; }
+
         /// <summary>
         /// <para>The ID of the instance.</para>
         /// 

@@ -40,6 +40,14 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
                 [Validation(Required=false)]
                 public string Domain { get; set; }
 
+                [NameInMap("ErrMsg")]
+                [Validation(Required=false)]
+                public string ErrMsg { get; set; }
+
+                [NameInMap("Passed")]
+                [Validation(Required=false)]
+                public string Passed { get; set; }
+
                 /// <summary>
                 /// <para>The CNAME detection result. Valid values:</para>
                 /// <list type="bullet">

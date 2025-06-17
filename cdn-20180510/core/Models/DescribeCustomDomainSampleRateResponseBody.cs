@@ -27,6 +27,18 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 
             }
 
+            [NameInMap("PageNumber")]
+            [Validation(Required=false)]
+            public long? PageNumber { get; set; }
+
+            [NameInMap("PageSize")]
+            [Validation(Required=false)]
+            public long? PageSize { get; set; }
+
+            [NameInMap("TotalCount")]
+            [Validation(Required=false)]
+            public long? TotalCount { get; set; }
+
         }
 
         [NameInMap("RequestId")]
