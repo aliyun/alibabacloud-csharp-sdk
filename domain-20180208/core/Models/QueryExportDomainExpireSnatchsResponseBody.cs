@@ -125,6 +125,10 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
             [Validation(Required=false)]
             public string RegDate { get; set; }
 
+            [NameInMap("RenewPrice")]
+            [Validation(Required=false)]
+            public double? RenewPrice { get; set; }
+
             [NameInMap("Reserved")]
             [Validation(Required=false)]
             public bool? Reserved { get; set; }
@@ -144,6 +148,10 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
             [NameInMap("ShortName")]
             [Validation(Required=false)]
             public string ShortName { get; set; }
+
+            [NameInMap("SnatchNo")]
+            [Validation(Required=false)]
+            public string SnatchNo { get; set; }
 
             [NameInMap("SnatchTypeDesc")]
             [Validation(Required=false)]
