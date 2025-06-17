@@ -50,6 +50,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [Validation(Required=false)]
                 public List<MediaConvertInput> Inputs { get; set; }
 
+                [NameInMap("JobName")]
+                [Validation(Required=false)]
+                public string JobName { get; set; }
+
                 /// <summary>
                 /// <para>The output group configurations.</para>
                 /// </summary>
@@ -65,6 +69,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public List<MediaConvertOutput> Outputs { get; set; }
 
             }
+
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public string CreateTime { get; set; }
+
+            [NameInMap("FinishTime")]
+            [Validation(Required=false)]
+            public string FinishTime { get; set; }
 
             /// <summary>
             /// <para>The ID of the transcoding task, which is a 32-bit string.</para>
@@ -99,6 +111,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("OutputGroupDetails")]
             [Validation(Required=false)]
             public List<MediaConvertOutputGroupDetail> OutputGroupDetails { get; set; }
+
+            [NameInMap("Percent")]
+            [Validation(Required=false)]
+            public int? Percent { get; set; }
 
             /// <summary>
             /// <para>The ID of the queue.</para>

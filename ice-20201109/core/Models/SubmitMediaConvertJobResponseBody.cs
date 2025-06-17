@@ -50,6 +50,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [Validation(Required=false)]
                 public List<MediaConvertInput> Inputs { get; set; }
 
+                [NameInMap("JobName")]
+                [Validation(Required=false)]
+                public string JobName { get; set; }
+
                 /// <summary>
                 /// <para>The output group configurations.</para>
                 /// </summary>

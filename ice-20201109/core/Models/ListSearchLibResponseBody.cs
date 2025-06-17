@@ -40,14 +40,26 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public List<ListSearchLibResponseBodySearchLibInfoListIndexInfo> IndexInfo { get; set; }
             public class ListSearchLibResponseBodySearchLibInfoListIndexInfo : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>Normal</para>
+                /// </summary>
                 [NameInMap("IndexReadiness")]
                 [Validation(Required=false)]
                 public string IndexReadiness { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>Active</para>
+                /// </summary>
                 [NameInMap("IndexStatus")]
                 [Validation(Required=false)]
                 public string IndexStatus { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>face</para>
+                /// </summary>
                 [NameInMap("IndexType")]
                 [Validation(Required=false)]
                 public string IndexType { get; set; }
@@ -92,7 +104,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Success { get; set; }
 
         /// <summary>
-        /// <para>总数。</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>
