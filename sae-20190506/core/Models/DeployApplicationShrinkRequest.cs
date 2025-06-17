@@ -420,6 +420,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string MicroRegistrationConfig { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{&quot;enable&quot;: true,&quot;mseLosslessRule&quot;: {&quot;delayTime&quot;: 0,&quot;enable&quot;: false,&quot;notice&quot;: false,&quot;warmupTime&quot;: 120}}</para>
+        /// </summary>
         [NameInMap("MicroserviceEngineConfig")]
         [Validation(Required=false)]
         public string MicroserviceEngineConfig { get; set; }
@@ -505,6 +509,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string NasId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>pro</para>
+        /// </summary>
         [NameInMap("NewSaeVersion")]
         [Validation(Required=false)]
         public string NewSaeVersion { get; set; }
@@ -766,6 +774,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string SlsConfigs { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;cat /home/admin/start.sh&quot;]},&quot;initialDelaySeconds&quot;:30,&quot;periodSeconds&quot;:30,&quot;timeoutSeconds&quot;:2}</para>
+        /// </summary>
         [NameInMap("StartupProbe")]
         [Validation(Required=false)]
         public string StartupProbe { get; set; }

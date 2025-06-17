@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
-    public class GetWebshellTokenResponseBody : TeaModel {
+    public class UpdateAppModeResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>200</para>
@@ -16,36 +16,6 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
-
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public GetWebshellTokenResponseBodyData Data { get; set; }
-        public class GetWebshellTokenResponseBodyData : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>HttpUrl :  &quot;<a href="https://saenext.console.aliyun.com/cn-shenzhen/app-list/app1/micro-app/shell/pod1?tokenId=xxx">https://saenext.console.aliyun.com/cn-shenzhen/app-list/app1/micro-app/shell/pod1?tokenId=xxx</a></para>
-            /// </summary>
-            [NameInMap("HttpUrl")]
-            [Validation(Required=false)]
-            public string HttpUrl { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>zWWpvRj_5pzof4hfo7-hGynM8oGMmO_7</para>
-            /// </summary>
-            [NameInMap("Token")]
-            [Validation(Required=false)]
-            public string Token { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>wss://sae-webshell.console.aliyun.com/websocket/eamWebshell?tokenId=xxx&amp;region=cn-shenzhen</para>
-            /// </summary>
-            [NameInMap("WebSocketUrl")]
-            [Validation(Required=false)]
-            public string WebSocketUrl { get; set; }
-
-        }
 
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
@@ -60,6 +30,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
         /// <para>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</para>
         /// </summary>
@@ -73,7 +45,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public string Success { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

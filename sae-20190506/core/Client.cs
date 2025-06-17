@@ -917,6 +917,11 @@ namespace AlibabaCloud.SDK.Sae20190506
             return await BindSlbWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Confirms whether to start the next batch.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfirmPipelineBatchRequest
         /// </param>
@@ -962,6 +967,11 @@ namespace AlibabaCloud.SDK.Sae20190506
             return TeaModel.ToObject<ConfirmPipelineBatchResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Confirms whether to start the next batch.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfirmPipelineBatchRequest
         /// </param>
@@ -1007,6 +1017,11 @@ namespace AlibabaCloud.SDK.Sae20190506
             return TeaModel.ToObject<ConfirmPipelineBatchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Confirms whether to start the next batch.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfirmPipelineBatchRequest
         /// </param>
@@ -1021,6 +1036,11 @@ namespace AlibabaCloud.SDK.Sae20190506
             return ConfirmPipelineBatchWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Confirms whether to start the next batch.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfirmPipelineBatchRequest
         /// </param>
@@ -7815,7 +7835,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a specified auto scaling policy of an application.</para>
+        /// <para>Queries an Auto Scaling policy of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7865,7 +7885,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a specified auto scaling policy of an application.</para>
+        /// <para>Queries an Auto Scaling policy of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7915,7 +7935,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a specified auto scaling policy of an application.</para>
+        /// <para>Queries an Auto Scaling policy of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7934,7 +7954,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a specified auto scaling policy of an application.</para>
+        /// <para>Queries an Auto Scaling policy of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9263,6 +9283,11 @@ namespace AlibabaCloud.SDK.Sae20190506
             return await DescribeIngressWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the logs of a sidecar container instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstanceLogRequest
         /// </param>
@@ -9308,6 +9333,11 @@ namespace AlibabaCloud.SDK.Sae20190506
             return TeaModel.ToObject<DescribeInstanceLogResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the logs of a sidecar container instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstanceLogRequest
         /// </param>
@@ -9353,6 +9383,11 @@ namespace AlibabaCloud.SDK.Sae20190506
             return TeaModel.ToObject<DescribeInstanceLogResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the logs of a sidecar container instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstanceLogRequest
         /// </param>
@@ -9367,6 +9402,11 @@ namespace AlibabaCloud.SDK.Sae20190506
             return DescribeInstanceLogWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the logs of a sidecar container instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstanceLogRequest
         /// </param>
@@ -14193,7 +14233,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of microservices</para>
+        /// <para>Queries the list of microservices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14271,7 +14311,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of microservices</para>
+        /// <para>Queries the list of microservices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14349,7 +14389,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of microservices</para>
+        /// <para>Queries the list of microservices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14368,7 +14408,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of microservices</para>
+        /// <para>Queries the list of microservices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20379,6 +20419,144 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>应用闲置模式更新</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAppModeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAppModeResponse
+        /// </returns>
+        public UpdateAppModeResponse UpdateAppModeWithOptions(UpdateAppModeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableIdle))
+            {
+                query["EnableIdle"] = request.EnableIdle;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAppMode",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v1/sam/app/updateAppMode",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAppModeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>应用闲置模式更新</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAppModeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAppModeResponse
+        /// </returns>
+        public async Task<UpdateAppModeResponse> UpdateAppModeWithOptionsAsync(UpdateAppModeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableIdle))
+            {
+                query["EnableIdle"] = request.EnableIdle;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAppMode",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v1/sam/app/updateAppMode",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAppModeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>应用闲置模式更新</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAppModeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAppModeResponse
+        /// </returns>
+        public UpdateAppModeResponse UpdateAppMode(UpdateAppModeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateAppModeWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>应用闲置模式更新</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAppModeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAppModeResponse
+        /// </returns>
+        public async Task<UpdateAppModeResponse> UpdateAppModeAsync(UpdateAppModeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateAppModeWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Updates the security group of an application.</para>
         /// </summary>
         /// 
@@ -20995,7 +21173,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update a ConfigMap.</para>
+        /// <para>Updates a ConfigMap instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21051,7 +21229,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update a ConfigMap.</para>
+        /// <para>Updates a ConfigMap instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21107,7 +21285,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update a ConfigMap.</para>
+        /// <para>Updates a ConfigMap instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21126,7 +21304,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update a ConfigMap.</para>
+        /// <para>Updates a ConfigMap instance.</para>
         /// </summary>
         /// 
         /// <param name="request">

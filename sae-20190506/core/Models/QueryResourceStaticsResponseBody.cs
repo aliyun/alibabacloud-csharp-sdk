@@ -72,6 +72,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public QueryResourceStaticsResponseBodyDataSummary Summary { get; set; }
             public class QueryResourceStaticsResponseBodyDataSummary : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>10</para>
+                /// </summary>
                 [NameInMap("ActiveCpu")]
                 [Validation(Required=false)]
                 public float? ActiveCpu { get; set; }
@@ -102,6 +106,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [Validation(Required=false)]
                 public float? GpuPpu810e { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>10</para>
+                /// </summary>
                 [NameInMap("IdleCpu")]
                 [Validation(Required=false)]
                 public float? IdleCpu { get; set; }

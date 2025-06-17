@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public ListApplicationsResponseBodyData Data { get; set; }
         public class ListApplicationsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The applications.</para>
+            /// <para>The queried applications.</para>
             /// </summary>
             [NameInMap("Applications")]
             [Validation(Required=false)]

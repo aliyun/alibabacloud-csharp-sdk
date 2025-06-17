@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -397,6 +397,15 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             }
 
             /// <summary>
+            /// <para>The ratio of the minimum number of available instances to the current number of instances. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>-1</b> (default value): The minimum number of available instances is not determined based on this parameter.</description></item>
+            /// <item><description><b>0 to 100</b>: The minimum number of available instances is calculated by using the following formula: Number of existing instances × Value of MinReadyInstanceRatio × 100%. The calculation result is rounded up to the nearest integer. For example, if the number of existing instances is 5 and MinReadyInstanceRatio is set to 50, the minimum number of available instances is 3.</description></item>
+            /// </list>
+            /// <remarks>
+            /// <para> If the <b>MinReadyInstanceRatio</b> and <b>MinReadyInstanceRatio</b> parameters are configured and the <b>MinReadyInstanceRatio</b> parameter is set to a number from 0 to 100, the value of the MinReadyInstanceRatio parameter takes precedence. For example, if the <b>MinReadyInstances</b> parameter is set to <b>5</b>, and the <b>MinReadyInstanceRatio</b> parameter is set to <b>50</b>, the minimum number of available instances is set to the nearest integer rounded up from the calculated result of the following formula: Nmber of existing instances × <b>50</b>.</para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>-1</para>
             /// </summary>
@@ -405,6 +414,15 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public int? MinReadyInstanceRatio { get; set; }
 
             /// <summary>
+            /// <para>The minimum number of available instances. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>If you set the value to <b>0</b>, business is interrupted when the application is updated.</description></item>
+            /// <item><description>If you set this property to -1, the system calculates a recommended value as the minimum number of available instances by using the following formula: Recommended value = Number of existing instances × 25%. The calculation result is rounded up to the nearest integer. For example, if the number of existing instances is 5, the recommended value is calculated by using the following formula: 5 × 25% = 1.25. In this case, the minimum number of available instances is 2.</description></item>
+            /// </list>
+            /// <remarks>
+            /// <para> To ensure business continuity, make sure that at least one instance is available during application deployment and rollback.</para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>

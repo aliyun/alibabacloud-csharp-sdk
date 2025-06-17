@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribeInstanceLogRequest : TeaModel {
+        /// <summary>
+        /// <para>The ID of the sidecar container. You can call the <a href="https://help.aliyun.com/document_detail/2834847.html">DescribeApplicationInstances</a> to obtain the ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sidecar-test-01</para>
+        /// </summary>
         [NameInMap("ContainerId")]
         [Validation(Required=false)]
         public string ContainerId { get; set; }
