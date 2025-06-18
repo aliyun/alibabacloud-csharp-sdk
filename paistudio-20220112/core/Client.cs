@@ -4554,6 +4554,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
             {
                 query["AcceleratorType"] = request.AcceleratorType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AvailabilityZone))
+            {
+                query["AvailabilityZone"] = request.AvailabilityZone;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterByQuotaId))
             {
                 query["FilterByQuotaId"] = request.FilterByQuotaId;
@@ -4565,6 +4569,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GPUType))
             {
                 query["GPUType"] = request.GPUType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HyperZone))
+            {
+                query["HyperZone"] = request.HyperZone;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MachineGroupIds))
             {
@@ -4664,6 +4672,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
             {
                 query["AcceleratorType"] = request.AcceleratorType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AvailabilityZone))
+            {
+                query["AvailabilityZone"] = request.AvailabilityZone;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterByQuotaId))
             {
                 query["FilterByQuotaId"] = request.FilterByQuotaId;
@@ -4675,6 +4687,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GPUType))
             {
                 query["GPUType"] = request.GPUType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HyperZone))
+            {
+                query["HyperZone"] = request.HyperZone;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MachineGroupIds))
             {

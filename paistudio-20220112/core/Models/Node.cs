@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string AcceleratorType { get; set; }
 
+        [NameInMap("AvailabilityZone")]
+        [Validation(Required=false)]
+        public string AvailabilityZone { get; set; }
+
         [NameInMap("BoundQuotas")]
         [Validation(Required=false)]
         public List<QuotaIdName> BoundQuotas { get; set; }
@@ -48,6 +52,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [NameInMap("GmtModifiedTime")]
         [Validation(Required=false)]
         public string GmtModifiedTime { get; set; }
+
+        [NameInMap("HyperZone")]
+        [Validation(Required=false)]
+        public string HyperZone { get; set; }
 
         [NameInMap("IsBound")]
         [Validation(Required=false)]

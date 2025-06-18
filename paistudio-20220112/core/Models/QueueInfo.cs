@@ -113,6 +113,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        [NameInMap("UseOversoldResource")]
+        [Validation(Required=false)]
+        public bool? UseOversoldResource { get; set; }
+
         [NameInMap("UserId")]
         [Validation(Required=false)]
         public string UserId { get; set; }
@@ -156,6 +160,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }
+
+        [NameInMap("WorkspaceName")]
+        [Validation(Required=false)]
+        public string WorkspaceName { get; set; }
 
     }
 

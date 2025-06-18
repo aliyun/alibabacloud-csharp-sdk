@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string DefaultGPUDriver { get; set; }
 
+        [NameInMap("EnableGPUShare")]
+        [Validation(Required=false)]
+        public bool? EnableGPUShare { get; set; }
+
         [NameInMap("EnablePreemptSubquotaWorkloads")]
         [Validation(Required=false)]
         public bool? EnablePreemptSubquotaWorkloads { get; set; }
@@ -37,9 +41,17 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public bool? EnableSubQuotaPreemption { get; set; }
 
+        [NameInMap("OversoldUsageInfo")]
+        [Validation(Required=false)]
+        public OversoldUsageConfig OversoldUsageInfo { get; set; }
+
         [NameInMap("ResourceSpecs")]
         [Validation(Required=false)]
         public List<WorkspaceSpecs> ResourceSpecs { get; set; }
+
+        [NameInMap("SelfQuotaPreemptionConfig")]
+        [Validation(Required=false)]
+        public SelfQuotaPreemptionConfig SelfQuotaPreemptionConfig { get; set; }
 
         [NameInMap("SubQuotaPreemptionConfig")]
         [Validation(Required=false)]

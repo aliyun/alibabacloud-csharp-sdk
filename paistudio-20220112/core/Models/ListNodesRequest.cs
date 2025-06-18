@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string AcceleratorType { get; set; }
 
+        [NameInMap("AvailabilityZone")]
+        [Validation(Required=false)]
+        public string AvailabilityZone { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>quotamtl37ge7gkvdz</para>
@@ -40,6 +44,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [NameInMap("GPUType")]
         [Validation(Required=false)]
         public string GPUType { get; set; }
+
+        [NameInMap("HyperZone")]
+        [Validation(Required=false)]
+        public string HyperZone { get; set; }
 
         [NameInMap("MachineGroupIds")]
         [Validation(Required=false)]

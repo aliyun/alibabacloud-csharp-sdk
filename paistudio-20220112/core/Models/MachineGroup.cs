@@ -21,6 +21,14 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string DefaultDriver { get; set; }
 
+        [NameInMap("DiskCapacity")]
+        [Validation(Required=false)]
+        public long? DiskCapacity { get; set; }
+
+        [NameInMap("DiskPL")]
+        [Validation(Required=false)]
+        public string DiskPL { get; set; }
+
         [NameInMap("EcsCount")]
         [Validation(Required=false)]
         public long? EcsCount { get; set; }
