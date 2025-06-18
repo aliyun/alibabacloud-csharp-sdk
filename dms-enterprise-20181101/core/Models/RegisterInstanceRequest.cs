@@ -248,6 +248,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public int? QueryTimeout { get; set; }
 
+        [NameInMap("ResourceGroup")]
+        [Validation(Required=false)]
+        public string ResourceGroup { get; set; }
+
         /// <summary>
         /// <para>The name of the security rule set (GroupName) for the database instance. You can call the <a href="https://help.aliyun.com/document_detail/417891.html">ListStandardGroups</a> or <a href="https://help.aliyun.com/document_detail/141567.html">GetInstance</a> operation to query the name of the security rule set.</para>
         /// <para>This parameter is required.</para>

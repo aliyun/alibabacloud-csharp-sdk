@@ -37329,6 +37329,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             {
                 query["QueryTimeout"] = request.QueryTimeout;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroup))
+            {
+                query["ResourceGroup"] = request.ResourceGroup;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SafeRule))
             {
                 query["SafeRule"] = request.SafeRule;
@@ -37475,6 +37479,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryTimeout))
             {
                 query["QueryTimeout"] = request.QueryTimeout;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroup))
+            {
+                query["ResourceGroup"] = request.ResourceGroup;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SafeRule))
             {

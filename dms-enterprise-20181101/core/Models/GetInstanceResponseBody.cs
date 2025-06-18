@@ -268,6 +268,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public string SellSitd { get; set; }
 
+            [NameInMap("SellTrust")]
+            [Validation(Required=false)]
+            public string SellTrust { get; set; }
+
             /// <summary>
             /// <para>The SID of the database instance.</para>
             /// 
