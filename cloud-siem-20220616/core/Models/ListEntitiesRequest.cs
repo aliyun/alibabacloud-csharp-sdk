@@ -103,6 +103,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         [Validation(Required=false)]
         public int? RoleType { get; set; }
 
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public string Tags { get; set; }
+
     }
 
 }

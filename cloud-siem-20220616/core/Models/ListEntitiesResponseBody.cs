@@ -171,6 +171,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 [Validation(Required=false)]
                 public string IncidentUuid { get; set; }
 
+                [NameInMap("IsAsset")]
+                [Validation(Required=false)]
+                public string IsAsset { get; set; }
+
+                [NameInMap("IsMalware")]
+                [Validation(Required=false)]
+                public string IsMalware { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>aliyun.siem.sas.alert_tag.webshell</para>
@@ -186,6 +194,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 [NameInMap("SubUserId")]
                 [Validation(Required=false)]
                 public long? SubUserId { get; set; }
+
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
+                public string Tags { get; set; }
 
             }
 
