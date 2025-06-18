@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class EventCenterQueryEventsRequest : TeaModel {
         /// <summary>
-        /// <para>The parameters in the request body.</para>
+        /// <para>The request body.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Body")]
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public EventCenterQueryEventsRequestBodyParameters Parameters { get; set; }
             public class EventCenterQueryEventsRequestBodyParameters : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether to further split the data set based on the column name.</para>
+                /// <para>Specifies whether to further split the dataset based on the column name.</para>
                 /// </summary>
                 [NameInMap("Breakdowns")]
                 [Validation(Required=false)]
@@ -223,7 +223,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public long? StartTime { get; set; }
 
                 /// <summary>
-                /// <para>The time range during which events are queried. Unit: milliseconds. Minimum value: 1000.</para>
+                /// <para>The time range during which events are queried. Minimum value: 1000. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000000</para>

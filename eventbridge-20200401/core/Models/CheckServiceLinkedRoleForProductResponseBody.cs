@@ -17,11 +17,16 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CheckServiceLinkedRoleForProductResponseBodyData Data { get; set; }
         public class CheckServiceLinkedRoleForProductResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Indicates whether the service-linked role exists.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -30,6 +35,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public bool? CheckPass { get; set; }
 
             /// <summary>
+            /// <para>The name of the service-linked role.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>AliyunServiceRoleForEventBridgeConnectVPC</para>
             /// </summary>

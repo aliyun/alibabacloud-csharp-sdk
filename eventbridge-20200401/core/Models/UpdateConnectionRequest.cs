@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public UpdateConnectionRequestAuthParametersOAuthParametersOAuthHttpParameters OAuthHttpParameters { get; set; }
                 public class UpdateConnectionRequestAuthParametersOAuthParametersOAuthHttpParameters : TeaModel {
                     /// <summary>
-                    /// <para>The parameters that are configured for the request.</para>
+                    /// <para>The parameters that are configured for the request body.</para>
                     /// </summary>
                     [NameInMap("BodyParameters")]
                     [Validation(Required=false)]

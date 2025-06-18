@@ -33,6 +33,25 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         /// <summary>
         /// <para>The rule that is used to filter events. If you leave this parameter empty, all events are matched.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{
+        ///     &quot;source&quot;: [
+        ///         {
+        ///             &quot;prefix&quot;: &quot;acs:mns&quot;
+        ///         }
+        ///     ],
+        ///     &quot;type&quot;: [
+        ///         {
+        ///             &quot;prefix&quot;: &quot;mns:Queue&quot;
+        ///         }
+        ///     ],
+        ///     &quot;subject&quot;: [
+        ///         {
+        ///             &quot;prefix&quot;: &quot;acs:mns:cn-hangzhou:123456789098****:queues/zeus&quot;
+        ///         }
+        ///     ]
+        /// }</para>
         /// </summary>
         [NameInMap("FilterPattern")]
         [Validation(Required=false)]

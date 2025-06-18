@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class UpdateConnectionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. The value Success indicates that the request was successful.</para>
+        /// <para>The response code. Valid value: 200, which indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>

@@ -47,13 +47,19 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
         /// <summary>
         /// <para>The type of the external data source.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>RabbitMQ</para>
         /// </summary>
         [NameInMap("ExternalSourceType")]
         [Validation(Required=false)]
         public byte[] ExternalSourceType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to connect to an external data source.</para>
+        /// <para>Specify whether to connect to an external data source.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("LinkedExternalSource")]
         [Validation(Required=false)]
@@ -240,14 +246,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         }
 
         /// <summary>
-        /// <para>The parameters that are configured if the event source is Message Service (MNS). If you specify MNS as the event source, you must configure RegionId, IsBase64Decode, and QueueName.</para>
+        /// <para>The parameters that are configured if you specify Simple Message Queue (formerly MNS) (SMQ) as the event source. If you specify SMQ as the event source, you must configure RegionId, IsBase64Decode, and QueueName.</para>
         /// </summary>
         [NameInMap("SourceMNSParameters")]
         [Validation(Required=false)]
         public CreateEventSourceRequestSourceMNSParameters SourceMNSParameters { get; set; }
         public class CreateEventSourceRequestSourceMNSParameters : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to enable Base64 decoding. Valid values: true and false.</para>
+            /// <para>Specify whether to enable Base64 decoding. Valid values: true and false. If you set this parameter to true, Base64 decoding is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -257,7 +263,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public bool? IsBase64Decode { get; set; }
 
             /// <summary>
-            /// <para>The name of the MNS queue.</para>
+            /// <para>The name of the SMQ queue.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MyQueue</para>
@@ -267,7 +273,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string QueueName { get; set; }
 
             /// <summary>
-            /// <para>The region where the MNS queue resides. Valid values: cn-qingdao, cn-beijing, cn-zhangjiakou, cn-huhehaote, cn-wulanchabu, cn-hangzhou, cn-shanghai, cn-shenzhen, cn-guangzhou, cn-chengdu, cn-hongkong, ap-southeast-1, ap-southeast-2, ap-southeast-3, ap-southeast-5, ap-northeast-1, eu-central-1, us-west-1, us-east-1, ap-south-1, me-east-1, and cn-north-2-gov-1.</para>
+            /// <para>The ID of the region where the SMQ queue resides. Valid values: cn-qingdao, cn-beijing, cn-zhangjiakou, cn-huhehaote, cn-wulanchabu, cn-hangzhou, cn-shanghai, cn-shenzhen, cn-guangzhou, cn-chengdu, cn-hongkong, ap-southeast-1, ap-southeast-2, ap-southeast-3, ap-southeast-5, ap-northeast-1, eu-central-1, us-west-1, us-east-1, ap-south-1, me-east-1, and cn-north-2-gov-1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>

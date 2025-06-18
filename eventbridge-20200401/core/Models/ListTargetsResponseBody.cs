@@ -47,10 +47,19 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             [Validation(Required=false)]
             public List<ListTargetsResponseBodyDataTargets> Targets { get; set; }
             public class ListTargetsResponseBodyDataTargets : TeaModel {
+                /// <summary>
+                /// <para>The concurrency configuration.</para>
+                /// </summary>
                 [NameInMap("ConcurrentConfig")]
                 [Validation(Required=false)]
                 public ListTargetsResponseBodyDataTargetsConcurrentConfig ConcurrentConfig { get; set; }
                 public class ListTargetsResponseBodyDataTargetsConcurrentConfig : TeaModel {
+                    /// <summary>
+                    /// <para>The maximum number of concurrent events allowed in the event target.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>10</para>
+                    /// </summary>
                     [NameInMap("Concurrency")]
                     [Validation(Required=false)]
                     public long? Concurrency { get; set; }

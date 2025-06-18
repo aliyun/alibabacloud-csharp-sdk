@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>200</para>
+        /// </summary>
         [NameInMap("HttpCode")]
         [Validation(Required=false)]
         public int? HttpCode { get; set; }

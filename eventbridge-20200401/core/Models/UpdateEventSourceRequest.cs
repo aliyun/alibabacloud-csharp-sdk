@@ -40,6 +40,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
         /// <summary>
         /// <para>The configurations of the external data source.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{\&quot;ConsumePosition\&quot;:\&quot;end\&quot;,\&quot;LogStore\&quot;:\&quot;oss_log\&quot;,\&quot;Project\&quot;:\&quot;slsaudit-center-5795350335281001-cn-beijing\&quot;,\&quot;RoleName\&quot;:\&quot;sls-beijing-tf\&quot;}</para>
         /// </summary>
         [NameInMap("ExternalSourceConfig")]
         [Validation(Required=false)]
@@ -47,6 +50,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
         /// <summary>
         /// <para>The type of the external data source.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SLS</para>
         /// </summary>
         [NameInMap("ExternalSourceType")]
         [Validation(Required=false)]
@@ -54,6 +60,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
         /// <summary>
         /// <para>Specifies whether to connect to an external data source.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("LinkedExternalSource")]
         [Validation(Required=false)]

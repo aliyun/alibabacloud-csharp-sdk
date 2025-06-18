@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string FilterPattern { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the runtime environment.</para>
+        /// <para>The parameters that are configured for the runtime environment.</para>
         /// </summary>
         [NameInMap("RunOptions")]
         [Validation(Required=false)]

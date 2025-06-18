@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class QueryEventResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code returned. The status code 200 indicates that the request was successful.</para>
+        /// <para>The response code. Valid values:</para>
+        /// <para>200: The request was successful.</para>
+        /// <para>Other values indicate that the request failed. For information about error codes, see Error codes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

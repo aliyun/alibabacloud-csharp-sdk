@@ -34,10 +34,19 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         [Validation(Required=false)]
         public List<CreateRuleRequestEventTargets> EventTargets { get; set; }
         public class CreateRuleRequestEventTargets : TeaModel {
+            /// <summary>
+            /// <para>The concurrency configuration.</para>
+            /// </summary>
             [NameInMap("ConcurrentConfig")]
             [Validation(Required=false)]
             public CreateRuleRequestEventTargetsConcurrentConfig ConcurrentConfig { get; set; }
             public class CreateRuleRequestEventTargetsConcurrentConfig : TeaModel {
+                /// <summary>
+                /// <para>The concurrency.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2</para>
+                /// </summary>
                 [NameInMap("Concurrency")]
                 [Validation(Required=false)]
                 public long? Concurrency { get; set; }
@@ -45,14 +54,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             }
 
             /// <summary>
-            /// <para>The dead-letter queue. Events that are not processed or whose maximum retries are exceeded are written to the dead-letter queue. The dead-letter queue feature is supported by the following queue types: Message Queue for Apache RocketMQ, Message Service (MNS), Message Queue for Apache Kafka, and EventBridge.</para>
+            /// <para>The dead-letter queue. Events that are not processed or whose maximum number of retries is exceeded are written to the dead-letter queue. You can use queues in ApsaraMQ for RocketMQ, Simple Message Queue (SMQ, formerly MNS), and ApsaraMQ for Kafka as dead-letter queues. You can also use event buses in EventBridge as dead-letter queues.</para>
             /// </summary>
             [NameInMap("DeadLetterQueue")]
             [Validation(Required=false)]
             public CreateRuleRequestEventTargetsDeadLetterQueue DeadLetterQueue { get; set; }
             public class CreateRuleRequestEventTargetsDeadLetterQueue : TeaModel {
                 /// <summary>
-                /// <para>The Alibaba Cloud Resource Name (ARN) of the dead-letter queue. Events that are not processed or whose maximum retries are exceeded are written to the dead-letter queue. The ARN feature is supported by the following queue types: MNS and Message Queue for Apache RocketMQ.</para>
+                /// <para>The Alibaba Cloud Resource Name (ARN) of the dead-letter queue. Events that are not processed or whose maximum number of retries is exceeded are written to the dead-letter queue. Queues in SMQ and ApsaraMQ for RocketMQ can be used as dead-letter queues.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>acs:mns:cn-hangzhou:123456789098****:/queues/rule-deadletterqueue</para>
@@ -90,7 +99,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string Endpoint { get; set; }
 
             /// <summary>
-            /// <para>The fault tolerance policy. Valid values: ALL: allows fault tolerance. If an error occurs, the event processing is not blocked. If the message fails to be sent after the maximum number of retries specified by the retry policy is reached, the message is delivered to the dead-letter queue or discarded based on your configurations. NONE: does not allow fault tolerance. If an error occurs and the message fails to be sent after the maximum number of retries specified by the retry policy is reached, the event processing is blocked.</para>
+            /// <para>The fault tolerance policy. Valid values: ALL and NONE. The value ALL specifies that fault tolerance is allowed. If an error occurs in an event, event processing is not blocked. If the event fails to be sent after the maximum number of retries specified by the retry policy is reached, the event is delivered to the dead-letter queue or discarded based on your configurations. The value NONE specifies that fault tolerance is not allowed. If an error occurs in an event and the event fails to be sent after the maximum number of retries specified by the retry policy is reached, event processing is blocked.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALL</para>
@@ -100,7 +109,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string ErrorsTolerance { get; set; }
 
             /// <summary>
-            /// <para>The ID of the custom event target.</para>
+            /// <para>The ID of the event target.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -118,7 +127,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public List<CreateRuleRequestEventTargetsParamList> ParamList { get; set; }
             public class CreateRuleRequestEventTargetsParamList : TeaModel {
                 /// <summary>
-                /// <para>The format that is used by the event target parameter. For more information, see <a href="https://www.alibabacloud.com/help/en/eventbridge/latest/limits">Limits.</a></para>
+                /// <para>The format of input parameters for the event target. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TEMPLATE</para>
@@ -128,7 +137,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public string Form { get; set; }
 
                 /// <summary>
-                /// <para>The resource parameter of the event target. For more information, see <a href="https://www.alibabacloud.com/help/en/eventbridge/latest/limits">Limits</a></para>
+                /// <para>The resource key of the event target. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>body</para>
@@ -138,7 +147,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public string ResourceKey { get; set; }
 
                 /// <summary>
-                /// <para>The template that is used by the event target parameter.</para>
+                /// <para>The structure of the template for the event target.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>The value of ${key} is ${value}!</para>
@@ -160,7 +169,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             }
 
             /// <summary>
-            /// <para>The retry policy that is used to push events. Valid values: BACKOFF_RETRY: backoff retry. If an event failed to be pushed, it can be retried up to three times. The interval between two consecutive retries is a random value between 10 and 20 seconds. EXPONENTIAL_DECAY_RETRY: exponential decay retry. If an event failed to be pushed, it can be retried up to 176 times. The interval between two consecutive retries exponentially increases to 512 seconds, and the total retry time is one day. The specific retry intervals are 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 512, ..., and 512 seconds. The interval of 512 seconds is used for 167 retries.</para>
+            /// <para>The retry policy that you want to use to push failed events. Valid values: BACKOFF_RETRY and EXPONENTIAL_DECAY_RETRY. BACKOFF_RETRY: A failed event can be retried up to three times. The interval between two consecutive retries is a random value from 10 seconds to 20 seconds. EXPONENTIAL_DECAY_RETRY: A failed event can be retried up to 176 times. The interval between two consecutive retries exponentially increases to a maximum of 512 seconds. The total retry time is 1 day. The specific retry intervals are 1, 2, 4, 8, 16, 32, 64, 128, 256, and 512 seconds. The interval of 512 seconds is used for 167 retries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>BACKOFF_RETRY</para>
@@ -170,7 +179,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string PushRetryStrategy { get; set; }
 
             /// <summary>
-            /// <para>The type of the event target. For more information, see <a href="https://www.alibabacloud.com/help/en/eventbridge/latest/event-target-parameters">Event target parameters.</a></para>
+            /// <para>The type of the event target. For more information, see <a href="https://help.aliyun.com/document_detail/185887.html">Event target parameters</a>.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

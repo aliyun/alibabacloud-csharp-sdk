@@ -40,18 +40,37 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             [Validation(Required=false)]
             public GetEventStreamingResponseBodyDataDetailedStatus DetailedStatus { get; set; }
             public class GetEventStreamingResponseBodyDataDetailedStatus : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>3</para>
+                /// </summary>
                 [NameInMap("DelayTime")]
                 [Validation(Required=false)]
                 public long? DelayTime { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
                 [NameInMap("DiffOffset")]
                 [Validation(Required=false)]
                 public long? DiffOffset { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>{
+                ///         &quot;test&quot;: &quot;test&quot;,
+                ///         &quot;test2&quot;: 1
+                ///       }</para>
+                /// </summary>
                 [NameInMap("Extensions")]
                 [Validation(Required=false)]
                 public Dictionary<string, object> Extensions { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>5</para>
+                /// </summary>
                 [NameInMap("TPS")]
                 [Validation(Required=false)]
                 public double? TPS { get; set; }
@@ -111,6 +130,24 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                 }
 
+                [NameInMap("BusinessOption")]
+                [Validation(Required=false)]
+                public GetEventStreamingResponseBodyDataRunOptionsBusinessOption BusinessOption { get; set; }
+                public class GetEventStreamingResponseBodyDataRunOptionsBusinessOption : TeaModel {
+                    [NameInMap("BusinessMode")]
+                    [Validation(Required=false)]
+                    public string BusinessMode { get; set; }
+
+                    [NameInMap("MaxCapacityUnitCount")]
+                    [Validation(Required=false)]
+                    public long? MaxCapacityUnitCount { get; set; }
+
+                    [NameInMap("MinCapacityUnitCount")]
+                    [Validation(Required=false)]
+                    public long? MinCapacityUnitCount { get; set; }
+
+                }
+
                 /// <summary>
                 /// <para>Indicates whether dead-letter queues are enabled. By default, dead-letter queues are disabled. Messages that fail to be pushed after allowed retries as specified by the retry policy are discarded.</para>
                 /// </summary>
@@ -128,18 +165,34 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public string Arn { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>PrivateNetwork</para>
+                    /// </summary>
                     [NameInMap("Network")]
                     [Validation(Required=false)]
                     public string Network { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>sg-2vcgdxz7o1n9zapp****</para>
+                    /// </summary>
                     [NameInMap("SecurityGroupId")]
                     [Validation(Required=false)]
                     public string SecurityGroupId { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>vsw-m5ev8asdc6h12345****</para>
+                    /// </summary>
                     [NameInMap("VSwitchIds")]
                     [Validation(Required=false)]
                     public string VSwitchIds { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>vpc-2zehizpoendb3****</para>
+                    /// </summary>
                     [NameInMap("VpcId")]
                     [Validation(Required=false)]
                     public string VpcId { get; set; }
@@ -218,6 +271,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             [Validation(Required=false)]
             public GetEventStreamingResponseBodyDataSink Sink { get; set; }
             public class GetEventStreamingResponseBodyDataSink : TeaModel {
+                /// <summary>
+                /// <para>Sink Apache RocketMQ Checkpoint Parameters</para>
+                /// </summary>
                 [NameInMap("SinkApacheRocketMQCheckpointParameters")]
                 [Validation(Required=false)]
                 public GetEventStreamingResponseBodyDataSinkSinkApacheRocketMQCheckpointParameters SinkApacheRocketMQCheckpointParameters { get; set; }
@@ -226,6 +282,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public GetEventStreamingResponseBodyDataSinkSinkApacheRocketMQCheckpointParametersConsumeTimestamp ConsumeTimestamp { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkApacheRocketMQCheckpointParametersConsumeTimestamp : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>CONSTANT</para>
+                        /// </summary>
                         [NameInMap("Form")]
                         [Validation(Required=false)]
                         public string Form { get; set; }
@@ -234,6 +294,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         [Validation(Required=false)]
                         public string Template { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>1570761026400</para>
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
@@ -244,6 +308,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public GetEventStreamingResponseBodyDataSinkSinkApacheRocketMQCheckpointParametersGroup Group { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkApacheRocketMQCheckpointParametersGroup : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>CONSTANT</para>
+                        /// </summary>
                         [NameInMap("Form")]
                         [Validation(Required=false)]
                         public string Form { get; set; }
@@ -252,28 +320,54 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         [Validation(Required=false)]
                         public string Template { get; set; }
 
+                        /// <summary>
+                        /// <para>Group ID</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>GID_EVENTBRIDGE_1736234******</para>
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
 
                     }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>192.168.1.1:9876</para>
+                    /// </summary>
                     [NameInMap("InstanceEndpoint")]
                     [Validation(Required=false)]
                     public string InstanceEndpoint { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <hr>
+                    /// </summary>
                     [NameInMap("InstancePassword")]
                     [Validation(Required=false)]
                     public string InstancePassword { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>admin</para>
+                    /// </summary>
                     [NameInMap("InstanceUsername")]
                     [Validation(Required=false)]
                     public string InstanceUsername { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>PrivateNetwork</para>
+                    /// </summary>
                     [NameInMap("NetworkType")]
                     [Validation(Required=false)]
                     public string NetworkType { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>sg-2ze5bmpw6adn0q******</para>
+                    /// </summary>
                     [NameInMap("SecurityGroupId")]
                     [Validation(Required=false)]
                     public string SecurityGroupId { get; set; }
@@ -282,6 +376,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public GetEventStreamingResponseBodyDataSinkSinkApacheRocketMQCheckpointParametersTopic Topic { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkApacheRocketMQCheckpointParametersTopic : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>CONSTANT</para>
+                        /// </summary>
                         [NameInMap("Form")]
                         [Validation(Required=false)]
                         public string Form { get; set; }
@@ -290,22 +388,37 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         [Validation(Required=false)]
                         public string Template { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>Mytopic</para>
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
 
                     }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>vsw-uf62oqt1twuevrt******</para>
+                    /// </summary>
                     [NameInMap("VSwitchId")]
                     [Validation(Required=false)]
                     public string VSwitchId { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>vpc-2zeccak5pb0j3ay******</para>
+                    /// </summary>
                     [NameInMap("VpcId")]
                     [Validation(Required=false)]
                     public string VpcId { get; set; }
 
                 }
 
+                /// <summary>
+                /// <para>Sink BaiLian Parameters</para>
+                /// </summary>
                 [NameInMap("SinkBaiLianParameters")]
                 [Validation(Required=false)]
                 public SinkBaiLianParameters SinkBaiLianParameters { get; set; }
@@ -314,6 +427,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 [Validation(Required=false)]
                 public GetEventStreamingResponseBodyDataSinkSinkCustomizedKafkaConnectorParameters SinkCustomizedKafkaConnectorParameters { get; set; }
                 public class GetEventStreamingResponseBodyDataSinkSinkCustomizedKafkaConnectorParameters : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>&quot;<a href="https://examplebucket.oss-cn-hangzhou.aliyuncs.com/testDoc/Old_Homebrew/2024-06-26%2022%3A34%3A08/opt/homebrew/homebrew/Library/Homebrew/test/support/fixtures/cask/AppWithBinary.zip?OSSAccessKeyId=ri&Expires=1725539627&Signature=rb8q3OpV">https://examplebucket.oss-cn-hangzhou.aliyuncs.com/testDoc/Old_Homebrew/2024-06-26%2022%3A34%3A08/opt/homebrew/homebrew/Library/Homebrew/test/support/fixtures/cask/AppWithBinary.zip?OSSAccessKeyId=ri&amp;Expires=1725539627&amp;Signature=rb8q3OpV</a>******&quot;</para>
+                    /// </summary>
                     [NameInMap("ConnectorPackageUrl")]
                     [Validation(Required=false)]
                     public string ConnectorPackageUrl { get; set; }
@@ -322,16 +439,39 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public GetEventStreamingResponseBodyDataSinkSinkCustomizedKafkaConnectorParametersConnectorParameters ConnectorParameters { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkCustomizedKafkaConnectorParametersConnectorParameters : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>{
+                        ///           &quot;connector.class&quot;: &quot;com.mongodb.kafka.connect.MongoSinkConnector&quot;,
+                        ///           &quot;tasks.max&quot;: &quot;1&quot;,
+                        ///           &quot;topics&quot;: &quot;sourceA,sourceB&quot;
+                        ///         }</para>
+                        /// </summary>
                         [NameInMap("Config")]
                         [Validation(Required=false)]
                         public Dictionary<string, object> Config { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>mongo-sink</para>
+                        /// </summary>
                         [NameInMap("Name")]
                         [Validation(Required=false)]
                         public string Name { get; set; }
 
                     }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>{
+                    ///         &quot;group.id&quot;: &quot;connect-eb-cluster-KAFKA_CONNECTORC&quot;,
+                    ///         &quot;offset.storage.topic&quot;: &quot;connect-eb-offset-KAFKA_CONNECTOR_yjqC8K5ewC&quot;,
+                    ///         &quot;config.storage.topic&quot;: &quot;connect-eb-config-KAFKA_CONNECTOR_yjqC8K5ewC&quot;,
+                    ///         &quot;status.storage.topic&quot;: &quot;connect-eb-status-KAFKA_CONNECTOR_yjqC8K5ewC&quot;,
+                    ///         &quot;consumer.group.id&quot;: &quot;connector-eb-cluster-KAFKA_CONNECTOR_yjqC8K5ewC-mongo-sink&quot;,
+                    ///         &quot;bootstrap.servers&quot;: &quot;alikafka-post:9092&quot;
+                    ///       }</para>
+                    /// </summary>
                     [NameInMap("WorkerParameters")]
                     [Validation(Required=false)]
                     public Dictionary<string, object> WorkerParameters { get; set; }
@@ -342,6 +482,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 [Validation(Required=false)]
                 public GetEventStreamingResponseBodyDataSinkSinkCustomizedKafkaParameters SinkCustomizedKafkaParameters { get; set; }
                 public class GetEventStreamingResponseBodyDataSinkSinkCustomizedKafkaParameters : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>90be1f96-4229-4535-bb76-34b4f6fb****</para>
+                    /// </summary>
                     [NameInMap("InstanceId")]
                     [Validation(Required=false)]
                     public string InstanceId { get; set; }
@@ -352,10 +496,18 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 [Validation(Required=false)]
                 public GetEventStreamingResponseBodyDataSinkSinkDashVectorParameters SinkDashVectorParameters { get; set; }
                 public class GetEventStreamingResponseBodyDataSinkSinkDashVectorParameters : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>Q34nExQH7sQ****</para>
+                    /// </summary>
                     [NameInMap("ApiKey")]
                     [Validation(Required=false)]
                     public string ApiKey { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>collection1</para>
+                    /// </summary>
                     [NameInMap("Collection")]
                     [Validation(Required=false)]
                     public string Collection { get; set; }
@@ -364,28 +516,66 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public GetEventStreamingResponseBodyDataSinkSinkDashVectorParametersDashVectorSchemaParameters DashVectorSchemaParameters { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkDashVectorParametersDashVectorSchemaParameters : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>TEMPLATE</para>
+                        /// </summary>
                         [NameInMap("Form")]
                         [Validation(Required=false)]
                         public string Form { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>[
+                        ///   {
+                        ///     &quot;name&quot;: &quot;schema1&quot;,
+                        ///     &quot;type&quot;: &quot;INT&quot;,
+                        ///     &quot;value&quot;: &quot;${value1}&quot;
+                        ///   },
+                        ///   {
+                        ///     &quot;name&quot;: &quot;schema2&quot;,
+                        ///     &quot;type&quot;: &quot;FLOAT&quot;,
+                        ///     &quot;value&quot;: &quot;${value2}&quot;
+                        ///   }
+                        /// ]</para>
+                        /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
                         public string Template { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>{
+                        ///   &quot;value1&quot;:&quot;v1&quot;,
+                        ///   &quot;value2&quot;:&quot;v2&quot;
+                        /// }</para>
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
 
                     }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>vrs-cn-lbj3ru1***</para>
+                    /// </summary>
                     [NameInMap("InstanceId")]
                     [Validation(Required=false)]
                     public string InstanceId { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>PublicNetwork</para>
+                    /// </summary>
                     [NameInMap("Network")]
                     [Validation(Required=false)]
                     public string Network { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>Upsert</para>
+                    /// </summary>
                     [NameInMap("Operation")]
                     [Validation(Required=false)]
                     public string Operation { get; set; }
@@ -394,6 +584,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public GetEventStreamingResponseBodyDataSinkSinkDashVectorParametersPartition Partition { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkDashVectorParametersPartition : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>CONSTANT</para>
+                        /// </summary>
                         [NameInMap("Form")]
                         [Validation(Required=false)]
                         public string Form { get; set; }
@@ -402,6 +596,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         [Validation(Required=false)]
                         public string Template { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>default</para>
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
@@ -412,14 +610,26 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public GetEventStreamingResponseBodyDataSinkSinkDashVectorParametersPrimaryKeyId PrimaryKeyId { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkDashVectorParametersPrimaryKeyId : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>JSONPATH</para>
+                        /// </summary>
                         [NameInMap("Form")]
                         [Validation(Required=false)]
                         public string Form { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>${ID}</para>
+                        /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
                         public string Template { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>$.data.requestId</para>
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
@@ -430,6 +640,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public GetEventStreamingResponseBodyDataSinkSinkDashVectorParametersVector Vector { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkDashVectorParametersVector : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>JSONPATH</para>
+                        /// </summary>
                         [NameInMap("Form")]
                         [Validation(Required=false)]
                         public string Form { get; set; }
@@ -438,6 +652,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         [Validation(Required=false)]
                         public string Template { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>$.data.messageBody</para>
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
@@ -454,6 +672,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public GetEventStreamingResponseBodyDataSinkSinkDataHubParametersBody Body { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkDataHubParametersBody : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>ORIGINAL</para>
+                        /// </summary>
                         [NameInMap("Form")]
                         [Validation(Required=false)]
                         public string Form { get; set; }
@@ -472,6 +694,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public GetEventStreamingResponseBodyDataSinkSinkDataHubParametersProject Project { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkDataHubParametersProject : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>CONSTANT</para>
+                        /// </summary>
                         [NameInMap("Form")]
                         [Validation(Required=false)]
                         public string Form { get; set; }
@@ -480,6 +706,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         [Validation(Required=false)]
                         public string Template { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>demo-project</para>
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
@@ -490,6 +720,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public GetEventStreamingResponseBodyDataSinkSinkDataHubParametersRoleName RoleName { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkDataHubParametersRoleName : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>CONSTANT</para>
+                        /// </summary>
                         [NameInMap("Form")]
                         [Validation(Required=false)]
                         public string Form { get; set; }
@@ -498,6 +732,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         [Validation(Required=false)]
                         public string Template { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>test-role</para>
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
@@ -508,6 +746,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public GetEventStreamingResponseBodyDataSinkSinkDataHubParametersTopic Topic { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkDataHubParametersTopic : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>CONSTANT</para>
+                        /// </summary>
                         [NameInMap("Form")]
                         [Validation(Required=false)]
                         public string Form { get; set; }
@@ -516,6 +758,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         [Validation(Required=false)]
                         public string Template { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>demo-topic</para>
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
@@ -526,6 +772,68 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public GetEventStreamingResponseBodyDataSinkSinkDataHubParametersTopicSchema TopicSchema { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkDataHubParametersTopicSchema : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>TEMPLATE</para>
+                        /// </summary>
+                        [NameInMap("Form")]
+                        [Validation(Required=false)]
+                        public string Form { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>{&quot;k1&quot;:&quot;${k1}&quot;,&quot;k2&quot;:&quot;${k2}&quot;}</para>
+                        /// </summary>
+                        [NameInMap("Template")]
+                        [Validation(Required=false)]
+                        public string Template { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>{&quot;k1&quot;:&quot;value1&quot;,&quot;k2&quot;:&quot;value2&quot;}</para>
+                        /// </summary>
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                    [NameInMap("TopicType")]
+                    [Validation(Required=false)]
+                    public GetEventStreamingResponseBodyDataSinkSinkDataHubParametersTopicType TopicType { get; set; }
+                    public class GetEventStreamingResponseBodyDataSinkSinkDataHubParametersTopicType : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>CONSTANT</para>
+                        /// </summary>
+                        [NameInMap("Form")]
+                        [Validation(Required=false)]
+                        public string Form { get; set; }
+
+                        [NameInMap("Template")]
+                        [Validation(Required=false)]
+                        public string Template { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>TUPLE</para>
+                        /// </summary>
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                }
+
+                [NameInMap("SinkDorisParameters")]
+                [Validation(Required=false)]
+                public GetEventStreamingResponseBodyDataSinkSinkDorisParameters SinkDorisParameters { get; set; }
+                public class GetEventStreamingResponseBodyDataSinkSinkDorisParameters : TeaModel {
+                    [NameInMap("BeHttpEndpoint")]
+                    [Validation(Required=false)]
+                    public GetEventStreamingResponseBodyDataSinkSinkDorisParametersBeHttpEndpoint BeHttpEndpoint { get; set; }
+                    public class GetEventStreamingResponseBodyDataSinkSinkDorisParametersBeHttpEndpoint : TeaModel {
                         [NameInMap("Form")]
                         [Validation(Required=false)]
                         public string Form { get; set; }
@@ -540,10 +848,190 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                     }
 
-                    [NameInMap("TopicType")]
+                    [NameInMap("Body")]
                     [Validation(Required=false)]
-                    public GetEventStreamingResponseBodyDataSinkSinkDataHubParametersTopicType TopicType { get; set; }
-                    public class GetEventStreamingResponseBodyDataSinkSinkDataHubParametersTopicType : TeaModel {
+                    public GetEventStreamingResponseBodyDataSinkSinkDorisParametersBody Body { get; set; }
+                    public class GetEventStreamingResponseBodyDataSinkSinkDorisParametersBody : TeaModel {
+                        [NameInMap("Form")]
+                        [Validation(Required=false)]
+                        public string Form { get; set; }
+
+                        [NameInMap("Template")]
+                        [Validation(Required=false)]
+                        public string Template { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                    [NameInMap("Database")]
+                    [Validation(Required=false)]
+                    public GetEventStreamingResponseBodyDataSinkSinkDorisParametersDatabase Database { get; set; }
+                    public class GetEventStreamingResponseBodyDataSinkSinkDorisParametersDatabase : TeaModel {
+                        [NameInMap("Form")]
+                        [Validation(Required=false)]
+                        public string Form { get; set; }
+
+                        [NameInMap("Template")]
+                        [Validation(Required=false)]
+                        public string Template { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                    [NameInMap("FeHttpEndpoint")]
+                    [Validation(Required=false)]
+                    public GetEventStreamingResponseBodyDataSinkSinkDorisParametersFeHttpEndpoint FeHttpEndpoint { get; set; }
+                    public class GetEventStreamingResponseBodyDataSinkSinkDorisParametersFeHttpEndpoint : TeaModel {
+                        [NameInMap("Form")]
+                        [Validation(Required=false)]
+                        public string Form { get; set; }
+
+                        [NameInMap("Template")]
+                        [Validation(Required=false)]
+                        public string Template { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                    [NameInMap("NetworkType")]
+                    [Validation(Required=false)]
+                    public GetEventStreamingResponseBodyDataSinkSinkDorisParametersNetworkType NetworkType { get; set; }
+                    public class GetEventStreamingResponseBodyDataSinkSinkDorisParametersNetworkType : TeaModel {
+                        [NameInMap("Form")]
+                        [Validation(Required=false)]
+                        public string Form { get; set; }
+
+                        [NameInMap("Template")]
+                        [Validation(Required=false)]
+                        public string Template { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                    [NameInMap("Password")]
+                    [Validation(Required=false)]
+                    public GetEventStreamingResponseBodyDataSinkSinkDorisParametersPassword Password { get; set; }
+                    public class GetEventStreamingResponseBodyDataSinkSinkDorisParametersPassword : TeaModel {
+                        [NameInMap("Form")]
+                        [Validation(Required=false)]
+                        public string Form { get; set; }
+
+                        [NameInMap("Template")]
+                        [Validation(Required=false)]
+                        public string Template { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                    [NameInMap("QueryEndpoint")]
+                    [Validation(Required=false)]
+                    public GetEventStreamingResponseBodyDataSinkSinkDorisParametersQueryEndpoint QueryEndpoint { get; set; }
+                    public class GetEventStreamingResponseBodyDataSinkSinkDorisParametersQueryEndpoint : TeaModel {
+                        [NameInMap("Form")]
+                        [Validation(Required=false)]
+                        public string Form { get; set; }
+
+                        [NameInMap("Template")]
+                        [Validation(Required=false)]
+                        public string Template { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                    [NameInMap("SecurityGroupId")]
+                    [Validation(Required=false)]
+                    public GetEventStreamingResponseBodyDataSinkSinkDorisParametersSecurityGroupId SecurityGroupId { get; set; }
+                    public class GetEventStreamingResponseBodyDataSinkSinkDorisParametersSecurityGroupId : TeaModel {
+                        [NameInMap("Form")]
+                        [Validation(Required=false)]
+                        public string Form { get; set; }
+
+                        [NameInMap("Template")]
+                        [Validation(Required=false)]
+                        public string Template { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                    [NameInMap("Table")]
+                    [Validation(Required=false)]
+                    public GetEventStreamingResponseBodyDataSinkSinkDorisParametersTable Table { get; set; }
+                    public class GetEventStreamingResponseBodyDataSinkSinkDorisParametersTable : TeaModel {
+                        [NameInMap("Form")]
+                        [Validation(Required=false)]
+                        public string Form { get; set; }
+
+                        [NameInMap("Template")]
+                        [Validation(Required=false)]
+                        public string Template { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                    [NameInMap("UserName")]
+                    [Validation(Required=false)]
+                    public GetEventStreamingResponseBodyDataSinkSinkDorisParametersUserName UserName { get; set; }
+                    public class GetEventStreamingResponseBodyDataSinkSinkDorisParametersUserName : TeaModel {
+                        [NameInMap("Form")]
+                        [Validation(Required=false)]
+                        public string Form { get; set; }
+
+                        [NameInMap("Template")]
+                        [Validation(Required=false)]
+                        public string Template { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                    [NameInMap("VSwitchIds")]
+                    [Validation(Required=false)]
+                    public GetEventStreamingResponseBodyDataSinkSinkDorisParametersVSwitchIds VSwitchIds { get; set; }
+                    public class GetEventStreamingResponseBodyDataSinkSinkDorisParametersVSwitchIds : TeaModel {
+                        [NameInMap("Form")]
+                        [Validation(Required=false)]
+                        public string Form { get; set; }
+
+                        [NameInMap("Template")]
+                        [Validation(Required=false)]
+                        public string Template { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                    [NameInMap("VpcId")]
+                    [Validation(Required=false)]
+                    public GetEventStreamingResponseBodyDataSinkSinkDorisParametersVpcId VpcId { get; set; }
+                    public class GetEventStreamingResponseBodyDataSinkSinkDorisParametersVpcId : TeaModel {
                         [NameInMap("Form")]
                         [Validation(Required=false)]
                         public string Form { get; set; }
@@ -651,14 +1139,28 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public GetEventStreamingResponseBodyDataSinkSinkFcParametersDataFormat DataFormat { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkFcParametersDataFormat : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>JSONPATH</para>
+                        /// </summary>
                         [NameInMap("Form")]
                         [Validation(Required=false)]
                         public string Form { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>$.data.key</para>
+                        /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
                         public string Template { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>{
+                        ///       &quot;key&quot;: &quot;value&quot;
+                        /// }</para>
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
@@ -684,6 +1186,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                         /// <summary>
                         /// <para>The template style.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>The value of ${key} is ${value}!</para>
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -720,6 +1225,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                         /// <summary>
                         /// <para>The template style.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>The value of ${key} is ${value}!</para>
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -756,6 +1264,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                         /// <summary>
                         /// <para>The template style.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>The value of ${key} is ${value}!</para>
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -792,6 +1303,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                         /// <summary>
                         /// <para>The template style.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>The value of ${key} is ${value}!</para>
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -1002,6 +1516,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                         /// <summary>
                         /// <para>The template style.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>The value of ${key} is ${value}!</para>
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -1023,14 +1540,28 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public GetEventStreamingResponseBodyDataSinkSinkKafkaParametersHeaders Headers { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkKafkaParametersHeaders : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>CONSTANT</para>
+                        /// </summary>
                         [NameInMap("Form")]
                         [Validation(Required=false)]
                         public string Form { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>The value of ${key} is ${value}!</para>
+                        /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
                         public string Template { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>{
+                        ///       &quot;key&quot;: &quot;value&quot;
+                        /// }</para>
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
@@ -1056,6 +1587,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                         /// <summary>
                         /// <para>The template style.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>The value of ${key} is ${value}!</para>
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -1092,6 +1626,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                         /// <summary>
                         /// <para>The template style.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>The value of ${key} is ${value}!</para>
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -1128,6 +1665,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                         /// <summary>
                         /// <para>The template style.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>The value of ${key} is ${value}!</para>
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -1310,10 +1850,17 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                 }
 
+                /// <summary>
+                /// <para>Sink Open Source RabbitMQ Parameters</para>
+                /// </summary>
                 [NameInMap("SinkOpenSourceRabbitMQParameters")]
                 [Validation(Required=false)]
                 public GetEventStreamingResponseBodyDataSinkSinkOpenSourceRabbitMQParameters SinkOpenSourceRabbitMQParameters { get; set; }
                 public class GetEventStreamingResponseBodyDataSinkSinkOpenSourceRabbitMQParameters : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>ACL</para>
+                    /// </summary>
                     [NameInMap("AuthType")]
                     [Validation(Required=false)]
                     public string AuthType { get; set; }
@@ -1322,24 +1869,44 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public GetEventStreamingResponseBodyDataSinkSinkOpenSourceRabbitMQParametersBody Body { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkOpenSourceRabbitMQParametersBody : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>CONSTANT</para>
+                        /// </summary>
                         [NameInMap("Form")]
                         [Validation(Required=false)]
                         public string Form { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>The value of ${key} is ${value}!</para>
+                        /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
                         public string Template { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>{&quot;key&quot;: &quot;value&quot;}</para>
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
 
                     }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>192.168.1.1:9876</para>
+                    /// </summary>
                     [NameInMap("Endpoint")]
                     [Validation(Required=false)]
                     public string Endpoint { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>my-exchange</para>
+                    /// </summary>
                     [NameInMap("Exchange")]
                     [Validation(Required=false)]
                     public string Exchange { get; set; }
@@ -1348,6 +1915,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public GetEventStreamingResponseBodyDataSinkSinkOpenSourceRabbitMQParametersMessageId MessageId { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkOpenSourceRabbitMQParametersMessageId : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>CONSTANT</para>
+                        /// </summary>
                         [NameInMap("Form")]
                         [Validation(Required=false)]
                         public string Form { get; set; }
@@ -1356,16 +1927,28 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         [Validation(Required=false)]
                         public string Template { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>12345</para>
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
 
                     }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>PublicNetwork</para>
+                    /// </summary>
                     [NameInMap("NetworkType")]
                     [Validation(Required=false)]
                     public string NetworkType { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <hr>
+                    /// </summary>
                     [NameInMap("Password")]
                     [Validation(Required=false)]
                     public string Password { get; set; }
@@ -1374,20 +1957,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public GetEventStreamingResponseBodyDataSinkSinkOpenSourceRabbitMQParametersProperties Properties { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkOpenSourceRabbitMQParametersProperties : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>CONSTANT</para>
+                        /// </summary>
                         [NameInMap("Form")]
                         [Validation(Required=false)]
                         public string Form { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>The value of ${key} is ${value}!</para>
+                        /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
                         public string Template { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>{&quot;env&quot;: &quot;prod&quot;}</para>
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
 
                     }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>my-queue</para>
+                    /// </summary>
                     [NameInMap("QueueName")]
                     [Validation(Required=false)]
                     public string QueueName { get; set; }
@@ -1396,40 +1995,76 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public GetEventStreamingResponseBodyDataSinkSinkOpenSourceRabbitMQParametersRoutingKey RoutingKey { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkOpenSourceRabbitMQParametersRoutingKey : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>CONSTANT</para>
+                        /// </summary>
                         [NameInMap("Form")]
                         [Validation(Required=false)]
                         public string Form { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>The value of ${key} is ${value}!</para>
+                        /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
                         public string Template { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>{&quot;Form&quot;: &quot;CONSTANT&quot;, &quot;Value&quot;: &quot;my-routing-key&quot;}</para>
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
 
                     }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>sg-uf6of9452b2pba82c ****</para>
+                    /// </summary>
                     [NameInMap("SecurityGroupId")]
                     [Validation(Required=false)]
                     public string SecurityGroupId { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>Exchange</para>
+                    /// </summary>
                     [NameInMap("TargetType")]
                     [Validation(Required=false)]
                     public string TargetType { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>admin</para>
+                    /// </summary>
                     [NameInMap("Username")]
                     [Validation(Required=false)]
                     public string Username { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>vsw-uf6of9452b2pba82c ****</para>
+                    /// </summary>
                     [NameInMap("VSwitchIds")]
                     [Validation(Required=false)]
                     public string VSwitchIds { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>vhost1</para>
+                    /// </summary>
                     [NameInMap("VirtualHostName")]
                     [Validation(Required=false)]
                     public string VirtualHostName { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>vpc-uf6of9452b2pba82c ****</para>
+                    /// </summary>
                     [NameInMap("VpcId")]
                     [Validation(Required=false)]
                     public string VpcId { get; set; }
@@ -1503,6 +2138,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                         /// <summary>
                         /// <para>The template style.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>The value of ${key} is ${value}!</para>
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -1539,6 +2177,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                         /// <summary>
                         /// <para>The template style.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>The value of ${key} is ${value}!</para>
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -1657,6 +2298,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                         /// <summary>
                         /// <para>The template style.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>The value of ${key} is ${value}!</para>
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -1693,6 +2337,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                         /// <summary>
                         /// <para>The template style.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>The value of ${key} is ${value}!</para>
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -1729,6 +2376,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                         /// <summary>
                         /// <para>The template style.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>The value of ${key} is ${value}!</para>
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -1784,6 +2434,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                 }
 
+                /// <summary>
+                /// <para>Sink RocketMQ Checkpoint Parameters</para>
+                /// </summary>
                 [NameInMap("SinkRocketMQCheckpointParameters")]
                 [Validation(Required=false)]
                 public GetEventStreamingResponseBodyDataSinkSinkRocketMQCheckpointParameters SinkRocketMQCheckpointParameters { get; set; }
@@ -1792,6 +2445,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public GetEventStreamingResponseBodyDataSinkSinkRocketMQCheckpointParametersConsumeTimestamp ConsumeTimestamp { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkRocketMQCheckpointParametersConsumeTimestamp : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>CONSTANT</para>
+                        /// </summary>
                         [NameInMap("Form")]
                         [Validation(Required=false)]
                         public string Form { get; set; }
@@ -1800,6 +2457,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         [Validation(Required=false)]
                         public string Template { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>1570761026400</para>
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
@@ -1810,6 +2471,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public GetEventStreamingResponseBodyDataSinkSinkRocketMQCheckpointParametersGroup Group { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkRocketMQCheckpointParametersGroup : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>CONSTANT</para>
+                        /// </summary>
                         [NameInMap("Form")]
                         [Validation(Required=false)]
                         public string Form { get; set; }
@@ -1818,16 +2483,30 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         [Validation(Required=false)]
                         public string Template { get; set; }
 
+                        /// <summary>
+                        /// <para>Group ID</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>GID_EVENTBRIDGE_1736234******</para>
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
 
                     }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>MQ_INST_164901546557****_BAAN****</para>
+                    /// </summary>
                     [NameInMap("InstanceId")]
                     [Validation(Required=false)]
                     public string InstanceId { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>Cloud_4</para>
+                    /// </summary>
                     [NameInMap("InstanceType")]
                     [Validation(Required=false)]
                     public string InstanceType { get; set; }
@@ -1836,6 +2515,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public GetEventStreamingResponseBodyDataSinkSinkRocketMQCheckpointParametersTopic Topic { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkRocketMQCheckpointParametersTopic : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>CONSTANT</para>
+                        /// </summary>
                         [NameInMap("Form")]
                         [Validation(Required=false)]
                         public string Form { get; set; }
@@ -1844,6 +2527,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         [Validation(Required=false)]
                         public string Template { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>Mytopic</para>
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
@@ -1904,6 +2591,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersDeliveryOrderType DeliveryOrderType { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersDeliveryOrderType : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>CONSTANT</para>
+                        /// </summary>
                         [NameInMap("Form")]
                         [Validation(Required=false)]
                         public string Form { get; set; }
@@ -1912,6 +2603,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         [Validation(Required=false)]
                         public string Template { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>Concurrently</para>
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
@@ -1922,6 +2617,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersInstanceEndpoint InstanceEndpoint { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersInstanceEndpoint : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>CONSTANT</para>
+                        /// </summary>
                         [NameInMap("Form")]
                         [Validation(Required=false)]
                         public string Form { get; set; }
@@ -1930,6 +2629,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         [Validation(Required=false)]
                         public string Template { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>vbr-8vbsvkkbpf3vb0zef****</para>
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
@@ -1955,6 +2658,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                         /// <summary>
                         /// <para>The template style.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>The value of ${key} is ${value}!</para>
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -1976,6 +2682,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersInstancePassword InstancePassword { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersInstancePassword : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>CONSTANT</para>
+                        /// </summary>
                         [NameInMap("Form")]
                         [Validation(Required=false)]
                         public string Form { get; set; }
@@ -1984,6 +2694,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         [Validation(Required=false)]
                         public string Template { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>admin****</para>
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
@@ -1994,6 +2708,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersInstanceType InstanceType { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersInstanceType : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>CONSTANT</para>
+                        /// </summary>
                         [NameInMap("Form")]
                         [Validation(Required=false)]
                         public string Form { get; set; }
@@ -2002,6 +2720,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         [Validation(Required=false)]
                         public string Template { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>Cloud_4</para>
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
@@ -2012,6 +2734,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersInstanceUsername InstanceUsername { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersInstanceUsername : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>CONSTANT</para>
+                        /// </summary>
                         [NameInMap("Form")]
                         [Validation(Required=false)]
                         public string Form { get; set; }
@@ -2020,6 +2746,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         [Validation(Required=false)]
                         public string Template { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>admin</para>
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
@@ -2071,6 +2801,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersNetwork Network { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersNetwork : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>CONSTANT</para>
+                        /// </summary>
                         [NameInMap("Form")]
                         [Validation(Required=false)]
                         public string Form { get; set; }
@@ -2079,6 +2813,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         [Validation(Required=false)]
                         public string Template { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>PublicNetwork</para>
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
@@ -2130,6 +2868,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersSecurityGroupId SecurityGroupId { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersSecurityGroupId : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>CONSTANT</para>
+                        /// </summary>
                         [NameInMap("Form")]
                         [Validation(Required=false)]
                         public string Form { get; set; }
@@ -2138,6 +2880,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         [Validation(Required=false)]
                         public string Template { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>b4bf375515f6440f942e3a20c33d****</para>
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
@@ -2148,6 +2894,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersShardingKey ShardingKey { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersShardingKey : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>CONSTANT</para>
+                        /// </summary>
                         [NameInMap("Form")]
                         [Validation(Required=false)]
                         public string Form { get; set; }
@@ -2156,6 +2906,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         [Validation(Required=false)]
                         public string Template { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>order_id</para>
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
@@ -2222,6 +2976,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                         /// <summary>
                         /// <para>The template style.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>The value of ${key} is ${value}!</para>
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -2243,6 +3000,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersVSwitchIds VSwitchIds { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersVSwitchIds : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>CONSTANT</para>
+                        /// </summary>
                         [NameInMap("Form")]
                         [Validation(Required=false)]
                         public string Form { get; set; }
@@ -2251,6 +3012,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         [Validation(Required=false)]
                         public string Template { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>vbr-8vb835n3zf9shwl****mp</para>
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
@@ -2261,6 +3026,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersVpcId VpcId { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersVpcId : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>CONSTANT</para>
+                        /// </summary>
                         [NameInMap("Form")]
                         [Validation(Required=false)]
                         public string Form { get; set; }
@@ -2269,6 +3038,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         [Validation(Required=false)]
                         public string Template { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>vbr-8vb835n3zf9shwlvb****</para>
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
@@ -2329,6 +3102,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public GetEventStreamingResponseBodyDataSinkSinkSLSParametersContentSchema ContentSchema { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkSLSParametersContentSchema : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>CONSTANT</para>
+                        /// </summary>
                         [NameInMap("Form")]
                         [Validation(Required=false)]
                         public string Form { get; set; }
@@ -2337,6 +3114,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         [Validation(Required=false)]
                         public string Template { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>{&quot;Key_1&quot;:{&quot;form&quot;:&quot;CONSTANT&quot;,&quot;value&quot;:&quot;demoKey&quot;},&quot;Value_1&quot;:{&quot;form&quot;:&quot;JSONPATH&quot;,&quot;value&quot;:&quot;$.data.value&quot;}}</para>
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
@@ -2347,6 +3128,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public GetEventStreamingResponseBodyDataSinkSinkSLSParametersContentType ContentType { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkSLSParametersContentType : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>CONSTANT</para>
+                        /// </summary>
                         [NameInMap("Form")]
                         [Validation(Required=false)]
                         public string Form { get; set; }
@@ -2355,6 +3140,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         [Validation(Required=false)]
                         public string Template { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>JSON</para>
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
@@ -2510,40 +3299,73 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             }
 
             /// <summary>
-            /// <para>The event provider, which is also known as the event source.</para>
+            /// <para>The event source.</para>
             /// </summary>
             [NameInMap("Source")]
             [Validation(Required=false)]
             public GetEventStreamingResponseBodyDataSource Source { get; set; }
             public class GetEventStreamingResponseBodyDataSource : TeaModel {
+                /// <summary>
+                /// <para>The parameters that are returned if Apache RocketMQ (Offset Data) is specified as the event source.</para>
+                /// </summary>
                 [NameInMap("SourceApacheRocketMQCheckpointParameters")]
                 [Validation(Required=false)]
                 public GetEventStreamingResponseBodyDataSourceSourceApacheRocketMQCheckpointParameters SourceApacheRocketMQCheckpointParameters { get; set; }
                 public class GetEventStreamingResponseBodyDataSourceSourceApacheRocketMQCheckpointParameters : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>registry-vpc.cn-hangzhou.aliyuncs.com</para>
+                    /// </summary>
                     [NameInMap("InstanceEndpoint")]
                     [Validation(Required=false)]
                     public string InstanceEndpoint { get; set; }
 
+                    /// <summary>
+                    /// <para>The ID of the Apache RocketMQ instance.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>MQ_INST_164901546557****_BAAN****</para>
+                    /// </summary>
                     [NameInMap("InstanceId")]
                     [Validation(Required=false)]
                     public string InstanceId { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>123456</para>
+                    /// </summary>
                     [NameInMap("InstancePassword")]
                     [Validation(Required=false)]
                     public string InstancePassword { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>admin</para>
+                    /// </summary>
                     [NameInMap("InstanceUsername")]
                     [Validation(Required=false)]
                     public string InstanceUsername { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>PrivateNetwork</para>
+                    /// </summary>
                     [NameInMap("NetworkType")]
                     [Validation(Required=false)]
                     public string NetworkType { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>cn-hangzhou</para>
+                    /// </summary>
                     [NameInMap("RegionId")]
                     [Validation(Required=false)]
                     public string RegionId { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>sg-mw43*****</para>
+                    /// </summary>
                     [NameInMap("SecurityGroupId")]
                     [Validation(Required=false)]
                     public string SecurityGroupId { get; set; }
@@ -2552,10 +3374,20 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public List<string> Topics { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>vsw-dwaafds****</para>
+                    /// </summary>
                     [NameInMap("VSwitchId")]
                     [Validation(Required=false)]
                     public string VSwitchId { get; set; }
 
+                    /// <summary>
+                    /// <para>VPC ID。</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>vpc-adw1awdw*****</para>
+                    /// </summary>
                     [NameInMap("VpcId")]
                     [Validation(Required=false)]
                     public string VpcId { get; set; }
@@ -2566,6 +3398,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 [Validation(Required=false)]
                 public GetEventStreamingResponseBodyDataSourceSourceCustomizedKafkaConnectorParameters SourceCustomizedKafkaConnectorParameters { get; set; }
                 public class GetEventStreamingResponseBodyDataSourceSourceCustomizedKafkaConnectorParameters : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>&quot;<a href="https://examplebucket.oss-cn-hangzhou.aliyuncs.com/testDoc/Old_Homebrew/2024-06-26%2022%3A34%3A08/opt/homebrew/homebrew/Library/Homebrew/test/support/fixtures/cask/AppWithBinary.zip?OSSAccessKeyId=ri&Expires=1725539627&Signature=rb8q3OpV2i3gZJ">https://examplebucket.oss-cn-hangzhou.aliyuncs.com/testDoc/Old_Homebrew/2024-06-26%2022%3A34%3A08/opt/homebrew/homebrew/Library/Homebrew/test/support/fixtures/cask/AppWithBinary.zip?OSSAccessKeyId=ri&amp;Expires=1725539627&amp;Signature=rb8q3OpV2i3gZJ</a>&quot;</para>
+                    /// </summary>
                     [NameInMap("ConnectorPackageUrl")]
                     [Validation(Required=false)]
                     public string ConnectorPackageUrl { get; set; }
@@ -2574,16 +3410,39 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public GetEventStreamingResponseBodyDataSourceSourceCustomizedKafkaConnectorParametersConnectorParameters ConnectorParameters { get; set; }
                     public class GetEventStreamingResponseBodyDataSourceSourceCustomizedKafkaConnectorParametersConnectorParameters : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>{
+                        ///           &quot;connector.class&quot;: &quot;com.mongodb.kafka.connect.MongoSinkConnector&quot;,
+                        ///           &quot;tasks.max&quot;: &quot;1&quot;,
+                        ///           &quot;topics&quot;: &quot;sourceA,sourceB&quot;
+                        ///         }</para>
+                        /// </summary>
                         [NameInMap("Config")]
                         [Validation(Required=false)]
                         public Dictionary<string, object> Config { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>test-name</para>
+                        /// </summary>
                         [NameInMap("Name")]
                         [Validation(Required=false)]
                         public string Name { get; set; }
 
                     }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>{
+                    ///         &quot;group.id&quot;: &quot;connect-eb-cluster-KAFKA_CONNECTORC&quot;,
+                    ///         &quot;offset.storage.topic&quot;: &quot;connect-eb-offset-KAFKA_CONNECTOR_yjqC8K5ewC&quot;,
+                    ///         &quot;config.storage.topic&quot;: &quot;connect-eb-config-KAFKA_CONNECTOR_yjqC8K5ewC&quot;,
+                    ///         &quot;status.storage.topic&quot;: &quot;connect-eb-status-KAFKA_CONNECTOR_yjqC8K5ewC&quot;,
+                    ///         &quot;consumer.group.id&quot;: &quot;connector-eb-cluster-KAFKA_CONNECTOR_yjqC8K5ewC-mongo-sink&quot;,
+                    ///         &quot;bootstrap.servers&quot;: &quot;alikafka-post:9092&quot;
+                    ///       }</para>
+                    /// </summary>
                     [NameInMap("WorkerParameters")]
                     [Validation(Required=false)]
                     public Dictionary<string, object> WorkerParameters { get; set; }
@@ -2594,6 +3453,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 [Validation(Required=false)]
                 public GetEventStreamingResponseBodyDataSourceSourceCustomizedKafkaParameters SourceCustomizedKafkaParameters { get; set; }
                 public class GetEventStreamingResponseBodyDataSourceSourceCustomizedKafkaParameters : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>r-8vb64581862c****</para>
+                    /// </summary>
                     [NameInMap("InstanceId")]
                     [Validation(Required=false)]
                     public string InstanceId { get; set; }
@@ -2680,10 +3543,18 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 [Validation(Required=false)]
                 public GetEventStreamingResponseBodyDataSourceSourceEventBusParameters SourceEventBusParameters { get; set; }
                 public class GetEventStreamingResponseBodyDataSourceSourceEventBusParameters : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>demo</para>
+                    /// </summary>
                     [NameInMap("EventBusName")]
                     [Validation(Required=false)]
                     public string EventBusName { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>test</para>
+                    /// </summary>
                     [NameInMap("EventRuleName")]
                     [Validation(Required=false)]
                     public string EventRuleName { get; set; }
@@ -2845,6 +3716,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 [Validation(Required=false)]
                 public GetEventStreamingResponseBodyDataSourceSourceMQTTParameters SourceMQTTParameters { get; set; }
                 public class GetEventStreamingResponseBodyDataSourceSourceMQTTParameters : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>JSON</para>
+                    /// </summary>
                     [NameInMap("BodyDataType")]
                     [Validation(Required=false)]
                     public string BodyDataType { get; set; }
@@ -2889,26 +3764,50 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 [Validation(Required=false)]
                 public GetEventStreamingResponseBodyDataSourceSourceOSSParameters SourceOSSParameters { get; set; }
                 public class GetEventStreamingResponseBodyDataSourceSourceOSSParameters : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>bucket_abc</para>
+                    /// </summary>
                     [NameInMap("BucketName")]
                     [Validation(Required=false)]
                     public string BucketName { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>\n</para>
+                    /// </summary>
                     [NameInMap("Delimiter")]
                     [Validation(Required=false)]
                     public string Delimiter { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>TextLoader</para>
+                    /// </summary>
                     [NameInMap("LoadFormat")]
                     [Validation(Required=false)]
                     public string LoadFormat { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>single</para>
+                    /// </summary>
                     [NameInMap("LoadMode")]
                     [Validation(Required=false)]
                     public string LoadMode { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>fun/document/</para>
+                    /// </summary>
                     [NameInMap("Prefix")]
                     [Validation(Required=false)]
                     public string Prefix { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>eventbridge_oss_role</para>
+                    /// </summary>
                     [NameInMap("RoleName")]
                     [Validation(Required=false)]
                     public string RoleName { get; set; }
@@ -2919,46 +3818,90 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 [Validation(Required=false)]
                 public GetEventStreamingResponseBodyDataSourceSourceOpenSourceRabbitMQParameters SourceOpenSourceRabbitMQParameters { get; set; }
                 public class GetEventStreamingResponseBodyDataSourceSourceOpenSourceRabbitMQParameters : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>ACL</para>
+                    /// </summary>
                     [NameInMap("AuthType")]
                     [Validation(Required=false)]
                     public string AuthType { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>Json</para>
+                    /// </summary>
                     [NameInMap("BodyDataType")]
                     [Validation(Required=false)]
                     public string BodyDataType { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>192.168.1.100:5672</para>
+                    /// </summary>
                     [NameInMap("Endpoint")]
                     [Validation(Required=false)]
                     public string Endpoint { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>PrivateNetwork</para>
+                    /// </summary>
                     [NameInMap("NetworkType")]
                     [Validation(Required=false)]
                     public string NetworkType { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <hr>
+                    /// </summary>
                     [NameInMap("Password")]
                     [Validation(Required=false)]
                     public string Password { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>demo</para>
+                    /// </summary>
                     [NameInMap("QueueName")]
                     [Validation(Required=false)]
                     public string QueueName { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>sg-2ze65razphjfz3******</para>
+                    /// </summary>
                     [NameInMap("SecurityGroupId")]
                     [Validation(Required=false)]
                     public string SecurityGroupId { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>admin</para>
+                    /// </summary>
                     [NameInMap("Username")]
                     [Validation(Required=false)]
                     public string Username { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>vsw-uf65zhil5oukof5******</para>
+                    /// </summary>
                     [NameInMap("VSwitchIds")]
                     [Validation(Required=false)]
                     public string VSwitchIds { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>eb-connect</para>
+                    /// </summary>
                     [NameInMap("VirtualHostName")]
                     [Validation(Required=false)]
                     public string VirtualHostName { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>vpc-bp1vllc1lnw1v657******</para>
+                    /// </summary>
                     [NameInMap("VpcId")]
                     [Validation(Required=false)]
                     public string VpcId { get; set; }
@@ -2985,6 +3928,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public string DataType { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>{&quot;env&quot;:&quot;test&quot;}</para>
+                    /// </summary>
                     [NameInMap("ExternalLabels")]
                     [Validation(Required=false)]
                     public string ExternalLabels { get; set; }
@@ -2997,10 +3944,18 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public string Labels { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>cn-hangzhou</para>
+                    /// </summary>
                     [NameInMap("RegionId")]
                     [Validation(Required=false)]
                     public string RegionId { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>test-role</para>
+                    /// </summary>
                     [NameInMap("RoleName")]
                     [Validation(Required=false)]
                     public string RoleName { get; set; }
@@ -3060,14 +4015,26 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 [Validation(Required=false)]
                 public GetEventStreamingResponseBodyDataSourceSourceRocketMQCheckpointParameters SourceRocketMQCheckpointParameters { get; set; }
                 public class GetEventStreamingResponseBodyDataSourceSourceRocketMQCheckpointParameters : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>rmp-cn-jte3w******</para>
+                    /// </summary>
                     [NameInMap("InstanceId")]
                     [Validation(Required=false)]
                     public string InstanceId { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>Cloud_4</para>
+                    /// </summary>
                     [NameInMap("InstanceType")]
                     [Validation(Required=false)]
                     public string InstanceType { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>cn-hangzhou</para>
+                    /// </summary>
                     [NameInMap("RegionId")]
                     [Validation(Required=false)]
                     public string RegionId { get; set; }
@@ -3093,14 +4060,26 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public string AuthType { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>Json</para>
+                    /// </summary>
                     [NameInMap("BodyDataType")]
                     [Validation(Required=false)]
                     public string BodyDataType { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>index &gt; 10</para>
+                    /// </summary>
                     [NameInMap("FilterSql")]
                     [Validation(Required=false)]
                     public string FilterSql { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>Tag</para>
+                    /// </summary>
                     [NameInMap("FilterType")]
                     [Validation(Required=false)]
                     public string FilterType { get; set; }
@@ -3189,6 +4168,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public string InstanceVpcId { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>PublicNetwork</para>
+                    /// </summary>
                     [NameInMap("Network")]
                     [Validation(Required=false)]
                     public string Network { get; set; }
@@ -3213,6 +4196,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public string RegionId { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>sg-m5edtu24f12345****</para>
+                    /// </summary>
                     [NameInMap("SecurityGroupId")]
                     [Validation(Required=false)]
                     public string SecurityGroupId { get; set; }
@@ -3247,10 +4234,18 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public string Topic { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>vsw-m5ev8asdc6h12345****</para>
+                    /// </summary>
                     [NameInMap("VSwitchIds")]
                     [Validation(Required=false)]
                     public string VSwitchIds { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>vpc-m5e3sv4b12345****</para>
+                    /// </summary>
                     [NameInMap("VpcId")]
                     [Validation(Required=false)]
                     public string VpcId { get; set; }

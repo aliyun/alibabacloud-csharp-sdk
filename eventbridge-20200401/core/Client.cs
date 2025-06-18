@@ -6357,8 +6357,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查EventSource配置是否可用</para>
+        /// <para>Checks whether event source configurations are available.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query all custom event sources.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// TestEventSourceConfigRequest
@@ -6405,8 +6410,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查EventSource配置是否可用</para>
+        /// <para>Checks whether event source configurations are available.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query all custom event sources.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// TestEventSourceConfigRequest
@@ -6453,8 +6463,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查EventSource配置是否可用</para>
+        /// <para>Checks whether event source configurations are available.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query all custom event sources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// TestEventSourceConfigRequest
@@ -6471,8 +6486,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查EventSource配置是否可用</para>
+        /// <para>Checks whether event source configurations are available.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query all custom event sources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// TestEventSourceConfigRequest

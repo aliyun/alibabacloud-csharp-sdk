@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class TestEventSourceConfigRequest : TeaModel {
+        /// <summary>
+        /// <para>The parameters that are configured if you specify MySQL as the event source.</para>
+        /// </summary>
         [NameInMap("SourceMySQLParameters")]
         [Validation(Required=false)]
         public TestEventSourceConfigRequestSourceMySQLParameters SourceMySQLParameters { get; set; }
         public class TestEventSourceConfigRequestSourceMySQLParameters : TeaModel {
             /// <summary>
+            /// <para>The database name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>database1</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string DatabaseName { get; set; }
 
             /// <summary>
+            /// <para>The endpoint of the database.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>rm-bp1vxxx.mysql.rds.aliyuncs.com</para>
             /// </summary>
@@ -30,6 +37,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string HostName { get; set; }
 
             /// <summary>
+            /// <para>The network type.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>PrivateNetwork</description></item>
+            /// <item><description>PublicNetwork</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>PrivateNetwork</para>
             /// </summary>
@@ -38,6 +52,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string NetworkType { get; set; }
 
             /// <summary>
+            /// <para>The password that is used for authentication.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1234xxx</para>
             /// </summary>
@@ -46,6 +62,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string Password { get; set; }
 
             /// <summary>
+            /// <para>The port that is used to connect to the database.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>80</para>
             /// </summary>
@@ -54,6 +72,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public int? Port { get; set; }
 
             /// <summary>
+            /// <para>The region ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
             /// </summary>
@@ -62,6 +82,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string RegionId { get; set; }
 
             /// <summary>
+            /// <para>The ID of the security group.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>sg-xxx</para>
             /// </summary>
@@ -70,6 +92,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string SecurityGroupId { get; set; }
 
             /// <summary>
+            /// <para>The table name. The name must be prefixed with the database name. ${DatabaseName}.${TableName}</para>
+            /// 
             /// <b>Example:</b>
             /// <para>database1.table1</para>
             /// </summary>
@@ -78,6 +102,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string TableNames { get; set; }
 
             /// <summary>
+            /// <para>The username that is used to log on to the database.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>user***</para>
             /// </summary>
@@ -86,6 +112,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string User { get; set; }
 
             /// <summary>
+            /// <para>The vSwitch ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>vsw-bp1gb7xxx</para>
             /// </summary>
@@ -94,7 +122,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string VSwitchIds { get; set; }
 
             /// <summary>
-            /// <para>VPC ID。</para>
+            /// <para>The virtual private cloud (VPC) ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-xxx</para>

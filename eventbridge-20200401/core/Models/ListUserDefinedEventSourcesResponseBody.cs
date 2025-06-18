@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -282,7 +282,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 }
 
                 /// <summary>
-                /// <para>The parameters that are returned if Message Service (MNS) is specified as the event source.</para>
+                /// <para>The parameters that are returned if Simple Message Queue (formerly MNS) (SMQ) is specified as the event source.</para>
                 /// </summary>
                 [NameInMap("SourceMNSParameters")]
                 [Validation(Required=false)]
@@ -299,7 +299,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public bool? IsBase64Decode { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the MNS queue.</para>
+                    /// <para>The name of the SMQ queue.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>queue.openapi-sign-callback</para>
@@ -309,7 +309,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string QueueName { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the region where the MNS queue resides.</para>
+                    /// <para>The ID of the region where the SMQ queue resides.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cn-hangzhou</para>

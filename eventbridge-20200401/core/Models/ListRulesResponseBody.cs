@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class ListRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. The value Success indicates that the request is successful.</para>
+        /// <para>The response code.</para>
+        /// <list type="bullet">
+        /// <item><description><b>Success</b>: The request was successful.</description></item>
+        /// <item><description><b>Other codes</b>: The request failed. For more information about error codes, see Error codes.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,7 +24,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -37,7 +41,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>The rules.</para>
+            /// <para>The event rules.</para>
             /// </summary>
             [NameInMap("Rules")]
             [Validation(Required=false)]
@@ -81,8 +85,11 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public string EventBusName { get; set; }
 
                 /// <summary>
-                /// <para>The event pattern, in JSON format. Valid values: stringEqual pattern stringExpression pattern Each field can have a maximum of five expressions in the map data structure.</para>
-                /// <para>Each field can have a maximum of five expressions in the map data structure.</para>
+                /// <para>The event pattern, in JSON format. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>stringEqual</b>: Up to five expressions in the map data structure can be specified in each field.</description></item>
+                /// <item><description><b>stringExpression</b>: Up to five expressions in the map data structure can be specified in each field.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{\&quot;source\&quot;:[\&quot;acs.oss\&quot;],\&quot;type\&quot;:[\&quot;oss:BucketQueried:GetBucketStat\&quot;]}</para>
@@ -112,7 +119,11 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public string RuleName { get; set; }
 
                 /// <summary>
-                /// <para>The status of the event rule. Valid values: ENABLE: The event rule is enabled. It is the default state of the event rule. DISABLE: The event rule is disabled.</para>
+                /// <para>The status of the event rule. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>ENABLE</b> (default)</description></item>
+                /// <item><description><b>DISABLE</b></description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ENABLE</para>
@@ -139,6 +150,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string Endpoint { get; set; }
 
                     /// <summary>
+                    /// <para>The fault tolerance policy. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>ALL</b>: Fault tolerance is allowed. If an error occurs in an event, event processing is not blocked. If the event fails to be sent after the maximum number of retries specified by the retry policy is reached, the event is delivered to the dead-letter queue or discarded based on your configurations.</description></item>
+                    /// <item><description><b>NONE</b>: Fault tolerance is prohibited. If an error occurs in an event and the event fails to be sent after the maximum number of retries specified by the retry policy is reached, event processing is blocked.</description></item>
+                    /// </list>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>ALL</para>
                     /// </summary>

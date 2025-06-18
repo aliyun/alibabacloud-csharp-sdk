@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class TestEventSourceConfigShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The parameters that are configured if you specify MySQL as the event source.</para>
+        /// </summary>
         [NameInMap("SourceMySQLParameters")]
         [Validation(Required=false)]
         public string SourceMySQLParametersShrink { get; set; }

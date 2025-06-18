@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class EventCenterQueryEventsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The parameters in the request body.</para>
+        /// <para>The request body.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Body")]

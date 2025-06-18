@@ -47,13 +47,19 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
         /// <summary>
         /// <para>The type of the external data source.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>RabbitMQ</para>
         /// </summary>
         [NameInMap("ExternalSourceType")]
         [Validation(Required=false)]
         public byte[] ExternalSourceType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to connect to an external data source.</para>
+        /// <para>Specify whether to connect to an external data source.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("LinkedExternalSource")]
         [Validation(Required=false)]
@@ -74,7 +80,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string SourceKafkaParametersShrink { get; set; }
 
         /// <summary>
-        /// <para>The parameters that are configured if the event source is Message Service (MNS). If you specify MNS as the event source, you must configure RegionId, IsBase64Decode, and QueueName.</para>
+        /// <para>The parameters that are configured if you specify Simple Message Queue (formerly MNS) (SMQ) as the event source. If you specify SMQ as the event source, you must configure RegionId, IsBase64Decode, and QueueName.</para>
         /// </summary>
         [NameInMap("SourceMNSParameters")]
         [Validation(Required=false)]
