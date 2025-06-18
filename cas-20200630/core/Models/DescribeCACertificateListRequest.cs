@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Cas20200630.Models
 {
     public class DescribeCACertificateListRequest : TeaModel {
+        [NameInMap("CaStatus")]
+        [Validation(Required=false)]
+        public string CaStatus { get; set; }
+
+        [NameInMap("CertType")]
+        [Validation(Required=false)]
+        public string CertType { get; set; }
+
         /// <summary>
         /// <para>The number of the page to return. Default value: <b>1</b>.</para>
         /// 
@@ -32,6 +40,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         [Validation(Required=false)]
         public string Identifier { get; set; }
 
+        [NameInMap("IssuerType")]
+        [Validation(Required=false)]
+        public string IssuerType { get; set; }
+
         /// <summary>
         /// <para>The number of CA certificates to return on each page. Default value: <b>20</b>.</para>
         /// 
@@ -41,6 +53,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         [NameInMap("ShowSize")]
         [Validation(Required=false)]
         public int? ShowSize { get; set; }
+
+        [NameInMap("ValidStatus")]
+        [Validation(Required=false)]
+        public string ValidStatus { get; set; }
 
     }
 

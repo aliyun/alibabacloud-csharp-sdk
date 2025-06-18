@@ -9,10 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Cas20200630.Models
 {
     public class CreateClientCertificateWithCsrResponseBody : TeaModel {
+        /// <summary>
+        /// <para>CertKmcRep1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>userSeal=MHkCIEu94PQAahFWuFk%</para>
+        /// <hr>
+        /// <para>EtFw%2FkMMBjw8i5bFfSkV%2FIUrcOJD</para>
+        /// </summary>
         [NameInMap("CertKmcRep1")]
         [Validation(Required=false)]
         public string CertKmcRep1 { get; set; }
 
+        /// <summary>
+        /// <para>Cert Sign Buf Kmc.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>userSeal=MHkCIEu94PQAahFWuFk%</para>
+        /// <hr>
+        /// <para>EtFw%2FkMMBjw8i5bFfSkV%2FIUrcOJD</para>
+        /// </summary>
         [NameInMap("CertSignBufKmc")]
         [Validation(Required=false)]
         public string CertSignBufKmc { get; set; }
