@@ -195,6 +195,650 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>生成剪辑视频</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// AsyncCreateClipsTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AsyncCreateClipsTaskResponse
+        /// </returns>
+        public AsyncCreateClipsTaskResponse AsyncCreateClipsTaskWithOptions(AsyncCreateClipsTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AsyncCreateClipsTaskShrinkRequest request = new AsyncCreateClipsTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ColorWords))
+            {
+                request.ColorWordsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ColorWords, "ColorWords", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColorWordsShrink))
+            {
+                body["ColorWords"] = request.ColorWordsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Height))
+            {
+                body["Height"] = request.Height;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MusicUrl))
+            {
+                body["MusicUrl"] = request.MusicUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MusicVolume))
+            {
+                body["MusicVolume"] = request.MusicVolume;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubtitleFontSize))
+            {
+                body["SubtitleFontSize"] = request.SubtitleFontSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VoiceStyle))
+            {
+                body["VoiceStyle"] = request.VoiceStyle;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VoiceVolume))
+            {
+                body["VoiceVolume"] = request.VoiceVolume;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Width))
+            {
+                body["Width"] = request.Width;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AsyncCreateClipsTask",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AsyncCreateClipsTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成剪辑视频</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// AsyncCreateClipsTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AsyncCreateClipsTaskResponse
+        /// </returns>
+        public async Task<AsyncCreateClipsTaskResponse> AsyncCreateClipsTaskWithOptionsAsync(AsyncCreateClipsTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AsyncCreateClipsTaskShrinkRequest request = new AsyncCreateClipsTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ColorWords))
+            {
+                request.ColorWordsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ColorWords, "ColorWords", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColorWordsShrink))
+            {
+                body["ColorWords"] = request.ColorWordsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Height))
+            {
+                body["Height"] = request.Height;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MusicUrl))
+            {
+                body["MusicUrl"] = request.MusicUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MusicVolume))
+            {
+                body["MusicVolume"] = request.MusicVolume;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubtitleFontSize))
+            {
+                body["SubtitleFontSize"] = request.SubtitleFontSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VoiceStyle))
+            {
+                body["VoiceStyle"] = request.VoiceStyle;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VoiceVolume))
+            {
+                body["VoiceVolume"] = request.VoiceVolume;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Width))
+            {
+                body["Width"] = request.Width;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AsyncCreateClipsTask",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AsyncCreateClipsTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成剪辑视频</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AsyncCreateClipsTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AsyncCreateClipsTaskResponse
+        /// </returns>
+        public AsyncCreateClipsTaskResponse AsyncCreateClipsTask(AsyncCreateClipsTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AsyncCreateClipsTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成剪辑视频</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AsyncCreateClipsTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AsyncCreateClipsTaskResponse
+        /// </returns>
+        public async Task<AsyncCreateClipsTaskResponse> AsyncCreateClipsTaskAsync(AsyncCreateClipsTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AsyncCreateClipsTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>智能剪辑timeline</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AsyncCreateClipsTimeLineRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AsyncCreateClipsTimeLineResponse
+        /// </returns>
+        public AsyncCreateClipsTimeLineResponse AsyncCreateClipsTimeLineWithOptions(AsyncCreateClipsTimeLineRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProcessPrompt))
+            {
+                body["ProcessPrompt"] = request.ProcessPrompt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AsyncCreateClipsTimeLine",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AsyncCreateClipsTimeLineResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>智能剪辑timeline</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AsyncCreateClipsTimeLineRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AsyncCreateClipsTimeLineResponse
+        /// </returns>
+        public async Task<AsyncCreateClipsTimeLineResponse> AsyncCreateClipsTimeLineWithOptionsAsync(AsyncCreateClipsTimeLineRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProcessPrompt))
+            {
+                body["ProcessPrompt"] = request.ProcessPrompt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AsyncCreateClipsTimeLine",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AsyncCreateClipsTimeLineResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>智能剪辑timeline</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AsyncCreateClipsTimeLineRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AsyncCreateClipsTimeLineResponse
+        /// </returns>
+        public AsyncCreateClipsTimeLineResponse AsyncCreateClipsTimeLine(AsyncCreateClipsTimeLineRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AsyncCreateClipsTimeLineWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>智能剪辑timeline</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AsyncCreateClipsTimeLineRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AsyncCreateClipsTimeLineResponse
+        /// </returns>
+        public async Task<AsyncCreateClipsTimeLineResponse> AsyncCreateClipsTimeLineAsync(AsyncCreateClipsTimeLineRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AsyncCreateClipsTimeLineWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>编辑剪辑任务的timeline</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// AsyncEditTimelineRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AsyncEditTimelineResponse
+        /// </returns>
+        public AsyncEditTimelineResponse AsyncEditTimelineWithOptions(AsyncEditTimelineRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AsyncEditTimelineShrinkRequest request = new AsyncEditTimelineShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Timelines))
+            {
+                request.TimelinesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Timelines, "Timelines", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoClips))
+            {
+                body["AutoClips"] = request.AutoClips;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimelinesShrink))
+            {
+                body["Timelines"] = request.TimelinesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AsyncEditTimeline",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AsyncEditTimelineResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>编辑剪辑任务的timeline</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// AsyncEditTimelineRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AsyncEditTimelineResponse
+        /// </returns>
+        public async Task<AsyncEditTimelineResponse> AsyncEditTimelineWithOptionsAsync(AsyncEditTimelineRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AsyncEditTimelineShrinkRequest request = new AsyncEditTimelineShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Timelines))
+            {
+                request.TimelinesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Timelines, "Timelines", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoClips))
+            {
+                body["AutoClips"] = request.AutoClips;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimelinesShrink))
+            {
+                body["Timelines"] = request.TimelinesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AsyncEditTimeline",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AsyncEditTimelineResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>编辑剪辑任务的timeline</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AsyncEditTimelineRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AsyncEditTimelineResponse
+        /// </returns>
+        public AsyncEditTimelineResponse AsyncEditTimeline(AsyncEditTimelineRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AsyncEditTimelineWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>编辑剪辑任务的timeline</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AsyncEditTimelineRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AsyncEditTimelineResponse
+        /// </returns>
+        public async Task<AsyncEditTimelineResponse> AsyncEditTimelineAsync(AsyncEditTimelineRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AsyncEditTimelineWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上传剪辑素材</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// AsyncUploadVideoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AsyncUploadVideoResponse
+        /// </returns>
+        public AsyncUploadVideoResponse AsyncUploadVideoWithOptions(AsyncUploadVideoRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AsyncUploadVideoShrinkRequest request = new AsyncUploadVideoShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SourceVideos))
+            {
+                request.SourceVideosShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceVideos, "SourceVideos", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AnlysisPrompt))
+            {
+                body["AnlysisPrompt"] = request.AnlysisPrompt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceVideosShrink))
+            {
+                body["SourceVideos"] = request.SourceVideosShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AsyncUploadVideo",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AsyncUploadVideoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上传剪辑素材</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// AsyncUploadVideoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AsyncUploadVideoResponse
+        /// </returns>
+        public async Task<AsyncUploadVideoResponse> AsyncUploadVideoWithOptionsAsync(AsyncUploadVideoRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AsyncUploadVideoShrinkRequest request = new AsyncUploadVideoShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SourceVideos))
+            {
+                request.SourceVideosShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceVideos, "SourceVideos", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AnlysisPrompt))
+            {
+                body["AnlysisPrompt"] = request.AnlysisPrompt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceVideosShrink))
+            {
+                body["SourceVideos"] = request.SourceVideosShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AsyncUploadVideo",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AsyncUploadVideoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上传剪辑素材</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AsyncUploadVideoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AsyncUploadVideoResponse
+        /// </returns>
+        public AsyncUploadVideoResponse AsyncUploadVideo(AsyncUploadVideoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AsyncUploadVideoWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上传剪辑素材</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AsyncUploadVideoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AsyncUploadVideoResponse
+        /// </returns>
+        public async Task<AsyncUploadVideoResponse> AsyncUploadVideoAsync(AsyncUploadVideoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AsyncUploadVideoWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>取消异步任务</para>
         /// </summary>
         /// 
@@ -4647,6 +5291,134 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GenerateViewPointWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获得剪辑任务状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAutoClipsTaskInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAutoClipsTaskInfoResponse
+        /// </returns>
+        public GetAutoClipsTaskInfoResponse GetAutoClipsTaskInfoWithOptions(GetAutoClipsTaskInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAutoClipsTaskInfo",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAutoClipsTaskInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获得剪辑任务状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAutoClipsTaskInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAutoClipsTaskInfoResponse
+        /// </returns>
+        public async Task<GetAutoClipsTaskInfoResponse> GetAutoClipsTaskInfoWithOptionsAsync(GetAutoClipsTaskInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAutoClipsTaskInfo",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAutoClipsTaskInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获得剪辑任务状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAutoClipsTaskInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAutoClipsTaskInfoResponse
+        /// </returns>
+        public GetAutoClipsTaskInfoResponse GetAutoClipsTaskInfo(GetAutoClipsTaskInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAutoClipsTaskInfoWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获得剪辑任务状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAutoClipsTaskInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAutoClipsTaskInfoResponse
+        /// </returns>
+        public async Task<GetAutoClipsTaskInfoResponse> GetAutoClipsTaskInfoAsync(GetAutoClipsTaskInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAutoClipsTaskInfoWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
