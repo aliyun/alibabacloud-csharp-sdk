@@ -5706,6 +5706,13 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await DeleteCallTagWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteContactFlowRequest
         /// </param>
@@ -5723,6 +5730,10 @@ namespace AlibabaCloud.SDK.CCC20200701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactFlowId))
             {
                 query["ContactFlowId"] = request.ContactFlowId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["Force"] = request.Force;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -5747,6 +5758,13 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<DeleteContactFlowResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteContactFlowRequest
         /// </param>
@@ -5764,6 +5782,10 @@ namespace AlibabaCloud.SDK.CCC20200701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactFlowId))
             {
                 query["ContactFlowId"] = request.ContactFlowId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["Force"] = request.Force;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -5788,6 +5810,13 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<DeleteContactFlowResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteContactFlowRequest
         /// </param>
@@ -5801,6 +5830,13 @@ namespace AlibabaCloud.SDK.CCC20200701
             return DeleteContactFlowWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteContactFlowRequest
         /// </param>
@@ -16950,6 +16986,13 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ListConfigItemsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListContactFlowsRequest
         /// </param>
@@ -16980,6 +17023,10 @@ namespace AlibabaCloud.SDK.CCC20200701
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchPattern))
+            {
+                query["SearchPattern"] = request.SearchPattern;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
             {
                 query["SortOrder"] = request.SortOrder;
@@ -17007,6 +17054,13 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListContactFlowsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListContactFlowsRequest
         /// </param>
@@ -17037,6 +17091,10 @@ namespace AlibabaCloud.SDK.CCC20200701
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchPattern))
+            {
+                query["SearchPattern"] = request.SearchPattern;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
             {
                 query["SortOrder"] = request.SortOrder;
@@ -17064,6 +17122,13 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListContactFlowsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListContactFlowsRequest
         /// </param>
@@ -17077,6 +17142,13 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ListContactFlowsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListContactFlowsRequest
         /// </param>

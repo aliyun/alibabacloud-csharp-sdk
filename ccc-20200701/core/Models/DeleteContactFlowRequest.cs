@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string ContactFlowId { get; set; }
 
+        [NameInMap("Force")]
+        [Validation(Required=false)]
+        public bool? Force { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

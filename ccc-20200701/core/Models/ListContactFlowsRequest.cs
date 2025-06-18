@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("SearchPattern")]
+        [Validation(Required=false)]
+        public string SearchPattern { get; set; }
+
         [NameInMap("SortOrder")]
         [Validation(Required=false)]
         public string SortOrder { get; set; }
