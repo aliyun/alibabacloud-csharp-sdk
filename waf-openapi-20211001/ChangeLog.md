@@ -1,3 +1,9 @@
+2025-06-19 Version: 5.3.0
+- Support API CreateDefenseResource.
+- Support API DeleteDefenseResource.
+- Support API DescribeIpAbroadCountryInfos.
+
+
 2025-06-11 Version: 5.1.5
 - Update API CreateDefenseRule: add request parameters DefenseType.
 - Update API DeleteDefenseRule: add request parameters DefenseType.
