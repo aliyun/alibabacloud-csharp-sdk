@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
-    public class Catalog : TeaModel {
+    public class IcebergTable : TeaModel {
         [NameInMap("createdAt")]
         [Validation(Required=false)]
         public long? CreatedAt { get; set; }
@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [NameInMap("createdBy")]
         [Validation(Required=false)]
         public string CreatedBy { get; set; }
+
+        [NameInMap("icebergTableMetadata")]
+        [Validation(Required=false)]
+        public IcebergTableMetadata IcebergTableMetadata { get; set; }
 
         [NameInMap("id")]
         [Validation(Required=false)]
@@ -25,21 +29,13 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        [NameInMap("options")]
-        [Validation(Required=false)]
-        public Dictionary<string, string> Options { get; set; }
-
         [NameInMap("owner")]
         [Validation(Required=false)]
         public string Owner { get; set; }
 
-        [NameInMap("status")]
+        [NameInMap("path")]
         [Validation(Required=false)]
-        public string Status { get; set; }
-
-        [NameInMap("type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
+        public string Path { get; set; }
 
         [NameInMap("updatedAt")]
         [Validation(Required=false)]
@@ -48,6 +44,10 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [NameInMap("updatedBy")]
         [Validation(Required=false)]
         public string UpdatedBy { get; set; }
+
+        [NameInMap("version")]
+        [Validation(Required=false)]
+        public long? Version { get; set; }
 
     }
 

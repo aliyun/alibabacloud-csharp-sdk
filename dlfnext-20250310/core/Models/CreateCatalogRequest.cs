@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public Dictionary<string, string> Options { get; set; }
 
+        [NameInMap("type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
+
     }
 
 }

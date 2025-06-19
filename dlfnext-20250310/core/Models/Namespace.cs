@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
-    public class Catalog : TeaModel {
+    public class Namespace : TeaModel {
         [NameInMap("createdAt")]
         [Validation(Required=false)]
         public long? CreatedAt { get; set; }
@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public string Id { get; set; }
 
+        [NameInMap("location")]
+        [Validation(Required=false)]
+        public string Location { get; set; }
+
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
@@ -32,14 +36,6 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [NameInMap("owner")]
         [Validation(Required=false)]
         public string Owner { get; set; }
-
-        [NameInMap("status")]
-        [Validation(Required=false)]
-        public string Status { get; set; }
-
-        [NameInMap("type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
 
         [NameInMap("updatedAt")]
         [Validation(Required=false)]
