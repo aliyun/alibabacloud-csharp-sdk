@@ -9,16 +9,38 @@ using Tea;
 namespace AlibabaCloud.SDK.Cas20200630.Models
 {
     public class DescribeCACertificateListRequest : TeaModel {
+        /// <summary>
+        /// <para>CaStatus.</para>
+        /// <list type="bullet">
+        /// <item><description>issue：inUse.</description></item>
+        /// <item><description>forbidden ：forbidden.</description></item>
+        /// <item><description>revoke：revoked.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>issue</para>
+        /// </summary>
         [NameInMap("CaStatus")]
         [Validation(Required=false)]
         public string CaStatus { get; set; }
 
+        /// <summary>
+        /// <para>The type of the certificate. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>root：rootCA.</description></item>
+        /// <item><description>subRoot：subCA.</description></item>
+        /// <item><description>externalCa：import.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>subRoot</para>
+        /// </summary>
         [NameInMap("CertType")]
         [Validation(Required=false)]
         public string CertType { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -28,9 +50,9 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the client certificate or server certificate that you want to revoke.</para>
+        /// <para>The unique identifier of the CA certificate.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/330884.html">ListClientCertificate</a> operation to query the unique identifiers of all client certificates and server certificates.</para>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/328095.html">DescribeCACertificateList</a> operation to query the unique identifiers of all CA certificates.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -40,12 +62,23 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         [Validation(Required=false)]
         public string Identifier { get; set; }
 
+        /// <summary>
+        /// <para>The CA Issuer Type.</para>
+        /// <list type="bullet">
+        /// <item><description>local：Private certificate.</description></item>
+        /// <item><description>iTrusChina： Compliance CA.</description></item>
+        /// <item><description>external：External Import.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>local</para>
+        /// </summary>
         [NameInMap("IssuerType")]
         [Validation(Required=false)]
         public string IssuerType { get; set; }
 
         /// <summary>
-        /// <para>The number of CA certificates to return on each page. Default value: <b>20</b>.</para>
+        /// <para>The number of CA certificates per page. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -54,6 +87,16 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         [Validation(Required=false)]
         public int? ShowSize { get; set; }
 
+        /// <summary>
+        /// <para>valid time.</para>
+        /// <list type="bullet">
+        /// <item><description>valid：means in the valid period.</description></item>
+        /// <item><description>notValid：means expired.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>valid</para>
+        /// </summary>
         [NameInMap("ValidStatus")]
         [Validation(Required=false)]
         public string ValidStatus { get; set; }

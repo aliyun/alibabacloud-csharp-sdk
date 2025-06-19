@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
 {
     public class DescribeCACertificateListResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array that consists of the details about the CA certificate.</para>
+        /// <para>The details about the CA certificates.</para>
         /// </summary>
         [NameInMap("CertificateList")]
         [Validation(Required=false)]
@@ -42,6 +42,16 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public string Algorithm { get; set; }
 
             /// <summary>
+            /// <para>The alias of the CA.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Aliyun_CA</para>
+            /// </summary>
+            [NameInMap("Alias")]
+            [Validation(Required=false)]
+            public string Alias { get; set; }
+
+            /// <summary>
             /// <para>The issuance date of the CA certificate. This value is a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
@@ -54,8 +64,8 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             /// <summary>
             /// <para>The type of the CA certificate. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ROOT</b>: root CA certificate</description></item>
-            /// <item><description><b>SUB_ROOT</b>: intermediate CA certificate</description></item>
+            /// <item><description><b>ROOT</b>: a root CA certificate.</description></item>
+            /// <item><description><b>SUB_ROOT</b>: an intermediate CA certificate.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -226,11 +236,11 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             /// <summary>
             /// <para>The Distinguished Name (DN) attribute of the CA certificate, which indicates the user information of the certificate. The DN attribute contains the following information:</para>
             /// <list type="bullet">
-            /// <item><description><b>C</b>: the country code in which the organization is located</description></item>
-            /// <item><description><b>O</b>: the name of the organization</description></item>
-            /// <item><description><b>OU</b>: the name of the department or branch in the organization</description></item>
-            /// <item><description><b>L</b>: the name of the city in which the organization is located</description></item>
-            /// <item><description><b>CN</b>: the common name or abbreviation of the organization</description></item>
+            /// <item><description><b>C</b>: the code of the country in which the organization is located.</description></item>
+            /// <item><description><b>O</b>: the name of the organization.</description></item>
+            /// <item><description><b>OU</b>: the name of the department or branch in the organization.</description></item>
+            /// <item><description><b>L</b>: the name of the city in which the organization is located.</description></item>
+            /// <item><description><b>CN</b>: the common name or abbreviation of the organization.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
