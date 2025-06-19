@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string AddressIPVersion { get; set; }
 
+        [NameInMap("AddressType")]
+        [Validation(Required=false)]
+        public string AddressType { get; set; }
+
         /// <summary>
         /// <para>The list of backend servers.</para>
         /// </summary>
@@ -247,6 +251,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [NameInMap("LoadBalancerStatus")]
         [Validation(Required=false)]
         public string LoadBalancerStatus { get; set; }
+
+        [NameInMap("LoadBalancerType")]
+        [Validation(Required=false)]
+        public string LoadBalancerType { get; set; }
 
         /// <summary>
         /// <para>The ID of the network.</para>

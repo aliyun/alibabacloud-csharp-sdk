@@ -70,6 +70,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string LoadBalancerStatus { get; set; }
 
+        [NameInMap("LoadBalancerType")]
+        [Validation(Required=false)]
+        public string LoadBalancerType { get; set; }
+
         /// <summary>
         /// <para>The ID of the network.</para>
         /// 

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateLoadBalancerRequest : TeaModel {
+        [NameInMap("BillingCycle")]
+        [Validation(Required=false)]
+        public string BillingCycle { get; set; }
+
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request. This prevents repeated operations caused by multiple retries.</para>
         /// <list type="bullet">
@@ -59,6 +63,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [NameInMap("LoadBalancerSpec")]
         [Validation(Required=false)]
         public string LoadBalancerSpec { get; set; }
+
+        [NameInMap("LoadBalancerType")]
+        [Validation(Required=false)]
+        public string LoadBalancerType { get; set; }
 
         /// <summary>
         /// <para>The network ID of the created ELB instance.</para>

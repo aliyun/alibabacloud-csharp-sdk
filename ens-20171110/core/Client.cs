@@ -5484,6 +5484,10 @@ namespace AlibabaCloud.SDK.Ens20171110
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillingCycle))
+            {
+                query["BillingCycle"] = request.BillingCycle;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -5499,6 +5503,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoadBalancerSpec))
             {
                 query["LoadBalancerSpec"] = request.LoadBalancerSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoadBalancerType))
+            {
+                query["LoadBalancerType"] = request.LoadBalancerType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkId))
             {
@@ -5558,6 +5566,10 @@ namespace AlibabaCloud.SDK.Ens20171110
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillingCycle))
+            {
+                query["BillingCycle"] = request.BillingCycle;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -5573,6 +5585,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoadBalancerSpec))
             {
                 query["LoadBalancerSpec"] = request.LoadBalancerSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoadBalancerType))
+            {
+                query["LoadBalancerType"] = request.LoadBalancerType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkId))
             {

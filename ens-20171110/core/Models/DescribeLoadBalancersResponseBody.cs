@@ -40,6 +40,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [Validation(Required=false)]
                 public string AddressIPVersion { get; set; }
 
+                [NameInMap("AddressType")]
+                [Validation(Required=false)]
+                public string AddressType { get; set; }
+
                 /// <summary>
                 /// <para>The time when the ELB instance was created. The time is displayed in UTC.</para>
                 /// 
@@ -93,6 +97,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [NameInMap("LoadBalancerStatus")]
                 [Validation(Required=false)]
                 public string LoadBalancerStatus { get; set; }
+
+                [NameInMap("LoadBalancerType")]
+                [Validation(Required=false)]
+                public string LoadBalancerType { get; set; }
 
                 /// <summary>
                 /// <para>The ID of the network.</para>
