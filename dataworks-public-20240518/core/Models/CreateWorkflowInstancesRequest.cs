@@ -76,14 +76,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The analysis of the configurations.</para>
+            /// <para>The configurations for analysis. If you set the Type parameter to SupplementData, this parameter is required.</para>
             /// </summary>
             [NameInMap("Analysis")]
             [Validation(Required=false)]
             public CreateWorkflowInstancesRequestDefaultRunPropertiesAnalysis Analysis { get; set; }
             public class CreateWorkflowInstancesRequestDefaultRunPropertiesAnalysis : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether to block the running of the instance if the analysis fails.</para>
+                /// <para>Specifies whether to block the running of the instance if the analysis fails. If you set the Type parameter to SupplementData, this parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public bool? Blocked { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable the analysis feature.</para>
+                /// <para>Specifies whether to enable the analysis feature. If you set the Type parameter to SupplementData, this parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -133,12 +133,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public List<long?> IncludeTaskIds { get; set; }
 
             /// <summary>
-            /// <para>The data backfill mode. Default value: ManualSelection. Valid values:</para>
+            /// <para>The data backfill mode. Default value: ManualSelection. If you set the Type parameter to SupplementData, this parameter is required. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>General: You can specify only one root task ID. The <c>IncludeTaskIds</c> parameter is optional. If you do not specify the IncludeTaskIds parameter, the tasks that are specified by the <c>RootTaskIds</c> parameter are included by default.``</description></item>
-            /// <item><description>ManualSelection: You can specify multiple root tasks IDs. The <c>IncludeTaskIds</c> parameter is optional. If you do not specify the IncludeTaskIds parameter, the tasks that are specified by the <c>RootTaskIds</c> parameter are included by default.``</description></item>
-            /// <item><description>Chain: The value of the <c>RootTaskIds</c> parameter is left empty. You must set the <c>IncludeTaskIds</c> parameter to the start task ID and the end task ID.</description></item>
-            /// <item><description>AllDownstream: You can specify only one root task ID.``</description></item>
+            /// <item><description>General: You can specify only <c>one root task ID</c>. The <c>IncludeTaskIds</c> parameter is optional. If you do not configure the IncludeTaskIds parameter, the tasks that are specified by the <c>RootTaskIds</c> parameter are included by default.</description></item>
+            /// <item><description>ManualSelection: You can specify <c>multiple root task IDs</c>. The <c>IncludeTaskIds</c> parameter is optional. If you do not configure the IncludeTaskIds parameter, the tasks that are specified by the <c>RootTaskIds</c> parameter are included by default.</description></item>
+            /// <item><description>Chain: If you set the Mode parameter to Chain, you must leave the <c>RootTaskIds</c> parameter empty and set the <c>IncludeTaskIds</c> parameter to the start task ID and the end task ID.</description></item>
+            /// <item><description>AllDownstream: You can specify only one <c>root task ID</c>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Order { get; set; }
 
             /// <summary>
-            /// <para>The number of tasks that can be run in parallel. If you specify the value to 2 to 10, the value indicates the number of tasks that can be run in parallel. If you specify the value to 1, the tasks are run one by one.</para>
+            /// <para>The number of tasks that can be run in parallel. If you specify a value that ranges from 2 to 10, the value indicates the number of tasks that can be run in parallel. If you set the value to 1, the tasks are run one by one. If you set the Type parameter to SupplementData, this parameter is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -178,20 +178,26 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
             /// <summary>
             /// <para>The root task IDs.</para>
+            /// <list type="bullet">
+            /// <item><description>If you set the Type parameter to SupplementData and the Mode parameter to a value other than Chain, the RootTaskIds parameter is required.</description></item>
+            /// <item><description>If you set the Type parameter to ManualWorkflow, the RootTaskIds parameter is optional. If you do not configure the RootTaskIds parameter, the IDs of the default root nodes of the manually triggered workflow are used.</description></item>
+            /// <item><description>If you set the Type parameter to Manual, the RootTaskIds parameter is required. The RootTaskIds parameter specifies the IDs of the manually triggered tasks that need to be run.</description></item>
+            /// <item><description>If you set the Type parameter to SmokeTest, the RootTaskIds parameter is required. The RootTaskIds parameter specifies the IDs of the test tasks that need to be run.</description></item>
+            /// </list>
             /// </summary>
             [NameInMap("RootTaskIds")]
             [Validation(Required=false)]
             public List<long?> RootTaskIds { get; set; }
 
             /// <summary>
-            /// <para>The data backfill policy. If you leave this parameter empty, the runtime configuration is used.</para>
+            /// <para>The policy for running. If you leave this parameter empty, the runtime configuration is used.</para>
             /// </summary>
             [NameInMap("RunPolicy")]
             [Validation(Required=false)]
             public CreateWorkflowInstancesRequestDefaultRunPropertiesRunPolicy RunPolicy { get; set; }
             public class CreateWorkflowInstancesRequestDefaultRunPropertiesRunPolicy : TeaModel {
                 /// <summary>
-                /// <para>The time when the instance finishes running. This parameter is required if you specify the RunPolicy parameter.</para>
+                /// <para>The end time of running. Configure this parameter in the <c>hh:mm:ss</c> format. The time must be in the 24-hour clock. This parameter is required if you configure the RunPolicy parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>23:59:59</para>
@@ -211,7 +217,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public bool? Immediately { get; set; }
 
                 /// <summary>
-                /// <para>The time when the instance starts to run. This parameter is required if you specify the RunPolicy parameter.</para>
+                /// <para>The start time of running. Configure this parameter in the <c>hh:mm:ss</c> format. The time must be in the 24-hour clock. This parameter is required if you configure the RunPolicy parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>00:00:00</para>
@@ -221,7 +227,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// <para>The type of the time period during which the data is backfilled. This parameter is required if you specify the RunPolicy parameter. Valid values:</para>
+                /// <para>The type of the time period during which the data is backfilled. This parameter is required if you configure the RunPolicy parameter.</para>
                 /// <list type="bullet">
                 /// <item><description>Daily</description></item>
                 /// <item><description>Weekend</description></item>
@@ -251,8 +257,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The environment of the workspace. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Prod: production environment</description></item>
-        /// <item><description>Dev: development environment</description></item>
+        /// <item><description>Prod</description></item>
+        /// <item><description>Dev</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -274,14 +280,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Make up the data cycle settings.</para>
+        /// <para>The configuration of the data backfilling period.</para>
         /// </summary>
         [NameInMap("Periods")]
         [Validation(Required=false)]
         public CreateWorkflowInstancesRequestPeriods Periods { get; set; }
         public class CreateWorkflowInstancesRequestPeriods : TeaModel {
             /// <summary>
-            /// <para>The list of business dates. You can specify a multi-segment business date (up to 7 segments).</para>
+            /// <para>The data timestamps. You can specify up to seven data timestamps.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("BizDates")]
@@ -289,7 +295,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public List<CreateWorkflowInstancesRequestPeriodsBizDates> BizDates { get; set; }
             public class CreateWorkflowInstancesRequestPeriodsBizDates : TeaModel {
                 /// <summary>
-                /// <para>The end date of the business.</para>
+                /// <para>The data timestamp at which data is no longer backfilled. Configure this parameter in the <c>yyyy-mm-dd</c> format.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -300,7 +306,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string EndBizDate { get; set; }
 
                 /// <summary>
-                /// <para>The start business date.</para>
+                /// <para>The data timestamp at which the data starts to be backfilled. Configure this parameter in the <c>yyyy-mm-dd</c> format.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -313,8 +319,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>Specifies the end cycle time. Default value: 23:59:59.</para>
-            /// <para>If you enter this field, StartTime and EndTime must be filled in at the same time.</para>
+            /// <para>The end time of data backfill. Configure this parameter in the <c>hh:mm:ss</c> format. The time must be in the 24-hour clock. Default value: 23:59:59.</para>
+            /// <para>If you configure this parameter, you must also configure the StartTime parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>23:59:59</para>
@@ -324,8 +330,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>Specifies the start cycle time. Default value: 00:00:00.</para>
-            /// <para>If you enter this field, StartTime and EndTime must be filled in at the same time.</para>
+            /// <para>The start time of data backfill. Configure this parameter in the <c>hh:mm:ss</c> format. The time must be in the 24-hour clock. Default value: 00:00:00.</para>
+            /// <para>If you configure this parameter, you must also configure the EndTime parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>00:00:00</para>
@@ -363,10 +369,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The type of the workflow instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SupplementData The values of the RootTaskIds and IncludeTaskIds parameters vary based on the value of the Mode parameter. For more information, see the Mode parameter in this API operation.</description></item>
-        /// <item><description>ManualWorkflow You must set the WorkflowId parameter to the ID of the manually triggered workflow. The RootTaskIds parameter is optional. If you do not specify the RootTaskIds parameter, the IDs of the default root nodes of the manually triggered workflow are used.</description></item>
-        /// <item><description>Manual You need to specify only the RootTaskIds parameter. The RootTaskIds parameter specifies the IDs of the manually triggered tasks that need to be run.</description></item>
-        /// <item><description>SmokeTest You need to specify only the RootTaskIds parameter. The RootTaskIds parameter specifies the IDs of the test tasks that need to be run.</description></item>
+        /// <item><description>SupplementData: The values of the RootTaskIds and IncludeTaskIds parameters vary based on the value of the Mode parameter. For more information, see the Mode parameter in this API operation.</description></item>
+        /// <item><description>ManualWorkflow: If you set the Type parameter to ManualWorkflow, you must set the WorkflowId parameter to the ID of the manually triggered workflow. The RootTaskIds parameter is optional. If you do not configure the RootTaskIds parameter, the IDs of the default root nodes of the manually triggered workflow are used.</description></item>
+        /// <item><description>Manual: You need to configure only the RootTaskIds parameter. The RootTaskIds parameter specifies the IDs of the manually triggered tasks that need to be run.</description></item>
+        /// <item><description>SmokeTest: You need to configure only the RootTaskIds parameter. The RootTaskIds parameter specifies the IDs of the test tasks that need to be run.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -577,6 +577,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             [Validation(Required=false)]
             public string TriggerType { get; set; }
 
+            [NameInMap("WaitingResourceTime")]
+            [Validation(Required=false)]
+            public long? WaitingResourceTime { get; set; }
+
+            [NameInMap("WaitingTriggerTime")]
+            [Validation(Required=false)]
+            public long? WaitingTriggerTime { get; set; }
+
             /// <summary>
             /// <para>The ID of the workflow to which the instance belongs.</para>
             /// 

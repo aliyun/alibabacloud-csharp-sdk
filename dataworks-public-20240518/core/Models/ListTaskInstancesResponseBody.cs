@@ -301,6 +301,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 }
 
+                [NameInMap("ScriptParameters")]
+                [Validation(Required=false)]
+                public string ScriptParameters { get; set; }
+
                 /// <summary>
                 /// <para>The time when the instance started to run.</para>
                 /// 
@@ -413,6 +417,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 [NameInMap("TriggerType")]
                 [Validation(Required=false)]
                 public string TriggerType { get; set; }
+
+                [NameInMap("WaitingResourceTime")]
+                [Validation(Required=false)]
+                public long? WaitingResourceTime { get; set; }
+
+                [NameInMap("WaitingTriggerTime")]
+                [Validation(Required=false)]
+                public long? WaitingTriggerTime { get; set; }
 
                 /// <summary>
                 /// <para>The ID of the workflow to which the instance belongs.</para>

@@ -6306,7 +6306,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工作流实例</para>
+        /// <para>Creates a workflow instance, such as a data backfill workflow instance, based on configurations.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6398,7 +6398,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工作流实例</para>
+        /// <para>Creates a workflow instance, such as a data backfill workflow instance, based on configurations.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6490,7 +6490,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工作流实例</para>
+        /// <para>Creates a workflow instance, such as a data backfill workflow instance, based on configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6508,7 +6508,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工作流实例</para>
+        /// <para>Creates a workflow instance, such as a data backfill workflow instance, based on configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14850,6 +14850,126 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询异步重跑工作流实例的结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRerunWorkflowInstancesResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRerunWorkflowInstancesResultResponse
+        /// </returns>
+        public GetRerunWorkflowInstancesResultResponse GetRerunWorkflowInstancesResultWithOptions(GetRerunWorkflowInstancesResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationId))
+            {
+                query["OperationId"] = request.OperationId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRerunWorkflowInstancesResult",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRerunWorkflowInstancesResultResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询异步重跑工作流实例的结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRerunWorkflowInstancesResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRerunWorkflowInstancesResultResponse
+        /// </returns>
+        public async Task<GetRerunWorkflowInstancesResultResponse> GetRerunWorkflowInstancesResultWithOptionsAsync(GetRerunWorkflowInstancesResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationId))
+            {
+                query["OperationId"] = request.OperationId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRerunWorkflowInstancesResult",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRerunWorkflowInstancesResultResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询异步重跑工作流实例的结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRerunWorkflowInstancesResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRerunWorkflowInstancesResultResponse
+        /// </returns>
+        public GetRerunWorkflowInstancesResultResponse GetRerunWorkflowInstancesResult(GetRerunWorkflowInstancesResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetRerunWorkflowInstancesResultWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询异步重跑工作流实例的结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRerunWorkflowInstancesResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRerunWorkflowInstancesResultResponse
+        /// </returns>
+        public async Task<GetRerunWorkflowInstancesResultResponse> GetRerunWorkflowInstancesResultAsync(GetRerunWorkflowInstancesResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetRerunWorkflowInstancesResultWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the information about a file resource.</para>
         /// </summary>
         /// 
@@ -15226,8 +15346,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取模式详情</para>
+        /// <para>Queries the information about a schema in Data Map. You can call this API operation to query the information only about MaxCompute and Hologres schemas.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>You can call this API operation to query the information only about MaxCompute and Hologres schemas.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSchemaRequest
@@ -15264,8 +15392,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取模式详情</para>
+        /// <para>Queries the information about a schema in Data Map. You can call this API operation to query the information only about MaxCompute and Hologres schemas.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>You can call this API operation to query the information only about MaxCompute and Hologres schemas.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSchemaRequest
@@ -15302,8 +15438,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取模式详情</para>
+        /// <para>Queries the information about a schema in Data Map. You can call this API operation to query the information only about MaxCompute and Hologres schemas.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>You can call this API operation to query the information only about MaxCompute and Hologres schemas.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSchemaRequest
@@ -15320,8 +15464,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取模式详情</para>
+        /// <para>Queries the information about a schema in Data Map. You can call this API operation to query the information only about MaxCompute and Hologres schemas.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>You can call this API operation to query the information only about MaxCompute and Hologres schemas.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSchemaRequest
@@ -26420,6 +26572,226 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RerunTaskInstancesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重跑工作流实例</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// RerunWorkflowInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RerunWorkflowInstancesResponse
+        /// </returns>
+        public RerunWorkflowInstancesResponse RerunWorkflowInstancesWithOptions(RerunWorkflowInstancesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RerunWorkflowInstancesShrinkRequest request = new RerunWorkflowInstancesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Filter))
+            {
+                request.FilterShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Filter, "Filter", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ids))
+            {
+                request.IdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ids, "Ids", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Bizdate))
+            {
+                body["Bizdate"] = request.Bizdate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTriggerTime))
+            {
+                body["EndTriggerTime"] = request.EndTriggerTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvType))
+            {
+                body["EnvType"] = request.EnvType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterShrink))
+            {
+                body["Filter"] = request.FilterShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdsShrink))
+            {
+                body["Ids"] = request.IdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTriggerTime))
+            {
+                body["StartTriggerTime"] = request.StartTriggerTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                body["WorkflowId"] = request.WorkflowId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RerunWorkflowInstances",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RerunWorkflowInstancesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重跑工作流实例</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// RerunWorkflowInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RerunWorkflowInstancesResponse
+        /// </returns>
+        public async Task<RerunWorkflowInstancesResponse> RerunWorkflowInstancesWithOptionsAsync(RerunWorkflowInstancesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RerunWorkflowInstancesShrinkRequest request = new RerunWorkflowInstancesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Filter))
+            {
+                request.FilterShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Filter, "Filter", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ids))
+            {
+                request.IdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ids, "Ids", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Bizdate))
+            {
+                body["Bizdate"] = request.Bizdate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTriggerTime))
+            {
+                body["EndTriggerTime"] = request.EndTriggerTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvType))
+            {
+                body["EnvType"] = request.EnvType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterShrink))
+            {
+                body["Filter"] = request.FilterShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdsShrink))
+            {
+                body["Ids"] = request.IdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTriggerTime))
+            {
+                body["StartTriggerTime"] = request.StartTriggerTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                body["WorkflowId"] = request.WorkflowId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RerunWorkflowInstances",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RerunWorkflowInstancesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重跑工作流实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RerunWorkflowInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RerunWorkflowInstancesResponse
+        /// </returns>
+        public RerunWorkflowInstancesResponse RerunWorkflowInstances(RerunWorkflowInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RerunWorkflowInstancesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重跑工作流实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RerunWorkflowInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RerunWorkflowInstancesResponse
+        /// </returns>
+        public async Task<RerunWorkflowInstancesResponse> RerunWorkflowInstancesAsync(RerunWorkflowInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RerunWorkflowInstancesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

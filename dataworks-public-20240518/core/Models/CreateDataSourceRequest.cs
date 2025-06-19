@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <item><description>Dev: development environment</description></item>
         /// <item><description>Prod: production environment</description></item>
         /// </list>
-        /// <para>The parameters that you need to configure to the data source vary based on the mode in which the data source is added. For more information, see <a href="https://help.aliyun.com/document_detail/2852465.html">Data source connection information (ConnectionProperties)</a>.</para>
+        /// <para>The parameters that you need to configure for the data source vary based on the mode in which the data source is added. For more information, see <a href="https://help.aliyun.com/document_detail/2852465.html">Data source connection information (ConnectionProperties)</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
