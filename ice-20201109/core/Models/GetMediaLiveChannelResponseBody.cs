@@ -640,7 +640,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 }
 
                 /// <summary>
-                /// <para>视频转码方式（普通转码、窄带高清转码等）</para>
+                /// <para>The video transcoding method. Valid values: NORMAL (regular transcoding) and NBHD (Narrowband HD™ transcoding).</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>NORMAL</para>
                 /// </summary>
                 [NameInMap("VideoCodecType")]
                 [Validation(Required=false)]

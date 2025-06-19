@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class StartWorkflowRequest : TeaModel {
+        [NameInMap("SkipInputVerification")]
+        [Validation(Required=false)]
+        public bool? SkipInputVerification { get; set; }
+
         /// <summary>
         /// <para>The workflow input. Only media assets are supported.</para>
         /// 
