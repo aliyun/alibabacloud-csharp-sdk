@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
     public class CreateRunRequest : TeaModel {
+        [NameInMap("allowStructViewContent")]
+        [Validation(Required=false)]
+        public bool? AllowStructViewContent { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

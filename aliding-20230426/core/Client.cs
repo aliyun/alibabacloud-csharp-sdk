@@ -8535,6 +8535,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowStructViewContent))
+            {
+                body["allowStructViewContent"] = request.AllowStructViewContent;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssistantId))
             {
                 body["assistantId"] = request.AssistantId;
@@ -8610,6 +8614,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowStructViewContent))
+            {
+                body["allowStructViewContent"] = request.AllowStructViewContent;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssistantId))
             {
                 body["assistantId"] = request.AssistantId;

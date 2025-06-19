@@ -448,6 +448,198 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             [Validation(Required=false)]
             public string ContentDesc { get; set; }
 
+            [NameInMap("contentStruct")]
+            [Validation(Required=false)]
+            public CreateRunResponseBodyMessagesContentStruct ContentStruct { get; set; }
+            public class CreateRunResponseBodyMessagesContentStruct : TeaModel {
+                [NameInMap("parts")]
+                [Validation(Required=false)]
+                public List<CreateRunResponseBodyMessagesContentStructParts> Parts { get; set; }
+                public class CreateRunResponseBodyMessagesContentStructParts : TeaModel {
+                    [NameInMap("append")]
+                    [Validation(Required=false)]
+                    public bool? Append { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>{}</para>
+                    /// </summary>
+                    [NameInMap("dataPart")]
+                    [Validation(Required=false)]
+                    public CreateRunResponseBodyMessagesContentStructPartsDataPart DataPart { get; set; }
+                    public class CreateRunResponseBodyMessagesContentStructPartsDataPart : TeaModel {
+                        [NameInMap("data")]
+                        [Validation(Required=false)]
+                        public object Data { get; set; }
+
+                    }
+
+                    [NameInMap("finish")]
+                    [Validation(Required=false)]
+                    public bool? Finish { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>这是正文内容部分</para>
+                    /// </summary>
+                    [NameInMap("partDesc")]
+                    [Validation(Required=false)]
+                    public string PartDesc { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>artifactId123</para>
+                    /// </summary>
+                    [NameInMap("partId")]
+                    [Validation(Required=false)]
+                    public string PartId { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>{}</para>
+                    /// </summary>
+                    [NameInMap("reasonPart")]
+                    [Validation(Required=false)]
+                    public CreateRunResponseBodyMessagesContentStructPartsReasonPart ReasonPart { get; set; }
+                    public class CreateRunResponseBodyMessagesContentStructPartsReasonPart : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>123123</para>
+                        /// </summary>
+                        [NameInMap("reason")]
+                        [Validation(Required=false)]
+                        public string Reason { get; set; }
+
+                    }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>{}</para>
+                    /// </summary>
+                    [NameInMap("recommendPart")]
+                    [Validation(Required=false)]
+                    public CreateRunResponseBodyMessagesContentStructPartsRecommendPart RecommendPart { get; set; }
+                    public class CreateRunResponseBodyMessagesContentStructPartsRecommendPart : TeaModel {
+                        [NameInMap("recommends")]
+                        [Validation(Required=false)]
+                        public List<CreateRunResponseBodyMessagesContentStructPartsRecommendPartRecommends> Recommends { get; set; }
+                        public class CreateRunResponseBodyMessagesContentStructPartsRecommendPartRecommends : TeaModel {
+                            [NameInMap("mobileUrl")]
+                            [Validation(Required=false)]
+                            public string MobileUrl { get; set; }
+
+                            [NameInMap("text")]
+                            [Validation(Required=false)]
+                            public string Text { get; set; }
+
+                            [NameInMap("url")]
+                            [Validation(Required=false)]
+                            public string Url { get; set; }
+
+                        }
+
+                    }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>{}</para>
+                    /// </summary>
+                    [NameInMap("referencePart")]
+                    [Validation(Required=false)]
+                    public CreateRunResponseBodyMessagesContentStructPartsReferencePart ReferencePart { get; set; }
+                    public class CreateRunResponseBodyMessagesContentStructPartsReferencePart : TeaModel {
+                        [NameInMap("references")]
+                        [Validation(Required=false)]
+                        public List<CreateRunResponseBodyMessagesContentStructPartsReferencePartReferences> References { get; set; }
+                        public class CreateRunResponseBodyMessagesContentStructPartsReferencePartReferences : TeaModel {
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>0</para>
+                            /// </summary>
+                            [NameInMap("index")]
+                            [Validation(Required=false)]
+                            public string Index { get; set; }
+
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>mcp是....</para>
+                            /// </summary>
+                            [NameInMap("name")]
+                            [Validation(Required=false)]
+                            public string Name { get; set; }
+
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>ata</para>
+                            /// </summary>
+                            [NameInMap("sourceCode")]
+                            [Validation(Required=false)]
+                            public string SourceCode { get; set; }
+
+                            [NameInMap("sourceIcon")]
+                            [Validation(Required=false)]
+                            public string SourceIcon { get; set; }
+
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>摘要</para>
+                            /// </summary>
+                            [NameInMap("summary")]
+                            [Validation(Required=false)]
+                            public string Summary { get; set; }
+
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>《mcp原理介绍》</para>
+                            /// </summary>
+                            [NameInMap("title")]
+                            [Validation(Required=false)]
+                            public string Title { get; set; }
+
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para><a href="https://taobao.com">https://taobao.com</a></para>
+                            /// </summary>
+                            [NameInMap("url")]
+                            [Validation(Required=false)]
+                            public string Url { get; set; }
+
+                        }
+
+                    }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>{}</para>
+                    /// </summary>
+                    [NameInMap("textPart")]
+                    [Validation(Required=false)]
+                    public CreateRunResponseBodyMessagesContentStructPartsTextPart TextPart { get; set; }
+                    public class CreateRunResponseBodyMessagesContentStructPartsTextPart : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>123123</para>
+                        /// </summary>
+                        [NameInMap("text")]
+                        [Validation(Required=false)]
+                        public string Text { get; set; }
+
+                    }
+
+                    /// <summary>
+                    /// <para>This parameter is required.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>textPart</para>
+                    /// </summary>
+                    [NameInMap("type")]
+                    [Validation(Required=false)]
+                    public string Type { get; set; }
+
+                }
+
+            }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>1642448000000</para>
