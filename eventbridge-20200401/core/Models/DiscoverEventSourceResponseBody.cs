@@ -29,6 +29,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 [Validation(Required=false)]
                 public List<string> DatabaseNames { get; set; }
 
+                [NameInMap("EstimatedRows")]
+                [Validation(Required=false)]
+                public long? EstimatedRows { get; set; }
+
+                [NameInMap("ExpireLogsDays")]
+                [Validation(Required=false)]
+                public int? ExpireLogsDays { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>[{\&quot;is_active\&quot;:\&quot;1\&quot;,\&quot;name\&quot;:\&quot;0c0c5d1a-e844-44a8-902d-4f62cbcb0479\&quot;,\&quot;id\&quot;:\&quot;21\&quot;},{\&quot;is_active\&quot;:\&quot;1\&quot;,\&quot;name\&quot;:\&quot;18ef033e-70bb-4795-8222-6cfb54f38f26\&quot;,\&quot;id\&quot;:\&quot;22\&quot;}]</para>
@@ -100,6 +108,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string TableName { get; set; }
 
                 }
+
+                [NameInMap("WaitTimeout")]
+                [Validation(Required=false)]
+                public int? WaitTimeout { get; set; }
 
             }
 
