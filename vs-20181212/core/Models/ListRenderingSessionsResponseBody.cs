@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [Validation(Required=false)]
             public string ClientId { get; set; }
 
+            [NameInMap("RenderingInstanceId")]
+            [Validation(Required=false)]
+            public string RenderingInstanceId { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>session-i205217481741918129226</para>

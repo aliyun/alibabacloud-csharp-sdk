@@ -14472,6 +14472,134 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询命令的执行状态与结果。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRenderingInstanceCommandsStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRenderingInstanceCommandsStatusResponse
+        /// </returns>
+        public GetRenderingInstanceCommandsStatusResponse GetRenderingInstanceCommandsStatusWithOptions(GetRenderingInstanceCommandsStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CmdId))
+            {
+                query["CmdId"] = request.CmdId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenderingInstanceId))
+            {
+                query["RenderingInstanceId"] = request.RenderingInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRenderingInstanceCommandsStatus",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRenderingInstanceCommandsStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询命令的执行状态与结果。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRenderingInstanceCommandsStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRenderingInstanceCommandsStatusResponse
+        /// </returns>
+        public async Task<GetRenderingInstanceCommandsStatusResponse> GetRenderingInstanceCommandsStatusWithOptionsAsync(GetRenderingInstanceCommandsStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CmdId))
+            {
+                query["CmdId"] = request.CmdId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenderingInstanceId))
+            {
+                query["RenderingInstanceId"] = request.RenderingInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRenderingInstanceCommandsStatus",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRenderingInstanceCommandsStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询命令的执行状态与结果。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRenderingInstanceCommandsStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRenderingInstanceCommandsStatusResponse
+        /// </returns>
+        public GetRenderingInstanceCommandsStatusResponse GetRenderingInstanceCommandsStatus(GetRenderingInstanceCommandsStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetRenderingInstanceCommandsStatusWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询命令的执行状态与结果。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRenderingInstanceCommandsStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRenderingInstanceCommandsStatusResponse
+        /// </returns>
+        public async Task<GetRenderingInstanceCommandsStatusResponse> GetRenderingInstanceCommandsStatusAsync(GetRenderingInstanceCommandsStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetRenderingInstanceCommandsStatusWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取云渲染实例流连接信息，每次流化建联前都需要调用此接口获取最新连接信息</para>
         /// </summary>
         /// 
@@ -16342,6 +16470,10 @@ namespace AlibabaCloud.SDK.Vs20181212
             {
                 query["ProjectId"] = request.ProjectId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenderingInstanceId))
+            {
+                query["RenderingInstanceId"] = request.RenderingInstanceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
             {
                 query["SessionId"] = request.SessionId;
@@ -16416,6 +16548,10 @@ namespace AlibabaCloud.SDK.Vs20181212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
             {
                 query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenderingInstanceId))
+            {
+                query["RenderingInstanceId"] = request.RenderingInstanceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
             {
@@ -19582,7 +19718,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下发shell命令，同步响应。不适用于耗时命令。</para>
+        /// <para>下发shell命令，支持同步/异步响应命令。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19599,9 +19735,17 @@ namespace AlibabaCloud.SDK.Vs20181212
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mode))
+            {
+                query["Mode"] = request.Mode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenderingInstanceId))
             {
                 query["RenderingInstanceId"] = request.RenderingInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timeout))
+            {
+                query["Timeout"] = request.Timeout;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Commands))
@@ -19630,7 +19774,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下发shell命令，同步响应。不适用于耗时命令。</para>
+        /// <para>下发shell命令，支持同步/异步响应命令。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19647,9 +19791,17 @@ namespace AlibabaCloud.SDK.Vs20181212
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mode))
+            {
+                query["Mode"] = request.Mode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenderingInstanceId))
             {
                 query["RenderingInstanceId"] = request.RenderingInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timeout))
+            {
+                query["Timeout"] = request.Timeout;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Commands))
@@ -19678,7 +19830,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下发shell命令，同步响应。不适用于耗时命令。</para>
+        /// <para>下发shell命令，支持同步/异步响应命令。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19696,7 +19848,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下发shell命令，同步响应。不适用于耗时命令。</para>
+        /// <para>下发shell命令，支持同步/异步响应命令。</para>
         /// </summary>
         /// 
         /// <param name="request">

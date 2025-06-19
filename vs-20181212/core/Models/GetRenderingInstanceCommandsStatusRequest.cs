@@ -8,20 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
-    public class SendRenderingInstanceCommandsRequest : TeaModel {
+    public class GetRenderingInstanceCommandsStatusRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>date;ls -l /tmp</para>
+        /// <para>cmd-81de027b66e442e99c1e0e09a16a0be5</para>
         /// </summary>
-        [NameInMap("Commands")]
+        [NameInMap("CmdId")]
         [Validation(Required=false)]
-        public string Commands { get; set; }
-
-        [NameInMap("Mode")]
-        [Validation(Required=false)]
-        public string Mode { get; set; }
+        public string CmdId { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
@@ -32,10 +28,6 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [NameInMap("RenderingInstanceId")]
         [Validation(Required=false)]
         public string RenderingInstanceId { get; set; }
-
-        [NameInMap("Timeout")]
-        [Validation(Required=false)]
-        public int? Timeout { get; set; }
 
     }
 
