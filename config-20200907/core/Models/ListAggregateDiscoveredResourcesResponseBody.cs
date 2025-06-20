@@ -152,6 +152,19 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public long? UpdateTime { get; set; }
 
                 /// <summary>
+                /// <para>This parameter is required.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vsw-t4n7pokxxxxxxxxxxxxxx</para>
+                /// 
+                /// <b>if can be null:</b>
+                /// <c>true</c>
+                /// </summary>
+                [NameInMap("VSwitchId")]
+                [Validation(Required=false)]
+                public string VSwitchId { get; set; }
+
+                /// <summary>
                 /// <para>The build version of the resource.</para>
                 /// 
                 /// <b>Example:</b>
@@ -160,6 +173,19 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 [NameInMap("Version")]
                 [Validation(Required=false)]
                 public long? Version { get; set; }
+
+                /// <summary>
+                /// <para>This parameter is required.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vpc-t4nhheyvay74fp7n0hxxx</para>
+                /// 
+                /// <b>if can be null:</b>
+                /// <c>true</c>
+                /// </summary>
+                [NameInMap("VpcId")]
+                [Validation(Required=false)]
+                public string VpcId { get; set; }
 
             }
 

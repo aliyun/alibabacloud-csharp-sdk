@@ -151,6 +151,27 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             [Validation(Required=false)]
             public string Tags { get; set; }
 
+            /// <summary>
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vsw-t4n7pokxxxxxxxxxxxxxx</para>
+            /// </summary>
+            [NameInMap("VSwitchId")]
+            [Validation(Required=false)]
+            public string VSwitchId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>vpc-t4nhheyvay74fp7n0hxxx</para>
+            /// 
+            /// <b>if can be null:</b>
+            /// <c>true</c>
+            /// </summary>
+            [NameInMap("VpcId")]
+            [Validation(Required=false)]
+            public string VpcId { get; set; }
+
         }
 
         /// <summary>
