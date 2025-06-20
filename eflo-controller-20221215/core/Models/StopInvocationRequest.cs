@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class StopInvocationRequest : TeaModel {
         /// <summary>
-        /// <para>Command execution ID.</para>
+        /// <para>The execution ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string InvokeId { get; set; }
 
         /// <summary>
-        /// <para>List of nodes.</para>
+        /// <para>The nodes.</para>
         /// </summary>
         [NameInMap("NodeIdList")]
         [Validation(Required=false)]

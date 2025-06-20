@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class CreateDiagnosticTaskRequest : TeaModel {
         /// <summary>
-        /// <para>Log information</para>
+        /// <para>The log information.</para>
         /// </summary>
         [NameInMap("AiJobLogInfo")]
         [Validation(Required=false)]
         public CreateDiagnosticTaskRequestAiJobLogInfo AiJobLogInfo { get; set; }
         public class CreateDiagnosticTaskRequestAiJobLogInfo : TeaModel {
             /// <summary>
-            /// <para>Task logs</para>
+            /// <para>The task logs.</para>
             /// </summary>
             [NameInMap("AiJobLogs")]
             [Validation(Required=false)]
             public List<CreateDiagnosticTaskRequestAiJobLogInfoAiJobLogs> AiJobLogs { get; set; }
             public class CreateDiagnosticTaskRequestAiJobLogInfoAiJobLogs : TeaModel {
                 /// <summary>
-                /// <para>Instance ID</para>
+                /// <para>The instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>null</para>
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string AiInstance { get; set; }
 
                 /// <summary>
-                /// <para>Log object</para>
+                /// <para>The logs.</para>
                 /// </summary>
                 [NameInMap("Logs")]
                 [Validation(Required=false)]
                 public List<CreateDiagnosticTaskRequestAiJobLogInfoAiJobLogsLogs> Logs { get; set; }
                 public class CreateDiagnosticTaskRequestAiJobLogInfoAiJobLogsLogs : TeaModel {
                     /// <summary>
-                    /// <para>Sent date, in the format yyyymmdd.</para>
+                    /// <para>The sending date in the yyyymmdd format.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2024-08-05T10:10:01</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                     public string Datetime { get; set; }
 
                     /// <summary>
-                    /// <para>Log content</para>
+                    /// <para>The log content.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>success</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 }
 
                 /// <summary>
-                /// <para>Node ID</para>
+                /// <para>The node ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>e01-tw-p2p2al5u1hn</para>
@@ -75,9 +75,9 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             }
 
             /// <summary>
-            /// <para>End time. In timestamp format, unit: seconds.</para>
+            /// <para>The end time. The value is in the timestamp format. Unit: seconds.</para>
             /// <remarks>
-            /// <para>Must be on the hour or half-hour mark.</para>
+            /// <para> This timestamp must indicate a point in time that is accurate to the minute.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -88,9 +88,9 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>Start time. In timestamp format, unit: seconds.</para>
+            /// <para>The start time. The value is in the timestamp format. Unit: seconds.</para>
             /// <remarks>
-            /// <para>Must be on the hour or half-hour mark.</para>
+            /// <para> This timestamp must indicate a point in time that is accurate to the minute.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
-        /// <para>Cluster ID</para>
+        /// <para>The cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i118913031696573280136</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>Diagnostic type.</para>
+        /// <para>The diagnostics type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CheckByAiJobLogs</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string DiagnosticType { get; set; }
 
         /// <summary>
-        /// <para>List of node IDs</para>
+        /// <para>The IDs of the nodes.</para>
         /// </summary>
         [NameInMap("NodeIds")]
         [Validation(Required=false)]

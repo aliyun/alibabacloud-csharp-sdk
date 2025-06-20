@@ -10,8 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class RunCommandShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Ensures idempotence of the request. Generate a unique parameter value from your client to ensure that the value is unique across different requests. 
-        /// ClientToken supports only ASCII characters and cannot exceed 64 characters. For more information, see How to Ensure Idempotence.</para>
+        /// <para>The client token to ensure the idempotency of the request. Use your client to generate the token that is unique among requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see &quot;How to ensure idempotence&quot;.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -21,13 +20,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Command content. Please note the following:</para>
+        /// <para>The command content. Take note of the following:</para>
         /// <list type="bullet">
-        /// <item><description>Specify <c>EnableParameter=true</c> to enable custom parameters in the command content.</description></item>
-        /// <item><description>Define custom parameters using the {{}} format; spaces and newlines within <c>{{}}</c> will be ignored.</description></item>
-        /// <item><description>The number of custom parameters cannot exceed 20.</description></item>
-        /// <item><description>Custom parameter names can only contain a-zA-Z0-9-_, and are case-insensitive.</description></item>
-        /// <item><description>A single custom parameter name cannot exceed 64 bytes.</description></item>
+        /// <item><description>When <c>EnableParameter</c> is set to true, you can use custom parameters in the command.</description></item>
+        /// <item><description>Define custom parameters in the {{}} format. Within <c>{{}}</c>, the spaces and line feeds before and after the parameter names are ignored.</description></item>
+        /// <item><description>You can specify up to 20 custom parameters.</description></item>
+        /// <item><description>A custom parameter name can contain only letters, digits, underscores (_), and hyphens (-). The name is not case-sensitive.</description></item>
+        /// <item><description>Each custom parameter name is up to 64 bytes in length.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +37,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string CommandContent { get; set; }
 
         /// <summary>
-        /// <para>Command ID</para>
+        /// <para>The ID of the command.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c-e996287206324975b5fbe1d***</para>
@@ -48,12 +47,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string CommandId { get; set; }
 
         /// <summary>
-        /// <para>Encoding method for the script content. Valid values:</para>
+        /// <para>The encoding mode of the command content. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PlainText: No encoding, transmitted in plain text.</description></item>
-        /// <item><description>Base64: Base64 encoding.</description></item>
+        /// <item><description>PlainText</description></item>
+        /// <item><description>Base64</description></item>
         /// </list>
-        /// <para>Default value: PlainText. If an invalid value is provided, it will be treated as PlainText.</para>
+        /// <para>Default value: PlainText. If the specified value of this parameter is invalid, PlainText is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Base64</para>
@@ -63,7 +62,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ContentEncoding { get; set; }
 
         /// <summary>
-        /// <para>Command description.</para>
+        /// <para>The command description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testDescription</para>
@@ -73,7 +72,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Whether the command contains custom parameters.</para>
+        /// <para>Specifies whether to use custom parameters in the command.</para>
         /// <para>Default value: false.</para>
         /// 
         /// <b>Example:</b>
@@ -84,32 +83,33 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public bool? EnableParameter { get; set; }
 
         /// <summary>
-        /// <para>Execution time for scheduled commands. Currently, three types of scheduling methods are supported: fixed interval (based on Rate expression), one-time execution at a specific time, and clock-based scheduling (based on Cron expression).</para>
-        /// <para>Fixed interval execution: Based on the Rate expression, the command is executed at the set interval. The interval can be set in seconds (s), minutes (m), hours (h), and days (d), suitable for scenarios where tasks need to be executed at fixed intervals. The format is rate(<interval value><interval unit>), such as rate(5m) for every 5 minutes. The following restrictions apply to fixed interval execution:</para>
+        /// <para>The schedule to run the command. Supported schedule types: at a fixed interval based on a rate expression, run only once at a specific time, or run at specific times based on a cron expression.</para>
         /// <list type="bullet">
-        /// <item><description>The interval should not exceed 7 days and should be no less than 60 seconds, and it must be greater than the timeout of the scheduled task.</description></item>
-        /// <item><description>The interval is based on a fixed frequency and is independent of the actual execution time of the task. For example, if the command is set to execute every 5 minutes and the task takes 2 minutes to complete, the next round will start 3 minutes after the completion of the task.</description></item>
-        /// <item><description>The task will not be executed immediately upon creation. For example, if the command is set to execute every 5 minutes, it will not be executed immediately upon creation but will start 5 minutes after the task is created.
-        /// One-time execution at a specific time: Executes the command once at the specified time and timezone. The format is at(yyyy-MM-dd HH:mm:ss <timezone>), which is at(year-month-day hour:minute:second <timezone>). If no timezone is specified, UTC is used by default. Timezones support the following three formats:</description></item>
-        /// <item><description>Full timezone name: e.g., Asia/Shanghai (China/Shanghai time), America/Los_Angeles (America/Los Angeles time), etc.</description></item>
-        /// <item><description>Timezone offset from GMT: e.g., GMT+8:00 (UTC+8:00), GMT-7:00 (UTC-7:00). When using the GMT format, leading zeros are not allowed in the hour position.</description></item>
-        /// <item><description>Timezone abbreviation: Only UTC (Coordinated Universal Time) is supported.</description></item>
-        /// </list>
-        /// <para>For example, to execute once at 13:15:30 on June 6, 2022, in Shanghai, China, the format would be: at(2022-06-06 13:15:30 Asia/Shanghai); to execute once at 13:15:30 on June 6, 2022, in the GMT-7:00 timezone, the format would be: at(2022-06-06 13:15:30 GMT-7:00).</para>
-        /// <para>Clock-based scheduling (based on Cron expression): Based on the Cron expression, the command is executed according to the set schedule. The format is <second> <minute> <hour> <day> <month> <weekday> &lt;year (optional)&gt; <timezone>, i.e., <Cron expression> <timezone>. In the specified timezone, the scheduled task execution time is calculated based on the Cron expression and then executed. If no timezone is specified, the system\&quot;s internal timezone of the instance running the scheduled task is used by default. For more information about Cron expressions, see Cron Expressions. Timezones support the following three formats:</para>
+        /// <item><description><para>To run the command at a fixed interval, use a rate expression to specify the interval. The interval can be in seconds, minutes, hours, or days. This option is suitable for scenarios in which tasks need to be executed at a fixed interval. Format: rate(\<Execution interval value> \<Execution interval unit>). For example, rate(5m) means to run the command every 5 minutes. When you specify an interval, take note of the following limits:</para>
         /// <list type="bullet">
-        /// <item><description>Full timezone name: e.g., Asia/Shanghai (China/Shanghai time), America/Los_Angeles (America/Los Angeles time), etc.</description></item>
-        /// <item><description>Timezone offset from GMT: e.g., GMT+8:00 (UTC+8:00), GMT-7:00 (UTC-7:00). When using the GMT format, leading zeros are not allowed in the hour position.</description></item>
-        /// <item><description>Timezone abbreviation: Only UTC (Coordinated Universal Time) is supported.</description></item>
+        /// <item><description>The interval can be anywhere from 60 seconds to 7 days, but must be longer than the timeout period of the scheduled task.</description></item>
+        /// <item><description>The interval is the time between two consecutive executions, irrelevant of the time required to run the command. For example, assume that you set the interval to 5 minutes and that it takes 2 minutes to run the command each time. The system waits 3 minutes before running the command again.</description></item>
+        /// <item><description>The command is not immediately executed after the task is created. For example, assume that you set the interval to 5 minutes. The task begins to be executed 5 minutes after it is created.</description></item>
         /// </list>
-        /// <para>For example, to execute the command at 10:15 AM every day in 2022 in Shanghai, China, the format would be 0 15 10 ? * * 2022 Asia/Shanghai; to execute the command every 30 minutes between 10:00 AM and 11:30 AM every day in 2022 in the GMT+8:00 timezone, the format would be 0 0/30 10-11 * * ? 2022 GMT+8:00; to execute the command every 5 minutes between 2:00 PM and 2:55 PM every day in October every two years starting from 2022 in UTC, the format would be 0 0/5 14 * 10 ? 2022/2 UTC.</para>
+        /// </description></item>
+        /// <item><description><para>To run a command only once at a specific point in time, specify a point in time and a time zone. Format: at(yyyy-MM-dd HH:mm:ss \<Time zone>). If you do not specify a time zone, the Coordinated Universal Time (UTC) time zone is used by default. The time zone name supports the following formats: Full name, such as Asia/Shanghai and America/Los_Angeles. The time offset from GMT. Examples: GMT+8:00 (UTC+8) and GMT-7:00 (UTC-7). If you use the GMT format, you cannot add leading zeros to the hour value. The time zone abbreviation. Only UTC is supported. For example, to configure a command to run only once at 13:15:30 on June 6, 2022 (Shanghai time), set the time to at(2022-06-06 13:15:30 Asia/Shanghai). To configure a command to run only once at 13:15:30 on June 6, 2022 (UTC-7), set the time to at(2022-06-06 13:15:30 GMT-7:00).</para>
+        /// </description></item>
+        /// <item><description><para>To run a command at designated points in time, use a cron expression to define the schedule. Format: \<Cron expression> \<Time zone>. Example: \<Seconds> \<Minutes> \<Hours> \<Day of the month> \<Month> \<Day of the week> \&lt;Year (optional)&gt; \<Time zone>. The system calculates the execution times of the command based on the specified cron expression and time zone and runs the command as scheduled. If you do not specify a time zone, the system time zone of the instance is used by default. For more information, see Cron expressions. The time zone name supports the following formats:</para>
+        /// <list type="bullet">
+        /// <item><description>Full name, such as Asia/Shanghai and America/Los_Angeles.</description></item>
+        /// <item><description>The time offset from GMT. Examples: GMT+8:00 (UTC+8) and GMT-7:00 (UTC-7). If you use the GMT format, you cannot add leading zeros to the hour value.</description></item>
+        /// <item><description>The time zone abbreviation. Only UTC is supported.</description></item>
+        /// </list>
+        /// <para>For example, if you specify a command to run at 10:15:00 every day in 2022 in China/Shanghai time, set the time to 0 15 10 ? \* \* 2022 Asia/Shanghai. To configure a command to run every half an hour from 10:00:00 to 11:30:00 every day in 2022 (UTC+8), set the schedule to 0 0/30 10-11 \* \* ? 2022 GMT+8:00. To configure a command to run every 5 minutes from 14:00:00 to 14:55:00 every October every two years from 2022 in UTC, set the schedule to 0 0/5 14 \* 10 ? 2022/2 UTC.</para>
+        /// </description></item>
+        /// </list>
         /// </summary>
         [NameInMap("Frequency")]
         [Validation(Required=false)]
         public string Frequency { get; set; }
 
         /// <summary>
-        /// <para>Bootstrap for script execution. The length must not exceed 1 KB.</para>
+        /// <para>The launcher for script execution. Cannot exceed 1 KB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>python3 -u {{ACS::ScriptFileName|Ext(&quot;.py&quot;)}}</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string Launcher { get; set; }
 
         /// <summary>
-        /// <para>Command name.</para>
+        /// <para>The command name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testName</para>
@@ -129,22 +129,22 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>List of nodes.</para>
+        /// <para>The node list.</para>
         /// </summary>
         [NameInMap("NodeIdList")]
         [Validation(Required=false)]
         public string NodeIdListShrink { get; set; }
 
         /// <summary>
-        /// <para>When the command contains custom parameters, you need to pass in key-value pairs of these custom parameters when executing the command. For example, if the command content is <c>echo {{name}}</c>, you can pass in the key-value pair <c>{&quot;name&quot;:&quot;Jack&quot;}</c> through the <c>Parameter</c> parameter. The custom parameter will automatically replace the variable value <c>name</c>, resulting in a new command, which actually executes as <c>echo Jack</c>.</para>
-        /// <para>The number of custom parameters ranges from 0 to 10, and you should note:</para>
+        /// <para>The key-value pairs of custom parameters to pass in when the command includes custom parameters. For example, the command content is <c>echo {{name}}</c>. You can use <c>Parameters</c> to pass in the <c>{&quot;name&quot;:&quot;Jack&quot;}</c> key-value pair. The <c>name</c> key of the custom parameter is automatically replaced by the paired Jack value to generate a new command. As a result, the <c>echo Jack</c> command is run.</para>
+        /// <para>You can specify 0 to 10 custom parameters. Take note of the following:</para>
         /// <list type="bullet">
-        /// <item><description>Keys cannot be empty strings and support up to 64 characters at most.</description></item>
-        /// <item><description>Values can be empty strings.</description></item>
-        /// <item><description>When combined with the original command content and Base64 encoded, if the command is saved, the size after Base64 encoding must not exceed 18 KB; if the command is not saved, the size after Base64 encoding must not exceed 24 KB. You can set whether to keep the command via <c>KeepCommand</c>.</description></item>
-        /// <item><description>The set of custom parameter names must be a subset of the parameter set defined during command creation. For parameters that are not passed in, you can use an empty string as a substitute.</description></item>
+        /// <item><description>The key of a custom parameter can be up to 64 characters in length, and cannot be an empty string.</description></item>
+        /// <item><description>The value of a custom parameter can be an empty string.</description></item>
+        /// <item><description>If you want to retain a command, make sure that the command after Base64 encoding, including custom parameters and original command content, does not exceed 18 KB in size. If you do not want to retain the command, make sure that the command after Base64 encoding does not exceed 24 KB in size. You can set <c>KeepCommand</c> to specify whether to retain the command.</description></item>
+        /// <item><description>The specified custom parameter names must be included in the custom parameter names that you specify when you create the command. You can use empty strings to represent the parameters that are not passed in.</description></item>
         /// </list>
-        /// <para>The default value is empty, indicating that the parameter is not set, thus disabling custom parameters.</para>
+        /// <para>This parameter is left empty by default, which indicates that the custom parameter feature is disabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;name&quot;:&quot;Jack&quot;, &quot;accessKey&quot;:&quot;LTAIdyvdIqaRY****&quot;}</para>
@@ -154,17 +154,17 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ParametersShrink { get; set; }
 
         /// <summary>
-        /// <para>Set the command execution mode. Valid values:</para>
+        /// <para>The mode to run the command. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Once: Execute the command immediately.</description></item>
-        /// <item><description>Period: Execute the command at a scheduled time. When this parameter is set to <c>Period</c>, you must also specify the <c>Frequency</c> parameter.</description></item>
-        /// <item><description>NextRebootOnly: Automatically execute the command when the instance starts next time.</description></item>
-        /// <item><description>EveryReboot: Automatically execute the command every time the instance starts.</description></item>
+        /// <item><description>Once: runs the command immediately.</description></item>
+        /// <item><description>Period: runs the command based on a schedule. When set to <c>Period</c>, <c>Frequency</c> is required.</description></item>
+        /// <item><description>NextRebootOnly: runs the command the next time the instances is started.</description></item>
+        /// <item><description>EveryReboot: runs the command every time the instance is started.</description></item>
         /// </list>
         /// <para>Default value:</para>
         /// <list type="bullet">
-        /// <item><description>If the <c>Frequency</c> parameter is not specified, the default value is <c>Once</c>.</description></item>
-        /// <item><description>If the <c>Frequency</c> parameter is specified, regardless of whether this parameter is already set, it will be processed as <c>Period</c>.</description></item>
+        /// <item><description>If you do not specify <c>Frequency</c>, the default value is <c>Once</c>.</description></item>
+        /// <item><description>If you specify <c>Frequency</c>, RepeatMode is set to <c>Period</c> regardless of whether a value is already specified.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -175,8 +175,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string RepeatMode { get; set; }
 
         /// <summary>
-        /// <para>The mode when stopping a task (manually or due to execution timeout). Possible values:
-        /// Process: Stops the current script process. ProcessTree: Stops the current process tree (a collection of the script process and all its child processes).</para>
+        /// <para>Indicates how the command task is stopped when a command execution is manually stopped or times out. Valid values:</para>
+        /// <para>Process: The process of the command is stopped. ProcessTree: The process tree of the command is stopped. In this case, the process of the command and all subprocesses are stopped.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ProcessTree</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string TerminationMode { get; set; }
 
         /// <summary>
-        /// <para>Timeout for executing the command, in seconds. If the command cannot run due to process issues, missing modules, or the absence of the Cloud Assistant Agent, a timeout will occur. After a timeout, the command process will be forcibly terminated. Default value: 60.</para>
+        /// <para>The timeout period for the command. Unit: seconds. A timeout error occurs if the command cannot be run because the process slows down or because a specific module or Cloud Assistant Agent does not exist. When the specified timeout period ends, the command process is forcefully terminated. Default value: 60.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3600</para>
@@ -196,8 +196,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public int? Timeout { get; set; }
 
         /// <summary>
-        /// <para>The username to execute the command in the instance. The length must not exceed 255 characters.
-        ///     For Linux systems, the command is executed by the root user by default.</para>
+        /// <para>The username that you use to run the command. The name can be up to 255 characters in length. For Linux instances, the root user is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>root</para>
@@ -207,10 +206,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string Username { get; set; }
 
         /// <summary>
-        /// <para>You can customize the execution path of the command. The default paths are as follows:</para>
-        /// <list type="bullet">
-        /// <item><description>Linux instances: The default execution path is under the /home directory of the root user.</description></item>
-        /// </list>
+        /// <para>The working path of the command. You can specify a custom path. Default path:</para>
+        /// <para>Linux instances: By default, the path is in the /home directory of the root user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/home/user</para>

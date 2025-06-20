@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class CreateDiagnosticTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>Diagnosis ID</para>
+        /// <para>The ID of the diagnostics task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>diag-i150553931717380274931</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string DiagnosticId { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A511C02A-0127-51AA-A9F9-966382C9A1B5</para>

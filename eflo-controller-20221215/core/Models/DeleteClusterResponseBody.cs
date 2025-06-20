@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class DeleteClusterResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request Id</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0FC4A1C7-421C-5EAB-9361-4C0338EFA287</para>

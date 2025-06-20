@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class RunCommandResponseBody : TeaModel {
         /// <summary>
-        /// <para>ID of the command execution.</para>
+        /// <para>The ID of the execution.</para>
         /// 
         /// <b>Example:</b>
         /// <para>t-7d2a745b412b4601b2d47f6a768d*</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string InvokeId { get; set; }
 
         /// <summary>
-        /// <para>ID of the request</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>2FE2B22C-CF9D-59DE-BF63-DC9B9B33A9D1</para>

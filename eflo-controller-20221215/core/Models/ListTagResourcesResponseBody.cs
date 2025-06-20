@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>NextToken for the next page, include this returned value when requesting the next page</para>
+        /// <para>The token that is used in the next request to retrieve a new page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdQ3Z+oPlg49gsr2y8jb6wY=</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8F208B6D-4C42-5FD3-B6BE-E826E92A44DD</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Tagged resources.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public List<ListTagResourcesResponseBodyTagResourcesTagResource> TagResource { get; set; }
             public class ListTagResourcesResponseBodyTagResourcesTagResource : TeaModel {
                 /// <summary>
-                /// <para>Resource ID</para>
+                /// <para>The resource ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>i15azeddnvf7uhw2oij57o0</para>
@@ -51,7 +51,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// <para>Resource type</para>
+                /// <para>The resource type.</para>
+                /// <para>Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Node</description></item>
+                /// <item><description>Cluster</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Cluster</para>
@@ -61,7 +66,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string ResourceType { get; set; }
 
                 /// <summary>
-                /// <para>Tag key</para>
+                /// <para>The tag key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>env</para>
@@ -71,7 +76,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// <para>Tag value</para>
+                /// <para>The tag value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dev</para>

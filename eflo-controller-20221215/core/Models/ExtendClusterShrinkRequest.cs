@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ExtendClusterShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Cluster ID</para>
+        /// <para>The cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i15b480fbd2fcdbc2869cd80</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>Whether to allow skipping failed node tasks, default value is False</para>
+        /// <para>Specifies whether to allow skipping failed nodes. Default value: False.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -30,21 +30,21 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public bool? IgnoreFailedNodeTasks { get; set; }
 
         /// <summary>
-        /// <para>IP allocation policy combination: Each policy can only choose one type, and multiple policies can be combined</para>
+        /// <para>The combined policies for assigning IP addresses: Only one policy type can be selected for each policy, and multiple policies can be combined.</para>
         /// </summary>
         [NameInMap("IpAllocationPolicy")]
         [Validation(Required=false)]
         public string IpAllocationPolicyShrink { get; set; }
 
         /// <summary>
-        /// <para>Node Group</para>
+        /// <para>The node groups.</para>
         /// </summary>
         [NameInMap("NodeGroups")]
         [Validation(Required=false)]
         public string NodeGroupsShrink { get; set; }
 
         /// <summary>
-        /// <para>VSwitch availability zone ID</para>
+        /// <para>The ID of the zone to which the vSwitch belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai-b</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string VSwitchZoneId { get; set; }
 
         /// <summary>
-        /// <para>List of cluster subnets</para>
+        /// <para>The subnets of the cluster.</para>
         /// </summary>
         [NameInMap("VpdSubnets")]
         [Validation(Required=false)]

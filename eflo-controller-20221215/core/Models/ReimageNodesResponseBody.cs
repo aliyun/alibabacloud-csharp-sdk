@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ReimageNodesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15FBCD9B-C93F-54E8-A168-AADE7E66DAD2</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Task ID</para>
+        /// <para>The job ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i158782151663841517926</para>

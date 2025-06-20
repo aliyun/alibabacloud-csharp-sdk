@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class DescribeVscRequest : TeaModel {
         /// <summary>
-        /// <para>The VscId to be queried</para>
+        /// <para>The VSC ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

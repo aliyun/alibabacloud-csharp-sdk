@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class TagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>Region ID</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>List of resource IDs</para>
+        /// <para>The IDs of the resources.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
@@ -29,7 +29,15 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>Resource type</para>
+        /// <para>The resource type.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Node</description></item>
+        /// <item><description>Vcc</description></item>
+        /// <item><description>Cluster</description></item>
+        /// <item><description>Vpd</description></item>
+        /// <item><description>Subnet</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,7 +48,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>Tags</para>
+        /// <para>The tags.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tag")]
@@ -48,7 +56,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>Tag key</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>app</para>
@@ -58,7 +66,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>Tag value</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>v3</para>

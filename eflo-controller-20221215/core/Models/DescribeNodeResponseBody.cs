@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class DescribeNodeResponseBody : TeaModel {
         /// <summary>
-        /// <para>Cluster ID</para>
+        /// <para>The cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i116913051662373010974</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>Cluster name</para>
+        /// <para>The cluster name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Standard_Cluster</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <para>Creation time</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-09-30T03:35:53Z</para>
@@ -40,16 +40,16 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>Disk infos</para>
+        /// <para>The disks.</para>
         /// </summary>
         [NameInMap("Disks")]
         [Validation(Required=false)]
         public List<DescribeNodeResponseBodyDisks> Disks { get; set; }
         public class DescribeNodeResponseBodyDisks : TeaModel {
             /// <summary>
-            /// <para>The category of the disk.</para>
+            /// <para>The disk type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>cloud_ssd: all-flash disk.</description></item>
+            /// <item><description>cloud_essd</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string Category { get; set; }
 
             /// <summary>
-            /// <para>The ID of the disk.</para>
+            /// <para>The disk ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>d-bp1fi88ryk4yah8a6yos</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string DiskId { get; set; }
 
             /// <summary>
-            /// <para>The performance level of the ESSD. Valid values:</para>
+            /// <para>The performance level of the ESSD that is used as the system disk. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</description></item>
             /// <item><description>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</description></item>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string PerformanceLevel { get; set; }
 
             /// <summary>
-            /// <para>The size of the disk. Unit: GiB.</para>
+            /// <para>The disk size. Unit: GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -94,9 +94,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public int? Size { get; set; }
 
             /// <summary>
-            /// <para>The type of the disk. Valid values:</para>
+            /// <para>The disk type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>system: system disk</description></item>
+            /// <item><description>data: data disk</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -109,7 +110,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
-        /// <para>Expiration time</para>
+        /// <para>The expiration time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-06-23T16:00:00Z</para>
@@ -119,7 +120,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ExpiredTime { get; set; }
 
         /// <summary>
-        /// <para>Whether file storage mounting is supported</para>
+        /// <para>Indicates whether file storage mounting is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -129,7 +130,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public bool? FileSystemMountEnabled { get; set; }
 
         /// <summary>
-        /// <para>Hostname</para>
+        /// <para>The hostname.</para>
         /// 
         /// <b>Example:</b>
         /// <para>31d38530-241e-11ed-bc63-acde48001122</para>
@@ -139,7 +140,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string Hostname { get; set; }
 
         /// <summary>
-        /// <para>Cluster number</para>
+        /// <para>The cluster number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A1</para>
@@ -149,7 +150,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string HpnZone { get; set; }
 
         /// <summary>
-        /// <para>Image ID</para>
+        /// <para>The image ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i190297201634099844192</para>
@@ -159,7 +160,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>Image name</para>
+        /// <para>The image name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Centos7.9_all_0811</para>
@@ -169,7 +170,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ImageName { get; set; }
 
         /// <summary>
-        /// <para>Machine type</para>
+        /// <para>The instance type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>efg1.nvga1</para>
@@ -179,14 +180,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string MachineType { get; set; }
 
         /// <summary>
-        /// <para>Network information</para>
+        /// <para>The network information.</para>
         /// </summary>
         [NameInMap("Networks")]
         [Validation(Required=false)]
         public List<DescribeNodeResponseBodyNetworks> Networks { get; set; }
         public class DescribeNodeResponseBodyNetworks : TeaModel {
             /// <summary>
-            /// <para>Network interface port information</para>
+            /// <para>The port information of the elastic network interface (ENI).</para>
             /// 
             /// <b>Example:</b>
             /// <para>Bond0</para>
@@ -196,7 +197,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string BondName { get; set; }
 
             /// <summary>
-            /// <para>Machine IP</para>
+            /// <para>The IP address of the node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>47.254.235.44</para>
@@ -206,7 +207,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string Ip { get; set; }
 
             /// <summary>
-            /// <para>Cluster subnet ID</para>
+            /// <para>The subnet ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-uf68v51fldm5egmui5a6k</para>
@@ -216,7 +217,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string SubnetId { get; set; }
 
             /// <summary>
-            /// <para>Cluster network ID</para>
+            /// <para>The ID of the cluster network.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpd-xcuhjyrj</para>
@@ -228,7 +229,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
-        /// <para>Node group ID</para>
+        /// <para>The node group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ng-ec3c96ff0aa4c60d</para>
@@ -238,7 +239,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NodeGroupId { get; set; }
 
         /// <summary>
-        /// <para>Node group name</para>
+        /// <para>The node group name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>emr-default</para>
@@ -248,7 +249,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NodeGroupName { get; set; }
 
         /// <summary>
-        /// <para>Node ID</para>
+        /// <para>The node ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e01-cn-zvp2tgykr08</para>
@@ -258,7 +259,23 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NodeId { get; set; }
 
         /// <summary>
-        /// <para>Node status</para>
+        /// <para>The node status.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Extending</description></item>
+        /// <item><description>UnusedNodeStopped</description></item>
+        /// <item><description>UnusedNodeStopping</description></item>
+        /// <item><description>Unused</description></item>
+        /// <item><description>Using</description></item>
+        /// <item><description>ReleaseLocking</description></item>
+        /// <item><description>Operating</description></item>
+        /// <item><description>Cutting</description></item>
+        /// <item><description>ClusterNodeStopped</description></item>
+        /// <item><description>UnusedNodeRecovering</description></item>
+        /// <item><description>ClusterNodeStopping</description></item>
+        /// <item><description>ClusterNodeRecovering</description></item>
+        /// <item><description>Replacing</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Using</para>
@@ -268,7 +285,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string OperatingState { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AC4F0004-7BCE-52E0-891B-CAC7D64E3368</para>
@@ -278,7 +295,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Resource group ID</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmywpvugkh7kq</para>
@@ -288,7 +305,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>Unique machine identifier</para>
+        /// <para>The serial number of the node.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sag42ckf4jx</para>
@@ -298,7 +315,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string Sn { get; set; }
 
         /// <summary>
-        /// <para>The script by user defined</para>
+        /// <para>The custom script.</para>
         /// 
         /// <b>Example:</b>
         /// <para>#!/bin/bash
@@ -310,7 +327,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string UserData { get; set; }
 
         /// <summary>
-        /// <para>Zone ID</para>
+        /// <para>The zone ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-i</para>

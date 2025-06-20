@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class DescribeZonesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E9116F2D-82F8-501E-9ADB-2BE0C02B6A84</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>List of available zones</para>
+        /// <para>The list of zones.</para>
         /// </summary>
         [NameInMap("Zones")]
         [Validation(Required=false)]
         public List<DescribeZonesResponseBodyZones> Zones { get; set; }
         public class DescribeZonesResponseBodyZones : TeaModel {
             /// <summary>
-            /// <para>Zone name</para>
+            /// <para>The zone name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Hang Zhou</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string LocalName { get; set; }
 
             /// <summary>
-            /// <para>Zone ID</para>
+            /// <para>The zone ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-i</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ShrinkClusterResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CC9FEF89-9BE5-5E03-845E-238B48D7599B</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>task id</para>
+        /// <para>The job ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i159136551662516768776</para>

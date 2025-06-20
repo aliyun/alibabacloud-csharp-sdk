@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class DescribeSendFileResultsRequest : TeaModel {
         /// <summary>
-        /// <para>Command execution ID.</para>
+        /// <para>The command execution ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string InvokeId { get; set; }
 
         /// <summary>
-        /// <para>Node ID</para>
+        /// <para>The node ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e01-cn-zvp2tgykr08</para>

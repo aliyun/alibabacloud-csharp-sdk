@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ListVscsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of data records to be read in this request.</para>
+        /// <para>The maximum number of data entries to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Marks the position to start reading from. If empty, it starts from the beginning.</para>
+        /// <para>The token that is used in the next request to retrieve a new page of results. If you leave this parameter empty, the query starts from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>563d42ae0b17572449ec8c97f7f66069</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>List of node IDs</para>
+        /// <para>The IDs of the nodes.</para>
         /// </summary>
         [NameInMap("NodeIds")]
         [Validation(Required=false)]
         public string NodeIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>Resource group ID</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aek2xdkc6icwfha</para>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>List of tags.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListVscsShrinkRequestTag> Tag { get; set; }
         public class ListVscsShrinkRequestTag : TeaModel {
             /// <summary>
-            /// <para>Tag key.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>key001</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>Tag value.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>value001</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
-        /// <para>Vsc name</para>
+        /// <para>The VSC name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_name</para>

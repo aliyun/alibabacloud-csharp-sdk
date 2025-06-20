@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ListImagesRequest : TeaModel {
         /// <summary>
-        /// <para>Architecture</para>
+        /// <para>The architecture.</para>
         /// 
         /// <b>Example:</b>
         /// <para>x86_64</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string Architecture { get; set; }
 
         /// <summary>
-        /// <para>Image version</para>
+        /// <para>The image version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7.9</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ImageVersion { get; set; }
 
         /// <summary>
-        /// <para>Platform</para>
+        /// <para>The platform.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ALinux3</para>

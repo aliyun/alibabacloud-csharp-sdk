@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ListFreeNodesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The query token value returned by this call.</para>
+        /// <para>The returned pagination token which can be used in the next request to retrieve a new page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a3f2224a5ec7224116c4f5246120abe4</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>List of nodes</para>
+        /// <para>The nodes.</para>
         /// </summary>
         [NameInMap("Nodes")]
         [Validation(Required=false)]
         public List<ListFreeNodesResponseBodyNodes> Nodes { get; set; }
         public class ListFreeNodesResponseBodyNodes : TeaModel {
             /// <summary>
-            /// <para>Product Code</para>
+            /// <para>The commodity code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bccluster_eflocomputing_public_cn</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string CommodityCode { get; set; }
 
             /// <summary>
-            /// <para>Creation time</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1652321554</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Expiration time of the machine</para>
+            /// <para>The time when the node expires.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1673107200</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string ExpiredTime { get; set; }
 
             /// <summary>
-            /// <para>Cluster number</para>
+            /// <para>The cluster number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>A1</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string HpnZone { get; set; }
 
             /// <summary>
-            /// <para>Machine type</para>
+            /// <para>The instance type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>efg1.nvga1</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string MachineType { get; set; }
 
             /// <summary>
-            /// <para>Node ID</para>
+            /// <para>The node ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>e01-cn-7pp2x193801</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string NodeId { get; set; }
 
             /// <summary>
-            /// <para>Node status</para>
+            /// <para>The node status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Unused</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string OperatingState { get; set; }
 
             /// <summary>
-            /// <para>Resource group ID</para>
+            /// <para>The resource group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-aekzkkbrpl4owgy</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>Machine SN</para>
+            /// <para>The serial number of the node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sn_pozkHBgicd</para>
@@ -117,14 +117,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string Sn { get; set; }
 
             /// <summary>
-            /// <para>Tags Info</para>
+            /// <para>The tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListFreeNodesResponseBodyNodesTags> Tags { get; set; }
             public class ListFreeNodesResponseBodyNodesTags : TeaModel {
                 /// <summary>
-                /// <para>The key of tag object</para>
+                /// <para>The tag key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>aa_key</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The value of tag object</para>
+                /// <para>The tag value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>aa_vakye</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             }
 
             /// <summary>
-            /// <para>Availability zone ID</para>
+            /// <para>The zone ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-j</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AA14CB86-70C4-5CB7-9E7B-6CCA77F3512B</para>

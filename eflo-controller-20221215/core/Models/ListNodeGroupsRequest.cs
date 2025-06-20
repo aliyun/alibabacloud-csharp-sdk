@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ListNodeGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>Cluster ID</para>
+        /// <para>The cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i119982311660892626523</para>
@@ -20,12 +20,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>Number of items per page in a paginated query. The maximum value is 100.</para>
+        /// <para>The number of entries per page. Maximum value: 100.</para>
         /// <para>Default value:</para>
-        /// <list type="bullet">
-        /// <item><description>If no value is set or the set value is less than 20, the default value is 20.</description></item>
-        /// <item><description>If the set value is greater than 100, the default value is 100.</description></item>
-        /// </list>
+        /// <para>• If you do not configure this parameter or if you set this parameter to a value less than 20, the default value is 20.</para>
+        /// <para>• If you set this parameter to a value greater than 100, the default value is 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -35,7 +33,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>NextToken for the next page, include this value when requesting the next page</para>
+        /// <para>The token that is used in the next request to retrieve a new page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a3f2224a5ec7224116c4f5246120abe4</para>
@@ -45,7 +43,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Node group ID</para>
+        /// <para>The node group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ng-ec3c96ff0aa4c60d</para>

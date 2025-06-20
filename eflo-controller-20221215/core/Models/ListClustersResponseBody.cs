@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ListClustersResponseBody : TeaModel {
         /// <summary>
-        /// <para>Cluster information</para>
+        /// <para>The clusters.</para>
         /// </summary>
         [NameInMap("Clusters")]
         [Validation(Required=false)]
         public List<ListClustersResponseBodyClusters> Clusters { get; set; }
         public class ListClustersResponseBodyClusters : TeaModel {
             /// <summary>
-            /// <para>Cluster description</para>
+            /// <para>The cluster description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PPU-cluster2 bz</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string ClusterDescription { get; set; }
 
             /// <summary>
-            /// <para>Cluster ID</para>
+            /// <para>The cluster ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i137590131672134915401</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>Cluster name</para>
+            /// <para>The cluster name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cnp_test_cluster</para>
@@ -47,7 +47,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string ClusterName { get; set; }
 
             /// <summary>
-            /// <para>Cluster type</para>
+            /// <para>The cluster type.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>AckEdgePro</description></item>
+            /// <item><description>ExclusiveBareCluster</description></item>
+            /// <item><description>Lite</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>AckEdgePro</para>
@@ -57,7 +63,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string ClusterType { get; set; }
 
             /// <summary>
-            /// <para>Component information</para>
+            /// <para>The component information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -67,7 +73,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public object Components { get; set; }
 
             /// <summary>
-            /// <para>IP version of the computing network</para>
+            /// <para>The IP type of the computing network.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IPv4</para>
@@ -77,7 +83,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string ComputingIpVersion { get; set; }
 
             /// <summary>
-            /// <para>Creation time</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1672134938</para>
@@ -87,7 +93,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Cluster number</para>
+            /// <para>The cluster number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>B1</para>
@@ -97,7 +103,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string HpnZone { get; set; }
 
             /// <summary>
-            /// <para>Number of nodes</para>
+            /// <para>The number of nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -107,7 +113,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public long? NodeCount { get; set; }
 
             /// <summary>
-            /// <para>Number of node groups</para>
+            /// <para>The number of node groups.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -117,7 +123,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public long? NodeGroupCount { get; set; }
 
             /// <summary>
-            /// <para>Cluster status</para>
+            /// <para>The cluster status.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>running</description></item>
+            /// <item><description>expanding</description></item>
+            /// <item><description>shrinking</description></item>
+            /// <item><description>initializing</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>initializing</para>
@@ -127,7 +140,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string OperatingState { get; set; }
 
             /// <summary>
-            /// <para>Resource group ID</para>
+            /// <para>The resource group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-aek2ajbjoloa23q</para>
@@ -137,14 +150,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>tag information</para>
+            /// <para>The tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListClustersResponseBodyClustersTags> Tags { get; set; }
             public class ListClustersResponseBodyClustersTags : TeaModel {
                 /// <summary>
-                /// <para>The key of tag object</para>
+                /// <para>The tag key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>aa_key</para>
@@ -154,7 +167,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The value of tag object</para>
+                /// <para>The tag value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>aa_value</para>
@@ -166,7 +179,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             }
 
             /// <summary>
-            /// <para>Task ID</para>
+            /// <para>The job ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i156365121663149566024</para>
@@ -176,7 +189,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>Update time</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1672134968</para>
@@ -186,7 +199,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>VPC ID</para>
+            /// <para>The virtual private cloud (VPC) ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-0jlx4hol2bjboafzmffvd</para>
@@ -198,7 +211,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
-        /// <para>The query token value returned by this call.</para>
+        /// <para>The returned pagination token which can be used in the next request to retrieve a new page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>f4f9a292c17072a2</para>
@@ -208,7 +221,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2FE2B22C-CF9D-59DE-BF63-DC9B9B33A9D1</para>

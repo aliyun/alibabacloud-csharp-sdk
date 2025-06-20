@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ListMachineTypesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details of the machine types</para>
+        /// <para>The instance types.</para>
         /// </summary>
         [NameInMap("MachineTypes")]
         [Validation(Required=false)]
         public List<ListMachineTypesResponseBodyMachineTypes> MachineTypes { get; set; }
         public class ListMachineTypesResponseBodyMachineTypes : TeaModel {
             /// <summary>
-            /// <para>Number of bonds</para>
+            /// <para>The number of bonds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public int? BondNum { get; set; }
 
             /// <summary>
-            /// <para>CPU information</para>
+            /// <para>The CPU information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2x Intel Icelake 8369B 32C CPU</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string CpuInfo { get; set; }
 
             /// <summary>
-            /// <para>Disk information</para>
+            /// <para>The disk information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2x 480GB SATA SSD</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string DiskInfo { get; set; }
 
             /// <summary>
-            /// <para>GPU information</para>
+            /// <para>The GPU information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8x NVIDIA SXM4 80GB A100 GPU</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string GpuInfo { get; set; }
 
             /// <summary>
-            /// <para>Memory information</para>
+            /// <para>The storage information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>32x 64GB DDR4 3200 Memory</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string MemoryInfo { get; set; }
 
             /// <summary>
-            /// <para>Machine name</para>
+            /// <para>The name of the instance type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>efg1.nvga1</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Network information</para>
+            /// <para>The network information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2x 100Gbps DP NIC</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string NetworkInfo { get; set; }
 
             /// <summary>
-            /// <para>Number of nodes</para>
+            /// <para>The number of nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string NodeCount { get; set; }
 
             /// <summary>
-            /// <para>Number of CPU cores</para>
+            /// <para>The number of vCPUs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>48</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public int? TotalCpuCore { get; set; }
 
             /// <summary>
-            /// <para>Type of machine</para>
+            /// <para>The access type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Public</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
-        /// <para>NextToken for the next page, include this value when requesting the next page</para>
+        /// <para>The token that is used in the next request to retrieve a new page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a3f2224a5ec7224116c4f5246120abe4</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F16BA4D8-FF50-53B6-A026-F443FE31006C</para>

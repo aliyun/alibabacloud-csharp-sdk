@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ListMachineTypesRequest : TeaModel {
         /// <summary>
-        /// <para>Machine name</para>
+        /// <para>The name of the instance type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>efg1.nvga1</para>

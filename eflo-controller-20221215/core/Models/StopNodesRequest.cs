@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class StopNodesRequest : TeaModel {
         /// <summary>
-        /// <para>Whether to allow skipping failed node tasks, default value is False.</para>
+        /// <para>Specifies whether to allow skipping failed nodes. Default value: False.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public bool? IgnoreFailedNodeTasks { get; set; }
 
         /// <summary>
-        /// <para>List of nodes.</para>
+        /// <para>The nodes.</para>
         /// </summary>
         [NameInMap("Nodes")]
         [Validation(Required=false)]

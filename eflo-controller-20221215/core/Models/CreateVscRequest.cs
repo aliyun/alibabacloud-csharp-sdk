@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class CreateVscRequest : TeaModel {
         /// <summary>
-        /// <para>Idempotent parameter</para>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Node ID</para>
+        /// <para>The node ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NodeId { get; set; }
 
         /// <summary>
-        /// <para>Resource group ID</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aek2xdkc6icwfha</para>
@@ -41,14 +41,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>Resource tags</para>
+        /// <para>The resource tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateVscRequestTag> Tag { get; set; }
         public class CreateVscRequestTag : TeaModel {
             /// <summary>
-            /// <para>Resource tag key</para>
+            /// <para>The resource tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>key001</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>Resource tag value</para>
+            /// <para>The resource tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>value001</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
-        /// <para>User-defined name for vscId, unique on a single compute node</para>
+        /// <para>The custom name of the VSC, which is unique on a compute node.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_name</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string VscName { get; set; }
 
         /// <summary>
-        /// <para>Set VSC type, primary/standard, default value is primary</para>
+        /// <para>The VSC type. Valid values: primary and standard. Default value: primary.</para>
         /// 
         /// <b>Example:</b>
         /// <para>primary</para>

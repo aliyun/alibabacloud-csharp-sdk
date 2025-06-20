@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class UpdateNodeGroupRequest : TeaModel {
         /// <summary>
-        /// <para>Whether file storage mounting is supported</para>
+        /// <para>Whether file storage mounting is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public bool? FileSystemMountEnabled { get; set; }
 
         /// <summary>
-        /// <para>The default image ID of a node group remains unchanged if not explicitly set.</para>
+        /// <para>The default image ID of the node group. if you do not set this parameter, the image ID will not change.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i123847249284734</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string LoginPassword { get; set; }
 
         /// <summary>
-        /// <para>Node group name</para>
+        /// <para>The node group name</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-update</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NewNodeGroupName { get; set; }
 
         /// <summary>
-        /// <para>Node group ID</para>
+        /// <para>The node group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i120021051733814190732</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NodeGroupId { get; set; }
 
         /// <summary>
-        /// <para>user data</para>
+        /// <para>The custom script.</para>
         /// 
         /// <b>Example:</b>
         /// <para>#!/bin/bash

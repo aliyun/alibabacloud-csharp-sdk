@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ExtendClusterRequest : TeaModel {
         /// <summary>
-        /// <para>Cluster ID</para>
+        /// <para>The cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i15b480fbd2fcdbc2869cd80</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>Whether to allow skipping failed node tasks, default value is False</para>
+        /// <para>Specifies whether to allow skipping failed nodes. Default value: False.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -30,21 +30,21 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public bool? IgnoreFailedNodeTasks { get; set; }
 
         /// <summary>
-        /// <para>IP allocation policy combination: Each policy can only choose one type, and multiple policies can be combined</para>
+        /// <para>The combined policies for assigning IP addresses: Only one policy type can be selected for each policy, and multiple policies can be combined.</para>
         /// </summary>
         [NameInMap("IpAllocationPolicy")]
         [Validation(Required=false)]
         public List<ExtendClusterRequestIpAllocationPolicy> IpAllocationPolicy { get; set; }
         public class ExtendClusterRequestIpAllocationPolicy : TeaModel {
             /// <summary>
-            /// <para>Specify the cluster subnet ID based on the bond name</para>
+            /// <para>The bond policy that you specify the cluster subnet ID based on the bond name.</para>
             /// </summary>
             [NameInMap("BondPolicy")]
             [Validation(Required=false)]
             public ExtendClusterRequestIpAllocationPolicyBondPolicy BondPolicy { get; set; }
             public class ExtendClusterRequestIpAllocationPolicyBondPolicy : TeaModel {
                 /// <summary>
-                /// <para>Default bond cluster subnet</para>
+                /// <para>The default bond subnet for the cluster.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>subnet-3od2fe</para>
@@ -54,14 +54,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string BondDefaultSubnet { get; set; }
 
                 /// <summary>
-                /// <para>Bond information</para>
+                /// <para>The bonds.</para>
                 /// </summary>
                 [NameInMap("Bonds")]
                 [Validation(Required=false)]
                 public List<ExtendClusterRequestIpAllocationPolicyBondPolicyBonds> Bonds { get; set; }
                 public class ExtendClusterRequestIpAllocationPolicyBondPolicyBonds : TeaModel {
                     /// <summary>
-                    /// <para>Bond name</para>
+                    /// <para>The bond name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Bond0</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>IP source cluster subnet</para>
+                    /// <para>The cluster subnet from which the IP address originates.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>subnet-3od2fe</para>
@@ -85,21 +85,21 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             }
 
             /// <summary>
-            /// <para>Machine type allocation policy</para>
+            /// <para>The allocation policies for the instance type.</para>
             /// </summary>
             [NameInMap("MachineTypePolicy")]
             [Validation(Required=false)]
             public List<ExtendClusterRequestIpAllocationPolicyMachineTypePolicy> MachineTypePolicy { get; set; }
             public class ExtendClusterRequestIpAllocationPolicyMachineTypePolicy : TeaModel {
                 /// <summary>
-                /// <para>Bond information</para>
+                /// <para>The bonds.</para>
                 /// </summary>
                 [NameInMap("Bonds")]
                 [Validation(Required=false)]
                 public List<ExtendClusterRequestIpAllocationPolicyMachineTypePolicyBonds> Bonds { get; set; }
                 public class ExtendClusterRequestIpAllocationPolicyMachineTypePolicyBonds : TeaModel {
                     /// <summary>
-                    /// <para>Bond name</para>
+                    /// <para>The bond name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Bond0</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>IP source cluster subnet</para>
+                    /// <para>The cluster subnet from which the IP address originates.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>subnet-fdo3dv</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 }
 
                 /// <summary>
-                /// <para>Machine Type</para>
+                /// <para>The instance type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>efg1.nvga1</para>
@@ -133,21 +133,21 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             }
 
             /// <summary>
-            /// <para>Node allocation policy</para>
+            /// <para>The node allocation policies.</para>
             /// </summary>
             [NameInMap("NodePolicy")]
             [Validation(Required=false)]
             public List<ExtendClusterRequestIpAllocationPolicyNodePolicy> NodePolicy { get; set; }
             public class ExtendClusterRequestIpAllocationPolicyNodePolicy : TeaModel {
                 /// <summary>
-                /// <para>Bond information</para>
+                /// <para>The bonds.</para>
                 /// </summary>
                 [NameInMap("Bonds")]
                 [Validation(Required=false)]
                 public List<ExtendClusterRequestIpAllocationPolicyNodePolicyBonds> Bonds { get; set; }
                 public class ExtendClusterRequestIpAllocationPolicyNodePolicyBonds : TeaModel {
                     /// <summary>
-                    /// <para>Bond name</para>
+                    /// <para>The bond name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Bond0</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>IP source cluster subnet</para>
+                    /// <para>The cluster subnet from which the IP address originates.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>subnet-fdo3dv</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 }
 
                 /// <summary>
-                /// <para>Host name</para>
+                /// <para>The hostname.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>i22c11282.eu95sqa</para>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string Hostname { get; set; }
 
                 /// <summary>
-                /// <para>Node ID</para>
+                /// <para>The node ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>i-3fdodw2</para>
@@ -193,17 +193,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
-        /// <para>Node Group</para>
+        /// <para>The node groups.</para>
         /// </summary>
         [NameInMap("NodeGroups")]
         [Validation(Required=false)]
         public List<ExtendClusterRequestNodeGroups> NodeGroups { get; set; }
         public class ExtendClusterRequestNodeGroups : TeaModel {
             /// <summary>
-            /// <para>Number of nodes to purchase. Value range: 0–500.</para>
-            /// <para>If the Amount parameter is set to 0, no nodes will be purchased. Existing nodes will be used for scaling.
-            /// If the Amount parameter is set to 1–500, the specified number of nodes will be purchased and used for scaling.
-            /// Default value: 0</para>
+            /// <para>The number of nodes to be purchased. Valid values: 0 to 500. If you set the value of the Amount parameter to 0, you do not want to purchase nodes and scale out the cluster by using existing nodes. If you set the value of the Amount parameter to a value ranging from 1 to 500, you want to purchase a certain number of nodes for cluster scale-out. Default value: 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -213,12 +210,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public long? Amount { get; set; }
 
             /// <summary>
-            /// <para>Whether to enable auto-renewal for purchased nodes.
-            /// Conditions: This parameter takes effect only when the Amount parameter is set to a non-zero value and the ChargeType is PrePaid.
-            /// Valid values:</para>
-            /// <para>True: Enable auto-renewal.
-            /// False: Disable auto-renewal.
-            /// Default value: False</para>
+            /// <para>Specifies whether to enable auto-renewal for the purchased nodes. This parameter takes effect only when the Amount parameter is not set to 0 and the ChargeType parameter is set to PrePaid. Valid values: true and false. Default value: False.</para>
             /// 
             /// <b>Example:</b>
             /// <para>True</para>
@@ -228,12 +220,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public bool? AutoRenew { get; set; }
 
             /// <summary>
-            /// <para>Billing method for nodes.
-            /// This parameter takes effect only when the Amount parameter is set to a value other than 0.
-            /// Valid values:</para>
-            /// <para>PrePaid: Subscription (prepaid).
-            /// PostPaid: Pay-as-you-go (postpaid).
-            /// Default value: PrePaid</para>
+            /// <para>The billing method of the node. This parameter does not take effect if you set the Amount parameter to 0. Valid values: PrePaid (subscription) and PostPaid (pay-as-you-go). Default value: PrePaid.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PostPaid</para>
@@ -243,15 +230,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// <para>The hostnames of purchased nodes.
-            /// This parameter takes effect only when the Amount parameter is set to a non-zero value.</para>
+            /// <para>The hostname for the purchased node. This parameter does not take effect if you set the Amount parameter to 0.</para>
             /// </summary>
             [NameInMap("Hostnames")]
             [Validation(Required=false)]
             public List<string> Hostnames { get; set; }
 
             /// <summary>
-            /// <para>The login password of node.</para>
+            /// <para>The logon password of the purchased node. This parameter does not take effect if you set the Amount parameter to 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Addk(*78</para>
@@ -261,7 +247,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string LoginPassword { get; set; }
 
             /// <summary>
-            /// <para>Node Group ID</para>
+            /// <para>The node group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i16d4883a46cbadeb4bc9</para>
@@ -271,14 +257,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string NodeGroupId { get; set; }
 
             /// <summary>
-            /// <para>The tag of node</para>
+            /// <para>The tags.</para>
             /// </summary>
             [NameInMap("NodeTag")]
             [Validation(Required=false)]
             public List<ExtendClusterRequestNodeGroupsNodeTag> NodeTag { get; set; }
             public class ExtendClusterRequestNodeGroupsNodeTag : TeaModel {
                 /// <summary>
-                /// <para>The key of tag.</para>
+                /// <para>The tag key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>my_key</para>
@@ -288,7 +274,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The value of tag.</para>
+                /// <para>The tag value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>my_value</para>
@@ -300,14 +286,36 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             }
 
             /// <summary>
-            /// <para>List of Nodes</para>
+            /// <para>The nodes.</para>
             /// </summary>
             [NameInMap("Nodes")]
             [Validation(Required=false)]
             public List<ExtendClusterRequestNodeGroupsNodes> Nodes { get; set; }
             public class ExtendClusterRequestNodeGroupsNodes : TeaModel {
+                [NameInMap("DataDisk")]
+                [Validation(Required=false)]
+                public List<ExtendClusterRequestNodeGroupsNodesDataDisk> DataDisk { get; set; }
+                public class ExtendClusterRequestNodeGroupsNodesDataDisk : TeaModel {
+                    [NameInMap("Category")]
+                    [Validation(Required=false)]
+                    public string Category { get; set; }
+
+                    [NameInMap("DeleteWithNode")]
+                    [Validation(Required=false)]
+                    public bool? DeleteWithNode { get; set; }
+
+                    [NameInMap("PerformanceLevel")]
+                    [Validation(Required=false)]
+                    public string PerformanceLevel { get; set; }
+
+                    [NameInMap("Size")]
+                    [Validation(Required=false)]
+                    public int? Size { get; set; }
+
+                }
+
                 /// <summary>
-                /// <para>Hostname</para>
+                /// <para>The hostname.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>d044d220-33fd-11ed-86a6</para>
@@ -317,7 +325,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string Hostname { get; set; }
 
                 /// <summary>
-                /// <para>Login Password</para>
+                /// <para>The logon password.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <hr>
@@ -327,7 +335,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string LoginPassword { get; set; }
 
                 /// <summary>
-                /// <para>Node ID</para>
+                /// <para>The node ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>e01-cn-zvp2zdpy601</para>
@@ -337,7 +345,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string NodeId { get; set; }
 
                 /// <summary>
-                /// <para>VSwitch ID</para>
+                /// <para>The vSwitch ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vsw-bp169pi5fj151rrms4sia</para>
@@ -347,7 +355,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// <para>VPC ID</para>
+                /// <para>The ID of the virtual private cloud (VPC).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-0jlasms92fdxqd3wlf8ny</para>
@@ -359,9 +367,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             }
 
             /// <summary>
-            /// <para>Purchase duration for nodes (unit: month).
-            /// Valid values: 1, 6, 12, 24, 36, 48.
-            /// Conditions: This parameter takes effect only when the Amount parameter is set to a non-zero value and the ChargeType is PrePaid.</para>
+            /// <para>The duration of the purchased node. Unit: months. Valid values: 1, 6, 12, 24, 36, and 48. This parameter takes effect only when the Amount parameter is not set to 0 and the ChargeType parameter is set to PrePaid.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6</para>
@@ -371,7 +377,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public long? Period { get; set; }
 
             /// <summary>
-            /// <para>Custom Data</para>
+            /// <para>The user data.</para>
             /// 
             /// <b>Example:</b>
             /// <para>#!/bin/sh
@@ -382,7 +388,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string UserData { get; set; }
 
             /// <summary>
-            /// <para>VSwitch Id</para>
+            /// <para>The vSwitch ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-0jly2d537ejphyq6h13ke</para>
@@ -392,7 +398,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// <para>Vpc Id</para>
+            /// <para>The ID of the virtual private cloud (VPC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-zq1econyv63tvyci5hefw</para>
@@ -402,7 +408,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string VpcId { get; set; }
 
             /// <summary>
-            /// <para>Zone ID</para>
+            /// <para>The zone ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-i</para>
@@ -414,7 +420,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
-        /// <para>VSwitch availability zone ID</para>
+        /// <para>The ID of the zone to which the vSwitch belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai-b</para>
@@ -424,7 +430,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string VSwitchZoneId { get; set; }
 
         /// <summary>
-        /// <para>List of cluster subnets</para>
+        /// <para>The subnets of the cluster.</para>
         /// </summary>
         [NameInMap("VpdSubnets")]
         [Validation(Required=false)]

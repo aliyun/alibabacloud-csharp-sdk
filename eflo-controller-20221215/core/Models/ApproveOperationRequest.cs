@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ApproveOperationRequest : TeaModel {
         /// <summary>
-        /// <para>Node ID</para>
+        /// <para>The node ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e01-cn-zvp2tgykr08</para>
@@ -20,7 +20,11 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NodeId { get; set; }
 
         /// <summary>
-        /// <para>Operation Type</para>
+        /// <para>The O\&amp;M operation type</para>
+        /// <para>Valid value:</para>
+        /// <list type="bullet">
+        /// <item><description>RepairMachine</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>RepairMachine</para>
