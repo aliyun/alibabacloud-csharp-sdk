@@ -264,6 +264,10 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
             [Validation(Required=false)]
             public string FileName { get; set; }
 
+            [NameInMap("languageHints")]
+            [Validation(Required=false)]
+            public string LanguageHints { get; set; }
+
             [NameInMap("level")]
             [Validation(Required=false)]
             public string Level { get; set; }
