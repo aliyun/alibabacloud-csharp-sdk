@@ -1,0 +1,34 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Safe20220117.Models
+{
+    public class SafeChangeQueryApproveFlowRequest : TeaModel {
+        [NameInMap("AuthKey")]
+        [Validation(Required=false)]
+        public string AuthKey { get; set; }
+
+        [NameInMap("AuthSign")]
+        [Validation(Required=false)]
+        public string AuthSign { get; set; }
+
+        [NameInMap("ReqTimestamp")]
+        [Validation(Required=false)]
+        public long? ReqTimestamp { get; set; }
+
+        [NameInMap("SourceOrderId")]
+        [Validation(Required=false)]
+        public string SourceOrderId { get; set; }
+
+        [NameInMap("Stage")]
+        [Validation(Required=false)]
+        public string Stage { get; set; }
+
+    }
+
+}
