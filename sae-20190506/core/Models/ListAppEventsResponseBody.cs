@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public List<ListAppEventsResponseBodyDataAppEventEntity> AppEventEntity { get; set; }
             public class ListAppEventsResponseBodyDataAppEventEntity : TeaModel {
+                [NameInMap("CauseAnalysis")]
+                [Validation(Required=false)]
+                public string CauseAnalysis { get; set; }
+
                 /// <summary>
                 /// <para>The type of the event. Valid values:</para>
                 /// 
