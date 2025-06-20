@@ -72,6 +72,9 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             [Validation(Required=false)]
             public string ProductName { get; set; }
 
+            /// <summary>
+            /// <para>The name of supported related resource types.</para>
+            /// </summary>
             [NameInMap("RelatedResourceTypes")]
             [Validation(Required=false)]
             public List<string> RelatedResourceTypes { get; set; }

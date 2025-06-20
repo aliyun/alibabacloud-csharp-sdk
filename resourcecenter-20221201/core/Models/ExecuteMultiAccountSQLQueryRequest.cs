@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         public string Expression { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of entries to return on each page.</para>
+        /// <para>Valid values: 1 to 1000.</para>
+        /// <para>Default value: 1000.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1000</para>
         /// </summary>
@@ -31,6 +35,8 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>eyJzZWFyY2hBZnRlcnMiOlsiMTAwMTU2Nzk4MTU1OSJd****</para>
         /// </summary>

@@ -76,14 +76,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AssociateDefaultFilterResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AssociateDefaultFilterResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AssociateDefaultFilterResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -125,14 +118,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AssociateDefaultFilterResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AssociateDefaultFilterResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AssociateDefaultFilterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -169,6 +155,158 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AssociateDefaultFilterWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建投递渠道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDeliveryChannelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDeliveryChannelResponse
+        /// </returns>
+        public CreateDeliveryChannelResponse CreateDeliveryChannelWithOptions(CreateDeliveryChannelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryChannelDescription))
+            {
+                query["DeliveryChannelDescription"] = request.DeliveryChannelDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryChannelFilter))
+            {
+                query["DeliveryChannelFilter"] = request.DeliveryChannelFilter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryChannelName))
+            {
+                query["DeliveryChannelName"] = request.DeliveryChannelName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceChangeDelivery))
+            {
+                query["ResourceChangeDelivery"] = request.ResourceChangeDelivery;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceSnapshotDelivery))
+            {
+                query["ResourceSnapshotDelivery"] = request.ResourceSnapshotDelivery;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDeliveryChannel",
+                Version = "2022-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDeliveryChannelResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建投递渠道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDeliveryChannelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDeliveryChannelResponse
+        /// </returns>
+        public async Task<CreateDeliveryChannelResponse> CreateDeliveryChannelWithOptionsAsync(CreateDeliveryChannelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryChannelDescription))
+            {
+                query["DeliveryChannelDescription"] = request.DeliveryChannelDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryChannelFilter))
+            {
+                query["DeliveryChannelFilter"] = request.DeliveryChannelFilter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryChannelName))
+            {
+                query["DeliveryChannelName"] = request.DeliveryChannelName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceChangeDelivery))
+            {
+                query["ResourceChangeDelivery"] = request.ResourceChangeDelivery;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceSnapshotDelivery))
+            {
+                query["ResourceSnapshotDelivery"] = request.ResourceSnapshotDelivery;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDeliveryChannel",
+                Version = "2022-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDeliveryChannelResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建投递渠道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDeliveryChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDeliveryChannelResponse
+        /// </returns>
+        public CreateDeliveryChannelResponse CreateDeliveryChannel(CreateDeliveryChannelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateDeliveryChannelWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建投递渠道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDeliveryChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDeliveryChannelResponse
+        /// </returns>
+        public async Task<CreateDeliveryChannelResponse> CreateDeliveryChannelAsync(CreateDeliveryChannelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateDeliveryChannelWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -214,14 +352,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateFilterResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateFilterResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateFilterResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -267,14 +398,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateFilterResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateFilterResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateFilterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -311,6 +435,158 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateFilterWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建多账号投递渠道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMultiAccountDeliveryChannelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMultiAccountDeliveryChannelResponse
+        /// </returns>
+        public CreateMultiAccountDeliveryChannelResponse CreateMultiAccountDeliveryChannelWithOptions(CreateMultiAccountDeliveryChannelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryChannelDescription))
+            {
+                query["DeliveryChannelDescription"] = request.DeliveryChannelDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryChannelFilter))
+            {
+                query["DeliveryChannelFilter"] = request.DeliveryChannelFilter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryChannelName))
+            {
+                query["DeliveryChannelName"] = request.DeliveryChannelName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceChangeDelivery))
+            {
+                query["ResourceChangeDelivery"] = request.ResourceChangeDelivery;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceSnapshotDelivery))
+            {
+                query["ResourceSnapshotDelivery"] = request.ResourceSnapshotDelivery;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMultiAccountDeliveryChannel",
+                Version = "2022-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateMultiAccountDeliveryChannelResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建多账号投递渠道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMultiAccountDeliveryChannelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMultiAccountDeliveryChannelResponse
+        /// </returns>
+        public async Task<CreateMultiAccountDeliveryChannelResponse> CreateMultiAccountDeliveryChannelWithOptionsAsync(CreateMultiAccountDeliveryChannelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryChannelDescription))
+            {
+                query["DeliveryChannelDescription"] = request.DeliveryChannelDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryChannelFilter))
+            {
+                query["DeliveryChannelFilter"] = request.DeliveryChannelFilter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryChannelName))
+            {
+                query["DeliveryChannelName"] = request.DeliveryChannelName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceChangeDelivery))
+            {
+                query["ResourceChangeDelivery"] = request.ResourceChangeDelivery;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceSnapshotDelivery))
+            {
+                query["ResourceSnapshotDelivery"] = request.ResourceSnapshotDelivery;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMultiAccountDeliveryChannel",
+                Version = "2022-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateMultiAccountDeliveryChannelResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建多账号投递渠道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMultiAccountDeliveryChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMultiAccountDeliveryChannelResponse
+        /// </returns>
+        public CreateMultiAccountDeliveryChannelResponse CreateMultiAccountDeliveryChannel(CreateMultiAccountDeliveryChannelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateMultiAccountDeliveryChannelWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建多账号投递渠道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMultiAccountDeliveryChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMultiAccountDeliveryChannelResponse
+        /// </returns>
+        public async Task<CreateMultiAccountDeliveryChannelResponse> CreateMultiAccountDeliveryChannelAsync(CreateMultiAccountDeliveryChannelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateMultiAccountDeliveryChannelWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -360,14 +636,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateSavedQueryResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateSavedQueryResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateSavedQueryResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -417,14 +686,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateSavedQueryResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateSavedQueryResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateSavedQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -461,6 +723,126 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateSavedQueryWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除投递渠道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDeliveryChannelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDeliveryChannelResponse
+        /// </returns>
+        public DeleteDeliveryChannelResponse DeleteDeliveryChannelWithOptions(DeleteDeliveryChannelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryChannelId))
+            {
+                query["DeliveryChannelId"] = request.DeliveryChannelId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDeliveryChannel",
+                Version = "2022-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDeliveryChannelResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除投递渠道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDeliveryChannelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDeliveryChannelResponse
+        /// </returns>
+        public async Task<DeleteDeliveryChannelResponse> DeleteDeliveryChannelWithOptionsAsync(DeleteDeliveryChannelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryChannelId))
+            {
+                query["DeliveryChannelId"] = request.DeliveryChannelId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDeliveryChannel",
+                Version = "2022-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDeliveryChannelResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除投递渠道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDeliveryChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDeliveryChannelResponse
+        /// </returns>
+        public DeleteDeliveryChannelResponse DeleteDeliveryChannel(DeleteDeliveryChannelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteDeliveryChannelWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除投递渠道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDeliveryChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDeliveryChannelResponse
+        /// </returns>
+        public async Task<DeleteDeliveryChannelResponse> DeleteDeliveryChannelAsync(DeleteDeliveryChannelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteDeliveryChannelWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -502,14 +884,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteFilterResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteFilterResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteFilterResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -551,14 +926,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteFilterResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteFilterResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteFilterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -595,6 +963,126 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteFilterWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除多账号投递渠道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMultiAccountDeliveryChannelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMultiAccountDeliveryChannelResponse
+        /// </returns>
+        public DeleteMultiAccountDeliveryChannelResponse DeleteMultiAccountDeliveryChannelWithOptions(DeleteMultiAccountDeliveryChannelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryChannelId))
+            {
+                query["DeliveryChannelId"] = request.DeliveryChannelId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMultiAccountDeliveryChannel",
+                Version = "2022-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteMultiAccountDeliveryChannelResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除多账号投递渠道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMultiAccountDeliveryChannelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMultiAccountDeliveryChannelResponse
+        /// </returns>
+        public async Task<DeleteMultiAccountDeliveryChannelResponse> DeleteMultiAccountDeliveryChannelWithOptionsAsync(DeleteMultiAccountDeliveryChannelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryChannelId))
+            {
+                query["DeliveryChannelId"] = request.DeliveryChannelId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMultiAccountDeliveryChannel",
+                Version = "2022-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteMultiAccountDeliveryChannelResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除多账号投递渠道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMultiAccountDeliveryChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMultiAccountDeliveryChannelResponse
+        /// </returns>
+        public DeleteMultiAccountDeliveryChannelResponse DeleteMultiAccountDeliveryChannel(DeleteMultiAccountDeliveryChannelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteMultiAccountDeliveryChannelWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除多账号投递渠道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMultiAccountDeliveryChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMultiAccountDeliveryChannelResponse
+        /// </returns>
+        public async Task<DeleteMultiAccountDeliveryChannelResponse> DeleteMultiAccountDeliveryChannelAsync(DeleteMultiAccountDeliveryChannelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteMultiAccountDeliveryChannelWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -636,14 +1124,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteSavedQueryResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteSavedQueryResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteSavedQueryResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -685,14 +1166,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteSavedQueryResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteSavedQueryResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteSavedQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -761,14 +1235,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DisableMultiAccountResourceCenterResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DisableMultiAccountResourceCenterResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DisableMultiAccountResourceCenterResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -801,14 +1268,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DisableMultiAccountResourceCenterResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DisableMultiAccountResourceCenterResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DisableMultiAccountResourceCenterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -869,14 +1329,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DisableResourceCenterResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DisableResourceCenterResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DisableResourceCenterResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -909,14 +1362,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DisableResourceCenterResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DisableResourceCenterResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DisableResourceCenterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -977,14 +1423,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DisassociateDefaultFilterResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DisassociateDefaultFilterResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DisassociateDefaultFilterResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -1017,14 +1456,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DisassociateDefaultFilterResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DisassociateDefaultFilterResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DisassociateDefaultFilterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -1090,14 +1522,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<EnableMultiAccountResourceCenterResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<EnableMultiAccountResourceCenterResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<EnableMultiAccountResourceCenterResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -1135,14 +1560,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<EnableMultiAccountResourceCenterResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<EnableMultiAccountResourceCenterResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<EnableMultiAccountResourceCenterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -1213,14 +1631,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<EnableResourceCenterResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<EnableResourceCenterResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<EnableResourceCenterResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -1253,14 +1664,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<EnableResourceCenterResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<EnableResourceCenterResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<EnableResourceCenterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -1342,14 +1746,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ExecuteMultiAccountSQLQueryResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ExecuteMultiAccountSQLQueryResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ExecuteMultiAccountSQLQueryResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -1403,14 +1800,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ExecuteMultiAccountSQLQueryResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ExecuteMultiAccountSQLQueryResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ExecuteMultiAccountSQLQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -1500,14 +1890,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ExecuteSQLQueryResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ExecuteSQLQueryResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ExecuteSQLQueryResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -1561,14 +1944,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ExecuteSQLQueryResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ExecuteSQLQueryResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ExecuteSQLQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -1605,6 +1981,246 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ExecuteSQLQueryWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询投递渠道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDeliveryChannelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDeliveryChannelResponse
+        /// </returns>
+        public GetDeliveryChannelResponse GetDeliveryChannelWithOptions(GetDeliveryChannelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryChannelId))
+            {
+                query["DeliveryChannelId"] = request.DeliveryChannelId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDeliveryChannel",
+                Version = "2022-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDeliveryChannelResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询投递渠道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDeliveryChannelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDeliveryChannelResponse
+        /// </returns>
+        public async Task<GetDeliveryChannelResponse> GetDeliveryChannelWithOptionsAsync(GetDeliveryChannelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryChannelId))
+            {
+                query["DeliveryChannelId"] = request.DeliveryChannelId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDeliveryChannel",
+                Version = "2022-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDeliveryChannelResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询投递渠道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDeliveryChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDeliveryChannelResponse
+        /// </returns>
+        public GetDeliveryChannelResponse GetDeliveryChannel(GetDeliveryChannelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetDeliveryChannelWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询投递渠道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDeliveryChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDeliveryChannelResponse
+        /// </returns>
+        public async Task<GetDeliveryChannelResponse> GetDeliveryChannelAsync(GetDeliveryChannelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetDeliveryChannelWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询投递渠道统计信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDeliveryChannelStatisticsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDeliveryChannelStatisticsResponse
+        /// </returns>
+        public GetDeliveryChannelStatisticsResponse GetDeliveryChannelStatisticsWithOptions(GetDeliveryChannelStatisticsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryChannelId))
+            {
+                query["DeliveryChannelId"] = request.DeliveryChannelId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDeliveryChannelStatistics",
+                Version = "2022-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDeliveryChannelStatisticsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询投递渠道统计信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDeliveryChannelStatisticsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDeliveryChannelStatisticsResponse
+        /// </returns>
+        public async Task<GetDeliveryChannelStatisticsResponse> GetDeliveryChannelStatisticsWithOptionsAsync(GetDeliveryChannelStatisticsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryChannelId))
+            {
+                query["DeliveryChannelId"] = request.DeliveryChannelId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDeliveryChannelStatistics",
+                Version = "2022-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDeliveryChannelStatisticsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询投递渠道统计信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDeliveryChannelStatisticsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDeliveryChannelStatisticsResponse
+        /// </returns>
+        public GetDeliveryChannelStatisticsResponse GetDeliveryChannelStatistics(GetDeliveryChannelStatisticsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetDeliveryChannelStatisticsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询投递渠道统计信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDeliveryChannelStatisticsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDeliveryChannelStatisticsResponse
+        /// </returns>
+        public async Task<GetDeliveryChannelStatisticsResponse> GetDeliveryChannelStatisticsAsync(GetDeliveryChannelStatisticsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetDeliveryChannelStatisticsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -1646,14 +2262,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetExampleQueryResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetExampleQueryResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetExampleQueryResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -1695,14 +2304,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetExampleQueryResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetExampleQueryResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetExampleQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -1743,6 +2345,246 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询多账号投递渠道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMultiAccountDeliveryChannelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMultiAccountDeliveryChannelResponse
+        /// </returns>
+        public GetMultiAccountDeliveryChannelResponse GetMultiAccountDeliveryChannelWithOptions(GetMultiAccountDeliveryChannelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryChannelId))
+            {
+                query["DeliveryChannelId"] = request.DeliveryChannelId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMultiAccountDeliveryChannel",
+                Version = "2022-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMultiAccountDeliveryChannelResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询多账号投递渠道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMultiAccountDeliveryChannelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMultiAccountDeliveryChannelResponse
+        /// </returns>
+        public async Task<GetMultiAccountDeliveryChannelResponse> GetMultiAccountDeliveryChannelWithOptionsAsync(GetMultiAccountDeliveryChannelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryChannelId))
+            {
+                query["DeliveryChannelId"] = request.DeliveryChannelId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMultiAccountDeliveryChannel",
+                Version = "2022-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMultiAccountDeliveryChannelResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询多账号投递渠道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMultiAccountDeliveryChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMultiAccountDeliveryChannelResponse
+        /// </returns>
+        public GetMultiAccountDeliveryChannelResponse GetMultiAccountDeliveryChannel(GetMultiAccountDeliveryChannelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetMultiAccountDeliveryChannelWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询多账号投递渠道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMultiAccountDeliveryChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMultiAccountDeliveryChannelResponse
+        /// </returns>
+        public async Task<GetMultiAccountDeliveryChannelResponse> GetMultiAccountDeliveryChannelAsync(GetMultiAccountDeliveryChannelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetMultiAccountDeliveryChannelWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询多账号投递渠道统计信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMultiAccountDeliveryChannelStatisticsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMultiAccountDeliveryChannelStatisticsResponse
+        /// </returns>
+        public GetMultiAccountDeliveryChannelStatisticsResponse GetMultiAccountDeliveryChannelStatisticsWithOptions(GetMultiAccountDeliveryChannelStatisticsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryChannelId))
+            {
+                query["DeliveryChannelId"] = request.DeliveryChannelId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMultiAccountDeliveryChannelStatistics",
+                Version = "2022-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMultiAccountDeliveryChannelStatisticsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询多账号投递渠道统计信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMultiAccountDeliveryChannelStatisticsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMultiAccountDeliveryChannelStatisticsResponse
+        /// </returns>
+        public async Task<GetMultiAccountDeliveryChannelStatisticsResponse> GetMultiAccountDeliveryChannelStatisticsWithOptionsAsync(GetMultiAccountDeliveryChannelStatisticsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryChannelId))
+            {
+                query["DeliveryChannelId"] = request.DeliveryChannelId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMultiAccountDeliveryChannelStatistics",
+                Version = "2022-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMultiAccountDeliveryChannelStatisticsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询多账号投递渠道统计信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMultiAccountDeliveryChannelStatisticsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMultiAccountDeliveryChannelStatisticsResponse
+        /// </returns>
+        public GetMultiAccountDeliveryChannelStatisticsResponse GetMultiAccountDeliveryChannelStatistics(GetMultiAccountDeliveryChannelStatisticsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetMultiAccountDeliveryChannelStatisticsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询多账号投递渠道统计信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMultiAccountDeliveryChannelStatisticsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMultiAccountDeliveryChannelStatisticsResponse
+        /// </returns>
+        public async Task<GetMultiAccountDeliveryChannelStatisticsResponse> GetMultiAccountDeliveryChannelStatisticsAsync(GetMultiAccountDeliveryChannelStatisticsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetMultiAccountDeliveryChannelStatisticsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the status of the cross-account resource search feature by using the management account of a resource directory or a delegated administrator account of Resource Center.</para>
         /// </summary>
         /// 
@@ -1771,14 +2613,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetMultiAccountResourceCenterServiceStatusResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetMultiAccountResourceCenterServiceStatusResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetMultiAccountResourceCenterServiceStatusResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -1811,14 +2646,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetMultiAccountResourceCenterServiceStatusResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetMultiAccountResourceCenterServiceStatusResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetMultiAccountResourceCenterServiceStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -1900,14 +2728,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetMultiAccountResourceConfigurationResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetMultiAccountResourceConfigurationResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetMultiAccountResourceConfigurationResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -1961,14 +2782,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetMultiAccountResourceConfigurationResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetMultiAccountResourceConfigurationResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetMultiAccountResourceConfigurationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -2037,14 +2851,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetResourceCenterServiceStatusResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetResourceCenterServiceStatusResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetResourceCenterServiceStatusResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -2077,14 +2884,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetResourceCenterServiceStatusResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetResourceCenterServiceStatusResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetResourceCenterServiceStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -2162,14 +2962,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetResourceConfigurationResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetResourceConfigurationResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetResourceConfigurationResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -2219,14 +3012,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetResourceConfigurationResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetResourceConfigurationResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetResourceConfigurationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -2308,14 +3094,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetResourceCountsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetResourceCountsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetResourceCountsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -2361,14 +3140,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetResourceCountsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetResourceCountsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetResourceCountsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -2446,14 +3218,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetSavedQueryResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetSavedQueryResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetSavedQueryResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -2495,14 +3260,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetSavedQueryResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetSavedQueryResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetSavedQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -2539,6 +3297,134 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetSavedQueryWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出投递渠道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDeliveryChannelsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDeliveryChannelsResponse
+        /// </returns>
+        public ListDeliveryChannelsResponse ListDeliveryChannelsWithOptions(ListDeliveryChannelsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDeliveryChannels",
+                Version = "2022-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDeliveryChannelsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出投递渠道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDeliveryChannelsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDeliveryChannelsResponse
+        /// </returns>
+        public async Task<ListDeliveryChannelsResponse> ListDeliveryChannelsWithOptionsAsync(ListDeliveryChannelsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDeliveryChannels",
+                Version = "2022-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDeliveryChannelsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出投递渠道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDeliveryChannelsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDeliveryChannelsResponse
+        /// </returns>
+        public ListDeliveryChannelsResponse ListDeliveryChannels(ListDeliveryChannelsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListDeliveryChannelsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出投递渠道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDeliveryChannelsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDeliveryChannelsResponse
+        /// </returns>
+        public async Task<ListDeliveryChannelsResponse> ListDeliveryChannelsAsync(ListDeliveryChannelsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListDeliveryChannelsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2584,14 +3470,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListExampleQueriesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListExampleQueriesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListExampleQueriesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -2637,14 +3516,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListExampleQueriesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListExampleQueriesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListExampleQueriesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -2713,14 +3585,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListFiltersResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListFiltersResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListFiltersResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -2753,14 +3618,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListFiltersResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListFiltersResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListFiltersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -2789,6 +3647,134 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListFiltersWithOptionsAsync(runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出多账号投递渠道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMultiAccountDeliveryChannelsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMultiAccountDeliveryChannelsResponse
+        /// </returns>
+        public ListMultiAccountDeliveryChannelsResponse ListMultiAccountDeliveryChannelsWithOptions(ListMultiAccountDeliveryChannelsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMultiAccountDeliveryChannels",
+                Version = "2022-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMultiAccountDeliveryChannelsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出多账号投递渠道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMultiAccountDeliveryChannelsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMultiAccountDeliveryChannelsResponse
+        /// </returns>
+        public async Task<ListMultiAccountDeliveryChannelsResponse> ListMultiAccountDeliveryChannelsWithOptionsAsync(ListMultiAccountDeliveryChannelsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMultiAccountDeliveryChannels",
+                Version = "2022-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMultiAccountDeliveryChannelsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出多账号投递渠道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMultiAccountDeliveryChannelsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMultiAccountDeliveryChannelsResponse
+        /// </returns>
+        public ListMultiAccountDeliveryChannelsResponse ListMultiAccountDeliveryChannels(ListMultiAccountDeliveryChannelsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListMultiAccountDeliveryChannelsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出多账号投递渠道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMultiAccountDeliveryChannelsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMultiAccountDeliveryChannelsResponse
+        /// </returns>
+        public async Task<ListMultiAccountDeliveryChannelsResponse> ListMultiAccountDeliveryChannelsAsync(ListMultiAccountDeliveryChannelsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListMultiAccountDeliveryChannelsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2842,14 +3828,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListMultiAccountResourceGroupsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListMultiAccountResourceGroupsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListMultiAccountResourceGroupsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -2903,14 +3882,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListMultiAccountResourceGroupsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListMultiAccountResourceGroupsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListMultiAccountResourceGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -2951,8 +3923,18 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>跨账号列出资源关系</para>
+        /// <para>Queries the relationships between resources within the management account or members of your resource directory.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you use a RAM user or a RAM role to call the operation, you must make sure that the RAM user or RAM role is granted the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/600556.html">Grant a RAM user the permissions to use Resource Center</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>By default, the operation returns up to 20 entries. You can configure the <c>MaxResults</c> parameter to specify the maximum number of entries to return.</description></item>
+        /// <item><description>If the response does not contain the <c>NextToken</c> parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the <c>NextToken</c> parameter to the value of <c>NextToken</c> in the last response of the operation. If you do not configure the <c>NextToken</c> parameter, entries on the first page are returned by default.</description></item>
+        /// <item><description>You can specify one or more filter conditions to narrow the search. For more information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical <c>AND</c> relations. Only resources that meet all filter conditions are returned. The values of a filter condition have logical <c>OR</c> relations. Resources that meet any value of the filter condition are returned.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListMultiAccountResourceRelationshipsRequest
@@ -3012,20 +3994,23 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListMultiAccountResourceRelationshipsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListMultiAccountResourceRelationshipsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListMultiAccountResourceRelationshipsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>跨账号列出资源关系</para>
+        /// <para>Queries the relationships between resources within the management account or members of your resource directory.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you use a RAM user or a RAM role to call the operation, you must make sure that the RAM user or RAM role is granted the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/600556.html">Grant a RAM user the permissions to use Resource Center</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>By default, the operation returns up to 20 entries. You can configure the <c>MaxResults</c> parameter to specify the maximum number of entries to return.</description></item>
+        /// <item><description>If the response does not contain the <c>NextToken</c> parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the <c>NextToken</c> parameter to the value of <c>NextToken</c> in the last response of the operation. If you do not configure the <c>NextToken</c> parameter, entries on the first page are returned by default.</description></item>
+        /// <item><description>You can specify one or more filter conditions to narrow the search. For more information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical <c>AND</c> relations. Only resources that meet all filter conditions are returned. The values of a filter condition have logical <c>OR</c> relations. Resources that meet any value of the filter condition are returned.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListMultiAccountResourceRelationshipsRequest
@@ -3085,20 +4070,23 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListMultiAccountResourceRelationshipsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListMultiAccountResourceRelationshipsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListMultiAccountResourceRelationshipsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>跨账号列出资源关系</para>
+        /// <para>Queries the relationships between resources within the management account or members of your resource directory.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you use a RAM user or a RAM role to call the operation, you must make sure that the RAM user or RAM role is granted the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/600556.html">Grant a RAM user the permissions to use Resource Center</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>By default, the operation returns up to 20 entries. You can configure the <c>MaxResults</c> parameter to specify the maximum number of entries to return.</description></item>
+        /// <item><description>If the response does not contain the <c>NextToken</c> parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the <c>NextToken</c> parameter to the value of <c>NextToken</c> in the last response of the operation. If you do not configure the <c>NextToken</c> parameter, entries on the first page are returned by default.</description></item>
+        /// <item><description>You can specify one or more filter conditions to narrow the search. For more information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical <c>AND</c> relations. Only resources that meet all filter conditions are returned. The values of a filter condition have logical <c>OR</c> relations. Resources that meet any value of the filter condition are returned.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListMultiAccountResourceRelationshipsRequest
@@ -3115,8 +4103,18 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>跨账号列出资源关系</para>
+        /// <para>Queries the relationships between resources within the management account or members of your resource directory.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you use a RAM user or a RAM role to call the operation, you must make sure that the RAM user or RAM role is granted the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/600556.html">Grant a RAM user the permissions to use Resource Center</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>By default, the operation returns up to 20 entries. You can configure the <c>MaxResults</c> parameter to specify the maximum number of entries to return.</description></item>
+        /// <item><description>If the response does not contain the <c>NextToken</c> parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the <c>NextToken</c> parameter to the value of <c>NextToken</c> in the last response of the operation. If you do not configure the <c>NextToken</c> parameter, entries on the first page are returned by default.</description></item>
+        /// <item><description>You can specify one or more filter conditions to narrow the search. For more information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical <c>AND</c> relations. Only resources that meet all filter conditions are returned. The values of a filter condition have logical <c>OR</c> relations. Resources that meet any value of the filter condition are returned.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListMultiAccountResourceRelationshipsRequest
@@ -3133,7 +4131,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tag keys of resources within the management account or a member of a resource directory by using the management account of the resource directory or a delegated administrator account of Resource Center.</para>
+        /// <para>Queries the tag keys of resources within the management account or a member of your resource directory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3186,19 +4184,12 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListMultiAccountTagKeysResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListMultiAccountTagKeysResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListMultiAccountTagKeysResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tag keys of resources within the management account or a member of a resource directory by using the management account of the resource directory or a delegated administrator account of Resource Center.</para>
+        /// <para>Queries the tag keys of resources within the management account or a member of your resource directory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3251,19 +4242,12 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListMultiAccountTagKeysResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListMultiAccountTagKeysResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListMultiAccountTagKeysResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tag keys of resources within the management account or a member of a resource directory by using the management account of the resource directory or a delegated administrator account of Resource Center.</para>
+        /// <para>Queries the tag keys of resources within the management account or a member of your resource directory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3281,7 +4265,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tag keys of resources within the management account or a member of a resource directory by using the management account of the resource directory or a delegated administrator account of Resource Center.</para>
+        /// <para>Queries the tag keys of resources within the management account or a member of your resource directory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3356,14 +4340,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListMultiAccountTagValuesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListMultiAccountTagValuesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListMultiAccountTagValuesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -3425,14 +4402,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListMultiAccountTagValuesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListMultiAccountTagValuesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListMultiAccountTagValuesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -3473,8 +4443,18 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出资源关系</para>
+        /// <para>Queries a list of resource relationships on which the current account has access permissions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation to query only the resource relationships on which the current account has access permissions.</para>
+        /// <list type="bullet">
+        /// <item><description>By default, this operation returns up to 20 entries. You can configure the <c>MaxResults</c> parameter to specify the maximum number of entries to return.</description></item>
+        /// <item><description>If the response does not contain the <c>NextToken</c> parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the <c>NextToken</c> parameter to the value of <c>NextToken</c> in the last response of the operation. If you do not configure the <c>NextToken</c> parameter, entries on the first page are returned by default.</description></item>
+        /// <item><description>You can specify one or more filter conditions to narrow the query scope. For information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical <c>AND</c> relations. Only entries that meet all filter conditions are returned. The values of a filter condition have logical <c>OR</c> relations. Entries that meet any value of the filter condition are returned.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListResourceRelationshipsRequest
@@ -3530,20 +4510,23 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListResourceRelationshipsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListResourceRelationshipsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListResourceRelationshipsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出资源关系</para>
+        /// <para>Queries a list of resource relationships on which the current account has access permissions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation to query only the resource relationships on which the current account has access permissions.</para>
+        /// <list type="bullet">
+        /// <item><description>By default, this operation returns up to 20 entries. You can configure the <c>MaxResults</c> parameter to specify the maximum number of entries to return.</description></item>
+        /// <item><description>If the response does not contain the <c>NextToken</c> parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the <c>NextToken</c> parameter to the value of <c>NextToken</c> in the last response of the operation. If you do not configure the <c>NextToken</c> parameter, entries on the first page are returned by default.</description></item>
+        /// <item><description>You can specify one or more filter conditions to narrow the query scope. For information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical <c>AND</c> relations. Only entries that meet all filter conditions are returned. The values of a filter condition have logical <c>OR</c> relations. Entries that meet any value of the filter condition are returned.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListResourceRelationshipsRequest
@@ -3599,20 +4582,23 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListResourceRelationshipsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListResourceRelationshipsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListResourceRelationshipsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出资源关系</para>
+        /// <para>Queries a list of resource relationships on which the current account has access permissions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation to query only the resource relationships on which the current account has access permissions.</para>
+        /// <list type="bullet">
+        /// <item><description>By default, this operation returns up to 20 entries. You can configure the <c>MaxResults</c> parameter to specify the maximum number of entries to return.</description></item>
+        /// <item><description>If the response does not contain the <c>NextToken</c> parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the <c>NextToken</c> parameter to the value of <c>NextToken</c> in the last response of the operation. If you do not configure the <c>NextToken</c> parameter, entries on the first page are returned by default.</description></item>
+        /// <item><description>You can specify one or more filter conditions to narrow the query scope. For information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical <c>AND</c> relations. Only entries that meet all filter conditions are returned. The values of a filter condition have logical <c>OR</c> relations. Entries that meet any value of the filter condition are returned.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListResourceRelationshipsRequest
@@ -3629,8 +4615,18 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出资源关系</para>
+        /// <para>Queries a list of resource relationships on which the current account has access permissions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation to query only the resource relationships on which the current account has access permissions.</para>
+        /// <list type="bullet">
+        /// <item><description>By default, this operation returns up to 20 entries. You can configure the <c>MaxResults</c> parameter to specify the maximum number of entries to return.</description></item>
+        /// <item><description>If the response does not contain the <c>NextToken</c> parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the <c>NextToken</c> parameter to the value of <c>NextToken</c> in the last response of the operation. If you do not configure the <c>NextToken</c> parameter, entries on the first page are returned by default.</description></item>
+        /// <item><description>You can specify one or more filter conditions to narrow the query scope. For information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical <c>AND</c> relations. Only entries that meet all filter conditions are returned. The values of a filter condition have logical <c>OR</c> relations. Entries that meet any value of the filter condition are returned.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListResourceRelationshipsRequest
@@ -3647,7 +4643,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the metadata of resource types.</para>
+        /// <para>Queries the metadata of resource types</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3692,19 +4688,12 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListResourceTypesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListResourceTypesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListResourceTypesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the metadata of resource types.</para>
+        /// <para>Queries the metadata of resource types</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3749,19 +4738,12 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListResourceTypesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListResourceTypesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListResourceTypesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the metadata of resource types.</para>
+        /// <para>Queries the metadata of resource types</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3779,7 +4761,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the metadata of resource types.</para>
+        /// <para>Queries the metadata of resource types</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3838,14 +4820,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListSavedQueriesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListSavedQueriesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListSavedQueriesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -3891,14 +4866,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListSavedQueriesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListSavedQueriesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListSavedQueriesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -3988,14 +4956,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListTagKeysResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListTagKeysResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListTagKeysResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4049,14 +5010,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListTagKeysResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListTagKeysResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListTagKeysResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4150,14 +5104,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListTagValuesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListTagValuesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListTagValuesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4215,14 +5162,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListTagValuesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListTagValuesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListTagValuesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4328,14 +5268,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<SearchMultiAccountResourcesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<SearchMultiAccountResourcesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<SearchMultiAccountResourcesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4405,14 +5338,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<SearchMultiAccountResourcesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<SearchMultiAccountResourcesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<SearchMultiAccountResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4541,14 +5467,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<SearchResourcesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<SearchResourcesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<SearchResourcesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4617,14 +5536,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<SearchResourcesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<SearchResourcesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<SearchResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4687,6 +5599,166 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>更新投递渠道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDeliveryChannelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDeliveryChannelResponse
+        /// </returns>
+        public UpdateDeliveryChannelResponse UpdateDeliveryChannelWithOptions(UpdateDeliveryChannelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryChannelDescription))
+            {
+                query["DeliveryChannelDescription"] = request.DeliveryChannelDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryChannelFilter))
+            {
+                query["DeliveryChannelFilter"] = request.DeliveryChannelFilter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryChannelId))
+            {
+                query["DeliveryChannelId"] = request.DeliveryChannelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryChannelName))
+            {
+                query["DeliveryChannelName"] = request.DeliveryChannelName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceChangeDelivery))
+            {
+                query["ResourceChangeDelivery"] = request.ResourceChangeDelivery;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceSnapshotDelivery))
+            {
+                query["ResourceSnapshotDelivery"] = request.ResourceSnapshotDelivery;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDeliveryChannel",
+                Version = "2022-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDeliveryChannelResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新投递渠道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDeliveryChannelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDeliveryChannelResponse
+        /// </returns>
+        public async Task<UpdateDeliveryChannelResponse> UpdateDeliveryChannelWithOptionsAsync(UpdateDeliveryChannelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryChannelDescription))
+            {
+                query["DeliveryChannelDescription"] = request.DeliveryChannelDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryChannelFilter))
+            {
+                query["DeliveryChannelFilter"] = request.DeliveryChannelFilter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryChannelId))
+            {
+                query["DeliveryChannelId"] = request.DeliveryChannelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryChannelName))
+            {
+                query["DeliveryChannelName"] = request.DeliveryChannelName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceChangeDelivery))
+            {
+                query["ResourceChangeDelivery"] = request.ResourceChangeDelivery;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceSnapshotDelivery))
+            {
+                query["ResourceSnapshotDelivery"] = request.ResourceSnapshotDelivery;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDeliveryChannel",
+                Version = "2022-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDeliveryChannelResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新投递渠道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDeliveryChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDeliveryChannelResponse
+        /// </returns>
+        public UpdateDeliveryChannelResponse UpdateDeliveryChannel(UpdateDeliveryChannelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateDeliveryChannelWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新投递渠道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDeliveryChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDeliveryChannelResponse
+        /// </returns>
+        public async Task<UpdateDeliveryChannelResponse> UpdateDeliveryChannelAsync(UpdateDeliveryChannelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateDeliveryChannelWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Updates a filter.</para>
         /// </summary>
         /// 
@@ -4728,14 +5800,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpdateFilterResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpdateFilterResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpdateFilterResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4781,14 +5846,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpdateFilterResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpdateFilterResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpdateFilterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4825,6 +5883,166 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateFilterWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新多账号投递渠道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMultiAccountDeliveryChannelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMultiAccountDeliveryChannelResponse
+        /// </returns>
+        public UpdateMultiAccountDeliveryChannelResponse UpdateMultiAccountDeliveryChannelWithOptions(UpdateMultiAccountDeliveryChannelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryChannelDescription))
+            {
+                query["DeliveryChannelDescription"] = request.DeliveryChannelDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryChannelFilter))
+            {
+                query["DeliveryChannelFilter"] = request.DeliveryChannelFilter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryChannelId))
+            {
+                query["DeliveryChannelId"] = request.DeliveryChannelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryChannelName))
+            {
+                query["DeliveryChannelName"] = request.DeliveryChannelName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceChangeDelivery))
+            {
+                query["ResourceChangeDelivery"] = request.ResourceChangeDelivery;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceSnapshotDelivery))
+            {
+                query["ResourceSnapshotDelivery"] = request.ResourceSnapshotDelivery;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMultiAccountDeliveryChannel",
+                Version = "2022-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateMultiAccountDeliveryChannelResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新多账号投递渠道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMultiAccountDeliveryChannelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMultiAccountDeliveryChannelResponse
+        /// </returns>
+        public async Task<UpdateMultiAccountDeliveryChannelResponse> UpdateMultiAccountDeliveryChannelWithOptionsAsync(UpdateMultiAccountDeliveryChannelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryChannelDescription))
+            {
+                query["DeliveryChannelDescription"] = request.DeliveryChannelDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryChannelFilter))
+            {
+                query["DeliveryChannelFilter"] = request.DeliveryChannelFilter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryChannelId))
+            {
+                query["DeliveryChannelId"] = request.DeliveryChannelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryChannelName))
+            {
+                query["DeliveryChannelName"] = request.DeliveryChannelName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceChangeDelivery))
+            {
+                query["ResourceChangeDelivery"] = request.ResourceChangeDelivery;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceSnapshotDelivery))
+            {
+                query["ResourceSnapshotDelivery"] = request.ResourceSnapshotDelivery;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMultiAccountDeliveryChannel",
+                Version = "2022-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateMultiAccountDeliveryChannelResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新多账号投递渠道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMultiAccountDeliveryChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMultiAccountDeliveryChannelResponse
+        /// </returns>
+        public UpdateMultiAccountDeliveryChannelResponse UpdateMultiAccountDeliveryChannel(UpdateMultiAccountDeliveryChannelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateMultiAccountDeliveryChannelWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新多账号投递渠道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMultiAccountDeliveryChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMultiAccountDeliveryChannelResponse
+        /// </returns>
+        public async Task<UpdateMultiAccountDeliveryChannelResponse> UpdateMultiAccountDeliveryChannelAsync(UpdateMultiAccountDeliveryChannelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateMultiAccountDeliveryChannelWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4878,14 +6096,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpdateSavedQueryResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpdateSavedQueryResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpdateSavedQueryResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4939,14 +6150,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpdateSavedQueryResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpdateSavedQueryResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpdateSavedQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>

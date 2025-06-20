@@ -124,6 +124,9 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             public class SearchResourcesResponseBodyResourcesIpAddressAttributes : TeaModel {
                 /// <summary>
                 /// <para>The IP address.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>192.168.1.2</para>
                 /// </summary>
                 [NameInMap("IpAddress")]
                 [Validation(Required=false)]

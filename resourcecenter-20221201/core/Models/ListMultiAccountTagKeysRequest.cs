@@ -47,12 +47,12 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The search scope. You can set the value to one of the following items:</para>
+        /// <para>The search scope. The value of this parameter can be one of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>ID of a resource directory: Resources within the management account and all members of the resource directory are searched. You can call the <a href="https://help.aliyun.com/document_detail/159995.html">GetResourceDirectory</a> operation to obtain the ID.</description></item>
-        /// <item><description>ID of the Root folder: Resources within all members in the Root folder and the subfolders of the Root folder are searched. You can call the <a href="https://help.aliyun.com/document_detail/159997.html">ListFoldersForParent</a> operation to obtain the ID.</description></item>
-        /// <item><description>ID of a folder: Resources within all members in the folder are searched. You can call the <a href="https://help.aliyun.com/document_detail/159997.html">ListFoldersForParent</a> operation to obtain the ID.</description></item>
-        /// <item><description>ID of a member: Resources within the member are searched. You can call the <a href="https://help.aliyun.com/document_detail/160016.html">ListAccounts</a> operation to obtain the ID.</description></item>
+        /// <item><description>ID of a resource directory: Resources within the management account and all members of the resource directory are searched. You can call the <a href="https://help.aliyun.com/document_detail/159995.html">GetResourceDirectory</a> operation to obtain the ID of the resource directory. The ID is indicated by the <c>ResourceDirectoryId</c> parameter in the response of the operation.</description></item>
+        /// <item><description>ID of the Root folder: Resources within all members in the Root folder and the subfolders of the Root folder are searched. You can call the <a href="https://help.aliyun.com/document_detail/159995.html">GetResourceDirectory</a> operation to obtain the ID of the Root folder. The ID is indicated by the <c>RootFolderId</c> parameter in the response of the operation.</description></item>
+        /// <item><description>ID of a folder: Resources within all members in the folder are searched. You can call the <a href="https://help.aliyun.com/document_detail/159997.html">ListFoldersForParent</a> operation to obtain the ID of the folder. The ID is indicated by the <c>FolderId</c> parameter in the response of the operation.</description></item>
+        /// <item><description>ID of a member: Resources within the member are searched. You can call the <a href="https://help.aliyun.com/document_detail/160016.html">ListAccounts</a> operation to obtain the ID of the member. The ID is indicated by the <c>AccountId</c> parameter in the response of the operation.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
