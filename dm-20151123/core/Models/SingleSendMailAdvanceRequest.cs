@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dm20151123.Models
 {
-    public class SingleSendMailRequest : TeaModel {
+    public class SingleSendMailAdvanceRequest : TeaModel {
         /// <summary>
         /// <para>The sending address configured in the management console.</para>
         /// <para>This parameter is required.</para>
@@ -35,15 +35,15 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 
         [NameInMap("Attachments")]
         [Validation(Required=false)]
-        public List<SingleSendMailRequestAttachments> Attachments { get; set; }
-        public class SingleSendMailRequestAttachments : TeaModel {
+        public List<SingleSendMailAdvanceRequestAttachments> Attachments { get; set; }
+        public class SingleSendMailAdvanceRequestAttachments : TeaModel {
             [NameInMap("AttachmentName")]
             [Validation(Required=false)]
             public string AttachmentName { get; set; }
 
             [NameInMap("AttachmentUrl")]
             [Validation(Required=false)]
-            public string AttachmentUrl { get; set; }
+            public Stream AttachmentUrlObject { get; set; }
 
         }
 
