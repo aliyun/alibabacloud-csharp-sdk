@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
+        [NameInMap("Interval")]
+        [Validation(Required=false)]
+        public long? Interval { get; set; }
+
         /// <summary>
         /// <para>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</para>
         /// 
