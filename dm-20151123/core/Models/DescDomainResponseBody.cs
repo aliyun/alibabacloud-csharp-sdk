@@ -90,6 +90,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public string DkimRR { get; set; }
 
+        [NameInMap("DkimRsaLength")]
+        [Validation(Required=false)]
+        public int? DkimRsaLength { get; set; }
+
         /// <summary>
         /// <para>DMARC verification flag, indicating whether the DMARC record set by the user in DNS has passed validation, 0: Passed, 1: Not passed</para>
         /// 
