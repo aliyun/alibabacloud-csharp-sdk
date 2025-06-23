@@ -227,6 +227,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public bool? EnableThinking { get; set; }
 
+            [NameInMap("ExcludeGenerateOptions")]
+            [Validation(Required=false)]
+            public List<string> ExcludeGenerateOptions { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>concise</para>

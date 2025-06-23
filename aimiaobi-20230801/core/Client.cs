@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成剪辑视频</para>
+        /// <para>生成剪辑视频任务</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -279,7 +279,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成剪辑视频</para>
+        /// <para>生成剪辑视频任务</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -363,7 +363,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成剪辑视频</para>
+        /// <para>生成剪辑视频任务</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -381,7 +381,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成剪辑视频</para>
+        /// <para>生成剪辑视频任务</para>
         /// </summary>
         /// 
         /// <param name="request">
