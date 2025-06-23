@@ -193,6 +193,11 @@ namespace AlibabaCloud.SDK.Wss20211221
             return await CreateMultiOrderWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询物流地址</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDeliveryAddressRequest
         /// </param>
@@ -221,6 +226,11 @@ namespace AlibabaCloud.SDK.Wss20211221
             return TeaModel.ToObject<DescribeDeliveryAddressResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询物流地址</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDeliveryAddressRequest
         /// </param>
@@ -249,6 +259,11 @@ namespace AlibabaCloud.SDK.Wss20211221
             return TeaModel.ToObject<DescribeDeliveryAddressResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询物流地址</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// DescribeDeliveryAddressResponse
         /// </returns>
@@ -258,6 +273,11 @@ namespace AlibabaCloud.SDK.Wss20211221
             return DescribeDeliveryAddressWithOptions(runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询物流地址</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// DescribeDeliveryAddressResponse
         /// </returns>
@@ -267,6 +287,11 @@ namespace AlibabaCloud.SDK.Wss20211221
             return await DescribeDeliveryAddressWithOptionsAsync(runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量询价</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMultiPriceRequest
         /// </param>
@@ -316,6 +341,11 @@ namespace AlibabaCloud.SDK.Wss20211221
             return TeaModel.ToObject<DescribeMultiPriceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量询价</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMultiPriceRequest
         /// </param>
@@ -365,6 +395,11 @@ namespace AlibabaCloud.SDK.Wss20211221
             return TeaModel.ToObject<DescribeMultiPriceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量询价</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMultiPriceRequest
         /// </param>
@@ -378,6 +413,11 @@ namespace AlibabaCloud.SDK.Wss20211221
             return DescribeMultiPriceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量询价</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMultiPriceRequest
         /// </param>
@@ -433,6 +473,10 @@ namespace AlibabaCloud.SDK.Wss20211221
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
             {
                 query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceTypes))
+            {
+                query["ResourceTypes"] = request.ResourceTypes;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
@@ -500,6 +544,10 @@ namespace AlibabaCloud.SDK.Wss20211221
             {
                 query["ResourceType"] = request.ResourceType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceTypes))
+            {
+                query["ResourceTypes"] = request.ResourceTypes;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 query["StartTime"] = request.StartTime;
@@ -559,6 +607,11 @@ namespace AlibabaCloud.SDK.Wss20211221
             return await DescribePackageDeductionsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新实例属性</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyInstancePropertiesRequest
         /// </param>
@@ -612,6 +665,11 @@ namespace AlibabaCloud.SDK.Wss20211221
             return TeaModel.ToObject<ModifyInstancePropertiesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新实例属性</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyInstancePropertiesRequest
         /// </param>
@@ -665,6 +723,11 @@ namespace AlibabaCloud.SDK.Wss20211221
             return TeaModel.ToObject<ModifyInstancePropertiesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新实例属性</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyInstancePropertiesRequest
         /// </param>
@@ -678,6 +741,11 @@ namespace AlibabaCloud.SDK.Wss20211221
             return ModifyInstancePropertiesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新实例属性</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyInstancePropertiesRequest
         /// </param>

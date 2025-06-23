@@ -38,14 +38,16 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>CorePackage</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
+
+        [NameInMap("ResourceTypes")]
+        [Validation(Required=false)]
+        public List<string> ResourceTypes { get; set; }
 
         [NameInMap("StartTime")]
         [Validation(Required=false)]

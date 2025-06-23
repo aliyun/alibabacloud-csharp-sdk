@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             [Validation(Required=false)]
             public string EndTime { get; set; }
 
+            [NameInMap("InstanceId")]
+            [Validation(Required=false)]
+            public string InstanceId { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>Deleted</para>
@@ -60,6 +64,10 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             [NameInMap("InstanceState")]
             [Validation(Required=false)]
             public string InstanceState { get; set; }
+
+            [NameInMap("InstanceType")]
+            [Validation(Required=false)]
+            public string InstanceType { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
@@ -89,6 +97,10 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             [Validation(Required=false)]
             public string ResourceType { get; set; }
 
+            [NameInMap("SessionId")]
+            [Validation(Required=false)]
+            public string SessionId { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>2024-07-31T02:00Z</para>
@@ -112,6 +124,10 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             [NameInMap("UsedTime")]
             [Validation(Required=false)]
             public long? UsedTime { get; set; }
+
+            [NameInMap("UsedTimeWithScale")]
+            [Validation(Required=false)]
+            public long? UsedTimeWithScale { get; set; }
 
         }
 
