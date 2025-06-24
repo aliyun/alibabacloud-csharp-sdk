@@ -249,6 +249,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string ProductActionShrink { get; set; }
 
+        [NameInMap("RecipientType")]
+        [Validation(Required=false)]
+        public string RecipientType { get; set; }
+
         /// <summary>
         /// <para>The tag information of the Viber message.</para>
         /// 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ChatappMigrationVerifiedRequest : TeaModel {
         /// <summary>
-        /// <para>The space ID of the user under the independent software vendor (ISV) account.</para>
+        /// <para>The space ID of the RAM user within the independent software vendor (ISV) account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
