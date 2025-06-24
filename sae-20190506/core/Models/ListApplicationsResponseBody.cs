@@ -131,6 +131,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     [Validation(Required=false)]
                     public int? Instances { get; set; }
 
+                    [NameInMap("IsStateful")]
+                    [Validation(Required=false)]
+                    public bool? IsStateful { get; set; }
+
                     [NameInMap("Mem")]
                     [Validation(Required=false)]
                     public int? Mem { get; set; }
@@ -227,6 +231,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [NameInMap("Instances")]
                 [Validation(Required=false)]
                 public int? Instances { get; set; }
+
+                [NameInMap("IsStateful")]
+                [Validation(Required=false)]
+                public bool? IsStateful { get; set; }
 
                 /// <summary>
                 /// <para>The memory size that is required by each instance. Unit: MB. This parameter cannot be set to 0. The values of this parameter correspond to the values of the Cpu parameter:</para>
@@ -332,6 +340,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public string Value { get; set; }
 
                 }
+
+                [NameInMap("VpcId")]
+                [Validation(Required=false)]
+                public string VpcId { get; set; }
 
             }
 
