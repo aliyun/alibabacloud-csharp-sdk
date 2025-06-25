@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string AppType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</para>
+        /// <para>The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.</para>
         /// <remarks>
         /// <para> You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</para>
         /// </remarks>

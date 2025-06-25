@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The attribute of the IP address whitelist. By default, this parameter is empty.</para>
         /// <remarks>
-        /// <para>Whitelists with the hidden attribute are not displayed in the console. Those whitelists are used to access Data Transmission Service (DTS) and PolarDB.</para>
+        /// <para> IP address whitelists with the hidden attribute are not displayed in the console. Those whitelists are used to access Data Transmission Service (DTS) and PolarDB.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

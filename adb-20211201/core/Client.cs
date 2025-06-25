@@ -7678,7 +7678,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于查看表索引信息</para>
+        /// <para>Queries the information about table indexes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7732,7 +7732,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于查看表索引信息</para>
+        /// <para>Queries the information about table indexes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7786,7 +7786,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于查看表索引信息</para>
+        /// <para>Queries the information about table indexes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7804,7 +7804,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于查看表索引信息</para>
+        /// <para>Queries the information about table indexes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7982,7 +7982,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于查看表元数据信息</para>
+        /// <para>Queries the information about table metadata.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8036,7 +8036,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于查看表元数据信息</para>
+        /// <para>Queries the information about table metadata.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8090,7 +8090,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于查看表元数据信息</para>
+        /// <para>Queries the information about table metadata.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8108,7 +8108,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于查看表元数据信息</para>
+        /// <para>Queries the information about table metadata.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13747,7 +13747,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</para>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13814,7 +13814,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</para>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13881,7 +13881,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</para>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13904,7 +13904,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</para>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13922,7 +13922,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the diagnostic information about SQL statements that meet a query condition for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</para>
+        /// <para>Queries the diagnostic information about SQL statements that meet a query condition for an AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14041,7 +14041,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the diagnostic information about SQL statements that meet a query condition for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</para>
+        /// <para>Queries the diagnostic information about SQL statements that meet a query condition for an AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14160,7 +14160,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the diagnostic information about SQL statements that meet a query condition for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</para>
+        /// <para>Queries the diagnostic information about SQL statements that meet a query condition for an AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14183,7 +14183,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the diagnostic information about SQL statements that meet a query condition for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</para>
+        /// <para>Queries the diagnostic information about SQL statements that meet a query condition for an AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14211,7 +14211,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</para>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14282,7 +14282,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</para>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14353,7 +14353,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</para>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14376,7 +14376,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</para>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14399,7 +14399,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</para>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14454,7 +14454,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</para>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14509,7 +14509,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</para>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14532,7 +14532,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</para>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16692,6 +16692,11 @@ namespace AlibabaCloud.SDK.Adb20211201
             return await DescribeLLMAnswerWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of questions similar to a user question.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeLLMSimilarQuestionsRequest
         /// </param>
@@ -16753,6 +16758,11 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeLLMSimilarQuestionsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of questions similar to a user question.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeLLMSimilarQuestionsRequest
         /// </param>
@@ -16814,6 +16824,11 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<DescribeLLMSimilarQuestionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of questions similar to a user question.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeLLMSimilarQuestionsRequest
         /// </param>
@@ -16827,6 +16842,11 @@ namespace AlibabaCloud.SDK.Adb20211201
             return DescribeLLMSimilarQuestionsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of questions similar to a user question.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeLLMSimilarQuestionsRequest
         /// </param>
@@ -18024,7 +18044,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3><a href="#"></a></h3>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://www.alibabacloud.com/help/en/analyticdb/analyticdb-for-mysql/developer-reference/api-adb-2021-12-01-endpoint?spm=a2c63.p38356.help-menu-92664.d_5_3_1.57da5837J23pkx">Endpoints</a>.</para>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18080,7 +18100,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3><a href="#"></a></h3>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://www.alibabacloud.com/help/en/analyticdb/analyticdb-for-mysql/developer-reference/api-adb-2021-12-01-endpoint?spm=a2c63.p38356.help-menu-92664.d_5_3_1.57da5837J23pkx">Endpoints</a>.</para>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18136,7 +18156,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3><a href="#"></a></h3>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://www.alibabacloud.com/help/en/analyticdb/analyticdb-for-mysql/developer-reference/api-adb-2021-12-01-endpoint?spm=a2c63.p38356.help-menu-92664.d_5_3_1.57da5837J23pkx">Endpoints</a>.</para>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18160,7 +18180,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3><a href="#"></a></h3>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://www.alibabacloud.com/help/en/analyticdb/analyticdb-for-mysql/developer-reference/api-adb-2021-12-01-endpoint?spm=a2c63.p38356.help-menu-92664.d_5_3_1.57da5837J23pkx">Endpoints</a>.</para>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18398,7 +18418,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看注册的WebSocket域名</para>
+        /// <para>Queries the WebSocket domain name of an AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18444,7 +18464,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看注册的WebSocket域名</para>
+        /// <para>Queries the WebSocket domain name of an AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18490,7 +18510,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看注册的WebSocket域名</para>
+        /// <para>Queries the WebSocket domain name of an AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18508,7 +18528,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看注册的WebSocket域名</para>
+        /// <para>Queries the WebSocket domain name of an AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20155,7 +20175,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</para>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20226,7 +20246,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</para>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20297,7 +20317,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</para>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20320,7 +20340,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</para>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20642,7 +20662,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询表统计信息</para>
+        /// <para>Queries the table statistics of an AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20708,7 +20728,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询表统计信息</para>
+        /// <para>Queries the table statistics of an AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20774,7 +20794,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询表统计信息</para>
+        /// <para>Queries the table statistics of an AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20792,7 +20812,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询表统计信息</para>
+        /// <para>Queries the table statistics of an AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21715,7 +21735,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</para>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21818,7 +21838,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</para>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21921,7 +21941,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</para>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21944,7 +21964,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</para>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24115,8 +24135,9 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</para>
+        /// <para>  Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/612447.html">PreloadSparkAppMetrics</a> operation to preload the metrics of a Spark application.</para>
         /// <list type="bullet">
+        /// <item><description>Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// <item><description>Regional Virtual Private Cloud (VPC) endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
         /// <para> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</para>
         /// </remarks>
@@ -24174,8 +24195,9 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</para>
+        /// <para>  Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/612447.html">PreloadSparkAppMetrics</a> operation to preload the metrics of a Spark application.</para>
         /// <list type="bullet">
+        /// <item><description>Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// <item><description>Regional Virtual Private Cloud (VPC) endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
         /// <para> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</para>
         /// </remarks>
@@ -24233,8 +24255,9 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</para>
+        /// <para>  Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/612447.html">PreloadSparkAppMetrics</a> operation to preload the metrics of a Spark application.</para>
         /// <list type="bullet">
+        /// <item><description>Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// <item><description>Regional Virtual Private Cloud (VPC) endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
         /// <para> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</para>
         /// </remarks>
@@ -24262,8 +24285,9 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</para>
+        /// <para>  Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/612447.html">PreloadSparkAppMetrics</a> operation to preload the metrics of a Spark application.</para>
         /// <list type="bullet">
+        /// <item><description>Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// <item><description>Regional Virtual Private Cloud (VPC) endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
         /// <para> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</para>
         /// </remarks>
@@ -25220,6 +25244,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             return await GetSparkReplStatementWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetSparkSQLEngineState is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries the state information about the Spark SQL engine.</para>
@@ -25246,6 +25274,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <returns>
         /// GetSparkSQLEngineStateResponse
         /// </returns>
+        [Obsolete("OpenAPI GetSparkSQLEngineState is deprecated")]
+        // Deprecated
         public GetSparkSQLEngineStateResponse GetSparkSQLEngineStateWithOptions(GetSparkSQLEngineStateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -25277,6 +25307,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<GetSparkSQLEngineStateResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetSparkSQLEngineState is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries the state information about the Spark SQL engine.</para>
@@ -25303,6 +25337,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <returns>
         /// GetSparkSQLEngineStateResponse
         /// </returns>
+        [Obsolete("OpenAPI GetSparkSQLEngineState is deprecated")]
+        // Deprecated
         public async Task<GetSparkSQLEngineStateResponse> GetSparkSQLEngineStateWithOptionsAsync(GetSparkSQLEngineStateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -25334,6 +25370,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<GetSparkSQLEngineStateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetSparkSQLEngineState is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries the state information about the Spark SQL engine.</para>
@@ -25357,12 +25397,18 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <returns>
         /// GetSparkSQLEngineStateResponse
         /// </returns>
+        [Obsolete("OpenAPI GetSparkSQLEngineState is deprecated")]
+        // Deprecated
         public GetSparkSQLEngineStateResponse GetSparkSQLEngineState(GetSparkSQLEngineStateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetSparkSQLEngineStateWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetSparkSQLEngineState is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries the state information about the Spark SQL engine.</para>
@@ -25386,6 +25432,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <returns>
         /// GetSparkSQLEngineStateResponse
         /// </returns>
+        [Obsolete("OpenAPI GetSparkSQLEngineState is deprecated")]
+        // Deprecated
         public async Task<GetSparkSQLEngineStateResponse> GetSparkSQLEngineStateAsync(GetSparkSQLEngineStateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -27760,6 +27808,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             return await KillSparkLogAnalyzeTaskWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI KillSparkSQLEngine is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Shuts down a Spark SQL engine.</para>
@@ -27786,6 +27838,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <returns>
         /// KillSparkSQLEngineResponse
         /// </returns>
+        [Obsolete("OpenAPI KillSparkSQLEngine is deprecated")]
+        // Deprecated
         public KillSparkSQLEngineResponse KillSparkSQLEngineWithOptions(KillSparkSQLEngineRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -27817,6 +27871,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<KillSparkSQLEngineResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI KillSparkSQLEngine is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Shuts down a Spark SQL engine.</para>
@@ -27843,6 +27901,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <returns>
         /// KillSparkSQLEngineResponse
         /// </returns>
+        [Obsolete("OpenAPI KillSparkSQLEngine is deprecated")]
+        // Deprecated
         public async Task<KillSparkSQLEngineResponse> KillSparkSQLEngineWithOptionsAsync(KillSparkSQLEngineRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -27874,6 +27934,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             return TeaModel.ToObject<KillSparkSQLEngineResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI KillSparkSQLEngine is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Shuts down a Spark SQL engine.</para>
@@ -27897,12 +27961,18 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <returns>
         /// KillSparkSQLEngineResponse
         /// </returns>
+        [Obsolete("OpenAPI KillSparkSQLEngine is deprecated")]
+        // Deprecated
         public KillSparkSQLEngineResponse KillSparkSQLEngine(KillSparkSQLEngineRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return KillSparkSQLEngineWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI KillSparkSQLEngine is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Shuts down a Spark SQL engine.</para>
@@ -27926,6 +27996,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <returns>
         /// KillSparkSQLEngineResponse
         /// </returns>
+        [Obsolete("OpenAPI KillSparkSQLEngine is deprecated")]
+        // Deprecated
         public async Task<KillSparkSQLEngineResponse> KillSparkSQLEngineAsync(KillSparkSQLEngineRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

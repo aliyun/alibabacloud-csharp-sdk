@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class GetDatabaseObjectsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried databases.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetDatabaseObjectsResponseBodyData Data { get; set; }
         public class GetDatabaseObjectsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The queried database.</para>
+            /// <para>The queried databases.</para>
             /// </summary>
             [NameInMap("DatabaseSummaryModels")]
             [Validation(Required=false)]

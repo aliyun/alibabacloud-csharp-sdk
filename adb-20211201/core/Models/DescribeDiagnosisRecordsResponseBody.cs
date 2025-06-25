@@ -114,6 +114,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public long? OutputRows { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>-5575924945138******</para>
+            /// </summary>
             [NameInMap("PatternId")]
             [Validation(Required=false)]
             public string PatternId { get; set; }
@@ -138,14 +142,28 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public string ProcessId { get; set; }
 
+            /// <summary>
+            /// <para>The query properties.</para>
+            /// <remarks>
+            /// <para> For information about common properties, see <a href="https://help.aliyun.com/document_detail/408955.html">Config and hint configuration parameters</a>.</para>
+            /// </remarks>
+            /// </summary>
             [NameInMap("QueryProperties")]
             [Validation(Required=false)]
             public List<DescribeDiagnosisRecordsResponseBodyQuerysQueryProperties> QueryProperties { get; set; }
             public class DescribeDiagnosisRecordsResponseBodyQuerysQueryProperties : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>max_select_items_count</para>
+                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1024</para>
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }

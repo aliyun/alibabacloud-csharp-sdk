@@ -34,7 +34,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The export type.</para>
+        /// <para>The type of the result set export job.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SLS</para>
         /// </summary>
         [NameInMap("ExportType")]
         [Validation(Required=false)]

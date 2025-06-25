@@ -21,11 +21,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The directory ID of the template files that you want to delete.</para>
+        /// <para>The directory ID or application ID of the template files that you want to delete.</para>
         /// <remarks>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/456205.html">GetSparkTemplateFullTree</a> operation to query the directory ID of template files.</para>
+        /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/612467.html">GetSparkTemplateFullTree</a> operation to query the directory ID or application ID.</para>
         /// </description></item>
         /// <item><description><para>When you specify a directory ID, the directory and all template files that are included in the directory are deleted.</para>
         /// </description></item>

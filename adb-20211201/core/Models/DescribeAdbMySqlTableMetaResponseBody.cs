@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeAdbMySqlTableMetaResponseBody : TeaModel {
         /// <summary>
+        /// <para>The returned message. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>If the request was successful, a success message is returned.****</description></item>
+        /// <item><description>If the request failed, an error message is returned.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -18,6 +24,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2FED790E-FB61-4721-8C1C-07C627FA5A19</para>
         /// </summary>
@@ -26,6 +34,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -33,11 +47,16 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
+        /// <summary>
+        /// <para>The queried table metadata.</para>
+        /// </summary>
         [NameInMap("TableMeta")]
         [Validation(Required=false)]
         public DescribeAdbMySqlTableMetaResponseBodyTableMeta TableMeta { get; set; }
         public class DescribeAdbMySqlTableMetaResponseBodyTableMeta : TeaModel {
             /// <summary>
+            /// <para>The time when the table was created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025-03-14 02:18:08.0</para>
             /// </summary>
@@ -46,6 +65,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The distribution key column.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>customer_id</para>
             /// </summary>
@@ -54,6 +75,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string DistributeColumn { get; set; }
 
             /// <summary>
+            /// <para>The distribution type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>hash</para>
             /// </summary>
@@ -62,6 +85,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string DistributeType { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether full-column indexes are used.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -70,6 +95,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public bool? IsAllIndex { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether dictionary encoding is used.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -78,6 +105,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public bool? IsDictEncode { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether full-text indexes are used.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -86,6 +115,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public bool? IsFullTextDict { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether pages are hidden.</para>
+            /// <list type="bullet">
+            /// <item><description><b>false</b></description></item>
+            /// <item><description><b>true</b></description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -94,6 +129,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public bool? IsHidden { get; set; }
 
             /// <summary>
+            /// <para>The partition key column.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>DATE_FORMAT(login_time, \&quot;%Y%m%d\&quot;)</para>
             /// </summary>
@@ -102,6 +139,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string PartitionColumn { get; set; }
 
             /// <summary>
+            /// <para>The type of the partition.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>value</para>
             /// </summary>
@@ -110,6 +149,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string PartitionType { get; set; }
 
             /// <summary>
+            /// <para>The primary key column.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>login_time,customer_id,phone_num</para>
             /// </summary>
@@ -118,6 +159,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string PrimaryKeyColumn { get; set; }
 
             /// <summary>
+            /// <para>The table engine.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>XUANWU</para>
             /// </summary>
@@ -126,6 +169,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string TableEngine { get; set; }
 
             /// <summary>
+            /// <para>The name of the table.</para>
+            /// <para>**</para>
+            /// <hr>
+            /// 
             /// <b>Example:</b>
             /// <para>external_supplier</para>
             /// </summary>
@@ -134,6 +181,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string TableName { get; set; }
 
             /// <summary>
+            /// <para>The database to which the table belongs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>tpch</para>
             /// </summary>
@@ -142,6 +191,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string TableSchema { get; set; }
 
             /// <summary>
+            /// <para>The type of the table.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>fact_table</para>
             /// </summary>
@@ -150,6 +201,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string TableType { get; set; }
 
             /// <summary>
+            /// <para>The time when the table was updated.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-07-25 02:07:23.0</para>
             /// </summary>

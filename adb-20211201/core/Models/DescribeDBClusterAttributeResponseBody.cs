@@ -20,6 +20,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public List<DescribeDBClusterAttributeResponseBodyItemsDBCluster> DBCluster { get; set; }
             public class DescribeDBClusterAttributeResponseBodyItemsDBCluster : TeaModel {
+                [NameInMap("AINodeNumber")]
+                [Validation(Required=false)]
+                public int? AINodeNumber { get; set; }
+
+                [NameInMap("AINodeSpec")]
+                [Validation(Required=false)]
+                public string AINodeSpec { get; set; }
+
                 /// <summary>
                 /// <para>The cache size of the ClickHouse wide table engine. Unit: GB. If a value of -1 is returned, the ClickHouse wide table engine is disabled. If a value other than -1 is returned, this parameter indicates the disk cache size.</para>
                 /// 

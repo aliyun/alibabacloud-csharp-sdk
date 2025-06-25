@@ -136,6 +136,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string MaxComputeResource { get; set; }
 
+        /// <summary>
+        /// <para>A reserved parameter.</para>
+        /// </summary>
         [NameInMap("MaxGpuQuantity")]
         [Validation(Required=false)]
         public int? MaxGpuQuantity { get; set; }
@@ -164,6 +167,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string MinComputeResource { get; set; }
 
+        /// <summary>
+        /// <para>A reserved parameter.</para>
+        /// </summary>
         [NameInMap("MinGpuQuantity")]
         [Validation(Required=false)]
         public int? MinGpuQuantity { get; set; }
@@ -172,10 +178,18 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public CreateDBResourceGroupRequestRayConfig RayConfig { get; set; }
         public class CreateDBResourceGroupRequestRayConfig : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>BASIC</para>
+            /// </summary>
             [NameInMap("Category")]
             [Validation(Required=false)]
             public string Category { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>xlarge</para>
+            /// </summary>
             [NameInMap("HeadSpec")]
             [Validation(Required=false)]
             public string HeadSpec { get; set; }
@@ -184,30 +198,58 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public List<CreateDBResourceGroupRequestRayConfigWorkerGroups> WorkerGroups { get; set; }
             public class CreateDBResourceGroupRequestRayConfigWorkerGroups : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("AllocateUnit")]
                 [Validation(Required=false)]
                 public string AllocateUnit { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>test</para>
+                /// </summary>
                 [NameInMap("GroupName")]
                 [Validation(Required=false)]
                 public string GroupName { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2</para>
+                /// </summary>
                 [NameInMap("MaxWorkerQuantity")]
                 [Validation(Required=false)]
                 public int? MaxWorkerQuantity { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("MinWorkerQuantity")]
                 [Validation(Required=false)]
                 public int? MinWorkerQuantity { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>100G</para>
+                /// </summary>
                 [NameInMap("WorkerDiskCapacity")]
                 [Validation(Required=false)]
                 public string WorkerDiskCapacity { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>xlarge</para>
+                /// </summary>
                 [NameInMap("WorkerSpecName")]
                 [Validation(Required=false)]
                 public string WorkerSpecName { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>GPU</para>
+                /// </summary>
                 [NameInMap("WorkerSpecType")]
                 [Validation(Required=false)]
                 public string WorkerSpecType { get; set; }
@@ -273,10 +315,16 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         }
 
+        /// <summary>
+        /// <para>A reserved parameter.</para>
+        /// </summary>
         [NameInMap("SpecName")]
         [Validation(Required=false)]
         public string SpecName { get; set; }
 
+        /// <summary>
+        /// <para>A reserved parameter.</para>
+        /// </summary>
         [NameInMap("TargetResourceGroupName")]
         [Validation(Required=false)]
         public string TargetResourceGroupName { get; set; }

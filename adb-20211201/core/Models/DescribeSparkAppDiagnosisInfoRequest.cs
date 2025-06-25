@@ -38,7 +38,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The execution language of the Spark application.</para>
+        /// <para>The language in which you want to display the results. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>en: English.</description></item>
+        /// <item><description>zh (default): Chinese.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

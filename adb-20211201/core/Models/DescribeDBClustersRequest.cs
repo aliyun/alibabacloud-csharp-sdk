@@ -35,25 +35,13 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterIds { get; set; }
 
         /// <summary>
-        /// <para>The state of the cluster. Valid values:</para>
+        /// <para>The status of the cluster. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Preparing</b></description></item>
-        /// </list>
-        /// <!---->
-        /// 
-        /// <list type="bullet">
         /// <item><description><b>Creating</b></description></item>
         /// <item><description><b>Running</b></description></item>
         /// <item><description><b>Deleting</b></description></item>
-        /// </list>
-        /// <!---->
-        /// 
-        /// <list type="bullet">
         /// <item><description><b>Restoring</b></description></item>
-        /// </list>
-        /// <!---->
-        /// 
-        /// <list type="bullet">
         /// <item><description><b>ClassChanging</b></description></item>
         /// <item><description><b>NetAddressCreating</b></description></item>
         /// <item><description><b>NetAddressDeleting</b></description></item>
@@ -68,11 +56,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterStatus { get; set; }
 
         /// <summary>
-        /// <para>The database engine version of the cluster. Valid values:</para>
+        /// <para>The version number corresponding to the edition of the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>3.0: Data Warehouse Edition.</description></item>
-        /// <item><description>5.0 (default): Data Lakehouse Edition, Enterprise Edition, and Basic Edition.</description></item>
-        /// <item><description>All: Data Warehouse Edition, Data Lakehouse Edition, Enterprise Edition, and Basic Edition.</description></item>
+        /// <item><description><b>3.0</b>: Data Warehouse Edition.</description></item>
+        /// <item><description><b>5.0</b> (default): includes Data Lakehouse Edition, Enterprise Edition, and Basic Edition.</description></item>
+        /// <item><description><b>All</b>: all editions, including Data Warehouse Edition, Data Lakehouse Edition, Enterprise Edition, and Basic Edition.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -110,10 +98,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The edition of the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>EnterpriseVersion: Enterprise Edition.</description></item>
-        /// <item><description>BasicVersion: Basic Edition.</description></item>
+        /// <item><description><b>EnterpriseVersion</b>: Enterprise Edition.</description></item>
+        /// <item><description><b>BasicVersion</b>: Basic Edition.</description></item>
         /// </list>
-        /// <para>If you leave this parameter empty, the information about clusters of all editions is returned.</para>
+        /// <remarks>
+        /// <para> If you leave this parameter empty, the information about clusters of all editions is returned.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>BasicVersion</para>

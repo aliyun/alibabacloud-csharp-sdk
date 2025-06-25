@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string DBClusterId { get; set; }
 
                 /// <summary>
-                /// <para>The network type of the cluster. <b>VPC</b> is returned.</para>
+                /// <para>The network type of the cluster. Only <b>VPC</b> is supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>VPC</para>
@@ -116,22 +116,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 /// <para>The status of the cluster. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>Preparing</b></description></item>
-                /// </list>
-                /// <!---->
-                /// 
-                /// <list type="bullet">
                 /// <item><description><b>Creating</b></description></item>
                 /// <item><description><b>Running</b></description></item>
                 /// <item><description><b>Deleting</b></description></item>
-                /// </list>
-                /// <!---->
-                /// 
-                /// <list type="bullet">
                 /// <item><description><b>Restoring</b></description></item>
-                /// </list>
-                /// <!---->
-                /// 
-                /// <list type="bullet">
                 /// <item><description><b>ClassChanging</b></description></item>
                 /// <item><description><b>NetAddressCreating</b></description></item>
                 /// <item><description><b>NetAddressDeleting</b></description></item>
@@ -186,7 +174,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public long? DBNodeStorage { get; set; }
 
                 /// <summary>
-                /// <para>The engine version of the AnalyticDB for MySQL Data Lakehouse Edition cluster. <b>5.0</b> is returned.</para>
+                /// <para>The version number corresponding to the edition of the cluster. Only <b>5.0</b> is supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5.0</para>
@@ -385,8 +373,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 /// <summary>
                 /// <para>The service type of the cluster. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>LegacyForm</description></item>
-                /// <item><description>IntegrationForm</description></item>
+                /// <item><description><b>LegacyForm</b></description></item>
+                /// <item><description><b>IntegrationForm</b></description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -519,7 +507,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 }
 
                 /// <summary>
-                /// <para>The job progress.</para>
+                /// <para>The information about the job.</para>
                 /// </summary>
                 [NameInMap("TaskInfo")]
                 [Validation(Required=false)]
@@ -643,7 +631,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 }
 
                 /// <summary>
-                /// <para>The ID of the cluster that resides in the VPC.</para>
+                /// <para>The VPC endpoint.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>am-bp163885f8q21****-controller</para>

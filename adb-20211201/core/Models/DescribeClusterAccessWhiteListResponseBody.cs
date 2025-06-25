@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public List<DescribeClusterAccessWhiteListResponseBodyItemsIPArray> IPArray { get; set; }
             public class DescribeClusterAccessWhiteListResponseBodyItemsIPArray : TeaModel {
                 /// <summary>
-                /// <para>The attribute of the whitelist.</para>
+                /// <para>The attribute of the IP address whitelist.</para>
                 /// <remarks>
-                /// <para>Whitelists with the <b>hidden</b> attribute are not displayed in the console. Those whitelists are used to access Data Transmission Service (DTS) and PolarDB.</para>
+                /// <para> The IP address whitelists that have the <b>hidden</b> attribute are not displayed in the console. These IP address whitelists are used to access services such as Data Transmission Service (DTS) and PolarDB.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>

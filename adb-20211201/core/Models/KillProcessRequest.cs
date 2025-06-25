@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The query ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/143382.html">DescribeProcessList</a> operation to query the IDs of queries that are being executed.</para>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/612277.html">DescribeProcessList</a> operation to query the IDs of queries that are being executed.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

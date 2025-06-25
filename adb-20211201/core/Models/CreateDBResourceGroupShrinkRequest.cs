@@ -136,6 +136,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string MaxComputeResource { get; set; }
 
+        /// <summary>
+        /// <para>A reserved parameter.</para>
+        /// </summary>
         [NameInMap("MaxGpuQuantity")]
         [Validation(Required=false)]
         public int? MaxGpuQuantity { get; set; }
@@ -164,6 +167,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string MinComputeResource { get; set; }
 
+        /// <summary>
+        /// <para>A reserved parameter.</para>
+        /// </summary>
         [NameInMap("MinGpuQuantity")]
         [Validation(Required=false)]
         public int? MinGpuQuantity { get; set; }
@@ -192,10 +198,16 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string RulesShrink { get; set; }
 
+        /// <summary>
+        /// <para>A reserved parameter.</para>
+        /// </summary>
         [NameInMap("SpecName")]
         [Validation(Required=false)]
         public string SpecName { get; set; }
 
+        /// <summary>
+        /// <para>A reserved parameter.</para>
+        /// </summary>
         [NameInMap("TargetResourceGroupName")]
         [Validation(Required=false)]
         public string TargetResourceGroupName { get; set; }
