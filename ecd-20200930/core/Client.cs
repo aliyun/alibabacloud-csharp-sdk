@@ -5653,6 +5653,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["CameraRedirect"] = request.CameraRedirect;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientControlMenu))
+            {
+                query["ClientControlMenu"] = request.ClientControlMenu;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientType))
             {
                 query["ClientType"] = request.ClientType;
@@ -5664,6 +5668,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColorEnhancement))
             {
                 query["ColorEnhancement"] = request.ColorEnhancement;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CpdDriveClipboard))
+            {
+                query["CpdDriveClipboard"] = request.CpdDriveClipboard;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CpuDownGradeDuration))
             {
@@ -5736,6 +5744,18 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileMigrate))
             {
                 query["FileMigrate"] = request.FileMigrate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileTransferAddress))
+            {
+                query["FileTransferAddress"] = request.FileTransferAddress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileTransferSpeed))
+            {
+                query["FileTransferSpeed"] = request.FileTransferSpeed;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileTransferSpeedLocation))
+            {
+                query["FileTransferSpeedLocation"] = request.FileTransferSpeedLocation;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuAcceleration))
             {
@@ -5913,6 +5933,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["ScopeValue"] = request.ScopeValue;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScreenDisplayMode))
+            {
+                query["ScreenDisplayMode"] = request.ScreenDisplayMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionMaxRateKbps))
             {
                 query["SessionMaxRateKbps"] = request.SessionMaxRateKbps;
@@ -5944,6 +5968,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsbSupplyRedirectRule))
             {
                 query["UsbSupplyRedirectRule"] = request.UsbSupplyRedirectRule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseTime))
+            {
+                query["UseTime"] = request.UseTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoEncAvgKbps))
             {
@@ -6095,6 +6123,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["CameraRedirect"] = request.CameraRedirect;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientControlMenu))
+            {
+                query["ClientControlMenu"] = request.ClientControlMenu;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientType))
             {
                 query["ClientType"] = request.ClientType;
@@ -6106,6 +6138,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColorEnhancement))
             {
                 query["ColorEnhancement"] = request.ColorEnhancement;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CpdDriveClipboard))
+            {
+                query["CpdDriveClipboard"] = request.CpdDriveClipboard;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CpuDownGradeDuration))
             {
@@ -6178,6 +6214,18 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileMigrate))
             {
                 query["FileMigrate"] = request.FileMigrate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileTransferAddress))
+            {
+                query["FileTransferAddress"] = request.FileTransferAddress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileTransferSpeed))
+            {
+                query["FileTransferSpeed"] = request.FileTransferSpeed;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileTransferSpeedLocation))
+            {
+                query["FileTransferSpeedLocation"] = request.FileTransferSpeedLocation;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuAcceleration))
             {
@@ -6355,6 +6403,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["ScopeValue"] = request.ScopeValue;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScreenDisplayMode))
+            {
+                query["ScreenDisplayMode"] = request.ScreenDisplayMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionMaxRateKbps))
             {
                 query["SessionMaxRateKbps"] = request.SessionMaxRateKbps;
@@ -6386,6 +6438,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsbSupplyRedirectRule))
             {
                 query["UsbSupplyRedirectRule"] = request.UsbSupplyRedirectRule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseTime))
+            {
+                query["UseTime"] = request.UseTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoEncAvgKbps))
             {
@@ -29713,6 +29769,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["CameraRedirect"] = request.CameraRedirect;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientControlMenu))
+            {
+                query["ClientControlMenu"] = request.ClientControlMenu;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientType))
             {
                 query["ClientType"] = request.ClientType;
@@ -29724,6 +29784,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColorEnhancement))
             {
                 query["ColorEnhancement"] = request.ColorEnhancement;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CpdDriveClipboard))
+            {
+                query["CpdDriveClipboard"] = request.CpdDriveClipboard;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CpuDownGradeDuration))
             {
@@ -29796,6 +29860,18 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileMigrate))
             {
                 query["FileMigrate"] = request.FileMigrate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileTransferAddress))
+            {
+                query["FileTransferAddress"] = request.FileTransferAddress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileTransferSpeed))
+            {
+                query["FileTransferSpeed"] = request.FileTransferSpeed;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileTransferSpeedLocation))
+            {
+                query["FileTransferSpeedLocation"] = request.FileTransferSpeedLocation;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuAcceleration))
             {
@@ -29985,6 +30061,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["ScopeValue"] = request.ScopeValue;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScreenDisplayMode))
+            {
+                query["ScreenDisplayMode"] = request.ScreenDisplayMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionMaxRateKbps))
             {
                 query["SessionMaxRateKbps"] = request.SessionMaxRateKbps;
@@ -30016,6 +30096,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsbSupplyRedirectRule))
             {
                 query["UsbSupplyRedirectRule"] = request.UsbSupplyRedirectRule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseTime))
+            {
+                query["UseTime"] = request.UseTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoEncAvgKbps))
             {
@@ -30167,6 +30251,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["CameraRedirect"] = request.CameraRedirect;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientControlMenu))
+            {
+                query["ClientControlMenu"] = request.ClientControlMenu;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientType))
             {
                 query["ClientType"] = request.ClientType;
@@ -30178,6 +30266,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColorEnhancement))
             {
                 query["ColorEnhancement"] = request.ColorEnhancement;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CpdDriveClipboard))
+            {
+                query["CpdDriveClipboard"] = request.CpdDriveClipboard;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CpuDownGradeDuration))
             {
@@ -30250,6 +30342,18 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileMigrate))
             {
                 query["FileMigrate"] = request.FileMigrate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileTransferAddress))
+            {
+                query["FileTransferAddress"] = request.FileTransferAddress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileTransferSpeed))
+            {
+                query["FileTransferSpeed"] = request.FileTransferSpeed;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileTransferSpeedLocation))
+            {
+                query["FileTransferSpeedLocation"] = request.FileTransferSpeedLocation;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuAcceleration))
             {
@@ -30439,6 +30543,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["ScopeValue"] = request.ScopeValue;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScreenDisplayMode))
+            {
+                query["ScreenDisplayMode"] = request.ScreenDisplayMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionMaxRateKbps))
             {
                 query["SessionMaxRateKbps"] = request.SessionMaxRateKbps;
@@ -30470,6 +30578,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsbSupplyRedirectRule))
             {
                 query["UsbSupplyRedirectRule"] = request.UsbSupplyRedirectRule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseTime))
+            {
+                query["UseTime"] = request.UseTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoEncAvgKbps))
             {
@@ -36061,7 +36173,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use this operation to modify only the name and description of a custom cloud computer template. To change other parameters of the template, use the <a href="~~ModifyTemplate~~">ModifyTemplate</a> operation.</para>
+        /// <para>You can use this operation to modify only the name and description of a custom cloud computer template. To change other parameters of the template, use the <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a> operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -36116,7 +36228,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use this operation to modify only the name and description of a custom cloud computer template. To change other parameters of the template, use the <a href="~~ModifyTemplate~~">ModifyTemplate</a> operation.</para>
+        /// <para>You can use this operation to modify only the name and description of a custom cloud computer template. To change other parameters of the template, use the <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a> operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -36171,7 +36283,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use this operation to modify only the name and description of a custom cloud computer template. To change other parameters of the template, use the <a href="~~ModifyTemplate~~">ModifyTemplate</a> operation.</para>
+        /// <para>You can use this operation to modify only the name and description of a custom cloud computer template. To change other parameters of the template, use the <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a> operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -36194,7 +36306,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use this operation to modify only the name and description of a custom cloud computer template. To change other parameters of the template, use the <a href="~~ModifyTemplate~~">ModifyTemplate</a> operation.</para>
+        /// <para>You can use this operation to modify only the name and description of a custom cloud computer template. To change other parameters of the template, use the <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a> operation.</para>
         /// </description>
         /// 
         /// <param name="request">

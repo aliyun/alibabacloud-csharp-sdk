@@ -207,6 +207,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string CameraRedirect { get; set; }
 
+        [NameInMap("ClientControlMenu")]
+        [Validation(Required=false)]
+        public string ClientControlMenu { get; set; }
+
         /// <summary>
         /// <para>The types of Alibaba Cloud Workspace clients that end users can use to connect to cloud computers.</para>
         /// </summary>
@@ -283,6 +287,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("ColorEnhancement")]
         [Validation(Required=false)]
         public string ColorEnhancement { get; set; }
+
+        [NameInMap("CpdDriveClipboard")]
+        [Validation(Required=false)]
+        public string CpdDriveClipboard { get; set; }
 
         /// <summary>
         /// <para>The CPU underclocking duration. Valid values: 30 to 120. Unit: seconds.</para>
@@ -658,6 +666,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("FileMigrate")]
         [Validation(Required=false)]
         public string FileMigrate { get; set; }
+
+        [NameInMap("FileTransferAddress")]
+        [Validation(Required=false)]
+        public string FileTransferAddress { get; set; }
+
+        [NameInMap("FileTransferSpeed")]
+        [Validation(Required=false)]
+        public string FileTransferSpeed { get; set; }
+
+        [NameInMap("FileTransferSpeedLocation")]
+        [Validation(Required=false)]
+        public string FileTransferSpeedLocation { get; set; }
 
         /// <summary>
         /// <para>Specifies whether to enable Image Quality Control. This feature is highly recommended for professional design scenarios where performance and user experience are critical.</para>
@@ -1372,6 +1392,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public List<string> ScopeValue { get; set; }
 
+        [NameInMap("ScreenDisplayMode")]
+        [Validation(Required=false)]
+        public string ScreenDisplayMode { get; set; }
+
         /// <summary>
         /// <para>The bandwidth peak allowed for sessions. Unit: Kbit/s. Valid values: 2000 to 100000.</para>
         /// 
@@ -1534,6 +1558,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string VendorId { get; set; }
 
         }
+
+        [NameInMap("UseTime")]
+        [Validation(Required=false)]
+        public string UseTime { get; set; }
 
         /// <summary>
         /// <para>The average bitrate for video encoding. Unit: Kbit/s. Valid values: 1000 to 50000.</para>

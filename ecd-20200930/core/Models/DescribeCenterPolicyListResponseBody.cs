@@ -157,6 +157,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string CameraRedirect { get; set; }
 
+            [NameInMap("ClientControlMenu")]
+            [Validation(Required=false)]
+            public string ClientControlMenu { get; set; }
+
             /// <summary>
             /// <para>The logon method control rules.</para>
             /// </summary>
@@ -205,6 +209,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("ColorEnhancement")]
             [Validation(Required=false)]
             public string ColorEnhancement { get; set; }
+
+            [NameInMap("CpdDriveClipboard")]
+            [Validation(Required=false)]
+            public string CpdDriveClipboard { get; set; }
 
             /// <summary>
             /// <para>The CPU underclocking duration. Valid values: 30 to 120. Unit: seconds.</para>
@@ -496,6 +504,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("EndUserGroupCoordinate")]
             [Validation(Required=false)]
             public string EndUserGroupCoordinate { get; set; }
+
+            [NameInMap("FileTransferAddress")]
+            [Validation(Required=false)]
+            public string FileTransferAddress { get; set; }
+
+            [NameInMap("FileTransferSpeed")]
+            [Validation(Required=false)]
+            public string FileTransferSpeed { get; set; }
+
+            [NameInMap("FileTransferSpeedLocation")]
+            [Validation(Required=false)]
+            public string FileTransferSpeedLocation { get; set; }
 
             /// <summary>
             /// <para>Indicates whether image quality control is enabled. For optimal computer performance and user experience in professional design scenarios, we recommend enabling this feature.</para>
@@ -987,6 +1007,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public List<string> ScopeValue { get; set; }
 
+            [NameInMap("ScreenDisplayMode")]
+            [Validation(Required=false)]
+            public string ScreenDisplayMode { get; set; }
+
             /// <summary>
             /// <para>Indicates whether smoothness enhancement is enabled for daily office use.</para>
             /// 
@@ -1105,6 +1129,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string VendorId { get; set; }
 
             }
+
+            [NameInMap("UseTime")]
+            [Validation(Required=false)]
+            public string UseTime { get; set; }
 
             /// <summary>
             /// <para>The average bitrate for video encoding. Unit: Kbit/s. Valid values: 1000 to 50000.</para>
