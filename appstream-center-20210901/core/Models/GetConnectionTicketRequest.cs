@@ -72,6 +72,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string AppInstancePersistentId { get; set; }
 
+        [NameInMap("AppPolicyId")]
+        [Validation(Required=false)]
+        public string AppPolicyId { get; set; }
+
         /// <summary>
         /// <para>The parameters that are configured to start the application. For information about how to obtain these parameters, see <a href="https://help.aliyun.com/document_detail/426045.html">Obtain parameters configured to install and start an application</a>.</para>
         /// 

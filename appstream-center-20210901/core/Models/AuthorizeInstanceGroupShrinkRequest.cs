@@ -30,11 +30,27 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstancePersistentId { get; set; }
 
         /// <summary>
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
+        [NameInMap("AuthorizeUserGroupIds")]
+        [Validation(Required=false)]
+        public List<string> AuthorizeUserGroupIds { get; set; }
+
+        /// <summary>
         /// <para>The IDs of the users that you want to add to the authorization list of the delivery group. You can specify 1 to 100 user IDs.</para>
         /// </summary>
         [NameInMap("AuthorizeUserIds")]
         [Validation(Required=false)]
         public List<string> AuthorizeUserIds { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>default</para>
+        /// </summary>
+        [NameInMap("AvatarId")]
+        [Validation(Required=false)]
+        public string AvatarId { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
@@ -45,6 +61,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [NameInMap("ProductType")]
         [Validation(Required=false)]
         public string ProductType { get; set; }
+
+        /// <summary>
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
+        [NameInMap("UnAuthorizeUserGroupIds")]
+        [Validation(Required=false)]
+        public List<string> UnAuthorizeUserGroupIds { get; set; }
 
         /// <summary>
         /// <para>The IDs of the users that you want to remove from the authorization list of the delivery group. You can specify 1 to 100 user IDs.</para>

@@ -17,6 +17,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<ListAppInstanceGroupResponseBodyAppInstanceGroupModels> AppInstanceGroupModels { get; set; }
         public class ListAppInstanceGroupResponseBodyAppInstanceGroupModels : TeaModel {
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>INTERNET</para>
+            /// </summary>
+            [NameInMap("AccessType")]
+            [Validation(Required=false)]
+            public string AccessType { get; set; }
+
+            /// <summary>
             /// <para>The number of subscription resources. Minimum value: 1.</para>
             /// 
             /// <b>Example:</b>
@@ -141,6 +149,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string AppVersionName { get; set; }
 
             }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>App</para>
+            /// </summary>
+            [NameInMap("AuthMode")]
+            [Validation(Required=false)]
+            public string AuthMode { get; set; }
 
             /// <summary>
             /// <para>The sales mode.</para>

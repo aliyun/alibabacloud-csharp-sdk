@@ -8,52 +8,58 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
-    public class AccessPageSetAclRequest : TeaModel {
+    public class ListAuthorizedUserGroupsRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>FREE_ACCESS</para>
+        /// <para>aig-9ciijz60n4xsv****</para>
         /// </summary>
-        [NameInMap("AccessMode")]
+        [NameInMap("AppInstanceGroupId")]
         [Validation(Required=false)]
-        public string AccessMode { get; set; }
-
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>a-062wec3cwmayw****</para>
-        /// </summary>
-        [NameInMap("AccessPageId")]
-        [Validation(Required=false)]
-        public string AccessPageId { get; set; }
+        public string AppInstanceGroupId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>notepad_test</para>
+        /// <para>ug-00001</para>
         /// </summary>
-        [NameInMap("AccessPageName")]
+        [NameInMap("GroupId")]
         [Validation(Required=false)]
-        public string AccessPageName { get; set; }
+        public string GroupId { get; set; }
+
+        [NameInMap("GroupName")]
+        [Validation(Required=false)]
+        public string GroupName { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>7</para>
+        /// <para>1</para>
         /// </summary>
-        [NameInMap("EffectTime")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public int? EffectTime { get; set; }
+        public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>Day</para>
+        /// <para>10</para>
         /// </summary>
-        [NameInMap("Unit")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public string Unit { get; set; }
+        public int? PageSize { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CloudApp</para>
+        /// </summary>
+        [NameInMap("ProductType")]
+        [Validation(Required=false)]
+        public string ProductType { get; set; }
 
     }
 
