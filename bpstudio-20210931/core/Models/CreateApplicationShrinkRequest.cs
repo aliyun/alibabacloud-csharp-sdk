@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("ProcessVariables")]
+        [Validation(Required=false)]
+        public string ProcessVariablesShrink { get; set; }
+
         /// <summary>
         /// <para>The ID of the resource group to which the application you want to create belongs.</para>
         /// 

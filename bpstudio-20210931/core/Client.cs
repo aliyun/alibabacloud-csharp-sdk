@@ -489,6 +489,10 @@ namespace AlibabaCloud.SDK.BPStudio20210931
             {
                 request.InstancesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Instances, "Instances", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ProcessVariables))
+            {
+                request.ProcessVariablesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ProcessVariables, "ProcessVariables", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Variables))
             {
                 request.VariablesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Variables, "Variables", "json");
@@ -513,6 +517,10 @@ namespace AlibabaCloud.SDK.BPStudio20210931
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProcessVariablesShrink))
+            {
+                body["ProcessVariables"] = request.ProcessVariablesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
@@ -573,6 +581,10 @@ namespace AlibabaCloud.SDK.BPStudio20210931
             {
                 request.InstancesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Instances, "Instances", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ProcessVariables))
+            {
+                request.ProcessVariablesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ProcessVariables, "ProcessVariables", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Variables))
             {
                 request.VariablesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Variables, "Variables", "json");
@@ -597,6 +609,10 @@ namespace AlibabaCloud.SDK.BPStudio20210931
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProcessVariablesShrink))
+            {
+                body["ProcessVariables"] = request.ProcessVariablesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
