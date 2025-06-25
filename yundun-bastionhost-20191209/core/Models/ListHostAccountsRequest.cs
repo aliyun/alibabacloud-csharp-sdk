@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string HostId { get; set; }
 
+        [NameInMap("HostIds")]
+        [Validation(Required=false)]
+        public string HostIds { get; set; }
+
         /// <summary>
         /// <para>The ID of the bastion host in which you want to query accounts of the specified host.</para>
         /// <remarks>

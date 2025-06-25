@@ -91,6 +91,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [Validation(Required=false)]
             public string PrivateKeyFingerprint { get; set; }
 
+            [NameInMap("PrivilegeType")]
+            [Validation(Required=false)]
+            public string PrivilegeType { get; set; }
+
             /// <summary>
             /// <para>The protocol that is used by the host.</para>
             /// <para>Valid values:</para>
@@ -105,6 +109,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [NameInMap("ProtocolName")]
             [Validation(Required=false)]
             public string ProtocolName { get; set; }
+
+            [NameInMap("RotationMode")]
+            [Validation(Required=false)]
+            public string RotationMode { get; set; }
 
         }
 

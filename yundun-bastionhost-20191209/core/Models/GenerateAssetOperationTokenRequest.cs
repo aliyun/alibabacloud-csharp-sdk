@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <item><description><b>SID</b></description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is available only for bastion hosts that run V3.2.44 or later.</para>
+        /// <para> This parameter is available only for Bastionhost V3.2.44 and later.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -137,10 +137,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <para>The O\&amp;M logon method. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>WebToken</b>: O\&amp;M token-based logon.</description></item>
-        /// <item><description><b>Sso</b>: Local client-based logon.</description></item>
+        /// <item><description><b>Sso</b>: local client-based logon.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is available only for bastion hosts that run V3.2.44 or later. If you do not specify this parameter, the default value WebToken is used.</para>
+        /// <para> This parameter is available only for Bastionhost V3.2.44 and later. If you do not specify this parameter, the default value WebToken is used.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -150,6 +150,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string OperationMode { get; set; }
 
+        /// <summary>
+        /// <para>The logon remarks. This parameter is required if an administrator enables the feature of logon remarks on the Control Policies page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>comment</para>
+        /// </summary>
         [NameInMap("OperationNote")]
         [Validation(Required=false)]
         public string OperationNote { get; set; }
@@ -174,7 +180,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <item><description><b>sftp</b>: Perform O\&amp;M operations on Linux assets by connecting to a bastion host from a Secure File Transfer Protocol (SFTP) client.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is available only for bastion hosts that run V3.2.44 or later.</para>
+        /// <para> This parameter is available only for Bastionhost V3.2.44 and later.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

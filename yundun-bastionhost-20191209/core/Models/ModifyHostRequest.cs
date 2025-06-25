@@ -104,6 +104,18 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string OSType { get; set; }
 
+        /// <summary>
+        /// <para>The preferred key exchange algorithm of the host. If you set OSType to Linux, you can modify this parameter. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>default</b></description></item>
+        /// <item><description><b>diffie-hellman-group1-sha1</b></description></item>
+        /// <item><description><b>diffie-hellman-group14-sha1</b></description></item>
+        /// <item><description><b>diffie-hellman-group-exchange-sha1</b></description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>default</para>
+        /// </summary>
         [NameInMap("PrefKex")]
         [Validation(Required=false)]
         public string PrefKex { get; set; }

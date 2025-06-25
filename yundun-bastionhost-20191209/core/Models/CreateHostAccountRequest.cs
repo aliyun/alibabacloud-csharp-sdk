@@ -94,6 +94,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string PrivateKey { get; set; }
 
+        [NameInMap("PrivilegeType")]
+        [Validation(Required=false)]
+        public string PrivilegeType { get; set; }
+
         /// <summary>
         /// <para>The protocol of the host to which you want to add a host account.</para>
         /// <para>Valid values:</para>
@@ -122,6 +126,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("RotationMode")]
+        [Validation(Required=false)]
+        public string RotationMode { get; set; }
 
     }
 
