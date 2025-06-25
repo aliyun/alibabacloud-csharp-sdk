@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class RunDocWashingRequest : TeaModel {
+        [NameInMap("ModelId")]
+        [Validation(Required=false)]
+        public string ModelId { get; set; }
+
         [NameInMap("Prompt")]
         [Validation(Required=false)]
         public string Prompt { get; set; }

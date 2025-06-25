@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public Dictionary<string, object> LengthRange { get; set; }
 
+        [NameInMap("ModelId")]
+        [Validation(Required=false)]
+        public string ModelId { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

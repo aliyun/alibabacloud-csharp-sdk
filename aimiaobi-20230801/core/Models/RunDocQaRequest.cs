@@ -35,6 +35,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public List<string> DocIds { get; set; }
 
+        [NameInMap("ModelName")]
+        [Validation(Required=false)]
+        public string ModelName { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
