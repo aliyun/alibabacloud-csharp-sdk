@@ -690,6 +690,166 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Uploads a certificate that uses an internationally accepted algorithm for a domain name added to Web Application Firewall (WAF) in CNAME record mode.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCertsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCertsResponse
+        /// </returns>
+        public CreateCertsResponse CreateCertsWithOptions(CreateCertsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertContent))
+            {
+                query["CertContent"] = request.CertContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertKey))
+            {
+                query["CertKey"] = request.CertKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertName))
+            {
+                query["CertName"] = request.CertName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCerts",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCertsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uploads a certificate that uses an internationally accepted algorithm for a domain name added to Web Application Firewall (WAF) in CNAME record mode.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCertsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCertsResponse
+        /// </returns>
+        public async Task<CreateCertsResponse> CreateCertsWithOptionsAsync(CreateCertsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertContent))
+            {
+                query["CertContent"] = request.CertContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertKey))
+            {
+                query["CertKey"] = request.CertKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertName))
+            {
+                query["CertName"] = request.CertName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCerts",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCertsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uploads a certificate that uses an internationally accepted algorithm for a domain name added to Web Application Firewall (WAF) in CNAME record mode.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCertsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCertsResponse
+        /// </returns>
+        public CreateCertsResponse CreateCerts(CreateCertsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateCertsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uploads a certificate that uses an internationally accepted algorithm for a domain name added to Web Application Firewall (WAF) in CNAME record mode.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCertsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCertsResponse
+        /// </returns>
+        public async Task<CreateCertsResponse> CreateCertsAsync(CreateCertsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateCertsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Adds a service to Web Application Firewall (WAF). This operation is supported for only the Elastic Compute Service (ECS) and Classic Load Balancer (CLB) services.</para>
         /// </summary>
         /// 
@@ -11338,6 +11498,134 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDomainDetailWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询域名已使用的端口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDomainUsedPortsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDomainUsedPortsResponse
+        /// </returns>
+        public DescribeDomainUsedPortsResponse DescribeDomainUsedPortsWithOptions(DescribeDomainUsedPortsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDomainUsedPorts",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDomainUsedPortsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询域名已使用的端口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDomainUsedPortsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDomainUsedPortsResponse
+        /// </returns>
+        public async Task<DescribeDomainUsedPortsResponse> DescribeDomainUsedPortsWithOptionsAsync(DescribeDomainUsedPortsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDomainUsedPorts",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDomainUsedPortsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询域名已使用的端口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDomainUsedPortsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDomainUsedPortsResponse
+        /// </returns>
+        public DescribeDomainUsedPortsResponse DescribeDomainUsedPorts(DescribeDomainUsedPortsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDomainUsedPortsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询域名已使用的端口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDomainUsedPortsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDomainUsedPortsResponse
+        /// </returns>
+        public async Task<DescribeDomainUsedPortsResponse> DescribeDomainUsedPortsAsync(DescribeDomainUsedPortsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDomainUsedPortsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
