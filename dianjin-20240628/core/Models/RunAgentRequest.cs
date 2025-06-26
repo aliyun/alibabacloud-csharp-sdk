@@ -58,6 +58,10 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         [Validation(Required=false)]
         public string UserContent { get; set; }
 
+        [NameInMap("userInputs")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> UserInputs { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>w4paqoezm2</para>

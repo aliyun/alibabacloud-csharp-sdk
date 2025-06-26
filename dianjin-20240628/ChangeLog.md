@@ -1,3 +1,7 @@
+2025-06-26 Version: 1.13.1
+- Update API RunAgent: add request parameters body.userInputs.
+
+
 2025-05-14 Version: 1.13.0
 - Support API RealtimeDialogAssist.
 
