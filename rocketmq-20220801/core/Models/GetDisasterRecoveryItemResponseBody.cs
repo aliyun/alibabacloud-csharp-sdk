@@ -90,6 +90,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             [Validation(Required=false)]
             public List<GetDisasterRecoveryItemResponseBodyDataTopics> Topics { get; set; }
             public class GetDisasterRecoveryItemResponseBodyDataTopics : TeaModel {
+                /// <term><b>Obsolete</b></term>
+                /// 
                 /// <summary>
                 /// <para>The consumer group ID.</para>
                 /// 
@@ -98,6 +100,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 /// </summary>
                 [NameInMap("consumerGroupId")]
                 [Validation(Required=false)]
+                [Obsolete]
                 public string ConsumerGroupId { get; set; }
 
                 /// <summary>

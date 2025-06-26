@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             [Validation(Required=false)]
             public string AuthType { get; set; }
 
+            [NameInMap("consumerGroupId")]
+            [Validation(Required=false)]
+            public string ConsumerGroupId { get; set; }
+
             /// <summary>
             /// <para>The instance endpoint. This parameter is required only if you set instanceType to EXTERNAL_ROCKETMQ.</para>
             /// 

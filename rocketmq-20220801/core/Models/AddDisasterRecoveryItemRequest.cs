@@ -16,6 +16,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         [Validation(Required=false)]
         public List<AddDisasterRecoveryItemRequestTopics> Topics { get; set; }
         public class AddDisasterRecoveryItemRequestTopics : TeaModel {
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>Consumer group ID, required for ACTIVE_ACTIVE bidirectional backup</para>
             /// 
@@ -24,6 +26,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             /// </summary>
             [NameInMap("consumerGroupId")]
             [Validation(Required=false)]
+            [Obsolete]
             public string ConsumerGroupId { get; set; }
 
             /// <summary>

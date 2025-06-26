@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class CreateConsumerGroupRequest : TeaModel {
         /// <summary>
-        /// <para>consume retry policy</para>
+        /// <para>The consumption retry policy of the consumer group. For more information, see <a href="https://help.aliyun.com/document_detail/440356.html">Consumption retry</a>.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("consumeRetryPolicy")]
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public class CreateConsumerGroupRequestConsumeRetryPolicy : TeaModel {
             /// <summary>
             /// <para>The dead-letter topic.</para>
-            /// <para>If a consumer still fails to consume a message after the message is retried for a specified number of times, the message is delivered to a dead-letter topic for subsequent business recovery or troubleshooting. For more information, see <a href="https://help.aliyun.com/document_detail/440356.html">Consumption retry and dead-letter messages</a>.</para>
+            /// <para>If a message still fails to be consumed after the maximum number of retries specified in the consumption retry policy is reached, the message is delivered to the dead-letter topic for subsequent business recovery or backtracking. For more information, see <a href="https://help.aliyun.com/document_detail/440356.html">Consumption retry and dead-letter messages</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DLQ_mqtest</para>
@@ -28,6 +28,16 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             [Validation(Required=false)]
             public string DeadLetterTargetTopic { get; set; }
 
+            /// <summary>
+            /// <para>Fixed retry interval, unit: seconds.This option is effective when retryPolicy is FixedRetryPolicy.Value range：</para>
+            /// <list type="bullet">
+            /// <item><description>Concurrently:10-600</description></item>
+            /// <item><description>Orderly:1-60</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
             [NameInMap("fixedIntervalRetryTime")]
             [Validation(Required=false)]
             public int? FixedIntervalRetryTime { get; set; }
@@ -46,8 +56,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             /// <para>The retry policy. For more information, see <a href="https://help.aliyun.com/document_detail/440356.html">Message retry</a>.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>FixedRetryPolicy: Failed messages are retried at a fixed interval.</description></item>
-            /// <item><description>DefaultRetryPolicy: Failed messages are retried at incremental intervals as the number of retries increases.</description></item>
+            /// <item><description>FixedRetryPolicy: fixed-interval retry. This value is valid only if you set deliveryOrderType to Orderly.</description></item>
+            /// <item><description>DefaultRetryPolicy: exponential backoff retry. This value is valid only if you set deliveryOrderType to Concurrently.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -61,7 +71,12 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         }
 
         /// <summary>
-        /// <para>The dynamic error message.</para>
+        /// <para>The message delivery method of the consumer group.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Concurrently: concurrent delivery</description></item>
+        /// <item><description>Orderly: ordered delivery</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,7 +87,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string DeliveryOrderType { get; set; }
 
         /// <summary>
-        /// <para>Maximum received message tps</para>
+        /// <para>The maximum number of messages that can be processed by consumers per second.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>
@@ -82,7 +97,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public long? MaxReceiveTps { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The description of the consumer group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is the remark for test.</para>

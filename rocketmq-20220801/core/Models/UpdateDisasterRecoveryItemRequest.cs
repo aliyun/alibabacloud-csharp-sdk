@@ -16,6 +16,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         [Validation(Required=false)]
         public List<UpdateDisasterRecoveryItemRequestTopics> Topics { get; set; }
         public class UpdateDisasterRecoveryItemRequestTopics : TeaModel {
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The ID of the consumer group. If you use the two-way backup mode, you must specify this parameter.</para>
             /// 
@@ -24,6 +26,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             /// </summary>
             [NameInMap("consumerGroupId")]
             [Validation(Required=false)]
+            [Obsolete]
             public string ConsumerGroupId { get; set; }
 
             /// <summary>
