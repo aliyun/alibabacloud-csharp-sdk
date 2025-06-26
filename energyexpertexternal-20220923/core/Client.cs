@@ -3261,7 +3261,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get document parsing/extraction result</para>
+        /// <para>[Important] The api is no longer maintained, please use GetDocExtractionResult, GetVLExtractionResult to get the extraction results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3307,7 +3307,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get document parsing/extraction result</para>
+        /// <para>[Important] The api is no longer maintained, please use GetDocExtractionResult, GetVLExtractionResult to get the extraction results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3353,7 +3353,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get document parsing/extraction result</para>
+        /// <para>[Important] The api is no longer maintained, please use GetDocExtractionResult, GetVLExtractionResult to get the extraction results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3372,7 +3372,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get document parsing/extraction result</para>
+        /// <para>[Important] The api is no longer maintained, please use GetDocExtractionResult, GetVLExtractionResult to get the extraction results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6915,7 +6915,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Online Document Q\&amp;A</para>
+        /// <para>[Important] This api is no longer maintained, please use the Chat api.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6969,7 +6969,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Online Document Q\&amp;A</para>
+        /// <para>[Important] This api is no longer maintained, please use the Chat api.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7023,7 +7023,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Online Document Q\&amp;A</para>
+        /// <para>[Important] This api is no longer maintained, please use the Chat api.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7042,7 +7042,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Online Document Q\&amp;A</para>
+        /// <para>[Important] This api is no longer maintained, please use the Chat api.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7979,7 +7979,9 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get document extraction result</para>
+        /// <para>[Important] The api is no longer maintained, please use the following api: 
+        /// Document parsing using SubmitDocParsingTask. 
+        /// Document extraction using SubmitVLExtractionTask, SubmitDocExtractionTask.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8041,7 +8043,9 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get document extraction result</para>
+        /// <para>[Important] The api is no longer maintained, please use the following api: 
+        /// Document parsing using SubmitDocParsingTask. 
+        /// Document extraction using SubmitVLExtractionTask, SubmitDocExtractionTask.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8103,7 +8107,9 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get document extraction result</para>
+        /// <para>[Important] The api is no longer maintained, please use the following api: 
+        /// Document parsing using SubmitDocParsingTask. 
+        /// Document extraction using SubmitVLExtractionTask, SubmitDocExtractionTask.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8122,7 +8128,9 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get document extraction result</para>
+        /// <para>[Important] The api is no longer maintained, please use the following api: 
+        /// Document parsing using SubmitDocParsingTask. 
+        /// Document extraction using SubmitVLExtractionTask, SubmitDocExtractionTask.</para>
         /// </summary>
         /// 
         /// <param name="request">

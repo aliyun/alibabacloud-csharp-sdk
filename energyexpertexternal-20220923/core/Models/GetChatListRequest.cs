@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
         /// </summary>
         [NameInMap("currentPage")]
         [Validation(Required=false)]
-        public string CurrentPage { get; set; }
+        public int? CurrentPage { get; set; }
 
         /// <summary>
         /// <para>Page size.</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
         /// </summary>
         [NameInMap("pageSize")]
         [Validation(Required=false)]
-        public string PageSize { get; set; }
+        public int? PageSize { get; set; }
 
         /// <summary>
         /// <para>Q&amp;A session ID, used to record multiple Q&amp;As for the same user.</para>

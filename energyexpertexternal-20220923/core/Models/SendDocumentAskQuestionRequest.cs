@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
 {
     public class SendDocumentAskQuestionRequest : TeaModel {
         /// <summary>
-        /// <para>Folder ID, used to specify the range of documents for the query. If it is empty, it indicates that all documents under the tenant will be queried.</para>
+        /// <para>Folder ID, used to specify the range of documents for the query. If it is empty, it indicates that all documents under the default folder will be queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1a851c4a-1d65-11ef-99a7-ssfsfdd</para>
