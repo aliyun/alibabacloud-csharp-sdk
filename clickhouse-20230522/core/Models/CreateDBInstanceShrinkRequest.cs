@@ -51,10 +51,6 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 
         /// <summary>
         /// <para>The engine type.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>clickhouse</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>clickhouse</para>
@@ -91,6 +87,10 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>rg-*****</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
