@@ -811,6 +811,10 @@ namespace AlibabaCloud.SDK.APIG20240327
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentProtocols))
+            {
+                body["agentProtocols"] = request.AgentProtocols;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AiProtocols))
             {
                 body["aiProtocols"] = request.AiProtocols;
@@ -901,6 +905,10 @@ namespace AlibabaCloud.SDK.APIG20240327
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentProtocols))
+            {
+                body["agentProtocols"] = request.AgentProtocols;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AiProtocols))
             {
                 body["aiProtocols"] = request.AiProtocols;
@@ -3065,6 +3073,108 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>删除服务</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteServiceResponse
+        /// </returns>
+        public DeleteServiceResponse DeleteServiceWithOptions(string serviceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteService",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除服务</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteServiceResponse
+        /// </returns>
+        public async Task<DeleteServiceResponse> DeleteServiceWithOptionsAsync(string serviceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteService",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除服务</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteServiceResponse
+        /// </returns>
+        public DeleteServiceResponse DeleteService(string serviceId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteServiceWithOptions(serviceId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除服务</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteServiceResponse
+        /// </returns>
+        public async Task<DeleteServiceResponse> DeleteServiceAsync(string serviceId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteServiceWithOptionsAsync(serviceId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deploy HttpApi</para>
         /// </summary>
         /// 
@@ -3803,7 +3913,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get a gateway.</para>
+        /// <para>Queries the basic information about an instance, such as the virtual private cloud (VPC) and vSwitch to which the instance belongs and its ingress.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3839,7 +3949,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get a gateway.</para>
+        /// <para>Queries the basic information about an instance, such as the virtual private cloud (VPC) and vSwitch to which the instance belongs and its ingress.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3875,7 +3985,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get a gateway.</para>
+        /// <para>Queries the basic information about an instance, such as the virtual private cloud (VPC) and vSwitch to which the instance belongs and its ingress.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3890,7 +4000,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get a gateway.</para>
+        /// <para>Queries the basic information about an instance, such as the virtual private cloud (VPC) and vSwitch to which the instance belongs and its ingress.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -8277,6 +8387,10 @@ namespace AlibabaCloud.SDK.APIG20240327
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentProtocols))
+            {
+                body["agentProtocols"] = request.AgentProtocols;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AiProtocols))
             {
                 body["aiProtocols"] = request.AiProtocols;
@@ -8359,6 +8473,10 @@ namespace AlibabaCloud.SDK.APIG20240327
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentProtocols))
+            {
+                body["agentProtocols"] = request.AgentProtocols;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AiProtocols))
             {
                 body["aiProtocols"] = request.AiProtocols;

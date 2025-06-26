@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [Validation(Required=false)]
             public List<string> Addresses { get; set; }
 
+            [NameInMap("agentServiceConfig")]
+            [Validation(Required=false)]
+            public AgentServiceConfig AgentServiceConfig { get; set; }
+
             /// <summary>
             /// <para>The AI service configurations.</para>
             /// </summary>
