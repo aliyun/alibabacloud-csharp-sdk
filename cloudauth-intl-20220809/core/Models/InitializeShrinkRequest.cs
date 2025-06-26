@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string CallbackUrl { get; set; }
 
+        [NameInMap("ChameleonFrameEnable")]
+        [Validation(Required=false)]
+        public string ChameleonFrameEnable { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <list type="bullet">

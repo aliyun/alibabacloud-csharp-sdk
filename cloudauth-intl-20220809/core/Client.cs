@@ -2958,6 +2958,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["CallbackUrl"] = request.CallbackUrl;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChameleonFrameEnable))
+            {
+                query["ChameleonFrameEnable"] = request.ChameleonFrameEnable;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Crop))
             {
                 query["Crop"] = request.Crop;
@@ -3151,6 +3155,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackUrl))
             {
                 query["CallbackUrl"] = request.CallbackUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChameleonFrameEnable))
+            {
+                query["ChameleonFrameEnable"] = request.ChameleonFrameEnable;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Crop))
             {
