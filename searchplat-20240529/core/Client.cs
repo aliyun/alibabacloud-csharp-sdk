@@ -27,6 +27,152 @@ namespace AlibabaCloud.SDK.Searchplat20240529
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建语音转录异步任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAudioAsrTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAudioAsrTaskResponse
+        /// </returns>
+        public CreateAudioAsrTaskResponse CreateAudioAsrTaskWithOptions(string workspaceName, string serviceId, CreateAudioAsrTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Input))
+            {
+                body["input"] = request.Input;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Output))
+            {
+                body["output"] = request.Output;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameters))
+            {
+                body["parameters"] = request.Parameters;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAudioAsrTask",
+                Version = "2024-05-29",
+                Protocol = "HTTPS",
+                Pathname = "/v3/openapi/workspaces/" + workspaceName + "/audio-asr/" + serviceId + "/async",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAudioAsrTaskResponse>(Execute(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建语音转录异步任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAudioAsrTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAudioAsrTaskResponse
+        /// </returns>
+        public async Task<CreateAudioAsrTaskResponse> CreateAudioAsrTaskWithOptionsAsync(string workspaceName, string serviceId, CreateAudioAsrTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Input))
+            {
+                body["input"] = request.Input;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Output))
+            {
+                body["output"] = request.Output;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameters))
+            {
+                body["parameters"] = request.Parameters;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAudioAsrTask",
+                Version = "2024-05-29",
+                Protocol = "HTTPS",
+                Pathname = "/v3/openapi/workspaces/" + workspaceName + "/audio-asr/" + serviceId + "/async",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAudioAsrTaskResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建语音转录异步任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAudioAsrTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAudioAsrTaskResponse
+        /// </returns>
+        public CreateAudioAsrTaskResponse CreateAudioAsrTask(string workspaceName, string serviceId, CreateAudioAsrTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateAudioAsrTaskWithOptions(workspaceName, serviceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建语音转录异步任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAudioAsrTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAudioAsrTaskResponse
+        /// </returns>
+        public async Task<CreateAudioAsrTaskResponse> CreateAudioAsrTaskAsync(string workspaceName, string serviceId, CreateAudioAsrTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateAudioAsrTaskWithOptionsAsync(workspaceName, serviceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>创建文档解析异步提取任务</para>
         /// </summary>
         /// 
@@ -299,6 +445,282 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await CreateImageAnalyzeTaskWithOptionsAsync(workspaceName, serviceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建语音转录异步任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVideoSnapshotTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVideoSnapshotTaskResponse
+        /// </returns>
+        public CreateVideoSnapshotTaskResponse CreateVideoSnapshotTaskWithOptions(string workspaceName, string serviceId, CreateVideoSnapshotTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Input))
+            {
+                body["input"] = request.Input;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Output))
+            {
+                body["output"] = request.Output;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameters))
+            {
+                body["parameters"] = request.Parameters;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateVideoSnapshotTask",
+                Version = "2024-05-29",
+                Protocol = "HTTPS",
+                Pathname = "/v3/openapi/workspaces/" + workspaceName + "/video-snapshot/" + serviceId + "/async",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateVideoSnapshotTaskResponse>(Execute(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建语音转录异步任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVideoSnapshotTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVideoSnapshotTaskResponse
+        /// </returns>
+        public async Task<CreateVideoSnapshotTaskResponse> CreateVideoSnapshotTaskWithOptionsAsync(string workspaceName, string serviceId, CreateVideoSnapshotTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Input))
+            {
+                body["input"] = request.Input;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Output))
+            {
+                body["output"] = request.Output;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameters))
+            {
+                body["parameters"] = request.Parameters;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateVideoSnapshotTask",
+                Version = "2024-05-29",
+                Protocol = "HTTPS",
+                Pathname = "/v3/openapi/workspaces/" + workspaceName + "/video-snapshot/" + serviceId + "/async",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateVideoSnapshotTaskResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建语音转录异步任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVideoSnapshotTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVideoSnapshotTaskResponse
+        /// </returns>
+        public CreateVideoSnapshotTaskResponse CreateVideoSnapshotTask(string workspaceName, string serviceId, CreateVideoSnapshotTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateVideoSnapshotTaskWithOptions(workspaceName, serviceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建语音转录异步任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVideoSnapshotTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVideoSnapshotTaskResponse
+        /// </returns>
+        public async Task<CreateVideoSnapshotTaskResponse> CreateVideoSnapshotTaskAsync(string workspaceName, string serviceId, CreateVideoSnapshotTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateVideoSnapshotTaskWithOptionsAsync(workspaceName, serviceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取视频截帧异步提取任务状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAudioAsrTaskStatusRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAudioAsrTaskStatusResponse
+        /// </returns>
+        public GetAudioAsrTaskStatusResponse GetAudioAsrTaskStatusWithOptions(string workspaceName, string serviceId, GetAudioAsrTaskStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["task_id"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAudioAsrTaskStatus",
+                Version = "2024-05-29",
+                Protocol = "HTTPS",
+                Pathname = "/v3/openapi/workspaces/" + workspaceName + "/audio-asr/" + serviceId + "/async/task-status",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAudioAsrTaskStatusResponse>(Execute(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取视频截帧异步提取任务状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAudioAsrTaskStatusRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAudioAsrTaskStatusResponse
+        /// </returns>
+        public async Task<GetAudioAsrTaskStatusResponse> GetAudioAsrTaskStatusWithOptionsAsync(string workspaceName, string serviceId, GetAudioAsrTaskStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["task_id"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAudioAsrTaskStatus",
+                Version = "2024-05-29",
+                Protocol = "HTTPS",
+                Pathname = "/v3/openapi/workspaces/" + workspaceName + "/audio-asr/" + serviceId + "/async/task-status",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAudioAsrTaskStatusResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取视频截帧异步提取任务状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAudioAsrTaskStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAudioAsrTaskStatusResponse
+        /// </returns>
+        public GetAudioAsrTaskStatusResponse GetAudioAsrTaskStatus(string workspaceName, string serviceId, GetAudioAsrTaskStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetAudioAsrTaskStatusWithOptions(workspaceName, serviceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取视频截帧异步提取任务状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAudioAsrTaskStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAudioAsrTaskStatusResponse
+        /// </returns>
+        public async Task<GetAudioAsrTaskStatusResponse> GetAudioAsrTaskStatusAsync(string workspaceName, string serviceId, GetAudioAsrTaskStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetAudioAsrTaskStatusWithOptionsAsync(workspaceName, serviceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -1837,6 +2259,136 @@ namespace AlibabaCloud.SDK.Searchplat20240529
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取视频截帧异步提取任务状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVideoSnapshotTaskStatusRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVideoSnapshotTaskStatusResponse
+        /// </returns>
+        public GetVideoSnapshotTaskStatusResponse GetVideoSnapshotTaskStatusWithOptions(string workspaceName, string serviceId, GetVideoSnapshotTaskStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["task_id"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetVideoSnapshotTaskStatus",
+                Version = "2024-05-29",
+                Protocol = "HTTPS",
+                Pathname = "/v3/openapi/workspaces/" + workspaceName + "/video-snapshot/" + serviceId + "/async/task-status",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetVideoSnapshotTaskStatusResponse>(Execute(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取视频截帧异步提取任务状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVideoSnapshotTaskStatusRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVideoSnapshotTaskStatusResponse
+        /// </returns>
+        public async Task<GetVideoSnapshotTaskStatusResponse> GetVideoSnapshotTaskStatusWithOptionsAsync(string workspaceName, string serviceId, GetVideoSnapshotTaskStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["task_id"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetVideoSnapshotTaskStatus",
+                Version = "2024-05-29",
+                Protocol = "HTTPS",
+                Pathname = "/v3/openapi/workspaces/" + workspaceName + "/video-snapshot/" + serviceId + "/async/task-status",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetVideoSnapshotTaskStatusResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取视频截帧异步提取任务状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVideoSnapshotTaskStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVideoSnapshotTaskStatusResponse
+        /// </returns>
+        public GetVideoSnapshotTaskStatusResponse GetVideoSnapshotTaskStatus(string workspaceName, string serviceId, GetVideoSnapshotTaskStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetVideoSnapshotTaskStatusWithOptions(workspaceName, serviceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取视频截帧异步提取任务状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVideoSnapshotTaskStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVideoSnapshotTaskStatusResponse
+        /// </returns>
+        public async Task<GetVideoSnapshotTaskStatusResponse> GetVideoSnapshotTaskStatusAsync(string workspaceName, string serviceId, GetVideoSnapshotTaskStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetVideoSnapshotTaskStatusWithOptionsAsync(workspaceName, serviceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>联网搜索</para>
         /// </summary>
         /// 
@@ -1857,9 +2409,21 @@ namespace AlibabaCloud.SDK.Searchplat20240529
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentType))
+            {
+                body["content_type"] = request.ContentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.History))
+            {
+                body["history"] = request.History;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
             {
                 body["query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryRewrite))
+            {
+                body["query_rewrite"] = request.QueryRewrite;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopK))
             {
@@ -1911,9 +2475,21 @@ namespace AlibabaCloud.SDK.Searchplat20240529
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentType))
+            {
+                body["content_type"] = request.ContentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.History))
+            {
+                body["history"] = request.History;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
             {
                 body["query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryRewrite))
+            {
+                body["query_rewrite"] = request.QueryRewrite;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopK))
             {
