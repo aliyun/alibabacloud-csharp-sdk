@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class SubmitCustomSourceTopicAnalysisRequest : TeaModel {
+        [NameInMap("AnalysisTypes")]
+        [Validation(Required=false)]
+        public List<string> AnalysisTypes { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>json</para>
@@ -58,6 +62,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [NameInMap("PubTime")]
             [Validation(Required=false)]
             public string PubTime { get; set; }
+
+            [NameInMap("Source")]
+            [Validation(Required=false)]
+            public string Source { get; set; }
 
             [NameInMap("Title")]
             [Validation(Required=false)]

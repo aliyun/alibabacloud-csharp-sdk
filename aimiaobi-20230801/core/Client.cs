@@ -21925,11 +21925,19 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             SubmitCustomSourceTopicAnalysisShrinkRequest request = new SubmitCustomSourceTopicAnalysisShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AnalysisTypes))
+            {
+                request.AnalysisTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AnalysisTypes, "AnalysisTypes", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.News))
             {
                 request.NewsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.News, "News", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AnalysisTypesShrink))
+            {
+                body["AnalysisTypes"] = request.AnalysisTypesShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileType))
             {
                 body["FileType"] = request.FileType;
@@ -21989,11 +21997,19 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             SubmitCustomSourceTopicAnalysisShrinkRequest request = new SubmitCustomSourceTopicAnalysisShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AnalysisTypes))
+            {
+                request.AnalysisTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AnalysisTypes, "AnalysisTypes", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.News))
             {
                 request.NewsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.News, "News", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AnalysisTypesShrink))
+            {
+                body["AnalysisTypes"] = request.AnalysisTypesShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileType))
             {
                 body["FileType"] = request.FileType;

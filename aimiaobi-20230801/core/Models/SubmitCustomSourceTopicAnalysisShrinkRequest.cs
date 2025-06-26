@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class SubmitCustomSourceTopicAnalysisShrinkRequest : TeaModel {
+        [NameInMap("AnalysisTypes")]
+        [Validation(Required=false)]
+        public string AnalysisTypesShrink { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>json</para>

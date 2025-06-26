@@ -89,6 +89,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            [NameInMap("rt")]
+            [Validation(Required=false)]
+            public long? Rt { get; set; }
+
+            [NameInMap("usages")]
+            [Validation(Required=false)]
+            public Dictionary<string, long?> Usages { get; set; }
+
         }
 
         /// <summary>
