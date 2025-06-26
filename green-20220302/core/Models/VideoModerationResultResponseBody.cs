@@ -456,6 +456,32 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                             [Validation(Required=false)]
                             public string FigureId { get; set; }
 
+                            [NameInMap("FigureName")]
+                            [Validation(Required=false)]
+                            public string FigureName { get; set; }
+
+                            [NameInMap("Location")]
+                            [Validation(Required=false)]
+                            public List<VideoModerationResultResponseBodyDataFrameResultFramesResultsPublicFigureLocation> Location { get; set; }
+                            public class VideoModerationResultResponseBodyDataFrameResultFramesResultsPublicFigureLocation : TeaModel {
+                                [NameInMap("H")]
+                                [Validation(Required=false)]
+                                public int? H { get; set; }
+
+                                [NameInMap("W")]
+                                [Validation(Required=false)]
+                                public int? W { get; set; }
+
+                                [NameInMap("X")]
+                                [Validation(Required=false)]
+                                public int? X { get; set; }
+
+                                [NameInMap("Y")]
+                                [Validation(Required=false)]
+                                public int? Y { get; set; }
+
+                            }
+
                         }
 
                         /// <summary>
