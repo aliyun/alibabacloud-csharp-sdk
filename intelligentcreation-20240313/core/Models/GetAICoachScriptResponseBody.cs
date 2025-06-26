@@ -101,6 +101,74 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public string CoverUrl { get; set; }
 
+        [NameInMap("customReplyRules")]
+        [Validation(Required=false)]
+        public List<GetAICoachScriptResponseBodyCustomReplyRules> CustomReplyRules { get; set; }
+        public class GetAICoachScriptResponseBodyCustomReplyRules : TeaModel {
+            [NameInMap("action")]
+            [Validation(Required=false)]
+            public GetAICoachScriptResponseBodyCustomReplyRulesAction Action { get; set; }
+            public class GetAICoachScriptResponseBodyCustomReplyRulesAction : TeaModel {
+                [NameInMap("parameters")]
+                [Validation(Required=false)]
+                public GetAICoachScriptResponseBodyCustomReplyRulesActionParameters Parameters { get; set; }
+                public class GetAICoachScriptResponseBodyCustomReplyRulesActionParameters : TeaModel {
+                    [NameInMap("assessPointId")]
+                    [Validation(Required=false)]
+                    public string AssessPointId { get; set; }
+
+                    [NameInMap("customContent")]
+                    [Validation(Required=false)]
+                    public string CustomContent { get; set; }
+
+                }
+
+                [NameInMap("type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+            }
+
+            [NameInMap("logic")]
+            [Validation(Required=false)]
+            public string Logic { get; set; }
+
+            [NameInMap("mainCondition")]
+            [Validation(Required=false)]
+            public GetAICoachScriptResponseBodyCustomReplyRulesMainCondition MainCondition { get; set; }
+            public class GetAICoachScriptResponseBodyCustomReplyRulesMainCondition : TeaModel {
+                [NameInMap("parameters")]
+                [Validation(Required=false)]
+                public GetAICoachScriptResponseBodyCustomReplyRulesMainConditionParameters Parameters { get; set; }
+                public class GetAICoachScriptResponseBodyCustomReplyRulesMainConditionParameters : TeaModel {
+                    [NameInMap("assessPointId")]
+                    [Validation(Required=false)]
+                    public string AssessPointId { get; set; }
+
+                }
+
+                [NameInMap("type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+            }
+
+            [NameInMap("priority")]
+            [Validation(Required=false)]
+            public int? Priority { get; set; }
+
+            [NameInMap("subCondition")]
+            [Validation(Required=false)]
+            public GetAICoachScriptResponseBodyCustomReplyRulesSubCondition SubCondition { get; set; }
+            public class GetAICoachScriptResponseBodyCustomReplyRulesSubCondition : TeaModel {
+                [NameInMap("type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+            }
+
+        }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>500</para>
@@ -570,6 +638,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
             [NameInMap("assessmentPointEnabled")]
             [Validation(Required=false)]
             public bool? AssessmentPointEnabled { get; set; }
+
+            [NameInMap("customReplyRuleEnabled")]
+            [Validation(Required=false)]
+            public bool? CustomReplyRuleEnabled { get; set; }
 
             /// <summary>
             /// <b>Example:</b>

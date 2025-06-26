@@ -4427,6 +4427,136 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取对练会话资源使用情况</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAICoachTaskSessionResourceUsageRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAICoachTaskSessionResourceUsageResponse
+        /// </returns>
+        public GetAICoachTaskSessionResourceUsageResponse GetAICoachTaskSessionResourceUsageWithOptions(GetAICoachTaskSessionResourceUsageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                query["sessionId"] = request.SessionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAICoachTaskSessionResourceUsage",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/aicoach/getSessionResourceUsage",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAICoachTaskSessionResourceUsageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取对练会话资源使用情况</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAICoachTaskSessionResourceUsageRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAICoachTaskSessionResourceUsageResponse
+        /// </returns>
+        public async Task<GetAICoachTaskSessionResourceUsageResponse> GetAICoachTaskSessionResourceUsageWithOptionsAsync(GetAICoachTaskSessionResourceUsageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                query["sessionId"] = request.SessionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAICoachTaskSessionResourceUsage",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/aicoach/getSessionResourceUsage",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAICoachTaskSessionResourceUsageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取对练会话资源使用情况</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAICoachTaskSessionResourceUsageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAICoachTaskSessionResourceUsageResponse
+        /// </returns>
+        public GetAICoachTaskSessionResourceUsageResponse GetAICoachTaskSessionResourceUsage(GetAICoachTaskSessionResourceUsageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetAICoachTaskSessionResourceUsageWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取对练会话资源使用情况</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAICoachTaskSessionResourceUsageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAICoachTaskSessionResourceUsageResponse
+        /// </returns>
+        public async Task<GetAICoachTaskSessionResourceUsageResponse> GetAICoachTaskSessionResourceUsageAsync(GetAICoachTaskSessionResourceUsageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetAICoachTaskSessionResourceUsageWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询配图</para>
         /// </summary>
         /// 

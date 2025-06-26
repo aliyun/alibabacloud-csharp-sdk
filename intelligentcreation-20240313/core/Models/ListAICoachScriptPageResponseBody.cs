@@ -79,6 +79,78 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
             [Validation(Required=false)]
             public string CoverUrl { get; set; }
 
+            [NameInMap("customReplyRules")]
+            [Validation(Required=false)]
+            public List<ListAICoachScriptPageResponseBodyListCustomReplyRules> CustomReplyRules { get; set; }
+            public class ListAICoachScriptPageResponseBodyListCustomReplyRules : TeaModel {
+                [NameInMap("action")]
+                [Validation(Required=false)]
+                public ListAICoachScriptPageResponseBodyListCustomReplyRulesAction Action { get; set; }
+                public class ListAICoachScriptPageResponseBodyListCustomReplyRulesAction : TeaModel {
+                    [NameInMap("parameters")]
+                    [Validation(Required=false)]
+                    public ListAICoachScriptPageResponseBodyListCustomReplyRulesActionParameters Parameters { get; set; }
+                    public class ListAICoachScriptPageResponseBodyListCustomReplyRulesActionParameters : TeaModel {
+                        [NameInMap("assessPoint")]
+                        [Validation(Required=false)]
+                        public string AssessPoint { get; set; }
+
+                        [NameInMap("customContent")]
+                        [Validation(Required=false)]
+                        public string CustomContent { get; set; }
+
+                    }
+
+                    [NameInMap("type")]
+                    [Validation(Required=false)]
+                    public string Type { get; set; }
+
+                }
+
+                [NameInMap("logic")]
+                [Validation(Required=false)]
+                public string Logic { get; set; }
+
+                [NameInMap("mainCondition")]
+                [Validation(Required=false)]
+                public ListAICoachScriptPageResponseBodyListCustomReplyRulesMainCondition MainCondition { get; set; }
+                public class ListAICoachScriptPageResponseBodyListCustomReplyRulesMainCondition : TeaModel {
+                    [NameInMap("parameters")]
+                    [Validation(Required=false)]
+                    public ListAICoachScriptPageResponseBodyListCustomReplyRulesMainConditionParameters Parameters { get; set; }
+                    public class ListAICoachScriptPageResponseBodyListCustomReplyRulesMainConditionParameters : TeaModel {
+                        [NameInMap("assessPoint")]
+                        [Validation(Required=false)]
+                        public string AssessPoint { get; set; }
+
+                    }
+
+                    [NameInMap("type")]
+                    [Validation(Required=false)]
+                    public string Type { get; set; }
+
+                }
+
+                [NameInMap("priority")]
+                [Validation(Required=false)]
+                public int? Priority { get; set; }
+
+                [NameInMap("sortNo")]
+                [Validation(Required=false)]
+                public int? SortNo { get; set; }
+
+                [NameInMap("subCondition")]
+                [Validation(Required=false)]
+                public ListAICoachScriptPageResponseBodyListCustomReplyRulesSubCondition SubCondition { get; set; }
+                public class ListAICoachScriptPageResponseBodyListCustomReplyRulesSubCondition : TeaModel {
+                    [NameInMap("type")]
+                    [Validation(Required=false)]
+                    public string Type { get; set; }
+
+                }
+
+            }
+
             [NameInMap("dialogueTextFlag")]
             [Validation(Required=false)]
             public bool? DialogueTextFlag { get; set; }
@@ -256,6 +328,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
                 [NameInMap("assessmentPointEnabled")]
                 [Validation(Required=false)]
                 public bool? AssessmentPointEnabled { get; set; }
+
+                [NameInMap("customReplyRuleEnabled")]
+                [Validation(Required=false)]
+                public bool? CustomReplyRuleEnabled { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
