@@ -120,6 +120,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public string TemplateType { get; set; }
 
+        [NameInMap("UnbindResourceGroups")]
+        [Validation(Required=false)]
+        public List<string> UnbindResourceGroups { get; set; }
+
+        [NameInMap("UnbindResources")]
+        [Validation(Required=false)]
+        public List<string> UnbindResources { get; set; }
+
     }
 
 }

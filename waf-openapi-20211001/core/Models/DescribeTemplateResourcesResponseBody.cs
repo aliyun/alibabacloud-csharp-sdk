@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeTemplateResourcesResponseBody : TeaModel {
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
         /// <summary>
         /// <para>The ID of the request.</para>
         /// 
@@ -25,6 +33,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [NameInMap("Resources")]
         [Validation(Required=false)]
         public List<string> Resources { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

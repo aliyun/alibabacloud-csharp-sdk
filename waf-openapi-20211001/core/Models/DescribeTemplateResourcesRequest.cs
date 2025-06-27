@@ -23,6 +23,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
         /// <summary>
         /// <para>The region where the WAF instance resides. Valid values:</para>
         /// <list type="bullet">
@@ -36,6 +44,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("Resource")]
+        [Validation(Required=false)]
+        public string Resource { get; set; }
 
         /// <summary>
         /// <para>The ID of the Alibaba Cloud resource group.</para>

@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// </summary>
             [NameInMap("CertId")]
             [Validation(Required=false)]
-            public long? CertId { get; set; }
+            public string CertId { get; set; }
 
             /// <summary>
             /// <para>The type of the cipher suites. Valid values:</para>
