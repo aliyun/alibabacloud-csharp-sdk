@@ -77,6 +77,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public string ServiceCode { get; set; }
 
+        [NameInMap("ServiceConfig")]
+        [Validation(Required=false)]
+        public string ServiceConfig { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>{}</para>

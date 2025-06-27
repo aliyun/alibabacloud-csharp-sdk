@@ -8868,6 +8868,142 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>使用SSE接口流式调用大模型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// LlmStreamChatRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// LlmStreamChatResponse
+        /// </returns>
+        public LlmStreamChatResponse LlmStreamChatWithOptions(LlmStreamChatRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Messages))
+            {
+                body["Messages"] = request.Messages;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Temperature))
+            {
+                body["Temperature"] = request.Temperature;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopP))
+            {
+                body["TopP"] = request.TopP;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "LlmStreamChat",
+                Version = "2022-09-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<LlmStreamChatResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>使用SSE接口流式调用大模型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// LlmStreamChatRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// LlmStreamChatResponse
+        /// </returns>
+        public async Task<LlmStreamChatResponse> LlmStreamChatWithOptionsAsync(LlmStreamChatRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Messages))
+            {
+                body["Messages"] = request.Messages;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Temperature))
+            {
+                body["Temperature"] = request.Temperature;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopP))
+            {
+                body["TopP"] = request.TopP;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "LlmStreamChat",
+                Version = "2022-09-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<LlmStreamChatResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>使用SSE接口流式调用大模型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// LlmStreamChatRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// LlmStreamChatResponse
+        /// </returns>
+        public LlmStreamChatResponse LlmStreamChat(LlmStreamChatRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return LlmStreamChatWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>使用SSE接口流式调用大模型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// LlmStreamChatRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// LlmStreamChatResponse
+        /// </returns>
+        public async Task<LlmStreamChatResponse> LlmStreamChatAsync(LlmStreamChatRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await LlmStreamChatWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>更新代答库</para>
         /// </summary>
         /// 
@@ -10750,6 +10886,10 @@ namespace AlibabaCloud.SDK.Green20220926
             {
                 body["ServiceCode"] = request.ServiceCode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceConfig))
+            {
+                body["ServiceConfig"] = request.ServiceConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoConfig))
             {
                 body["VideoConfig"] = request.VideoConfig;
@@ -10829,6 +10969,10 @@ namespace AlibabaCloud.SDK.Green20220926
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceCode))
             {
                 body["ServiceCode"] = request.ServiceCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceConfig))
+            {
+                body["ServiceConfig"] = request.ServiceConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoConfig))
             {

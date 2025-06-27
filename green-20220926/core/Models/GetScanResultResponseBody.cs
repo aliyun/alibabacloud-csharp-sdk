@@ -115,6 +115,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 [Validation(Required=false)]
                 public string GmtCreate { get; set; }
 
+                [NameInMap("GuardFileUrls")]
+                [Validation(Required=false)]
+                public List<string> GuardFileUrls { get; set; }
+
+                [NameInMap("GuardImageUrls")]
+                [Validation(Required=false)]
+                public List<string> GuardImageUrls { get; set; }
+
                 [NameInMap("ImageLabels")]
                 [Validation(Required=false)]
                 public List<Dictionary<string, object>> ImageLabels { get; set; }
@@ -144,6 +152,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 [NameInMap("Labels")]
                 [Validation(Required=false)]
                 public string Labels { get; set; }
+
+                [NameInMap("MaliciousFileLevel")]
+                [Validation(Required=false)]
+                public string MaliciousFileLevel { get; set; }
+
+                [NameInMap("MaliciousUrlLevel")]
+                [Validation(Required=false)]
+                public string MaliciousUrlLevel { get; set; }
 
                 [NameInMap("ManualOnly")]
                 [Validation(Required=false)]
