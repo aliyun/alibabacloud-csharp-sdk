@@ -837,6 +837,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public string PeriodUnit { get; set; }
 
+            [NameInMap("SchedulerOptions")]
+            [Validation(Required=false)]
+            public CreateAutoProvisioningGroupRequestLaunchConfigurationSchedulerOptions SchedulerOptions { get; set; }
+            public class CreateAutoProvisioningGroupRequestLaunchConfigurationSchedulerOptions : TeaModel {
+                [NameInMap("DedicatedHostClusterId")]
+                [Validation(Required=false)]
+                public string DedicatedHostClusterId { get; set; }
+
+                [NameInMap("DedicatedHostId")]
+                [Validation(Required=false)]
+                public string DedicatedHostId { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The protection period of the spot instance. Unit: hours. Default value: 1. Valid values: Valid values:</para>
             /// <list type="bullet">
