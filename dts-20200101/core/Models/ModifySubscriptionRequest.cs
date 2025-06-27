@@ -14,7 +14,6 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <remarks>
         /// <para> You can call the <a href="https://help.aliyun.com/document_detail/208925.html">DescribeDtsJobDetail</a> operation to query the original objects of the task.</para>
         /// </remarks>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;dtstest&quot;:{&quot;name&quot;:&quot;dtstest&quot;,&quot;all&quot;:true}}</para>
@@ -43,6 +42,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string DtsJobId { get; set; }
 
+        [NameInMap("ModifyType")]
+        [Validation(Required=false)]
+        public string ModifyType { get; set; }
+
         /// <summary>
         /// <para>The ID of the region where the change tracking instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
         /// 
@@ -52,6 +55,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("Reserved")]
+        [Validation(Required=false)]
+        public string Reserved { get; set; }
 
         /// <summary>
         /// <para>Resource group ID.</para>
@@ -69,7 +76,6 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <item><description><b>true</b>: yes</description></item>
         /// <item><description><b>false</b>: no</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -84,7 +90,6 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <item><description><b>true</b>: yes</description></item>
         /// <item><description><b>false</b>: no</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
