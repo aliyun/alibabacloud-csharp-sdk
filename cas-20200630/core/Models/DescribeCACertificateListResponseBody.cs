@@ -96,6 +96,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             [Validation(Required=false)]
             public string CountryCode { get; set; }
 
+            [NameInMap("Gift")]
+            [Validation(Required=false)]
+            public int? Gift { get; set; }
+
             /// <summary>
             /// <para>The unique identifier of the CA certificate.</para>
             /// 
@@ -249,6 +253,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             [NameInMap("SubjectDN")]
             [Validation(Required=false)]
             public string SubjectDN { get; set; }
+
+            [NameInMap("Trial")]
+            [Validation(Required=false)]
+            public int? Trial { get; set; }
 
             /// <summary>
             /// <para>The content of the CA certificate.</para>

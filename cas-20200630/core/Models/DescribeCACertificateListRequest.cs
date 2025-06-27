@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
 {
     public class DescribeCACertificateListRequest : TeaModel {
         /// <summary>
-        /// <para>CaStatus.</para>
+        /// <para>Ca status.</para>
         /// <list type="bullet">
-        /// <item><description>issue：inUse.</description></item>
-        /// <item><description>forbidden ：forbidden.</description></item>
-        /// <item><description>revoke：revoked.</description></item>
+        /// <item><description>issue: inUse.</description></item>
+        /// <item><description>forbidden: forbidden.</description></item>
+        /// <item><description>revoke: revoked.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -27,9 +27,9 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         /// <summary>
         /// <para>The type of the certificate. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>root：rootCA.</description></item>
-        /// <item><description>subRoot：subCA.</description></item>
-        /// <item><description>externalCa：import.</description></item>
+        /// <item><description>root: rootCA.</description></item>
+        /// <item><description>subRoot: subCA.</description></item>
+        /// <item><description>externalCa: import.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -65,9 +65,9 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         /// <summary>
         /// <para>The CA Issuer Type.</para>
         /// <list type="bullet">
-        /// <item><description>local：Private certificate.</description></item>
-        /// <item><description>iTrusChina： Compliance CA.</description></item>
-        /// <item><description>external：External Import.</description></item>
+        /// <item><description>local: Private certificate.</description></item>
+        /// <item><description>iTrusChina: Compliance CA.</description></item>
+        /// <item><description>external: External Import.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -90,8 +90,8 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         /// <summary>
         /// <para>valid time.</para>
         /// <list type="bullet">
-        /// <item><description>valid：means in the valid period.</description></item>
-        /// <item><description>notValid：means expired.</description></item>
+        /// <item><description>valid: means in the valid period.</description></item>
+        /// <item><description>notValid: means expired.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
