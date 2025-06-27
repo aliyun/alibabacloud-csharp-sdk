@@ -74,6 +74,10 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         [Validation(Required=false)]
         public string ScanBy { get; set; }
 
+        [NameInMap("StepMinutes")]
+        [Validation(Required=false)]
+        public int? StepMinutes { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>false</para>

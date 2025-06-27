@@ -2562,6 +2562,10 @@ namespace AlibabaCloud.SDK.Nis20211216
             {
                 query["ScanBy"] = request.ScanBy;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StepMinutes))
+            {
+                query["StepMinutes"] = request.StepMinutes;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseCrossAccount))
             {
                 query["UseCrossAccount"] = request.UseCrossAccount;
@@ -2641,6 +2645,10 @@ namespace AlibabaCloud.SDK.Nis20211216
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanBy))
             {
                 query["ScanBy"] = request.ScanBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StepMinutes))
+            {
+                query["StepMinutes"] = request.StepMinutes;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseCrossAccount))
             {
