@@ -23,6 +23,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string CommandLine { get; set; }
 
         /// <summary>
+        /// <para>The network type of the WebSocket URL required to connect to the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Internet (default)</description></item>
+        /// <item><description>Intranet</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Intranet</para>
         /// </summary>

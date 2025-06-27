@@ -445,6 +445,29 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string ImageId { get; set; }
 
                     /// <summary>
+                    /// <para>Details about the image options.</para>
+                    /// </summary>
+                    [NameInMap("ImageOptions")]
+                    [Validation(Required=false)]
+                    public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataImageOptions ImageOptions { get; set; }
+                    public class DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataImageOptions : TeaModel {
+                        /// <summary>
+                        /// <para>Specifies whether the instance that uses the image supports logons of the ecs-user user. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>true</description></item>
+                        /// <item><description>false</description></item>
+                        /// </list>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>false</para>
+                        /// </summary>
+                        [NameInMap("LoginAsNonRoot")]
+                        [Validation(Required=false)]
+                        public bool? LoginAsNonRoot { get; set; }
+
+                    }
+
+                    /// <summary>
                     /// <para>The source of the image. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description>system: public image provided by Alibaba Cloud</description></item>

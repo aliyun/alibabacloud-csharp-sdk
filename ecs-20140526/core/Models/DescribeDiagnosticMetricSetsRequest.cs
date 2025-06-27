@@ -54,10 +54,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The resource type supported by the diagnostic metric set.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>instance</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>instance</para>
@@ -69,8 +65,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The type of the diagnostic metric set. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>User: user-defined diagnostic metric set</description></item>
-        /// <item><description>Common: common diagnostic metric set</description></item>
+        /// <item><description>User: custom diagnostic metric set</description></item>
+        /// <item><description>Common: public diagnostic metric set</description></item>
         /// </list>
         /// <para>Default value: User.</para>
         /// 
