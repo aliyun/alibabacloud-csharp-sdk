@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListMetaCollectionsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListMetaCollectionsResponseBodyData Data { get; set; }
         public class ListMetaCollectionsResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The collections.</para>
+            /// </summary>
             [NameInMap("MetaCollections")]
             [Validation(Required=false)]
             public List<ListMetaCollectionsResponseBodyDataMetaCollections> MetaCollections { get; set; }
@@ -22,6 +28,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public List<string> Administrators { get; set; }
 
                 /// <summary>
+                /// <para>The time when the collection was created. The value is a UNIX timestamp. Unit: milliseconds.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1668568601000</para>
                 /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Description { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the collection.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>category.123</para>
                 /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Id { get; set; }
 
                 /// <summary>
+                /// <para>The time when the collection was modified. The value is a UNIX timestamp. Unit: milliseconds.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1668568601000</para>
                 /// </summary>
@@ -66,6 +78,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Name { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the collection of the ancestor node. This parameter can be left empty.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>category.1</para>
                 /// </summary>

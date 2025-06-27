@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListSchemasResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The pagination information.</para>
+        /// </summary>
         [NameInMap("PagingInfo")]
         [Validation(Required=false)]
         public ListSchemasResponseBodyPagingInfo PagingInfo { get; set; }
@@ -22,6 +25,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
+            /// <para>The number of entries per page.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -29,6 +34,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
+            /// <summary>
+            /// <para>The schemas.</para>
+            /// </summary>
             [NameInMap("Schemas")]
             [Validation(Required=false)]
             public List<Schema> Schemas { get; set; }
@@ -44,6 +52,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>235BBA5E-3428-XXXXXX</para>
         /// </summary>
@@ -52,6 +62,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

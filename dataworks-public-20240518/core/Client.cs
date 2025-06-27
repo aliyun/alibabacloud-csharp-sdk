@@ -3662,7 +3662,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注册血缘关系</para>
+        /// <para>Creates a lineage between a source entity and a destination entity. Either the source or destination entity must be a custom entity.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3726,7 +3726,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注册血缘关系</para>
+        /// <para>Creates a lineage between a source entity and a destination entity. Either the source or destination entity must be a custom entity.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3790,7 +3790,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注册血缘关系</para>
+        /// <para>Creates a lineage between a source entity and a destination entity. Either the source or destination entity must be a custom entity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3808,7 +3808,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注册血缘关系</para>
+        /// <para>Creates a lineage between a source entity and a destination entity. Either the source or destination entity must be a custom entity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3826,7 +3826,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建集合</para>
+        /// <para>Creates a collection in Data Map. Collections include categories, subcategories, data albums, and categories that are created in the data albums.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3880,7 +3880,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建集合</para>
+        /// <para>Creates a collection in Data Map. Collections include categories, subcategories, data albums, and categories that are created in the data albums.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3934,7 +3934,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建集合</para>
+        /// <para>Creates a collection in Data Map. Collections include categories, subcategories, data albums, and categories that are created in the data albums.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3952,7 +3952,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建集合</para>
+        /// <para>Creates a collection in Data Map. Collections include categories, subcategories, data albums, and categories that are created in the data albums.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13842,7 +13842,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>请求collection详情</para>
+        /// <para>Queries the information about a collection in Data Map. Collections include categories and data albums.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13880,7 +13880,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>请求collection详情</para>
+        /// <para>Queries the information about a collection in Data Map. Collections include categories and data albums.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13918,7 +13918,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>请求collection详情</para>
+        /// <para>Queries the information about a collection in Data Map. Collections include categories and data albums.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13936,7 +13936,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>请求collection详情</para>
+        /// <para>Queries the information about a collection in Data Map. Collections include categories and data albums.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14850,7 +14850,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询异步重跑工作流实例的结果</para>
+        /// <para>Query the result of asynchronous workflow instance reruns.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14892,7 +14892,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询异步重跑工作流实例的结果</para>
+        /// <para>Query the result of asynchronous workflow instance reruns.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14934,7 +14934,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询异步重跑工作流实例的结果</para>
+        /// <para>Query the result of asynchronous workflow instance reruns.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14952,7 +14952,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询异步重跑工作流实例的结果</para>
+        /// <para>Query the result of asynchronous workflow instance reruns.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20440,7 +20440,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询集合中的实体列表</para>
+        /// <para>Queries a list of entities in a collection in Data Map. Collections include categories and data albums. Entities can only be tables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20478,7 +20478,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询集合中的实体列表</para>
+        /// <para>Queries a list of entities in a collection in Data Map. Collections include categories and data albums. Entities can only be tables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20516,7 +20516,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询集合中的实体列表</para>
+        /// <para>Queries a list of entities in a collection in Data Map. Collections include categories and data albums. Entities can only be tables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20534,7 +20534,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询集合中的实体列表</para>
+        /// <para>Queries a list of entities in a collection in Data Map. Collections include categories and data albums. Entities can only be tables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21260,7 +21260,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实体血缘</para>
+        /// <para>Queries a list of ancestor and descendant entities of an entity in Data Map. You can specify whether to return the lineage between the entities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21298,7 +21298,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实体血缘</para>
+        /// <para>Queries a list of ancestor and descendant entities of an entity in Data Map. You can specify whether to return the lineage between the entities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21336,7 +21336,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实体血缘</para>
+        /// <para>Queries a list of ancestor and descendant entities of an entity in Data Map. You can specify whether to return the lineage between the entities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21354,7 +21354,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实体血缘</para>
+        /// <para>Queries a list of ancestor and descendant entities of an entity in Data Map. You can specify whether to return the lineage between the entities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21372,7 +21372,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Collection列表</para>
+        /// <para>Queries a list of collections in Data Map. Collections include categories and data albums.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21410,7 +21410,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Collection列表</para>
+        /// <para>Queries a list of collections in Data Map. Collections include categories and data albums.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21448,7 +21448,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Collection列表</para>
+        /// <para>Queries a list of collections in Data Map. Collections include categories and data albums.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21466,7 +21466,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Collection列表</para>
+        /// <para>Queries a list of collections in Data Map. Collections include categories and data albums.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23172,7 +23172,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模式列表</para>
+        /// <para>Queries a list of schemas in a database or a MaxCompute project in Data Map. Only schemas of the MaxCompute and Hologres metadata crawler types are supported.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -23216,7 +23216,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模式列表</para>
+        /// <para>Queries a list of schemas in a database or a MaxCompute project in Data Map. Only schemas of the MaxCompute and Hologres metadata crawler types are supported.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -23260,7 +23260,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模式列表</para>
+        /// <para>Queries a list of schemas in a database or a MaxCompute project in Data Map. Only schemas of the MaxCompute and Hologres metadata crawler types are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23278,7 +23278,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模式列表</para>
+        /// <para>Queries a list of schemas in a database or a MaxCompute project in Data Map. Only schemas of the MaxCompute and Hologres metadata crawler types are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26576,7 +26576,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重跑工作流实例</para>
+        /// <para>Reruns workflow instances.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -26668,7 +26668,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重跑工作流实例</para>
+        /// <para>Reruns workflow instances.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -26760,7 +26760,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重跑工作流实例</para>
+        /// <para>Reruns workflow instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26778,7 +26778,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重跑工作流实例</para>
+        /// <para>Reruns workflow instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31632,7 +31632,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新集合</para>
+        /// <para>Updates the information about a collection in Data Map, including the collection name, description, and administrator. Collections include categories and data albums. If you want to update the information about a data album, the account that you use must be attached the AliyunDataWorksFullAccess policy, or you are the data album creator or administrator.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -31692,7 +31692,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新集合</para>
+        /// <para>Updates the information about a collection in Data Map, including the collection name, description, and administrator. Collections include categories and data albums. If you want to update the information about a data album, the account that you use must be attached the AliyunDataWorksFullAccess policy, or you are the data album creator or administrator.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -31752,7 +31752,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新集合</para>
+        /// <para>Updates the information about a collection in Data Map, including the collection name, description, and administrator. Collections include categories and data albums. If you want to update the information about a data album, the account that you use must be attached the AliyunDataWorksFullAccess policy, or you are the data album creator or administrator.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31770,7 +31770,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新集合</para>
+        /// <para>Updates the information about a collection in Data Map, including the collection name, description, and administrator. Collections include categories and data albums. If you want to update the information about a data album, the account that you use must be attached the AliyunDataWorksFullAccess policy, or you are the data album creator or administrator.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32712,7 +32712,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据表业务元数据</para>
+        /// <para>Updates the business metadata of a table in Data Map. Currently, only the usage notes of a table can be updated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32758,7 +32758,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据表业务元数据</para>
+        /// <para>Updates the business metadata of a table in Data Map. Currently, only the usage notes of a table can be updated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32804,7 +32804,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据表业务元数据</para>
+        /// <para>Updates the business metadata of a table in Data Map. Currently, only the usage notes of a table can be updated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32822,7 +32822,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据表业务元数据</para>
+        /// <para>Updates the business metadata of a table in Data Map. Currently, only the usage notes of a table can be updated.</para>
         /// </summary>
         /// 
         /// <param name="request">

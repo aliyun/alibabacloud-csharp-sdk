@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public string SrcEntityShrink { get; set; }
 
+        /// <summary>
+        /// <para>The task information.</para>
+        /// </summary>
         [NameInMap("Task")]
         [Validation(Required=false)]
         public string TaskShrink { get; set; }

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateMetaCollectionResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the created collection.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>category.123</para>
         /// </summary>

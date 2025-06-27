@@ -62,6 +62,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The ID of the collection of an ancestor node.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>category.123</para>
         /// </summary>
@@ -78,6 +80,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string SortBy { get; set; }
 
         /// <summary>
+        /// <para>The type of the collection. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Category</description></item>
+        /// <item><description>Album</description></item>
+        /// <item><description>AlbumCategory</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

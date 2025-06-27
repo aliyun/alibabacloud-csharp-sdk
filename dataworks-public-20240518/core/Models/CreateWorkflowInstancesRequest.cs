@@ -176,6 +176,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             [Validation(Required=false)]
             public int? Priority { get; set; }
 
+            [NameInMap("PriorityWeightStrategy")]
+            [Validation(Required=false)]
+            public string PriorityWeightStrategy { get; set; }
+
             /// <summary>
             /// <para>The root task IDs.</para>
             /// <list type="bullet">

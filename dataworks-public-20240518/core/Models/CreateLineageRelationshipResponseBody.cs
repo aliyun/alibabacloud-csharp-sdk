@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateLineageRelationshipResponseBody : TeaModel {
         /// <summary>
+        /// <para>The lineage ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>110xxxx:custom-table.xxxxx:maxcompute-table.project.test_big_lineage_080901:custom-sqlxx.00001</para>
         /// </summary>

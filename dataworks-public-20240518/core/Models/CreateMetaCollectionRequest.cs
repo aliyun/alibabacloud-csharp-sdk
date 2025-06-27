@@ -28,6 +28,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The ID of the collection of an ancestor node.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>category.123</para>
         /// </summary>

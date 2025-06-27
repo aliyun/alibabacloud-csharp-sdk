@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateMetaCollectionShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The collection administrator IDs. This parameter is available only for data albums. The administrator must be an account within the same tenant.</para>
+        /// </summary>
         [NameInMap("Administrators")]
         [Validation(Required=false)]
         public string AdministratorsShrink { get; set; }
@@ -22,6 +25,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The collection ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

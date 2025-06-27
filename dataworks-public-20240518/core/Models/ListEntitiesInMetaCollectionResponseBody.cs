@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListEntitiesInMetaCollectionResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The pagination information.</para>
+        /// </summary>
         [NameInMap("PagingInfo")]
         [Validation(Required=false)]
         public ListEntitiesInMetaCollectionResponseBodyPagingInfo PagingInfo { get; set; }
         public class ListEntitiesInMetaCollectionResponseBodyPagingInfo : TeaModel {
+            /// <summary>
+            /// <para>The entities in the collection.</para>
+            /// </summary>
             [NameInMap("Entities")]
             [Validation(Required=false)]
             public List<ListEntitiesInMetaCollectionResponseBodyPagingInfoEntities> Entities { get; set; }
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Description { get; set; }
 
                 /// <summary>
+                /// <para>The entity ID. Entities can only be tables. This parameter is left empty if the entity is deleted.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>dlf-table:123456789:test_catalog:test_database::test_table</para>
                 /// </summary>
@@ -58,6 +66,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Name { get; set; }
 
                 /// <summary>
+                /// <para>The type of the entity.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>dlf-table</para>
                 /// </summary>

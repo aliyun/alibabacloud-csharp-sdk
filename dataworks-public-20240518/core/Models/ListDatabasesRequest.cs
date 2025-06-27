@@ -50,6 +50,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The parent entity ID. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">description of concepts related to metadata entities.</a></para>
+        /// <para>The type of the parent entity can be found in the response of the ListCrawlerTypes operation.</para>
+        /// <list type="bullet">
+        /// <item><description>If the parent entity is a catalog, the format of <c>ParentMetaEntityId</c> follows the response of the ListCatalogs API.</description></item>
+        /// <item><description>If the parent entity is a metadata crawler, the format of <c>ParentMetaEntityId</c> is <c>${CrawlerType}:${Instance ID or encoded URL}.</c></description></item>
+        /// </list>
+        /// <para>ParentMetaEntityId format examples</para>
+        /// <para><c>dlf-catalog::catalog_id</c></para>
+        /// <para><c>holo:instance_id</c></para>
+        /// <para><c>mysql:(instance_id|encoded_jdbc_url)</c></para>
+        /// <remarks>
+        /// <para>\
+        /// <c>catalog_id</c>: The DLF catalog ID.\
+        /// <c>instance_id</c>: The instance ID, required for the data source registered in instance mode.\
+        /// <c>encoded_jdbc_url</c>: The JDBC connection string that has been URL encoded, required for the data source registered via a connection string.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

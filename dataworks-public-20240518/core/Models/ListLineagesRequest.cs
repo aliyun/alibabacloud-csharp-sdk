@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListLineagesRequest : TeaModel {
         /// <summary>
+        /// <para>The destination entity ID. For more information, see the table ID or field ID in the response returned by the ListTables or ListColumns operation. You can also specify a custom entity ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>maxcompute-table:123456XXX::test_project::test_tbl
         /// dlf-table:123456XXX:test_catalog:test_db::test_tbl
@@ -71,6 +73,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string SortBy { get; set; }
 
         /// <summary>
+        /// <para>The source entity ID. For more information, see the table ID or field ID in the response returned by the ListTables or ListColumns operation. You can also specify a custom entity ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>maxcompute-table:123456XXX::test_project::test_tbl
         /// dlf-table:123456XXX:test_catalog:test_db::test_tbl

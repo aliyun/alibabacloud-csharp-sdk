@@ -50,6 +50,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The parent entity ID. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a>.</para>
+        /// <para>Only DLF and StarRocks data sources support this parameter.</para>
+        /// <list type="bullet">
+        /// <item><description>For DLF data sources, you can call this API operation to query all catalogs. In this case, you must set the <c>ParentMetaEntityId</c> parameter to <c>dlf</c>.</description></item>
+        /// <item><description>For StarRocks data sources, you can call this API operation to query the catalogs in a specific instance. In this case, you can configure the <c>ParentMetaEntityId</c> parameter in the <c>starrocks:(instance_id|encoded_jdbc_url)</c> format.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>\
+        /// <c>instance_id</c>: the ID of an instance. If the related data source is added to DataWorks in Alibaba Cloud instance mode, you must configure this parameter.\
+        /// <c>encoded_jdbc_url</c>: the JDBC connection string that is URL-encoded. If the related data source is added to DataWorks in connection string mode, you must configure this parameter.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

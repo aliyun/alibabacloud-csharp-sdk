@@ -30,6 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string EntityType { get; set; }
 
         /// <summary>
+        /// <para>The collection ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

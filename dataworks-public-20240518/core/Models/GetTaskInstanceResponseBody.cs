@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The details of the instance.</para>
+        /// <para>The details of the task instance.</para>
         /// </summary>
         [NameInMap("TaskInstance")]
         [Validation(Required=false)]
@@ -577,10 +577,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             [Validation(Required=false)]
             public string TriggerType { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1710239005403</para>
+            /// </summary>
             [NameInMap("WaitingResourceTime")]
             [Validation(Required=false)]
             public long? WaitingResourceTime { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1710239005403</para>
+            /// </summary>
             [NameInMap("WaitingTriggerTime")]
             [Validation(Required=false)]
             public long? WaitingTriggerTime { get; set; }

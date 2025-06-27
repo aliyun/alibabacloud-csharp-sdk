@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetMetaCollectionResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The information about the collection.</para>
+        /// </summary>
         [NameInMap("MetaCollection")]
         [Validation(Required=false)]
         public GetMetaCollectionResponseBodyMetaCollection MetaCollection { get; set; }
@@ -38,6 +41,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The collection ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>category.123</para>
             /// </summary>
@@ -62,6 +67,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The ID of the collection of the ancestor node. This parameter can be left empty.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>category.12</para>
             /// </summary>

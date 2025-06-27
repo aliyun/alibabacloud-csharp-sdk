@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetMetaCollectionRequest : TeaModel {
         /// <summary>
+        /// <para>The collection ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

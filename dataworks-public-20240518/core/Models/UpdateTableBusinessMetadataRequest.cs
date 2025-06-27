@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateTableBusinessMetadataRequest : TeaModel {
         /// <summary>
+        /// <para>The data table ID. You can call the ListTables operation to query the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
