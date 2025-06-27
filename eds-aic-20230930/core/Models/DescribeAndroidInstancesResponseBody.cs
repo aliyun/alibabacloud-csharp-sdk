@@ -321,6 +321,20 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string PersistentAppInstanceId { get; set; }
 
+            [NameInMap("PhoneDataInfo")]
+            [Validation(Required=false)]
+            public DescribeAndroidInstancesResponseBodyInstanceModelPhoneDataInfo PhoneDataInfo { get; set; }
+            public class DescribeAndroidInstancesResponseBodyInstanceModelPhoneDataInfo : TeaModel {
+                [NameInMap("PhoneDataId")]
+                [Validation(Required=false)]
+                public string PhoneDataId { get; set; }
+
+                [NameInMap("PhoneDataVolume")]
+                [Validation(Required=false)]
+                public int? PhoneDataVolume { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The ID of the policy.</para>
             /// 

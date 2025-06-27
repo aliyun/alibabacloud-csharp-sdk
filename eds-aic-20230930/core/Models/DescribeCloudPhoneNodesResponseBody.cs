@@ -158,6 +158,20 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public int? PhoneCount { get; set; }
 
+            [NameInMap("PhoneDataInfo")]
+            [Validation(Required=false)]
+            public DescribeCloudPhoneNodesResponseBodyNodeModelPhoneDataInfo PhoneDataInfo { get; set; }
+            public class DescribeCloudPhoneNodesResponseBodyNodeModelPhoneDataInfo : TeaModel {
+                [NameInMap("PhoneDataId")]
+                [Validation(Required=false)]
+                public string PhoneDataId { get; set; }
+
+                [NameInMap("PhoneDataVolume")]
+                [Validation(Required=false)]
+                public int? PhoneDataVolume { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The region ID.</para>
             /// 
