@@ -7939,6 +7939,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await DescribeDNSSLBSubDomainsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询代理域名</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDnsCacheDomainsRequest
         /// </param>
@@ -7988,6 +7993,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DescribeDnsCacheDomainsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询代理域名</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDnsCacheDomainsRequest
         /// </param>
@@ -8037,6 +8047,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DescribeDnsCacheDomainsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询代理域名</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDnsCacheDomainsRequest
         /// </param>
@@ -8050,6 +8065,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return DescribeDnsCacheDomainsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询代理域名</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDnsCacheDomainsRequest
         /// </param>
@@ -10523,6 +10543,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await DescribeDohAccountStatisticsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询DOH域名请求量数据</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDohDomainStatisticsRequest
         /// </param>
@@ -10572,6 +10597,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DescribeDohDomainStatisticsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询DOH域名请求量数据</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDohDomainStatisticsRequest
         /// </param>
@@ -10621,6 +10651,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DescribeDohDomainStatisticsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询DOH域名请求量数据</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDohDomainStatisticsRequest
         /// </param>
@@ -10634,6 +10669,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return DescribeDohDomainStatisticsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询DOH域名请求量数据</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDohDomainStatisticsRequest
         /// </param>
@@ -15391,6 +15431,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await DescribeInstanceDomainsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询解析日志</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInternetDnsLogsRequest
         /// </param>
@@ -15437,6 +15482,10 @@ namespace AlibabaCloud.SDK.Alidns20150109
             {
                 query["QueryCondition"] = request.QueryCondition;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecursionProtocolType))
+            {
+                query["RecursionProtocolType"] = request.RecursionProtocolType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTimestamp))
             {
                 query["StartTimestamp"] = request.StartTimestamp;
@@ -15460,6 +15509,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DescribeInternetDnsLogsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询解析日志</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInternetDnsLogsRequest
         /// </param>
@@ -15506,6 +15560,10 @@ namespace AlibabaCloud.SDK.Alidns20150109
             {
                 query["QueryCondition"] = request.QueryCondition;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecursionProtocolType))
+            {
+                query["RecursionProtocolType"] = request.RecursionProtocolType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTimestamp))
             {
                 query["StartTimestamp"] = request.StartTimestamp;
@@ -15529,6 +15587,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DescribeInternetDnsLogsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询解析日志</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInternetDnsLogsRequest
         /// </param>
@@ -15542,6 +15605,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return DescribeInternetDnsLogsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询解析日志</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInternetDnsLogsRequest
         /// </param>
@@ -16590,6 +16658,10 @@ namespace AlibabaCloud.SDK.Alidns20150109
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
             {
                 query["StartDate"] = request.StartDate;
@@ -16655,6 +16727,10 @@ namespace AlibabaCloud.SDK.Alidns20150109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
             {
@@ -17733,7 +17809,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取公共DNS用户信息</para>
+        /// <para>Queries the information about users in Alibaba Cloud Public DNS.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17775,7 +17851,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取公共DNS用户信息</para>
+        /// <para>Queries the information about users in Alibaba Cloud Public DNS.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17817,7 +17893,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取公共DNS用户信息</para>
+        /// <para>Queries the information about users in Alibaba Cloud Public DNS.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17835,7 +17911,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取公共DNS用户信息</para>
+        /// <para>Queries the information about users in Alibaba Cloud Public DNS.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18775,6 +18851,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await DescribeSubDomainRecordsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询支持的所有线路</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSupportLinesRequest
         /// </param>
@@ -18820,6 +18901,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DescribeSupportLinesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询支持的所有线路</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSupportLinesRequest
         /// </param>
@@ -18865,6 +18951,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DescribeSupportLinesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询支持的所有线路</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSupportLinesRequest
         /// </param>
@@ -18878,6 +18969,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return DescribeSupportLinesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询支持的所有线路</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSupportLinesRequest
         /// </param>

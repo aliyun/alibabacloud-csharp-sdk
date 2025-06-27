@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public string ResourceType { get; set; }
+
         [NameInMap("StartDate")]
         [Validation(Required=false)]
         public string StartDate { get; set; }

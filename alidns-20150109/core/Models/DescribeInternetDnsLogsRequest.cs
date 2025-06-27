@@ -106,6 +106,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string QueryCondition { get; set; }
 
+        [NameInMap("RecursionProtocolType")]
+        [Validation(Required=false)]
+        public string RecursionProtocolType { get; set; }
+
         /// <summary>
         /// <para>The start time of the query (timestamp, unit: milliseconds).</para>
         /// 

@@ -197,6 +197,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
+                [NameInMap("SlaveDnsStatus")]
+                [Validation(Required=false)]
+                public string SlaveDnsStatus { get; set; }
+
                 /// <summary>
                 /// <para>Indicates whether the domain name was added to favorites.</para>
                 /// 
