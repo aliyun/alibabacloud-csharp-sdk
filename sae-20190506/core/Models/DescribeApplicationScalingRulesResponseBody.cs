@@ -78,6 +78,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     [Validation(Required=false)]
                     public int? MaxReplicas { get; set; }
 
+                    [NameInMap("MetricSource")]
+                    [Validation(Required=false)]
+                    public string MetricSource { get; set; }
+
                     /// <summary>
                     /// <para>The list of metrics that are used to trigger the auto scaling policy.</para>
                     /// </summary>
@@ -328,6 +332,28 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     [NameInMap("MinReplicas")]
                     [Validation(Required=false)]
                     public int? MinReplicas { get; set; }
+
+                    [NameInMap("PrometheusMetrics")]
+                    [Validation(Required=false)]
+                    public List<DescribeApplicationScalingRulesResponseBodyDataApplicationScalingRulesMetricPrometheusMetrics> PrometheusMetrics { get; set; }
+                    public class DescribeApplicationScalingRulesResponseBodyDataApplicationScalingRulesMetricPrometheusMetrics : TeaModel {
+                        [NameInMap("PrometheusQuery")]
+                        [Validation(Required=false)]
+                        public string PrometheusQuery { get; set; }
+
+                        [NameInMap("TargetMetricValue")]
+                        [Validation(Required=false)]
+                        public string TargetMetricValue { get; set; }
+
+                    }
+
+                    [NameInMap("PrometheusToken")]
+                    [Validation(Required=false)]
+                    public string PrometheusToken { get; set; }
+
+                    [NameInMap("PrometheusUrl")]
+                    [Validation(Required=false)]
+                    public string PrometheusUrl { get; set; }
 
                     /// <summary>
                     /// <para>Rules that determine the application scale-in.</para>
