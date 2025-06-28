@@ -1695,6 +1695,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["ServerType"] = request.ServerType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StreamMode))
+            {
+                query["StreamMode"] = request.StreamMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
                 query["Tag"] = request.Tag;
@@ -1816,6 +1820,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerType))
             {
                 query["ServerType"] = request.ServerType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StreamMode))
+            {
+                query["StreamMode"] = request.StreamMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
@@ -5853,6 +5861,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                query["EndUserId"] = request.EndUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
             {
                 query["InstanceIds"] = request.InstanceIds;
@@ -5895,6 +5907,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                query["EndUserId"] = request.EndUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
             {
                 query["InstanceIds"] = request.InstanceIds;
@@ -7740,7 +7756,19 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         public ModifyCloudPhoneNodeResponse ModifyCloudPhoneNodeWithOptions(ModifyCloudPhoneNodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewNodeName))
+            {
+                query["NewNodeName"] = request.NewNodeName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeId))
+            {
+                query["NodeId"] = request.NodeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StreamMode))
+            {
+                query["StreamMode"] = request.StreamMode;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -7751,7 +7779,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
                 Version = "2023-09-30",
                 Protocol = "HTTPS",
                 Pathname = "/",
-                Method = "GET",
+                Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
                 ReqBodyType = "formData",
@@ -7778,7 +7806,19 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         public async Task<ModifyCloudPhoneNodeResponse> ModifyCloudPhoneNodeWithOptionsAsync(ModifyCloudPhoneNodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewNodeName))
+            {
+                query["NewNodeName"] = request.NewNodeName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeId))
+            {
+                query["NodeId"] = request.NodeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StreamMode))
+            {
+                query["StreamMode"] = request.StreamMode;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -7789,7 +7829,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
                 Version = "2023-09-30",
                 Protocol = "HTTPS",
                 Pathname = "/",
-                Method = "GET",
+                Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
                 ReqBodyType = "formData",

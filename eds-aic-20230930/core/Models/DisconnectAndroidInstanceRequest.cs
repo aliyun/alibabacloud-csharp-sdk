@@ -9,9 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DisconnectAndroidInstanceRequest : TeaModel {
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
+        [NameInMap("EndUserId")]
+        [Validation(Required=false)]
+        public string EndUserId { get; set; }
+
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
