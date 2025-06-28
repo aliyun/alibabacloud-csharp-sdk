@@ -9,14 +9,34 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class CreateDBResourceGroupRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-12d3-a456-t7241****</para>
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// <para>The working mode of the resource group. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Disable</b> (default)</description></item>
+        /// <item><description><b>AutoScale</b></description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AutoScale</para>
+        /// </summary>
         [NameInMap("ClusterMode")]
         [Validation(Required=false)]
         public string ClusterMode { get; set; }
 
+        /// <summary>
+        /// <para>The resource specifications of a single compute cluster. Unit: ACU.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>16ACU</para>
+        /// </summary>
         [NameInMap("ClusterSizeResource")]
         [Validation(Required=false)]
         public string ClusterSizeResource { get; set; }
@@ -35,10 +55,26 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        /// <summary>
+        /// <para>The engine of the resource group. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>AnalyticDB</b> (default)</description></item>
+        /// <item><description><b>SparkWarehouse</b></description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AnalyticDB</para>
+        /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
         public string Engine { get; set; }
 
+        /// <summary>
+        /// <para>The Spark application configuration parameters that can be applied to all Spark jobs executed in the resource group. If you want to configure parameters for a specific Spark job, you can specify values for the parameters in the code editor when you submit the job.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{\&quot;spark.adb.version\&quot;:\&quot;3.5\&quot;}</para>
+        /// </summary>
         [NameInMap("EngineParams")]
         [Validation(Required=false)]
         public Dictionary<string, object> EngineParams { get; set; }
@@ -64,6 +100,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// <list type="bullet">
         /// <item><description><b>interactive</b> (default)</description></item>
         /// <item><description><b>batch</b></description></item>
+        /// <item><description><b>job</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -73,18 +110,50 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public string GroupType { get; set; }
 
+        /// <summary>
+        /// <para>The maximum number of compute clusters that are allowed in the resource group. Maximum value: 10.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
         [NameInMap("MaxClusterCount")]
         [Validation(Required=false)]
         public int? MaxClusterCount { get; set; }
 
+        /// <summary>
+        /// <para>The maximum amount of reserved computing resources, which refers to the amount of resources that are not allocated in the cluster. Unit: ACU.</para>
+        /// <list type="bullet">
+        /// <item><description>When GroupType is set to interactive, set this parameter to a value in increments of 16ACU.</description></item>
+        /// <item><description>When GroupType is set to job, set this parameter to a value in increments of 8ACU.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>32ACU</para>
+        /// </summary>
         [NameInMap("MaxComputeResource")]
         [Validation(Required=false)]
         public string MaxComputeResource { get; set; }
 
+        /// <summary>
+        /// <para>The minimum number of compute clusters that are required in the resource group. Minimum value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("MinClusterCount")]
         [Validation(Required=false)]
         public int? MinClusterCount { get; set; }
 
+        /// <summary>
+        /// <para>The minimum amount of reserved computing resources. Unit: AnalyticDB compute unit (ACU).</para>
+        /// <list type="bullet">
+        /// <item><description>When GroupType is set to interactive, set this parameter to 16ACU.</description></item>
+        /// <item><description>When GroupType is set to job, set this parameter to 0ACU.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0ACU</para>
+        /// </summary>
         [NameInMap("MinComputeResource")]
         [Validation(Required=false)]
         public string MinComputeResource { get; set; }

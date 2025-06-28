@@ -2062,13 +2062,18 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a resource group for an AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
+        /// <para>Creates a resource group for an AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Precautions</h2>
-        /// <para>This operation is applicable only for elastic clusters of 32 cores or more.</para>
+        /// <para>This operation is suitable for the following editions:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Enterprise Edition</b>.</description></item>
+        /// <item><description><b>Basic Edition</b>.</description></item>
+        /// <item><description><b>Data Lakehouse Edition</b>.</description></item>
+        /// <item><description><b>Data Warehouse Edition in elastic mode</b>: 32 cores and 128 GB or more.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -2180,13 +2185,18 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a resource group for an AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
+        /// <para>Creates a resource group for an AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Precautions</h2>
-        /// <para>This operation is applicable only for elastic clusters of 32 cores or more.</para>
+        /// <para>This operation is suitable for the following editions:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Enterprise Edition</b>.</description></item>
+        /// <item><description><b>Basic Edition</b>.</description></item>
+        /// <item><description><b>Data Lakehouse Edition</b>.</description></item>
+        /// <item><description><b>Data Warehouse Edition in elastic mode</b>: 32 cores and 128 GB or more.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -2298,13 +2308,18 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a resource group for an AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
+        /// <para>Creates a resource group for an AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Precautions</h2>
-        /// <para>This operation is applicable only for elastic clusters of 32 cores or more.</para>
+        /// <para>This operation is suitable for the following editions:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Enterprise Edition</b>.</description></item>
+        /// <item><description><b>Basic Edition</b>.</description></item>
+        /// <item><description><b>Data Lakehouse Edition</b>.</description></item>
+        /// <item><description><b>Data Warehouse Edition in elastic mode</b>: 32 cores and 128 GB or more.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -2322,13 +2337,18 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a resource group for an AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
+        /// <para>Creates a resource group for an AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Precautions</h2>
-        /// <para>This operation is applicable only for elastic clusters of 32 cores or more.</para>
+        /// <para>This operation is suitable for the following editions:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Enterprise Edition</b>.</description></item>
+        /// <item><description><b>Basic Edition</b>.</description></item>
+        /// <item><description><b>Data Lakehouse Edition</b>.</description></item>
+        /// <item><description><b>Data Warehouse Edition in elastic mode</b>: 32 cores and 128 GB or more.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -9566,13 +9586,18 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a resource group for an AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
+        /// <para>Queries the information about a resource group for an AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3></h3>
-        /// <para>You can call this operation only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.</para>
+        /// <para>This operation is suitable for the following editions:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Enterprise Edition</b>.</description></item>
+        /// <item><description><b>Basic Edition</b>.</description></item>
+        /// <item><description><b>Data Lakehouse Edition</b>.</description></item>
+        /// <item><description><b>Data Warehouse Edition in elastic mode</b>: 32 cores and 128 GB or more.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -9634,13 +9659,18 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a resource group for an AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
+        /// <para>Queries the information about a resource group for an AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3></h3>
-        /// <para>You can call this operation only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.</para>
+        /// <para>This operation is suitable for the following editions:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Enterprise Edition</b>.</description></item>
+        /// <item><description><b>Basic Edition</b>.</description></item>
+        /// <item><description><b>Data Lakehouse Edition</b>.</description></item>
+        /// <item><description><b>Data Warehouse Edition in elastic mode</b>: 32 cores and 128 GB or more.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -9702,13 +9732,18 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a resource group for an AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
+        /// <para>Queries the information about a resource group for an AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3></h3>
-        /// <para>You can call this operation only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.</para>
+        /// <para>This operation is suitable for the following editions:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Enterprise Edition</b>.</description></item>
+        /// <item><description><b>Basic Edition</b>.</description></item>
+        /// <item><description><b>Data Lakehouse Edition</b>.</description></item>
+        /// <item><description><b>Data Warehouse Edition in elastic mode</b>: 32 cores and 128 GB or more.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -9726,13 +9761,18 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a resource group for an AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
+        /// <para>Queries the information about a resource group for an AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3></h3>
-        /// <para>You can call this operation only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.</para>
+        /// <para>This operation is suitable for the following editions:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Enterprise Edition</b>.</description></item>
+        /// <item><description><b>Basic Edition</b>.</description></item>
+        /// <item><description><b>Data Lakehouse Edition</b>.</description></item>
+        /// <item><description><b>Data Warehouse Edition in elastic mode</b>: 32 cores and 128 GB or more.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -15387,6 +15427,10 @@ namespace AlibabaCloud.SDK.Adb20190315
             {
                 query["StartTime"] = request.StartTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                query["UserName"] = request.UserName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -15460,6 +15504,10 @@ namespace AlibabaCloud.SDK.Adb20190315
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                query["UserName"] = request.UserName;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -23127,10 +23175,12 @@ namespace AlibabaCloud.SDK.Adb20190315
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Precautions</h2>
+        /// <para>This operation is suitable for the following editions:</para>
         /// <list type="bullet">
-        /// <item><description>This operation is applicable only for elastic clusters of 32 cores or more.</description></item>
-        /// <item><description>The number of nodes cannot be changed for the default resource group USER_DEFAULT.</description></item>
+        /// <item><description><b>Enterprise Edition</b>.</description></item>
+        /// <item><description><b>Basic Edition</b>.</description></item>
+        /// <item><description><b>Data Lakehouse Edition</b>.</description></item>
+        /// <item><description><b>Data Warehouse Edition in elastic mode</b>: 32 cores and 128 GB or more. The number of nodes cannot be modified for the default resource group USER_DEFAULT.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -23252,10 +23302,12 @@ namespace AlibabaCloud.SDK.Adb20190315
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Precautions</h2>
+        /// <para>This operation is suitable for the following editions:</para>
         /// <list type="bullet">
-        /// <item><description>This operation is applicable only for elastic clusters of 32 cores or more.</description></item>
-        /// <item><description>The number of nodes cannot be changed for the default resource group USER_DEFAULT.</description></item>
+        /// <item><description><b>Enterprise Edition</b>.</description></item>
+        /// <item><description><b>Basic Edition</b>.</description></item>
+        /// <item><description><b>Data Lakehouse Edition</b>.</description></item>
+        /// <item><description><b>Data Warehouse Edition in elastic mode</b>: 32 cores and 128 GB or more. The number of nodes cannot be modified for the default resource group USER_DEFAULT.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -23377,10 +23429,12 @@ namespace AlibabaCloud.SDK.Adb20190315
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Precautions</h2>
+        /// <para>This operation is suitable for the following editions:</para>
         /// <list type="bullet">
-        /// <item><description>This operation is applicable only for elastic clusters of 32 cores or more.</description></item>
-        /// <item><description>The number of nodes cannot be changed for the default resource group USER_DEFAULT.</description></item>
+        /// <item><description><b>Enterprise Edition</b>.</description></item>
+        /// <item><description><b>Basic Edition</b>.</description></item>
+        /// <item><description><b>Data Lakehouse Edition</b>.</description></item>
+        /// <item><description><b>Data Warehouse Edition in elastic mode</b>: 32 cores and 128 GB or more. The number of nodes cannot be modified for the default resource group USER_DEFAULT.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -23404,10 +23458,12 @@ namespace AlibabaCloud.SDK.Adb20190315
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Precautions</h2>
+        /// <para>This operation is suitable for the following editions:</para>
         /// <list type="bullet">
-        /// <item><description>This operation is applicable only for elastic clusters of 32 cores or more.</description></item>
-        /// <item><description>The number of nodes cannot be changed for the default resource group USER_DEFAULT.</description></item>
+        /// <item><description><b>Enterprise Edition</b>.</description></item>
+        /// <item><description><b>Basic Edition</b>.</description></item>
+        /// <item><description><b>Data Lakehouse Edition</b>.</description></item>
+        /// <item><description><b>Data Warehouse Edition in elastic mode</b>: 32 cores and 128 GB or more. The number of nodes cannot be modified for the default resource group USER_DEFAULT.</description></item>
         /// </list>
         /// </description>
         /// 
