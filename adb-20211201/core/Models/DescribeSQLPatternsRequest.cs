@@ -148,6 +148,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
+        [NameInMap("UserName")]
+        [Validation(Required=false)]
+        public string UserName { get; set; }
+
     }
 
 }
