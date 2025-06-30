@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
+        [NameInMap("ResourceGroupIDs")]
+        [Validation(Required=false)]
+        public string ResourceGroupIDs { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>Lingjun</para>

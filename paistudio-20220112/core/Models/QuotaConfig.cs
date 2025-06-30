@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public bool? EnableSubQuotaPreemption { get; set; }
 
+        [NameInMap("EniCacheConfig")]
+        [Validation(Required=false)]
+        public EniCacheConfig EniCacheConfig { get; set; }
+
         [NameInMap("OversoldUsageInfo")]
         [Validation(Required=false)]
         public OversoldUsageConfig OversoldUsageInfo { get; set; }
@@ -48,6 +52,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [NameInMap("ResourceSpecs")]
         [Validation(Required=false)]
         public List<WorkspaceSpecs> ResourceSpecs { get; set; }
+
+        [NameInMap("SandboxCacheConfig")]
+        [Validation(Required=false)]
+        public SandboxCacheConfig SandboxCacheConfig { get; set; }
 
         [NameInMap("SelfQuotaPreemptionConfig")]
         [Validation(Required=false)]

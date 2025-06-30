@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class MachineGroup : TeaModel {
+        [NameInMap("Cpu")]
+        [Validation(Required=false)]
+        public long? Cpu { get; set; }
+
         [NameInMap("CreatorID")]
         [Validation(Required=false)]
         public string CreatorID { get; set; }
@@ -53,6 +57,18 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string GmtStartedTime { get; set; }
 
+        [NameInMap("Gpu")]
+        [Validation(Required=false)]
+        public long? Gpu { get; set; }
+
+        [NameInMap("GpuMemory")]
+        [Validation(Required=false)]
+        public long? GpuMemory { get; set; }
+
+        [NameInMap("GpuType")]
+        [Validation(Required=false)]
+        public string GpuType { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>mg1</para>
@@ -60,6 +76,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [NameInMap("MachineGroupID")]
         [Validation(Required=false)]
         public string MachineGroupID { get; set; }
+
+        [NameInMap("Memory")]
+        [Validation(Required=false)]
+        public long? Memory { get; set; }
 
         [NameInMap("OrderInstanceId")]
         [Validation(Required=false)]
@@ -88,6 +108,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [NameInMap("ResourceGroupID")]
         [Validation(Required=false)]
         public string ResourceGroupID { get; set; }
+
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public string ResourceType { get; set; }
 
         [NameInMap("Status")]
         [Validation(Required=false)]
