@@ -374,6 +374,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EdgeDnsClusters))
+            {
+                query["EdgeDnsClusters"] = request.EdgeDnsClusters;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointId))
             {
                 query["EndpointId"] = request.EndpointId;
@@ -393,6 +397,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
                 query["Type"] = request.Type;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Vpcs))
+            {
+                query["Vpcs"] = request.Vpcs;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneName))
             {
@@ -442,6 +450,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EdgeDnsClusters))
+            {
+                query["EdgeDnsClusters"] = request.EdgeDnsClusters;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointId))
             {
                 query["EndpointId"] = request.EndpointId;
@@ -461,6 +473,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
                 query["Type"] = request.Type;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Vpcs))
+            {
+                query["Vpcs"] = request.Vpcs;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneName))
             {

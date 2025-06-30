@@ -237,6 +237,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 
                 }
 
+                [NameInMap("SlaveDnsStatus")]
+                [Validation(Required=false)]
+                public string SlaveDnsStatus { get; set; }
+
                 /// <summary>
                 /// <para>The time when the zone was last modified. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
                 /// 

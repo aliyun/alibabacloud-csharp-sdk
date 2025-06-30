@@ -9,6 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class DescribeZoneInfoResponseBody : TeaModel {
+        [NameInMap("BindEdgeDnsClusters")]
+        [Validation(Required=false)]
+        public DescribeZoneInfoResponseBodyBindEdgeDnsClusters BindEdgeDnsClusters { get; set; }
+        public class DescribeZoneInfoResponseBodyBindEdgeDnsClusters : TeaModel {
+            [NameInMap("EdgeDnsCluster")]
+            [Validation(Required=false)]
+            public List<DescribeZoneInfoResponseBodyBindEdgeDnsClustersEdgeDnsCluster> EdgeDnsCluster { get; set; }
+            public class DescribeZoneInfoResponseBodyBindEdgeDnsClustersEdgeDnsCluster : TeaModel {
+                [NameInMap("ClusterId")]
+                [Validation(Required=false)]
+                public string ClusterId { get; set; }
+
+                [NameInMap("ClusterName")]
+                [Validation(Required=false)]
+                public string ClusterName { get; set; }
+
+                [NameInMap("ClusterUserId")]
+                [Validation(Required=false)]
+                public long? ClusterUserId { get; set; }
+
+            }
+
+        }
+
         /// <summary>
         /// <para>The VPCs associated with the zone.</para>
         /// </summary>

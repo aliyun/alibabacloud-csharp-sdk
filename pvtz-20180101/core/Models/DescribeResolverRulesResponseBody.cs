@@ -46,6 +46,24 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         [Validation(Required=false)]
         public List<DescribeResolverRulesResponseBodyRules> Rules { get; set; }
         public class DescribeResolverRulesResponseBodyRules : TeaModel {
+            [NameInMap("BindEdgeDnsClusters")]
+            [Validation(Required=false)]
+            public List<DescribeResolverRulesResponseBodyRulesBindEdgeDnsClusters> BindEdgeDnsClusters { get; set; }
+            public class DescribeResolverRulesResponseBodyRulesBindEdgeDnsClusters : TeaModel {
+                [NameInMap("ClusterId")]
+                [Validation(Required=false)]
+                public string ClusterId { get; set; }
+
+                [NameInMap("ClusterName")]
+                [Validation(Required=false)]
+                public string ClusterName { get; set; }
+
+                [NameInMap("ClusterUserId")]
+                [Validation(Required=false)]
+                public long? ClusterUserId { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The VPCs associated with the forwarding rule.</para>
             /// </summary>

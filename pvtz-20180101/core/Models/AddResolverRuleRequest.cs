@@ -9,9 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class AddResolverRuleRequest : TeaModel {
+        [NameInMap("EdgeDnsClusters")]
+        [Validation(Required=false)]
+        public List<AddResolverRuleRequestEdgeDnsClusters> EdgeDnsClusters { get; set; }
+        public class AddResolverRuleRequestEdgeDnsClusters : TeaModel {
+            [NameInMap("ClusterId")]
+            [Validation(Required=false)]
+            public string ClusterId { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The outbound endpoint ID. The outbound endpoint is used to forward the DNS requests to the specified destination IP addresses.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hr****</para>
@@ -96,6 +105,28 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
+
+        [NameInMap("Vpcs")]
+        [Validation(Required=false)]
+        public List<AddResolverRuleRequestVpcs> Vpcs { get; set; }
+        public class AddResolverRuleRequestVpcs : TeaModel {
+            [NameInMap("RegionId")]
+            [Validation(Required=false)]
+            public string RegionId { get; set; }
+
+            [NameInMap("VpcId")]
+            [Validation(Required=false)]
+            public string VpcId { get; set; }
+
+            [NameInMap("VpcType")]
+            [Validation(Required=false)]
+            public string VpcType { get; set; }
+
+            [NameInMap("VpcUserId")]
+            [Validation(Required=false)]
+            public long? VpcUserId { get; set; }
+
+        }
 
         /// <summary>
         /// <para>The zone for which you want to forward DNS requests.</para>

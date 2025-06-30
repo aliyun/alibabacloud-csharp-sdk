@@ -9,6 +9,24 @@ using Tea;
 namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class DescribeResolverRuleResponseBody : TeaModel {
+        [NameInMap("BindEdgeDnsClusters")]
+        [Validation(Required=false)]
+        public List<DescribeResolverRuleResponseBodyBindEdgeDnsClusters> BindEdgeDnsClusters { get; set; }
+        public class DescribeResolverRuleResponseBodyBindEdgeDnsClusters : TeaModel {
+            [NameInMap("ClusterId")]
+            [Validation(Required=false)]
+            public string ClusterId { get; set; }
+
+            [NameInMap("ClusterName")]
+            [Validation(Required=false)]
+            public string ClusterName { get; set; }
+
+            [NameInMap("ClusterUserId")]
+            [Validation(Required=false)]
+            public long? ClusterUserId { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The virtual private clouds (VPCs) that are associated with the forwarding rule.</para>
         /// </summary>

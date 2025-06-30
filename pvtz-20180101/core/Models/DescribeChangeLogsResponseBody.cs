@@ -66,6 +66,12 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
                 [Validation(Required=false)]
                 public string CreatorType { get; set; }
 
+                /// <summary>
+                /// <para>The operator ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>141339776561****</para>
+                /// </summary>
                 [NameInMap("CreatorUserId")]
                 [Validation(Required=false)]
                 public string CreatorUserId { get; set; }
