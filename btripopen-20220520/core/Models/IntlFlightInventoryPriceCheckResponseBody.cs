@@ -9,6 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class IntlFlightInventoryPriceCheckResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>SUCCESS</para>
+        /// </summary>
+        [NameInMap("code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>成功</para>
+        /// </summary>
+        [NameInMap("message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
         [NameInMap("module")]
         [Validation(Required=false)]
         public IntlFlightInventoryPriceCheckResponseBodyModule Module { get; set; }
@@ -47,22 +63,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public class IntlFlightInventoryPriceCheckResponseBodyModulePassengerChangedPriceInfoListChangedPrice : TeaModel {
                     /// <summary>
                     /// <b>Example:</b>
-                    /// <para>9000</para>
-                    /// </summary>
-                    [NameInMap("build_price")]
-                    [Validation(Required=false)]
-                    public long? BuildPrice { get; set; }
-
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>5000</para>
-                    /// </summary>
-                    [NameInMap("oil_price")]
-                    [Validation(Required=false)]
-                    public long? OilPrice { get; set; }
-
-                    /// <summary>
-                    /// <b>Example:</b>
                     /// <para>12000</para>
                     /// </summary>
                     [NameInMap("tax_price")]
@@ -83,22 +83,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public IntlFlightInventoryPriceCheckResponseBodyModulePassengerChangedPriceInfoListOriginalPrice OriginalPrice { get; set; }
                 public class IntlFlightInventoryPriceCheckResponseBodyModulePassengerChangedPriceInfoListOriginalPrice : TeaModel {
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>9000</para>
-                    /// </summary>
-                    [NameInMap("build_price")]
-                    [Validation(Required=false)]
-                    public long? BuildPrice { get; set; }
-
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>5000</para>
-                    /// </summary>
-                    [NameInMap("oil_price")]
-                    [Validation(Required=false)]
-                    public long? OilPrice { get; set; }
-
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>12000</para>
@@ -144,18 +128,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>0</para>
-        /// </summary>
-        [NameInMap("result_code")]
-        [Validation(Required=false)]
-        public string ResultCode { get; set; }
-
-        [NameInMap("result_msg")]
-        [Validation(Required=false)]
-        public string ResultMsg { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

@@ -9,25 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class IntlFlightOrderDetailResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>SUCCESS</para>
+        /// </summary>
+        [NameInMap("code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>成功</para>
+        /// </summary>
+        [NameInMap("message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
         [NameInMap("module")]
         [Validation(Required=false)]
         public IntlFlightOrderDetailResponseBodyModule Module { get; set; }
         public class IntlFlightOrderDetailResponseBodyModule : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>122928120369012</para>
-            /// </summary>
-            [NameInMap("book_user_id")]
+            [NameInMap("booker_user_id")]
             [Validation(Required=false)]
-            public string BookUserId { get; set; }
+            public string BookerUserId { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>ZHANG/SAN</para>
-            /// </summary>
-            [NameInMap("book_user_name")]
+            [NameInMap("booker_user_name")]
             [Validation(Required=false)]
-            public string BookUserName { get; set; }
+            public string BookerUserName { get; set; }
 
             [NameInMap("close_reason")]
             [Validation(Required=false)]
@@ -39,69 +47,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             /// </summary>
             [NameInMap("close_time")]
             [Validation(Required=false)]
-            public long? CloseTime { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>2024-03-06 14:56:05</para>
-            /// </summary>
-            [NameInMap("close_time_str")]
-            [Validation(Required=false)]
-            public string CloseTimeStr { get; set; }
+            public string CloseTime { get; set; }
 
             [NameInMap("contact_info")]
             [Validation(Required=false)]
             public IntlFlightOrderDetailResponseBodyModuleContactInfo ContactInfo { get; set; }
             public class IntlFlightOrderDetailResponseBodyModuleContactInfo : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para><a href="mailto:test@cainiao.com">test@cainiao.com</a></para>
-                /// </summary>
-                [NameInMap("contact_email")]
-                [Validation(Required=false)]
-                public string ContactEmail { get; set; }
-
                 [NameInMap("contact_name")]
                 [Validation(Required=false)]
                 public string ContactName { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>185006022345</para>
-                /// </summary>
-                [NameInMap("contact_phone")]
-                [Validation(Required=false)]
-                public string ContactPhone { get; set; }
-
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>false</para>
-                /// </summary>
-                [NameInMap("send_msg_to_passenger")]
-                [Validation(Required=false)]
-                public bool? SendMsgToPassenger { get; set; }
-
             }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1709708165000</para>
-            /// </summary>
-            [NameInMap("create_time")]
-            [Validation(Required=false)]
-            public long? CreateTime { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>2024-03-06 14:56:05</para>
-            /// </summary>
-            [NameInMap("create_time_str")]
-            [Validation(Required=false)]
-            public string CreateTimeStr { get; set; }
-
-            [NameInMap("ext_info_map")]
-            [Validation(Required=false)]
-            public Dictionary<string, string> ExtInfoMap { get; set; }
 
             [NameInMap("journey_list")]
             [Validation(Required=false)]
@@ -119,6 +75,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string ArrCityName { get; set; }
 
+                [NameInMap("arr_time")]
+                [Validation(Required=false)]
+                public string ArrTime { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>SHA</para>
@@ -131,42 +91,58 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string DepCityName { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>2024-07-06</para>
-                /// </summary>
-                [NameInMap("dep_date")]
+                [NameInMap("dep_time")]
                 [Validation(Required=false)]
-                public string DepDate { get; set; }
+                public string DepTime { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
-                [NameInMap("journey_index")]
+                [NameInMap("duration")]
                 [Validation(Required=false)]
-                public int? JourneyIndex { get; set; }
+                public int? Duration { get; set; }
 
-                [NameInMap("segment_list")]
+                [NameInMap("flight_segment_infos")]
                 [Validation(Required=false)]
-                public List<IntlFlightOrderDetailResponseBodyModuleJourneyListSegmentList> SegmentList { get; set; }
-                public class IntlFlightOrderDetailResponseBodyModuleJourneyListSegmentList : TeaModel {
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>HKG</para>
-                    /// </summary>
-                    [NameInMap("arr_airport_code")]
+                public List<IntlFlightOrderDetailResponseBodyModuleJourneyListFlightSegmentInfos> FlightSegmentInfos { get; set; }
+                public class IntlFlightOrderDetailResponseBodyModuleJourneyListFlightSegmentInfos : TeaModel {
+                    [NameInMap("airline_info")]
                     [Validation(Required=false)]
-                    public string ArrAirportCode { get; set; }
+                    public IntlFlightOrderDetailResponseBodyModuleJourneyListFlightSegmentInfosAirlineInfo AirlineInfo { get; set; }
+                    public class IntlFlightOrderDetailResponseBodyModuleJourneyListFlightSegmentInfosAirlineInfo : TeaModel {
+                        [NameInMap("airline_code")]
+                        [Validation(Required=false)]
+                        public string AirlineCode { get; set; }
 
-                    [NameInMap("arr_airport_name")]
+                        [NameInMap("airline_name")]
+                        [Validation(Required=false)]
+                        public string AirlineName { get; set; }
+
+                        [NameInMap("short_name")]
+                        [Validation(Required=false)]
+                        public string ShortName { get; set; }
+
+                    }
+
+                    [NameInMap("arr_airport_info")]
                     [Validation(Required=false)]
-                    public string ArrAirportName { get; set; }
+                    public IntlFlightOrderDetailResponseBodyModuleJourneyListFlightSegmentInfosArrAirportInfo ArrAirportInfo { get; set; }
+                    public class IntlFlightOrderDetailResponseBodyModuleJourneyListFlightSegmentInfosArrAirportInfo : TeaModel {
+                        [NameInMap("airport_code")]
+                        [Validation(Required=false)]
+                        public string AirportCode { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>HKG</para>
-                    /// </summary>
+                        [NameInMap("airport_name")]
+                        [Validation(Required=false)]
+                        public string AirportName { get; set; }
+
+                        [NameInMap("airport_short_name")]
+                        [Validation(Required=false)]
+                        public string AirportShortName { get; set; }
+
+                        [NameInMap("terminal")]
+                        [Validation(Required=false)]
+                        public string Terminal { get; set; }
+
+                    }
+
                     [NameInMap("arr_city_code")]
                     [Validation(Required=false)]
                     public string ArrCityCode { get; set; }
@@ -175,46 +151,32 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     [Validation(Required=false)]
                     public string ArrCityName { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>T1</para>
-                    /// </summary>
-                    [NameInMap("arr_terminal")]
-                    [Validation(Required=false)]
-                    public string ArrTerminal { get; set; }
-
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>2024-07-06 14:05:00</para>
-                    /// </summary>
                     [NameInMap("arr_time")]
                     [Validation(Required=false)]
                     public string ArrTime { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>false</para>
-                    /// </summary>
-                    [NameInMap("code_share")]
+                    [NameInMap("dep_airport_info")]
                     [Validation(Required=false)]
-                    public bool? CodeShare { get; set; }
+                    public IntlFlightOrderDetailResponseBodyModuleJourneyListFlightSegmentInfosDepAirportInfo DepAirportInfo { get; set; }
+                    public class IntlFlightOrderDetailResponseBodyModuleJourneyListFlightSegmentInfosDepAirportInfo : TeaModel {
+                        [NameInMap("airport_code")]
+                        [Validation(Required=false)]
+                        public string AirportCode { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>PVG</para>
-                    /// </summary>
-                    [NameInMap("dep_airport_code")]
-                    [Validation(Required=false)]
-                    public string DepAirportCode { get; set; }
+                        [NameInMap("airport_name")]
+                        [Validation(Required=false)]
+                        public string AirportName { get; set; }
 
-                    [NameInMap("dep_airport_name")]
-                    [Validation(Required=false)]
-                    public string DepAirportName { get; set; }
+                        [NameInMap("airport_short_name")]
+                        [Validation(Required=false)]
+                        public string AirportShortName { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>SHA</para>
-                    /// </summary>
+                        [NameInMap("terminal")]
+                        [Validation(Required=false)]
+                        public string Terminal { get; set; }
+
+                    }
+
                     [NameInMap("dep_city_code")]
                     [Validation(Required=false)]
                     public string DepCityCode { get; set; }
@@ -223,310 +185,142 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     [Validation(Required=false)]
                     public string DepCityName { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>T1</para>
-                    /// </summary>
-                    [NameInMap("dep_terminal")]
-                    [Validation(Required=false)]
-                    public string DepTerminal { get; set; }
-
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>2024-07-06 11:10:00</para>
-                    /// </summary>
                     [NameInMap("dep_time")]
                     [Validation(Required=false)]
                     public string DepTime { get; set; }
 
-                    [NameInMap("flight_other_info")]
+                    [NameInMap("duration")]
                     [Validation(Required=false)]
-                    public IntlFlightOrderDetailResponseBodyModuleJourneyListSegmentListFlightOtherInfo FlightOtherInfo { get; set; }
-                    public class IntlFlightOrderDetailResponseBodyModuleJourneyListSegmentListFlightOtherInfo : TeaModel {
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>100</para>
-                        /// </summary>
-                        [NameInMap("aircraft_age")]
-                        [Validation(Required=false)]
-                        public string AircraftAge { get; set; }
+                    public int? Duration { get; set; }
 
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>10</para>
-                        /// </summary>
-                        [NameInMap("avg_delay_time")]
-                        [Validation(Required=false)]
-                        public string AvgDelayTime { get; set; }
+                    [NameInMap("flight_no")]
+                    [Validation(Required=false)]
+                    public string FlightNo { get; set; }
 
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>32Q</para>
-                        /// </summary>
-                        [NameInMap("equip_type")]
+                    [NameInMap("flight_share_info")]
+                    [Validation(Required=false)]
+                    public IntlFlightOrderDetailResponseBodyModuleJourneyListFlightSegmentInfosFlightShareInfo FlightShareInfo { get; set; }
+                    public class IntlFlightOrderDetailResponseBodyModuleJourneyListFlightSegmentInfosFlightShareInfo : TeaModel {
+                        [NameInMap("operating_airline_info")]
                         [Validation(Required=false)]
-                        public string EquipType { get; set; }
+                        public IntlFlightOrderDetailResponseBodyModuleJourneyListFlightSegmentInfosFlightShareInfoOperatingAirlineInfo OperatingAirlineInfo { get; set; }
+                        public class IntlFlightOrderDetailResponseBodyModuleJourneyListFlightSegmentInfosFlightShareInfoOperatingAirlineInfo : TeaModel {
+                            [NameInMap("airline_code")]
+                            [Validation(Required=false)]
+                            public string AirlineCode { get; set; }
 
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>20</para>
-                        /// </summary>
-                        [NameInMap("flight_cancel_rate")]
-                        [Validation(Required=false)]
-                        public string FlightCancelRate { get; set; }
+                            [NameInMap("airline_name")]
+                            [Validation(Required=false)]
+                            public string AirlineName { get; set; }
 
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>195</para>
-                        /// </summary>
-                        [NameInMap("flight_distance")]
-                        [Validation(Required=false)]
-                        public int? FlightDistance { get; set; }
+                            [NameInMap("short_name")]
+                            [Validation(Required=false)]
+                            public string ShortName { get; set; }
 
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>165</para>
-                        /// </summary>
-                        [NameInMap("flight_duration")]
-                        [Validation(Required=false)]
-                        public int? FlightDuration { get; set; }
+                        }
 
-                        [NameInMap("flight_size")]
+                        [NameInMap("operating_flight_no")]
                         [Validation(Required=false)]
-                        public string FlightSize { get; set; }
-
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>70</para>
-                        /// </summary>
-                        [NameInMap("jet_bridge_rate")]
-                        [Validation(Required=false)]
-                        public string JetBridgeRate { get; set; }
-
-                        [NameInMap("manufacturer")]
-                        [Validation(Required=false)]
-                        public string Manufacturer { get; set; }
-
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>0</para>
-                        /// </summary>
-                        [NameInMap("meal")]
-                        [Validation(Required=false)]
-                        public int? Meal { get; set; }
-
-                        [NameInMap("meal_desc")]
-                        [Validation(Required=false)]
-                        public string MealDesc { get; set; }
-
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>80</para>
-                        /// </summary>
-                        [NameInMap("on_time_rate")]
-                        [Validation(Required=false)]
-                        public string OnTimeRate { get; set; }
-
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>true</para>
-                        /// </summary>
-                        [NameInMap("wifi")]
-                        [Validation(Required=false)]
-                        public bool? Wifi { get; set; }
+                        public string OperatingFlightNo { get; set; }
 
                     }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>0</para>
-                    /// </summary>
-                    [NameInMap("journey_index")]
+                    [NameInMap("flight_size")]
                     [Validation(Required=false)]
-                    public int? JourneyIndex { get; set; }
+                    public string FlightSize { get; set; }
+
+                    [NameInMap("flight_stop_info_list")]
+                    [Validation(Required=false)]
+                    public List<IntlFlightOrderDetailResponseBodyModuleJourneyListFlightSegmentInfosFlightStopInfoList> FlightStopInfoList { get; set; }
+                    public class IntlFlightOrderDetailResponseBodyModuleJourneyListFlightSegmentInfosFlightStopInfoList : TeaModel {
+                        [NameInMap("stop_airport")]
+                        [Validation(Required=false)]
+                        public string StopAirport { get; set; }
+
+                        [NameInMap("stop_airport_name")]
+                        [Validation(Required=false)]
+                        public string StopAirportName { get; set; }
+
+                        [NameInMap("stop_arr_term")]
+                        [Validation(Required=false)]
+                        public string StopArrTerm { get; set; }
+
+                        [NameInMap("stop_arr_time")]
+                        [Validation(Required=false)]
+                        public string StopArrTime { get; set; }
+
+                        [NameInMap("stop_city_code")]
+                        [Validation(Required=false)]
+                        public string StopCityCode { get; set; }
+
+                        [NameInMap("stop_city_name")]
+                        [Validation(Required=false)]
+                        public string StopCityName { get; set; }
+
+                        [NameInMap("stop_dep_term")]
+                        [Validation(Required=false)]
+                        public string StopDepTerm { get; set; }
+
+                        [NameInMap("stop_dep_time")]
+                        [Validation(Required=false)]
+                        public string StopDepTime { get; set; }
+
+                        [NameInMap("stop_time")]
+                        [Validation(Required=false)]
+                        public string StopTime { get; set; }
+
+                    }
+
+                    [NameInMap("flight_type")]
+                    [Validation(Required=false)]
+                    public string FlightType { get; set; }
 
                     [NameInMap("luggage_direct_info")]
                     [Validation(Required=false)]
-                    public IntlFlightOrderDetailResponseBodyModuleJourneyListSegmentListLuggageDirectInfo LuggageDirectInfo { get; set; }
-                    public class IntlFlightOrderDetailResponseBodyModuleJourneyListSegmentListLuggageDirectInfo : TeaModel {
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>0</para>
-                        /// </summary>
+                    public IntlFlightOrderDetailResponseBodyModuleJourneyListFlightSegmentInfosLuggageDirectInfo LuggageDirectInfo { get; set; }
+                    public class IntlFlightOrderDetailResponseBodyModuleJourneyListFlightSegmentInfosLuggageDirectInfo : TeaModel {
                         [NameInMap("dep_city_luggage_direct")]
                         [Validation(Required=false)]
                         public int? DepCityLuggageDirect { get; set; }
 
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>0</para>
-                        /// </summary>
                         [NameInMap("stop_city_luggage_direct")]
                         [Validation(Required=false)]
                         public int? StopCityLuggageDirect { get; set; }
 
                     }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>MU</para>
-                    /// </summary>
-                    [NameInMap("marketing_airline")]
+                    [NameInMap("manufacturer")]
                     [Validation(Required=false)]
-                    public string MarketingAirline { get; set; }
+                    public string Manufacturer { get; set; }
 
-                    [NameInMap("marketing_airline_info")]
+                    [NameInMap("meal_desc")]
                     [Validation(Required=false)]
-                    public IntlFlightOrderDetailResponseBodyModuleJourneyListSegmentListMarketingAirlineInfo MarketingAirlineInfo { get; set; }
-                    public class IntlFlightOrderDetailResponseBodyModuleJourneyListSegmentListMarketingAirlineInfo : TeaModel {
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>MU</para>
-                        /// </summary>
-                        [NameInMap("airline_code")]
-                        [Validation(Required=false)]
-                        public string AirlineCode { get; set; }
+                    public string MealDesc { get; set; }
 
-                        [NameInMap("airline_name")]
-                        [Validation(Required=false)]
-                        public string AirlineName { get; set; }
-
-                        [NameInMap("alliance_name")]
-                        [Validation(Required=false)]
-                        public string AllianceName { get; set; }
-
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>false</para>
-                        /// </summary>
-                        [NameInMap("cheap_airline")]
-                        [Validation(Required=false)]
-                        public bool? CheapAirline { get; set; }
-
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para><a href="https://gw.alicdn.com/tfs/TB15EXDFHY1gK0jSZTEXXXDQVXa-450-450.png">https://gw.alicdn.com/tfs/TB15EXDFHY1gK0jSZTEXXXDQVXa-450-450.png</a></para>
-                        /// </summary>
-                        [NameInMap("icon_url")]
-                        [Validation(Required=false)]
-                        public string IconUrl { get; set; }
-
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para><a href="https://gw.alicdn.com/tfs/TB15EXDFHY1gK0jSZTEXXXDQVXa-450-450.png">https://gw.alicdn.com/tfs/TB15EXDFHY1gK0jSZTEXXXDQVXa-450-450.png</a></para>
-                        /// </summary>
-                        [NameInMap("logo_url")]
-                        [Validation(Required=false)]
-                        public string LogoUrl { get; set; }
-
-                        [NameInMap("short_name")]
-                        [Validation(Required=false)]
-                        public string ShortName { get; set; }
-
-                    }
-
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>MU507</para>
-                    /// </summary>
-                    [NameInMap("marketing_flight_no")]
+                    [NameInMap("one_more")]
                     [Validation(Required=false)]
-                    public string MarketingFlightNo { get; set; }
+                    public int? OneMore { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>MU</para>
-                    /// </summary>
-                    [NameInMap("operating_airline")]
+                    [NameInMap("one_more_show")]
                     [Validation(Required=false)]
-                    public string OperatingAirline { get; set; }
+                    public string OneMoreShow { get; set; }
 
-                    [NameInMap("operating_airline_info")]
-                    [Validation(Required=false)]
-                    public IntlFlightOrderDetailResponseBodyModuleJourneyListSegmentListOperatingAirlineInfo OperatingAirlineInfo { get; set; }
-                    public class IntlFlightOrderDetailResponseBodyModuleJourneyListSegmentListOperatingAirlineInfo : TeaModel {
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>MU</para>
-                        /// </summary>
-                        [NameInMap("airline_code")]
-                        [Validation(Required=false)]
-                        public string AirlineCode { get; set; }
-
-                        [NameInMap("airline_name")]
-                        [Validation(Required=false)]
-                        public string AirlineName { get; set; }
-
-                        [NameInMap("alliance_name")]
-                        [Validation(Required=false)]
-                        public string AllianceName { get; set; }
-
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>false</para>
-                        /// </summary>
-                        [NameInMap("cheap_airline")]
-                        [Validation(Required=false)]
-                        public bool? CheapAirline { get; set; }
-
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para><a href="https://gw.alicdn.com/tfs/TB15EXDFHY1gK0jSZTEXXXDQVXa-450-450.png">https://gw.alicdn.com/tfs/TB15EXDFHY1gK0jSZTEXXXDQVXa-450-450.png</a></para>
-                        /// </summary>
-                        [NameInMap("icon_url")]
-                        [Validation(Required=false)]
-                        public string IconUrl { get; set; }
-
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para><a href="https://gw.alicdn.com/tfs/TB15EXDFHY1gK0jSZTEXXXDQVXa-450-450.png">https://gw.alicdn.com/tfs/TB15EXDFHY1gK0jSZTEXXXDQVXa-450-450.png</a></para>
-                        /// </summary>
-                        [NameInMap("logo_url")]
-                        [Validation(Required=false)]
-                        public string LogoUrl { get; set; }
-
-                        [NameInMap("short_name")]
-                        [Validation(Required=false)]
-                        public string ShortName { get; set; }
-
-                    }
-
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>MU507</para>
-                    /// </summary>
-                    [NameInMap("operating_flight_no")]
-                    [Validation(Required=false)]
-                    public string OperatingFlightNo { get; set; }
-
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>0</para>
-                    /// </summary>
                     [NameInMap("segment_index")]
                     [Validation(Required=false)]
                     public int? SegmentIndex { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>MU507PVGHKG0706</para>
-                    /// </summary>
                     [NameInMap("segment_key")]
                     [Validation(Required=false)]
                     public string SegmentKey { get; set; }
 
                     [NameInMap("segment_visa_remark")]
                     [Validation(Required=false)]
-                    public IntlFlightOrderDetailResponseBodyModuleJourneyListSegmentListSegmentVisaRemark SegmentVisaRemark { get; set; }
-                    public class IntlFlightOrderDetailResponseBodyModuleJourneyListSegmentListSegmentVisaRemark : TeaModel {
+                    public IntlFlightOrderDetailResponseBodyModuleJourneyListFlightSegmentInfosSegmentVisaRemark SegmentVisaRemark { get; set; }
+                    public class IntlFlightOrderDetailResponseBodyModuleJourneyListFlightSegmentInfosSegmentVisaRemark : TeaModel {
                         [NameInMap("dep_city_visa_remark")]
                         [Validation(Required=false)]
                         public string DepCityVisaRemark { get; set; }
 
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>0</para>
-                        /// </summary>
                         [NameInMap("dep_city_visa_type")]
                         [Validation(Required=false)]
                         public int? DepCityVisaType { get; set; }
@@ -541,75 +335,21 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
                     }
 
-                    [NameInMap("stop_city_list")]
+                    [NameInMap("share")]
                     [Validation(Required=false)]
-                    public List<IntlFlightOrderDetailResponseBodyModuleJourneyListSegmentListStopCityList> StopCityList { get; set; }
-                    public class IntlFlightOrderDetailResponseBodyModuleJourneyListSegmentListStopCityList : TeaModel {
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>PVG</para>
-                        /// </summary>
-                        [NameInMap("stop_airport")]
-                        [Validation(Required=false)]
-                        public string StopAirport { get; set; }
+                    public bool? Share { get; set; }
 
-                        [NameInMap("stop_airport_name")]
-                        [Validation(Required=false)]
-                        public string StopAirportName { get; set; }
-
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>T1</para>
-                        /// </summary>
-                        [NameInMap("stop_arr_terminal")]
-                        [Validation(Required=false)]
-                        public string StopArrTerminal { get; set; }
-
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>2024-07-06 11:10:00</para>
-                        /// </summary>
-                        [NameInMap("stop_arr_time")]
-                        [Validation(Required=false)]
-                        public string StopArrTime { get; set; }
-
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>SHA</para>
-                        /// </summary>
-                        [NameInMap("stop_city_code")]
-                        [Validation(Required=false)]
-                        public string StopCityCode { get; set; }
-
-                        [NameInMap("stop_city_name")]
-                        [Validation(Required=false)]
-                        public string StopCityName { get; set; }
-
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>T1</para>
-                        /// </summary>
-                        [NameInMap("stop_dep_terminal")]
-                        [Validation(Required=false)]
-                        public string StopDepTerminal { get; set; }
-
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>2024-07-06 11:10:00</para>
-                        /// </summary>
-                        [NameInMap("stop_dep_time")]
-                        [Validation(Required=false)]
-                        public string StopDepTime { get; set; }
-
-                    }
-
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>0</para>
-                    /// </summary>
-                    [NameInMap("stop_quantity")]
+                    [NameInMap("short_flight_size")]
                     [Validation(Required=false)]
-                    public int? StopQuantity { get; set; }
+                    public string ShortFlightSize { get; set; }
+
+                    [NameInMap("stop")]
+                    [Validation(Required=false)]
+                    public bool? Stop { get; set; }
+
+                    [NameInMap("total_time")]
+                    [Validation(Required=false)]
+                    public string TotalTime { get; set; }
 
                 }
 
@@ -617,9 +357,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
-                [NameInMap("transfer_count")]
+                [NameInMap("journey_index")]
                 [Validation(Required=false)]
-                public int? TransferCount { get; set; }
+                public int? JourneyIndex { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
@@ -637,7 +377,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             /// </summary>
             [NameInMap("order_id")]
             [Validation(Required=false)]
-            public long? OrderId { get; set; }
+            public string OrderId { get; set; }
 
             [NameInMap("order_item_list")]
             [Validation(Required=false)]
@@ -651,9 +391,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     [Validation(Required=false)]
                     public string BaggageDigest { get; set; }
 
-                    [NameInMap("baggage_info_map")]
+                    [NameInMap("offer_baggage_info_map")]
                     [Validation(Required=false)]
-                    public Dictionary<string, List<ModuleOrderItemListBaggageRuleBaggageInfoMapValue>> BaggageInfoMap { get; set; }
+                    public Dictionary<string, List<ModuleOrderItemListBaggageRuleOfferBaggageInfoMapValue>> OfferBaggageInfoMap { get; set; }
 
                     /// <summary>
                     /// <b>Example:</b>
@@ -671,38 +411,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public class IntlFlightOrderDetailResponseBodyModuleOrderItemListPassengerPriceList : TeaModel {
                     /// <summary>
                     /// <b>Example:</b>
-                    /// <para>3.5</para>
-                    /// </summary>
-                    [NameInMap("discount")]
-                    [Validation(Required=false)]
-                    public double? Discount { get; set; }
-
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>3.5折</para>
-                    /// </summary>
-                    [NameInMap("discount_info")]
-                    [Validation(Required=false)]
-                    public string DiscountInfo { get; set; }
-
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>0</para>
-                    /// </summary>
-                    [NameInMap("modify_fee")]
-                    [Validation(Required=false)]
-                    public long? ModifyFee { get; set; }
-
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>0</para>
-                    /// </summary>
-                    [NameInMap("modify_tax_spread")]
-                    [Validation(Required=false)]
-                    public long? ModifyTaxSpread { get; set; }
-
-                    /// <summary>
-                    /// <b>Example:</b>
                     /// <para>0</para>
                     /// </summary>
                     [NameInMap("passenger_type")]
@@ -715,7 +423,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     /// </summary>
                     [NameInMap("sell_price")]
                     [Validation(Required=false)]
-                    public long? SellPrice { get; set; }
+                    public int? SellPrice { get; set; }
 
                     /// <summary>
                     /// <b>Example:</b>
@@ -723,7 +431,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     /// </summary>
                     [NameInMap("tax")]
                     [Validation(Required=false)]
-                    public long? Tax { get; set; }
+                    public int? Tax { get; set; }
 
                     /// <summary>
                     /// <b>Example:</b>
@@ -731,15 +439,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     /// </summary>
                     [NameInMap("ticket_price")]
                     [Validation(Required=false)]
-                    public long? TicketPrice { get; set; }
-
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>0</para>
-                    /// </summary>
-                    [NameInMap("upgrade_fee")]
-                    [Validation(Required=false)]
-                    public long? UpgradeFee { get; set; }
+                    public int? TicketPrice { get; set; }
 
                 }
 
@@ -763,6 +463,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     [Validation(Required=false)]
                     public bool? ChangeFeeInd { get; set; }
 
+                    [NameInMap("change_rule_desc")]
+                    [Validation(Required=false)]
+                    public string ChangeRuleDesc { get; set; }
+
                     [NameInMap("offer_penalty_info_map")]
                     [Validation(Required=false)]
                     public Dictionary<string, List<ModuleOrderItemListRefundChangeRuleOfferPenaltyInfoMapValue>> OfferPenaltyInfoMap { get; set; }
@@ -770,6 +474,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     [NameInMap("refund_change_digest")]
                     [Validation(Required=false)]
                     public string RefundChangeDigest { get; set; }
+
+                    [NameInMap("refund_rule_desc")]
+                    [Validation(Required=false)]
+                    public string RefundRuleDesc { get; set; }
 
                     /// <summary>
                     /// <b>Example:</b>
@@ -787,6 +495,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             }
 
+            [NameInMap("order_status")]
+            [Validation(Required=false)]
+            public int? OrderStatus { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>F11374007131319304192</para>
@@ -795,243 +507,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string OutOrderId { get; set; }
 
-            [NameInMap("passenger_item_detail_list")]
-            [Validation(Required=false)]
-            public List<IntlFlightOrderDetailResponseBodyModulePassengerItemDetailList> PassengerItemDetailList { get; set; }
-            public class IntlFlightOrderDetailResponseBodyModulePassengerItemDetailList : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>8432002</para>
-                /// </summary>
-                [NameInMap("passenger_id")]
-                [Validation(Required=false)]
-                public long? PassengerId { get; set; }
-
-                [NameInMap("ticket_list")]
-                [Validation(Required=false)]
-                public List<IntlFlightOrderDetailResponseBodyModulePassengerItemDetailListTicketList> TicketList { get; set; }
-                public class IntlFlightOrderDetailResponseBodyModulePassengerItemDetailListTicketList : TeaModel {
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>2024-03-05 00:00:00</para>
-                    /// </summary>
-                    [NameInMap("issue_time")]
-                    [Validation(Required=false)]
-                    public string IssueTime { get; set; }
-
-                    [NameInMap("price_info")]
-                    [Validation(Required=false)]
-                    public IntlFlightOrderDetailResponseBodyModulePassengerItemDetailListTicketListPriceInfo PriceInfo { get; set; }
-                    public class IntlFlightOrderDetailResponseBodyModulePassengerItemDetailListTicketListPriceInfo : TeaModel {
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>0</para>
-                        /// </summary>
-                        [NameInMap("modify_fee")]
-                        [Validation(Required=false)]
-                        public long? ModifyFee { get; set; }
-
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>0</para>
-                        /// </summary>
-                        [NameInMap("modify_tax_spread")]
-                        [Validation(Required=false)]
-                        public long? ModifyTaxSpread { get; set; }
-
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>26900</para>
-                        /// </summary>
-                        [NameInMap("sell_price")]
-                        [Validation(Required=false)]
-                        public long? SellPrice { get; set; }
-
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>24900</para>
-                        /// </summary>
-                        [NameInMap("tax")]
-                        [Validation(Required=false)]
-                        public long? Tax { get; set; }
-
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>2000</para>
-                        /// </summary>
-                        [NameInMap("ticket_price")]
-                        [Validation(Required=false)]
-                        public long? TicketPrice { get; set; }
-
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>0</para>
-                        /// </summary>
-                        [NameInMap("upgrade_fee")]
-                        [Validation(Required=false)]
-                        public long? UpgradeFee { get; set; }
-
-                    }
-
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>000-1709625883</para>
-                    /// </summary>
-                    [NameInMap("ticket_no")]
-                    [Validation(Required=false)]
-                    public string TicketNo { get; set; }
-
-                    [NameInMap("ticket_segment_list")]
-                    [Validation(Required=false)]
-                    public List<IntlFlightOrderDetailResponseBodyModulePassengerItemDetailListTicketListTicketSegmentList> TicketSegmentList { get; set; }
-                    public class IntlFlightOrderDetailResponseBodyModulePassengerItemDetailListTicketListTicketSegmentList : TeaModel {
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>K</para>
-                        /// </summary>
-                        [NameInMap("cabin")]
-                        [Validation(Required=false)]
-                        public string Cabin { get; set; }
-
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>Y</para>
-                        /// </summary>
-                        [NameInMap("cabin_class")]
-                        [Validation(Required=false)]
-                        public string CabinClass { get; set; }
-
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>false</para>
-                        /// </summary>
-                        [NameInMap("modified")]
-                        [Validation(Required=false)]
-                        public bool? Modified { get; set; }
-
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>OPEN FOR USE</para>
-                        /// </summary>
-                        [NameInMap("open_ticket_status")]
-                        [Validation(Required=false)]
-                        public string OpenTicketStatus { get; set; }
-
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>false</para>
-                        /// </summary>
-                        [NameInMap("refunded")]
-                        [Validation(Required=false)]
-                        public bool? Refunded { get; set; }
-
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>MU507PVGHKG0706</para>
-                        /// </summary>
-                        [NameInMap("segment_key")]
-                        [Validation(Required=false)]
-                        public string SegmentKey { get; set; }
-
-                    }
-
-                }
-
-            }
-
             [NameInMap("passenger_list")]
             [Validation(Required=false)]
             public List<IntlFlightOrderDetailResponseBodyModulePassengerList> PassengerList { get; set; }
             public class IntlFlightOrderDetailResponseBodyModulePassengerList : TeaModel {
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>1996-09-13</para>
+                /// <para>ZHANG/SAN</para>
                 /// </summary>
-                [NameInMap("birthday")]
+                [NameInMap("full_name")]
                 [Validation(Required=false)]
-                public string Birthday { get; set; }
-
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1000</para>
-                /// </summary>
-                [NameInMap("cascade_dept_mask")]
-                [Validation(Required=false)]
-                public string CascadeDeptMask { get; set; }
-
-                [NameInMap("cascade_dept_name")]
-                [Validation(Required=false)]
-                public string CascadeDeptName { get; set; }
-
-                [NameInMap("cert_info")]
-                [Validation(Required=false)]
-                public IntlFlightOrderDetailResponseBodyModulePassengerListCertInfo CertInfo { get; set; }
-                public class IntlFlightOrderDetailResponseBodyModulePassengerListCertInfo : TeaModel {
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>CN</para>
-                    /// </summary>
-                    [NameInMap("cert_nation")]
-                    [Validation(Required=false)]
-                    public string CertNation { get; set; }
-
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>H123456</para>
-                    /// </summary>
-                    [NameInMap("cert_no")]
-                    [Validation(Required=false)]
-                    public string CertNo { get; set; }
-
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>1</para>
-                    /// </summary>
-                    [NameInMap("cert_type")]
-                    [Validation(Required=false)]
-                    public int? CertType { get; set; }
-
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>2025-09-09</para>
-                    /// </summary>
-                    [NameInMap("cert_valid_date")]
-                    [Validation(Required=false)]
-                    public string CertValidDate { get; set; }
-
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>ZHANG/SAN</para>
-                    /// </summary>
-                    [NameInMap("name")]
-                    [Validation(Required=false)]
-                    public string Name { get; set; }
-
-                }
-
-                [NameInMap("cost_center_name")]
-                [Validation(Required=false)]
-                public string CostCenterName { get; set; }
-
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1009909</para>
-                /// </summary>
-                [NameInMap("cost_center_number")]
-                [Validation(Required=false)]
-                public string CostCenterNumber { get; set; }
-
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1001</para>
-                /// </summary>
-                [NameInMap("dept_id")]
-                [Validation(Required=false)]
-                public string DeptId { get; set; }
-
-                [NameInMap("dept_name")]
-                [Validation(Required=false)]
-                public string DeptName { get; set; }
+                public string FullName { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
@@ -1041,14 +527,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public int? Gender { get; set; }
 
-                [NameInMap("invoice_id")]
-                [Validation(Required=false)]
-                public string InvoiceId { get; set; }
-
-                [NameInMap("invoice_title")]
-                [Validation(Required=false)]
-                public string InvoiceTitle { get; set; }
-
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>1001101</para>
@@ -1056,14 +534,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("job_no")]
                 [Validation(Required=false)]
                 public string JobNo { get; set; }
-
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>86</para>
-                /// </summary>
-                [NameInMap("mobile_country_code")]
-                [Validation(Required=false)]
-                public string MobileCountryCode { get; set; }
 
                 [NameInMap("nationality")]
                 [Validation(Required=false)]
@@ -1089,75 +559,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
-                [NameInMap("passenger_type")]
+                [NameInMap("type")]
                 [Validation(Required=false)]
-                public int? PassengerType { get; set; }
-
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>185006021321</para>
-                /// </summary>
-                [NameInMap("phone")]
-                [Validation(Required=false)]
-                public string Phone { get; set; }
-
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>testcode</para>
-                /// </summary>
-                [NameInMap("project_code")]
-                [Validation(Required=false)]
-                public string ProjectCode { get; set; }
-
-                [NameInMap("project_title")]
-                [Validation(Required=false)]
-                public string ProjectTitle { get; set; }
-
-                [NameInMap("subsidiary_cert_info_list")]
-                [Validation(Required=false)]
-                public List<IntlFlightOrderDetailResponseBodyModulePassengerListSubsidiaryCertInfoList> SubsidiaryCertInfoList { get; set; }
-                public class IntlFlightOrderDetailResponseBodyModulePassengerListSubsidiaryCertInfoList : TeaModel {
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>CN</para>
-                    /// </summary>
-                    [NameInMap("cert_nation")]
-                    [Validation(Required=false)]
-                    public string CertNation { get; set; }
-
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>H123456</para>
-                    /// </summary>
-                    [NameInMap("cert_no")]
-                    [Validation(Required=false)]
-                    public string CertNo { get; set; }
-
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>1</para>
-                    /// </summary>
-                    [NameInMap("cert_type")]
-                    [Validation(Required=false)]
-                    public int? CertType { get; set; }
-
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>2025-09-09</para>
-                    /// </summary>
-                    [NameInMap("cert_valid_date")]
-                    [Validation(Required=false)]
-                    public string CertValidDate { get; set; }
-
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>ZHANG/SAN</para>
-                    /// </summary>
-                    [NameInMap("name")]
-                    [Validation(Required=false)]
-                    public string Name { get; set; }
-
-                }
+                public int? Type { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
@@ -1177,21 +581,85 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1709711779000</para>
-            /// </summary>
-            [NameInMap("pay_expire_time")]
+            [NameInMap("passenger_ticket_list")]
             [Validation(Required=false)]
-            public long? PayExpireTime { get; set; }
+            public List<IntlFlightOrderDetailResponseBodyModulePassengerTicketList> PassengerTicketList { get; set; }
+            public class IntlFlightOrderDetailResponseBodyModulePassengerTicketList : TeaModel {
+                [NameInMap("passenger_id")]
+                [Validation(Required=false)]
+                public long? PassengerId { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>2024-03-06 15:56:19</para>
-            /// </summary>
-            [NameInMap("pay_expire_time_str")]
+                [NameInMap("ticket_list")]
+                [Validation(Required=false)]
+                public List<IntlFlightOrderDetailResponseBodyModulePassengerTicketListTicketList> TicketList { get; set; }
+                public class IntlFlightOrderDetailResponseBodyModulePassengerTicketListTicketList : TeaModel {
+                    [NameInMap("issue_time")]
+                    [Validation(Required=false)]
+                    public string IssueTime { get; set; }
+
+                    [NameInMap("price_info")]
+                    [Validation(Required=false)]
+                    public IntlFlightOrderDetailResponseBodyModulePassengerTicketListTicketListPriceInfo PriceInfo { get; set; }
+                    public class IntlFlightOrderDetailResponseBodyModulePassengerTicketListTicketListPriceInfo : TeaModel {
+                        [NameInMap("sell_price")]
+                        [Validation(Required=false)]
+                        public int? SellPrice { get; set; }
+
+                        [NameInMap("tax")]
+                        [Validation(Required=false)]
+                        public int? Tax { get; set; }
+
+                        [NameInMap("ticket_price")]
+                        [Validation(Required=false)]
+                        public int? TicketPrice { get; set; }
+
+                    }
+
+                    [NameInMap("segment_key_list")]
+                    [Validation(Required=false)]
+                    public List<string> SegmentKeyList { get; set; }
+
+                    [NameInMap("ticket_no")]
+                    [Validation(Required=false)]
+                    public string TicketNo { get; set; }
+
+                    [NameInMap("ticket_segment_list")]
+                    [Validation(Required=false)]
+                    public List<IntlFlightOrderDetailResponseBodyModulePassengerTicketListTicketListTicketSegmentList> TicketSegmentList { get; set; }
+                    public class IntlFlightOrderDetailResponseBodyModulePassengerTicketListTicketListTicketSegmentList : TeaModel {
+                        [NameInMap("cabin")]
+                        [Validation(Required=false)]
+                        public string Cabin { get; set; }
+
+                        [NameInMap("cabin_class")]
+                        [Validation(Required=false)]
+                        public string CabinClass { get; set; }
+
+                        [NameInMap("modified")]
+                        [Validation(Required=false)]
+                        public bool? Modified { get; set; }
+
+                        [NameInMap("open_ticket_status")]
+                        [Validation(Required=false)]
+                        public string OpenTicketStatus { get; set; }
+
+                        [NameInMap("refunded")]
+                        [Validation(Required=false)]
+                        public bool? Refunded { get; set; }
+
+                        [NameInMap("segment_key")]
+                        [Validation(Required=false)]
+                        public string SegmentKey { get; set; }
+
+                    }
+
+                }
+
+            }
+
+            [NameInMap("pay_latest_time")]
             [Validation(Required=false)]
-            public string PayExpireTimeStr { get; set; }
+            public string PayLatestTime { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
@@ -1207,15 +675,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             /// </summary>
             [NameInMap("pay_time")]
             [Validation(Required=false)]
-            public long? PayTime { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1709708435000</para>
-            /// </summary>
-            [NameInMap("pay_time_str")]
-            [Validation(Required=false)]
-            public string PayTimeStr { get; set; }
+            public string PayTime { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
@@ -1225,29 +685,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public int? PayType { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>4</para>
-            /// </summary>
-            [NameInMap("status")]
+            [NameInMap("success_time")]
             [Validation(Required=false)]
-            public int? Status { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1709711779000</para>
-            /// </summary>
-            [NameInMap("succeed_time")]
-            [Validation(Required=false)]
-            public long? SucceedTime { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>2024-03-06 15:56:19</para>
-            /// </summary>
-            [NameInMap("succeed_time_str")]
-            [Validation(Required=false)]
-            public string SucceedTimeStr { get; set; }
+            public string SuccessTime { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
@@ -1256,6 +696,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [NameInMap("total_price")]
             [Validation(Required=false)]
             public long? TotalPrice { get; set; }
+
+            [NameInMap("total_tax_price")]
+            [Validation(Required=false)]
+            public long? TotalTaxPrice { get; set; }
+
+            [NameInMap("total_ticket_price")]
+            [Validation(Required=false)]
+            public long? TotalTicketPrice { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
@@ -1267,25 +715,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>A3F8DCAB-8301-5770-BD9F-71B0BF9E1A6E</para>
-        /// </summary>
-        [NameInMap("request_id")]
+        [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>0</para>
-        /// </summary>
-        [NameInMap("result_code")]
-        [Validation(Required=false)]
-        public string ResultCode { get; set; }
-
-        [NameInMap("result_msg")]
-        [Validation(Required=false)]
-        public string ResultMsg { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -1297,9 +729,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>21041ce316577904808056433edbb2</para>
+        /// <para>210bc4b116835992457938931db4de</para>
         /// </summary>
-        [NameInMap("trace_id")]
+        [NameInMap("traceId")]
         [Validation(Required=false)]
         public string TraceId { get; set; }
 

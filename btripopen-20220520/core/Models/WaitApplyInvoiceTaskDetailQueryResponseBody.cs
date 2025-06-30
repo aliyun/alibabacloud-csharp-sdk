@@ -149,6 +149,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string TrainInvoiceFee { get; set; }
 
+            [NameInMap("vacation_normal_invoice_fee")]
+            [Validation(Required=false)]
+            public string VacationNormalInvoiceFee { get; set; }
+
             [NameInMap("vas_mall_special_invoice_fee")]
             [Validation(Required=false)]
             public string VasMallSpecialInvoiceFee { get; set; }

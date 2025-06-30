@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string BillBatch { get; set; }
 
+        [NameInMap("order_id")]
+        [Validation(Required=false)]
+        public double? OrderId { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

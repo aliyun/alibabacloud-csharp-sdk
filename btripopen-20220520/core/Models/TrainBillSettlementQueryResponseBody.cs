@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public List<TrainBillSettlementQueryResponseBodyModuleDataList> DataList { get; set; }
             public class TrainBillSettlementQueryResponseBodyModuleDataList : TeaModel {
+                [NameInMap("adjust_time")]
+                [Validation(Required=false)]
+                public string AdjustTime { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>2021123432260</para>
@@ -115,6 +119,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("arr_time")]
                 [Validation(Required=false)]
                 public string ArrTime { get; set; }
+
+                [NameInMap("base_location")]
+                [Validation(Required=false)]
+                public string BaseLocation { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
@@ -208,6 +216,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string CostCenterNumber { get; set; }
 
+                [NameInMap("cost_department")]
+                [Validation(Required=false)]
+                public string CostDepartment { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -215,6 +227,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("coupon")]
                 [Validation(Required=false)]
                 public double? Coupon { get; set; }
+
+                [NameInMap("custom_content")]
+                [Validation(Required=false)]
+                public string CustomContent { get; set; }
 
                 [NameInMap("deductible_tax")]
                 [Validation(Required=false)]
@@ -300,6 +316,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string LongTicketNo { get; set; }
 
+                [NameInMap("mapping_company_code")]
+                [Validation(Required=false)]
+                public string MappingCompanyCode { get; set; }
+
                 [NameInMap("max_cabin")]
                 [Validation(Required=false)]
                 public string MaxCabin { get; set; }
@@ -340,6 +360,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string PaymentDepartmentName { get; set; }
 
+                [NameInMap("position")]
+                [Validation(Required=false)]
+                public string Position { get; set; }
+
+                [NameInMap("position_level")]
+                [Validation(Required=false)]
+                public string PositionLevel { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>4740293</para>
@@ -351,6 +379,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("print_ticket_price")]
                 [Validation(Required=false)]
                 public double? PrintTicketPrice { get; set; }
+
+                [NameInMap("processor_oa_code")]
+                [Validation(Required=false)]
+                public string ProcessorOaCode { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>

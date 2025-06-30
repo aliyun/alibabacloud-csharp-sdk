@@ -22,8 +22,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string BuyerName { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -33,31 +31,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>false</para>
-        /// </summary>
-        [NameInMap("direct_only")]
-        [Validation(Required=false)]
-        public bool? DirectOnly { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
         /// <para>open12igetbis4o07v10B1TlOWcM00</para>
         /// </summary>
         [NameInMap("isv_name")]
         [Validation(Required=false)]
         public string IsvName { get; set; }
-
-        [NameInMap("language")]
-        [Validation(Required=false)]
-        public string Language { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>true</para>
-        /// </summary>
-        [NameInMap("need_share_flight")]
-        [Validation(Required=false)]
-        public bool? NeedShareFlight { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
@@ -120,14 +98,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("arr_city_code")]
                 [Validation(Required=false)]
                 public string ArrCityCode { get; set; }
-
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
-                [NameInMap("cabin_type")]
-                [Validation(Required=false)]
-                public int? CabinType { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
@@ -224,14 +194,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? Type { get; set; }
 
         }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>TEST</para>
-        /// </summary>
-        [NameInMap("supplier_code")]
-        [Validation(Required=false)]
-        public string SupplierCode { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

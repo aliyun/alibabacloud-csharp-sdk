@@ -88,14 +88,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     [Validation(Required=false)]
                     public IntlFlightOtaSearchResponseBodyModuleFlightJourneyInfosFlightSegmentInfosAirlineInfo AirlineInfo { get; set; }
                     public class IntlFlightOtaSearchResponseBodyModuleFlightJourneyInfosFlightSegmentInfosAirlineInfo : TeaModel {
-                        [NameInMap("airline_chinese_name")]
-                        [Validation(Required=false)]
-                        public string AirlineChineseName { get; set; }
-
-                        [NameInMap("airline_chinese_short_name")]
-                        [Validation(Required=false)]
-                        public string AirlineChineseShortName { get; set; }
-
                         /// <summary>
                         /// <b>Example:</b>
                         /// <para>MU</para>
@@ -104,21 +96,13 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                         [Validation(Required=false)]
                         public string AirlineCode { get; set; }
 
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para><a href="https://gw.alicdn.com/tfs/TB15EXDFHY1gK0jSZTEXXXDQVXa-450-450.png_80x80.jpg">https://gw.alicdn.com/tfs/TB15EXDFHY1gK0jSZTEXXXDQVXa-450-450.png_80x80.jpg</a></para>
-                        /// </summary>
-                        [NameInMap("airline_icon")]
+                        [NameInMap("airline_name")]
                         [Validation(Required=false)]
-                        public string AirlineIcon { get; set; }
+                        public string AirlineName { get; set; }
 
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>false</para>
-                        /// </summary>
-                        [NameInMap("cheap_flight")]
+                        [NameInMap("short_name")]
                         [Validation(Required=false)]
-                        public bool? CheapFlight { get; set; }
+                        public string ShortName { get; set; }
 
                     }
 
@@ -171,10 +155,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     [NameInMap("arr_time")]
                     [Validation(Required=false)]
                     public string ArrTime { get; set; }
-
-                    [NameInMap("baggage_desc")]
-                    [Validation(Required=false)]
-                    public string BaggageDesc { get; set; }
 
                     [NameInMap("dep_airport_info")]
                     [Validation(Required=false)]
@@ -250,14 +230,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                         [Validation(Required=false)]
                         public IntlFlightOtaSearchResponseBodyModuleFlightJourneyInfosFlightSegmentInfosFlightShareInfoOperatingAirlineInfo OperatingAirlineInfo { get; set; }
                         public class IntlFlightOtaSearchResponseBodyModuleFlightJourneyInfosFlightSegmentInfosFlightShareInfoOperatingAirlineInfo : TeaModel {
-                            [NameInMap("airline_chinese_name")]
-                            [Validation(Required=false)]
-                            public string AirlineChineseName { get; set; }
-
-                            [NameInMap("airline_chinese_short_name")]
-                            [Validation(Required=false)]
-                            public string AirlineChineseShortName { get; set; }
-
                             /// <summary>
                             /// <b>Example:</b>
                             /// <para>DR</para>
@@ -266,21 +238,13 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                             [Validation(Required=false)]
                             public string AirlineCode { get; set; }
 
-                            /// <summary>
-                            /// <b>Example:</b>
-                            /// <para><a href="https://gw.alicdn.com/tfs/TB1gSXBFUT1gK0jSZFhXXaAtVXa-450-450.png_80x80.jpg">https://gw.alicdn.com/tfs/TB1gSXBFUT1gK0jSZFhXXaAtVXa-450-450.png_80x80.jpg</a></para>
-                            /// </summary>
-                            [NameInMap("airline_icon")]
+                            [NameInMap("airline_name")]
                             [Validation(Required=false)]
-                            public string AirlineIcon { get; set; }
+                            public string AirlineName { get; set; }
 
-                            /// <summary>
-                            /// <b>Example:</b>
-                            /// <para>false</para>
-                            /// </summary>
-                            [NameInMap("cheap_flight")]
+                            [NameInMap("short_name")]
                             [Validation(Required=false)]
-                            public bool? CheapFlight { get; set; }
+                            public string ShortName { get; set; }
 
                         }
 
@@ -298,14 +262,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     [Validation(Required=false)]
                     public string FlightSize { get; set; }
 
-                    [NameInMap("flight_stop_info")]
+                    [NameInMap("flight_stop_info_list")]
                     [Validation(Required=false)]
-                    public IntlFlightOtaSearchResponseBodyModuleFlightJourneyInfosFlightSegmentInfosFlightStopInfo FlightStopInfo { get; set; }
-                    public class IntlFlightOtaSearchResponseBodyModuleFlightJourneyInfosFlightSegmentInfosFlightStopInfo : TeaModel {
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>HGH</para>
-                        /// </summary>
+                    public List<IntlFlightOtaSearchResponseBodyModuleFlightJourneyInfosFlightSegmentInfosFlightStopInfoList> FlightStopInfoList { get; set; }
+                    public class IntlFlightOtaSearchResponseBodyModuleFlightJourneyInfosFlightSegmentInfosFlightStopInfoList : TeaModel {
                         [NameInMap("stop_airport")]
                         [Validation(Required=false)]
                         public string StopAirport { get; set; }
@@ -314,54 +274,26 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                         [Validation(Required=false)]
                         public string StopAirportName { get; set; }
 
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>T3</para>
-                        /// </summary>
                         [NameInMap("stop_arr_term")]
                         [Validation(Required=false)]
                         public string StopArrTerm { get; set; }
 
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>BJS</para>
-                        /// </summary>
                         [NameInMap("stop_arr_time")]
                         [Validation(Required=false)]
                         public string StopArrTime { get; set; }
 
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>HGH</para>
-                        /// </summary>
                         [NameInMap("stop_city_code")]
                         [Validation(Required=false)]
                         public string StopCityCode { get; set; }
 
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>HGH</para>
-                        /// </summary>
                         [NameInMap("stop_city_name")]
                         [Validation(Required=false)]
                         public string StopCityName { get; set; }
 
-                        [NameInMap("stop_city_names")]
-                        [Validation(Required=false)]
-                        public List<string> StopCityNames { get; set; }
-
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>T4</para>
-                        /// </summary>
                         [NameInMap("stop_dep_term")]
                         [Validation(Required=false)]
                         public string StopDepTerm { get; set; }
 
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>2023-08-13 07:25</para>
-                        /// </summary>
                         [NameInMap("stop_dep_time")]
                         [Validation(Required=false)]
                         public string StopDepTime { get; set; }
@@ -409,22 +341,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     [NameInMap("meal_desc")]
                     [Validation(Required=false)]
                     public string MealDesc { get; set; }
-
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>1200</para>
-                    /// </summary>
-                    [NameInMap("miles")]
-                    [Validation(Required=false)]
-                    public int? Miles { get; set; }
-
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>80%</para>
-                    /// </summary>
-                    [NameInMap("on_time_rate")]
-                    [Validation(Required=false)]
-                    public string OnTimeRate { get; set; }
 
                     /// <summary>
                     /// <b>Example:</b>
@@ -504,18 +420,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     [Validation(Required=false)]
                     public string TotalTime { get; set; }
 
-                    [NameInMap("transfer_time")]
-                    [Validation(Required=false)]
-                    public string TransferTime { get; set; }
-
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>120</para>
-                    /// </summary>
-                    [NameInMap("transfer_time_number")]
-                    [Validation(Required=false)]
-                    public int? TransferTimeNumber { get; set; }
-
                 }
 
                 /// <summary>
@@ -542,47 +446,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public class IntlFlightOtaSearchResponseBodyModuleItemList : TeaModel {
                 [NameInMap("agreement_price_codes")]
                 [Validation(Required=false)]
-                public List<string> AgreementPriceCodes { get; set; }
-
-                [NameInMap("flight_rule_info_list")]
-                [Validation(Required=false)]
-                public List<IntlFlightOtaSearchResponseBodyModuleItemListFlightRuleInfoList> FlightRuleInfoList { get; set; }
-                public class IntlFlightOtaSearchResponseBodyModuleItemListFlightRuleInfoList : TeaModel {
-                    [NameInMap("flight_rule_info")]
+                public List<IntlFlightOtaSearchResponseBodyModuleItemListAgreementPriceCodes> AgreementPriceCodes { get; set; }
+                public class IntlFlightOtaSearchResponseBodyModuleItemListAgreementPriceCodes : TeaModel {
+                    [NameInMap("code")]
                     [Validation(Required=false)]
-                    public IntlFlightOtaSearchResponseBodyModuleItemListFlightRuleInfoListFlightRuleInfo FlightRuleInfo { get; set; }
-                    public class IntlFlightOtaSearchResponseBodyModuleItemListFlightRuleInfoListFlightRuleInfo : TeaModel {
-                        [NameInMap("baggage_desc")]
-                        [Validation(Required=false)]
-                        public string BaggageDesc { get; set; }
+                    public string Code { get; set; }
 
-                        [NameInMap("refund_change_rule_desc")]
-                        [Validation(Required=false)]
-                        public string RefundChangeRuleDesc { get; set; }
-
-                    }
-
-                    [NameInMap("segment_position")]
+                    [NameInMap("type")]
                     [Validation(Required=false)]
-                    public IntlFlightOtaSearchResponseBodyModuleItemListFlightRuleInfoListSegmentPosition SegmentPosition { get; set; }
-                    public class IntlFlightOtaSearchResponseBodyModuleItemListFlightRuleInfoListSegmentPosition : TeaModel {
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>0</para>
-                        /// </summary>
-                        [NameInMap("journey_index")]
-                        [Validation(Required=false)]
-                        public int? JourneyIndex { get; set; }
-
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>0</para>
-                        /// </summary>
-                        [NameInMap("segment_index")]
-                        [Validation(Required=false)]
-                        public int? SegmentIndex { get; set; }
-
-                    }
+                    public int? Type { get; set; }
 
                 }
 
@@ -602,10 +474,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public Dictionary<string, ModuleItemListShoppingItemMapValue> ShoppingItemMap { get; set; }
 
-                [NameInMap("sub_item_position_map")]
-                [Validation(Required=false)]
-                public Dictionary<string, List<ModuleItemListSubItemPositionMapValue>> SubItemPositionMap { get; set; }
-
                 [NameInMap("sub_items")]
                 [Validation(Required=false)]
                 public List<IntlFlightOtaSearchResponseBodyModuleItemListSubItems> SubItems { get; set; }
@@ -618,9 +486,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                         [Validation(Required=false)]
                         public string BaggageDigest { get; set; }
 
-                        [NameInMap("baggage_info_map")]
+                        [NameInMap("offer_baggage_info_map")]
                         [Validation(Required=false)]
-                        public Dictionary<string, List<ModuleItemListSubItemsBaggageRuleBaggageInfoMapValue>> BaggageInfoMap { get; set; }
+                        public Dictionary<string, List<ModuleItemListSubItemsBaggageRuleOfferBaggageInfoMapValue>> OfferBaggageInfoMap { get; set; }
 
                         /// <summary>
                         /// <b>Example:</b>
@@ -652,6 +520,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                         [Validation(Required=false)]
                         public bool? ChangeFeeInd { get; set; }
 
+                        [NameInMap("change_rule_desc")]
+                        [Validation(Required=false)]
+                        public string ChangeRuleDesc { get; set; }
+
                         [NameInMap("offer_penalty_info_map")]
                         [Validation(Required=false)]
                         public Dictionary<string, List<ModuleItemListSubItemsRefundChangeRuleOfferPenaltyInfoMapValue>> OfferPenaltyInfoMap { get; set; }
@@ -659,6 +531,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                         [NameInMap("refund_change_digest")]
                         [Validation(Required=false)]
                         public string RefundChangeDigest { get; set; }
+
+                        [NameInMap("refund_rule_desc")]
+                        [Validation(Required=false)]
+                        public string RefundRuleDesc { get; set; }
 
                         /// <summary>
                         /// <b>Example:</b>
@@ -673,6 +549,20 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     [NameInMap("segment_keys")]
                     [Validation(Required=false)]
                     public List<string> SegmentKeys { get; set; }
+
+                    [NameInMap("segment_position_list")]
+                    [Validation(Required=false)]
+                    public List<IntlFlightOtaSearchResponseBodyModuleItemListSubItemsSegmentPositionList> SegmentPositionList { get; set; }
+                    public class IntlFlightOtaSearchResponseBodyModuleItemListSubItemsSegmentPositionList : TeaModel {
+                        [NameInMap("journey_index")]
+                        [Validation(Required=false)]
+                        public int? JourneyIndex { get; set; }
+
+                        [NameInMap("segment_index")]
+                        [Validation(Required=false)]
+                        public int? SegmentIndex { get; set; }
+
+                    }
 
                     [NameInMap("shopping_item_map")]
                     [Validation(Required=false)]

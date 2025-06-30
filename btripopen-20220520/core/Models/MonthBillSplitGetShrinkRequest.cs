@@ -8,37 +8,36 @@ using Tea;
 
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
-    public class IntlFlightOrderCancelRequest : TeaModel {
+    public class MonthBillSplitGetShrinkRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>10001</para>
+        /// <para>20240101</para>
         /// </summary>
-        [NameInMap("btrip_user_id")]
+        [NameInMap("bill_batch")]
         [Validation(Required=false)]
-        public string BtripUserId { get; set; }
+        public string BillBatch { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>ZHANG/SAN</para>
+        /// <para>202401</para>
         /// </summary>
-        [NameInMap("buyer_name")]
+        [NameInMap("bill_month")]
         [Validation(Required=false)]
-        public string BuyerName { get; set; }
+        public string BillMonth { get; set; }
 
-        [NameInMap("isv_name")]
+        [NameInMap("bill_split_key_list")]
         [Validation(Required=false)]
-        public string IsvName { get; set; }
+        public string BillSplitKeyListShrink { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>by_invoice_third_part_id</para>
         /// </summary>
-        [NameInMap("order_id")]
+        [NameInMap("bill_split_mode")]
         [Validation(Required=false)]
-        public string OrderId { get; set; }
-
-        [NameInMap("out_order_id")]
-        [Validation(Required=false)]
-        public string OutOrderId { get; set; }
+        public string BillSplitMode { get; set; }
 
     }
 

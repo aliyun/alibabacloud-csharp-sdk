@@ -9,41 +9,40 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class IntlFlightOrderPayRequest : TeaModel {
-        [NameInMap("ext_params")]
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10001</para>
+        /// </summary>
+        [NameInMap("btrip_user_id")]
         [Validation(Required=false)]
-        public Dictionary<string, object> ExtParams { get; set; }
+        public string BtripUserId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>TRAVEL</para>
+        /// <para>ZHANG/SAN</para>
         /// </summary>
+        [NameInMap("buyer_name")]
+        [Validation(Required=false)]
+        public string BuyerName { get; set; }
+
         [NameInMap("isv_name")]
         [Validation(Required=false)]
         public string IsvName { get; set; }
 
         /// <summary>
-        /// <b>Example:</b>
-        /// <para>1002145190081005400</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("order_id")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>F11372878673688133632</para>
-        /// </summary>
+        [NameInMap("order_price")]
+        [Validation(Required=false)]
+        public long? OrderPrice { get; set; }
+
         [NameInMap("out_order_id")]
         [Validation(Required=false)]
         public string OutOrderId { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>15500</para>
-        /// </summary>
-        [NameInMap("total_price")]
-        [Validation(Required=false)]
-        public long? TotalPrice { get; set; }
 
     }
 

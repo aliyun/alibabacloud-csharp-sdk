@@ -8,22 +8,36 @@ using Tea;
 
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
-    public class IntlFlightOrderPayShrinkRequest : TeaModel {
-        [NameInMap("ext_params")]
+    public class IntlFlightReShopConsultRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10001</para>
+        /// </summary>
+        [NameInMap("btrip_user_id")]
         [Validation(Required=false)]
-        public string ExtParamsShrink { get; set; }
+        public string BtripUserId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>TRAVEL</para>
+        /// <para>ZHANG/SAN</para>
+        /// </summary>
+        [NameInMap("buyer_name")]
+        [Validation(Required=false)]
+        public string BuyerName { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>TEST</para>
         /// </summary>
         [NameInMap("isv_name")]
         [Validation(Required=false)]
         public string IsvName { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>1002145190081005400</para>
+        /// <para>1003038202430742196</para>
         /// </summary>
         [NameInMap("order_id")]
         [Validation(Required=false)]
@@ -31,19 +45,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>F11372878673688133632</para>
+        /// <para>JP2024072600000006</para>
         /// </summary>
         [NameInMap("out_order_id")]
         [Validation(Required=false)]
         public string OutOrderId { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>15500</para>
-        /// </summary>
-        [NameInMap("total_price")]
-        [Validation(Required=false)]
-        public long? TotalPrice { get; set; }
 
     }
 

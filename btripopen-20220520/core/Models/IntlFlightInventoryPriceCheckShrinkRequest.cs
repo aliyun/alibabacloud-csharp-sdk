@@ -10,20 +10,30 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class IntlFlightInventoryPriceCheckShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10001</para>
+        /// </summary>
+        [NameInMap("btrip_user_id")]
+        [Validation(Required=false)]
+        public string BtripUserId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ZHANG/SAN</para>
+        /// </summary>
+        [NameInMap("buyer_name")]
+        [Validation(Required=false)]
+        public string BuyerName { get; set; }
+
+        /// <summary>
         /// <b>Example:</b>
         /// <para>ZJTD</para>
         /// </summary>
         [NameInMap("isv_name")]
         [Validation(Required=false)]
         public string IsvName { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>chinese</para>
-        /// </summary>
-        [NameInMap("language")]
-        [Validation(Required=false)]
-        public string Language { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -49,18 +59,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [NameInMap("passenger_list")]
         [Validation(Required=false)]
         public string PassengerListShrink { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>12412341234</para>
-        /// </summary>
-        [NameInMap("user_id")]
-        [Validation(Required=false)]
-        public string UserId { get; set; }
-
-        [NameInMap("user_name")]
-        [Validation(Required=false)]
-        public string UserName { get; set; }
 
     }
 

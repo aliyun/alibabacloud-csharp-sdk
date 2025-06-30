@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public int? ItineraryStatus { get; set; }
 
+                [NameInMap("remark")]
+                [Validation(Required=false)]
+                public string Remark { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>781-6605285563</para>

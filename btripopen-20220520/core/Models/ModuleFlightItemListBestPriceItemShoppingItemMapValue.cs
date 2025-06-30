@@ -21,36 +21,28 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
-                [NameInMap("segment_index")]
+                [NameInMap("journey_index")]
                 [Validation(Required=false)]
-                public int? SegmentIndex { get; set; }
+                public int? JourneyIndex { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
-                [NameInMap("journey_index")]
+                [NameInMap("segment_index")]
                 [Validation(Required=false)]
-                public int? JourneyIndex { get; set; }
+                public int? SegmentIndex { get; set; }
 
             }
 
-            [NameInMap("cabin")]
+            [NameInMap("cabin_info")]
             [Validation(Required=false)]
-            public ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityListCabin Cabin { get; set; }
-            public class ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityListCabin : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>Y</para>
-                /// </summary>
+            public ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityListCabinInfo CabinInfo { get; set; }
+            public class ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityListCabinInfo : TeaModel {
                 [NameInMap("cabin")]
                 [Validation(Required=false)]
                 public string Cabin { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>Y</para>
-                /// </summary>
                 [NameInMap("cabin_class")]
                 [Validation(Required=false)]
                 public string CabinClass { get; set; }
@@ -59,10 +51,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string CabinClassName { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>A</para>
-                /// </summary>
                 [NameInMap("quantity")]
                 [Validation(Required=false)]
                 public string Quantity { get; set; }
@@ -279,17 +267,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 /// <b>Example:</b>
                 /// <para>120000</para>
                 /// </summary>
-                [NameInMap("ticket_price")]
+                [NameInMap("sell_price")]
                 [Validation(Required=false)]
-                public int? TicketPrice { get; set; }
+                public int? SellPrice { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>120000</para>
                 /// </summary>
-                [NameInMap("sell_price")]
+                [NameInMap("ticket_price")]
                 [Validation(Required=false)]
-                public int? SellPrice { get; set; }
+                public int? TicketPrice { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>

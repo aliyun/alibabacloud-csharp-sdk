@@ -9,39 +9,39 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class IntlFlightOrderPayResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>SUCCESS</para>
+        /// </summary>
+        [NameInMap("code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>成功</para>
+        /// </summary>
+        [NameInMap("message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
         [NameInMap("module")]
         [Validation(Required=false)]
         public IntlFlightOrderPayResponseBodyModule Module { get; set; }
         public class IntlFlightOrderPayResponseBodyModule : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>51000</para>
-            /// </summary>
-            [NameInMap("price")]
+            [NameInMap("actual_pay_price")]
             [Validation(Required=false)]
-            public long? Price { get; set; }
+            public long? ActualPayPrice { get; set; }
+
+            [NameInMap("pay_status")]
+            [Validation(Required=false)]
+            public int? PayStatus { get; set; }
 
         }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>9BCDD5DE-E6CB-5C25-93B9-9BE178A0AA56</para>
-        /// </summary>
-        [NameInMap("request_id")]
+        [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>0</para>
-        /// </summary>
-        [NameInMap("result_code")]
-        [Validation(Required=false)]
-        public string ResultCode { get; set; }
-
-        [NameInMap("result_msg")]
-        [Validation(Required=false)]
-        public string ResultMsg { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -53,9 +53,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>21041ce316577904808056433edbb2</para>
+        /// <para>210bc4b116835992457938931db4de</para>
         /// </summary>
-        [NameInMap("trace_id")]
+        [NameInMap("traceId")]
         [Validation(Required=false)]
         public string TraceId { get; set; }
 

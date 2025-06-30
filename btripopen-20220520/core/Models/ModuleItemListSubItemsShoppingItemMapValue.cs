@@ -9,6 +9,56 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class ModuleItemListSubItemsShoppingItemMapValue : TeaModel {
+        [NameInMap("cabin_quantity_list")]
+        [Validation(Required=false)]
+        public List<ModuleItemListSubItemsShoppingItemMapValueCabinQuantityList> CabinQuantityList { get; set; }
+        public class ModuleItemListSubItemsShoppingItemMapValueCabinQuantityList : TeaModel {
+            [NameInMap("segment_position")]
+            [Validation(Required=false)]
+            public ModuleItemListSubItemsShoppingItemMapValueCabinQuantityListSegmentPosition SegmentPosition { get; set; }
+            public class ModuleItemListSubItemsShoppingItemMapValueCabinQuantityListSegmentPosition : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
+                [NameInMap("journey_index")]
+                [Validation(Required=false)]
+                public int? JourneyIndex { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
+                [NameInMap("segment_index")]
+                [Validation(Required=false)]
+                public int? SegmentIndex { get; set; }
+
+            }
+
+            [NameInMap("cabin_info")]
+            [Validation(Required=false)]
+            public ModuleItemListSubItemsShoppingItemMapValueCabinQuantityListCabinInfo CabinInfo { get; set; }
+            public class ModuleItemListSubItemsShoppingItemMapValueCabinQuantityListCabinInfo : TeaModel {
+                [NameInMap("cabin")]
+                [Validation(Required=false)]
+                public string Cabin { get; set; }
+
+                [NameInMap("cabin_class")]
+                [Validation(Required=false)]
+                public string CabinClass { get; set; }
+
+                [NameInMap("cabin_class_name")]
+                [Validation(Required=false)]
+                public string CabinClassName { get; set; }
+
+                [NameInMap("quantity")]
+                [Validation(Required=false)]
+                public string Quantity { get; set; }
+
+            }
+
+        }
+
         [NameInMap("search_price")]
         [Validation(Required=false)]
         public ModuleItemListSubItemsShoppingItemMapValueSearchPrice SearchPrice { get; set; }
@@ -178,6 +228,64 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("show_ticket_price")]
                 [Validation(Required=false)]
                 public bool? ShowTicketPrice { get; set; }
+
+            }
+
+        }
+
+        [NameInMap("segment_price_list")]
+        [Validation(Required=false)]
+        public List<ModuleItemListSubItemsShoppingItemMapValueSegmentPriceList> SegmentPriceList { get; set; }
+        public class ModuleItemListSubItemsShoppingItemMapValueSegmentPriceList : TeaModel {
+            [NameInMap("segment_position")]
+            [Validation(Required=false)]
+            public ModuleItemListSubItemsShoppingItemMapValueSegmentPriceListSegmentPosition SegmentPosition { get; set; }
+            public class ModuleItemListSubItemsShoppingItemMapValueSegmentPriceListSegmentPosition : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
+                [NameInMap("journey_index")]
+                [Validation(Required=false)]
+                public int? JourneyIndex { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
+                [NameInMap("segment_index")]
+                [Validation(Required=false)]
+                public int? SegmentIndex { get; set; }
+
+            }
+
+            [NameInMap("search_price")]
+            [Validation(Required=false)]
+            public ModuleItemListSubItemsShoppingItemMapValueSegmentPriceListSearchPrice SearchPrice { get; set; }
+            public class ModuleItemListSubItemsShoppingItemMapValueSegmentPriceListSearchPrice : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>120000</para>
+                /// </summary>
+                [NameInMap("sell_price")]
+                [Validation(Required=false)]
+                public int? SellPrice { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>120000</para>
+                /// </summary>
+                [NameInMap("ticket_price")]
+                [Validation(Required=false)]
+                public int? TicketPrice { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>6000</para>
+                /// </summary>
+                [NameInMap("tax")]
+                [Validation(Required=false)]
+                public int? Tax { get; set; }
 
             }
 

@@ -121,6 +121,22 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public int? TimeUnitCode { get; set; }
 
+        [NameInMap("title")]
+        [Validation(Required=false)]
+        public string Title { get; set; }
+
+        [NameInMap("dep_time")]
+        [Validation(Required=false)]
+        public string DepTime { get; set; }
+
+        [NameInMap("segment_number")]
+        [Validation(Required=false)]
+        public string SegmentNumber { get; set; }
+
+        [NameInMap("desc_infos")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> DescInfos { get; set; }
+
     }
 
 }

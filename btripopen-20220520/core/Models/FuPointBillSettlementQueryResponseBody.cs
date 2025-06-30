@@ -44,6 +44,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public List<FuPointBillSettlementQueryResponseBodyModuleItems> Items { get; set; }
             public class FuPointBillSettlementQueryResponseBodyModuleItems : TeaModel {
+                [NameInMap("adjust_time")]
+                [Validation(Required=false)]
+                public string AdjustTime { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>123aaa</para>
@@ -208,6 +212,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string CostCenterNumber { get; set; }
 
+                [NameInMap("cost_department")]
+                [Validation(Required=false)]
+                public string CostDepartment { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>0.11</para>
@@ -271,6 +279,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string MakeInvoice { get; set; }
 
+                [NameInMap("mapping_company_code")]
+                [Validation(Required=false)]
+                public string MappingCompanyCode { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>4801105714092</para>
@@ -322,6 +334,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("primary_id")]
                 [Validation(Required=false)]
                 public long? PrimaryId { get; set; }
+
+                [NameInMap("processor_oa_code")]
+                [Validation(Required=false)]
+                public string ProcessorOaCode { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>

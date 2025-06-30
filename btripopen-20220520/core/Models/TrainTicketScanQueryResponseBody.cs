@@ -69,6 +69,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string Department { get; set; }
 
+                [NameInMap("fee_type_show_code")]
+                [Validation(Required=false)]
+                public int? FeeTypeShowCode { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>71</para>
@@ -77,9 +81,21 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
+                [NameInMap("invoice_date")]
+                [Validation(Required=false)]
+                public string InvoiceDate { get; set; }
+
+                [NameInMap("invoice_material")]
+                [Validation(Required=false)]
+                public int? InvoiceMaterial { get; set; }
+
                 [NameInMap("invoice_title")]
                 [Validation(Required=false)]
                 public string InvoiceTitle { get; set; }
+
+                [NameInMap("ofd_url")]
+                [Validation(Required=false)]
+                public string OfdUrl { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
@@ -101,6 +117,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string Passenger { get; set; }
 
+                [NameInMap("pdf_url")]
+                [Validation(Required=false)]
+                public string PdfUrl { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -112,6 +132,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("project")]
                 [Validation(Required=false)]
                 public string Project { get; set; }
+
+                [NameInMap("purchaser_name")]
+                [Validation(Required=false)]
+                public string PurchaserName { get; set; }
+
+                [NameInMap("purchaser_tax_no")]
+                [Validation(Required=false)]
+                public string PurchaserTaxNo { get; set; }
 
                 [NameInMap("seat")]
                 [Validation(Required=false)]

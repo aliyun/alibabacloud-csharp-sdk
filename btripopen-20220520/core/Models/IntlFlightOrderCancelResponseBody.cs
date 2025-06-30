@@ -9,6 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class IntlFlightOrderCancelResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>SUCCESS</para>
+        /// </summary>
+        [NameInMap("code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>成功</para>
+        /// </summary>
+        [NameInMap("message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
         [NameInMap("module")]
         [Validation(Required=false)]
         public IntlFlightOrderCancelResponseBodyModule Module { get; set; }
@@ -23,25 +39,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>A3F8DCAB-8301-5770-BD9F-71B0BF9E1A6E</para>
-        /// </summary>
-        [NameInMap("request_id")]
+        [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>0</para>
-        /// </summary>
-        [NameInMap("result_code")]
-        [Validation(Required=false)]
-        public string ResultCode { get; set; }
-
-        [NameInMap("result_msg")]
-        [Validation(Required=false)]
-        public string ResultMsg { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -53,9 +53,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>21041ce316577904808056433edbb2</para>
+        /// <para>210bc4b116835992457938931db4de</para>
         /// </summary>
-        [NameInMap("trace_id")]
+        [NameInMap("traceId")]
         [Validation(Required=false)]
         public string TraceId { get; set; }
 

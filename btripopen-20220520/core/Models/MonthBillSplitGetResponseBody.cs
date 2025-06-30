@@ -8,84 +8,60 @@ using Tea;
 
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
-    public class IntlFlightCreateOrderResponseBody : TeaModel {
+    public class MonthBillSplitGetResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>SUCCESS</para>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>成功</para>
-        /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         [NameInMap("module")]
         [Validation(Required=false)]
-        public IntlFlightCreateOrderResponseBodyModule Module { get; set; }
-        public class IntlFlightCreateOrderResponseBodyModule : TeaModel {
+        public List<MonthBillSplitGetResponseBodyModule> Module { get; set; }
+        public class MonthBillSplitGetResponseBodyModule : TeaModel {
             /// <summary>
             /// <b>Example:</b>
-            /// <para>deb6372db8194f1c94c23bc4fadc508d</para>
+            /// <para>invoice_third_part_id123</para>
             /// </summary>
-            [NameInMap("async_create_order_key")]
+            [NameInMap("bill_split_key")]
             [Validation(Required=false)]
-            public string AsyncCreateOrderKey { get; set; }
+            public string BillSplitKey { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>1003038197806523003</para>
+            /// <para>2023-12-31</para>
             /// </summary>
-            [NameInMap("order_id")]
+            [NameInMap("end_date")]
             [Validation(Required=false)]
-            public string OrderId { get; set; }
+            public string EndDate { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>F11378244642107293696</para>
+            /// <para>2023-12-01</para>
             /// </summary>
-            [NameInMap("out_order_id")]
+            [NameInMap("start_date")]
             [Validation(Required=false)]
-            public string OutOrderId { get; set; }
-
-            [NameInMap("pay_latest_time")]
-            [Validation(Required=false)]
-            public string PayLatestTime { get; set; }
+            public string StartDate { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>0</para>
+            /// <para><a href="https://alibtrip-oss.oss-cn-hangzhou.aliyuncs.com/">https://alibtrip-oss.oss-cn-hangzhou.aliyuncs.com/</a>********</para>
             /// </summary>
-            [NameInMap("pay_status")]
+            [NameInMap("url")]
             [Validation(Required=false)]
-            public int? PayStatus { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>-1</para>
-            /// </summary>
-            [NameInMap("status")]
-            [Validation(Required=false)]
-            public int? Status { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>22300</para>
-            /// </summary>
-            [NameInMap("total_price")]
-            [Validation(Required=false)]
-            public long? TotalPrice { get; set; }
+            public string Url { get; set; }
 
         }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>C61ECFF6-606B-5F66-B81D-D77369043A5F</para>
+        /// <para>407543AF-<b><b>-</b></b>-****-9D1AB7218B27</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
@@ -101,7 +77,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>2103ad1116826479016562032da98c</para>
+        /// <para>21041ce********056433edbb2</para>
         /// </summary>
         [NameInMap("traceId")]
         [Validation(Required=false)]
