@@ -152,6 +152,38 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [Validation(Required=false)]
         public string SignCode { get; set; }
 
+        [NameInMap("SignIspRegisterDetailList")]
+        [Validation(Required=false)]
+        public List<GetSmsSignResponseBodySignIspRegisterDetailList> SignIspRegisterDetailList { get; set; }
+        public class GetSmsSignResponseBodySignIspRegisterDetailList : TeaModel {
+            [NameInMap("OperatorCode")]
+            [Validation(Required=false)]
+            public string OperatorCode { get; set; }
+
+            [NameInMap("OperatorCompleteTime")]
+            [Validation(Required=false)]
+            public string OperatorCompleteTime { get; set; }
+
+            [NameInMap("RegisterStatus")]
+            [Validation(Required=false)]
+            public int? RegisterStatus { get; set; }
+
+            [NameInMap("RegisterStatusReasons")]
+            [Validation(Required=false)]
+            public List<GetSmsSignResponseBodySignIspRegisterDetailListRegisterStatusReasons> RegisterStatusReasons { get; set; }
+            public class GetSmsSignResponseBodySignIspRegisterDetailListRegisterStatusReasons : TeaModel {
+                [NameInMap("ReasonCode")]
+                [Validation(Required=false)]
+                public string ReasonCode { get; set; }
+
+                [NameInMap("ReasonDescList")]
+                [Validation(Required=false)]
+                public List<string> ReasonDescList { get; set; }
+
+            }
+
+        }
+
         /// <summary>
         /// <para>SMS signature name.</para>
         /// 
