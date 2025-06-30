@@ -29,6 +29,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [Validation(Required=false)]
         public List<ListClusterAgentInstallRecordsResponseBodyData> Data { get; set; }
         public class ListClusterAgentInstallRecordsResponseBodyData : TeaModel {
+            [NameInMap("agent_config_id")]
+            [Validation(Required=false)]
+            public string AgentConfigId { get; set; }
+
+            [NameInMap("agent_config_name")]
+            [Validation(Required=false)]
+            public string AgentConfigName { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>cbf7a37bc905d4682a3338b3744810269</para>

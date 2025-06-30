@@ -3935,6 +3935,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             {
                 body["cluster_id"] = request.ClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                body["config_id"] = request.ConfigId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrayscaleConfig))
             {
                 body["grayscale_config"] = request.GrayscaleConfig;
@@ -3992,6 +3996,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {
                 body["cluster_id"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                body["config_id"] = request.ConfigId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrayscaleConfig))
             {
@@ -4575,6 +4583,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             {
                 query["plugin_version"] = request.PluginVersion;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                query["region"] = request.Region;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["status"] = request.Status;
@@ -4640,6 +4652,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PluginVersion))
             {
                 query["plugin_version"] = request.PluginVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                query["region"] = request.Region;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
@@ -4879,6 +4895,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentConfigId))
+            {
+                query["agent_config_id"] = request.AgentConfigId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {
                 query["cluster_id"] = request.ClusterId;
@@ -4941,6 +4961,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentConfigId))
+            {
+                query["agent_config_id"] = request.AgentConfigId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {
                 query["cluster_id"] = request.ClusterId;

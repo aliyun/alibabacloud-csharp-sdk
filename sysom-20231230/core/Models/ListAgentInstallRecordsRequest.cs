@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [Validation(Required=false)]
         public string PluginVersion { get; set; }
 
+        [NameInMap("region")]
+        [Validation(Required=false)]
+        public string Region { get; set; }
+
         [NameInMap("status")]
         [Validation(Required=false)]
         public string Status { get; set; }

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListClusterAgentInstallRecordsRequest : TeaModel {
+        [NameInMap("agent_config_id")]
+        [Validation(Required=false)]
+        public string AgentConfigId { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>cbd80af02b9d6454ebdc579c5e022d0c8</para>
