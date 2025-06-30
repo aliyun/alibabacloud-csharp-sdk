@@ -571,6 +571,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public long? ResetType { get; set; }
 
+            [NameInMap("SimpleUserGroupId")]
+            [Validation(Required=false)]
+            public string SimpleUserGroupId { get; set; }
+
             /// <summary>
             /// <para>The status of the cloud computer share.</para>
             /// <para>Valid values:</para>

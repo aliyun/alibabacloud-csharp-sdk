@@ -620,6 +620,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string SessionType { get; set; }
 
+        [NameInMap("SimpleUserGroupId")]
+        [Validation(Required=false)]
+        public string SimpleUserGroupId { get; set; }
+
         /// <summary>
         /// <para>The ID of the automatic snapshot policy.</para>
         /// 

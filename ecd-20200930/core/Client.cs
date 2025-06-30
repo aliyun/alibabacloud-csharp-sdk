@@ -725,6 +725,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SimpleUserGroupId))
+            {
+                query["SimpleUserGroupId"] = request.SimpleUserGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupName))
             {
                 query["UserGroupName"] = request.UserGroupName;
@@ -790,6 +794,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SimpleUserGroupId))
+            {
+                query["SimpleUserGroupId"] = request.SimpleUserGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupName))
             {
@@ -7381,6 +7389,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["SessionType"] = request.SessionType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SimpleUserGroupId))
+            {
+                query["SimpleUserGroupId"] = request.SimpleUserGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnapshotPolicyId))
             {
                 query["SnapshotPolicyId"] = request.SnapshotPolicyId;
@@ -7662,6 +7674,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionType))
             {
                 query["SessionType"] = request.SessionType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SimpleUserGroupId))
+            {
+                query["SimpleUserGroupId"] = request.SimpleUserGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnapshotPolicyId))
             {
@@ -15913,6 +15929,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["DesktopGroupName"] = request.DesktopGroupName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopType))
+            {
+                query["DesktopType"] = request.DesktopType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserIds))
             {
                 query["EndUserIds"] = request.EndUserIds;
@@ -16026,6 +16046,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopGroupName))
             {
                 query["DesktopGroupName"] = request.DesktopGroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopType))
+            {
+                query["DesktopType"] = request.DesktopType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserIds))
             {
@@ -18166,6 +18190,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await DescribeDirectoriesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询EIP监控</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeFlowMetricRequest
         /// </param>
@@ -18227,6 +18256,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeFlowMetricResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询EIP监控</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeFlowMetricRequest
         /// </param>
@@ -18288,6 +18322,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<DescribeFlowMetricResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询EIP监控</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeFlowMetricRequest
         /// </param>
@@ -18301,6 +18340,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return DescribeFlowMetricWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询EIP监控</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeFlowMetricRequest
         /// </param>
@@ -37521,6 +37565,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SimpleUserGroupId))
+            {
+                query["SimpleUserGroupId"] = request.SimpleUserGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupName))
             {
                 query["UserGroupName"] = request.UserGroupName;
@@ -37582,6 +37630,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SimpleUserGroupId))
+            {
+                query["SimpleUserGroupId"] = request.SimpleUserGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupName))
             {

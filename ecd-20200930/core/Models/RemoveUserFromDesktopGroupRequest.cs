@@ -44,6 +44,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("SimpleUserGroupId")]
+        [Validation(Required=false)]
+        public string SimpleUserGroupId { get; set; }
+
         [NameInMap("UserGroupName")]
         [Validation(Required=false)]
         public string UserGroupName { get; set; }

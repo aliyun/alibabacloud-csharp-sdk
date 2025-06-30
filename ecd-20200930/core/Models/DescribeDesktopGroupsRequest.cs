@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string DesktopGroupName { get; set; }
 
+        [NameInMap("DesktopType")]
+        [Validation(Required=false)]
+        public string DesktopType { get; set; }
+
         /// <summary>
         /// <para>The IDs of the users who can access the cloud computer share.</para>
         /// </summary>
