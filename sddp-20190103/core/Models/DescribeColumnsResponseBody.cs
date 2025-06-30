@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The columns.</para>
+        /// <para>The data in the columns of the table.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -46,6 +46,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public string DataType { get; set; }
 
+            /// <summary>
+            /// <para>The type of the database engine.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>MySQL</para>
+            /// </summary>
             [NameInMap("EngineType")]
             [Validation(Required=false)]
             public string EngineType { get; set; }
@@ -80,6 +86,17 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public string InstanceName { get; set; }
 
+            /// <summary>
+            /// <para>The column encryption status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>-1</b>: unencrypted</description></item>
+            /// <item><description><b>1</b>: encrypted</description></item>
+            /// <item><description><b>2</b>: encryption failed</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>-1</para>
+            /// </summary>
             [NameInMap("MaskingStatus")]
             [Validation(Required=false)]
             public int? MaskingStatus { get; set; }
@@ -177,6 +194,26 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public string ProductCode { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the service to which the data object belongs. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>1</b>: MaxCompute</description></item>
+            /// <item><description><b>2</b>: Object Storage Service (OSS)</description></item>
+            /// <item><description><b>3</b>: AnalyticDB for MySQL</description></item>
+            /// <item><description><b>4</b>: Tablestore (OTS)</description></item>
+            /// <item><description><b>5</b>: ApsaraDB RDS</description></item>
+            /// <item><description><b>6</b>: self-managed database</description></item>
+            /// <item><description><b>7</b>: PolarDB for Xscale (PolarDB-X)</description></item>
+            /// <item><description><b>8</b>: PolarDB</description></item>
+            /// <item><description><b>9</b>: AnalyticDB for PostgreSQL</description></item>
+            /// <item><description><b>10</b>: ApsaraDB for OceanBase</description></item>
+            /// <item><description><b>11</b>: ApsaraDB for MongoDB</description></item>
+            /// <item><description><b>25</b>: ApsaraDB for Redis</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5</para>
+            /// </summary>
             [NameInMap("ProductId")]
             [Validation(Required=false)]
             public long? ProductId { get; set; }

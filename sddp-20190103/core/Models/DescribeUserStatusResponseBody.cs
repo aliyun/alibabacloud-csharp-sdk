@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             /// <para>The AccessKey ID of the current account.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>LTAI4G67HRBzNRmMhfyv****</para>
+            /// <para>yourAccessKeyID</para>
             /// </summary>
             [NameInMap("AccessKeyId")]
             [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DescribeColumnsV2ResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// <para>When performing a paginated query, sets the current page number. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>A list of column recognition results of the data table.</para>
+        /// <para>List of recognition results for the columns in the data table.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeColumnsV2ResponseBodyItems> Items { get; set; }
         public class DescribeColumnsV2ResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The time when the data in the column of the table is created. Unit: milliseconds.</para>
+            /// <para>The creation time of the column data in the data asset table, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1536751124000</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The type of data in the column of the table.</para>
+            /// <para>The data type of the column data in the data asset table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>varchar</para>
@@ -46,12 +46,25 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public string DataType { get; set; }
 
+            /// <summary>
+            /// <para>Engine type. Values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>MySQL</b></description></item>
+            /// <item><description><b>MariaDB</b></description></item>
+            /// <item><description><b>Oracle</b></description></item>
+            /// <item><description><b>PostgreSQL</b></description></item>
+            /// <item><description><b>SQLServer</b></description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>MySQL</para>
+            /// </summary>
             [NameInMap("EngineType")]
             [Validation(Required=false)]
             public string EngineType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the column of the table.</para>
+            /// <para>The unique identifier ID of the column in the data asset table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>111111</para>
@@ -61,7 +74,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance to which data in the column of the table belongs.</para>
+            /// <para>The ID of the asset instance to which the column data in the data asset table belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1232122</para>
@@ -71,7 +84,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the instance to which data in the column of the table belongs.</para>
+            /// <para>The name of the asset instance to which the column data in the data asset table belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rm-1234</para>
@@ -80,23 +93,37 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public string InstanceName { get; set; }
 
+            /// <summary>
+            /// <para>Column encryption status. Values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>-1</b>: Not encrypted</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: Encryption successful</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: Encryption failed</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>-1</para>
+            /// </summary>
             [NameInMap("MaskingStatus")]
             [Validation(Required=false)]
             public int? MaskingStatus { get; set; }
 
             /// <summary>
-            /// <para>A list of data tags.</para>
+            /// <para>Data tag list.</para>
             /// </summary>
             [NameInMap("ModelTags")]
             [Validation(Required=false)]
             public List<DescribeColumnsV2ResponseBodyItemsModelTags> ModelTags { get; set; }
             public class DescribeColumnsV2ResponseBodyItemsModelTags : TeaModel {
                 /// <summary>
-                /// <para>The tag ID. Valid values:</para>
+                /// <para>Data tag ID. Values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>101</b>: personal sensitive information</description></item>
-                /// <item><description><b>102</b>: personal information</description></item>
-                /// <item><description><b>107</b>: general information</description></item>
+                /// <item><description><b>101</b>: Personal sensitive information</description></item>
+                /// <item><description><b>102</b>: Personal information</description></item>
+                /// <item><description><b>107</b>: General information</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -107,7 +134,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The tag name. Valid values:</para>
+                /// <para>Data tag name. Values:</para>
                 /// <list type="bullet">
                 /// <item><description>Personal sensitive information</description></item>
                 /// <item><description>Personal information</description></item>
@@ -124,7 +151,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             }
 
             /// <summary>
-            /// <para>The name of the column of the table.</para>
+            /// <para>The name of the column in the data asset table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>obj_id</para>
@@ -134,13 +161,13 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The name of the sensitivity level for asset. Valid values:</para>
+            /// <para>The risk level name of the asset. Values:</para>
             /// <list type="bullet">
-            /// <item><description><b>N/A</b>: indicates that no sensitive data is detected.</description></item>
-            /// <item><description><b>S1</b>: indicates the low sensitivity level.</description></item>
-            /// <item><description><b>S2</b>: indicates the medium sensitivity level.</description></item>
-            /// <item><description><b>S3</b>: indicates the high sensitivity level.</description></item>
-            /// <item><description><b>S4</b>: indicates the highest sensitivity level.</description></item>
+            /// <item><description><b>N/A</b>：No sensitive data detected.</description></item>
+            /// <item><description><b>S1</b>：Level 1 sensitive data.</description></item>
+            /// <item><description><b>S2</b>：Level 2 sensitive data.</description></item>
+            /// <item><description><b>S3</b>：Level 3 sensitive data.</description></item>
+            /// <item><description><b>S4</b>：Level 4 sensitive data.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -151,17 +178,17 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string OdpsRiskLevelName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the sensitivity level of the asset. Valid values:</para>
+            /// <para>The risk level code of the asset. Values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: N/A</description></item>
-            /// <item><description><b>2</b>: S1</description></item>
-            /// <item><description><b>3</b>: S2</description></item>
-            /// <item><description><b>4</b>: S3</description></item>
-            /// <item><description><b>5</b>: S4<remarks>
-            /// <para>The return value &lt;=1 means N/A.</para>
-            /// </remarks>
-            /// </description></item>
+            /// <item><description><b>1</b>：N/A.</description></item>
+            /// <item><description><b>2</b>：S1.</description></item>
+            /// <item><description><b>3</b>：S2.</description></item>
+            /// <item><description><b>4</b>：S3.</description></item>
+            /// <item><description><b>5</b>：S4.</description></item>
             /// </list>
+            /// <remarks>
+            /// <para>A return value &lt;= 1 represents N/A.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -171,7 +198,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? OdpsRiskLevelValue { get; set; }
 
             /// <summary>
-            /// <para>The name of the service to which data in the column of the table belongs. Valid values: <b>MaxCompute, OSS, ADS, OTS, and RDS</b>.</para>
+            /// <para>The product name to which the column data in the data asset table belongs. Values: <b>MaxCompute, OSS, ADS, OTS, RDS</b>, etc.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RDS</para>
@@ -180,16 +207,36 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public string ProductCode { get; set; }
 
+            /// <summary>
+            /// <para>The ID corresponding to the product name of the data asset. Values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>1</b>: MaxCompute</description></item>
+            /// <item><description><b>2</b>: OSS</description></item>
+            /// <item><description><b>3</b>: ADS</description></item>
+            /// <item><description><b>4</b>: OTS</description></item>
+            /// <item><description><b>5</b>: RDS</description></item>
+            /// <item><description><b>6</b>: SELF_DB</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5</para>
+            /// </summary>
             [NameInMap("ProductId")]
             [Validation(Required=false)]
             public long? ProductId { get; set; }
 
+            /// <summary>
+            /// <para>The region where the asset is located.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
+            /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the revision record.</para>
+            /// <para>Correction record ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -199,10 +246,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? RevisionId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the column is revised. Valid values:</para>
+            /// <para>Correction status. Values:</para>
             /// <list type="bullet">
-            /// <item><description>1: yes</description></item>
-            /// <item><description>0: no</description></item>
+            /// <item><description>1: Corrected.</description></item>
+            /// <item><description>0: Not corrected.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -213,16 +260,16 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? RevisionStatus { get; set; }
 
             /// <summary>
-            /// <para>The ID of the sensitivity level of data in the column of the table. Valid values:</para>
+            /// <para>The risk level ID of the column data in the data asset table. Values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: N/A</description></item>
-            /// <item><description><b>2</b>: S1</description></item>
-            /// <item><description><b>3</b>: S2</description></item>
-            /// <item><description><b>4</b>: S3</description></item>
-            /// <item><description><b>5</b>: S4</description></item>
+            /// <item><description><b>1</b>：N/A.</description></item>
+            /// <item><description><b>2</b>：S1.</description></item>
+            /// <item><description><b>3</b>：S2.</description></item>
+            /// <item><description><b>4</b>：S3.</description></item>
+            /// <item><description><b>5</b>：S4.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>The return value &lt;=1 means N/A.</para>
+            /// <para>A return value &lt;= 1 represents N/A.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -233,13 +280,13 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? RiskLevelId { get; set; }
 
             /// <summary>
-            /// <para>The name of the sensitivity level for data in the column of the table. Valid values:</para>
+            /// <para>The risk level name of the column data in the data asset table. Values:</para>
             /// <list type="bullet">
-            /// <item><description><b>N/A</b>: indicates that no sensitive data is detected.</description></item>
-            /// <item><description><b>S1</b>: indicates the low sensitivity level.</description></item>
-            /// <item><description><b>S2</b>: indicates the medium sensitivity level.</description></item>
-            /// <item><description><b>S3</b>: indicates the high sensitivity level.</description></item>
-            /// <item><description><b>S4</b>: indicates the highest sensitivity level.</description></item>
+            /// <item><description><b>N/A</b>：No sensitive data detected.</description></item>
+            /// <item><description><b>S1</b>：Level 1 sensitive data.</description></item>
+            /// <item><description><b>S2</b>：Level 2 sensitive data.</description></item>
+            /// <item><description><b>S3</b>：Level 3 sensitive data.</description></item>
+            /// <item><description><b>S4</b>：Level 4 sensitive data.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -250,7 +297,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string RiskLevelName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the sensitive data detection rule that data in the column of the table hits.</para>
+            /// <para>The ID of the sensitive data recognition rule that the column data in the data asset table hits.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1004</para>
@@ -260,7 +307,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? RuleId { get; set; }
 
             /// <summary>
-            /// <para>The name of the sensitive data detection rule that data in the column of the table hits.</para>
+            /// <para>The name of the sensitive data recognition rule that the column data in the data asset table hits.</para>
             /// 
             /// <b>Example:</b>
             /// <para>name</para>
@@ -270,13 +317,13 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string RuleName { get; set; }
 
             /// <summary>
-            /// <para>The name of the sensitivity level. Valid values:</para>
+            /// <para>The sensitivity level name. Values:</para>
             /// <list type="bullet">
-            /// <item><description><b>N/A</b>: indicates that no sensitive data is detected.</description></item>
-            /// <item><description><b>S1</b>: indicates the low sensitivity level.</description></item>
-            /// <item><description><b>S2</b>: indicates the medium sensitivity level.</description></item>
-            /// <item><description><b>S3</b>: indicates the high sensitivity level.</description></item>
-            /// <item><description><b>S4</b>: indicates the highest sensitivity level.</description></item>
+            /// <item><description><b>N/A</b>：No sensitive data detected.</description></item>
+            /// <item><description><b>S1</b>：Level 1 sensitive data.</description></item>
+            /// <item><description><b>S2</b>：Level 2 sensitive data.</description></item>
+            /// <item><description><b>S3</b>：Level 3 sensitive data.</description></item>
+            /// <item><description><b>S4</b>：Level 4 sensitive data.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -287,10 +334,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string SensLevelName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the column contains sensitive data. Valid values:</para>
+            /// <para>Whether the column data in the data asset table contains sensitive data. Values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description>true: The column data in the data asset table contains sensitive data.</description></item>
+            /// <item><description>false: The column data in the data asset table does not contain sensitive data.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -301,7 +348,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public bool? Sensitive { get; set; }
 
             /// <summary>
-            /// <para>The ID of the table.</para>
+            /// <para>The ID of the asset table to which the column data in the data asset table belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -311,7 +358,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? TableId { get; set; }
 
             /// <summary>
-            /// <para>The name of the table to which the revised column belongs.</para>
+            /// <para>The name of the table to which the target column for correction belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>it_table</para>
@@ -323,7 +370,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: <b>10</b>.</para>
+        /// <para>When performing a paginated query, sets the maximum number of data asset instances displayed per page. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -333,7 +380,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique identifier generated by Alibaba Cloud for this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B1F2BB1F-04EC-5D36-B136-B4DE17FD8DE0</para>
@@ -343,7 +390,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>Total number of data entries in the result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12</para>

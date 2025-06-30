@@ -44,6 +44,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public string ParentId { get; set; }
 
+        [NameInMap("RegionType")]
+        [Validation(Required=false)]
+        public string RegionType { get; set; }
+
         /// <summary>
         /// <para>The type of service to which the data asset belongs. Valid values:</para>
         /// <list type="bullet">

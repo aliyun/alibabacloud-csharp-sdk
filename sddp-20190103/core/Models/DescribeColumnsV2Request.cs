@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DescribeColumnsV2Request : TeaModel {
         /// <summary>
-        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// <para>When performing a paginated query, sets the current page number. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -19,14 +19,27 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
+        /// <summary>
+        /// <para>Engine type. Values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>MySQL</b>.</description></item>
+        /// <item><description><b>MariaDB</b>.</description></item>
+        /// <item><description><b>Oracle</b>.</description></item>
+        /// <item><description><b>PostgreSQL</b>.</description></item>
+        /// <item><description><b>SQLServer</b>.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MySQL</para>
+        /// </summary>
         [NameInMap("EngineType")]
         [Validation(Required=false)]
         public string EngineType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance to which data in the column of the table belongs.</para>
+        /// <para>ID of the asset instance to which the column data in the data asset table belongs.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/141708.html">DescribeInstances</a> operation to obtain the ID of the instance to which the data in the column of the table belongs.</para>
+        /// <para>Query the data in the columns of the data assets authorized by the Data Security Center based on the ID of the asset instance to which the column data in the data asset table belongs. The asset instance ID can be obtained by calling the <a href="https://help.aliyun.com/document_detail/141708.html">DescribeInstances</a> interface.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -37,7 +50,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public long? InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the instance to which data in the column of the table belongs.</para>
+        /// <para>Name of the asset instance to which the column data in the data asset table belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-bp17t1htja573l5i8****</para>
@@ -47,10 +60,11 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh_cn</b>. Valid values:</para>
+        /// <para>Sets the language type for requests and received messages, default is <b>zh_cn</b>.
+        /// Values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh_cn</b>: simplified Chinese</description></item>
-        /// <item><description><b>en_us</b>: English</description></item>
+        /// <item><description><b>zh_cn</b>: Simplified Chinese</description></item>
+        /// <item><description><b>en_us</b>: English (United States)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -61,8 +75,8 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The search keyword. Fuzzy match is supported.</para>
-        /// <para>For example, if you enter <b>test</b>, all columns whose names contain <b>test</b> are retrieved.</para>
+        /// <para>Search keyword, supports fuzzy matching.</para>
+        /// <para>For example, entering <b>test</b> will search for all data information containing <b>test</b> in the search items.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -72,7 +86,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: <b>10</b>.</para>
+        /// <para>When performing a paginated query, sets the maximum number of data asset instances displayed per page. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -82,7 +96,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The name of the service to which data in the column of the table belongs. Valid values include <b>MaxCompute, OSS, ADS, OTS, and RDS</b>.</para>
+        /// <para>Product name to which the column data in the data asset table belongs. Values: <b>MaxCompute, OSS, ADS, OTS, RDS</b>, etc.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MaxCompute</para>
@@ -92,13 +106,13 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the sensitivity level of the data that hits the sensitive data detection rule. Valid values:</para>
+        /// <para>Risk level ID of the sensitive data recognition rule. Values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: N/A</description></item>
-        /// <item><description><b>2</b>: S1</description></item>
-        /// <item><description><b>3</b>: S2</description></item>
-        /// <item><description><b>4</b>: S3</description></item>
-        /// <item><description><b>5</b>: S4</description></item>
+        /// <item><description><b>1</b>: N/A.</description></item>
+        /// <item><description><b>2</b>: S1.</description></item>
+        /// <item><description><b>3</b>: S2.</description></item>
+        /// <item><description><b>4</b>: S3.</description></item>
+        /// <item><description><b>5</b>: S4.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -109,9 +123,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public long? RiskLevelId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the sensitive data detection rule that data in the column of the table hits.</para>
+        /// <para>Unique identifier ID of the sensitive data recognition rule hit by the column data in the asset table.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/141389.html">DescribeRules</a> operation to obtain the ID of the sensitive data detection rule.</para>
+        /// <para>Query the data in the columns of the data assets authorized by the Data Security Center based on the ID of the sensitive data recognition rule hit by the column data in the asset table. The sensitive data recognition rule ID can be obtained by calling the <a href="https://help.aliyun.com/document_detail/141389.html">DescribeRules</a> interface.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -122,7 +136,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public long? RuleId { get; set; }
 
         /// <summary>
-        /// <para>The name of the sensitive data detection rule that data in the column of the table hits.</para>
+        /// <para>Name of the sensitive data recognition rule hit by the column data in the data asset table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>name</para>
@@ -132,13 +146,13 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The name of the sensitivity level. Valid values:</para>
+        /// <para>Sensitive level name. Values:</para>
         /// <list type="bullet">
-        /// <item><description><b>N/A</b>: indicates that no sensitive data is detected.</description></item>
-        /// <item><description><b>S1</b>: indicates the low sensitivity level.</description></item>
-        /// <item><description><b>S2</b>: indicates the medium sensitivity level.</description></item>
-        /// <item><description><b>S3</b>: indicates the high sensitivity level.</description></item>
-        /// <item><description><b>S4</b>: indicates the highest sensitivity level.</description></item>
+        /// <item><description><b>N/A</b>: No sensitive data detected.</description></item>
+        /// <item><description><b>S1</b>: Level 1 sensitive data.</description></item>
+        /// <item><description><b>S2</b>: Level 2 sensitive data.</description></item>
+        /// <item><description><b>S3</b>: Level 3 sensitive data.</description></item>
+        /// <item><description><b>S4</b>: Level 4 sensitive data.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -149,9 +163,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string SensLevelName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the table to which the column belongs.</para>
+        /// <para>Unique identifier ID of the asset table to which the column in MaxCompute, RDS, etc., belongs.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/141709.html">DescribeTables</a> operation to obtain the ID of the table.</para>
+        /// <para>Query the data in the columns of the data assets authorized by the Data Security Center based on the ID of the asset table. The asset table ID can be obtained by calling the <a href="https://help.aliyun.com/document_detail/141709.html">DescribeTables</a> interface.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -162,7 +176,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string TableId { get; set; }
 
         /// <summary>
-        /// <para>The name of the table.</para>
+        /// <para>Name of the data asset table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>it_table</para>
