@@ -1476,10 +1476,66 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             {
                 request.TransformationRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TransformationRules, "TransformationRules", "json");
             }
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationDataSourceSettingsShrink))
+            {
+                body["DestinationDataSourceSettings"] = request.DestinationDataSourceSettingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationDataSourceType))
+            {
+                body["DestinationDataSourceType"] = request.DestinationDataSourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobName))
+            {
+                body["JobName"] = request.JobName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobSettingsShrink))
+            {
+                body["JobSettings"] = request.JobSettingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobType))
+            {
+                body["JobType"] = request.JobType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MigrationType))
+            {
+                body["MigrationType"] = request.MigrationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceSettingsShrink))
+            {
+                body["ResourceSettings"] = request.ResourceSettingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDataSourceSettingsShrink))
+            {
+                body["SourceDataSourceSettings"] = request.SourceDataSourceSettingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDataSourceType))
+            {
+                body["SourceDataSourceType"] = request.SourceDataSourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableMappingsShrink))
+            {
+                body["TableMappings"] = request.TableMappingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransformationRulesShrink))
+            {
+                body["TransformationRules"] = request.TransformationRulesShrink;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1487,7 +1543,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
                 Version = "2024-05-18",
                 Protocol = "HTTPS",
                 Pathname = "/",
-                Method = "GET",
+                Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
                 ReqBodyType = "formData",
@@ -1548,10 +1604,66 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             {
                 request.TransformationRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TransformationRules, "TransformationRules", "json");
             }
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationDataSourceSettingsShrink))
+            {
+                body["DestinationDataSourceSettings"] = request.DestinationDataSourceSettingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationDataSourceType))
+            {
+                body["DestinationDataSourceType"] = request.DestinationDataSourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobName))
+            {
+                body["JobName"] = request.JobName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobSettingsShrink))
+            {
+                body["JobSettings"] = request.JobSettingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobType))
+            {
+                body["JobType"] = request.JobType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MigrationType))
+            {
+                body["MigrationType"] = request.MigrationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceSettingsShrink))
+            {
+                body["ResourceSettings"] = request.ResourceSettingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDataSourceSettingsShrink))
+            {
+                body["SourceDataSourceSettings"] = request.SourceDataSourceSettingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDataSourceType))
+            {
+                body["SourceDataSourceType"] = request.SourceDataSourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableMappingsShrink))
+            {
+                body["TableMappings"] = request.TableMappingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransformationRulesShrink))
+            {
+                body["TransformationRules"] = request.TransformationRulesShrink;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1559,7 +1671,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
                 Version = "2024-05-18",
                 Protocol = "HTTPS",
                 Pathname = "/",
-                Method = "GET",
+                Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
                 ReqBodyType = "formData",
@@ -29691,10 +29803,44 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             {
                 request.TransformationRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TransformationRules, "TransformationRules", "json");
             }
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DIJobId))
+            {
+                body["DIJobId"] = request.DIJobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobSettingsShrink))
+            {
+                body["JobSettings"] = request.JobSettingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceSettingsShrink))
+            {
+                body["ResourceSettings"] = request.ResourceSettingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableMappingsShrink))
+            {
+                body["TableMappings"] = request.TableMappingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransformationRulesShrink))
+            {
+                body["TransformationRules"] = request.TransformationRulesShrink;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -29702,7 +29848,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
                 Version = "2024-05-18",
                 Protocol = "HTTPS",
                 Pathname = "/",
-                Method = "GET",
+                Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
                 ReqBodyType = "formData",
@@ -29752,10 +29898,44 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             {
                 request.TransformationRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TransformationRules, "TransformationRules", "json");
             }
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DIJobId))
+            {
+                body["DIJobId"] = request.DIJobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobSettingsShrink))
+            {
+                body["JobSettings"] = request.JobSettingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceSettingsShrink))
+            {
+                body["ResourceSettings"] = request.ResourceSettingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableMappingsShrink))
+            {
+                body["TableMappings"] = request.TableMappingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransformationRulesShrink))
+            {
+                body["TransformationRules"] = request.TransformationRulesShrink;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -29763,7 +29943,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
                 Version = "2024-05-18",
                 Protocol = "HTTPS",
                 Pathname = "/",
-                Method = "GET",
+                Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
                 ReqBodyType = "formData",
