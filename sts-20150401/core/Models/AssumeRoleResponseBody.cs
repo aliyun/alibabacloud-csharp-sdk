@@ -100,6 +100,10 @@ namespace AlibabaCloud.SDK.Sts20150401.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("SourceIdentity")]
+        [Validation(Required=false)]
+        public string SourceIdentity { get; set; }
+
     }
 
 }
