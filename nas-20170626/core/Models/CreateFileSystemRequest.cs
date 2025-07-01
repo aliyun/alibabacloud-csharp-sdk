@@ -117,8 +117,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Extreme NAS file system: All regions support KMS-managed keys.</description></item>
-        /// <item><description>General-purpose NAS file system: KMS-managed keys are supported in the following regions: China (Chengdu), China (Qingdao), China (Hohhot), China (Ulanqab), China (Heyuan), China (Hangzhou), China (Shanghai), China (Beijing), China (Zhangjiakou), China (Shenzhen), China (Guangzhou), China (Hong Kong), Japan (Tokyo), Philippines (Manila), Thailand (Bangkok), Malaysia (Kuala Lumpur), US (Silicon Valley), Indonesia (Jakarta), UK (London), Singapore, US (Virginia), Germany (Frankfurt),  and China East 1 Finance.</description></item>
+        /// <item><description>Extreme NAS file systems: All regions except China East 1 Finance support KMS-managed keys.</description></item>
+        /// <item><description>General-purpose NAS file systems: All regions support KMS-managed keys.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the KMS-managed key.</para>
+        /// <para>The ID of the KMS key.</para>
         /// <para>This parameter is required only if the EncryptType parameter is set to 2.</para>
         /// 
         /// <b>Example:</b>
@@ -187,9 +187,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// <para>The snapshot ID.</para>
-        /// <para>This parameter is available only for Extreme NAS file systems.</para>
+        /// <para>This parameter is available only for advanced Extreme NAS file systems.</para>
         /// <remarks>
-        /// <para>You can create a file system from a snapshot. In this case, the version of the file system is the same as that of the source file system. For example, the source file system of the snapshot uses version 1. To create a file system of version 2, you can create File System A from the snapshot and create File System B of version 2. You can then copy the data and migrate your business from File System A to File System B.</para>
+        /// <para> You can create a file system from a snapshot. In this case, the version of the file system is the same as that of the source file system. For example, the source file system of the snapshot uses version 1. To create a file system of version 2, you can create File System A from the snapshot and create File System B of version 2. You can then copy the data and migrate your business from File System A to File System B.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -215,7 +215,56 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string StorageType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch.</para>
+        /// <para>An array of tags.</para>
+        /// <para>You can specify up to 20 tags. If you specify multiple tags, each tag key must be unique.</para>
+        /// </summary>
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<CreateFileSystemRequestTag> Tag { get; set; }
+        public class CreateFileSystemRequestTag : TeaModel {
+            /// <summary>
+            /// <para>The tag key.</para>
+            /// <para>Limits:</para>
+            /// <list type="bullet">
+            /// <item><description>The tag key cannot be null or an empty string.</description></item>
+            /// <item><description>The tag key can be up to 128 characters in length.</description></item>
+            /// <item><description>The tag key cannot start with <c>aliyun</c> or <c>acs:</c>.</description></item>
+            /// <item><description>The tag key cannot contain <c>http://</c> or <c>https://</c>.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>nastest</para>
+            /// 
+            /// <b>if can be null:</b>
+            /// <c>false</c>
+            /// </summary>
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            /// <summary>
+            /// <para>The tag value.</para>
+            /// <para>Limits:</para>
+            /// <list type="bullet">
+            /// <item><description>The tag value cannot be null or an empty string.</description></item>
+            /// <item><description>The tag value can be up to 128 characters in length.</description></item>
+            /// <item><description>The tag value cannot contain <c>http://</c> or <c>https://</c>.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>testValue</para>
+            /// 
+            /// <b>if can be null:</b>
+            /// <c>false</c>
+            /// </summary>
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
+        /// <summary>
+        /// <para>The vSwitch ID.</para>
         /// <para>This parameter is reserved and does not take effect. You do not need to configure this parameter.</para>
         /// 
         /// <b>Example:</b>

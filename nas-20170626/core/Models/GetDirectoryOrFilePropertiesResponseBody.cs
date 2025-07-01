@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class GetDirectoryOrFilePropertiesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the files or directories.</para>
+        /// <para>The details about the file or directory.</para>
         /// </summary>
         [NameInMap("Entry")]
         [Validation(Required=false)]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string ATime { get; set; }
 
             /// <summary>
-            /// <para>The time when the raw data was modified.</para>
+            /// <para>The time when the metadata was modified.</para>
             /// <para>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// <para>This parameter is returned only if the value of the Type parameter is File.</para>
             /// 
@@ -129,12 +129,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public long? Size { get; set; }
 
             /// <summary>
-            /// <para>The storage type of the file.</para>
+            /// <para>The storage class of the file.</para>
             /// <para>This parameter is returned only if the value of the Type parameter is File.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
             /// <item><description>standard: General-purpose NAS file system</description></item>
-            /// <item><description>InfrequentAccess: IA storage medium</description></item>
+            /// <item><description>InfrequentAccess: the IA storage class.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

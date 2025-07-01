@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class ModifyLifecyclePolicyRequest : TeaModel {
-        [NameInMap("EnableLifecycle")]
-        [Validation(Required=false)]
-        public bool? EnableLifecycle { get; set; }
-
         /// <summary>
         /// <para>The ID of the file system.</para>
         /// <para>This parameter is required.</para>
@@ -23,10 +19,6 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
         public string FileSystemId { get; set; }
-
-        [NameInMap("FsetIds")]
-        [Validation(Required=false)]
-        public List<string> FsetIds { get; set; }
 
         /// <summary>
         /// <para>The name of the lifecycle policy.</para>

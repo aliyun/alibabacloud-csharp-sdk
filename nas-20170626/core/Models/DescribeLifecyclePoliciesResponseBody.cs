@@ -27,10 +27,6 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
-            [NameInMap("EnableLifecycle")]
-            [Validation(Required=false)]
-            public bool? EnableLifecycle { get; set; }
-
             /// <summary>
             /// <para>The ID of the file system.</para>
             /// 
@@ -40,10 +36,6 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             [NameInMap("FileSystemId")]
             [Validation(Required=false)]
             public string FileSystemId { get; set; }
-
-            [NameInMap("FsetIds")]
-            [Validation(Required=false)]
-            public List<string> FsetIds { get; set; }
 
             /// <summary>
             /// <para>The name of the lifecycle policy.</para>
@@ -72,10 +64,6 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             [Validation(Required=false)]
             public string LifecycleRuleName { get; set; }
 
-            [NameInMap("LifecycleRuleType")]
-            [Validation(Required=false)]
-            public string LifecycleRuleType { get; set; }
-
             /// <summary>
             /// <para>The absolute path of a directory with which the lifecycle policy is associated.</para>
             /// 
@@ -92,10 +80,6 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             [NameInMap("Paths")]
             [Validation(Required=false)]
             public List<string> Paths { get; set; }
-
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
 
             /// <summary>
             /// <para>The storage type of the data that is dumped to the IA storage medium.</para>

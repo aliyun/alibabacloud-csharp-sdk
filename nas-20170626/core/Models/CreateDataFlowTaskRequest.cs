@@ -188,6 +188,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [Validation(Required=false)]
         public string FileSystemId { get; set; }
 
+        [NameInMap("Includes")]
+        [Validation(Required=false)]
+        public string Includes { get; set; }
+
         /// <summary>
         /// <para>If you specify SrcTaskId, the configurations of the TaskAction, DataType, and EntryList parameters are copied from the desired dataflow task. You do not need to specify them.</para>
         /// 

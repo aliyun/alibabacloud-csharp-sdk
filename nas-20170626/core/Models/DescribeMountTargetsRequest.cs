@@ -16,7 +16,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>174494b666-x****.dualstack.cn-hangzhou.nas.aliyuncs.com</para>
+        /// <para>1ca404****-x****.dualstack.cn-hangzhou.nas.aliyuncs.com</para>
         /// </summary>
         [NameInMap("DualStackMountTargetDomain")]
         [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The domain name of the mount target.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1ca404a666-x****.cn-hangzhou.nas.aliyuncs.com</para>
+        /// <para>1ca404****-x****.cn-hangzhou.nas.aliyuncs.com</para>
         /// </summary>
         [NameInMap("MountTargetDomain")]
         [Validation(Required=false)]

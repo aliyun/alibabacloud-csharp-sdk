@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeMountTargetsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about mount targets.</para>
+        /// <para>The queried mount targets.</para>
         /// </summary>
         [NameInMap("MountTargets")]
         [Validation(Required=false)]
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 /// <para>The dual-stack (IPv4 and IPv6) domain name of the mount target.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>174494b666-x****.dualstack.cn-hangzhou.nas.aliyuncs.com</para>
+                /// <para>1ca404****-x****.dualstack.cn-hangzhou.nas.aliyuncs.com</para>
                 /// </summary>
                 [NameInMap("DualStackMountTargetDomain")]
                 [Validation(Required=false)]
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 /// <para>The IPv4 domain name of the mount target.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>1ca404a666-w****.cn-hangzhou.nas.aliyuncs.com</para>
+                /// <para>1ca404****-w****.cn-hangzhou.nas.aliyuncs.com</para>
                 /// </summary>
                 [NameInMap("MountTargetDomain")]
                 [Validation(Required=false)]
@@ -140,6 +140,52 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
+
+                /// <summary>
+                /// <para>An array of tags. The array may contain up to 20 tags. If the array contains multiple tags, each tag key is unique.</para>
+                /// </summary>
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
+                public DescribeMountTargetsResponseBodyMountTargetsMountTargetTags Tags { get; set; }
+                public class DescribeMountTargetsResponseBodyMountTargetsMountTargetTags : TeaModel {
+                    [NameInMap("Tag")]
+                    [Validation(Required=false)]
+                    public List<DescribeMountTargetsResponseBodyMountTargetsMountTargetTagsTag> Tag { get; set; }
+                    public class DescribeMountTargetsResponseBodyMountTargetsMountTargetTagsTag : TeaModel {
+                        /// <summary>
+                        /// <para>The tag key. Limits:</para>
+                        /// <list type="bullet">
+                        /// <item><description>The tag key cannot be null or an empty string.</description></item>
+                        /// <item><description>The tag key can be up to 128 characters in length.</description></item>
+                        /// <item><description>The key value cannot start with aliyun or acs:.</description></item>
+                        /// <item><description>The key value cannot contain http:// or https://.</description></item>
+                        /// </list>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>nastest</para>
+                        /// </summary>
+                        [NameInMap("Key")]
+                        [Validation(Required=false)]
+                        public string Key { get; set; }
+
+                        /// <summary>
+                        /// <para>The tag value.</para>
+                        /// <para>Limits:</para>
+                        /// <list type="bullet">
+                        /// <item><description>The tag value can be up to 128 characters in length.</description></item>
+                        /// <item><description>The tag value cannot contain http:// or https://.</description></item>
+                        /// </list>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>mounttargettest</para>
+                        /// </summary>
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                }
 
                 /// <summary>
                 /// <para>The ID of the virtual private cloud (VPC).</para>

@@ -173,6 +173,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 [Validation(Required=false)]
                 public string FsPath { get; set; }
 
+                [NameInMap("Includes")]
+                [Validation(Required=false)]
+                public string Includes { get; set; }
+
                 /// <summary>
                 /// <para>The initiator of the data flow task. Valid values:</para>
                 /// <list type="bullet">

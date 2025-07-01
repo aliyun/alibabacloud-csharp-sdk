@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>Specifies whether to perform a dry run. The dry run checks parameter validity and prerequisites. The dry run does not delete the specified quota or incur fees.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: performs only a dry run. The system checks the required parameters, request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the HTTP status code 200 is returned.</description></item>
+        /// <item><description>true: performs only a dry run. The system checks the required parameters, request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the HTTP status code 200 is returned.</description></item>
         /// <item><description>false (default): performs a dry run and sends the request. If the request passes the dry run, the quota is deleted.</description></item>
         /// </list>
         /// 
@@ -75,11 +75,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FsetId { get; set; }
 
         /// <summary>
-        /// <para>The limit of the total capacity of the quota. Unit: bytes.</para>
+        /// <para>The total capacity of the quota. Unit: bytes.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Minimum value: 10737418240 (10 GiB).</description></item>
-        /// <item><description>Maximum value: 1073741824000 (1024000 GiB).</description></item>
         /// <item><description>Step size: 1073741824 (1 GiB).</description></item>
         /// </list>
         /// 
