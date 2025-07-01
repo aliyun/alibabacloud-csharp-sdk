@@ -187,6 +187,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             [Validation(Required=false)]
             public long? WorkflowId { get; set; }
 
+            [NameInMap("WorkflowParameters")]
+            [Validation(Required=false)]
+            public string WorkflowParameters { get; set; }
+
         }
 
     }
