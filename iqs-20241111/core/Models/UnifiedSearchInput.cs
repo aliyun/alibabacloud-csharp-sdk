@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         [Validation(Required=false)]
         public string EngineType { get; set; }
 
+        [NameInMap("location")]
+        [Validation(Required=false)]
+        public string Location { get; set; }
+
         [NameInMap("query")]
         [Validation(Required=false)]
         public string Query { get; set; }
