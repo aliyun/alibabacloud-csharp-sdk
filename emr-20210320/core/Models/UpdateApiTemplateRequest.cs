@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>区域ID。</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>资源组ID。</para>
+        /// <para>Resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzabjyop****</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>集群模板id。</para>
+        /// <para>Template ID (it is recommended to use the parameter TemplateId).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,11 +64,11 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// <para>集群模板名字。</para>
+        /// <para>The name of the template.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>DATALAKE模板</para>
+        /// <para>datalakeTest1</para>
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]

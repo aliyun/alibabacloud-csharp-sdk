@@ -8,17 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Emr20210320.Models
 {
-    public class DeleteUsersResponseBody : TeaModel {
-        /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values: true and false.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>true</para>
-        /// </summary>
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public bool? Data { get; set; }
-
+    public class PutManagedScalingPolicyResponseBody : TeaModel {
         /// <summary>
         /// <para>The request ID.</para>
         /// 

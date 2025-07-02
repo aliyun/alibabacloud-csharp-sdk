@@ -12,6 +12,11 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
+        /// <para>Indicates whether the user is an admin user. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -22,7 +27,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public bool? IsAdmin { get; set; }
 
         /// <summary>
-        /// <para>本次请求所返回的最大记录条数。</para>
+        /// <para>The maximum number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -32,7 +37,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>返回读取到的数据位置，空代表数据已经读取完毕。</para>
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DD6B1B2A-5837-5237-ABE4-FF0C89568980</para>
@@ -42,7 +47,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>请求ID。</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DD6B1B2A-5837-5237-ABE4-FF0C8944****</para>
@@ -52,7 +57,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>本次请求条件下的数据总量。</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -62,14 +67,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>用户列表。</para>
+        /// <para>The users.</para>
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]
         public List<ListUsersResponseBodyUsers> Users { get; set; }
         public class ListUsersResponseBodyUsers : TeaModel {
             /// <summary>
-            /// <para>创建时间。</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1509338726362</para>
@@ -79,7 +84,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>备注。</para>
+            /// <para>The remarks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>添加test用户</para>
@@ -89,7 +94,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Keytab内容Base64编码。</para>
+            /// <para>The Base64-encoded content of the keytab file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DBEDASDF==</para>
@@ -99,8 +104,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string KeytabHex { get; set; }
 
             /// <summary>
-            /// <para>LDAP链接。
-            /// ldap://emr-header-1.cluster-50018****:10389</para>
+            /// <para>The Lightweight Directory Access Protocol (LDAP) link.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ldap://master-1-1.c-c6ce2d16d118****.cn-hangzhou.emr.aliyuncs.com:10389</para>
@@ -110,7 +114,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string LdapUrl { get; set; }
 
             /// <summary>
-            /// <para>用户ID。</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>125046002175****</para>
@@ -120,8 +124,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string UserId { get; set; }
 
             /// <summary>
-            /// <para>用户名称。
-            /// test</para>
+            /// <para>The username.</para>
             /// 
             /// <b>Example:</b>
             /// <para>yun****</para>

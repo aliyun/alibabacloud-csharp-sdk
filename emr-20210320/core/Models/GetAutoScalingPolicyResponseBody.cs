@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the auto scaling policy.</para>
+        /// <para>The auto scaling policy.</para>
         /// </summary>
         [NameInMap("ScalingPolicy")]
         [Validation(Required=false)]

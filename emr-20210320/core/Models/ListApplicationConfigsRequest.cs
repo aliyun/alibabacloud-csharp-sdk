@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ConfigFileName { get; set; }
 
         /// <summary>
-        /// <para>The name of the configuration item.</para>
+        /// <para>The key of the configuration item.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dfs.replication</para>

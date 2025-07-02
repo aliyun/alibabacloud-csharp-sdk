@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The API operation templates.</para>
+        /// <para>The array of API templates.</para>
         /// </summary>
         [NameInMap("ApiTemplates")]
         [Validation(Required=false)]

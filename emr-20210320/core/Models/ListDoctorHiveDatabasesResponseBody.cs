@@ -1818,7 +1818,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 }
 
                 /// <summary>
-                /// <para>The daily incremental of the total data volume.</para>
+                /// <para>The daily increment of the total data volume.</para>
                 /// </summary>
                 [NameInMap("TotalDataDayGrowthSize")]
                 [Validation(Required=false)]

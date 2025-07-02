@@ -12,6 +12,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Valid values: true and false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -22,7 +23,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>请求ID。</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DD6B1B2A-5837-5237-ABE4-FF0C8944****</para>

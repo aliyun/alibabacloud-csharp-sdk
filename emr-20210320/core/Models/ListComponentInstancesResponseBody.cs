@@ -137,6 +137,10 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             [Validation(Required=false)]
             public string NodeName { get; set; }
 
+            [NameInMap("ZoneId")]
+            [Validation(Required=false)]
+            public string ZoneId { get; set; }
+
         }
 
         /// <summary>

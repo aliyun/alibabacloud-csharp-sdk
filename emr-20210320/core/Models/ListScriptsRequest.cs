@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ScriptType { get; set; }
 
         /// <summary>
-        /// <para>The status of the script. Only common scripts are supported.</para>
+        /// <para>The script status list.</para>
         /// </summary>
         [NameInMap("Statuses")]
         [Validation(Required=false)]

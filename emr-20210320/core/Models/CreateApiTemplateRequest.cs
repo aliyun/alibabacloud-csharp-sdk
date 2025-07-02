@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>DATALAKE模板</para>
+        /// <para>DATALAKE template</para>
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]

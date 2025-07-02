@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Details about nodes.</para>
+        /// <para>The node list.</para>
         /// </summary>
         [NameInMap("Nodes")]
         [Validation(Required=false)]

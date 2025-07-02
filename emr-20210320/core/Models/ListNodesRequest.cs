@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The list of tags to be bound.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

@@ -1,3 +1,13 @@
+2025-07-02 Version: 3.0.0
+- Support API PutManagedScalingPolicy.
+- Delete API GetDoctorHDFSUGI.
+- Update API IncreaseNodes: add request parameters Promotions.
+- Update API ListComponentInstances: add request parameters ZoneId.
+- Update API ListComponentInstances: add response parameters Body.ComponentInstances.$.ZoneId.
+- Update API ListNodeGroups: add request parameters ZoneId.
+- Update API RunCluster: add request parameters Promotions.
+
+
 2025-02-21 Version: 2.3.0
 - Support API CreateUsers.
 - Support API DeleteUsers.

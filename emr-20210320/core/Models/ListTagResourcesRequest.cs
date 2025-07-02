@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The array of tags. The number of array elements N. Valid values: 1 to 20.</para>
+        /// <para>An array of tags. The number of elements in the array. Valid values: 1 to 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

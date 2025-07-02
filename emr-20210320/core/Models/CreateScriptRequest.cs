@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ScriptType { get; set; }
 
         /// <summary>
-        /// <para>The common scripts or bootstrap actions.</para>
+        /// <para>The list of scripts.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Scripts")]
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public List<Script> Scripts { get; set; }
 
         /// <summary>
-        /// <para>The timeout period for manually running a common script. You cannot specify the timeout period for a bootstrap action.</para>
+        /// <para>The timeout period for a manual execution script. You cannot specify a timeout period for a bootstrap action.</para>
         /// </summary>
         [NameInMap("TimeoutSecs")]
         [Validation(Required=false)]

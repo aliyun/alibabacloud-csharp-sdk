@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ApplicationConfigsShrink { get; set; }
 
         /// <summary>
-        /// <para>The services. Number of elements in the array: 1 to 100.</para>
+        /// <para>The list of services. Number of elements in the array: 1 to 100.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Applications")]
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ApplicationsShrink { get; set; }
 
         /// <summary>
-        /// <para>The bootstrap actions. Number of elements in the array: 1 to 10.</para>
+        /// <para>The array of bootstrap scripts. Number of elements in the array: 1 to 10.</para>
         /// </summary>
         [NameInMap("BootstrapScripts")]
         [Validation(Required=false)]
@@ -112,14 +112,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The attributes of all ECS instances.</para>
+        /// <para>The node attributes. The basic attributes of all ECS nodes in the cluster.</para>
         /// </summary>
         [NameInMap("NodeAttributes")]
         [Validation(Required=false)]
         public string NodeAttributesShrink { get; set; }
 
         /// <summary>
-        /// <para>The node groups. Number of elements in the array: 1 to 100.</para>
+        /// <para>The array of configurations of the node groups. Number of elements in the array: 1 to 100.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("NodeGroups")]
@@ -140,6 +140,10 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         [NameInMap("PaymentType")]
         [Validation(Required=false)]
         public string PaymentType { get; set; }
+
+        [NameInMap("Promotions")]
+        [Validation(Required=false)]
+        public string PromotionsShrink { get; set; }
 
         /// <summary>
         /// <para>The region ID.</para>
@@ -188,14 +192,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string SecurityMode { get; set; }
 
         /// <summary>
-        /// <para>The subscription configurations. This parameter takes effect only if you set the PaymentType parameter to Subscription.</para>
+        /// <para>The subscription configurations. This parameter is required when the PaymentType parameter is set to Subscription.</para>
         /// </summary>
         [NameInMap("SubscriptionConfig")]
         [Validation(Required=false)]
         public string SubscriptionConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The tags. Number of elements in the array: 0 to 20.</para>
+        /// <para>The tag. Number of elements in the array: 0 to 20.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

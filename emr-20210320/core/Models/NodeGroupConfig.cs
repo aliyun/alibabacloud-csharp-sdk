@@ -23,6 +23,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         [Validation(Required=false)]
         public AutoScalingPolicy AutoScalingPolicy { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("CompensateWithOnDemand")]
+        [Validation(Required=false)]
+        public bool? CompensateWithOnDemand { get; set; }
+
         [NameInMap("ComponentTags")]
         [Validation(Required=false)]
         public List<string> ComponentTags { get; set; }

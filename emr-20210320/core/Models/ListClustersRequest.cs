@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ListClustersRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the clusters. You can specify a maximum of 100 items.</para>
+        /// <para>The cluster IDs. Number of elements in the array: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzabjyop****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <para>The states of clusters. You can specify a maximum of 100 items.</para>
+        /// <para>The states of the clusters. Number of elements in the array: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;HADOOP&quot;]</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public List<string> ClusterStates { get; set; }
 
         /// <summary>
-        /// <para>The types of the clusters. You can specify a maximum of 100 items.</para>
+        /// <para>The list of cluster types. Number of elements in the array: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;c-b933c5aac8fe****&quot;]</para>
@@ -81,34 +81,6 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
         /// <summary>
         /// <para>The region ID.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>cn-qingdao</description></item>
-        /// <item><description>cn-beijing</description></item>
-        /// <item><description>cn-zhangjiakou</description></item>
-        /// <item><description>cn-huhehaote</description></item>
-        /// <item><description>cn-hangzhou</description></item>
-        /// <item><description>cn-shanghai</description></item>
-        /// <item><description>cn-shenzhen</description></item>
-        /// <item><description>cn-chengdu</description></item>
-        /// <item><description>cn-hongkong</description></item>
-        /// <item><description>cn-wulanchabu</description></item>
-        /// <item><description>cn-heyuan-acdr-1</description></item>
-        /// <item><description>cn-qingdao-acdr-ut-1</description></item>
-        /// <item><description>ap-northeast-1</description></item>
-        /// <item><description>ap-southeast-1</description></item>
-        /// <item><description>ap-southeast-2</description></item>
-        /// <item><description>ap-southeast-3</description></item>
-        /// <item><description>ap-southeast-5</description></item>
-        /// <item><description>ap-south-1</description></item>
-        /// <item><description>us-east-1</description></item>
-        /// <item><description>us-west-1</description></item>
-        /// <item><description>me-east-1</description></item>
-        /// <item><description>me-central-1</description></item>
-        /// <item><description>eu-central-1</description></item>
-        /// <item><description>eu-west-1</description></item>
-        /// <item><description>cn-north-2-gov-1</description></item>
-        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -129,7 +101,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tags. Number of elements in the array: 1 to 20.</para>
+        /// <para>The tag list. Number of elements in the array: 1 to 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;PayAsYouGo&quot;]</para>

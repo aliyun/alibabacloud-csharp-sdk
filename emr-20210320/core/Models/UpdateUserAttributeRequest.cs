@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class UpdateUserAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>集群ID。</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>用户备注。</para>
+        /// <para>The remarks of the user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>用户密码。</para>
+        /// <para>The user password.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>区域ID。</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>用户ID。</para>
+        /// <para>The user ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>125046002175****</para>
@@ -65,6 +65,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string UserId { get; set; }
 
         /// <summary>
+        /// <para>The username.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>yun****</para>
         /// </summary>

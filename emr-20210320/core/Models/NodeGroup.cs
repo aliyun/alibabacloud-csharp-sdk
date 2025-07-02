@@ -20,6 +20,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public List<string> AdditionalSecurityGroupIds { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("CompensateWithOnDemand")]
+        [Validation(Required=false)]
+        public bool? CompensateWithOnDemand { get; set; }
+
+        /// <summary>
         /// <para>成本优化模式配置。</para>
         /// </summary>
         [NameInMap("CostOptimizedConfig")]

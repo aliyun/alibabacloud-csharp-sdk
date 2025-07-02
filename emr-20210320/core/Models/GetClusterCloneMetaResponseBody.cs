@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class GetClusterCloneMetaResponseBody : TeaModel {
         /// <summary>
-        /// <para>The metadata of the cluster that you want to clone.</para>
+        /// <para>Cluster clone metadata.</para>
         /// </summary>
         [NameInMap("ClusterCloneMeta")]
         [Validation(Required=false)]
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public List<ApplicationConfig> ApplicationConfigs { get; set; }
 
             /// <summary>
-            /// <para>The services.</para>
+            /// <para>The cluster applications.</para>
             /// </summary>
             [NameInMap("Applications")]
             [Validation(Required=false)]
             public List<Application> Applications { get; set; }
 
             /// <summary>
-            /// <para>The bootstrap actions. Number of elements in the array: 1 to 10.</para>
+            /// <para>An array of bootstrap scripts. The number of elements in the array: 1 to 10.</para>
             /// </summary>
             [NameInMap("BootstrapScripts")]
             [Validation(Required=false)]
@@ -140,6 +140,9 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             /// <item><description>False</description></item>
             /// <item><description>True</description></item>
             /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>True</para>
             /// </summary>
             [NameInMap("ExistCloneConfig")]
             [Validation(Required=false)]
@@ -153,7 +156,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public NodeAttributes NodeAttributes { get; set; }
 
             /// <summary>
-            /// <para>The node groups. Number of elements in the array: 1 to 100.</para>
+            /// <para>The node groups. The number of elements in the array: 1 to 100.</para>
             /// </summary>
             [NameInMap("NodeGroups")]
             [Validation(Required=false)]
@@ -391,7 +394,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public SubscriptionConfig SubscriptionConfig { get; set; }
 
             /// <summary>
-            /// <para>The tags.</para>
+            /// <para>The list of cluster tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]

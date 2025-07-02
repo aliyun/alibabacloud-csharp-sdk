@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class IncreaseNodesRequest : TeaModel {
         /// <summary>
-        /// <para>The application configurations. You can specify a maximum of 1,000 items.</para>
+        /// <para>The application configurations. Number of elements in the array: 1 to 1,000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The number of nodes. The number of incremental nodes for this scale-out. Valid values: 1 to 500.</para>
+        /// <para>The number of nodes to add.Valid values: 1 to 500.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -114,6 +114,10 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         [NameInMap("PaymentDurationUnit")]
         [Validation(Required=false)]
         public string PaymentDurationUnit { get; set; }
+
+        [NameInMap("Promotions")]
+        [Validation(Required=false)]
+        public List<Promotion> Promotions { get; set; }
 
         /// <summary>
         /// <para>The ID of the region in which you want to create the instance.</para>

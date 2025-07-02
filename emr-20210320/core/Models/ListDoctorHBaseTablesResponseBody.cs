@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ListDoctorHBaseTablesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response parameters.</para>
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                     /// <para>The unit of the metric.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>dat</para>
+                    /// <para>day</para>
                     /// </summary>
                     [NameInMap("Unit")]
                     [Validation(Required=false)]

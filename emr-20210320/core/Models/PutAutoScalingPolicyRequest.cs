@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class PutAutoScalingPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>集群ID。</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The maximum and minimum numbers of nodes in a node group.</para>
+        /// <para>The constraints on the maximum and minimum numbers of nodes in a node group.</para>
         /// </summary>
         [NameInMap("Constraints")]
         [Validation(Required=false)]
         public ScalingConstraints Constraints { get; set; }
 
         /// <summary>
-        /// <para>节点组ID。节点组 Id-针对 ACK 集群，此字段为空。</para>
+        /// <para>The ID of the node group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string NodeGroupId { get; set; }
 
         /// <summary>
-        /// <para>区域ID。</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The auto scaling rules. Number of elements in the array: 0 to 100.</para>
+        /// <para>The description list of auto scaling rules. Number of elements in the array: 0 to 100.</para>
         /// </summary>
         [NameInMap("ScalingRules")]
         [Validation(Required=false)]

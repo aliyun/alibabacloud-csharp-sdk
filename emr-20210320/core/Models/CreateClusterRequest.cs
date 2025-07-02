@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class CreateClusterRequest : TeaModel {
         /// <summary>
-        /// <para>The application configurations. Number of elements in the array: 1 to 1000.</para>
+        /// <para>The service configurations. Number of elements in the array: 1 to 1,000.</para>
         /// </summary>
         [NameInMap("ApplicationConfigs")]
         [Validation(Required=false)]
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public List<Application> Applications { get; set; }
 
         /// <summary>
-        /// <para>The bootstrap actions. Number of elements in the array: 1 to 10.</para>
+        /// <para>The array of bootstrap scripts. Number of elements in the array: 1 to 10.</para>
         /// </summary>
         [NameInMap("BootstrapScripts")]
         [Validation(Required=false)]
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The attributes of all ECS instances.</para>
+        /// <para>The node attributes. The basic attributes of all ECS nodes in the cluster.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("NodeAttributes")]
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public NodeAttributes NodeAttributes { get; set; }
 
         /// <summary>
-        /// <para>The node groups. Number of elements in the array: 1 to 100.</para>
+        /// <para>The array of configurations of the node groups. Number of elements in the array: 1 to 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public SubscriptionConfig SubscriptionConfig { get; set; }
 
         /// <summary>
-        /// <para>The tags. Number of elements in the array: 0 to 20.</para>
+        /// <para>The tag. Number of elements in the array: 0 to 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A7D960FA-6DBA-5E07-8746-A63E3E4D****</para>

@@ -143,6 +143,12 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             [Validation(Required=false)]
             public string OperationId { get; set; }
 
+            /// <summary>
+            /// <para>The policy type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>AUTO</para>
+            /// </summary>
             [NameInMap("PolicyType")]
             [Validation(Required=false)]
             public string PolicyType { get; set; }

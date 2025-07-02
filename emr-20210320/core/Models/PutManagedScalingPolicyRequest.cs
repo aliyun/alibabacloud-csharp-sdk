@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Emr20210320.Models
 {
-    public class DeleteUsersRequest : TeaModel {
+    public class PutManagedScalingPolicyRequest : TeaModel {
         /// <summary>
         /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
@@ -21,6 +21,13 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The constrains on the maximum and minimum numbers of nodes in a node group.</para>
+        /// </summary>
+        [NameInMap("Constraints")]
+        [Validation(Required=false)]
+        public ManagedScalingConstraints Constraints { get; set; }
+
+        /// <summary>
         /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -30,13 +37,6 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
-
-        /// <summary>
-        /// <para>The usernames. Number of elements in the array: 0 to 10.</para>
-        /// </summary>
-        [NameInMap("UserNames")]
-        [Validation(Required=false)]
-        public List<string> UserNames { get; set; }
 
     }
 

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Emr20210320.Models
 {
-    public class GetDoctorHDFSUGIResponse : TeaModel {
+    public class PutManagedScalingPolicyResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public GetDoctorHDFSUGIResponseBody Body { get; set; }
+        public PutManagedScalingPolicyResponseBody Body { get; set; }
 
     }
 
