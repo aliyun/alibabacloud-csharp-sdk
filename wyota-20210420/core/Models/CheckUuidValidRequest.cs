@@ -28,6 +28,10 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         [Validation(Required=false)]
         public string ClientId { get; set; }
 
+        [NameInMap("ClientVersion")]
+        [Validation(Required=false)]
+        public string ClientVersion { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -39,12 +43,24 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         [Validation(Required=false)]
         public string EtherMac { get; set; }
 
+        [NameInMap("LoginRegionId")]
+        [Validation(Required=false)]
+        public string LoginRegionId { get; set; }
+
+        [NameInMap("LoginToken")]
+        [Validation(Required=false)]
+        public string LoginToken { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SerialNo")]
         [Validation(Required=false)]
         public string SerialNo { get; set; }
+
+        [NameInMap("SessionId")]
+        [Validation(Required=false)]
+        public string SessionId { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

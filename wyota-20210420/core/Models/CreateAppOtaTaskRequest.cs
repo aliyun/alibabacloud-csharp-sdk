@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         [Validation(Required=false)]
         public string TenantId { get; set; }
 
+        [NameInMap("TenantIdList")]
+        [Validation(Required=false)]
+        public List<string> TenantIdList { get; set; }
+
     }
 
 }

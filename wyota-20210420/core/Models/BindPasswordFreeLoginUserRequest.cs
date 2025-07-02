@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         [Validation(Required=false)]
         public string EndUserId { get; set; }
 
+        [NameInMap("MainBizType")]
+        [Validation(Required=false)]
+        public string MainBizType { get; set; }
+
         [NameInMap("SerialNumber")]
         [Validation(Required=false)]
         public string SerialNumber { get; set; }

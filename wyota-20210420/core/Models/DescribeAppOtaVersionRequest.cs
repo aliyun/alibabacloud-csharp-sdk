@@ -25,6 +25,14 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         [Validation(Required=false)]
         public string Creator { get; set; }
 
+        [NameInMap("NullChannel")]
+        [Validation(Required=false)]
+        public bool? NullChannel { get; set; }
+
+        [NameInMap("OtaType")]
+        [Validation(Required=false)]
+        public int? OtaType { get; set; }
+
         [NameInMap("Project")]
         [Validation(Required=false)]
         public string Project { get; set; }

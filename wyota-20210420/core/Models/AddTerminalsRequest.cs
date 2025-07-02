@@ -35,6 +35,10 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
 
         }
 
+        [NameInMap("MainBizType")]
+        [Validation(Required=false)]
+        public string MainBizType { get; set; }
+
     }
 
 }

@@ -109,6 +109,10 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
                 [Validation(Required=false)]
                 public string VersionType { get; set; }
 
+                [NameInMap("WyForceUpgrade")]
+                [Validation(Required=false)]
+                public bool? WyForceUpgrade { get; set; }
+
             }
 
         }

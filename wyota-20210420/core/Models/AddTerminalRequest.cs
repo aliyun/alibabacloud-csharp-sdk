@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         [Validation(Required=false)]
         public string Alias { get; set; }
 
+        [NameInMap("ClientType")]
+        [Validation(Required=false)]
+        public string ClientType { get; set; }
+
+        [NameInMap("MainBizType")]
+        [Validation(Required=false)]
+        public string MainBizType { get; set; }
+
         [NameInMap("SerialNumber")]
         [Validation(Required=false)]
         public string SerialNumber { get; set; }
@@ -20,6 +28,10 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         [NameInMap("TerminalGroupId")]
         [Validation(Required=false)]
         public string TerminalGroupId { get; set; }
+
+        [NameInMap("Uuid")]
+        [Validation(Required=false)]
+        public string Uuid { get; set; }
 
     }
 

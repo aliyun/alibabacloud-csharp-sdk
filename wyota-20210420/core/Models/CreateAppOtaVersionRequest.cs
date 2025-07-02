@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         [Validation(Required=false)]
         public string Project { get; set; }
 
+        [NameInMap("RelationVersionUids")]
+        [Validation(Required=false)]
+        public List<string> RelationVersionUids { get; set; }
+
         [NameInMap("ReleaseNote")]
         [Validation(Required=false)]
         public string ReleaseNote { get; set; }

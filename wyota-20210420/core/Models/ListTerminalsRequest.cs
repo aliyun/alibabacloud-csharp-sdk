@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         [Validation(Required=false)]
         public bool? InManage { get; set; }
 
+        [NameInMap("MainBizType")]
+        [Validation(Required=false)]
+        public string MainBizType { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>200</para>

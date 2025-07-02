@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
+        [NameInMap("ClientAppVersion")]
+        [Validation(Required=false)]
+        public string ClientAppVersion { get; set; }
+
         [NameInMap("ClientId")]
         [Validation(Required=false)]
         public string ClientId { get; set; }

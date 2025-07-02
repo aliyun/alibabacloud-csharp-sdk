@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Wyota20210420.Models
 {
     public class UnbindPasswordFreeLoginUserRequest : TeaModel {
+        [NameInMap("MainBizType")]
+        [Validation(Required=false)]
+        public string MainBizType { get; set; }
+
         [NameInMap("SerialNumber")]
         [Validation(Required=false)]
         public string SerialNumber { get; set; }

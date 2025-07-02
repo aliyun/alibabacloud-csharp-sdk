@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         [Validation(Required=false)]
         public RegisterDeviceResponseBodyData Data { get; set; }
         public class RegisterDeviceResponseBodyData : TeaModel {
+            [NameInMap("NewUpgrade")]
+            [Validation(Required=false)]
+            public bool? NewUpgrade { get; set; }
+
             [NameInMap("Uuid")]
             [Validation(Required=false)]
             public string Uuid { get; set; }
