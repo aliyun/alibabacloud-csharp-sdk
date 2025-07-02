@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     public List<DescribeVSwitchesResponseBodyVSwitchesVSwitchTagsTag> Tag { get; set; }
                     public class DescribeVSwitchesResponseBodyVSwitchesVSwitchTagsTag : TeaModel {
                         /// <summary>
-                        /// <para>标签键。</para>
+                        /// <para>The tag key.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>TestKey</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                         public string TagValue { get; set; }
 
                         /// <summary>
-                        /// <para>标签值。</para>
+                        /// <para>The request error rate.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>TestValue</para>

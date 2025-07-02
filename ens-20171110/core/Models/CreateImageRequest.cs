@@ -66,12 +66,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string TargetOSSRegionId { get; set; }
 
         /// <summary>
-        /// <para>创建镜像是否包含数据盘。</para>
+        /// <para>Specifies whether to include data disk snapshots in the custom image.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>取值
-        /// true：附带数据盘
-        /// false：默认值，不附带数据盘</para>
+        /// <para>Value true false (default)</para>
         /// </summary>
         [NameInMap("WithDataDisks")]
         [Validation(Required=false)]

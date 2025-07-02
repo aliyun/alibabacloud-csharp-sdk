@@ -94,6 +94,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string ImageId { get; set; }
 
+        [NameInMap("InstanceBillingCycle")]
+        [Validation(Required=false)]
+        public string InstanceBillingCycle { get; set; }
+
         /// <summary>
         /// <para>The specification of the Android in Container (AIC) instance. Examples:</para>
         /// <list type="bullet">
@@ -169,7 +173,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <item><description>If you set PeriodUnit to Day, you can set Period only to 3.</description></item>
         /// <item><description>If you set PeriodUnit to Month, you can set Period to a value within the range of [1,9], or set the value to 12.</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -185,7 +188,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <item><description>If you set PeriodUnit to Day, you can set Period only to 3.</description></item>
         /// <item><description>If you set PeriodUnit to Month, you can set Period to a value within the range of [1,9], or set the value to 12.</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>

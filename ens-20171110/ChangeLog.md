@@ -1,3 +1,7 @@
+2025-07-02 Version: 8.0.14
+- Update API CreateARMServerInstances: add request parameters InstanceBillingCycle.
+
+
 2025-06-26 Version: 8.0.13
 - Generated csharp 2017-11-10 for Ens.
 
