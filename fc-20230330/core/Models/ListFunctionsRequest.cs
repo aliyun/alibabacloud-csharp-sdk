@@ -78,6 +78,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public string Prefix { get; set; }
 
+        [NameInMap("resourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         /// <summary>
         /// <para>The runtime of the functions to retrieve.</para>
         /// 

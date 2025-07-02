@@ -1,3 +1,7 @@
+2025-07-02 Version: 4.3.5
+- Update API ListFunctions: add request parameters resourceGroupId.
+
+
 2025-04-24 Version: 4.3.4
 - Generated csharp 2023-03-30 for FC.
 

@@ -129,6 +129,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public OSSMountConfig OssMountConfig { get; set; }
 
+        [NameInMap("resourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>acs:ram::188077086902****:role/fc-test</para>
@@ -147,6 +151,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public string Runtime { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>MCP_SSE</para>
+        /// </summary>
         [NameInMap("sessionAffinity")]
         [Validation(Required=false)]
         public string SessionAffinity { get; set; }
