@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitHighlightExtractionJobRequest : TeaModel {
         /// <summary>
+        /// <para>The client token used to ensure the idempotency of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b>12e8864746a0a398</b></b></para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The input configuration.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{
         ///     &quot;MediaArray&quot;: [{
@@ -42,6 +46,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string InputConfig { get; set; }
 
         /// <summary>
+        /// <para>The output configuration.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{
         ///     &quot;NeedExport&quot;: true,
@@ -57,6 +63,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string OutputConfig { get; set; }
 
+        /// <summary>
+        /// <para>The user-defined data, including the business and callback configurations. For more information, see <a href="~~357745#section-urj-v3f-0s1~~">UserData</a>.</para>
+        /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]
         public string UserData { get; set; }

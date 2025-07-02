@@ -28,16 +28,28 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public List<UpdateMediaLiveInputRequestInputSettings> InputSettings { get; set; }
         public class UpdateMediaLiveInputRequestInputSettings : TeaModel {
+            /// <summary>
+            /// <para>The ID of the flow from MediaConnect. This parameter is required when Type is set to MEDIA_CONNECT.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><b><b><b>81-9693-40dc-bbab-db5e49</b></b></b></para>
+            /// </summary>
             [NameInMap("FlowId")]
             [Validation(Required=false)]
             public string FlowId { get; set; }
 
+            /// <summary>
+            /// <para>The output name of the MediaConnect flow. This parameter is required when Type is set to MEDIA_CONNECT.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>myFlowOutputName</para>
+            /// </summary>
             [NameInMap("FlowOutputName")]
             [Validation(Required=false)]
             public string FlowOutputName { get; set; }
 
             /// <summary>
-            /// <para>The source URL where the stream is pulled from. This parameter is required for PULL inputs.</para>
+            /// <para>The source URL from which the stream is pulled. This parameter is required for PULL inputs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rtmp://domain/app/stream</para>

@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public int? AsrMaxSilence { get; set; }
 
+            [NameInMap("CustomParams")]
+            [Validation(Required=false)]
+            public string CustomParams { get; set; }
+
             [NameInMap("VadLevel")]
             [Validation(Required=false)]
             public int? VadLevel { get; set; }
@@ -123,6 +127,24 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public AIAgentConfigTtsConfig TtsConfig { get; set; }
         public class AIAgentConfigTtsConfig : TeaModel {
+            [NameInMap("PronunciationRules")]
+            [Validation(Required=false)]
+            public List<AIAgentConfigTtsConfigPronunciationRules> PronunciationRules { get; set; }
+            public class AIAgentConfigTtsConfigPronunciationRules : TeaModel {
+                [NameInMap("Pronunciation")]
+                [Validation(Required=false)]
+                public string Pronunciation { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+                [NameInMap("Word")]
+                [Validation(Required=false)]
+                public string Word { get; set; }
+
+            }
+
             [NameInMap("VoiceId")]
             [Validation(Required=false)]
             public string VoiceId { get; set; }
@@ -137,6 +159,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public AIAgentConfigTurnDetectionConfig TurnDetectionConfig { get; set; }
         public class AIAgentConfigTurnDetectionConfig : TeaModel {
+            [NameInMap("Mode")]
+            [Validation(Required=false)]
+            public string Mode { get; set; }
+
+            [NameInMap("SemanticWaitDuration")]
+            [Validation(Required=false)]
+            public int? SemanticWaitDuration { get; set; }
+
             [NameInMap("TurnEndWords")]
             [Validation(Required=false)]
             public List<string> TurnEndWords { get; set; }
@@ -150,6 +180,70 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [NameInMap("UserOnlineTimeout")]
         [Validation(Required=false)]
         public int? UserOnlineTimeout { get; set; }
+
+        [NameInMap("VcrConfig")]
+        [Validation(Required=false)]
+        public AIAgentConfigVcrConfig VcrConfig { get; set; }
+        public class AIAgentConfigVcrConfig : TeaModel {
+            [NameInMap("Equipment")]
+            [Validation(Required=false)]
+            public AIAgentConfigVcrConfigEquipment Equipment { get; set; }
+            public class AIAgentConfigVcrConfigEquipment : TeaModel {
+                [NameInMap("Enabled")]
+                [Validation(Required=false)]
+                public bool? Enabled { get; set; }
+
+            }
+
+            [NameInMap("HeadMotion")]
+            [Validation(Required=false)]
+            public AIAgentConfigVcrConfigHeadMotion HeadMotion { get; set; }
+            public class AIAgentConfigVcrConfigHeadMotion : TeaModel {
+                [NameInMap("Enabled")]
+                [Validation(Required=false)]
+                public bool? Enabled { get; set; }
+
+            }
+
+            [NameInMap("InvalidFrameMotion")]
+            [Validation(Required=false)]
+            public AIAgentConfigVcrConfigInvalidFrameMotion InvalidFrameMotion { get; set; }
+            public class AIAgentConfigVcrConfigInvalidFrameMotion : TeaModel {
+                [NameInMap("CallbackDelay")]
+                [Validation(Required=false)]
+                public int? CallbackDelay { get; set; }
+
+                [NameInMap("Enabled")]
+                [Validation(Required=false)]
+                public bool? Enabled { get; set; }
+
+            }
+
+            [NameInMap("PeopleCount")]
+            [Validation(Required=false)]
+            public AIAgentConfigVcrConfigPeopleCount PeopleCount { get; set; }
+            public class AIAgentConfigVcrConfigPeopleCount : TeaModel {
+                [NameInMap("Enabled")]
+                [Validation(Required=false)]
+                public bool? Enabled { get; set; }
+
+            }
+
+            [NameInMap("StillFrameMotion")]
+            [Validation(Required=false)]
+            public AIAgentConfigVcrConfigStillFrameMotion StillFrameMotion { get; set; }
+            public class AIAgentConfigVcrConfigStillFrameMotion : TeaModel {
+                [NameInMap("CallbackDelay")]
+                [Validation(Required=false)]
+                public int? CallbackDelay { get; set; }
+
+                [NameInMap("Enabled")]
+                [Validation(Required=false)]
+                public bool? Enabled { get; set; }
+
+            }
+
+        }
 
         [NameInMap("VoiceprintConfig")]
         [Validation(Required=false)]

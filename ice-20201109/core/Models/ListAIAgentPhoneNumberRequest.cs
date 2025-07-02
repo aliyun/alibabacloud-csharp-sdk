@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListAIAgentPhoneNumberRequest : TeaModel {
+        [NameInMap("Number")]
+        [Validation(Required=false)]
+        public string Number { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>1</para>
@@ -24,6 +28,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public int? Status { get; set; }
 
     }
 

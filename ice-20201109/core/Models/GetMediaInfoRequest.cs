@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetMediaInfoRequest : TeaModel {
+        [NameInMap("AuthTimeout")]
+        [Validation(Required=false)]
+        public long? AuthTimeout { get; set; }
+
         /// <summary>
         /// <para>The input URL of the media asset in another service. The URL must be registered in the IMS content library and bound to the ID of the media asset in IMS.</para>
         /// <list type="bullet">

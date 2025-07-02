@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListMediaBasicInfosRequest : TeaModel {
+        [NameInMap("AuthTimeout")]
+        [Validation(Required=false)]
+        public long? AuthTimeout { get; set; }
+
         /// <summary>
         /// <para>The business type of the media asset. Valid values:</para>
         /// <para>\- subtitles</para>

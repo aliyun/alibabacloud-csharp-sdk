@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public AIAgentOutboundCallConfig Config { get; set; }
 
+        [NameInMap("ImsAIAgentFreeObCall")]
+        [Validation(Required=false)]
+        public string ImsAIAgentFreeObCall { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>f213fbc005e4f309379701645f4****</para>

@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string SecurityGroupIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The input type. Valid values: RTMP_PUSH, RTMP_PULL, SRT_PUSH, and SRT_PULL.</para>
+        /// <para>The input type. Valid values: RTMP_PUSH, RTMP_PULL, SRT_PUSH, SRT_PULL, and MEDIA_CONNECT.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -1880,6 +1880,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             {
                 query["AdditionType"] = request.AdditionType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthTimeout))
+            {
+                query["AuthTimeout"] = request.AuthTimeout;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaIds))
             {
                 query["MediaIds"] = request.MediaIds;
@@ -1925,6 +1929,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdditionType))
             {
                 query["AdditionType"] = request.AdditionType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthTimeout))
+            {
+                query["AuthTimeout"] = request.AuthTimeout;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaIds))
             {
@@ -20013,6 +20021,10 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthTimeout))
+            {
+                query["AuthTimeout"] = request.AuthTimeout;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputURL))
             {
                 query["InputURL"] = request.InputURL;
@@ -20072,6 +20084,10 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthTimeout))
+            {
+                query["AuthTimeout"] = request.AuthTimeout;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputURL))
             {
                 query["InputURL"] = request.InputURL;
@@ -21209,6 +21225,10 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthTimeout))
+            {
+                query["AuthTimeout"] = request.AuthTimeout;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputURL))
             {
                 query["InputURL"] = request.InputURL;
@@ -21260,6 +21280,10 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthTimeout))
+            {
+                query["AuthTimeout"] = request.AuthTimeout;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputURL))
             {
                 query["InputURL"] = request.InputURL;
@@ -24488,6 +24512,10 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Number))
+            {
+                query["Number"] = request.Number;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["PageNumber"] = request.PageNumber;
@@ -24495,6 +24523,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -24534,6 +24566,10 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Number))
+            {
+                query["Number"] = request.Number;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["PageNumber"] = request.PageNumber;
@@ -24541,6 +24577,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -28761,6 +28801,10 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthTimeout))
+            {
+                query["AuthTimeout"] = request.AuthTimeout;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessType))
             {
                 query["BusinessType"] = request.BusinessType;
@@ -28848,6 +28892,10 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthTimeout))
+            {
+                query["AuthTimeout"] = request.AuthTimeout;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessType))
             {
                 query["BusinessType"] = request.BusinessType;
@@ -39498,6 +39546,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             {
                 query["Config"] = request.ConfigShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImsAIAgentFreeObCall))
+            {
+                query["ImsAIAgentFreeObCall"] = request.ImsAIAgentFreeObCall;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
             {
                 query["SessionId"] = request.SessionId;
@@ -39565,6 +39617,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigShrink))
             {
                 query["Config"] = request.ConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImsAIAgentFreeObCall))
+            {
+                query["ImsAIAgentFreeObCall"] = request.ImsAIAgentFreeObCall;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
             {
@@ -42975,7 +43031,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交高光提取任务</para>
+        /// <para>Submits a highlight extraction task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43031,7 +43087,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交高光提取任务</para>
+        /// <para>Submits a highlight extraction task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43087,7 +43143,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交高光提取任务</para>
+        /// <para>Submits a highlight extraction task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43105,7 +43161,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交高光提取任务</para>
+        /// <para>Submits a highlight extraction task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45455,7 +45511,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交高燃混剪任务</para>
+        /// <para>Submits a task to automatically recognize the highlight segments in the video input and compile them into a dramatic and engaging clip.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45511,7 +45567,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交高燃混剪任务</para>
+        /// <para>Submits a task to automatically recognize the highlight segments in the video input and compile them into a dramatic and engaging clip.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45567,7 +45623,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交高燃混剪任务</para>
+        /// <para>Submits a task to automatically recognize the highlight segments in the video input and compile them into a dramatic and engaging clip.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45585,7 +45641,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交高燃混剪任务</para>
+        /// <para>Submits a task to automatically recognize the highlight segments in the video input and compile them into a dramatic and engaging clip.</para>
         /// </summary>
         /// 
         /// <param name="request">

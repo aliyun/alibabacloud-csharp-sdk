@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetPlayInfoRequest : TeaModel {
+        [NameInMap("AuthTimeout")]
+        [Validation(Required=false)]
+        public long? AuthTimeout { get; set; }
+
         /// <summary>
         /// <para>The input URL that you specified for the media asset when you registered the media asset. For more information, see <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a>.</para>
         /// <remarks>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitScreenMediaHighlightsJobRequest : TeaModel {
         /// <summary>
+        /// <para>The editing configuration. For detailed parameters, see <a href="~~2863940#9b05519d46e0x~~">EditingConfig</a>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{
         ///     &quot;MediaConfig&quot;: {
@@ -26,6 +28,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string EditingConfig { get; set; }
 
         /// <summary>
+        /// <para>The input configuration. For detailed parameters, see <a href="~~2863940#dda38bf6ec2pk~~">InputConfig</a>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{
         ///     &quot;MediaArray&quot;: [
@@ -39,6 +43,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string InputConfig { get; set; }
 
         /// <summary>
+        /// <para>The output configuration. For detailed parameters, see <a href="~~2863940#4111a373d0xbz~~">OutputConfig</a>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{
         ///   &quot;MediaURL&quot;: &quot;<a href="http://xxx.oss-cn-shanghai.aliyuncs.com/xxx_%7Bindex%7D.mp4">http://xxx.oss-cn-shanghai.aliyuncs.com/xxx_{index}.mp4</a>&quot;,
@@ -51,6 +57,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string OutputConfig { get; set; }
 
+        /// <summary>
+        /// <para>The user-defined data, including the business and callback configurations. For more information, see <a href="https://help.aliyun.com/document_detail/357745.html">UserData</a>.</para>
+        /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]
         public string UserData { get; set; }

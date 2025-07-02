@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string AdditionType { get; set; }
 
+        [NameInMap("AuthTimeout")]
+        [Validation(Required=false)]
+        public long? AuthTimeout { get; set; }
+
         /// <summary>
         /// <para>The IDs of the media assets that you want to query. Separate the IDs with commas (,).</para>
         /// 

@@ -408,7 +408,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public List<UpdateMediaLiveChannelRequestVideoSettings> VideoSettings { get; set; }
         public class UpdateMediaLiveChannelRequestVideoSettings : TeaModel {
             /// <summary>
-            /// <para>The height of the output. Valid values: 0 to 2000. If you set it to 0 or leave it empty, the height automatically adapts to the specified width to maintain the original aspect ratio.</para>
+            /// <para>The height of the output. If you set it to 0 or leave it empty, the height automatically adapts to the specified width to maintain the original aspect ratio.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>For regular transcoding, the larger dimension cannot exceed 3840 px, and the smaller one cannot exceed 2160 px.</description></item>
+            /// <item><description>For Narrowband HD™ transcoding, the larger dimension cannot exceed 1920 px, and the smaller one cannot exceed 1080 px.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>720</para>
@@ -603,12 +608,28 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             }
 
+            /// <summary>
+            /// <para>The video transcoding method. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>NORMAL: regular transcoding</description></item>
+            /// <item><description>NBHD: Narrowband HD™ transcoding</description></item>
+            /// </list>
+            /// <para>If not specified, regular transcoding is used by default.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>NORMAL</para>
+            /// </summary>
             [NameInMap("VideoCodecType")]
             [Validation(Required=false)]
             public string VideoCodecType { get; set; }
 
             /// <summary>
-            /// <para>The width of the output. Valid values: 0 to 2000. If you set it to 0 or leave it empty, the width automatically adapts to the specified height to maintain the original aspect ratio.</para>
+            /// <para>The width of the output. If you set it to 0 or leave it empty, the width automatically adapts to the specified height to maintain the original aspect ratio.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>For regular transcoding, the larger dimension cannot exceed 3840 px, and the smaller one cannot exceed 2160 px.</description></item>
+            /// <item><description>For Narrowband HD™ transcoding, the larger dimension cannot exceed 1920 px, and the smaller one cannot exceed 1080 px.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>1280</para>
