@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryAuditLogRequest : TeaModel {
         /// <summary>
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
+        [NameInMap("AccessSourceFlag")]
+        [Validation(Required=false)]
+        public string AccessSourceFlag { get; set; }
+
+        /// <summary>
         /// <para>End date of the query, format (&quot;yyyyMMdd&quot;).</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -77,6 +85,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         [NameInMap("StartDate")]
         [Validation(Required=false)]
         public string StartDate { get; set; }
+
+        /// <summary>
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
+        [NameInMap("UserAccessDevice")]
+        [Validation(Required=false)]
+        public string UserAccessDevice { get; set; }
 
         /// <summary>
         /// <para>Workspace ID, the ID of the workspace to which the logs to be queried belong.</para>

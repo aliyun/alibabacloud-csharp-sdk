@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The dataset information.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string DatasetName { get; set; }
 
             /// <summary>
-            /// <para>If it is a custom SQL table, this is the specific SQL.</para>
+            /// <para>A list of all dimensions in the dataset.</para>
             /// </summary>
             [NameInMap("DimensionList")]
             [Validation(Required=false)]
@@ -222,6 +222,11 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string Expression { get; set; }
 
                 /// <summary>
+                /// <para>Expression for the flattened calculation dimensions.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>example_expression</para>
+                /// 
                 /// <b>if can be null:</b>
                 /// <c>true</c>
                 /// </summary>
@@ -240,6 +245,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string FactColumn { get; set; }
 
                 /// <summary>
+                /// <para>The description of the field.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>hhhh</para>
                 /// </summary>
@@ -398,7 +405,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string GmtModify { get; set; }
 
             /// <summary>
-            /// <para>The unique ID of the table to which the table belongs, which corresponds to the UniqueId of the CubeTypeList.</para>
+            /// <para>A list of all measures for the dataset.</para>
             /// </summary>
             [NameInMap("MeasureList")]
             [Validation(Required=false)]
@@ -440,6 +447,11 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string Expression { get; set; }
 
                 /// <summary>
+                /// <para>Expression for flattened computation metrics.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>example_expression</para>
+                /// 
                 /// <b>if can be null:</b>
                 /// <c>true</c>
                 /// </summary>
@@ -462,8 +474,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string FactColumn { get; set; }
 
                 /// <summary>
+                /// <para>The description of the field.</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>hhhh</para>
+                /// <para>asadsda</para>
                 /// </summary>
                 [NameInMap("FieldDescription")]
                 [Validation(Required=false)]
@@ -501,6 +515,16 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 
             }
 
+            /// <summary>
+            /// <para>Whether to enable extraction acceleration. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true</description></item>
+            /// <item><description>false</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("OpenOfflineAcceleration")]
             [Validation(Required=false)]
             public bool? OpenOfflineAcceleration { get; set; }

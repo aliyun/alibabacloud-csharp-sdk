@@ -7934,6 +7934,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessSourceFlag))
+            {
+                query["AccessSourceFlag"] = request.AccessSourceFlag;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
             {
                 query["EndDate"] = request.EndDate;
@@ -7957,6 +7961,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
             {
                 query["StartDate"] = request.StartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserAccessDevice))
+            {
+                query["UserAccessDevice"] = request.UserAccessDevice;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
@@ -8000,6 +8008,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessSourceFlag))
+            {
+                query["AccessSourceFlag"] = request.AccessSourceFlag;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
             {
                 query["EndDate"] = request.EndDate;
@@ -8023,6 +8035,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
             {
                 query["StartDate"] = request.StartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserAccessDevice))
+            {
+                query["UserAccessDevice"] = request.UserAccessDevice;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
@@ -9465,11 +9481,9 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Indicates whether the table is a custom SQL table. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: custom SQL table</description></item>
-        /// <item><description>false: non-custom SQL table</description></item>
-        /// </list>
+        /// <para>Indicates whether the table is a custom SQL table. Valid values:
+        /// \*   true: custom SQL table
+        /// \*   false: non-custom SQL table</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9511,11 +9525,9 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Indicates whether the table is a custom SQL table. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: custom SQL table</description></item>
-        /// <item><description>false: non-custom SQL table</description></item>
-        /// </list>
+        /// <para>Indicates whether the table is a custom SQL table. Valid values:
+        /// \*   true: custom SQL table
+        /// \*   false: non-custom SQL table</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9557,11 +9569,9 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Indicates whether the table is a custom SQL table. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: custom SQL table</description></item>
-        /// <item><description>false: non-custom SQL table</description></item>
-        /// </list>
+        /// <para>Indicates whether the table is a custom SQL table. Valid values:
+        /// \*   true: custom SQL table
+        /// \*   false: non-custom SQL table</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9579,11 +9589,9 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Indicates whether the table is a custom SQL table. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: custom SQL table</description></item>
-        /// <item><description>false: non-custom SQL table</description></item>
-        /// </list>
+        /// <para>Indicates whether the table is a custom SQL table. Valid values:
+        /// \*   true: custom SQL table
+        /// \*   false: non-custom SQL table</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13929,7 +13937,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch Management of Smart Q\&amp;A Authorizations</para>
+        /// <para>Batch Management of Smart Q\\\&amp;A Authorizations</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13996,7 +14004,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch Management of Smart Q\&amp;A Authorizations</para>
+        /// <para>Batch Management of Smart Q\\\&amp;A Authorizations</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14063,7 +14071,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch Management of Smart Q\&amp;A Authorizations</para>
+        /// <para>Batch Management of Smart Q\\\&amp;A Authorizations</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14086,7 +14094,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch Management of Smart Q\&amp;A Authorizations</para>
+        /// <para>Batch Management of Smart Q\\\&amp;A Authorizations</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>

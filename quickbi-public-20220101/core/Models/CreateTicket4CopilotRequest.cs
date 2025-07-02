@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <list type="bullet">
         /// <item><description><para>1: Alibaba Cloud Primary Account</para>
         /// </description></item>
-        /// <item><description><para>3: QuickBI Self-built Account</para>
+        /// <item><description><para>3: Quick BI Self-built Account</para>
         /// </description></item>
         /// <item><description><para>4: DingTalk</para>
         /// </description></item>

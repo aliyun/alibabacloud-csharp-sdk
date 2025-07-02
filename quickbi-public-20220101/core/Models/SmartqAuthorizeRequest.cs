@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class SmartqAuthorizeRequest : TeaModel {
+        /// <summary>
+        /// <para>Array of dataset IDs, separated by English commas. <notice>This parameter will be converted to the corresponding question resource ID for authorization. Therefore, if the input cubeId does not correspond to any question resource, an error indicating that the question resource does not exist will be reported. Please ensure the correctness of the cubeId.</notice></para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>wasdasd<em><b><b><b>1235235sd,ASDAS</b></b></b></em>**ASDAW123</para>
+        /// </summary>
         [NameInMap("CubeIds")]
         [Validation(Required=false)]
         public string CubeIds { get; set; }
