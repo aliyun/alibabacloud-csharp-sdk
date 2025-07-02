@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public string Database { get; set; }
 
+        [NameInMap("function")]
+        [Validation(Required=false)]
+        public string Function { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -58,6 +62,10 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [NameInMap("table")]
         [Validation(Required=false)]
         public string Table { get; set; }
+
+        [NameInMap("view")]
+        [Validation(Required=false)]
+        public string View { get; set; }
 
     }
 

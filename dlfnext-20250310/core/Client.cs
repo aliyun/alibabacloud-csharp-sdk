@@ -2535,6 +2535,10 @@ namespace AlibabaCloud.SDK.DlfNext20250310
             {
                 query["database"] = request.Database;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Function))
+            {
+                query["function"] = request.Function;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["maxResults"] = request.MaxResults;
@@ -2554,6 +2558,10 @@ namespace AlibabaCloud.SDK.DlfNext20250310
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Table))
             {
                 query["table"] = request.Table;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.View))
+            {
+                query["view"] = request.View;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2601,6 +2609,10 @@ namespace AlibabaCloud.SDK.DlfNext20250310
             {
                 query["database"] = request.Database;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Function))
+            {
+                query["function"] = request.Function;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["maxResults"] = request.MaxResults;
@@ -2620,6 +2632,10 @@ namespace AlibabaCloud.SDK.DlfNext20250310
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Table))
             {
                 query["table"] = request.Table;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.View))
+            {
+                query["view"] = request.View;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
