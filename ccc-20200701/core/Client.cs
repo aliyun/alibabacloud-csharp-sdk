@@ -17890,6 +17890,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ListFlashSmsApplicationsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取闪信模板列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListFlashSmsTemplatesRequest
         /// </param>
@@ -17935,6 +17940,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListFlashSmsTemplatesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取闪信模板列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListFlashSmsTemplatesRequest
         /// </param>
@@ -17980,6 +17990,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListFlashSmsTemplatesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取闪信模板列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListFlashSmsTemplatesRequest
         /// </param>
@@ -17993,6 +18008,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ListFlashSmsTemplatesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取闪信模板列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListFlashSmsTemplatesRequest
         /// </param>

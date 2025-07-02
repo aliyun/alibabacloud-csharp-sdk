@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public List<ListFlashSmsTemplatesResponseBodyData> Data { get; set; }
         public class ListFlashSmsTemplatesResponseBodyData : TeaModel {
+            [NameInMap("TemplateDetails")]
+            [Validation(Required=false)]
+            public string TemplateDetails { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>1715*****38</para>
