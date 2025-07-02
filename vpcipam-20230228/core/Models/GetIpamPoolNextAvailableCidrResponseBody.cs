@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
 {
     public class GetIpamPoolNextAvailableCidrResponseBody : TeaModel {
         /// <summary>
+        /// <para>Available CIDR.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>172.68.0.0/26</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
         public string CidrBlock { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>29FC6758-9B7C-5CC7-8CBF-4DD846FE7D82</para>
         /// </summary>

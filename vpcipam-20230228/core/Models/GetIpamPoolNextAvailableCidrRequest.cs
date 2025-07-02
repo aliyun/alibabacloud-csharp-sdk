@@ -10,6 +10,11 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
 {
     public class GetIpamPoolNextAvailableCidrRequest : TeaModel {
         /// <summary>
+        /// <para>CIDR to be allocated.</para>
+        /// <remarks>
+        /// <para> You must enter at least one of the CidrBlock and CidrMask fields.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>172.68.0.0/26</para>
         /// </summary>
@@ -18,6 +23,11 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
         public string CidrBlock { get; set; }
 
         /// <summary>
+        /// <para>The length of the CIDR mask to be allocated.</para>
+        /// <remarks>
+        /// <para> You must enter at least one of the CidrBlock and CidrMask fields.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>26</para>
         /// </summary>
@@ -26,6 +36,11 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
         public int? CidrMask { get; set; }
 
         /// <summary>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
+        /// <remarks>
+        /// <para> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
         /// </summary>
@@ -34,6 +49,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The ID of the IPAM pool.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,6 +60,10 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
         public string IpamPoolId { get; set; }
 
         /// <summary>
+        /// <para>The region of the IPAM pool.</para>
+        /// <remarks>
+        /// <para> If the IPAM pool has the region attribute, this parameter is set to the effective region of the IPAM pool. If not, this is set to the managed region.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

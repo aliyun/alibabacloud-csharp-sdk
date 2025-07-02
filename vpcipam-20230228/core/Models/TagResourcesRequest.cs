@@ -18,6 +18,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The region ID of the resource.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +29,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The IDs of the resources.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
@@ -43,6 +45,12 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The resource type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>IPAM</b></description></item>
+        /// <item><description><b>IPAMSCOPE</b></description></item>
+        /// <item><description><b>IPAMPOOL</b></description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,6 +61,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
         public string ResourceType { get; set; }
 
         /// <summary>
+        /// <para>The tags to add to the resources.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tag")]
@@ -60,6 +69,9 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
+            /// <para>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</para>
+            /// <para>The tag key can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It cannot start with a <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>FinanceDept</para>
             /// </summary>
@@ -68,6 +80,9 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
             public string Key { get; set; }
 
             /// <summary>
+            /// <para>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</para>
+            /// <para>The tag value can be up to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It cannot start with a <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>FinanceJoshua</para>
             /// </summary>

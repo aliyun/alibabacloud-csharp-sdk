@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
 {
     public class DeleteIpamPoolCidrResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F28A239E-F88D-500E-ADE7-FA5E8CA3A170</para>
         /// </summary>

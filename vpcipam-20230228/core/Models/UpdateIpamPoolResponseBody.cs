@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
 {
     public class UpdateIpamPoolResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9DED57B9-7654-5B6D-93F7-BCA5839FEE38</para>
         /// </summary>

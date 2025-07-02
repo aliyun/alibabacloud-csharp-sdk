@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
 {
     public class ListIpamsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The number of entries returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -35,6 +37,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>Default resource discovery association ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ipam-res-disco-assoc-jt5fac8twugdbbgip****</para>
             /// </summary>
@@ -43,6 +47,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
             public string DefaultResourceDiscoveryAssociationId { get; set; }
 
             /// <summary>
+            /// <para>Default resource discovery instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ipam-res-disco-jt5f2af2u6nk2z321****</para>
             /// </summary>
@@ -144,6 +150,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
             public string RegionId { get; set; }
 
             /// <summary>
+            /// <para>Number of resource discovery associations.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>

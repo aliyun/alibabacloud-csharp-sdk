@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
 {
     public class AssociateIpamResourceDiscoveryResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>E897D16A-50EB-543F-B002-C5A26AB818FF</para>
         /// </summary>

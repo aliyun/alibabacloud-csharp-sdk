@@ -37,6 +37,24 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Provisions a CIDR block to an IP Address Manager (IPAM) pool.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you provision a CIDR block, make sure that an IPAM pool is created. You can call the <b>CreateIpamPool</b> operation to create an IPAM pool.</para>
+        /// <list type="bullet">
+        /// <item><description>If no CIDR block is provisioned to a parent pool, you cannot provision CIDR blocks to its subpools.</description></item>
+        /// <item><description>If a CIDR block is provisioned to a parent pool, you can provision CIDR blocks to its subpools and the CIDR blocks must be subsets of the CIDR block provisioned to the parent pool.</description></item>
+        /// <item><description>If a CIDR block is provisioned to a parent pool and allocations are created, CIDR blocks provisioned to its subpools cannot overlap with existing allocated CIDR blocks.</description></item>
+        /// <item><description>You can provision CIDR blocks to a pool only in the region where the IPAM is hosted.</description></item>
+        /// <item><description>CIDR blocks provisioned to an IPAM pool cannot overlap with the CIDR blocks provisioned to other pools in the same scope.</description></item>
+        /// <item><description>You can provision at most 50 CIDR blocks to each pool.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// AddIpamPoolCidrRequest
         /// </param>
@@ -87,16 +105,27 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AddIpamPoolCidrResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AddIpamPoolCidrResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AddIpamPoolCidrResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Provisions a CIDR block to an IP Address Manager (IPAM) pool.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you provision a CIDR block, make sure that an IPAM pool is created. You can call the <b>CreateIpamPool</b> operation to create an IPAM pool.</para>
+        /// <list type="bullet">
+        /// <item><description>If no CIDR block is provisioned to a parent pool, you cannot provision CIDR blocks to its subpools.</description></item>
+        /// <item><description>If a CIDR block is provisioned to a parent pool, you can provision CIDR blocks to its subpools and the CIDR blocks must be subsets of the CIDR block provisioned to the parent pool.</description></item>
+        /// <item><description>If a CIDR block is provisioned to a parent pool and allocations are created, CIDR blocks provisioned to its subpools cannot overlap with existing allocated CIDR blocks.</description></item>
+        /// <item><description>You can provision CIDR blocks to a pool only in the region where the IPAM is hosted.</description></item>
+        /// <item><description>CIDR blocks provisioned to an IPAM pool cannot overlap with the CIDR blocks provisioned to other pools in the same scope.</description></item>
+        /// <item><description>You can provision at most 50 CIDR blocks to each pool.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// AddIpamPoolCidrRequest
         /// </param>
@@ -147,16 +176,27 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AddIpamPoolCidrResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AddIpamPoolCidrResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AddIpamPoolCidrResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Provisions a CIDR block to an IP Address Manager (IPAM) pool.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you provision a CIDR block, make sure that an IPAM pool is created. You can call the <b>CreateIpamPool</b> operation to create an IPAM pool.</para>
+        /// <list type="bullet">
+        /// <item><description>If no CIDR block is provisioned to a parent pool, you cannot provision CIDR blocks to its subpools.</description></item>
+        /// <item><description>If a CIDR block is provisioned to a parent pool, you can provision CIDR blocks to its subpools and the CIDR blocks must be subsets of the CIDR block provisioned to the parent pool.</description></item>
+        /// <item><description>If a CIDR block is provisioned to a parent pool and allocations are created, CIDR blocks provisioned to its subpools cannot overlap with existing allocated CIDR blocks.</description></item>
+        /// <item><description>You can provision CIDR blocks to a pool only in the region where the IPAM is hosted.</description></item>
+        /// <item><description>CIDR blocks provisioned to an IPAM pool cannot overlap with the CIDR blocks provisioned to other pools in the same scope.</description></item>
+        /// <item><description>You can provision at most 50 CIDR blocks to each pool.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// AddIpamPoolCidrRequest
         /// </param>
@@ -170,6 +210,24 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return AddIpamPoolCidrWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Provisions a CIDR block to an IP Address Manager (IPAM) pool.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you provision a CIDR block, make sure that an IPAM pool is created. You can call the <b>CreateIpamPool</b> operation to create an IPAM pool.</para>
+        /// <list type="bullet">
+        /// <item><description>If no CIDR block is provisioned to a parent pool, you cannot provision CIDR blocks to its subpools.</description></item>
+        /// <item><description>If a CIDR block is provisioned to a parent pool, you can provision CIDR blocks to its subpools and the CIDR blocks must be subsets of the CIDR block provisioned to the parent pool.</description></item>
+        /// <item><description>If a CIDR block is provisioned to a parent pool and allocations are created, CIDR blocks provisioned to its subpools cannot overlap with existing allocated CIDR blocks.</description></item>
+        /// <item><description>You can provision CIDR blocks to a pool only in the region where the IPAM is hosted.</description></item>
+        /// <item><description>CIDR blocks provisioned to an IPAM pool cannot overlap with the CIDR blocks provisioned to other pools in the same scope.</description></item>
+        /// <item><description>You can provision at most 50 CIDR blocks to each pool.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// AddIpamPoolCidrRequest
         /// </param>
@@ -185,8 +243,13 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关联资源发现和IPAM实例。</para>
+        /// <para>Associates resource discovery with an IPAM instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The specified resource discovery instance can only be associated with one IPAM instance and associations cannot be duplicated.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AssociateIpamResourceDiscoveryRequest
@@ -254,20 +317,18 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AssociateIpamResourceDiscoveryResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AssociateIpamResourceDiscoveryResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AssociateIpamResourceDiscoveryResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关联资源发现和IPAM实例。</para>
+        /// <para>Associates resource discovery with an IPAM instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The specified resource discovery instance can only be associated with one IPAM instance and associations cannot be duplicated.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AssociateIpamResourceDiscoveryRequest
@@ -335,20 +396,18 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AssociateIpamResourceDiscoveryResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AssociateIpamResourceDiscoveryResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AssociateIpamResourceDiscoveryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关联资源发现和IPAM实例。</para>
+        /// <para>Associates resource discovery with an IPAM instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The specified resource discovery instance can only be associated with one IPAM instance and associations cannot be duplicated.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AssociateIpamResourceDiscoveryRequest
@@ -365,8 +424,13 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关联资源发现和IPAM实例。</para>
+        /// <para>Associates resource discovery with an IPAM instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The specified resource discovery instance can only be associated with one IPAM instance and associations cannot be duplicated.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AssociateIpamResourceDiscoveryRequest
@@ -381,6 +445,11 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return await AssociateIpamResourceDiscoveryWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the resource group of an IPAM resource.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ChangeResourceGroupRequest
         /// </param>
@@ -443,16 +512,14 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ChangeResourceGroupResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ChangeResourceGroupResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ChangeResourceGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the resource group of an IPAM resource.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ChangeResourceGroupRequest
         /// </param>
@@ -515,16 +582,14 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ChangeResourceGroupResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ChangeResourceGroupResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ChangeResourceGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the resource group of an IPAM resource.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ChangeResourceGroupRequest
         /// </param>
@@ -538,6 +603,11 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return ChangeResourceGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the resource group of an IPAM resource.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ChangeResourceGroupRequest
         /// </param>
@@ -553,8 +623,21 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建IPAM实例。</para>
+        /// <para>Creates an IP Address Manager (IPAM).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can create only one IPAM with each Alibaba Cloud account in each region.</description></item>
+        /// <item><description>Only IPv4 IP addresses can be allocated.</description></item>
+        /// <item><description>When you create an IPAM instance:<list type="bullet">
+        /// <item><description>If there is no custom resource discovery in the region, the system creates a default resource discovery associated with the IPAM instance.</description></item>
+        /// <item><description>If there is a custom resource discovery in the region, the system converts it to a default resource discovery and associates it with the IPAM instance.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateIpamRequest
@@ -634,20 +717,26 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateIpamResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateIpamResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateIpamResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建IPAM实例。</para>
+        /// <para>Creates an IP Address Manager (IPAM).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can create only one IPAM with each Alibaba Cloud account in each region.</description></item>
+        /// <item><description>Only IPv4 IP addresses can be allocated.</description></item>
+        /// <item><description>When you create an IPAM instance:<list type="bullet">
+        /// <item><description>If there is no custom resource discovery in the region, the system creates a default resource discovery associated with the IPAM instance.</description></item>
+        /// <item><description>If there is a custom resource discovery in the region, the system converts it to a default resource discovery and associates it with the IPAM instance.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateIpamRequest
@@ -727,20 +816,26 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateIpamResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateIpamResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateIpamResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建IPAM实例。</para>
+        /// <para>Creates an IP Address Manager (IPAM).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can create only one IPAM with each Alibaba Cloud account in each region.</description></item>
+        /// <item><description>Only IPv4 IP addresses can be allocated.</description></item>
+        /// <item><description>When you create an IPAM instance:<list type="bullet">
+        /// <item><description>If there is no custom resource discovery in the region, the system creates a default resource discovery associated with the IPAM instance.</description></item>
+        /// <item><description>If there is a custom resource discovery in the region, the system converts it to a default resource discovery and associates it with the IPAM instance.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateIpamRequest
@@ -757,8 +852,21 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建IPAM实例。</para>
+        /// <para>Creates an IP Address Manager (IPAM).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can create only one IPAM with each Alibaba Cloud account in each region.</description></item>
+        /// <item><description>Only IPv4 IP addresses can be allocated.</description></item>
+        /// <item><description>When you create an IPAM instance:<list type="bullet">
+        /// <item><description>If there is no custom resource discovery in the region, the system creates a default resource discovery associated with the IPAM instance.</description></item>
+        /// <item><description>If there is a custom resource discovery in the region, the system converts it to a default resource discovery and associates it with the IPAM instance.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateIpamRequest
@@ -773,6 +881,11 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return await CreateIpamWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an IP Address Manager (IPAM) pool.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateIpamPoolRequest
         /// </param>
@@ -879,16 +992,14 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateIpamPoolResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateIpamPoolResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateIpamPoolResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an IP Address Manager (IPAM) pool.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateIpamPoolRequest
         /// </param>
@@ -995,16 +1106,14 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateIpamPoolResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateIpamPoolResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateIpamPoolResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an IP Address Manager (IPAM) pool.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateIpamPoolRequest
         /// </param>
@@ -1018,6 +1127,11 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return CreateIpamPoolWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an IP Address Manager (IPAM) pool.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateIpamPoolRequest
         /// </param>
@@ -1031,6 +1145,21 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return await CreateIpamPoolWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Reserves a custom CIDR block from an IP Address Manager (IPAM) pool.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you reserve a custom CIDR block, make sure that an IPAM pool is created and CIDR blocks are added to the pool. You can call <b>CreateIpamPool</b> to create an IPAM pool and call <b>AddIpamPoolCidr</b> to add CIDR blocks to the pool.</para>
+        /// <list type="bullet">
+        /// <item><description>When you specify Cidr or CidrMask to reserve a custom CIDR block, the mask must fall within the range specified by the IPAM pool.</description></item>
+        /// <item><description>If the IPAM pool has the region attribute, you must reserve a custom CIDR block in the region to which the IPAM pool belongs.</description></item>
+        /// <item><description>The custom CIDR block that you want to reserve cannot overlap with existing CIDR blocks created from the IPAM pool.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateIpamPoolAllocationRequest
         /// </param>
@@ -1093,16 +1222,24 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateIpamPoolAllocationResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateIpamPoolAllocationResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateIpamPoolAllocationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Reserves a custom CIDR block from an IP Address Manager (IPAM) pool.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you reserve a custom CIDR block, make sure that an IPAM pool is created and CIDR blocks are added to the pool. You can call <b>CreateIpamPool</b> to create an IPAM pool and call <b>AddIpamPoolCidr</b> to add CIDR blocks to the pool.</para>
+        /// <list type="bullet">
+        /// <item><description>When you specify Cidr or CidrMask to reserve a custom CIDR block, the mask must fall within the range specified by the IPAM pool.</description></item>
+        /// <item><description>If the IPAM pool has the region attribute, you must reserve a custom CIDR block in the region to which the IPAM pool belongs.</description></item>
+        /// <item><description>The custom CIDR block that you want to reserve cannot overlap with existing CIDR blocks created from the IPAM pool.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateIpamPoolAllocationRequest
         /// </param>
@@ -1165,16 +1302,24 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateIpamPoolAllocationResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateIpamPoolAllocationResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateIpamPoolAllocationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Reserves a custom CIDR block from an IP Address Manager (IPAM) pool.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you reserve a custom CIDR block, make sure that an IPAM pool is created and CIDR blocks are added to the pool. You can call <b>CreateIpamPool</b> to create an IPAM pool and call <b>AddIpamPoolCidr</b> to add CIDR blocks to the pool.</para>
+        /// <list type="bullet">
+        /// <item><description>When you specify Cidr or CidrMask to reserve a custom CIDR block, the mask must fall within the range specified by the IPAM pool.</description></item>
+        /// <item><description>If the IPAM pool has the region attribute, you must reserve a custom CIDR block in the region to which the IPAM pool belongs.</description></item>
+        /// <item><description>The custom CIDR block that you want to reserve cannot overlap with existing CIDR blocks created from the IPAM pool.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateIpamPoolAllocationRequest
         /// </param>
@@ -1188,6 +1333,21 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return CreateIpamPoolAllocationWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Reserves a custom CIDR block from an IP Address Manager (IPAM) pool.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you reserve a custom CIDR block, make sure that an IPAM pool is created and CIDR blocks are added to the pool. You can call <b>CreateIpamPool</b> to create an IPAM pool and call <b>AddIpamPoolCidr</b> to add CIDR blocks to the pool.</para>
+        /// <list type="bullet">
+        /// <item><description>When you specify Cidr or CidrMask to reserve a custom CIDR block, the mask must fall within the range specified by the IPAM pool.</description></item>
+        /// <item><description>If the IPAM pool has the region attribute, you must reserve a custom CIDR block in the region to which the IPAM pool belongs.</description></item>
+        /// <item><description>The custom CIDR block that you want to reserve cannot overlap with existing CIDR blocks created from the IPAM pool.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateIpamPoolAllocationRequest
         /// </param>
@@ -1203,8 +1363,16 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义类型资源发现。</para>
+        /// <para>Creates a custom resource discovery instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Each Alibaba Cloud account can create only one resource discovery instance in each region.</para>
+        /// <list type="bullet">
+        /// <item><description>You can create only custom resource discovery instances.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateIpamResourceDiscoveryRequest
@@ -1284,20 +1452,21 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateIpamResourceDiscoveryResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateIpamResourceDiscoveryResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateIpamResourceDiscoveryResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义类型资源发现。</para>
+        /// <para>Creates a custom resource discovery instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Each Alibaba Cloud account can create only one resource discovery instance in each region.</para>
+        /// <list type="bullet">
+        /// <item><description>You can create only custom resource discovery instances.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateIpamResourceDiscoveryRequest
@@ -1377,20 +1546,21 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateIpamResourceDiscoveryResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateIpamResourceDiscoveryResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateIpamResourceDiscoveryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义类型资源发现。</para>
+        /// <para>Creates a custom resource discovery instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Each Alibaba Cloud account can create only one resource discovery instance in each region.</para>
+        /// <list type="bullet">
+        /// <item><description>You can create only custom resource discovery instances.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateIpamResourceDiscoveryRequest
@@ -1407,8 +1577,16 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义类型资源发现。</para>
+        /// <para>Creates a custom resource discovery instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Each Alibaba Cloud account can create only one resource discovery instance in each region.</para>
+        /// <list type="bullet">
+        /// <item><description>You can create only custom resource discovery instances.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateIpamResourceDiscoveryRequest
@@ -1423,6 +1601,11 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return await CreateIpamResourceDiscoveryWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a public scope and private scope to respectively manage public and private IP addresses.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateIpamScopeRequest
         /// </param>
@@ -1505,16 +1688,14 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateIpamScopeResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateIpamScopeResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateIpamScopeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a public scope and private scope to respectively manage public and private IP addresses.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateIpamScopeRequest
         /// </param>
@@ -1597,16 +1778,14 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateIpamScopeResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateIpamScopeResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateIpamScopeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a public scope and private scope to respectively manage public and private IP addresses.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateIpamScopeRequest
         /// </param>
@@ -1620,6 +1799,11 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return CreateIpamScopeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a public scope and private scope to respectively manage public and private IP addresses.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateIpamScopeRequest
         /// </param>
@@ -1633,6 +1817,20 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return await CreateIpamScopeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an IP Address Manager (IPAM).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Prerequisites</h2>
+        /// <list type="bullet">
+        /// <item><description>Before you delete an IPAM, make sure that all IPAM pools of the IPAM are deleted. You can call <b>DeleteIpamPool</b> to delete IPAM pools.</description></item>
+        /// <item><description>Before you delete an IPAM, make sure that all IPAM scopes of the IPAM are deleted. You can call <b>DeleteIpamScope</b> to delete IPAM scopes.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteIpamRequest
         /// </param>
@@ -1695,16 +1893,23 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteIpamResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteIpamResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteIpamResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an IP Address Manager (IPAM).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Prerequisites</h2>
+        /// <list type="bullet">
+        /// <item><description>Before you delete an IPAM, make sure that all IPAM pools of the IPAM are deleted. You can call <b>DeleteIpamPool</b> to delete IPAM pools.</description></item>
+        /// <item><description>Before you delete an IPAM, make sure that all IPAM scopes of the IPAM are deleted. You can call <b>DeleteIpamScope</b> to delete IPAM scopes.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteIpamRequest
         /// </param>
@@ -1767,16 +1972,23 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteIpamResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteIpamResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteIpamResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an IP Address Manager (IPAM).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Prerequisites</h2>
+        /// <list type="bullet">
+        /// <item><description>Before you delete an IPAM, make sure that all IPAM pools of the IPAM are deleted. You can call <b>DeleteIpamPool</b> to delete IPAM pools.</description></item>
+        /// <item><description>Before you delete an IPAM, make sure that all IPAM scopes of the IPAM are deleted. You can call <b>DeleteIpamScope</b> to delete IPAM scopes.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteIpamRequest
         /// </param>
@@ -1790,6 +2002,20 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return DeleteIpamWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an IP Address Manager (IPAM).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Prerequisites</h2>
+        /// <list type="bullet">
+        /// <item><description>Before you delete an IPAM, make sure that all IPAM pools of the IPAM are deleted. You can call <b>DeleteIpamPool</b> to delete IPAM pools.</description></item>
+        /// <item><description>Before you delete an IPAM, make sure that all IPAM scopes of the IPAM are deleted. You can call <b>DeleteIpamScope</b> to delete IPAM scopes.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteIpamRequest
         /// </param>
@@ -1803,6 +2029,21 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return await DeleteIpamWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an IP Address Manager (IPAM) scope.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Usage notes</h3>
+        /// <list type="bullet">
+        /// <item><description>Before you delete a parent pool, make sure that all subpools of the parent pool are deleted.</description></item>
+        /// <item><description>If an effective region is specified for a parent pool and IP addresses are allocated from the parent pool, you cannot delete the parent pool.</description></item>
+        /// <item><description>If an effective region is specified for a subpool and IP addresses are allocated from the subpool, you cannot delete the subpool.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteIpamPoolRequest
         /// </param>
@@ -1865,16 +2106,24 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteIpamPoolResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteIpamPoolResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteIpamPoolResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an IP Address Manager (IPAM) scope.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Usage notes</h3>
+        /// <list type="bullet">
+        /// <item><description>Before you delete a parent pool, make sure that all subpools of the parent pool are deleted.</description></item>
+        /// <item><description>If an effective region is specified for a parent pool and IP addresses are allocated from the parent pool, you cannot delete the parent pool.</description></item>
+        /// <item><description>If an effective region is specified for a subpool and IP addresses are allocated from the subpool, you cannot delete the subpool.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteIpamPoolRequest
         /// </param>
@@ -1937,16 +2186,24 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteIpamPoolResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteIpamPoolResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteIpamPoolResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an IP Address Manager (IPAM) scope.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Usage notes</h3>
+        /// <list type="bullet">
+        /// <item><description>Before you delete a parent pool, make sure that all subpools of the parent pool are deleted.</description></item>
+        /// <item><description>If an effective region is specified for a parent pool and IP addresses are allocated from the parent pool, you cannot delete the parent pool.</description></item>
+        /// <item><description>If an effective region is specified for a subpool and IP addresses are allocated from the subpool, you cannot delete the subpool.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteIpamPoolRequest
         /// </param>
@@ -1960,6 +2217,21 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return DeleteIpamPoolWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an IP Address Manager (IPAM) scope.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Usage notes</h3>
+        /// <list type="bullet">
+        /// <item><description>Before you delete a parent pool, make sure that all subpools of the parent pool are deleted.</description></item>
+        /// <item><description>If an effective region is specified for a parent pool and IP addresses are allocated from the parent pool, you cannot delete the parent pool.</description></item>
+        /// <item><description>If an effective region is specified for a subpool and IP addresses are allocated from the subpool, you cannot delete the subpool.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteIpamPoolRequest
         /// </param>
@@ -1973,6 +2245,11 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return await DeleteIpamPoolWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a custom reserved CIDR block from an IP Address Manager (IPAM) pool.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteIpamPoolAllocationRequest
         /// </param>
@@ -2019,16 +2296,14 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteIpamPoolAllocationResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteIpamPoolAllocationResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteIpamPoolAllocationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a custom reserved CIDR block from an IP Address Manager (IPAM) pool.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteIpamPoolAllocationRequest
         /// </param>
@@ -2075,16 +2350,14 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteIpamPoolAllocationResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteIpamPoolAllocationResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteIpamPoolAllocationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a custom reserved CIDR block from an IP Address Manager (IPAM) pool.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteIpamPoolAllocationRequest
         /// </param>
@@ -2098,6 +2371,11 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return DeleteIpamPoolAllocationWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a custom reserved CIDR block from an IP Address Manager (IPAM) pool.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteIpamPoolAllocationRequest
         /// </param>
@@ -2111,6 +2389,21 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return await DeleteIpamPoolAllocationWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a CIDR block provisioned to an IP Address Manager (IPAM) pool.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If CIDR blocks are provisioned to a parent pool and its subpools, you must first delete the CIDR blocks provisioned to the subpools before you delete the ones provisioned to the parent pool.</para>
+        /// <list type="bullet">
+        /// <item><description>If CIDR blocks are provisioned only to the parent pool, directly delete them.</description></item>
+        /// <item><description>If CIDR blocks are allocated from provisioned ones, you must first delete the allocated CIDR blocks before you delete the provisioned ones.</description></item>
+        /// <item><description>You can delete CIDR blocks provisioned to an IPAM pool only in the region where the IPAM is hosted.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteIpamPoolCidrRequest
         /// </param>
@@ -2161,16 +2454,24 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteIpamPoolCidrResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteIpamPoolCidrResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteIpamPoolCidrResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a CIDR block provisioned to an IP Address Manager (IPAM) pool.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If CIDR blocks are provisioned to a parent pool and its subpools, you must first delete the CIDR blocks provisioned to the subpools before you delete the ones provisioned to the parent pool.</para>
+        /// <list type="bullet">
+        /// <item><description>If CIDR blocks are provisioned only to the parent pool, directly delete them.</description></item>
+        /// <item><description>If CIDR blocks are allocated from provisioned ones, you must first delete the allocated CIDR blocks before you delete the provisioned ones.</description></item>
+        /// <item><description>You can delete CIDR blocks provisioned to an IPAM pool only in the region where the IPAM is hosted.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteIpamPoolCidrRequest
         /// </param>
@@ -2221,16 +2522,24 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteIpamPoolCidrResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteIpamPoolCidrResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteIpamPoolCidrResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a CIDR block provisioned to an IP Address Manager (IPAM) pool.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If CIDR blocks are provisioned to a parent pool and its subpools, you must first delete the CIDR blocks provisioned to the subpools before you delete the ones provisioned to the parent pool.</para>
+        /// <list type="bullet">
+        /// <item><description>If CIDR blocks are provisioned only to the parent pool, directly delete them.</description></item>
+        /// <item><description>If CIDR blocks are allocated from provisioned ones, you must first delete the allocated CIDR blocks before you delete the provisioned ones.</description></item>
+        /// <item><description>You can delete CIDR blocks provisioned to an IPAM pool only in the region where the IPAM is hosted.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteIpamPoolCidrRequest
         /// </param>
@@ -2244,6 +2553,21 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return DeleteIpamPoolCidrWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a CIDR block provisioned to an IP Address Manager (IPAM) pool.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If CIDR blocks are provisioned to a parent pool and its subpools, you must first delete the CIDR blocks provisioned to the subpools before you delete the ones provisioned to the parent pool.</para>
+        /// <list type="bullet">
+        /// <item><description>If CIDR blocks are provisioned only to the parent pool, directly delete them.</description></item>
+        /// <item><description>If CIDR blocks are allocated from provisioned ones, you must first delete the allocated CIDR blocks before you delete the provisioned ones.</description></item>
+        /// <item><description>You can delete CIDR blocks provisioned to an IPAM pool only in the region where the IPAM is hosted.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteIpamPoolCidrRequest
         /// </param>
@@ -2259,8 +2583,13 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义类型的资源发现。</para>
+        /// <para>Deletes a custom resource discovery instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If a resource discovery instance is shared, it cannot be deleted.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteIpamResourceDiscoveryRequest
@@ -2324,20 +2653,18 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteIpamResourceDiscoveryResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteIpamResourceDiscoveryResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteIpamResourceDiscoveryResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义类型的资源发现。</para>
+        /// <para>Deletes a custom resource discovery instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If a resource discovery instance is shared, it cannot be deleted.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteIpamResourceDiscoveryRequest
@@ -2401,20 +2728,18 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteIpamResourceDiscoveryResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteIpamResourceDiscoveryResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteIpamResourceDiscoveryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义类型的资源发现。</para>
+        /// <para>Deletes a custom resource discovery instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If a resource discovery instance is shared, it cannot be deleted.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteIpamResourceDiscoveryRequest
@@ -2431,8 +2756,13 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义类型的资源发现。</para>
+        /// <para>Deletes a custom resource discovery instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If a resource discovery instance is shared, it cannot be deleted.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteIpamResourceDiscoveryRequest
@@ -2447,6 +2777,20 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return await DeleteIpamResourceDiscoveryWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an IP Address Manager (IPAM) scope.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Usage notes</h3>
+        /// <list type="bullet">
+        /// <item><description>You cannot delete the private scope and public scope created by the system.</description></item>
+        /// <item><description>Before you delete an IPAM scope, make sure that all pools within the scope are deleted. You can call <b>DeleteIpamPool</b> to delete IPAM pools.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteIpamScopeRequest
         /// </param>
@@ -2509,16 +2853,23 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteIpamScopeResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteIpamScopeResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteIpamScopeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an IP Address Manager (IPAM) scope.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Usage notes</h3>
+        /// <list type="bullet">
+        /// <item><description>You cannot delete the private scope and public scope created by the system.</description></item>
+        /// <item><description>Before you delete an IPAM scope, make sure that all pools within the scope are deleted. You can call <b>DeleteIpamPool</b> to delete IPAM pools.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteIpamScopeRequest
         /// </param>
@@ -2581,16 +2932,23 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteIpamScopeResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteIpamScopeResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteIpamScopeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an IP Address Manager (IPAM) scope.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Usage notes</h3>
+        /// <list type="bullet">
+        /// <item><description>You cannot delete the private scope and public scope created by the system.</description></item>
+        /// <item><description>Before you delete an IPAM scope, make sure that all pools within the scope are deleted. You can call <b>DeleteIpamPool</b> to delete IPAM pools.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteIpamScopeRequest
         /// </param>
@@ -2604,6 +2962,20 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return DeleteIpamScopeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an IP Address Manager (IPAM) scope.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Usage notes</h3>
+        /// <list type="bullet">
+        /// <item><description>You cannot delete the private scope and public scope created by the system.</description></item>
+        /// <item><description>Before you delete an IPAM scope, make sure that all pools within the scope are deleted. You can call <b>DeleteIpamPool</b> to delete IPAM pools.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteIpamScopeRequest
         /// </param>
@@ -2619,7 +2991,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解关联资源发现和IPAM实例。</para>
+        /// <para>Disassociates resource discovery and IPAM instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2688,19 +3060,12 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DissociateIpamResourceDiscoveryResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DissociateIpamResourceDiscoveryResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DissociateIpamResourceDiscoveryResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解关联资源发现和IPAM实例。</para>
+        /// <para>Disassociates resource discovery and IPAM instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2769,19 +3134,12 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DissociateIpamResourceDiscoveryResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DissociateIpamResourceDiscoveryResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DissociateIpamResourceDiscoveryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解关联资源发现和IPAM实例。</para>
+        /// <para>Disassociates resource discovery and IPAM instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2799,7 +3157,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解关联资源发现和IPAM实例。</para>
+        /// <para>Disassociates resource discovery and IPAM instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2817,7 +3175,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定IPAM地址池CIDR分配的信息</para>
+        /// <para>Queries CIDR block allocations of an IP Address Manager (IPAM) pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2850,19 +3208,12 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetIpamPoolAllocationResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetIpamPoolAllocationResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetIpamPoolAllocationResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定IPAM地址池CIDR分配的信息</para>
+        /// <para>Queries CIDR block allocations of an IP Address Manager (IPAM) pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2895,19 +3246,12 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetIpamPoolAllocationResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetIpamPoolAllocationResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetIpamPoolAllocationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定IPAM地址池CIDR分配的信息</para>
+        /// <para>Queries CIDR block allocations of an IP Address Manager (IPAM) pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2925,7 +3269,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定IPAM地址池CIDR分配的信息</para>
+        /// <para>Queries CIDR block allocations of an IP Address Manager (IPAM) pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2943,7 +3287,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取地址池可用CIDR。</para>
+        /// <para>Gets the available CIDR blocks of the IPAM pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2976,19 +3320,12 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetIpamPoolNextAvailableCidrResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetIpamPoolNextAvailableCidrResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetIpamPoolNextAvailableCidrResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取地址池可用CIDR。</para>
+        /// <para>Gets the available CIDR blocks of the IPAM pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3021,19 +3358,12 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetIpamPoolNextAvailableCidrResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetIpamPoolNextAvailableCidrResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetIpamPoolNextAvailableCidrResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取地址池可用CIDR。</para>
+        /// <para>Gets the available CIDR blocks of the IPAM pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3051,7 +3381,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取地址池可用CIDR。</para>
+        /// <para>Gets the available CIDR blocks of the IPAM pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3069,7 +3399,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询IPAM功能的开通状态。</para>
+        /// <para>Queries whether IP Address Manager (IPAM) is activated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3126,19 +3456,12 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetVpcIpamServiceStatusResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetVpcIpamServiceStatusResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetVpcIpamServiceStatusResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询IPAM功能的开通状态。</para>
+        /// <para>Queries whether IP Address Manager (IPAM) is activated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3195,19 +3518,12 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetVpcIpamServiceStatusResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetVpcIpamServiceStatusResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetVpcIpamServiceStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询IPAM功能的开通状态。</para>
+        /// <para>Queries whether IP Address Manager (IPAM) is activated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3225,7 +3541,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询IPAM功能的开通状态。</para>
+        /// <para>Queries whether IP Address Manager (IPAM) is activated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3241,6 +3557,11 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return await GetVpcIpamServiceStatusWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries discovered resources.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListIpamDiscoveredResourceRequest
         /// </param>
@@ -3295,16 +3616,14 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListIpamDiscoveredResourceResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListIpamDiscoveredResourceResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListIpamDiscoveredResourceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries discovered resources.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListIpamDiscoveredResourceRequest
         /// </param>
@@ -3359,16 +3678,14 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListIpamDiscoveredResourceResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListIpamDiscoveredResourceResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListIpamDiscoveredResourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries discovered resources.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListIpamDiscoveredResourceRequest
         /// </param>
@@ -3382,6 +3699,11 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return ListIpamDiscoveredResourceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries discovered resources.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListIpamDiscoveredResourceRequest
         /// </param>
@@ -3395,6 +3717,11 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return await ListIpamDiscoveredResourceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries CIDR block allocations of an IP Address Manager (IPAM) pool.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListIpamPoolAllocationsRequest
         /// </param>
@@ -3453,16 +3780,14 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListIpamPoolAllocationsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListIpamPoolAllocationsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListIpamPoolAllocationsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries CIDR block allocations of an IP Address Manager (IPAM) pool.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListIpamPoolAllocationsRequest
         /// </param>
@@ -3521,16 +3846,14 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListIpamPoolAllocationsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListIpamPoolAllocationsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListIpamPoolAllocationsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries CIDR block allocations of an IP Address Manager (IPAM) pool.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListIpamPoolAllocationsRequest
         /// </param>
@@ -3544,6 +3867,11 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return ListIpamPoolAllocationsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries CIDR block allocations of an IP Address Manager (IPAM) pool.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListIpamPoolAllocationsRequest
         /// </param>
@@ -3557,6 +3885,11 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return await ListIpamPoolAllocationsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries CIDR blocks provisioned to an IP Address Manager (IPAM) pool.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListIpamPoolCidrsRequest
         /// </param>
@@ -3607,16 +3940,14 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListIpamPoolCidrsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListIpamPoolCidrsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListIpamPoolCidrsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries CIDR blocks provisioned to an IP Address Manager (IPAM) pool.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListIpamPoolCidrsRequest
         /// </param>
@@ -3667,16 +3998,14 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListIpamPoolCidrsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListIpamPoolCidrsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListIpamPoolCidrsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries CIDR blocks provisioned to an IP Address Manager (IPAM) pool.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListIpamPoolCidrsRequest
         /// </param>
@@ -3690,6 +4019,11 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return ListIpamPoolCidrsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries CIDR blocks provisioned to an IP Address Manager (IPAM) pool.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListIpamPoolCidrsRequest
         /// </param>
@@ -3703,6 +4037,11 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return await ListIpamPoolCidrsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries IP Address Manager (IPAM) pools.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListIpamPoolsRequest
         /// </param>
@@ -3793,16 +4132,14 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListIpamPoolsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListIpamPoolsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListIpamPoolsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries IP Address Manager (IPAM) pools.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListIpamPoolsRequest
         /// </param>
@@ -3893,16 +4230,14 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListIpamPoolsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListIpamPoolsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListIpamPoolsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries IP Address Manager (IPAM) pools.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListIpamPoolsRequest
         /// </param>
@@ -3916,6 +4251,11 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return ListIpamPoolsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries IP Address Manager (IPAM) pools.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListIpamPoolsRequest
         /// </param>
@@ -3929,6 +4269,11 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return await ListIpamPoolsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries resources in an IP Address Manager (IPAM) pool.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListIpamResourceCidrsRequest
         /// </param>
@@ -3995,16 +4340,14 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListIpamResourceCidrsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListIpamResourceCidrsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListIpamResourceCidrsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries resources in an IP Address Manager (IPAM) pool.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListIpamResourceCidrsRequest
         /// </param>
@@ -4071,16 +4414,14 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListIpamResourceCidrsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListIpamResourceCidrsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListIpamResourceCidrsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries resources in an IP Address Manager (IPAM) pool.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListIpamResourceCidrsRequest
         /// </param>
@@ -4094,6 +4435,11 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return ListIpamResourceCidrsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries resources in an IP Address Manager (IPAM) pool.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListIpamResourceCidrsRequest
         /// </param>
@@ -4109,7 +4455,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询ipam资源发现实例</para>
+        /// <para>Queries IPAM resource discovery instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4194,19 +4540,12 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListIpamResourceDiscoveriesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListIpamResourceDiscoveriesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListIpamResourceDiscoveriesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询ipam资源发现实例</para>
+        /// <para>Queries IPAM resource discovery instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4291,19 +4630,12 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListIpamResourceDiscoveriesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListIpamResourceDiscoveriesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListIpamResourceDiscoveriesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询ipam资源发现实例</para>
+        /// <para>Queries IPAM resource discovery instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4321,7 +4653,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询ipam资源发现实例</para>
+        /// <para>Queries IPAM resource discovery instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4339,7 +4671,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看资源发现和IPAM的关联关系。</para>
+        /// <para>Queries the association between resource discovery and IPAM.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4408,19 +4740,12 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListIpamResourceDiscoveryAssociationsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListIpamResourceDiscoveryAssociationsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListIpamResourceDiscoveryAssociationsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看资源发现和IPAM的关联关系。</para>
+        /// <para>Queries the association between resource discovery and IPAM.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4489,19 +4814,12 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListIpamResourceDiscoveryAssociationsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListIpamResourceDiscoveryAssociationsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListIpamResourceDiscoveryAssociationsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看资源发现和IPAM的关联关系。</para>
+        /// <para>Queries the association between resource discovery and IPAM.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4519,7 +4837,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看资源发现和IPAM的关联关系。</para>
+        /// <para>Queries the association between resource discovery and IPAM.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4535,6 +4853,11 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return await ListIpamResourceDiscoveryAssociationsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries IP Address Manager (IPAM) scopes.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListIpamScopesRequest
         /// </param>
@@ -4617,16 +4940,14 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListIpamScopesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListIpamScopesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListIpamScopesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries IP Address Manager (IPAM) scopes.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListIpamScopesRequest
         /// </param>
@@ -4709,16 +5030,14 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListIpamScopesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListIpamScopesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListIpamScopesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries IP Address Manager (IPAM) scopes.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListIpamScopesRequest
         /// </param>
@@ -4732,6 +5051,11 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return ListIpamScopesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries IP Address Manager (IPAM) scopes.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListIpamScopesRequest
         /// </param>
@@ -4824,14 +5148,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListIpamsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListIpamsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListIpamsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4913,14 +5230,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListIpamsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListIpamsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListIpamsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4961,8 +5271,19 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资源标签列表</para>
+        /// <para>Queries a list of resource tags.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Usage notes</h3>
+        /// <list type="bullet">
+        /// <item><description>You must specify <b>ResourceId.N</b> or <b>Tag.N</b> that consists of <b>Tag.N.Key</b> and <b>Tag.N.Value</b> in the request to specify the object that you want to query.</description></item>
+        /// <item><description><b>Tag.N</b> is a resource tag that consists of a key-value pair. If you specify only <b>Tag.N.Key</b>, all tag values that are associated with the specified key are returned. If you specify only <b>Tag.N.Value</b>, an error message is returned.</description></item>
+        /// <item><description>If you specify <b>Tag.N</b> and <b>ResourceId.N</b> to filter tags, <b>ResourceId.N</b> must match all specified key-value pairs.</description></item>
+        /// <item><description>If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTagResourcesRequest
@@ -5034,20 +5355,24 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListTagResourcesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListTagResourcesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListTagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资源标签列表</para>
+        /// <para>Queries a list of resource tags.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Usage notes</h3>
+        /// <list type="bullet">
+        /// <item><description>You must specify <b>ResourceId.N</b> or <b>Tag.N</b> that consists of <b>Tag.N.Key</b> and <b>Tag.N.Value</b> in the request to specify the object that you want to query.</description></item>
+        /// <item><description><b>Tag.N</b> is a resource tag that consists of a key-value pair. If you specify only <b>Tag.N.Key</b>, all tag values that are associated with the specified key are returned. If you specify only <b>Tag.N.Value</b>, an error message is returned.</description></item>
+        /// <item><description>If you specify <b>Tag.N</b> and <b>ResourceId.N</b> to filter tags, <b>ResourceId.N</b> must match all specified key-value pairs.</description></item>
+        /// <item><description>If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTagResourcesRequest
@@ -5119,20 +5444,24 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListTagResourcesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资源标签列表</para>
+        /// <para>Queries a list of resource tags.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Usage notes</h3>
+        /// <list type="bullet">
+        /// <item><description>You must specify <b>ResourceId.N</b> or <b>Tag.N</b> that consists of <b>Tag.N.Key</b> and <b>Tag.N.Value</b> in the request to specify the object that you want to query.</description></item>
+        /// <item><description><b>Tag.N</b> is a resource tag that consists of a key-value pair. If you specify only <b>Tag.N.Key</b>, all tag values that are associated with the specified key are returned. If you specify only <b>Tag.N.Value</b>, an error message is returned.</description></item>
+        /// <item><description>If you specify <b>Tag.N</b> and <b>ResourceId.N</b> to filter tags, <b>ResourceId.N</b> must match all specified key-value pairs.</description></item>
+        /// <item><description>If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTagResourcesRequest
@@ -5149,8 +5478,19 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资源标签列表</para>
+        /// <para>Queries a list of resource tags.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Usage notes</h3>
+        /// <list type="bullet">
+        /// <item><description>You must specify <b>ResourceId.N</b> or <b>Tag.N</b> that consists of <b>Tag.N.Key</b> and <b>Tag.N.Value</b> in the request to specify the object that you want to query.</description></item>
+        /// <item><description><b>Tag.N</b> is a resource tag that consists of a key-value pair. If you specify only <b>Tag.N.Key</b>, all tag values that are associated with the specified key are returned. If you specify only <b>Tag.N.Value</b>, an error message is returned.</description></item>
+        /// <item><description>If you specify <b>Tag.N</b> and <b>ResourceId.N</b> to filter tags, <b>ResourceId.N</b> must match all specified key-value pairs.</description></item>
+        /// <item><description>If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTagResourcesRequest
@@ -5167,7 +5507,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开通IPAM功能。</para>
+        /// <para>Activates IP Address Manager (IPAM).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5224,19 +5564,12 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<OpenVpcIpamServiceResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<OpenVpcIpamServiceResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<OpenVpcIpamServiceResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开通IPAM功能。</para>
+        /// <para>Activates IP Address Manager (IPAM).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5293,19 +5626,12 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<OpenVpcIpamServiceResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<OpenVpcIpamServiceResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<OpenVpcIpamServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开通IPAM功能。</para>
+        /// <para>Activates IP Address Manager (IPAM).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5323,7 +5649,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开通IPAM功能。</para>
+        /// <para>Activates IP Address Manager (IPAM).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5341,8 +5667,19 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为资源实例绑定资源标签</para>
+        /// <para>Adds a tag to a resource.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Usage notes</h3>
+        /// <para>Tags are used to classify instances. Each tag consists of a key-value pair. Before you use tags, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>Each tag key that is added to an instance must be unique.</description></item>
+        /// <item><description>You cannot create tags without adding them to instances. All tags must be added to instances.</description></item>
+        /// <item><description>You can add at most 20 tags to each instance. Before you add a tag to an instance, the system automatically checks the number of existing tags. An error message is returned if the maximum number of tags is reached.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// TagResourcesRequest
@@ -5406,20 +5743,24 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<TagResourcesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<TagResourcesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<TagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为资源实例绑定资源标签</para>
+        /// <para>Adds a tag to a resource.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Usage notes</h3>
+        /// <para>Tags are used to classify instances. Each tag consists of a key-value pair. Before you use tags, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>Each tag key that is added to an instance must be unique.</description></item>
+        /// <item><description>You cannot create tags without adding them to instances. All tags must be added to instances.</description></item>
+        /// <item><description>You can add at most 20 tags to each instance. Before you add a tag to an instance, the system automatically checks the number of existing tags. An error message is returned if the maximum number of tags is reached.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// TagResourcesRequest
@@ -5483,20 +5824,24 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<TagResourcesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<TagResourcesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<TagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为资源实例绑定资源标签</para>
+        /// <para>Adds a tag to a resource.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Usage notes</h3>
+        /// <para>Tags are used to classify instances. Each tag consists of a key-value pair. Before you use tags, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>Each tag key that is added to an instance must be unique.</description></item>
+        /// <item><description>You cannot create tags without adding them to instances. All tags must be added to instances.</description></item>
+        /// <item><description>You can add at most 20 tags to each instance. Before you add a tag to an instance, the system automatically checks the number of existing tags. An error message is returned if the maximum number of tags is reached.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// TagResourcesRequest
@@ -5513,8 +5858,19 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为资源实例绑定资源标签</para>
+        /// <para>Adds a tag to a resource.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Usage notes</h3>
+        /// <para>Tags are used to classify instances. Each tag consists of a key-value pair. Before you use tags, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>Each tag key that is added to an instance must be unique.</description></item>
+        /// <item><description>You cannot create tags without adding them to instances. All tags must be added to instances.</description></item>
+        /// <item><description>You can add at most 20 tags to each instance. Before you add a tag to an instance, the system automatically checks the number of existing tags. An error message is returned if the maximum number of tags is reached.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// TagResourcesRequest
@@ -5531,7 +5887,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为资源解绑资源标签</para>
+        /// <para>Removes a tag from a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5600,19 +5956,12 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UntagResourcesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UntagResourcesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UntagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为资源解绑资源标签</para>
+        /// <para>Removes a tag from a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5681,19 +6030,12 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UntagResourcesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UntagResourcesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UntagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为资源解绑资源标签</para>
+        /// <para>Removes a tag from a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5711,7 +6053,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为资源解绑资源标签</para>
+        /// <para>Removes a tag from a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5729,7 +6071,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新ipam</para>
+        /// <para>Updates an IP Address Manager (IPAM).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5810,19 +6152,12 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpdateIpamResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpdateIpamResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpdateIpamResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新ipam</para>
+        /// <para>Updates an IP Address Manager (IPAM).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5903,19 +6238,12 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpdateIpamResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpdateIpamResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpdateIpamResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新ipam</para>
+        /// <para>Updates an IP Address Manager (IPAM).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5933,7 +6261,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新ipam</para>
+        /// <para>Updates an IP Address Manager (IPAM).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5949,6 +6277,11 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return await UpdateIpamWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the basic information about an IP Address Manager (IPAM) pool.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateIpamPoolRequest
         /// </param>
@@ -6039,16 +6372,14 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpdateIpamPoolResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpdateIpamPoolResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpdateIpamPoolResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the basic information about an IP Address Manager (IPAM) pool.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateIpamPoolRequest
         /// </param>
@@ -6139,16 +6470,14 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpdateIpamPoolResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpdateIpamPoolResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpdateIpamPoolResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the basic information about an IP Address Manager (IPAM) pool.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateIpamPoolRequest
         /// </param>
@@ -6162,6 +6491,11 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return UpdateIpamPoolWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the basic information about an IP Address Manager (IPAM) pool.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateIpamPoolRequest
         /// </param>
@@ -6177,7 +6511,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新IPAM地址池分配信息</para>
+        /// <para>Modifies CIDR block allocations of an IP Address Manager (IPAM) pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6234,19 +6568,12 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpdateIpamPoolAllocationResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpdateIpamPoolAllocationResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpdateIpamPoolAllocationResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新IPAM地址池分配信息</para>
+        /// <para>Modifies CIDR block allocations of an IP Address Manager (IPAM) pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6303,19 +6630,12 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpdateIpamPoolAllocationResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpdateIpamPoolAllocationResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpdateIpamPoolAllocationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新IPAM地址池分配信息</para>
+        /// <para>Modifies CIDR block allocations of an IP Address Manager (IPAM) pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6333,7 +6653,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新IPAM地址池分配信息</para>
+        /// <para>Modifies CIDR block allocations of an IP Address Manager (IPAM) pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6351,8 +6671,16 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新自定义类型资源发现。</para>
+        /// <para>Modifies a resource discovery instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can add or remove effective regions only for custom resource discovery instances.</para>
+        /// <list type="bullet">
+        /// <item><description>When removing effective regions from a resource discovery instance, the managed region cannot be included.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateIpamResourceDiscoveryRequest
@@ -6432,20 +6760,21 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpdateIpamResourceDiscoveryResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpdateIpamResourceDiscoveryResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpdateIpamResourceDiscoveryResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新自定义类型资源发现。</para>
+        /// <para>Modifies a resource discovery instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can add or remove effective regions only for custom resource discovery instances.</para>
+        /// <list type="bullet">
+        /// <item><description>When removing effective regions from a resource discovery instance, the managed region cannot be included.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateIpamResourceDiscoveryRequest
@@ -6525,20 +6854,21 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpdateIpamResourceDiscoveryResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpdateIpamResourceDiscoveryResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpdateIpamResourceDiscoveryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新自定义类型资源发现。</para>
+        /// <para>Modifies a resource discovery instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can add or remove effective regions only for custom resource discovery instances.</para>
+        /// <list type="bullet">
+        /// <item><description>When removing effective regions from a resource discovery instance, the managed region cannot be included.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateIpamResourceDiscoveryRequest
@@ -6555,8 +6885,16 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新自定义类型资源发现。</para>
+        /// <para>Modifies a resource discovery instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can add or remove effective regions only for custom resource discovery instances.</para>
+        /// <list type="bullet">
+        /// <item><description>When removing effective regions from a resource discovery instance, the managed region cannot be included.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateIpamResourceDiscoveryRequest
@@ -6571,6 +6909,11 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return await UpdateIpamResourceDiscoveryWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the basic information about an IP Address Manager (IPAM) scope.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateIpamScopeRequest
         /// </param>
@@ -6641,16 +6984,14 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpdateIpamScopeResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpdateIpamScopeResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpdateIpamScopeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the basic information about an IP Address Manager (IPAM) scope.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateIpamScopeRequest
         /// </param>
@@ -6721,16 +7062,14 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpdateIpamScopeResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpdateIpamScopeResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpdateIpamScopeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the basic information about an IP Address Manager (IPAM) scope.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateIpamScopeRequest
         /// </param>
@@ -6744,6 +7083,11 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return UpdateIpamScopeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the basic information about an IP Address Manager (IPAM) scope.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateIpamScopeRequest
         /// </param>
