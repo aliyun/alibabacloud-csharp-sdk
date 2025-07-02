@@ -761,6 +761,136 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取作业批改结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEssayCorrectionTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEssayCorrectionTaskResponse
+        /// </returns>
+        public GetEssayCorrectionTaskResponse GetEssayCorrectionTaskWithOptions(string workspaceId, GetEssayCorrectionTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["taskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetEssayCorrectionTask",
+                Version = "2024-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/quanmiao/lightapp/getEssayCorrectionTask",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetEssayCorrectionTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取作业批改结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEssayCorrectionTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEssayCorrectionTaskResponse
+        /// </returns>
+        public async Task<GetEssayCorrectionTaskResponse> GetEssayCorrectionTaskWithOptionsAsync(string workspaceId, GetEssayCorrectionTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["taskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetEssayCorrectionTask",
+                Version = "2024-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/quanmiao/lightapp/getEssayCorrectionTask",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetEssayCorrectionTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取作业批改结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEssayCorrectionTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEssayCorrectionTaskResponse
+        /// </returns>
+        public GetEssayCorrectionTaskResponse GetEssayCorrectionTask(string workspaceId, GetEssayCorrectionTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetEssayCorrectionTaskWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取作业批改结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEssayCorrectionTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEssayCorrectionTaskResponse
+        /// </returns>
+        public async Task<GetEssayCorrectionTaskResponse> GetEssayCorrectionTaskAsync(string workspaceId, GetEssayCorrectionTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetEssayCorrectionTaskWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取挖掘分析任务结果</para>
         /// </summary>
         /// 
@@ -1783,6 +1913,184 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>作业批改</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunEssayCorrectionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunEssayCorrectionResponse
+        /// </returns>
+        public RunEssayCorrectionResponse RunEssayCorrectionWithOptions(string workspaceId, RunEssayCorrectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Answer))
+            {
+                body["answer"] = request.Answer;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Grade))
+            {
+                body["grade"] = request.Grade;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
+            {
+                body["modelId"] = request.ModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OtherReviewPoints))
+            {
+                body["otherReviewPoints"] = request.OtherReviewPoints;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Question))
+            {
+                body["question"] = request.Question;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Subject))
+            {
+                body["subject"] = request.Subject;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TotalScore))
+            {
+                body["totalScore"] = request.TotalScore;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunEssayCorrection",
+                Version = "2024-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/quanmiao/lightapp/runEssayCorrection",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunEssayCorrectionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>作业批改</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunEssayCorrectionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunEssayCorrectionResponse
+        /// </returns>
+        public async Task<RunEssayCorrectionResponse> RunEssayCorrectionWithOptionsAsync(string workspaceId, RunEssayCorrectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Answer))
+            {
+                body["answer"] = request.Answer;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Grade))
+            {
+                body["grade"] = request.Grade;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
+            {
+                body["modelId"] = request.ModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OtherReviewPoints))
+            {
+                body["otherReviewPoints"] = request.OtherReviewPoints;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Question))
+            {
+                body["question"] = request.Question;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Subject))
+            {
+                body["subject"] = request.Subject;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TotalScore))
+            {
+                body["totalScore"] = request.TotalScore;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunEssayCorrection",
+                Version = "2024-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/quanmiao/lightapp/runEssayCorrection",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunEssayCorrectionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>作业批改</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunEssayCorrectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunEssayCorrectionResponse
+        /// </returns>
+        public RunEssayCorrectionResponse RunEssayCorrection(string workspaceId, RunEssayCorrectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return RunEssayCorrectionWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>作业批改</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunEssayCorrectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunEssayCorrectionResponse
+        /// </returns>
+        public async Task<RunEssayCorrectionResponse> RunEssayCorrectionAsync(string workspaceId, RunEssayCorrectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await RunEssayCorrectionWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>轻应用-热点播报-问答</para>
         /// </summary>
         /// 
@@ -2749,6 +3057,152 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await RunNetworkContentAuditWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>作业批改</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunOcrParseRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunOcrParseResponse
+        /// </returns>
+        public RunOcrParseResponse RunOcrParseWithOptions(string workspaceId, RunOcrParseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileKey))
+            {
+                body["fileKey"] = request.FileKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
+            {
+                body["modelId"] = request.ModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                body["url"] = request.Url;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunOcrParse",
+                Version = "2024-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/quanmiao/lightapp/runOcrParse",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunOcrParseResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>作业批改</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunOcrParseRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunOcrParseResponse
+        /// </returns>
+        public async Task<RunOcrParseResponse> RunOcrParseWithOptionsAsync(string workspaceId, RunOcrParseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileKey))
+            {
+                body["fileKey"] = request.FileKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
+            {
+                body["modelId"] = request.ModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                body["url"] = request.Url;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunOcrParse",
+                Version = "2024-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/quanmiao/lightapp/runOcrParse",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunOcrParseResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>作业批改</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunOcrParseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunOcrParseResponse
+        /// </returns>
+        public RunOcrParseResponse RunOcrParse(string workspaceId, RunOcrParseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return RunOcrParseWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>作业批改</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunOcrParseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunOcrParseResponse
+        /// </returns>
+        public async Task<RunOcrParseResponse> RunOcrParseAsync(string workspaceId, RunOcrParseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await RunOcrParseWithOptionsAsync(workspaceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4301,6 +4755,196 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await SubmitEnterpriseVocAnalysisTaskWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交批改任务</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitEssayCorrectionTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitEssayCorrectionTaskResponse
+        /// </returns>
+        public SubmitEssayCorrectionTaskResponse SubmitEssayCorrectionTaskWithOptions(string workspaceId, SubmitEssayCorrectionTaskRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitEssayCorrectionTaskShrinkRequest request = new SubmitEssayCorrectionTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tasks))
+            {
+                request.TasksShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tasks, "tasks", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Grade))
+            {
+                body["grade"] = request.Grade;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
+            {
+                body["modelId"] = request.ModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OtherReviewPoints))
+            {
+                body["otherReviewPoints"] = request.OtherReviewPoints;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Question))
+            {
+                body["question"] = request.Question;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Subject))
+            {
+                body["subject"] = request.Subject;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TasksShrink))
+            {
+                body["tasks"] = request.TasksShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TotalScore))
+            {
+                body["totalScore"] = request.TotalScore;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitEssayCorrectionTask",
+                Version = "2024-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/quanmiao/lightapp/submitEssayCorrectionTask",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitEssayCorrectionTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交批改任务</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitEssayCorrectionTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitEssayCorrectionTaskResponse
+        /// </returns>
+        public async Task<SubmitEssayCorrectionTaskResponse> SubmitEssayCorrectionTaskWithOptionsAsync(string workspaceId, SubmitEssayCorrectionTaskRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitEssayCorrectionTaskShrinkRequest request = new SubmitEssayCorrectionTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tasks))
+            {
+                request.TasksShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tasks, "tasks", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Grade))
+            {
+                body["grade"] = request.Grade;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
+            {
+                body["modelId"] = request.ModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OtherReviewPoints))
+            {
+                body["otherReviewPoints"] = request.OtherReviewPoints;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Question))
+            {
+                body["question"] = request.Question;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Subject))
+            {
+                body["subject"] = request.Subject;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TasksShrink))
+            {
+                body["tasks"] = request.TasksShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TotalScore))
+            {
+                body["totalScore"] = request.TotalScore;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitEssayCorrectionTask",
+                Version = "2024-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/quanmiao/lightapp/submitEssayCorrectionTask",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitEssayCorrectionTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交批改任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitEssayCorrectionTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitEssayCorrectionTaskResponse
+        /// </returns>
+        public SubmitEssayCorrectionTaskResponse SubmitEssayCorrectionTask(string workspaceId, SubmitEssayCorrectionTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return SubmitEssayCorrectionTaskWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交批改任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitEssayCorrectionTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitEssayCorrectionTaskResponse
+        /// </returns>
+        public async Task<SubmitEssayCorrectionTaskResponse> SubmitEssayCorrectionTaskAsync(string workspaceId, SubmitEssayCorrectionTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await SubmitEssayCorrectionTaskWithOptionsAsync(workspaceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
