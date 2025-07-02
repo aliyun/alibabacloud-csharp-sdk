@@ -1,0 +1,40 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Eds_user20210308.Models
+{
+    public class DescribeGroupsResponseBody : TeaModel {
+        [NameInMap("Groups")]
+        [Validation(Required=false)]
+        public List<DescribeGroupsResponseBodyGroups> Groups { get; set; }
+        public class DescribeGroupsResponseBodyGroups : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>ug-2412ojkwtybd****</para>
+            /// </summary>
+            [NameInMap("GroupId")]
+            [Validation(Required=false)]
+            public string GroupId { get; set; }
+
+            [NameInMap("GroupName")]
+            [Validation(Required=false)]
+            public string GroupName { get; set; }
+
+        }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+    }
+
+}
