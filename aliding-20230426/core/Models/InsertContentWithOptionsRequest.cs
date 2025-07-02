@@ -38,16 +38,6 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         public int? Index { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>union_id</para>
-        /// </summary>
-        [NameInMap("OperatorId")]
-        [Validation(Required=false)]
-        public string OperatorId { get; set; }
-
-        /// <summary>
         /// <b>Example:</b>
         /// <para>[0,0]</para>
         /// </summary>

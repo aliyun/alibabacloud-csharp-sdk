@@ -29071,10 +29071,6 @@ namespace AlibabaCloud.SDK.Aliding20230426
             {
                 body["Index"] = request.Index;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatorId))
-            {
-                body["OperatorId"] = request.OperatorId;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PathShrink))
             {
                 body["Path"] = request.PathShrink;
@@ -29166,10 +29162,6 @@ namespace AlibabaCloud.SDK.Aliding20230426
             {
                 body["Index"] = request.Index;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatorId))
-            {
-                body["OperatorId"] = request.OperatorId;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PathShrink))
             {
                 body["Path"] = request.PathShrink;
@@ -29243,6 +29235,218 @@ namespace AlibabaCloud.SDK.Aliding20230426
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             InsertContentWithOptionsHeaders headers = new InsertContentWithOptionsHeaders();
             return await InsertContentWithOptionsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>插入下拉列表</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// InsertDropDownListRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// InsertDropDownListHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertDropDownListResponse
+        /// </returns>
+        public InsertDropDownListResponse InsertDropDownListWithOptions(InsertDropDownListRequest tmpReq, InsertDropDownListHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            InsertDropDownListShrinkRequest request = new InsertDropDownListShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            InsertDropDownListShrinkHeaders headers = new InsertDropDownListShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Options))
+            {
+                request.OptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Options, "Options", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OptionsShrink))
+            {
+                body["Options"] = request.OptionsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RangeAddress))
+            {
+                body["RangeAddress"] = request.RangeAddress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SheetId))
+            {
+                body["SheetId"] = request.SheetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkbookId))
+            {
+                body["WorkbookId"] = request.WorkbookId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "InsertDropDownList",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/documents/insertDropDownList",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<InsertDropDownListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>插入下拉列表</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// InsertDropDownListRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// InsertDropDownListHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertDropDownListResponse
+        /// </returns>
+        public async Task<InsertDropDownListResponse> InsertDropDownListWithOptionsAsync(InsertDropDownListRequest tmpReq, InsertDropDownListHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            InsertDropDownListShrinkRequest request = new InsertDropDownListShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            InsertDropDownListShrinkHeaders headers = new InsertDropDownListShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Options))
+            {
+                request.OptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Options, "Options", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OptionsShrink))
+            {
+                body["Options"] = request.OptionsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RangeAddress))
+            {
+                body["RangeAddress"] = request.RangeAddress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SheetId))
+            {
+                body["SheetId"] = request.SheetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkbookId))
+            {
+                body["WorkbookId"] = request.WorkbookId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "InsertDropDownList",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/documents/insertDropDownList",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<InsertDropDownListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>插入下拉列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InsertDropDownListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertDropDownListResponse
+        /// </returns>
+        public InsertDropDownListResponse InsertDropDownList(InsertDropDownListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            InsertDropDownListHeaders headers = new InsertDropDownListHeaders();
+            return InsertDropDownListWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>插入下拉列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InsertDropDownListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertDropDownListResponse
+        /// </returns>
+        public async Task<InsertDropDownListResponse> InsertDropDownListAsync(InsertDropDownListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            InsertDropDownListHeaders headers = new InsertDropDownListHeaders();
+            return await InsertDropDownListWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("result")]
+        [Validation(Required=false)]
+        public string Result { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>true</para>
