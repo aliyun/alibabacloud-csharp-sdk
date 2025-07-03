@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [Validation(Required=false)]
             public List<ListZonesResponseBodyDataItems> Items { get; set; }
             public class ListZonesResponseBodyDataItems : TeaModel {
+                [NameInMap("supportQat")]
+                [Validation(Required=false)]
+                public string SupportQat { get; set; }
+
                 /// <summary>
                 /// <para>可用区ID。</para>
                 /// 
