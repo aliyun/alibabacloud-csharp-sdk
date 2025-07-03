@@ -383,6 +383,14 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             public string InstanceRole { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>10000</para>
+            /// </summary>
+            [NameInMap("Iops")]
+            [Validation(Required=false)]
+            public int? Iops { get; set; }
+
+            /// <summary>
             /// <para>Indicates whether the OBServer version is the latest.</para>
             /// 
             /// <b>Example:</b>

@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         [Validation(Required=false)]
         public string Limit { get; set; }
 
+        [NameInMap("MetricScope")]
+        [Validation(Required=false)]
+        public string MetricScope { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

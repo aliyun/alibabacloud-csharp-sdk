@@ -119,6 +119,14 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             public bool? EnableReadOnlyReplica { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>10000</para>
+            /// </summary>
+            [NameInMap("Iops")]
+            [Validation(Required=false)]
+            public int? Iops { get; set; }
+
+            /// <summary>
             /// <para>The total memory size of the tenant, in GB.</para>
             /// 
             /// <b>Example:</b>

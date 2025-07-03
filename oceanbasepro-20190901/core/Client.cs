@@ -8037,6 +8037,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
                 query["StartTime"] = request.StartTime;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricScope))
+            {
+                body["MetricScope"] = request.MetricScope;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReplicaType))
             {
                 body["ReplicaType"] = request.ReplicaType;
@@ -8117,6 +8121,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
                 query["StartTime"] = request.StartTime;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricScope))
+            {
+                body["MetricScope"] = request.MetricScope;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReplicaType))
             {
                 body["ReplicaType"] = request.ReplicaType;
@@ -12992,6 +13000,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
             {
                 body["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatorType))
+            {
+                body["OperatorType"] = request.OperatorType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 body["PageNumber"] = request.PageNumber;
@@ -13053,6 +13065,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatorType))
+            {
+                body["OperatorType"] = request.OperatorType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
@@ -18688,6 +18704,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
             {
                 body["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Iops))
+            {
+                body["Iops"] = request.Iops;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogDisk))
             {
                 body["LogDisk"] = request.LogDisk;
@@ -18749,6 +18769,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Iops))
+            {
+                body["Iops"] = request.Iops;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogDisk))
             {

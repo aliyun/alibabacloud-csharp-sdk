@@ -32,6 +32,14 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>10000</para>
+        /// </summary>
+        [NameInMap("Iops")]
+        [Validation(Required=false)]
+        public string Iops { get; set; }
+
+        /// <summary>
         /// <para>The size of the log disk allocated to the tenant, in GB.</para>
         /// 
         /// <b>Example:</b>

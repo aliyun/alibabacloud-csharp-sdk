@@ -210,6 +210,14 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             public string InstanceType { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>10000</para>
+            /// </summary>
+            [NameInMap("Iops")]
+            [Validation(Required=false)]
+            public int? Iops { get; set; }
+
+            /// <summary>
             /// <para>Indicates whether the table name is case-sensitive. Valid values: </para>
             /// <list type="bullet">
             /// <item><description><b>1</b>: The table name is case-insensitive. </description></item>

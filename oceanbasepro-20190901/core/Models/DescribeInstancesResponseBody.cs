@@ -320,6 +320,14 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             public string InstanceType { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>10000</para>
+            /// </summary>
+            [NameInMap("Iops")]
+            [Validation(Required=false)]
+            public int? Iops { get; set; }
+
+            /// <summary>
             /// <para>The time period in UTC for the daily routine maintenance of the cluster.</para>
             /// 
             /// <b>Example:</b>

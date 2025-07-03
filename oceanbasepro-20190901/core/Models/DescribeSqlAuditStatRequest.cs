@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("OperatorType")]
+        [Validation(Required=false)]
+        public string OperatorType { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>1</para>
