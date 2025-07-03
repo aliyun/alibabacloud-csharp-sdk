@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 {
-    public class GetImageRequest : TeaModel {
+    public class GetImageShrinkRequest : TeaModel {
         [NameInMap("AdditionalRegionIds")]
         [Validation(Required=false)]
-        public List<string> AdditionalRegionIds { get; set; }
+        public string AdditionalRegionIdsShrink { get; set; }
 
         [NameInMap("ImageCategory")]
         [Validation(Required=false)]

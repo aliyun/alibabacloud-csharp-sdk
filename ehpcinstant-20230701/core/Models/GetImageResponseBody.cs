@@ -13,6 +13,24 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         [Validation(Required=false)]
         public GetImageResponseBodyImage Image { get; set; }
         public class GetImageResponseBodyImage : TeaModel {
+            [NameInMap("AdditionalRegionsInfo")]
+            [Validation(Required=false)]
+            public List<GetImageResponseBodyImageAdditionalRegionsInfo> AdditionalRegionsInfo { get; set; }
+            public class GetImageResponseBodyImageAdditionalRegionsInfo : TeaModel {
+                [NameInMap("ImageId")]
+                [Validation(Required=false)]
+                public string ImageId { get; set; }
+
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
+                public string RegionId { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+            }
+
             [NameInMap("AppId")]
             [Validation(Required=false)]
             public string AppId { get; set; }

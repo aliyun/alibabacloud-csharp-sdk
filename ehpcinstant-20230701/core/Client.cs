@@ -1282,7 +1282,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
         /// <para>查询托管侧镜像详情。</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// GetImageRequest
         /// </param>
         /// <param name="runtime">
@@ -1292,10 +1292,20 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
         /// <returns>
         /// GetImageResponse
         /// </returns>
-        public GetImageResponse GetImageWithOptions(GetImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetImageResponse GetImageWithOptions(GetImageRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetImageShrinkRequest request = new GetImageShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AdditionalRegionIds))
+            {
+                request.AdditionalRegionIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AdditionalRegionIds, "AdditionalRegionIds", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdditionalRegionIdsShrink))
+            {
+                query["AdditionalRegionIds"] = request.AdditionalRegionIdsShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageCategory))
             {
                 query["ImageCategory"] = request.ImageCategory;
@@ -1332,7 +1342,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
         /// <para>查询托管侧镜像详情。</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// GetImageRequest
         /// </param>
         /// <param name="runtime">
@@ -1342,10 +1352,20 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
         /// <returns>
         /// GetImageResponse
         /// </returns>
-        public async Task<GetImageResponse> GetImageWithOptionsAsync(GetImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetImageResponse> GetImageWithOptionsAsync(GetImageRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetImageShrinkRequest request = new GetImageShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AdditionalRegionIds))
+            {
+                request.AdditionalRegionIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AdditionalRegionIds, "AdditionalRegionIds", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdditionalRegionIdsShrink))
+            {
+                query["AdditionalRegionIds"] = request.AdditionalRegionIdsShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageCategory))
             {
                 query["ImageCategory"] = request.ImageCategory;
