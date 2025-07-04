@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
 {
     public class DeleteMultiAccountDeliveryChannelRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the delivery channel.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

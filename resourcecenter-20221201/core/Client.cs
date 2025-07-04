@@ -159,8 +159,18 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建投递渠道</para>
+        /// <para>Creates a single-account delivery channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Resource delivery supports the delivery of resource configuration change events and scheduled resource snapshots.
+        /// Scheduled resource snapshots support the following delivery scenarios:</para>
+        /// <list type="bullet">
+        /// <item><description>Standard delivery: Leave the ResourceSnapshotDelivery.CustomExpression parameter empty.</description></item>
+        /// <item><description>Custom delivery: Set the ResourceSnapshotDelivery.CustomExpression parameter to an appropriate value.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDeliveryChannelRequest
@@ -217,8 +227,18 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建投递渠道</para>
+        /// <para>Creates a single-account delivery channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Resource delivery supports the delivery of resource configuration change events and scheduled resource snapshots.
+        /// Scheduled resource snapshots support the following delivery scenarios:</para>
+        /// <list type="bullet">
+        /// <item><description>Standard delivery: Leave the ResourceSnapshotDelivery.CustomExpression parameter empty.</description></item>
+        /// <item><description>Custom delivery: Set the ResourceSnapshotDelivery.CustomExpression parameter to an appropriate value.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDeliveryChannelRequest
@@ -275,8 +295,18 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建投递渠道</para>
+        /// <para>Creates a single-account delivery channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Resource delivery supports the delivery of resource configuration change events and scheduled resource snapshots.
+        /// Scheduled resource snapshots support the following delivery scenarios:</para>
+        /// <list type="bullet">
+        /// <item><description>Standard delivery: Leave the ResourceSnapshotDelivery.CustomExpression parameter empty.</description></item>
+        /// <item><description>Custom delivery: Set the ResourceSnapshotDelivery.CustomExpression parameter to an appropriate value.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDeliveryChannelRequest
@@ -293,8 +323,18 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建投递渠道</para>
+        /// <para>Creates a single-account delivery channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Resource delivery supports the delivery of resource configuration change events and scheduled resource snapshots.
+        /// Scheduled resource snapshots support the following delivery scenarios:</para>
+        /// <list type="bullet">
+        /// <item><description>Standard delivery: Leave the ResourceSnapshotDelivery.CustomExpression parameter empty.</description></item>
+        /// <item><description>Custom delivery: Set the ResourceSnapshotDelivery.CustomExpression parameter to an appropriate value.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDeliveryChannelRequest
@@ -439,8 +479,18 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建多账号投递渠道</para>
+        /// <para>Creates a multi-account delivery channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>In Resource Center, you can create multi-account delivery channels by using the management account of your resource directory or the delegated administrator account of Resource Center to deliver resource configuration change events and scheduled resource snapshots within the members in your resource directory to Object Storage Service (OSS) or Simple Log Service. Then, other Alibaba Cloud services consume standardized resource information from OSS or Simple Log Service.
+        /// Scheduled resource snapshots support the following delivery scenarios:</para>
+        /// <list type="bullet">
+        /// <item><description>Standard delivery: Leave the <c>ResourceSnapshotDelivery.CustomExpression</c> parameter empty.</description></item>
+        /// <item><description>Custom delivery: Set the <c>ResourceSnapshotDelivery.CustomExpression</c> parameter to an appropriate value.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateMultiAccountDeliveryChannelRequest
@@ -497,8 +547,18 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建多账号投递渠道</para>
+        /// <para>Creates a multi-account delivery channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>In Resource Center, you can create multi-account delivery channels by using the management account of your resource directory or the delegated administrator account of Resource Center to deliver resource configuration change events and scheduled resource snapshots within the members in your resource directory to Object Storage Service (OSS) or Simple Log Service. Then, other Alibaba Cloud services consume standardized resource information from OSS or Simple Log Service.
+        /// Scheduled resource snapshots support the following delivery scenarios:</para>
+        /// <list type="bullet">
+        /// <item><description>Standard delivery: Leave the <c>ResourceSnapshotDelivery.CustomExpression</c> parameter empty.</description></item>
+        /// <item><description>Custom delivery: Set the <c>ResourceSnapshotDelivery.CustomExpression</c> parameter to an appropriate value.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateMultiAccountDeliveryChannelRequest
@@ -555,8 +615,18 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建多账号投递渠道</para>
+        /// <para>Creates a multi-account delivery channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>In Resource Center, you can create multi-account delivery channels by using the management account of your resource directory or the delegated administrator account of Resource Center to deliver resource configuration change events and scheduled resource snapshots within the members in your resource directory to Object Storage Service (OSS) or Simple Log Service. Then, other Alibaba Cloud services consume standardized resource information from OSS or Simple Log Service.
+        /// Scheduled resource snapshots support the following delivery scenarios:</para>
+        /// <list type="bullet">
+        /// <item><description>Standard delivery: Leave the <c>ResourceSnapshotDelivery.CustomExpression</c> parameter empty.</description></item>
+        /// <item><description>Custom delivery: Set the <c>ResourceSnapshotDelivery.CustomExpression</c> parameter to an appropriate value.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateMultiAccountDeliveryChannelRequest
@@ -573,8 +643,18 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建多账号投递渠道</para>
+        /// <para>Creates a multi-account delivery channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>In Resource Center, you can create multi-account delivery channels by using the management account of your resource directory or the delegated administrator account of Resource Center to deliver resource configuration change events and scheduled resource snapshots within the members in your resource directory to Object Storage Service (OSS) or Simple Log Service. Then, other Alibaba Cloud services consume standardized resource information from OSS or Simple Log Service.
+        /// Scheduled resource snapshots support the following delivery scenarios:</para>
+        /// <list type="bullet">
+        /// <item><description>Standard delivery: Leave the <c>ResourceSnapshotDelivery.CustomExpression</c> parameter empty.</description></item>
+        /// <item><description>Custom delivery: Set the <c>ResourceSnapshotDelivery.CustomExpression</c> parameter to an appropriate value.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateMultiAccountDeliveryChannelRequest
@@ -727,7 +807,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除投递渠道</para>
+        /// <para>Deletes a single-account delivery channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -769,7 +849,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除投递渠道</para>
+        /// <para>Deletes a single-account delivery channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -811,7 +891,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除投递渠道</para>
+        /// <para>Deletes a single-account delivery channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -829,7 +909,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除投递渠道</para>
+        /// <para>Deletes a single-account delivery channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -967,7 +1047,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除多账号投递渠道</para>
+        /// <para>Deletes a multi-account delivery channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1009,7 +1089,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除多账号投递渠道</para>
+        /// <para>Deletes a multi-account delivery channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1051,7 +1131,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除多账号投递渠道</para>
+        /// <para>Deletes a multi-account delivery channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1069,7 +1149,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除多账号投递渠道</para>
+        /// <para>Deletes a multi-account delivery channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1985,7 +2065,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询投递渠道</para>
+        /// <para>Queries the information about a single-account delivery channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2027,7 +2107,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询投递渠道</para>
+        /// <para>Queries the information about a single-account delivery channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2069,7 +2149,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询投递渠道</para>
+        /// <para>Queries the information about a single-account delivery channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2087,7 +2167,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询投递渠道</para>
+        /// <para>Queries the information about a single-account delivery channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2105,7 +2185,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询投递渠道统计信息</para>
+        /// <para>Queries the statistics on a single-account delivery channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2147,7 +2227,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询投递渠道统计信息</para>
+        /// <para>Queries the statistics on a single-account delivery channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2189,7 +2269,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询投递渠道统计信息</para>
+        /// <para>Queries the statistics on a single-account delivery channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2207,7 +2287,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询投递渠道统计信息</para>
+        /// <para>Queries the statistics on a single-account delivery channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2345,7 +2425,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询多账号投递渠道</para>
+        /// <para>Queries the information about a multi-account delivery channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2387,7 +2467,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询多账号投递渠道</para>
+        /// <para>Queries the information about a multi-account delivery channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2429,7 +2509,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询多账号投递渠道</para>
+        /// <para>Queries the information about a multi-account delivery channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2447,7 +2527,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询多账号投递渠道</para>
+        /// <para>Queries the information about a multi-account delivery channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2465,7 +2545,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询多账号投递渠道统计信息</para>
+        /// <para>Queries the statistics on a multi-account delivery channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2507,7 +2587,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询多账号投递渠道统计信息</para>
+        /// <para>Queries the statistics on a multi-account delivery channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2549,7 +2629,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询多账号投递渠道统计信息</para>
+        /// <para>Queries the statistics on a multi-account delivery channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2567,7 +2647,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询多账号投递渠道统计信息</para>
+        /// <para>Queries the statistics on a multi-account delivery channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2819,6 +2899,142 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetMultiAccountResourceConfigurationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取多账号资源数量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMultiAccountResourceCountsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMultiAccountResourceCountsResponse
+        /// </returns>
+        public GetMultiAccountResourceCountsResponse GetMultiAccountResourceCountsWithOptions(GetMultiAccountResourceCountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                query["Filter"] = request.Filter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupByKey))
+            {
+                query["GroupByKey"] = request.GroupByKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scope))
+            {
+                query["Scope"] = request.Scope;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMultiAccountResourceCounts",
+                Version = "2022-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMultiAccountResourceCountsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取多账号资源数量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMultiAccountResourceCountsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMultiAccountResourceCountsResponse
+        /// </returns>
+        public async Task<GetMultiAccountResourceCountsResponse> GetMultiAccountResourceCountsWithOptionsAsync(GetMultiAccountResourceCountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                query["Filter"] = request.Filter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupByKey))
+            {
+                query["GroupByKey"] = request.GroupByKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scope))
+            {
+                query["Scope"] = request.Scope;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMultiAccountResourceCounts",
+                Version = "2022-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMultiAccountResourceCountsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取多账号资源数量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMultiAccountResourceCountsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMultiAccountResourceCountsResponse
+        /// </returns>
+        public GetMultiAccountResourceCountsResponse GetMultiAccountResourceCounts(GetMultiAccountResourceCountsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetMultiAccountResourceCountsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取多账号资源数量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMultiAccountResourceCountsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMultiAccountResourceCountsResponse
+        /// </returns>
+        public async Task<GetMultiAccountResourceCountsResponse> GetMultiAccountResourceCountsAsync(GetMultiAccountResourceCountsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetMultiAccountResourceCountsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3301,7 +3517,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出投递渠道</para>
+        /// <para>Queries a list of single-account delivery channels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3347,7 +3563,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出投递渠道</para>
+        /// <para>Queries a list of single-account delivery channels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3393,7 +3609,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出投递渠道</para>
+        /// <para>Queries a list of single-account delivery channels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3411,7 +3627,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出投递渠道</para>
+        /// <para>Queries a list of single-account delivery channels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3651,7 +3867,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出多账号投递渠道</para>
+        /// <para>Queries a list of multi-account delivery channels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3697,7 +3913,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出多账号投递渠道</para>
+        /// <para>Queries a list of multi-account delivery channels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3743,7 +3959,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出多账号投递渠道</para>
+        /// <para>Queries a list of multi-account delivery channels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3761,7 +3977,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出多账号投递渠道</para>
+        /// <para>Queries a list of multi-account delivery channels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5599,8 +5815,18 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新投递渠道</para>
+        /// <para>Updates a single-account delivery channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Resource delivery supports the delivery of resource configuration change events and scheduled resource snapshots.
+        /// Scheduled resource snapshots support the following delivery scenarios:</para>
+        /// <list type="bullet">
+        /// <item><description>Standard delivery: Leave the <c>ResourceSnapshotDelivery.CustomExpression</c> parameter empty.</description></item>
+        /// <item><description>Custom delivery: Set the <c>ResourceSnapshotDelivery.CustomExpression</c> parameter to an appropriate value.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDeliveryChannelRequest
@@ -5661,8 +5887,18 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新投递渠道</para>
+        /// <para>Updates a single-account delivery channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Resource delivery supports the delivery of resource configuration change events and scheduled resource snapshots.
+        /// Scheduled resource snapshots support the following delivery scenarios:</para>
+        /// <list type="bullet">
+        /// <item><description>Standard delivery: Leave the <c>ResourceSnapshotDelivery.CustomExpression</c> parameter empty.</description></item>
+        /// <item><description>Custom delivery: Set the <c>ResourceSnapshotDelivery.CustomExpression</c> parameter to an appropriate value.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDeliveryChannelRequest
@@ -5723,8 +5959,18 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新投递渠道</para>
+        /// <para>Updates a single-account delivery channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Resource delivery supports the delivery of resource configuration change events and scheduled resource snapshots.
+        /// Scheduled resource snapshots support the following delivery scenarios:</para>
+        /// <list type="bullet">
+        /// <item><description>Standard delivery: Leave the <c>ResourceSnapshotDelivery.CustomExpression</c> parameter empty.</description></item>
+        /// <item><description>Custom delivery: Set the <c>ResourceSnapshotDelivery.CustomExpression</c> parameter to an appropriate value.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDeliveryChannelRequest
@@ -5741,8 +5987,18 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新投递渠道</para>
+        /// <para>Updates a single-account delivery channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Resource delivery supports the delivery of resource configuration change events and scheduled resource snapshots.
+        /// Scheduled resource snapshots support the following delivery scenarios:</para>
+        /// <list type="bullet">
+        /// <item><description>Standard delivery: Leave the <c>ResourceSnapshotDelivery.CustomExpression</c> parameter empty.</description></item>
+        /// <item><description>Custom delivery: Set the <c>ResourceSnapshotDelivery.CustomExpression</c> parameter to an appropriate value.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDeliveryChannelRequest
@@ -5887,8 +6143,18 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新多账号投递渠道</para>
+        /// <para>Updates a multi-account delivery channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Resource delivery supports the delivery of resource configuration change events and scheduled resource snapshots.
+        /// Scheduled resource snapshots support the following delivery scenarios:</para>
+        /// <list type="bullet">
+        /// <item><description>Standard delivery: Leave the <c>ResourceSnapshotDelivery.CustomExpression</c> parameter empty.</description></item>
+        /// <item><description>Custom delivery: Set the <c>ResourceSnapshotDelivery.CustomExpression</c> parameter to an appropriate value.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateMultiAccountDeliveryChannelRequest
@@ -5949,8 +6215,18 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新多账号投递渠道</para>
+        /// <para>Updates a multi-account delivery channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Resource delivery supports the delivery of resource configuration change events and scheduled resource snapshots.
+        /// Scheduled resource snapshots support the following delivery scenarios:</para>
+        /// <list type="bullet">
+        /// <item><description>Standard delivery: Leave the <c>ResourceSnapshotDelivery.CustomExpression</c> parameter empty.</description></item>
+        /// <item><description>Custom delivery: Set the <c>ResourceSnapshotDelivery.CustomExpression</c> parameter to an appropriate value.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateMultiAccountDeliveryChannelRequest
@@ -6011,8 +6287,18 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新多账号投递渠道</para>
+        /// <para>Updates a multi-account delivery channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Resource delivery supports the delivery of resource configuration change events and scheduled resource snapshots.
+        /// Scheduled resource snapshots support the following delivery scenarios:</para>
+        /// <list type="bullet">
+        /// <item><description>Standard delivery: Leave the <c>ResourceSnapshotDelivery.CustomExpression</c> parameter empty.</description></item>
+        /// <item><description>Custom delivery: Set the <c>ResourceSnapshotDelivery.CustomExpression</c> parameter to an appropriate value.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateMultiAccountDeliveryChannelRequest
@@ -6029,8 +6315,18 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新多账号投递渠道</para>
+        /// <para>Updates a multi-account delivery channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Resource delivery supports the delivery of resource configuration change events and scheduled resource snapshots.
+        /// Scheduled resource snapshots support the following delivery scenarios:</para>
+        /// <list type="bullet">
+        /// <item><description>Standard delivery: Leave the <c>ResourceSnapshotDelivery.CustomExpression</c> parameter empty.</description></item>
+        /// <item><description>Custom delivery: Set the <c>ResourceSnapshotDelivery.CustomExpression</c> parameter to an appropriate value.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateMultiAccountDeliveryChannelRequest

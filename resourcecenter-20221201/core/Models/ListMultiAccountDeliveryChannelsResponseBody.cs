@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
 {
     public class ListMultiAccountDeliveryChannelsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The delivery channels.</para>
+        /// </summary>
         [NameInMap("DeliveryChannels")]
         [Validation(Required=false)]
         public List<ListMultiAccountDeliveryChannelsResponseBodyDeliveryChannels> DeliveryChannels { get; set; }
         public class ListMultiAccountDeliveryChannelsResponseBodyDeliveryChannels : TeaModel {
             /// <summary>
+            /// <para>The time when the delivery channel was created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2023-08-17T00:23:55Z</para>
             /// </summary>
@@ -21,11 +26,16 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            /// <summary>
+            /// <para>The description of the delivery channel.</para>
+            /// </summary>
             [NameInMap("DeliveryChannelDescription")]
             [Validation(Required=false)]
             public string DeliveryChannelDescription { get; set; }
 
             /// <summary>
+            /// <para>The ID of the delivery channel.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>dc-0bzhsqpnk***</para>
             /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             public string DeliveryChannelId { get; set; }
 
             /// <summary>
+            /// <para>The name of the delivery channel.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test-multi-account-delivery-channel</para>
             /// </summary>
@@ -44,6 +56,8 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         }
 
         /// <summary>
+        /// <para>The maximum number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -52,6 +66,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>17502A1B-7026-5551-8E1C-CCABD0CBC***</para>
         /// </summary>

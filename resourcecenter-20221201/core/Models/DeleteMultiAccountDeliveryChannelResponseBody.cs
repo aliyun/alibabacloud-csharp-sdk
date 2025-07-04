@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
 {
     public class DeleteMultiAccountDeliveryChannelResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3C5CDBF6-4DB7-53E9-ADDC-5919E3FAC***</para>
         /// </summary>
