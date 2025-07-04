@@ -2264,6 +2264,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             {
                 body["rawSchema"] = request.RawSchema;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scene))
+            {
+                body["scene"] = request.Scene;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VectorIndex))
             {
                 body["vectorIndex"] = request.VectorIndex;
@@ -2347,6 +2351,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RawSchema))
             {
                 body["rawSchema"] = request.RawSchema;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scene))
+            {
+                body["scene"] = request.Scene;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VectorIndex))
             {

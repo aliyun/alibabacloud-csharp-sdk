@@ -313,6 +313,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         [Validation(Required=false)]
         public string RawSchema { get; set; }
 
+        [NameInMap("scene")]
+        [Validation(Required=false)]
+        public string Scene { get; set; }
+
         /// <summary>
         /// <para>The index schema.</para>
         /// </summary>

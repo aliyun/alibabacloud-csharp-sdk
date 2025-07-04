@@ -260,6 +260,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 
             }
 
+            [NameInMap("scene")]
+            [Validation(Required=false)]
+            public string Scene { get; set; }
+
             /// <summary>
             /// <para>The type of the data source. Valid values:</para>
             /// <list type="bullet">
