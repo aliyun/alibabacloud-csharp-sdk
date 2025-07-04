@@ -83,6 +83,14 @@ namespace AlibabaCloud.SDK.FaRui20240628.Models
 
         }
 
+        [NameInMap("contents")]
+        [Validation(Required=false)]
+        public string Contents { get; set; }
+
+        [NameInMap("extra")]
+        [Validation(Required=false)]
+        public string Extra { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>200</para>

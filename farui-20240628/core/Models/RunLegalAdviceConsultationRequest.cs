@@ -51,6 +51,20 @@ namespace AlibabaCloud.SDK.FaRui20240628.Models
 
         }
 
+        [NameInMap("extra")]
+        [Validation(Required=false)]
+        public RunLegalAdviceConsultationRequestExtra Extra { get; set; }
+        public class RunLegalAdviceConsultationRequestExtra : TeaModel {
+            [NameInMap("deepThink")]
+            [Validation(Required=false)]
+            public bool? DeepThink { get; set; }
+
+            [NameInMap("onlineSearch")]
+            [Validation(Required=false)]
+            public bool? OnlineSearch { get; set; }
+
+        }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>true</para>

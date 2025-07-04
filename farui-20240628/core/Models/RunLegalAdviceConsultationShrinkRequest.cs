@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.FaRui20240628.Models
         [Validation(Required=false)]
         public string AssistantShrink { get; set; }
 
+        [NameInMap("extra")]
+        [Validation(Required=false)]
+        public string ExtraShrink { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>true</para>
