@@ -1892,6 +1892,10 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["endpoint_public_access"] = request.EndpointPublicAccess;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtraSans))
+            {
+                body["extra_sans"] = request.ExtraSans;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FormatDisk))
             {
                 body["format_disk"] = request.FormatDisk;
@@ -2067,6 +2071,10 @@ namespace AlibabaCloud.SDK.CS20151215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 body["resource_group_id"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RrsaConfig))
+            {
+                body["rrsa_config"] = request.RrsaConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Runtime))
             {
@@ -2347,6 +2355,10 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["endpoint_public_access"] = request.EndpointPublicAccess;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtraSans))
+            {
+                body["extra_sans"] = request.ExtraSans;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FormatDisk))
             {
                 body["format_disk"] = request.FormatDisk;
@@ -2522,6 +2534,10 @@ namespace AlibabaCloud.SDK.CS20151215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 body["resource_group_id"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RrsaConfig))
+            {
+                body["rrsa_config"] = request.RrsaConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Runtime))
             {

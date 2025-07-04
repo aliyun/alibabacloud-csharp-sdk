@@ -520,6 +520,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Obsolete]
         public string CpuPolicy { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The custom subject alternative names (SANs) for the API server certificate to accept requests from specified IP addresses or domain names. Separate multiple IP addresses and domain names with commas (,).</para>
         /// 
@@ -528,6 +530,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("custom_san")]
         [Validation(Required=false)]
+        [Obsolete]
         public string CustomSan { get; set; }
 
         /// <summary>
@@ -564,6 +567,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Obsolete]
         public bool? DisableRollback { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>Specifies whether to enable the RAM Roles for Service Accounts (RRSA) feature.</para>
         /// 
@@ -572,6 +577,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("enable_rrsa")]
         [Validation(Required=false)]
+        [Obsolete]
         public bool? EnableRrsa { get; set; }
 
         /// <summary>
@@ -601,6 +607,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("endpoint_public_access")]
         [Validation(Required=false)]
         public bool? EndpointPublicAccess { get; set; }
+
+        [NameInMap("extra_sans")]
+        [Validation(Required=false)]
+        public List<string> ExtraSans { get; set; }
 
         /// <term><b>Obsolete</b></term>
         /// 
@@ -1281,6 +1291,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("resource_group_id")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
+
+        [NameInMap("rrsa_config")]
+        [Validation(Required=false)]
+        public CreateClusterRequestRrsaConfig RrsaConfig { get; set; }
+        public class CreateClusterRequestRrsaConfig : TeaModel {
+            [NameInMap("enabled")]
+            [Validation(Required=false)]
+            public bool? Enabled { get; set; }
+
+        }
 
         /// <summary>
         /// <para>The container runtime. The default container runtime is Docker. containerd and Sandboxed-Container are also supported.</para>
