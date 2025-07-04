@@ -23,14 +23,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>Specifies whether to enable the auto-renewal feature. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
-        /// </list>
-        /// <remarks>
-        /// </remarks>
+        /// <item><description><b>false</b><remarks>
         /// <list type="bullet">
-        /// <item><description><para>This parameter is valid only when you change the billing method from pay-as-you-go to subscription.</para>
-        /// </description></item>
-        /// <item><description><para>All strings except <b>true</b> are considered <b>false</b>.</para>
+        /// <item><description>This parameter is valid only when you change the billing method from pay-as-you-go to subscription.</description></item>
+        /// <item><description>All strings except <b>true</b> are considered <b>false</b>.</description></item>
+        /// </list>
+        /// </remarks>
         /// </description></item>
         /// </list>
         /// 
@@ -68,7 +66,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The custom client token that is used to ensure the idempotence of the request.</para>
         /// <remarks>
-        /// <para> The value can contain ASCII characters and can be up to 64 characters in length.</para>
+        /// <para>The value can contain ASCII characters and can be up to 64 characters in length.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -100,11 +98,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// <para>The reserved parameter. This parameter is not supported.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>PrePaid</description></item>
-        /// <item><description>PostPaid</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -153,11 +146,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The renewal cycle of the instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Year</b></description></item>
-        /// <item><description><b>Month</b></description></item>
-        /// </list>
-        /// <remarks>
-        /// <para> This parameter must be specified if you set the PayType parameter to <b>Prepaid</b>.</para>
+        /// <item><description><b>Month</b><remarks>
+        /// <para>This parameter must be specified if you set the PayType parameter to <b>Prepaid</b>.</para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -193,11 +186,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The subscription duration of the instance.</para>
         /// <list type="bullet">
-        /// <item><description>**If you set the <b><b>Period</b></b> parameter to **Year, the value of the UsedTime parameter ranges from 1 to 5.</description></item>
-        /// <item><description>If the <b>Period</b> parameter is set to <b>Month</b>, the value of the <b>UsedTime</b> parameter ranges from 1 to 11.</description></item>
+        /// <item><description>If you set the <b>Period</b> parameter to <b>Year</b>, the value of the <b>UsedTime</b> parameter ranges from <b>1</b> to <b>5</b>.</description></item>
+        /// <item><description>If the <b>Period</b> parameter is set to <b>Month</b>, the value of the <b>UsedTime</b> parameter ranges from <b>1</b> to <b>11</b>.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you set the PayType parameter to <b>Prepaid</b>, you must also specify this parameter.</para>
+        /// <para>If you set the <b>PayType</b> parameter to <b>Prepaid</b>, you must specify this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

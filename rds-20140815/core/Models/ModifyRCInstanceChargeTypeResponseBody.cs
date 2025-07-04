@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The billing method.</para>
         /// <list type="bullet">
-        /// <item><description><b>POSTPAY</b>: pay-as-you-go</description></item>
-        /// <item><description><b>PREPAY</b>: subscription</description></item>
+        /// <item><description><b>POSTPAY</b>: pay-as-you-go.</description></item>
+        /// <item><description><b>PREPAY</b>: subscription.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The instance IDs.</para>
+        /// <para>The list of instance IDs.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]

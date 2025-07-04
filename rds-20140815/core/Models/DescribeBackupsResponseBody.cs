@@ -284,6 +284,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public string EngineVersion { get; set; }
 
+                [NameInMap("ExpectExpireTime")]
+                [Validation(Required=false)]
+                public string ExpectExpireTime { get; set; }
+
                 /// <summary>
                 /// <para>The ID of the instance that generates the backup set. This parameter is used to indicate whether the instance that generates the backup set is a primary instance or a secondary instance.</para>
                 /// 

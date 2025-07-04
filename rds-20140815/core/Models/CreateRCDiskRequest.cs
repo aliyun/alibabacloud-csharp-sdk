@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The data disk type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cloud_efficiency</b>: ultra disk</description></item>
+        /// <item><description><b>cloud_efficiency</b>: ultra disk.</description></item>
         /// <item><description><b>cloud_ssd</b>: standard SSD</description></item>
         /// <item><description><b>cloud_essd</b>: ESSD</description></item>
         /// <item><description><b>cloud_auto</b> (default): Premium ESSD</description></item>
@@ -80,7 +80,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DiskName { get; set; }
 
         /// <summary>
-        /// <para>The billing method. Set the value to <b>Postpaid</b>, which specifies the pay-as-you-go billing method.</para>
+        /// <para>The billing method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Postpaid</b>: pay-as-you-go Pay-as-you-go disks do not require to be attached. You can also attach the pay-as-you-go disk to an instance of any billing method based on your business requirements.</description></item>
+        /// <item><description><b>Prepaid</b>: subscription Subscription disks must be attached to a subscription instance. Set <b>InstanceId</b> to the ID of a subscription instance.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Postpaid</para>
@@ -90,7 +94,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceChargeType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance to which you want to attach the disk.</para>
+        /// <para>The ID of the instance to which you want to attach the disk. If you set <b>InstanceChargeType</b> to <b>Prepaid</b>, you must set InstanceId to the ID of a subscription instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rc-v28c6k3jupp61m2t****</para>
@@ -147,6 +151,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-ac****</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
@@ -181,6 +191,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The snapshot that you want to use to create the disk.</para>
         /// <list type="bullet">
+        /// <item><description>The snapshots of RDS Custom instances and the non-shared snapshots of ECS instances are supported.</description></item>
         /// <item><description>If the size of the snapshot specified by <b>SnapshotId</b> is greater than the value of <b>Size</b>, the size of the created disk is equal to the specified snapshot size. If the snapshot size is less than the <b>Size</b> value, the size of the created disk is equal to the <b>Size</b> value.</description></item>
         /// <item><description>You cannot create elastic ephemeral disks from snapshots.</description></item>
         /// <item><description>Snapshots that were created on or before July 15, 2013 cannot be used to create disks.</description></item>
@@ -193,14 +204,29 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string SnapshotId { get; set; }
 
+        /// <summary>
+        /// <para>The list of tags.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateRCDiskRequestTag> Tag { get; set; }
         public class CreateRCDiskRequestTag : TeaModel {
+            /// <summary>
+            /// <para>The tag key. You can create N tag keys at a time. Valid values of N: <b>1 to 20</b>. The tag key cannot be an empty string.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>testkey1</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <para>The tag value. You can query N values at a time. Valid values of N: <b>1</b> to <b>20</b>. The tag value can be an empty string.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>testvalue1</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

@@ -84,6 +84,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DataDiskShrink { get; set; }
 
+        [NameInMap("DeletionProtection")]
+        [Validation(Required=false)]
+        public bool? DeletionProtection { get; set; }
+
         /// <summary>
         /// <para>The deployment set ID.</para>
         /// 

@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public List<DescribeDBInstancesResponseBodyItemsDBInstance> DBInstance { get; set; }
             public class DescribeDBInstancesResponseBodyItemsDBInstance : TeaModel {
+                [NameInMap("AutoRenewal")]
+                [Validation(Required=false)]
+                public bool? AutoRenewal { get; set; }
+
                 [NameInMap("BlueGreenDeploymentName")]
                 [Validation(Required=false)]
                 public string BlueGreenDeploymentName { get; set; }

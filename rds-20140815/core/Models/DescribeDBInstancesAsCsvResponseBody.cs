@@ -188,6 +188,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public int? DBInstanceStorage { get; set; }
 
+                [NameInMap("DBInstanceStorageType")]
+                [Validation(Required=false)]
+                public string DBInstanceStorageType { get; set; }
+
                 /// <summary>
                 /// <para>The instance type. Valid values:</para>
                 /// <list type="bullet">

@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         /// <summary>
         /// <para>The retention period of the snapshot. Valid values: 1 to 65536. Unit: days. The snapshot is automatically released when its retention period expires.</para>
         /// <para>By default, this parameter is left empty, which specifies that the snapshot is not automatically released.</para>
@@ -71,6 +75,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("RetentionDays")]
         [Validation(Required=false)]
         public int? RetentionDays { get; set; }
+
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<CreateRCSnapshotRequestTag> Tag { get; set; }
+        public class CreateRCSnapshotRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
         /// <summary>
         /// <para>This parameter has been deprecated.</para>

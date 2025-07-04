@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstanceSSLResponseBody : TeaModel {
         /// <summary>
-        /// <para>The method that is used to verify the identities of clients. This parameter is supported only when the instance runs PostgreSQL with cloud disks. Valid values:</para>
+        /// <para>The method that is used to verify the instance. This parameter is supported only when the instance runs PostgreSQL with cloud disks.</para>
         /// <list type="bullet">
         /// <item><description><b>cert</b></description></item>
         /// <item><description><b>prefer</b></description></item>
@@ -50,7 +50,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientCACert { get; set; }
 
         /// <summary>
-        /// <para>The time when the public key of the CA that issues client certificates expires. This parameter is supported only when the instance runs PostgreSQL with cloud disks. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. This parameter is not supported now.</para>
+        /// <para>The time when the public key of the CA that issues client certificates expires. This parameter is supported only when the instance runs PostgreSQL with cloud disks. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format and must be in UTC.</para>
+        /// <para>This parameter is not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -82,9 +83,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ConnectionString { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the forceful SSL encryption feature is enabled. This parameter is supported only for ApsaraDB RDS for SQL Server instances. For more information, see <a href="https://help.aliyun.com/document_detail/95715.html">Configure the SSL encryption feature</a>.</para>
+        /// <para>Indicates whether the <a href="https://help.aliyun.com/document_detail/95715.html">forceful SSL encryption</a> feature is enabled. This parameter is supported only for RDS for SQL Server instances.</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: enabled</description></item>
+        /// <item><description><b>1</b>: The feature is enabled.</description></item>
         /// <item><description><b>0</b>: The feature is disabled.</description></item>
         /// </list>
         /// 
@@ -96,11 +97,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ForceEncryption { get; set; }
 
         /// <summary>
-        /// <para>The status of the SSL link. This parameter is supported only when the instance runs PostgreSQL with cloud disks. Valid values:</para>
+        /// <para>The status of the SSL link. This parameter is supported only when the instance runs PostgreSQL with cloud disks.</para>
         /// <list type="bullet">
-        /// <item><description><b>success</b></description></item>
-        /// <item><description><b>setting</b></description></item>
-        /// <item><description><b>failed</b></description></item>
+        /// <item><description><b>success</b>: The SSL link is successfully configured.</description></item>
+        /// <item><description><b>setting</b>: The SSL link is being configured.</description></item>
+        /// <item><description><b>failed</b>: The SSL link failed to be configured.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -147,20 +148,19 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the server certificate needs to be updated.</para>
+        /// <para>Indicates whether the SSL certificate needs to be updated. Valid values:</para>
+        /// <remarks>
+        /// <para> An SSL certificate remains valid for one year. Before the used SSL certificate expires, you must update the validity period of the SSL certificate. If you do not update the validity period of the SSL certificate, your application or client that uses encrypted network connections cannot connect to your RDS instance.</para>
+        /// </remarks>
+        /// <para><b>RDS instances that run MySQL and SQL Server</b></para>
         /// <list type="bullet">
-        /// <item><description><para>Valid values for ApsaraDB RDS for MySQL instances and ApsaraDB RDS for SQL Server instances:</para>
-        /// <list type="bullet">
-        /// <item><description><b>No</b></description></item>
-        /// <item><description><b>Yes</b></description></item>
+        /// <item><description><b>No</b>: The SSL certificate does not need to be updated.</description></item>
+        /// <item><description><b>Yes</b>: The SSL certificate needs to be updated.</description></item>
         /// </list>
-        /// </description></item>
-        /// <item><description><para>Valid values for ApsaraDB RDS for PostgreSQL instances:</para>
+        /// <para><b>RDS instances that run PostgreSQL</b></para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: no</description></item>
-        /// <item><description><b>1</b>: yes</description></item>
-        /// </list>
-        /// </description></item>
+        /// <item><description><b>0</b>: The SSL certificate does not need to be updated.</description></item>
+        /// <item><description><b>1</b>: The SSL certificate needs to be updated.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -207,20 +207,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SSLCreateTime { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether SSL encryption is enabled.</para>
+        /// <para>Indicates whether SSL encryption is enabled. Valid values:</para>
+        /// <para><b>RDS instances that run MySQL and SQL Server</b></para>
         /// <list type="bullet">
-        /// <item><description><para>Valid values for ApsaraDB RDS for MySQL instances and ApsaraDB RDS for SQL Server instances:</para>
-        /// <list type="bullet">
-        /// <item><description><b>Yes</b></description></item>
-        /// <item><description><b>No</b></description></item>
+        /// <item><description><b>Yes</b>: SSL encryption is enabled.</description></item>
+        /// <item><description><b>No</b>: SSL encryption is disabled.</description></item>
         /// </list>
-        /// </description></item>
-        /// <item><description><para>Valid values for ApsaraDB RDS for PostgreSQL instances:</para>
+        /// <para><b>RDS instances that run PostgreSQL</b></para>
         /// <list type="bullet">
-        /// <item><description><b>on</b>: enabled</description></item>
-        /// <item><description><b>off</b>: disabled</description></item>
-        /// </list>
-        /// </description></item>
+        /// <item><description><b>on</b>: SSL encryption is enabled.</description></item>
+        /// <item><description><b>off</b>: SSL encryption is disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -231,7 +227,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SSLEnabled { get; set; }
 
         /// <summary>
-        /// <para>The time when the server certificate expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+        /// <para>The time when the SSL certificate expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format and must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-10-11T08:16:43Z</para>
@@ -273,7 +269,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ServerKey { get; set; }
 
         /// <summary>
-        /// <para>The minimum Transport Layer Security (TLS) version. Valid values: 1.0, 1.1, and 1.2. This parameter is supported only for ApsaraDB RDS for SQL Server instances. For more information, see <a href="https://help.aliyun.com/document_detail/95715.html">Configure the SSL encryption feature</a>.</para>
+        /// <para>The <a href="https://help.aliyun.com/document_detail/95715.html">minimum Transport Layer Security (TLS) version</a>. Valid values: 1.0, 1.1, and 1.2. This parameter is supported only for ApsaraDB RDS for SQL Server instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.1</para>

@@ -10,13 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DeleteBackupFileRequest : TeaModel {
         /// <summary>
-        /// <para>The backup set ID. You can specify the IDs of up to 100 backup sets at a time. Separate the IDs with commas (,).</para>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>If the instance runs SQL Server, only the ID of the backup set for an individual database is supported.</description></item>
-        /// <item><description>You can call the DescribeBackups operation to query the backup set ID.</description></item>
-        /// </list>
-        /// </remarks>
+        /// <para>You can specify only the ID of a backup file whose backup policy is Single-database Backup. You can specify the IDs of up to 100 backup files at a time. Separate the IDs with commas (,). You can call the DescribeBackups operation to query the IDs of data backup files.</para>
         /// 
         /// <b>Example:</b>
         /// <para>29304****</para>
@@ -26,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to delete the backup sets that are generated before the specified point in time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The time before which the backup files you want to delete are generated. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2011-06-11T16:00:00Z</para>

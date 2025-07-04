@@ -275,6 +275,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string PayType { get; set; }
 
+        [NameInMap("QueryAutoRenewal")]
+        [Validation(Required=false)]
+        public bool? QueryAutoRenewal { get; set; }
+
         /// <summary>
         /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>

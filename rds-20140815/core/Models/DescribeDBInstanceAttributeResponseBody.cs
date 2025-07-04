@@ -110,10 +110,22 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
                 }
 
+                /// <summary>
+                /// <para>This is a reserved parameter and is not in use.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>None</para>
+                /// </summary>
                 [NameInMap("BlueGreenDeploymentName")]
                 [Validation(Required=false)]
                 public string BlueGreenDeploymentName { get; set; }
 
+                /// <summary>
+                /// <para>This is a reserved parameter and is not in use.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>None</para>
+                /// </summary>
                 [NameInMap("BlueInstanceName")]
                 [Validation(Required=false)]
                 public string BlueInstanceName { get; set; }
@@ -202,7 +214,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Collation { get; set; }
 
                 /// <summary>
-                /// <para>The storage compression mode.</para>
+                /// <para>The storage compression mode of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on, off</para>
@@ -221,6 +233,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public string CompressionRatio { get; set; }
 
+                /// <summary>
+                /// <para>This is a reserved parameter and is not in use.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>None</para>
+                /// </summary>
                 [NameInMap("ComputeBurstEnabled")]
                 [Validation(Required=false)]
                 public bool? ComputeBurstEnabled { get; set; }
@@ -697,6 +715,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public string GeneralGroupName { get; set; }
 
+                /// <summary>
+                /// <para>This is a reserved parameter and is not in use.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>None</para>
+                /// </summary>
                 [NameInMap("GreenInstanceName")]
                 [Validation(Required=false)]
                 public string GreenInstanceName { get; set; }
@@ -891,7 +915,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <para>The OptimizedWritesInfo parameter contains the following fields:</para>
                 /// <list type="bullet">
                 /// <item><description><b>optimized_writes</b>: indicates whether the 16K atomic write feature is enabled for the current instance.</description></item>
-                /// <item><description><b>init_optimized_writes</b>: indicates whether the 16K atomic write feature can be enabled for the current instance. If init_optimized_writes is set to false, the 16K atomic write switch is not displayed for specific instances in the console.</description></item>
+                /// <item><description><b>init_optimized_writes</b>: indicates whether the 16K atomic write feature can be enabled for the current instance. If init_optimized_writes is set to false, the 16K atomic write switch is not displayed for the instance in the console.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -979,6 +1003,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
                 }
 
+                /// <summary>
+                /// <para>This is a reserved parameter and is not in use.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>None</para>
+                /// </summary>
                 [NameInMap("ReadOnlyStatus")]
                 [Validation(Required=false)]
                 public string ReadOnlyStatus { get; set; }
@@ -1140,7 +1170,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string SuperPermissionMode { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the storage compression mode can be enabled for the instance.</para>
+                /// <para>Indicates whether storage compression can be enabled for the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true, false</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBProxyEndpointResponseBody : TeaModel {
         /// <summary>
-        /// <para>The consistency read timeout period. Unit: milliseconds. Default value: <b>10</b> Unit: milliseconds. Valid values: <b>0 to 60000</b></para>
+        /// <para>The timeout period for consistency reads. Unit: milliseconds. Default value: <b>10</b>. Valid values: <b>0</b> to <b>60000</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

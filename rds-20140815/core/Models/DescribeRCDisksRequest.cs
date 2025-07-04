@@ -60,14 +60,29 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The list of the tags.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeRCDisksRequestTag> Tag { get; set; }
         public class DescribeRCDisksRequestTag : TeaModel {
+            /// <summary>
+            /// <para>The key of the tag. The tag key <b>cannot be</b> an empty string or a duplicate value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>testkey1</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <para>The value of the tag. The tag value <b>can be</b> an empty string.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>testvalue1</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

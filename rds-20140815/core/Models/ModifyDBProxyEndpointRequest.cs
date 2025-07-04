@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBProxyEndpointRequest : TeaModel {
         /// <summary>
-        /// <para>Consistency read timeout, in milliseconds.</para>
+        /// <para>The consistency read timeout period. Unit: milliseconds. Default value: <b>10</b> Unit: milliseconds. Valid values: <b>0 to 60000</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -27,6 +27,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <item><description><b>ConnectionPersist</b>: connection pooling</description></item>
         /// <item><description><b>TransactionReadSqlRouteOptimizeStatus</b>: transaction splitting</description></item>
         /// <item><description><b>AZProximityAccess</b>: nearest access</description></item>
+        /// <item><description><b>CausalConsistRead</b>: read consistency</description></item>
         /// </list>
         /// <para>Valid status values:</para>
         /// <list type="bullet">
@@ -269,7 +270,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The virtual private cloud (VPC) ID.</para>
+        /// <para>The VPC ID of the zone in which the proxy endpoint is specified. The default value is the VPC ID that corresponds to the default terminal of the database proxy. You can call the DescribeDBInstanceAttribute operation to query the default VPC of an instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-2zeusejj******</para>

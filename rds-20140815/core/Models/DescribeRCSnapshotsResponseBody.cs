@@ -139,6 +139,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            [NameInMap("ResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
+
             /// <summary>
             /// <para>The snapshot ID.</para>
             /// 
@@ -235,6 +239,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
+            [NameInMap("Tag")]
+            [Validation(Required=false)]
+            public List<DescribeRCSnapshotsResponseBodySnapshotsTag> Tag { get; set; }
+            public class DescribeRCSnapshotsResponseBodySnapshotsTag : TeaModel {
+                [NameInMap("TagKey")]
+                [Validation(Required=false)]
+                public string TagKey { get; set; }
+
+                [NameInMap("TagValue")]
+                [Validation(Required=false)]
+                public string TagValue { get; set; }
+
+            }
 
             /// <summary>
             /// <para>Indicates whether the snapshot is used to create custom images or disks. Valid values:</para>

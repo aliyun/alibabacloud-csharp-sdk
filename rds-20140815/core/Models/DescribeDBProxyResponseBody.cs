@@ -233,7 +233,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyInstanceType { get; set; }
 
         /// <summary>
-        /// <para>Internal parameters, no need to pay attention.</para>
+        /// <para>An internal parameter. You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>18</para>
@@ -243,7 +243,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyKindCode { get; set; }
 
         /// <summary>
-        /// <para>The proxy node list.</para>
+        /// <para>The proxy nodes.</para>
         /// </summary>
         [NameInMap("DBProxyNodes")]
         [Validation(Required=false)]
@@ -254,7 +254,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribeDBProxyResponseBodyDBProxyNodesDBProxyNodes> DBProxyNodes { get; set; }
             public class DescribeDBProxyResponseBodyDBProxyNodesDBProxyNodes : TeaModel {
                 /// <summary>
-                /// <para>The number of cpu cores for the node.</para>
+                /// <para>The number of CPU cores of the node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -264,7 +264,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string CpuCores { get; set; }
 
                 /// <summary>
-                /// <para>The proxy node id.</para>
+                /// <para>The ID of the proxy node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pn-xxxxxxx01</para>
@@ -274,7 +274,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string NodeId { get; set; }
 
                 /// <summary>
-                /// <para>The id of the availability zone where the node is located.</para>
+                /// <para>The ID of the zone in which the node is deployed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou-c</para>

@@ -169,6 +169,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         }
 
+        [NameInMap("DeletionProtection")]
+        [Validation(Required=false)]
+        public bool? DeletionProtection { get; set; }
+
         /// <summary>
         /// <para>The ID of the deployment set.</para>
         /// 
@@ -288,6 +292,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("ExpiredTime")]
         [Validation(Required=false)]
         public string ExpiredTime { get; set; }
+
+        [NameInMap("Gpu")]
+        [Validation(Required=false)]
+        public int? Gpu { get; set; }
+
+        [NameInMap("GpuTypes")]
+        [Validation(Required=false)]
+        public string GpuTypes { get; set; }
 
         /// <summary>
         /// <para>The instance hostname.</para>
@@ -454,6 +466,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("Memory")]
         [Validation(Required=false)]
         public int? Memory { get; set; }
+
+        [NameInMap("NodeType")]
+        [Validation(Required=false)]
+        public string NodeType { get; set; }
 
         /// <summary>
         /// <para>The reasons why the instance is locked.</para>
@@ -636,6 +652,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             }
 
         }
+
+        [NameInMap("UserData")]
+        [Validation(Required=false)]
+        public string UserData { get; set; }
 
         /// <summary>
         /// <para>The virtual LAN (VLAN) ID of the instance.</para>

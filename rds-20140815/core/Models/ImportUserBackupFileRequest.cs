@@ -17,7 +17,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <item><description><b>Object</b>: The path of the full backup file that is stored as an object in the OSS bucket. You can call the <a href="https://help.aliyun.com/document_detail/31980.html">GetObject</a> operation to query the path of the object.</description></item>
         /// <item><description><b>Location</b>: The ID of the region in which the OSS bucket is located. You can call the <a href="https://help.aliyun.com/document_detail/31967.html">GetBucketLocation</a> operation to query the region of the bucket.</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;Bucket&quot;:&quot;test&quot;, &quot;Object&quot;:&quot;test/test_db_employees.xb&quot;,&quot;Location&quot;:&quot;ap-southeast-1&quot;}</para>
@@ -28,7 +27,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// <para>The region ID of the OSS bucket where the full backup file of the self-managed MySQL database is located. You can call the DescribeRegions operation to query the most recent region list.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -36,6 +34,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("BucketRegion")]
         [Validation(Required=false)]
         public string BucketRegion { get; set; }
+
+        [NameInMap("BuildReplication")]
+        [Validation(Required=false)]
+        public bool? BuildReplication { get; set; }
 
         /// <summary>
         /// <para>The description of the full backup file.</para>
@@ -66,6 +68,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
+
+        [NameInMap("MasterInfo")]
+        [Validation(Required=false)]
+        public string MasterInfo { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>oss</para>
+        /// </summary>
+        [NameInMap("Mode")]
+        [Validation(Required=false)]
+        public string Mode { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
@@ -131,6 +145,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("Retention")]
         [Validation(Required=false)]
         public int? Retention { get; set; }
+
+        [NameInMap("SourceInfo")]
+        [Validation(Required=false)]
+        public string SourceInfo { get; set; }
 
         /// <summary>
         /// <para>The zone ID. You can call the DescribeRegions operation to query the zone ID.</para>

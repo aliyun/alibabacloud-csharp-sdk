@@ -142,6 +142,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public int? Memory { get; set; }
 
+            [NameInMap("NodeType")]
+            [Validation(Required=false)]
+            public string NodeType { get; set; }
+
             [NameInMap("PublicIp")]
             [Validation(Required=false)]
             public string PublicIp { get; set; }

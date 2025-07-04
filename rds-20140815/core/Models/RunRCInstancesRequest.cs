@@ -158,6 +158,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         }
 
+        [NameInMap("DeletionProtection")]
+        [Validation(Required=false)]
+        public bool? DeletionProtection { get; set; }
+
         /// <summary>
         /// <para>The deployment set ID.</para>
         /// 

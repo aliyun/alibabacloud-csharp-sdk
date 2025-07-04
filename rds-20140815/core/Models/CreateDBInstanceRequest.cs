@@ -42,13 +42,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? AutoCreateProxy { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the automatic payment feature. Valid values:</para>
+        /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enables the feature. Make sure that your account balance is sufficient.</description></item>
-        /// <item><description><b>false</b>: disables the feature. An unpaid order is generated.</description></item>
+        /// <item><description><b>true</b>: enables the feature. Make sure that your account balance is sufficient when you enable automatic payment.</description></item>
+        /// <item><description><b>false</b>: does not automatically complete the payment. An unpaid order is generated.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> Default value: true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.</para>
+        /// <para> Default value: true. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -171,10 +171,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <item><description><b>serverless_standard</b>: RDS High-availability Edition for serverless instances. This edition is available only for instances that run MySQL and PostgreSQL.</description></item>
         /// <item><description><b>serverless_ha</b>: RDS High-availability Edition for serverless instances. This edition is available only for instances that run SQL Server.</description></item>
         /// </list>
-        /// <para>**</para>
-        /// <para><b>Note</b> This parameter is required if PayType is set to Serverless.</para>
         /// </description></item>
         /// </list>
+        /// <remarks>
+        /// <para>This parameter is required if PayType is set to Serverless.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>HighAvailability</para>
@@ -376,13 +377,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>You can specify the time zone when you create a primary instance. You cannot specify the time zone when you create a read-only instance. Read-only instances inherit the time zone of their primary instance.</para>
-        /// </description></item>
-        /// <item><description><para>If you do not specify this parameter, the system automatically assigns the default time zone of the region in which the instance resides.</para>
-        /// </description></item>
+        /// <item><description>You can specify the time zone when you create a primary instance. You cannot specify the time zone when you create a read-only instance. Read-only instances inherit the time zone of their primary instance.</description></item>
+        /// <item><description>If you do not specify this parameter, the system automatically assigns the default time zone of the region in which the instance resides.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>+08:00</para>
@@ -421,9 +420,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? DeletionProtection { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. Default value: false. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs a dry run but does not create the instance. The system checks items such as the request parameters, request format, service limits, and available resources.</description></item>
+        /// <item><description><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and insufficient inventory errors.</description></item>
         /// <item><description><b>false</b> (default): performs a dry run and sends the request. If the request passes the dry run, the instance is created.</description></item>
         /// </list>
         /// 
@@ -511,22 +510,23 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
+        [NameInMap("ExternalReplication")]
+        [Validation(Required=false)]
+        public bool? ExternalReplication { get; set; }
+
         /// <summary>
         /// <para>The network type of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VPC</b></description></item>
-        /// <item><description><b>Classic</b></description></item>
+        /// <item><description><b>VPC</b>: a virtual private cloud (VPC)</description></item>
+        /// <item><description><b>Classic</b>: the classic network</description></item>
         /// </list>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>If the instance runs MySQL and uses cloud disks, you must set this parameter to <b>VPC</b>.</para>
-        /// </description></item>
-        /// <item><description><para>If the instance runs PostgreSQL or MariaDB, you must set this parameter to <b>VPC</b>.</para>
-        /// </description></item>
-        /// <item><description><para>If the instance runs SQL Server Basic or SQL Server Web, you can set this parameter to VPC or Classic. If the instance runs other database engine, you must set this parameter to <b>VPC</b>.</para>
-        /// </description></item>
+        /// <item><description>If the instance runs MySQL and uses cloud disks, you must set this parameter to <b>VPC</b>.</description></item>
+        /// <item><description>If the instance runs PostgreSQL or MariaDB, you must set this parameter to <b>VPC</b>.</description></item>
+        /// <item><description>If the instance runs SQL Server Basic or SQL Server Web, you can set this parameter to VPC or Classic. If the instance runs other database engine, you must set this parameter to <b>VPC</b>.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>Classic</para>
@@ -553,10 +553,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string IoAccelerationEnabled { get; set; }
 
         /// <summary>
-        /// <para>The switch of the 16K atomic write function. Valid values:</para>
+        /// <para>Specifies whether to enable the 16K atomic write feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>optimized</b></description></item>
-        /// <item><description><b>none</b> (default)</description></item>
+        /// <item><description><b>optimized</b>: enables the 16K atomic write feature.</description></item>
+        /// <item><description><b>none</b> (default): does not enable the 16K atomic write feature.</description></item>
         /// </list>
         /// <remarks>
         /// <para> For more information, see <a href="https://help.aliyun.com/document_detail/2858761.html">Use the 16K atomic write feature</a>.</para>
@@ -693,7 +693,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SecurityIPList { get; set; }
 
         /// <summary>
-        /// <para>The settings of the serverless instance. This parameter is required when you create a serverless instance.</para>
+        /// <para>The settings of the serverless instance. These parameters are required only when you create a serverless instance.</para>
         /// <remarks>
         /// <para> ApsaraDB RDS for MariaDB does not support serverless instances.</para>
         /// </remarks>
@@ -762,13 +762,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <item><description><b>false</b> (default)</description></item>
             /// </list>
             /// <remarks>
-            /// </remarks>
             /// <list type="bullet">
-            /// <item><description><para>This parameter is required only for serverless instances that run MySQL and PostgreSQL. If you set this parameter to true, a service interruption that lasts approximately 30 to 120 seconds occurs during forced scaling. Process with caution.</para>
-            /// </description></item>
-            /// <item><description><para>The RCU scaling for a serverless instance immediately takes effect. In some cases, such as the execution of large transactions, the scaling does not immediately take effect. In this case, you can enable this feature to forcefully scale the RCUs of the instance.</para>
-            /// </description></item>
+            /// <item><description>This parameter is required only for serverless instances that run MySQL and PostgreSQL. If you set this parameter to true, a service interruption that lasts approximately 30 to 120 seconds occurs during forced scaling. Process with caution.</description></item>
+            /// <item><description>The RCU scaling for a serverless instance immediately takes effect. In some cases, such as the execution of large transactions, the scaling does not immediately take effect. In this case, you can enable this feature to forcefully scale the RCUs of the instance.</description></item>
             /// </list>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>

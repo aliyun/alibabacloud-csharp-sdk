@@ -10,6 +10,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyRCInstanceAttributeRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to enable the release protection feature for the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: enables the release protection feature.</description></item>
+        /// <item><description><b>false</b> (default): does not enable the release protection feature.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("DeletionProtection")]
+        [Validation(Required=false)]
+        public bool? DeletionProtection { get; set; }
+
+        /// <summary>
         /// <para>The hostname of the instance.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +42,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
+
+        [NameInMap("InstanceIds")]
+        [Validation(Required=false)]
+        public List<string> InstanceIds { get; set; }
 
         /// <summary>
         /// <para>The new password of the instance.</para>
@@ -67,9 +85,19 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the security group to which the instance is added.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sg-uf6av412xaxixu****</para>
+        /// </summary>
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]
         public string SecurityGroupId { get; set; }
+
+        [NameInMap("SecurityGroupIds")]
+        [Validation(Required=false)]
+        public List<string> SecurityGroupIds { get; set; }
 
     }
 

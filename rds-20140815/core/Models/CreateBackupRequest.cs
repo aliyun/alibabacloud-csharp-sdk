@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string BackupMethod { get; set; }
 
+        [NameInMap("BackupRetentionPeriod")]
+        [Validation(Required=false)]
+        public long? BackupRetentionPeriod { get; set; }
+
         /// <summary>
         /// <para>The backup policy. Valid values:</para>
         /// <list type="bullet">

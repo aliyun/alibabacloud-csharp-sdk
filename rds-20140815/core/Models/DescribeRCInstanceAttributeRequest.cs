@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("MaxDisksResults")]
+        [Validation(Required=false)]
+        public long? MaxDisksResults { get; set; }
+
         [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]
         public string PrivateIpAddress { get; set; }
