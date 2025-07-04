@@ -173,6 +173,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             [Validation(Required=false)]
             public int? Status { get; set; }
 
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public Dictionary<string, object> Tags { get; set; }
+
             [NameInMap("VSwitches")]
             [Validation(Required=false)]
             public List<GetClusterResponseBodyDataVSwitches> VSwitches { get; set; }

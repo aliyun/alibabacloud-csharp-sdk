@@ -41,6 +41,20 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<ListClustersRequestTag> Tag { get; set; }
+        public class ListClustersRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
     }
 
 }
