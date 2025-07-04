@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class CreatePrivateAccessPolicyResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the private access policy.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pa-policy-867ef4007c8a****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string PolicyId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the current request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>EFE7EBB2-449D-5BBB-B381-CA7839BC1649</para>
         /// </summary>
