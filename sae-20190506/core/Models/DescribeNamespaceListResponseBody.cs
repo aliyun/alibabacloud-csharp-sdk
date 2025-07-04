@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The namespaces.</para>
+        /// <para>The list of namespaces.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

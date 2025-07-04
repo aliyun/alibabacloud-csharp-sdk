@@ -10,11 +10,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class BatchStartApplicationsRequest : TeaModel {
         /// <summary>
-        /// <para>The returned message.</para>
-        /// <list type="bullet">
-        /// <item><description><b>success</b> is returned when the request succeeds.</description></item>
-        /// <item><description>An error code is returned when the request fails.</description></item>
-        /// </list>
+        /// <para>The IDs of the applications that you want to start. Separate multiple IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>ebf491f0-c1a5-45e2-b2c4-710dbe2a****</para>

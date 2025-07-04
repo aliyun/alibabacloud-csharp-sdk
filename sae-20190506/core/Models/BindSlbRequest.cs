@@ -30,6 +30,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string Internet { get; set; }
 
+        /// <summary>
+        /// <para>The billing method of an Internet-facing SLB instance. The following billing methods are supported:</para>
+        /// <list type="bullet">
+        /// <item><description><b>PayBySpec</b>: Pay-by-specification.</description></item>
+        /// <item><description><b>PayByCLCU</b>: Pay-by-CLCU.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PayBySpec</para>
+        /// </summary>
         [NameInMap("InternetSlbChargeType")]
         [Validation(Required=false)]
         public string InternetSlbChargeType { get; set; }
@@ -54,6 +64,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string Intranet { get; set; }
 
+        /// <summary>
+        /// <para>The billing method of an Internal-facing SLB instance. The following billing methods are supported:</para>
+        /// <list type="bullet">
+        /// <item><description><b>PayBySpec</b>: Pay-by-specification.</description></item>
+        /// <item><description><b>PayByCLCU</b>: Pay-by-CLCU.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PayBySpec</para>
+        /// </summary>
         [NameInMap("IntranetSlbChargeType")]
         [Validation(Required=false)]
         public string IntranetSlbChargeType { get; set; }

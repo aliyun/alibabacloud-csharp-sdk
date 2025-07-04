@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The details of the application instances.</para>
+        /// <para>The details of the application instance.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The list of application instances.</para>
+            /// <para>The application instances.</para>
             /// </summary>
             [NameInMap("Instances")]
             [Validation(Required=false)]
@@ -59,6 +59,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [Validation(Required=false)]
                 public long? CreateTimeStamp { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>False</para>
+                /// </summary>
                 [NameInMap("DebugStatus")]
                 [Validation(Required=false)]
                 public bool? DebugStatus { get; set; }
@@ -179,6 +183,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
+                /// <summary>
+                /// <para>The status of the main container.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Running</para>
+                /// </summary>
                 [NameInMap("MainContainerStatus")]
                 [Validation(Required=false)]
                 public string MainContainerStatus { get; set; }
@@ -193,28 +203,59 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [Validation(Required=false)]
                 public string PackageVersion { get; set; }
 
+                /// <summary>
+                /// <para>The status of the sidecar container.</para>
+                /// </summary>
                 [NameInMap("SidecarContainersStatus")]
                 [Validation(Required=false)]
                 public List<DescribeApplicationInstancesResponseBodyDataInstancesSidecarContainersStatus> SidecarContainersStatus { get; set; }
                 public class DescribeApplicationInstancesResponseBodyDataInstancesSidecarContainersStatus : TeaModel {
+                    /// <summary>
+                    /// <para>The ID of the sidecar container.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>sidecar-test-01</para>
+                    /// </summary>
                     [NameInMap("ContainerId")]
                     [Validation(Required=false)]
                     public string ContainerId { get; set; }
 
+                    /// <summary>
+                    /// <para>The status of the container.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Running</para>
+                    /// </summary>
                     [NameInMap("ContainerStatus")]
                     [Validation(Required=false)]
                     public string ContainerStatus { get; set; }
 
+                    /// <summary>
+                    /// <para>The URL of the image.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>registry.cn-beijing.aliyuncs.com/sae-dev-test/******</para>
+                    /// </summary>
                     [NameInMap("ImageUrl")]
                     [Validation(Required=false)]
                     public string ImageUrl { get; set; }
 
                 }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1750061980000</para>
+                /// </summary>
                 [NameInMap("Timestamp")]
                 [Validation(Required=false)]
                 public long? Timestamp { get; set; }
 
+                /// <summary>
+                /// <para>If the health check of an application instance fails, the detailed failure cause or error message is returned. If the health check of an application instance passes, no response is returned.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Null</para>
+                /// </summary>
                 [NameInMap("UnhealthyMessage")]
                 [Validation(Required=false)]
                 public string UnhealthyMessage { get; set; }

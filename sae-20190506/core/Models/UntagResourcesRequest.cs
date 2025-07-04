@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>false</para>
+        /// <para>Specifies whether to remove all the specified tags. This parameter takes effect only if the TagKeys parameter is specified. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -20,7 +24,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? DeleteAll { get; set; }
 
         /// <summary>
-        /// <para>cn-beijing</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +35,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>[&quot;d42921c4-5433-4abd-8075-0e536f8b\<em>\</em>\<em>\</em>&quot;]</para>
+        /// <para>The IDs of resources. Separate multiple resource IDs with comma (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +46,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ResourceIds { get; set; }
 
         /// <summary>
-        /// <para>application</para>
+        /// <para>The type of the resource. Set the value to <c>application</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +57,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>[&quot;k1&quot;,&quot;k2&quot;]</para>
+        /// <para>The tag keys. Separate multiple tag keys with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;k1&quot;,&quot;k2&quot;]</para>

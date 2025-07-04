@@ -41,6 +41,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the application instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>demo-faaca66c-5959-45cc-b3bf-d26093b2e9c0******</para>
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -55,6 +61,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>85750d48-6cfc-4dbf-8ea0-840397******</para>
+        /// </summary>
         [NameInMap("PipelineId")]
         [Validation(Required=false)]
         public string PipelineId { get; set; }

@@ -20,6 +20,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to automatically enable an auto scaling policy for the application. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: enabled.</description></item>
+        /// <item><description><b>false</b>: disabled</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("AutoEnableApplicationScalingRule")]
         [Validation(Required=false)]
         public bool? AutoEnableApplicationScalingRule { get; set; }

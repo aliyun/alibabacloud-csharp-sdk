@@ -70,6 +70,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string FieldValue { get; set; }
 
+        [NameInMap("IsStateful")]
+        [Validation(Required=false)]
+        public string IsStateful { get; set; }
+
         /// <summary>
         /// <para>1</para>
         /// 

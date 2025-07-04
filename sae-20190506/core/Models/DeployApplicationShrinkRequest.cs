@@ -138,6 +138,18 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ConfigMapMountDesc { get; set; }
 
         /// <summary>
+        /// <para>The CPU specifications that are required for each instance. Unit: millicores. This parameter cannot be set to 0. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>500</b></description></item>
+        /// <item><description><b>1000</b></description></item>
+        /// <item><description><b>2000</b></description></item>
+        /// <item><description><b>4000</b></description></item>
+        /// <item><description><b>8000</b></description></item>
+        /// <item><description><b>12000</b></description></item>
+        /// <item><description><b>16000</b></description></item>
+        /// <item><description><b>32000</b></description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>1000</para>
         /// </summary>
@@ -160,6 +172,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string CustomHostAlias { get; set; }
 
         /// <summary>
+        /// <para>Custom image type. To it to empty string to use pre-built image.</para>
+        /// <list type="bullet">
+        /// <item><description><para>internet: Public network image</para>
+        /// </description></item>
+        /// <item><description><para>intranet: Private network image</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>internet</para>
         /// </summary>
@@ -182,6 +202,15 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Deploy { get; set; }
 
         /// <summary>
+        /// <para>The version of .NET</para>
+        /// <list type="bullet">
+        /// <item><description>.NET 3.1</description></item>
+        /// <item><description>.NET 5.0</description></item>
+        /// <item><description>.NET 6.0</description></item>
+        /// <item><description>.NET 7.0</description></item>
+        /// <item><description>.NET 8.0</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>.NET 3.1</para>
         /// </summary>
@@ -214,6 +243,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string EnableAhas { get; set; }
 
         /// <summary>
+        /// <para>Enable CPU Burst.</para>
+        /// <para>true: enable</para>
+        /// <para>false: disable</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -236,6 +269,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? EnableGreyTagRoute { get; set; }
 
         /// <summary>
+        /// <para>Enable new ARMS features.</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: enable</para>
+        /// </description></item>
+        /// <item><description><para>false: disable</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -243,7 +284,15 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public bool? EnableNewArms { get; set; }
 
+        [NameInMap("EnablePrometheus")]
+        [Validation(Required=false)]
+        public bool? EnablePrometheus { get; set; }
+
         /// <summary>
+        /// <para>Enable Sidecar resource isolation.</para>
+        /// <para>true: enable</para>
+        /// <para>false: disable</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -265,6 +314,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <item><description><b>name</b>: the name of the environment variable. You can reference one or all keys. If you want to reference all keys, specify <c>sae-sys-configmap-all-&lt;ConfigMap name&gt;</c>. Example: <c>sae-sys-configmap-all-test1</c>.</description></item>
         /// <item><description><b>valueFrom</b>: the reference of the environment variable. Set the value to <c>configMapRef</c>.</description></item>
         /// <item><description><b>configMapId</b>: the ConfigMap ID.</description></item>
+        /// <item><description><b>key</b>: the key. If you want to reference all keys, do not configure this parameter.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para>Reference secret dictionary</para>
+        /// <list type="bullet">
+        /// <item><description><b>name</b>: the name of the environment variable. You can reference one or all keys. If you want to reference all keys, specify <c>sae-sys-secret-all-&lt;Secret dictionary name&gt;</c>. Example: <c>sae-sys-secret-all-test1</c>.</description></item>
+        /// <item><description><b>valueFrom</b>: the reference of the environment variable. Set the value to <c>secretRef</c>.</description></item>
+        /// <item><description><b>secretId</b>: the secret dictionary ID.</description></item>
         /// <item><description><b>key</b>: the key. If you want to reference all keys, do not configure this parameter.</description></item>
         /// </list>
         /// </description></item>
@@ -301,6 +358,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string ImageUrl { get; set; }
 
+        /// <summary>
+        /// <para>Initialize container configuration.</para>
+        /// </summary>
         [NameInMap("InitContainersConfig")]
         [Validation(Required=false)]
         public string InitContainersConfigShrink { get; set; }
@@ -390,6 +450,20 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Liveness { get; set; }
 
         /// <summary>
+        /// <para>The memory size that is required by each instance. Unit: MB. This parameter cannot be set to 0. The values of this parameter correspond to the values of the Cpu parameter:</para>
+        /// <list type="bullet">
+        /// <item><description>This parameter is set to <b>1024</b> if the Cpu parameter is set to 500 or 1000.</description></item>
+        /// <item><description>This parameter is set to <b>2048</b> if the Cpu parameter is set to 500, 1000, or 2000.</description></item>
+        /// <item><description>This parameter is set to <b>4096</b> if the Cpu parameter is set to 1000, 2000, or 4000.</description></item>
+        /// <item><description>This parameter is set to <b>8192</b> if the Cpu parameter is set to 2000, 4000, or 8,000.</description></item>
+        /// <item><description>This parameter is set to <b>12288</b> if the Cpu parameter is set to 12000.</description></item>
+        /// <item><description>This parameter is set to <b>16384</b> if the Cpu parameter is set to 4000, 8000, or 16000.</description></item>
+        /// <item><description>This parameter is set to <b>24576</b> if the Cpu parameter is set to 12000.</description></item>
+        /// <item><description>This parameter is set to <b>32768</b> if the Cpu parameter is set to 16000.</description></item>
+        /// <item><description>This parameter is set to <b>65536</b> if the Cpu parameter is set to 8000, 16000, or 32000.</description></item>
+        /// <item><description>This parameter is set to <b>131072</b> if the Cpu parameter is set to 32000.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>1024</para>
         /// </summary>
@@ -413,6 +487,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string MicroRegistration { get; set; }
 
         /// <summary>
+        /// <para>Select the edition of Nacos.</para>
+        /// <list type="bullet">
+        /// <item><description><para>0: SAE built-in Nacos. Unable to get the configuration of SAE built-in Nacos.</para>
+        /// </description></item>
+        /// <item><description><para>1: Self-built Nacos from users.</para>
+        /// </description></item>
+        /// <item><description><para>2: MSE enterprise Nacos.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>{\&quot;instanceId\&quot;:\&quot;mse-cn-zvp2bh6h70r\&quot;,\&quot;namespace\&quot;:\&quot;4c0aa74f-57cb-423c-b6af-5d9f2d0e3dbd\&quot;}</para>
         /// </summary>
@@ -421,6 +505,30 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string MicroRegistrationConfig { get; set; }
 
         /// <summary>
+        /// <para>Configure Microservices Governance</para>
+        /// <para>Whether to enable microservices governance (enable):</para>
+        /// <list type="bullet">
+        /// <item><description>true: Enable</description></item>
+        /// <item><description>false: Disable</description></item>
+        /// </list>
+        /// <para>Configure lossless online/offline deployment (mseLosslessRule):</para>
+        /// <para>delayTime: Delay duration (unit: seconds)</para>
+        /// <para>enable: Whether to enable lossless deployment</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: Enable</para>
+        /// </description></item>
+        /// <item><description><para>false: Disable</para>
+        /// </description></item>
+        /// </list>
+        /// <para>notice: Whether to enable notifications</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: Enable</para>
+        /// </description></item>
+        /// <item><description><para>false: Disable</para>
+        /// </description></item>
+        /// </list>
+        /// <para>warmupTime: Small-traffic warm-up duration (unit: seconds)</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;enable&quot;: true,&quot;mseLosslessRule&quot;: {&quot;delayTime&quot;: 0,&quot;enable&quot;: false,&quot;notice&quot;: false,&quot;warmupTime&quot;: 120}}</para>
         /// </summary>
@@ -510,6 +618,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string NasId { get; set; }
 
         /// <summary>
+        /// <para>SAE edition.</para>
+        /// <list type="bullet">
+        /// <item><description><para>lite: the lightweight edition.</para>
+        /// </description></item>
+        /// <item><description><para>std: the standard edition.</para>
+        /// </description></item>
+        /// <item><description><para>pro: the professional edition.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>pro</para>
         /// </summary>
@@ -575,6 +693,28 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string OssMountDescs { get; set; }
 
         /// <summary>
+        /// <para>The package type.</para>
+        /// <para>When using Java, FatJar, War and Image are supported.
+        /// When using Python, PythonZip and Image are supported.
+        /// When using PHP, the followings are supported:</para>
+        /// <list type="bullet">
+        /// <item><description>PhpZip</description></item>
+        /// <item><description>IMAGE_PHP_5_4</description></item>
+        /// <item><description>IMAGE_PHP_5_4_ALPINE</description></item>
+        /// <item><description>IMAGE_PHP_5_5</description></item>
+        /// <item><description>IMAGE_PHP_5_5_ALPINE</description></item>
+        /// <item><description>IMAGE_PHP_5_6</description></item>
+        /// <item><description>IMAGE_PHP_5_6_ALPINE</description></item>
+        /// <item><description>IMAGE_PHP_7_0</description></item>
+        /// <item><description>IMAGE_PHP_7_0_ALPINE</description></item>
+        /// <item><description>IMAGE_PHP_7_1</description></item>
+        /// <item><description>IMAGE_PHP_7_1_ALPINE</description></item>
+        /// <item><description>IMAGE_PHP_7_2</description></item>
+        /// <item><description>IMAGE_PHP_7_2_ALPINE</description></item>
+        /// <item><description>IMAGE_PHP_7_3</description></item>
+        /// <item><description>IMAGE_PHP_7_3_ALPINE</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>FatJar</para>
         /// </summary>
@@ -603,6 +743,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string PackageVersion { get; set; }
 
         /// <summary>
+        /// <para>The dependent PHP version of PHP package. Image is not supported.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>PHP-FPM 7.0</para>
         /// </summary>
@@ -710,6 +852,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Readiness { get; set; }
 
         /// <summary>
+        /// <para>The number of instances.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -718,6 +862,17 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public int? Replicas { get; set; }
 
         /// <summary>
+        /// <para>Secret Mount Description
+        /// Use the secret dictionaries created in the Namespace Secret Dictionary page to inject information into containers. Parameter descriptions are as follows:</para>
+        /// <list type="bullet">
+        /// <item><description><para>secretId: Secret instance ID. Obtain via the ListSecrets interface.</para>
+        /// </description></item>
+        /// <item><description><para>key: Key-value pair. Note: Set the parameter sae-sys-secret-all to mount all keys.</para>
+        /// </description></item>
+        /// <item><description><para>mountPath: Mount path.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>[{“secretId&quot;:10,”key&quot;:&quot;test&quot;,&quot;mountPath&quot;:&quot;/tmp&quot;}]</para>
         /// </summary>
@@ -726,6 +881,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string SecretMountDesc { get; set; }
 
         /// <summary>
+        /// <para>Security group ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>sg-wz969ngg2e49q5i4****</para>
         /// </summary>
@@ -734,6 +891,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
+        /// <para>The gray-release tag of the application.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{\&quot;alicloud.service.tag\&quot;:\&quot;g1\&quot;}</para>
         /// </summary>
@@ -775,6 +934,11 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string SlsConfigs { get; set; }
 
         /// <summary>
+        /// <para>Check Failure: Indicates that the application failed to start. The system will report the exception and automatically restart it.</para>
+        /// <para>Note: </para>
+        /// <para>Supports exec, httpGet, and tcpSocket methods. For specific examples, see Liveness Parameters.
+        /// Only one method can be selected for health checks.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;cat /home/admin/start.sh&quot;]},&quot;initialDelaySeconds&quot;:30,&quot;periodSeconds&quot;:30,&quot;timeoutSeconds&quot;:2}</para>
         /// </summary>
@@ -782,6 +946,31 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string StartupProbe { get; set; }
 
+        /// <summary>
+        /// <para>Configure K8s Service-based Service Registration/Discovery and Full-Chain Grayscale Capabilities</para>
+        /// <list type="bullet">
+        /// <item><description><para>enable: Whether to enable full-link grayscale based on K8s Service (set to &quot;true&quot; to enable; set to &quot;false&quot; to disable).</para>
+        /// </description></item>
+        /// <item><description><para>namespaceId: Namespace ID</para>
+        /// </description></item>
+        /// <item><description><para>portAndProtocol: Listener port and protocol. Format: {&quot;Port:Protocol Type&quot;:&quot;Container Port&quot;}</para>
+        /// </description></item>
+        /// <item><description><para>portProtocols: Define service ports and protocols
+        /// port: Port
+        /// protocol: Protocol
+        /// targetPort: Container port</para>
+        /// </description></item>
+        /// <item><description><para>pvtzDiscoveryName: Service discovery name</para>
+        /// </description></item>
+        /// <item><description><para>serviceId: Service ID</para>
+        /// </description></item>
+        /// <item><description><para>serviceName: Service name</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{\&quot;enable\&quot;:\&quot;false\&quot;,\&quot;namespaceId\&quot;:\&quot;cn-beijing:test\&quot;,\&quot;portAndProtocol\&quot;:{\&quot;2000:TCP\&quot;:\&quot;18081\&quot;},\&quot;portProtocols\&quot;:[{\&quot;port\&quot;:2000,\&quot;protocol\&quot;:\&quot;TCP\&quot;,\&quot;targetPort\&quot;:18081}],\&quot;pvtzDiscoveryName\&quot;:\&quot;cn-beijing-1421801774382676\&quot;,\&quot;serviceId\&quot;:\&quot;3513\&quot;,\&quot;serviceName\&quot;:\&quot;demo-gray.test\&quot;}</para>
+        /// </summary>
         [NameInMap("SwimlanePvtzDiscoverySvc")]
         [Validation(Required=false)]
         public string SwimlanePvtzDiscoverySvc { get; set; }
@@ -853,6 +1042,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string UpdateStrategy { get; set; }
 
         /// <summary>
+        /// <para>The ID of the vSwitch, where the EIP of the application instances resides. The vSwitch must reside in the VPC above.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vsw-bp12mw1f8k3jgygk9****</para>
         /// </summary>

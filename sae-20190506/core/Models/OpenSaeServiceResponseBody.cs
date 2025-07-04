@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class OpenSaeServiceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the order.</para>
+        /// <para>PushEvent</para>
         /// 
         /// <b>Example:</b>
         /// <para>20485646575****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>enableWAF</para>
         /// 
         /// <b>Example:</b>
         /// <para>559B4247-C41C-4D9E-B866-B55D378B****</para>

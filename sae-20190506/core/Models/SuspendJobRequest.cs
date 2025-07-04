@@ -21,7 +21,11 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to suspend the job template.</para>
+        /// <para>Start or suspend a job template.</para>
+        /// <list type="bullet">
+        /// <item><description>true: Start a job template.</description></item>
+        /// <item><description>false: Suspend a job template.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

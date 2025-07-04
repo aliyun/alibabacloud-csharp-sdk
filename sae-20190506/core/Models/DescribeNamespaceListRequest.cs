@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? ContainCustom { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to exclude hybrid cloud namespaces from the result. Valid values:</para>
+        /// <para>Indicates whether hybrid cloud namespaces are excluded. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The system excludes hybrid cloud namespaces from the result.</description></item>
-        /// <item><description><b>false</b>: The system does not exclude hybrid cloud namespaces from the result.</description></item>
+        /// <item><description><b>true</b>: Hybrid cloud namespaces are excluded.</description></item>
+        /// <item><description><b>false</b>: Hybrid cloud namespaces are included.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

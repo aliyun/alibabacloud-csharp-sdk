@@ -300,6 +300,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public bool? EnableNewArms { get; set; }
 
+            [NameInMap("EnablePrometheus")]
+            [Validation(Required=false)]
+            public bool? EnablePrometheus { get; set; }
+
             /// <summary>
             /// <para>The environment variables. Variable description:</para>
             /// <list type="bullet">
@@ -387,6 +391,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string Name { get; set; }
 
             }
+
+            [NameInMap("IsStateful")]
+            [Validation(Required=false)]
+            public bool? IsStateful { get; set; }
 
             /// <summary>
             /// <para>The arguments in the JAR package. The arguments are used to start the application container. The default startup command is <c>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</c>.</para>

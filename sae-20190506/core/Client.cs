@@ -307,7 +307,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>cn-shanghai</para>
+        /// <para>Starts multiple applications at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -361,7 +361,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>cn-shanghai</para>
+        /// <para>Starts multiple applications at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -415,7 +415,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>cn-shanghai</para>
+        /// <para>Starts multiple applications at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -434,7 +434,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>cn-shanghai</para>
+        /// <para>Starts multiple applications at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -453,7 +453,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops multiple applications at a time.</para>
+        /// <para>Stop applications in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -507,7 +507,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops multiple applications at a time.</para>
+        /// <para>Stop applications in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -561,7 +561,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops multiple applications at a time.</para>
+        /// <para>Stop applications in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -580,7 +580,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops multiple applications at a time.</para>
+        /// <para>Stop applications in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1055,6 +1055,11 @@ namespace AlibabaCloud.SDK.Sae20190506
             return await ConfirmPipelineBatchWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an application.</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// CreateApplicationRequest
         /// </param>
@@ -1150,6 +1155,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["EnableNewArms"] = request.EnableNewArms;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnablePrometheus))
+            {
+                query["EnablePrometheus"] = request.EnablePrometheus;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Envs))
             {
                 query["Envs"] = request.Envs;
@@ -1165,6 +1174,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
             {
                 query["ImageUrl"] = request.ImageUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsStateful))
+            {
+                query["IsStateful"] = request.IsStateful;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JarStartArgs))
             {
@@ -1408,6 +1421,11 @@ namespace AlibabaCloud.SDK.Sae20190506
             return TeaModel.ToObject<CreateApplicationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an application.</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// CreateApplicationRequest
         /// </param>
@@ -1503,6 +1521,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["EnableNewArms"] = request.EnableNewArms;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnablePrometheus))
+            {
+                query["EnablePrometheus"] = request.EnablePrometheus;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Envs))
             {
                 query["Envs"] = request.Envs;
@@ -1518,6 +1540,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
             {
                 query["ImageUrl"] = request.ImageUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsStateful))
+            {
+                query["IsStateful"] = request.IsStateful;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JarStartArgs))
             {
@@ -1761,6 +1787,11 @@ namespace AlibabaCloud.SDK.Sae20190506
             return TeaModel.ToObject<CreateApplicationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an application.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateApplicationRequest
         /// </param>
@@ -1775,6 +1806,11 @@ namespace AlibabaCloud.SDK.Sae20190506
             return CreateApplicationWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an application.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateApplicationRequest
         /// </param>
@@ -3811,7 +3847,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Null</para>
+        /// <para>Creates a Secret in a namespace.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3875,7 +3911,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Null</para>
+        /// <para>Creates a Secret in a namespace.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3939,7 +3975,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Null</para>
+        /// <para>Creates a Secret in a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3958,7 +3994,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Null</para>
+        /// <para>Creates a Secret in a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6307,6 +6343,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["EnableNewArms"] = request.EnableNewArms;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnablePrometheus))
+            {
+                query["EnablePrometheus"] = request.EnablePrometheus;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Envs))
             {
                 query["Envs"] = request.Envs;
@@ -6656,6 +6696,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableNewArms))
             {
                 query["EnableNewArms"] = request.EnableNewArms;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnablePrometheus))
+            {
+                query["EnablePrometheus"] = request.EnablePrometheus;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Envs))
             {
@@ -7261,6 +7305,11 @@ namespace AlibabaCloud.SDK.Sae20190506
             return await DescribeApplicationConfigWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the instance groups of an application.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeApplicationGroupsRequest
         /// </param>
@@ -7310,6 +7359,11 @@ namespace AlibabaCloud.SDK.Sae20190506
             return TeaModel.ToObject<DescribeApplicationGroupsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the instance groups of an application.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeApplicationGroupsRequest
         /// </param>
@@ -7359,6 +7413,11 @@ namespace AlibabaCloud.SDK.Sae20190506
             return TeaModel.ToObject<DescribeApplicationGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the instance groups of an application.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeApplicationGroupsRequest
         /// </param>
@@ -7373,6 +7432,11 @@ namespace AlibabaCloud.SDK.Sae20190506
             return DescribeApplicationGroupsWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the instance groups of an application.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeApplicationGroupsRequest
         /// </param>
@@ -7527,7 +7591,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries application instances.</para>
+        /// <para>Queries a list of application instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7597,7 +7661,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries application instances.</para>
+        /// <para>Queries a list of application instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7667,7 +7731,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries application instances.</para>
+        /// <para>Queries a list of application instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7686,7 +7750,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries application instances.</para>
+        /// <para>Queries a list of application instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10229,6 +10293,11 @@ namespace AlibabaCloud.SDK.Sae20190506
             return await DescribeNamespaceListWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the information about resources in a namespace.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeNamespaceResourcesRequest
         /// </param>
@@ -10274,6 +10343,11 @@ namespace AlibabaCloud.SDK.Sae20190506
             return TeaModel.ToObject<DescribeNamespaceResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the information about resources in a namespace.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeNamespaceResourcesRequest
         /// </param>
@@ -10319,6 +10393,11 @@ namespace AlibabaCloud.SDK.Sae20190506
             return TeaModel.ToObject<DescribeNamespaceResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the information about resources in a namespace.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeNamespaceResourcesRequest
         /// </param>
@@ -10333,6 +10412,11 @@ namespace AlibabaCloud.SDK.Sae20190506
             return DescribeNamespaceResourcesWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the information about resources in a namespace.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeNamespaceResourcesRequest
         /// </param>
@@ -14751,6 +14835,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["FieldValue"] = request.FieldValue;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsStateful))
+            {
+                query["IsStateful"] = request.IsStateful;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
             {
                 query["NamespaceId"] = request.NamespaceId;
@@ -14832,6 +14920,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FieldValue))
             {
                 query["FieldValue"] = request.FieldValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsStateful))
+            {
+                query["IsStateful"] = request.IsStateful;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
             {
@@ -17765,7 +17857,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activates the Serverless App Engine (SAE) service for free.</para>
+        /// <para>Activates Serverless App Engine (SAE) for free.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -17808,7 +17900,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activates the Serverless App Engine (SAE) service for free.</para>
+        /// <para>Activates Serverless App Engine (SAE) for free.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -17851,7 +17943,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activates the Serverless App Engine (SAE) service for free.</para>
+        /// <para>Activates Serverless App Engine (SAE) for free.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -17873,7 +17965,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activates the Serverless App Engine (SAE) service for free.</para>
+        /// <para>Activates Serverless App Engine (SAE) for free.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -18177,7 +18269,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reduces capacity by instance IDs.</para>
+        /// <para>Scales in an application based on instance IDs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18227,7 +18319,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reduces capacity by instance IDs.</para>
+        /// <para>Scales in an application based on instance IDs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18277,7 +18369,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reduces capacity by instance IDs.</para>
+        /// <para>Scales in an application based on instance IDs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18296,7 +18388,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reduces capacity by instance IDs.</para>
+        /// <para>Scales in an application based on instance IDs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18315,7 +18407,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scales an application.</para>
+        /// <para>Rescale an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18377,7 +18469,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scales an application.</para>
+        /// <para>Rescale an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18439,7 +18531,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scales an application.</para>
+        /// <para>Rescale an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18458,7 +18550,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scales an application.</para>
+        /// <para>Rescale an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19405,7 +19497,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>0099b7be-5f5b-4512-a7fc-56049ef1\<em>\</em>\<em>\</em></para>
+        /// <para>Stops an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19451,7 +19543,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>0099b7be-5f5b-4512-a7fc-56049ef1\<em>\</em>\<em>\</em></para>
+        /// <para>Stops an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19497,7 +19589,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>0099b7be-5f5b-4512-a7fc-56049ef1\<em>\</em>\<em>\</em></para>
+        /// <para>Stops an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19516,7 +19608,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>0099b7be-5f5b-4512-a7fc-56049ef1\<em>\</em>\<em>\</em></para>
+        /// <para>Stops an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19685,7 +19777,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Suspends a job.</para>
+        /// <para>Suspends one or more jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19735,7 +19827,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Suspends a job.</para>
+        /// <para>Suspends one or more jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19785,7 +19877,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Suspends a job.</para>
+        /// <para>Suspends one or more jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19804,7 +19896,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Suspends a job.</para>
+        /// <para>Suspends one or more jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19823,7 +19915,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>cn-beijing</para>
+        /// <para>Adds tags to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19881,7 +19973,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>cn-beijing</para>
+        /// <para>Adds tags to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19939,7 +20031,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>cn-beijing</para>
+        /// <para>Adds tags to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19958,7 +20050,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>cn-beijing</para>
+        /// <para>Adds tags to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20275,6 +20367,11 @@ namespace AlibabaCloud.SDK.Sae20190506
             return await UnbindSlbWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes tags from resources.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UntagResourcesRequest
         /// </param>
@@ -20332,6 +20429,11 @@ namespace AlibabaCloud.SDK.Sae20190506
             return TeaModel.ToObject<UntagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes tags from resources.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UntagResourcesRequest
         /// </param>
@@ -20389,6 +20491,11 @@ namespace AlibabaCloud.SDK.Sae20190506
             return TeaModel.ToObject<UntagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes tags from resources.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UntagResourcesRequest
         /// </param>
@@ -20403,6 +20510,11 @@ namespace AlibabaCloud.SDK.Sae20190506
             return UntagResourcesWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes tags from resources.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UntagResourcesRequest
         /// </param>

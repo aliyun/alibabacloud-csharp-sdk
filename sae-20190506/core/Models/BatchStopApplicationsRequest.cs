@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class BatchStopApplicationsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The ID of the application that you want to stop.</para>
+        /// <remarks>
+        /// <para>If you want to stop multiple applications at the same time, separate the IDs with commas (,).</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>ebf491f0-c1a5-45e2-b2c4-710dbe2a****</para>
