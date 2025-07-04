@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         [Validation(Required=false)]
         public List<string> ExecutorIds { get; set; }
 
+        [NameInMap("JobScheduler")]
+        [Validation(Required=false)]
+        public string JobScheduler { get; set; }
+
         [NameInMap("JobSpec")]
         [Validation(Required=false)]
         public List<DeleteJobsRequestJobSpec> JobSpec { get; set; }
