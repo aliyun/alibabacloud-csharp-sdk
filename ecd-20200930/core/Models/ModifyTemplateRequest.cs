@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyTemplateRequest : TeaModel {
+        [NameInMap("AutoPay")]
+        [Validation(Required=false)]
+        public bool? AutoPay { get; set; }
+
+        [NameInMap("AutoRenew")]
+        [Validation(Required=false)]
+        public bool? AutoRenew { get; set; }
+
+        [NameInMap("ChargeType")]
+        [Validation(Required=false)]
+        public string ChargeType { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>zh-CN</para>
@@ -33,6 +45,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string ImageId { get; set; }
 
+        [NameInMap("Period")]
+        [Validation(Required=false)]
+        public int? Period { get; set; }
+
+        [NameInMap("PeriodUnit")]
+        [Validation(Required=false)]
+        public string PeriodUnit { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>pg-gx2x1dhsmthe9****</para>
@@ -40,6 +60,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("PolicyGroupId")]
         [Validation(Required=false)]
         public string PolicyGroupId { get; set; }
+
+        [NameInMap("PostPaidAfterUsedUp")]
+        [Validation(Required=false)]
+        public bool? PostPaidAfterUsedUp { get; set; }
 
         [NameInMap("RegionConfigList")]
         [Validation(Required=false)]
@@ -184,6 +208,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("TimerGroupId")]
         [Validation(Required=false)]
         public string TimerGroupId { get; set; }
+
+        [NameInMap("UserDuration")]
+        [Validation(Required=false)]
+        public int? UserDuration { get; set; }
 
     }
 

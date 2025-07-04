@@ -21,6 +21,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public List<DescribeTemplatesResponseBodyData> Data { get; set; }
         public class DescribeTemplatesResponseBodyData : TeaModel {
+            [NameInMap("AutoPay")]
+            [Validation(Required=false)]
+            public bool? AutoPay { get; set; }
+
+            [NameInMap("AutoRenew")]
+            [Validation(Required=false)]
+            public bool? AutoRenew { get; set; }
+
+            [NameInMap("ChargeType")]
+            [Validation(Required=false)]
+            public string ChargeType { get; set; }
+
             [NameInMap("DataDiskList")]
             [Validation(Required=false)]
             public List<DescribeTemplatesResponseBodyDataDataDiskList> DataDiskList { get; set; }
@@ -87,6 +99,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string ImageType { get; set; }
 
+            [NameInMap("Period")]
+            [Validation(Required=false)]
+            public int? Period { get; set; }
+
+            [NameInMap("PeriodUnit")]
+            [Validation(Required=false)]
+            public string PeriodUnit { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>pg-0caoeogkhz*****</para>
@@ -94,6 +114,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("PolicyGroupId")]
             [Validation(Required=false)]
             public string PolicyGroupId { get; set; }
+
+            [NameInMap("PostPaidAfterUsedUp")]
+            [Validation(Required=false)]
+            public bool? PostPaidAfterUsedUp { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
@@ -284,6 +308,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("TimerGroupId")]
             [Validation(Required=false)]
             public string TimerGroupId { get; set; }
+
+            [NameInMap("UserDuration")]
+            [Validation(Required=false)]
+            public string UserDuration { get; set; }
 
         }
 

@@ -24,6 +24,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string CommandContent { get; set; }
 
+        [NameInMap("CommandRole")]
+        [Validation(Required=false)]
+        public string CommandRole { get; set; }
+
         /// <summary>
         /// <para>The encoding mode of the command content. Valid values:</para>
         /// <list type="bullet">
