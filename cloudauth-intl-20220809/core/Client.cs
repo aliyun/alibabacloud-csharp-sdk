@@ -39,6 +39,206 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>地址核验</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddressVerifyIntlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddressVerifyIntlResponse
+        /// </returns>
+        public AddressVerifyIntlResponse AddressVerifyIntlWithOptions(AddressVerifyIntlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddressType))
+            {
+                query["AddressType"] = request.AddressType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultCity))
+            {
+                query["DefaultCity"] = request.DefaultCity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultCountry))
+            {
+                query["DefaultCountry"] = request.DefaultCountry;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultDistrict))
+            {
+                query["DefaultDistrict"] = request.DefaultDistrict;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultProvince))
+            {
+                query["DefaultProvince"] = request.DefaultProvince;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Latitude))
+            {
+                query["Latitude"] = request.Latitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Longitude))
+            {
+                query["Longitude"] = request.Longitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mobile))
+            {
+                query["Mobile"] = request.Mobile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Text))
+            {
+                query["Text"] = request.Text;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VerifyType))
+            {
+                query["VerifyType"] = request.VerifyType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddressVerifyIntl",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddressVerifyIntlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>地址核验</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddressVerifyIntlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddressVerifyIntlResponse
+        /// </returns>
+        public async Task<AddressVerifyIntlResponse> AddressVerifyIntlWithOptionsAsync(AddressVerifyIntlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddressType))
+            {
+                query["AddressType"] = request.AddressType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultCity))
+            {
+                query["DefaultCity"] = request.DefaultCity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultCountry))
+            {
+                query["DefaultCountry"] = request.DefaultCountry;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultDistrict))
+            {
+                query["DefaultDistrict"] = request.DefaultDistrict;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultProvince))
+            {
+                query["DefaultProvince"] = request.DefaultProvince;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Latitude))
+            {
+                query["Latitude"] = request.Latitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Longitude))
+            {
+                query["Longitude"] = request.Longitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mobile))
+            {
+                query["Mobile"] = request.Mobile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Text))
+            {
+                query["Text"] = request.Text;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VerifyType))
+            {
+                query["VerifyType"] = request.VerifyType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddressVerifyIntl",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddressVerifyIntlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>地址核验</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddressVerifyIntlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddressVerifyIntlResponse
+        /// </returns>
+        public AddressVerifyIntlResponse AddressVerifyIntl(AddressVerifyIntlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AddressVerifyIntlWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>地址核验</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddressVerifyIntlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddressVerifyIntlResponse
+        /// </returns>
+        public async Task<AddressVerifyIntlResponse> AddressVerifyIntlAsync(AddressVerifyIntlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AddressVerifyIntlWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>银行卡核验</para>
         /// </summary>
         /// 
