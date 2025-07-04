@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public string Area { get; set; }
 
+        [NameInMap("ConsistencyHash")]
+        [Validation(Required=false)]
+        public bool? ConsistencyHash { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to prefetch content to L2 points of presence (POPs). Valid values:</para>
         /// <list type="bullet">

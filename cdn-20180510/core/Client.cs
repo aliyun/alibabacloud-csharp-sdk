@@ -28769,6 +28769,10 @@ namespace AlibabaCloud.SDK.Cdn20180510
             {
                 query["Area"] = request.Area;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsistencyHash))
+            {
+                query["ConsistencyHash"] = request.ConsistencyHash;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.L2Preload))
             {
                 query["L2Preload"] = request.L2Preload;
@@ -28853,6 +28857,10 @@ namespace AlibabaCloud.SDK.Cdn20180510
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Area))
             {
                 query["Area"] = request.Area;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsistencyHash))
+            {
+                query["ConsistencyHash"] = request.ConsistencyHash;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.L2Preload))
             {
@@ -29886,10 +29894,6 @@ namespace AlibabaCloud.SDK.Cdn20180510
             {
                 query["DomainName"] = request.DomainName;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Env))
-            {
-                query["Env"] = request.Env;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
@@ -29975,10 +29979,6 @@ namespace AlibabaCloud.SDK.Cdn20180510
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
             {
                 query["DomainName"] = request.DomainName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Env))
-            {
-                query["Env"] = request.Env;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
