@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
-    public class DescribeMetricDataRequest : TeaModel {
+    public class DescribeMetricDataShrinkRequest : TeaModel {
         /// <summary>
         /// <para>Aggregation method over time. Possible values include:</para>
         /// <list type="bullet">
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 
         [NameInMap("GroupByLabels")]
         [Validation(Required=false)]
-        public List<string> GroupByLabels { get; set; }
+        public string GroupByLabelsShrink { get; set; }
 
         /// <summary>
         /// <para>Metric name. Possible values include:</para>

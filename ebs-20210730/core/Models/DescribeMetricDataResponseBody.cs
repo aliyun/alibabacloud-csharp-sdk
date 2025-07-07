@@ -10,36 +10,24 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class DescribeMetricDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The disk monitoring data.</para>
+        /// <para>Collection of monitoring data for the cloud disk.</para>
         /// </summary>
         [NameInMap("DataList")]
         [Validation(Required=false)]
         public List<DescribeMetricDataResponseBodyDataList> DataList { get; set; }
         public class DescribeMetricDataResponseBodyDataList : TeaModel {
             /// <summary>
-            /// <para>The datapoints that consist of consecutive timestamps in seconds and metric values that were recorded at these time points.</para>
+            /// <para>List of monitoring data, consisting of a series of consecutive second-level timestamps and the corresponding metric values at those times.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{
-            ///         &quot;1699258861&quot;: 1,
-            ///         &quot;1699259461&quot;: 0,
-            ///         &quot;1699260061&quot;: 0,
-            ///         &quot;1699260661&quot;: 0,
-            ///         &quot;1699261261&quot;: 0,
-            ///         &quot;1699261861&quot;: 0,
-            ///         &quot;1699262461&quot;: 0,
-            ///         &quot;1699263061&quot;: 0,
-            ///         &quot;1699263661&quot;: 0,
-            ///         &quot;1699264261&quot;: 0,
-            ///         &quot;1699264861&quot;: 0
-            /// }</para>
+            /// <para>{&quot;1699258861&quot;: 1,&quot;1699259461&quot;: 0}</para>
             /// </summary>
             [NameInMap("Datapoints")]
             [Validation(Required=false)]
             public object Datapoints { get; set; }
 
             /// <summary>
-            /// <para>The tags.</para>
+            /// <para>Labels.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;DiskId&quot;: &quot;d-1234&quot;}</para>
@@ -51,7 +39,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>11B55F58-D3A4-4A9B-9596-342420D0****</para>
@@ -61,15 +49,18 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of data entries queried.</para>
+        /// <para>Total number of data points queried.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>3</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
 
+        /// <summary>
+        /// <para>List of warning messages.</para>
+        /// </summary>
         [NameInMap("Warnings")]
         [Validation(Required=false)]
         public List<string> Warnings { get; set; }

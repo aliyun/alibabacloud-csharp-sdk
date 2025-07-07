@@ -14,16 +14,6 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>App name.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>App1</para>
-        /// </summary>
-        [NameInMap("AppName")]
-        [Validation(Required=false)]
-        public string AppName { get; set; }
-
-        /// <summary>
         /// <para>Maximum number of items for Token-based pagination.</para>
         /// 
         /// <b>Example:</b>

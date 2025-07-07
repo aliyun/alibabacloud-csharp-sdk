@@ -4861,10 +4861,10 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statistics about a metric of Elastic Block Storage (EBS) disks.</para>
+        /// <para>Query single metric monitoring information</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// DescribeMetricDataRequest
         /// </param>
         /// <param name="runtime">
@@ -4874,9 +4874,15 @@ namespace AlibabaCloud.SDK.Ebs20210730
         /// <returns>
         /// DescribeMetricDataResponse
         /// </returns>
-        public DescribeMetricDataResponse DescribeMetricDataWithOptions(DescribeMetricDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeMetricDataResponse DescribeMetricDataWithOptions(DescribeMetricDataRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DescribeMetricDataShrinkRequest request = new DescribeMetricDataShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.GroupByLabels))
+            {
+                request.GroupByLabelsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.GroupByLabels, "GroupByLabels", "simple");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggreOps))
             {
@@ -4893,6 +4899,10 @@ namespace AlibabaCloud.SDK.Ebs20210730
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupByLabelsShrink))
+            {
+                query["GroupByLabels"] = request.GroupByLabelsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricName))
             {
@@ -4931,10 +4941,10 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statistics about a metric of Elastic Block Storage (EBS) disks.</para>
+        /// <para>Query single metric monitoring information</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// DescribeMetricDataRequest
         /// </param>
         /// <param name="runtime">
@@ -4944,9 +4954,15 @@ namespace AlibabaCloud.SDK.Ebs20210730
         /// <returns>
         /// DescribeMetricDataResponse
         /// </returns>
-        public async Task<DescribeMetricDataResponse> DescribeMetricDataWithOptionsAsync(DescribeMetricDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeMetricDataResponse> DescribeMetricDataWithOptionsAsync(DescribeMetricDataRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DescribeMetricDataShrinkRequest request = new DescribeMetricDataShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.GroupByLabels))
+            {
+                request.GroupByLabelsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.GroupByLabels, "GroupByLabels", "simple");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggreOps))
             {
@@ -4963,6 +4979,10 @@ namespace AlibabaCloud.SDK.Ebs20210730
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupByLabelsShrink))
+            {
+                query["GroupByLabels"] = request.GroupByLabelsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricName))
             {
@@ -5001,7 +5021,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statistics about a metric of Elastic Block Storage (EBS) disks.</para>
+        /// <para>Query single metric monitoring information</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5019,7 +5039,7 @@ namespace AlibabaCloud.SDK.Ebs20210730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statistics about a metric of Elastic Block Storage (EBS) disks.</para>
+        /// <para>Query single metric monitoring information</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6563,10 +6583,6 @@ namespace AlibabaCloud.SDK.Ebs20210730
                 query["PageSize"] = request.PageSize;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
-            {
-                body["AppName"] = request.AppName;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
@@ -6631,10 +6647,6 @@ namespace AlibabaCloud.SDK.Ebs20210730
                 query["PageSize"] = request.PageSize;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
-            {
-                body["AppName"] = request.AppName;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
