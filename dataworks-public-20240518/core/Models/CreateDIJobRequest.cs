@@ -27,13 +27,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
+        /// <para>The destination type. Valid values: Hologres, OSS-HDFS, OSS, MaxCompute, LogHub, StarRocks, DataHub, AnalyticDB for MySQL, Kafka, and Hive.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Hologres</para>
         /// </summary>
         [NameInMap("DestinationDataSourceType")]
         [Validation(Required=false)]
         public string DestinationDataSourceType { get; set; }
 
         /// <term><b>Obsolete</b></term>
+        /// 
+        /// <summary>
+        /// <para>This parameter is deprecated and is replaced by the Name parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mysql_to_holo_sync_8772</para>
+        /// </summary>
         [NameInMap("JobName")]
         [Validation(Required=false)]
         [Obsolete]
@@ -105,21 +116,56 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         }
 
+        /// <summary>
+        /// <para>The type of the task. This parameter is optional. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>DatabaseRealtimeMigration: A real-time synchronization task used to synchronize only full data, only incremental data, or full and incremental data in multiple tables of multiple databases at the source.</description></item>
+        /// <item><description>DatabaseOfflineMigration: A batch synchronization task used to synchronize only full data, only incremental data, or full and incremental data in multiple tables of multiple databases at the source.</description></item>
+        /// <item><description>SingleTableRealtimeMigration: A real-time synchronization task used to synchronize only data in single table at the source.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DatabaseRealtimeMigration</para>
+        /// </summary>
         [NameInMap("JobType")]
         [Validation(Required=false)]
         public string JobType { get; set; }
 
         /// <summary>
+        /// <para>The synchronization type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>FullAndRealtimeIncremental: full synchronization and real-time incremental synchronization of data in an entire database</description></item>
+        /// <item><description>RealtimeIncremental: real-time incremental synchronization of data in a single table</description></item>
+        /// <item><description>Full: full batch synchronization of data in an entire database</description></item>
+        /// <item><description>OfflineIncremental: batch incremental synchronization of data in an entire database</description></item>
+        /// <item><description>FullAndOfflineIncremental: full synchronization and batch incremental synchronization of data in an entire database</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>FullAndRealtimeIncremental</para>
         /// </summary>
         [NameInMap("MigrationType")]
         [Validation(Required=false)]
         public string MigrationType { get; set; }
 
+        /// <summary>
+        /// <para>The name of the synchronization task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mysql_to_holo_sync_8772</para>
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// <para>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</para>
+        /// <para>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10000</para>
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
@@ -203,7 +249,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
+        /// <para>The source type. Valid values: PolarDB, MySQL, Kafka, LogHub, Hologres, Oracle, OceanBase, MongoDB, Redshift, Hive, SQL Server, Doris, and ClickHouse.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MySQL</para>
         /// </summary>
         [NameInMap("SourceDataSourceType")]
         [Validation(Required=false)]

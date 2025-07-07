@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateDIJobRequest : TeaModel {
         /// <term><b>Obsolete</b></term>
+        /// 
+        /// <summary>
+        /// <para>This parameter is deprecated. Use the Id parameter instead.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>11588</para>
+        /// </summary>
         [NameInMap("DIJobId")]
         [Validation(Required=false)]
         [Obsolete]
@@ -91,6 +98,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         }
 
+        /// <summary>
+        /// <para>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the workspace ID.</para>
+        /// <para>You must configure this parameter to specify the DataWorks workspace to which the operation is applied.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10000</para>
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
