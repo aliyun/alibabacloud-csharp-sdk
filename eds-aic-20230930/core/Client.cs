@@ -1679,6 +1679,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["PhoneCount"] = request.PhoneCount;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneDataVolume))
+            {
+                query["PhoneDataVolume"] = request.PhoneDataVolume;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResolutionHeight))
             {
                 query["ResolutionHeight"] = request.ResolutionHeight;
@@ -1804,6 +1808,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneCount))
             {
                 query["PhoneCount"] = request.PhoneCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneDataVolume))
+            {
+                query["PhoneDataVolume"] = request.PhoneDataVolume;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResolutionHeight))
             {

@@ -158,6 +158,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public int? PhoneCount { get; set; }
 
+        [NameInMap("PhoneDataVolume")]
+        [Validation(Required=false)]
+        public int? PhoneDataVolume { get; set; }
+
         /// <summary>
         /// <para>The resolution height. Unit: pixel.</para>
         /// 
