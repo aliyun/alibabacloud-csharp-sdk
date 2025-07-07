@@ -120,6 +120,10 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             [Validation(Required=false)]
             public string DestinationZoneId { get; set; }
 
+            [NameInMap("EnableRtc")]
+            [Validation(Required=false)]
+            public bool? EnableRtc { get; set; }
+
             /// <summary>
             /// <para>The time when the replication pair expires. The value of this parameter is a timestamp. Unit: seconds.</para>
             /// 

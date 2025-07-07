@@ -106,6 +106,10 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         [Validation(Required=false)]
         public string DiskId { get; set; }
 
+        [NameInMap("EnableRtc")]
+        [Validation(Required=false)]
+        public bool? EnableRtc { get; set; }
+
         /// <summary>
         /// <para>The name of the replication pair. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <c>http://</c> or <c>https://</c>. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
         /// 

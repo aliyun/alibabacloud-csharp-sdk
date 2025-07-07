@@ -42,6 +42,10 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("EnableRtc")]
+        [Validation(Required=false)]
+        public bool? EnableRtc { get; set; }
+
         /// <summary>
         /// <para>The name of the replication pair.</para>
         /// 
