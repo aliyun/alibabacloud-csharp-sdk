@@ -166,6 +166,20 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string ProtocolType { get; set; }
 
+            [NameInMap("ResourceGroups")]
+            [Validation(Required=false)]
+            public List<DescribeDesktopSessionsResponseBodySessionsResourceGroups> ResourceGroups { get; set; }
+            public class DescribeDesktopSessionsResponseBodySessionsResourceGroups : TeaModel {
+                [NameInMap("Id")]
+                [Validation(Required=false)]
+                public string Id { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The end time of the session.</para>
             /// 

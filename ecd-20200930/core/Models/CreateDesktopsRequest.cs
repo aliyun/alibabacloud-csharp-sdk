@@ -652,6 +652,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string PromotionId { get; set; }
 
+        [NameInMap("QosRuleId")]
+        [Validation(Required=false)]
+        public string QosRuleId { get; set; }
+
         /// <summary>
         /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
