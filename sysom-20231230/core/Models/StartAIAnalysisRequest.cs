@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [Validation(Required=false)]
         public string AnalysisTool { get; set; }
 
+        [NameInMap("analysis_params")]
+        [Validation(Required=false)]
+        public List<string> AnalysisParams { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>ecs_sysom</para>
@@ -29,6 +33,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [Validation(Required=false)]
         public string Comms { get; set; }
 
+        [NameInMap("created_by")]
+        [Validation(Required=false)]
+        public string CreatedBy { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>i-wz9dej066kii4goqxxxx</para>
@@ -36,6 +44,22 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("instance")]
         [Validation(Required=false)]
         public string Instance { get; set; }
+
+        [NameInMap("instance_type")]
+        [Validation(Required=false)]
+        public string InstanceType { get; set; }
+
+        [NameInMap("iteration_func")]
+        [Validation(Required=false)]
+        public string IterationFunc { get; set; }
+
+        [NameInMap("iteration_mod")]
+        [Validation(Required=false)]
+        public string IterationMod { get; set; }
+
+        [NameInMap("iteration_range")]
+        [Validation(Required=false)]
+        public List<int?> IterationRange { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -60,6 +84,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("timeout")]
         [Validation(Required=false)]
         public int? Timeout { get; set; }
+
+        [NameInMap("uid")]
+        [Validation(Required=false)]
+        public string Uid { get; set; }
 
     }
 
