@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string CreatedBy { get; set; }
 
                 /// <summary>
-                /// <para>The time when the launch template was modified.</para>
+                /// <para>The default version number of the launch template.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public long? DefaultVersionNumber { get; set; }
 
                 /// <summary>
-                /// <para>The tags of the launch template.</para>
+                /// <para>The latest version number of the launch template.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public long? LatestVersionNumber { get; set; }
 
                 /// <summary>
-                /// <para>The time when the launch template was created.</para>
+                /// <para>The ID of the launch template.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>lt-m5e3ofjr1zn1aw7q****</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string LaunchTemplateId { get; set; }
 
                 /// <summary>
-                /// <para>The default version number of the launch template.</para>
+                /// <para>The name of the template.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>wd-152630748****</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string ModifiedTime { get; set; }
 
                 /// <summary>
-                /// <para>The creator of the launch template.</para>
+                /// <para>The ID of the resource group to which the launch template belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rg-acfmxazb4p****</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTagsTag> Tag { get; set; }
                     public class DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTagsTag : TeaModel {
                         /// <summary>
-                        /// <para>The tag value of the launch template.</para>
+                        /// <para>The tag key of the launch template.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>TestKey</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public string TagKey { get; set; }
 
                         /// <summary>
-                        /// <para>The tag key of the launch template.</para>
+                        /// <para>The tag value of the launch template.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>TestValue</para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The total number of launch templates.</para>
+        /// <para>The page number of the returned page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>04F0F334-1335-436C-A1D7-6C044FE12CBA</para>
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the launch templates.</para>
+        /// <para>The total number of launch templates.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

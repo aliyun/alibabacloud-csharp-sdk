@@ -77,6 +77,26 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacity Capacity { get; set; }
                 public class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacity : TeaModel {
+                    [NameInMap("AvailableInstanceTypes")]
+                    [Validation(Required=false)]
+                    public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacityAvailableInstanceTypes AvailableInstanceTypes { get; set; }
+                    public class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacityAvailableInstanceTypes : TeaModel {
+                        [NameInMap("AvailableInstanceType")]
+                        [Validation(Required=false)]
+                        public List<DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacityAvailableInstanceTypesAvailableInstanceType> AvailableInstanceType { get; set; }
+                        public class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacityAvailableInstanceTypesAvailableInstanceType : TeaModel {
+                            [NameInMap("AvailableInstanceCapacity")]
+                            [Validation(Required=false)]
+                            public int? AvailableInstanceCapacity { get; set; }
+
+                            [NameInMap("InstanceType")]
+                            [Validation(Required=false)]
+                            public string InstanceType { get; set; }
+
+                        }
+
+                    }
+
                     /// <summary>
                     /// <para>The amount of available space on the local disks. Unit: GiB</para>
                     /// 
