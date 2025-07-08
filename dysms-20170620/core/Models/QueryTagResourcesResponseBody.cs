@@ -1,0 +1,52 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Dysms20170620.Models
+{
+    public class QueryTagResourcesResponseBody : TeaModel {
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public string Data { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TagResources")]
+        [Validation(Required=false)]
+        public List<QueryTagResourcesResponseBodyTagResources> TagResources { get; set; }
+        public class QueryTagResourcesResponseBodyTagResources : TeaModel {
+            [NameInMap("ResourceId")]
+            [Validation(Required=false)]
+            public string ResourceId { get; set; }
+
+            [NameInMap("ResourceType")]
+            [Validation(Required=false)]
+            public string ResourceType { get; set; }
+
+            [NameInMap("TagKey")]
+            [Validation(Required=false)]
+            public string TagKey { get; set; }
+
+            [NameInMap("TagValue")]
+            [Validation(Required=false)]
+            public string TagValue { get; set; }
+
+        }
+
+    }
+
+}
