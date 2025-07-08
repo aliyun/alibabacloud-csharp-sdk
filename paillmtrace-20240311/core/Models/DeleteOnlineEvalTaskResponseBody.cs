@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311.Models
 {
     public class DeleteOnlineEvalTaskResponseBody : TeaModel {
         /// <summary>
+        /// <para>Internal error code. Set only when the response is in error.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>InvalidInputParams</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>Response error message. Set only when the response is in error.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>task id is empty</para>
         /// </summary>
@@ -26,7 +30,7 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>ID of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>6A87228C-969A-1381-98CF-AE07AE630FA5</para>

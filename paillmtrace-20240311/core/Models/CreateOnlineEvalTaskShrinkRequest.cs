@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiLLMTrace20240311.Models
 {
     public class CreateOnlineEvalTaskShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The request data.</para>
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public string BodyShrink { get; set; }

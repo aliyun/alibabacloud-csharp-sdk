@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311.Models
 {
     public class CreateOnlineEvalTaskResponseBody : TeaModel {
         /// <summary>
+        /// <para>The internal error code. This parameter is returned only when an error occurs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>InvalidInputParams</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The error message. This parameter is returned only when an error occurs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>EvaluationConfig.Answer.SpanName is required.</para>
         /// </summary>
@@ -36,6 +40,8 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the created trace evaluation task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>711ef9112343286810abbfce04e161ee</para>
         /// </summary>

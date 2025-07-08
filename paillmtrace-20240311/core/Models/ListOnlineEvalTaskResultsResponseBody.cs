@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311.Models
 {
     public class ListOnlineEvalTaskResultsResponseBody : TeaModel {
         /// <summary>
+        /// <para>Internal error code. Set only when the response has an error.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>InvalidInputParams</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>List of evaluation results.</para>
+        /// </summary>
         [NameInMap("EvaluationResults")]
         [Validation(Required=false)]
         public List<string> EvaluationResults { get; set; }
 
         /// <summary>
+        /// <para>Response error message. Set only when the response has an error.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>must provide trace_id(s) or eval_id</para>
         /// </summary>
@@ -30,7 +37,7 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>ID of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>22BA9A5A-E3D8-5B4C-90FC-F33F6E5853F8</para>
@@ -40,6 +47,8 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Total number of evaluation results that meet the criteria.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311.Models
 {
     public class StopOnlineEvalTaskResponseBody : TeaModel {
         /// <summary>
+        /// <para>Internal error code. Set only when the response is in error.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>InvalidInputParams</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>Response error message. Set only when the response is in error.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>task id is empty</para>
         /// </summary>
@@ -26,7 +30,7 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the POP request</para>
+        /// <para>ID of the POP request</para>
         /// 
         /// <b>Example:</b>
         /// <para>31E5FBC2-792D-5B5C-A5EB-3019984ABFC8</para>

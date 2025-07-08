@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个在线评估任务</para>
+        /// <para>Creates a trace evaluation task. The system will sample some data from the user\&quot;s trace data based on the task\&quot;s configuration. Then, an LLM is used to evaluate the performance of these traces, and the evaluation results are recorded.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个在线评估任务</para>
+        /// <para>Creates a trace evaluation task. The system will sample some data from the user\&quot;s trace data based on the task\&quot;s configuration. Then, an LLM is used to evaluate the performance of these traces, and the evaluation results are recorded.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个在线评估任务</para>
+        /// <para>Creates a trace evaluation task. The system will sample some data from the user\&quot;s trace data based on the task\&quot;s configuration. Then, an LLM is used to evaluate the performance of these traces, and the evaluation results are recorded.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个在线评估任务</para>
+        /// <para>Creates a trace evaluation task. The system will sample some data from the user\&quot;s trace data based on the task\&quot;s configuration. Then, an LLM is used to evaluate the performance of these traces, and the evaluation results are recorded.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -283,7 +283,7 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个在线评估任务</para>
+        /// <para>Delete an online evaluation task</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -319,7 +319,7 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个在线评估任务</para>
+        /// <para>Delete an online evaluation task</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -355,7 +355,7 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个在线评估任务</para>
+        /// <para>Delete an online evaluation task</para>
         /// </summary>
         /// 
         /// <returns>
@@ -370,7 +370,7 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个在线评估任务</para>
+        /// <para>Delete an online evaluation task</para>
         /// </summary>
         /// 
         /// <returns>
@@ -385,7 +385,7 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>基于traceId创建和执行评估任务</para>
+        /// <para>Evaluates a specified piece of trace data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -451,7 +451,7 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>基于traceId创建和执行评估任务</para>
+        /// <para>Evaluates a specified piece of trace data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -517,7 +517,7 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>基于traceId创建和执行评估任务</para>
+        /// <para>Evaluates a specified piece of trace data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -536,7 +536,7 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>基于traceId创建和执行评估任务</para>
+        /// <para>Evaluates a specified piece of trace data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -555,7 +555,7 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用于评估的prompt templates内容</para>
+        /// <para>Get the content of prompt templates used for evaluation</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -591,7 +591,7 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用于评估的prompt templates内容</para>
+        /// <para>Get the content of prompt templates used for evaluation</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -627,7 +627,7 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用于评估的prompt templates内容</para>
+        /// <para>Get the content of prompt templates used for evaluation</para>
         /// </summary>
         /// 
         /// <returns>
@@ -642,7 +642,7 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用于评估的prompt templates内容</para>
+        /// <para>Get the content of prompt templates used for evaluation</para>
         /// </summary>
         /// 
         /// <returns>
@@ -657,7 +657,7 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一个在线评估任务的详情</para>
+        /// <para>Get the details of an online evaluation task</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -693,7 +693,7 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一个在线评估任务的详情</para>
+        /// <para>Get the details of an online evaluation task</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -729,7 +729,7 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一个在线评估任务的详情</para>
+        /// <para>Get the details of an online evaluation task</para>
         /// </summary>
         /// 
         /// <returns>
@@ -744,7 +744,7 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一个在线评估任务的详情</para>
+        /// <para>Get the details of an online evaluation task</para>
         /// </summary>
         /// 
         /// <returns>
@@ -963,7 +963,181 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看符合条件的在线评估任务的结果</para>
+        /// <para>Obtains the list of results for trace evaluation. This API is used together with EvaluateTrace. EvaluateTrace starts the evaluation. ListEvalResults obtains the results.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListEvalResultsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEvalResultsResponse
+        /// </returns>
+        public ListEvalResultsResponse ListEvalResultsWithOptions(ListEvalResultsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListEvalResultsShrinkRequest request = new ListEvalResultsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RecordIds))
+            {
+                request.RecordIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RecordIds, "RecordIds", "simple");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EvaluationId))
+            {
+                query["EvaluationId"] = request.EvaluationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordIdsShrink))
+            {
+                query["RecordIds"] = request.RecordIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEvalResults",
+                Version = "2024-03-11",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/PAILLMTrace/eval/results",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEvalResultsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the list of results for trace evaluation. This API is used together with EvaluateTrace. EvaluateTrace starts the evaluation. ListEvalResults obtains the results.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListEvalResultsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEvalResultsResponse
+        /// </returns>
+        public async Task<ListEvalResultsResponse> ListEvalResultsWithOptionsAsync(ListEvalResultsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListEvalResultsShrinkRequest request = new ListEvalResultsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RecordIds))
+            {
+                request.RecordIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RecordIds, "RecordIds", "simple");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EvaluationId))
+            {
+                query["EvaluationId"] = request.EvaluationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordIdsShrink))
+            {
+                query["RecordIds"] = request.RecordIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEvalResults",
+                Version = "2024-03-11",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/PAILLMTrace/eval/results",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEvalResultsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the list of results for trace evaluation. This API is used together with EvaluateTrace. EvaluateTrace starts the evaluation. ListEvalResults obtains the results.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEvalResultsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEvalResultsResponse
+        /// </returns>
+        public ListEvalResultsResponse ListEvalResults(ListEvalResultsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListEvalResultsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the list of results for trace evaluation. This API is used together with EvaluateTrace. EvaluateTrace starts the evaluation. ListEvalResults obtains the results.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEvalResultsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEvalResultsResponse
+        /// </returns>
+        public async Task<ListEvalResultsResponse> ListEvalResultsAsync(ListEvalResultsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListEvalResultsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>List the results of online evaluation tasks that meet the criteria</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1031,7 +1205,7 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看符合条件的在线评估任务的结果</para>
+        /// <para>List the results of online evaluation tasks that meet the criteria</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1099,7 +1273,7 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看符合条件的在线评估任务的结果</para>
+        /// <para>List the results of online evaluation tasks that meet the criteria</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1118,7 +1292,7 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看符合条件的在线评估任务的结果</para>
+        /// <para>List the results of online evaluation tasks that meet the criteria</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1137,7 +1311,7 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看符合条件的在线评估任务</para>
+        /// <para>View online evaluation tasks that meet the criteria</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1199,7 +1373,7 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看符合条件的在线评估任务</para>
+        /// <para>View online evaluation tasks that meet the criteria</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1261,7 +1435,7 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看符合条件的在线评估任务</para>
+        /// <para>View online evaluation tasks that meet the criteria</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1280,7 +1454,7 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看符合条件的在线评估任务</para>
+        /// <para>View online evaluation tasks that meet the criteria</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1299,7 +1473,7 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>从trace日志中list出符合条件的trace数据。</para>
+        /// <para>Obtains a list of trace data based on specified criteria.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1353,9 +1527,17 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
             {
                 query["LlmAppName"] = request.LlmAppName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxDuration))
+            {
+                query["MaxDuration"] = request.MaxDuration;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxTime))
             {
                 query["MaxTime"] = request.MaxTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinDuration))
+            {
+                query["MinDuration"] = request.MinDuration;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinTime))
             {
@@ -1393,6 +1575,10 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
             {
                 query["SpanIds"] = request.SpanIdsShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpanName))
+            {
+                query["SpanName"] = request.SpanName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TraceIdsShrink))
             {
                 query["TraceIds"] = request.TraceIdsShrink;
@@ -1423,7 +1609,7 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>从trace日志中list出符合条件的trace数据。</para>
+        /// <para>Obtains a list of trace data based on specified criteria.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1477,9 +1663,17 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
             {
                 query["LlmAppName"] = request.LlmAppName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxDuration))
+            {
+                query["MaxDuration"] = request.MaxDuration;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxTime))
             {
                 query["MaxTime"] = request.MaxTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinDuration))
+            {
+                query["MinDuration"] = request.MinDuration;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinTime))
             {
@@ -1517,6 +1711,10 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
             {
                 query["SpanIds"] = request.SpanIdsShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpanName))
+            {
+                query["SpanName"] = request.SpanName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TraceIdsShrink))
             {
                 query["TraceIds"] = request.TraceIdsShrink;
@@ -1547,7 +1745,7 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>从trace日志中list出符合条件的trace数据。</para>
+        /// <para>Obtains a list of trace data based on specified criteria.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1566,7 +1764,7 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>从trace日志中list出符合条件的trace数据。</para>
+        /// <para>Obtains a list of trace data based on specified criteria.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1585,7 +1783,7 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止一个在线评估任务的执行</para>
+        /// <para>Stop the execution of an online evaluation task</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -1621,7 +1819,7 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止一个在线评估任务的执行</para>
+        /// <para>Stop the execution of an online evaluation task</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -1657,7 +1855,7 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止一个在线评估任务的执行</para>
+        /// <para>Stop the execution of an online evaluation task</para>
         /// </summary>
         /// 
         /// <returns>
@@ -1672,7 +1870,7 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止一个在线评估任务的执行</para>
+        /// <para>Stop the execution of an online evaluation task</para>
         /// </summary>
         /// 
         /// <returns>
@@ -1687,7 +1885,7 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更改一个在线评估任务的配置</para>
+        /// <para>Changes the configuration of a trace evaluation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1769,7 +1967,7 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更改一个在线评估任务的配置</para>
+        /// <para>Changes the configuration of a trace evaluation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1851,7 +2049,7 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更改一个在线评估任务的配置</para>
+        /// <para>Changes the configuration of a trace evaluation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1870,7 +2068,7 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更改一个在线评估任务的配置</para>
+        /// <para>Changes the configuration of a trace evaluation task.</para>
         /// </summary>
         /// 
         /// <param name="request">

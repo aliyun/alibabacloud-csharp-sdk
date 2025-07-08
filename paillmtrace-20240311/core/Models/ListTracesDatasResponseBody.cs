@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311.Models
 {
     public class ListTracesDatasResponseBody : TeaModel {
         /// <summary>
+        /// <para>The internal error code. This parameter is returned only when an error occurs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ExecutionFailure</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The error message. This parameter is returned only when an error occurs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>failed to get trace data</para>
         /// </summary>
@@ -36,6 +40,8 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of traces that meet the condition.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>22</para>
         /// </summary>
@@ -43,6 +49,9 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311.Models
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
 
+        /// <summary>
+        /// <para>The JSON array with each element being a trace\&quot;s JSON string. Length of the array is equal to or less than the page size parameter value.</para>
+        /// </summary>
         [NameInMap("Traces")]
         [Validation(Required=false)]
         public List<object> Traces { get; set; }

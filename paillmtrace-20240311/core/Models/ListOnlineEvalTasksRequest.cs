@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311.Models
 {
     public class ListOnlineEvalTasksRequest : TeaModel {
         /// <summary>
+        /// <para>Search keyword. It will match on fields such as task name, application name (appName), task description, and evaluation metric name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>foo</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311.Models
         public string Keyword { get; set; }
 
         /// <summary>
+        /// <para>The UTC end time of the search time range</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2025-04-07 13:24:25
         /// 2025-04-07</para>
@@ -27,6 +31,8 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311.Models
         public string MaxTime { get; set; }
 
         /// <summary>
+        /// <para>The UTC start time of the search time range</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2025-04-05 13:24:25
         /// 2025-04-05</para>
@@ -36,6 +42,8 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311.Models
         public string MinTime { get; set; }
 
         /// <summary>
+        /// <para>The current page number. Value range: integers greater than 0. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -44,6 +52,8 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>Page size, default is 10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>50</para>
         /// </summary>

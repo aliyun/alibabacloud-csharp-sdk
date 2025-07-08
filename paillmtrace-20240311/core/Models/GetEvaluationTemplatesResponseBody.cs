@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311.Models
 {
     public class GetEvaluationTemplatesResponseBody : TeaModel {
         /// <summary>
+        /// <para>Internal error code. Set only when the response has an error.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ExecutionFailure</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>A series of templates used internally by the evaluation system to construct LLM interaction information.</para>
+        /// </summary>
         [NameInMap("EvaluationTemplates")]
         [Validation(Required=false)]
         public List<object> EvaluationTemplates { get; set; }
 
         /// <summary>
+        /// <para>Response error message. Set only when the response has an error.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cannot get data back.</para>
         /// </summary>
@@ -30,7 +37,7 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>ID of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>6A87228C-969A-1381-98CF-AE07AE630FA5</para>
