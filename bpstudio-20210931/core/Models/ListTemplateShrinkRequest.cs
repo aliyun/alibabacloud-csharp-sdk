@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.BPStudio20210931.Models
 {
-    public class ListTemplateRequest : TeaModel {
+    public class ListTemplateShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The keyword that is used to search for templates.</para>
         /// 
@@ -70,17 +70,7 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
 
         [NameInMap("Tag")]
         [Validation(Required=false)]
-        public List<ListTemplateRequestTag> Tag { get; set; }
-        public class ListTemplateRequestTag : TeaModel {
-            [NameInMap("Key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
-
-            [NameInMap("Value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-        }
+        public string TagShrink { get; set; }
 
         /// <summary>
         /// <para>The tag that you want to use to query templates.</para>

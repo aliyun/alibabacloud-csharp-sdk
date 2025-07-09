@@ -3284,7 +3284,7 @@ namespace AlibabaCloud.SDK.BPStudio20210931
         /// <para>Queries templates, including information such as the template name, architecture image URL, and URL of the serialized architecture image file.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListTemplateRequest
         /// </param>
         /// <param name="runtime">
@@ -3294,9 +3294,15 @@ namespace AlibabaCloud.SDK.BPStudio20210931
         /// <returns>
         /// ListTemplateResponse
         /// </returns>
-        public ListTemplateResponse ListTemplateWithOptions(ListTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListTemplateResponse ListTemplateWithOptions(ListTemplateRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListTemplateShrinkRequest request = new ListTemplateShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
+            {
+                request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "Tag", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
             {
@@ -3317,6 +3323,10 @@ namespace AlibabaCloud.SDK.BPStudio20210931
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 body["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagShrink))
+            {
+                body["Tag"] = request.TagShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagList))
             {
@@ -3350,7 +3360,7 @@ namespace AlibabaCloud.SDK.BPStudio20210931
         /// <para>Queries templates, including information such as the template name, architecture image URL, and URL of the serialized architecture image file.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListTemplateRequest
         /// </param>
         /// <param name="runtime">
@@ -3360,9 +3370,15 @@ namespace AlibabaCloud.SDK.BPStudio20210931
         /// <returns>
         /// ListTemplateResponse
         /// </returns>
-        public async Task<ListTemplateResponse> ListTemplateWithOptionsAsync(ListTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListTemplateResponse> ListTemplateWithOptionsAsync(ListTemplateRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListTemplateShrinkRequest request = new ListTemplateShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
+            {
+                request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "Tag", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
             {
@@ -3383,6 +3399,10 @@ namespace AlibabaCloud.SDK.BPStudio20210931
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 body["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagShrink))
+            {
+                body["Tag"] = request.TagShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagList))
             {
