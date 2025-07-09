@@ -309,7 +309,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 
             /// <summary>
             /// <para>The computing specification that specifies the messaging transactions per second (TPS) of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/444715.html">Instance editions</a>.</para>
-            /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rmq.s2.2xlarge</para>
