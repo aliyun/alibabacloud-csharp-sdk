@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string ResourceGroup { get; set; }
 
+        [NameInMap("ScheduledStartTime")]
+        [Validation(Required=false)]
+        public string ScheduledStartTime { get; set; }
+
         [NameInMap("SchemaName")]
         [Validation(Required=false)]
         public string SchemaName { get; set; }

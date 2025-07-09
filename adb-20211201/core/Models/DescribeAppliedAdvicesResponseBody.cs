@@ -46,6 +46,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public string BuildSQL { get; set; }
 
+            [NameInMap("IndexFields")]
+            [Validation(Required=false)]
+            public string IndexFields { get; set; }
+
             /// <summary>
             /// <para>The status of the suggestion execution job. Valid values:</para>
             /// <list type="bullet">

@@ -60,6 +60,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public string Benefit { get; set; }
 
+            [NameInMap("IndexFields")]
+            [Validation(Required=false)]
+            public string IndexFields { get; set; }
+
             /// <summary>
             /// <para>The page number. Pages start from page 1. Default value: 1.</para>
             /// 

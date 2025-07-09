@@ -9,6 +9,24 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class OpenStructMvDetailModel : TeaModel {
+        [NameInMap("BaseTableInfos")]
+        [Validation(Required=false)]
+        public List<OpenStructMvDetailModelBaseTableInfos> BaseTableInfos { get; set; }
+        public class OpenStructMvDetailModelBaseTableInfos : TeaModel {
+            [NameInMap("BaseTableIsMv")]
+            [Validation(Required=false)]
+            public bool? BaseTableIsMv { get; set; }
+
+            [NameInMap("SchemaName")]
+            [Validation(Required=false)]
+            public string SchemaName { get; set; }
+
+            [NameInMap("TableName")]
+            [Validation(Required=false)]
+            public string TableName { get; set; }
+
+        }
+
         [NameInMap("BaseTableNames")]
         [Validation(Required=false)]
         public List<List<string>> BaseTableNames { get; set; }
