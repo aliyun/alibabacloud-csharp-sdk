@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string MsgBody { get; set; }
 
+        [NameInMap("Namespace")]
+        [Validation(Required=false)]
+        public string Namespace { get; set; }
+
         /// <summary>
         /// <para>The name of the search library. Default value: ims-default-search-lib.</para>
         /// 

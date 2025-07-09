@@ -1,3 +1,10 @@
+2025-07-09 Version: 6.4.4
+- Update API DeleteMediaFromSearchLib: add request parameters Namespace.
+- Update API InsertMediaToSearchLib: add request parameters Namespace.
+- Update API SearchIndexJobRerun: add request parameters Namespace.
+- Update API UpdateMediaToSearchLib: add request parameters Namespace.
+
+
 2025-07-07 Version: 6.4.3
 - Update API GetSmartHandleJob: add response parameters Body.ErrorCode.
 - Update API GetSmartHandleJob: add response parameters Body.ErrorMessage.

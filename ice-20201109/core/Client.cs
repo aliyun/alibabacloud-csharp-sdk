@@ -11088,6 +11088,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             {
                 query["MsgBody"] = request.MsgBody;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchLibName))
             {
                 query["SearchLibName"] = request.SearchLibName;
@@ -11137,6 +11141,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MsgBody))
             {
                 query["MsgBody"] = request.MsgBody;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchLibName))
             {
@@ -24012,6 +24020,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             {
                 query["MsgBody"] = request.MsgBody;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchLibName))
             {
                 query["SearchLibName"] = request.SearchLibName;
@@ -24073,6 +24085,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MsgBody))
             {
                 query["MsgBody"] = request.MsgBody;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchLibName))
             {
@@ -36256,6 +36272,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             {
                 query["MediaIds"] = request.MediaIds;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchLibName))
             {
                 query["SearchLibName"] = request.SearchLibName;
@@ -36305,6 +36325,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaIds))
             {
                 query["MediaIds"] = request.MediaIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchLibName))
             {
@@ -52312,6 +52336,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             {
                 query["MsgBody"] = request.MsgBody;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchLibName))
             {
                 query["SearchLibName"] = request.SearchLibName;
@@ -52361,6 +52389,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MsgBody))
             {
                 query["MsgBody"] = request.MsgBody;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchLibName))
             {
