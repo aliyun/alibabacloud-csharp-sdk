@@ -46,8 +46,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <item><description><b>Open</b>: disables password-free access.</description></item>
         /// <item><description><b>Close</b>: enables password-free access.</description></item>
         /// </list>
-        /// <para>**</para>
-        /// <para><b>Description</b> Default value: <b>Open</b>.</para>
+        /// <remarks>
+        /// <para> Default value: <b>Open</b>.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

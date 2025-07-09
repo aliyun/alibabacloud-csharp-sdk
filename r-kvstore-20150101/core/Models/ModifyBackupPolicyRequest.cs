@@ -20,13 +20,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? BackupRetentionPeriod { get; set; }
 
         /// <summary>
-        /// <para>Enables or disables the data flashback feature for the instance. Valid values:</para>
+        /// <para>Specifies whether to enable the data flashback feature for the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: enables the data flashback feature. You must also enable AOF persistence by setting <c>appendonly</c> to <c>yes</c> in the parameter settings of the instance. Then, you can use the data flashback feature.</description></item>
+        /// <item><description><b>1</b>: enables the data flashback feature. You must also enable append-only file (AOF) persistence by setting <c>appendonly</c> to <c>yes</c> in the parameter settings of the instance. Then, you can use the data flashback feature.</description></item>
         /// <item><description><b>0</b> (default): disables the data flashback feature.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is available only for ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based and persistent memory-optimized instances. For more information, see <a href="https://help.aliyun.com/document_detail/443784.html">Data flashback</a>.</para>
+        /// <para> This parameter is available only for Tair (Enterprise Edition) DRAM-based and persistent memory-optimized instances. For more information, see <a href="https://help.aliyun.com/document_detail/148479.html">Data flashback</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

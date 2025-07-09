@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class AddShardingNodeRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable automatic payment. Valid values:</para>
+        /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enables automatic payment. Make sure that you have sufficient balance within your account.</description></item>
-        /// <item><description><b>false</b>: disables automatic payment. In this case, you must manually renew the instance in the console before the instance expires. For more information, see <a href="https://help.aliyun.com/document_detail/26352.html">Renewal</a>.</description></item>
+        /// <item><description><b>true</b>: enables auto-renewal. Make sure that your account has sufficient balance.</description></item>
+        /// <item><description><b>false</b>: disables auto-renewal. You must manually renew the instance in the console before the instance expires. For more information, see <a href="https://help.aliyun.com/document_detail/26352.html">Instance renewal</a>.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>The default value is <b>true</b>.</para>
+        /// <para> Default value: <b>true</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

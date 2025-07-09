@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 [Validation(Required=false)]
                 public string ChargeType { get; set; }
 
+                [NameInMap("ComputeUnitNum")]
+                [Validation(Required=false)]
+                public int? ComputeUnitNum { get; set; }
+
                 [NameInMap("ConnectionString")]
                 [Validation(Required=false)]
                 public string ConnectionString { get; set; }
@@ -65,6 +69,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 [Validation(Required=false)]
                 public string IsOrderCompleted { get; set; }
 
+                [NameInMap("Model")]
+                [Validation(Required=false)]
+                public string Model { get; set; }
+
+                [NameInMap("ModelServiceNum")]
+                [Validation(Required=false)]
+                public int? ModelServiceNum { get; set; }
+
                 [NameInMap("NetworkType")]
                 [Validation(Required=false)]
                 public string NetworkType { get; set; }
@@ -77,17 +89,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
-                [NameInMap("ReserveGpuNum")]
-                [Validation(Required=false)]
-                public int? ReserveGpuNum { get; set; }
-
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
-
-                [NameInMap("SecurityGroupId")]
-                [Validation(Required=false)]
-                public string SecurityGroupId { get; set; }
 
                 [NameInMap("Storage")]
                 [Validation(Required=false)]

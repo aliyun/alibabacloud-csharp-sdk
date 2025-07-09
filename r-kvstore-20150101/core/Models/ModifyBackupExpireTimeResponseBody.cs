@@ -8,12 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
-    public class ModifyInstanceConfigResponseBody : TeaModel {
+    public class ModifyBackupExpireTimeResponseBody : TeaModel {
         /// <summary>
-        /// <para>请求ID。</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>8D0C0AFC-E9CD-47A4-8395-5C31BF9B****</para>
+        /// <para>B560AAD5-5027-51AD-A0D4-FA4DB1A76F40</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <list type="bullet">
         /// <item><description>The name can contain lowercase letters, digits, and hyphens (-), and must start with a lowercase letter.</description></item>
         /// <item><description>The name can be up to 100 characters in length.</description></item>
-        /// <item><description>The name cannot be one of the reserved words in the <a href="https://help.aliyun.com/document_detail/92665.html#title-84o-mok-b6h">Reserved words for Redis account names</a> section.</description></item>
+        /// <item><description>The name cannot be one of the reserved words in the <a href="https://www.alibabacloud.com/help/en/redis/user-guide/create-and-manage-database-accounts#section-u3q-817-om3">Reserved words for Redis account names</a> section.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

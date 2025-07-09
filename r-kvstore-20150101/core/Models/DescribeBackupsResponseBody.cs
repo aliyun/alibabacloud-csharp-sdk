@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         }
 
         /// <summary>
-        /// <para>Details of the backup files.</para>
+        /// <para>The queried backup sets.</para>
         /// </summary>
         [NameInMap("Backups")]
         [Validation(Required=false)]
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// <summary>
                 /// <para>The internal download URL of the backup file.</para>
                 /// <remarks>
-                /// <para> You can use this URL to download the backup file from an Elastic Compute Service (ECS) instance that is connected to the ApsaraDB for Redis instance. The ECS instance must belong to the same classic network or reside in the same virtual private cloud (VPC) as the ApsaraDB for Redis instance.</para>
+                /// <para> You can use this URL to download the backup file from an Elastic Compute Service (ECS) instance that is connected to the Tair instance. The ECS instance must belong to the same classic network or reside in the same virtual private cloud (VPC) as the Tair instance.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -247,6 +247,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 [NameInMap("EngineVersion")]
                 [Validation(Required=false)]
                 public string EngineVersion { get; set; }
+
+                [NameInMap("ExpectExpireTime")]
+                [Validation(Required=false)]
+                public string ExpectExpireTime { get; set; }
 
                 /// <summary>
                 /// <para>The node ID.</para>

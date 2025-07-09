@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class RestoreInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the backup file. You can call the <a href="https://help.aliyun.com/document_detail/473823.html">DescribeBackups</a> operation to query the IDs of backup files.</para>
+        /// <para>The ID of the backup file. You can call the <a href="https://help.aliyun.com/document_detail/473823.html">DescribeBackups</a>operation to query the IDs of backup files.</para>
         /// 
         /// <b>Example:</b>
         /// <para>78241****</para>

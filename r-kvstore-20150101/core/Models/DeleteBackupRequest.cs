@@ -8,13 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
-    public class CreateBackupRequest : TeaModel {
-        [NameInMap("BackupRetentionPeriod")]
+    public class DeleteBackupRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>521****66</para>
+        /// </summary>
+        [NameInMap("BackupId")]
         [Validation(Required=false)]
-        public long? BackupRetentionPeriod { get; set; }
+        public string BackupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,10 +44,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("SecurityToken")]
-        [Validation(Required=false)]
-        public string SecurityToken { get; set; }
 
     }
 

@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 [Validation(Required=false)]
                 public string ChargeType { get; set; }
 
+                [NameInMap("ComputeUnitNum")]
+                [Validation(Required=false)]
+                public int? ComputeUnitNum { get; set; }
+
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
@@ -57,9 +61,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 [Validation(Required=false)]
                 public string InstanceType { get; set; }
 
-                [NameInMap("ModuleName")]
+                [NameInMap("Model")]
                 [Validation(Required=false)]
-                public string ModuleName { get; set; }
+                public string Model { get; set; }
+
+                [NameInMap("ModelServiceNum")]
+                [Validation(Required=false)]
+                public int? ModelServiceNum { get; set; }
 
                 [NameInMap("NetworkType")]
                 [Validation(Required=false)]
@@ -72,10 +80,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
-
-                [NameInMap("ReserveGpuNum")]
-                [Validation(Required=false)]
-                public int? ReserveGpuNum { get; set; }
 
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
@@ -101,9 +105,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
                 }
 
-                [NameInMap("UsedGpuNum")]
+                [NameInMap("VNodeName")]
                 [Validation(Required=false)]
-                public int? UsedGpuNum { get; set; }
+                public string VNodeName { get; set; }
 
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]

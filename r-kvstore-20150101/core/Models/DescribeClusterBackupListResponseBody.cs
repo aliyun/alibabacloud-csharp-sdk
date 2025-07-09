@@ -240,6 +240,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             [Validation(Required=false)]
             public string ClusterBackupStatus { get; set; }
 
+            [NameInMap("ExpectExpireTime")]
+            [Validation(Required=false)]
+            public string ExpectExpireTime { get; set; }
+
             /// <summary>
             /// <para>Indicates whether the backup set is valid. A value of 0 indicates that shard-level backups failed or have not been completed.</para>
             /// 

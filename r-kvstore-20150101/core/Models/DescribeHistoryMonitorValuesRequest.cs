@@ -35,7 +35,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The interval at which to collect monitoring data. Unit: minutes. Set the value to <c>01m</c>.</para>
+        /// <para>This parameter is deprecated. Set the value to <c>01m</c>.</para>
+        /// <para>The <b>interval at which a query is performed</b> is automatically determined based on the start time and end time of the query. For example, if the query time range is less than or equal to 10 minutes, data is aggregated at a frequency of every 5 seconds and the results are returned at 5-second intervals.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The query result is aligned with the data aggregation frequency. If the specified StartTime value does not coincide with a point in time for data aggregation, the system returns the latest point in time for data aggregation as the first point in time. For example, if you set the StartTime parameter to 2022-01-20T12:01:48Z, the first point in time returned is 2022-01-20T12:01:45Z.</description></item>
+        /// <item><description>If the number of data shards is greater than or equal to 32, the minimum data aggregation frequency is 1 minute.</description></item>
+        /// </list>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -59,13 +66,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// </list>
         /// <para>For more information about monitoring metrics and their descriptions, see <a href="https://www.alibabacloud.com/help/zh/redis/developer-reference/api-r-kvstore-2015-01-01-describehistorymonitorvalues-redis#monitorKeys-note">Additional description of MonitorKeys</a>.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>This parameter is empty by default, which indicates that the UsedMemory and quotaMemory metrics are returned.</para>
-        /// </description></item>
-        /// <item><description><para>To ensure query efficiency, we recommend that you specify no more than five metrics for a single node at a time, and specify only a single metric when you query aggregate metrics.</para>
-        /// </description></item>
+        /// <item><description>This parameter is empty by default, which indicates that the UsedMemory and quotaMemory metrics are returned.</description></item>
+        /// <item><description>To ensure query efficiency, we recommend that you specify no more than five metrics for a single node at a time, and specify only a single metric when you query aggregate metrics.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>memoryUsage</para>
@@ -77,7 +82,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The ID of the node in the instance. You can set this parameter to query the data of a specified node.</para>
         /// <list type="bullet">
-        /// <item><description><para>This parameter is available only for read/write splitting or cluster instances of ApsaraDB for Redis.</para>
+        /// <item><description><para>This parameter is available only for read/write splitting or cluster instances of Tair.</para>
         /// </description></item>
         /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/473786.html">DescribeLogicInstanceTopology</a> operation to query node IDs.</para>
         /// </description></item>
@@ -133,6 +138,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
+
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
     }
 

@@ -81,17 +81,25 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public bool? ForceUpgrade { get; set; }
 
         /// <summary>
-        /// <para>The instance type.</para>
-        /// <para><b>To view the instance type, perform the following steps:</b></para>
+        /// <para>The instance type.**** <b>To view the instance type, perform the following steps:</b></para>
         /// <ol>
-        /// <item><description>In the <a href="https://help.aliyun.com/document_detail/26350.html">Overview</a> topic, click the link in the <b>Reference</b> column corresponding to the instance type that you want to view.</description></item>
-        /// <item><description>In the instance type table of the page that appears, find the instance type in the <b>InstanceClass</b> column.</description></item>
+        /// <item><description>In the <a href="https://help.aliyun.com/document_detail/26350.html">Instance specifications</a> topic, click the link in the <b>References for instance specifications</b> column corresponding to the instance type that you want to view.</description></item>
+        /// <item><description>In the instance type table of the specification documentation, find the instance type in the <b>InstanceClass</b> column.</description></item>
         /// </ol>
-        /// <para>When you query cloud-native cluster instances, you must set this parameter to one of the following values and use the Instances parameter to specify the instance type that you want to query.</para>
+        /// <remarks>
+        /// <para> If you want to query new instances, in addition to key parameters, you must also specify at least the following parameters:</para>
+        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>ApsaraDB for Redis cluster instances: redis.cluster.sharding.common.ce</description></item>
-        /// <item><description>Tair DRAM-based cluster instances: tair.rdb.cluster.sharding.common</description></item>
-        /// <item><description>Tair persistent memory-based cluster instances: tair.scm.cluster.sharding.common.ce</description></item>
+        /// <item><description><para>To query a classic instance, specify this parameter.</para>
+        /// </description></item>
+        /// <item><description><para>To query a cloud-native standard instance, specify this parameter.</para>
+        /// </description></item>
+        /// <item><description><para>To query a cloud-native cluster instance, specify this parameter and the <b>ShardCount</b> parameter.</para>
+        /// </description></item>
+        /// <item><description><para>To query a cloud-native read/write splitting instance, specify this parameter and the <b>Instances</b> parameter.</para>
+        /// </description></item>
+        /// <item><description><para>To query multiple instances of different specifications or to query a Tair ESSD-based instance that has a custom storage type and storage capacity, specify the Instances parameter. In this case, you do not need to specify the InstanceClass parameter.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -115,7 +123,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>A JSON string that contains information about one or more cloud-native cluster instances. For more information, see the &quot;Additional description of the Instances parameter&quot; section of this topic.</para>
+        /// <para>If you want to query cloud-native read/write splitting instances, Tair ESSD-based instances, or instances of different specifications, you must specify this parameter as a JSON string. For more information, see the <b>Additional description of the Instances parameter</b> section.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Instances=[{&quot;RegionId&quot;: &quot;cn-hangzhou&quot;,&quot;ZoneId&quot;: &quot;cn-hangzhou-b&quot;,&quot;InstanceClass&quot;: &quot;redis.master.small.default&quot;,&quot;Period&quot;: &quot;1&quot;,&quot;Quantity&quot;: &quot;1&quot;,&quot;Capacity&quot;: &quot;4096&quot;}]</para>
@@ -178,7 +186,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration. Unit: months. Valid values: <b>1</b>, 2, 3, 4, 5, 6, 7, 8, <b>9</b>, <b>12</b>, <b>24</b>, and <b>36</b>.</para>
+        /// <para>The subscription duration. Unit: month. Valid values: <b>1</b>, 2, 3, 4, 5, 6, 7, 8, <b>9</b>, <b>12</b>, <b>24</b>, and <b>36</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -198,7 +206,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? Quantity { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -220,7 +228,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The number of shards. This parameter is applicable only to cloud-native cluster instances. You can use this parameter to customize the number of shards.</para>
+        /// <para>The number of data shards in the cloud-native cluster instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -230,7 +238,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? ShardCount { get; set; }
 
         /// <summary>
-        /// <para>The zone ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> operation to query the most recent zone list.</para>
+        /// <para>The zone ID. You can call the <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> operation to query the zone ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-e</para>

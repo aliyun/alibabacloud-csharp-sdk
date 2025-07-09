@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                     public string CouponNo { get; set; }
 
                     /// <summary>
-                    /// <para>The description of the coupon.</para>
+                    /// <para>The coupon description.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>coupondemo</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the coupon was selected.</para>
+                    /// <para>Indicates whether the coupon is selected.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -139,14 +139,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                     /// <para>The activity name.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>合同优惠_整单_xxx折</para>
+                    /// <para>contract promotion_order_xxx discount</para>
                     /// </summary>
                     [NameInMap("ActivityName")]
                     [Validation(Required=false)]
                     public string ActivityName { get; set; }
 
                     /// <summary>
-                    /// <para>The price after the promotion.</para>
+                    /// <para>The preferential price.</para>
                     /// </summary>
                     [NameInMap("FinalFee")]
                     [Validation(Required=false)]
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                     public double? FinalPromFee { get; set; }
 
                     /// <summary>
-                    /// <para>The promotion ID.</para>
+                    /// <para>The promotion code.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <hr>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 }
 
                 /// <summary>
-                /// <para>The price difference displayed in the total order amount.</para>
+                /// <para>The promotional offer (displayed in the total order amount).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>**</para>
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public long? Differential { get; set; }
 
                 /// <summary>
-                /// <para>The name of the price difference.</para>
+                /// <para>The name of the promotional offer.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>XXXXX</para>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string DifferentialName { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the contract promotion is hit.</para>
+                /// <para>Indicates whether eligibility for the contracted discount is met.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -287,7 +287,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string HandlingFeeAmount { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the contract promotion is hit.</para>
+            /// <para>Indicates whether eligibility for the contracted discount is met.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -297,7 +297,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public bool? IsContractActivity { get; set; }
 
             /// <summary>
-            /// <para>The order information.</para>
+            /// <para>The information about the order.</para>
             /// 
             /// <b>Example:</b>
             /// <para>&quot;&quot;</para>
@@ -347,7 +347,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public long? StandDiscountPrice { get; set; }
 
             /// <summary>
-            /// <para>The discount.</para>
+            /// <para>The discounted price.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -369,7 +369,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         }
 
         /// <summary>
-        /// <para>The parameters of the order. This parameter is returned when OrderParamOut is set to <c>true</c>.</para>
+        /// <para>The parameters of the order. When OrderParamOut is set to <c>true</c>, this parameter is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>String</para>
@@ -379,7 +379,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string OrderParams { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3A40BE4E-1890-4972-889C-FEFA37663635</para>
@@ -400,7 +400,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public List<DescribePriceResponseBodyRulesRule> Rule { get; set; }
             public class DescribePriceResponseBodyRulesRule : TeaModel {
                 /// <summary>
-                /// <para>The name of the promotion rule.</para>
+                /// <para>The name of the rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -434,7 +434,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         }
 
         /// <summary>
-        /// <para>The rules that match the coupon.</para>
+        /// <para>The orders that match the coupons.</para>
         /// </summary>
         [NameInMap("SubOrders")]
         [Validation(Required=false)]
@@ -509,7 +509,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                         public string ActivityName { get; set; }
 
                         /// <summary>
-                        /// <para>The discounted price.</para>
+                        /// <para>The preferential price.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <hr>
@@ -519,7 +519,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                         public double? FinalFee { get; set; }
 
                         /// <summary>
-                        /// <para>The transaction price.</para>
+                        /// <para>The total discount amount.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <hr>
@@ -539,7 +539,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                         public string OptionCode { get; set; }
 
                         /// <summary>
-                        /// <para>The promotion ID.</para>
+                        /// <para>The promotion IDs.</para>
                         /// </summary>
                         [NameInMap("OptionIds")]
                         [Validation(Required=false)]
@@ -921,7 +921,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                         public bool? PricingModule { get; set; }
 
                         /// <summary>
-                        /// <para>The discount.</para>
+                        /// <para>The discounted price.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <hr>
@@ -931,7 +931,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                         public double? StandPrice { get; set; }
 
                         /// <summary>
-                        /// <para>The original price of the product.</para>
+                        /// <para>The original price of the instance.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>0.0</para>
@@ -976,7 +976,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                         public string CanPromFee { get; set; }
 
                         /// <summary>
-                        /// <para>The coupon code. Default value: <c>youhuiquan_promotion_option_id_for_blank</c>.</para>
+                        /// <para>Indicates whether coupons are used. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>default or null (default): Coupons are used.</description></item>
+                        /// <item><description>youhuiquan_promotion_option_id_for_blank: Coupons are not used.</description></item>
+                        /// </list>
                         /// 
                         /// <b>Example:</b>
                         /// <para>default</para>
@@ -1036,7 +1040,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                         public string PromotionOptionNo { get; set; }
 
                         /// <summary>
-                        /// <para>Indicates whether</para>
+                        /// <para>Indicates whether the promotion option is selected.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>false</para>
@@ -1070,7 +1074,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string OriginalAmount { get; set; }
 
                 /// <summary>
-                /// <para>The promotion details.</para>
+                /// <para>Details about promotions.</para>
                 /// </summary>
                 [NameInMap("PromDetailList")]
                 [Validation(Required=false)]
@@ -1101,7 +1105,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                         public string DerivedPromType { get; set; }
 
                         /// <summary>
-                        /// <para>The transaction price.</para>
+                        /// <para>The discount amount.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <hr>
@@ -1111,7 +1115,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                         public double? FinalPromFee { get; set; }
 
                         /// <summary>
-                        /// <para>The code of the coupon.</para>
+                        /// <para>The coupon code.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <hr>
@@ -1131,7 +1135,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                         public string PromType { get; set; }
 
                         /// <summary>
-                        /// <para>The coupon code.</para>
+                        /// <para>The promotion code.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <hr>
@@ -1151,7 +1155,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                         public long? PromotionId { get; set; }
 
                         /// <summary>
-                        /// <para>The name of the promotional activity.</para>
+                        /// <para>The promotion name.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <hr>
@@ -1165,7 +1169,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 }
 
                 /// <summary>
-                /// <para>The rule IDs.</para>
+                /// <para>The hit rule IDs.</para>
                 /// </summary>
                 [NameInMap("RuleIds")]
                 [Validation(Required=false)]
@@ -1178,7 +1182,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 }
 
                 /// <summary>
-                /// <para>The discount.</para>
+                /// <para>The discounted price.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <hr>
@@ -1188,7 +1192,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public long? StandDiscountPrice { get; set; }
 
                 /// <summary>
-                /// <para>The discount.</para>
+                /// <para>The discounted price.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <hr>
@@ -1198,7 +1202,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public long? StandPrice { get; set; }
 
                 /// <summary>
-                /// <para>The final price of the order.</para>
+                /// <para>The transaction price of the order.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
