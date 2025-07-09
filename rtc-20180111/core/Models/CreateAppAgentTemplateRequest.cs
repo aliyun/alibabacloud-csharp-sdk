@@ -41,9 +41,6 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
-            /// <summary>
-            /// <para>This parameter is required.</para>
-            /// </summary>
             [NameInMap("WordWeights")]
             [Validation(Required=false)]
             public List<CreateAppAgentTemplateRequestAsrConfigWordWeights> WordWeights { get; set; }
