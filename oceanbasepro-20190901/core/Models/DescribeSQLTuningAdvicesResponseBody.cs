@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 /// </summary>
                 [NameInMap("Ndv")]
                 [Validation(Required=false)]
-                public float? Ndv { get; set; }
+                public double? Ndv { get; set; }
 
             }
 

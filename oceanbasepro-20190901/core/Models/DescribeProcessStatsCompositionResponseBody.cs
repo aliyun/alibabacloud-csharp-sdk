@@ -76,13 +76,9 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 [Validation(Required=false)]
                 public string Database { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>true</para>
-                /// </summary>
                 [NameInMap("DynamicSql")]
                 [Validation(Required=false)]
-                public string DynamicSql { get; set; }
+                public bool? DynamicSql { get; set; }
 
                 /// <summary>
                 /// <para>The definition of this parameter varies based on whether the SQL statement is executed.</para>
@@ -128,13 +124,9 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                     [Validation(Required=false)]
                     public string Database { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>true</para>
-                    /// </summary>
                     [NameInMap("DynamicSql")]
                     [Validation(Required=false)]
-                    public string DynamicSql { get; set; }
+                    public bool? DynamicSql { get; set; }
 
                     [NameInMap("ExecuteTime")]
                     [Validation(Required=false)]
@@ -166,7 +158,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
                         [NameInMap("DynamicSql")]
                         [Validation(Required=false)]
-                        public string DynamicSql { get; set; }
+                        public bool? DynamicSql { get; set; }
 
                         [NameInMap("ExecuteTime")]
                         [Validation(Required=false)]

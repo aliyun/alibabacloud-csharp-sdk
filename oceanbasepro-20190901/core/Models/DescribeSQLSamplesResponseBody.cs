@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("AffectedRows")]
             [Validation(Required=false)]
-            public double? AffectedRows { get; set; }
+            public long? AffectedRows { get; set; }
 
             /// <summary>
             /// <para>Application event waiting time (in milliseconds).</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("ClientPort")]
             [Validation(Required=false)]
-            public string ClientPort { get; set; }
+            public int? ClientPort { get; set; }
 
             /// <summary>
             /// <para>Concurrency event waiting time (in milliseconds).</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("ExpectedWorkerCount")]
             [Validation(Required=false)]
-            public double? ExpectedWorkerCount { get; set; }
+            public long? ExpectedWorkerCount { get; set; }
 
             /// <summary>
             /// <para>The full SQL text. </para>
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("MemstoreReadRows")]
             [Validation(Required=false)]
-            public double? MemstoreReadRows { get; set; }
+            public long? MemstoreReadRows { get; set; }
 
             /// <summary>
             /// <para>Network transmission time (in milliseconds).</para>
@@ -267,7 +267,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("ObDbId")]
             [Validation(Required=false)]
-            public double? ObDbId { get; set; }
+            public long? ObDbId { get; set; }
 
             /// <summary>
             /// <para>Server  ID.</para>
@@ -277,7 +277,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("ObServerId")]
             [Validation(Required=false)]
-            public double? ObServerId { get; set; }
+            public long? ObServerId { get; set; }
 
             /// <summary>
             /// <para>User ID.</para>
@@ -287,7 +287,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("ObUserId")]
             [Validation(Required=false)]
-            public double? ObUserId { get; set; }
+            public long? ObUserId { get; set; }
 
             /// <summary>
             /// <para>The parameter value of the SQL statement.</para>
@@ -307,7 +307,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("PartitionCount")]
             [Validation(Required=false)]
-            public double? PartitionCount { get; set; }
+            public long? PartitionCount { get; set; }
 
             /// <summary>
             /// <para>The execution plan ID.</para>
@@ -317,7 +317,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("PlanId")]
             [Validation(Required=false)]
-            public double? PlanId { get; set; }
+            public long? PlanId { get; set; }
 
             /// <summary>
             /// <para>Plan type.</para>
@@ -347,7 +347,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("RequestId")]
             [Validation(Required=false)]
-            public string RequestId { get; set; }
+            public long? RequestId { get; set; }
 
             /// <summary>
             /// <para>SQL request time.</para>
@@ -367,7 +367,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("RetCode")]
             [Validation(Required=false)]
-            public double? RetCode { get; set; }
+            public int? RetCode { get; set; }
 
             /// <summary>
             /// <para>Retry count.</para>
@@ -377,7 +377,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("RetryCount")]
             [Validation(Required=false)]
-            public double? RetryCount { get; set; }
+            public long? RetryCount { get; set; }
 
             /// <summary>
             /// <para>Average returned rows during the execution period.</para>
@@ -387,7 +387,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("ReturnRows")]
             [Validation(Required=false)]
-            public double? ReturnRows { get; set; }
+            public long? ReturnRows { get; set; }
 
             /// <summary>
             /// <para>RowCache hit count.</para>
@@ -407,7 +407,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("RpcCount")]
             [Validation(Required=false)]
-            public double? RpcCount { get; set; }
+            public long? RpcCount { get; set; }
 
             /// <summary>
             /// <para>Schedule event waiting time (in milliseconds).</para>
@@ -457,7 +457,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("SsstoreReadRows")]
             [Validation(Required=false)]
-            public double? SsstoreReadRows { get; set; }
+            public long? SsstoreReadRows { get; set; }
 
             /// <summary>
             /// <para>Parameterized SQL text.</para>
@@ -507,7 +507,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("UsedWorkerCount")]
             [Validation(Required=false)]
-            public double? UsedWorkerCount { get; set; }
+            public long? UsedWorkerCount { get; set; }
 
             /// <summary>
             /// <para>UserIO event waiting time (in milliseconds).</para>
@@ -537,7 +537,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("WaitCount")]
             [Validation(Required=false)]
-            public double? WaitCount { get; set; }
+            public long? WaitCount { get; set; }
 
             /// <summary>
             /// <para>Longest wait event during the execution period.</para>

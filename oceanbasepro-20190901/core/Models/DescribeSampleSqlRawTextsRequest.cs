@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         /// </summary>
         [NameInMap("Limit")]
         [Validation(Required=false)]
-        public string Limit { get; set; }
+        public int? Limit { get; set; }
 
         /// <summary>
         /// <para>SQL ID。</para>

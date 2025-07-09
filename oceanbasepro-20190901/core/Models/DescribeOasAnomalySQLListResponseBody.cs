@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("LastExecutedTime")]
             [Validation(Required=false)]
-            public double? LastExecutedTime { get; set; }
+            public string LastExecutedTime { get; set; }
 
             /// <summary>
             /// <para>Risk level.</para>

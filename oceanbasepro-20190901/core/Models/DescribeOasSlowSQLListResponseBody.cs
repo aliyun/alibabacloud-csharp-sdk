@@ -362,7 +362,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("Executions")]
             [Validation(Required=false)]
-            public double? Executions { get; set; }
+            public long? Executions { get; set; }
 
             /// <summary>
             /// <para>Average number of partition accessed during the execution period.</para>
@@ -372,7 +372,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("FailCount")]
             [Validation(Required=false)]
-            public double? FailCount { get; set; }
+            public long? FailCount { get; set; }
 
             /// <summary>
             /// <para>Error percentage during the execution period.</para>
@@ -512,7 +512,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("MissPlans")]
             [Validation(Required=false)]
-            public double? MissPlans { get; set; }
+            public long? MissPlans { get; set; }
 
             /// <summary>
             /// <para>Remote plan percentage during the execution period.</para>
@@ -532,7 +532,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("RemotePlans")]
             [Validation(Required=false)]
-            public double? RemotePlans { get; set; }
+            public long? RemotePlans { get; set; }
 
             /// <summary>
             /// <para>Number of occurrences of code 4012 during the execution period.</para>
@@ -562,7 +562,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("RetCode5001Count")]
             [Validation(Required=false)]
-            public double? RetCode5001Count { get; set; }
+            public long? RetCode5001Count { get; set; }
 
             /// <summary>
             /// <para>Number of occurrences of code 5024 during the execution period.</para>
@@ -572,7 +572,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("RetCode5024Count")]
             [Validation(Required=false)]
-            public double? RetCode5024Count { get; set; }
+            public long? RetCode5024Count { get; set; }
 
             /// <summary>
             /// <para>Number of occurrences of code 5167 during the execution period.</para>
@@ -582,7 +582,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("RetCode5167Count")]
             [Validation(Required=false)]
-            public double? RetCode5167Count { get; set; }
+            public long? RetCode5167Count { get; set; }
 
             /// <summary>
             /// <para>Number of occurrences of code 5217 during the execution period.</para>
@@ -592,7 +592,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("RetCode5217Count")]
             [Validation(Required=false)]
-            public double? RetCode5217Count { get; set; }
+            public long? RetCode5217Count { get; set; }
 
             /// <summary>
             /// <para>Number of occurrences of code 6002 during the execution period.</para>
@@ -602,7 +602,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("RetCode6002Count")]
             [Validation(Required=false)]
-            public double? RetCode6002Count { get; set; }
+            public long? RetCode6002Count { get; set; }
 
             /// <summary>
             /// <para>Total number of retries during the execution period.</para>
@@ -612,7 +612,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("RetryCount")]
             [Validation(Required=false)]
-            public double? RetryCount { get; set; }
+            public long? RetryCount { get; set; }
 
             /// <summary>
             /// <para>RPC count during the execution period.</para>
@@ -806,11 +806,11 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
                 [NameInMap("Executions")]
                 [Validation(Required=false)]
-                public double? Executions { get; set; }
+                public long? Executions { get; set; }
 
                 [NameInMap("FailCount")]
                 [Validation(Required=false)]
-                public double? FailCount { get; set; }
+                public long? FailCount { get; set; }
 
                 [NameInMap("FailPercentage")]
                 [Validation(Required=false)]
@@ -866,7 +866,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
                 [NameInMap("MissPlans")]
                 [Validation(Required=false)]
-                public double? MissPlans { get; set; }
+                public long? MissPlans { get; set; }
 
                 [NameInMap("RemotePlanPercentage")]
                 [Validation(Required=false)]
@@ -874,7 +874,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
                 [NameInMap("RemotePlans")]
                 [Validation(Required=false)]
-                public double? RemotePlans { get; set; }
+                public long? RemotePlans { get; set; }
 
                 [NameInMap("RetCode4012Count")]
                 [Validation(Required=false)]
@@ -906,7 +906,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
                 [NameInMap("RetryCount")]
                 [Validation(Required=false)]
-                public double? RetryCount { get; set; }
+                public long? RetryCount { get; set; }
 
                 [NameInMap("RpcCount")]
                 [Validation(Required=false)]

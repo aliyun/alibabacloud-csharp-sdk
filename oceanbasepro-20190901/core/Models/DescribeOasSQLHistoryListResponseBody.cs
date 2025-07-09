@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("AvgAffectedRows")]
             [Validation(Required=false)]
-            public long? AvgAffectedRows { get; set; }
+            public double? AvgAffectedRows { get; set; }
 
             /// <summary>
             /// <para>Average Application event wait time (in milliseconds) during the client waiting period.</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("AvgBlockCacheHit")]
             [Validation(Required=false)]
-            public long? AvgBlockCacheHit { get; set; }
+            public double? AvgBlockCacheHit { get; set; }
 
             /// <summary>
             /// <para>Average BlockIndexCache hit count during the execution period.</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("AvgBlockIndexCacheHit")]
             [Validation(Required=false)]
-            public long? AvgBlockIndexCacheHit { get; set; }
+            public double? AvgBlockIndexCacheHit { get; set; }
 
             /// <summary>
             /// <para>Average BloomFilterCache hit count during the execution period.</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("AvgBloomFilterCacheHit")]
             [Validation(Required=false)]
-            public long? AvgBloomFilterCacheHit { get; set; }
+            public double? AvgBloomFilterCacheHit { get; set; }
 
             /// <summary>
             /// <para>Average Concurrency event wait time (in milliseconds) during the execution period.</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("AvgDiskReads")]
             [Validation(Required=false)]
-            public long? AvgDiskReads { get; set; }
+            public double? AvgDiskReads { get; set; }
 
             /// <summary>
             /// <para>Average response time (in milliseconds) during the execution period.</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("AvgLogicalReads")]
             [Validation(Required=false)]
-            public long? AvgLogicalReads { get; set; }
+            public double? AvgLogicalReads { get; set; }
 
             /// <summary>
             /// <para>Average Memstore read rows during the execution period.</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("AvgMemstoreReadRows")]
             [Validation(Required=false)]
-            public long? AvgMemstoreReadRows { get; set; }
+            public double? AvgMemstoreReadRows { get; set; }
 
             /// <summary>
             /// <para>Average network transmission time (in milliseconds) during the execution period.</para>
@@ -234,7 +234,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("AvgReturnRows")]
             [Validation(Required=false)]
-            public long? AvgReturnRows { get; set; }
+            public double? AvgReturnRows { get; set; }
 
             /// <summary>
             /// <para>Average RowCache hit count during the execution period.</para>
@@ -244,7 +244,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("AvgRowCacheHit")]
             [Validation(Required=false)]
-            public long? AvgRowCacheHit { get; set; }
+            public double? AvgRowCacheHit { get; set; }
 
             /// <summary>
             /// <para>Average number of RPC sent during the execution.</para>
@@ -254,7 +254,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("AvgRpcCount")]
             [Validation(Required=false)]
-            public long? AvgRpcCount { get; set; }
+            public double? AvgRpcCount { get; set; }
 
             /// <summary>
             /// <para>Average Schedule event wait time (in milliseconds) during the scheduling period.</para>
@@ -274,7 +274,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("AvgSsstoreReadRows")]
             [Validation(Required=false)]
-            public long? AvgSsstoreReadRows { get; set; }
+            public double? AvgSsstoreReadRows { get; set; }
 
             /// <summary>
             /// <para>Average number of threads used of the SQL during the execution period.</para>
@@ -524,7 +524,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("RetCode4012Count")]
             [Validation(Required=false)]
-            public double? RetCode4012Count { get; set; }
+            public long? RetCode4012Count { get; set; }
 
             /// <summary>
             /// <para>Number of occurrences of code 4013 during the execution period.</para>
@@ -534,7 +534,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("RetCode4013Count")]
             [Validation(Required=false)]
-            public double? RetCode4013Count { get; set; }
+            public long? RetCode4013Count { get; set; }
 
             /// <summary>
             /// <para>Number of occurrences of code 5001 during the execution period.</para>
@@ -544,7 +544,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("RetCode5001Count")]
             [Validation(Required=false)]
-            public double? RetCode5001Count { get; set; }
+            public long? RetCode5001Count { get; set; }
 
             /// <summary>
             /// <para>Number of occurrences of code 5024 during the execution period.</para>
@@ -554,7 +554,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("RetCode5024Count")]
             [Validation(Required=false)]
-            public double? RetCode5024Count { get; set; }
+            public long? RetCode5024Count { get; set; }
 
             /// <summary>
             /// <para>Number of occurrences of code 5167 during the execution period.</para>
@@ -564,7 +564,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("RetCode5167Count")]
             [Validation(Required=false)]
-            public double? RetCode5167Count { get; set; }
+            public long? RetCode5167Count { get; set; }
 
             /// <summary>
             /// <para>Number of occurrences of code 5217 during the execution period.</para>
@@ -574,7 +574,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("RetCode5217Count")]
             [Validation(Required=false)]
-            public double? RetCode5217Count { get; set; }
+            public long? RetCode5217Count { get; set; }
 
             /// <summary>
             /// <para>Number of occurrences of code 6002 during the execution period.</para>
@@ -584,7 +584,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("RetCode6002Count")]
             [Validation(Required=false)]
-            public double? RetCode6002Count { get; set; }
+            public long? RetCode6002Count { get; set; }
 
             /// <summary>
             /// <para>Total number of retries during the execution period.</para>
