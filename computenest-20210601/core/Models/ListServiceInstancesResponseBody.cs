@@ -482,6 +482,10 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             [Validation(Required=false)]
             public string StatusDetail { get; set; }
 
+            [NameInMap("SupportTrialToPrivate")]
+            [Validation(Required=false)]
+            public bool? SupportTrialToPrivate { get; set; }
+
             /// <summary>
             /// <para>The custom tags.</para>
             /// </summary>

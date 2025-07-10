@@ -285,6 +285,10 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         [Validation(Required=false)]
         public string ServiceId { get; set; }
 
+        [NameInMap("ServiceInstanceId")]
+        [Validation(Required=false)]
+        public string ServiceInstanceId { get; set; }
+
         /// <summary>
         /// <para>The service version.</para>
         /// 

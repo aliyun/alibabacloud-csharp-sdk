@@ -734,6 +734,10 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             {
                 query["ServiceId"] = request.ServiceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceInstanceId))
+            {
+                query["ServiceInstanceId"] = request.ServiceInstanceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceVersion))
             {
                 query["ServiceVersion"] = request.ServiceVersion;
@@ -853,6 +857,10 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceId))
             {
                 query["ServiceId"] = request.ServiceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceInstanceId))
+            {
+                query["ServiceInstanceId"] = request.ServiceInstanceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceVersion))
             {

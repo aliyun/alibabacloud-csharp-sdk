@@ -461,7 +461,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string Resources { get; set; }
 
         /// <summary>
-        /// <para>The information about the service to which the service instance belongs.</para>
+        /// <para>The information about the cloud service.</para>
         /// </summary>
         [NameInMap("Service")]
         [Validation(Required=false)]
@@ -491,6 +491,12 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             [Validation(Required=false)]
             public string DeployType { get; set; }
 
+            /// <summary>
+            /// <para>Operation info.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;SupportBackup&quot;:false,&quot;PrometheusConfigMap&quot;:{},&quot;ModifyParametersConfig&quot;:[{&quot;TemplateName&quot;:&quot;国内版&quot;,&quot;Operation&quot;:[{&quot;Name&quot;:&quot;套餐变配&quot;,&quot;Description&quot;:&quot;套餐变配&quot;,&quot;Type&quot;:&quot;Custom&quot;,&quot;SupportPredefinedParameters&quot;:true,&quot;EnableLogging&quot;:false},{&quot;Name&quot;:&quot;参数变配&quot;,&quot;Description&quot;:&quot;参数变配&quot;,&quot;Type&quot;:&quot;Custom&quot;,&quot;SupportPredefinedParameters&quot;:false,&quot;EnableLogging&quot;:false,&quot;Parameters&quot;:[&quot;DataDiskSize&quot;]}]}]}</para>
+            /// </summary>
             [NameInMap("OperationMetadata")]
             [Validation(Required=false)]
             public string OperationMetadata { get; set; }
@@ -640,14 +646,14 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string SupplierUrl { get; set; }
 
             /// <summary>
-            /// <para>The upgradable service version.</para>
+            /// <para>The service versions that can be updated.</para>
             /// </summary>
             [NameInMap("UpgradableServiceInfos")]
             [Validation(Required=false)]
             public List<GetServiceInstanceResponseBodyServiceUpgradableServiceInfos> UpgradableServiceInfos { get; set; }
             public class GetServiceInstanceResponseBodyServiceUpgradableServiceInfos : TeaModel {
                 /// <summary>
-                /// <para>An upgradable service version.</para>
+                /// <para>The service version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>draft</para>
@@ -657,7 +663,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
                 public string Version { get; set; }
 
                 /// <summary>
-                /// <para>The version name of an upgradable service version.</para>
+                /// <para>The version name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.1.0</para>
@@ -677,37 +683,6 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 
             /// <summary>
             /// <para>The metadata about the upgrade.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>{
-            ///   &quot;Type&quot;: &quot;OOS&quot;,
-            ///   &quot;Description&quot;: &quot;Changelog or something description&quot;,
-            ///   &quot;SupportUpgradeFromVersions&quot;: [1, 2],
-            ///   &quot;UpgradeSteps&quot;: {
-            ///     &quot;PreUpgradeStage&quot;: {
-            ///       &quot;Description&quot;: &quot;初始化数据库&quot;,
-            ///       &quot;Type&quot;: &quot;RunCommand&quot;,
-            ///       &quot;ResourceName&quot;: &quot;EcsRole1&quot;,
-            ///       &quot;CommandType&quot;: &quot;runShellScript&quot;,
-            ///       &quot;CommandContent&quot;: &quot;echo hello&quot;
-            ///     },
-            ///     &quot;UpgradeStage&quot;: [{
-            ///       &quot;Description&quot;: &quot;更新EcsRole1实例&quot;,
-            ///       &quot;Type&quot;: &quot;RunCommand&quot;,
-            ///       &quot;ResourceName&quot;: &quot;EcsRole1&quot;,
-            ///       &quot;ArtifactsDownloadDirectory&quot;: &quot;/home/admin&quot;,
-            ///       &quot;CommandType&quot;: &quot;runShellScript&quot;,
-            ///       &quot;CommandContent&quot;: &quot;echo hello&quot;
-            ///     }],
-            ///     &quot;PostUpgradeStage&quot;: {
-            ///       &quot;Description&quot;: &quot;部署后post check&quot;,
-            ///       &quot;Type&quot;: &quot;None/RunCommand&quot;,
-            ///       &quot;ResourceName&quot;: &quot;EcsRole1&quot;,
-            ///       &quot;CommandType&quot;: &quot;runShellScript&quot;,
-            ///       &quot;CommandContent&quot;: &quot;echo hello&quot;
-            ///     }
-            ///   }
-            /// }</para>
             /// </summary>
             [NameInMap("UpgradeMetadata")]
             [Validation(Required=false)]
@@ -814,6 +789,10 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         [NameInMap("SupplierUid")]
         [Validation(Required=false)]
         public long? SupplierUid { get; set; }
+
+        [NameInMap("SupportTrialToPrivate")]
+        [Validation(Required=false)]
+        public bool? SupportTrialToPrivate { get; set; }
 
         /// <summary>
         /// <para>The tags.</para>
