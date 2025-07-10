@@ -283,6 +283,16 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
             [Validation(Required=false)]
             public int? ServerCount { get; set; }
 
+            /// <summary>
+            /// <para>Specifies how GWLB processes requests over existing connections when a backend server is not running as expected. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>NoRebalance</b>: GWLB continues to forward requests over existing connections to the unhealthy backend server.</description></item>
+            /// <item><description><b>Rebalance</b>: GWLB forwards requests over existing connections to the remaining healthy backend servers.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>NoRebalance</para>
+            /// </summary>
             [NameInMap("ServerFailoverMode")]
             [Validation(Required=false)]
             public string ServerFailoverMode { get; set; }

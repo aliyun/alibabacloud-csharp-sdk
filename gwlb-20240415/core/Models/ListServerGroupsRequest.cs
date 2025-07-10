@@ -64,8 +64,8 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
         /// <summary>
         /// <para>The server group type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Instance</b>: allows you to specify servers of the <b>Ecs</b>, <b>Eni</b>, or <b>Eci</b> type.</description></item>
-        /// <item><description><b>Ip</b>: allows you to add servers of by specifying IP addresses.</description></item>
+        /// <item><description><b>Instance</b>: allows you to specify resources of the <b>Ecs</b>, <b>Eni</b>, or <b>Eci</b> type.</description></item>
+        /// <item><description><b>Ip</b>: allows you to add servers by specifying IP addresses.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -73,15 +73,15 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the health check feature.</para>
+        /// <para>The health check configuration.</para>
         /// </summary>
         [NameInMap("HealthCheckConfig")]
         [Validation(Required=false)]
         public UpdateServerGroupAttributeRequestHealthCheckConfig HealthCheckConfig { get; set; }
         public class UpdateServerGroupAttributeRequestHealthCheckConfig : TeaModel {
             /// <summary>
-            /// <para>The backend server port that is used by health checks.</para>
-            /// <para>Valid values: 1 to 65535.</para>
+            /// <para>The backend server port that is used for health checks.</para>
+            /// <para>Valid values: <b>1</b> to <b>65535</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -91,8 +91,8 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
             public int? HealthCheckConnectPort { get; set; }
 
             /// <summary>
-            /// <para>The maximum timeout period of a health check response.</para>
-            /// <para>Unit: seconds</para>
+            /// <para>The maximum timeout period for a health check response.</para>
+            /// <para>Unit: seconds.</para>
             /// <para>Valid values: <b>1</b> to <b>300</b>.</para>
             /// 
             /// <b>Example:</b>
@@ -103,13 +103,13 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
             public int? HealthCheckConnectTimeout { get; set; }
 
             /// <summary>
-            /// <para>The domain name that is used for health checks. Valid values:</para>
+            /// <para>The domain name used for health checks. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>$SERVER_IP</b>: the internal IP address of a backend server.</description></item>
             /// <item><description><b>domain</b>: a domain name. The domain name must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), and periods (.).</description></item>
             /// </list>
             /// <remarks>
-            /// <para>This parameter takes effect only if you set <b>HealthCheckProtocol</b> to <b>HTTP</b>.</para>
+            /// <para> This parameter takes effect only if you set <b>HealthCheckProtocol</b> to <b>HTTP</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
             public string HealthCheckDomain { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the health check feature. Valid values:</para>
+            /// <para>Specifies whether to enable health checks. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>true</b></description></item>
             /// <item><description><b>false</b></description></item>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
 
             /// <summary>
             /// <para>The interval at which health checks are performed.</para>
-            /// <para>Unit: seconds</para>
+            /// <para>Unit: seconds.</para>
             /// <para>Valid values: <b>1</b> to <b>50</b>.</para>
             /// 
             /// <b>Example:</b>
@@ -153,10 +153,10 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
             public int? HealthCheckInterval { get; set; }
 
             /// <summary>
-            /// <para>The URL that is used for health checks.</para>
-            /// <para>The URL must be 1 to 80 characters in length, and can contain letters, digits, and the following special characters: <c>- / . % ? # &amp; </c>The URL must start with a forward slash (/).</para>
+            /// <para>The URL used for health checks.</para>
+            /// <para>The URL must be 1 to 80 characters in length, and can contain letters, digits, and the following special characters: <c>- / . % ? # &amp; </c>It must start with a forward slash (/).</para>
             /// <remarks>
-            /// <para>This parameter takes effect only if you set <b>HealthCheckProtocol</b> to <b>HTTP</b>.</para>
+            /// <para> This parameter takes effect only if you set <b>HealthCheckProtocol</b> to <b>HTTP</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
             /// <para>The protocol that is used for health checks. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>TCP</b>: TCP health checks send TCP SYN packets to a backend server to check whether the port of the backend server is reachable.</description></item>
-            /// <item><description><b>HTTP</b>: HTTP health checks simulate a process that uses a web browser to access resources by sending HEAD or GET requests to an instance. These requests are used to check whether the instance is healthy.</description></item>
+            /// <item><description><b>HTTP</b>: HTTP health checks simulate a process that uses a web browser to access resources by sending GET requests to an instance. These requests are used to check whether the instance is healthy.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
             public string HealthCheckProtocol { get; set; }
 
             /// <summary>
-            /// <para>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status changes from <b>fail</b> to <b>success</b>.</para>
+            /// <para>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health check status of the backend server changes from <b>fail</b> to <b>success</b>.</para>
             /// <para>Valid values: <b>2</b> to <b>10</b>.</para>
             /// 
             /// <b>Example:</b>
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
             public int? HealthyThreshold { get; set; }
 
             /// <summary>
-            /// <para>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status changes from <b>success</b> to <b>fail</b>.</para>
+            /// <para>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health check status of the backend server changes from <b>success</b> to <b>fail</b>.</para>
             /// <para>Valid values: <b>2</b> to <b>10</b>.</para>
             /// 
             /// <b>Example:</b>
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
         /// <para>The scheduling algorithm. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>5TCH</b>: specifies consistent hashing that is based on the following factors: source IP address, destination IP address, source port, protocol, and destination port. Requests that contain the same information based on the preceding factors are forwarded to the same backend server.</description></item>
-        /// <item><description><b>3TCH</b>: specifies consistent hashing that is based on the following factors: source IP address, destination IP address, and protocol. Requests that contain the same information based on the preceding factors are forwarded to the same backend server.</description></item>
+        /// <item><description><b>3TCH</b>: indicates consistent hashing that is based on the following factors: source IP address, destination IP address, and protocol. Requests that contain the same information based on the preceding factors are forwarded to the same backend server.</description></item>
         /// <item><description><b>2TCH</b>: specifies consistent hashing that is based on the following factors: source IP address and destination IP address. Requests that contain the same information based on the preceding factors are forwarded to the same backend server.</description></item>
         /// </list>
         /// 
@@ -219,6 +219,16 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
         [Validation(Required=false)]
         public string Scheduler { get; set; }
 
+        /// <summary>
+        /// <para>Specifies how GWLB processes requests over existing connections when a backend server is not running as expected. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>NoRebalance</b>: GWLB continues to forward requests over existing connections to the unavailable backend server.</description></item>
+        /// <item><description><b>Rebalance</b>: GWLB forwards requests over existing connections to the remaining healthy backend servers.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>NoRebalance</para>
+        /// </summary>
         [NameInMap("ServerFailoverMode")]
         [Validation(Required=false)]
         public string ServerFailoverMode { get; set; }

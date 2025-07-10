@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
 {
     public class ListLoadBalancersRequest : TeaModel {
         /// <summary>
-        /// <para>The IP version. Valid values:</para>
+        /// <para>The IP version of the NLB instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Ipv4</b>: IPv4</description></item>
+        /// <item><description><b>Ipv4</b></description></item>
         /// </list>
         /// <para>Enumeration values:</para>
         /// <list type="bullet">
         /// <item><description>IPv4: IPv4</description></item>
-        /// <item><description>DualStack: DualStack</description></item>
+        /// <item><description>DualStack: dual-stack</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -145,6 +145,16 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
 
         }
 
+        /// <summary>
+        /// <para>Specifies the traffic processing mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>LoadBalance</b>: load balancing mode. GWLB continues to forward traffic to backend servers.</description></item>
+        /// <item><description><b>ByPass</b>: bypass mode. GWLB directly returns traffic to the GWLB endpoint without forwarding it to the backend servers.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>LoadBalance</para>
+        /// </summary>
         [NameInMap("TrafficMode")]
         [Validation(Required=false)]
         public string TrafficMode { get; set; }

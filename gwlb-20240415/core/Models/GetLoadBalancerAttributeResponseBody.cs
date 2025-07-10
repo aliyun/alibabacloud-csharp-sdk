@@ -133,6 +133,16 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
 
         }
 
+        /// <summary>
+        /// <para>Traffic processing mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>LoadBalance</b>: load balancing mode. GWLB forwards traffic to backend servers.</description></item>
+        /// <item><description><b>ByPass</b>: bypass mode. GWLB directly returns traffic to the GWLB endpoint without forwarding it to the backend servers.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>LoadBalance</para>
+        /// </summary>
         [NameInMap("TrafficMode")]
         [Validation(Required=false)]
         public string TrafficMode { get; set; }

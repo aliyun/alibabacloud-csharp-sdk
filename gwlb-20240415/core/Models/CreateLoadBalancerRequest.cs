@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tag keys. You can specify at most 20 tags in each call.</para>
+        /// <para>The tags that are added to the instance.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
         public class CreateLoadBalancerRequestTag : TeaModel {
             /// <summary>
             /// <para>The tag key. The tag key cannot be an empty string.</para>
-            /// <para>The tag key can be up to 128 characters in length. The tag key cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>It can be up to 128 characters in length, cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testTagKey</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. The tag value can be up to 256 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value. It can be up to 256 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testTagValue</para>

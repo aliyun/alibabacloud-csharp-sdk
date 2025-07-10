@@ -74,14 +74,14 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the health check feature.</para>
+        /// <para>The health check configurations.</para>
         /// </summary>
         [NameInMap("HealthCheckConfig")]
         [Validation(Required=false)]
         public CreateServerGroupRequestHealthCheckConfig HealthCheckConfig { get; set; }
         public class CreateServerGroupRequestHealthCheckConfig : TeaModel {
             /// <summary>
-            /// <para>The backend server port that is used for health checks.</para>
+            /// <para>The backend server port used for health checks.</para>
             /// <para>Valid values: <b>1</b> to <b>65535</b>.</para>
             /// <para>Default value: <b>80</b>.</para>
             /// 
@@ -93,8 +93,8 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
             public int? HealthCheckConnectPort { get; set; }
 
             /// <summary>
-            /// <para>The maximum timeout period of a health check response.</para>
-            /// <para>Unit: seconds</para>
+            /// <para>The maximum timeout period for a health check response.</para>
+            /// <para>Unit: seconds.</para>
             /// <para>Valid values: <b>1</b> to <b>300</b>.</para>
             /// <para>Default value: <b>5</b>.</para>
             /// 
@@ -106,13 +106,13 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
             public int? HealthCheckConnectTimeout { get; set; }
 
             /// <summary>
-            /// <para>The domain name that you want to use for health checks. Valid values:</para>
+            /// <para>The domain name used for health checks. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>$SERVER_IP</b> (default): the private IP address of a backend server.</description></item>
             /// <item><description><b>domain</b>: a domain name. The domain name must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), and periods (.).</description></item>
             /// </list>
             /// <remarks>
-            /// <para>This parameter takes effect only if you set <b>HealthCheckProtocol</b> to <b>HTTP</b>.</para>
+            /// <para> This parameter takes effect only if you set <b>HealthCheckProtocol</b> to <b>HTTP</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
             public string HealthCheckDomain { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the health check feature. Valid values:</para>
+            /// <para>Specifies whether to enable health checks. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>true</b> (default)</description></item>
             /// <item><description><b>false</b></description></item>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
 
             /// <summary>
             /// <para>The interval at which health checks are performed.</para>
-            /// <para>Unit: seconds</para>
+            /// <para>Unit: seconds.</para>
             /// <para>Valid values: <b>1</b> to <b>50</b>.</para>
             /// <para>Default value: <b>10</b>.</para>
             /// 
@@ -157,11 +157,11 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
             public int? HealthCheckInterval { get; set; }
 
             /// <summary>
-            /// <para>The URL that is used for health checks.</para>
-            /// <para>The URL must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), percent signs (%), question marks (?), number signs (#), and ampersands (&amp;). The URL can also contain the following extended characters: _ ; ~ ! ( ) \* [ ] @ $ ^ : \&quot; , + =</para>
-            /// <para>The URL must start with a forward slash (/).</para>
+            /// <para>The path used for health checks.</para>
+            /// <para>It must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), percent signs (%), question marks (?), number signs (#), and ampersands (&amp;). The URL can also contain the following extended characters: _ ; ~ ! ( ) \* [ ] @ $ ^ : \&quot; , + =</para>
+            /// <para>It must start with a forward slash (/).</para>
             /// <remarks>
-            /// <para>This parameter takes effect only if you set <b>HealthCheckProtocol</b> to <b>HTTP</b>.</para>
+            /// <para> This parameter takes effect only if you set <b>HealthCheckProtocol</b> to <b>HTTP</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -172,10 +172,10 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
             public string HealthCheckPath { get; set; }
 
             /// <summary>
-            /// <para>The protocol that is used for health checks. Valid values:</para>
+            /// <para>The protocol used for health checks. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>TCP</b> (default): GWLB performs TCP health checks by sending SYN packets to a backend server to check whether the port of the backend server is available to receive requests.</description></item>
-            /// <item><description><b>HTTP</b>: GWLB performs HTTP health checks to check whether backend servers are healthy by sending HEAD or GET requests which simulate access from browsers.</description></item>
+            /// <item><description><b>HTTP</b>: GWLB performs HTTP health checks to check whether backend servers are healthy by sending GET requests which simulate access from browsers.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
             public string HealthCheckProtocol { get; set; }
 
             /// <summary>
-            /// <para>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status changes from <b>fail</b> to <b>success</b>.</para>
+            /// <para>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health check status of the backend server changes from <b>fail</b> to <b>success</b>.</para>
             /// <para>Valid values: <b>2</b> to <b>10</b>.</para>
             /// <para>Default value: <b>2</b>.</para>
             /// 
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
             public int? HealthyThreshold { get; set; }
 
             /// <summary>
-            /// <para>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status changes from <b>success</b> to <b>fail</b>.</para>
+            /// <para>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health check status of the backend server changes from <b>success</b> to <b>fail</b>.</para>
             /// <para>Valid values: <b>2</b> to <b>10</b>.</para>
             /// <para>Default value: <b>2</b>.</para>
             /// 
@@ -212,9 +212,9 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
         }
 
         /// <summary>
-        /// <para>The backend protocol. Valid values:</para>
+        /// <para>The backend protocol. Valid value:</para>
         /// <list type="bullet">
-        /// <item><description><b>GENEVE</b>(default)</description></item>
+        /// <item><description><b>GENEVE</b> (default)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -249,6 +249,16 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
         [Validation(Required=false)]
         public string Scheduler { get; set; }
 
+        /// <summary>
+        /// <para>Specifies how GWLB processes requests over existing connections when a backend server is not running as expected. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>NoRebalance</b> (default): GWLB continues to forward requests over existing connections to the unavailable backend server.</description></item>
+        /// <item><description><b>Rebalance</b>: GWLB forwards requests over existing connections to the remaining healthy backend servers.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>NoRebalance</para>
+        /// </summary>
         [NameInMap("ServerFailoverMode")]
         [Validation(Required=false)]
         public string ServerFailoverMode { get; set; }
@@ -265,10 +275,10 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
         public string ServerGroupName { get; set; }
 
         /// <summary>
-        /// <para>The type of server group. Valid values:</para>
+        /// <para>The type of the server group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Instance</b> (default): allows you to specify servers of the <b>Ecs</b>, <b>Eni</b>, or <b>Eci</b> type.</description></item>
-        /// <item><description><b>Ip</b>: allows you to add servers of by specifying IP addresses.</description></item>
+        /// <item><description><b>Instance</b> (default): allows you to specify resources of the <b>Ecs</b>, <b>Eni</b>, or <b>Eci</b> type.</description></item>
+        /// <item><description><b>Ip</b>: allows you to add servers by specifying their IP addresses.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -115,6 +115,16 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
 
         }
 
+        /// <summary>
+        /// <para>The timeout period of an idle TCP connection. Unit: seconds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>350</para>
+        /// </summary>
+        [NameInMap("TcpIdleTimeout")]
+        [Validation(Required=false)]
+        public int? TcpIdleTimeout { get; set; }
+
     }
 
 }
