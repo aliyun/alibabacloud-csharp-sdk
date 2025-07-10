@@ -134,6 +134,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             [Validation(Required=false)]
             public string DataId { get; set; }
 
+            [NameInMap("DetectedLanguage")]
+            [Validation(Required=false)]
+            public string DetectedLanguage { get; set; }
+
             [NameInMap("ManualTaskId")]
             [Validation(Required=false)]
             public string ManualTaskId { get; set; }
@@ -291,6 +295,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 public string SensitiveLevel { get; set; }
 
             }
+
+            [NameInMap("TranslatedContent")]
+            [Validation(Required=false)]
+            public string TranslatedContent { get; set; }
 
         }
 
