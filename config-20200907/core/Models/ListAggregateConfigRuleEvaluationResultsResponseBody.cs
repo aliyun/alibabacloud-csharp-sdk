@@ -153,6 +153,16 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                         public string RegionId { get; set; }
 
                         /// <summary>
+                        /// <para>This parameter is required.</para>
+                        /// 
+                        /// <b>if can be null:</b>
+                        /// <c>true</c>
+                        /// </summary>
+                        [NameInMap("ResourceGroupId")]
+                        [Validation(Required=false)]
+                        public string ResourceGroupId { get; set; }
+
+                        /// <summary>
                         /// <para>The resource ID.</para>
                         /// 
                         /// <b>Example:</b>
