@@ -84,6 +84,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string StartType { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>75</para>
+        /// </summary>
+        [NameInMap("TaskCps")]
+        [Validation(Required=false)]
+        public long? TaskCps { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

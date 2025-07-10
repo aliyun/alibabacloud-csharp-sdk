@@ -2190,6 +2190,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             {
                 query["StartType"] = request.StartType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskCps))
+            {
+                query["TaskCps"] = request.TaskCps;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskName))
             {
                 query["TaskName"] = request.TaskName;
@@ -2297,6 +2301,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartType))
             {
                 query["StartType"] = request.StartType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskCps))
+            {
+                query["TaskCps"] = request.TaskCps;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskName))
             {
@@ -16022,6 +16030,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             {
                 query["CallerNumber"] = request.CallerNumber;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerLineCode))
+            {
+                query["CustomerLineCode"] = request.CustomerLineCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Extension))
             {
                 query["Extension"] = request.Extension;
@@ -16121,6 +16133,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerNumber))
             {
                 query["CallerNumber"] = request.CallerNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerLineCode))
+            {
+                query["CustomerLineCode"] = request.CustomerLineCode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Extension))
             {
