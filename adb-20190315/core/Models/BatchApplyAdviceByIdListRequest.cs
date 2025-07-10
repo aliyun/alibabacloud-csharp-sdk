@@ -29,6 +29,14 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public string AdviceIdList { get; set; }
 
+        [NameInMap("ApplyType")]
+        [Validation(Required=false)]
+        public string ApplyType { get; set; }
+
+        [NameInMap("BuildImmediately")]
+        [Validation(Required=false)]
+        public bool? BuildImmediately { get; set; }
+
         /// <summary>
         /// <para>The cluster ID.</para>
         /// <remarks>

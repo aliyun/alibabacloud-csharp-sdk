@@ -271,6 +271,14 @@ namespace AlibabaCloud.SDK.Adb20190315
             {
                 query["AdviceId"] = request.AdviceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplyType))
+            {
+                query["ApplyType"] = request.ApplyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BuildImmediately))
+            {
+                query["BuildImmediately"] = request.BuildImmediately;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
@@ -324,6 +332,14 @@ namespace AlibabaCloud.SDK.Adb20190315
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdviceId))
             {
                 query["AdviceId"] = request.AdviceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplyType))
+            {
+                query["ApplyType"] = request.ApplyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BuildImmediately))
+            {
+                query["BuildImmediately"] = request.BuildImmediately;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
@@ -587,6 +603,14 @@ namespace AlibabaCloud.SDK.Adb20190315
             {
                 query["AdviceIdList"] = request.AdviceIdList;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplyType))
+            {
+                query["ApplyType"] = request.ApplyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BuildImmediately))
+            {
+                query["BuildImmediately"] = request.BuildImmediately;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
@@ -640,6 +664,14 @@ namespace AlibabaCloud.SDK.Adb20190315
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdviceIdList))
             {
                 query["AdviceIdList"] = request.AdviceIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplyType))
+            {
+                query["ApplyType"] = request.ApplyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BuildImmediately))
+            {
+                query["BuildImmediately"] = request.BuildImmediately;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
