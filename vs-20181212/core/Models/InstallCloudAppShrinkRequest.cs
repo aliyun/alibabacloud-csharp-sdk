@@ -8,26 +8,28 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
-    public class ListRenderingInstancesRequest : TeaModel {
-        [NameInMap("EndTime")]
-        [Validation(Required=false)]
-        public string EndTime { get; set; }
-
+    public class InstallCloudAppShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>cap-b06b26edfhytbn b94a75ae1a79efc90eb</para>
         /// </summary>
+        [NameInMap("AppId")]
+        [Validation(Required=false)]
+        public string AppId { get; set; }
+
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>10</para>
-        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("ProjectId")]
+        [Validation(Required=false)]
+        public string ProjectId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -37,21 +39,9 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string RenderingInstanceId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>crs.cp.l1</para>
-        /// </summary>
-        [NameInMap("RenderingSpec")]
+        [NameInMap("RenderingInstanceIds")]
         [Validation(Required=false)]
-        public string RenderingSpec { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=false)]
-        public string StartTime { get; set; }
-
-        [NameInMap("StorageSize")]
-        [Validation(Required=false)]
-        public int? StorageSize { get; set; }
+        public string RenderingInstanceIdsShrink { get; set; }
 
     }
 

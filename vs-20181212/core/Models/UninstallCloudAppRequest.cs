@@ -19,15 +19,29 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("ProjectId")]
+        [Validation(Required=false)]
+        public string ProjectId { get; set; }
+
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>render-9f8c57355d224ad7beaf95e145f22111</para>
         /// </summary>
         [NameInMap("RenderingInstanceId")]
         [Validation(Required=false)]
         public string RenderingInstanceId { get; set; }
+
+        [NameInMap("RenderingInstanceIds")]
+        [Validation(Required=false)]
+        public List<string> RenderingInstanceIds { get; set; }
 
     }
 

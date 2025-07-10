@@ -45,6 +45,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            [NameInMap("PkgFormat")]
+            [Validation(Required=false)]
+            public string PkgFormat { get; set; }
+
+            [NameInMap("PkgType")]
+            [Validation(Required=false)]
+            public string PkgType { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>Success</para>

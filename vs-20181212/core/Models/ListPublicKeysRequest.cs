@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ListPublicKeysRequest : TeaModel {
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public string EndTime { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>g-test</para>
@@ -44,6 +48,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
     }
 

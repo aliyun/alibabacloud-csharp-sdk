@@ -137,6 +137,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string Hostname { get; set; }
 
+        [NameInMap("InternalIp")]
+        [Validation(Required=false)]
+        public string InternalIp { get; set; }
+
         [NameInMap("Isp")]
         [Validation(Required=false)]
         public string Isp { get; set; }

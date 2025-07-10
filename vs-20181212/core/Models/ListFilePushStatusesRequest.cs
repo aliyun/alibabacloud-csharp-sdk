@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ListFilePushStatusesRequest : TeaModel {
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public string EndTime { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>f-1671accd4dafdag3er256cvgewt13f7141db2f7</para>
@@ -48,6 +52,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [NameInMap("RenderingInstanceId")]
         [Validation(Required=false)]
         public string RenderingInstanceId { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
     }
 

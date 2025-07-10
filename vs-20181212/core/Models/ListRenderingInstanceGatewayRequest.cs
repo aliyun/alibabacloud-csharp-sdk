@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ListRenderingInstanceGatewayRequest : TeaModel {
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public string EndTime { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>render-xxx</para>
@@ -40,6 +44,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [NameInMap("RenderingInstanceId")]
         [Validation(Required=false)]
         public string RenderingInstanceId { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
     }
 
