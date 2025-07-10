@@ -1,3 +1,6 @@
+2025-07-10 Version: 2.0.5
+- Generated csharp 2023-01-17 for airticketOpen.
+
 2025-06-17 Version: 2.0.4
 - Generated csharp 2023-01-17 for airticketOpen.
 

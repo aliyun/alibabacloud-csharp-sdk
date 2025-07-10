@@ -117,6 +117,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 
                 /// <summary>
                 /// <para>arrival city code (capitalized)</para>
+                /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MFM</para>
@@ -157,6 +158,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 
                 /// <summary>
                 /// <para>departure city code (capitalized)</para>
+                /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SHA</para>
@@ -167,6 +169,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 
                 /// <summary>
                 /// <para>departure time in string format (yyyy-MM-dd HH:mm:ss)</para>
+                /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-03-10 07:55:00</para>
