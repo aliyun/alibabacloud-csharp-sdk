@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class CreateLogoTaskRequest : TeaModel {
+        [NameInMap("LogoVersion")]
+        [Validation(Required=false)]
+        public string LogoVersion { get; set; }
+
         [NameInMap("NegativePrompt")]
         [Validation(Required=false)]
         public string NegativePrompt { get; set; }
@@ -24,14 +28,6 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [NameInMap("Prompt")]
         [Validation(Required=false)]
         public string Prompt { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1.0.2</para>
-        /// </summary>
-        [NameInMap("Version")]
-        [Validation(Required=false)]
-        public string Version { get; set; }
 
     }
 

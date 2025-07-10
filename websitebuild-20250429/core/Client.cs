@@ -56,6 +56,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogoVersion))
+            {
+                query["LogoVersion"] = request.LogoVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NegativePrompt))
             {
                 query["NegativePrompt"] = request.NegativePrompt;
@@ -67,10 +71,6 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prompt))
             {
                 query["Prompt"] = request.Prompt;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
-            {
-                query["Version"] = request.Version;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -110,6 +110,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogoVersion))
+            {
+                query["LogoVersion"] = request.LogoVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NegativePrompt))
             {
                 query["NegativePrompt"] = request.NegativePrompt;
@@ -121,10 +125,6 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prompt))
             {
                 query["Prompt"] = request.Prompt;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
-            {
-                query["Version"] = request.Version;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
