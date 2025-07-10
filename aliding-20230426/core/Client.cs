@@ -5645,6 +5645,254 @@ namespace AlibabaCloud.SDK.Aliding20230426
             return await CopyDentryWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <param name="tmpReq">
+        /// CreateAlidingAssistantRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// CreateAlidingAssistantHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAlidingAssistantResponse
+        /// </returns>
+        public CreateAlidingAssistantResponse CreateAlidingAssistantWithOptions(CreateAlidingAssistantRequest tmpReq, CreateAlidingAssistantHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateAlidingAssistantShrinkRequest request = new CreateAlidingAssistantShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            CreateAlidingAssistantShrinkHeaders headers = new CreateAlidingAssistantShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ext))
+            {
+                request.ExtShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ext, "Ext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RecommendPrompts))
+            {
+                request.RecommendPromptsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RecommendPrompts, "RecommendPrompts", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppCode))
+            {
+                body["AppCode"] = request.AppCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtShrink))
+            {
+                body["Ext"] = request.ExtShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Icon))
+            {
+                body["Icon"] = request.Icon;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Instructions))
+            {
+                body["Instructions"] = request.Instructions;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecommendPromptsShrink))
+            {
+                body["RecommendPrompts"] = request.RecommendPromptsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                body["Source"] = request.Source;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIdentityId))
+            {
+                body["SourceIdentityId"] = request.SourceIdentityId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WelcomeContent))
+            {
+                body["WelcomeContent"] = request.WelcomeContent;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAlidingAssistant",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/aiagent/createAlidingAssistant",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAlidingAssistantResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <param name="tmpReq">
+        /// CreateAlidingAssistantRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// CreateAlidingAssistantHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAlidingAssistantResponse
+        /// </returns>
+        public async Task<CreateAlidingAssistantResponse> CreateAlidingAssistantWithOptionsAsync(CreateAlidingAssistantRequest tmpReq, CreateAlidingAssistantHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateAlidingAssistantShrinkRequest request = new CreateAlidingAssistantShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            CreateAlidingAssistantShrinkHeaders headers = new CreateAlidingAssistantShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ext))
+            {
+                request.ExtShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ext, "Ext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RecommendPrompts))
+            {
+                request.RecommendPromptsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RecommendPrompts, "RecommendPrompts", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppCode))
+            {
+                body["AppCode"] = request.AppCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtShrink))
+            {
+                body["Ext"] = request.ExtShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Icon))
+            {
+                body["Icon"] = request.Icon;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Instructions))
+            {
+                body["Instructions"] = request.Instructions;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecommendPromptsShrink))
+            {
+                body["RecommendPrompts"] = request.RecommendPromptsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                body["Source"] = request.Source;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIdentityId))
+            {
+                body["SourceIdentityId"] = request.SourceIdentityId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WelcomeContent))
+            {
+                body["WelcomeContent"] = request.WelcomeContent;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAlidingAssistant",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/aiagent/createAlidingAssistant",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAlidingAssistantResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// CreateAlidingAssistantRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAlidingAssistantResponse
+        /// </returns>
+        public CreateAlidingAssistantResponse CreateAlidingAssistant(CreateAlidingAssistantRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            CreateAlidingAssistantHeaders headers = new CreateAlidingAssistantHeaders();
+            return CreateAlidingAssistantWithOptions(request, headers, runtime);
+        }
+
+        /// <param name="request">
+        /// CreateAlidingAssistantRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAlidingAssistantResponse
+        /// </returns>
+        public async Task<CreateAlidingAssistantResponse> CreateAlidingAssistantAsync(CreateAlidingAssistantRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            CreateAlidingAssistantHeaders headers = new CreateAlidingAssistantHeaders();
+            return await CreateAlidingAssistantWithOptionsAsync(request, headers, runtime);
+        }
+
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>发布钉钉投放活动</para>
@@ -11429,6 +11677,166 @@ namespace AlibabaCloud.SDK.Aliding20230426
             return await CreateWorkspaceDocWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <param name="tmpReq">
+        /// DeleteAlidingAssistantRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// DeleteAlidingAssistantHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAlidingAssistantResponse
+        /// </returns>
+        public DeleteAlidingAssistantResponse DeleteAlidingAssistantWithOptions(DeleteAlidingAssistantRequest tmpReq, DeleteAlidingAssistantHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteAlidingAssistantShrinkRequest request = new DeleteAlidingAssistantShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            DeleteAlidingAssistantShrinkHeaders headers = new DeleteAlidingAssistantShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssistantId))
+            {
+                body["AssistantId"] = request.AssistantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAlidingAssistant",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/aiagent/deleteAlidingAssistant",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAlidingAssistantResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <param name="tmpReq">
+        /// DeleteAlidingAssistantRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// DeleteAlidingAssistantHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAlidingAssistantResponse
+        /// </returns>
+        public async Task<DeleteAlidingAssistantResponse> DeleteAlidingAssistantWithOptionsAsync(DeleteAlidingAssistantRequest tmpReq, DeleteAlidingAssistantHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteAlidingAssistantShrinkRequest request = new DeleteAlidingAssistantShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            DeleteAlidingAssistantShrinkHeaders headers = new DeleteAlidingAssistantShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssistantId))
+            {
+                body["AssistantId"] = request.AssistantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAlidingAssistant",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/aiagent/deleteAlidingAssistant",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAlidingAssistantResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// DeleteAlidingAssistantRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAlidingAssistantResponse
+        /// </returns>
+        public DeleteAlidingAssistantResponse DeleteAlidingAssistant(DeleteAlidingAssistantRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            DeleteAlidingAssistantHeaders headers = new DeleteAlidingAssistantHeaders();
+            return DeleteAlidingAssistantWithOptions(request, headers, runtime);
+        }
+
+        /// <param name="request">
+        /// DeleteAlidingAssistantRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAlidingAssistantResponse
+        /// </returns>
+        public async Task<DeleteAlidingAssistantResponse> DeleteAlidingAssistantAsync(DeleteAlidingAssistantRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            DeleteAlidingAssistantHeaders headers = new DeleteAlidingAssistantHeaders();
+            return await DeleteAlidingAssistantWithOptionsAsync(request, headers, runtime);
+        }
+
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>删除指定列</para>
@@ -16607,6 +17015,186 @@ namespace AlibabaCloud.SDK.Aliding20230426
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             GetActivityListHeaders headers = new GetActivityListHeaders();
             return await GetActivityListWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取阿里钉ai助理信息</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GetAlidingAssistantInfoRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// GetAlidingAssistantInfoHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAlidingAssistantInfoResponse
+        /// </returns>
+        public GetAlidingAssistantInfoResponse GetAlidingAssistantInfoWithOptions(GetAlidingAssistantInfoRequest tmpReq, GetAlidingAssistantInfoHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetAlidingAssistantInfoShrinkRequest request = new GetAlidingAssistantInfoShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            GetAlidingAssistantInfoShrinkHeaders headers = new GetAlidingAssistantInfoShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssistantId))
+            {
+                body["AssistantId"] = request.AssistantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAlidingAssistantInfo",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/aiagent/getAlidingAssistantInfo",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAlidingAssistantInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取阿里钉ai助理信息</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GetAlidingAssistantInfoRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// GetAlidingAssistantInfoHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAlidingAssistantInfoResponse
+        /// </returns>
+        public async Task<GetAlidingAssistantInfoResponse> GetAlidingAssistantInfoWithOptionsAsync(GetAlidingAssistantInfoRequest tmpReq, GetAlidingAssistantInfoHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetAlidingAssistantInfoShrinkRequest request = new GetAlidingAssistantInfoShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            GetAlidingAssistantInfoShrinkHeaders headers = new GetAlidingAssistantInfoShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssistantId))
+            {
+                body["AssistantId"] = request.AssistantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAlidingAssistantInfo",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/aiagent/getAlidingAssistantInfo",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAlidingAssistantInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取阿里钉ai助理信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAlidingAssistantInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAlidingAssistantInfoResponse
+        /// </returns>
+        public GetAlidingAssistantInfoResponse GetAlidingAssistantInfo(GetAlidingAssistantInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetAlidingAssistantInfoHeaders headers = new GetAlidingAssistantInfoHeaders();
+            return GetAlidingAssistantInfoWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取阿里钉ai助理信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAlidingAssistantInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAlidingAssistantInfoResponse
+        /// </returns>
+        public async Task<GetAlidingAssistantInfoResponse> GetAlidingAssistantInfoAsync(GetAlidingAssistantInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetAlidingAssistantInfoHeaders headers = new GetAlidingAssistantInfoHeaders();
+            return await GetAlidingAssistantInfoWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -47191,6 +47779,262 @@ namespace AlibabaCloud.SDK.Aliding20230426
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             UnsubscribeEventHeaders headers = new UnsubscribeEventHeaders();
             return await UnsubscribeEventWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <param name="tmpReq">
+        /// UpdateAlidingAssistantRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// UpdateAlidingAssistantHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAlidingAssistantResponse
+        /// </returns>
+        public UpdateAlidingAssistantResponse UpdateAlidingAssistantWithOptions(UpdateAlidingAssistantRequest tmpReq, UpdateAlidingAssistantHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateAlidingAssistantShrinkRequest request = new UpdateAlidingAssistantShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            UpdateAlidingAssistantShrinkHeaders headers = new UpdateAlidingAssistantShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ext))
+            {
+                request.ExtShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ext, "Ext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Feature))
+            {
+                request.FeatureShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Feature, "Feature", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RecommendPrompts))
+            {
+                request.RecommendPromptsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RecommendPrompts, "RecommendPrompts", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssistantId))
+            {
+                body["AssistantId"] = request.AssistantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtShrink))
+            {
+                body["Ext"] = request.ExtShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FallbackContent))
+            {
+                body["FallbackContent"] = request.FallbackContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeatureShrink))
+            {
+                body["Feature"] = request.FeatureShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Icon))
+            {
+                body["Icon"] = request.Icon;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Instructions))
+            {
+                body["Instructions"] = request.Instructions;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecommendPromptsShrink))
+            {
+                body["RecommendPrompts"] = request.RecommendPromptsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WelcomeContent))
+            {
+                body["WelcomeContent"] = request.WelcomeContent;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAlidingAssistant",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/aiagent/updateAlidingAssistant",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAlidingAssistantResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <param name="tmpReq">
+        /// UpdateAlidingAssistantRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// UpdateAlidingAssistantHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAlidingAssistantResponse
+        /// </returns>
+        public async Task<UpdateAlidingAssistantResponse> UpdateAlidingAssistantWithOptionsAsync(UpdateAlidingAssistantRequest tmpReq, UpdateAlidingAssistantHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateAlidingAssistantShrinkRequest request = new UpdateAlidingAssistantShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            UpdateAlidingAssistantShrinkHeaders headers = new UpdateAlidingAssistantShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ext))
+            {
+                request.ExtShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ext, "Ext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Feature))
+            {
+                request.FeatureShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Feature, "Feature", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RecommendPrompts))
+            {
+                request.RecommendPromptsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RecommendPrompts, "RecommendPrompts", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssistantId))
+            {
+                body["AssistantId"] = request.AssistantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtShrink))
+            {
+                body["Ext"] = request.ExtShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FallbackContent))
+            {
+                body["FallbackContent"] = request.FallbackContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeatureShrink))
+            {
+                body["Feature"] = request.FeatureShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Icon))
+            {
+                body["Icon"] = request.Icon;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Instructions))
+            {
+                body["Instructions"] = request.Instructions;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecommendPromptsShrink))
+            {
+                body["RecommendPrompts"] = request.RecommendPromptsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WelcomeContent))
+            {
+                body["WelcomeContent"] = request.WelcomeContent;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAlidingAssistant",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/aiagent/updateAlidingAssistant",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAlidingAssistantResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// UpdateAlidingAssistantRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAlidingAssistantResponse
+        /// </returns>
+        public UpdateAlidingAssistantResponse UpdateAlidingAssistant(UpdateAlidingAssistantRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            UpdateAlidingAssistantHeaders headers = new UpdateAlidingAssistantHeaders();
+            return UpdateAlidingAssistantWithOptions(request, headers, runtime);
+        }
+
+        /// <param name="request">
+        /// UpdateAlidingAssistantRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAlidingAssistantResponse
+        /// </returns>
+        public async Task<UpdateAlidingAssistantResponse> UpdateAlidingAssistantAsync(UpdateAlidingAssistantRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            UpdateAlidingAssistantHeaders headers = new UpdateAlidingAssistantHeaders();
+            return await UpdateAlidingAssistantWithOptionsAsync(request, headers, runtime);
         }
 
         /// <param name="tmpReq">
