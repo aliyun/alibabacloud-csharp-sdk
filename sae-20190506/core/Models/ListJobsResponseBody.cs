@@ -128,6 +128,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [Validation(Required=false)]
                 public long? Failed { get; set; }
 
+                [NameInMap("ImageUrl")]
+                [Validation(Required=false)]
+                public string ImageUrl { get; set; }
+
                 /// <summary>
                 /// <para>Indicates whether the latest change order was executed. Valid values:</para>
                 /// <list type="bullet">
