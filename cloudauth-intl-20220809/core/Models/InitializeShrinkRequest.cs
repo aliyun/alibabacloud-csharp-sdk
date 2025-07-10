@@ -47,6 +47,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string DateOfExpiry { get; set; }
 
+        [NameInMap("DocName")]
+        [Validation(Required=false)]
+        public string DocName { get; set; }
+
+        [NameInMap("DocNo")]
+        [Validation(Required=false)]
+        public string DocNo { get; set; }
+
         [NameInMap("DocPageConfig")]
         [Validation(Required=false)]
         public string DocPageConfigShrink { get; set; }
