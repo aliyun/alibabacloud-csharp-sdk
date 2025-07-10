@@ -134,6 +134,20 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             [Validation(Required=false)]
             public string SubscriptionName { get; set; }
 
+            [NameInMap("TenantRateLimitPolicy")]
+            [Validation(Required=false)]
+            public GetSubscriptionAttributesResponseBodyDataTenantRateLimitPolicy TenantRateLimitPolicy { get; set; }
+            public class GetSubscriptionAttributesResponseBodyDataTenantRateLimitPolicy : TeaModel {
+                [NameInMap("Enabled")]
+                [Validation(Required=false)]
+                public bool? Enabled { get; set; }
+
+                [NameInMap("MaxReceivesPerSecond")]
+                [Validation(Required=false)]
+                public int? MaxReceivesPerSecond { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The name of the topic.</para>
             /// 

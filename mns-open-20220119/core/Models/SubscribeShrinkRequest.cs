@@ -16,6 +16,14 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         [Validation(Required=false)]
         public string DlqPolicyShrink { get; set; }
 
+        [NameInMap("DmAttributes")]
+        [Validation(Required=false)]
+        public string DmAttributesShrink { get; set; }
+
+        [NameInMap("DysmsAttributes")]
+        [Validation(Required=false)]
+        public string DysmsAttributesShrink { get; set; }
+
         /// <summary>
         /// <para>The receiver endpoint. The format of the endpoint varies based on the terminal type.</para>
         /// <list type="bullet">
@@ -33,6 +41,10 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         [NameInMap("Endpoint")]
         [Validation(Required=false)]
         public string Endpoint { get; set; }
+
+        [NameInMap("KafkaAttributes")]
+        [Validation(Required=false)]
+        public string KafkaAttributesShrink { get; set; }
 
         /// <summary>
         /// <para>The tag that is used to filter messages. Only messages that have the same tag can be pushed. Set the value to a string of no more than 16 characters.</para>
@@ -106,6 +118,10 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         [NameInMap("SubscriptionName")]
         [Validation(Required=false)]
         public string SubscriptionName { get; set; }
+
+        [NameInMap("TenantRateLimitPolicy")]
+        [Validation(Required=false)]
+        public string TenantRateLimitPolicyShrink { get; set; }
 
         /// <summary>
         /// <para>The name of the topic.</para>

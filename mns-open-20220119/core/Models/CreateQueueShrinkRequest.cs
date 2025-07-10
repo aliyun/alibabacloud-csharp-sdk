@@ -111,6 +111,10 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
 
         }
 
+        [NameInMap("TenantRateLimitPolicy")]
+        [Validation(Required=false)]
+        public string TenantRateLimitPolicyShrink { get; set; }
+
         /// <summary>
         /// <para>The duration for which a message stays in the Inactive state after the message is received from the queue. Valid values: 1 to 43200. Unit: seconds. Default value: 30.</para>
         /// 

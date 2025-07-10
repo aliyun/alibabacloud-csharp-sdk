@@ -218,6 +218,14 @@ namespace AlibabaCloud.SDK.Mns_open20220119
                 request.MatchRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MatchRules, "MatchRules", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryMode))
+            {
+                query["DeliveryMode"] = request.DeliveryMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointsShrink))
             {
                 query["Endpoints"] = request.EndpointsShrink;
@@ -290,6 +298,14 @@ namespace AlibabaCloud.SDK.Mns_open20220119
                 request.MatchRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MatchRules, "MatchRules", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryMode))
+            {
+                query["DeliveryMode"] = request.DeliveryMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointsShrink))
             {
                 query["Endpoints"] = request.EndpointsShrink;
@@ -389,6 +405,10 @@ namespace AlibabaCloud.SDK.Mns_open20220119
             {
                 request.DlqPolicyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DlqPolicy, "DlqPolicy", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantRateLimitPolicy))
+            {
+                request.TenantRateLimitPolicyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantRateLimitPolicy, "TenantRateLimitPolicy", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DelaySeconds))
             {
@@ -421,6 +441,10 @@ namespace AlibabaCloud.SDK.Mns_open20220119
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
                 query["Tag"] = request.Tag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantRateLimitPolicyShrink))
+            {
+                query["TenantRateLimitPolicy"] = request.TenantRateLimitPolicyShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VisibilityTimeout))
             {
@@ -469,6 +493,10 @@ namespace AlibabaCloud.SDK.Mns_open20220119
             {
                 request.DlqPolicyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DlqPolicy, "DlqPolicy", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantRateLimitPolicy))
+            {
+                request.TenantRateLimitPolicyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantRateLimitPolicy, "TenantRateLimitPolicy", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DelaySeconds))
             {
@@ -501,6 +529,10 @@ namespace AlibabaCloud.SDK.Mns_open20220119
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
                 query["Tag"] = request.Tag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantRateLimitPolicyShrink))
+            {
+                query["TenantRateLimitPolicy"] = request.TenantRateLimitPolicyShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VisibilityTimeout))
             {
@@ -2441,6 +2473,10 @@ namespace AlibabaCloud.SDK.Mns_open20220119
             {
                 request.DlqPolicyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DlqPolicy, "DlqPolicy", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantRateLimitPolicy))
+            {
+                request.TenantRateLimitPolicyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantRateLimitPolicy, "TenantRateLimitPolicy", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DelaySeconds))
             {
@@ -2469,6 +2505,10 @@ namespace AlibabaCloud.SDK.Mns_open20220119
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueName))
             {
                 query["QueueName"] = request.QueueName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantRateLimitPolicyShrink))
+            {
+                query["TenantRateLimitPolicy"] = request.TenantRateLimitPolicyShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VisibilityTimeout))
             {
@@ -2517,6 +2557,10 @@ namespace AlibabaCloud.SDK.Mns_open20220119
             {
                 request.DlqPolicyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DlqPolicy, "DlqPolicy", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantRateLimitPolicy))
+            {
+                request.TenantRateLimitPolicyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantRateLimitPolicy, "TenantRateLimitPolicy", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DelaySeconds))
             {
@@ -2545,6 +2589,10 @@ namespace AlibabaCloud.SDK.Mns_open20220119
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueName))
             {
                 query["QueueName"] = request.QueueName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantRateLimitPolicyShrink))
+            {
+                query["TenantRateLimitPolicy"] = request.TenantRateLimitPolicyShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VisibilityTimeout))
             {
@@ -2629,6 +2677,10 @@ namespace AlibabaCloud.SDK.Mns_open20220119
             {
                 request.DlqPolicyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DlqPolicy, "DlqPolicy", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantRateLimitPolicy))
+            {
+                request.TenantRateLimitPolicyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantRateLimitPolicy, "TenantRateLimitPolicy", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DlqPolicyShrink))
             {
@@ -2641,6 +2693,10 @@ namespace AlibabaCloud.SDK.Mns_open20220119
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscriptionName))
             {
                 query["SubscriptionName"] = request.SubscriptionName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantRateLimitPolicyShrink))
+            {
+                query["TenantRateLimitPolicy"] = request.TenantRateLimitPolicyShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopicName))
             {
@@ -2689,6 +2745,10 @@ namespace AlibabaCloud.SDK.Mns_open20220119
             {
                 request.DlqPolicyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DlqPolicy, "DlqPolicy", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantRateLimitPolicy))
+            {
+                request.TenantRateLimitPolicyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantRateLimitPolicy, "TenantRateLimitPolicy", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DlqPolicyShrink))
             {
@@ -2701,6 +2761,10 @@ namespace AlibabaCloud.SDK.Mns_open20220119
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscriptionName))
             {
                 query["SubscriptionName"] = request.SubscriptionName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantRateLimitPolicyShrink))
+            {
+                query["TenantRateLimitPolicy"] = request.TenantRateLimitPolicyShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopicName))
             {
@@ -2921,14 +2985,42 @@ namespace AlibabaCloud.SDK.Mns_open20220119
             {
                 request.DlqPolicyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DlqPolicy, "DlqPolicy", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DmAttributes))
+            {
+                request.DmAttributesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DmAttributes, "DmAttributes", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DysmsAttributes))
+            {
+                request.DysmsAttributesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DysmsAttributes, "DysmsAttributes", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.KafkaAttributes))
+            {
+                request.KafkaAttributesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.KafkaAttributes, "KafkaAttributes", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantRateLimitPolicy))
+            {
+                request.TenantRateLimitPolicyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantRateLimitPolicy, "TenantRateLimitPolicy", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DlqPolicyShrink))
             {
                 query["DlqPolicy"] = request.DlqPolicyShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DmAttributesShrink))
+            {
+                query["DmAttributes"] = request.DmAttributesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DysmsAttributesShrink))
+            {
+                query["DysmsAttributes"] = request.DysmsAttributesShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Endpoint))
             {
                 query["Endpoint"] = request.Endpoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KafkaAttributesShrink))
+            {
+                query["KafkaAttributes"] = request.KafkaAttributesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageTag))
             {
@@ -2953,6 +3045,10 @@ namespace AlibabaCloud.SDK.Mns_open20220119
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscriptionName))
             {
                 query["SubscriptionName"] = request.SubscriptionName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantRateLimitPolicyShrink))
+            {
+                query["TenantRateLimitPolicy"] = request.TenantRateLimitPolicyShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopicName))
             {
@@ -3001,14 +3097,42 @@ namespace AlibabaCloud.SDK.Mns_open20220119
             {
                 request.DlqPolicyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DlqPolicy, "DlqPolicy", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DmAttributes))
+            {
+                request.DmAttributesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DmAttributes, "DmAttributes", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DysmsAttributes))
+            {
+                request.DysmsAttributesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DysmsAttributes, "DysmsAttributes", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.KafkaAttributes))
+            {
+                request.KafkaAttributesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.KafkaAttributes, "KafkaAttributes", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantRateLimitPolicy))
+            {
+                request.TenantRateLimitPolicyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantRateLimitPolicy, "TenantRateLimitPolicy", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DlqPolicyShrink))
             {
                 query["DlqPolicy"] = request.DlqPolicyShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DmAttributesShrink))
+            {
+                query["DmAttributes"] = request.DmAttributesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DysmsAttributesShrink))
+            {
+                query["DysmsAttributes"] = request.DysmsAttributesShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Endpoint))
             {
                 query["Endpoint"] = request.Endpoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KafkaAttributesShrink))
+            {
+                query["KafkaAttributes"] = request.KafkaAttributesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageTag))
             {
@@ -3033,6 +3157,10 @@ namespace AlibabaCloud.SDK.Mns_open20220119
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscriptionName))
             {
                 query["SubscriptionName"] = request.SubscriptionName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantRateLimitPolicyShrink))
+            {
+                query["TenantRateLimitPolicy"] = request.TenantRateLimitPolicyShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopicName))
             {

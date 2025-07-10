@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Mns_open20220119.Models
 {
     public class CreateEventRuleShrinkRequest : TeaModel {
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        [NameInMap("DeliveryMode")]
+        [Validation(Required=false)]
+        public string DeliveryMode { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>

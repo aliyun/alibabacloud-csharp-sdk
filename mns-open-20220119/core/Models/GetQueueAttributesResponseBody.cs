@@ -208,6 +208,20 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
 
             }
 
+            [NameInMap("TenantRateLimitPolicy")]
+            [Validation(Required=false)]
+            public GetQueueAttributesResponseBodyDataTenantRateLimitPolicy TenantRateLimitPolicy { get; set; }
+            public class GetQueueAttributesResponseBodyDataTenantRateLimitPolicy : TeaModel {
+                [NameInMap("Enabled")]
+                [Validation(Required=false)]
+                public bool? Enabled { get; set; }
+
+                [NameInMap("MaxReceivesPerSecond")]
+                [Validation(Required=false)]
+                public int? MaxReceivesPerSecond { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The duration for which a message stays in the Inactive state after the message is received from the queue. Valid values: 1 to 43200. Unit: seconds. Default value: 30.</para>
             /// 

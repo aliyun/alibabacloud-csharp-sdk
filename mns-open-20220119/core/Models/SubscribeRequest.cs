@@ -38,6 +38,34 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
 
         }
 
+        [NameInMap("DmAttributes")]
+        [Validation(Required=false)]
+        public SubscribeRequestDmAttributes DmAttributes { get; set; }
+        public class SubscribeRequestDmAttributes : TeaModel {
+            [NameInMap("AccountName")]
+            [Validation(Required=false)]
+            public string AccountName { get; set; }
+
+            [NameInMap("Subject")]
+            [Validation(Required=false)]
+            public string Subject { get; set; }
+
+        }
+
+        [NameInMap("DysmsAttributes")]
+        [Validation(Required=false)]
+        public SubscribeRequestDysmsAttributes DysmsAttributes { get; set; }
+        public class SubscribeRequestDysmsAttributes : TeaModel {
+            [NameInMap("SignName")]
+            [Validation(Required=false)]
+            public string SignName { get; set; }
+
+            [NameInMap("TemplateCode")]
+            [Validation(Required=false)]
+            public string TemplateCode { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The receiver endpoint. The format of the endpoint varies based on the terminal type.</para>
         /// <list type="bullet">
@@ -55,6 +83,16 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         [NameInMap("Endpoint")]
         [Validation(Required=false)]
         public string Endpoint { get; set; }
+
+        [NameInMap("KafkaAttributes")]
+        [Validation(Required=false)]
+        public SubscribeRequestKafkaAttributes KafkaAttributes { get; set; }
+        public class SubscribeRequestKafkaAttributes : TeaModel {
+            [NameInMap("BusinessMode")]
+            [Validation(Required=false)]
+            public string BusinessMode { get; set; }
+
+        }
 
         /// <summary>
         /// <para>The tag that is used to filter messages. Only messages that have the same tag can be pushed. Set the value to a string of no more than 16 characters.</para>
@@ -128,6 +166,20 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         [NameInMap("SubscriptionName")]
         [Validation(Required=false)]
         public string SubscriptionName { get; set; }
+
+        [NameInMap("TenantRateLimitPolicy")]
+        [Validation(Required=false)]
+        public SubscribeRequestTenantRateLimitPolicy TenantRateLimitPolicy { get; set; }
+        public class SubscribeRequestTenantRateLimitPolicy : TeaModel {
+            [NameInMap("Enabled")]
+            [Validation(Required=false)]
+            public bool? Enabled { get; set; }
+
+            [NameInMap("MaxReceivesPerSecond")]
+            [Validation(Required=false)]
+            public int? MaxReceivesPerSecond { get; set; }
+
+        }
 
         /// <summary>
         /// <para>The name of the topic.</para>

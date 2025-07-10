@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         [Validation(Required=false)]
         public string SubscriptionName { get; set; }
 
+        [NameInMap("TenantRateLimitPolicy")]
+        [Validation(Required=false)]
+        public string TenantRateLimitPolicyShrink { get; set; }
+
         /// <summary>
         /// <para>The name of the topic.</para>
         /// <para>This parameter is required.</para>
