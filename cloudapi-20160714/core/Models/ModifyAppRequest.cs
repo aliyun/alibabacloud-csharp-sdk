@@ -42,6 +42,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("Disabled")]
+        [Validation(Required=false)]
+        public bool? Disabled { get; set; }
+
         /// <summary>
         /// <para>扩展信息</para>
         /// 

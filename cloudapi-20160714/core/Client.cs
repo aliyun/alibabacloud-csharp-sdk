@@ -27226,6 +27226,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Disabled))
+            {
+                query["Disabled"] = request.Disabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Extend))
             {
                 query["Extend"] = request.Extend;
@@ -27296,6 +27300,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Disabled))
+            {
+                query["Disabled"] = request.Disabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Extend))
             {
