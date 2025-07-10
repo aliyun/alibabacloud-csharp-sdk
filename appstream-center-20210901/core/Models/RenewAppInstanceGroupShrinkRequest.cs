@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
-    public class RenewAppInstanceGroupRequest : TeaModel {
+    public class RenewAppInstanceGroupShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The ID of the delivery group.</para>
         /// <para>This parameter is required.</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         [NameInMap("RenewNodes")]
         [Validation(Required=false)]
-        public List<string> RenewNodes { get; set; }
+        public string RenewNodesShrink { get; set; }
 
     }
 

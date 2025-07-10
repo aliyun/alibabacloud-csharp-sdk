@@ -5074,7 +5074,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <para>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/426039.html">billing methods and prices</a> of App Streaming.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// RenewAppInstanceGroupRequest
         /// </param>
         /// <param name="runtime">
@@ -5084,9 +5084,15 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <returns>
         /// RenewAppInstanceGroupResponse
         /// </returns>
-        public RenewAppInstanceGroupResponse RenewAppInstanceGroupWithOptions(RenewAppInstanceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public RenewAppInstanceGroupResponse RenewAppInstanceGroupWithOptions(RenewAppInstanceGroupRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RenewAppInstanceGroupShrinkRequest request = new RenewAppInstanceGroupShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RenewNodes))
+            {
+                request.RenewNodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RenewNodes, "RenewNodes", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceGroupId))
             {
@@ -5111,6 +5117,18 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
             {
                 query["PromotionId"] = request.PromotionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenewAmount))
+            {
+                query["RenewAmount"] = request.RenewAmount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenewMode))
+            {
+                query["RenewMode"] = request.RenewMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenewNodesShrink))
+            {
+                query["RenewNodes"] = request.RenewNodesShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5141,7 +5159,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <para>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/426039.html">billing methods and prices</a> of App Streaming.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// RenewAppInstanceGroupRequest
         /// </param>
         /// <param name="runtime">
@@ -5151,9 +5169,15 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <returns>
         /// RenewAppInstanceGroupResponse
         /// </returns>
-        public async Task<RenewAppInstanceGroupResponse> RenewAppInstanceGroupWithOptionsAsync(RenewAppInstanceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<RenewAppInstanceGroupResponse> RenewAppInstanceGroupWithOptionsAsync(RenewAppInstanceGroupRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RenewAppInstanceGroupShrinkRequest request = new RenewAppInstanceGroupShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RenewNodes))
+            {
+                request.RenewNodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RenewNodes, "RenewNodes", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceGroupId))
             {
@@ -5178,6 +5202,18 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
             {
                 query["PromotionId"] = request.PromotionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenewAmount))
+            {
+                query["RenewAmount"] = request.RenewAmount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenewMode))
+            {
+                query["RenewMode"] = request.RenewMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenewNodesShrink))
+            {
+                query["RenewNodes"] = request.RenewNodesShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
