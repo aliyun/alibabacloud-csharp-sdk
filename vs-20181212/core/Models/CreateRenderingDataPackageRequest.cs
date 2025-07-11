@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("InstanceBillingCycle")]
+        [Validation(Required=false)]
+        public string InstanceBillingCycle { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

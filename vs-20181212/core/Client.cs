@@ -4401,6 +4401,10 @@ namespace AlibabaCloud.SDK.Vs20181212
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceBillingCycle))
+            {
+                query["InstanceBillingCycle"] = request.InstanceBillingCycle;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenderingInstanceId))
             {
                 query["RenderingInstanceId"] = request.RenderingInstanceId;
@@ -4450,6 +4454,10 @@ namespace AlibabaCloud.SDK.Vs20181212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceBillingCycle))
+            {
+                query["InstanceBillingCycle"] = request.InstanceBillingCycle;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenderingInstanceId))
             {
