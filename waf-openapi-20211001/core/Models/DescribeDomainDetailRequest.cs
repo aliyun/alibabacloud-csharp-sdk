@@ -11,7 +11,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
     public class DescribeDomainDetailRequest : TeaModel {
         /// <summary>
         /// <para>The domain name that you want to query.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></para>
@@ -19,6 +18,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [NameInMap("Domain")]
         [Validation(Required=false)]
         public string Domain { get; set; }
+
+        [NameInMap("DomainId")]
+        [Validation(Required=false)]
+        public string DomainId { get; set; }
 
         /// <summary>
         /// <para>The ID of the WAF instance.</para>

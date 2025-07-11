@@ -83,6 +83,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public string Domain { get; set; }
 
+            [NameInMap("DomainId")]
+            [Validation(Required=false)]
+            public string DomainId { get; set; }
+
             /// <summary>
             /// <para>The configurations of the listeners.</para>
             /// </summary>
