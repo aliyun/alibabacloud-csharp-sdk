@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("AvgLogicalReads")]
             [Validation(Required=false)]
-            public float? AvgLogicalReads { get; set; }
+            public double? AvgLogicalReads { get; set; }
 
             /// <summary>
             /// <para>The average number of retries.</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("AvgRetryCount")]
             [Validation(Required=false)]
-            public float? AvgRetryCount { get; set; }
+            public double? AvgRetryCount { get; set; }
 
             /// <summary>
             /// <para>CPU time of the suspicious SQL.</para>
@@ -220,7 +220,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 /// </summary>
                 [NameInMap("AvgLogicalReads")]
                 [Validation(Required=false)]
-                public float? AvgLogicalReads { get; set; }
+                public double? AvgLogicalReads { get; set; }
 
                 /// <summary>
                 /// <para>The average number of retries.</para>
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 /// </summary>
                 [NameInMap("AvgRetryCount")]
                 [Validation(Required=false)]
-                public float? AvgRetryCount { get; set; }
+                public double? AvgRetryCount { get; set; }
 
                 /// <summary>
                 /// <para>The total CPU time.</para>
@@ -352,7 +352,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 /// </summary>
                 [NameInMap("SumElapsedTime")]
                 [Validation(Required=false)]
-                public string SumElapsedTime { get; set; }
+                public double? SumElapsedTime { get; set; }
 
                 /// <summary>
                 /// <para>The total number of retries.</para>
@@ -362,7 +362,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 /// </summary>
                 [NameInMap("SumRetryCount")]
                 [Validation(Required=false)]
-                public float? SumRetryCount { get; set; }
+                public double? SumRetryCount { get; set; }
 
                 /// <summary>
                 /// <para>The username.</para>
@@ -411,7 +411,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("SumElapsedTime")]
             [Validation(Required=false)]
-            public string SumElapsedTime { get; set; }
+            public double? SumElapsedTime { get; set; }
 
             /// <summary>
             /// <para>The total number of retries.</para>
@@ -421,7 +421,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("SumRetryCount")]
             [Validation(Required=false)]
-            public float? SumRetryCount { get; set; }
+            public double? SumRetryCount { get; set; }
 
             /// <summary>
             /// <para>Username.</para>

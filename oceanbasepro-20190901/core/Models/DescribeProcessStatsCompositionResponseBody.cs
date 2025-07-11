@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("ActiveSessionCount")]
             [Validation(Required=false)]
-            public int? ActiveSessionCount { get; set; }
+            public long? ActiveSessionCount { get; set; }
 
             /// <summary>
             /// <para>The details of all sessions.</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 /// </summary>
                 [NameInMap("PlanId")]
                 [Validation(Required=false)]
-                public string PlanId { get; set; }
+                public long? PlanId { get; set; }
 
                 [NameInMap("ProcessSqlLists")]
                 [Validation(Required=false)]
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
                     [NameInMap("PlanId")]
                     [Validation(Required=false)]
-                    public string PlanId { get; set; }
+                    public long? PlanId { get; set; }
 
                     [NameInMap("ProcessSqlList")]
                     [Validation(Required=false)]
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 
                         [NameInMap("PlanId")]
                         [Validation(Required=false)]
-                        public string PlanId { get; set; }
+                        public long? PlanId { get; set; }
 
                         [NameInMap("ProxySessId")]
                         [Validation(Required=false)]
@@ -348,7 +348,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("IdleSessionCount")]
             [Validation(Required=false)]
-            public int? IdleSessionCount { get; set; }
+            public long? IdleSessionCount { get; set; }
 
             /// <summary>
             /// <para>The version of OceanBase Database.</para>
@@ -524,7 +524,7 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             /// </summary>
             [NameInMap("TotalSessionCount")]
             [Validation(Required=false)]
-            public int? TotalSessionCount { get; set; }
+            public long? TotalSessionCount { get; set; }
 
         }
 
