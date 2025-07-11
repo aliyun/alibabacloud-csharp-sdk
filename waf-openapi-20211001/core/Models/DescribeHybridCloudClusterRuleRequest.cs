@@ -11,7 +11,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
     public class DescribeHybridCloudClusterRuleRequest : TeaModel {
         /// <summary>
         /// <para>The ID of the hybrid cloud cluster.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -19,6 +18,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public long? ClusterId { get; set; }
+
+        [NameInMap("ClusterRuleResourceId")]
+        [Validation(Required=false)]
+        public string ClusterRuleResourceId { get; set; }
 
         /// <summary>
         /// <para>The ID of the WAF instance.</para>
@@ -63,7 +66,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <list type="bullet">
         /// <item><description><b>pullin</b>: The traffic redirection rule of the hybrid cloud cluster.</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pullin</para>

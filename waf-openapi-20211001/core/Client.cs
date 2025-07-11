@@ -26083,6 +26083,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             {
                 query["ClusterId"] = request.ClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterRuleResourceId))
+            {
+                query["ClusterRuleResourceId"] = request.ClusterRuleResourceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -26148,6 +26152,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {
                 query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterRuleResourceId))
+            {
+                query["ClusterRuleResourceId"] = request.ClusterRuleResourceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {

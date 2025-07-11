@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public DescribeHybridCloudClusterRuleResponseBodyClusterRule ClusterRule { get; set; }
         public class DescribeHybridCloudClusterRuleResponseBodyClusterRule : TeaModel {
+            [NameInMap("ClusterRuleResourceId")]
+            [Validation(Required=false)]
+            public string ClusterRuleResourceId { get; set; }
+
             /// <summary>
             /// <para>The configuration of the rule.</para>
             /// 
