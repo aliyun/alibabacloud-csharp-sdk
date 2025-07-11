@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [Validation(Required=false)]
         public bool? EnableLog { get; set; }
 
+        [NameInMap("LabelRouteStrategy")]
+        [Validation(Required=false)]
+        public int? LabelRouteStrategy { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>10</para>

@@ -8,15 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
-    public class UpdateAppRequest : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>f312159702f4469585586ed5a6904163v3</para>
-        /// </summary>
-        [NameInMap("AccessToken")]
-        [Validation(Required=false)]
-        public string AccessToken { get; set; }
-
+    public class ListJobScriptHistoryRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -38,31 +30,30 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>74</para>
         /// </summary>
-        [NameInMap("EnableLog")]
+        [NameInMap("JobId")]
         [Validation(Required=false)]
-        public bool? EnableLog { get; set; }
-
-        [NameInMap("LabelRouteStrategy")]
-        [Validation(Required=false)]
-        public int? LabelRouteStrategy { get; set; }
+        public long? JobId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
-        [NameInMap("MaxConcurrency")]
+        [NameInMap("MaxResults")]
         [Validation(Required=false)]
-        public int? MaxConcurrency { get; set; }
+        public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
+        /// <b>Example:</b>
+        /// <para>eCKqVlS5FKF5EWGGOo8EgQ==</para>
         /// </summary>
-        [NameInMap("Title")]
+        [NameInMap("NextToken")]
         [Validation(Required=false)]
-        public string Title { get; set; }
+        public string NextToken { get; set; }
 
     }
 
