@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListChatappTemplateShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The review status of the message template. Valid values:</para>
+        /// <para>The review state of the template. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>pass</b>: The message template is approved.</description></item>
-        /// <item><description><b>fail</b>: The message template is rejected.</description></item>
-        /// <item><description><b>auditing</b>: The message template is being reviewed.</description></item>
+        /// <item><description><b>pass</b>: The template is approved.</description></item>
+        /// <item><description><b>fail</b>: The template is rejected.</description></item>
+        /// <item><description><b>auditing</b>: The template is being reviewed.</description></item>
         /// <item><description><b>unaudit</b>: The review is suspended.</description></item>
         /// </list>
         /// 
@@ -26,6 +26,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AuditStatus { get; set; }
 
         /// <summary>
+        /// <para>The category of the message template.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AUTHENTICATION</para>
         /// </summary>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>Template encoding.</para>
+        /// <para>The code of the message template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>838888822*****</para>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The space ID of the user under the ISV account.</para>
+        /// <para>The space ID of the RAM user within the ISV account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>28251486512358****</para>
@@ -56,7 +58,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The WhatsApp Business account (WABA) ID of the user within the independent software vendor (ISV) account.</para>
+        /// <para>The WhatsApp Business Account (WABA) ID of the RAM user within the independent software vendor (ISV) account.</para>
         /// <remarks>
         /// <para> CustWabaId is an obsolete parameter. Use CustSpaceId instead.</para>
         /// </remarks>
@@ -70,7 +72,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustWabaId { get; set; }
 
         /// <summary>
-        /// <para>The independent software vendor (ISV) verification code, which is used to verify whether the user is authorized by the ISV account.</para>
+        /// <para>The ISV verification code. This parameter is used to verify whether the RAM user is authorized by the ISV account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>skdi3kksloslikdkkdk</para>
@@ -90,7 +92,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// <para>The name of the message template.</para>
+        /// <para>The name of the template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hello_whatsapp</para>
@@ -126,7 +128,6 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <list type="bullet">
         /// <item><description><b>WHATSAPP</b></description></item>
         /// <item><description><b>VIBER</b></description></item>
-        /// <item><description>LINE: the Line message template. This type of message template will be released later.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

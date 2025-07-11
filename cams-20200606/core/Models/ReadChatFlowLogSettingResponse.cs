@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
-    public class BeeBotAssociateResponse : TeaModel {
+    public class ReadChatFlowLogSettingResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public BeeBotAssociateResponseBody Body { get; set; }
+        public ReadChatFlowLogSettingResponseBody Body { get; set; }
 
     }
 

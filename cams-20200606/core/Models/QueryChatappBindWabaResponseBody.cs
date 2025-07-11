@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public Dictionary<string, object> AuthInternationalRateEligibility { get; set; }
 
             /// <summary>
-            /// <para>The ID of the business platform.</para>
+            /// <para>The business ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>19293988***</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string BusinessId { get; set; }
 
             /// <summary>
-            /// <para>The name of the business platform.</para>
+            /// <para>The business name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Alibaba</para>
@@ -111,6 +111,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string Id { get; set; }
 
             /// <summary>
+            /// <para>The Marketing Messaging Lite status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Y</para>
             /// </summary>

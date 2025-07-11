@@ -559,446 +559,6 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates FAQs in the knowledge base.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
-        /// </description>
-        /// 
-        /// <param name="tmpReq">
-        /// BeeBotAssociateRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// BeeBotAssociateResponse
-        /// </returns>
-        public BeeBotAssociateResponse BeeBotAssociateWithOptions(BeeBotAssociateRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            BeeBotAssociateShrinkRequest request = new BeeBotAssociateShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Perspective))
-            {
-                request.PerspectiveShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Perspective, "Perspective", "json");
-            }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatBotInstanceId))
-            {
-                body["ChatBotInstanceId"] = request.ChatBotInstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustSpaceId))
-            {
-                body["CustSpaceId"] = request.CustSpaceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsvCode))
-            {
-                body["IsvCode"] = request.IsvCode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PerspectiveShrink))
-            {
-                body["Perspective"] = request.PerspectiveShrink;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecommendNum))
-            {
-                body["RecommendNum"] = request.RecommendNum;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
-            {
-                body["SessionId"] = request.SessionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Utterance))
-            {
-                body["Utterance"] = request.Utterance;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "BeeBotAssociate",
-                Version = "2020-06-06",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<BeeBotAssociateResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Associates FAQs in the knowledge base.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
-        /// </description>
-        /// 
-        /// <param name="tmpReq">
-        /// BeeBotAssociateRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// BeeBotAssociateResponse
-        /// </returns>
-        public async Task<BeeBotAssociateResponse> BeeBotAssociateWithOptionsAsync(BeeBotAssociateRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            BeeBotAssociateShrinkRequest request = new BeeBotAssociateShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Perspective))
-            {
-                request.PerspectiveShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Perspective, "Perspective", "json");
-            }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatBotInstanceId))
-            {
-                body["ChatBotInstanceId"] = request.ChatBotInstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustSpaceId))
-            {
-                body["CustSpaceId"] = request.CustSpaceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsvCode))
-            {
-                body["IsvCode"] = request.IsvCode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PerspectiveShrink))
-            {
-                body["Perspective"] = request.PerspectiveShrink;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecommendNum))
-            {
-                body["RecommendNum"] = request.RecommendNum;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
-            {
-                body["SessionId"] = request.SessionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Utterance))
-            {
-                body["Utterance"] = request.Utterance;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "BeeBotAssociate",
-                Version = "2020-06-06",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<BeeBotAssociateResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Associates FAQs in the knowledge base.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// BeeBotAssociateRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// BeeBotAssociateResponse
-        /// </returns>
-        public BeeBotAssociateResponse BeeBotAssociate(BeeBotAssociateRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return BeeBotAssociateWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Associates FAQs in the knowledge base.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// BeeBotAssociateRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// BeeBotAssociateResponse
-        /// </returns>
-        public async Task<BeeBotAssociateResponse> BeeBotAssociateAsync(BeeBotAssociateRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await BeeBotAssociateWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Conducts sessions with the bot based on its unique identifier (ID).</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>The ID of the session.</para>
-        /// </description>
-        /// 
-        /// <param name="tmpReq">
-        /// BeeBotChatRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// BeeBotChatResponse
-        /// </returns>
-        public BeeBotChatResponse BeeBotChatWithOptions(BeeBotChatRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            BeeBotChatShrinkRequest request = new BeeBotChatShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Perspective))
-            {
-                request.PerspectiveShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Perspective, "Perspective", "json");
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.VendorParam))
-            {
-                request.VendorParamShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VendorParam, "VendorParam", "json");
-            }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatBotInstanceId))
-            {
-                body["ChatBotInstanceId"] = request.ChatBotInstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustSpaceId))
-            {
-                body["CustSpaceId"] = request.CustSpaceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IntentName))
-            {
-                body["IntentName"] = request.IntentName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsvCode))
-            {
-                body["IsvCode"] = request.IsvCode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeId))
-            {
-                body["KnowledgeId"] = request.KnowledgeId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PerspectiveShrink))
-            {
-                body["Perspective"] = request.PerspectiveShrink;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SenderId))
-            {
-                body["SenderId"] = request.SenderId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SenderNick))
-            {
-                body["SenderNick"] = request.SenderNick;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
-            {
-                body["SessionId"] = request.SessionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Utterance))
-            {
-                body["Utterance"] = request.Utterance;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VendorParamShrink))
-            {
-                body["VendorParam"] = request.VendorParamShrink;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "BeeBotChat",
-                Version = "2020-06-06",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<BeeBotChatResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Conducts sessions with the bot based on its unique identifier (ID).</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>The ID of the session.</para>
-        /// </description>
-        /// 
-        /// <param name="tmpReq">
-        /// BeeBotChatRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// BeeBotChatResponse
-        /// </returns>
-        public async Task<BeeBotChatResponse> BeeBotChatWithOptionsAsync(BeeBotChatRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            BeeBotChatShrinkRequest request = new BeeBotChatShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Perspective))
-            {
-                request.PerspectiveShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Perspective, "Perspective", "json");
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.VendorParam))
-            {
-                request.VendorParamShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VendorParam, "VendorParam", "json");
-            }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatBotInstanceId))
-            {
-                body["ChatBotInstanceId"] = request.ChatBotInstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustSpaceId))
-            {
-                body["CustSpaceId"] = request.CustSpaceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IntentName))
-            {
-                body["IntentName"] = request.IntentName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsvCode))
-            {
-                body["IsvCode"] = request.IsvCode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeId))
-            {
-                body["KnowledgeId"] = request.KnowledgeId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PerspectiveShrink))
-            {
-                body["Perspective"] = request.PerspectiveShrink;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SenderId))
-            {
-                body["SenderId"] = request.SenderId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SenderNick))
-            {
-                body["SenderNick"] = request.SenderNick;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
-            {
-                body["SessionId"] = request.SessionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Utterance))
-            {
-                body["Utterance"] = request.Utterance;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VendorParamShrink))
-            {
-                body["VendorParam"] = request.VendorParamShrink;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "BeeBotChat",
-                Version = "2020-06-06",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<BeeBotChatResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Conducts sessions with the bot based on its unique identifier (ID).</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>The ID of the session.</para>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// BeeBotChatRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// BeeBotChatResponse
-        /// </returns>
-        public BeeBotChatResponse BeeBotChat(BeeBotChatRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return BeeBotChatWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Conducts sessions with the bot based on its unique identifier (ID).</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>The ID of the session.</para>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// BeeBotChatRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// BeeBotChatResponse
-        /// </returns>
-        public async Task<BeeBotChatResponse> BeeBotChatAsync(BeeBotChatRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await BeeBotChatWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
         /// <para>Binds the WhatsApp Business account with ChatApp.</para>
         /// </summary>
         /// 
@@ -2271,6 +1831,526 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Create Chatflow</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateChatFlowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateChatFlowResponse
+        /// </returns>
+        public CreateChatFlowResponse CreateChatFlowWithOptions(CreateChatFlowRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateChatFlowShrinkRequest request = new CreateChatFlowShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BizExtend))
+            {
+                request.BizExtendShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BizExtend, "BizExtend", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizCode))
+            {
+                query["BizCode"] = request.BizCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizExtendShrink))
+            {
+                query["BizExtend"] = request.BizExtendShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowTriggerType))
+            {
+                query["FlowTriggerType"] = request.FlowTriggerType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                query["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            {
+                query["Title"] = request.Title;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateChatFlow",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateChatFlowResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create Chatflow</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateChatFlowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateChatFlowResponse
+        /// </returns>
+        public async Task<CreateChatFlowResponse> CreateChatFlowWithOptionsAsync(CreateChatFlowRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateChatFlowShrinkRequest request = new CreateChatFlowShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BizExtend))
+            {
+                request.BizExtendShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BizExtend, "BizExtend", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizCode))
+            {
+                query["BizCode"] = request.BizCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizExtendShrink))
+            {
+                query["BizExtend"] = request.BizExtendShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowTriggerType))
+            {
+                query["FlowTriggerType"] = request.FlowTriggerType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                query["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            {
+                query["Title"] = request.Title;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateChatFlow",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateChatFlowResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create Chatflow</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateChatFlowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateChatFlowResponse
+        /// </returns>
+        public CreateChatFlowResponse CreateChatFlow(CreateChatFlowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateChatFlowWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create Chatflow</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateChatFlowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateChatFlowResponse
+        /// </returns>
+        public async Task<CreateChatFlowResponse> CreateChatFlowAsync(CreateChatFlowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateChatFlowWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Import and create flow</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateChatFlowByImportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateChatFlowByImportResponse
+        /// </returns>
+        public CreateChatFlowByImportResponse CreateChatFlowByImportWithOptions(CreateChatFlowByImportRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateChatFlowByImportShrinkRequest request = new CreateChatFlowByImportShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BizExtend))
+            {
+                request.BizExtendShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BizExtend, "BizExtend", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizCode))
+            {
+                query["BizCode"] = request.BizCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizExtendShrink))
+            {
+                query["BizExtend"] = request.BizExtendShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowViewModel))
+            {
+                query["FlowViewModel"] = request.FlowViewModel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                query["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            {
+                query["Title"] = request.Title;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateChatFlowByImport",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateChatFlowByImportResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Import and create flow</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateChatFlowByImportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateChatFlowByImportResponse
+        /// </returns>
+        public async Task<CreateChatFlowByImportResponse> CreateChatFlowByImportWithOptionsAsync(CreateChatFlowByImportRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateChatFlowByImportShrinkRequest request = new CreateChatFlowByImportShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BizExtend))
+            {
+                request.BizExtendShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BizExtend, "BizExtend", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizCode))
+            {
+                query["BizCode"] = request.BizCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizExtendShrink))
+            {
+                query["BizExtend"] = request.BizExtendShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowViewModel))
+            {
+                query["FlowViewModel"] = request.FlowViewModel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                query["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            {
+                query["Title"] = request.Title;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateChatFlowByImport",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateChatFlowByImportResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Import and create flow</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateChatFlowByImportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateChatFlowByImportResponse
+        /// </returns>
+        public CreateChatFlowByImportResponse CreateChatFlowByImport(CreateChatFlowByImportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateChatFlowByImportWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Import and create flow</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateChatFlowByImportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateChatFlowByImportResponse
+        /// </returns>
+        public async Task<CreateChatFlowByImportResponse> CreateChatFlowByImportAsync(CreateChatFlowByImportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateChatFlowByImportWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create chatFlow log setting</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateChatFlowLogSettingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateChatFlowLogSettingResponse
+        /// </returns>
+        public CreateChatFlowLogSettingResponse CreateChatFlowLogSettingWithOptions(CreateChatFlowLogSettingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowCode))
+            {
+                query["FlowCode"] = request.FlowCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateChatFlowLogSetting",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateChatFlowLogSettingResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create chatFlow log setting</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateChatFlowLogSettingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateChatFlowLogSettingResponse
+        /// </returns>
+        public async Task<CreateChatFlowLogSettingResponse> CreateChatFlowLogSettingWithOptionsAsync(CreateChatFlowLogSettingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowCode))
+            {
+                query["FlowCode"] = request.FlowCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateChatFlowLogSetting",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateChatFlowLogSettingResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create chatFlow log setting</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateChatFlowLogSettingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateChatFlowLogSettingResponse
+        /// </returns>
+        public CreateChatFlowLogSettingResponse CreateChatFlowLogSetting(CreateChatFlowLogSettingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateChatFlowLogSettingWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create chatFlow log setting</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateChatFlowLogSettingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateChatFlowLogSettingResponse
+        /// </returns>
+        public async Task<CreateChatFlowLogSettingResponse> CreateChatFlowLogSettingAsync(CreateChatFlowLogSettingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateChatFlowLogSettingWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>The ID of the number.</para>
         /// </summary>
         /// 
@@ -2855,6 +2935,194 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>CreateFlowVersion</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateFlowVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFlowVersionResponse
+        /// </returns>
+        public CreateFlowVersionResponse CreateFlowVersionWithOptions(CreateFlowVersionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateFlowVersionShrinkRequest request = new CreateFlowVersionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BizExtend))
+            {
+                request.BizExtendShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BizExtend, "BizExtend", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizCode))
+            {
+                query["BizCode"] = request.BizCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizExtendShrink))
+            {
+                query["BizExtend"] = request.BizExtendShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowCode))
+            {
+                query["FlowCode"] = request.FlowCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowVersionCopyFrom))
+            {
+                query["FlowVersionCopyFrom"] = request.FlowVersionCopyFrom;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                query["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateFlowVersion",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateFlowVersionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CreateFlowVersion</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateFlowVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFlowVersionResponse
+        /// </returns>
+        public async Task<CreateFlowVersionResponse> CreateFlowVersionWithOptionsAsync(CreateFlowVersionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateFlowVersionShrinkRequest request = new CreateFlowVersionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BizExtend))
+            {
+                request.BizExtendShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BizExtend, "BizExtend", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizCode))
+            {
+                query["BizCode"] = request.BizCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizExtendShrink))
+            {
+                query["BizExtend"] = request.BizExtendShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowCode))
+            {
+                query["FlowCode"] = request.FlowCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowVersionCopyFrom))
+            {
+                query["FlowVersionCopyFrom"] = request.FlowVersionCopyFrom;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                query["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateFlowVersion",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateFlowVersionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CreateFlowVersion</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateFlowVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFlowVersionResponse
+        /// </returns>
+        public CreateFlowVersionResponse CreateFlowVersion(CreateFlowVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateFlowVersionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CreateFlowVersion</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateFlowVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFlowVersionResponse
+        /// </returns>
+        public async Task<CreateFlowVersionResponse> CreateFlowVersionAsync(CreateFlowVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateFlowVersionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a quick-response (QR) code that contains a message.</para>
         /// </summary>
         /// 
@@ -2995,6 +3263,178 @@ namespace AlibabaCloud.SDK.Cams20200606
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreatePhoneMessageQrdlWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete Process</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DeleteChatFlowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteChatFlowResponse
+        /// </returns>
+        public DeleteChatFlowResponse DeleteChatFlowWithOptions(DeleteChatFlowRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteChatFlowShrinkRequest request = new DeleteChatFlowShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BizExtend))
+            {
+                request.BizExtendShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BizExtend, "BizExtend", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizCode))
+            {
+                query["BizCode"] = request.BizCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizExtendShrink))
+            {
+                query["BizExtend"] = request.BizExtendShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowCode))
+            {
+                query["FlowCode"] = request.FlowCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteChatFlow",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteChatFlowResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete Process</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DeleteChatFlowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteChatFlowResponse
+        /// </returns>
+        public async Task<DeleteChatFlowResponse> DeleteChatFlowWithOptionsAsync(DeleteChatFlowRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteChatFlowShrinkRequest request = new DeleteChatFlowShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BizExtend))
+            {
+                request.BizExtendShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BizExtend, "BizExtend", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizCode))
+            {
+                query["BizCode"] = request.BizCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizExtendShrink))
+            {
+                query["BizExtend"] = request.BizExtendShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowCode))
+            {
+                query["FlowCode"] = request.FlowCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteChatFlow",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteChatFlowResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete Process</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteChatFlowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteChatFlowResponse
+        /// </returns>
+        public DeleteChatFlowResponse DeleteChatFlow(DeleteChatFlowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteChatFlowWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete Process</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteChatFlowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteChatFlowResponse
+        /// </returns>
+        public async Task<DeleteChatFlowResponse> DeleteChatFlowAsync(DeleteChatFlowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteChatFlowWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3887,6 +4327,186 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Delete Flow Version</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DeleteFlowVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFlowVersionResponse
+        /// </returns>
+        public DeleteFlowVersionResponse DeleteFlowVersionWithOptions(DeleteFlowVersionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteFlowVersionShrinkRequest request = new DeleteFlowVersionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BizExtend))
+            {
+                request.BizExtendShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BizExtend, "BizExtend", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizCode))
+            {
+                query["BizCode"] = request.BizCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizExtendShrink))
+            {
+                query["BizExtend"] = request.BizExtendShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowCode))
+            {
+                query["FlowCode"] = request.FlowCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowVersion))
+            {
+                query["FlowVersion"] = request.FlowVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteFlowVersion",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteFlowVersionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete Flow Version</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DeleteFlowVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFlowVersionResponse
+        /// </returns>
+        public async Task<DeleteFlowVersionResponse> DeleteFlowVersionWithOptionsAsync(DeleteFlowVersionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteFlowVersionShrinkRequest request = new DeleteFlowVersionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BizExtend))
+            {
+                request.BizExtendShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BizExtend, "BizExtend", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizCode))
+            {
+                query["BizCode"] = request.BizCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizExtendShrink))
+            {
+                query["BizExtend"] = request.BizExtendShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowCode))
+            {
+                query["FlowCode"] = request.FlowCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowVersion))
+            {
+                query["FlowVersion"] = request.FlowVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteFlowVersion",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteFlowVersionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete Flow Version</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteFlowVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFlowVersionResponse
+        /// </returns>
+        public DeleteFlowVersionResponse DeleteFlowVersion(DeleteFlowVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteFlowVersionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete Flow Version</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteFlowVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFlowVersionResponse
+        /// </returns>
+        public async Task<DeleteFlowVersionResponse> DeleteFlowVersionAsync(DeleteFlowVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteFlowVersionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes a quick-response (QR) code that contains a message.</para>
         /// </summary>
         /// 
@@ -4295,6 +4915,934 @@ namespace AlibabaCloud.SDK.Cams20200606
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await EnableWhatsappROIMetricWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Bind phone numbers to flow</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// FlowBindPhoneRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FlowBindPhoneResponse
+        /// </returns>
+        public FlowBindPhoneResponse FlowBindPhoneWithOptions(FlowBindPhoneRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            FlowBindPhoneShrinkRequest request = new FlowBindPhoneShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PhoneNumbers))
+            {
+                request.PhoneNumbersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PhoneNumbers, "PhoneNumbers", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelCode))
+            {
+                query["ChannelCode"] = request.ChannelCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelType))
+            {
+                query["ChannelType"] = request.ChannelType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowCode))
+            {
+                query["FlowCode"] = request.FlowCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowVersion))
+            {
+                query["FlowVersion"] = request.FlowVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNumbersShrink))
+            {
+                query["PhoneNumbers"] = request.PhoneNumbersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WabaId))
+            {
+                query["WabaId"] = request.WabaId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "FlowBindPhone",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<FlowBindPhoneResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Bind phone numbers to flow</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// FlowBindPhoneRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FlowBindPhoneResponse
+        /// </returns>
+        public async Task<FlowBindPhoneResponse> FlowBindPhoneWithOptionsAsync(FlowBindPhoneRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            FlowBindPhoneShrinkRequest request = new FlowBindPhoneShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PhoneNumbers))
+            {
+                request.PhoneNumbersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PhoneNumbers, "PhoneNumbers", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelCode))
+            {
+                query["ChannelCode"] = request.ChannelCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelType))
+            {
+                query["ChannelType"] = request.ChannelType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowCode))
+            {
+                query["FlowCode"] = request.FlowCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowVersion))
+            {
+                query["FlowVersion"] = request.FlowVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNumbersShrink))
+            {
+                query["PhoneNumbers"] = request.PhoneNumbersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WabaId))
+            {
+                query["WabaId"] = request.WabaId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "FlowBindPhone",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<FlowBindPhoneResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Bind phone numbers to flow</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FlowBindPhoneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FlowBindPhoneResponse
+        /// </returns>
+        public FlowBindPhoneResponse FlowBindPhone(FlowBindPhoneRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return FlowBindPhoneWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Bind phone numbers to flow</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FlowBindPhoneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FlowBindPhoneResponse
+        /// </returns>
+        public async Task<FlowBindPhoneResponse> FlowBindPhoneAsync(FlowBindPhoneRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await FlowBindPhoneWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Rebind phone number for flow</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// FlowRebindPhoneRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FlowRebindPhoneResponse
+        /// </returns>
+        public FlowRebindPhoneResponse FlowRebindPhoneWithOptions(FlowRebindPhoneRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            FlowRebindPhoneShrinkRequest request = new FlowRebindPhoneShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PhoneNumbers))
+            {
+                request.PhoneNumbersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PhoneNumbers, "PhoneNumbers", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelCode))
+            {
+                query["ChannelCode"] = request.ChannelCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelType))
+            {
+                query["ChannelType"] = request.ChannelType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowCode))
+            {
+                query["FlowCode"] = request.FlowCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowVersion))
+            {
+                query["FlowVersion"] = request.FlowVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNumbersShrink))
+            {
+                query["PhoneNumbers"] = request.PhoneNumbersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WabaId))
+            {
+                query["WabaId"] = request.WabaId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "FlowRebindPhone",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<FlowRebindPhoneResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Rebind phone number for flow</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// FlowRebindPhoneRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FlowRebindPhoneResponse
+        /// </returns>
+        public async Task<FlowRebindPhoneResponse> FlowRebindPhoneWithOptionsAsync(FlowRebindPhoneRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            FlowRebindPhoneShrinkRequest request = new FlowRebindPhoneShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PhoneNumbers))
+            {
+                request.PhoneNumbersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PhoneNumbers, "PhoneNumbers", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelCode))
+            {
+                query["ChannelCode"] = request.ChannelCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelType))
+            {
+                query["ChannelType"] = request.ChannelType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowCode))
+            {
+                query["FlowCode"] = request.FlowCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowVersion))
+            {
+                query["FlowVersion"] = request.FlowVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNumbersShrink))
+            {
+                query["PhoneNumbers"] = request.PhoneNumbersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WabaId))
+            {
+                query["WabaId"] = request.WabaId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "FlowRebindPhone",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<FlowRebindPhoneResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Rebind phone number for flow</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FlowRebindPhoneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FlowRebindPhoneResponse
+        /// </returns>
+        public FlowRebindPhoneResponse FlowRebindPhone(FlowRebindPhoneRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return FlowRebindPhoneWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Rebind phone number for flow</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FlowRebindPhoneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FlowRebindPhoneResponse
+        /// </returns>
+        public async Task<FlowRebindPhoneResponse> FlowRebindPhoneAsync(FlowRebindPhoneRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await FlowRebindPhoneWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbind phone number from flow</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// FlowUnbindPhoneRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FlowUnbindPhoneResponse
+        /// </returns>
+        public FlowUnbindPhoneResponse FlowUnbindPhoneWithOptions(FlowUnbindPhoneRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            FlowUnbindPhoneShrinkRequest request = new FlowUnbindPhoneShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PhoneNumbers))
+            {
+                request.PhoneNumbersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PhoneNumbers, "PhoneNumbers", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelType))
+            {
+                query["ChannelType"] = request.ChannelType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowCode))
+            {
+                query["FlowCode"] = request.FlowCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowVersion))
+            {
+                query["FlowVersion"] = request.FlowVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNumbersShrink))
+            {
+                query["PhoneNumbers"] = request.PhoneNumbersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "FlowUnbindPhone",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<FlowUnbindPhoneResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbind phone number from flow</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// FlowUnbindPhoneRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FlowUnbindPhoneResponse
+        /// </returns>
+        public async Task<FlowUnbindPhoneResponse> FlowUnbindPhoneWithOptionsAsync(FlowUnbindPhoneRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            FlowUnbindPhoneShrinkRequest request = new FlowUnbindPhoneShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PhoneNumbers))
+            {
+                request.PhoneNumbersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PhoneNumbers, "PhoneNumbers", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelType))
+            {
+                query["ChannelType"] = request.ChannelType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowCode))
+            {
+                query["FlowCode"] = request.FlowCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowVersion))
+            {
+                query["FlowVersion"] = request.FlowVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNumbersShrink))
+            {
+                query["PhoneNumbers"] = request.PhoneNumbersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "FlowUnbindPhone",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<FlowUnbindPhoneResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbind phone number from flow</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FlowUnbindPhoneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FlowUnbindPhoneResponse
+        /// </returns>
+        public FlowUnbindPhoneResponse FlowUnbindPhone(FlowUnbindPhoneRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return FlowUnbindPhoneWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbind phone number from flow</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FlowUnbindPhoneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FlowUnbindPhoneResponse
+        /// </returns>
+        public async Task<FlowUnbindPhoneResponse> FlowUnbindPhoneAsync(FlowUnbindPhoneRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await FlowUnbindPhoneWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get ChatFlow Runtime Data</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GetChatFlowMetricRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetChatFlowMetricResponse
+        /// </returns>
+        public GetChatFlowMetricResponse GetChatFlowMetricWithOptions(GetChatFlowMetricRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetChatFlowMetricShrinkRequest request = new GetChatFlowMetricShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BizExtend))
+            {
+                request.BizExtendShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BizExtend, "BizExtend", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizCode))
+            {
+                query["BizCode"] = request.BizCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizExtendShrink))
+            {
+                query["BizExtend"] = request.BizExtendShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowCode))
+            {
+                query["FlowCode"] = request.FlowCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowVersion))
+            {
+                query["FlowVersion"] = request.FlowVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
+            {
+                query["From"] = request.From;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricName))
+            {
+                query["MetricName"] = request.MetricName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.To))
+            {
+                query["To"] = request.To;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetChatFlowMetric",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetChatFlowMetricResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get ChatFlow Runtime Data</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GetChatFlowMetricRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetChatFlowMetricResponse
+        /// </returns>
+        public async Task<GetChatFlowMetricResponse> GetChatFlowMetricWithOptionsAsync(GetChatFlowMetricRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetChatFlowMetricShrinkRequest request = new GetChatFlowMetricShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BizExtend))
+            {
+                request.BizExtendShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BizExtend, "BizExtend", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizCode))
+            {
+                query["BizCode"] = request.BizCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizExtendShrink))
+            {
+                query["BizExtend"] = request.BizExtendShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowCode))
+            {
+                query["FlowCode"] = request.FlowCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowVersion))
+            {
+                query["FlowVersion"] = request.FlowVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
+            {
+                query["From"] = request.From;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricName))
+            {
+                query["MetricName"] = request.MetricName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.To))
+            {
+                query["To"] = request.To;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetChatFlowMetric",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetChatFlowMetricResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get ChatFlow Runtime Data</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetChatFlowMetricRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetChatFlowMetricResponse
+        /// </returns>
+        public GetChatFlowMetricResponse GetChatFlowMetric(GetChatFlowMetricRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetChatFlowMetricWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get ChatFlow Runtime Data</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetChatFlowMetricRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetChatFlowMetricResponse
+        /// </returns>
+        public async Task<GetChatFlowMetricResponse> GetChatFlowMetricAsync(GetChatFlowMetricRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetChatFlowMetricWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query chatFlow template</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetChatFlowTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetChatFlowTemplateResponse
+        /// </returns>
+        public GetChatFlowTemplateResponse GetChatFlowTemplateWithOptions(GetChatFlowTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizCode))
+            {
+                query["BizCode"] = request.BizCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetChatFlowTemplate",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetChatFlowTemplateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query chatFlow template</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetChatFlowTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetChatFlowTemplateResponse
+        /// </returns>
+        public async Task<GetChatFlowTemplateResponse> GetChatFlowTemplateWithOptionsAsync(GetChatFlowTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizCode))
+            {
+                query["BizCode"] = request.BizCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetChatFlowTemplate",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetChatFlowTemplateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query chatFlow template</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetChatFlowTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetChatFlowTemplateResponse
+        /// </returns>
+        public GetChatFlowTemplateResponse GetChatFlowTemplate(GetChatFlowTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetChatFlowTemplateWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query chatFlow template</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetChatFlowTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetChatFlowTemplateResponse
+        /// </returns>
+        public async Task<GetChatFlowTemplateResponse> GetChatFlowTemplateAsync(GetChatFlowTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetChatFlowTemplateWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7239,6 +8787,546 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>根据flowCode查询已绑定列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListBindingRelationsForFlowVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListBindingRelationsForFlowVersionResponse
+        /// </returns>
+        public ListBindingRelationsForFlowVersionResponse ListBindingRelationsForFlowVersionWithOptions(ListBindingRelationsForFlowVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelType))
+            {
+                query["ChannelType"] = request.ChannelType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowCode))
+            {
+                query["FlowCode"] = request.FlowCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListBindingRelationsForFlowVersion",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListBindingRelationsForFlowVersionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据flowCode查询已绑定列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListBindingRelationsForFlowVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListBindingRelationsForFlowVersionResponse
+        /// </returns>
+        public async Task<ListBindingRelationsForFlowVersionResponse> ListBindingRelationsForFlowVersionWithOptionsAsync(ListBindingRelationsForFlowVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelType))
+            {
+                query["ChannelType"] = request.ChannelType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowCode))
+            {
+                query["FlowCode"] = request.FlowCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListBindingRelationsForFlowVersion",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListBindingRelationsForFlowVersionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据flowCode查询已绑定列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListBindingRelationsForFlowVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListBindingRelationsForFlowVersionResponse
+        /// </returns>
+        public ListBindingRelationsForFlowVersionResponse ListBindingRelationsForFlowVersion(ListBindingRelationsForFlowVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListBindingRelationsForFlowVersionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据flowCode查询已绑定列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListBindingRelationsForFlowVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListBindingRelationsForFlowVersionResponse
+        /// </returns>
+        public async Task<ListBindingRelationsForFlowVersionResponse> ListBindingRelationsForFlowVersionAsync(ListBindingRelationsForFlowVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListBindingRelationsForFlowVersionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>List Flows</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListChatFlowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListChatFlowResponse
+        /// </returns>
+        public ListChatFlowResponse ListChatFlowWithOptions(ListChatFlowRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListChatFlowShrinkRequest request = new ListChatFlowShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BizExtend))
+            {
+                request.BizExtendShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BizExtend, "BizExtend", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizCode))
+            {
+                query["BizCode"] = request.BizCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizExtendShrink))
+            {
+                query["BizExtend"] = request.BizExtendShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowTriggerType))
+            {
+                query["FlowTriggerType"] = request.FlowTriggerType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnWithOnlineVersion))
+            {
+                query["ReturnWithOnlineVersion"] = request.ReturnWithOnlineVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListChatFlow",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListChatFlowResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>List Flows</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListChatFlowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListChatFlowResponse
+        /// </returns>
+        public async Task<ListChatFlowResponse> ListChatFlowWithOptionsAsync(ListChatFlowRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListChatFlowShrinkRequest request = new ListChatFlowShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BizExtend))
+            {
+                request.BizExtendShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BizExtend, "BizExtend", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizCode))
+            {
+                query["BizCode"] = request.BizCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizExtendShrink))
+            {
+                query["BizExtend"] = request.BizExtendShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowTriggerType))
+            {
+                query["FlowTriggerType"] = request.FlowTriggerType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnWithOnlineVersion))
+            {
+                query["ReturnWithOnlineVersion"] = request.ReturnWithOnlineVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListChatFlow",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListChatFlowResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>List Flows</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListChatFlowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListChatFlowResponse
+        /// </returns>
+        public ListChatFlowResponse ListChatFlow(ListChatFlowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListChatFlowWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>List Flows</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListChatFlowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListChatFlowResponse
+        /// </returns>
+        public async Task<ListChatFlowResponse> ListChatFlowAsync(ListChatFlowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListChatFlowWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ChatFlow Template List</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListChatFlowTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListChatFlowTemplateResponse
+        /// </returns>
+        public ListChatFlowTemplateResponse ListChatFlowTemplateWithOptions(ListChatFlowTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizCode))
+            {
+                query["BizCode"] = request.BizCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerType))
+            {
+                query["TriggerType"] = request.TriggerType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListChatFlowTemplate",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListChatFlowTemplateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ChatFlow Template List</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListChatFlowTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListChatFlowTemplateResponse
+        /// </returns>
+        public async Task<ListChatFlowTemplateResponse> ListChatFlowTemplateWithOptionsAsync(ListChatFlowTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizCode))
+            {
+                query["BizCode"] = request.BizCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerType))
+            {
+                query["TriggerType"] = request.TriggerType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListChatFlowTemplate",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListChatFlowTemplateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ChatFlow Template List</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListChatFlowTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListChatFlowTemplateResponse
+        /// </returns>
+        public ListChatFlowTemplateResponse ListChatFlowTemplate(ListChatFlowTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListChatFlowTemplateWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ChatFlow Template List</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListChatFlowTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListChatFlowTemplateResponse
+        /// </returns>
+        public async Task<ListChatFlowTemplateResponse> ListChatFlowTemplateAsync(ListChatFlowTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListChatFlowTemplateWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>ListChatGroup</para>
         /// </summary>
         /// 
@@ -8043,6 +10131,202 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>List Flow Versions</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListFlowVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFlowVersionResponse
+        /// </returns>
+        public ListFlowVersionResponse ListFlowVersionWithOptions(ListFlowVersionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListFlowVersionShrinkRequest request = new ListFlowVersionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BizExtend))
+            {
+                request.BizExtendShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BizExtend, "BizExtend", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizCode))
+            {
+                query["BizCode"] = request.BizCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizExtendShrink))
+            {
+                query["BizExtend"] = request.BizExtendShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowCode))
+            {
+                query["FlowCode"] = request.FlowCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListFlowVersion",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListFlowVersionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>List Flow Versions</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListFlowVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFlowVersionResponse
+        /// </returns>
+        public async Task<ListFlowVersionResponse> ListFlowVersionWithOptionsAsync(ListFlowVersionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListFlowVersionShrinkRequest request = new ListFlowVersionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BizExtend))
+            {
+                request.BizExtendShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BizExtend, "BizExtend", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizCode))
+            {
+                query["BizCode"] = request.BizCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizExtendShrink))
+            {
+                query["BizExtend"] = request.BizExtendShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowCode))
+            {
+                query["FlowCode"] = request.FlowCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListFlowVersion",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListFlowVersionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>List Flow Versions</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListFlowVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFlowVersionResponse
+        /// </returns>
+        public ListFlowVersionResponse ListFlowVersion(ListFlowVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListFlowVersionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>List Flow Versions</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListFlowVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFlowVersionResponse
+        /// </returns>
+        public async Task<ListFlowVersionResponse> ListFlowVersionAsync(ListFlowVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListFlowVersionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the information about a list of quick-response (QR) codes that contain messages.</para>
         /// </summary>
         /// 
@@ -8059,18 +10343,30 @@ namespace AlibabaCloud.SDK.Cams20200606
         public ListPhoneMessageQrdlResponse ListPhoneMessageQrdlWithOptions(ListPhoneMessageQrdlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustSpaceId))
             {
-                body["CustSpaceId"] = request.CustSpaceId;
+                query["CustSpaceId"] = request.CustSpaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNumber))
             {
-                body["PhoneNumber"] = request.PhoneNumber;
+                query["PhoneNumber"] = request.PhoneNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -8105,18 +10401,30 @@ namespace AlibabaCloud.SDK.Cams20200606
         public async Task<ListPhoneMessageQrdlResponse> ListPhoneMessageQrdlWithOptionsAsync(ListPhoneMessageQrdlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustSpaceId))
             {
-                body["CustSpaceId"] = request.CustSpaceId;
+                query["CustSpaceId"] = request.CustSpaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNumber))
             {
-                body["PhoneNumber"] = request.PhoneNumber;
+                query["PhoneNumber"] = request.PhoneNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -9435,6 +11743,382 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Offline Flow Version</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// OfflineFlowVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OfflineFlowVersionResponse
+        /// </returns>
+        public OfflineFlowVersionResponse OfflineFlowVersionWithOptions(OfflineFlowVersionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            OfflineFlowVersionShrinkRequest request = new OfflineFlowVersionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BizExtend))
+            {
+                request.BizExtendShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BizExtend, "BizExtend", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizCode))
+            {
+                query["BizCode"] = request.BizCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizExtendShrink))
+            {
+                query["BizExtend"] = request.BizExtendShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowCode))
+            {
+                query["FlowCode"] = request.FlowCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowVersion))
+            {
+                query["FlowVersion"] = request.FlowVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                query["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OfflineFlowVersion",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OfflineFlowVersionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Offline Flow Version</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// OfflineFlowVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OfflineFlowVersionResponse
+        /// </returns>
+        public async Task<OfflineFlowVersionResponse> OfflineFlowVersionWithOptionsAsync(OfflineFlowVersionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            OfflineFlowVersionShrinkRequest request = new OfflineFlowVersionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BizExtend))
+            {
+                request.BizExtendShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BizExtend, "BizExtend", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizCode))
+            {
+                query["BizCode"] = request.BizCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizExtendShrink))
+            {
+                query["BizExtend"] = request.BizExtendShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowCode))
+            {
+                query["FlowCode"] = request.FlowCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowVersion))
+            {
+                query["FlowVersion"] = request.FlowVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                query["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OfflineFlowVersion",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OfflineFlowVersionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Offline Flow Version</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OfflineFlowVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OfflineFlowVersionResponse
+        /// </returns>
+        public OfflineFlowVersionResponse OfflineFlowVersion(OfflineFlowVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return OfflineFlowVersionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Offline Flow Version</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OfflineFlowVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OfflineFlowVersionResponse
+        /// </returns>
+        public async Task<OfflineFlowVersionResponse> OfflineFlowVersionAsync(OfflineFlowVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await OfflineFlowVersionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Online Flow Version</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// OnlineFlowVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OnlineFlowVersionResponse
+        /// </returns>
+        public OnlineFlowVersionResponse OnlineFlowVersionWithOptions(OnlineFlowVersionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            OnlineFlowVersionShrinkRequest request = new OnlineFlowVersionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BizExtend))
+            {
+                request.BizExtendShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BizExtend, "BizExtend", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizCode))
+            {
+                query["BizCode"] = request.BizCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizExtendShrink))
+            {
+                query["BizExtend"] = request.BizExtendShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowCode))
+            {
+                query["FlowCode"] = request.FlowCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowVersion))
+            {
+                query["FlowVersion"] = request.FlowVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                query["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OnlineFlowVersion",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OnlineFlowVersionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Online Flow Version</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// OnlineFlowVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OnlineFlowVersionResponse
+        /// </returns>
+        public async Task<OnlineFlowVersionResponse> OnlineFlowVersionWithOptionsAsync(OnlineFlowVersionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            OnlineFlowVersionShrinkRequest request = new OnlineFlowVersionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BizExtend))
+            {
+                request.BizExtendShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BizExtend, "BizExtend", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizCode))
+            {
+                query["BizCode"] = request.BizCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizExtendShrink))
+            {
+                query["BizExtend"] = request.BizExtendShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowCode))
+            {
+                query["FlowCode"] = request.FlowCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowVersion))
+            {
+                query["FlowVersion"] = request.FlowVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                query["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OnlineFlowVersion",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OnlineFlowVersionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Online Flow Version</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OnlineFlowVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OnlineFlowVersionResponse
+        /// </returns>
+        public OnlineFlowVersionResponse OnlineFlowVersion(OnlineFlowVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return OnlineFlowVersionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Online Flow Version</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OnlineFlowVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OnlineFlowVersionResponse
+        /// </returns>
+        public async Task<OnlineFlowVersionResponse> OnlineFlowVersionAsync(OnlineFlowVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await OnlineFlowVersionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Publishes a Flow.</para>
         /// </summary>
         /// 
@@ -10275,6 +12959,510 @@ namespace AlibabaCloud.SDK.Cams20200606
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryWabaBusinessInfoWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve Flow</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ReadChatFlowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReadChatFlowResponse
+        /// </returns>
+        public ReadChatFlowResponse ReadChatFlowWithOptions(ReadChatFlowRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ReadChatFlowShrinkRequest request = new ReadChatFlowShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BizExtend))
+            {
+                request.BizExtendShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BizExtend, "BizExtend", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizCode))
+            {
+                query["BizCode"] = request.BizCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizExtendShrink))
+            {
+                query["BizExtend"] = request.BizExtendShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowCode))
+            {
+                query["FlowCode"] = request.FlowCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReadChatFlow",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReadChatFlowResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve Flow</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ReadChatFlowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReadChatFlowResponse
+        /// </returns>
+        public async Task<ReadChatFlowResponse> ReadChatFlowWithOptionsAsync(ReadChatFlowRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ReadChatFlowShrinkRequest request = new ReadChatFlowShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BizExtend))
+            {
+                request.BizExtendShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BizExtend, "BizExtend", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizCode))
+            {
+                query["BizCode"] = request.BizCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizExtendShrink))
+            {
+                query["BizExtend"] = request.BizExtendShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowCode))
+            {
+                query["FlowCode"] = request.FlowCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReadChatFlow",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReadChatFlowResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve Flow</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReadChatFlowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReadChatFlowResponse
+        /// </returns>
+        public ReadChatFlowResponse ReadChatFlow(ReadChatFlowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ReadChatFlowWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve Flow</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReadChatFlowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReadChatFlowResponse
+        /// </returns>
+        public async Task<ReadChatFlowResponse> ReadChatFlowAsync(ReadChatFlowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ReadChatFlowWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>View chatFlow log settings</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReadChatFlowLogSettingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReadChatFlowLogSettingResponse
+        /// </returns>
+        public ReadChatFlowLogSettingResponse ReadChatFlowLogSettingWithOptions(ReadChatFlowLogSettingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowCode))
+            {
+                query["FlowCode"] = request.FlowCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReadChatFlowLogSetting",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReadChatFlowLogSettingResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>View chatFlow log settings</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReadChatFlowLogSettingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReadChatFlowLogSettingResponse
+        /// </returns>
+        public async Task<ReadChatFlowLogSettingResponse> ReadChatFlowLogSettingWithOptionsAsync(ReadChatFlowLogSettingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowCode))
+            {
+                query["FlowCode"] = request.FlowCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReadChatFlowLogSetting",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReadChatFlowLogSettingResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>View chatFlow log settings</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReadChatFlowLogSettingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReadChatFlowLogSettingResponse
+        /// </returns>
+        public ReadChatFlowLogSettingResponse ReadChatFlowLogSetting(ReadChatFlowLogSettingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ReadChatFlowLogSettingWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>View chatFlow log settings</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReadChatFlowLogSettingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReadChatFlowLogSettingResponse
+        /// </returns>
+        public async Task<ReadChatFlowLogSettingResponse> ReadChatFlowLogSettingAsync(ReadChatFlowLogSettingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ReadChatFlowLogSettingWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get Flow Version</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ReadFlowVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReadFlowVersionResponse
+        /// </returns>
+        public ReadFlowVersionResponse ReadFlowVersionWithOptions(ReadFlowVersionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ReadFlowVersionShrinkRequest request = new ReadFlowVersionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BizExtend))
+            {
+                request.BizExtendShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BizExtend, "BizExtend", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizCode))
+            {
+                query["BizCode"] = request.BizCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizExtendShrink))
+            {
+                query["BizExtend"] = request.BizExtendShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowCode))
+            {
+                query["FlowCode"] = request.FlowCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowVersion))
+            {
+                query["FlowVersion"] = request.FlowVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReadFlowVersion",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReadFlowVersionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get Flow Version</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ReadFlowVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReadFlowVersionResponse
+        /// </returns>
+        public async Task<ReadFlowVersionResponse> ReadFlowVersionWithOptionsAsync(ReadFlowVersionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ReadFlowVersionShrinkRequest request = new ReadFlowVersionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BizExtend))
+            {
+                request.BizExtendShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BizExtend, "BizExtend", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizCode))
+            {
+                query["BizCode"] = request.BizCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizExtendShrink))
+            {
+                query["BizExtend"] = request.BizExtendShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowCode))
+            {
+                query["FlowCode"] = request.FlowCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowVersion))
+            {
+                query["FlowVersion"] = request.FlowVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReadFlowVersion",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReadFlowVersionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get Flow Version</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReadFlowVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReadFlowVersionResponse
+        /// </returns>
+        public ReadFlowVersionResponse ReadFlowVersion(ReadFlowVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ReadFlowVersionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get Flow Version</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReadFlowVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReadFlowVersionResponse
+        /// </returns>
+        public async Task<ReadFlowVersionResponse> ReadFlowVersionAsync(ReadFlowVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ReadFlowVersionWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -11531,6 +14719,354 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Get Process</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateChatFlowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateChatFlowResponse
+        /// </returns>
+        public UpdateChatFlowResponse UpdateChatFlowWithOptions(UpdateChatFlowRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateChatFlowShrinkRequest request = new UpdateChatFlowShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BizExtend))
+            {
+                request.BizExtendShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BizExtend, "BizExtend", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizCode))
+            {
+                query["BizCode"] = request.BizCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizExtendShrink))
+            {
+                query["BizExtend"] = request.BizExtendShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowCode))
+            {
+                query["FlowCode"] = request.FlowCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                query["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            {
+                query["Title"] = request.Title;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateChatFlow",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateChatFlowResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get Process</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateChatFlowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateChatFlowResponse
+        /// </returns>
+        public async Task<UpdateChatFlowResponse> UpdateChatFlowWithOptionsAsync(UpdateChatFlowRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateChatFlowShrinkRequest request = new UpdateChatFlowShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BizExtend))
+            {
+                request.BizExtendShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BizExtend, "BizExtend", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizCode))
+            {
+                query["BizCode"] = request.BizCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizExtendShrink))
+            {
+                query["BizExtend"] = request.BizExtendShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowCode))
+            {
+                query["FlowCode"] = request.FlowCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                query["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            {
+                query["Title"] = request.Title;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateChatFlow",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateChatFlowResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get Process</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateChatFlowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateChatFlowResponse
+        /// </returns>
+        public UpdateChatFlowResponse UpdateChatFlow(UpdateChatFlowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateChatFlowWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get Process</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateChatFlowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateChatFlowResponse
+        /// </returns>
+        public async Task<UpdateChatFlowResponse> UpdateChatFlowAsync(UpdateChatFlowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateChatFlowWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modify chatFlow log settings</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateChatFlowLogSettingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateChatFlowLogSettingResponse
+        /// </returns>
+        public UpdateChatFlowLogSettingResponse UpdateChatFlowLogSettingWithOptions(UpdateChatFlowLogSettingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowCode))
+            {
+                query["FlowCode"] = request.FlowCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateChatFlowLogSetting",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateChatFlowLogSettingResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modify chatFlow log settings</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateChatFlowLogSettingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateChatFlowLogSettingResponse
+        /// </returns>
+        public async Task<UpdateChatFlowLogSettingResponse> UpdateChatFlowLogSettingWithOptionsAsync(UpdateChatFlowLogSettingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowCode))
+            {
+                query["FlowCode"] = request.FlowCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateChatFlowLogSetting",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateChatFlowLogSettingResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modify chatFlow log settings</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateChatFlowLogSettingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateChatFlowLogSettingResponse
+        /// </returns>
+        public UpdateChatFlowLogSettingResponse UpdateChatFlowLogSetting(UpdateChatFlowLogSettingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateChatFlowLogSettingWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modify chatFlow log settings</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateChatFlowLogSettingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateChatFlowLogSettingResponse
+        /// </returns>
+        public async Task<UpdateChatFlowLogSettingResponse> UpdateChatFlowLogSettingAsync(UpdateChatFlowLogSettingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateChatFlowLogSettingWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>UpdateChatGroup</para>
         /// </summary>
         /// 
@@ -12267,6 +15803,202 @@ namespace AlibabaCloud.SDK.Cams20200606
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateFlowJSONAssetWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update flow version, used for updating the flow DSL on the canvas</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateFlowVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateFlowVersionResponse
+        /// </returns>
+        public UpdateFlowVersionResponse UpdateFlowVersionWithOptions(UpdateFlowVersionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateFlowVersionShrinkRequest request = new UpdateFlowVersionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BizExtend))
+            {
+                request.BizExtendShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BizExtend, "BizExtend", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizCode))
+            {
+                query["BizCode"] = request.BizCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizExtendShrink))
+            {
+                query["BizExtend"] = request.BizExtendShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowCode))
+            {
+                query["FlowCode"] = request.FlowCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowVersion))
+            {
+                query["FlowVersion"] = request.FlowVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowViewModel))
+            {
+                query["FlowViewModel"] = request.FlowViewModel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                query["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateFlowVersion",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateFlowVersionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update flow version, used for updating the flow DSL on the canvas</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateFlowVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateFlowVersionResponse
+        /// </returns>
+        public async Task<UpdateFlowVersionResponse> UpdateFlowVersionWithOptionsAsync(UpdateFlowVersionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateFlowVersionShrinkRequest request = new UpdateFlowVersionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BizExtend))
+            {
+                request.BizExtendShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BizExtend, "BizExtend", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizCode))
+            {
+                query["BizCode"] = request.BizCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizExtendShrink))
+            {
+                query["BizExtend"] = request.BizExtendShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowCode))
+            {
+                query["FlowCode"] = request.FlowCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowVersion))
+            {
+                query["FlowVersion"] = request.FlowVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowViewModel))
+            {
+                query["FlowViewModel"] = request.FlowViewModel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                query["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateFlowVersion",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateFlowVersionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update flow version, used for updating the flow DSL on the canvas</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateFlowVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateFlowVersionResponse
+        /// </returns>
+        public UpdateFlowVersionResponse UpdateFlowVersion(UpdateFlowVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateFlowVersionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update flow version, used for updating the flow DSL on the canvas</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateFlowVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateFlowVersionResponse
+        /// </returns>
+        public async Task<UpdateFlowVersionResponse> UpdateFlowVersionAsync(UpdateFlowVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateFlowVersionWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

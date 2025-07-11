@@ -34,18 +34,18 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The list of the templates.</para>
+        /// <para>The message templates.</para>
         /// </summary>
         [NameInMap("ListTemplate")]
         [Validation(Required=false)]
         public List<ListChatappTemplateResponseBodyListTemplate> ListTemplate { get; set; }
         public class ListChatappTemplateResponseBodyListTemplate : TeaModel {
             /// <summary>
-            /// <para>The review state of the message template. Valid values:</para>
+            /// <para>The review state of the template. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>pass</b>: The message template is approved.</description></item>
-            /// <item><description><b>fail</b>: The message template is rejected.</description></item>
-            /// <item><description><b>auditing</b>: The message template is being reviewed.</description></item>
+            /// <item><description><b>pass</b>: The template is approved.</description></item>
+            /// <item><description><b>fail</b>: The template is rejected.</description></item>
+            /// <item><description><b>auditing</b>: The template is being reviewed.</description></item>
             /// <item><description><b>unaudit</b>: The review is suspended.</description></item>
             /// </list>
             /// 
@@ -57,23 +57,23 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string AuditStatus { get; set; }
 
             /// <summary>
-            /// <para>The category of the WhatsApp template. Valid values:</para>
+            /// <para>The category of the WhatsApp message template. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>UTILITY</b>: utility template</description></item>
-            /// <item><description><b>MARKETING</b>: marketing template</description></item>
-            /// <item><description><b>AUTHENTICATION</b>: authentication template</description></item>
+            /// <item><description><b>UTILITY</b></description></item>
+            /// <item><description><b>MARKETING</b></description></item>
+            /// <item><description><b>AUTHENTICATION</b></description></item>
             /// </list>
             /// <para>The category of the Viber template. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>text</b>: template that contains only text</description></item>
-            /// <item><description><b>image</b>: template that contains only an image</description></item>
-            /// <item><description><b>text_image_button</b>: template that contains text, an image, and a button</description></item>
-            /// <item><description><b>text_button</b>: template that contains text and a button</description></item>
-            /// <item><description><b>document</b>: template that contains only a document</description></item>
-            /// <item><description><b>video</b>: template that contains only a video</description></item>
-            /// <item><description><b>text_video</b>: template that contains text and a video</description></item>
-            /// <item><description><b>text_video_button</b>: template that contains text, a video, and a button</description></item>
-            /// <item><description><b>text_image</b>: template that contains text and an image</description></item>
+            /// <item><description><b>image</b>: template that contains only images</description></item>
+            /// <item><description><b>text_image_button</b>: template that contains text, images, and buttons</description></item>
+            /// <item><description><b>text_button</b>: template that contains text and buttons</description></item>
+            /// <item><description><b>document</b>: template that contains only documents</description></item>
+            /// <item><description><b>video</b>: template that contains only videos</description></item>
+            /// <item><description><b>text_video</b>: template that contains text and videos</description></item>
+            /// <item><description><b>text_video_button</b>: template that contains text, videos, and buttons</description></item>
+            /// <item><description><b>text_image</b>: template that contains text and images</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public long? LastUpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The reason for the review failure.</para>
+            /// <para>The reason why the template was rejected.</para>
             /// 
             /// <b>Example:</b>
             /// <para>None</para>
@@ -166,6 +166,12 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The request was successful.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -174,7 +180,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of returned entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

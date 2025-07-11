@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListPhoneMessageQrdlResponseBody : TeaModel {
+        [NameInMap("AccessDeniedDetail")]
+        [Validation(Required=false)]
+        public string AccessDeniedDetail { get; set; }
+
         /// <summary>
         /// <para>If OK is returned, the request was successful.</para>
         /// 
