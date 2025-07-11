@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             [Validation(Required=false)]
             public List<string> ExecutorIds { get; set; }
 
+            [NameInMap("Image")]
+            [Validation(Required=false)]
+            public string Image { get; set; }
+
             [NameInMap("IpAddresses")]
             [Validation(Required=false)]
             public List<string> IpAddresses { get; set; }
@@ -48,6 +52,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             [NameInMap("TimeCreatedBefore")]
             [Validation(Required=false)]
             public int? TimeCreatedBefore { get; set; }
+
+            [NameInMap("VswitchId")]
+            [Validation(Required=false)]
+            public string VswitchId { get; set; }
 
         }
 
