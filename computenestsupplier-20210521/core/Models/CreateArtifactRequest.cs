@@ -188,6 +188,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [Validation(Required=false)]
             public string DockerfilePath { get; set; }
 
+            [NameInMap("EnableGpu")]
+            [Validation(Required=false)]
+            public bool? EnableGpu { get; set; }
+
             /// <summary>
             /// <para>The region ID where the source mirror image is located.</para>
             /// <remarks>
