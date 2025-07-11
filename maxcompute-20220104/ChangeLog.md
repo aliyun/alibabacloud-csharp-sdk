@@ -1,3 +1,12 @@
+2025-07-11 Version: 1.6.0
+- Support API GetStorageAmountSummary.
+- Support API GetStorageSizeSummary.
+- Support API GetStorageSummaryCompared.
+- Support API ListStorageProjectsInfo.
+- Support API QueryStorageMetric.
+- Support API UpdateUsersToRole.
+
+
 2025-05-30 Version: 1.5.1
 - Generated csharp 2022-01-04 for MaxCompute.
 
