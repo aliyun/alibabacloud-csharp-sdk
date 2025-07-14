@@ -163,6 +163,16 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string UserId { get; set; }
 
             /// <summary>
+            /// <para>The username of the RAM user, which is the prefix of the logon name of the RAM user.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
+            [NameInMap("UserName")]
+            [Validation(Required=false)]
+            public string UserName { get; set; }
+
+            /// <summary>
             /// <para>The logon name of the RAM user.</para>
             /// 
             /// <b>Example:</b>

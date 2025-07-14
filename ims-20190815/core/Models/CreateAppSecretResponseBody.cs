@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class CreateAppSecretResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information of the application secret.</para>
+        /// <para>The details of the application secret.</para>
         /// </summary>
         [NameInMap("AppSecret")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string AppSecretId { get; set; }
 
             /// <summary>
-            /// <para>The content of the application secret. This value can be used as the client secret for open authorization.</para>
+            /// <para>The content of the application secret. This value can be used as the client secret for open authorization (OAuth).</para>
             /// 
             /// <b>Example:</b>
             /// <para>ai78ZmmxnlUG1jXlBZRDFKos9DIjY4m17Q7dCpMwn1rqXsTGb1X1XmrmveMp****</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EE46FC3C-3BDE-4771-B531-27B7B6EB533D</para>

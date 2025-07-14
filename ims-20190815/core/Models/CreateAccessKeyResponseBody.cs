@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             /// <para>The AccessKey ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>LTAI4G3HaMmeHpay2gcq****</para>
+            /// <para>yourAccessKeyID</para>
             /// </summary>
             [NameInMap("AccessKeyId")]
             [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             /// <para>The AccessKey secret.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Y3MSLE6OgizS4qrz5LVFDoyZEL****</para>
+            /// <para>yourAccessKeySecret</para>
             /// </summary>
             [NameInMap("AccessKeySecret")]
             [Validation(Required=false)]

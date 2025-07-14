@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The details of the RAM user.</para>
+        /// <para>The information about the RAM users.</para>
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]
@@ -135,6 +135,12 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 [Validation(Required=false)]
                 public string ProvisionType { get; set; }
 
+                /// <summary>
+                /// <para>The status of the RAM user.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>active</para>
+                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }

@@ -70,6 +70,16 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 [Validation(Required=false)]
                 public bool? AllowUserToChangePassword { get; set; }
 
+                /// <summary>
+                /// <para>Indicates whether a RAM user can use a passkey for logon. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>true</description></item>
+                /// <item><description>false</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
                 [NameInMap("AllowUserToLoginWithPasskey")]
                 [Validation(Required=false)]
                 public bool? AllowUserToLoginWithPasskey { get; set; }
@@ -123,6 +133,8 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 [Validation(Required=false)]
                 public string MFAOperationForLogin { get; set; }
 
+                /// <term><b>Obsolete</b></term>
+                /// 
                 /// <summary>
                 /// <para>Indicates whether to enable MFA for RAM users who initiated unusual logons. Valid values:</para>
                 /// <list type="bullet">
@@ -135,6 +147,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 /// </summary>
                 [NameInMap("OperationForRiskLogin")]
                 [Validation(Required=false)]
+                [Obsolete]
                 public string OperationForRiskLogin { get; set; }
 
             }
@@ -162,11 +175,16 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 
             }
 
+            /// <summary>
+            /// <para>The maximum idle periods. Unit: days.</para>
+            /// </summary>
             [NameInMap("MaxIdleDays")]
             [Validation(Required=false)]
             public GetSecurityPreferenceResponseBodySecurityPreferenceMaxIdleDays MaxIdleDays { get; set; }
             public class GetSecurityPreferenceResponseBodySecurityPreferenceMaxIdleDays : TeaModel {
                 /// <summary>
+                /// <para>The maximum number of days that the AccessKey pair of a RAM user can stay unused. If an AccessKey pair is not used in the previous specified number of days, the AccessKey pair is automatically disabled on the next day. The default value is 730. You cannot change the value.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>730</para>
                 /// </summary>
@@ -175,6 +193,8 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 public int? MaxIdleDaysForAccessKeys { get; set; }
 
                 /// <summary>
+                /// <para>The maximum number of days that a RAM user can stay idle. If a RAM user for whom console logon is enabled does not log on to the console in the previous specified number of days, console logon is automatically disabled for the RAM user on the next day. Single sign-on (SSO) is not involved. The default value is 730. You cannot change the value.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>730</para>
                 /// </summary>

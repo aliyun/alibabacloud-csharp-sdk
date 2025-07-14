@@ -97,10 +97,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public int? PasswordReusePrevention { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the password must contain lowercase letters. Default value: false. Valid values:</para>
+        /// <para>Specifies whether the password must contain lowercase letters. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>false (default)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -111,10 +111,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public bool? RequireLowercaseCharacters { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the password must contain digits. Default value: false. Valid values:</para>
+        /// <para>Specifies whether the password must contain digits. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>false (default)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -125,10 +125,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public bool? RequireNumbers { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the password must contain special characters. Default value: false. Valid values:</para>
+        /// <para>Specifies whether the password must contain special characters. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>false (default)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -139,10 +139,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public bool? RequireSymbols { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the password must contain uppercase letters. Default value: false. Valid values:</para>
+        /// <para>Specifies whether the password must contain uppercase letters. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>false (default)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

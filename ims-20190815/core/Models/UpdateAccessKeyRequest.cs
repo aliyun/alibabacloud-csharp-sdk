@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>LTAI4GFTgcR8m8cZQDTH****</para>
+        /// <para>LTAI*******************</para>
         /// </summary>
         [NameInMap("UserAccessKeyId")]
         [Validation(Required=false)]

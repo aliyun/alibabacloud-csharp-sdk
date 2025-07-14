@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         /// <summary>
         /// <para>The client ID that you want to remove.</para>
         /// <para>The client ID can contain letters, digits, and special characters and cannot start with the special characters. The special characters are <c>periods, (.), hyphens (-), underscores (_), colons (:), and forward slashes (/)</c>.``</para>
-        /// <para>The client ID can be up to 64 characters in length.</para>
+        /// <para>The client ID can be up to 128 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>498469743454717****</para>

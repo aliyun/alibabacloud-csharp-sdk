@@ -43,8 +43,8 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             /// <summary>
             /// <para>The type of the MFA device. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>VMFA: virtual MFA device</description></item>
-            /// <item><description>U2F: Universal 2nd Factor (U2F) security key</description></item>
+            /// <item><description>VMFA: virtual MFA device.</description></item>
+            /// <item><description>U2F: Universal 2nd Factor (U2F) security key.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FCF7322A-20A9-4F68-8B7F-F86958839BC0</para>

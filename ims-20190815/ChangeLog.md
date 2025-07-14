@@ -1,3 +1,29 @@
+2025-07-14 Version: 2.3.0
+- Support API DeleteAccessKeyInRecycleBin.
+- Support API DeleteUserInRecycleBin.
+- Support API DeprovisionApplication.
+- Support API DeprovisionExternalApplication.
+- Support API GenerateGovernanceReport.
+- Support API GetAccessKeyInfoInRecycleBin.
+- Support API GetApplicationProvisionInfo.
+- Support API GetExternalApplication.
+- Support API GetGovernanceItemReport.
+- Support API GetGovernanceReportStatus.
+- Support API GetUserInRecycleBin.
+- Support API ListAccessKeysInRecycleBin.
+- Support API ListApplicationProvisionInfos.
+- Support API ListExternalApplications.
+- Support API ListRecentGovernanceMetrics.
+- Support API ListUsersInRecycleBin.
+- Support API ProvisionApplication.
+- Support API ProvisionExternalApplication.
+- Support API RestoreAccessKeyFromRecycleBin.
+- Support API RestoreUserFromRecycleBin.
+- Support API SetVerificationInfo.
+- Support API UnbindVerification.
+- Update API GetUser: add response parameters Body.User.UserName.
+
+
 2025-02-07 Version: 2.2.0
 - Support API DeletePasskey.
 - Support API ListPasskeys.

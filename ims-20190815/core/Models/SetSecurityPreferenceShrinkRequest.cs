@@ -23,6 +23,16 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         [Validation(Required=false)]
         public bool? AllowUserToChangePassword { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether a RAM user can use a passkey for logon. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: A RAM user can use a passkey for logon. This is the default value.</description></item>
+        /// <item><description>false: A RAM user cannot use a passkey for logon.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("AllowUserToLoginWithPasskey")]
         [Validation(Required=false)]
         public bool? AllowUserToLoginWithPasskey { get; set; }
@@ -126,6 +136,8 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         [Validation(Required=false)]
         public string MFAOperationForLogin { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>Specifies whether to enable MFA for RAM users who initiated unusual logons. Valid values:</para>
         /// <list type="bullet">
@@ -138,6 +150,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         /// </summary>
         [NameInMap("OperationForRiskLogin")]
         [Validation(Required=false)]
+        [Obsolete]
         public string OperationForRiskLogin { get; set; }
 
         /// <summary>

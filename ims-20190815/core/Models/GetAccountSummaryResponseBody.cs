@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The overview information of the Alibaba Cloud account.</para>
+        /// <para>The overview information about the Alibaba Cloud account.</para>
         /// </summary>
         [NameInMap("SummaryMap")]
         [Validation(Required=false)]
@@ -97,6 +97,8 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public int? AttachedSystemPoliciesPerUserQuota { get; set; }
 
             /// <summary>
+            /// <para>The maximum number of network access control policies that can be configured for an Alibaba Cloud account or AccessKey pair.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>8</para>
             /// </summary>
@@ -135,6 +137,8 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public int? GroupsQuota { get; set; }
 
             /// <summary>
+            /// <para>The maximum number of IP addresses that can be specified in an account-level AccessKey pair-based or AccessKey pair-level policy for network access control.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>50</para>
             /// </summary>

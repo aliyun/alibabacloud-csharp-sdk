@@ -30,6 +30,12 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         [Validation(Required=false)]
         public int? MaxItems { get; set; }
 
+        /// <summary>
+        /// <para>The status of the RAM users that you want to query. Valid values: active, freeze, and active,freeze. If you leave the parameter empty, the value active is used by default. If you specify a value for the Tag parameter, users in both states are queried.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>active</para>
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }

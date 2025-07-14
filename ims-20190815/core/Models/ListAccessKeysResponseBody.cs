@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class ListAccessKeysResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of AccessKey pairs.</para>
+        /// <para>The AccessKey pairs.</para>
         /// </summary>
         [NameInMap("AccessKeys")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 /// <para>The AccessKey ID.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>0wNEpMMlzy7s****</para>
+                /// <para>LTAI*******************</para>
                 /// </summary>
                 [NameInMap("AccessKeyId")]
                 [Validation(Required=false)]
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4B450CA1-36E8-4AA2-8461-86B42BF4CC4E</para>
