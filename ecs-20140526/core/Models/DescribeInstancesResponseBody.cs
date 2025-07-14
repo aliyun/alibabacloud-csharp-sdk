@@ -56,6 +56,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string AutoReleaseTime { get; set; }
 
+                [NameInMap("ClockOptions")]
+                [Validation(Required=false)]
+                public DescribeInstancesResponseBodyInstancesInstanceClockOptions ClockOptions { get; set; }
+                public class DescribeInstancesResponseBodyInstancesInstanceClockOptions : TeaModel {
+                    [NameInMap("PtpStatus")]
+                    [Validation(Required=false)]
+                    public string PtpStatus { get; set; }
+
+                }
+
                 /// <summary>
                 /// <para>The ID of the cluster to which the instance belongs.</para>
                 /// <remarks>
