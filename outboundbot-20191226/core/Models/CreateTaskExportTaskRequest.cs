@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         [Validation(Required=false)]
         public string CalledNumber { get; set; }
 
+        [NameInMap("CallingNumber")]
+        [Validation(Required=false)]
+        public string CallingNumber { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>true</para>
