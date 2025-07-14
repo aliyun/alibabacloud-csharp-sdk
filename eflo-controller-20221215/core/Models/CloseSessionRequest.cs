@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class CloseSessionRequest : TeaModel {
         /// <summary>
+        /// <para>The session ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>i207023871669364793713</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string SessionId { get; set; }
 
         /// <summary>
+        /// <para>Session token.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>03f53c719015a9ad4f4f55d66cac2dac161b18e8065ca75a3220b89de389c980</para>
         /// </summary>

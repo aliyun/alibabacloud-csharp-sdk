@@ -137,6 +137,16 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
+            /// <para>Whether to enable gpu virtualization or not</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
+            [NameInMap("VirtualGpuEnabled")]
+            [Validation(Required=false)]
+            public bool? VirtualGpuEnabled { get; set; }
+
+            /// <summary>
             /// <para>The zone ID.</para>
             /// 
             /// <b>Example:</b>

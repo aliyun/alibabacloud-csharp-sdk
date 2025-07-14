@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class UpdateNodeGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>Request ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>8F065DDD-6996-5973-9691-9EC57BD0072E</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The task ID.</para>
+        /// <para>Task ID</para>
         /// 
         /// <b>Example:</b>
-        /// <para>i15374011238111706</para>
+        /// <para>i154273451745372344629</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

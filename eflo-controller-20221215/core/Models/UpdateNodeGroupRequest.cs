@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class UpdateNodeGroupRequest : TeaModel {
         /// <summary>
-        /// <para>Whether file storage mounting is supported.</para>
+        /// <para>Whether file storage mounting is supported</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>
@@ -20,34 +20,37 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public bool? FileSystemMountEnabled { get; set; }
 
         /// <summary>
-        /// <para>The default image ID of the node group. if you do not set this parameter, the image ID will not change.</para>
+        /// <para>The default image ID of the node group. If not set, it will not change.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>i123847249284734</para>
+        /// <para>i1232142432432</para>
         /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The name of the key pair.</para>
+        /// <para>Key pair name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>sc-key</para>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("KeyPairName")]
         [Validation(Required=false)]
         public string KeyPairName { get; set; }
 
         /// <summary>
-        /// <para>节点组内机器的登录密码</para>
+        /// <para>Login password for machines within the node group</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>LoginPassword</para>
         /// </summary>
         [NameInMap("LoginPassword")]
         [Validation(Required=false)]
         public string LoginPassword { get; set; }
 
         /// <summary>
-        /// <para>The node group name</para>
+        /// <para>Node group name</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-update</para>
@@ -57,7 +60,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NewNodeGroupName { get; set; }
 
         /// <summary>
-        /// <para>The node group ID.</para>
+        /// <para>Node group ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>i120021051733814190732</para>
@@ -67,7 +70,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NodeGroupId { get; set; }
 
         /// <summary>
-        /// <para>The custom script.</para>
+        /// <para>User-defined script</para>
         /// 
         /// <b>Example:</b>
         /// <para>#!/bin/bash

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class CreateClusterShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster description.</para>
+        /// <para>Cluster description</para>
         /// 
         /// <b>Example:</b>
         /// <para>Cluster description</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterDescription { get; set; }
 
         /// <summary>
-        /// <para>The cluster name.</para>
+        /// <para>Cluster name</para>
         /// 
         /// <b>Example:</b>
         /// <para>Standard_Cluster</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <para>The cluster type.</para>
+        /// <para>Cluster type</para>
         /// 
         /// <b>Example:</b>
         /// <para>Lite</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterType { get; set; }
 
         /// <summary>
-        /// <para>The components (software instance).</para>
+        /// <para>Components (software instances)</para>
         /// </summary>
         [NameInMap("Components")]
         [Validation(Required=false)]
         public string ComponentsShrink { get; set; }
 
         /// <summary>
-        /// <para>The cluster number.</para>
+        /// <para>Cluster number</para>
         /// 
         /// <b>Example:</b>
         /// <para>A1</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string HpnZone { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to allow skipping failed nodes. Default value: False.</para>
+        /// <para>Whether to allow skipping failed nodes, the default value is False</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -67,28 +67,28 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public bool? IgnoreFailedNodeTasks { get; set; }
 
         /// <summary>
-        /// <para>The network information.</para>
+        /// <para>Network information</para>
         /// </summary>
         [NameInMap("Networks")]
         [Validation(Required=false)]
         public string NetworksShrink { get; set; }
 
         /// <summary>
-        /// <para>The node vSwitch.</para>
+        /// <para>Node VSwitches</para>
         /// </summary>
         [NameInMap("NimizVSwitches")]
         [Validation(Required=false)]
         public string NimizVSwitchesShrink { get; set; }
 
         /// <summary>
-        /// <para>The node groups.</para>
+        /// <para>Node group list</para>
         /// </summary>
         [NameInMap("NodeGroups")]
         [Validation(Required=false)]
         public string NodeGroupsShrink { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the elastic network interface (ENI) supports the Jumbo Frames feature.</para>
+        /// <para>Whether the network interface supports jumbo frames</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public bool? OpenEniJumboFrame { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>Resource group ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aek2xdkc6icwfha</para>
@@ -108,14 +108,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The resource tags.</para>
+        /// <para>Resource tags</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateClusterShrinkRequestTag> Tag { get; set; }
         public class CreateClusterShrinkRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key.</para>
+            /// <para>Key</para>
             /// 
             /// <b>Example:</b>
             /// <para>env-name</para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value.</para>
+            /// <para>Value</para>
             /// 
             /// <b>Example:</b>
             /// <para>dev</para>

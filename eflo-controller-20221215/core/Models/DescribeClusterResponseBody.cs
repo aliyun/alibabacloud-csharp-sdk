@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class DescribeClusterResponseBody : TeaModel {
         /// <summary>
-        /// <para>集群描述</para>
+        /// <para>The cluster description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试集群</para>
+        /// <para>Test cluster</para>
         /// </summary>
         [NameInMap("ClusterDescription")]
         [Validation(Required=false)]
         public string ClusterDescription { get; set; }
 
         /// <summary>
-        /// <para>集群id</para>
+        /// <para>The cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i116913051662373010974</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>集群名称</para>
+        /// <para>The cluster name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Eflo-YJ-Test-Cluster</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <para>集群类型</para>
+        /// <para>The cluster type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AckEdgePro</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterType { get; set; }
 
         /// <summary>
-        /// <para>组件信息</para>
+        /// <para>The component information.</para>
         /// </summary>
         [NameInMap("Components")]
         [Validation(Required=false)]
         public List<DescribeClusterResponseBodyComponents> Components { get; set; }
         public class DescribeClusterResponseBodyComponents : TeaModel {
             /// <summary>
-            /// <para>组件id</para>
+            /// <para>The component ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i149549021660892626529</para>
@@ -67,7 +67,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string ComponentId { get; set; }
 
             /// <summary>
-            /// <para>组件类型</para>
+            /// <para>The component type.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>ARMS</description></item>
+            /// <item><description>ACKEdge</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>ACKEdge</para>
@@ -79,7 +84,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
-        /// <para>计算网络的IP类型</para>
+        /// <para>The IP type of the computing network.</para>
         /// 
         /// <b>Example:</b>
         /// <para>IPv4</para>
@@ -89,7 +94,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ComputingIpVersion { get; set; }
 
         /// <summary>
-        /// <para>创建时间</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-06-08T07:05:11Z</para>
@@ -99,7 +104,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>集群编号</para>
+        /// <para>The cluster number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A2</para>
@@ -109,14 +114,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string HpnZone { get; set; }
 
         /// <summary>
-        /// <para>网络信息</para>
+        /// <para>The network information.</para>
         /// </summary>
         [NameInMap("Networks")]
         [Validation(Required=false)]
         public DescribeClusterResponseBodyNetworks Networks { get; set; }
         public class DescribeClusterResponseBodyNetworks : TeaModel {
             /// <summary>
-            /// <para>集群网段id</para>
+            /// <para>The ID of the CIDR block for the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpd-iqd7xunc</para>
@@ -128,7 +133,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
-        /// <para>节点数</para>
+        /// <para>The number of nodes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -138,7 +143,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public long? NodeCount { get; set; }
 
         /// <summary>
-        /// <para>节点组数量</para>
+        /// <para>The number of node groups.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -148,7 +153,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public long? NodeGroupCount { get; set; }
 
         /// <summary>
-        /// <para>网络接口巨帧</para>
+        /// <para>The status of Jumbo Frames for the elastic network interface (ENI).</para>
         /// 
         /// <b>Example:</b>
         /// <para>unsupported</para>
@@ -158,7 +163,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string OpenEniJumboFrame { get; set; }
 
         /// <summary>
-        /// <para>集群状态</para>
+        /// <para>The cluster status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>running</para>
@@ -168,7 +173,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string OperatingState { get; set; }
 
         /// <summary>
-        /// <para>请求id。</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>887FA855-89F4-5DB3-B305-C5879EC480E6</para>
@@ -178,7 +183,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>资源组id</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aek2k3rqlvv6ytq</para>
@@ -188,7 +193,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>任务id</para>
+        /// <para>The job ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i152609221670466904596</para>
@@ -198,7 +203,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>更新时间</para>
+        /// <para>The update time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-08-23T06:36:17.000Z</para>
@@ -208,7 +213,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string UpdateTime { get; set; }
 
         /// <summary>
-        /// <para>专有网络ID</para>
+        /// <para>The ID of the virtual private cloud (VPC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-0jlkqysom5dmcviymep3f</para>

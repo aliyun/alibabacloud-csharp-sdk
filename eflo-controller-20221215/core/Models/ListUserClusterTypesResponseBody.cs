@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ListUserClusterTypesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of cluster types. Number of elements in the array: 1 to 100.</para>
+        /// </summary>
         [NameInMap("ClusterTypes")]
         [Validation(Required=false)]
         public List<ListUserClusterTypesResponseBodyClusterTypes> ClusterTypes { get; set; }
         public class ListUserClusterTypesResponseBodyClusterTypes : TeaModel {
             /// <summary>
+            /// <para>The access type of cluster type</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Public</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string AccessType { get; set; }
 
             /// <summary>
+            /// <para>The name of cluster type</para>
+            /// 
             /// <b>Example:</b>
             /// <para>AckEdgePro</para>
             /// </summary>
@@ -32,6 +39,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
+        /// <para>NextToken for the next page. Include this value when requesting the next page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3a6b93229825ac667104463b56790c91</para>
         /// </summary>
