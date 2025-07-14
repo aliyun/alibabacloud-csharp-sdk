@@ -10605,6 +10605,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return await QueryOrganizationWorkspaceListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI QueryReadableResourcesListByUserId is deprecated, please use quickbi-public::2022-01-01::QueryReadableResourcesListByUserIdV2 instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries the list of works that a user has the permission to view, including the statements that are authorized to share in a space.</para>
@@ -10620,6 +10624,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         /// <returns>
         /// QueryReadableResourcesListByUserIdResponse
         /// </returns>
+        [Obsolete("OpenAPI QueryReadableResourcesListByUserId is deprecated, please use quickbi-public::2022-01-01::QueryReadableResourcesListByUserIdV2 instead.")]
+        // Deprecated
         public QueryReadableResourcesListByUserIdResponse QueryReadableResourcesListByUserIdWithOptions(QueryReadableResourcesListByUserIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10647,6 +10653,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryReadableResourcesListByUserIdResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI QueryReadableResourcesListByUserId is deprecated, please use quickbi-public::2022-01-01::QueryReadableResourcesListByUserIdV2 instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries the list of works that a user has the permission to view, including the statements that are authorized to share in a space.</para>
@@ -10662,6 +10672,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         /// <returns>
         /// QueryReadableResourcesListByUserIdResponse
         /// </returns>
+        [Obsolete("OpenAPI QueryReadableResourcesListByUserId is deprecated, please use quickbi-public::2022-01-01::QueryReadableResourcesListByUserIdV2 instead.")]
+        // Deprecated
         public async Task<QueryReadableResourcesListByUserIdResponse> QueryReadableResourcesListByUserIdWithOptionsAsync(QueryReadableResourcesListByUserIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10689,6 +10701,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return TeaModel.ToObject<QueryReadableResourcesListByUserIdResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI QueryReadableResourcesListByUserId is deprecated, please use quickbi-public::2022-01-01::QueryReadableResourcesListByUserIdV2 instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries the list of works that a user has the permission to view, including the statements that are authorized to share in a space.</para>
@@ -10701,12 +10717,18 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         /// <returns>
         /// QueryReadableResourcesListByUserIdResponse
         /// </returns>
+        [Obsolete("OpenAPI QueryReadableResourcesListByUserId is deprecated, please use quickbi-public::2022-01-01::QueryReadableResourcesListByUserIdV2 instead.")]
+        // Deprecated
         public QueryReadableResourcesListByUserIdResponse QueryReadableResourcesListByUserId(QueryReadableResourcesListByUserIdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryReadableResourcesListByUserIdWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI QueryReadableResourcesListByUserId is deprecated, please use quickbi-public::2022-01-01::QueryReadableResourcesListByUserIdV2 instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries the list of works that a user has the permission to view, including the statements that are authorized to share in a space.</para>
@@ -10719,10 +10741,148 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         /// <returns>
         /// QueryReadableResourcesListByUserIdResponse
         /// </returns>
+        [Obsolete("OpenAPI QueryReadableResourcesListByUserId is deprecated, please use quickbi-public::2022-01-01::QueryReadableResourcesListByUserIdV2 instead.")]
+        // Deprecated
         public async Task<QueryReadableResourcesListByUserIdResponse> QueryReadableResourcesListByUserIdAsync(QueryReadableResourcesListByUserIdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryReadableResourcesListByUserIdWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询用户有权查看的作品列表(新)</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryReadableResourcesListByUserIdV2Request
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryReadableResourcesListByUserIdV2Response
+        /// </returns>
+        public QueryReadableResourcesListByUserIdV2Response QueryReadableResourcesListByUserIdV2WithOptions(QueryReadableResourcesListByUserIdV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkType))
+            {
+                query["WorkType"] = request.WorkType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryReadableResourcesListByUserIdV2",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryReadableResourcesListByUserIdV2Response>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询用户有权查看的作品列表(新)</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryReadableResourcesListByUserIdV2Request
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryReadableResourcesListByUserIdV2Response
+        /// </returns>
+        public async Task<QueryReadableResourcesListByUserIdV2Response> QueryReadableResourcesListByUserIdV2WithOptionsAsync(QueryReadableResourcesListByUserIdV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkType))
+            {
+                query["WorkType"] = request.WorkType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryReadableResourcesListByUserIdV2",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryReadableResourcesListByUserIdV2Response>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询用户有权查看的作品列表(新)</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryReadableResourcesListByUserIdV2Request
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryReadableResourcesListByUserIdV2Response
+        /// </returns>
+        public QueryReadableResourcesListByUserIdV2Response QueryReadableResourcesListByUserIdV2(QueryReadableResourcesListByUserIdV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryReadableResourcesListByUserIdV2WithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询用户有权查看的作品列表(新)</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryReadableResourcesListByUserIdV2Request
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryReadableResourcesListByUserIdV2Response
+        /// </returns>
+        public async Task<QueryReadableResourcesListByUserIdV2Response> QueryReadableResourcesListByUserIdV2Async(QueryReadableResourcesListByUserIdV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryReadableResourcesListByUserIdV2WithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
