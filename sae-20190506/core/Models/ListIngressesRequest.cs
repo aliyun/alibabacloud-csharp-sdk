@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
+        [NameInMap("CurrentPage")]
+        [Validation(Required=false)]
+        public int? CurrentPage { get; set; }
+
         /// <summary>
         /// <para>The ID of a namespace.</para>
         /// <para>This parameter is required.</para>
@@ -29,6 +33,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [NameInMap("NamespaceId")]
         [Validation(Required=false)]
         public string NamespaceId { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
 
     }
 

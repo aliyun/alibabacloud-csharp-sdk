@@ -32,6 +32,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public ListIngressesResponseBodyData Data { get; set; }
         public class ListIngressesResponseBodyData : TeaModel {
+            [NameInMap("CurrentPage")]
+            [Validation(Required=false)]
+            public int? CurrentPage { get; set; }
+
             /// <summary>
             /// <para>The list of routing rules.</para>
             /// </summary>
@@ -313,6 +317,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string SlbType { get; set; }
 
             }
+
+            [NameInMap("PageSize")]
+            [Validation(Required=false)]
+            public int? PageSize { get; set; }
+
+            [NameInMap("TotalSize")]
+            [Validation(Required=false)]
+            public int? TotalSize { get; set; }
 
         }
 

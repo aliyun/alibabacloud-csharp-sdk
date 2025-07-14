@@ -49,6 +49,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [Validation(Required=false)]
                 public float? Cpu { get; set; }
 
+                /// <summary>
+                /// <para>The storage size of the temporary storage space. Unit: GiB.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
                 [NameInMap("EphemeralStorage")]
                 [Validation(Required=false)]
                 public float? EphemeralStorage { get; set; }
@@ -73,6 +79,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public QueryResourceStaticsResponseBodyDataSummary Summary { get; set; }
             public class QueryResourceStaticsResponseBodyDataSummary : TeaModel {
                 /// <summary>
+                /// <para>The usage of active vCPU. Unit: Core*min.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
                 /// </summary>
@@ -90,14 +98,30 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [Validation(Required=false)]
                 public float? Cpu { get; set; }
 
+                /// <summary>
+                /// <para>The CU usage.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2312145</para>
+                /// </summary>
                 [NameInMap("Cu")]
                 [Validation(Required=false)]
                 public float? Cu { get; set; }
 
+                /// <summary>
+                /// <para>The storage size of the temporary storage space. Unit: GiB.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>20</para>
+                /// </summary>
                 [NameInMap("EphemeralStorage")]
                 [Validation(Required=false)]
                 public float? EphemeralStorage { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>c8g1</para>
+                /// </summary>
                 [NameInMap("GpuA10")]
                 [Validation(Required=false)]
                 public float? GpuA10 { get; set; }
@@ -107,6 +131,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public float? GpuPpu810e { get; set; }
 
                 /// <summary>
+                /// <para>The usage of idle CPU. Unit: Core*min.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
                 /// </summary>
@@ -134,6 +160,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <item><description>The <b>ErrorCode</b> parameter is not returned when the request succeeds.</description></item>
         /// <item><description>The <b>ErrorCode</b> parameter is returned when the request fails. For more information, see <b>Error codes</b> in this topic.</description></item>
         /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Null</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

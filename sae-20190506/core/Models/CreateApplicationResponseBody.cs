@@ -66,7 +66,11 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The returned message. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>If the request was successful, a success message is returned.</description></item>
+        /// <item><description>If the request failed, an error code is returned.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

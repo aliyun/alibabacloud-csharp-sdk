@@ -10,13 +10,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class ListApplicationsRequest : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>2xx</b>: indicates that the request was successful.</description></item>
-        /// <item><description><b>3xx</b>: indicates that the request was redirected.</description></item>
-        /// <item><description><b>4xx</b>: indicates that the request was invalid.</description></item>
-        /// <item><description><b>5xx</b>: indicates that a server error occurred.</description></item>
-        /// </list>
+        /// <para>The application name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>demo-app</para>
@@ -41,7 +35,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string AppSource { get; set; }
 
         /// <summary>
-        /// <para>The number of the returned page.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -51,7 +45,13 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>true</para>
+        /// <para>Set the filtering criteria for applications. The value options are as follows:</para>
+        /// <list type="bullet">
+        /// <item><description>appName: Application name.</description></item>
+        /// <item><description>appIds: Application IDs.</description></item>
+        /// <item><description>slbIps: SLB IP addresses.</description></item>
+        /// <item><description>instanceIps: Instance IP addresses.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>appName</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string FieldType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The name, ID, SLB IP, or instance IP of the target application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>demo-app</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string IsStateful { get; set; }
 
         /// <summary>
-        /// <para>1</para>
+        /// <para>The namespace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing:demo</para>
@@ -85,7 +85,11 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string NamespaceId { get; set; }
 
         /// <summary>
-        /// <para>runnings</para>
+        /// <para>Specifies how applications are sorted. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>running</b>: The applications are sorted based on the number of running instances.</description></item>
+        /// <item><description><b>instances</b>: The applications are sorted based on the number of destination instances.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>running</para>
@@ -95,11 +99,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the application is being deleted. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>true</b>: The application is being deleted.</description></item>
-        /// <item><description><b>false</b>: The application is not being deleted.</description></item>
-        /// </list>
+        /// <para>The number of records in each page. Value range: [0,10000]</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -109,7 +109,11 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>Sort by the running status of application instances. If the statuses are the same, sort by instance ID. The value options are as follows:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Sort in ascending order. Instances are arranged according to the startup process, for example: to ultimately reach the running state, an instance must first go through steps such as starting containers, pulling images, and initializing the instance.</description></item>
+        /// <item><description>false: Sort in descending order.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -119,7 +123,13 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Reverse { get; set; }
 
         /// <summary>
-        /// <para>The list of applications.</para>
+        /// <para>The tag in the format of a key-value pair.</para>
+        /// <list type="bullet">
+        /// <item><description><b>key</b>: the tag key. It cannot exceed 128 characters in length.</description></item>
+        /// <item><description><b>value</b>: the tag value. It cannot exceed 128 characters in length.</description></item>
+        /// </list>
+        /// <para>Tag keys and tag values are case-sensitive. If you specify multiple tags, the system adds all the tags to the specified resources. Each tag key on a resource can have only one tag value. If you create a tag that has the same key as an existing tag, the value of the existing tag is overwritten.</para>
+        /// <para>Tag keys and tag values cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;key&quot;:&quot;key&quot;,&quot;value&quot;:&quot;value&quot;}]</para>
