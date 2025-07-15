@@ -9,26 +9,59 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveDomainTrafficDataResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The time granularity of the query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>300</para>
+        /// </summary>
         [NameInMap("DataInterval")]
         [Validation(Required=false)]
         public string DataInterval { get; set; }
 
+        /// <summary>
+        /// <para>The streaming domain.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example.com</para>
+        /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
+        /// <summary>
+        /// <para>The end of the time range during which the data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2017-12-10T15:00:00Z</para>
+        /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        /// <summary>
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>B955107D-E658-4E77-B913-E0AC3D31693E</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The beginning of the time range during which the data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2017-12-10T14:00:00Z</para>
+        /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
+        /// <summary>
+        /// <para>The network traffic data that was collected at each interval.</para>
+        /// </summary>
         [NameInMap("TrafficDataPerInterval")]
         [Validation(Required=false)]
         public DescribeLiveDomainTrafficDataResponseBodyTrafficDataPerInterval TrafficDataPerInterval { get; set; }
@@ -37,18 +70,42 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public List<DescribeLiveDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule> DataModule { get; set; }
             public class DescribeLiveDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule : TeaModel {
+                /// <summary>
+                /// <para>The traffic over HTTP. Unit: bytes.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
                 [NameInMap("HttpTrafficValue")]
                 [Validation(Required=false)]
                 public string HttpTrafficValue { get; set; }
 
+                /// <summary>
+                /// <para>The traffic over HTTPS. Unit: bytes.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>454680793</para>
+                /// </summary>
                 [NameInMap("HttpsTrafficValue")]
                 [Validation(Required=false)]
                 public string HttpsTrafficValue { get; set; }
 
+                /// <summary>
+                /// <para>The timestamp of the data returned.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2017-12-10T15:00:05Z</para>
+                /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
                 public string TimeStamp { get; set; }
 
+                /// <summary>
+                /// <para>The total traffic. Unit: bytes.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>454680793</para>
+                /// </summary>
                 [NameInMap("TrafficValue")]
                 [Validation(Required=false)]
                 public string TrafficValue { get; set; }

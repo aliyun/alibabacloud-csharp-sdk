@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DynamicUpdateWaterMarkStreamRuleResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>BE9407FF-F897-4DBD-338D-98A750AD805F</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

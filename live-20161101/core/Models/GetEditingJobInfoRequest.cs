@@ -9,6 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class GetEditingJobInfoRequest : TeaModel {
+        /// <summary>
+        /// <para>The ID of the production studio.</para>
+        /// <list type="bullet">
+        /// <item><description>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</description></item>
+        /// <item><description>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <b>Production Studio Management</b> page. To go to the page, log on to the <b>ApsaraVideo Live console</b> and click <b>Production Studios</b> in the left-side navigation pane.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> You can find the ID of the production studio in the Instance ID/Name column.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>53200b81-b761-4c10-842a-a0726d97****</para>
+        /// </summary>
         [NameInMap("CasterId")]
         [Validation(Required=false)]
         public string CasterId { get; set; }
@@ -17,6 +31,19 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the episode for which you want to query editing tasks.</para>
+        /// <remarks>
+        /// <para> You can obtain the ID from the response parameter ShowId of the <a href="https://help.aliyun.com/document_detail/370861.html">AddShowIntoShowList</a> operation.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>72200b81-b761-4c10-842a-a0726d97****</para>
+        /// </summary>
         [NameInMap("ShowId")]
         [Validation(Required=false)]
         public string ShowId { get; set; }

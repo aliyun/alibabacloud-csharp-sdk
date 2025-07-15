@@ -13,10 +13,24 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The streaming domain. The type of the domain name is <b>liveVideo</b>.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example.com</para>
+        /// </summary>
         [NameInMap("PullDomain")]
         [Validation(Required=false)]
         public string PullDomain { get; set; }
 
+        /// <summary>
+        /// <para>The ingest domain. The type of the domain name is <b>liveEdge</b>.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>demo.aliyundoc.com</para>
+        /// </summary>
         [NameInMap("PushDomain")]
         [Validation(Required=false)]
         public string PushDomain { get; set; }

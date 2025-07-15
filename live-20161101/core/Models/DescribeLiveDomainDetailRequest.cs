@@ -9,6 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveDomainDetailRequest : TeaModel {
+        /// <summary>
+        /// <para>The streaming domain or ingest domain.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>demo.aliyundoc.com</para>
+        /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }

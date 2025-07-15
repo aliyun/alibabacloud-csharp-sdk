@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveCertificateListRequest : TeaModel {
+        /// <summary>
+        /// <para>The ingest domain or streaming domain. Separate multiple domain names with commas (,).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>demo.aliyundoc.com,example.com</para>
+        /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }

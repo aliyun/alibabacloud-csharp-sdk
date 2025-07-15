@@ -9,13 +9,24 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveVerifyContentRequest : TeaModel {
+        /// <summary>
+        /// <para>The domain name. You can specify only one domain name.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example.com</para>
+        /// </summary>
+        [NameInMap("DomainName")]
+        [Validation(Required=false)]
+        public string DomainName { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        [NameInMap("DomainName")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string DomainName { get; set; }
+        public string RegionId { get; set; }
 
     }
 

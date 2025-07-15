@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class AddTrancodeSEIResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>16A96B9A-F203-4E*****43-CB92E68F4CD8</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

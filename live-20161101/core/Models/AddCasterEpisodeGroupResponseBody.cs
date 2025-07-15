@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class AddCasterEpisodeGroupResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The IDs of the episodes.</para>
+        /// </summary>
         [NameInMap("ItemIds")]
         [Validation(Required=false)]
         public AddCasterEpisodeGroupResponseBodyItemIds ItemIds { get; set; }
@@ -19,10 +22,22 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 
         }
 
+        /// <summary>
+        /// <para>The ID of the episode list that was added. Record the ID as it can be used to manage the program being added.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>16A96B9A-F203-4EC5-8E43-CB92E68X****</para>
+        /// </summary>
         [NameInMap("ProgramId")]
         [Validation(Required=false)]
         public string ProgramId { get; set; }
 
+        /// <summary>
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>16A96B9A-F203-4EC5-8E43-CB92E68F****</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -9,6 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DeleteLiveDomainRequest : TeaModel {
+        /// <summary>
+        /// <para>The ingest domain or streaming domain that you want to delete.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>demo.aliyundoc.com</para>
+        /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }

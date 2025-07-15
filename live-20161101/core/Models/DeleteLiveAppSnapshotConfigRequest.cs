@@ -9,10 +9,24 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DeleteLiveAppSnapshotConfigRequest : TeaModel {
+        /// <summary>
+        /// <para>The name of the application to which the live stream belongs. The value of this parameter must be the same as the application name in the ingest URL. Otherwise, the configuration does not take effect. You can view the application name on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page of the ApsaraVideo Live console.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>liveApp****</para>
+        /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]
         public string AppName { get; set; }
 
+        /// <summary>
+        /// <para>The main streaming domain.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example.com</para>
+        /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }

@@ -9,6 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DeleteSnapshotCallbackAuthRequest : TeaModel {
+        /// <summary>
+        /// <para>The main streaming domain.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example.aliyundoc.com</para>
+        /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
@@ -16,6 +23,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
     }
 

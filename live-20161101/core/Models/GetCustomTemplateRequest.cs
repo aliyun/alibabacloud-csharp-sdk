@@ -13,6 +13,17 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        /// <summary>
+        /// <para>The name of the custom template that you want to query. The value is a string.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>TestTemplate</para>
+        /// </summary>
         [NameInMap("Template")]
         [Validation(Required=false)]
         public string Template { get; set; }

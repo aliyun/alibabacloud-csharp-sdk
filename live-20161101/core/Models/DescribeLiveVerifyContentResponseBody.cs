@@ -9,13 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveVerifyContentResponseBody : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
+        /// <summary>
+        /// <para>The verification content.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>verify_dffeb6610035dcb77b413******</para>
+        /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public string Content { get; set; }
+
+        /// <summary>
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>16A96B9A-F203-4EC5-8E43-CB92E68F****</para>
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 

@@ -9,10 +9,24 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DeleteLiveSnapshotDetectPornConfigRequest : TeaModel {
+        /// <summary>
+        /// <para>The name of the application to which the live stream belongs. You can call the <a href="https://help.aliyun.com/document_detail/2847918.html">DescribeLiveSnapshotDetectPornConfig</a> operation to query the application name.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>liveApp****</para>
+        /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]
         public string AppName { get; set; }
 
+        /// <summary>
+        /// <para>The main streaming domain.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example.com</para>
+        /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }

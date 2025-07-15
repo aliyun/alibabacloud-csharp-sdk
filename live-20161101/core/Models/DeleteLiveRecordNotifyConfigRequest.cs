@@ -9,6 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DeleteLiveRecordNotifyConfigRequest : TeaModel {
+        /// <summary>
+        /// <para>The main streaming domain.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example.com</para>
+        /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }

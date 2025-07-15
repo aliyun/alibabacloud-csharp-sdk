@@ -9,6 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveCertificateDetailRequest : TeaModel {
+        /// <summary>
+        /// <para>The name of the certificate.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Cert-****</para>
+        /// </summary>
         [NameInMap("CertName")]
         [Validation(Required=false)]
         public string CertName { get; set; }

@@ -9,6 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveStreamTranscodeInfoRequest : TeaModel {
+        /// <summary>
+        /// <para>The name of the application to which the live stream belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>myapp</para>
+        /// </summary>
+        [NameInMap("AppName")]
+        [Validation(Required=false)]
+        public string AppName { get; set; }
+
+        /// <summary>
+        /// <para>The main streaming domain.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example.com</para>
+        /// </summary>
         [NameInMap("DomainTranscodeName")]
         [Validation(Required=false)]
         public string DomainTranscodeName { get; set; }
@@ -16,6 +33,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
     }
 

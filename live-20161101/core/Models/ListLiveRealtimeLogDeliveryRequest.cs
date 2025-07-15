@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ListLiveRealtimeLogDeliveryRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter has no practical significance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("LiveOpenapiReserve")]
         [Validation(Required=false)]
         public string LiveOpenapiReserve { get; set; }
@@ -16,6 +22,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
     }
 

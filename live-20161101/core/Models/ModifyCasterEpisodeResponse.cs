@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ModifyCasterEpisodeResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public ModifyCasterEpisodeResponseBody Body { get; set; }
 
     }

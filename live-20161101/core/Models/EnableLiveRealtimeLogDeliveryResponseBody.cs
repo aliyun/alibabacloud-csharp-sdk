@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class EnableLiveRealtimeLogDeliveryResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9732E117-8A37-49FD-A36F-ABBB87556CA7</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

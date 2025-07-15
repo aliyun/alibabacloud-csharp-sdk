@@ -9,10 +9,24 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DeleteLiveAppRecordConfigRequest : TeaModel {
+        /// <summary>
+        /// <para>The name of the application to which the live stream belongs.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>liveApp****</para>
+        /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]
         public string AppName { get; set; }
 
+        /// <summary>
+        /// <para>The main streaming domain.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example.com</para>
+        /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
@@ -25,6 +39,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
 
+        /// <summary>
+        /// <para>The name of the live stream.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>liveStream****</para>
+        /// </summary>
         [NameInMap("StreamName")]
         [Validation(Required=false)]
         public string StreamName { get; set; }

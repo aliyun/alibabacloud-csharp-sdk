@@ -9,6 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeCasterSceneAudioRequest : TeaModel {
+        /// <summary>
+        /// <para>The ID of the production studio.</para>
+        /// <list type="bullet">
+        /// <item><description>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/69338.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</description></item>
+        /// <item><description>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <b>Production Studio Management</b> page. To go to the page, log on to the <b>ApsaraVideo Live console</b> and click <b>Production Studios</b> in the left-side navigation pane.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> You can find the ID of the production studio in the Instance Name column.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>97df6b7f-3490-47d2-ac50-88338765****</para>
+        /// </summary>
         [NameInMap("CasterId")]
         [Validation(Required=false)]
         public string CasterId { get; set; }
@@ -17,6 +31,17 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the scene.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>97df6b7f-3490-47d2-ac50-88339087****</para>
+        /// </summary>
         [NameInMap("SceneId")]
         [Validation(Required=false)]
         public string SceneId { get; set; }
