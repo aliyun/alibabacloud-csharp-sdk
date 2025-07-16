@@ -1,3 +1,6 @@
+2025-07-16 Version: 2.4.1
+- Generated csharp 2018-10-12 for alimt.
+
 2025-05-08 Version: 2.4.0
 - Support API GetDetectLanguageVpc.
 - Support API TranslateSearch.
