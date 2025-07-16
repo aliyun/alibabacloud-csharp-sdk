@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public int? CpuCount { get; set; }
 
+        [NameInMap("CpuUsed")]
+        [Validation(Required=false)]
+        public int? CpuUsed { get; set; }
+
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
         public string CreateTime { get; set; }
@@ -25,13 +29,41 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public Dictionary<string, object> ExtraData { get; set; }
 
+        [NameInMap("Features")]
+        [Validation(Required=false)]
+        public List<string> Features { get; set; }
+
         [NameInMap("GpuCount")]
         [Validation(Required=false)]
         public int? GpuCount { get; set; }
 
+        [NameInMap("GpuUsed")]
+        [Validation(Required=false)]
+        public float? GpuUsed { get; set; }
+
         [NameInMap("InstanceCount")]
         [Validation(Required=false)]
         public int? InstanceCount { get; set; }
+
+        [NameInMap("InstanceMaxAllocatableCPU")]
+        [Validation(Required=false)]
+        public int? InstanceMaxAllocatableCPU { get; set; }
+
+        [NameInMap("InstanceMaxAllocatableGPU")]
+        [Validation(Required=false)]
+        public float? InstanceMaxAllocatableGPU { get; set; }
+
+        [NameInMap("InstanceMaxAllocatableMemory")]
+        [Validation(Required=false)]
+        public int? InstanceMaxAllocatableMemory { get; set; }
+
+        [NameInMap("Memory")]
+        [Validation(Required=false)]
+        public int? Memory { get; set; }
+
+        [NameInMap("MemoryUsed")]
+        [Validation(Required=false)]
+        public int? MemoryUsed { get; set; }
 
         [NameInMap("Message")]
         [Validation(Required=false)]

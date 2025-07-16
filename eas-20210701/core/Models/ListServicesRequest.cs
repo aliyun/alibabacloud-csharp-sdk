@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ListServicesRequest : TeaModel {
+        [NameInMap("AutoscalerEnabled")]
+        [Validation(Required=false)]
+        public bool? AutoscalerEnabled { get; set; }
+
+        [NameInMap("CronscalerEnabled")]
+        [Validation(Required=false)]
+        public bool? CronscalerEnabled { get; set; }
+
         /// <summary>
         /// <para>The field that is used for fuzzy matches. The system performs fuzzy matches only by service name.</para>
         /// 
@@ -107,6 +115,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [NameInMap("ResourceAliasName")]
         [Validation(Required=false)]
         public string ResourceAliasName { get; set; }
+
+        [NameInMap("ResourceBurstable")]
+        [Validation(Required=false)]
+        public bool? ResourceBurstable { get; set; }
 
         [NameInMap("ResourceId")]
         [Validation(Required=false)]

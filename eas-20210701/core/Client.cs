@@ -9819,6 +9819,14 @@ namespace AlibabaCloud.SDK.Eas20210701
                 request.LabelShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Label, "Label", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoscalerEnabled))
+            {
+                query["AutoscalerEnabled"] = request.AutoscalerEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CronscalerEnabled))
+            {
+                query["CronscalerEnabled"] = request.CronscalerEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
             {
                 query["Filter"] = request.Filter;
@@ -9862,6 +9870,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceAliasName))
             {
                 query["ResourceAliasName"] = request.ResourceAliasName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceBurstable))
+            {
+                query["ResourceBurstable"] = request.ResourceBurstable;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
             {
@@ -9951,6 +9963,14 @@ namespace AlibabaCloud.SDK.Eas20210701
                 request.LabelShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Label, "Label", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoscalerEnabled))
+            {
+                query["AutoscalerEnabled"] = request.AutoscalerEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CronscalerEnabled))
+            {
+                query["CronscalerEnabled"] = request.CronscalerEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
             {
                 query["Filter"] = request.Filter;
@@ -9994,6 +10014,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceAliasName))
             {
                 query["ResourceAliasName"] = request.ResourceAliasName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceBurstable))
+            {
+                query["ResourceBurstable"] = request.ResourceBurstable;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
             {

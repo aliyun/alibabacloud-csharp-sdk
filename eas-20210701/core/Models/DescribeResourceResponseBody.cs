@@ -59,6 +59,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string ExtraData { get; set; }
 
+        [NameInMap("Features")]
+        [Validation(Required=false)]
+        public List<string> Features { get; set; }
+
         /// <summary>
         /// <para>The total number of GPUs.</para>
         /// 
@@ -88,6 +92,18 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [NameInMap("InstanceCount")]
         [Validation(Required=false)]
         public int? InstanceCount { get; set; }
+
+        [NameInMap("InstanceMaxAllocatableCPU")]
+        [Validation(Required=false)]
+        public int? InstanceMaxAllocatableCPU { get; set; }
+
+        [NameInMap("InstanceMaxAllocatableGPU")]
+        [Validation(Required=false)]
+        public float? InstanceMaxAllocatableGPU { get; set; }
+
+        [NameInMap("InstanceMaxAllocatableMemory")]
+        [Validation(Required=false)]
+        public int? InstanceMaxAllocatableMemory { get; set; }
 
         /// <summary>
         /// <para>The total memory size. Unit: MB.</para>

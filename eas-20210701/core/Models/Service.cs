@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string AppVersion { get; set; }
 
+        [NameInMap("AutoscalerEnabled")]
+        [Validation(Required=false)]
+        public bool? AutoscalerEnabled { get; set; }
+
         [NameInMap("CallerUid")]
         [Validation(Required=false)]
         public string CallerUid { get; set; }
@@ -41,6 +45,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string CreateTime { get; set; }
 
+        [NameInMap("CronscalerEnabled")]
+        [Validation(Required=false)]
+        public bool? CronscalerEnabled { get; set; }
+
         [NameInMap("CurrentVersion")]
         [Validation(Required=false)]
         public int? CurrentVersion { get; set; }
@@ -48,6 +56,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [NameInMap("ExtraData")]
         [Validation(Required=false)]
         public string ExtraData { get; set; }
+
+        [NameInMap("GPUCorePercentage")]
+        [Validation(Required=false)]
+        public int? GPUCorePercentage { get; set; }
+
+        [NameInMap("GPUMemory")]
+        [Validation(Required=false)]
+        public int? GPUMemory { get; set; }
 
         [NameInMap("Gateway")]
         [Validation(Required=false)]
@@ -60,6 +76,24 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [NameInMap("Image")]
         [Validation(Required=false)]
         public string Image { get; set; }
+
+        [NameInMap("InstanceCountInResource")]
+        [Validation(Required=false)]
+        public ServiceInstanceCountInResource InstanceCountInResource { get; set; }
+        public class ServiceInstanceCountInResource : TeaModel {
+            [NameInMap("Dedicated")]
+            [Validation(Required=false)]
+            public int? Dedicated { get; set; }
+
+            [NameInMap("Public")]
+            [Validation(Required=false)]
+            public int? Public { get; set; }
+
+            [NameInMap("Quota")]
+            [Validation(Required=false)]
+            public int? Quota { get; set; }
+
+        }
 
         [NameInMap("InternetEndpoint")]
         [Validation(Required=false)]
@@ -130,6 +164,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [NameInMap("ResourceAlias")]
         [Validation(Required=false)]
         public string ResourceAlias { get; set; }
+
+        [NameInMap("ResourceBurstable")]
+        [Validation(Required=false)]
+        public bool? ResourceBurstable { get; set; }
 
         [NameInMap("Role")]
         [Validation(Required=false)]

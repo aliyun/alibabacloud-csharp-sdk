@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public bool? DisableSpotProtectionPeriod { get; set; }
 
+        [NameInMap("Features")]
+        [Validation(Required=false)]
+        public List<string> Features { get; set; }
+
         /// <summary>
         /// <para>The ID of the request.</para>
         /// 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ListGatewayDomainsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of custom domain names.</para>
+        /// <para>The custom domain names.</para>
         /// </summary>
         [NameInMap("CustomDomains")]
         [Validation(Required=false)]

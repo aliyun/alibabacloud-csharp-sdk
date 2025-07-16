@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The list of VPC peers.</para>
+        /// <para>The VPC peers.</para>
         /// </summary>
         [NameInMap("PeerVpcList")]
         [Validation(Required=false)]
         public List<ListGatewayIntranetLinkedVpcPeerResponseBodyPeerVpcList> PeerVpcList { get; set; }
         public class ListGatewayIntranetLinkedVpcPeerResponseBodyPeerVpcList : TeaModel {
             /// <summary>
-            /// <para>The ID of the VPC peers.</para>
+            /// <para>The IDs of the VPC peers.</para>
             /// </summary>
             [NameInMap("PeerVpcs")]
             [Validation(Required=false)]
