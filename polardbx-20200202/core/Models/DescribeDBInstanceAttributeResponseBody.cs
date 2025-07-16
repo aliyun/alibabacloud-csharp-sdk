@@ -105,6 +105,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             [Validation(Required=false)]
             public string ConnectionString { get; set; }
 
+            [NameInMap("CpuType")]
+            [Validation(Required=false)]
+            public string CpuType { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>2021-08-31T08:56:25.000+0000</para>
