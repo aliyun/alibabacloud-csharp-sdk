@@ -49,9 +49,37 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 [Validation(Required=false)]
                 public string AppUuid { get; set; }
 
+                [NameInMap("CreatedTime")]
+                [Validation(Required=false)]
+                public string CreatedTime { get; set; }
+
+                [NameInMap("Edition")]
+                [Validation(Required=false)]
+                public string Edition { get; set; }
+
+                [NameInMap("EnterpriseInternetUrl")]
+                [Validation(Required=false)]
+                public string EnterpriseInternetUrl { get; set; }
+
+                [NameInMap("EnterpriseIntranetUrl")]
+                [Validation(Required=false)]
+                public string EnterpriseIntranetUrl { get; set; }
+
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("InternetUrl")]
+                [Validation(Required=false)]
+                public string InternetUrl { get; set; }
+
+                [NameInMap("IntranetUrl")]
+                [Validation(Required=false)]
+                public string IntranetUrl { get; set; }
+
+                [NameInMap("MajorVersion")]
+                [Validation(Required=false)]
+                public string MajorVersion { get; set; }
 
                 [NameInMap("SecurityGroupId")]
                 [Validation(Required=false)]

@@ -1051,6 +1051,158 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>添加表到资产类目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddTableToCategoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddTableToCategoryResponse
+        /// </returns>
+        public AddTableToCategoryResponse AddTableToCategoryWithOptions(AddTableToCategoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryId))
+            {
+                query["CategoryId"] = request.CategoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbId))
+            {
+                query["DbId"] = request.DbId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
+            {
+                query["TableName"] = request.TableName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableSchemaName))
+            {
+                query["TableSchemaName"] = request.TableSchemaName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddTableToCategory",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddTableToCategoryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加表到资产类目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddTableToCategoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddTableToCategoryResponse
+        /// </returns>
+        public async Task<AddTableToCategoryResponse> AddTableToCategoryWithOptionsAsync(AddTableToCategoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryId))
+            {
+                query["CategoryId"] = request.CategoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbId))
+            {
+                query["DbId"] = request.DbId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
+            {
+                query["TableName"] = request.TableName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableSchemaName))
+            {
+                query["TableSchemaName"] = request.TableSchemaName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddTableToCategory",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddTableToCategoryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加表到资产类目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddTableToCategoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddTableToCategoryResponse
+        /// </returns>
+        public AddTableToCategoryResponse AddTableToCategory(AddTableToCategoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AddTableToCategoryWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加表到资产类目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddTableToCategoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddTableToCategoryResponse
+        /// </returns>
+        public async Task<AddTableToCategoryResponse> AddTableToCategoryAsync(AddTableToCategoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AddTableToCategoryWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Adds directed edges for an existing task node.</para>
         /// </summary>
         /// 
@@ -5762,6 +5914,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             {
                 query["AdbpgInstanceMode"] = request.AdbpgInstanceMode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupVSwitchId))
+            {
+                query["BackupVSwitchId"] = request.BackupVSwitchId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -5814,6 +5970,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             {
                 query["DryRun"] = request.DryRun;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Edition))
+            {
+                query["Edition"] = request.Edition;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableExtraEndpoint))
+            {
+                query["EnableExtraEndpoint"] = request.EnableExtraEndpoint;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuNodeSpec))
             {
                 query["GpuNodeSpec"] = request.GpuNodeSpec;
@@ -5849,6 +6013,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KvStoreType))
             {
                 query["KvStoreType"] = request.KvStoreType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MajorVersion))
+            {
+                query["MajorVersion"] = request.MajorVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
             {
@@ -6030,6 +6198,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             {
                 query["AdbpgInstanceMode"] = request.AdbpgInstanceMode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupVSwitchId))
+            {
+                query["BackupVSwitchId"] = request.BackupVSwitchId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -6082,6 +6254,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             {
                 query["DryRun"] = request.DryRun;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Edition))
+            {
+                query["Edition"] = request.Edition;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableExtraEndpoint))
+            {
+                query["EnableExtraEndpoint"] = request.EnableExtraEndpoint;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuNodeSpec))
             {
                 query["GpuNodeSpec"] = request.GpuNodeSpec;
@@ -6117,6 +6297,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KvStoreType))
             {
                 query["KvStoreType"] = request.KvStoreType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MajorVersion))
+            {
+                query["MajorVersion"] = request.MajorVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
             {
@@ -6883,6 +7067,142 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateLogicDatabaseWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建资产类目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMetaCategoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMetaCategoryResponse
+        /// </returns>
+        public CreateMetaCategoryResponse CreateMetaCategoryWithOptions(CreateMetaCategoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentCategoryId))
+            {
+                query["ParentCategoryId"] = request.ParentCategoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMetaCategory",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateMetaCategoryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建资产类目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMetaCategoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMetaCategoryResponse
+        /// </returns>
+        public async Task<CreateMetaCategoryResponse> CreateMetaCategoryWithOptionsAsync(CreateMetaCategoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentCategoryId))
+            {
+                query["ParentCategoryId"] = request.ParentCategoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMetaCategory",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateMetaCategoryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建资产类目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMetaCategoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMetaCategoryResponse
+        /// </returns>
+        public CreateMetaCategoryResponse CreateMetaCategory(CreateMetaCategoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateMetaCategoryWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建资产类目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMetaCategoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMetaCategoryResponse
+        /// </returns>
+        public async Task<CreateMetaCategoryResponse> CreateMetaCategoryAsync(CreateMetaCategoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateMetaCategoryWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -10851,6 +11171,134 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>删除资产类目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMetaCategoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMetaCategoryResponse
+        /// </returns>
+        public DeleteMetaCategoryResponse DeleteMetaCategoryWithOptions(DeleteMetaCategoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryId))
+            {
+                query["CategoryId"] = request.CategoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMetaCategory",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteMetaCategoryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除资产类目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMetaCategoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMetaCategoryResponse
+        /// </returns>
+        public async Task<DeleteMetaCategoryResponse> DeleteMetaCategoryWithOptionsAsync(DeleteMetaCategoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryId))
+            {
+                query["CategoryId"] = request.CategoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMetaCategory",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteMetaCategoryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除资产类目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMetaCategoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMetaCategoryResponse
+        /// </returns>
+        public DeleteMetaCategoryResponse DeleteMetaCategory(DeleteMetaCategoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteMetaCategoryWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除资产类目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMetaCategoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMetaCategoryResponse
+        /// </returns>
+        public async Task<DeleteMetaCategoryResponse> DeleteMetaCategoryAsync(DeleteMetaCategoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteMetaCategoryWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>You can call this operation to disable the data security protection proxy of a DB instance.</para>
         /// </summary>
         /// 
@@ -12379,6 +12827,190 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDifyDefaultVpcWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于获取Dify当前支持的版本信息</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><c>workspaceOption</c> 参数指示是否新建工作空间，默认使用已有工作空间。</description></item>
+        /// <item><description>如果选择新建工作空间 (<c>CreateNewInstance</c>)，则必须提供 <c>workspaceName</c> 和 <c>workspaceDescription</c>。</description></item>
+        /// <item><description><c>vpcId</c>, <c>VSwitchID</c>, <c>zoneId</c>, <c>regionCode</c>, <c>ResourceQuota</c>, <c>Replicas</c>, <c>storageType</c>, <c>dbInstanceClass</c>, <c>dbEngineVersion</c>, <c>kvstoreEngineVersion</c> 是必填项。</description></item>
+        /// <item><description>当 <c>storageType</c> 为 <c>oss</c> 时，需要指定 <c>ossBucketResourceId</c> 和 <c>ossPath</c>。</description></item>
+        /// <item><description>如果需要新建数据库实例，则必须提供 <c>instanceAccount</c> 和 <c>instancePassword</c>。</description></item>
+        /// <item><description>预付费模式下，<c>PayPeriodType</c> 和 <c>PayPeriod</c> 必须填写。</description></item>
+        /// <item><description>可以通过设置 <c>dryRun</c> 为 <c>true</c> 来执行预检查而不实际创建实例。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDifyEditionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDifyEditionsResponse
+        /// </returns>
+        public DescribeDifyEditionsResponse DescribeDifyEditionsWithOptions(DescribeDifyEditionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataRegion))
+            {
+                query["DataRegion"] = request.DataRegion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDifyEditions",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDifyEditionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于获取Dify当前支持的版本信息</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><c>workspaceOption</c> 参数指示是否新建工作空间，默认使用已有工作空间。</description></item>
+        /// <item><description>如果选择新建工作空间 (<c>CreateNewInstance</c>)，则必须提供 <c>workspaceName</c> 和 <c>workspaceDescription</c>。</description></item>
+        /// <item><description><c>vpcId</c>, <c>VSwitchID</c>, <c>zoneId</c>, <c>regionCode</c>, <c>ResourceQuota</c>, <c>Replicas</c>, <c>storageType</c>, <c>dbInstanceClass</c>, <c>dbEngineVersion</c>, <c>kvstoreEngineVersion</c> 是必填项。</description></item>
+        /// <item><description>当 <c>storageType</c> 为 <c>oss</c> 时，需要指定 <c>ossBucketResourceId</c> 和 <c>ossPath</c>。</description></item>
+        /// <item><description>如果需要新建数据库实例，则必须提供 <c>instanceAccount</c> 和 <c>instancePassword</c>。</description></item>
+        /// <item><description>预付费模式下，<c>PayPeriodType</c> 和 <c>PayPeriod</c> 必须填写。</description></item>
+        /// <item><description>可以通过设置 <c>dryRun</c> 为 <c>true</c> 来执行预检查而不实际创建实例。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDifyEditionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDifyEditionsResponse
+        /// </returns>
+        public async Task<DescribeDifyEditionsResponse> DescribeDifyEditionsWithOptionsAsync(DescribeDifyEditionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataRegion))
+            {
+                query["DataRegion"] = request.DataRegion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDifyEditions",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDifyEditionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于获取Dify当前支持的版本信息</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><c>workspaceOption</c> 参数指示是否新建工作空间，默认使用已有工作空间。</description></item>
+        /// <item><description>如果选择新建工作空间 (<c>CreateNewInstance</c>)，则必须提供 <c>workspaceName</c> 和 <c>workspaceDescription</c>。</description></item>
+        /// <item><description><c>vpcId</c>, <c>VSwitchID</c>, <c>zoneId</c>, <c>regionCode</c>, <c>ResourceQuota</c>, <c>Replicas</c>, <c>storageType</c>, <c>dbInstanceClass</c>, <c>dbEngineVersion</c>, <c>kvstoreEngineVersion</c> 是必填项。</description></item>
+        /// <item><description>当 <c>storageType</c> 为 <c>oss</c> 时，需要指定 <c>ossBucketResourceId</c> 和 <c>ossPath</c>。</description></item>
+        /// <item><description>如果需要新建数据库实例，则必须提供 <c>instanceAccount</c> 和 <c>instancePassword</c>。</description></item>
+        /// <item><description>预付费模式下，<c>PayPeriodType</c> 和 <c>PayPeriod</c> 必须填写。</description></item>
+        /// <item><description>可以通过设置 <c>dryRun</c> 为 <c>true</c> 来执行预检查而不实际创建实例。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDifyEditionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDifyEditionsResponse
+        /// </returns>
+        public DescribeDifyEditionsResponse DescribeDifyEditions(DescribeDifyEditionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDifyEditionsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于获取Dify当前支持的版本信息</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><c>workspaceOption</c> 参数指示是否新建工作空间，默认使用已有工作空间。</description></item>
+        /// <item><description>如果选择新建工作空间 (<c>CreateNewInstance</c>)，则必须提供 <c>workspaceName</c> 和 <c>workspaceDescription</c>。</description></item>
+        /// <item><description><c>vpcId</c>, <c>VSwitchID</c>, <c>zoneId</c>, <c>regionCode</c>, <c>ResourceQuota</c>, <c>Replicas</c>, <c>storageType</c>, <c>dbInstanceClass</c>, <c>dbEngineVersion</c>, <c>kvstoreEngineVersion</c> 是必填项。</description></item>
+        /// <item><description>当 <c>storageType</c> 为 <c>oss</c> 时，需要指定 <c>ossBucketResourceId</c> 和 <c>ossPath</c>。</description></item>
+        /// <item><description>如果需要新建数据库实例，则必须提供 <c>instanceAccount</c> 和 <c>instancePassword</c>。</description></item>
+        /// <item><description>预付费模式下，<c>PayPeriodType</c> 和 <c>PayPeriod</c> 必须填写。</description></item>
+        /// <item><description>可以通过设置 <c>dryRun</c> 为 <c>true</c> 来执行预检查而不实际创建实例。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDifyEditionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDifyEditionsResponse
+        /// </returns>
+        public async Task<DescribeDifyEditionsResponse> DescribeDifyEditionsAsync(DescribeDifyEditionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDifyEditionsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -14047,6 +14679,126 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ExecuteStructSyncWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>数据库知识库补数据接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenMetaKnowledgeAssetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenMetaKnowledgeAssetResponse
+        /// </returns>
+        public GenMetaKnowledgeAssetResponse GenMetaKnowledgeAssetWithOptions(GenMetaKnowledgeAssetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbId))
+            {
+                query["DbId"] = request.DbId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenMetaKnowledgeAsset",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenMetaKnowledgeAssetResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>数据库知识库补数据接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenMetaKnowledgeAssetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenMetaKnowledgeAssetResponse
+        /// </returns>
+        public async Task<GenMetaKnowledgeAssetResponse> GenMetaKnowledgeAssetWithOptionsAsync(GenMetaKnowledgeAssetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbId))
+            {
+                query["DbId"] = request.DbId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenMetaKnowledgeAsset",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenMetaKnowledgeAssetResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>数据库知识库补数据接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenMetaKnowledgeAssetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenMetaKnowledgeAssetResponse
+        /// </returns>
+        public GenMetaKnowledgeAssetResponse GenMetaKnowledgeAsset(GenMetaKnowledgeAssetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GenMetaKnowledgeAssetWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>数据库知识库补数据接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenMetaKnowledgeAssetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenMetaKnowledgeAssetResponse
+        /// </returns>
+        public async Task<GenMetaKnowledgeAssetResponse> GenMetaKnowledgeAssetAsync(GenMetaKnowledgeAssetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GenMetaKnowledgeAssetWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -29736,6 +30488,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                query["Region"] = request.Region;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchKey))
             {
                 query["SearchKey"] = request.SearchKey;
@@ -29809,6 +30565,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                query["Region"] = request.Region;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchKey))
             {
@@ -30463,6 +31223,150 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListLogicTablesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取资产类目列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMetaCategoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMetaCategoryResponse
+        /// </returns>
+        public ListMetaCategoryResponse ListMetaCategoryWithOptions(ListMetaCategoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentCategoryId))
+            {
+                query["ParentCategoryId"] = request.ParentCategoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMetaCategory",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMetaCategoryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取资产类目列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMetaCategoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMetaCategoryResponse
+        /// </returns>
+        public async Task<ListMetaCategoryResponse> ListMetaCategoryWithOptionsAsync(ListMetaCategoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentCategoryId))
+            {
+                query["ParentCategoryId"] = request.ParentCategoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMetaCategory",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMetaCategoryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取资产类目列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMetaCategoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMetaCategoryResponse
+        /// </returns>
+        public ListMetaCategoryResponse ListMetaCategory(ListMetaCategoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListMetaCategoryWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取资产类目列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMetaCategoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMetaCategoryResponse
+        /// </returns>
+        public async Task<ListMetaCategoryResponse> ListMetaCategoryAsync(ListMetaCategoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListMetaCategoryWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -32947,6 +33851,150 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTablesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取类目下的表列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTablesInCategoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTablesInCategoryResponse
+        /// </returns>
+        public ListTablesInCategoryResponse ListTablesInCategoryWithOptions(ListTablesInCategoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryId))
+            {
+                query["CategoryId"] = request.CategoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTablesInCategory",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTablesInCategoryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取类目下的表列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTablesInCategoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTablesInCategoryResponse
+        /// </returns>
+        public async Task<ListTablesInCategoryResponse> ListTablesInCategoryWithOptionsAsync(ListTablesInCategoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryId))
+            {
+                query["CategoryId"] = request.CategoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTablesInCategory",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTablesInCategoryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取类目下的表列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTablesInCategoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTablesInCategoryResponse
+        /// </returns>
+        public ListTablesInCategoryResponse ListTablesInCategory(ListTablesInCategoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListTablesInCategoryWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取类目下的表列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTablesInCategoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTablesInCategoryResponse
+        /// </returns>
+        public async Task<ListTablesInCategoryResponse> ListTablesInCategoryAsync(ListTablesInCategoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListTablesInCategoryWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -37891,6 +38939,158 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>从资产类目移除表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveTableFromCategoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveTableFromCategoryResponse
+        /// </returns>
+        public RemoveTableFromCategoryResponse RemoveTableFromCategoryWithOptions(RemoveTableFromCategoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryId))
+            {
+                query["CategoryId"] = request.CategoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbId))
+            {
+                query["DbId"] = request.DbId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
+            {
+                query["TableName"] = request.TableName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableSchemaName))
+            {
+                query["TableSchemaName"] = request.TableSchemaName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveTableFromCategory",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveTableFromCategoryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>从资产类目移除表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveTableFromCategoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveTableFromCategoryResponse
+        /// </returns>
+        public async Task<RemoveTableFromCategoryResponse> RemoveTableFromCategoryWithOptionsAsync(RemoveTableFromCategoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryId))
+            {
+                query["CategoryId"] = request.CategoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbId))
+            {
+                query["DbId"] = request.DbId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
+            {
+                query["TableName"] = request.TableName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableSchemaName))
+            {
+                query["TableSchemaName"] = request.TableSchemaName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveTableFromCategory",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveTableFromCategoryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>从资产类目移除表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveTableFromCategoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveTableFromCategoryResponse
+        /// </returns>
+        public RemoveTableFromCategoryResponse RemoveTableFromCategory(RemoveTableFromCategoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RemoveTableFromCategoryWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>从资产类目移除表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveTableFromCategoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveTableFromCategoryResponse
+        /// </returns>
+        public async Task<RemoveTableFromCategoryResponse> RemoveTableFromCategoryAsync(RemoveTableFromCategoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RemoveTableFromCategoryWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Reruns a failed SQL task for data change.</para>
         /// </summary>
         /// 
@@ -42503,6 +43703,142 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新资产类目信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMetaCategoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMetaCategoryResponse
+        /// </returns>
+        public UpdateMetaCategoryResponse UpdateMetaCategoryWithOptions(UpdateMetaCategoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryId))
+            {
+                query["CategoryId"] = request.CategoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMetaCategory",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateMetaCategoryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新资产类目信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMetaCategoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMetaCategoryResponse
+        /// </returns>
+        public async Task<UpdateMetaCategoryResponse> UpdateMetaCategoryWithOptionsAsync(UpdateMetaCategoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryId))
+            {
+                query["CategoryId"] = request.CategoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMetaCategory",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateMetaCategoryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新资产类目信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMetaCategoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMetaCategoryResponse
+        /// </returns>
+        public UpdateMetaCategoryResponse UpdateMetaCategory(UpdateMetaCategoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateMetaCategoryWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新资产类目信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMetaCategoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMetaCategoryResponse
+        /// </returns>
+        public async Task<UpdateMetaCategoryResponse> UpdateMetaCategoryAsync(UpdateMetaCategoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateMetaCategoryWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public string AdbpgInstanceMode { get; set; }
 
+        [NameInMap("BackupVSwitchId")]
+        [Validation(Required=false)]
+        public string BackupVSwitchId { get; set; }
+
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
@@ -68,6 +72,18 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Community</para>
+        /// </summary>
+        [NameInMap("Edition")]
+        [Validation(Required=false)]
+        public string Edition { get; set; }
+
+        [NameInMap("EnableExtraEndpoint")]
+        [Validation(Required=false)]
+        public bool? EnableExtraEndpoint { get; set; }
+
         [NameInMap("GpuNodeSpec")]
         [Validation(Required=false)]
         public string GpuNodeSpec { get; set; }
@@ -103,6 +119,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [NameInMap("KvStoreType")]
         [Validation(Required=false)]
         public string KvStoreType { get; set; }
+
+        [NameInMap("MajorVersion")]
+        [Validation(Required=false)]
+        public string MajorVersion { get; set; }
 
         [NameInMap("ModelId")]
         [Validation(Required=false)]

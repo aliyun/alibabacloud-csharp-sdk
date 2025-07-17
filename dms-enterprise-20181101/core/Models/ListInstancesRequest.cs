@@ -103,6 +103,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("Region")]
+        [Validation(Required=false)]
+        public string Region { get; set; }
+
         /// <summary>
         /// <para>The keyword that is used to search for database instances.</para>
         /// 
