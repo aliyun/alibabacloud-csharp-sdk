@@ -419,6 +419,196 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>将已授权OSS Bucket中的文件添加到百炼应用数据</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// AddFilesFromAuthorizedOssRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddFilesFromAuthorizedOssResponse
+        /// </returns>
+        public AddFilesFromAuthorizedOssResponse AddFilesFromAuthorizedOssWithOptions(string WorkspaceId, AddFilesFromAuthorizedOssRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AddFilesFromAuthorizedOssShrinkRequest request = new AddFilesFromAuthorizedOssShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.FileDetails))
+            {
+                request.FileDetailsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.FileDetails, "FileDetails", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
+            {
+                request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryId))
+            {
+                body["CategoryId"] = request.CategoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryType))
+            {
+                body["CategoryType"] = request.CategoryType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileDetailsShrink))
+            {
+                body["FileDetails"] = request.FileDetailsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssBucketName))
+            {
+                body["OssBucketName"] = request.OssBucketName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssRegionId))
+            {
+                body["OssRegionId"] = request.OssRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
+            {
+                body["Tags"] = request.TagsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddFilesFromAuthorizedOss",
+                Version = "2023-12-29",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(WorkspaceId) + "/datacenter/file/fromoss",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddFilesFromAuthorizedOssResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将已授权OSS Bucket中的文件添加到百炼应用数据</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// AddFilesFromAuthorizedOssRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddFilesFromAuthorizedOssResponse
+        /// </returns>
+        public async Task<AddFilesFromAuthorizedOssResponse> AddFilesFromAuthorizedOssWithOptionsAsync(string WorkspaceId, AddFilesFromAuthorizedOssRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AddFilesFromAuthorizedOssShrinkRequest request = new AddFilesFromAuthorizedOssShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.FileDetails))
+            {
+                request.FileDetailsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.FileDetails, "FileDetails", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
+            {
+                request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryId))
+            {
+                body["CategoryId"] = request.CategoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryType))
+            {
+                body["CategoryType"] = request.CategoryType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileDetailsShrink))
+            {
+                body["FileDetails"] = request.FileDetailsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssBucketName))
+            {
+                body["OssBucketName"] = request.OssBucketName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssRegionId))
+            {
+                body["OssRegionId"] = request.OssRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
+            {
+                body["Tags"] = request.TagsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddFilesFromAuthorizedOss",
+                Version = "2023-12-29",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(WorkspaceId) + "/datacenter/file/fromoss",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddFilesFromAuthorizedOssResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将已授权OSS Bucket中的文件添加到百炼应用数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddFilesFromAuthorizedOssRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddFilesFromAuthorizedOssResponse
+        /// </returns>
+        public AddFilesFromAuthorizedOssResponse AddFilesFromAuthorizedOss(string WorkspaceId, AddFilesFromAuthorizedOssRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return AddFilesFromAuthorizedOssWithOptions(WorkspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将已授权OSS Bucket中的文件添加到百炼应用数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddFilesFromAuthorizedOssRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddFilesFromAuthorizedOssResponse
+        /// </returns>
+        public async Task<AddFilesFromAuthorizedOssResponse> AddFilesFromAuthorizedOssAsync(string WorkspaceId, AddFilesFromAuthorizedOssRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await AddFilesFromAuthorizedOssWithOptionsAsync(WorkspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Applies for a document upload lease to upload a document.</para>
         /// </summary>
         /// 
