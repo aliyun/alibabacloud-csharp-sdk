@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class GetStackRequest : TeaModel {
         /// <summary>
-        /// <para>The end time of the call method.</para>
+        /// <para>The exit timestamp of the method call. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1653641800</para>
@@ -52,6 +52,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RpcID { get; set; }
 
         /// <summary>
+        /// <para>The span ID of the trace. It is displayed on the Trace Explorer page in the ARMS console.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>88c32dfa4b******</para>
         /// </summary>
@@ -60,7 +62,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string SpanID { get; set; }
 
         /// <summary>
-        /// <para>The start time of the call method.</para>
+        /// <para>The entry timestamp of the method call. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1653555396</para>
@@ -70,7 +72,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The trace ID. You can log on to the Application Real-Time Monitoring Service (ARMS) console and obtain the trace ID on the <b>Trace Query</b> page.</para>
+        /// <para>The trace ID. It is displayed on the <b>Trace Explorer</b> page in the Application Real-Time Monitoring Service (ARMS) console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -39,6 +39,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>192.168.0.0/24</para>
+        /// </summary>
+        [NameInMap("ipSections")]
+        [Validation(Required=false)]
+        public string IpSections { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>北京VPC-A通道</para>
         /// </summary>
         [NameInMap("name")]

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>The error message returned when the request parameters are invalid.</para>
+        /// <para>The error message returned for invalid request parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;Deletion of application successful&quot;</para>

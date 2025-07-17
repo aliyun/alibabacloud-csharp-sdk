@@ -70,6 +70,12 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string IntegrationType { get; set; }
 
+        /// <summary>
+        /// <para>The notification object configured in the notification policy, responsible for handling alerts.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Alice</para>
+        /// </summary>
         [NameInMap("Owner")]
         [Validation(Required=false)]
         public string Owner { get; set; }

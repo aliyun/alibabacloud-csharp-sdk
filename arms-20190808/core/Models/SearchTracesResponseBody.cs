@@ -66,6 +66,12 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public string ServiceName { get; set; }
 
+            /// <summary>
+            /// <para>Span ID. You can get it from the <b>Trace Explorer</b> page of the ARMS console.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>be3d6dcf5750e***</para>
+            /// </summary>
             [NameInMap("SpanID")]
             [Validation(Required=false)]
             public string SpanID { get; set; }

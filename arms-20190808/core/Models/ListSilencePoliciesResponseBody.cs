@@ -33,6 +33,12 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public List<ListSilencePoliciesResponseBodyPageBeanSilencePolicies> SilencePolicies { get; set; }
             public class ListSilencePoliciesResponseBodyPageBeanSilencePolicies : TeaModel {
+                /// <summary>
+                /// <para>The effective type. Valid values: PERMANENT: The policy is effective permanently. CYCLE_EFFECT: The policy is effective cyclically. CUSTOM_TIME: The policy is effective during a custom time period.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>PERMANENT</para>
+                /// </summary>
                 [NameInMap("EffectiveTimeType")]
                 [Validation(Required=false)]
                 public string EffectiveTimeType { get; set; }
@@ -123,10 +129,22 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [Validation(Required=false)]
                 public string State { get; set; }
 
+                /// <summary>
+                /// <para>The effective time. Valid values: WEEK: weekly DAY: daily</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>WEEK</para>
+                /// </summary>
                 [NameInMap("TimePeriod")]
                 [Validation(Required=false)]
                 public string TimePeriod { get; set; }
 
+                /// <summary>
+                /// <para>Effective period.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>[{&quot;endTime&quot;:&quot;00:00&quot;,&quot;endWeek&quot;:&quot;7&quot;,&quot;startTime&quot;:&quot;00:00&quot;,&quot;startWeek&quot;:&quot;1&quot;}]</para>
+                /// </summary>
                 [NameInMap("TimeSlots")]
                 [Validation(Required=false)]
                 public string TimeSlots { get; set; }

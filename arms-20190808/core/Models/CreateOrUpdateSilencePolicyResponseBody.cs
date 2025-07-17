@@ -20,12 +20,18 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>A list of silence policies.</para>
+        /// <para>The silence policy.</para>
         /// </summary>
         [NameInMap("SilencePolicy")]
         [Validation(Required=false)]
         public CreateOrUpdateSilencePolicyResponseBodySilencePolicy SilencePolicy { get; set; }
         public class CreateOrUpdateSilencePolicyResponseBodySilencePolicy : TeaModel {
+            /// <summary>
+            /// <para>The effective type. Valid values: PERMANENT: The policy is effective permanently. CYCLE_EFFECT: The policy is effective cyclically. CUSTOM_TIME: The policy is effective during a custom time period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>PERMANENT</para>
+            /// </summary>
             [NameInMap("EffectiveTimeType")]
             [Validation(Required=false)]
             public string EffectiveTimeType { get; set; }
@@ -116,10 +122,22 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public string State { get; set; }
 
+            /// <summary>
+            /// <para>Effective period. Valid values: DAY: daily WEEK: weekly</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>WEEK</para>
+            /// </summary>
             [NameInMap("TimePeriod")]
             [Validation(Required=false)]
             public string TimePeriod { get; set; }
 
+            /// <summary>
+            /// <para>The time period during which the silence policy is effective.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>[{startWeek: &quot;1&quot;, startTime: &quot;00:00&quot;, endTime: &quot;11:59&quot;, endWeek:&quot;7&quot;}]</para>
+            /// </summary>
             [NameInMap("TimeSlots")]
             [Validation(Required=false)]
             public string TimeSlots { get; set; }

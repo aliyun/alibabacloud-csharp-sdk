@@ -77,8 +77,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>The time interval between data slices. Unit: seconds. Minimum value: 3600.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>3600: hours</description></item>
-        /// <item><description>86400: days</description></item>
+        /// <item><description>3600: 1 hour</description></item>
+        /// <item><description>86400: 1 day</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

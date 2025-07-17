@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <item><description>PAUSED</description></item>
         /// </list>
         /// <remarks>
-        /// <para> The PAUSED state indicates that the alert rule is abnormal and has been suspended. This may be because the specified threshold value is excessively large, or the associated cluster has been deleted.</para>
+        /// <para> The PAUSED state indicates an abnormal and paused alert rule. This may result from excessively large threshold values or deleted associated clusters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string AlertStatus { get; set; }
 
         /// <summary>
-        /// <para>The type of the alert rule. This parameter is required for the new version of Alert Management.</para>
+        /// <para>The type of the alert rule. This parameter is required for the new version of Alert Management. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring</description></item>
         /// <item><description>BROWSER_MONITORING_ALERT_RULE: alert rule for Browser Monitoring</description></item>

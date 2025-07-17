@@ -8,16 +8,19 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
-    public class DeleteAppListRequest : TeaModel {
+    public class DescribeEnvDropMetricsRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The list of PIDs for the applications monitored by Application Monitoring.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>env-xxxxxx</para>
         /// </summary>
-        [NameInMap("Pids")]
+        [NameInMap("EnvironmentId")]
         [Validation(Required=false)]
-        public List<string> Pids { get; set; }
+        public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

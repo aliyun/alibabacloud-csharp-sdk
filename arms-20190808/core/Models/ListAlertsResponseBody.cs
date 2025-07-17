@@ -9,24 +9,36 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListAlertsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The returned error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>alert.manager.error.code.signature.invalid</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The information about the array object.</para>
+        /// <para>The struct returned.</para>
         /// </summary>
         [NameInMap("PageBean")]
         [Validation(Required=false)]
         public ListAlertsResponseBodyPageBean PageBean { get; set; }
         public class ListAlertsResponseBodyPageBean : TeaModel {
             /// <summary>
-            /// <para>The alerts for which the alert sending history is queried.</para>
+            /// <para>The queried alert notification history records.</para>
             /// </summary>
             [NameInMap("ListAlerts")]
             [Validation(Required=false)]
             public List<ListAlertsResponseBodyPageBeanListAlerts> ListAlerts { get; set; }
             public class ListAlertsResponseBodyPageBeanListAlerts : TeaModel {
+                /// <summary>
+                /// <para>Time to claim the alarm.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>-1</para>
+                /// </summary>
                 [NameInMap("AcknowledgeTime")]
                 [Validation(Required=false)]
                 public long? AcknowledgeTime { get; set; }
@@ -288,6 +300,12 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
+                /// <summary>
+                /// <para>The description of a event execution status.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>[Notification Strategy: ARMS Front-end Alarm]\nPage Indicator Page Name: Home JS Error Number Average in the last 5 minutes &gt;= 1.0 times, current value 1.0000 times\n</para>
+                /// </summary>
                 [NameInMap("Describe")]
                 [Validation(Required=false)]
                 public string Describe { get; set; }
@@ -312,18 +330,42 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [Validation(Required=false)]
                 public string DispatchRuleName { get; set; }
 
+                /// <summary>
+                /// <para>Alarm handler.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Alice</para>
+                /// </summary>
                 [NameInMap("Handler")]
                 [Validation(Required=false)]
                 public string Handler { get; set; }
 
+                /// <summary>
+                /// <para>The contact card of an instant messaging app.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Test Robot</para>
+                /// </summary>
                 [NameInMap("NotifyRobots")]
                 [Validation(Required=false)]
                 public string NotifyRobots { get; set; }
 
+                /// <summary>
+                /// <para>The notification object configured in the notification policy, responsible for handling alerts.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Alice</para>
+                /// </summary>
                 [NameInMap("Owner")]
                 [Validation(Required=false)]
                 public string Owner { get; set; }
 
+                /// <summary>
+                /// <para>Alarm recovery time.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>-1</para>
+                /// </summary>
                 [NameInMap("RecoverTime")]
                 [Validation(Required=false)]
                 public long? RecoverTime { get; set; }

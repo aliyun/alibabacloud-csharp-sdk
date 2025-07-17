@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The returned struct.</para>
+        /// <para>The struct returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -263,6 +263,16 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string VSwitchId { get; set; }
 
             }
+
+            /// <summary>
+            /// <para>The feature configurations.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{}</para>
+            /// </summary>
+            [NameInMap("config")]
+            [Validation(Required=false)]
+            public string Config { get; set; }
 
         }
 

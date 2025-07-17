@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information of the method stack.</para>
+        /// <para>The method stack details.</para>
         /// </summary>
         [NameInMap("StackInfo")]
         [Validation(Required=false)]
@@ -37,6 +37,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string Api { get; set; }
 
             /// <summary>
+            /// <para>The number of times the method is called.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>

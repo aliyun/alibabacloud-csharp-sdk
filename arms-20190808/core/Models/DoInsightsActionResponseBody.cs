@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DoInsightsActionResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code. 200 means success, other status codes are exceptions.</para>
+        /// <para>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -24,8 +24,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <list type="bullet">
         /// <item><description><para>QueryTopo</para>
         /// <pre><c>{
-        ///  &quot;nodes&quot;: [Node] # The collection of nodes. For more information, see the &quot;Node&quot; section of this topic.
-        ///  &quot;edges&quot;: [Edge] # The collection of edges. For more information, see the &quot;Edge&quot; section of this topic.
+        /// &quot;nodes&quot;: [Object] # The nodes. For more information, see node details in the supplementary notes of response parameters.
+        /// &quot;edges&quot;: [Object] # The edges. For more information, see edge details in the supplementary notes of response parameters.
         /// }
         /// </c></pre>
         /// </description></item>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>Information returned when the call fails.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>626037F5-FDEB-45B0-804C-B3C92797A64E</para>
@@ -136,10 +136,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Whether the query is successful:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><c>true</c></description></item>
+        /// <item><description><c>false</c></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

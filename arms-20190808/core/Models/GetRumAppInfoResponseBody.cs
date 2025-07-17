@@ -20,12 +20,22 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The details of the application.</para>
+        /// <para>The application details.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetRumAppInfoResponseBodyData Data { get; set; }
         public class GetRumAppInfoResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The application configurations in the JSON format. This parameter is deprecated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;apiRequestOfH5&quot;:300,&quot;apiRequestOfOriginal&quot;:500,&quot;coldStart&quot;:5000,&quot;hotStart&quot;:3000,&quot;staticResourceLoad&quot;:300,&quot;stutter&quot;:1000,&quot;viewLoadOfH5&quot;:1000,&quot;viewLoadOfOriginal&quot;:2000}</para>
+            /// </summary>
+            [NameInMap("AppConfig")]
+            [Validation(Required=false)]
+            public string AppConfig { get; set; }
+
             /// <summary>
             /// <para>The group to which the application belongs.</para>
             /// 
@@ -96,11 +106,16 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
                 }
 
+                /// <summary>
+                /// <para>Sampling configuration.</para>
+                /// </summary>
                 [NameInMap("samplingConfig")]
                 [Validation(Required=false)]
                 public GetRumAppInfoResponseBodyDataBonreeSDKConfigSamplingConfig SamplingConfig { get; set; }
                 public class GetRumAppInfoResponseBodyDataBonreeSDKConfigSamplingConfig : TeaModel {
                     /// <summary>
+                    /// <para>Sampling rate: between (0, 1000], a thousandth.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>500</para>
                     /// </summary>
@@ -109,6 +124,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     public int? SamplingRate { get; set; }
 
                     /// <summary>
+                    /// <para>Sampling type, currently only session random sampling is supported, that is, fixed transmission: 1.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
                     /// </summary>
@@ -142,6 +159,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
             /// <summary>
             /// <para>The description of the application.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Portal home page.</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -261,6 +281,12 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [Validation(Required=false)]
                 public List<string> PropagatorTypes { get; set; }
 
+                /// <summary>
+                /// <para>The sampling rate of a trace. Valid values: (0, 100].</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>100</para>
+                /// </summary>
                 [NameInMap("SamplingRate")]
                 [Validation(Required=false)]
                 public int? SamplingRate { get; set; }

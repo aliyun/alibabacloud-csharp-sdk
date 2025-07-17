@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
-    public class ManageRecordingRuleResponse : TeaModel {
+    public class UpdateEnvDropMetricsRuleResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public ManageRecordingRuleResponseBody Body { get; set; }
+        public UpdateEnvDropMetricsRuleResponseBody Body { get; set; }
 
     }
 

@@ -138,12 +138,18 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public class UpdateTimingSyntheticTaskRequestCommonSettingCustomPrometheusSetting : TeaModel {
                 /// <summary>
                 /// <para>A reserved parameter.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>A reserved parameter.</para>
                 /// </summary>
                 [NameInMap("PrometheusClusterId")]
                 [Validation(Required=false)]
                 public string PrometheusClusterId { get; set; }
 
                 /// <summary>
+                /// <para>A reserved parameter.</para>
+                /// 
+                /// <b>Example:</b>
                 /// <para>A reserved parameter.</para>
                 /// </summary>
                 [NameInMap("PrometheusClusterRegion")]

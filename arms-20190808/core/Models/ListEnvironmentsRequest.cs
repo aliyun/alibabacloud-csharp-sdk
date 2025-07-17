@@ -88,7 +88,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string FeePackage { get; set; }
 
         /// <summary>
-        /// <para>The region IDs.</para>
+        /// <para>The region IDs to be queried.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-beijing,cn-hangzhou</para>
         /// </summary>
         [NameInMap("FilterRegionIds")]
         [Validation(Required=false)]

@@ -49,6 +49,12 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         }
 
+        /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
+        /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }

@@ -22,6 +22,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <summary>
         /// <para>The IP addresses or CIDR blocks for which password-free read is enabled. Separate multiple IP addresses with line breaks.</para>
         /// 
+        /// <b>Example:</b>
+        /// <para>0.0.0.0/0</para>
+        /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
         /// </summary>
@@ -31,6 +34,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// <para>The IP addresses or CIDR blocks for which password-free write is enabled. Separate multiple IP addresses with line breaks.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0.0.0.0/0</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -82,6 +88,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// <para>The billing mode. Valid values: POSTPAY: charges fees based on the amount of reported metric data. POSTPAY_GB: charges fees based on the amount of written metric data.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>POSTPAY</para>
         /// </summary>
         [NameInMap("PaymentType")]
         [Validation(Required=false)]
@@ -99,7 +108,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The ID of the Prometheus resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmxyexli2****</para>

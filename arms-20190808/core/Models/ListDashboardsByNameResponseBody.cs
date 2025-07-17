@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListDashboardsByNameResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status Code. Description 200 indicates success.</para>
+        /// <para>The status code. The HTTP 200 status code indicates a successful request, while others indicate error conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>Returns a hint message for the result.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

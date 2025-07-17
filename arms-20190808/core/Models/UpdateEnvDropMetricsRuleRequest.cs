@@ -8,31 +8,38 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
-    public class ManageGetRecordingRuleRequest : TeaModel {
+    public class UpdateEnvDropMetricsRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <b>Example:</b>
+        /// <para>zh</para>
+        /// </summary>
+        [NameInMap("AliyunLang")]
+        [Validation(Required=false)]
+        public string AliyunLang { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cc7a37ee31aea4ed1a059eff8034b****</para>
+        /// <para>metric_1
+        /// metric_2
+        /// metric_3</para>
         /// </summary>
-        [NameInMap("ClusterId")]
+        [NameInMap("DropMetrics")]
         [Validation(Required=false)]
-        public string ClusterId { get; set; }
+        public string DropMetrics { get; set; }
 
         /// <summary>
-        /// <para>The user ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>876345234</para>
+        /// <para>env-xxx</para>
         /// </summary>
-        [NameInMap("QueryUserId")]
+        [NameInMap("EnvironmentId")]
         [Validation(Required=false)]
-        public string QueryUserId { get; set; }
+        public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

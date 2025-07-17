@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DeletePrometheusGlobalViewResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code. 200 is success, other status codes are exceptions.</para>
+        /// <para>The status code. The status code 200 indicates a successful request, whereas others indicate a failed request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>Additional Message.</para>
+        /// <para>The supplemental message providing additional context about the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

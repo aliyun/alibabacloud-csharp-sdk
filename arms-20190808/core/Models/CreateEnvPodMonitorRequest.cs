@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string AliyunLang { get; set; }
 
         /// <summary>
-        /// <para>The YAML configuration string of the PodMonitor.</para>
+        /// <para>The YAML configuration snippet for PodMonitor.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

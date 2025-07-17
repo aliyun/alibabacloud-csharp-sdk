@@ -23,6 +23,26 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public long? EndTime { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public long? PageNumber { get; set; }
+
+        /// <summary>
+        /// <para>The number of entries on each page. Maximum value: 100.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public long? PageSize { get; set; }
+
+        /// <summary>
         /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 

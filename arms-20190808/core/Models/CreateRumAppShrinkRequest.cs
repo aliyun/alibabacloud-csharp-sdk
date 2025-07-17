@@ -41,6 +41,16 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The language used by the client.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>java</para>
+        /// </summary>
+        [NameInMap("Language")]
+        [Validation(Required=false)]
+        public string Language { get; set; }
+
+        /// <summary>
         /// <para>The nickname of the application.</para>
         /// 
         /// <b>Example:</b>
@@ -60,6 +70,12 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string PackageName { get; set; }
 
+        /// <summary>
+        /// <para>The region where the application resides. You can leave this parameter empty or set it to China East 2 Finance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai-finance-1</para>
+        /// </summary>
         [NameInMap("RealRegionId")]
         [Validation(Required=false)]
         public string RealRegionId { get; set; }

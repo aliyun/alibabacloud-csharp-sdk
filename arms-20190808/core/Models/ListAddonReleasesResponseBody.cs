@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The result of the operation.</para>
+        /// <para>The result returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -123,6 +123,16 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 }
 
                 /// <summary>
+                /// <para>The configuration information of the add-on release.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{&quot;port&quot;:&quot;9379&quot;}</para>
+                /// </summary>
+                [NameInMap("Config")]
+                [Validation(Required=false)]
+                public string Config { get; set; }
+
+                /// <summary>
                 /// <para>The time when the add-on was created.</para>
                 /// 
                 /// <b>Example:</b>
@@ -192,9 +202,25 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [Validation(Required=false)]
                 public string Language { get; set; }
 
+                /// <summary>
+                /// <para>Indicates whether the component is fully managed.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
                 [NameInMap("Managed")]
                 [Validation(Required=false)]
                 public bool? Managed { get; set; }
+
+                /// <summary>
+                /// <para>The latest version.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0.0.4</para>
+                /// </summary>
+                [NameInMap("NextVersion")]
+                [Validation(Required=false)]
+                public string NextVersion { get; set; }
 
                 /// <summary>
                 /// <para>The region ID.</para>

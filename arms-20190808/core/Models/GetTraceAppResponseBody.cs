@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string AppName { get; set; }
 
             /// <summary>
-            /// <para>Cluster ID, used only in K8s scenarios.</para>
+            /// <para>The ID of the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c905d1364c2dd4b6284a3f41790c4****</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public List<string> Labels { get; set; }
 
             /// <summary>
-            /// <para>Coding Language.</para>
+            /// <para>The programming language of the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>java</para>

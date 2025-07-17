@@ -30,6 +30,12 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
+        /// <summary>
+        /// <para>The region where the application resides. You can leave this parameter empty or set it to China East 2 Finance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai-finance-1</para>
+        /// </summary>
         [NameInMap("RealRegionId")]
         [Validation(Required=false)]
         public string RealRegionId { get; set; }

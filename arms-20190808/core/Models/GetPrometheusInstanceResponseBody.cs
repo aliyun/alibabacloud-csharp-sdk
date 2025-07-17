@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string EnableAuthToken { get; set; }
 
             /// <summary>
-            /// <para>The extra information.</para>
+            /// <para>The extra information. This parameter is returned only for console requests.</para>
             /// </summary>
             [NameInMap("ExtraInfo")]
             [Validation(Required=false)]
@@ -190,6 +190,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public string HttpApiIntraUrl { get; set; }
 
+            [NameInMap("OpenTelemetryInterUrl")]
+            [Validation(Required=false)]
+            public string OpenTelemetryInterUrl { get; set; }
+
+            [NameInMap("OpenTelemetryIntraUrl")]
+            [Validation(Required=false)]
+            public string OpenTelemetryIntraUrl { get; set; }
+
             /// <summary>
             /// <para>The billing method. Valid values:</para>
             /// <list type="bullet">
@@ -206,6 +214,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
             /// <summary>
             /// <para>The time when the billing method was modified.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2025-02-26T06:05:01Z</para>
             /// </summary>
             [NameInMap("PaymentTypeUpdateTime")]
             [Validation(Required=false)]
@@ -332,7 +343,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public int? StorageDuration { get; set; }
 
             /// <summary>
-            /// <para>The child instances of the Prometheus instance for GlobalView. The value is a JSON string.</para>
+            /// <para>The child instances of the global aggregation instance. The value is a JSON string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[{&quot;headers&quot;:{},&quot;regionId&quot;:&quot;cn-hangzhou&quot;,&quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,&quot;extras&quot;:{},&quot;clusterId&quot;:&quot;c39a1048921e04fceb039db2fbb73\<em>\</em>\<em>&quot;,&quot;sourceName&quot;:&quot;arms-luyao-test&quot;,&quot;dataSource&quot;:&quot;&quot;,&quot;userId&quot;:&quot;167275301789\</em>\<em>\</em>&quot;},{&quot;headers&quot;:{},&quot;regionId&quot;:&quot;cn-beijing&quot;,&quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,&quot;extras&quot;:{},&quot;clusterId&quot;:&quot;c6b6485496d5b400abde22cb47b5\<em>\</em>\<em>\</em>&quot;,&quot;sourceName&quot;:&quot;agent-321-test&quot;,&quot;dataSource&quot;:&quot;&quot;,&quot;userId&quot;:&quot;1672753017899\<em>\</em>\<em>&quot;},{&quot;headers&quot;:{},&quot;regionId&quot;:&quot;cn-zhangjiakou&quot;,&quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,&quot;extras&quot;:{},&quot;clusterId&quot;:&quot;c261a4f3200c446659133f1ade789b15e&quot;,&quot;sourceName&quot;:&quot;zaifeng-cardinality-01&quot;,&quot;dataSource&quot;:&quot;&quot;,&quot;userId&quot;:&quot;167275301789\</em>\<em>\</em>&quot;}]</para>
@@ -397,6 +408,12 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public string VSwitchId { get; set; }
 
+            /// <summary>
+            /// <para>Version</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>V1</para>
+            /// </summary>
             [NameInMap("Version")]
             [Validation(Required=false)]
             public string Version { get; set; }

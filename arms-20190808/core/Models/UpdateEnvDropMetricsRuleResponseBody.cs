@@ -8,10 +8,8 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
-    public class ManageRecordingRuleResponseBody : TeaModel {
+    public class UpdateEnvDropMetricsRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -20,8 +18,6 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The result of the operation.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -30,8 +26,6 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -40,10 +34,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request. You can use the ID to troubleshoot issues.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>CD782AEC-A676-529F-8F26-0ED0FF0EF1EA</para>
+        /// <para>6A9AEA84-7186-4D8D-B498-4585C6A2****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

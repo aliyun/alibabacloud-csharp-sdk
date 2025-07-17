@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class UpdateRumAppRequest : TeaModel {
         /// <summary>
+        /// <para>The application configurations in the JSON format. This parameter is deprecated.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;apiRequestOfH5&quot;:300,&quot;apiRequestOfOriginal&quot;:500,&quot;coldStart&quot;:5000,&quot;hotStart&quot;:3000,&quot;staticResourceLoad&quot;:300,&quot;stutter&quot;:1000,&quot;viewLoadOfH5&quot;:1000,&quot;viewLoadOfOriginal&quot;:2000}</para>
+        /// </summary>
+        [NameInMap("AppConfig")]
+        [Validation(Required=false)]
+        public string AppConfig { get; set; }
+
+        /// <summary>
         /// <para>Specifies whether to restart the application the next day. Valid values: true and false.</para>
         /// 
         /// <b>Example:</b>
@@ -20,7 +30,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public bool? AutoRestart { get; set; }
 
         /// <summary>
-        /// <para>The collection configurations of the mobile SDK. You can enable or disable collection configurations based on the app version.</para>
+        /// <para>The region where the backend application is deployed. This parameter is used in end-to-end tracing scenarios.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;moduleConfig\&quot;:{\&quot;enable\&quot;:true,\&quot;defaultConfig\&quot;:{\&quot;network\&quot;:{\&quot;enable\&quot;:true},\&quot;h5\&quot;:{\&quot;enable\&quot;:true},\&quot;routechange\&quot;:{\&quot;enable\&quot;:true},\&quot;crash\&quot;:{\&quot;enable\&quot;:true},\&quot;view\&quot;:{\&quot;enable\&quot;:true},\&quot;coollaunch\&quot;:{\&quot;enable\&quot;:true},\&quot;hotlaunch\&quot;:{\&quot;enable\&quot;:true},\&quot;action\&quot;:{\&quot;enable\&quot;:true},\&quot;lagstuck\&quot;:{\&quot;enable\&quot;:true},\&quot;lagfps\&quot;:{\&quot;enable\&quot;:true},\&quot;statechange\&quot;:{\&quot;enable\&quot;:true},\&quot;anr\&quot;:{\&quot;enable\&quot;:true},\&quot;customlog\&quot;:{\&quot;enable\&quot;:true},\&quot;customevent\&quot;:{\&quot;enable\&quot;:true},\&quot;custommetric\&quot;:{\&quot;enable\&quot;:true}},\&quot;versionConfigs\&quot;:{\&quot;1.1.0\&quot;:{\&quot;useCustom\&quot;:true,\&quot;customConfig\&quot;:{\&quot;network\&quot;:{\&quot;enable\&quot;:true},\&quot;h5\&quot;:{\&quot;enable\&quot;:true},\&quot;routechange\&quot;:{\&quot;enable\&quot;:true},\&quot;crash\&quot;:{\&quot;enable\&quot;:true},\&quot;view\&quot;:{\&quot;enable\&quot;:true},\&quot;coollaunch\&quot;:{\&quot;enable\&quot;:true},\&quot;hotlaunch\&quot;:{\&quot;enable\&quot;:true},\&quot;action\&quot;:{\&quot;enable\&quot;:true},\&quot;lagstuck\&quot;:{\&quot;enable\&quot;:false},\&quot;lagfps\&quot;:{\&quot;enable\&quot;:false},\&quot;statechange\&quot;:{\&quot;enable\&quot;:true},\&quot;anr\&quot;:{\&quot;enable\&quot;:true},\&quot;customlog\&quot;:{\&quot;enable\&quot;:true},\&quot;customevent\&quot;:{\&quot;enable\&quot;:true},\&quot;custommetric\&quot;:{\&quot;enable\&quot;:true}}},\&quot;1.2.0\&quot;:{\&quot;useCustom\&quot;:false,\&quot;customConfig\&quot;:{}}}}}</para>
@@ -81,7 +91,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Pid { get; set; }
 
         /// <summary>
-        /// <para>Backend application deployment area (used in end-to-end link scenarios).</para>
+        /// <para>The region where the application resides. You can leave this parameter empty or set it to China East 2 Finance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

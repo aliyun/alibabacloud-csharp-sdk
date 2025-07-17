@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class SearchTracesByPageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned struct.</para>
+        /// <para>The struct returned.</para>
         /// </summary>
         [NameInMap("PageBean")]
         [Validation(Required=false)]
@@ -93,6 +93,12 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [Validation(Required=false)]
                 public string ServiceName { get; set; }
 
+                /// <summary>
+                /// <para>The span ID of the trace.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>be3d6dcf5750e***</para>
+                /// </summary>
                 [NameInMap("SpanID")]
                 [Validation(Required=false)]
                 public string SpanID { get; set; }

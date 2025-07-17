@@ -30,6 +30,12 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The type of the cloud service integration. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>direct: self-monitoring</description></item>
+        /// <item><description>cms: Hybrid Cloud Monitoring</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>direct</para>
         /// </summary>

@@ -112,6 +112,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
+        [NameInMap("VcExtraInfo")]
+        [Validation(Required=false)]
+        public string VcExtraInfo { get; set; }
+
         /// <summary>
         /// <para>The virtual private cloud (VPC) where the cluster resides.</para>
         /// <para>This parameter is required.</para>

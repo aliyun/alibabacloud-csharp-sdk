@@ -118,12 +118,24 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <summary>
         /// <para>The type of the alert rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring</description></item>
-        /// <item><description>BROWSER_MONITORING_ALERT_RULE: alert rule for Browser Monitoring</description></item>
-        /// <item><description>PROMETHEUS_MONITORING_ALERT_RULE: alert rule for Managed Service for Prometheus</description></item>
-        /// <item><description>XTRACE_MONITORING_ALERT_RULE: alert rule for Managed Service for OpenTelemetry</description></item>
-        /// <item><description>EBPF_MONITORING_ALERT_RULE: alert rule for Application Monitoring eBPF Edition</description></item>
-        /// <item><description>RUM_MONITORING_ALERT_RULE: alert rule for Real User Monitoring</description></item>
+        /// <item><description>APPLICATION_MONITORING_ALERT_RULE: an alert rule for Application Monitoring.</description></item>
+        /// <item><description>BROWSER_MONITORING_ALERT_RULE: an alert rule for Browser Monitoring.</description></item>
+        /// <item><description>PROMETHEUS_MONITORING_ALERT_RULE: an alert rule for Managed Service for Prometheus.</description></item>
+        /// <item><description>XTRACE_MONITORING_ALERT_RULE: an alert rule for Managed Service for OpenTelemetry.</description></item>
+        /// <item><description>EBPF_MONITORING_ALERT_RULE: an alert rule for Application Monitoring eBPF Edition.</description></item>
+        /// <item><description>RUM_MONITORING_ALERT_RULE: an alert rule for Real User Monitoring.</description></item>
+        /// </list>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PROMETHEUS_MONITORING_ALERT_RULE</description></item>
+        /// <item><description>APPLICATION_MONITORING_ALERT_RULE</description></item>
+        /// <item><description>BROWSER_MONITORING_ALERT_RULE</description></item>
+        /// <item><description>prometheus monitoring alert</description></item>
+        /// <item><description>application monitoring alert</description></item>
+        /// <item><description>browser monitoring alert</description></item>
+        /// <item><description>XTRACE_MONITORING_ALERT_RULE</description></item>
+        /// <item><description>EBPF_MONITORING_ALERT_RULE</description></item>
+        /// <item><description>RUM_MONITORING_ALERT_RULE</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -174,6 +186,16 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [NameInMap("AutoAddTargetConfig")]
         [Validation(Required=false)]
         public string AutoAddTargetConfig { get; set; }
+
+        /// <summary>
+        /// <para>The interval for checking the alerts in Managed Service for Prometheus.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("CheckCycle")]
+        [Validation(Required=false)]
+        public long? CheckCycle { get; set; }
 
         /// <summary>
         /// <para>The ID of the monitored cluster.</para>
@@ -338,7 +360,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Notice { get; set; }
 
         /// <summary>
-        /// <para>The notification mode. You can specify the normal mode or simple mode.</para>
+        /// <para>The notification mode. You can specify normal mode or simple mode.</para>
         /// <list type="bullet">
         /// <item><description>DIRECTED_MODE</description></item>
         /// <item><description>NORMAL_MODE</description></item>

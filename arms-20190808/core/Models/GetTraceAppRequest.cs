@@ -32,14 +32,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>标签。</para>
+        /// <para>The list of tags.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<GetTraceAppRequestTags> Tags { get; set; }
         public class GetTraceAppRequestTags : TeaModel {
             /// <summary>
-            /// <para>标签的键（key）。</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>标签的值（value）。</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

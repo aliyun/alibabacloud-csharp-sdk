@@ -40,6 +40,16 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string AppName { get; set; }
 
         /// <summary>
+        /// <para>The application type. Currently, supported application types include: web, mini program, Android, iOS, Windows, macOS, and HarmonyOS.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>web</para>
+        /// </summary>
+        [NameInMap("AppType")]
+        [Validation(Required=false)]
+        public string AppType { get; set; }
+
+        /// <summary>
         /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 

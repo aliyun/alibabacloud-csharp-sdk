@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class GetRetcodeShareUrlResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>01FF8DD9-A09C-47A1-895A-B6E321******</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The logon-free URL of the application.</para>
+        /// <para>The share URL of the application monitored by Browser Monitoring.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://arms-daily.console.aliyun.com:8080/shareapi/retcode.json?login_arms_t3h_token=XXXxxx&action=RetcodeAction&eventSubmitDoGetData=1">http://arms-daily.console.aliyun.com:8080/shareapi/retcode.json?login_arms_t3h_token=XXXxxx&amp;action=RetcodeAction&amp;eventSubmitDoGetData=1</a></para>

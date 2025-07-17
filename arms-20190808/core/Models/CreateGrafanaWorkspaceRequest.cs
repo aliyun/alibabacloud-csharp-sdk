@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class CreateGrafanaWorkspaceRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("AccountNumber")]
         [Validation(Required=false)]
         public string AccountNumber { get; set; }
@@ -27,10 +31,18 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string AliyunLang { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
         public string AutoRenew { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("CustomAccountNumber")]
         [Validation(Required=false)]
         public string CustomAccountNumber { get; set; }
@@ -45,6 +57,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>6</para>
+        /// </summary>
         [NameInMap("Duration")]
         [Validation(Required=false)]
         public string Duration { get; set; }
@@ -98,6 +114,12 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string Password { get; set; }
 
+        /// <summary>
+        /// <para>包年包月的计费周期，取值： Month（默认值）：按月购买。                                 Year：按年购买。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Month</para>
+        /// </summary>
         [NameInMap("PricingCycle")]
         [Validation(Required=false)]
         public string PricingCycle { get; set; }

@@ -45,6 +45,12 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string ExceptionThreadId { get; set; }
 
+        /// <summary>
+        /// <para>Extra information about iOS symbol tables. You can leave this parameter empty.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>GraphicsServices:system/GraphicsServices/85419099-269B-336D-86B4-0D52D0FF6923/GraphicsServices;WebCore:system/WebCore/BF44A3F4-85D4-38C8-BF26-197F06ADE273/WebCore</para>
+        /// </summary>
         [NameInMap("ExtraInfo")]
         [Validation(Required=false)]
         public string ExtraInfo { get; set; }
@@ -71,11 +77,13 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The file type. Valid values:</para>
+        /// <para>The parsing type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>source-map: SourceMap files</description></item>
-        /// <item><description>mapping: symbol table files for Android</description></item>
-        /// <item><description>dsym: dSYM files for iOS</description></item>
+        /// <item><description>js: Parses JavaScript errors.</description></item>
+        /// <item><description>sym: Parses PC errors.</description></item>
+        /// <item><description>har: Parses HarmonyOS errors.</description></item>
+        /// <item><description>dSYM: Parses iOS errors.</description></item>
+        /// <item><description>so: Parses Android errors.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
