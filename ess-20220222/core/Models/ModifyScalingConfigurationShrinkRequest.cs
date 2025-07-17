@@ -1006,8 +1006,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// <para>The instance type. If you specify InstanceTypes, InstanceType is ignored.</para>
-        /// <para>Auto Scaling creates instances based on the priorities of instance types. If Auto Scaling cannot create instances by using the instance type that has the highest priority, Auto Scaling creates instances by using the instance type that has the next highest priority.</para>
+        /// <para>The instance types. If you specify InstanceTypes, InstanceType is ignored.</para>
+        /// <para>Auto Scaling creates instances based on a priority list of instance types. If it fails to create instances using the highest-priority type, it automatically moves to the next type in the priority order.</para>
         /// </summary>
         [NameInMap("InstanceTypes")]
         [Validation(Required=false)]
@@ -1246,15 +1246,33 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
 
+        /// <summary>
+        /// <para>The resource pools used for instance creation, which can be the public pool or a private pool associated with any active elasticity assurance or capacity reservation. When you specify this parameter, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>This parameter takes effect only when you create pay-as-you-go instances.</description></item>
+        /// <item><description>If you specify this parameter, you cannot specify PrivatePoolOptions.MatchCriteria or PrivatePoolOptions.Id.</description></item>
+        /// </list>
+        /// </summary>
         [NameInMap("ResourcePoolOptions")]
         [Validation(Required=false)]
         public ModifyScalingConfigurationShrinkRequestResourcePoolOptions ResourcePoolOptions { get; set; }
         public class ModifyScalingConfigurationShrinkRequestResourcePoolOptions : TeaModel {
+            /// <summary>
+            /// <para>The IDs of private pools. The ID of a private pool is the same as that of the elasticity assurance or capacity reservation for which the private pool is generated. You can specify the IDs of only targeted private pools for this parameter.</para>
+            /// </summary>
             [NameInMap("PrivatePoolIds")]
             [Validation(Required=false)]
             public List<string> PrivatePoolIds { get; set; }
 
             /// <summary>
+            /// <para>The resource pool used for instance creation, which can be the public pool or a private pool associated with any active elasticity assurance or capacity reservation. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>PrivatePoolFirst: prioritizes private pools. When this option is set along with ResourcePoolOptions.PrivatePoolIds, the specified private pools are used first. If you leave ResourcePoolOptions.PrivatePoolIds empty or if the specified private pools lack sufficient capacity, the system will automatically use available open private pools instead. If no matching private pools are available, the system defaults to the public pool.</description></item>
+            /// <item><description>PrivatePoolOnly: uses only private pools. If you use this value, you must specify ResourcePoolOptions.PrivatePoolIds. If the specified private pools lack sufficient capacity, instance creation will fail.</description></item>
+            /// <item><description>None: uses no resource pools.</description></item>
+            /// </list>
+            /// <para>Default value: None.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>PrivatePoolFirst</para>
             /// </summary>

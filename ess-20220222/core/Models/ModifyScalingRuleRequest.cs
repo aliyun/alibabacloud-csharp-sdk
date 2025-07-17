@@ -68,10 +68,29 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         }
 
+        /// <summary>
+        /// <para>The alert attributes.</para>
+        /// </summary>
         [NameInMap("AlarmOptions")]
         [Validation(Required=false)]
         public ModifyScalingRuleRequestAlarmOptions AlarmOptions { get; set; }
         public class ModifyScalingRuleRequestAlarmOptions : TeaModel {
+            /// <summary>
+            /// <para>The statistical period of the metric data in the target tracking scaling rule. Unit: seconds. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>15</description></item>
+            /// <item><description>60</description></item>
+            /// <item><description>120</description></item>
+            /// <item><description>300</description></item>
+            /// <item><description>900</description></item>
+            /// </list>
+            /// <remarks>
+            /// <para> Default value: 60.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>60</para>
+            /// </summary>
             [NameInMap("Period")]
             [Validation(Required=false)]
             public int? Period { get; set; }

@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <para>The name series of elastic container instances. Naming conventions:</para>
         /// <list type="bullet">
         /// <item><description>The name must be 2 to 128 characters in length.</description></item>
-        /// <item><description>The name can contain only lowercase letters, digits, and hyphens (-). The name cannot start or end with a hyphen (-).</description></item>
+        /// <item><description>The name can contain only lowercase letters, digits, and hyphens (-). It cannot start or end with a hyphen (-).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -788,7 +788,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// <remarks>
-        /// <para> This parameter is unavailable.</para>
+        /// <para> This parameter is unavailable for use.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

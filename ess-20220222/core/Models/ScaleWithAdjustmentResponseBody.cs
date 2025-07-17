@@ -21,6 +21,38 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public string ActivityType { get; set; }
 
+        [NameInMap("PlanResult")]
+        [Validation(Required=false)]
+        public ScaleWithAdjustmentResponseBodyPlanResult PlanResult { get; set; }
+        public class ScaleWithAdjustmentResponseBodyPlanResult : TeaModel {
+            [NameInMap("ResourceAllocations")]
+            [Validation(Required=false)]
+            public List<ScaleWithAdjustmentResponseBodyPlanResultResourceAllocations> ResourceAllocations { get; set; }
+            public class ScaleWithAdjustmentResponseBodyPlanResultResourceAllocations : TeaModel {
+                [NameInMap("Amount")]
+                [Validation(Required=false)]
+                public int? Amount { get; set; }
+
+                [NameInMap("InstanceChargeType")]
+                [Validation(Required=false)]
+                public string InstanceChargeType { get; set; }
+
+                [NameInMap("InstanceType")]
+                [Validation(Required=false)]
+                public string InstanceType { get; set; }
+
+                [NameInMap("SpotStrategy")]
+                [Validation(Required=false)]
+                public string SpotStrategy { get; set; }
+
+                [NameInMap("ZoneId")]
+                [Validation(Required=false)]
+                public string ZoneId { get; set; }
+
+            }
+
+        }
+
         /// <summary>
         /// <para>The ID of the request.</para>
         /// 

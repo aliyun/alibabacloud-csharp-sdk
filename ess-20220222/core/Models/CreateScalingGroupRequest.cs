@@ -129,8 +129,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// <summary>
             /// <para>The cost comparison method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PricePerUnit: compares costs based on unit price divided by instance capacities (weights). The capacity of an instance in a scaling group is determined by the weight of the instance type used. If no weight is set, the capacity defaults to 1.</description></item>
-            /// <item><description>PricePerVCpu: compares costs based on unit price divided by the number of vCPUs.</description></item>
+            /// <item><description><para>PricePerUnit: Prices are compared based on the price per instance capacity.</para>
+            /// <para>Capacity is determined by the weights assigned to instance types in the scaling group. If no weight is specified, a default weight of 1 is used, meaning each instance is assigned a capacity of 1.</para>
+            /// </description></item>
+            /// <item><description><para>PricePerVCpu: Prices are compared based on the price per vCPU.</para>
+            /// </description></item>
             /// </list>
             /// <para>Default value: PricePerUnit.</para>
             /// 

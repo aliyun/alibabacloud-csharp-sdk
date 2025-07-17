@@ -72,6 +72,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public CreateScalingRuleRequestAlarmOptions AlarmOptions { get; set; }
         public class CreateScalingRuleRequestAlarmOptions : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>60</para>
+            /// </summary>
             [NameInMap("Period")]
             [Validation(Required=false)]
             public int? Period { get; set; }

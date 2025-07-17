@@ -1002,15 +1002,31 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
+            /// <summary>
+            /// <para>The resource pools used for instance creation, which can be the public pool or a private pool associated with any active elasticity assurance or capacity reservation.</para>
+            /// <list type="bullet">
+            /// <item><description>This parameter takes effect only when you create pay-as-you-go instances.</description></item>
+            /// </list>
+            /// </summary>
             [NameInMap("ResourcePoolOptions")]
             [Validation(Required=false)]
             public DescribeScalingConfigurationsResponseBodyScalingConfigurationsResourcePoolOptions ResourcePoolOptions { get; set; }
             public class DescribeScalingConfigurationsResponseBodyScalingConfigurationsResourcePoolOptions : TeaModel {
+                /// <summary>
+                /// <para>The IDs of private pools. The ID of a private pool is the same as the ID of the elasticity assurance or capacity reservation that is associated with the private pool.</para>
+                /// </summary>
                 [NameInMap("PrivatePoolIds")]
                 [Validation(Required=false)]
                 public List<string> PrivatePoolIds { get; set; }
 
                 /// <summary>
+                /// <para>The resource pool used for instance creation, which can be the public pool or a private pool associated with any active elasticity assurance or capacity reservation. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>PrivatePoolFirst: prioritizes private pools. When this option is set along with ResourcePoolOptions.PrivatePoolIds, the specified private pools are used first. If you leave ResourcePoolOptions.PrivatePoolIds empty or if the specified private pools lack sufficient capacity, the system will automatically use available open private pools instead. If no matching private pools are available, the system defaults to the public pool.</description></item>
+                /// <item><description>PrivatePoolOnly: uses only private pools. If you use this value, you must specify ResourcePoolOptions.PrivatePoolIds. If the specified private pools lack sufficient capacity, instance creation will fail.</description></item>
+                /// <item><description>None: uses no resource pools.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>PrivatePoolFirst</para>
                 /// </summary>

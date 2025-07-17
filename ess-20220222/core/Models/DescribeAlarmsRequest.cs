@@ -46,9 +46,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <summary>
         /// <para>The metric type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>system: system metrics of CloudMonitor</description></item>
-        /// <item><description>custom: custom metrics that are reported to CloudMonitor.</description></item>
-        /// <item><description>hybrid: metrics of Hybrid Cloud Monitoring.</description></item>
+        /// <item><description>system: a system metric of CloudMonitor</description></item>
+        /// <item><description>custom: a custom metric that is reported to CloudMonitor.</description></item>
+        /// <item><description>hybrid: a metric of Hybrid Cloud Monitoring.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: 50.</para>
+        /// <para>The number of entries per page. Valid values: 1 to 50.</para>
         /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>

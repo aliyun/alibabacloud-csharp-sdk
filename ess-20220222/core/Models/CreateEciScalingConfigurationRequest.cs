@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ContainerGroupName { get; set; }
 
         /// <summary>
-        /// <para>The containers on the elastic container instance.</para>
+        /// <para>The containers per elastic container instance.</para>
         /// </summary>
         [NameInMap("Containers")]
         [Validation(Required=false)]
@@ -261,14 +261,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             }
 
             /// <summary>
-            /// <para>The startup arguments of the containers. You can specify up to 10 arguments.</para>
+            /// <para>The startup arguments of the container. You can specify up to 10 arguments.</para>
             /// </summary>
             [NameInMap("Args")]
             [Validation(Required=false)]
             public List<string> Args { get; set; }
 
             /// <summary>
-            /// <para>The commands that you can run by using a CLI to perform liveness probes within the container.</para>
+            /// <para>The commands that you want to run by using the CLI for liveness probing within the container.</para>
             /// </summary>
             [NameInMap("Commands")]
             [Validation(Required=false)]
@@ -304,7 +304,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public string FieldRefFieldPath { get; set; }
 
                 /// <summary>
-                /// <para>The name of the environment variable. The name can be 1 to 128 characters in length and can contain letters, underscores (_), and digits. The name cannot start with a digit. Specify the value in the [0-9a-zA-Z] format.</para>
+                /// <para>The name of the environment variable. The name can be 1 to 128 characters in length and can contain letters, underscores (_), and digits. It cannot start with a digit. Specify the value in the [0-9a-zA-Z] format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PATH</para>
@@ -336,7 +336,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? Gpu { get; set; }
 
             /// <summary>
-            /// <para>The container image.</para>
+            /// <para>The image in the container.</para>
             /// 
             /// <b>Example:</b>
             /// <para>registry-vpc.cn-hangzhou.aliyuncs.com/eci_open/nginx:latest</para>
@@ -349,8 +349,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// <para>The image pulling policy. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Always: Each time instances are created, image pulling is performed.</description></item>
-            /// <item><description>IfNotPresent: Image pulling is performed as needed. On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.</description></item>
-            /// <item><description>Never: On-premises images are always used. Image pulling is not performed.</description></item>
+            /// <item><description>IfNotPresent: Image pulling is performed based on your business requirements. On-premises images are used by default. If no on-premises images are available, images are pulled from remote sources.</description></item>
+            /// <item><description>Never: Image pulling is not performed. On-premises images are always used. Image pulling is not performed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -361,14 +361,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string ImagePullPolicy { get; set; }
 
             /// <summary>
-            /// <para>The commands that you can run by using a CLI to configure the postStart callback function within the container.</para>
+            /// <para>The commands that you want to run by using the CLI to configure the postStart callback function within the container.</para>
             /// </summary>
             [NameInMap("LifecyclePostStartHandlerExecs")]
             [Validation(Required=false)]
             public List<string> LifecyclePostStartHandlerExecs { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the host to which you send an HTTP GET request to configure the postStart callback function.</para>
+            /// <para>The IP address of the host to which you want to send HTTP GET requests to configure the postStart callback function.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.0.XX.XX</para>
@@ -378,7 +378,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string LifecyclePostStartHandlerHttpGetHost { get; set; }
 
             /// <summary>
-            /// <para>The path to which you send an HTTP GET request to configure the postStart callback function.</para>
+            /// <para>The path to which you want to send HTTP GET requests to configure the postStart callback function.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/healthyz</para>
@@ -388,7 +388,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string LifecyclePostStartHandlerHttpGetPath { get; set; }
 
             /// <summary>
-            /// <para>The port over which you send an HTTP GET request to configure the postStart callback function.</para>
+            /// <para>The port over which you want to send HTTP GET requests to configure the postStart callback function.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5050</para>
@@ -398,7 +398,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? LifecyclePostStartHandlerHttpGetPort { get; set; }
 
             /// <summary>
-            /// <para>The protocol type of the HTTP GET request that you send to configure the postStart callback function. Valid values:</para>
+            /// <para>The protocol type of HTTP GET requests that you want to send to configure the postStart callback function. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>HTTP</description></item>
             /// <item><description>HTTPS</description></item>
@@ -412,7 +412,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string LifecyclePostStartHandlerHttpGetScheme { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the host detected by the TCP socket that you use to configure the postStart callback function.</para>
+            /// <para>The IP address of the host detected by the TCP sockets that you want to use to configure the postStart callback function.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.0.XX.XX</para>
@@ -422,7 +422,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string LifecyclePostStartHandlerTcpSocketHost { get; set; }
 
             /// <summary>
-            /// <para>The port detected by the TCP socket that you use to configure the postStart callback function.</para>
+            /// <para>The port detected by the TCP sockets that you want to use to configure the postStart callback function.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -432,14 +432,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? LifecyclePostStartHandlerTcpSocketPort { get; set; }
 
             /// <summary>
-            /// <para>The commands that you can run by using a CLI to configure the preStop callback function within the container.</para>
+            /// <para>The commands that you want to run by using the CLI to configure the preStop callback function within the container.</para>
             /// </summary>
             [NameInMap("LifecyclePreStopHandlerExecs")]
             [Validation(Required=false)]
             public List<string> LifecyclePreStopHandlerExecs { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the host to which you send an HTTP GET request to configure the preStop callback function.</para>
+            /// <para>The IP address of the host to which you want to send HTTP GET requests to configure the preStop callback function.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.0.XX.XX</para>
@@ -449,7 +449,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string LifecyclePreStopHandlerHttpGetHost { get; set; }
 
             /// <summary>
-            /// <para>The path to which you send an HTTP GET request to configure the preStop callback function.</para>
+            /// <para>The path to which you want to send HTTP GET requests to configure the preStop callback function.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/healthyz</para>
@@ -459,7 +459,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string LifecyclePreStopHandlerHttpGetPath { get; set; }
 
             /// <summary>
-            /// <para>The port over which you send an HTTP GET request to configure the preStop callback function.</para>
+            /// <para>The port over which you want to send HTTP GET requests to configure the preStop callback function.</para>
             /// 
             /// <b>Example:</b>
             /// <para>88</para>
@@ -469,7 +469,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? LifecyclePreStopHandlerHttpGetPort { get; set; }
 
             /// <summary>
-            /// <para>The protocol type of the HTTP GET request that you send to configure the preStop callback function. Valid values:</para>
+            /// <para>The protocol type of the HTTP GET requests that you want to send to configure the preStop callback function. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>HTTP</description></item>
             /// <item><description>HTTPS</description></item>
@@ -483,7 +483,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string LifecyclePreStopHandlerHttpGetScheme { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the host detected by the TCP socket that you use to configure the preStop callback function.</para>
+            /// <para>The IP address of the host detected by the TCP sockets that you want to use to configure the preStop callback function.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.0.XX.XX</para>
@@ -493,7 +493,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string LifecyclePreStopHandlerTcpSocketHost { get; set; }
 
             /// <summary>
-            /// <para>The port detected by the TCP socket that you use to configure the preStop callback function.</para>
+            /// <para>The port detected by the TCP sockets that you want to use to configure the preStop callback function.</para>
             /// 
             /// <b>Example:</b>
             /// <para>90</para>
@@ -503,7 +503,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? LifecyclePreStopHandlerTcpSocketPort { get; set; }
 
             /// <summary>
-            /// <para>The memory size per container. Unit: GiB.</para>
+            /// <para>The memory size that you want to allocate to the container. Unit: GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.5</para>
@@ -530,7 +530,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public List<CreateEciScalingConfigurationRequestContainersPorts> Ports { get; set; }
             public class CreateEciScalingConfigurationRequestContainersPorts : TeaModel {
                 /// <summary>
-                /// <para>The port number. Valid values: 1 to 65535.</para>
+                /// <para>The port. Valid values: 1 to 65535.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>80</para>
@@ -540,9 +540,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public int? Port { get; set; }
 
                 /// <summary>
-                /// <para>The protocol type. Valid values:</para>
+                /// <para>The type of the protocol. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>TCP</description></item>
+                /// <item><description>TCP.</description></item>
                 /// <item><description>UDP</description></item>
                 /// </list>
                 /// 
@@ -578,7 +578,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public bool? StdinOnce { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the Interaction feature. Valid values:</para>
+            /// <para>Specifies whether to enable interaction. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true</description></item>
             /// <item><description>false</description></item>
@@ -601,7 +601,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public List<CreateEciScalingConfigurationRequestContainersVolumeMounts> VolumeMounts { get; set; }
             public class CreateEciScalingConfigurationRequestContainersVolumeMounts : TeaModel {
                 /// <summary>
-                /// <para>The directory to which the container mounts the volume.</para>
+                /// <para>The directory in which the container mounts the volume.</para>
                 /// <remarks>
                 /// <para> Data in this directory is overwritten by data on the volume. Specify this parameter with caution.</para>
                 /// </remarks>
@@ -614,11 +614,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public string MountPath { get; set; }
 
                 /// <summary>
-                /// <para>The mount propagation settings of the volume. Mount propagation enables volume sharing from one container to other containers within the same pod or to containers across separate pods on the same node. Valid values:</para>
+                /// <para>The mount propagation setting. Mount propagation enables volume sharing from one container to other containers within the same pod or to containers across separate pods on the same node. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>None: Subsequent mounts executed on the volume or its subdirectories do not propagate to the volume.</description></item>
-                /// <item><description>HostToCotainer: Subsequent mounts executed on the volume or its subdirectories propagate to the volume.</description></item>
-                /// <item><description>Bidirectional: This value is similar to HostToCotainer. Subsequent mounts executed on the volume or its subdirectories propagate to the volume. All volume mounts executed on the container not only propagate back to the underlying host but also to all containers across every pod that uses the same volume.</description></item>
+                /// <item><description>None: Subsequent mounts executed on the volume or its subdirectories are not propagated to the volume.</description></item>
+                /// <item><description>HostToCotainer: Subsequent mounts executed on the volume or its subdirectories are propagated to the volume.</description></item>
+                /// <item><description>Bidirectional: This value is similar to HostToCotainer. Subsequent mounts executed on the volume or its subdirectories are propagated to the volume. All volume mounts executed on the container are not only propagate back to the underlying host but also to all containers across every pod that uses the same volume.</description></item>
                 /// </list>
                 /// <para>Default value: None.</para>
                 /// 
@@ -630,7 +630,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public string MountPropagation { get; set; }
 
                 /// <summary>
-                /// <para>The name of the volume. The value of this parameter is the same as the value of Volumes.Name.</para>
+                /// <para>The volume name. The value of this parameter is the same as the value of Volumes.Name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>default-volume1</para>
@@ -655,7 +655,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public bool? ReadOnly { get; set; }
 
                 /// <summary>
-                /// <para>The subdirectory of the volume.</para>
+                /// <para>The volume subdirectory.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>data2/</para>

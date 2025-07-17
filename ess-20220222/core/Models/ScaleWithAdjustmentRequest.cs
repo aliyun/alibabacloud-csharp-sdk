@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("ExecutionMode")]
+        [Validation(Required=false)]
+        public string ExecutionMode { get; set; }
+
         /// <summary>
         /// <para>The context of the lifecycle hook.</para>
         /// </summary>

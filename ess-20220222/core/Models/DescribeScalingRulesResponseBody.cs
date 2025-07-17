@@ -212,6 +212,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 [Validation(Required=false)]
                 public string MetricType { get; set; }
 
+                /// <summary>
+                /// <para>The statistical period of the metric data in the target tracking scaling rule.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>60</para>
+                /// </summary>
                 [NameInMap("Period")]
                 [Validation(Required=false)]
                 public int? Period { get; set; }
