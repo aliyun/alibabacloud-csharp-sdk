@@ -1,3 +1,8 @@
+2025-07-17 Version: 4.0.1
+- Update API GetInstance: add response parameters Body.FeatureDBInfo.
+- Update API ListInstances: add response parameters Body.Instances.$.FeatureDBInfo.
+
+
 2025-05-26 Version: 4.0.0
 - Update API GetFeatureView: update response parameters Body.Fields.$.Transform' type has changed.
 - Update API GetFeatureView: delete response parameters Body.Fields.$.Transform.

@@ -9,8 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 {
     public class GetInstanceResponseBody : TeaModel {
+        [NameInMap("FeatureDBInfo")]
+        [Validation(Required=false)]
+        public GetInstanceResponseBodyFeatureDBInfo FeatureDBInfo { get; set; }
+        public class GetInstanceResponseBodyFeatureDBInfo : TeaModel {
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
+        }
+
+        /// <term><b>Obsolete</b></term>
         [NameInMap("FeatureDBInstanceInfo")]
         [Validation(Required=false)]
+        [Obsolete]
         public GetInstanceResponseBodyFeatureDBInstanceInfo FeatureDBInstanceInfo { get; set; }
         public class GetInstanceResponseBodyFeatureDBInstanceInfo : TeaModel {
             [NameInMap("Status")]

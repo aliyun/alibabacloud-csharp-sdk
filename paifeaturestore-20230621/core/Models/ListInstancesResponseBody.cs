@@ -13,8 +13,20 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         [Validation(Required=false)]
         public List<ListInstancesResponseBodyInstances> Instances { get; set; }
         public class ListInstancesResponseBodyInstances : TeaModel {
+            [NameInMap("FeatureDBInfo")]
+            [Validation(Required=false)]
+            public ListInstancesResponseBodyInstancesFeatureDBInfo FeatureDBInfo { get; set; }
+            public class ListInstancesResponseBodyInstancesFeatureDBInfo : TeaModel {
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+            }
+
+            /// <term><b>Obsolete</b></term>
             [NameInMap("FeatureDBInstanceInfo")]
             [Validation(Required=false)]
+            [Obsolete]
             public ListInstancesResponseBodyInstancesFeatureDBInstanceInfo FeatureDBInstanceInfo { get; set; }
             public class ListInstancesResponseBodyInstancesFeatureDBInstanceInfo : TeaModel {
                 [NameInMap("Status")]
