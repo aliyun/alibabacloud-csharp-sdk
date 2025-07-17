@@ -117,11 +117,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The type of the task. This parameter is optional. Valid values:</para>
+        /// <para>The type of the synchronization task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DatabaseRealtimeMigration: A real-time synchronization task used to synchronize only full data, only incremental data, or full and incremental data in multiple tables of multiple databases at the source.</description></item>
-        /// <item><description>DatabaseOfflineMigration: A batch synchronization task used to synchronize only full data, only incremental data, or full and incremental data in multiple tables of multiple databases at the source.</description></item>
-        /// <item><description>SingleTableRealtimeMigration: A real-time synchronization task used to synchronize only data in single table at the source.</description></item>
+        /// <item><description>DatabaseRealtimeMigration: A real-time synchronization task used to synchronize only full data, only incremental data, or full and incremental data in multiple tables of multiple databases in the source.</description></item>
+        /// <item><description>DatabaseOfflineMigration: A batch synchronization task used to synchronize only full data, only incremental data, or full and incremental data in multiple tables of multiple databases in the source.</description></item>
+        /// <item><description>SingleTableRealtimeMigration: A real-time synchronization task used to synchronize data only in a single table in the source.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -134,11 +134,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The synchronization type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>FullAndRealtimeIncremental: full synchronization and real-time incremental synchronization of data in an entire database</description></item>
-        /// <item><description>RealtimeIncremental: real-time incremental synchronization of data in a single table</description></item>
-        /// <item><description>Full: full batch synchronization of data in an entire database</description></item>
-        /// <item><description>OfflineIncremental: batch incremental synchronization of data in an entire database</description></item>
-        /// <item><description>FullAndOfflineIncremental: full synchronization and batch incremental synchronization of data in an entire database</description></item>
+        /// <item><description>FullAndRealtimeIncremental</description></item>
+        /// <item><description>RealtimeIncremental</description></item>
+        /// <item><description>Full</description></item>
+        /// <item><description>OfflineIncremental</description></item>
+        /// <item><description>FullAndOfflineIncremental</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</para>
+        /// <para>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the ID.</para>
         /// <para>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</para>
         /// 
         /// <b>Example:</b>

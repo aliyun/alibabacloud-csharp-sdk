@@ -105,6 +105,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             [Validation(Required=false)]
             public string UserId { get; set; }
 
+            [NameInMap("UserName")]
+            [Validation(Required=false)]
+            public string UserName { get; set; }
+
         }
 
         /// <summary>

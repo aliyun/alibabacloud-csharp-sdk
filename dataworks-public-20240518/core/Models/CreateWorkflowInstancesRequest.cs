@@ -61,8 +61,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The alerting policy. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>SUCCESS: An alert is reported when data backfill succeeds.</description></item>
-                /// <item><description>FAILURE: An alert is reported when data backfill fails.</description></item>
+                /// <item><description>Success: An alert is reported when data backfill succeeds.</description></item>
+                /// <item><description>Failure: An alert is reported when data backfill fails.</description></item>
                 /// <item><description>SuccessFailure: An alert is reported regardless of whether data backfill succeeds or fails.</description></item>
                 /// </list>
                 /// 
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public CreateWorkflowInstancesRequestDefaultRunPropertiesAnalysis Analysis { get; set; }
             public class CreateWorkflowInstancesRequestDefaultRunPropertiesAnalysis : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether to block the running of the instance if the analysis fails. If you set the Type parameter to SupplementData, this parameter is required.</para>
+                /// <para>Specifies whether to block running if the analysis fails. If you set the Type parameter to SupplementData, this parameter is required. Valid values: true and false.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public bool? Blocked { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable the analysis feature. If you set the Type parameter to SupplementData, this parameter is required.</para>
+                /// <para>Specifies whether to enable the analysis feature. If you set the Type parameter to SupplementData, this parameter is required. Valid values: true and false.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -149,9 +149,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Mode { get; set; }
 
             /// <summary>
-            /// <para>The running order. Default value: Asc. Valid values:</para>
+            /// <para>The running order. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Asc: The tasks are sorted by data timestamp in ascending order.</description></item>
+            /// <item><description>Asc (default): The tasks are sorted by data timestamp in ascending order.</description></item>
             /// <item><description>Desc: The tasks are sorted by data timestamp in descending order.</description></item>
             /// </list>
             /// 
@@ -172,10 +172,26 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             [Validation(Required=false)]
             public int? Parallelism { get; set; }
 
+            /// <summary>
+            /// <para>The running priority. Valid values: 1 to 11. A larger value indicates a higher priority.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("Priority")]
             [Validation(Required=false)]
             public int? Priority { get; set; }
 
+            /// <summary>
+            /// <para>The weight policy for the priority. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><c>Disable</c>: No weight policy for the priority is enabled. This is the default value.</description></item>
+            /// <item><description><c>Upstream</c>: The sum of the weights for the ancestor nodes of the current node is calculated. The more ancestor nodes, the higher the weight.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Upstream</para>
+            /// </summary>
             [NameInMap("PriorityWeightStrategy")]
             [Validation(Required=false)]
             public string PriorityWeightStrategy { get; set; }
@@ -194,7 +210,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public List<long?> RootTaskIds { get; set; }
 
             /// <summary>
-            /// <para>The policy for running. If you leave this parameter empty, the runtime configuration is used.</para>
+            /// <para>The policy for running. If you leave this parameter empty, the task configuration is used.</para>
             /// </summary>
             [NameInMap("RunPolicy")]
             [Validation(Required=false)]
@@ -211,7 +227,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string EndTime { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether the instance can be run immediately during the time period in the future. Default value: false.</para>
+                /// <para>Specifies whether the instances can be run immediately during the time period in the future. Valid values: true and false.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -399,7 +415,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? WorkflowId { get; set; }
 
         /// <summary>
-        /// <para>The workflow parameters. The priority of workflow parameters is higher than that of task parameters. You can call the GetTask operation to obtain the format of the workflow parameters by querying the Parameters parameter.</para>
+        /// <para>The workflow parameters. This parameter takes effect only when you set the <c>WorkflowId</c> parameter to a value other than 1. If your workflow is an auto triggered workflow, configure this parameter in the key=value format. The parameters that you configure in this parameter have a lower priority than task parameters. If your workflow is a manually triggered workflow, configure this parameter in the JSON format. The parameters that you configure in this parameter have a higher priority than task parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{ 
