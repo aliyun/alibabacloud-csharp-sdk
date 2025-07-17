@@ -468,6 +468,126 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询异步多模态检测结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeMultimodalModerationResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMultimodalModerationResultResponse
+        /// </returns>
+        public DescribeMultimodalModerationResultResponse DescribeMultimodalModerationResultWithOptions(DescribeMultimodalModerationResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReqId))
+            {
+                query["ReqId"] = request.ReqId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeMultimodalModerationResult",
+                Version = "2022-03-02",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeMultimodalModerationResultResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询异步多模态检测结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeMultimodalModerationResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMultimodalModerationResultResponse
+        /// </returns>
+        public async Task<DescribeMultimodalModerationResultResponse> DescribeMultimodalModerationResultWithOptionsAsync(DescribeMultimodalModerationResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReqId))
+            {
+                query["ReqId"] = request.ReqId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeMultimodalModerationResult",
+                Version = "2022-03-02",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeMultimodalModerationResultResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询异步多模态检测结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeMultimodalModerationResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMultimodalModerationResultResponse
+        /// </returns>
+        public DescribeMultimodalModerationResultResponse DescribeMultimodalModerationResult(DescribeMultimodalModerationResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeMultimodalModerationResultWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询异步多模态检测结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeMultimodalModerationResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMultimodalModerationResultResponse
+        /// </returns>
+        public async Task<DescribeMultimodalModerationResultResponse> DescribeMultimodalModerationResultAsync(DescribeMultimodalModerationResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeMultimodalModerationResultWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询上传token</para>
         /// </summary>
         /// 
@@ -1782,6 +1902,134 @@ namespace AlibabaCloud.SDK.Green20220302
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await MultiModalGuardWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>多模态-异步检测</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MultimodalAsyncModerationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MultimodalAsyncModerationResponse
+        /// </returns>
+        public MultimodalAsyncModerationResponse MultimodalAsyncModerationWithOptions(MultimodalAsyncModerationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Service))
+            {
+                query["Service"] = request.Service;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceParameters))
+            {
+                query["ServiceParameters"] = request.ServiceParameters;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MultimodalAsyncModeration",
+                Version = "2022-03-02",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MultimodalAsyncModerationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>多模态-异步检测</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MultimodalAsyncModerationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MultimodalAsyncModerationResponse
+        /// </returns>
+        public async Task<MultimodalAsyncModerationResponse> MultimodalAsyncModerationWithOptionsAsync(MultimodalAsyncModerationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Service))
+            {
+                query["Service"] = request.Service;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceParameters))
+            {
+                query["ServiceParameters"] = request.ServiceParameters;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MultimodalAsyncModeration",
+                Version = "2022-03-02",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MultimodalAsyncModerationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>多模态-异步检测</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MultimodalAsyncModerationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MultimodalAsyncModerationResponse
+        /// </returns>
+        public MultimodalAsyncModerationResponse MultimodalAsyncModeration(MultimodalAsyncModerationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return MultimodalAsyncModerationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>多模态-异步检测</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MultimodalAsyncModerationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MultimodalAsyncModerationResponse
+        /// </returns>
+        public async Task<MultimodalAsyncModerationResponse> MultimodalAsyncModerationAsync(MultimodalAsyncModerationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await MultimodalAsyncModerationWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
