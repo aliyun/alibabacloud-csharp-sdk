@@ -130,6 +130,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
         }
 
+        [NameInMap("modelCategory")]
+        [Validation(Required=false)]
+        public string ModelCategory { get; set; }
+
         /// <summary>
         /// <para>The API name.</para>
         /// <para>This parameter is required.</para>
@@ -147,6 +151,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [NameInMap("protocols")]
         [Validation(Required=false)]
         public List<string> Protocols { get; set; }
+
+        [NameInMap("removeBasePathOnForward")]
+        [Validation(Required=false)]
+        public bool? RemoveBasePathOnForward { get; set; }
 
         /// <summary>
         /// <para>The resource group ID.</para>

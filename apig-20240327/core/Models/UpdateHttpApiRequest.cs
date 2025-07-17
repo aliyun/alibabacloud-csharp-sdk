@@ -132,6 +132,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public List<string> Protocols { get; set; }
 
+        [NameInMap("removeBasePathOnForward")]
+        [Validation(Required=false)]
+        public bool? RemoveBasePathOnForward { get; set; }
+
         /// <summary>
         /// <para>The versioning configurations.</para>
         /// </summary>
