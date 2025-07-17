@@ -14857,6 +14857,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             {
                 query["Question"] = request.Question;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableNames))
+            {
+                query["TableNames"] = request.TableNames;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -14931,6 +14935,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Question))
             {
                 query["Question"] = request.Question;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableNames))
+            {
+                query["TableNames"] = request.TableNames;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

@@ -58,6 +58,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public string Question { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>users,orders</para>
+        /// </summary>
+        [NameInMap("TableNames")]
+        [Validation(Required=false)]
+        public string TableNames { get; set; }
+
     }
 
 }
