@@ -136,6 +136,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [Validation(Required=false)]
             public string GatewayType { get; set; }
 
+            [NameInMap("isp")]
+            [Validation(Required=false)]
+            public string Isp { get; set; }
+
             /// <summary>
             /// <para>The ingress addresses of the instance.</para>
             /// </summary>
