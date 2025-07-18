@@ -159,6 +159,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("SessionManagerConfig")]
+        [Validation(Required=false)]
+        public DescribeCloudAssistantSettingsResponseBodySessionManagerConfig SessionManagerConfig { get; set; }
+        public class DescribeCloudAssistantSettingsResponseBodySessionManagerConfig : TeaModel {
+            [NameInMap("SessionManagerEnabled")]
+            [Validation(Required=false)]
+            public bool? SessionManagerEnabled { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The configurations for delivering items to Simple Log Service.</para>
         /// </summary>

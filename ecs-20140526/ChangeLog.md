@@ -1,3 +1,8 @@
+2025-07-18 Version: 7.0.15
+- Update API DescribeCloudAssistantSettings: add response parameters Body.SessionManagerConfig.
+- Update API ModifyCloudAssistantSettings: add request parameters SessionManagerConfig.
+
+
 2025-07-14 Version: 7.0.14
 - Update API DescribeInstances: add response parameters Body.Instances.$.ClockOptions.
 
