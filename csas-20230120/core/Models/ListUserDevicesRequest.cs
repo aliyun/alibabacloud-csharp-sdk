@@ -117,6 +117,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public bool? SharingStatus { get; set; }
 
+        [NameInMap("SnSystem")]
+        [Validation(Required=false)]
+        public string SnSystem { get; set; }
+
         [NameInMap("SortBy")]
         [Validation(Required=false)]
         public string SortBy { get; set; }

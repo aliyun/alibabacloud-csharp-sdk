@@ -225,6 +225,26 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public bool? SharingStatus { get; set; }
 
+            [NameInMap("SnBaseBoard")]
+            [Validation(Required=false)]
+            public string SnBaseBoard { get; set; }
+
+            [NameInMap("SnBios")]
+            [Validation(Required=false)]
+            public string SnBios { get; set; }
+
+            [NameInMap("SnDiskDrive")]
+            [Validation(Required=false)]
+            public string SnDiskDrive { get; set; }
+
+            [NameInMap("SnProcessor")]
+            [Validation(Required=false)]
+            public string SnProcessor { get; set; }
+
+            [NameInMap("SnSystem")]
+            [Validation(Required=false)]
+            public string SnSystem { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>106.14.XX.XX</para>
