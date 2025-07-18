@@ -1,3 +1,6 @@
+2025-07-18 Version: 7.1.3
+- Generated csharp 2021-07-01 for eas.
+
 2025-07-16 Version: 7.1.2
 - Update API DescribeResource: add response parameters Body.Features.
 - Update API DescribeResource: add response parameters Body.InstanceMaxAllocatableCPU.
