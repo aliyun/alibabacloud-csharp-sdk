@@ -27,6 +27,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>StartExecution</para>
+        /// </summary>
+        [NameInMap("expressType")]
+        [Validation(Required=false)]
+        public string ExpressType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>gw-xxxx</para>
         /// </summary>
         [NameInMap("gatewayId")]
@@ -48,6 +56,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [NameInMap("healthStatus")]
         [Validation(Required=false)]
         public string HealthStatus { get; set; }
+
+        [NameInMap("labelDetails")]
+        [Validation(Required=false)]
+        public LabelDetail LabelDetails { get; set; }
 
         [NameInMap("name")]
         [Validation(Required=false)]
