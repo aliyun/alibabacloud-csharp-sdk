@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>List of mail addresses</para>
+        /// <para>List of sending addresses</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 /// <para>Sending address</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>账户+@+域名</para>
+                /// <para><a href="mailto:sender@example.com">sender@example.com</a></para>
                 /// </summary>
                 [NameInMap("AccountName")]
                 [Validation(Required=false)]
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 public string DomainStatus { get; set; }
 
                 /// <summary>
-                /// <para>Mail address ID</para>
+                /// <para>Sending address ID</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12122</para>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 public string ReplyStatus { get; set; }
 
                 /// <summary>
-                /// <para>Type of sending address. Values:</para>
+                /// <para>Sending address type. Values:</para>
                 /// <list type="bullet">
                 /// <item><description>batch: bulk email</description></item>
                 /// <item><description>trigger: triggered email</description></item>

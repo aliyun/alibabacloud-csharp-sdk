@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string ClickTrace { get; set; }
 
         /// <summary>
-        /// <para>Currently, the standard fields that can be added to the email header are Message-ID, List-Unsubscribe, and List-Unsubscribe-Post. Standard fields will overwrite the existing values in the email header, while non-standard fields need to start with X-User- and will be appended to the email header. Currently, up to 10 headers can be passed in JSON format, and both standard and non-standard fields must comply with the syntax requirements for headers.</para>
+        /// <para>Currently, the standard fields that can be added to the email header are Message-ID, List-Unsubscribe, and List-Unsubscribe-Post. Standard fields will overwrite the existing values in the email header, while non-standard fields must start with X-User- and will be appended to the email header. Currently, up to 10 headers can be passed in JSON format, and both standard and non-standard fields must comply with the syntax requirements for headers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -61,6 +61,12 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public string Headers { get; set; }
 
+        /// <summary>
+        /// <para>dedicated IP pool ID. Users who have purchased an dedicated IP can use this parameter to specify the outgoing IP for this send operation.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xxx</para>
+        /// </summary>
         [NameInMap("IpPoolId")]
         [Validation(Required=false)]
         public string IpPoolId { get; set; }
@@ -70,7 +76,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The name of the recipient list that has been created and uploaded. Note: The recipient list should not be deleted until at least 10 minutes after the task is triggered, otherwise it may cause sending failure.</para>
+        /// <para>The name of the recipient list that has been created and uploaded with recipients. Note: The recipient list should not be deleted until at least 10 minutes after the task is triggered, otherwise it may cause sending failure.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -119,7 +125,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string TagName { get; set; }
 
         /// <summary>
-        /// <para>The name of a pre-created and approved template.</para>
+        /// <para>The name of the template that has been created and approved in advance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -130,13 +136,13 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string TemplateName { get; set; }
 
         /// <summary>
-        /// <para>Filter level. Refer to the <a href="https://help.aliyun.com/document_detail/2689048.html">Unsubscribe Function Link Generation and Filtering Mechanism</a> document.</para>
+        /// <para>Filtering level. Refer to the <a href="https://help.aliyun.com/document_detail/2689048.html">Unsubscribe Function Link Generation and Filtering Mechanism</a> document.</para>
         /// <list type="bullet">
         /// <item><description>disabled: No filtering</description></item>
-        /// <item><description>default: Use the default strategy, bulk addresses use sender address level filtering</description></item>
-        /// <item><description>mailfrom: Sender address level filtering</description></item>
-        /// <item><description>mailfrom_domain: Sender domain level filtering</description></item>
-        /// <item><description>edm_id: Account level filtering</description></item>
+        /// <item><description>default: Use the default strategy, bulk addresses use sender address-level filtering</description></item>
+        /// <item><description>mailfrom: Sender address-level filtering</description></item>
+        /// <item><description>mailfrom_domain: Sender domain-level filtering</description></item>
+        /// <item><description>edm_id: Account-level filtering</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -147,14 +153,14 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string UnSubscribeFilterLevel { get; set; }
 
         /// <summary>
-        /// <para>Type of generated unsubscribe link. Refer to the <a href="https://help.aliyun.com/document_detail/2689048.html">Unsubscribe Function Link Generation and Filtering Mechanism</a> document.</para>
+        /// <para>The type of generated unsubscribe link. Refer to the <a href="https://help.aliyun.com/document_detail/2689048.html">Unsubscribe Function Link Generation and Filtering Mechanism</a> document.</para>
         /// <list type="bullet">
-        /// <item><description>disabled: Not generated</description></item>
-        /// <item><description>default: Use the default strategy: Generate an unsubscribe link when sending from a bulk email address to specific domains, such as those containing keywords like &quot;gmail&quot;, &quot;yahoo&quot;,
+        /// <item><description>disabled: Do not generate</description></item>
+        /// <item><description>default: Use the default strategy: Generate an unsubscribe link when a bulk-type sending address sends to specific domains, such as those containing keywords like &quot;gmail&quot;, &quot;yahoo&quot;,
         /// &quot;google&quot;, &quot;aol.com&quot;, &quot;hotmail&quot;,
         /// &quot;outlook&quot;, &quot;ymail.com&quot;, etc.</description></item>
-        /// <item><description>zh-cn: Generated, for future content preparation</description></item>
-        /// <item><description>en-us: Generated, for future content preparation</description></item>
+        /// <item><description>zh-cn: Generate, for future content preparation</description></item>
+        /// <item><description>en-us: Generate, for future content preparation</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

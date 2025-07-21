@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class QueryTaskByParamRequest : TeaModel {
         /// <summary>
-        /// <para>Keyword, defaults to all information.</para>
+        /// <para>Keyword, defaults to all information</para>
         /// 
         /// <b>Example:</b>
         /// <para>mesh-notification-788717</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Current page number, default is 1.</para>
+        /// <para>Current page number, default is 1</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>Page size, default is 10.</para>
+        /// <para>Page size, default is 10</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Status, defaults to all statuses.</para>
+        /// <para>Status, defaults to all statuses</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

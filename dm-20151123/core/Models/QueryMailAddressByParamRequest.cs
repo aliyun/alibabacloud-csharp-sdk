@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         /// <para>Email address, length 1-60, supports numbers, letters, ., -, @.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>账号+@+域名</para>
+        /// <para><a href="mailto:sender@example.com">sender@example.com</a></para>
         /// </summary>
         [NameInMap("KeyWord")]
         [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Type of sending address. Values:</para>
+        /// <para>Sending address type. Values:</para>
         /// <list type="bullet">
         /// <item><description>batch: bulk email</description></item>
         /// <item><description>trigger: triggered email</description></item>

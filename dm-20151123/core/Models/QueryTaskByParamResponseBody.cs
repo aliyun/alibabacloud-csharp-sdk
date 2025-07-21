@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class QueryTaskByParamResponseBody : TeaModel {
         /// <summary>
-        /// <para>Current page number.</para>
+        /// <para>Current page number</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Page size.</para>
+        /// <para>Page size</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>Request ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>10A1AD70-E48E-476D-98D9-39BD92193837</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total count.</para>
+        /// <para>Total count</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>Returned results.</para>
+        /// <para>Returned results</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 public string AddressType { get; set; }
 
                 /// <summary>
-                /// <para>Creation time.</para>
+                /// <para>Creation time</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-04-18T10:36Z</para>
@@ -80,16 +80,28 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
+                /// <summary>
+                /// <para>dedicated IP pool ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>xxx</para>
+                /// </summary>
                 [NameInMap("IpPoolId")]
                 [Validation(Required=false)]
                 public string IpPoolId { get; set; }
 
+                /// <summary>
+                /// <para>dedicated IP pool name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
+                /// </summary>
                 [NameInMap("IpPoolName")]
                 [Validation(Required=false)]
                 public string IpPoolName { get; set; }
 
                 /// <summary>
-                /// <para>Receiver\&quot;s name.</para>
+                /// <para>Receiver\&quot;s name</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TKP000442-333</para>
@@ -99,7 +111,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 public string ReceiversName { get; set; }
 
                 /// <summary>
-                /// <para>Request count.</para>
+                /// <para>Request count</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -109,7 +121,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 public string RequestCount { get; set; }
 
                 /// <summary>
-                /// <para>Tag.</para>
+                /// <para>Tag</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>202201</para>
@@ -119,7 +131,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 public string TagName { get; set; }
 
                 /// <summary>
-                /// <para>Task ID.</para>
+                /// <para>Task ID</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1054296</para>
@@ -129,7 +141,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 public string TaskId { get; set; }
 
                 /// <summary>
-                /// <para>Task status, sent successfully: 1.</para>
+                /// <para>Task status, sent successfully: 1</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -139,7 +151,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 public string TaskStatus { get; set; }
 
                 /// <summary>
-                /// <para>Template name.</para>
+                /// <para>Template name</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Short Simple</para>
@@ -149,7 +161,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 public string TemplateName { get; set; }
 
                 /// <summary>
-                /// <para>Creation time in UTC format.</para>
+                /// <para>Creation time in UTC format</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1569734892</para>

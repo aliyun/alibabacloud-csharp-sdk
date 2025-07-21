@@ -8,26 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dm20151123.Models
 {
-    public class BatchSendMailResponseBody : TeaModel {
+    public class DedicatedIpChangeWarmupTypeRequest : TeaModel {
         /// <summary>
-        /// <para>Event ID</para>
+        /// <para>Dedicated IP ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
         /// </summary>
-        [NameInMap("EnvId")]
+        [NameInMap("Id")]
         [Validation(Required=false)]
-        public string EnvId { get; set; }
+        public string Id { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>Warmup method</para>
         /// 
         /// <b>Example:</b>
-        /// <para>12D086F6-8F31-4658-84C1-006DED011A85</para>
+        /// <para>sysCusStream</para>
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("WarmupType")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string WarmupType { get; set; }
 
     }
 
