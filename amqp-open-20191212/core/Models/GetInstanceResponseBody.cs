@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
             [Validation(Required=false)]
             public string ClassicEndpoint { get; set; }
 
+            [NameInMap("Edition")]
+            [Validation(Required=false)]
+            public string Edition { get; set; }
+
             [NameInMap("EncryptedInstance")]
             [Validation(Required=false)]
             public bool? EncryptedInstance { get; set; }
@@ -132,6 +136,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
             [NameInMap("PrivateEndpoint")]
             [Validation(Required=false)]
             public string PrivateEndpoint { get; set; }
+
+            [NameInMap("ProvisionedCapacity")]
+            [Validation(Required=false)]
+            public int? ProvisionedCapacity { get; set; }
 
             /// <summary>
             /// <b>Example:</b>

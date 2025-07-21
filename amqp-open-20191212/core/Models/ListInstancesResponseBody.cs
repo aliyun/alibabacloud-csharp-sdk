@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                 [Validation(Required=false)]
                 public string ClassicEndpoint { get; set; }
 
+                [NameInMap("Edition")]
+                [Validation(Required=false)]
+                public string Edition { get; set; }
+
                 /// <summary>
                 /// <para>Indicates whether the encryption at rest feature is enabled for the instance.</para>
                 /// 
@@ -181,6 +185,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                 [NameInMap("PrivateEndpoint")]
                 [Validation(Required=false)]
                 public string PrivateEndpoint { get; set; }
+
+                [NameInMap("ProvisionedCapacity")]
+                [Validation(Required=false)]
+                public int? ProvisionedCapacity { get; set; }
 
                 /// <summary>
                 /// <para>The public endpoint of the instance.</para>
