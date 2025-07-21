@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListBindingRelationsForFlowVersionRequest : TeaModel {
         /// <summary>
+        /// <para>Channel type. Values:</para>
+        /// <list type="bullet">
+        /// <item><description>INSTAGRAM</description></item>
+        /// <item><description>WHATSAPP</description></item>
+        /// <item><description>MESSENGER</description></item>
+        /// </list>
+        /// <para>&lt;props=&quot;intl&quot;&gt;- VIBER</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,10 +27,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ChannelType { get; set; }
 
         /// <summary>
+        /// <para>Process code. View the process code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> interface.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>f4912c16943b4dfba44bd6fedacf****</para>
+        /// <para>9ccc41**************************</para>
         /// </summary>
         [NameInMap("FlowCode")]
         [Validation(Required=false)]

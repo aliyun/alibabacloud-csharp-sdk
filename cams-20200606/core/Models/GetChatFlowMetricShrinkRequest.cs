@@ -70,6 +70,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string MetricName { get; set; }
 
+        [NameInMap("MetricParam")]
+        [Validation(Required=false)]
+        public string MetricParamShrink { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }

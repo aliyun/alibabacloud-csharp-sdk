@@ -10,53 +10,46 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListFlowRequest : TeaModel {
         /// <summary>
-        /// <para>The space ID of the RAM user within the independent software vendor (ISV) account.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>99948484</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
         public string CustSpaceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the Flow that you want to query. If FlowName is left empty, the information about all Flows is queried.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>flow_001</para>
+        /// <para>示例值</para>
         /// </summary>
         [NameInMap("FlowName")]
         [Validation(Required=false)]
         public string FlowName { get; set; }
 
-        /// <summary>
-        /// <para>The returned pages.</para>
-        /// </summary>
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         [NameInMap("Page")]
         [Validation(Required=false)]
         public ListFlowRequestPage Page { get; set; }
         public class ListFlowRequestPage : TeaModel {
-            /// <summary>
-            /// <para>The page number.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>1</para>
-            /// </summary>
             [NameInMap("Index")]
             [Validation(Required=false)]
             public int? Index { get; set; }
 
-            /// <summary>
-            /// <para>The number of entries per page.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>20</para>
-            /// </summary>
             [NameInMap("Size")]
             [Validation(Required=false)]
             public int? Size { get; set; }
 
         }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
 
     }
 

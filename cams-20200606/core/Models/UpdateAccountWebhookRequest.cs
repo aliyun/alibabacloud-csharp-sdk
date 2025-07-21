@@ -34,6 +34,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string HttpFlag { get; set; }
 
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to use Message Service (MNS) queues to receive receipts. Valid values:</para>
         /// <list type="bullet">
@@ -47,6 +51,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [NameInMap("QueueFlag")]
         [Validation(Required=false)]
         public string QueueFlag { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
 
         /// <summary>
         /// <para>The callback URL to which status reports are sent by using HTTP callbacks.</para>

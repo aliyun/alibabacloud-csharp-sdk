@@ -10,27 +10,38 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class IsvGetAppIdRequest : TeaModel {
         /// <summary>
-        /// <para>The permission.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>whatsapp_business_messaging: sending permission on WhatsApp messages</description></item>
-        /// <item><description>ads_management: management permission on advertisements</description></item>
-        /// <item><description>catalog_management: management permission on catalogs</description></item>
-        /// </list>
-        /// 
         /// <b>Example:</b>
-        /// <para>catalog_management</para>
+        /// <para>示例值示例值示例值</para>
+        /// </summary>
+        [NameInMap("IntlVersion")]
+        [Validation(Required=false)]
+        public string IntlVersion { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("Permissions")]
         [Validation(Required=false)]
         public string Permissions { get; set; }
 
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
         /// <summary>
-        /// <para>The type of the app. Valid value: WHATSAPP.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>WHATSAPP</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

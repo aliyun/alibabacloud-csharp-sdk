@@ -10,15 +10,26 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ChatappEmbedSignUpRequest : TeaModel {
         /// <summary>
-        /// <para>The InputToken returned after the embedded signup flow is complete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>wlelkelwidilwloe-ewlwols0lwsllsld</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("InputToken")]
         [Validation(Required=false)]
         public string InputToken { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
 
     }
 
