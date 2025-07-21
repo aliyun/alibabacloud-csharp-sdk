@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Wyota20210420.Models
 {
     public class GetFbOssConfigRequest : TeaModel {
+        [NameInMap("AreaSite")]
+        [Validation(Required=false)]
+        public string AreaSite { get; set; }
+
         [NameInMap("DirPrefix")]
         [Validation(Required=false)]
         public string DirPrefix { get; set; }

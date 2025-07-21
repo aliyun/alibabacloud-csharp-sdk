@@ -1921,6 +1921,10 @@ namespace AlibabaCloud.SDK.Wyota20210420
             {
                 body["EtherMac"] = request.EtherMac;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HostOsInfo))
+            {
+                body["HostOsInfo"] = request.HostOsInfo;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoginRegionId))
             {
                 body["LoginRegionId"] = request.LoginRegionId;
@@ -2014,6 +2018,10 @@ namespace AlibabaCloud.SDK.Wyota20210420
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EtherMac))
             {
                 body["EtherMac"] = request.EtherMac;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HostOsInfo))
+            {
+                body["HostOsInfo"] = request.HostOsInfo;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoginRegionId))
             {
@@ -5497,6 +5505,10 @@ namespace AlibabaCloud.SDK.Wyota20210420
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AreaSite))
+            {
+                body["AreaSite"] = request.AreaSite;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirPrefix))
             {
                 body["DirPrefix"] = request.DirPrefix;
@@ -5547,6 +5559,10 @@ namespace AlibabaCloud.SDK.Wyota20210420
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AreaSite))
+            {
+                body["AreaSite"] = request.AreaSite;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirPrefix))
             {
                 body["DirPrefix"] = request.DirPrefix;
@@ -9445,9 +9461,21 @@ namespace AlibabaCloud.SDK.Wyota20210420
             {
                 body["FileList"] = request.FileListShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsSubstituteReport))
+            {
+                body["IsSubstituteReport"] = request.IsSubstituteReport;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IssueLabel))
             {
                 body["IssueLabel"] = request.IssueLabel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoginRegionId))
+            {
+                body["LoginRegionId"] = request.LoginRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoginToken))
+            {
+                body["LoginToken"] = request.LoginToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OccurTime))
             {
@@ -9460,6 +9488,10 @@ namespace AlibabaCloud.SDK.Wyota20210420
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReservedB))
             {
                 body["ReservedB"] = request.ReservedB;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["SessionId"] = request.SessionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TelNo))
             {
@@ -9593,9 +9625,21 @@ namespace AlibabaCloud.SDK.Wyota20210420
             {
                 body["FileList"] = request.FileListShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsSubstituteReport))
+            {
+                body["IsSubstituteReport"] = request.IsSubstituteReport;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IssueLabel))
             {
                 body["IssueLabel"] = request.IssueLabel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoginRegionId))
+            {
+                body["LoginRegionId"] = request.LoginRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoginToken))
+            {
+                body["LoginToken"] = request.LoginToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OccurTime))
             {
@@ -9608,6 +9652,10 @@ namespace AlibabaCloud.SDK.Wyota20210420
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReservedB))
             {
                 body["ReservedB"] = request.ReservedB;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["SessionId"] = request.SessionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TelNo))
             {

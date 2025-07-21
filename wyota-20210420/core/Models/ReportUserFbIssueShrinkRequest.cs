@@ -69,9 +69,21 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         [Validation(Required=false)]
         public string FileListShrink { get; set; }
 
+        [NameInMap("IsSubstituteReport")]
+        [Validation(Required=false)]
+        public bool? IsSubstituteReport { get; set; }
+
         [NameInMap("IssueLabel")]
         [Validation(Required=false)]
         public string IssueLabel { get; set; }
+
+        [NameInMap("LoginRegionId")]
+        [Validation(Required=false)]
+        public string LoginRegionId { get; set; }
+
+        [NameInMap("LoginToken")]
+        [Validation(Required=false)]
+        public string LoginToken { get; set; }
 
         [NameInMap("OccurTime")]
         [Validation(Required=false)]
@@ -84,6 +96,10 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         [NameInMap("ReservedB")]
         [Validation(Required=false)]
         public string ReservedB { get; set; }
+
+        [NameInMap("SessionId")]
+        [Validation(Required=false)]
+        public string SessionId { get; set; }
 
         [NameInMap("TelNo")]
         [Validation(Required=false)]

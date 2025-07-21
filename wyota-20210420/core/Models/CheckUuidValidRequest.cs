@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         [Validation(Required=false)]
         public string EtherMac { get; set; }
 
+        [NameInMap("HostOsInfo")]
+        [Validation(Required=false)]
+        public string HostOsInfo { get; set; }
+
         [NameInMap("LoginRegionId")]
         [Validation(Required=false)]
         public string LoginRegionId { get; set; }
