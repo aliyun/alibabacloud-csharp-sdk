@@ -1,3 +1,7 @@
+2025-07-22 Version: 2.4.4
+- Update API GetDasSQLLogHotData: add response parameters Body.Data.List.$.NodeId.
+
+
 2025-06-25 Version: 2.4.3
 - Generated csharp 2020-01-16 for DAS.
 

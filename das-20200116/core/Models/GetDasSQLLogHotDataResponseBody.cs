@@ -123,6 +123,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [Validation(Required=false)]
                 public long? LogicRead { get; set; }
 
+                [NameInMap("NodeId")]
+                [Validation(Required=false)]
+                public string NodeId { get; set; }
+
                 /// <summary>
                 /// <para>The execution time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
                 /// 
