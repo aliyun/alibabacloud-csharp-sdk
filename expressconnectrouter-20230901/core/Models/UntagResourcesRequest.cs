@@ -10,12 +10,14 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to remove all tags. This parameter is valid only when the TagKey.N parameter is not specified. Valid values:</para>
+        /// <para>Specifies whether to remove all tags. This parameter is valid only when the <b>TagKey</b> parameter is not specified. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b> (default)</description></item>
         /// </list>
-        /// <para>Default value: false.</para>
+        /// <remarks>
+        /// <para> You must specify one of <b>TagKey</b> and <b>All</b>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

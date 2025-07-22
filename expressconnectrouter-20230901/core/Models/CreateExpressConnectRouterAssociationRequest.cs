@@ -16,6 +16,18 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         [Validation(Required=false)]
         public List<string> AllowedPrefixes { get; set; }
 
+        /// <summary>
+        /// <para>The route prefix mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>MatchMode</b>: After you distribute new route CIDR blocks to data centers, original specific routes that are distributed are withdrawn.</para>
+        /// </description></item>
+        /// <item><description><para><b>IncrementalMode</b>: After you distribute new route CIDR blocks to data centers, the original specific routes that fall in the CIDR blocks that you configure are withdrawn, and the original specific routes that do not fall in the CIDR blocks are still distributed.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MatchMode</para>
+        /// </summary>
         [NameInMap("AllowedPrefixesMode")]
         [Validation(Required=false)]
         public string AllowedPrefixesMode { get; set; }
@@ -69,6 +81,12 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         [Validation(Required=false)]
         public bool? CreateAttachment { get; set; }
 
+        /// <summary>
+        /// <para>The information about the associated resource. It must be 0 to 128 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }

@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The name of the ECR.</para>
+        /// <para>The name of the ECR. The name must be 0 to 128 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

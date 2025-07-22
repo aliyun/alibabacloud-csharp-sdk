@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
 {
     public class DescribeFlowLogsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The queried information about the request denial.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Authentication is failed for ****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
+        /// <para>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed. For more information, see Error codes.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The dynamic error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>IllegalParamFormat.EcrId</para>
         /// </summary>
@@ -34,6 +40,11 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
+        /// <para>The dynamic part in the error message. This parameter is used to replace the <c>%s</c> variable in <b>ErrMessage</b>.</para>
+        /// <remarks>
+        /// <para> For example, if the value of <b>ErrMessage</b> is <b>The Value of Input Parameter %s is not valid</b> and the value of <b>DynamicMessage</b> is <b>DtsJobId</b>, the request parameter <b>DtsJobId</b> is invalid.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>The param format of EcrId **** is illegal.</para>
         /// </summary>
@@ -41,11 +52,16 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         [Validation(Required=false)]
         public string DynamicMessage { get; set; }
 
+        /// <summary>
+        /// <para>The information about the flow logs.</para>
+        /// </summary>
         [NameInMap("FlowLogs")]
         [Validation(Required=false)]
         public List<DescribeFlowLogsResponseBodyFlowLogs> FlowLogs { get; set; }
         public class DescribeFlowLogsResponseBodyFlowLogs : TeaModel {
             /// <summary>
+            /// <para>The time when the flow log was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2023-09-21T04:20Z</para>
             /// </summary>
@@ -54,6 +70,8 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             public string CreationTime { get; set; }
 
             /// <summary>
+            /// <para>The description of the flow log.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>myFlowlog</para>
             /// </summary>
@@ -62,6 +80,8 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The ECR ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ecr-h4cop1khw98*****</para>
             /// </summary>
@@ -70,6 +90,8 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             public string EcrId { get; set; }
 
             /// <summary>
+            /// <para>The ID of the flow log.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>flowlog-leypqehtgtia2*****</para>
             /// </summary>
@@ -78,6 +100,8 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             public string FlowLogId { get; set; }
 
             /// <summary>
+            /// <para>The name of the flow log.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>myFlowlog</para>
             /// </summary>
@@ -86,6 +110,8 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             public string FlowLogName { get; set; }
 
             /// <summary>
+            /// <para>The ID of the network instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>vbr-9dpty76irpf4u15*****</para>
             /// </summary>
@@ -94,6 +120,11 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <para>The type of the network instance. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>VBR</b>: virtual border router (VBR)</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>VBR</para>
             /// </summary>
@@ -102,6 +133,13 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             public string InstanceType { get; set; }
 
             /// <summary>
+            /// <para>The time window for collecting log data. Unit: seconds. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>60</b></description></item>
+            /// <item><description><b>600</b></description></item>
+            /// </list>
+            /// <para>Default value: <b>600</b>.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>600</para>
             /// </summary>
@@ -110,6 +148,8 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             public int? Interval { get; set; }
 
             /// <summary>
+            /// <para>The Logstore that stores the captured traffic data.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>FlowLogStore</para>
             /// </summary>
@@ -118,6 +158,8 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             public string LogStoreName { get; set; }
 
             /// <summary>
+            /// <para>The name of the project that stores the captured traffic data.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>FlowLogProject</para>
             /// </summary>
@@ -126,6 +168,8 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             public string ProjectName { get; set; }
 
             /// <summary>
+            /// <para>The region ID of the flow log.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai</para>
             /// </summary>
@@ -134,6 +178,8 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             public string RegionId { get; set; }
 
             /// <summary>
+            /// <para>The ID of the resource group to which the ECR belongs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>rg-aekzb3xwrexc4ry</para>
             /// </summary>
@@ -142,6 +188,14 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
+            /// <para>The sampling proportion. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>1:4096</b></description></item>
+            /// <item><description><b>1:2048</b></description></item>
+            /// <item><description><b>1:1024</b></description></item>
+            /// </list>
+            /// <para>Default value: <b>1:4096</b>.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1:4096</para>
             /// </summary>
@@ -150,6 +204,8 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             public string SamplingRate { get; set; }
 
             /// <summary>
+            /// <para>The ID of the region where Log Service is deployed.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
             /// </summary>
@@ -158,6 +214,14 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             public string SlsRegionId { get; set; }
 
             /// <summary>
+            /// <para>The status of the flow log. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>Active</b></para>
+            /// </description></item>
+            /// <item><description><para><b>Inactive</b></para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>Active</para>
             /// </summary>
@@ -165,11 +229,19 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// <para>The tag key.</para>
+            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<DescribeFlowLogsResponseBodyFlowLogsTags> Tags { get; set; }
             public class DescribeFlowLogsResponseBodyFlowLogsTags : TeaModel {
                 /// <summary>
+                /// <para>The key of tag N of the instance. The tag key cannot be an empty string.</para>
+                /// <remarks>
+                /// <para>It can be up to 64 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+                /// </remarks>
+                /// 
                 /// <b>Example:</b>
                 /// <para>TagKey</para>
                 /// </summary>
@@ -178,6 +250,11 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
                 public string Key { get; set; }
 
                 /// <summary>
+                /// <para>The tag value.</para>
+                /// <remarks>
+                /// <para>It can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>. The tag value can be an empty string.</para>
+                /// </remarks>
+                /// 
                 /// <b>Example:</b>
                 /// <para>TagValue</para>
                 /// </summary>
@@ -190,6 +267,8 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -198,6 +277,8 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries returned. Valid values: 1 to 2147483647. Default value: 10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -206,6 +287,8 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The returned message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -214,6 +297,12 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>If <b>NextToken</b> is empty, no next page exists.</description></item>
+        /// <item><description>If a value of <b>NextToken</b> is returned, the value indicates the token that is used for the next query.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>AAAAAYws9fJ0Ur4MGm/5OkDoW/Zn0J0/sCjivzwX9oBcwFnWaaas/kSG+J/WzLOxJHS4****</para>
         /// </summary>
@@ -222,6 +311,8 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6FABF516-FED3-5697-BDA2-B18C5D9A****</para>
         /// </summary>
@@ -230,6 +321,12 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>True</b></description></item>
+        /// <item><description><b>False</b></description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>
@@ -238,6 +335,8 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>The total number of records that meet the query conditions.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>11</para>
         /// </summary>

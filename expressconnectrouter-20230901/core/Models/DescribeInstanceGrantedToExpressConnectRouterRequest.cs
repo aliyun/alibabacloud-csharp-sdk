@@ -9,6 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
 {
     public class DescribeInstanceGrantedToExpressConnectRouterRequest : TeaModel {
+        /// <summary>
+        /// <para>The type of the user account. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>sub</b>: a Resource Access Management (RAM) user.</description></item>
+        /// <item><description><b>parent</b>: an Alibaba Cloud account.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OTHER</para>
+        /// </summary>
         [NameInMap("CallerType")]
         [Validation(Required=false)]
         public string CallerType { get; set; }

@@ -53,8 +53,8 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
-        /// <para>You can bind up to 20 tags to an ECR.</para>
+        /// <para>The tag.</para>
+        /// <para>You can specify at most 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

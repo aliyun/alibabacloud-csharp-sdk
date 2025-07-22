@@ -69,6 +69,12 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             [Validation(Required=false)]
             public string EcrId { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the Alibaba Cloud account that owns the ECR to which you want to grant permissions.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1456408190545060</para>
+            /// </summary>
             [NameInMap("EcrOwnerAliUid")]
             [Validation(Required=false)]
             public string EcrOwnerAliUid { get; set; }

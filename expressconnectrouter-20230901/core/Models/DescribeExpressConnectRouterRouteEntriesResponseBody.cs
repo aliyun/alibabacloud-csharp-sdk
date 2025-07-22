@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The route entries.</para>
+        /// <para>The routes.</para>
         /// </summary>
         [NameInMap("RouteEntriesList")]
         [Validation(Required=false)]
@@ -143,6 +143,17 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             [Validation(Required=false)]
             public string DestinationCidrBlock { get; set; }
 
+            /// <summary>
+            /// <para>The MED value of the BGP route, which is used between the ECR and the transit router.</para>
+            /// <list type="bullet">
+            /// <item><description>You can set the MED value to 2000. In this case, the transit router and the ECR are used as default paths.</description></item>
+            /// <item><description>If a non-default path is used, the MED value is empty.</description></item>
+            /// <item><description>You can set the MED value to 2000 only for one object associated with a transit router of a CEN instance.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2000</para>
+            /// </summary>
             [NameInMap("Med")]
             [Validation(Required=false)]
             public long? Med { get; set; }

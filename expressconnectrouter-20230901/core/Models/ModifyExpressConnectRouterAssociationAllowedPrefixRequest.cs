@@ -16,6 +16,16 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         [Validation(Required=false)]
         public List<string> AllowedPrefixes { get; set; }
 
+        /// <summary>
+        /// <para>The route prefix mode.</para>
+        /// <list type="bullet">
+        /// <item><description>MatchMode: After you distribute new route CIDR blocks to data centers, original specific routes that are distributed are withdrawn.</description></item>
+        /// <item><description>IncrementalMode: After you distribute new route CIDR blocks to data centers, the original specific routes that fall in the CIDR blocks that you configure are withdrawn, and the original specific routes that do not fall in the CIDR blocks are still distributed.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MatchMode</para>
+        /// </summary>
         [NameInMap("AllowedPrefixesMode")]
         [Validation(Required=false)]
         public string AllowedPrefixesMode { get; set; }

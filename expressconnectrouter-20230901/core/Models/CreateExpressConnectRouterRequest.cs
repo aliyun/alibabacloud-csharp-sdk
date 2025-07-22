@@ -36,6 +36,9 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
 
         /// <summary>
         /// <para>The description of the ECR.</para>
+        /// <remarks>
+        /// <para> The description can be empty or 0 to 256 characters in length and cannot start with http:// or https://.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -60,6 +63,9 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
 
         /// <summary>
         /// <para>The name of the ECR.</para>
+        /// <remarks>
+        /// <para> The name must be 0 to 128 characters in length, and cannot start with http:// or https://.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

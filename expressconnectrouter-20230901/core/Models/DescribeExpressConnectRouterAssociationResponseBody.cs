@@ -33,6 +33,16 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             [Validation(Required=false)]
             public List<string> AllowedPrefixes { get; set; }
 
+            /// <summary>
+            /// <para>The prefix route mode. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>MatchMode</description></item>
+            /// <item><description>IncrementalMode</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>MatchMode</para>
+            /// </summary>
             [NameInMap("AllowedPrefixesMode")]
             [Validation(Required=false)]
             public string AllowedPrefixesMode { get; set; }
@@ -71,6 +81,12 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             [Validation(Required=false)]
             public string CenId { get; set; }
 
+            /// <summary>
+            /// <para>The description of the associated resource.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
