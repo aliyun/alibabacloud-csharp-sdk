@@ -81,6 +81,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             [Validation(Required=false)]
             public string CostCenterUpdateTime { get; set; }
 
+            [NameInMap("InstanceId")]
+            [Validation(Required=false)]
+            public string InstanceId { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>1234567812345678</para>
