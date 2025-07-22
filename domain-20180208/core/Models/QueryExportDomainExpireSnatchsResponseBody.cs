@@ -125,6 +125,10 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
             [Validation(Required=false)]
             public string RegDate { get; set; }
 
+            [NameInMap("Registrar")]
+            [Validation(Required=false)]
+            public string Registrar { get; set; }
+
             [NameInMap("RenewPrice")]
             [Validation(Required=false)]
             public double? RenewPrice { get; set; }
