@@ -803,6 +803,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
         }
 
+        [NameInMap("SpecMixedUserList")]
+        [Validation(Required=false)]
+        public List<string> SpecMixedUserList { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

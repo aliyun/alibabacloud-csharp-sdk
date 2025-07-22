@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class StartStreamingOutShrinkRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>disable</para>
+        /// </summary>
+        [NameInMap("Annotation")]
+        [Validation(Required=false)]
+        public string Annotation { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -812,6 +820,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [NameInMap("ShowDefaultBackgroundOnMute")]
         [Validation(Required=false)]
         public bool? ShowDefaultBackgroundOnMute { get; set; }
+
+        [NameInMap("SpecMixedUserList")]
+        [Validation(Required=false)]
+        public List<string> SpecMixedUserList { get; set; }
 
         [NameInMap("StartWithoutChannel")]
         [Validation(Required=false)]

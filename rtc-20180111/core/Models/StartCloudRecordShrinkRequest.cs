@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class StartCloudRecordShrinkRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>disable</para>
+        /// </summary>
+        [NameInMap("Annotation")]
+        [Validation(Required=false)]
+        public string Annotation { get; set; }
+
+        /// <summary>
         /// <para>appId</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -782,6 +790,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
         }
 
+        [NameInMap("RecordMode")]
+        [Validation(Required=false)]
+        public int? RecordMode { get; set; }
+
         [NameInMap("RegionColor")]
         [Validation(Required=false)]
         public StartCloudRecordShrinkRequestRegionColor RegionColor { get; set; }
@@ -819,6 +831,22 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [NameInMap("ShowDefaultBackgroundOnMute")]
         [Validation(Required=false)]
         public bool? ShowDefaultBackgroundOnMute { get; set; }
+
+        [NameInMap("SingleStreamingRecord")]
+        [Validation(Required=false)]
+        public string SingleStreamingRecordShrink { get; set; }
+
+        [NameInMap("StartWithoutChannel")]
+        [Validation(Required=false)]
+        public bool? StartWithoutChannel { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>30</para>
+        /// </summary>
+        [NameInMap("StartWithoutChannelWaitTime")]
+        [Validation(Required=false)]
+        public int? StartWithoutChannelWaitTime { get; set; }
 
         /// <summary>
         /// <para>storageConfig</para>

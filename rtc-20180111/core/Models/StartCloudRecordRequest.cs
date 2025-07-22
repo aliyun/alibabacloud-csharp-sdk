@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class StartCloudRecordRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>disable</para>
+        /// </summary>
+        [NameInMap("Annotation")]
+        [Validation(Required=false)]
+        public string Annotation { get; set; }
+
+        /// <summary>
         /// <para>appId</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -798,6 +806,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
         }
 
+        [NameInMap("RecordMode")]
+        [Validation(Required=false)]
+        public int? RecordMode { get; set; }
+
         [NameInMap("RegionColor")]
         [Validation(Required=false)]
         public StartCloudRecordRequestRegionColor RegionColor { get; set; }
@@ -835,6 +847,83 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [NameInMap("ShowDefaultBackgroundOnMute")]
         [Validation(Required=false)]
         public bool? ShowDefaultBackgroundOnMute { get; set; }
+
+        [NameInMap("SingleStreamingRecord")]
+        [Validation(Required=false)]
+        public StartCloudRecordRequestSingleStreamingRecord SingleStreamingRecord { get; set; }
+        public class StartCloudRecordRequestSingleStreamingRecord : TeaModel {
+            /// <summary>
+            /// <para>This parameter is required.</para>
+            /// </summary>
+            [NameInMap("SpecifiedStreams")]
+            [Validation(Required=false)]
+            public List<StartCloudRecordRequestSingleStreamingRecordSpecifiedStreams> SpecifiedStreams { get; set; }
+            public class StartCloudRecordRequestSingleStreamingRecordSpecifiedStreams : TeaModel {
+                /// <summary>
+                /// <para>This parameter is required.</para>
+                /// </summary>
+                [NameInMap("Ids")]
+                [Validation(Required=false)]
+                public List<string> Ids { get; set; }
+
+                /// <summary>
+                /// <para>This parameter is required.</para>
+                /// </summary>
+                [NameInMap("StreamType")]
+                [Validation(Required=false)]
+                public string StreamType { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>white</para>
+                /// </summary>
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+            }
+
+            [NameInMap("TranscodingParameters")]
+            [Validation(Required=false)]
+            public StartCloudRecordRequestSingleStreamingRecordTranscodingParameters TranscodingParameters { get; set; }
+            public class StartCloudRecordRequestSingleStreamingRecordTranscodingParameters : TeaModel {
+                [NameInMap("Audio")]
+                [Validation(Required=false)]
+                public StartCloudRecordRequestSingleStreamingRecordTranscodingParametersAudio Audio { get; set; }
+                public class StartCloudRecordRequestSingleStreamingRecordTranscodingParametersAudio : TeaModel {
+                    [NameInMap("Bitrate")]
+                    [Validation(Required=false)]
+                    public int? Bitrate { get; set; }
+
+                    [NameInMap("Codec")]
+                    [Validation(Required=false)]
+                    public string Codec { get; set; }
+
+                    [NameInMap("SampleRate")]
+                    [Validation(Required=false)]
+                    public int? SampleRate { get; set; }
+
+                }
+
+                [NameInMap("Container")]
+                [Validation(Required=false)]
+                public string Container { get; set; }
+
+            }
+
+        }
+
+        [NameInMap("StartWithoutChannel")]
+        [Validation(Required=false)]
+        public bool? StartWithoutChannel { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>30</para>
+        /// </summary>
+        [NameInMap("StartWithoutChannelWaitTime")]
+        [Validation(Required=false)]
+        public int? StartWithoutChannelWaitTime { get; set; }
 
         /// <summary>
         /// <para>storageConfig</para>

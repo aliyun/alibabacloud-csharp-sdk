@@ -14131,7 +14131,15 @@ namespace AlibabaCloud.SDK.Rtc20180111
             {
                 request.LayoutSpecifiedUsersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LayoutSpecifiedUsers, "LayoutSpecifiedUsers", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SingleStreamingRecord))
+            {
+                request.SingleStreamingRecordShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SingleStreamingRecord, "SingleStreamingRecord", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Annotation))
+            {
+                query["Annotation"] = request.Annotation;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
             {
                 query["AppId"] = request.AppId;
@@ -14168,6 +14176,10 @@ namespace AlibabaCloud.SDK.Rtc20180111
             {
                 query["Panes"] = request.Panes;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordMode))
+            {
+                query["RecordMode"] = request.RecordMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionColor))
             {
                 query["RegionColor"] = request.RegionColor;
@@ -14179,6 +14191,18 @@ namespace AlibabaCloud.SDK.Rtc20180111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowDefaultBackgroundOnMute))
             {
                 query["ShowDefaultBackgroundOnMute"] = request.ShowDefaultBackgroundOnMute;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SingleStreamingRecordShrink))
+            {
+                query["SingleStreamingRecord"] = request.SingleStreamingRecordShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartWithoutChannel))
+            {
+                query["StartWithoutChannel"] = request.StartWithoutChannel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartWithoutChannelWaitTime))
+            {
+                query["StartWithoutChannelWaitTime"] = request.StartWithoutChannelWaitTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageConfig))
             {
@@ -14243,7 +14267,15 @@ namespace AlibabaCloud.SDK.Rtc20180111
             {
                 request.LayoutSpecifiedUsersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LayoutSpecifiedUsers, "LayoutSpecifiedUsers", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SingleStreamingRecord))
+            {
+                request.SingleStreamingRecordShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SingleStreamingRecord, "SingleStreamingRecord", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Annotation))
+            {
+                query["Annotation"] = request.Annotation;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
             {
                 query["AppId"] = request.AppId;
@@ -14280,6 +14312,10 @@ namespace AlibabaCloud.SDK.Rtc20180111
             {
                 query["Panes"] = request.Panes;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordMode))
+            {
+                query["RecordMode"] = request.RecordMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionColor))
             {
                 query["RegionColor"] = request.RegionColor;
@@ -14291,6 +14327,18 @@ namespace AlibabaCloud.SDK.Rtc20180111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowDefaultBackgroundOnMute))
             {
                 query["ShowDefaultBackgroundOnMute"] = request.ShowDefaultBackgroundOnMute;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SingleStreamingRecordShrink))
+            {
+                query["SingleStreamingRecord"] = request.SingleStreamingRecordShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartWithoutChannel))
+            {
+                query["StartWithoutChannel"] = request.StartWithoutChannel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartWithoutChannelWaitTime))
+            {
+                query["StartWithoutChannelWaitTime"] = request.StartWithoutChannelWaitTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageConfig))
             {
@@ -14992,6 +15040,10 @@ namespace AlibabaCloud.SDK.Rtc20180111
                 request.LayoutSpecifiedUsersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LayoutSpecifiedUsers, "LayoutSpecifiedUsers", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Annotation))
+            {
+                query["Annotation"] = request.Annotation;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
             {
                 query["AppId"] = request.AppId;
@@ -15039,6 +15091,10 @@ namespace AlibabaCloud.SDK.Rtc20180111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowDefaultBackgroundOnMute))
             {
                 query["ShowDefaultBackgroundOnMute"] = request.ShowDefaultBackgroundOnMute;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecMixedUserList))
+            {
+                query["SpecMixedUserList"] = request.SpecMixedUserList;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartWithoutChannel))
             {
@@ -15112,6 +15168,10 @@ namespace AlibabaCloud.SDK.Rtc20180111
                 request.LayoutSpecifiedUsersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LayoutSpecifiedUsers, "LayoutSpecifiedUsers", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Annotation))
+            {
+                query["Annotation"] = request.Annotation;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
             {
                 query["AppId"] = request.AppId;
@@ -15159,6 +15219,10 @@ namespace AlibabaCloud.SDK.Rtc20180111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowDefaultBackgroundOnMute))
             {
                 query["ShowDefaultBackgroundOnMute"] = request.ShowDefaultBackgroundOnMute;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecMixedUserList))
+            {
+                query["SpecMixedUserList"] = request.SpecMixedUserList;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartWithoutChannel))
             {
@@ -17624,6 +17688,10 @@ namespace AlibabaCloud.SDK.Rtc20180111
             {
                 query["RegionColor"] = request.RegionColor;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecMixedUserList))
+            {
+                query["SpecMixedUserList"] = request.SpecMixedUserList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
             {
                 query["TaskId"] = request.TaskId;
@@ -17719,6 +17787,10 @@ namespace AlibabaCloud.SDK.Rtc20180111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionColor))
             {
                 query["RegionColor"] = request.RegionColor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecMixedUserList))
+            {
+                query["SpecMixedUserList"] = request.SpecMixedUserList;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
             {
