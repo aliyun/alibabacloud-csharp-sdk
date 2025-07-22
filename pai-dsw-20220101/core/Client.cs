@@ -2737,6 +2737,144 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取自定义用户命令</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUserCommandRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUserCommandResponse
+        /// </returns>
+        public GetUserCommandResponse GetUserCommandWithOptions(string UserCommandId, GetUserCommandRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
+            {
+                query["Token"] = request.Token;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetUserCommand",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/usercommands/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(UserCommandId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetUserCommandResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取自定义用户命令</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUserCommandRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUserCommandResponse
+        /// </returns>
+        public async Task<GetUserCommandResponse> GetUserCommandWithOptionsAsync(string UserCommandId, GetUserCommandRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
+            {
+                query["Token"] = request.Token;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetUserCommand",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/usercommands/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(UserCommandId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetUserCommandResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取自定义用户命令</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUserCommandRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUserCommandResponse
+        /// </returns>
+        public GetUserCommandResponse GetUserCommand(string UserCommandId, GetUserCommandRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetUserCommandWithOptions(UserCommandId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取自定义用户命令</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUserCommandRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUserCommandResponse
+        /// </returns>
+        public async Task<GetUserCommandResponse> GetUserCommandAsync(string UserCommandId, GetUserCommandRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetUserCommandWithOptionsAsync(UserCommandId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取用户配置</para>
         /// </summary>
         /// 
@@ -3647,6 +3785,216 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListInstancesWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取系统日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSystemLogsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSystemLogsResponse
+        /// </returns>
+        public ListSystemLogsResponse ListSystemLogsWithOptions(ListSystemLogsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GmtEndTime))
+            {
+                query["GmtEndTime"] = request.GmtEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GmtStartTime))
+            {
+                query["GmtStartTime"] = request.GmtStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogLevel))
+            {
+                query["LogLevel"] = request.LogLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProblemCategory))
+            {
+                query["ProblemCategory"] = request.ProblemCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                query["SortBy"] = request.SortBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRequestId))
+            {
+                query["SourceRequestId"] = request.SourceRequestId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["SourceType"] = request.SourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSystemLogs",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/systemlogs",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSystemLogsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取系统日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSystemLogsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSystemLogsResponse
+        /// </returns>
+        public async Task<ListSystemLogsResponse> ListSystemLogsWithOptionsAsync(ListSystemLogsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GmtEndTime))
+            {
+                query["GmtEndTime"] = request.GmtEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GmtStartTime))
+            {
+                query["GmtStartTime"] = request.GmtStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogLevel))
+            {
+                query["LogLevel"] = request.LogLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProblemCategory))
+            {
+                query["ProblemCategory"] = request.ProblemCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                query["SortBy"] = request.SortBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRequestId))
+            {
+                query["SourceRequestId"] = request.SourceRequestId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["SourceType"] = request.SourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSystemLogs",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/systemlogs",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSystemLogsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取系统日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSystemLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSystemLogsResponse
+        /// </returns>
+        public ListSystemLogsResponse ListSystemLogs(ListSystemLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListSystemLogsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取系统日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSystemLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSystemLogsResponse
+        /// </returns>
+        public async Task<ListSystemLogsResponse> ListSystemLogsAsync(ListSystemLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListSystemLogsWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
