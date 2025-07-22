@@ -1,3 +1,7 @@
+2025-07-22 Version: 4.10.1
+- Update API ModifyDesktopChargeType: add response parameters Body.TaskId.
+
+
 2025-07-22 Version: 4.10.0
 - Support API AllocateIpAddress.
 - Support API AssociateIpAddress.
