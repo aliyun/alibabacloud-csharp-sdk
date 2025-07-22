@@ -333,6 +333,178 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await AssignJobsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>异步创建外呼任务</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// AssignJobsAsyncRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssignJobsAsyncResponse
+        /// </returns>
+        public AssignJobsAsyncResponse AssignJobsAsyncWithOptions(AssignJobsAsyncRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AssignJobsAsyncShrinkRequest request = new AssignJobsAsyncShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CallingNumber))
+            {
+                request.CallingNumberShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CallingNumber, "CallingNumber", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.JobsJson))
+            {
+                request.JobsJsonShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.JobsJson, "JobsJson", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallingNumberShrink))
+            {
+                body["CallingNumber"] = request.CallingNumberShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobGroupId))
+            {
+                body["JobGroupId"] = request.JobGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobsJsonShrink))
+            {
+                body["JobsJson"] = request.JobsJsonShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrategyJson))
+            {
+                body["StrategyJson"] = request.StrategyJson;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AssignJobsAsync",
+                Version = "2019-12-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AssignJobsAsyncResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>异步创建外呼任务</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// AssignJobsAsyncRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssignJobsAsyncResponse
+        /// </returns>
+        public async Task<AssignJobsAsyncResponse> AssignJobsAsyncWithOptionsAsync(AssignJobsAsyncRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AssignJobsAsyncShrinkRequest request = new AssignJobsAsyncShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CallingNumber))
+            {
+                request.CallingNumberShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CallingNumber, "CallingNumber", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.JobsJson))
+            {
+                request.JobsJsonShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.JobsJson, "JobsJson", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallingNumberShrink))
+            {
+                body["CallingNumber"] = request.CallingNumberShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobGroupId))
+            {
+                body["JobGroupId"] = request.JobGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobsJsonShrink))
+            {
+                body["JobsJson"] = request.JobsJsonShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrategyJson))
+            {
+                body["StrategyJson"] = request.StrategyJson;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AssignJobsAsync",
+                Version = "2019-12-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AssignJobsAsyncResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>异步创建外呼任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AssignJobsAsyncRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssignJobsAsyncResponse
+        /// </returns>
+        public AssignJobsAsyncResponse AssignJobsAsync(AssignJobsAsyncRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AssignJobsAsyncWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>异步创建外呼任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AssignJobsAsyncRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssignJobsAsyncResponse
+        /// </returns>
+        public async Task<AssignJobsAsyncResponse> AssignJobsAsyncAsync(AssignJobsAsyncRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AssignJobsAsyncWithOptionsAsync(request, runtime);
+        }
+
         /// <param name="request">
         /// CancelJobsRequest
         /// </param>
@@ -9827,6 +9999,126 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetAsrServerInfoWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取异步外呼任务上传结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAssignJobsAsyncResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAssignJobsAsyncResultResponse
+        /// </returns>
+        public GetAssignJobsAsyncResultResponse GetAssignJobsAsyncResultWithOptions(GetAssignJobsAsyncResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsyncTaskId))
+            {
+                query["AsyncTaskId"] = request.AsyncTaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAssignJobsAsyncResult",
+                Version = "2019-12-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAssignJobsAsyncResultResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取异步外呼任务上传结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAssignJobsAsyncResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAssignJobsAsyncResultResponse
+        /// </returns>
+        public async Task<GetAssignJobsAsyncResultResponse> GetAssignJobsAsyncResultWithOptionsAsync(GetAssignJobsAsyncResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsyncTaskId))
+            {
+                query["AsyncTaskId"] = request.AsyncTaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAssignJobsAsyncResult",
+                Version = "2019-12-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAssignJobsAsyncResultResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取异步外呼任务上传结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAssignJobsAsyncResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAssignJobsAsyncResultResponse
+        /// </returns>
+        public GetAssignJobsAsyncResultResponse GetAssignJobsAsyncResult(GetAssignJobsAsyncResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAssignJobsAsyncResultWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取异步外呼任务上传结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAssignJobsAsyncResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAssignJobsAsyncResultResponse
+        /// </returns>
+        public async Task<GetAssignJobsAsyncResultResponse> GetAssignJobsAsyncResultAsync(GetAssignJobsAsyncResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAssignJobsAsyncResultWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

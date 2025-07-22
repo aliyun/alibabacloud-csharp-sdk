@@ -173,6 +173,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 [Validation(Required=false)]
                 public string FcRegion { get; set; }
 
+                [NameInMap("SupportBeebotPrompts")]
+                [Validation(Required=false)]
+                public bool? SupportBeebotPrompts { get; set; }
+
             }
 
             [NameInMap("Scene")]
