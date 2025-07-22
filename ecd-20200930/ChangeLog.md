@@ -1,3 +1,46 @@
+2025-07-22 Version: 4.10.0
+- Support API AllocateIpAddress.
+- Support API AssociateIpAddress.
+- Support API AssociateRouteTable.
+- Support API CreateCloudDriveGroup.
+- Support API CreateDrive.
+- Support API CreateEcdReportTask.
+- Support API CreateForwardEntry.
+- Support API CreateNatGateway.
+- Support API CreateRouteEntry.
+- Support API CreateRouteTable.
+- Support API CreateSnatEntry.
+- Support API CreateSubnet.
+- Support API DeleteDrive.
+- Support API DeleteForwardEntry.
+- Support API DeleteNatGateway.
+- Support API DeleteRouteEntry.
+- Support API DeleteRouteTable.
+- Support API DeleteSnatEntry.
+- Support API DeleteSubnet.
+- Support API DescribeDrives.
+- Support API DescribeEcdReportTasks.
+- Support API DescribeForwardTableEntries.
+- Support API DescribeIpAddresses.
+- Support API DescribeNatGateways.
+- Support API DescribeRouteEntryList.
+- Support API DescribeRouteTableList.
+- Support API DescribeSnatTableEntries.
+- Support API DescribeSubnets.
+- Support API DissociateIpAddress.
+- Support API ListTransferFiles.
+- Support API ReleaseIpAddress.
+- Support API TransferTaskApprovalCallback.
+- Update API CreateDesktopGroup: add request parameters DeleteDuration.
+- Update API DescribeDesktopGroups: add response parameters Body.DesktopGroups.$.ExpiredTimes.
+- Update API DescribeDesktops: add response parameters Body.Desktops.$.DomainType.
+- Update API DescribeDesktopsInGroup: add response parameters Body.PaidDesktops.$.ExpiredTime.
+- Update API GetDesktopGroupDetail: add response parameters Body.Desktops.ExpiredTimes.
+- Update API GetDesktopGroupDetail: add response parameters Body.Desktops.OsType.
+- Update API GetDesktopGroupDetail: add response parameters Body.Desktops.ProtocolType.
+- Update API ModifyDesktopGroup: add request parameters DeleteDuration.
+
+
 2025-07-07 Version: 4.8.16
 - Update API CreateDesktops: add request parameters QosRuleId.
 - Update API DescribeDesktopSessions: add request parameters ResourceGroupId.

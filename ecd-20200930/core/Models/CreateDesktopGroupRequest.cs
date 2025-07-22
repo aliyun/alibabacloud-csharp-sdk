@@ -251,6 +251,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string DefaultLanguage { get; set; }
 
+        [NameInMap("DeleteDuration")]
+        [Validation(Required=false)]
+        public long? DeleteDuration { get; set; }
+
         /// <summary>
         /// <para>The name of the shared group. The name can be up to 30 characters in length and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-). It must start with a letter but cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 

@@ -104,7 +104,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>The office network ID.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou+dir-363353****</para>

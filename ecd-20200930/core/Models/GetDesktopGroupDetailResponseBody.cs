@@ -188,6 +188,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string ExpiredTime { get; set; }
 
+            [NameInMap("ExpiredTimes")]
+            [Validation(Required=false)]
+            public List<string> ExpiredTimes { get; set; }
+
             /// <summary>
             /// <para>The number of vGPUs.</para>
             /// 
@@ -341,6 +345,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string OfficeSiteType { get; set; }
 
+            [NameInMap("OsType")]
+            [Validation(Required=false)]
+            public string OsType { get; set; }
+
             /// <summary>
             /// <para>The ID of the cloud computer template.</para>
             /// 
@@ -436,6 +444,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("ProfileFollowSwitch")]
             [Validation(Required=false)]
             public bool? ProfileFollowSwitch { get; set; }
+
+            [NameInMap("ProtocolType")]
+            [Validation(Required=false)]
+            public string ProtocolType { get; set; }
 
             /// <summary>
             /// <para>The threshold for the ratio of connected sessions, which triggers automatic scaling of cloud computers within the multi-session many-to-many share. To calculate the ratio of connected sessions, use the following formula:</para>

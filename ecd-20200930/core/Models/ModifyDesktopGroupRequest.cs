@@ -105,6 +105,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public long? ConnectDuration { get; set; }
 
+        [NameInMap("DeleteDuration")]
+        [Validation(Required=false)]
+        public long? DeleteDuration { get; set; }
+
         /// <summary>
         /// <para>The ID of the cloud computer share.</para>
         /// <para>This parameter is required.</para>

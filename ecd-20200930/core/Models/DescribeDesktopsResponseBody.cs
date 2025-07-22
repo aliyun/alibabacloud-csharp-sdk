@@ -352,6 +352,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             }
 
+            [NameInMap("DomainType")]
+            [Validation(Required=false)]
+            public string DomainType { get; set; }
+
             /// <summary>
             /// <para>The number of times for which the cloud desktop can be downgraded.</para>
             /// 

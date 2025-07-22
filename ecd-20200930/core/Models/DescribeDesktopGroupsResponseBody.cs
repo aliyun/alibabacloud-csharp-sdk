@@ -259,6 +259,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string ExpiredTime { get; set; }
 
+            [NameInMap("ExpiredTimes")]
+            [Validation(Required=false)]
+            public List<string> ExpiredTimes { get; set; }
+
             /// <summary>
             /// <para>The number of GPUs.</para>
             /// 

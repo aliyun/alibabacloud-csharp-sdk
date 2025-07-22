@@ -218,6 +218,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public List<string> EndUserNames { get; set; }
 
+            [NameInMap("ExpiredTime")]
+            [Validation(Required=false)]
+            public string ExpiredTime { get; set; }
+
             /// <summary>
             /// <para>The image version.</para>
             /// 
