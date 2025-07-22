@@ -37,6 +37,11 @@ namespace AlibabaCloud.SDK.Mseap20210118
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>商品授权码激活</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ActivateLicenseRequest
         /// </param>
@@ -90,6 +95,11 @@ namespace AlibabaCloud.SDK.Mseap20210118
             return TeaModel.ToObject<ActivateLicenseResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>商品授权码激活</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ActivateLicenseRequest
         /// </param>
@@ -143,6 +153,11 @@ namespace AlibabaCloud.SDK.Mseap20210118
             return TeaModel.ToObject<ActivateLicenseResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>商品授权码激活</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ActivateLicenseRequest
         /// </param>
@@ -156,6 +171,11 @@ namespace AlibabaCloud.SDK.Mseap20210118
             return ActivateLicenseWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>商品授权码激活</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ActivateLicenseRequest
         /// </param>
@@ -449,6 +469,11 @@ namespace AlibabaCloud.SDK.Mseap20210118
             return await CallbackTaskWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询协议状态</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeAgreementStatusRequest
         /// </param>
@@ -486,6 +511,11 @@ namespace AlibabaCloud.SDK.Mseap20210118
             return TeaModel.ToObject<DescribeAgreementStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询协议状态</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeAgreementStatusRequest
         /// </param>
@@ -523,6 +553,11 @@ namespace AlibabaCloud.SDK.Mseap20210118
             return TeaModel.ToObject<DescribeAgreementStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询协议状态</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeAgreementStatusRequest
         /// </param>
@@ -536,6 +571,11 @@ namespace AlibabaCloud.SDK.Mseap20210118
             return DescribeAgreementStatusWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询协议状态</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeAgreementStatusRequest
         /// </param>
@@ -1147,6 +1187,126 @@ namespace AlibabaCloud.SDK.Mseap20210118
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetNodeByTemplateIdWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>合作伙伴获取订单概要信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetOrderSummaryForPartnerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOrderSummaryForPartnerResponse
+        /// </returns>
+        public GetOrderSummaryForPartnerResponse GetOrderSummaryForPartnerWithOptions(GetOrderSummaryForPartnerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["OrderId"] = request.OrderId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetOrderSummaryForPartner",
+                Version = "2021-01-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetOrderSummaryForPartnerResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>合作伙伴获取订单概要信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetOrderSummaryForPartnerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOrderSummaryForPartnerResponse
+        /// </returns>
+        public async Task<GetOrderSummaryForPartnerResponse> GetOrderSummaryForPartnerWithOptionsAsync(GetOrderSummaryForPartnerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["OrderId"] = request.OrderId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetOrderSummaryForPartner",
+                Version = "2021-01-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetOrderSummaryForPartnerResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>合作伙伴获取订单概要信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetOrderSummaryForPartnerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOrderSummaryForPartnerResponse
+        /// </returns>
+        public GetOrderSummaryForPartnerResponse GetOrderSummaryForPartner(GetOrderSummaryForPartnerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetOrderSummaryForPartnerWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>合作伙伴获取订单概要信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetOrderSummaryForPartnerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOrderSummaryForPartnerResponse
+        /// </returns>
+        public async Task<GetOrderSummaryForPartnerResponse> GetOrderSummaryForPartnerAsync(GetOrderSummaryForPartnerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetOrderSummaryForPartnerWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3721,6 +3881,11 @@ namespace AlibabaCloud.SDK.Mseap20210118
             return await SetRedisValueWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新协议状态</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateAgreementStatusRequest
         /// </param>
@@ -3758,6 +3923,11 @@ namespace AlibabaCloud.SDK.Mseap20210118
             return TeaModel.ToObject<UpdateAgreementStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新协议状态</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateAgreementStatusRequest
         /// </param>
@@ -3795,6 +3965,11 @@ namespace AlibabaCloud.SDK.Mseap20210118
             return TeaModel.ToObject<UpdateAgreementStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新协议状态</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateAgreementStatusRequest
         /// </param>
@@ -3808,6 +3983,11 @@ namespace AlibabaCloud.SDK.Mseap20210118
             return UpdateAgreementStatusWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新协议状态</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateAgreementStatusRequest
         /// </param>
