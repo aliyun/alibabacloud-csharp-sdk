@@ -5401,7 +5401,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Promotes a non-master hardware security module (HSM) in a cluster to the master HSM.</para>
+        /// <para>Promotes a slave hardware security module (HSM) to the master HSM within the cluster. Clusters that are manually synchronized in the Chinese Mainland do not support this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5447,7 +5447,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Promotes a non-master hardware security module (HSM) in a cluster to the master HSM.</para>
+        /// <para>Promotes a slave hardware security module (HSM) to the master HSM within the cluster. Clusters that are manually synchronized in the Chinese Mainland do not support this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5493,7 +5493,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Promotes a non-master hardware security module (HSM) in a cluster to the master HSM.</para>
+        /// <para>Promotes a slave hardware security module (HSM) to the master HSM within the cluster. Clusters that are manually synchronized in the Chinese Mainland do not support this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5511,7 +5511,7 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Promotes a non-master hardware security module (HSM) in a cluster to the master HSM.</para>
+        /// <para>Promotes a slave hardware security module (HSM) to the master HSM within the cluster. Clusters that are manually synchronized in the Chinese Mainland do not support this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5534,9 +5534,9 @@ namespace AlibabaCloud.SDK.Hsm20231113
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  This operation is supported only for hardware security modules (HSMs) that are created in regions in the Chinese mainland.</para>
+        /// <para>  This operation is used for manually synchronizing data within clusters located in the Chinese Mainland. For clusters outside the Chinese Mainland, automatic data synchronization is supported, and this operation is unnecessary. If you attempt to use this operation, a 400 error code will be returned.</para>
         /// <list type="bullet">
-        /// <item><description>The time required to synchronize the data is approximately 5 minutes. We recommend that you synchronize data during off-peak hours to prevent service interruptions.</description></item>
+        /// <item><description>The data synchronization takes approximately 5 minutes. To avoid service interruptions, we recommend performing this operation during off-peak hours.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5584,9 +5584,9 @@ namespace AlibabaCloud.SDK.Hsm20231113
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  This operation is supported only for hardware security modules (HSMs) that are created in regions in the Chinese mainland.</para>
+        /// <para>  This operation is used for manually synchronizing data within clusters located in the Chinese Mainland. For clusters outside the Chinese Mainland, automatic data synchronization is supported, and this operation is unnecessary. If you attempt to use this operation, a 400 error code will be returned.</para>
         /// <list type="bullet">
-        /// <item><description>The time required to synchronize the data is approximately 5 minutes. We recommend that you synchronize data during off-peak hours to prevent service interruptions.</description></item>
+        /// <item><description>The data synchronization takes approximately 5 minutes. To avoid service interruptions, we recommend performing this operation during off-peak hours.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5634,9 +5634,9 @@ namespace AlibabaCloud.SDK.Hsm20231113
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  This operation is supported only for hardware security modules (HSMs) that are created in regions in the Chinese mainland.</para>
+        /// <para>  This operation is used for manually synchronizing data within clusters located in the Chinese Mainland. For clusters outside the Chinese Mainland, automatic data synchronization is supported, and this operation is unnecessary. If you attempt to use this operation, a 400 error code will be returned.</para>
         /// <list type="bullet">
-        /// <item><description>The time required to synchronize the data is approximately 5 minutes. We recommend that you synchronize data during off-peak hours to prevent service interruptions.</description></item>
+        /// <item><description>The data synchronization takes approximately 5 minutes. To avoid service interruptions, we recommend performing this operation during off-peak hours.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5660,9 +5660,9 @@ namespace AlibabaCloud.SDK.Hsm20231113
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  This operation is supported only for hardware security modules (HSMs) that are created in regions in the Chinese mainland.</para>
+        /// <para>  This operation is used for manually synchronizing data within clusters located in the Chinese Mainland. For clusters outside the Chinese Mainland, automatic data synchronization is supported, and this operation is unnecessary. If you attempt to use this operation, a 400 error code will be returned.</para>
         /// <list type="bullet">
-        /// <item><description>The time required to synchronize the data is approximately 5 minutes. We recommend that you synchronize data during off-peak hours to prevent service interruptions.</description></item>
+        /// <item><description>The data synchronization takes approximately 5 minutes. To avoid service interruptions, we recommend performing this operation during off-peak hours.</description></item>
         /// </list>
         /// </description>
         /// 

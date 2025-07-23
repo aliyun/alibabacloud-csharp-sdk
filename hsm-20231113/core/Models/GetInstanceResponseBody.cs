@@ -165,7 +165,14 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>密码机硬件隔离类型，枚举值&quot;vsm&quot;虚拟密码机，&quot;hostedHsm&quot;托管硬件密码机</para>
+            /// <para>The type of HSMs that is classified based on resource isolation. Valid values: </para>
+            /// <list type="bullet">
+            /// <item><description>vsm: Virtual security modules (VSMs)</description></item>
+            /// <item><description>hostedHsm: Dedicated HSMs.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vsm</para>
             /// </summary>
             [NameInMap("TenantIsolationType")]
             [Validation(Required=false)]

@@ -34,8 +34,8 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
         /// <summary>
         /// <para>The image generation mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PERIODIC: The image is automatically generated.</description></item>
-        /// <item><description>MANUAL: The image is manually generated.</description></item>
+        /// <item><description>PERIODIC: It is automatically generated.</description></item>
+        /// <item><description>MANUAL: It is manually generated.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -1,3 +1,8 @@
+2025-07-23 Version: 1.1.3
+- Update API GetCluster: add response parameters Body.Cluster.CertManaged.
+- Update API GetCluster: add response parameters Body.Cluster.EntityCertExpireTime.
+
+
 2025-01-09 Version: 1.1.2
 - Update API GetCluster: update response param.
 - Update API ListInstances: update param CurrentPage.

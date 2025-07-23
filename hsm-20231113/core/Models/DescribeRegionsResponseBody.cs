@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
         public class DescribeRegionsResponseBodyRegions : TeaModel {
             /// <summary>
             /// <para>The name of the region.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Singapore</para>
             /// </summary>
             [NameInMap("LocalName")]
             [Validation(Required=false)]
@@ -27,7 +30,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>cn-hangzhou</para>
+            /// <para>ap-southeast-1</para>
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
@@ -56,6 +59,9 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
 
                 /// <summary>
                 /// <para>The name of the zone.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Singapore Zone A</para>
                 /// </summary>
                 [NameInMap("LocalName")]
                 [Validation(Required=false)]
@@ -65,7 +71,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
                 /// <para>The zone ID.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>cn-hangzhou-a</para>
+                /// <para>ap-southeast-1a</para>
                 /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]

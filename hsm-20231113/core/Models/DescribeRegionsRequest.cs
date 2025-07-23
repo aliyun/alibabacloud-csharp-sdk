@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>zh</para>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]

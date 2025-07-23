@@ -79,8 +79,8 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             /// <summary>
             /// <para>The image generation mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PERIODIC: The image is automatically generated.</description></item>
-            /// <item><description>MANUAL: The image is manually generated.</description></item>
+            /// <item><description>PERIODIC: It is automatically generated.</description></item>
+            /// <item><description>MANUAL: It is manually generated.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -153,10 +153,10 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             /// <summary>
             /// <para>The status of the image. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>NEW: The image is disabled.</description></item>
-            /// <item><description>DELETED: The image is deleted.</description></item>
-            /// <item><description>CREATING: The image is being created.</description></item>
-            /// <item><description>NORMAL: The image is created.</description></item>
+            /// <item><description>NEW: It is disabled.</description></item>
+            /// <item><description>DELETED: It is deleted.</description></item>
+            /// <item><description>CREATING: It is being created.</description></item>
+            /// <item><description>NORMAL: It is created.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

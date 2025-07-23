@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
 {
     public class GetClusterResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the cluster.</para>
+        /// <para>The cluster details.</para>
         /// </summary>
         [NameInMap("Cluster")]
         [Validation(Required=false)]
         public GetClusterResponseBodyCluster Cluster { get; set; }
         public class GetClusterResponseBodyCluster : TeaModel {
+            [NameInMap("CertManaged")]
+            [Validation(Required=false)]
+            public bool? CertManaged { get; set; }
+
             /// <summary>
             /// <para>The cluster certificate.</para>
             /// 
@@ -51,6 +55,13 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             [Validation(Required=false)]
             public string ClusterId { get; set; }
 
+            /// <summary>
+            /// <para>The cluster mode.</para>
+            /// <para>2: automatically synchronizes the cluster.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
+            /// </summary>
             [NameInMap("ClusterMode")]
             [Validation(Required=false)]
             public int? ClusterMode { get; set; }
@@ -98,6 +109,10 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             [NameInMap("DeviceType")]
             [Validation(Required=false)]
             public string DeviceType { get; set; }
+
+            [NameInMap("EntityCertExpireTime")]
+            [Validation(Required=false)]
+            public string EntityCertExpireTime { get; set; }
 
             /// <summary>
             /// <para>The HSMs in the cluster.</para>

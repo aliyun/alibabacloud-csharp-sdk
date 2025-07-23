@@ -32,6 +32,9 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
 
         /// <summary>
         /// <para>The description of the backup.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Test backup.</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
