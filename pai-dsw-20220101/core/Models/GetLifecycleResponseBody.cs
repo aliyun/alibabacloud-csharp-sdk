@@ -91,6 +91,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
             [Validation(Required=false)]
             public string GmtCreateTime { get; set; }
 
+            [NameInMap("GmtEndTime")]
+            [Validation(Required=false)]
+            public string GmtEndTime { get; set; }
+
         }
 
         /// <summary>
