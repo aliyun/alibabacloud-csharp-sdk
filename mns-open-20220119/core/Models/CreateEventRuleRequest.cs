@@ -17,16 +17,25 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         [Validation(Required=false)]
         public string DeliveryMode { get; set; }
 
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
+        [NameInMap("Endpoint")]
+        [Validation(Required=false)]
+        public CreateEventRuleRequestEndpoint Endpoint { get; set; }
+        public class CreateEventRuleRequestEndpoint : TeaModel {
+            [NameInMap("EndpointType")]
+            [Validation(Required=false)]
+            public string EndpointType { get; set; }
+
+            [NameInMap("EndpointValue")]
+            [Validation(Required=false)]
+            public string EndpointValue { get; set; }
+
+        }
+
         [NameInMap("Endpoints")]
         [Validation(Required=false)]
         public List<CreateEventRuleRequestEndpoints> Endpoints { get; set; }
         public class CreateEventRuleRequestEndpoints : TeaModel {
             /// <summary>
-            /// <para>This parameter is required.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>http</para>
             /// </summary>
@@ -35,8 +44,6 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             public string EndpointType { get; set; }
 
             /// <summary>
-            /// <para>This parameter is required.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>test-xxx-queue</para>
             /// </summary>

@@ -205,6 +205,10 @@ namespace AlibabaCloud.SDK.Mns_open20220119
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateEventRuleShrinkRequest request = new CreateEventRuleShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Endpoint))
+            {
+                request.EndpointShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Endpoint, "Endpoint", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Endpoints))
             {
                 request.EndpointsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Endpoints, "Endpoints", "json");
@@ -225,6 +229,10 @@ namespace AlibabaCloud.SDK.Mns_open20220119
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryMode))
             {
                 query["DeliveryMode"] = request.DeliveryMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointShrink))
+            {
+                query["Endpoint"] = request.EndpointShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointsShrink))
             {
@@ -285,6 +293,10 @@ namespace AlibabaCloud.SDK.Mns_open20220119
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateEventRuleShrinkRequest request = new CreateEventRuleShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Endpoint))
+            {
+                request.EndpointShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Endpoint, "Endpoint", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Endpoints))
             {
                 request.EndpointsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Endpoints, "Endpoints", "json");
@@ -305,6 +317,10 @@ namespace AlibabaCloud.SDK.Mns_open20220119
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryMode))
             {
                 query["DeliveryMode"] = request.DeliveryMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointShrink))
+            {
+                query["Endpoint"] = request.EndpointShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointsShrink))
             {

@@ -17,9 +17,10 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         [Validation(Required=false)]
         public string DeliveryMode { get; set; }
 
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
+        [NameInMap("Endpoint")]
+        [Validation(Required=false)]
+        public string EndpointShrink { get; set; }
+
         [NameInMap("Endpoints")]
         [Validation(Required=false)]
         public string EndpointsShrink { get; set; }
