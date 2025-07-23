@@ -82,6 +82,8 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
 
         }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The tag that you want to use to query templates.</para>
         /// 
@@ -90,6 +92,7 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
         /// </summary>
         [NameInMap("TagList")]
         [Validation(Required=false)]
+        [Obsolete]
         public int? TagList { get; set; }
 
         /// <summary>

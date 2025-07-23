@@ -46,6 +46,10 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            [NameInMap("DocumentUrl")]
+            [Validation(Required=false)]
+            public string DocumentUrl { get; set; }
+
             /// <summary>
             /// <para>The path to the template schema image file</para>
             /// 

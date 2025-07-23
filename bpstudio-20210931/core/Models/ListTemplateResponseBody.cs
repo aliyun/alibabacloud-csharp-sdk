@@ -36,6 +36,14 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+
+            [NameInMap("DocumentUrl")]
+            [Validation(Required=false)]
+            public string DocumentUrl { get; set; }
+
             /// <summary>
             /// <para>The URL of the architecture image.</para>
             /// 
@@ -66,6 +74,22 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
+            [NameInMap("Tag")]
+            [Validation(Required=false)]
+            public List<ListTemplateResponseBodyDataTag> Tag { get; set; }
+            public class ListTemplateResponseBodyDataTag : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The ID of the tag that is added to the template.</para>
             /// 
@@ -74,8 +98,11 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
             /// </summary>
             [NameInMap("TagId")]
             [Validation(Required=false)]
+            [Obsolete]
             public int? TagId { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The name of the tag that is added to the template.</para>
             /// 
@@ -84,6 +111,7 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
             /// </summary>
             [NameInMap("TagName")]
             [Validation(Required=false)]
+            [Obsolete]
             public string TagName { get; set; }
 
             /// <summary>
