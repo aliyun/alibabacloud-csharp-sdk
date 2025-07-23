@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public AlertRuleNotification Notification { get; set; }
 
+        [NameInMap("sendToArms")]
+        [Validation(Required=false)]
+        public bool? SendToArms { get; set; }
+
     }
 
 }

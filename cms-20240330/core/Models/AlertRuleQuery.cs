@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public bool? CheckAfterDataComplete { get; set; }
 
+        [NameInMap("dimensions")]
+        [Validation(Required=false)]
+        public List<Dictionary<string, string>> Dimensions { get; set; }
+
         [NameInMap("duration")]
         [Validation(Required=false)]
         public long? Duration { get; set; }
@@ -29,9 +33,17 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public List<string> GroupFieldList { get; set; }
 
+        [NameInMap("groupId")]
+        [Validation(Required=false)]
+        public string GroupId { get; set; }
+
         [NameInMap("groupType")]
         [Validation(Required=false)]
         public string GroupType { get; set; }
+
+        [NameInMap("namespace")]
+        [Validation(Required=false)]
+        public string Namespace { get; set; }
 
         [NameInMap("queries")]
         [Validation(Required=false)]
@@ -103,6 +115,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public long? Window { get; set; }
 
         }
+
+        [NameInMap("relationType")]
+        [Validation(Required=false)]
+        public string RelationType { get; set; }
 
         [NameInMap("secondJoin")]
         [Validation(Required=false)]

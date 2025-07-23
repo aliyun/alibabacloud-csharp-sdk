@@ -81,20 +81,130 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         }
 
-        [NameInMap("noDataAppendValue")]
+        [NameInMap("compositeEscalation")]
         [Validation(Required=false)]
-        public string NoDataAppendValue { get; set; }
+        public AlertRuleConditionCompositeEscalation CompositeEscalation { get; set; }
+        public class AlertRuleConditionCompositeEscalation : TeaModel {
+            [NameInMap("escalations")]
+            [Validation(Required=false)]
+            public List<AlertRuleConditionCompositeEscalationEscalations> Escalations { get; set; }
+            public class AlertRuleConditionCompositeEscalationEscalations : TeaModel {
+                [NameInMap("comparisonOperator")]
+                [Validation(Required=false)]
+                public string ComparisonOperator { get; set; }
+
+                [NameInMap("metricName")]
+                [Validation(Required=false)]
+                public string MetricName { get; set; }
+
+                [NameInMap("period")]
+                [Validation(Required=false)]
+                public long? Period { get; set; }
+
+                [NameInMap("statistics")]
+                [Validation(Required=false)]
+                public string Statistics { get; set; }
+
+                [NameInMap("threshold")]
+                [Validation(Required=false)]
+                public double? Threshold { get; set; }
+
+            }
+
+            [NameInMap("level")]
+            [Validation(Required=false)]
+            public string Level { get; set; }
+
+            [NameInMap("relation")]
+            [Validation(Required=false)]
+            public string Relation { get; set; }
+
+            [NameInMap("times")]
+            [Validation(Required=false)]
+            public int? Times { get; set; }
+
+        }
+
+        [NameInMap("escalationType")]
+        [Validation(Required=false)]
+        public string EscalationType { get; set; }
+
+        [NameInMap("expressEscalation")]
+        [Validation(Required=false)]
+        public AlertRuleConditionExpressEscalation ExpressEscalation { get; set; }
+        public class AlertRuleConditionExpressEscalation : TeaModel {
+            [NameInMap("level")]
+            [Validation(Required=false)]
+            public string Level { get; set; }
+
+            [NameInMap("rawExpression")]
+            [Validation(Required=false)]
+            public string RawExpression { get; set; }
+
+            [NameInMap("times")]
+            [Validation(Required=false)]
+            public int? Times { get; set; }
+
+        }
 
         /// <summary>
         /// <para>无数据时按什么级别告警，不指定则不对无数据报警</para>
         /// </summary>
-        [NameInMap("nodataAlertLevel")]
+        [NameInMap("noDataAlertLevel")]
         [Validation(Required=false)]
-        public string NodataAlertLevel { get; set; }
+        public string NoDataAlertLevel { get; set; }
+
+        [NameInMap("noDataAppendValue")]
+        [Validation(Required=false)]
+        public string NoDataAppendValue { get; set; }
+
+        [NameInMap("noDataPolicy")]
+        [Validation(Required=false)]
+        public string NoDataPolicy { get; set; }
 
         [NameInMap("relation")]
         [Validation(Required=false)]
         public string Relation { get; set; }
+
+        [NameInMap("simpleEscalation")]
+        [Validation(Required=false)]
+        public AlertRuleConditionSimpleEscalation SimpleEscalation { get; set; }
+        public class AlertRuleConditionSimpleEscalation : TeaModel {
+            [NameInMap("escalations")]
+            [Validation(Required=false)]
+            public List<AlertRuleConditionSimpleEscalationEscalations> Escalations { get; set; }
+            public class AlertRuleConditionSimpleEscalationEscalations : TeaModel {
+                [NameInMap("comparisonOperator")]
+                [Validation(Required=false)]
+                public string ComparisonOperator { get; set; }
+
+                [NameInMap("level")]
+                [Validation(Required=false)]
+                public string Level { get; set; }
+
+                [NameInMap("statistics")]
+                [Validation(Required=false)]
+                public string Statistics { get; set; }
+
+                [NameInMap("threshold")]
+                [Validation(Required=false)]
+                public double? Threshold { get; set; }
+
+                [NameInMap("times")]
+                [Validation(Required=false)]
+                public int? Times { get; set; }
+
+            }
+
+            [NameInMap("metricName")]
+            [Validation(Required=false)]
+            public string MetricName { get; set; }
+
+            [NameInMap("period")]
+            [Validation(Required=false)]
+            public long? Period { get; set; }
+
+        }
 
         /// <summary>
         /// <para>规则条件类型，可选值：SLS_CONDITION</para>
