@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Brain_industrial20200920.Models
 {
     public class CreateLoadForecastJobRequest : TeaModel {
+        [NameInMap("BusinessKey")]
+        [Validation(Required=false)]
+        public string BusinessKey { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>electricityMeter</para>
