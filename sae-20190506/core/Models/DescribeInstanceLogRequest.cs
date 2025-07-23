@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ContainerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -54,6 +54,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
             /// <summary>
             /// <para>The description of the application.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>The application description.</para>
             /// </summary>
             [NameInMap("AppDescription")]
             [Validation(Required=false)]
@@ -108,6 +111,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public bool? AssociateEip { get; set; }
 
+            /// <summary>
+            /// <para>The base app ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>8c573618-8d72-4407-baf4-f7b64b******</para>
+            /// </summary>
             [NameInMap("BaseAppId")]
             [Validation(Required=false)]
             public string BaseAppId { get; set; }
@@ -122,6 +131,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public int? BatchWaitTime { get; set; }
 
+            /// <summary>
+            /// <para>The cluster ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>495fc79c-ae61-4600-866d-a09d68******</para>
+            /// </summary>
             [NameInMap("ClusterId")]
             [Validation(Required=false)]
             public string ClusterId { get; set; }
@@ -238,14 +253,45 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string CustomHostAlias { get; set; }
 
+            /// <summary>
+            /// <para>The type of custom image. Set to empty string if using pre-built image.</para>
+            /// <list type="bullet">
+            /// <item><description><para>internet: public network image.</para>
+            /// </description></item>
+            /// <item><description><para>intranet: private network image.</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>internet</para>
+            /// </summary>
             [NameInMap("CustomImageNetworkType")]
             [Validation(Required=false)]
             public string CustomImageNetworkType { get; set; }
 
+            /// <summary>
+            /// <para>The disk size. Unit: GB.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
+            /// </summary>
             [NameInMap("DiskSize")]
             [Validation(Required=false)]
             public int? DiskSize { get; set; }
 
+            /// <summary>
+            /// <para>The version of .NET.</para>
+            /// <list type="bullet">
+            /// <item><description>.NET 3.1</description></item>
+            /// <item><description>.NET 5.0</description></item>
+            /// <item><description>.NET 6.0</description></item>
+            /// <item><description>.NET 7.0</description></item>
+            /// <item><description>.NET 8.0</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>.NET 8.0</para>
+            /// </summary>
             [NameInMap("Dotnet")]
             [Validation(Required=false)]
             public string Dotnet { get; set; }
@@ -274,6 +320,18 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string EnableAhas { get; set; }
 
+            /// <summary>
+            /// <para>Enable CPU Burst.</para>
+            /// <list type="bullet">
+            /// <item><description><para>true: enable</para>
+            /// </description></item>
+            /// <item><description><para>false: disable</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("EnableCpuBurst")]
             [Validation(Required=false)]
             public string EnableCpuBurst { get; set; }
@@ -292,10 +350,34 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public bool? EnableGreyTagRoute { get; set; }
 
+            /// <summary>
+            /// <para>Enable idle mode.</para>
+            /// <list type="bullet">
+            /// <item><description><para>true: enable</para>
+            /// </description></item>
+            /// <item><description><para>false: disable</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("EnableIdle")]
             [Validation(Required=false)]
             public bool? EnableIdle { get; set; }
 
+            /// <summary>
+            /// <para>Enable new ARMS feature.</para>
+            /// <list type="bullet">
+            /// <item><description><para>true: enable</para>
+            /// </description></item>
+            /// <item><description><para>false: disable</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("EnableNewArms")]
             [Validation(Required=false)]
             public bool? EnableNewArms { get; set; }
@@ -327,6 +409,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string GpuType { get; set; }
 
             /// <summary>
+            /// <para>The ID of the corresponding secret dictionary.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -344,48 +428,133 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string ImageUrl { get; set; }
 
+            /// <summary>
+            /// <para>Initialize container configuration.</para>
+            /// </summary>
             [NameInMap("InitContainersConfig")]
             [Validation(Required=false)]
             public List<DescribeApplicationConfigResponseBodyDataInitContainersConfig> InitContainersConfig { get; set; }
             public class DescribeApplicationConfigResponseBodyDataInitContainersConfig : TeaModel {
+                /// <summary>
+                /// <para>The command that is used to start the image. The command must be an existing executable object in the container. Sample statements:</para>
+                /// <pre><c>command:
+                ///       - echo
+                ///       - abc
+                ///       - &gt;
+                ///       - file0
+                /// </c></pre>
+                /// <para>In this example, the Command parameter is set to <c>Command=&quot;echo&quot;, CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</c>.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>/bin/sh</para>
+                /// </summary>
                 [NameInMap("Command")]
                 [Validation(Required=false)]
                 public string Command { get; set; }
 
+                /// <summary>
+                /// <para>The parameters of the image startup command. The CommandArgs parameter specifies the parameters that are required for the <b>Command</b> parameter. You can specify the name in one of the following formats:</para>
+                /// <para><c>[&quot;a&quot;,&quot;b&quot;]</c></para>
+                /// <para>In the preceding example, the CommandArgs parameter is set to <c>CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</c>. The data type of <c>[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</c> must be an array of strings in the JSON format. This parameter is optional.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>[&quot;a&quot;,&quot;b&quot;]</para>
+                /// </summary>
                 [NameInMap("CommandArgs")]
                 [Validation(Required=false)]
                 public string CommandArgs { get; set; }
 
+                /// <summary>
+                /// <para>The information of ConfigMap.</para>
+                /// </summary>
                 [NameInMap("ConfigMapMountDesc")]
                 [Validation(Required=false)]
                 public List<DescribeApplicationConfigResponseBodyDataInitContainersConfigConfigMapMountDesc> ConfigMapMountDesc { get; set; }
                 public class DescribeApplicationConfigResponseBodyDataInitContainersConfigConfigMapMountDesc : TeaModel {
+                    /// <summary>
+                    /// <para>ConfigMap ID。</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1</para>
+                    /// </summary>
                     [NameInMap("ConfigMapId")]
                     [Validation(Required=false)]
                     public long? ConfigMapId { get; set; }
 
+                    /// <summary>
+                    /// <para>The name of the ConfigMap.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>test</para>
+                    /// </summary>
                     [NameInMap("ConfigMapName")]
                     [Validation(Required=false)]
                     public string ConfigMapName { get; set; }
 
+                    /// <summary>
+                    /// <para>The key.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>k1</para>
+                    /// </summary>
                     [NameInMap("Key")]
                     [Validation(Required=false)]
                     public string Key { get; set; }
 
+                    /// <summary>
+                    /// <para>The mount path.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>/tmp</para>
+                    /// </summary>
                     [NameInMap("MountPath")]
                     [Validation(Required=false)]
                     public string MountPath { get; set; }
 
                 }
 
+                /// <summary>
+                /// <para>The environment variables. You can configure custom environment variables or reference a ConfigMap. If you want to reference a ConfigMap, you must first create a ConfigMap. For more information, see <a href="https://help.aliyun.com/document_detail/176914.html">CreateConfigMap</a>. Take note of the following rules:</para>
+                /// <list type="bullet">
+                /// <item><description><para>Customize</para>
+                /// <list type="bullet">
+                /// <item><description><b>name</b>: the name of the environment variable.</description></item>
+                /// <item><description><b>value</b>: the value of the environment variable.</description></item>
+                /// </list>
+                /// </description></item>
+                /// <item><description><para>Reference ConfigMap</para>
+                /// <list type="bullet">
+                /// <item><description><b>name</b>: the name of the environment variable. You can reference one or all keys. If you want to reference all keys, specify <c>sae-sys-configmap-all-&lt;ConfigMap name&gt;</c>. Example: <c>sae-sys-configmap-all-test1</c>.</description></item>
+                /// <item><description><b>valueFrom</b>: the reference of the environment variable. Set the value to <c>configMapRef</c>.</description></item>
+                /// <item><description><b>configMapId</b>: the ConfigMap ID.</description></item>
+                /// <item><description><b>key</b>: the key. If you want to reference all keys, do not configure this parameter.</description></item>
+                /// </list>
+                /// </description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>[{&quot;name&quot;:&quot;TEST_ENV_KEY&quot;,&quot;value&quot;:&quot;TEST_ENV_VAR&quot;}]</para>
+                /// </summary>
                 [NameInMap("Envs")]
                 [Validation(Required=false)]
                 public string Envs { get; set; }
 
+                /// <summary>
+                /// <para>The image URL of the initialized container.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>registry.cn-shenzhen.aliyuncs.com/sae-serverless-demo/sae-demo:microservice-java-provider-v1.0</para>
+                /// </summary>
                 [NameInMap("ImageUrl")]
                 [Validation(Required=false)]
                 public string ImageUrl { get; set; }
 
+                /// <summary>
+                /// <para>The name of the initialized container.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>init-container</para>
+                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
@@ -517,6 +686,13 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public int? Memory { get; set; }
 
             /// <summary>
+            /// <para>The Nacos registry. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: SAE built-in Nacos registry</description></item>
+            /// <item><description><b>1</b>: self-managed Nacos registry</description></item>
+            /// <item><description><b>2</b> : MSE Nacos registry</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>&quot;0&quot;</para>
             /// </summary>
@@ -524,10 +700,34 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string MicroRegistration { get; set; }
 
+            /// <summary>
+            /// <para>The configuration of registration center. Takes effect only the type of registration center is MSE enterprise Nacos.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{\&quot;instanceId\&quot;:\&quot;mse-cn-1ls43******\&quot;,\&quot;namespace\&quot;:\&quot;62ee12fb-c279-4da4-be96-21**********\&quot;}</para>
+            /// </summary>
             [NameInMap("MicroRegistrationConfig")]
             [Validation(Required=false)]
             public string MicroRegistrationConfig { get; set; }
 
+            /// <summary>
+            /// <para>Configure microservices governance</para>
+            /// <para>enable: Whether to enable microservices governance</para>
+            /// <list type="bullet">
+            /// <item><description>true: Enable</description></item>
+            /// <item><description>false: Disable</description></item>
+            /// </list>
+            /// <para>mseLosslessRule: Configure lossless online/offline deployment</para>
+            /// <list type="bullet">
+            /// <item><description>delayTime: Delay duration (unit: seconds)</description></item>
+            /// <item><description>enable: Whether to enable lossless deployment. Set to &quot;true&quot; to enable; set to &quot;false&quot; to disable.</description></item>
+            /// <item><description>notice: Whether to enable notifications. Set to &quot;true&quot; to enable; set to &quot;false&quot; to disable.</description></item>
+            /// <item><description>warmupTime: Small-traffic warm-up duration (unit: seconds)</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{\&quot;Enable\&quot;:true,\&quot;MseLosslessRule\&quot;:{\&quot;enable\&quot;:true,\&quot;notice\&quot;:true,\&quot;delayTime\&quot;:10,\&quot;warmupTime\&quot;:120,\&quot;funcType\&quot;:2,\&quot;aligned\&quot;:false,\&quot;related\&quot;:false,\&quot;lossLessDetail\&quot;:false}}</para>
+            /// </summary>
             [NameInMap("MicroserviceEngineConfig")]
             [Validation(Required=false)]
             public string MicroserviceEngineConfig { get; set; }
@@ -616,6 +816,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string MseApplicationId { get; set; }
 
             /// <summary>
+            /// <para>The application name of SAE service registered in MSE.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-shenzhen-alb-demo-5c****</para>
             /// </summary>
@@ -634,6 +836,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string NamespaceId { get; set; }
 
             /// <summary>
+            /// <para>The configurations for mounting the NAS file system.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>[{&quot;mountPath&quot;:&quot;/test1&quot;,&quot;readOnly&quot;:false,&quot;nasId&quot;:&quot;nasId1&quot;,&quot;mountDomain&quot;:&quot;nasId1.cn-shenzhen.nas.aliyuncs.com&quot;,&quot;nasPath&quot;:&quot;/test1&quot;},{&quot;nasId&quot;:&quot;nasId2&quot;,&quot;mountDomain&quot;:&quot;nasId2.cn-shenzhen.nas.aliyuncs.com&quot;,&quot;readOnly&quot;:false,&quot;nasPath&quot;:&quot;/test2&quot;,&quot;mountPath&quot;:&quot;/test2&quot;}]</para>
             /// </summary>
@@ -651,10 +855,30 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string NasId { get; set; }
 
+            /// <summary>
+            /// <para>The SAE application edition.</para>
+            /// <list type="bullet">
+            /// <item><description>lite: The lightweight edition.</description></item>
+            /// <item><description>std: The standard edition.</description></item>
+            /// <item><description>pro: The professional edition.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>pro</para>
+            /// </summary>
             [NameInMap("NewSaeVersion")]
             [Validation(Required=false)]
             public string NewSaeVersion { get; set; }
 
+            /// <summary>
+            /// <para>The name of the RAM role used to authenticate the user identity.</para>
+            /// <remarks>
+            /// <para> You need to create an OpenID Connect (OIDC) identity provider (IdP) and an identity provider (IdP) for role-based single sign-on (SSO) in advance. For more information, see <a href="https://help.aliyun.com/document_detail/2331022.html">Creates an OpenID Connect (OIDC) identity provider (IdP)</a> and <a href="https://help.aliyun.com/document_detail/2331016.html">Creates an identity provider (IdP) for role-based single sign-on (SSO)</a>.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>sae-test</para>
+            /// </summary>
             [NameInMap("OidcRoleName")]
             [Validation(Required=false)]
             public string OidcRoleName { get; set; }
@@ -783,6 +1007,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string PackageVersion { get; set; }
 
             /// <summary>
+            /// <para>The version of PHP supporting PHP deployment packages. Image is not supported.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>PHP-FPM 7.0</para>
             /// </summary>
@@ -857,6 +1083,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string ProgrammingLanguage { get; set; }
 
             /// <summary>
+            /// <para>Enable K8s Service discovery and registration.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{&quot;serviceName&quot;:&quot;bwm-poc-sc-gateway-cn-beijing-front&quot;,&quot;namespaceId&quot;:&quot;cn-beijing:front&quot;,&quot;portAndProtocol&quot;:{&quot;18012&quot;:&quot;TCP&quot;},&quot;enable&quot;:true}</para>
             /// </summary>
@@ -865,6 +1093,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string PvtzDiscovery { get; set; }
 
             /// <summary>
+            /// <para>The Python environment. PYTHON 3.9.15 is supported.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>PYTHON 3.9.15</para>
             /// </summary>
@@ -873,6 +1103,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string Python { get; set; }
 
             /// <summary>
+            /// <para>The configurations for installing custom module dependencies. By default, the dependencies defined by the requirements.txt file in the root directory are installed. If no software package is configured, you can specify dependencies based on your business requirements.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Flask==2.0</para>
             /// </summary>
@@ -913,26 +1145,59 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public int? Replicas { get; set; }
 
+            /// <summary>
+            /// <para>The type of the resource. Set the value to <c>application</c>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>application</para>
+            /// </summary>
             [NameInMap("ResourceType")]
             [Validation(Required=false)]
             public string ResourceType { get; set; }
 
+            /// <summary>
+            /// <para>Secret mount description.</para>
+            /// </summary>
             [NameInMap("SecretMountDesc")]
             [Validation(Required=false)]
             public List<DescribeApplicationConfigResponseBodyDataSecretMountDesc> SecretMountDesc { get; set; }
             public class DescribeApplicationConfigResponseBodyDataSecretMountDesc : TeaModel {
+                /// <summary>
+                /// <para>The key to Base64 encode values.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>task-center</para>
+                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// <para>The mount path.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>/opt/www/runtime/logs</para>
+                /// </summary>
                 [NameInMap("MountPath")]
                 [Validation(Required=false)]
                 public string MountPath { get; set; }
 
+                /// <summary>
+                /// <para>The secret ID of the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>520</para>
+                /// </summary>
                 [NameInMap("SecretId")]
                 [Validation(Required=false)]
                 public long? SecretId { get; set; }
 
+                /// <summary>
+                /// <para>The name of the secret.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>dummy-name-opaque-894</para>
+                /// </summary>
                 [NameInMap("SecretName")]
                 [Validation(Required=false)]
                 public string SecretName { get; set; }
@@ -956,74 +1221,202 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public Dictionary<string, string> ServiceTags { get; set; }
 
+            /// <summary>
+            /// <para>The configuration of the Sidecar container.</para>
+            /// </summary>
             [NameInMap("SidecarContainersConfig")]
             [Validation(Required=false)]
             public List<DescribeApplicationConfigResponseBodyDataSidecarContainersConfig> SidecarContainersConfig { get; set; }
             public class DescribeApplicationConfigResponseBodyDataSidecarContainersConfig : TeaModel {
+                /// <summary>
+                /// <para>The ID of Container Registry Enterprise Edition instance. This parameter is required when the <b>ImageUrl</b> parameter is set to the URL of an image in an ACR Enterprise Edition instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cri-fhzlneorxala66ip</para>
+                /// </summary>
                 [NameInMap("AcrInstanceId")]
                 [Validation(Required=false)]
                 public string AcrInstanceId { get; set; }
 
+                /// <summary>
+                /// <para>The command that is used to start the image. The command must be an existing executable object in the container. Sample statements:</para>
+                /// <pre><c>command:
+                ///       - echo
+                ///       - abc
+                ///       - &gt;
+                ///       - file0
+                /// </c></pre>
+                /// <para>In this example, the Command parameter is set to <c>Command=&quot;echo&quot;, CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</c>.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>/bin/sh</para>
+                /// </summary>
                 [NameInMap("Command")]
                 [Validation(Required=false)]
                 public string Command { get; set; }
 
+                /// <summary>
+                /// <para>The parameters of the image startup command. The CommandArgs parameter specifies the parameters that are required for the <b>Command</b> parameter. You can specify the name in one of the following formats:</para>
+                /// <para><c>[&quot;a&quot;,&quot;b&quot;]</c></para>
+                /// <para>In the preceding example, the CommandArgs parameter is set to <c>CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</c>. The data type of <c>[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</c> must be an array of strings in the JSON format. This parameter is optional.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>[\&quot;-c\&quot;,\&quot;echo \\\&quot;test\\\&quot; &gt; /home/nas/test.log &amp;&amp; sleep 10000000s\&quot;]</para>
+                /// </summary>
                 [NameInMap("CommandArgs")]
                 [Validation(Required=false)]
                 public string CommandArgs { get; set; }
 
+                /// <summary>
+                /// <para>The description of the <b>ConfigMap</b> instance mounted to the application. Use configurations created on the Configuration Items page to configure containers. The following table describes the parameters that are used in the preceding statements.</para>
+                /// <list type="bullet">
+                /// <item><description><b>congfigMapId</b>: the ID of the ConfigMap instance. You can call the <a href="https://help.aliyun.com/document_detail/176917.html">ListNamespacedConfigMaps</a> operation to obtain the ID.</description></item>
+                /// <item><description><b>key</b>: the key.</description></item>
+                /// </list>
+                /// <remarks>
+                /// <para>You can use the <c>sae-sys-configmap-all</c> key to mount all keys.</para>
+                /// </remarks>
+                /// <list type="bullet">
+                /// <item><description><b>mountPath</b>: the mount path in the container.</description></item>
+                /// </list>
+                /// </summary>
                 [NameInMap("ConfigMapMountDesc")]
                 [Validation(Required=false)]
                 public List<DescribeApplicationConfigResponseBodyDataSidecarContainersConfigConfigMapMountDesc> ConfigMapMountDesc { get; set; }
                 public class DescribeApplicationConfigResponseBodyDataSidecarContainersConfigConfigMapMountDesc : TeaModel {
+                    /// <summary>
+                    /// <para>The ConfigMap ID.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>7361</para>
+                    /// </summary>
                     [NameInMap("ConfigMapId")]
                     [Validation(Required=false)]
                     public long? ConfigMapId { get; set; }
 
+                    /// <summary>
+                    /// <para>The ConfigMap name.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>ConfigMap-test</para>
+                    /// </summary>
                     [NameInMap("ConfigMapName")]
                     [Validation(Required=false)]
                     public string ConfigMapName { get; set; }
 
+                    /// <summary>
+                    /// <para>The ConfigMap key</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>key</para>
+                    /// </summary>
                     [NameInMap("Key")]
                     [Validation(Required=false)]
                     public string Key { get; set; }
 
+                    /// <summary>
+                    /// <para>The mount path.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>/mnt/test</para>
+                    /// </summary>
                     [NameInMap("MountPath")]
                     [Validation(Required=false)]
                     public string MountPath { get; set; }
 
                 }
 
+                /// <summary>
+                /// <para>Set the CPU resource limit of the primary container that can be used by Sidecar container.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>500</para>
+                /// </summary>
                 [NameInMap("Cpu")]
                 [Validation(Required=false)]
                 public int? Cpu { get; set; }
 
+                /// <summary>
+                /// <para>Shared temporary storage mounted to the primary container and the Sidecar container.</para>
+                /// </summary>
                 [NameInMap("EmptyDirDesc")]
                 [Validation(Required=false)]
                 public List<DescribeApplicationConfigResponseBodyDataSidecarContainersConfigEmptyDirDesc> EmptyDirDesc { get; set; }
                 public class DescribeApplicationConfigResponseBodyDataSidecarContainersConfigEmptyDirDesc : TeaModel {
+                    /// <summary>
+                    /// <para>Mount path of the data volume within the container.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>/mnt/cache</para>
+                    /// </summary>
                     [NameInMap("MountPath")]
                     [Validation(Required=false)]
                     public string MountPath { get; set; }
 
+                    /// <summary>
+                    /// <para>The name of the shared temporary storage.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>sidecar-container</para>
+                    /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
                 }
 
+                /// <summary>
+                /// <para>The environment variables. You can configure custom environment variables or reference a ConfigMap. If you want to reference a ConfigMap, you must first create a ConfigMap. For more information, see <a href="https://help.aliyun.com/document_detail/176914.html">CreateConfigMap</a>. Take note of the following rules:</para>
+                /// <list type="bullet">
+                /// <item><description><para>Customize</para>
+                /// <list type="bullet">
+                /// <item><description><b>name</b>: the name of the environment variable.</description></item>
+                /// <item><description><b>value</b>: the value of the environment variable.</description></item>
+                /// </list>
+                /// </description></item>
+                /// <item><description><para>Reference ConfigMap</para>
+                /// <list type="bullet">
+                /// <item><description><b>name</b>: the name of the environment variable. You can reference one or all keys. If you want to reference all keys, specify <c>sae-sys-configmap-all-&lt;ConfigMap name&gt;</c>. Example: <c>sae-sys-configmap-all-test1</c>.</description></item>
+                /// <item><description><b>valueFrom</b>: the reference of the environment variable. Set the value to <c>configMapRef</c>.</description></item>
+                /// <item><description><b>configMapId</b>: the ConfigMap ID.</description></item>
+                /// <item><description><b>key</b>: the key. If you want to reference all keys, do not configure this parameter.</description></item>
+                /// </list>
+                /// </description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>[{\&quot;name\&quot;:\&quot;k1\&quot;,\&quot;value\&quot;:\&quot;c8e3a815-e5d3-4adf-abb3-98b106a607c4\&quot;}]</para>
+                /// </summary>
                 [NameInMap("Envs")]
                 [Validation(Required=false)]
                 public string Envs { get; set; }
 
+                /// <summary>
+                /// <para>The URL of the image.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>registry.cn-beijing.aliyuncs.com/sae-dev-test/nginx:stable</para>
+                /// </summary>
                 [NameInMap("ImageUrl")]
                 [Validation(Required=false)]
                 public string ImageUrl { get; set; }
 
+                /// <summary>
+                /// <para>Set the memory limit of the primary container that can be used by Sidecar container.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1024</para>
+                /// </summary>
                 [NameInMap("Memory")]
                 [Validation(Required=false)]
                 public int? Memory { get; set; }
 
+                /// <summary>
+                /// <para>The container name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
+                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
@@ -1053,10 +1446,22 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string SlsConfigs { get; set; }
 
+            /// <summary>
+            /// <para>Enable startup probe.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{\&quot;exec\&quot;:{\&quot;command\&quot;:[\&quot;/bin/sh\&quot;,\&quot;-c\&quot;,\&quot;#!Note: If microservice config is enabled, the application will be automatically injected with the prestop configuration for lossless offline. If you delete this prestop configuration, lossless offline will not be effective.\\n echo stop &gt; /tmp/prestop; /home/admin/.tools/curl <a href="http://127.0.0.1:54199/offline">http://127.0.0.1:54199/offline</a>; sleep 30\&quot;]}}</para>
+            /// </summary>
             [NameInMap("StartupProbe")]
             [Validation(Required=false)]
             public string StartupProbe { get; set; }
 
+            /// <summary>
+            /// <para>Configuration of K8s Service discovery and registration, and full-chain gray-release feature.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{\&quot;enable\&quot;:\&quot;false\&quot;,\&quot;namespaceId\&quot;:\&quot;cn-beijing:test\&quot;,\&quot;portAndProtocol\&quot;:{\&quot;2000:TCP\&quot;:\&quot;18081\&quot;},\&quot;portProtocols\&quot;:[{\&quot;port\&quot;:2000,\&quot;protocol\&quot;:\&quot;TCP\&quot;,\&quot;targetPort\&quot;:18081}],\&quot;pvtzDiscoveryName\&quot;:\&quot;cn-beijing-1421801774382676\&quot;,\&quot;serviceId\&quot;:\&quot;3513\&quot;,\&quot;serviceName\&quot;:\&quot;demo-gray.test\&quot;}</para>
+            /// </summary>
             [NameInMap("SwimlanePvtzDiscovery")]
             [Validation(Required=false)]
             public string SwimlanePvtzDiscovery { get; set; }
@@ -1209,6 +1614,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <item><description>If the call is successful, the <b>ErrorCode</b> parameter is not returned.</description></item>
         /// <item><description>If the call fails, the <b>ErrorCode</b> parameter is returned. For more information, see the &quot;<b>Error codes</b>&quot; section of this topic.</description></item>
         /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Null</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

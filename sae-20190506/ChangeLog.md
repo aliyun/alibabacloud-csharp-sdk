@@ -1,3 +1,8 @@
+2025-07-23 Version: 2.4.8
+- Update API UpdateAppMode: add request parameters AppIds.
+- Update API UpdateAppMode: add request parameters NamespaceId.
+
+
 2025-07-14 Version: 2.4.7
 - Update API ListIngresses: add request parameters CurrentPage.
 - Update API ListIngresses: add request parameters PageSize.

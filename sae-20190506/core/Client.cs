@@ -20571,9 +20571,17 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["AppId"] = request.AppId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppIds))
+            {
+                query["AppIds"] = request.AppIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableIdle))
             {
                 query["EnableIdle"] = request.EnableIdle;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -20621,9 +20629,17 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["AppId"] = request.AppId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppIds))
+            {
+                query["AppIds"] = request.AppIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableIdle))
             {
                 query["EnableIdle"] = request.EnableIdle;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
