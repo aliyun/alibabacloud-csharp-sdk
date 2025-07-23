@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class ListCloudAccessResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of the AccessKey pairs.</para>
+        /// <para>The query results.</para>
         /// </summary>
         [NameInMap("CloudAccessList")]
         [Validation(Required=false)]
         public List<ListCloudAccessResponseBodyCloudAccessList> CloudAccessList { get; set; }
         public class ListCloudAccessResponseBodyCloudAccessList : TeaModel {
             /// <summary>
-            /// <para>The AccessKey ID used to access the cloud service.</para>
+            /// <para>The ID of the primary key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>888</para>
@@ -37,17 +37,17 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string CloudName { get; set; }
 
             /// <summary>
-            /// <para>The AccessKey secret used to access the cloud service.</para>
+            /// <para>The AccessKey ID that is used to access cloud resources.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>LTAI4G5KAZCJQqdwPBAXXXX</para>
+            /// <para>AAAqdwPBA****</para>
             /// </summary>
             [NameInMap("SecretId")]
             [Validation(Required=false)]
             public string SecretId { get; set; }
 
             /// <summary>
-            /// <para>The status of the service.</para>
+            /// <para>The service status. The value normal indicates that the service runs as expected.</para>
             /// 
             /// <b>Example:</b>
             /// <para>normal</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         }
 
         /// <summary>
-        /// <para>The page number. Default value: 1.</para>
+        /// <para>The default value is the current page. If CurrentPage is not specified, this parameter is not returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of revoked certificates per page. Default value: <b>20</b>.</para>
+        /// <para>The number of entries per page. If ShowSize is not specified, this parameter is not returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class DescribeCertificateStateResponseBody : TeaModel {
+        [NameInMap("CertId")]
+        [Validation(Required=false)]
+        public string CertId { get; set; }
+
         /// <summary>
         /// <para>The content of the certificate in the PEM format. For more information about the PEM format and how to convert certificate formats, see <a href="https://help.aliyun.com/document_detail/42214.html">What formats are used for mainstream digital certificates?</a></para>
         /// <remarks>

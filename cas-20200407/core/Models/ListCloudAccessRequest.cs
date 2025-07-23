@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class ListCloudAccessRequest : TeaModel {
         /// <summary>
-        /// <para>The cloud service provider.</para>
+        /// <para>The cloud service provider. Set the value to <b>Tencent</b>, which indicates Tencent Cloud.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Tencent</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The AccessKey secret used to access the cloud service.</para>
+        /// <para>The AccessKey ID that is used to access cloud resources.</para>
         /// 
         /// <b>Example:</b>
         /// <para>276</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string SecretId { get; set; }
 
         /// <summary>
-        /// <para>The number of certificates per page. Default value: <b>20</b>.</para>
+        /// <para>The number of entries per page. Valid values: <b>10</b>, <b>20</b>, and <b>50</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

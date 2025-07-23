@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class CreateDeploymentJobRequest : TeaModel {
         /// <summary>
-        /// <para>The certificate IDs.</para>
+        /// <para>The ID of the certificate. Separate multiple certificate IDs with commas (,). You can call the <a href="https://help.aliyun.com/document_detail/455804.html">ListUserCertificateOrder</a> operation to obtain the IDs of certificates from the <b>CertificateId</b> parameter.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string CertIds { get; set; }
 
         /// <summary>
-        /// <para>The contact IDs.</para>
+        /// <para>The ID of the contact. Separate multiple contact IDs with commas (,). You can call the <a href="https://help.aliyun.com/document_detail/2712221.html">ListContact</a> operation to obtain the IDs of contacts from the <b>ContactId</b> parameter.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,11 +32,11 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string ContactIds { get; set; }
 
         /// <summary>
-        /// <para>The type of the task.</para>
+        /// <para>The type of the deployment task.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cloud</description></item>
-        /// <item><description>user</description></item>
+        /// <item><description>cloud: multi-cloud deployment task.</description></item>
+        /// <item><description>user: cloud service deployment task. This type of task does not support cloud servers.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The resource IDs.</para>
+        /// <para>The ID of the cloud resource. Separate multiple resource IDs with commas (,). You can call the <a href="https://help.aliyun.com/document_detail/2712230.html">ListCloudResources</a> operation to obtain the IDs of cloud resources from the <b>Id</b> parameter.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string ResourceIds { get; set; }
 
         /// <summary>
-        /// <para>The time when the task was scheduled.</para>
+        /// <para>The time when the task starts. The value is a UNIX timestamp. If you do not specify this parameter, the system immediately starts the task after the task is in the pending state.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1706613560008</para>
