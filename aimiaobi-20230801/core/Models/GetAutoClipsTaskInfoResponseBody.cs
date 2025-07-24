@@ -83,6 +83,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public string Content { get; set; }
 
+            [NameInMap("ErrorMessage")]
+            [Validation(Required=false)]
+            public string ErrorMessage { get; set; }
+
             [NameInMap("MediaCloudTimeline")]
             [Validation(Required=false)]
             public string MediaCloudTimeline { get; set; }
@@ -171,6 +175,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                     [Validation(Required=false)]
                     public int? In { get; set; }
 
+                    [NameInMap("InEx")]
+                    [Validation(Required=false)]
+                    public float? InEx { get; set; }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>5</para>
@@ -178,6 +186,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                     [NameInMap("Out")]
                     [Validation(Required=false)]
                     public int? Out { get; set; }
+
+                    [NameInMap("OutEx")]
+                    [Validation(Required=false)]
+                    public float? OutEx { get; set; }
 
                     /// <summary>
                     /// <b>Example:</b>

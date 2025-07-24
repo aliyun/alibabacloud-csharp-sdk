@@ -13,6 +13,24 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string AnlysisPrompt { get; set; }
 
+        [NameInMap("ReferenceVideo")]
+        [Validation(Required=false)]
+        public AsyncUploadVideoRequestReferenceVideo ReferenceVideo { get; set; }
+        public class AsyncUploadVideoRequestReferenceVideo : TeaModel {
+            [NameInMap("VideoExtraInfo")]
+            [Validation(Required=false)]
+            public string VideoExtraInfo { get; set; }
+
+            [NameInMap("VideoName")]
+            [Validation(Required=false)]
+            public string VideoName { get; set; }
+
+            [NameInMap("VideoUrl")]
+            [Validation(Required=false)]
+            public string VideoUrl { get; set; }
+
+        }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -42,6 +60,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public string VideoUrl { get; set; }
 
         }
+
+        [NameInMap("SplitInterval")]
+        [Validation(Required=false)]
+        public int? SplitInterval { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

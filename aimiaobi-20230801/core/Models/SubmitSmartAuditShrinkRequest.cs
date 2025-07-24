@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }
 
+        [NameInMap("imageUrls")]
+        [Validation(Required=false)]
+        public string ImageUrlsShrink { get; set; }
+
     }
 
 }

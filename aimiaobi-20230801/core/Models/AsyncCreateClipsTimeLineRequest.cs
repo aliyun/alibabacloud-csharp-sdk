@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class AsyncCreateClipsTimeLineRequest : TeaModel {
+        [NameInMap("AdditionalContent")]
+        [Validation(Required=false)]
+        public string AdditionalContent { get; set; }
+
+        [NameInMap("CustomContent")]
+        [Validation(Required=false)]
+        public string CustomContent { get; set; }
+
+        [NameInMap("NoRefVideo")]
+        [Validation(Required=false)]
+        public bool? NoRefVideo { get; set; }
+
         [NameInMap("ProcessPrompt")]
         [Validation(Required=false)]
         public string ProcessPrompt { get; set; }

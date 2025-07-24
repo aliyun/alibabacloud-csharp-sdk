@@ -49,9 +49,17 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 [Validation(Required=false)]
                 public int? In { get; set; }
 
+                [NameInMap("InEx")]
+                [Validation(Required=false)]
+                public float? InEx { get; set; }
+
                 [NameInMap("Out")]
                 [Validation(Required=false)]
                 public int? Out { get; set; }
+
+                [NameInMap("OutEx")]
+                [Validation(Required=false)]
+                public float? OutEx { get; set; }
 
                 [NameInMap("VideoId")]
                 [Validation(Required=false)]

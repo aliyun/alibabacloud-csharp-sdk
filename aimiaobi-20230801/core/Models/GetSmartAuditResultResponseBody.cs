@@ -101,6 +101,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 [Validation(Required=false)]
                 public string SubClassDesc { get; set; }
 
+                [NameInMap("Url")]
+                [Validation(Required=false)]
+                public string Url { get; set; }
+
             }
 
             /// <summary>

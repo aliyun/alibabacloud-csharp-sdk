@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class RunKeywordsExtractionGenerationRequest : TeaModel {
+        [NameInMap("Prompt")]
+        [Validation(Required=false)]
+        public string Prompt { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>

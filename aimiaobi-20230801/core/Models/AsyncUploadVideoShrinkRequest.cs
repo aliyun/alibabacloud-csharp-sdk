@@ -13,12 +13,20 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string AnlysisPrompt { get; set; }
 
+        [NameInMap("ReferenceVideo")]
+        [Validation(Required=false)]
+        public string ReferenceVideoShrink { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SourceVideos")]
         [Validation(Required=false)]
         public string SourceVideosShrink { get; set; }
+
+        [NameInMap("SplitInterval")]
+        [Validation(Required=false)]
+        public int? SplitInterval { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

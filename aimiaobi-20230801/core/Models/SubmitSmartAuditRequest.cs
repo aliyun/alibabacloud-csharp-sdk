@@ -25,6 +25,20 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }
 
+        [NameInMap("imageUrls")]
+        [Validation(Required=false)]
+        public List<SubmitSmartAuditRequestImageUrls> ImageUrls { get; set; }
+        public class SubmitSmartAuditRequestImageUrls : TeaModel {
+            [NameInMap("id")]
+            [Validation(Required=false)]
+            public string Id { get; set; }
+
+            [NameInMap("url")]
+            [Validation(Required=false)]
+            public string Url { get; set; }
+
+        }
+
     }
 
 }
