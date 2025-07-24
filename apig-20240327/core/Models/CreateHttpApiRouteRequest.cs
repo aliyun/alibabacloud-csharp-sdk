@@ -143,6 +143,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [Validation(Required=false)]
             public string ExposedUriPath { get; set; }
 
+            [NameInMap("mcpStatisticsEnable")]
+            [Validation(Required=false)]
+            public bool? McpStatisticsEnable { get; set; }
+
             [NameInMap("protocol")]
             [Validation(Required=false)]
             public string Protocol { get; set; }

@@ -76,6 +76,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string PluginId { get; set; }
 
+        [NameInMap("routeId")]
+        [Validation(Required=false)]
+        public string RouteId { get; set; }
+
         /// <summary>
         /// <para>The dashboard source. Valid values:</para>
         /// <list type="bullet">

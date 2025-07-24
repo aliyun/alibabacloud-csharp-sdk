@@ -63,6 +63,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 [Validation(Required=false)]
                 public string EnvironmentId { get; set; }
 
+                [NameInMap("parentResourceId")]
+                [Validation(Required=false)]
+                public string ParentResourceId { get; set; }
+
                 /// <summary>
                 /// <para>The resource ID.</para>
                 /// 
@@ -72,6 +76,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 [NameInMap("resourceId")]
                 [Validation(Required=false)]
                 public string ResourceId { get; set; }
+
+                [NameInMap("resources")]
+                [Validation(Required=false)]
+                public List<string> Resources { get; set; }
 
             }
 

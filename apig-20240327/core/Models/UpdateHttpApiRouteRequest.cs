@@ -136,6 +136,28 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public HttpRouteMatch Match { get; set; }
 
+        [NameInMap("mcpRouteConfig")]
+        [Validation(Required=false)]
+        public UpdateHttpApiRouteRequestMcpRouteConfig McpRouteConfig { get; set; }
+        public class UpdateHttpApiRouteRequestMcpRouteConfig : TeaModel {
+            [NameInMap("exposedUriPath")]
+            [Validation(Required=false)]
+            public string ExposedUriPath { get; set; }
+
+            [NameInMap("mcpStatisticsEnable")]
+            [Validation(Required=false)]
+            public bool? McpStatisticsEnable { get; set; }
+
+            [NameInMap("protocol")]
+            [Validation(Required=false)]
+            public string Protocol { get; set; }
+
+        }
+
+        [NameInMap("name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
     }
 
 }
