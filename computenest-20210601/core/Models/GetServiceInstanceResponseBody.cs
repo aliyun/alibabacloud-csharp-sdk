@@ -461,7 +461,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string Resources { get; set; }
 
         /// <summary>
-        /// <para>The information about the cloud service.</para>
+        /// <para>The service details.</para>
         /// </summary>
         [NameInMap("Service")]
         [Validation(Required=false)]
@@ -492,10 +492,10 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string DeployType { get; set; }
 
             /// <summary>
-            /// <para>Operation info.</para>
+            /// <para>Parameters related to O\&amp;M operations, including configuration change, prometheus, and log configurations.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{&quot;SupportBackup&quot;:false,&quot;PrometheusConfigMap&quot;:{},&quot;ModifyParametersConfig&quot;:[{&quot;TemplateName&quot;:&quot;国内版&quot;,&quot;Operation&quot;:[{&quot;Name&quot;:&quot;套餐变配&quot;,&quot;Description&quot;:&quot;套餐变配&quot;,&quot;Type&quot;:&quot;Custom&quot;,&quot;SupportPredefinedParameters&quot;:true,&quot;EnableLogging&quot;:false},{&quot;Name&quot;:&quot;参数变配&quot;,&quot;Description&quot;:&quot;参数变配&quot;,&quot;Type&quot;:&quot;Custom&quot;,&quot;SupportPredefinedParameters&quot;:false,&quot;EnableLogging&quot;:false,&quot;Parameters&quot;:[&quot;DataDiskSize&quot;]}]}]}</para>
+            /// <para>{&quot;SupportBackup&quot;:false,&quot;PrometheusConfigMap&quot;:{},&quot;ModifyParametersConfig&quot;:[{&quot;TemplateName&quot;:&quot;Chinese mainland version&quot;,&quot;Operation&quot;:[{&quot;Name&quot;:&quot;Change Plan&quot;,&quot;Description&quot;:&quot;Change Plan&quot;,&quot;Type&quot;:&quot;Custom&quot;,&quot;SupportPredefinedParameters&quot;:true,&quot;EnableLogging&quot;:false},{&quot;Name&quot;:&quot;Parameter configuration change&quot;,&quot;Description&quot;:&quot;Parameter configuration change&quot;,&quot;Type&quot;:&quot;Custom&quot;,&quot;SupportPredefinedParameters&quot;:false,&quot;EnableLogging&quot;:false,&quot;Parameters&quot;:[&quot;DataDiskSize&quot;]}]}}</para>
             /// </summary>
             [NameInMap("OperationMetadata")]
             [Validation(Required=false)]
@@ -683,6 +683,9 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 
             /// <summary>
             /// <para>The metadata about the upgrade.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{\&quot;Description\&quot;:\&quot;Allowed Upgrade 11\&quot;,\&quot;SupportRollback\&quot;:true,\&quot;SupportUpgradeFromVersions\&quot;:[],\&quot;UpgradeComponents\&quot;:[\&quot;Configuration\&quot;,\&quot;Resource\&quot;]}</para>
             /// </summary>
             [NameInMap("UpgradeMetadata")]
             [Validation(Required=false)]
@@ -790,6 +793,9 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         [Validation(Required=false)]
         public long? SupplierUid { get; set; }
 
+        /// <summary>
+        /// <para>Is it supported to convert from trial to private</para>
+        /// </summary>
         [NameInMap("SupportTrialToPrivate")]
         [Validation(Required=false)]
         public bool? SupportTrialToPrivate { get; set; }

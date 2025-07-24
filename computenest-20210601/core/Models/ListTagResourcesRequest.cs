@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAfu+XtuBE55iRLHEYYuojI4=</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>The region ID of the resource.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         /// <list type="bullet">
         /// <item><description>service: service</description></item>
         /// <item><description>serviceinstance: service instance</description></item>
-        /// <item><description>artifact: artifact</description></item>
+        /// <item><description>artifact: deployment package</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

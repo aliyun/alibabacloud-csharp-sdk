@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             [Validation(Required=false)]
             public string PayPeriodUnit { get; set; }
 
+            [NameInMap("QuotationId")]
+            [Validation(Required=false)]
+            public string QuotationId { get; set; }
+
         }
 
         /// <summary>

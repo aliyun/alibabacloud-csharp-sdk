@@ -228,10 +228,16 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 
         }
 
+        /// <summary>
+        /// <para>Compliance check metadata.</para>
+        /// </summary>
         [NameInMap("ComplianceMetadata")]
         [Validation(Required=false)]
         public GetServiceResponseBodyComplianceMetadata ComplianceMetadata { get; set; }
         public class GetServiceResponseBodyComplianceMetadata : TeaModel {
+            /// <summary>
+            /// <para>The compliance pack list.</para>
+            /// </summary>
             [NameInMap("CompliancePacks")]
             [Validation(Required=false)]
             public List<string> CompliancePacks { get; set; }

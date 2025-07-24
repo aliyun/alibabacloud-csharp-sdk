@@ -2327,7 +2327,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>计算巢查询服务是否开通</para>
+        /// <para>Queries the information about the activation status and Resource Access Management (RAM) roles of the cloud services required by a service.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2395,7 +2395,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>计算巢查询服务是否开通</para>
+        /// <para>Queries the information about the activation status and Resource Access Management (RAM) roles of the cloud services required by a service.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2463,7 +2463,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>计算巢查询服务是否开通</para>
+        /// <para>Queries the information about the activation status and Resource Access Management (RAM) roles of the cloud services required by a service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2481,7 +2481,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>计算巢查询服务是否开通</para>
+        /// <para>Queries the information about the activation status and Resource Access Management (RAM) roles of the cloud services required by a service.</para>
         /// </summary>
         /// 
         /// <param name="request">

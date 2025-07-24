@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string ServiceId { get; set; }
 
             /// <summary>
-            /// <para>The information about the service.</para>
+            /// <para>The service information.</para>
             /// </summary>
             [NameInMap("ServiceInfos")]
             [Validation(Required=false)]
@@ -209,14 +209,29 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
                 [Validation(Required=false)]
                 public string ShortDescription { get; set; }
 
+                /// <summary>
+                /// <para>Service software information.</para>
+                /// </summary>
                 [NameInMap("Softwares")]
                 [Validation(Required=false)]
                 public List<ListServicesResponseBodyServicesServiceInfosSoftwares> Softwares { get; set; }
                 public class ListServicesResponseBodyServicesServiceInfosSoftwares : TeaModel {
+                    /// <summary>
+                    /// <para>The name of the software.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>wordpress</para>
+                    /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
+                    /// <summary>
+                    /// <para>The version of the software.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>6.0.1</para>
+                    /// </summary>
                     [NameInMap("Version")]
                     [Validation(Required=false)]
                     public string Version { get; set; }

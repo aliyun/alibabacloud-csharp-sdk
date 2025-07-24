@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the service instances.</para>
+        /// <para>The information about service instances.</para>
         /// </summary>
         [NameInMap("ServiceInstances")]
         [Validation(Required=false)]
@@ -341,7 +341,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
                     /// <para>The description of the service.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>B是A公司自主设计并研发的开源分布式的关系型数据库</para>
+                    /// <para>WordPress is a free and open-source website content management system (CMS).</para>
                     /// </summary>
                     [NameInMap("ShortDescription")]
                     [Validation(Required=false)]
@@ -482,6 +482,12 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             [Validation(Required=false)]
             public string StatusDetail { get; set; }
 
+            /// <summary>
+            /// <para>Is it supported to convert from trial to formal</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("SupportTrialToPrivate")]
             [Validation(Required=false)]
             public bool? SupportTrialToPrivate { get; set; }
@@ -519,7 +525,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             /// <para>The template name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>模板1</para>
+            /// <para>Single ECS</para>
             /// </summary>
             [NameInMap("TemplateName")]
             [Validation(Required=false)]

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>A list of resources that have tags.</para>
+        /// <para>The collection of details about resources and tags, such as resource IDs, resource types, and tag key-value pairs.</para>
         /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
@@ -51,7 +51,8 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             /// <list type="bullet">
             /// <item><description>service: service</description></item>
             /// <item><description>serviceinstance: service instance</description></item>
-            /// <item><description>artifact: artifact</description></item>
+            /// <item><description>artifact: deployment package</description></item>
+            /// <item><description>dataset: dataset</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -62,7 +63,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The key of the tag.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -72,7 +73,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string TagKey { get; set; }
 
             /// <summary>
-            /// <para>The values of the tags.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>major</para>

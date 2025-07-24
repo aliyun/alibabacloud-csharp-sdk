@@ -89,6 +89,10 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             [Validation(Required=false)]
             public string PayPeriodUnit { get; set; }
 
+            [NameInMap("QuotationId")]
+            [Validation(Required=false)]
+            public string QuotationId { get; set; }
+
         }
 
         /// <summary>
@@ -285,6 +289,12 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         [Validation(Required=false)]
         public string ServiceId { get; set; }
 
+        /// <summary>
+        /// <para>The trial service instance id witch you want to convert to formal</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>si-d32fbcef30664721b785</para>
+        /// </summary>
         [NameInMap("ServiceInstanceId")]
         [Validation(Required=false)]
         public string ServiceInstanceId { get; set; }
