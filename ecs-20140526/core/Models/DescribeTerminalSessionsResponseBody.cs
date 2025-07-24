@@ -91,6 +91,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         [Validation(Required=false)]
                         public string EndTime { get; set; }
 
+                        /// <summary>
+                        /// <para>Cause of the connection failure. This parameter is returned only when the Status parameter is Failed.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>The Session Manager is closed normally.</para>
+                        /// </summary>
                         [NameInMap("FailedDetail")]
                         [Validation(Required=false)]
                         public string FailedDetail { get; set; }
@@ -120,8 +126,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         /// <list type="bullet">
                         /// <item><description>Connecting: The connection is being established.</description></item>
                         /// <item><description>Connected: The connection is established.</description></item>
-                        /// <item><description>Disconnected: The connection is disconnected.</description></item>
-                        /// <item><description>Terminating: The session is being terminated.</description></item>
                         /// <item><description>Terminated: The session is terminated.</description></item>
                         /// <item><description>Failed: The connection failed.</description></item>
                         /// </list>

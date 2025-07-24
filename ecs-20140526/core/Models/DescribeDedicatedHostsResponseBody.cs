@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDedicatedHostsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the dedicated hosts.</para>
+        /// <para>Details about the DDH.</para>
         /// </summary>
         [NameInMap("DedicatedHosts")]
         [Validation(Required=false)]
@@ -275,7 +275,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public int? Cores { get; set; }
 
                 /// <summary>
-                /// <para>The CPU overcommit ratio.Valid values: 1 to 5.</para>
+                /// <para>The CPU overcommit ratio. Valid values: 1 to 5.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>

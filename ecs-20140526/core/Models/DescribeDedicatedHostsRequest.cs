@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DedicatedHostClusterId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of dedicated hosts. You can specify up to 100 dedicated host IDs in a single request. Separate the IDs with commas (,).</para>
+        /// <para>The list of DDH IDs. You can specify up to 100 deployment set IDs in each request. Separate the deployment set IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;dh-bp165p6xk2tlw61e****&quot;, &quot;dh-bp1f9vxmno7emy96****&quot;]</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DedicatedHostName { get; set; }
 
         /// <summary>
-        /// <para>The dedicated host type. You can call the <a href="https://help.aliyun.com/document_detail/134240.html">DescribeDedicatedHostTypes</a> operation to query the most recent list of dedicated host types.</para>
+        /// <para>The type of the DDH. You can call the <a href="https://help.aliyun.com/document_detail/134240.html">DescribeDedicatedHostTypes</a> operation to query the most recent list of DDH types.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ddh.g5</para>
@@ -94,8 +94,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
-        /// <para>Default value: 1.</para>
+        /// <remarks>
+        /// <para> This parameter will be removed in the future. You can use NextToken and MaxResults for a paged query.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -105,9 +106,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
-        /// <para>Valid values: 1 to 100.</para>
-        /// <para>Default value: 10.</para>
+        /// <remarks>
+        /// <para> This parameter will be removed in the future. You can use NextToken and MaxResults for a paged query.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -153,10 +154,19 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to display socket information. Valid values:</para>
+        /// <para>Specifies whether to display socket information. You can view the remaining resources (vCPUs, memory usage, remaining resources, and total resources) based on the capacity information of the socket dimension. Then you can determine whether ECS instances of the corresponding specifications can be created. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
+        /// <item><description>true Only some DDHs support the information about resources in the socket dimension. For more information, see <a href="https://help.aliyun.com/document_detail/68989.html">View and export information about DDHs</a>.</description></item>
         /// <item><description>false</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> Each DDH generally has two CPUs, and each CPU corresponds to Socket 0 and Socket 1. To maximize the performance of an ECS instance on a DDH, ECS instances are not created across sockets.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>If one socket has available computing resources for creating the ECS instance, creation succeeds.</para>
+        /// </description></item>
+        /// <item><description><para>If not, creation fails even if the combined available resources of both sockets are sufficient. Although the remaining resources of the two sockets on the DDH are larger than the ECS instance type, the ECS instance cannot be created.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -185,14 +195,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The tags of the dedicated host.</para>
+        /// <para>The list of tags. The list length ranges from 0 to 20.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeDedicatedHostsRequestTag> Tag { get; set; }
         public class DescribeDedicatedHostsRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N of the dedicated host. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>acs:</c> or <c>aliyun</c>.</para>
+            /// <para>The key of tag N of the DDH. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>acs:</c> or <c>aliyun</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -202,7 +212,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N of the dedicated host. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The value of tag N of the DDH. You can specify empty strings as tag values. The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

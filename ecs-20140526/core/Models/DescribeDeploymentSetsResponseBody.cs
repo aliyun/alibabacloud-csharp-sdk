@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSet> DeploymentSet { get; set; }
             public class DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSet : TeaModel {
+                [NameInMap("AccountId")]
+                [Validation(Required=false)]
+                public long? AccountId { get; set; }
+
                 /// <summary>
                 /// <para>Details of the capacities of the deployment set. This parameter is valid only when the deployment set contains ECS instances. The value contains information about the capacities of the deployment set in different zones.</para>
                 /// </summary>

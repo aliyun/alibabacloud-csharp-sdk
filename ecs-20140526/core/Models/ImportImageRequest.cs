@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DetectionStrategy { get; set; }
 
         /// <summary>
-        /// <para>The information of disks from which the custom images are created.</para>
+        /// <para>Details about the custom images.</para>
         /// </summary>
         [NameInMap("DiskDeviceMapping")]
         [Validation(Required=false)]
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? DiskImSize { get; set; }
 
             /// <summary>
-            /// <para>The size of disk N in the custom image after the image is imported.</para>
+            /// <para>The size of disk N in the custom image after the source image is imported.</para>
             /// <para>You can use this parameter to specify the sizes of the system disk and data disks in the custom image. When you specify the size of the system disk, make sure that the specified size is greater than or equal to the size of the imported image file. Unit: GiB. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>When the N value is 1, this parameter specifies the size of the system disk in the custom image. Valid values: 1 to 2048.</description></item>
@@ -132,13 +132,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? DiskImageSize { get; set; }
 
             /// <summary>
-            /// <para>The image format. Valid values:</para>
+            /// <para>The format of the source image. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>RAW</description></item>
             /// <item><description>VHD</description></item>
             /// <item><description>QCOW2</description></item>
+            /// <item><description>VMDK (invitational preview)</description></item>
             /// </list>
-            /// <para>This parameter is empty by default, which indicates that the system checks the format of the image and uses the check result as the value of this parameter.</para>
+            /// <para>This parameter is empty by default, which indicates that the system checks the image format and uses the check result as the value of this parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>QCOW2</para>
@@ -148,9 +149,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Format { get; set; }
 
             /// <summary>
-            /// <para>The OSS bucket where the image file is stored.</para>
+            /// <para>The Object Storage Service (OSS) bucket where the image file is stored.</para>
             /// <remarks>
-            /// <para> Before you import images for the first time, you must use RAM to authorize ECS to access your OSS buckets. If ECS is not authorized to access your OSS buckets, the <c>NoSetRoletoECSServiceAcount</c> error code is returned when you call the ImportImage operation. For more information, see the &quot;<b>Usage notes</b>&quot; section in this topic.</para>
+            /// <para> Before you import images for the first time, you must use RAM to authorize ECS to access your OSS buckets. If ECS is not authorized to access your OSS buckets, the <c>NoSetRoletoECSServiceAcount</c> error code is returned when you call the ImportImage operation. For more information, see <b>Usage notes</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -161,7 +162,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string OSSBucket { get; set; }
 
             /// <summary>
-            /// <para>The name (key) of the object that the uploaded image is stored as in the OSS bucket.</para>
+            /// <para>The name (key) of the object that the image file is stored as in the OSS bucket.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CentOS_5.4_32.raw</para>

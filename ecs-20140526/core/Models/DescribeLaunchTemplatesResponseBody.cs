@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string LaunchTemplateId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the template.</para>
+                /// <para>The name of the launch template.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>wd-152630748****</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTagsTag> Tag { get; set; }
                     public class DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTagsTag : TeaModel {
                         /// <summary>
-                        /// <para>The tag key of the launch template.</para>
+                        /// <para>The tag value of the launch template.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>TestKey</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public string TagKey { get; set; }
 
                         /// <summary>
-                        /// <para>The tag value of the launch template.</para>
+                        /// <para>The tag key of the launch template.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>TestValue</para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>04F0F334-1335-436C-A1D7-6C044FE12CBA</para>

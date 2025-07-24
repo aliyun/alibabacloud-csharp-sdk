@@ -20,6 +20,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeInstanceTypesResponseBodyInstanceTypesInstanceType> InstanceType { get; set; }
             public class DescribeInstanceTypesResponseBodyInstanceTypesInstanceType : TeaModel {
+                /// <summary>
+                /// <para>The list of specification attributes.</para>
+                /// </summary>
                 [NameInMap("Attributes")]
                 [Validation(Required=false)]
                 public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeAttributes Attributes { get; set; }
@@ -28,10 +31,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public List<DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeAttributesAttribute> Attribute { get; set; }
                     public class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeAttributesAttribute : TeaModel {
+                        /// <summary>
+                        /// <para>The name of the attribute.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>VirtualIntelSpeedSelectTechnologySupport</para>
+                        /// </summary>
                         [NameInMap("Name")]
                         [Validation(Required=false)]
                         public string Name { get; set; }
 
+                        /// <summary>
+                        /// <para>The attribute value.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>1</para>
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
@@ -50,10 +65,23 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public int? BaselineCredit { get; set; }
 
+                /// <summary>
+                /// <para>The clock supported by the specification.</para>
+                /// </summary>
                 [NameInMap("Clock")]
                 [Validation(Required=false)]
                 public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeClock Clock { get; set; }
                 public class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeClock : TeaModel {
+                    /// <summary>
+                    /// <para>Whether PTP is supported. Possible values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>supported</description></item>
+                    /// <item><description>unsupported</description></item>
+                    /// </list>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>unsupported</para>
+                    /// </summary>
                     [NameInMap("PtpSupport")]
                     [Validation(Required=false)]
                     public string PtpSupport { get; set; }
@@ -543,6 +571,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <item><description>true</description></item>
                 /// <item><description>false</description></item>
                 /// </list>
+                /// <remarks>
+                /// <para> This parameter is in invitational preview and is not publicly available.</para>
+                /// </remarks>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>

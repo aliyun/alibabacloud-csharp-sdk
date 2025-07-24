@@ -36,9 +36,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The policy used to migrate the instances deployed on the dedicated host when the dedicated host fails or needs to be repaired online. Valid values:</para>
+        /// <para>The policy for migrating the instances deployed on the dedicated host when the dedicated host fails or needs to be repaired online. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Migrate: The instances are migrated to another physical server and restarted.</para>
+        /// <item><description><para>Migrate: The instances are migrated to another physical machine and then restarted.</para>
         /// <para>If cloud disks are attached to the dedicated host, the default value is Migrate.</para>
         /// </description></item>
         /// <item><description><para>Stop: The instances are stopped. If the dedicated host cannot be repaired, the instances are migrated to another physical machine and then restarted.</para>

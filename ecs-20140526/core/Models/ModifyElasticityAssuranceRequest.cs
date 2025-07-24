@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The assurance schedules based on which the capacity reservation takes effect.</para>
+        /// <para>The assurance schedules of the time-segmented elasticity assurance.</para>
         /// <remarks>
         /// <para> Time-segmented elasticity assurances are available only in specific regions and to specific users. To use time-segmented elasticity assurances, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</para>
         /// </remarks>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<ModifyElasticityAssuranceRequestRecurrenceRules> RecurrenceRules { get; set; }
         public class ModifyElasticityAssuranceRequestRecurrenceRules : TeaModel {
             /// <summary>
-            /// <para>The end time of the assurance period for the capacity reservation. Specify an on-the-hour point in time.</para>
+            /// <para>The end time of the assurance period for the capacity reservation of the time-segmented elasticity assurance. Specify an on-the-hour point in time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <item><description>Monthly</description></item>
             /// </list>
             /// <remarks>
-            /// <para> You must specify both <c>RecurrenceType</c> and <c>RecurrenceValue</c>.</para>
+            /// <para> If you specify this parameter, you must specify <c>RecurrenceType</c> and <c>RecurrenceValue</c>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -113,14 +113,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string RecurrenceType { get; set; }
 
             /// <summary>
-            /// <para>The days of the week or month on which the capacity reservation takes effect or the interval, in number of days, at which the capacity reservation takes effect.</para>
+            /// <para>The days of the week or month on which the capacity reservation of the time-segmented elasticity assurance takes effect or the interval, in number of days, at which the capacity reservation takes effect.</para>
             /// <list type="bullet">
-            /// <item><description>If you set <c>RecurrenceType</c> to <c>Daily</c>, you can specify only one value for this parameter. Valid values: 1 to 31. The value specifies that the capacity reservation takes effect every few days.</description></item>
-            /// <item><description>If you set <c>RecurrenceType</c> to <c>Weekly</c>, you can specify multiple values for this parameter. Separate the values with commas (,). Valid values: 0, 1, 2, 3, 4, 5, and 6, which specify Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday, respectively. Example: <c>1,2</c>, which specifies that the capacity reservation takes effect on Monday and Tuesday.</description></item>
-            /// <item><description>If you set <c>RecurrenceType</c> to <c>Monthly</c>, you can specify two values in the <c>A-B</c> format for this parameter. Valid values of A and B: 1 to 31. B must be greater than or equal to A. Example: <c>1-5</c>, which specifies that the capacity reservation takes effect every day from the first day up to the fifth day of each month.</description></item>
+            /// <item><description>If you set <c>RecurrenceType</c> to <c>Daily</c>, you can specify only one value. Valid values: 1 to 31. The value specifies that the capacity reservation takes effect every few days.</description></item>
+            /// <item><description>If you set <c>RecurrenceType</c> to <c>Weekly</c>, you can specify multiple values. Separate the values with commas (,). Valid values: 0, 1, 2, 3, 4, 5, and 6, which specify Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday, respectively. Example: <c>1,2</c>, which specifies that the capacity reservation takes effect on Monday and Tuesday.</description></item>
+            /// <item><description>If you set <c>RecurrenceType</c> to <c>Monthly</c>, you can specify two values in the <c>A-B</c> format. Valid values of A and B: 1 to 31. B must be greater than or equal to A. Example: <c>1-5</c>, which specifies that the capacity reservation takes effect every day from the first day up to the fifth day of each month.</description></item>
             /// </list>
             /// <remarks>
-            /// <para> You must specify both <c>RecurrenceType</c> and <c>RecurrenceValue</c>.</para>
+            /// <para> If this parameter is specified, you must specify <c>RecurrenceType</c> and <c>RecurrenceValue</c>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -131,9 +131,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string RecurrenceValue { get; set; }
 
             /// <summary>
-            /// <para>The start time of the assurance period for the capacity reservation. Specify an on-the-hour point in time.</para>
+            /// <para>The start time of the assurance period for the capacity reservation of the time-segmented elasticity assurance. Specify an on-the-hour point in time.</para>
             /// <remarks>
-            /// <para> You must specify both <c>StartHour</c> and <c>EndHour</c>. EndHour must be at least four hours later than StartHour.</para>
+            /// <para> You must specify both <c>StartHour</c> and <c>EndHour</c>. The EndHour value must be at least 4 hours later than the StartHour value.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

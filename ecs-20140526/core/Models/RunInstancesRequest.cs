@@ -14,8 +14,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public RunInstancesRequestCpuOptions CpuOptions { get; set; }
         public class RunInstancesRequestCpuOptions : TeaModel {
             /// <summary>
-            /// <para>The number of CPU cores. This parameter cannot be specified but only uses its default value.</para>
-            /// <para>For information about the default value, see <a href="https://help.aliyun.com/document_detail/145895.html">Customize CPU options</a>.</para>
+            /// <para>The number of CPU cores.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -811,8 +810,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The ID of the dedicated host on which to create the instance. Spot instances cannot be created on dedicated hosts. If you specify <c>DedicatedHostId</c>, <c>SpotStrategy</c> and <c>SpotPriceLimit</c> are ignored.</para>
+        /// <para>The ID of the dedicated host.</para>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/134242.html">DescribeDedicatedHosts</a> operation to query the list of dedicated host IDs.</para>
+        /// <remarks>
+        /// <para>Spot instances cannot be created on dedicated hosts. If you specify DedicatedHostId, SpotStrategy and SpotPriceLimit are automatically ignored.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>dh-bp67acfmxazb4p****</para>
@@ -1251,8 +1253,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>Specifies whether to release ENI N when the associated instance is released. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description>true: releases the ENI when the associated instance is released.</description></item>
+            /// <item><description>false: retains the ENI when the associated instance is released.</description></item>
             /// </list>
             /// <para>Default value: true.</para>
             /// <remarks>
@@ -1283,10 +1285,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The type of ENI N. The value of N cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</para>
+            /// <para>The type of ENI N. The value of the first N in this parameter cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Primary</description></item>
+            /// <item><description>Primary: the primary ENI</description></item>
             /// <item><description>Secondary</description></item>
             /// </list>
             /// <para>Default value: Secondary.</para>
@@ -1330,7 +1332,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <para>The index of the network card for ENI N.</para>
             /// <para>Take note of the following items:</para>
             /// <list type="bullet">
-            /// <item><description>You can specify network card indexes only for instances of specific instance types.</description></item>
+            /// <item><description>You can specify NIC indexes only for instances of specific instance types.</description></item>
             /// <item><description>If you set NetworkInterface.N.InstanceType to Primary, you can set NetworkInterface.N.NetworkCardIndex only to 0 for instance types that support network cards.</description></item>
             /// <item><description>If you set NetworkInterface.N.InstanceType to Secondary or leave NetworkInterface.N.InstanceType empty, you can specify NetworkInterface.N.NetworkCardIndex based on instance types if the instance types support network cards. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</description></item>
             /// </list>
@@ -1343,7 +1345,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? NetworkCardIndex { get; set; }
 
             /// <summary>
-            /// <para>The ID of ENI N to attach to the instance.</para>
+            /// <para>The ID of the ENI to attach to the instance.</para>
             /// <para>If you specify this parameter, you must set <c>Amount</c> to 1.</para>
             /// <remarks>
             /// <para> This parameter takes effect only for secondary ENIs. After you specify an existing secondary ENI, you cannot specify other ENI creation parameters.</para>
@@ -1423,7 +1425,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <list type="bullet">
             /// <item><description>The value of N cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</description></item>
             /// <item><description>The value of this parameter cannot exceed the maximum number of queues allowed per ENI.</description></item>
-            /// <item><description>The total number of queues for all ENIs on an instance cannot exceed the queue quota for the instance type. To query the maximum number of queues per ENI and the queue quota for an instance type, you can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation and check the <c>MaximumQueueNumberPerEni</c> and <c>TotalEniQueueQuantity</c> values in the response.</description></item>
+            /// <item><description>The total number of queues for all ENIs of an instance cannot exceed the queue quota for the instance type. To query the maximum number of queues per ENI and the queue quota for an instance type, you can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation and check the <c>MaximumQueueNumberPerEni</c> and <c>TotalEniQueueQuantity</c> values in the response.</description></item>
             /// <item><description>If you specify this parameter and set <c>NetworkInterface.N.InstanceType</c> to <c>Primary</c>, you cannot specify <c>NetworkInterfaceQueueNumber</c>.</description></item>
             /// </list>
             /// 
@@ -1473,7 +1475,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <list type="bullet">
             /// <item><description>The value of N cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</description></item>
             /// <item><description>If <c>NetworkInterface.N.InstanceType</c> is set to <c>Primary</c>, you must specify this parameter. In this case, this parameter is equivalent to <c>SecurityGroupId</c> and you cannot specify <c>SecurityGroupId</c>, <c>SecurityGroupIds.N</c>, or <c>NetworkInterface.N.SecurityGroupIds.N</c>.</description></item>
-            /// <item><description>If <c>NetworkInterface.N.InstanceType</c> is set to <c>Secondary</c> or left empty, you do not need to specify this parameter. The default value is the ID of the security group to which to assign the instance.</description></item>
+            /// <item><description>If you set <c>NetworkInterface.N.InstanceType</c> to <c>Secondary</c> or leave NetworkInterface.N.InstanceType empty, you do not need to specify this parameter. The default value is the ID of the security group to which to assign the instance.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -1487,7 +1489,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <para>The IDs of security groups to which to assign ENI N.</para>
             /// <list type="bullet">
             /// <item><description>The value of the first N in this parameter cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</description></item>
-            /// <item><description>The second N in this parameter indicates that one or more security group IDs can be specified. The valid values of the second N vary based on the maximum number of security groups to which an instance can belong. For more information, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits&quot; topic.</description></item>
+            /// <item><description>The second N in this parameter indicates that one or more security group IDs can be specified. The valid values of the second N vary based on the maximum number of security groups to which an instance can belong. For more information, see <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a>.</description></item>
             /// </list>
             /// <para>Take note of the following items:</para>
             /// <list type="bullet">
@@ -1503,8 +1505,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<string> SecurityGroupIds { get; set; }
 
             /// <summary>
+            /// <para>Specifies whether to enable the source and destination IP address check feature. We recommend that you enable the feature to improve network security. Valid value:</para>
+            /// <list type="bullet">
+            /// <item><description>true: enables the performance burst feature for the system disk.</description></item>
+            /// <item><description>false: disables the performance burst feature for the data disk.</description></item>
+            /// </list>
+            /// <para>Default value: false.</para>
             /// <remarks>
-            /// <para> This parameter is in invitational preview and is not publicly available.</para>
+            /// <para> This feature is available only in some regions. Before you use this method, read <a href="https://help.aliyun.com/document_detail/2863210.html">Source and destination IP address check</a>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -1535,7 +1543,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <para>The ID of the vSwitch to which to connect ENI N.</para>
-            /// <para>Take note of the following items:</para>
+            /// <para>When you specify this parameter, take note of the following items:</para>
             /// <list type="bullet">
             /// <item><description>The value of N cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</description></item>
             /// <item><description>If <c>NetworkInterface.N.InstanceType</c> is set to <c>Primary</c>, you must specify this parameter. In this case, this parameter is equivalent to <c>VSwitchId</c>. You cannot specify both NetworkInterface.N.VSwitchId and <c>VSwitchId</c> in the same request.</description></item>
@@ -1864,12 +1872,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> SecurityGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The protection period of the spot instance. Unit: hours. Default value: 1. Valid values:</para>
+        /// <para>The protection period of the spot instance. Unit: hours. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>1: After a spot instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</description></item>
-        /// <item><description>0: After a spot instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</description></item>
+        /// <item><description>0: After a spot instance is created, Alibaba Cloud does not ensure that the instance can run for one hour. The system compares the biding price with the market prices and checks the resource inventory to determine whether to retain or release the instance.</description></item>
         /// </list>
-        /// <para>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. The spot instance is billed by second. We recommend that you specify an appropriate protection period based on your business requirements.</para>
+        /// <para>Default value: 1.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>You can set this parameter only to 0 or 1.</para>
+        /// </description></item>
+        /// <item><description><para>The spot instance is billed by second. Specify an appropriate protection period.</para>
+        /// </description></item>
+        /// <item><description><para>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

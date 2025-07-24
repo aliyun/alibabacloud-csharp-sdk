@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The page number. Page starts from page 1.</para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the launch template. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The ID of the resource group to which the launch template belongs. If you specify this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be returned.</para>
         /// <remarks>
-        /// <para>Resources in the default resource group are displayed in the response regardless of whether you specify this parameter.</para>
+        /// <para> The default resource group is not supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The tags of the launch template.</para>
         /// <remarks>
-        /// <para> You can only call API operations to add tags to and query the tags of a launch template. You cannot add tags to or view the tags of a launch template in the Elastic Compute Service (ECS) console.</para>
+        /// <para> You can only call API operations to add tags to and query the tags of a launch template. You cannot add tags to or view the tags of a launch template in the ECS console.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("TemplateTag")]
