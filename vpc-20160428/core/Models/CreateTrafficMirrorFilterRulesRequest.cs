@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The list of outbound rules.</para>
+        /// <para>The information about the outbound rule.</para>
         /// </summary>
         [NameInMap("EgressRules")]
         [Validation(Required=false)]
         public List<CreateTrafficMirrorFilterRulesRequestEgressRules> EgressRules { get; set; }
         public class CreateTrafficMirrorFilterRulesRequestEgressRules : TeaModel {
             /// <summary>
-            /// <para>The action of the outbound rule. Valid values:</para>
+            /// <para>The collection policy of the outbound rule. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>accept</b>: accepts network traffic.</description></item>
             /// <item><description><b>drop</b>: drops network traffic.</description></item>
@@ -69,9 +69,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string DestinationCidrBlock { get; set; }
 
             /// <summary>
-            /// <para>The destination port range of the outbound traffic. Valid values for a port: <b>1</b> to <b>65535</b>. Separate the first port and the last port with a forward slash (/). Examples: <b>1/200</b> and <b>80/80</b>. You cannot set this parameter to only <b>-1/-1</b>, which specifies all ports.</para>
+            /// <para>The destination port range of the outbound traffic. Valid value: <b>1</b> to <b>65535</b>. Separate the first and last port with a forward slash (/). For example <b>1/200</b> and <b>80/80</b>. You cannot set this parameter to \<em>\</em>-1/-1\<em>\</em>, which indicates all ports.</para>
             /// <remarks>
-            /// <para> If you set <b>EgressRules.N.Protocol</b> to <b>ALL</b> or <b>ICMP</b>, you do not need to set this parameter. In this case, all ports are available.</para>
+            /// <para> If <b>EgressRules.N.Protocol</b> is set to <b>ALL</b> or <b>ICMP</b>, you do not need to set this parameter. In this case, all ports are available.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -81,6 +81,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public string DestinationPortRange { get; set; }
 
+            /// <summary>
+            /// <para>The IP version of the instance. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>IPv4</b>: IPv4</description></item>
+            /// <item><description><b>IPv6</b>: IPv6</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>IPv4</para>
+            /// </summary>
             [NameInMap("IpVersion")]
             [Validation(Required=false)]
             public string IpVersion { get; set; }
@@ -99,9 +109,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <para>The protocol that is used by the outbound traffic to be mirrored. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>ALL</b>: all protocols</description></item>
-            /// <item><description><b>ICMP</b>: ICMP</description></item>
-            /// <item><description><b>TCP</b>: TCP</description></item>
-            /// <item><description><b>UDP</b>: UDP</description></item>
+            /// <item><description><b>ICMP</b>: Internet Control Message Protocol.</description></item>
+            /// <item><description><b>TCP</b>: Transmission Control Protocol.</description></item>
+            /// <item><description><b>UDP</b>: User Datagram Protocol.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -122,9 +132,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string SourceCidrBlock { get; set; }
 
             /// <summary>
-            /// <para>The source port range of the outbound traffic. Valid values for a port: <b>1</b> to <b>65535</b>. Separate the first port and the last port with a forward slash (/). Examples: <b>1/200</b> and <b>80/80</b>. You cannot set this parameter to only <b>-1/-1</b>, which specifies all ports.</para>
+            /// <para>The source port range of the outbound traffic. Valid value: <b>1</b> to <b>65535</b>. Separate the first and last port with a forward slash (/). For example <b>1/200</b> and <b>80/80</b>. You cannot set this parameter to \<em>\</em>-1/-1\<em>\</em>, which indicates all ports.</para>
             /// <remarks>
-            /// <para> If you set <b>EgressRules.N.Protocol</b> to <b>ALL</b> or <b>ICMP</b>, you do not need to set this parameter. In this case, all ports are available.</para>
+            /// <para> If <b>EgressRules.N.Protocol</b> is set to <b>ALL</b> or <b>ICMP</b>, you do not need to set this parameter. In this case, all ports are available.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -137,16 +147,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The list of inbound rules.</para>
+        /// <para>The information about the inbound rules.</para>
         /// </summary>
         [NameInMap("IngressRules")]
         [Validation(Required=false)]
         public List<CreateTrafficMirrorFilterRulesRequestIngressRules> IngressRules { get; set; }
         public class CreateTrafficMirrorFilterRulesRequestIngressRules : TeaModel {
             /// <summary>
-            /// <para>The action of the inbound rule. Valid values:</para>
+            /// <para>The policy of the inbound rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>accept</b>: accepts network traffic.</description></item>
+            /// <item><description><b>accept</b>: collects network traffic.</description></item>
             /// <item><description><b>drop</b>: drops network traffic.</description></item>
             /// </list>
             /// 
@@ -168,9 +178,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string DestinationCidrBlock { get; set; }
 
             /// <summary>
-            /// <para>The destination port range of the inbound traffic. Valid values for a port: <b>1</b> to <b>65535</b>. Separate the first port and the last port with a forward slash (/). Examples: <b>1/200</b> and <b>80/80</b>.</para>
+            /// <para>The destination port range of the inbound traffic. Valid value: <b>1</b> to <b>65535</b>. Separate the first and the last port with a forward slash (/). For example, <b>1/200</b> or <b>80/80</b>.</para>
             /// <remarks>
-            /// <para> If you set <b>IngressRules.N.Protocol</b> to <b>ALL</b> or <b>ICMP</b>, you do not need to set this parameter. In this case, all ports are available.</para>
+            /// <para> If the <b>IngressRules.N.Protocol</b> parameter is set to <b>ALL</b> or <b>ICMP</b>, you do not need to set this parameter. In this case, all ports are available.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -180,6 +190,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public string DestinationPortRange { get; set; }
 
+            /// <summary>
+            /// <para>The IP version of the instance. The following value may be returned:</para>
+            /// <list type="bullet">
+            /// <item><description><b>IPv4</b>: IPv4</description></item>
+            /// <item><description><b>IPv6</b>: IPv6</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>IPv4</para>
+            /// </summary>
             [NameInMap("IpVersion")]
             [Validation(Required=false)]
             public string IpVersion { get; set; }
@@ -198,9 +218,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <para>The protocol that is used by the inbound traffic to be mirrored. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>ALL</b>: all protocols</description></item>
-            /// <item><description><b>ICMP</b>: Internet Control Message Protocol (ICMP)</description></item>
-            /// <item><description><b>TCP</b>: TCP</description></item>
-            /// <item><description><b>UDP</b>: User Datagram Protocol (UDP)</description></item>
+            /// <item><description><b>ICMP</b>: Internet Control Message Protocol.</description></item>
+            /// <item><description><b>TCP</b>: Transmission Control Protocol.</description></item>
+            /// <item><description><b>UDP</b>: User Datagram Protocol.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -221,9 +241,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string SourceCidrBlock { get; set; }
 
             /// <summary>
-            /// <para>The source port range of the inbound traffic. Valid values for a port: <b>1</b> to <b>65535</b>. Separate the first port and the last port with a forward slash (/). Examples: <b>1/200</b> and <b>80/80</b>. You cannot set this parameter to only <b>-1/-1</b>, which specifies all ports.</para>
+            /// <para>The source port range of the inbound traffic. Valid value: <b>1</b> to <b>65535</b>. Separate the first and last port with a forward slash (/). For example <b>1/200</b> and <b>80/80</b>. You cannot set this parameter to \<em>\</em>-1/-1\<em>\</em>, which indicates all ports.</para>
             /// <remarks>
-            /// <para> If you set <b>IngressRules.N.Protocol</b> to <b>ALL</b> or <b>ICMP</b>, you do not need to set this parameter. In this case, all ports are available.</para>
+            /// <para> If the <b>IngressRules.N.Protocol</b> parameter is set to <b>ALL</b> or <b>ICMP</b>, you do not need to set this parameter. In this case, all ports are available.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -245,7 +265,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The ID of the region to which the mirrored traffic belongs.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list. For more information about regions that support traffic mirroring, see <a href="https://help.aliyun.com/document_detail/207513.html">Overview of traffic mirroring</a>.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list. For more information about regions that support traffic mirror, see <a href="https://help.aliyun.com/document_detail/207513.html">Overview of traffic mirror</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

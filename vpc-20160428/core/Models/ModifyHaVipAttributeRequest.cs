@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The description of the HAVIP.</para>
+        /// <para>The description of the HaVip.</para>
         /// <para>The description must be 1 to 255 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the HAVIP.</para>
+        /// <para>The ID of the HaVip.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string HaVipId { get; set; }
 
         /// <summary>
-        /// <para>The name of the HAVIP.</para>
+        /// <para>The name of the HaVip.</para>
         /// <para>The name must be 1 to 128 characters in length, and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region to which the HAVIP belongs.</para>
+        /// <para>The ID of the region to which the HaVip belongs.</para>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 

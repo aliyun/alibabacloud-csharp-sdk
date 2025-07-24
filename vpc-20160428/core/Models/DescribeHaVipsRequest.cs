@@ -21,12 +21,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <list type="bullet">
             /// <item><description><b>VpcId</b>: virtual private cloud (VPC) ID</description></item>
             /// <item><description><b>VSwitchId</b>: vSwitch ID</description></item>
-            /// <item><description><b>Status</b>: HAVIP status</description></item>
-            /// <item><description><b>HaVipId</b>: HAVIP ID</description></item>
-            /// <item><description><b>HaVipAddress</b>: HAVIP IP address</description></item>
+            /// <item><description><b>Status</b>: HaVip status</description></item>
+            /// <item><description><b>HaVipId</b>: HaVip ID</description></item>
+            /// <item><description><b>HaVipAddress</b>: HaVip IP address</description></item>
             /// </list>
             /// <para>You can specify multiple values for each filter key. The logical operator among multiple values is OR. If one value is matched, the filter key is matched.</para>
-            /// <para>The logical operator among multiple filter keys is AND. HAVIPs can be queried only if all filter keys are matched.</para>
+            /// <para>The logical operator among multiple filter keys is AND. HaVips can be queried only if all filter keys are matched.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HaVipId</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// <para>The number of the returned page. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the HAVIP.</para>
+        /// <para>The region ID of the HaVip.</para>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the HAVIP belongs.</para>
+        /// <para>The ID of the resource group to which the HaVip belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-bp67acfmxazb4ph****</para>

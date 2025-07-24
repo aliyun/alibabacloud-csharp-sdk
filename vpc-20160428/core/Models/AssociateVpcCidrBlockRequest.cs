@@ -46,6 +46,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string IpamPoolId { get; set; }
 
+        [NameInMap("Ipv6CidrMask")]
+        [Validation(Required=false)]
+        public int? Ipv6CidrMask { get; set; }
+
         /// <summary>
         /// <para>The type of the IPv6 CIDR block. Valid values:</para>
         /// <list type="bullet">
@@ -76,7 +80,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The region ID of the VPC to which you want to add a secondary CIDR block.</para>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ch-hangzhou</para>

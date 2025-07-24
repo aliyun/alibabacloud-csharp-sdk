@@ -4322,24 +4322,24 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a high-availability virtual IP address (HAVIP) with an Elastic Compute Service (ECS) instance or an elastic network interface (ENI).</para>
+        /// <para>Associates a high-availability virtual IP address (HaVip) with an Elastic Compute Service (ECS) instance or an elastic network interface (ENI).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>When you call this operation, take note of the following limits:</para>
         /// <list type="bullet">
-        /// <item><description>An HAVIP immediately takes effect after it is associated. You do not need to restart the ECS instance. However, you must associate the HAVIP with the ENI of the ECS instance.</description></item>
-        /// <item><description>The HAVIP and ECS instance must belong to the same vSwitch.</description></item>
-        /// <item><description>You can associate an HAVIP with at most two ECS instances.</description></item>
+        /// <item><description>An HaVip immediately takes effect after it is associated. You do not need to restart the ECS instance. However, you must associate the HaVip with the ENI of the ECS instance.</description></item>
+        /// <item><description>The HaVip and ECS instance must belong to the same vSwitch.</description></item>
+        /// <item><description>You can associate an HaVip with at most two ECS instances.</description></item>
         /// <item><description>The ECS instance must be in the <b>Running</b> or <b>Stopped</b> state.</description></item>
-        /// <item><description>The HAVIP must be in the <b>Available</b> or <b>InUse</b> state.</description></item>
-        /// <item><description>The <b>AssociateHaVip</b> operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of an HAVIP:<list type="bullet">
-        /// <item><description>If the HAVIP is in the <b>Associating</b> state, the HAVIP is being associated.</description></item>
-        /// <item><description>If the HAVIP is in the <b>InUse</b> state, the HAVIP is associated.</description></item>
+        /// <item><description>The HaVip must be in the <b>Available</b> or <b>InUse</b> state.</description></item>
+        /// <item><description>The <b>AssociateHaVip</b> operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of an HaVip:<list type="bullet">
+        /// <item><description>If the HaVip is in the <b>Associating</b> state, the HaVip is being associated.</description></item>
+        /// <item><description>If the HaVip is in the <b>InUse</b> state, the HaVip is associated.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You cannot repeatedly call the <b>AssociateHaVip</b> operation to associate an HAVIP within the specified period of time.</description></item>
+        /// <item><description>You cannot repeatedly call the <b>AssociateHaVip</b> operation to associate an HaVip within the specified period of time.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4414,24 +4414,24 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a high-availability virtual IP address (HAVIP) with an Elastic Compute Service (ECS) instance or an elastic network interface (ENI).</para>
+        /// <para>Associates a high-availability virtual IP address (HaVip) with an Elastic Compute Service (ECS) instance or an elastic network interface (ENI).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>When you call this operation, take note of the following limits:</para>
         /// <list type="bullet">
-        /// <item><description>An HAVIP immediately takes effect after it is associated. You do not need to restart the ECS instance. However, you must associate the HAVIP with the ENI of the ECS instance.</description></item>
-        /// <item><description>The HAVIP and ECS instance must belong to the same vSwitch.</description></item>
-        /// <item><description>You can associate an HAVIP with at most two ECS instances.</description></item>
+        /// <item><description>An HaVip immediately takes effect after it is associated. You do not need to restart the ECS instance. However, you must associate the HaVip with the ENI of the ECS instance.</description></item>
+        /// <item><description>The HaVip and ECS instance must belong to the same vSwitch.</description></item>
+        /// <item><description>You can associate an HaVip with at most two ECS instances.</description></item>
         /// <item><description>The ECS instance must be in the <b>Running</b> or <b>Stopped</b> state.</description></item>
-        /// <item><description>The HAVIP must be in the <b>Available</b> or <b>InUse</b> state.</description></item>
-        /// <item><description>The <b>AssociateHaVip</b> operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of an HAVIP:<list type="bullet">
-        /// <item><description>If the HAVIP is in the <b>Associating</b> state, the HAVIP is being associated.</description></item>
-        /// <item><description>If the HAVIP is in the <b>InUse</b> state, the HAVIP is associated.</description></item>
+        /// <item><description>The HaVip must be in the <b>Available</b> or <b>InUse</b> state.</description></item>
+        /// <item><description>The <b>AssociateHaVip</b> operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of an HaVip:<list type="bullet">
+        /// <item><description>If the HaVip is in the <b>Associating</b> state, the HaVip is being associated.</description></item>
+        /// <item><description>If the HaVip is in the <b>InUse</b> state, the HaVip is associated.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You cannot repeatedly call the <b>AssociateHaVip</b> operation to associate an HAVIP within the specified period of time.</description></item>
+        /// <item><description>You cannot repeatedly call the <b>AssociateHaVip</b> operation to associate an HaVip within the specified period of time.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4506,24 +4506,24 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a high-availability virtual IP address (HAVIP) with an Elastic Compute Service (ECS) instance or an elastic network interface (ENI).</para>
+        /// <para>Associates a high-availability virtual IP address (HaVip) with an Elastic Compute Service (ECS) instance or an elastic network interface (ENI).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>When you call this operation, take note of the following limits:</para>
         /// <list type="bullet">
-        /// <item><description>An HAVIP immediately takes effect after it is associated. You do not need to restart the ECS instance. However, you must associate the HAVIP with the ENI of the ECS instance.</description></item>
-        /// <item><description>The HAVIP and ECS instance must belong to the same vSwitch.</description></item>
-        /// <item><description>You can associate an HAVIP with at most two ECS instances.</description></item>
+        /// <item><description>An HaVip immediately takes effect after it is associated. You do not need to restart the ECS instance. However, you must associate the HaVip with the ENI of the ECS instance.</description></item>
+        /// <item><description>The HaVip and ECS instance must belong to the same vSwitch.</description></item>
+        /// <item><description>You can associate an HaVip with at most two ECS instances.</description></item>
         /// <item><description>The ECS instance must be in the <b>Running</b> or <b>Stopped</b> state.</description></item>
-        /// <item><description>The HAVIP must be in the <b>Available</b> or <b>InUse</b> state.</description></item>
-        /// <item><description>The <b>AssociateHaVip</b> operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of an HAVIP:<list type="bullet">
-        /// <item><description>If the HAVIP is in the <b>Associating</b> state, the HAVIP is being associated.</description></item>
-        /// <item><description>If the HAVIP is in the <b>InUse</b> state, the HAVIP is associated.</description></item>
+        /// <item><description>The HaVip must be in the <b>Available</b> or <b>InUse</b> state.</description></item>
+        /// <item><description>The <b>AssociateHaVip</b> operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of an HaVip:<list type="bullet">
+        /// <item><description>If the HaVip is in the <b>Associating</b> state, the HaVip is being associated.</description></item>
+        /// <item><description>If the HaVip is in the <b>InUse</b> state, the HaVip is associated.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You cannot repeatedly call the <b>AssociateHaVip</b> operation to associate an HAVIP within the specified period of time.</description></item>
+        /// <item><description>You cannot repeatedly call the <b>AssociateHaVip</b> operation to associate an HaVip within the specified period of time.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4542,24 +4542,24 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a high-availability virtual IP address (HAVIP) with an Elastic Compute Service (ECS) instance or an elastic network interface (ENI).</para>
+        /// <para>Associates a high-availability virtual IP address (HaVip) with an Elastic Compute Service (ECS) instance or an elastic network interface (ENI).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>When you call this operation, take note of the following limits:</para>
         /// <list type="bullet">
-        /// <item><description>An HAVIP immediately takes effect after it is associated. You do not need to restart the ECS instance. However, you must associate the HAVIP with the ENI of the ECS instance.</description></item>
-        /// <item><description>The HAVIP and ECS instance must belong to the same vSwitch.</description></item>
-        /// <item><description>You can associate an HAVIP with at most two ECS instances.</description></item>
+        /// <item><description>An HaVip immediately takes effect after it is associated. You do not need to restart the ECS instance. However, you must associate the HaVip with the ENI of the ECS instance.</description></item>
+        /// <item><description>The HaVip and ECS instance must belong to the same vSwitch.</description></item>
+        /// <item><description>You can associate an HaVip with at most two ECS instances.</description></item>
         /// <item><description>The ECS instance must be in the <b>Running</b> or <b>Stopped</b> state.</description></item>
-        /// <item><description>The HAVIP must be in the <b>Available</b> or <b>InUse</b> state.</description></item>
-        /// <item><description>The <b>AssociateHaVip</b> operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of an HAVIP:<list type="bullet">
-        /// <item><description>If the HAVIP is in the <b>Associating</b> state, the HAVIP is being associated.</description></item>
-        /// <item><description>If the HAVIP is in the <b>InUse</b> state, the HAVIP is associated.</description></item>
+        /// <item><description>The HaVip must be in the <b>Available</b> or <b>InUse</b> state.</description></item>
+        /// <item><description>The <b>AssociateHaVip</b> operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of an HaVip:<list type="bullet">
+        /// <item><description>If the HaVip is in the <b>Associating</b> state, the HaVip is being associated.</description></item>
+        /// <item><description>If the HaVip is in the <b>InUse</b> state, the HaVip is associated.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You cannot repeatedly call the <b>AssociateHaVip</b> operation to associate an HAVIP within the specified period of time.</description></item>
+        /// <item><description>You cannot repeatedly call the <b>AssociateHaVip</b> operation to associate an HaVip within the specified period of time.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5792,6 +5792,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["IpamPoolId"] = request.IpamPoolId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6CidrMask))
+            {
+                query["Ipv6CidrMask"] = request.Ipv6CidrMask;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6Isp))
             {
                 query["Ipv6Isp"] = request.Ipv6Isp;
@@ -5894,6 +5898,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpamPoolId))
             {
                 query["IpamPoolId"] = request.IpamPoolId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6CidrMask))
+            {
+                query["Ipv6CidrMask"] = request.Ipv6CidrMask;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6Isp))
             {
@@ -8072,6 +8080,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return await ConnectRouterInterfaceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI ConvertBandwidthPackage is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Converts a NAT service plan to an Internet Shared Bandwidth instance.</para>
@@ -8097,6 +8109,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// ConvertBandwidthPackageResponse
         /// </returns>
+        [Obsolete("OpenAPI ConvertBandwidthPackage is deprecated")]
+        // Deprecated
         public ConvertBandwidthPackageResponse ConvertBandwidthPackageWithOptions(ConvertBandwidthPackageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8148,6 +8162,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return TeaModel.ToObject<ConvertBandwidthPackageResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI ConvertBandwidthPackage is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Converts a NAT service plan to an Internet Shared Bandwidth instance.</para>
@@ -8173,6 +8191,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// ConvertBandwidthPackageResponse
         /// </returns>
+        [Obsolete("OpenAPI ConvertBandwidthPackage is deprecated")]
+        // Deprecated
         public async Task<ConvertBandwidthPackageResponse> ConvertBandwidthPackageWithOptionsAsync(ConvertBandwidthPackageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8224,6 +8244,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return TeaModel.ToObject<ConvertBandwidthPackageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI ConvertBandwidthPackage is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Converts a NAT service plan to an Internet Shared Bandwidth instance.</para>
@@ -8246,12 +8270,18 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// ConvertBandwidthPackageResponse
         /// </returns>
+        [Obsolete("OpenAPI ConvertBandwidthPackage is deprecated")]
+        // Deprecated
         public ConvertBandwidthPackageResponse ConvertBandwidthPackage(ConvertBandwidthPackageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ConvertBandwidthPackageWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI ConvertBandwidthPackage is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Converts a NAT service plan to an Internet Shared Bandwidth instance.</para>
@@ -8274,6 +8304,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <returns>
         /// ConvertBandwidthPackageResponse
         /// </returns>
+        [Obsolete("OpenAPI ConvertBandwidthPackage is deprecated")]
+        // Deprecated
         public async Task<ConvertBandwidthPackageResponse> ConvertBandwidthPackageAsync(ConvertBandwidthPackageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12538,15 +12570,15 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a high-availability virtual IP address (HAVIP).</para>
+        /// <para>Creates a high-availability virtual IP address (HaVip).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para><em>CreateHaVip</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of the task:</para>
         /// <list type="bullet">
-        /// <item><description>If the HAVIP is in the <b>Creating</b> state, the HAVIP is being created.</description></item>
-        /// <item><description>If the HAVIP is in the <b>Available</b> state, the HAVIP is created.</description></item>
+        /// <item><description>If the HaVip is in the <b>Creating</b> state, the HaVip is being created.</description></item>
+        /// <item><description>If the HaVip is in the <b>Available</b> state, the HaVip is created.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12633,15 +12665,15 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a high-availability virtual IP address (HAVIP).</para>
+        /// <para>Creates a high-availability virtual IP address (HaVip).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para><em>CreateHaVip</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of the task:</para>
         /// <list type="bullet">
-        /// <item><description>If the HAVIP is in the <b>Creating</b> state, the HAVIP is being created.</description></item>
-        /// <item><description>If the HAVIP is in the <b>Available</b> state, the HAVIP is created.</description></item>
+        /// <item><description>If the HaVip is in the <b>Creating</b> state, the HaVip is being created.</description></item>
+        /// <item><description>If the HaVip is in the <b>Available</b> state, the HaVip is created.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12728,15 +12760,15 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a high-availability virtual IP address (HAVIP).</para>
+        /// <para>Creates a high-availability virtual IP address (HaVip).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para><em>CreateHaVip</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of the task:</para>
         /// <list type="bullet">
-        /// <item><description>If the HAVIP is in the <b>Creating</b> state, the HAVIP is being created.</description></item>
-        /// <item><description>If the HAVIP is in the <b>Available</b> state, the HAVIP is created.</description></item>
+        /// <item><description>If the HaVip is in the <b>Creating</b> state, the HaVip is being created.</description></item>
+        /// <item><description>If the HaVip is in the <b>Available</b> state, the HaVip is created.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12755,15 +12787,15 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a high-availability virtual IP address (HAVIP).</para>
+        /// <para>Creates a high-availability virtual IP address (HaVip).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para><em>CreateHaVip</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of the task:</para>
         /// <list type="bullet">
-        /// <item><description>If the HAVIP is in the <b>Creating</b> state, the HAVIP is being created.</description></item>
-        /// <item><description>If the HAVIP is in the <b>Available</b> state, the HAVIP is created.</description></item>
+        /// <item><description>If the HaVip is in the <b>Creating</b> state, the HaVip is being created.</description></item>
+        /// <item><description>If the HaVip is in the <b>Available</b> state, the HaVip is created.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18890,7 +18922,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a filter for traffic mirroring.</para>
+        /// <para>Creates a filter for traffic mirror.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -18989,7 +19021,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a filter for traffic mirroring.</para>
+        /// <para>Creates a filter for traffic mirror.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -19088,7 +19120,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a filter for traffic mirroring.</para>
+        /// <para>Creates a filter for traffic mirror.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -19115,7 +19147,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a filter for traffic mirroring.</para>
+        /// <para>Creates a filter for traffic mirror.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -19142,7 +19174,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an inbound or outbound rule for traffic mirroring.</para>
+        /// <para>Creates an inbound or outbound rule for traffic mirror.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -19230,7 +19262,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an inbound or outbound rule for traffic mirroring.</para>
+        /// <para>Creates an inbound or outbound rule for traffic mirror.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -19318,7 +19350,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an inbound or outbound rule for traffic mirroring.</para>
+        /// <para>Creates an inbound or outbound rule for traffic mirror.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -19346,7 +19378,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an inbound or outbound rule for traffic mirroring.</para>
+        /// <para>Creates an inbound or outbound rule for traffic mirror.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -21353,6 +21385,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["Ipv6CidrBlock"] = request.Ipv6CidrBlock;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6CidrMask))
+            {
+                query["Ipv6CidrMask"] = request.Ipv6CidrMask;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6IpamPoolId))
+            {
+                query["Ipv6IpamPoolId"] = request.Ipv6IpamPoolId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6Isp))
             {
                 query["Ipv6Isp"] = request.Ipv6Isp;
@@ -21484,6 +21524,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6CidrBlock))
             {
                 query["Ipv6CidrBlock"] = request.Ipv6CidrBlock;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6CidrMask))
+            {
+                query["Ipv6CidrMask"] = request.Ipv6CidrMask;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6IpamPoolId))
+            {
+                query["Ipv6IpamPoolId"] = request.Ipv6IpamPoolId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6Isp))
             {
@@ -27030,22 +27078,22 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a high-availability virtual IP address (HAVIP).</para>
+        /// <para>Deletes a high-availability virtual IP address (HaVip).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>When you call this operation, take note of the following rules:</para>
         /// <list type="bullet">
-        /// <item><description>You can delete only HAVIPs that are in the Available state.</description></item>
-        /// <item><description>Make sure that no route points to the HAVIP that you want to delete.</description></item>
-        /// <item><description>Make sure that no elastic IP address (EIP) is associated with the HAVIP that you want to delete.</description></item>
-        /// <item><description>The <b>DeleteHaVip</b> operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of an HAVIP:<list type="bullet">
-        /// <item><description>If the HAVIP is in the <b>Deleting</b> state, the HAVIP is being deleted.</description></item>
-        /// <item><description>If you cannot query the HAVIP, the HAVIP is deleted.</description></item>
+        /// <item><description>The HaVip must be in the available state before it can be deleted.</description></item>
+        /// <item><description>Make sure that no routes are destined for the HaVip.</description></item>
+        /// <item><description>Make sure that no elastic IP addresses (EIPs) are associated with the HaVip.</description></item>
+        /// <item><description><b>DeleteHaVip</b> is an asynchronous operation. After a request is sent, the system returns a request ID while deleting the HaVip in the background. Call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of an HaVip:<list type="bullet">
+        /// <item><description>The <b>Deleting</b> state indicates the HaVip is being deleted.</description></item>
+        /// <item><description>If no HaVip is found, the HaVip is deleted.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You cannot repeatedly call the <b>DeleteHaVip</b> operation to delete an HAVIP within the specified period of time.</description></item>
+        /// <item><description>You cannot repeatedly call the <b>DeleteHaVip</b> operation to delete the same HaVip.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -27112,22 +27160,22 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a high-availability virtual IP address (HAVIP).</para>
+        /// <para>Deletes a high-availability virtual IP address (HaVip).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>When you call this operation, take note of the following rules:</para>
         /// <list type="bullet">
-        /// <item><description>You can delete only HAVIPs that are in the Available state.</description></item>
-        /// <item><description>Make sure that no route points to the HAVIP that you want to delete.</description></item>
-        /// <item><description>Make sure that no elastic IP address (EIP) is associated with the HAVIP that you want to delete.</description></item>
-        /// <item><description>The <b>DeleteHaVip</b> operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of an HAVIP:<list type="bullet">
-        /// <item><description>If the HAVIP is in the <b>Deleting</b> state, the HAVIP is being deleted.</description></item>
-        /// <item><description>If you cannot query the HAVIP, the HAVIP is deleted.</description></item>
+        /// <item><description>The HaVip must be in the available state before it can be deleted.</description></item>
+        /// <item><description>Make sure that no routes are destined for the HaVip.</description></item>
+        /// <item><description>Make sure that no elastic IP addresses (EIPs) are associated with the HaVip.</description></item>
+        /// <item><description><b>DeleteHaVip</b> is an asynchronous operation. After a request is sent, the system returns a request ID while deleting the HaVip in the background. Call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of an HaVip:<list type="bullet">
+        /// <item><description>The <b>Deleting</b> state indicates the HaVip is being deleted.</description></item>
+        /// <item><description>If no HaVip is found, the HaVip is deleted.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You cannot repeatedly call the <b>DeleteHaVip</b> operation to delete an HAVIP within the specified period of time.</description></item>
+        /// <item><description>You cannot repeatedly call the <b>DeleteHaVip</b> operation to delete the same HaVip.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -27194,22 +27242,22 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a high-availability virtual IP address (HAVIP).</para>
+        /// <para>Deletes a high-availability virtual IP address (HaVip).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>When you call this operation, take note of the following rules:</para>
         /// <list type="bullet">
-        /// <item><description>You can delete only HAVIPs that are in the Available state.</description></item>
-        /// <item><description>Make sure that no route points to the HAVIP that you want to delete.</description></item>
-        /// <item><description>Make sure that no elastic IP address (EIP) is associated with the HAVIP that you want to delete.</description></item>
-        /// <item><description>The <b>DeleteHaVip</b> operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of an HAVIP:<list type="bullet">
-        /// <item><description>If the HAVIP is in the <b>Deleting</b> state, the HAVIP is being deleted.</description></item>
-        /// <item><description>If you cannot query the HAVIP, the HAVIP is deleted.</description></item>
+        /// <item><description>The HaVip must be in the available state before it can be deleted.</description></item>
+        /// <item><description>Make sure that no routes are destined for the HaVip.</description></item>
+        /// <item><description>Make sure that no elastic IP addresses (EIPs) are associated with the HaVip.</description></item>
+        /// <item><description><b>DeleteHaVip</b> is an asynchronous operation. After a request is sent, the system returns a request ID while deleting the HaVip in the background. Call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of an HaVip:<list type="bullet">
+        /// <item><description>The <b>Deleting</b> state indicates the HaVip is being deleted.</description></item>
+        /// <item><description>If no HaVip is found, the HaVip is deleted.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You cannot repeatedly call the <b>DeleteHaVip</b> operation to delete an HAVIP within the specified period of time.</description></item>
+        /// <item><description>You cannot repeatedly call the <b>DeleteHaVip</b> operation to delete the same HaVip.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -27228,22 +27276,22 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a high-availability virtual IP address (HAVIP).</para>
+        /// <para>Deletes a high-availability virtual IP address (HaVip).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>When you call this operation, take note of the following rules:</para>
         /// <list type="bullet">
-        /// <item><description>You can delete only HAVIPs that are in the Available state.</description></item>
-        /// <item><description>Make sure that no route points to the HAVIP that you want to delete.</description></item>
-        /// <item><description>Make sure that no elastic IP address (EIP) is associated with the HAVIP that you want to delete.</description></item>
-        /// <item><description>The <b>DeleteHaVip</b> operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of an HAVIP:<list type="bullet">
-        /// <item><description>If the HAVIP is in the <b>Deleting</b> state, the HAVIP is being deleted.</description></item>
-        /// <item><description>If you cannot query the HAVIP, the HAVIP is deleted.</description></item>
+        /// <item><description>The HaVip must be in the available state before it can be deleted.</description></item>
+        /// <item><description>Make sure that no routes are destined for the HaVip.</description></item>
+        /// <item><description>Make sure that no elastic IP addresses (EIPs) are associated with the HaVip.</description></item>
+        /// <item><description><b>DeleteHaVip</b> is an asynchronous operation. After a request is sent, the system returns a request ID while deleting the HaVip in the background. Call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of an HaVip:<list type="bullet">
+        /// <item><description>The <b>Deleting</b> state indicates the HaVip is being deleted.</description></item>
+        /// <item><description>If no HaVip is found, the HaVip is deleted.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You cannot repeatedly call the <b>DeleteHaVip</b> operation to delete an HAVIP within the specified period of time.</description></item>
+        /// <item><description>You cannot repeatedly call the <b>DeleteHaVip</b> operation to delete the same HaVip.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -32042,7 +32090,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a filter of traffic mirroring.</para>
+        /// <para>Deletes a filter of traffic mirror.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32122,7 +32170,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a filter of traffic mirroring.</para>
+        /// <para>Deletes a filter of traffic mirror.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32202,7 +32250,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a filter of traffic mirroring.</para>
+        /// <para>Deletes a filter of traffic mirror.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32230,7 +32278,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a filter of traffic mirroring.</para>
+        /// <para>Deletes a filter of traffic mirror.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32258,7 +32306,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an inbound or outbound rule of a filter for traffic mirroring.</para>
+        /// <para>Deletes an inbound or outbound rule of a filter for traffic mirror.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32342,7 +32390,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an inbound or outbound rule of a filter for traffic mirroring.</para>
+        /// <para>Deletes an inbound or outbound rule of a filter for traffic mirror.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32426,7 +32474,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an inbound or outbound rule of a filter for traffic mirroring.</para>
+        /// <para>Deletes an inbound or outbound rule of a filter for traffic mirror.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32454,7 +32502,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an inbound or outbound rule of a filter for traffic mirroring.</para>
+        /// <para>Deletes an inbound or outbound rule of a filter for traffic mirror.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32705,7 +32753,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <description>
         /// <para>When you call this operation, take note of the following limits:</para>
         /// <list type="bullet">
-        /// <item><description>Before you delete a vSwitch, you must first release or remove all virtual private cloud (VPC) resources, including vSwitches, instances, router interfaces, and high-availability virtual IP addresses (HAVIPs).</description></item>
+        /// <item><description>Before you delete a vSwitch, you must first release or remove all virtual private cloud (VPC) resources, including vSwitches, instances, router interfaces, and high-availability virtual IP addresses (HaVips).</description></item>
         /// <item><description>You can delete only vSwitches that are in the <b>Available</b> state.</description></item>
         /// <item><description>You cannot delete a vSwitch from a VPC where a vSwitch or a route is being created or deleted.</description></item>
         /// <item><description><b>DeleteVSwitch</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> operation to query the status of the task:<list type="bullet">
@@ -32787,7 +32835,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <description>
         /// <para>When you call this operation, take note of the following limits:</para>
         /// <list type="bullet">
-        /// <item><description>Before you delete a vSwitch, you must first release or remove all virtual private cloud (VPC) resources, including vSwitches, instances, router interfaces, and high-availability virtual IP addresses (HAVIPs).</description></item>
+        /// <item><description>Before you delete a vSwitch, you must first release or remove all virtual private cloud (VPC) resources, including vSwitches, instances, router interfaces, and high-availability virtual IP addresses (HaVips).</description></item>
         /// <item><description>You can delete only vSwitches that are in the <b>Available</b> state.</description></item>
         /// <item><description>You cannot delete a vSwitch from a VPC where a vSwitch or a route is being created or deleted.</description></item>
         /// <item><description><b>DeleteVSwitch</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> operation to query the status of the task:<list type="bullet">
@@ -32869,7 +32917,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <description>
         /// <para>When you call this operation, take note of the following limits:</para>
         /// <list type="bullet">
-        /// <item><description>Before you delete a vSwitch, you must first release or remove all virtual private cloud (VPC) resources, including vSwitches, instances, router interfaces, and high-availability virtual IP addresses (HAVIPs).</description></item>
+        /// <item><description>Before you delete a vSwitch, you must first release or remove all virtual private cloud (VPC) resources, including vSwitches, instances, router interfaces, and high-availability virtual IP addresses (HaVips).</description></item>
         /// <item><description>You can delete only vSwitches that are in the <b>Available</b> state.</description></item>
         /// <item><description>You cannot delete a vSwitch from a VPC where a vSwitch or a route is being created or deleted.</description></item>
         /// <item><description><b>DeleteVSwitch</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> operation to query the status of the task:<list type="bullet">
@@ -32903,7 +32951,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <description>
         /// <para>When you call this operation, take note of the following limits:</para>
         /// <list type="bullet">
-        /// <item><description>Before you delete a vSwitch, you must first release or remove all virtual private cloud (VPC) resources, including vSwitches, instances, router interfaces, and high-availability virtual IP addresses (HAVIPs).</description></item>
+        /// <item><description>Before you delete a vSwitch, you must first release or remove all virtual private cloud (VPC) resources, including vSwitches, instances, router interfaces, and high-availability virtual IP addresses (HaVips).</description></item>
         /// <item><description>You can delete only vSwitches that are in the <b>Available</b> state.</description></item>
         /// <item><description>You cannot delete a vSwitch from a VPC where a vSwitch or a route is being created or deleted.</description></item>
         /// <item><description><b>DeleteVSwitch</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> operation to query the status of the task:<list type="bullet">
@@ -33773,7 +33821,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <description>
         /// <para>When you call this operation, take note of the following limits:</para>
         /// <list type="bullet">
-        /// <item><description>Before you delete a VPC, make sure that all resources deployed in the VPC are released or removed, such as vSwitches, instances, and high-availability virtual IP addresses (HAVIPs).</description></item>
+        /// <item><description>Before you delete a VPC, make sure that all resources deployed in the VPC are released or removed, such as vSwitches, instances, and high-availability virtual IP addresses (HaVips).</description></item>
         /// <item><description>You can delete only a VPC that is in the <b>Available</b> state.</description></item>
         /// <item><description>The <b>DeleteVpc</b> operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/94565.html">DescribeVpcAttribute</a> operation to query the status of a VPC:<list type="bullet">
         /// <item><description>If the VPC is in the <b>Deleting</b> state, the VPC is being deleted.</description></item>
@@ -33862,7 +33910,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <description>
         /// <para>When you call this operation, take note of the following limits:</para>
         /// <list type="bullet">
-        /// <item><description>Before you delete a VPC, make sure that all resources deployed in the VPC are released or removed, such as vSwitches, instances, and high-availability virtual IP addresses (HAVIPs).</description></item>
+        /// <item><description>Before you delete a VPC, make sure that all resources deployed in the VPC are released or removed, such as vSwitches, instances, and high-availability virtual IP addresses (HaVips).</description></item>
         /// <item><description>You can delete only a VPC that is in the <b>Available</b> state.</description></item>
         /// <item><description>The <b>DeleteVpc</b> operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/94565.html">DescribeVpcAttribute</a> operation to query the status of a VPC:<list type="bullet">
         /// <item><description>If the VPC is in the <b>Deleting</b> state, the VPC is being deleted.</description></item>
@@ -33951,7 +33999,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <description>
         /// <para>When you call this operation, take note of the following limits:</para>
         /// <list type="bullet">
-        /// <item><description>Before you delete a VPC, make sure that all resources deployed in the VPC are released or removed, such as vSwitches, instances, and high-availability virtual IP addresses (HAVIPs).</description></item>
+        /// <item><description>Before you delete a VPC, make sure that all resources deployed in the VPC are released or removed, such as vSwitches, instances, and high-availability virtual IP addresses (HaVips).</description></item>
         /// <item><description>You can delete only a VPC that is in the <b>Available</b> state.</description></item>
         /// <item><description>The <b>DeleteVpc</b> operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/94565.html">DescribeVpcAttribute</a> operation to query the status of a VPC:<list type="bullet">
         /// <item><description>If the VPC is in the <b>Deleting</b> state, the VPC is being deleted.</description></item>
@@ -33984,7 +34032,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <description>
         /// <para>When you call this operation, take note of the following limits:</para>
         /// <list type="bullet">
-        /// <item><description>Before you delete a VPC, make sure that all resources deployed in the VPC are released or removed, such as vSwitches, instances, and high-availability virtual IP addresses (HAVIPs).</description></item>
+        /// <item><description>Before you delete a VPC, make sure that all resources deployed in the VPC are released or removed, such as vSwitches, instances, and high-availability virtual IP addresses (HaVips).</description></item>
         /// <item><description>You can delete only a VPC that is in the <b>Available</b> state.</description></item>
         /// <item><description>The <b>DeleteVpc</b> operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/94565.html">DescribeVpcAttribute</a> operation to query the status of a VPC:<list type="bullet">
         /// <item><description>If the VPC is in the <b>Deleting</b> state, the VPC is being deleted.</description></item>
@@ -40110,7 +40158,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries HAVIPs in a region.</para>
+        /// <para>Queries HaVips in a region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40188,7 +40236,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries HAVIPs in a region.</para>
+        /// <para>Queries HaVips in a region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40266,7 +40314,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries HAVIPs in a region.</para>
+        /// <para>Queries HaVips in a region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40284,7 +40332,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries HAVIPs in a region.</para>
+        /// <para>Queries HaVips in a region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46242,7 +46290,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询标签键列表。</para>
+        /// <para>Queries tag keys.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46320,7 +46368,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询标签键列表。</para>
+        /// <para>Queries tag keys.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46398,7 +46446,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询标签键列表。</para>
+        /// <para>Queries tag keys.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46416,7 +46464,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询标签键列表。</para>
+        /// <para>Queries tag keys.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -54290,7 +54338,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of the traffic mirroring feature.</para>
+        /// <para>Queries the status of the traffic mirror feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -54356,7 +54404,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of the traffic mirroring feature.</para>
+        /// <para>Queries the status of the traffic mirror feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -54422,7 +54470,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of the traffic mirroring feature.</para>
+        /// <para>Queries the status of the traffic mirror feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -54440,7 +54488,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of the traffic mirroring feature.</para>
+        /// <para>Queries the status of the traffic mirror feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -59088,7 +59136,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries filters for traffic mirroring.</para>
+        /// <para>Queries filters for traffic mirror.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -59170,7 +59218,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries filters for traffic mirroring.</para>
+        /// <para>Queries filters for traffic mirror.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -59252,7 +59300,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries filters for traffic mirroring.</para>
+        /// <para>Queries filters for traffic mirror.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -59270,7 +59318,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries filters for traffic mirroring.</para>
+        /// <para>Queries filters for traffic mirror.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -60344,7 +60392,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询路由发布情况</para>
+        /// <para>Queries advertised routes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -60430,7 +60478,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询路由发布情况</para>
+        /// <para>Queries advertised routes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -60516,7 +60564,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询路由发布情况</para>
+        /// <para>Queries advertised routes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -60534,7 +60582,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询路由发布情况</para>
+        /// <para>Queries advertised routes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -64630,9 +64678,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return await ModifyGlobalAccelerationInstanceSpecWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name and description of a high-availability virtual IP address (HaVip).</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You cannot repeatedly call the <b>ModifyHaVipAttribute</b> operation to modify the name and description of an HAVIP within the specified periods of time.</para>
+        /// <para>You cannot repeatedly call the <b>ModifyHaVipAttribute</b> operation to modify the name and description of an HaVip within the specified periods of time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -64704,9 +64757,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return TeaModel.ToObject<ModifyHaVipAttributeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name and description of a high-availability virtual IP address (HaVip).</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You cannot repeatedly call the <b>ModifyHaVipAttribute</b> operation to modify the name and description of an HAVIP within the specified periods of time.</para>
+        /// <para>You cannot repeatedly call the <b>ModifyHaVipAttribute</b> operation to modify the name and description of an HaVip within the specified periods of time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -64778,9 +64836,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return TeaModel.ToObject<ModifyHaVipAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name and description of a high-availability virtual IP address (HaVip).</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You cannot repeatedly call the <b>ModifyHaVipAttribute</b> operation to modify the name and description of an HAVIP within the specified periods of time.</para>
+        /// <para>You cannot repeatedly call the <b>ModifyHaVipAttribute</b> operation to modify the name and description of an HaVip within the specified periods of time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -64796,9 +64859,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return ModifyHaVipAttributeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name and description of a high-availability virtual IP address (HaVip).</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You cannot repeatedly call the <b>ModifyHaVipAttribute</b> operation to modify the name and description of an HAVIP within the specified periods of time.</para>
+        /// <para>You cannot repeatedly call the <b>ModifyHaVipAttribute</b> operation to modify the name and description of an HaVip within the specified periods of time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -74428,13 +74496,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables traffic mirroring.</para>
+        /// <para>Enables traffic mirror.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2><a href="#"></a>Usage notes</h2>
-        /// <para>You can enable traffic mirroring for different regions. You cannot repeatedly call the <b>OpenTrafficMirrorService</b> operation to enable traffic mirroring for one region within the specified period of time.</para>
+        /// <para>You can enable traffic mirror for different regions. You cannot repeatedly call the <b>OpenTrafficMirrorService</b> operation to enable traffic mirror for one region within the specified period of time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -74500,13 +74568,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables traffic mirroring.</para>
+        /// <para>Enables traffic mirror.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2><a href="#"></a>Usage notes</h2>
-        /// <para>You can enable traffic mirroring for different regions. You cannot repeatedly call the <b>OpenTrafficMirrorService</b> operation to enable traffic mirroring for one region within the specified period of time.</para>
+        /// <para>You can enable traffic mirror for different regions. You cannot repeatedly call the <b>OpenTrafficMirrorService</b> operation to enable traffic mirror for one region within the specified period of time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -74572,13 +74640,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables traffic mirroring.</para>
+        /// <para>Enables traffic mirror.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2><a href="#"></a>Usage notes</h2>
-        /// <para>You can enable traffic mirroring for different regions. You cannot repeatedly call the <b>OpenTrafficMirrorService</b> operation to enable traffic mirroring for one region within the specified period of time.</para>
+        /// <para>You can enable traffic mirror for different regions. You cannot repeatedly call the <b>OpenTrafficMirrorService</b> operation to enable traffic mirror for one region within the specified period of time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -74596,13 +74664,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables traffic mirroring.</para>
+        /// <para>Enables traffic mirror.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2><a href="#"></a>Usage notes</h2>
-        /// <para>You can enable traffic mirroring for different regions. You cannot repeatedly call the <b>OpenTrafficMirrorService</b> operation to enable traffic mirroring for one region within the specified period of time.</para>
+        /// <para>You can enable traffic mirror for different regions. You cannot repeatedly call the <b>OpenTrafficMirrorService</b> operation to enable traffic mirror for one region within the specified period of time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -74620,7 +74688,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布VPC路由</para>
+        /// <para>Advertises VPC routes to an external component.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -74698,7 +74766,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布VPC路由</para>
+        /// <para>Advertises VPC routes to an external component.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -74776,7 +74844,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布VPC路由</para>
+        /// <para>Advertises VPC routes to an external component.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -74794,7 +74862,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布VPC路由</para>
+        /// <para>Advertises VPC routes to an external component.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -80028,7 +80096,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a high-availability virtual IP address (HAVIP) from an Elastic Compute Service (ECS) in a virtual private cloud (VPC) or from an elastic network interface (ENI).</para>
+        /// <para>Disassociates a high-availability virtual IP address (HaVip) from an Elastic Compute Service (ECS) in a virtual private cloud (VPC) or from an elastic network interface (ENI).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -80037,13 +80105,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <para>When you call this operation, take note of the following limits:</para>
         /// <list type="bullet">
         /// <item><description>The ECS instance must be in the <b>Running</b> or <b>Stopped</b> state.</description></item>
-        /// <item><description>The HAVIP must be in the <b>Available</b> or <b>InUse</b> state.</description></item>
-        /// <item><description><b>UnassociateHaVip</b> is an asynchronous operation. After a request is sent, the system returns a request ID and an instance ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of an HAVIP:<list type="bullet">
-        /// <item><description>If the HAVIP is in the <b>Unassociating</b> state, the HAVIP is being disassociated.</description></item>
-        /// <item><description>If the HAVIP is in the <b>Inuse</b> or <b>Available</b> state, the HAVIP is disassociated.</description></item>
+        /// <item><description>The HaVip must be in the <b>Available</b> or <b>InUse</b> state.</description></item>
+        /// <item><description><b>UnassociateHaVip</b> is an asynchronous operation. After a request is sent, the system returns a request ID and an instance ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of an HaVip:<list type="bullet">
+        /// <item><description>If the HaVip is in the <b>Unassociating</b> state, the HaVip is being disassociated.</description></item>
+        /// <item><description>If the HaVip is in the <b>Inuse</b> or <b>Available</b> state, the HaVip is disassociated.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You cannot repeatedly call the <b>UnassociateHaVip</b> operation to disassociate an HAVIP within the specified period of time.</description></item>
+        /// <item><description>You cannot repeatedly call the <b>UnassociateHaVip</b> operation to disassociate an HaVip within the specified period of time.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -80122,7 +80190,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a high-availability virtual IP address (HAVIP) from an Elastic Compute Service (ECS) in a virtual private cloud (VPC) or from an elastic network interface (ENI).</para>
+        /// <para>Disassociates a high-availability virtual IP address (HaVip) from an Elastic Compute Service (ECS) in a virtual private cloud (VPC) or from an elastic network interface (ENI).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -80131,13 +80199,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <para>When you call this operation, take note of the following limits:</para>
         /// <list type="bullet">
         /// <item><description>The ECS instance must be in the <b>Running</b> or <b>Stopped</b> state.</description></item>
-        /// <item><description>The HAVIP must be in the <b>Available</b> or <b>InUse</b> state.</description></item>
-        /// <item><description><b>UnassociateHaVip</b> is an asynchronous operation. After a request is sent, the system returns a request ID and an instance ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of an HAVIP:<list type="bullet">
-        /// <item><description>If the HAVIP is in the <b>Unassociating</b> state, the HAVIP is being disassociated.</description></item>
-        /// <item><description>If the HAVIP is in the <b>Inuse</b> or <b>Available</b> state, the HAVIP is disassociated.</description></item>
+        /// <item><description>The HaVip must be in the <b>Available</b> or <b>InUse</b> state.</description></item>
+        /// <item><description><b>UnassociateHaVip</b> is an asynchronous operation. After a request is sent, the system returns a request ID and an instance ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of an HaVip:<list type="bullet">
+        /// <item><description>If the HaVip is in the <b>Unassociating</b> state, the HaVip is being disassociated.</description></item>
+        /// <item><description>If the HaVip is in the <b>Inuse</b> or <b>Available</b> state, the HaVip is disassociated.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You cannot repeatedly call the <b>UnassociateHaVip</b> operation to disassociate an HAVIP within the specified period of time.</description></item>
+        /// <item><description>You cannot repeatedly call the <b>UnassociateHaVip</b> operation to disassociate an HaVip within the specified period of time.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -80216,7 +80284,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a high-availability virtual IP address (HAVIP) from an Elastic Compute Service (ECS) in a virtual private cloud (VPC) or from an elastic network interface (ENI).</para>
+        /// <para>Disassociates a high-availability virtual IP address (HaVip) from an Elastic Compute Service (ECS) in a virtual private cloud (VPC) or from an elastic network interface (ENI).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -80225,13 +80293,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <para>When you call this operation, take note of the following limits:</para>
         /// <list type="bullet">
         /// <item><description>The ECS instance must be in the <b>Running</b> or <b>Stopped</b> state.</description></item>
-        /// <item><description>The HAVIP must be in the <b>Available</b> or <b>InUse</b> state.</description></item>
-        /// <item><description><b>UnassociateHaVip</b> is an asynchronous operation. After a request is sent, the system returns a request ID and an instance ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of an HAVIP:<list type="bullet">
-        /// <item><description>If the HAVIP is in the <b>Unassociating</b> state, the HAVIP is being disassociated.</description></item>
-        /// <item><description>If the HAVIP is in the <b>Inuse</b> or <b>Available</b> state, the HAVIP is disassociated.</description></item>
+        /// <item><description>The HaVip must be in the <b>Available</b> or <b>InUse</b> state.</description></item>
+        /// <item><description><b>UnassociateHaVip</b> is an asynchronous operation. After a request is sent, the system returns a request ID and an instance ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of an HaVip:<list type="bullet">
+        /// <item><description>If the HaVip is in the <b>Unassociating</b> state, the HaVip is being disassociated.</description></item>
+        /// <item><description>If the HaVip is in the <b>Inuse</b> or <b>Available</b> state, the HaVip is disassociated.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You cannot repeatedly call the <b>UnassociateHaVip</b> operation to disassociate an HAVIP within the specified period of time.</description></item>
+        /// <item><description>You cannot repeatedly call the <b>UnassociateHaVip</b> operation to disassociate an HaVip within the specified period of time.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -80250,7 +80318,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a high-availability virtual IP address (HAVIP) from an Elastic Compute Service (ECS) in a virtual private cloud (VPC) or from an elastic network interface (ENI).</para>
+        /// <para>Disassociates a high-availability virtual IP address (HaVip) from an Elastic Compute Service (ECS) in a virtual private cloud (VPC) or from an elastic network interface (ENI).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -80259,13 +80327,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <para>When you call this operation, take note of the following limits:</para>
         /// <list type="bullet">
         /// <item><description>The ECS instance must be in the <b>Running</b> or <b>Stopped</b> state.</description></item>
-        /// <item><description>The HAVIP must be in the <b>Available</b> or <b>InUse</b> state.</description></item>
-        /// <item><description><b>UnassociateHaVip</b> is an asynchronous operation. After a request is sent, the system returns a request ID and an instance ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of an HAVIP:<list type="bullet">
-        /// <item><description>If the HAVIP is in the <b>Unassociating</b> state, the HAVIP is being disassociated.</description></item>
-        /// <item><description>If the HAVIP is in the <b>Inuse</b> or <b>Available</b> state, the HAVIP is disassociated.</description></item>
+        /// <item><description>The HaVip must be in the <b>Available</b> or <b>InUse</b> state.</description></item>
+        /// <item><description><b>UnassociateHaVip</b> is an asynchronous operation. After a request is sent, the system returns a request ID and an instance ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of an HaVip:<list type="bullet">
+        /// <item><description>If the HaVip is in the <b>Unassociating</b> state, the HaVip is being disassociated.</description></item>
+        /// <item><description>If the HaVip is in the <b>Inuse</b> or <b>Available</b> state, the HaVip is disassociated.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You cannot repeatedly call the <b>UnassociateHaVip</b> operation to disassociate an HAVIP within the specified period of time.</description></item>
+        /// <item><description>You cannot repeatedly call the <b>UnassociateHaVip</b> operation to disassociate an HaVip within the specified period of time.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -83244,12 +83312,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a filter for traffic mirroring.</para>
+        /// <para>Modifies the configuration of a filter for traffic mirror.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You cannot repeatedly call the <b>UpdateTrafficMirrorFilterAttribute</b> operation to modify the configuration of a filter for traffic mirroring within the specified period of time.</para>
+        /// <para>You cannot repeatedly call the <b>UpdateTrafficMirrorFilterAttribute</b> operation to modify the configuration of a filter for traffic mirror within the specified period of time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -83327,12 +83395,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a filter for traffic mirroring.</para>
+        /// <para>Modifies the configuration of a filter for traffic mirror.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You cannot repeatedly call the <b>UpdateTrafficMirrorFilterAttribute</b> operation to modify the configuration of a filter for traffic mirroring within the specified period of time.</para>
+        /// <para>You cannot repeatedly call the <b>UpdateTrafficMirrorFilterAttribute</b> operation to modify the configuration of a filter for traffic mirror within the specified period of time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -83410,12 +83478,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a filter for traffic mirroring.</para>
+        /// <para>Modifies the configuration of a filter for traffic mirror.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You cannot repeatedly call the <b>UpdateTrafficMirrorFilterAttribute</b> operation to modify the configuration of a filter for traffic mirroring within the specified period of time.</para>
+        /// <para>You cannot repeatedly call the <b>UpdateTrafficMirrorFilterAttribute</b> operation to modify the configuration of a filter for traffic mirror within the specified period of time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -83433,12 +83501,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a filter for traffic mirroring.</para>
+        /// <para>Modifies the configuration of a filter for traffic mirror.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You cannot repeatedly call the <b>UpdateTrafficMirrorFilterAttribute</b> operation to modify the configuration of a filter for traffic mirroring within the specified period of time.</para>
+        /// <para>You cannot repeatedly call the <b>UpdateTrafficMirrorFilterAttribute</b> operation to modify the configuration of a filter for traffic mirror within the specified period of time.</para>
         /// </description>
         /// 
         /// <param name="request">

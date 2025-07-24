@@ -77,6 +77,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string ResourceType { get; set; }
 
+                [NameInMap("ResourceVpcId")]
+                [Validation(Required=false)]
+                public string ResourceVpcId { get; set; }
+
                 [NameInMap("TunnelIndex")]
                 [Validation(Required=false)]
                 public string TunnelIndex { get; set; }

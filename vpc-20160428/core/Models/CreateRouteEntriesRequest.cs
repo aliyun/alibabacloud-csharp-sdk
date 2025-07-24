@@ -9,6 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateRouteEntriesRequest : TeaModel {
+        /// <summary>
+        /// <para>Specifies whether to only precheck the request. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: prechecks the request without performing the operation. The system prechecks the required parameters, request syntax, and limits. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends the request. After the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
@@ -115,7 +125,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <para>The type of next hop. You can specify at most 50 next hop types. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Instance</b>: Elastic Compute Service (ECS) instance. This is the default value.</description></item>
-            /// <item><description><b>HaVip</b>: high-availability virtual IP address (HAVIP).</description></item>
+            /// <item><description><b>HaVip</b>: high-availability virtual IP address (HaVip).</description></item>
             /// <item><description><b>RouterInterface</b>: router interface.</description></item>
             /// <item><description><b>NetworkInterface</b>: elastic network interface (ENI).</description></item>
             /// <item><description><b>VpnGateway</b>: VPN gateway.</description></item>

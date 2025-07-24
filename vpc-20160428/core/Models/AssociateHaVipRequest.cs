@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the HAVIP.</para>
+        /// <para>The ID of the HaVip.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string HaVipId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ECS instance to be associated with the HAVIP.</para>
+        /// <para>The ID of the ECS instance to be associated with the HaVip.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,10 +46,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the instance to be associated with the HAVIP. Valid values:</para>
+        /// <para>The type of the instance to be associated with the HaVip. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>EcsInstance</b>: an ECS instance</description></item>
-        /// <item><description><b>NetworkInterface</b>: an ENI. If you want to associate the HAVIP with an ENI, this parameter is required.</description></item>
+        /// <item><description><b>NetworkInterface</b>: an ENI. If you want to associate the HaVip with an ENI, this parameter is required.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region to which the HAVIP belongs.</para>
+        /// <para>The ID of the region to which the HaVip belongs.</para>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 

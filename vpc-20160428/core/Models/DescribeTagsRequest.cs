@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeTagsRequest : TeaModel {
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: 1 to 50. Default value: 50.</para>
+        /// <para>The number of entries per page. Valid values: 1 to 50. Default value: 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

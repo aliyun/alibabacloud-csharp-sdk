@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The description of the HAVIP.</para>
+        /// <para>The description of the HaVip.</para>
         /// <para>The description must be 1 to 255 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
@@ -35,8 +35,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the HAVIP.</para>
-        /// <para>The specified IP address must be an idle IP address that falls within the CIDR block of the vSwitch. If this parameter is not set, an idle IP address from the CIDR block of the vSwitch is randomly assigned to the HAVIP.</para>
+        /// <para>The IP address of the HaVip.</para>
+        /// <para>The specified IP address must be an idle IP address that falls within the CIDR block of the vSwitch. If this parameter is not set, an idle IP address from the CIDR block of the vSwitch is randomly assigned to the HaVip.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.XX.XX.10</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string IpAddress { get; set; }
 
         /// <summary>
-        /// <para>The name of the HAVIP.</para>
+        /// <para>The name of the HaVip.</para>
         /// <para>The name must be 1 to 128 characters in length, and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the HAVIP. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the HaVip. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the HAVIP belongs.</para>
+        /// <para>The ID of the resource group to which the HaVip belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmxazb4ph6aiy****</para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The ID of the vSwitch to which the HAVIP belongs.</para>
+        /// <para>The ID of the vSwitch to which the HaVip belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

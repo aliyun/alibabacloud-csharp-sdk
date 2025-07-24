@@ -45,10 +45,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<CreateTrafficMirrorFilterRequestEgressRules> EgressRules { get; set; }
         public class CreateTrafficMirrorFilterRequestEgressRules : TeaModel {
             /// <summary>
-            /// <para>The collection policy of the outbound rule. Valid value:</para>
+            /// <para>The collection policy of the outbound rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>accept</b>: collects network traffic.</description></item>
-            /// <item><description><b>drop</b>: does not collect network traffic.</description></item>
+            /// <item><description><b>accept</b>: collects the network traffic.</description></item>
+            /// <item><description><b>drop</b>: does not collect the network traffic.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -81,6 +81,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public string DestinationPortRange { get; set; }
 
+            /// <summary>
+            /// <para>The IP version of the instance. The following value may be returned:</para>
+            /// <list type="bullet">
+            /// <item><description><b>IPv4</b>: IPv4</description></item>
+            /// <item><description><b>IPv6</b>: IPv6</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>IPv4</para>
+            /// </summary>
             [NameInMap("IpVersion")]
             [Validation(Required=false)]
             public string IpVersion { get; set; }
@@ -96,7 +106,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public int? Priority { get; set; }
 
             /// <summary>
-            /// <para>The type of the protocol that is used by the outbound traffic that you want to mirror. Valid value:</para>
+            /// <para>The type of the protocol that is used by the outbound traffic that you want to mirror. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>ALL</b>: all protocols</description></item>
             /// <item><description><b>ICMP</b>: Internet Control Message Protocol.</description></item>
@@ -144,10 +154,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<CreateTrafficMirrorFilterRequestIngressRules> IngressRules { get; set; }
         public class CreateTrafficMirrorFilterRequestIngressRules : TeaModel {
             /// <summary>
-            /// <para>The collection policy of the inbound rule. Valid value:</para>
+            /// <para>The collection policy of the inbound rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>accept</b>: collects network traffic.</description></item>
-            /// <item><description><b>drop</b>: does not collect network traffic.</description></item>
+            /// <item><description><b>accept</b>: collects the network traffic.</description></item>
+            /// <item><description><b>drop</b>: does not collect the network traffic.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -180,6 +190,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public string DestinationPortRange { get; set; }
 
+            /// <summary>
+            /// <para>The IP version of the instance. The following value may be returned:</para>
+            /// <list type="bullet">
+            /// <item><description><b>IPv4</b></description></item>
+            /// <item><description><b>IPv6</b></description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>IPv4</para>
+            /// </summary>
             [NameInMap("IpVersion")]
             [Validation(Required=false)]
             public string IpVersion { get; set; }
@@ -195,7 +215,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public int? Priority { get; set; }
 
             /// <summary>
-            /// <para>The type of the protocol is used by the inbound traffic that you want to mirror. Valid value:</para>
+            /// <para>The type of the protocol is used by the inbound traffic that you want to mirror. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>ALL</b>: all protocols</description></item>
             /// <item><description><b>ICMP</b>: Internet Control Message Protocol.</description></item>
@@ -245,7 +265,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The ID of the region to which the mirrored traffic belongs.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list. For more information about regions that support traffic mirroring, see <a href="https://help.aliyun.com/document_detail/207513.html">Overview of traffic mirroring</a>.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list. For more information about regions that support traffic mirror, see <a href="https://help.aliyun.com/document_detail/207513.html">Overview of traffic mirror</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

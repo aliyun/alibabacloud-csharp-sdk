@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: 1 to 50. Default value: 50.</para>
+        /// <para>The number of entries per page. Valid values: 1 to 50. Default value: 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -63,6 +63,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The resource IDs. You can specify up to 20 resource IDs.</para>
+        /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }

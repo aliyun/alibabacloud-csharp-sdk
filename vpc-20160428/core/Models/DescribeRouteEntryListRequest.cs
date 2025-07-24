@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The next hop type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Instance</b>: an Elastic Compute Service (ECS) instance. This is the default value.</description></item>
-        /// <item><description><b>HaVip</b>: a high-availability virtual IP address (HAVIP).</description></item>
+        /// <item><description><b>HaVip</b>: a high-availability virtual IP address (HaVip).</description></item>
         /// <item><description><b>VpnGateway</b>: a VPN gateway.</description></item>
         /// <item><description><b>NatGateway</b>: a NAT gateway.</description></item>
         /// <item><description><b>NetworkInterface</b>: a secondary elastic network interface (ENI).</description></item>

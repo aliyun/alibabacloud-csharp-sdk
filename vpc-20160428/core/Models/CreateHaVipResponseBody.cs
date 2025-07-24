@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateHaVipResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the HAVIP.</para>
+        /// <para>The ID of the HaVip.</para>
         /// 
         /// <b>Example:</b>
         /// <para>havip-2zeo05qre24nhrqpy****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string HaVipId { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the HAVIP.</para>
+        /// <para>The IP address of the HaVip.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.XX.XX.10</para>

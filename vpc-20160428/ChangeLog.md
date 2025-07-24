@@ -1,3 +1,11 @@
+2025-07-24 Version: 6.12.6
+- Update API AssociateVpcCidrBlock: add request parameters Ipv6CidrMask.
+- Update API CreateVpc: add request parameters Ipv6CidrMask.
+- Update API CreateVpc: add request parameters Ipv6IpamPoolId.
+- Update API DescribeNatGatewayAssociateNetworkInterfaces: add response parameters Body.AssociateNetworkInterfaces.$.ResourceVpcId.
+- Update API GetVpcPrefixListAssociations: add response parameters Body.PrefixListAssociation.$.CidrList.
+
+
 2025-06-16 Version: 6.12.5
 - Update API GetDhcpOptionsSet: add response parameters Body.CreationTime.
 - Update API ListDhcpOptionsSets: add response parameters Body.DhcpOptionsSets.$.CreationTime.

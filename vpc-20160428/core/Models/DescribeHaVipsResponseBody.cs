@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeHaVipsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the HAVIP.</para>
+        /// <para>The details about the HaVip.</para>
         /// </summary>
         [NameInMap("HaVips")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public List<DescribeHaVipsResponseBodyHaVipsHaVip> HaVip { get; set; }
             public class DescribeHaVipsResponseBodyHaVipsHaVip : TeaModel {
                 /// <summary>
-                /// <para>The list of EIPs associated with the HAVIP.</para>
+                /// <para>The list of EIPs associated with the HaVip.</para>
                 /// </summary>
                 [NameInMap("AssociatedEipAddresses")]
                 [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
                 /// <summary>
-                /// <para>The type of the instance with which the HAVIP is associated. Valid values:</para>
+                /// <para>The type of the instance with which the HaVip is associated. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>EcsInstance</b>: Elastic Compute Service (ECS) instance</description></item>
                 /// <item><description><b>NetworkInterface</b>: elastic network interface (ENI)</description></item>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string AssociatedInstanceType { get; set; }
 
                 /// <summary>
-                /// <para>The information about the instance associated with the HAVIP.</para>
+                /// <para>The information about the instance associated with the HaVip.</para>
                 /// </summary>
                 [NameInMap("AssociatedInstances")]
                 [Validation(Required=false)]
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string ChargeType { get; set; }
 
                 /// <summary>
-                /// <para>The time when the HAVIP was created.</para>
+                /// <para>The time when the HaVip was created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-07-03T14:25:26Z</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The description of the HAVIP.</para>
+                /// <para>The description of the HaVip.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>My HaVip</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the HAVIP.</para>
+                /// <para>The ID of the HaVip.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>havip-bp149uyvut73dpld****</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string HaVipId { get; set; }
 
                 /// <summary>
-                /// <para>The private IP address of the HAVIP.</para>
+                /// <para>The private IP address of the HaVip.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>192.168.24.5</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string IpAddress { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the active instance that is associated with the HAVIP.</para>
+                /// <para>The ID of the active instance that is associated with the HaVip.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>i-bp145q7glnuzdvz****</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string MasterInstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the HAVIP.</para>
+                /// <para>The name of the HaVip.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the region to which the HAVIP belongs.</para>
+                /// <para>The ID of the region to which the HaVip belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the resource group to which the HAVIP belongs.</para>
+                /// <para>The ID of the resource group to which the HaVip belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rg-bp67acfmxazb4ph****</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The status of the HAVIP. Valid values:</para>
+                /// <para>The status of the HaVip. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>Creating</b>: The server group is being created.</description></item>
                 /// <item><description><b>Available</b>: The FULLNAT entry is available.</description></item>
@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
                 /// <summary>
-                /// <para>The ID of the vSwitch to which the HAVIP belongs.</para>
+                /// <para>The ID of the vSwitch to which the HaVip belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vsw-bp1pkt1fba8e824ez****</para>
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the VPC to which the HAVIP belongs.</para>
+                /// <para>The ID of the VPC to which the HaVip belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-bp1kcm36tevkpms97****</para>

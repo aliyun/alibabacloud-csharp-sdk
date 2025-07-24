@@ -41,6 +41,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<GetVpcPrefixListAssociationsResponseBodyPrefixListAssociation> PrefixListAssociation { get; set; }
         public class GetVpcPrefixListAssociationsResponseBodyPrefixListAssociation : TeaModel {
             /// <summary>
+            /// <para>List of CIDR addresses where the prefix list is effective in the currently associated resources.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>192.168.0.0/16</para>
+            /// </summary>
+            [NameInMap("CidrList")]
+            [Validation(Required=false)]
+            public string CidrList { get; set; }
+
+            /// <summary>
             /// <para>The ID of the Alibaba Cloud account to which the prefix list belongs.</para>
             /// 
             /// <b>Example:</b>

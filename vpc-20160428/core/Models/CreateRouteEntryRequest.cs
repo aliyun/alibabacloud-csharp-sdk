@@ -49,12 +49,25 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string DestinationCidrBlock { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: performs only a dry run. The system checks the required parameters, request syntax, and limits. If the request fails, an error message is returned. If the request passes the validation, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends the request. If the request passes the check, an HTTP 2xx status code is returned and the operation is performed.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The ID of the next hop.</para>
+        /// <para>The ID of the next hop for the custom route.</para>
+        /// <remarks>
+        /// <para> <a href="#-nexthoptype--ecr-describeexpressconnectrouterassociation--associationid--id"></a>If you set the NextHopType parameter to ECR, call the <a href="https://help.aliyun.com/document_detail/2712069.html">DescribeExpressConnectRouterAssociation</a> operation to access the AssociationId and use it as the next hop ID.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>i-j6c2fp57q8rr4jlu****</para>
@@ -106,7 +119,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The type of next hop of the custom route entry. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Instance</b>: an Elastic Compute Service (ECS) instance. This is the default value.</description></item>
-        /// <item><description><b>HaVip</b>: a high-availability virtual IP address (HAVIP).</description></item>
+        /// <item><description><b>HaVip</b>: a high-availability virtual IP address (HaVip).</description></item>
         /// <item><description><b>RouterInterface</b>: a router interface.</description></item>
         /// <item><description><b>NetworkInterface</b>: an elastic network interface (ENI).</description></item>
         /// <item><description><b>VpnGateway</b>: a VPN gateway.</description></item>

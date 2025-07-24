@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the route.</para>
+        /// <para>The information about the routes.</para>
         /// </summary>
         [NameInMap("RouteEntrys")]
         [Validation(Required=false)]
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                         /// <para>The next hop type. Valid values:</para>
                         /// <list type="bullet">
                         /// <item><description><b>Instance</b>: an ECS instance.</description></item>
-                        /// <item><description><b>HaVip</b>: an HAVIP.</description></item>
+                        /// <item><description><b>HaVip</b>: an HaVip.</description></item>
                         /// <item><description><b>VpnGateway</b>: a VPN gateway.</description></item>
                         /// <item><description><b>NatGateway</b>: a NAT gateway.</description></item>
                         /// <item><description><b>NetworkInterface</b>: a secondary ENI.</description></item>
@@ -282,11 +282,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string ServiceType { get; set; }
 
                 /// <summary>
-                /// <para>The route status. Valid values:</para>
+                /// <para>The status of the route entry. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>Pending</b></description></item>
                 /// <item><description><b>Available</b></description></item>
                 /// <item><description><b>Modifying</b></description></item>
+                /// <item><description><b>Deleting</b></description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

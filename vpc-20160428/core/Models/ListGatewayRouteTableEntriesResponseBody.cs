@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <para>The type of the next hop. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>Instance</b> (default): an ECS instance</description></item>
-                /// <item><description><b>HaVip</b>: a high-availability virtual IP address (HAVIP).</description></item>
+                /// <item><description><b>HaVip</b>: a high-availability virtual IP address (HaVip).</description></item>
                 /// <item><description><b>VpnGateway</b>: a VPN gateway</description></item>
                 /// <item><description><b>NatGateway</b>: a NAT gateway</description></item>
                 /// <item><description><b>NetworkInterface</b>: a secondary ENI</description></item>

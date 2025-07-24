@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The CIDR block of the VPC.</para>
         /// <list type="bullet">
-        /// <item><description>You can specify one of the following CIDR blocks or their subsets as the primary IPv4 CIDR block of the VPC: 192.168.0.0/16, 172.16.0.0/12, and 10.0.0.0/8. These CIDR blocks are standard private CIDR blocks as defined by Request for Comments (RFC) documents. The subnet mask must be 8 to 28 bits in length.</description></item>
-        /// <item><description>You can also use a custom CIDR block other than 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, 169.254.0.0/16, and their subnets as the primary IPv4 CIDR block of the VPC.</description></item>
+        /// <item><description>We recommend using the private IPv4 address specified in RFC 1918 as the primary IPv4 CIDR block of the VPC with a recommended mask length of 16 to 28 bits. For example, 10.0.0.0/16, 172.16.0.0/16, and 192.168.0.0/16.</description></item>
+        /// <item><description>You can also use a custom CIDR block other than 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, 169.254.0.0/16, or their subnets as the primary IPv4 CIDR block.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,15 +62,25 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
+        /// <summary>
+        /// <para>Whether to enable the DNS hostname feature. Values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>false</b> (default): Not enabled. </description></item>
+        /// <item><description><b>true</b>: Enabled.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("EnableDnsHostname")]
         [Validation(Required=false)]
         public bool? EnableDnsHostname { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable IPv6. Valid values:</para>
+        /// <para>Indicates whether IPv6 is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default)</description></item>
-        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b> (default): disabled.</description></item>
+        /// <item><description><b>true</b>: enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -80,6 +90,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public bool? EnableIpv6 { get; set; }
 
+        /// <summary>
+        /// <para>Allocate VPC from the IPAM address pool by inputting a mask.</para>
+        /// <remarks>
+        /// <para>When creating a VPC with a specified IPAM address pool, at least one of the parameters CidrBlock or Ipv4CidrMask must be provided.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12</para>
+        /// </summary>
         [NameInMap("Ipv4CidrMask")]
         [Validation(Required=false)]
         public int? Ipv4CidrMask { get; set; }
@@ -95,7 +114,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Ipv4IpamPoolId { get; set; }
 
         /// <summary>
-        /// <para>The IPv6 CIDR block of the VPC.</para>
+        /// <para>The IPv6 CIDR block of the VPC. If you enable IPv6 for a VPC, the system allocates an IPv6 CIDR block. To specify an IPv6 CIDR block, you must call the <a href="https://help.aliyun.com/document_detail/448916.html">AllocateVpcIpv6Cidr</a> operation to reserve the specified IPv6 CIDR block.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2408:XXXX:0:6a::/56</para>
@@ -103,6 +122,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("Ipv6CidrBlock")]
         [Validation(Required=false)]
         public string Ipv6CidrBlock { get; set; }
+
+        [NameInMap("Ipv6CidrMask")]
+        [Validation(Required=false)]
+        public int? Ipv6CidrMask { get; set; }
+
+        [NameInMap("Ipv6IpamPoolId")]
+        [Validation(Required=false)]
+        public string Ipv6IpamPoolId { get; set; }
 
         /// <summary>
         /// <para>The type of the IPv6 CIDR block of the VPC. Valid values:</para>
