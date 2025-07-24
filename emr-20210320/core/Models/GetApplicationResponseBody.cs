@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 /// <para>操作名称。</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>START</para>
+                /// <para>decommission</para>
                 /// </summary>
                 [NameInMap("ActionName")]
                 [Validation(Required=false)]
@@ -49,6 +49,9 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
                     /// <summary>
                     /// <para>动作参数KEY。</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>timeout</para>
                     /// </summary>
                     [NameInMap("Key")]
                     [Validation(Required=false)]
@@ -75,7 +78,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                         /// <para>值步长。</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>2</para>
+                        /// <para>1</para>
                         /// </summary>
                         [NameInMap("ValueIncrementStep")]
                         [Validation(Required=false)]
@@ -85,7 +88,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                         /// <para>最大值。</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>20</para>
+                        /// <para>100</para>
                         /// </summary>
                         [NameInMap("ValueMaximum")]
                         [Validation(Required=false)]
@@ -105,7 +108,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                         /// <para>属性值类型。</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>STRING</para>
+                        /// <para>int</para>
                         /// </summary>
                         [NameInMap("ValueType")]
                         [Validation(Required=false)]
@@ -129,7 +132,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 /// <para>命令。</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>START</para>
+                /// <para>decommission</para>
                 /// </summary>
                 [NameInMap("Command")]
                 [Validation(Required=false)]
@@ -159,7 +162,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 /// <para>执行范围。</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>CLUSTER</para>
+                /// <para>COMPONENT_INSTANCE</para>
                 /// </summary>
                 [NameInMap("RunActionScope")]
                 [Validation(Required=false)]
@@ -179,6 +182,9 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
             /// <summary>
             /// <para>应用操作状态。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>RUNNING</para>
             /// </summary>
             [NameInMap("ApplicationState")]
             [Validation(Required=false)]
@@ -188,7 +194,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             /// <para>应用版本。</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2.8.5</para>
+            /// <para>2.8.1</para>
             /// </summary>
             [NameInMap("ApplicationVersion")]
             [Validation(Required=false)]
@@ -198,7 +204,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             /// <para>社区版本。</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2.8.5</para>
+            /// <para>2.8.1</para>
             /// </summary>
             [NameInMap("CommunityVersion")]
             [Validation(Required=false)]
@@ -210,7 +216,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// <para>请求ID。</para>
         /// 
         /// <b>Example:</b>
-        /// <para>DD6B1B2A-5837-5237-ABE4-FF0C8944****</para>
+        /// <para>9E3A7161-EB7B-172B-8D18-FFB06BA3****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

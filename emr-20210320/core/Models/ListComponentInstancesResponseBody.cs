@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             /// <para>应用名称。</para>
             /// 
             /// <b>Example:</b>
-            /// <para>HDFS</para>
+            /// <para>KNOX</para>
             /// </summary>
             [NameInMap("ApplicationName")]
             [Validation(Required=false)]
@@ -70,6 +70,9 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             /// <item><description>STOPPED：已停止</description></item>
             /// <item><description>STOP_FAILED：停止失败</description></item>
             /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>STARTED</para>
             /// </summary>
             [NameInMap("ComponentInstanceState")]
             [Validation(Required=false)]
@@ -79,7 +82,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             /// <para>组件名称。</para>
             /// 
             /// <b>Example:</b>
-            /// <para>DataNode</para>
+            /// <para>KNOX</para>
             /// </summary>
             [NameInMap("ComponentName")]
             [Validation(Required=false)]
@@ -121,7 +124,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             /// <para>节点ID。</para>
             /// 
             /// <b>Example:</b>
-            /// <para>i-bp1cudc25w2bfwl5****</para>
+            /// <para>i-bp17yy050pxo01m2****</para>
             /// </summary>
             [NameInMap("NodeId")]
             [Validation(Required=false)]
@@ -131,12 +134,16 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             /// <para>节点名称。</para>
             /// 
             /// <b>Example:</b>
-            /// <para>core1-1</para>
+            /// <para>emr-worker-1</para>
             /// </summary>
             [NameInMap("NodeName")]
             [Validation(Required=false)]
             public string NodeName { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou-i</para>
+            /// </summary>
             [NameInMap("ZoneId")]
             [Validation(Required=false)]
             public string ZoneId { get; set; }
@@ -147,7 +154,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// <para>本次请求所返回的最大记录条数。</para>
         /// 
         /// <b>Example:</b>
-        /// <para>20</para>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
@@ -157,7 +164,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// <para>返回读取到的数据位置，空代表数据已经读取完毕。</para>
         /// 
         /// <b>Example:</b>
-        /// <para>DD6B1B2A-5837-5237-ABE4-FF0C89568980</para>
+        /// <para>“”</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -167,7 +174,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// <para>请求ID。</para>
         /// 
         /// <b>Example:</b>
-        /// <para>DD6B1B2A-5837-5237-ABE4-FF0C8944****</para>
+        /// <para>7345241A-014C-17D2-A3AC-C72771188F46</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -177,7 +184,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// <para>本次请求条件下的数据总量。</para>
         /// 
         /// <b>Example:</b>
-        /// <para>200</para>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

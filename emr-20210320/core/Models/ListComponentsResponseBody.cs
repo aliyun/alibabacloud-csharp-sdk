@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             /// <para>应用名称。</para>
             /// 
             /// <b>Example:</b>
-            /// <para>HDFS</para>
+            /// <para>KNOX</para>
             /// </summary>
             [NameInMap("ApplicationName")]
             [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             /// <para>组件名称。</para>
             /// 
             /// <b>Example:</b>
-            /// <para>DataNode</para>
+            /// <para>KNOX</para>
             /// </summary>
             [NameInMap("ComponentName")]
             [Validation(Required=false)]
@@ -42,6 +42,9 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
             /// <summary>
             /// <para>命名空间。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>“”</para>
             /// </summary>
             [NameInMap("Namespace")]
             [Validation(Required=false)]
@@ -83,7 +86,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// <para>请求ID。</para>
         /// 
         /// <b>Example:</b>
-        /// <para>DD6B1B2A-5837-5237-ABE4-FF0C8944****</para>
+        /// <para>FFAC608A-5DC3-174F-93C6-9F88CA6D5875</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

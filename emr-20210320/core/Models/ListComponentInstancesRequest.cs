@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// <para>应用名称列表。</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[&quot;HDFS&quot;]</para>
+        /// <para>c-b933c5aac8fe****</para>
         /// </summary>
         [NameInMap("ApplicationNames")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>c-b933c5aac8fe****</para>
+        /// <para>C-8CFEBCCFFEF5****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// <para>组件名称列表。</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[&quot;DataNode&quot;]</para>
+        /// <para>[&quot;HDFS&quot;]</para>
         /// </summary>
         [NameInMap("ComponentNames")]
         [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// <para>一次获取的最大记录数。取值范围：1~100。</para>
         /// 
         /// <b>Example:</b>
-        /// <para>20</para>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// <para>标记当前开始读取的位置，置空表示从头开始。</para>
         /// 
         /// <b>Example:</b>
-        /// <para>DD6B1B2A-5837-5237-ABE4-FF0C89568980</para>
+        /// <para>“”</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// <para>节点ID列表。</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[&quot;i-bp1cudc25w2bfwl5****&quot;]</para>
+        /// <para>DD6B1B2A-5837-5237-ABE4-FF0C89568980</para>
         /// </summary>
         [NameInMap("NodeIds")]
         [Validation(Required=false)]
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// <para>节点名称列表。</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[&quot;core1-1&quot;]</para>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("NodeNames")]
         [Validation(Required=false)]
@@ -99,6 +99,10 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-i</para>
+        /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]
         public string ZoneId { get; set; }

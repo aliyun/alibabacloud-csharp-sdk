@@ -8,31 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Emr20210320.Models
 {
-    public class GetApplicationRequest : TeaModel {
-        /// <summary>
-        /// <para>应用名称。</para>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>HDFS</para>
-        /// </summary>
-        [NameInMap("ApplicationName")]
-        [Validation(Required=false)]
-        public string ApplicationName { get; set; }
-
+    public class GetManagedScalingPolicyRequest : TeaModel {
         /// <summary>
         /// <para>集群ID。</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>c-e6a9d46e92675****</para>
+        /// <para>c-b933c5aac8fe****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>地域ID。</para>
+        /// <para>区域ID。</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
