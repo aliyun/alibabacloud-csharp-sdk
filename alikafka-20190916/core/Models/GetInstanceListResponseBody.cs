@@ -461,6 +461,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 [Validation(Required=false)]
                 public int? PaidType { get; set; }
 
+                [NameInMap("RecommendedPartitionCount")]
+                [Validation(Required=false)]
+                public int? RecommendedPartitionCount { get; set; }
+
                 /// <summary>
                 /// <para>The ID of the region where the instance resides.</para>
                 /// 

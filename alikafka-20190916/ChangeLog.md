@@ -1,3 +1,8 @@
+2025-07-24 Version: 2.12.0
+- Support API GetRiskList.
+- Update API GetInstanceList: add response parameters Body.InstanceList.$.RecommendedPartitionCount.
+
+
 2025-05-27 Version: 2.11.0
 - Support API ListRebalanceInfo.
 
