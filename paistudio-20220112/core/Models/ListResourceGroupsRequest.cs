@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string ComputingResourceProvider { get; set; }
 
+        [NameInMap("HasResource")]
+        [Validation(Required=false)]
+        public bool? HasResource { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>rgf0zhfqn1d4ity2</para>

@@ -5098,6 +5098,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HasResource))
+            {
+                query["HasResource"] = request.HasResource;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Labels))
             {
                 query["Labels"] = request.Labels;
@@ -5196,6 +5200,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HasResource))
+            {
+                query["HasResource"] = request.HasResource;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Labels))
             {
                 query["Labels"] = request.Labels;
@@ -5562,6 +5570,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
             {
                 query["ComputingResourceProvider"] = request.ComputingResourceProvider;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HasResource))
+            {
+                query["HasResource"] = request.HasResource;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
@@ -5643,6 +5655,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComputingResourceProvider))
             {
                 query["ComputingResourceProvider"] = request.ComputingResourceProvider;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HasResource))
+            {
+                query["HasResource"] = request.HasResource;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {

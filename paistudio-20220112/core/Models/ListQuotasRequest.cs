@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class ListQuotasRequest : TeaModel {
+        [NameInMap("HasResource")]
+        [Validation(Required=false)]
+        public string HasResource { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>official=true,gpu=false</para>
