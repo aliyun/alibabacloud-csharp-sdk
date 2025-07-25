@@ -16197,6 +16197,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             {
                 query["AlertType"] = request.AlertType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                query["BizRegionId"] = request.BizRegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {
                 query["ClusterId"] = request.ClusterId;
@@ -16274,6 +16278,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertType))
             {
                 query["AlertType"] = request.AlertType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                query["BizRegionId"] = request.BizRegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {

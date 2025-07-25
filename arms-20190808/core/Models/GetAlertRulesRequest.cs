@@ -73,6 +73,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string AlertType { get; set; }
 
+        [NameInMap("BizRegionId")]
+        [Validation(Required=false)]
+        public string BizRegionId { get; set; }
+
         /// <summary>
         /// <para>The ID of the monitored cluster.</para>
         /// 
