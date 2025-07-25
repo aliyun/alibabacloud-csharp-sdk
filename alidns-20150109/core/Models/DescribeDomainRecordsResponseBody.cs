@@ -40,6 +40,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 [Validation(Required=false)]
                 public string DomainName { get; set; }
 
+                [NameInMap("LbaStatus")]
+                [Validation(Required=false)]
+                public bool? LbaStatus { get; set; }
+
                 /// <summary>
                 /// <para>The resolution line.</para>
                 /// 
