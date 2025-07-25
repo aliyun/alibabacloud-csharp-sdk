@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeCloudPhoneNodesRequest : TeaModel {
+        [NameInMap("BandwidthPackageId")]
+        [Validation(Required=false)]
+        public string BandwidthPackageId { get; set; }
+
         /// <summary>
         /// <para>The region ID.</para>
         /// 

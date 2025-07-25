@@ -140,6 +140,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public List<string> OfficeSiteIds { get; set; }
 
+        [NameInMap("PrivateIpAddress")]
+        [Validation(Required=false)]
+        public string PrivateIpAddress { get; set; }
+
         [NameInMap("QosRuleIds")]
         [Validation(Required=false)]
         public List<string> QosRuleIds { get; set; }

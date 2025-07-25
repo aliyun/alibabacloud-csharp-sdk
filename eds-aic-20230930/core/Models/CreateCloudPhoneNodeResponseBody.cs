@@ -9,6 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class CreateCloudPhoneNodeResponseBody : TeaModel {
+        [NameInMap("NetworkPackageOrderModel")]
+        [Validation(Required=false)]
+        public CreateCloudPhoneNodeResponseBodyNetworkPackageOrderModel NetworkPackageOrderModel { get; set; }
+        public class CreateCloudPhoneNodeResponseBodyNetworkPackageOrderModel : TeaModel {
+            [NameInMap("BandwidthPackageId")]
+            [Validation(Required=false)]
+            public string BandwidthPackageId { get; set; }
+
+            [NameInMap("BandwidthPackageOrderId")]
+            [Validation(Required=false)]
+            public string BandwidthPackageOrderId { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The cloud phone matrixes.</para>
         /// </summary>

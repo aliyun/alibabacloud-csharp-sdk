@@ -9,6 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeImageListRequest : TeaModel {
+        [NameInMap("ImageBizTags")]
+        [Validation(Required=false)]
+        public List<DescribeImageListRequestImageBizTags> ImageBizTags { get; set; }
+        public class DescribeImageListRequestImageBizTags : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The ID of the image.</para>
         /// 
@@ -54,6 +68,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [NameInMap("ImageType")]
         [Validation(Required=false)]
         public string ImageType { get; set; }
+
+        [NameInMap("InstanceType")]
+        [Validation(Required=false)]
+        public string InstanceType { get; set; }
 
         /// <summary>
         /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 20.</para>

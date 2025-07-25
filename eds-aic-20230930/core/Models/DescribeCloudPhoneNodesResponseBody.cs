@@ -40,6 +40,28 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public List<DescribeCloudPhoneNodesResponseBodyNodeModel> NodeModel { get; set; }
         public class DescribeCloudPhoneNodesResponseBodyNodeModel : TeaModel {
+            [NameInMap("BandwidthPackageId")]
+            [Validation(Required=false)]
+            public string BandwidthPackageId { get; set; }
+
+            [NameInMap("BandwidthPackageType")]
+            [Validation(Required=false)]
+            public string BandwidthPackageType { get; set; }
+
+            [NameInMap("BizTags")]
+            [Validation(Required=false)]
+            public List<DescribeCloudPhoneNodesResponseBodyNodeModelBizTags> BizTags { get; set; }
+            public class DescribeCloudPhoneNodesResponseBodyNodeModelBizTags : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The billing method.</para>
             /// 
@@ -118,15 +140,31 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public List<DescribeCloudPhoneNodesResponseBodyNodeModelNetworkInfos> NetworkInfos { get; set; }
             public class DescribeCloudPhoneNodesResponseBodyNodeModelNetworkInfos : TeaModel {
+                [NameInMap("BandwidthPackageId")]
+                [Validation(Required=false)]
+                public string BandwidthPackageId { get; set; }
+
+                [NameInMap("BandwidthPackageType")]
+                [Validation(Required=false)]
+                public string BandwidthPackageType { get; set; }
+
                 [NameInMap("NetworkId")]
                 [Validation(Required=false)]
                 public string NetworkId { get; set; }
+
+                [NameInMap("NetworkType")]
+                [Validation(Required=false)]
+                public string NetworkType { get; set; }
 
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]
                 public string VSwitchId { get; set; }
 
             }
+
+            [NameInMap("NetworkType")]
+            [Validation(Required=false)]
+            public string NetworkType { get; set; }
 
             /// <summary>
             /// <para>The matrix ID.</para>

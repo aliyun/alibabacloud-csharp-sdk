@@ -39,6 +39,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public bool? AutoRenew { get; set; }
 
+        [NameInMap("BandwidthPackageId")]
+        [Validation(Required=false)]
+        public string BandwidthPackageId { get; set; }
+
+        [NameInMap("BandwidthPackageType")]
+        [Validation(Required=false)]
+        public string BandwidthPackageType { get; set; }
+
         /// <summary>
         /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
@@ -88,6 +96,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
         }
 
+        [NameInMap("DownBandwidthLimit")]
+        [Validation(Required=false)]
+        public int? DownBandwidthLimit { get; set; }
+
         /// <summary>
         /// <para>The image ID.</para>
         /// 
@@ -122,6 +134,40 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [NameInMap("NetworkId")]
         [Validation(Required=false)]
         public string NetworkId { get; set; }
+
+        [NameInMap("NetworkInfo")]
+        [Validation(Required=false)]
+        public CreateCloudPhoneNodeRequestNetworkInfo NetworkInfo { get; set; }
+        public class CreateCloudPhoneNodeRequestNetworkInfo : TeaModel {
+            [NameInMap("BandwidthPackageName")]
+            [Validation(Required=false)]
+            public string BandwidthPackageName { get; set; }
+
+            [NameInMap("CidrBlock")]
+            [Validation(Required=false)]
+            public string CidrBlock { get; set; }
+
+            [NameInMap("InternetChargeType")]
+            [Validation(Required=false)]
+            public string InternetChargeType { get; set; }
+
+            [NameInMap("IpRatio")]
+            [Validation(Required=false)]
+            public int? IpRatio { get; set; }
+
+            [NameInMap("Isp")]
+            [Validation(Required=false)]
+            public string Isp { get; set; }
+
+            [NameInMap("LimitedBandwidth")]
+            [Validation(Required=false)]
+            public int? LimitedBandwidth { get; set; }
+
+        }
+
+        [NameInMap("NetworkType")]
+        [Validation(Required=false)]
+        public string NetworkType { get; set; }
 
         /// <summary>
         /// <para>The name of the cloud phone matrix.</para>
@@ -253,6 +299,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string Value { get; set; }
 
         }
+
+        [NameInMap("UpBandwidthLimit")]
+        [Validation(Required=false)]
+        public int? UpBandwidthLimit { get; set; }
 
         /// <summary>
         /// <para>The vSwitch ID.</para>

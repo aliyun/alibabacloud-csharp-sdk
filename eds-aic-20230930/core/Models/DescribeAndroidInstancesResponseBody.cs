@@ -110,6 +110,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string AuthorizedUserId { get; set; }
 
+            [NameInMap("BandwidthPackageId")]
+            [Validation(Required=false)]
+            public string BandwidthPackageId { get; set; }
+
+            [NameInMap("BandwidthPackageType")]
+            [Validation(Required=false)]
+            public string BandwidthPackageType { get; set; }
+
             /// <summary>
             /// <para>The ID of the bound user.</para>
             /// 
@@ -119,6 +127,20 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [NameInMap("BindUserId")]
             [Validation(Required=false)]
             public string BindUserId { get; set; }
+
+            [NameInMap("BizTags")]
+            [Validation(Required=false)]
+            public List<DescribeAndroidInstancesResponseBodyInstanceModelBizTags> BizTags { get; set; }
+            public class DescribeAndroidInstancesResponseBodyInstanceModelBizTags : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
 
             /// <summary>
             /// <para>The billing method of the instance.</para>
@@ -194,6 +216,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 public int? ResolutionWidth { get; set; }
 
             }
+
+            [NameInMap("DownBandwidthLimit")]
+            [Validation(Required=false)]
+            public int? DownBandwidthLimit { get; set; }
 
             /// <summary>
             /// <para>The cause of the instance data backup failure or restoration failure.</para>
@@ -301,6 +327,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string NetworkInterfaceIpv6Address { get; set; }
 
+            [NameInMap("NetworkType")]
+            [Validation(Required=false)]
+            public string NetworkType { get; set; }
+
             /// <summary>
             /// <para>The office network ID.</para>
             /// 
@@ -401,6 +431,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string RenderingType { get; set; }
 
+            [NameInMap("ServerType")]
+            [Validation(Required=false)]
+            public string ServerType { get; set; }
+
             /// <summary>
             /// <para>The session status.</para>
             /// <para>Valid values:</para>
@@ -448,6 +482,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 public string Value { get; set; }
 
             }
+
+            [NameInMap("UpBandwidthLimit")]
+            [Validation(Required=false)]
+            public int? UpBandwidthLimit { get; set; }
 
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]

@@ -56,6 +56,20 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string GmtModified { get; set; }
 
+            [NameInMap("ImageBizTags")]
+            [Validation(Required=false)]
+            public List<DescribeImageListResponseBodyDataImageBizTags> ImageBizTags { get; set; }
+            public class DescribeImageListResponseBodyDataImageBizTags : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The ID of the image.</para>
             /// 

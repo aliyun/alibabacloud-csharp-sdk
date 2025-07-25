@@ -19,6 +19,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string AndroidInstanceId { get; set; }
 
+        [NameInMap("DownBandwidthLimit")]
+        [Validation(Required=false)]
+        public int? DownBandwidthLimit { get; set; }
+
+        [NameInMap("InstanceIds")]
+        [Validation(Required=false)]
+        public List<string> InstanceIds { get; set; }
+
         /// <summary>
         /// <para>The new name of the cloud phone instance.</para>
         /// <remarks>
@@ -31,6 +39,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [NameInMap("NewAndroidInstanceName")]
         [Validation(Required=false)]
         public string NewAndroidInstanceName { get; set; }
+
+        [NameInMap("UpBandwidthLimit")]
+        [Validation(Required=false)]
+        public int? UpBandwidthLimit { get; set; }
 
     }
 
