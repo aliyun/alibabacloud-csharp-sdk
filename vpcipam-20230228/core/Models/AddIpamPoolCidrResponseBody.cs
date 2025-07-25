@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.VpcIpam20230228.Models
 {
     public class AddIpamPoolCidrResponseBody : TeaModel {
+        [NameInMap("Cidr")]
+        [Validation(Required=false)]
+        public string Cidr { get; set; }
+
         /// <summary>
         /// <para>The request ID.</para>
         /// 

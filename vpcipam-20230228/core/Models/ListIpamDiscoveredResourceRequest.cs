@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the managed region of the IPAM pool.</para>
+        /// <para>The ID of the hosted region of the IPAM pool.</para>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region list.</para>
         /// <para>This parameter is required.</para>
         /// 

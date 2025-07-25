@@ -14,7 +14,6 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
         /// <remarks>
         /// <para> Only IPv4 CIDR blocks are supported.</para>
         /// </remarks>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.1.0/24</para>
@@ -60,6 +59,10 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
         [NameInMap("IpamPoolId")]
         [Validation(Required=false)]
         public string IpamPoolId { get; set; }
+
+        [NameInMap("NetmaskLength")]
+        [Validation(Required=false)]
+        public int? NetmaskLength { get; set; }
 
         /// <summary>
         /// <para>The ID of the region where the IPAM instance is hosted.</para>

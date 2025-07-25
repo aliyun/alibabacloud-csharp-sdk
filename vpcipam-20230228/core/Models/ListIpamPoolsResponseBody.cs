@@ -177,6 +177,10 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
             [Validation(Required=false)]
             public string IpamScopeType { get; set; }
 
+            [NameInMap("Ipv6Isp")]
+            [Validation(Required=false)]
+            public string Ipv6Isp { get; set; }
+
             /// <summary>
             /// <para>Whether it is a shared pool.</para>
             /// 

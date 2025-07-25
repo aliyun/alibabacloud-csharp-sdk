@@ -122,6 +122,10 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
         [Validation(Required=false)]
         public string IpamScopeId { get; set; }
 
+        [NameInMap("Ipv6Isp")]
+        [Validation(Required=false)]
+        public string Ipv6Isp { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }

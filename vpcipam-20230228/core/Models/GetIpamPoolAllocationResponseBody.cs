@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
         /// <summary>
         /// <para>The region of the IPAM pool.</para>
         /// <remarks>
-        /// <para> If the IPAM pool to which the CIDR block allocation belongs has the region attribute, this parameter is the region of the IPAM pool. If not, this parameter is the IPAM managed region.</para>
+        /// <para> If the IPAM pool to which the CIDR block allocation belongs has the region attribute, this parameter is the region of the IPAM pool. If not, this parameter is the IPAM hosted region.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

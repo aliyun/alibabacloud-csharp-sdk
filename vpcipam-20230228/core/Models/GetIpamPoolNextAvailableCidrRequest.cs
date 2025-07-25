@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
         /// <summary>
         /// <para>The region of the IPAM pool.</para>
         /// <remarks>
-        /// <para> If the IPAM pool has the region attribute, this parameter is set to the effective region of the IPAM pool. If not, this is set to the managed region.</para>
+        /// <para> If the IPAM pool has the region attribute, this parameter is set to the effective region of the IPAM pool. If not, this is set to the hosted region.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

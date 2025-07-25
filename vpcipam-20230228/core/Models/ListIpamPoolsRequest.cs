@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.VpcIpam20230228.Models
 {
     public class ListIpamPoolsRequest : TeaModel {
+        [NameInMap("IpVersion")]
+        [Validation(Required=false)]
+        public string IpVersion { get; set; }
+
         /// <summary>
         /// <para>The IDs of IPAM pools. Valid values of N: 1 to 100. A maximum of 100 IPAM pools can be queried at a time.</para>
         /// </summary>
@@ -36,6 +40,10 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
         [NameInMap("IpamScopeId")]
         [Validation(Required=false)]
         public string IpamScopeId { get; set; }
+
+        [NameInMap("Ipv6Isp")]
+        [Validation(Required=false)]
+        public string Ipv6Isp { get; set; }
 
         /// <summary>
         /// <para>Whether it is a shared pool.</para>

@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
         /// <summary>
         /// <para>The request region.</para>
         /// <remarks>
-        /// <para> The request region is the managed region of the resource discovery instance.</para>
+        /// <para> The request region is the hosted region of the resource discovery instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

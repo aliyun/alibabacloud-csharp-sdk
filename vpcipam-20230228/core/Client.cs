@@ -85,6 +85,10 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             {
                 query["IpamPoolId"] = request.IpamPoolId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetmaskLength))
+            {
+                query["NetmaskLength"] = request.NetmaskLength;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -155,6 +159,10 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpamPoolId))
             {
                 query["IpamPoolId"] = request.IpamPoolId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetmaskLength))
+            {
+                query["NetmaskLength"] = request.NetmaskLength;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -940,6 +948,10 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             {
                 query["IpamScopeId"] = request.IpamScopeId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6Isp))
+            {
+                query["Ipv6Isp"] = request.Ipv6Isp;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -1053,6 +1065,10 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpamScopeId))
             {
                 query["IpamScopeId"] = request.IpamScopeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6Isp))
+            {
+                query["Ipv6Isp"] = request.Ipv6Isp;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -4056,6 +4072,10 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpVersion))
+            {
+                query["IpVersion"] = request.IpVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpamPoolIds))
             {
                 query["IpamPoolIds"] = request.IpamPoolIds;
@@ -4067,6 +4087,10 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpamScopeId))
             {
                 query["IpamScopeId"] = request.IpamScopeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6Isp))
+            {
+                query["Ipv6Isp"] = request.Ipv6Isp;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsShared))
             {
@@ -4154,6 +4178,10 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpVersion))
+            {
+                query["IpVersion"] = request.IpVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpamPoolIds))
             {
                 query["IpamPoolIds"] = request.IpamPoolIds;
@@ -4165,6 +4193,10 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpamScopeId))
             {
                 query["IpamScopeId"] = request.IpamScopeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6Isp))
+            {
+                query["Ipv6Isp"] = request.Ipv6Isp;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsShared))
             {
@@ -6678,7 +6710,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
         /// <description>
         /// <para>  You can add or remove effective regions only for custom resource discovery instances.</para>
         /// <list type="bullet">
-        /// <item><description>When removing effective regions from a resource discovery instance, the managed region cannot be included.</description></item>
+        /// <item><description>When removing effective regions from a resource discovery instance, the hosted region cannot be included.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6772,7 +6804,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
         /// <description>
         /// <para>  You can add or remove effective regions only for custom resource discovery instances.</para>
         /// <list type="bullet">
-        /// <item><description>When removing effective regions from a resource discovery instance, the managed region cannot be included.</description></item>
+        /// <item><description>When removing effective regions from a resource discovery instance, the hosted region cannot be included.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6866,7 +6898,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
         /// <description>
         /// <para>  You can add or remove effective regions only for custom resource discovery instances.</para>
         /// <list type="bullet">
-        /// <item><description>When removing effective regions from a resource discovery instance, the managed region cannot be included.</description></item>
+        /// <item><description>When removing effective regions from a resource discovery instance, the hosted region cannot be included.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6892,7 +6924,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
         /// <description>
         /// <para>  You can add or remove effective regions only for custom resource discovery instances.</para>
         /// <list type="bullet">
-        /// <item><description>When removing effective regions from a resource discovery instance, the managed region cannot be included.</description></item>
+        /// <item><description>When removing effective regions from a resource discovery instance, the hosted region cannot be included.</description></item>
         /// </list>
         /// </description>
         /// 
