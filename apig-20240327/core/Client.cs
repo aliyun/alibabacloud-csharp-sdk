@@ -8299,6 +8299,10 @@ namespace AlibabaCloud.SDK.APIG20240327
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttachResourceId))
+            {
+                query["attachResourceId"] = request.AttachResourceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttachResourceType))
             {
                 query["attachResourceType"] = request.AttachResourceType;
@@ -8306,6 +8310,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
             {
                 query["direction"] = request.Direction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                query["gatewayId"] = request.GatewayId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
@@ -8361,6 +8369,10 @@ namespace AlibabaCloud.SDK.APIG20240327
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttachResourceId))
+            {
+                query["attachResourceId"] = request.AttachResourceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttachResourceType))
             {
                 query["attachResourceType"] = request.AttachResourceType;
@@ -8368,6 +8380,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
             {
                 query["direction"] = request.Direction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                query["gatewayId"] = request.GatewayId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {

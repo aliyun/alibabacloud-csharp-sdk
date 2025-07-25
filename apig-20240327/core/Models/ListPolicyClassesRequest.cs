@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListPolicyClassesRequest : TeaModel {
+        [NameInMap("attachResourceId")]
+        [Validation(Required=false)]
+        public string AttachResourceId { get; set; }
+
         /// <summary>
         /// <para>Types of attachment points supported by the policy.</para>
         /// <list type="bullet">
@@ -42,6 +46,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [NameInMap("direction")]
         [Validation(Required=false)]
         public string Direction { get; set; }
+
+        [NameInMap("gatewayId")]
+        [Validation(Required=false)]
+        public string GatewayId { get; set; }
 
         /// <summary>
         /// <para>Page number, default is 1.</para>
