@@ -579,6 +579,206 @@ namespace AlibabaCloud.SDK.Brain_industrial20200920
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建用电负荷预测任务，历史数据来自文件url</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLoadForecastByFileUrlJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLoadForecastByFileUrlJobResponse
+        /// </returns>
+        public CreateLoadForecastByFileUrlJobResponse CreateLoadForecastByFileUrlJobWithOptions(CreateLoadForecastByFileUrlJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessKey))
+            {
+                body["BusinessKey"] = request.BusinessKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceType))
+            {
+                body["DeviceType"] = request.DeviceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Duration))
+            {
+                body["Duration"] = request.Duration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Freq))
+            {
+                body["Freq"] = request.Freq;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HistoryUrl))
+            {
+                body["HistoryUrl"] = request.HistoryUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelVersion))
+            {
+                body["ModelVersion"] = request.ModelVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunDate))
+            {
+                body["RunDate"] = request.RunDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemType))
+            {
+                body["SystemType"] = request.SystemType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeColumn))
+            {
+                body["TimeColumn"] = request.TimeColumn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeZone))
+            {
+                body["TimeZone"] = request.TimeZone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValueColumn))
+            {
+                body["ValueColumn"] = request.ValueColumn;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateLoadForecastByFileUrlJob",
+                Version = "2020-09-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateLoadForecastByFileUrlJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建用电负荷预测任务，历史数据来自文件url</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLoadForecastByFileUrlJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLoadForecastByFileUrlJobResponse
+        /// </returns>
+        public async Task<CreateLoadForecastByFileUrlJobResponse> CreateLoadForecastByFileUrlJobWithOptionsAsync(CreateLoadForecastByFileUrlJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessKey))
+            {
+                body["BusinessKey"] = request.BusinessKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceType))
+            {
+                body["DeviceType"] = request.DeviceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Duration))
+            {
+                body["Duration"] = request.Duration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Freq))
+            {
+                body["Freq"] = request.Freq;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HistoryUrl))
+            {
+                body["HistoryUrl"] = request.HistoryUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelVersion))
+            {
+                body["ModelVersion"] = request.ModelVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunDate))
+            {
+                body["RunDate"] = request.RunDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemType))
+            {
+                body["SystemType"] = request.SystemType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeColumn))
+            {
+                body["TimeColumn"] = request.TimeColumn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeZone))
+            {
+                body["TimeZone"] = request.TimeZone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValueColumn))
+            {
+                body["ValueColumn"] = request.ValueColumn;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateLoadForecastByFileUrlJob",
+                Version = "2020-09-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateLoadForecastByFileUrlJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建用电负荷预测任务，历史数据来自文件url</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLoadForecastByFileUrlJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLoadForecastByFileUrlJobResponse
+        /// </returns>
+        public CreateLoadForecastByFileUrlJobResponse CreateLoadForecastByFileUrlJob(CreateLoadForecastByFileUrlJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateLoadForecastByFileUrlJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建用电负荷预测任务，历史数据来自文件url</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLoadForecastByFileUrlJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLoadForecastByFileUrlJobResponse
+        /// </returns>
+        public async Task<CreateLoadForecastByFileUrlJobResponse> CreateLoadForecastByFileUrlJobAsync(CreateLoadForecastByFileUrlJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateLoadForecastByFileUrlJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>创建用电负荷预测任务</para>
         /// </summary>
         /// 
@@ -771,6 +971,226 @@ namespace AlibabaCloud.SDK.Brain_industrial20200920
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateLoadForecastJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建发电功率预测任务，历史数据来自文件url</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreatePowerForecastByFileUrlJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePowerForecastByFileUrlJobResponse
+        /// </returns>
+        public CreatePowerForecastByFileUrlJobResponse CreatePowerForecastByFileUrlJobWithOptions(CreatePowerForecastByFileUrlJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreatePowerForecastByFileUrlJobShrinkRequest request = new CreatePowerForecastByFileUrlJobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Location))
+            {
+                request.LocationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Location, "Location", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessKey))
+            {
+                body["BusinessKey"] = request.BusinessKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceType))
+            {
+                body["DeviceType"] = request.DeviceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Duration))
+            {
+                body["Duration"] = request.Duration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Freq))
+            {
+                body["Freq"] = request.Freq;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HistoryUrl))
+            {
+                body["HistoryUrl"] = request.HistoryUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocationShrink))
+            {
+                body["Location"] = request.LocationShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelVersion))
+            {
+                body["ModelVersion"] = request.ModelVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunDate))
+            {
+                body["RunDate"] = request.RunDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemType))
+            {
+                body["SystemType"] = request.SystemType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeColumn))
+            {
+                body["TimeColumn"] = request.TimeColumn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeZone))
+            {
+                body["TimeZone"] = request.TimeZone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValueColumn))
+            {
+                body["ValueColumn"] = request.ValueColumn;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreatePowerForecastByFileUrlJob",
+                Version = "2020-09-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreatePowerForecastByFileUrlJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建发电功率预测任务，历史数据来自文件url</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreatePowerForecastByFileUrlJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePowerForecastByFileUrlJobResponse
+        /// </returns>
+        public async Task<CreatePowerForecastByFileUrlJobResponse> CreatePowerForecastByFileUrlJobWithOptionsAsync(CreatePowerForecastByFileUrlJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreatePowerForecastByFileUrlJobShrinkRequest request = new CreatePowerForecastByFileUrlJobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Location))
+            {
+                request.LocationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Location, "Location", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessKey))
+            {
+                body["BusinessKey"] = request.BusinessKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceType))
+            {
+                body["DeviceType"] = request.DeviceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Duration))
+            {
+                body["Duration"] = request.Duration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Freq))
+            {
+                body["Freq"] = request.Freq;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HistoryUrl))
+            {
+                body["HistoryUrl"] = request.HistoryUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocationShrink))
+            {
+                body["Location"] = request.LocationShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelVersion))
+            {
+                body["ModelVersion"] = request.ModelVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunDate))
+            {
+                body["RunDate"] = request.RunDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemType))
+            {
+                body["SystemType"] = request.SystemType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeColumn))
+            {
+                body["TimeColumn"] = request.TimeColumn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeZone))
+            {
+                body["TimeZone"] = request.TimeZone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValueColumn))
+            {
+                body["ValueColumn"] = request.ValueColumn;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreatePowerForecastByFileUrlJob",
+                Version = "2020-09-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreatePowerForecastByFileUrlJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建发电功率预测任务，历史数据来自文件url</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreatePowerForecastByFileUrlJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePowerForecastByFileUrlJobResponse
+        /// </returns>
+        public CreatePowerForecastByFileUrlJobResponse CreatePowerForecastByFileUrlJob(CreatePowerForecastByFileUrlJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreatePowerForecastByFileUrlJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建发电功率预测任务，历史数据来自文件url</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreatePowerForecastByFileUrlJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePowerForecastByFileUrlJobResponse
+        /// </returns>
+        public async Task<CreatePowerForecastByFileUrlJobResponse> CreatePowerForecastByFileUrlJobAsync(CreatePowerForecastByFileUrlJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreatePowerForecastByFileUrlJobWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
