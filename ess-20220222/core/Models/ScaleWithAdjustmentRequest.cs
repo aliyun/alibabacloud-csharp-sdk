@@ -214,6 +214,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public float? Memory { get; set; }
 
+            [NameInMap("UserData")]
+            [Validation(Required=false)]
+            public string UserData { get; set; }
+
         }
 
         [NameInMap("OwnerId")]
