@@ -1435,6 +1435,242 @@ namespace AlibabaCloud.SDK.Yunjian20211217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>报备列表查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PageDemandPlanWithDemandInfoRequest
+        /// </param>
+        /// <param name="headers">
+        /// PageDemandPlanWithDemandInfoHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PageDemandPlanWithDemandInfoResponse
+        /// </returns>
+        public PageDemandPlanWithDemandInfoResponse PageDemandPlanWithDemandInfoWithOptions(PageDemandPlanWithDemandInfoRequest request, PageDemandPlanWithDemandInfoHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApprovalStatus))
+            {
+                body["approvalStatus"] = request.ApprovalStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimeEnd))
+            {
+                body["createTimeEnd"] = request.CreateTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimeStart))
+            {
+                body["createTimeStart"] = request.CreateTimeStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreatorStaffId))
+            {
+                body["creatorStaffId"] = request.CreatorStaffId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DemandDeliveryStatus))
+            {
+                body["demandDeliveryStatus"] = request.DemandDeliveryStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DemandId))
+            {
+                body["demandId"] = request.DemandId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DemandPlanId))
+            {
+                body["demandPlanId"] = request.DemandPlanId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DemandPlanStatus))
+            {
+                body["demandPlanStatus"] = request.DemandPlanStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Operator))
+            {
+                body["operator"] = request.Operator;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                body["pageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoCode))
+            {
+                body["roCode"] = request.RoCode;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.YunUserId))
+            {
+                realHeaders["Yun-User-Id"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.YunUserId);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PageDemandPlanWithDemandInfo",
+                Version = "2021-12-17",
+                Protocol = "HTTPS",
+                Pathname = "/api/demand/getDemandPlanList",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PageDemandPlanWithDemandInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>报备列表查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PageDemandPlanWithDemandInfoRequest
+        /// </param>
+        /// <param name="headers">
+        /// PageDemandPlanWithDemandInfoHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PageDemandPlanWithDemandInfoResponse
+        /// </returns>
+        public async Task<PageDemandPlanWithDemandInfoResponse> PageDemandPlanWithDemandInfoWithOptionsAsync(PageDemandPlanWithDemandInfoRequest request, PageDemandPlanWithDemandInfoHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApprovalStatus))
+            {
+                body["approvalStatus"] = request.ApprovalStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimeEnd))
+            {
+                body["createTimeEnd"] = request.CreateTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimeStart))
+            {
+                body["createTimeStart"] = request.CreateTimeStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreatorStaffId))
+            {
+                body["creatorStaffId"] = request.CreatorStaffId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DemandDeliveryStatus))
+            {
+                body["demandDeliveryStatus"] = request.DemandDeliveryStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DemandId))
+            {
+                body["demandId"] = request.DemandId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DemandPlanId))
+            {
+                body["demandPlanId"] = request.DemandPlanId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DemandPlanStatus))
+            {
+                body["demandPlanStatus"] = request.DemandPlanStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Operator))
+            {
+                body["operator"] = request.Operator;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                body["pageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoCode))
+            {
+                body["roCode"] = request.RoCode;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.YunUserId))
+            {
+                realHeaders["Yun-User-Id"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.YunUserId);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PageDemandPlanWithDemandInfo",
+                Version = "2021-12-17",
+                Protocol = "HTTPS",
+                Pathname = "/api/demand/getDemandPlanList",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PageDemandPlanWithDemandInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>报备列表查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PageDemandPlanWithDemandInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PageDemandPlanWithDemandInfoResponse
+        /// </returns>
+        public PageDemandPlanWithDemandInfoResponse PageDemandPlanWithDemandInfo(PageDemandPlanWithDemandInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            PageDemandPlanWithDemandInfoHeaders headers = new PageDemandPlanWithDemandInfoHeaders();
+            return PageDemandPlanWithDemandInfoWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>报备列表查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PageDemandPlanWithDemandInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PageDemandPlanWithDemandInfoResponse
+        /// </returns>
+        public async Task<PageDemandPlanWithDemandInfoResponse> PageDemandPlanWithDemandInfoAsync(PageDemandPlanWithDemandInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            PageDemandPlanWithDemandInfoHeaders headers = new PageDemandPlanWithDemandInfoHeaders();
+            return await PageDemandPlanWithDemandInfoWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>ecs资源方案</para>
         /// </summary>
         /// 
