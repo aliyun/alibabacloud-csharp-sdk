@@ -1,3 +1,13 @@
+2025-07-28 Version: 4.9.0
+- Support API CreateSystemPropertyTemplate.
+- Support API DeleteSystemPropertyTemplates.
+- Support API DescribeSystemPropertyTemplates.
+- Support API GetInstanceProperties.
+- Support API ModifySystemPropertyTemplate.
+- Support API SendSystemPropertyTemplate.
+- Update API CreateCloudPhoneNode: add request parameters UseTemplate.
+
+
 2025-07-25 Version: 4.8.1
 - Update API CreateCloudPhoneNode: add request parameters BandwidthPackageId.
 - Update API CreateCloudPhoneNode: add request parameters BandwidthPackageType.

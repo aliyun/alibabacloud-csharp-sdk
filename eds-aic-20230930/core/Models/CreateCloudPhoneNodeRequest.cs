@@ -304,6 +304,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public int? UpBandwidthLimit { get; set; }
 
+        [NameInMap("UseTemplate")]
+        [Validation(Required=false)]
+        public string UseTemplate { get; set; }
+
         /// <summary>
         /// <para>The vSwitch ID.</para>
         /// 
