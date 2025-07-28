@@ -79,6 +79,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public string DefenseScene { get; set; }
 
+            [NameInMap("DefenseType")]
+            [Validation(Required=false)]
+            public string DefenseType { get; set; }
+
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ModifyDefenseRuleStatusRequest : TeaModel {
+        [NameInMap("DefenseType")]
+        [Validation(Required=false)]
+        public string DefenseType { get; set; }
+
         /// <summary>
         /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
         /// <remarks>
@@ -75,7 +79,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
         /// <summary>
         /// <para>The ID of the protection rule template to which the protection rule whose status you want to change belongs.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7239</para>

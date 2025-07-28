@@ -34,6 +34,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public List<string> Resources { get; set; }
 
+        [NameInMap("TemplateId")]
+        [Validation(Required=false)]
+        public long? TemplateId { get; set; }
+
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }

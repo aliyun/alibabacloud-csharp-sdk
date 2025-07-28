@@ -60,6 +60,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public string DefenseScene { get; set; }
 
+            [NameInMap("DefenseType")]
+            [Validation(Required=false)]
+            public string DefenseType { get; set; }
+
             /// <summary>
             /// <para>The most recent time when the protection rule was modified.</para>
             /// 

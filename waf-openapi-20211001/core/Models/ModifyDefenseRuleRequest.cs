@@ -11,7 +11,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
     public class ModifyDefenseRuleRequest : TeaModel {
         /// <summary>
         /// <para>The scenario in which you want to use the protection rule. For more information, see the description of the <b>DefenseScene</b> parameter in the <a href="~~CreateDefenseRule~~">CreateDefenseRule</a> topic.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>waf_group</para>
