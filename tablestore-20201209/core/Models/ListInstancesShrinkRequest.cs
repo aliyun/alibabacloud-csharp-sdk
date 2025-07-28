@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The instance status.</para>
+        /// <para>The status of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>normal</para>
@@ -66,6 +66,9 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// <para>The tags of the instance.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public string TagShrink { get; set; }

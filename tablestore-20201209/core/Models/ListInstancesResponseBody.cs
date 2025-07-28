@@ -71,11 +71,11 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
             public string InstanceSpecification { get; set; }
 
             /// <summary>
-            /// <para>The instance status.</para>
+            /// <para>The status of the instance.</para>
             /// <list type="bullet">
-            /// <item><description>normal: The instance works as expected.</description></item>
+            /// <item><description>normal: The instance runs as expected.</description></item>
             /// <item><description>forbidden: The instance is disabled.</description></item>
-            /// <item><description>deleting: The instance is being deleted.</description></item>
+            /// <item><description>Deleting: The instance is being released.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

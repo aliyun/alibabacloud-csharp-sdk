@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The instance status.</para>
+        /// <para>The status of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>normal</para>
@@ -66,14 +66,29 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// <para>The tags of the instance.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListInstancesRequestTag> Tag { get; set; }
         public class ListInstancesRequestTag : TeaModel {
+            /// <summary>
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Owner</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Tester</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

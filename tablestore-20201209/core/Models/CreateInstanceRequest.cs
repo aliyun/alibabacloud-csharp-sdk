@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         [Validation(Required=false)]
         public string ClusterType { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>(Deprecated) Specifies whether to enable disaster recovery for the instance.</para>
         /// <para>Valid values:</para>
@@ -33,6 +35,7 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         /// </summary>
         [NameInMap("DisableReplication")]
         [Validation(Required=false)]
+        [Obsolete]
         public bool? DisableReplication { get; set; }
 
         /// <summary>
