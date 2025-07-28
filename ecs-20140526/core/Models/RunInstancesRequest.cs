@@ -1581,6 +1581,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public RunInstancesRequestNetworkOptions NetworkOptions { get; set; }
         public class RunInstancesRequestNetworkOptions : TeaModel {
+            [NameInMap("BandwidthWeighting")]
+            [Validation(Required=false)]
+            public string BandwidthWeighting { get; set; }
+
             /// <summary>
             /// <para>Specifies whether to enable the Jumbo Frames feature for the instance. Valid values:</para>
             /// <list type="bullet">

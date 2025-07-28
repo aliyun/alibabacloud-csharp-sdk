@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("autoSnapshotPolicyId")]
+        [Validation(Required=false)]
+        public string AutoSnapshotPolicyId { get; set; }
+
         /// <summary>
         /// <para>The IDs of the disks for which you want to disable the automatic snapshot policy. To disable the automatic snapshot policy for multiple disks, you can set this parameter to a JSON array that consists of multiple disk IDs, such as [&quot;dxxxxxxxxx&quot;, &quot;dyyyyyyyyy&quot;, … &quot;dzzzzzzzzz&quot;]. Separate the disk IDs with commas (,).</para>
         /// <para>This parameter is required.</para>

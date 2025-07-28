@@ -336,6 +336,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public DescribeInstanceAttributeResponseBodyNetworkOptions NetworkOptions { get; set; }
         public class DescribeInstanceAttributeResponseBodyNetworkOptions : TeaModel {
+            [NameInMap("BandwidthWeighting")]
+            [Validation(Required=false)]
+            public string BandwidthWeighting { get; set; }
+
             [NameInMap("EnableJumboFrame")]
             [Validation(Required=false)]
             public bool? EnableJumboFrame { get; set; }
