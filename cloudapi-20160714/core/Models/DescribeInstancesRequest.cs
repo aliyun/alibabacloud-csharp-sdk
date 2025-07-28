@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("InstanceType")]
+        [Validation(Required=false)]
+        public string InstanceType { get; set; }
+
         /// <summary>
         /// <para>The language in which you want the description of the system policy to be returned. Valid values:</para>
         /// <list type="bullet">
