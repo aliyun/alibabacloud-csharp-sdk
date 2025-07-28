@@ -95,6 +95,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
             [Validation(Required=false)]
             public string GmtEndTime { get; set; }
 
+            [NameInMap("LifecycleId")]
+            [Validation(Required=false)]
+            public string LifecycleId { get; set; }
+
         }
 
         /// <summary>
