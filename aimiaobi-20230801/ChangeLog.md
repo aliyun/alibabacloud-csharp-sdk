@@ -1,3 +1,6 @@
+2025-07-28 Version: 1.32.2
+- Generated csharp 2023-08-01 for AiMiaoBi.
+
 2025-07-24 Version: 1.32.1
 - Update API AsyncCreateClipsTimeLine: add request parameters AdditionalContent.
 - Update API AsyncCreateClipsTimeLine: add request parameters CustomContent.
