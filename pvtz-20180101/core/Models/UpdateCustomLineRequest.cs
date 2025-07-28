@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class UpdateCustomLineRequest : TeaModel {
+        [NameInMap("DnsCategory")]
+        [Validation(Required=false)]
+        public string DnsCategory { get; set; }
+
         /// <summary>
         /// <para>The IPv4 CIDR blocks.</para>
         /// <para>This parameter is required.</para>

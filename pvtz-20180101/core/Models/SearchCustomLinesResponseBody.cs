@@ -80,6 +80,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
                 [Validation(Required=false)]
                 public string CreatorType { get; set; }
 
+                [NameInMap("DnsCategory")]
+                [Validation(Required=false)]
+                public string DnsCategory { get; set; }
+
                 /// <summary>
                 /// <para>The IPv4 CIDR blocks.</para>
                 /// </summary>

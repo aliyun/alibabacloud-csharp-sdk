@@ -6772,6 +6772,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DnsCategory))
+            {
+                query["DnsCategory"] = request.DnsCategory;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv4s))
             {
                 query["Ipv4s"] = request.Ipv4s;
@@ -6826,6 +6830,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DnsCategory))
+            {
+                query["DnsCategory"] = request.DnsCategory;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv4s))
             {
                 query["Ipv4s"] = request.Ipv4s;
