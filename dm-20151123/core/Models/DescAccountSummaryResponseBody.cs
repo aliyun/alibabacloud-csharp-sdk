@@ -60,6 +60,14 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? EnableTimes { get; set; }
 
         /// <summary>
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
+        [NameInMap("IpChannelType")]
+        [Validation(Required=false)]
+        public string IpChannelType { get; set; }
+
+        /// <summary>
         /// <para>Number of sending addresses</para>
         /// 
         /// <b>Example:</b>
