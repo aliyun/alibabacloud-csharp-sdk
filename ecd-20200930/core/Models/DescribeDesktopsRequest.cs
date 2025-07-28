@@ -187,6 +187,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public List<string> ImageId { get; set; }
 
+        [NameInMap("IncludeAutoSnapshotPolicy")]
+        [Validation(Required=false)]
+        public bool? IncludeAutoSnapshotPolicy { get; set; }
+
         /// <summary>
         /// <para>The flag that is used to manage the cloud desktops.</para>
         /// 

@@ -20245,6 +20245,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["ImageId"] = request.ImageId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeAutoSnapshotPolicy))
+            {
+                query["IncludeAutoSnapshotPolicy"] = request.IncludeAutoSnapshotPolicy;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagementFlag))
             {
                 query["ManagementFlag"] = request.ManagementFlag;
@@ -20426,6 +20430,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
             {
                 query["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeAutoSnapshotPolicy))
+            {
+                query["IncludeAutoSnapshotPolicy"] = request.IncludeAutoSnapshotPolicy;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagementFlag))
             {
