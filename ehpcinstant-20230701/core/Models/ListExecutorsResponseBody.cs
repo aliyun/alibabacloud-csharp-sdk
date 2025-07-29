@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             [Validation(Required=false)]
             public int? ArrayIndex { get; set; }
 
+            [NameInMap("BlockDuration")]
+            [Validation(Required=false)]
+            public int? BlockDuration { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>2024-02-20 10:04:10</para>
@@ -84,6 +88,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             [NameInMap("JobName")]
             [Validation(Required=false)]
             public string JobName { get; set; }
+
+            [NameInMap("Preemptible")]
+            [Validation(Required=false)]
+            public bool? Preemptible { get; set; }
 
             [NameInMap("Resource")]
             [Validation(Required=false)]

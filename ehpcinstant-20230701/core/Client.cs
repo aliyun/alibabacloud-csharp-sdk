@@ -237,6 +237,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateJobShrinkRequest request = new CreateJobShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DependencyPolicy))
+            {
+                request.DependencyPolicyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DependencyPolicy, "DependencyPolicy", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DeploymentPolicy))
             {
                 request.DeploymentPolicyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DeploymentPolicy, "DeploymentPolicy", "json");
@@ -250,6 +254,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
                 request.TasksShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tasks, "Tasks", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DependencyPolicyShrink))
+            {
+                query["DependencyPolicy"] = request.DependencyPolicyShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentPolicyShrink))
             {
                 query["DeploymentPolicy"] = request.DeploymentPolicyShrink;
@@ -313,6 +321,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateJobShrinkRequest request = new CreateJobShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DependencyPolicy))
+            {
+                request.DependencyPolicyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DependencyPolicy, "DependencyPolicy", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DeploymentPolicy))
             {
                 request.DeploymentPolicyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DeploymentPolicy, "DeploymentPolicy", "json");
@@ -326,6 +338,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
                 request.TasksShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tasks, "Tasks", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DependencyPolicyShrink))
+            {
+                query["DependencyPolicy"] = request.DependencyPolicyShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentPolicyShrink))
             {
                 query["DeploymentPolicy"] = request.DeploymentPolicyShrink;

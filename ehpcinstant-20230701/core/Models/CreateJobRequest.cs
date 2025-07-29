@@ -9,6 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 {
     public class CreateJobRequest : TeaModel {
+        [NameInMap("DependencyPolicy")]
+        [Validation(Required=false)]
+        public CreateJobRequestDependencyPolicy DependencyPolicy { get; set; }
+        public class CreateJobRequestDependencyPolicy : TeaModel {
+            [NameInMap("JobDependency")]
+            [Validation(Required=false)]
+            public List<CreateJobRequestDependencyPolicyJobDependency> JobDependency { get; set; }
+            public class CreateJobRequestDependencyPolicyJobDependency : TeaModel {
+                /// <summary>
+                /// <para>This parameter is required.</para>
+                /// </summary>
+                [NameInMap("JobId")]
+                [Validation(Required=false)]
+                public string JobId { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+            }
+
+        }
+
         [NameInMap("DeploymentPolicy")]
         [Validation(Required=false)]
         public CreateJobRequestDeploymentPolicy DeploymentPolicy { get; set; }
@@ -212,6 +235,36 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                     [NameInMap("Memory")]
                     [Validation(Required=false)]
                     public float? Memory { get; set; }
+
+                }
+
+                [NameInMap("RetryPolicy")]
+                [Validation(Required=false)]
+                public CreateJobRequestTasksTaskSpecRetryPolicy RetryPolicy { get; set; }
+                public class CreateJobRequestTasksTaskSpecRetryPolicy : TeaModel {
+                    [NameInMap("ExitCodeActions")]
+                    [Validation(Required=false)]
+                    public List<CreateJobRequestTasksTaskSpecRetryPolicyExitCodeActions> ExitCodeActions { get; set; }
+                    public class CreateJobRequestTasksTaskSpecRetryPolicyExitCodeActions : TeaModel {
+                        /// <summary>
+                        /// <para>This parameter is required.</para>
+                        /// </summary>
+                        [NameInMap("Action")]
+                        [Validation(Required=false)]
+                        public string Action { get; set; }
+
+                        /// <summary>
+                        /// <para>This parameter is required.</para>
+                        /// </summary>
+                        [NameInMap("ExitCode")]
+                        [Validation(Required=false)]
+                        public long? ExitCode { get; set; }
+
+                    }
+
+                    [NameInMap("RetryCount")]
+                    [Validation(Required=false)]
+                    public int? RetryCount { get; set; }
 
                 }
 

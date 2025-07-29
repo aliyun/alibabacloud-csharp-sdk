@@ -25,6 +25,26 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            [NameInMap("DependencyPolicy")]
+            [Validation(Required=false)]
+            public GetJobResponseBodyJobInfoDependencyPolicy DependencyPolicy { get; set; }
+            public class GetJobResponseBodyJobInfoDependencyPolicy : TeaModel {
+                [NameInMap("JobDependency")]
+                [Validation(Required=false)]
+                public List<GetJobResponseBodyJobInfoDependencyPolicyJobDependency> JobDependency { get; set; }
+                public class GetJobResponseBodyJobInfoDependencyPolicyJobDependency : TeaModel {
+                    [NameInMap("JobId")]
+                    [Validation(Required=false)]
+                    public string JobId { get; set; }
+
+                    [NameInMap("Type")]
+                    [Validation(Required=false)]
+                    public string Type { get; set; }
+
+                }
+
+            }
+
             [NameInMap("DeploymentPolicy")]
             [Validation(Required=false)]
             public GetJobResponseBodyJobInfoDeploymentPolicy DeploymentPolicy { get; set; }
@@ -286,6 +306,30 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                         [NameInMap("Memory")]
                         [Validation(Required=false)]
                         public int? Memory { get; set; }
+
+                    }
+
+                    [NameInMap("RetryPolicy")]
+                    [Validation(Required=false)]
+                    public GetJobResponseBodyJobInfoTasksTaskSpecRetryPolicy RetryPolicy { get; set; }
+                    public class GetJobResponseBodyJobInfoTasksTaskSpecRetryPolicy : TeaModel {
+                        [NameInMap("ExitCodeActions")]
+                        [Validation(Required=false)]
+                        public List<GetJobResponseBodyJobInfoTasksTaskSpecRetryPolicyExitCodeActions> ExitCodeActions { get; set; }
+                        public class GetJobResponseBodyJobInfoTasksTaskSpecRetryPolicyExitCodeActions : TeaModel {
+                            [NameInMap("Action")]
+                            [Validation(Required=false)]
+                            public string Action { get; set; }
+
+                            [NameInMap("ExitCode")]
+                            [Validation(Required=false)]
+                            public long? ExitCode { get; set; }
+
+                        }
+
+                        [NameInMap("RetryCount")]
+                        [Validation(Required=false)]
+                        public int? RetryCount { get; set; }
 
                     }
 

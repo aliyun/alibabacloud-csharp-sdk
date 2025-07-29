@@ -1,3 +1,14 @@
+2025-07-29 Version: 2.0.8
+- Update API CreateJob: add request parameters DependencyPolicy.
+- Update API CreateJob: add request parameters Tasks.$.TaskSpec.RetryPolicy.
+- Update API GetJob: add response parameters Body.JobInfo.DependencyPolicy.
+- Update API GetJob: add response parameters Body.JobInfo.Tasks.$.TaskSpec.RetryPolicy.
+- Update API ListExecutors: add response parameters Body.Executors.$.BlockDuration.
+- Update API ListExecutors: add response parameters Body.Executors.$.Preemptible.
+- Update API ListJobExecutors: add response parameters Body.Executors.$.BlockDuration.
+- Update API ListJobExecutors: add response parameters Body.Executors.$.Preemptible.
+
+
 2025-07-11 Version: 2.0.7
 - Update API ListExecutors: add request parameters Filter.Image.
 - Update API ListExecutors: add request parameters Filter.VswitchId.

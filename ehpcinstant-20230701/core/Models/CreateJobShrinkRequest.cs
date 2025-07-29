@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 {
     public class CreateJobShrinkRequest : TeaModel {
+        [NameInMap("DependencyPolicy")]
+        [Validation(Required=false)]
+        public string DependencyPolicyShrink { get; set; }
+
         [NameInMap("DeploymentPolicy")]
         [Validation(Required=false)]
         public string DeploymentPolicyShrink { get; set; }
