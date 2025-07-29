@@ -435,6 +435,56 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
 
                 }
 
+                [NameInMap("videoRoleRecognitionResult")]
+                [Validation(Required=false)]
+                public RunVideoAnalysisResponseBodyPayloadOutputVideoRoleRecognitionResult VideoRoleRecognitionResult { get; set; }
+                public class RunVideoAnalysisResponseBodyPayloadOutputVideoRoleRecognitionResult : TeaModel {
+                    [NameInMap("videoRoles")]
+                    [Validation(Required=false)]
+                    public List<RunVideoAnalysisResponseBodyPayloadOutputVideoRoleRecognitionResultVideoRoles> VideoRoles { get; set; }
+                    public class RunVideoAnalysisResponseBodyPayloadOutputVideoRoleRecognitionResultVideoRoles : TeaModel {
+                        [NameInMap("isAutoRecognition")]
+                        [Validation(Required=false)]
+                        public bool? IsAutoRecognition { get; set; }
+
+                        [NameInMap("ratio")]
+                        [Validation(Required=false)]
+                        public float? Ratio { get; set; }
+
+                        [NameInMap("roleInfo")]
+                        [Validation(Required=false)]
+                        public string RoleInfo { get; set; }
+
+                        [NameInMap("roleName")]
+                        [Validation(Required=false)]
+                        public string RoleName { get; set; }
+
+                        [NameInMap("timeIntervals")]
+                        [Validation(Required=false)]
+                        public List<RunVideoAnalysisResponseBodyPayloadOutputVideoRoleRecognitionResultVideoRolesTimeIntervals> TimeIntervals { get; set; }
+                        public class RunVideoAnalysisResponseBodyPayloadOutputVideoRoleRecognitionResultVideoRolesTimeIntervals : TeaModel {
+                            [NameInMap("endTime")]
+                            [Validation(Required=false)]
+                            public long? EndTime { get; set; }
+
+                            [NameInMap("startTime")]
+                            [Validation(Required=false)]
+                            public long? StartTime { get; set; }
+
+                            [NameInMap("timestamp")]
+                            [Validation(Required=false)]
+                            public long? Timestamp { get; set; }
+
+                            [NameInMap("url")]
+                            [Validation(Required=false)]
+                            public string Url { get; set; }
+
+                        }
+
+                    }
+
+                }
+
                 [NameInMap("videoShotSnapshotResult")]
                 [Validation(Required=false)]
                 public RunVideoAnalysisResponseBodyPayloadOutputVideoShotSnapshotResult VideoShotSnapshotResult { get; set; }

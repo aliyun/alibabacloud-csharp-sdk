@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
 {
     public class SubmitVideoAnalysisTaskRequest : TeaModel {
+        [NameInMap("autoRoleRecognitionVideoUrl")]
+        [Validation(Required=false)]
+        public string AutoRoleRecognitionVideoUrl { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>1</para>
@@ -193,6 +197,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
         [Validation(Required=false)]
         public List<SubmitVideoAnalysisTaskRequestVideoRoles> VideoRoles { get; set; }
         public class SubmitVideoAnalysisTaskRequestVideoRoles : TeaModel {
+            [NameInMap("isAutoRecognition")]
+            [Validation(Required=false)]
+            public bool? IsAutoRecognition { get; set; }
+
             [NameInMap("roleInfo")]
             [Validation(Required=false)]
             public string RoleInfo { get; set; }
@@ -200,6 +208,20 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
             [NameInMap("roleName")]
             [Validation(Required=false)]
             public string RoleName { get; set; }
+
+            [NameInMap("timeIntervals")]
+            [Validation(Required=false)]
+            public List<SubmitVideoAnalysisTaskRequestVideoRolesTimeIntervals> TimeIntervals { get; set; }
+            public class SubmitVideoAnalysisTaskRequestVideoRolesTimeIntervals : TeaModel {
+                [NameInMap("endTime")]
+                [Validation(Required=false)]
+                public long? EndTime { get; set; }
+
+                [NameInMap("startTime")]
+                [Validation(Required=false)]
+                public long? StartTime { get; set; }
+
+            }
 
             [NameInMap("urls")]
             [Validation(Required=false)]

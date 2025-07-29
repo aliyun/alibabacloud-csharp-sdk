@@ -4233,6 +4233,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
                 request.VideoRolesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VideoRoles, "videoRoles", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRoleRecognitionVideoUrl))
+            {
+                body["autoRoleRecognitionVideoUrl"] = request.AutoRoleRecognitionVideoUrl;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeGenerateOptionsShrink))
             {
                 body["excludeGenerateOptions"] = request.ExcludeGenerateOptionsShrink;
@@ -4381,6 +4385,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
                 request.VideoRolesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VideoRoles, "videoRoles", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRoleRecognitionVideoUrl))
+            {
+                body["autoRoleRecognitionVideoUrl"] = request.AutoRoleRecognitionVideoUrl;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeGenerateOptionsShrink))
             {
                 body["excludeGenerateOptions"] = request.ExcludeGenerateOptionsShrink;
@@ -5209,6 +5217,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
                 request.VideoRolesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VideoRoles, "videoRoles", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRoleRecognitionVideoUrl))
+            {
+                body["autoRoleRecognitionVideoUrl"] = request.AutoRoleRecognitionVideoUrl;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeduplicationId))
             {
                 body["deduplicationId"] = request.DeduplicationId;
@@ -5353,6 +5365,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
                 request.VideoRolesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VideoRoles, "videoRoles", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRoleRecognitionVideoUrl))
+            {
+                body["autoRoleRecognitionVideoUrl"] = request.AutoRoleRecognitionVideoUrl;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeduplicationId))
             {
                 body["deduplicationId"] = request.DeduplicationId;

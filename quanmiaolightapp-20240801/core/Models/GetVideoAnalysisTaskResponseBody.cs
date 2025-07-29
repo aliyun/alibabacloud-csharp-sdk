@@ -439,6 +439,56 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
 
                     }
 
+                    [NameInMap("videoRoleRecognitionResult")]
+                    [Validation(Required=false)]
+                    public GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoRoleRecognitionResult VideoRoleRecognitionResult { get; set; }
+                    public class GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoRoleRecognitionResult : TeaModel {
+                        [NameInMap("videoRoles")]
+                        [Validation(Required=false)]
+                        public List<GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoRoleRecognitionResultVideoRoles> VideoRoles { get; set; }
+                        public class GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoRoleRecognitionResultVideoRoles : TeaModel {
+                            [NameInMap("isAutoRecognition")]
+                            [Validation(Required=false)]
+                            public bool? IsAutoRecognition { get; set; }
+
+                            [NameInMap("ratio")]
+                            [Validation(Required=false)]
+                            public float? Ratio { get; set; }
+
+                            [NameInMap("roleInfo")]
+                            [Validation(Required=false)]
+                            public string RoleInfo { get; set; }
+
+                            [NameInMap("roleName")]
+                            [Validation(Required=false)]
+                            public string RoleName { get; set; }
+
+                            [NameInMap("timeIntervals")]
+                            [Validation(Required=false)]
+                            public List<GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoRoleRecognitionResultVideoRolesTimeIntervals> TimeIntervals { get; set; }
+                            public class GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoRoleRecognitionResultVideoRolesTimeIntervals : TeaModel {
+                                [NameInMap("endTime")]
+                                [Validation(Required=false)]
+                                public long? EndTime { get; set; }
+
+                                [NameInMap("startTime")]
+                                [Validation(Required=false)]
+                                public long? StartTime { get; set; }
+
+                                [NameInMap("timestamp")]
+                                [Validation(Required=false)]
+                                public long? Timestamp { get; set; }
+
+                                [NameInMap("url")]
+                                [Validation(Required=false)]
+                                public string Url { get; set; }
+
+                            }
+
+                        }
+
+                    }
+
                     [NameInMap("videoTitleGenerateResult")]
                     [Validation(Required=false)]
                     public GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoTitleGenerateResult VideoTitleGenerateResult { get; set; }
