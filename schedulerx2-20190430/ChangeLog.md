@@ -2,6 +2,10 @@
 - Support API ManageSchedulerxJobSync.
 
 
+2025-07-29 Version: 1.5.0
+- Support API ManageSchedulerxJobSync.
+
+
 2025-06-10 Version: 1.4.0
 - Support API ReadSchedulerxDesignateInfo.
 
