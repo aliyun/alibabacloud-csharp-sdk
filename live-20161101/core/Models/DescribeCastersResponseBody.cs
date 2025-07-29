@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
-                public int? ResourceGroupId { get; set; }
+                public string ResourceGroupId { get; set; }
 
                 /// <summary>
                 /// <para>The time when the production studio was started. This parameter is returned if the production studio is in the streaming status.</para>
