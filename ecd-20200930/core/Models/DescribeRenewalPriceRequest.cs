@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string PeriodUnit { get; set; }
 
+        [NameInMap("PromotionId")]
+        [Validation(Required=false)]
+        public string PromotionId { get; set; }
+
         /// <summary>
         /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</para>
         /// <para>This parameter is required.</para>
