@@ -314,6 +314,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public string ImageType { get; set; }
 
+            [NameInMap("instance_metadata_options")]
+            [Validation(Required=false)]
+            public InstanceMetadataOptions InstanceMetadataOptions { get; set; }
+
             /// <summary>
             /// <para>The instance types of the nodes.</para>
             /// </summary>

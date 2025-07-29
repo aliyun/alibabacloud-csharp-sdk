@@ -495,6 +495,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public string InstanceChargeType { get; set; }
 
+            [NameInMap("instance_metadata_options")]
+            [Validation(Required=false)]
+            public InstanceMetadataOptions InstanceMetadataOptions { get; set; }
+
             /// <summary>
             /// <para>This parameter is required.</para>
             /// </summary>
