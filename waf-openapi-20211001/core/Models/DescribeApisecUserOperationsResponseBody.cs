@@ -60,6 +60,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public string ObjectId { get; set; }
 
+            [NameInMap("OperationSource")]
+            [Validation(Required=false)]
+            public string OperationSource { get; set; }
+
             /// <summary>
             /// <para>The time at which the operation was performed. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</para>
             /// 

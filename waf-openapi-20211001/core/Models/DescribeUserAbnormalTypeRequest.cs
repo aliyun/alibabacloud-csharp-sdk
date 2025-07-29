@@ -80,6 +80,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public long? StartTime { get; set; }
 
+        [NameInMap("UserStatusList")]
+        [Validation(Required=false)]
+        public List<string> UserStatusList { get; set; }
+
     }
 
 }

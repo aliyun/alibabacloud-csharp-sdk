@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
+
         /// <summary>
         /// <para>The level of the policy.</para>
         /// <para>If Type is set to risk or event, you can set this parameter to one of the following values:</para>

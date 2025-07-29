@@ -106,6 +106,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public long? Medium { get; set; }
 
+            [NameInMap("NotFixed")]
+            [Validation(Required=false)]
+            public long? NotFixed { get; set; }
+
+            [NameInMap("SystemFixed")]
+            [Validation(Required=false)]
+            public long? SystemFixed { get; set; }
+
             /// <summary>
             /// <para>The number of events to be confirmed.</para>
             /// 
@@ -125,6 +133,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [NameInMap("ToBeFixed")]
             [Validation(Required=false)]
             public long? ToBeFixed { get; set; }
+
+            [NameInMap("ToBeVerified")]
+            [Validation(Required=false)]
+            public long? ToBeVerified { get; set; }
 
             /// <summary>
             /// <para>The number of new high-risk events today.</para>

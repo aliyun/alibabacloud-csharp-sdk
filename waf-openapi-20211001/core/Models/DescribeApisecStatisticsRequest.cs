@@ -22,6 +22,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public long? EndTime { get; set; }
+
         /// <summary>
         /// <para>The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:</para>
         /// <list type="bullet">
@@ -61,6 +65,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public string ResourceManagerResourceGroupId { get; set; }
 
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public long? StartTime { get; set; }
+
         /// <summary>
         /// <para>The type of the statistics. Valid values:</para>
         /// <list type="bullet">
@@ -74,6 +82,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
+
+        [NameInMap("UserStatusList")]
+        [Validation(Required=false)]
+        public List<string> UserStatusList { get; set; }
 
     }
 
