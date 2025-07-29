@@ -5446,6 +5446,186 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>同步任务</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ManageSchedulerxJobSyncRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ManageSchedulerxJobSyncResponse
+        /// </returns>
+        public ManageSchedulerxJobSyncResponse ManageSchedulerxJobSyncWithOptions(ManageSchedulerxJobSyncRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ManageSchedulerxJobSyncShrinkRequest request = new ManageSchedulerxJobSyncShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.JobIdList))
+            {
+                request.JobIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.JobIdList, "JobIdList", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobIdListShrink))
+            {
+                body["JobIdList"] = request.JobIdListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceSource))
+            {
+                body["NamespaceSource"] = request.NamespaceSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginalGroupId))
+            {
+                body["OriginalGroupId"] = request.OriginalGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginalNamespace))
+            {
+                body["OriginalNamespace"] = request.OriginalNamespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetGroupId))
+            {
+                body["TargetGroupId"] = request.TargetGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetNamespace))
+            {
+                body["TargetNamespace"] = request.TargetNamespace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ManageSchedulerxJobSync",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ManageSchedulerxJobSyncResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>同步任务</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ManageSchedulerxJobSyncRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ManageSchedulerxJobSyncResponse
+        /// </returns>
+        public async Task<ManageSchedulerxJobSyncResponse> ManageSchedulerxJobSyncWithOptionsAsync(ManageSchedulerxJobSyncRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ManageSchedulerxJobSyncShrinkRequest request = new ManageSchedulerxJobSyncShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.JobIdList))
+            {
+                request.JobIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.JobIdList, "JobIdList", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobIdListShrink))
+            {
+                body["JobIdList"] = request.JobIdListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceSource))
+            {
+                body["NamespaceSource"] = request.NamespaceSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginalGroupId))
+            {
+                body["OriginalGroupId"] = request.OriginalGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginalNamespace))
+            {
+                body["OriginalNamespace"] = request.OriginalNamespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetGroupId))
+            {
+                body["TargetGroupId"] = request.TargetGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetNamespace))
+            {
+                body["TargetNamespace"] = request.TargetNamespace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ManageSchedulerxJobSync",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ManageSchedulerxJobSyncResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>同步任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ManageSchedulerxJobSyncRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ManageSchedulerxJobSyncResponse
+        /// </returns>
+        public ManageSchedulerxJobSyncResponse ManageSchedulerxJobSync(ManageSchedulerxJobSyncRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ManageSchedulerxJobSyncWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>同步任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ManageSchedulerxJobSyncRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ManageSchedulerxJobSyncResponse
+        /// </returns>
+        public async Task<ManageSchedulerxJobSyncResponse> ManageSchedulerxJobSyncAsync(ManageSchedulerxJobSyncRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ManageSchedulerxJobSyncWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取机器详细信息</para>
         /// </summary>
         /// 
