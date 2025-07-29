@@ -1167,6 +1167,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["GpuConfig"] = request.GpuConfig;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Html))
+            {
+                query["Html"] = request.Html;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImagePullSecrets))
             {
                 query["ImagePullSecrets"] = request.ImagePullSecrets;
@@ -1532,6 +1536,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuConfig))
             {
                 query["GpuConfig"] = request.GpuConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Html))
+            {
+                query["Html"] = request.Html;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImagePullSecrets))
             {
@@ -6355,6 +6363,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["GpuConfig"] = request.GpuConfig;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Html))
+            {
+                query["Html"] = request.Html;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImagePullSecrets))
             {
                 query["ImagePullSecrets"] = request.ImagePullSecrets;
@@ -6708,6 +6720,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuConfig))
             {
                 query["GpuConfig"] = request.GpuConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Html))
+            {
+                query["Html"] = request.Html;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImagePullSecrets))
             {

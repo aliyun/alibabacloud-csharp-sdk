@@ -338,6 +338,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string GpuConfig { get; set; }
 
+        [NameInMap("Html")]
+        [Validation(Required=false)]
+        public string Html { get; set; }
+
         /// <summary>
         /// <para>The ID of the corresponding Secret.</para>
         /// 
