@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 [Validation(Required=false)]
                 public int? ChunkSize { get; set; }
 
+                [NameInMap("ConfgModel")]
+                [Validation(Required=false)]
+                public string ConfgModel { get; set; }
+
                 /// <summary>
                 /// <para>The description of the knowledge base.</para>
                 /// 
@@ -72,6 +76,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 [NameInMap("EmbeddingModelName")]
                 [Validation(Required=false)]
                 public string EmbeddingModelName { get; set; }
+
+                [NameInMap("EnableRewrite")]
+                [Validation(Required=false)]
+                public bool? EnableRewrite { get; set; }
 
                 /// <summary>
                 /// <para>The primary key ID of the knowledge base, which is the <c>Data.Id</c> parameter returned by the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation.</para>

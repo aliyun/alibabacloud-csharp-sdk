@@ -1039,6 +1039,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             {
                 request.DocumentIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DocumentIds, "DocumentIds", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TableIds))
+            {
+                request.TableIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TableIds, "TableIds", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MetaExtractColumns))
             {
                 request.MetaExtractColumnsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MetaExtractColumns, "metaExtractColumns", "json");
@@ -1056,6 +1060,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             {
                 query["Columns"] = request.ColumnsShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateIndexType))
+            {
+                query["CreateIndexType"] = request.CreateIndexType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceShrink))
             {
                 query["DataSource"] = request.DataSourceShrink;
@@ -1071,6 +1079,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EmbeddingModelName))
             {
                 query["EmbeddingModelName"] = request.EmbeddingModelName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableRewrite))
+            {
+                query["EnableRewrite"] = request.EnableRewrite;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -1111,6 +1123,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StructureType))
             {
                 query["StructureType"] = request.StructureType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableIdsShrink))
+            {
+                query["TableIds"] = request.TableIdsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChunkMode))
             {
@@ -1192,6 +1208,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             {
                 request.DocumentIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DocumentIds, "DocumentIds", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TableIds))
+            {
+                request.TableIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TableIds, "TableIds", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MetaExtractColumns))
             {
                 request.MetaExtractColumnsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MetaExtractColumns, "metaExtractColumns", "json");
@@ -1209,6 +1229,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             {
                 query["Columns"] = request.ColumnsShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateIndexType))
+            {
+                query["CreateIndexType"] = request.CreateIndexType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceShrink))
             {
                 query["DataSource"] = request.DataSourceShrink;
@@ -1224,6 +1248,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EmbeddingModelName))
             {
                 query["EmbeddingModelName"] = request.EmbeddingModelName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableRewrite))
+            {
+                query["EnableRewrite"] = request.EnableRewrite;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -1264,6 +1292,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StructureType))
             {
                 query["StructureType"] = request.StructureType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableIdsShrink))
+            {
+                query["TableIds"] = request.TableIdsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChunkMode))
             {
@@ -5297,6 +5329,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             {
                 query["DocumentIds"] = request.DocumentIdsShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableHeaders))
+            {
+                query["EnableHeaders"] = request.EnableHeaders;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IndexId))
             {
                 query["IndexId"] = request.IndexId;
@@ -5390,6 +5426,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocumentIdsShrink))
             {
                 query["DocumentIds"] = request.DocumentIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableHeaders))
+            {
+                query["EnableHeaders"] = request.EnableHeaders;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IndexId))
             {

@@ -56,6 +56,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 
         }
 
+        [NameInMap("CreateIndexType")]
+        [Validation(Required=false)]
+        public string CreateIndexType { get; set; }
+
         /// <summary>
         /// <remarks>
         /// <para> This parameter is not available. Do not specify this parameter.</para>
@@ -184,6 +188,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         [NameInMap("EmbeddingModelName")]
         [Validation(Required=false)]
         public string EmbeddingModelName { get; set; }
+
+        [NameInMap("EnableRewrite")]
+        [Validation(Required=false)]
+        public bool? EnableRewrite { get; set; }
 
         /// <summary>
         /// <para>The name of the knowledge base. The name must be 1 to 20 characters in length and can contain characters classified as letter in Unicode, including English letters, Chinese characters, digits, among others. The name can also contain colons (:), underscores (_), periods (.), and hyphens (-).</para>
@@ -334,6 +342,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         [NameInMap("StructureType")]
         [Validation(Required=false)]
         public string StructureType { get; set; }
+
+        [NameInMap("TableIds")]
+        [Validation(Required=false)]
+        public List<string> TableIds { get; set; }
 
         [NameInMap("chunkMode")]
         [Validation(Required=false)]
