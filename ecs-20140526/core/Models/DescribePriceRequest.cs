@@ -111,6 +111,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public string DedicatedHostId { get; set; }
 
+            [NameInMap("DeploymentSetStrategy")]
+            [Validation(Required=false)]
+            public string DeploymentSetStrategy { get; set; }
+
         }
 
         [NameInMap("SystemDisk")]
