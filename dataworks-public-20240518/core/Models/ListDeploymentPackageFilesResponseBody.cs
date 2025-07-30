@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListDeploymentPackageFilesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination information.</para>
+        /// <para>The pagination details.</para>
         /// </summary>
         [NameInMap("PagingInfo")]
         [Validation(Required=false)]
         public ListDeploymentPackageFilesResponseBodyPagingInfo PagingInfo { get; set; }
         public class ListDeploymentPackageFilesResponseBodyPagingInfo : TeaModel {
             /// <summary>
-            /// <para>The details of the versions of the files to be deployed.</para>
+            /// <para>The list of files pending deployment.</para>
             /// </summary>
             [NameInMap("DeploymentPackageFiles")]
             [Validation(Required=false)]
@@ -219,16 +219,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string SmokeTestStatus { get; set; }
 
                 /// <summary>
-                /// <para>The status of the code for the file of the current version. Valid values:</para>
+                /// <para>The status of the code file of the current version. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>10: committing</description></item>
-                /// <item><description>11: committed to the development environment of the scheduling system</description></item>
-                /// <item><description>20: review passed</description></item>
-                /// <item><description>21: review failed</description></item>
-                /// <item><description>80: deployment package creation succeeded</description></item>
-                /// <item><description>100: deploying</description></item>
-                /// <item><description>101: deployed to the production environment</description></item>
-                /// <item><description>200: cancelled</description></item>
+                /// <item><description>2: Commit check in progress.</description></item>
+                /// <item><description>3: Commit check passed.</description></item>
+                /// <item><description>4: Commit check failed.</description></item>
+                /// <item><description>10: Committing.</description></item>
+                /// <item><description>11: Committed.</description></item>
+                /// <item><description>20: Approved.</description></item>
+                /// <item><description>21: Rejected.</description></item>
+                /// <item><description>22: Warning detected during checking.</description></item>
+                /// <item><description>23: Under code review.</description></item>
+                /// <item><description>24: Code review rejected.</description></item>
+                /// <item><description>80: Deployment package created.</description></item>
+                /// <item><description>100: Deploying.</description></item>
+                /// <item><description>101: Deployed to the production environment.</description></item>
+                /// <item><description>200: Cancelled.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

@@ -173,12 +173,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Remark { get; set; }
 
                 /// <summary>
-                /// <para>The type of the resource group. Valid values:</para>
+                /// <para>Resource group types:</para>
                 /// <list type="bullet">
-                /// <item><description>CommonV2: serverless resource group</description></item>
-                /// <item><description>ExclusiveDataIntegration: exclusive resource group for Data Integration</description></item>
-                /// <item><description>ExclusiveScheduler: exclusive resource group for scheduling</description></item>
-                /// <item><description>ExclusiveDataService: exclusive resource group for DataService Studio</description></item>
+                /// <item><description>CommonV2: Serverless resource group</description></item>
+                /// <item><description>ExclusiveDataIntegration: Exclusive resource group for Data Integration</description></item>
+                /// <item><description>ExclusiveScheduler: Exclusive resource group for scheduling</description></item>
+                /// <item><description>ExclusiveDataService: Exclusive resource group for DataService Studio</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

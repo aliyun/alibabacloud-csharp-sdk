@@ -91,7 +91,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         /// <summary>
         /// <para>The name.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SQL node</para>
@@ -109,7 +108,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         /// <summary>
         /// <para>The account ID of the task owner.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -135,7 +133,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <item><description>FailureAllowed: The task can be rerun only after it fails to run.</description></item>
         /// <item><description>AllAllowed: The task can be rerun regardless of whether the task is successfully run or fails to run.</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AllAllowed</para>
@@ -156,7 +153,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         /// <summary>
         /// <para>The configurations of the runtime environment, such as the resource group information.</para>
-        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RuntimeResource")]
         [Validation(Required=false)]
@@ -188,7 +184,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         /// <summary>
         /// <para>The trigger method.</para>
-        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Trigger")]
         [Validation(Required=false)]

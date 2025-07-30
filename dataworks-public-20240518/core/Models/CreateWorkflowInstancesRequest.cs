@@ -373,6 +373,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
+        [NameInMap("TagCreationPolicy")]
+        [Validation(Required=false)]
+        public string TagCreationPolicy { get; set; }
+
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<CreateWorkflowInstancesRequestTags> Tags { get; set; }
+        public class CreateWorkflowInstancesRequestTags : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The task-specific parameters. The value is in the JSON format. The key specifies the task ID. You can call the GetTask operation to obtain the format of the value by querying the script parameters.</para>
         /// 

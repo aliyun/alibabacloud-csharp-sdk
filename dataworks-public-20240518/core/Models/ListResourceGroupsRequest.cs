@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public List<string> ResourceGroupTypes { get; set; }
 
         /// <summary>
-        /// <para>The fields used for sorting. Fields such as TriggerTime and StartedTime are supported. The value of this parameter is in the Sort field + Sort by (Desc/Asc) format. By default, results are sorted in ascending order. Valid values:</para>
+        /// <para>The list of fields used for sorting. Fields such as TriggerTime and StartedTime are supported. You must configure this parameter in the Sorting field + Sort by (Desc/Asc). By default, results are sorted in ascending order. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Id (Desc/Asc): the resource group ID</description></item>
         /// <item><description>Name (Desc/Asc): the name of the resource group</description></item>

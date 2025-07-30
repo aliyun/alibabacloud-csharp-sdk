@@ -6591,6 +6591,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             {
                 request.PeriodsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Periods, "Periods", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
+            {
+                request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStartEnabled))
             {
@@ -6619,6 +6623,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
             {
                 body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagCreationPolicy))
+            {
+                body["TagCreationPolicy"] = request.TagCreationPolicy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
+            {
+                body["Tags"] = request.TagsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskParameters))
             {
@@ -6683,6 +6695,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             {
                 request.PeriodsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Periods, "Periods", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
+            {
+                request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStartEnabled))
             {
@@ -6711,6 +6727,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
             {
                 body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagCreationPolicy))
+            {
+                body["TagCreationPolicy"] = request.TagCreationPolicy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
+            {
+                body["Tags"] = request.TagsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskParameters))
             {
