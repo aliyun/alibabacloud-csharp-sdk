@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class CreateTensorboardRequest : TeaModel {
         /// <summary>
-        /// <para>The visibility of the job. Valid values:</para>
+        /// <para>The job visibility. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PUBLIC: The configuration is public in the workspace.</description></item>
-        /// <item><description>PRIVATE: The configuration is visible only to you and the administrator of the workspace.</description></item>
+        /// <item><description>PUBLIC: Visible to all members in the workspace.</description></item>
+        /// <item><description>PRIVATE: Visible only to you and the administrator of the workspace.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,8 +34,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public long? Cpu { get; set; }
 
         /// <summary>
-        /// <para>The dataset ID. 
-        /// &lt;props=&quot;china&quot;&gt;Call <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a> to get the dataset ID.</para>
+        /// <para>The dataset ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d-xxxxxxxx</para>
@@ -76,7 +75,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The job ID. Call <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a> to get the job ID.</para>
+        /// <para>The job ID. For more information about how to query the job ID, see <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dlc-20210126170216-mtl37ge7gkvdz</para>
@@ -130,8 +129,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Priority { get; set; }
 
         /// <summary>
-        /// <para>The resource quota ID. This parameter is required when you create a TensorBoard job by using a resource quota. &lt;props=&quot;china&quot;&gt;Call <a href="https://help.aliyun.com/document_detail/2628071.html">ListQuotas</a> to get the quota ID. 
-        /// This feature is currently limited to whitelisted users. If you need to use this feature, contact us.</para>
+        /// <para>The resource quota ID. This parameter is required when you create a TensorBoard job by using a resource quota.</para>
+        /// <para>This feature is currently limited to whitelisted users. If you need to use this feature, contact us.</para>
         /// 
         /// <b>Example:</b>
         /// <para>quota12345</para>
@@ -195,7 +194,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public TensorboardSpec TensorboardSpec { get; set; }
 
         /// <summary>
-        /// <para>The dataset URI.</para>
+        /// <para>The dataset URI:</para>
         /// <list type="bullet">
         /// <item><description>Value format when DataSourceType is set to OSS: <c>oss://[oss-bucket].[endpoint]/[path]</c>.</description></item>
         /// <item><description>Value format when DataSourceType is set to NAS:<c>nas://[nas-filesystem-id].[region]/[path]</c>.</description></item>
@@ -209,8 +208,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Uri { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID. 
-        /// &lt;props=&quot;china&quot;&gt;Call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</para>
+        /// <para>The workspace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123***</para>

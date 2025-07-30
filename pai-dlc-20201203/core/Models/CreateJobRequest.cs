@@ -100,6 +100,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             [Validation(Required=false)]
             public string DataSourceVersion { get; set; }
 
+            [NameInMap("EnableCache")]
+            [Validation(Required=false)]
+            public bool? EnableCache { get; set; }
+
             [NameInMap("MountAccess")]
             [Validation(Required=false)]
             public string MountAccess { get; set; }
@@ -190,7 +194,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public long? JobMaxRunningTimeMinutes { get; set; }
 
         /// <summary>
-        /// <para>The configurations for job running, such as the image address, startup command, node resource declaration, and number of replicas.****</para>
+        /// <para><b>JobSpecs</b> describes the configurations for job running, such as the image address, startup command, node resource declaration, and number of replicas.</para>
         /// <para>A DLC job consists of different types of nodes. If nodes of the same type have exactly the same configuration, the configuration is called JobSpec. <b>JobSpecs</b> specifies the configurations of all types of nodes. The value is of the array type.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -210,7 +214,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         /// <item><description>SlurmJob</description></item>
         /// <item><description>RayJob</description></item>
         /// </list>
-        /// <para>Valid values for each job type:</para>
+        /// <para>Valid values and corresponding frameworks:</para>
         /// <list type="bullet">
         /// <item><description>OneFlowJob: OneFlow.</description></item>
         /// <item><description>PyTorchJob: PyTorch.</description></item>
@@ -243,7 +247,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         /// <summary>
         /// <para>The priority of the job. Default value: 1. Valid values: 1 to 9.</para>
         /// <list type="bullet">
-        /// <item><description>1: the lowest priority.</description></item>
+        /// <item><description>1 is the lowest priority.</description></item>
         /// <item><description>9: the highest priority.</description></item>
         /// </list>
         /// 
@@ -328,7 +332,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             /// <para>The default route. Default value: false. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>eth0: The default network interface is used to access the Internet through the public gateway.</description></item>
-            /// <item><description>eth1: The user\&quot;s Elastic Network Interface is used to access the Internet through the private gateway. For more information about the configuration method, see <a href="https://help.aliyun.com/document_detail/2525343.html">Enable Internet access for a DSW instance by using a private Internet NAT gateway</a>.</description></item>
+            /// <item><description>eth1: The user\&quot;s elastic network interface (ENI) is used to access the Internet through the private gateway. For more information about the configuration method, see <a href="https://help.aliyun.com/document_detail/2525343.html">Enable Internet access for a DSW instance by using a private Internet NAT gateway</a>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

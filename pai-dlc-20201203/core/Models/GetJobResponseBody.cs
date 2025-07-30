@@ -253,7 +253,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The node configurations of the job, which is <b>JobSpecs</b> in the CreateJob operation.</para>
+        /// <para>The node configuration of the job, which is <b>JobSpecs</b> in the CreateJob operation.</para>
         /// </summary>
         [NameInMap("JobSpecs")]
         [Validation(Required=false)]
@@ -583,7 +583,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string RestartTimes { get; set; }
 
         /// <summary>
-        /// <para>The settings of the additional parameters of the job.</para>
+        /// <para>The additional parameter configurations of the job.</para>
         /// </summary>
         [NameInMap("Settings")]
         [Validation(Required=false)]

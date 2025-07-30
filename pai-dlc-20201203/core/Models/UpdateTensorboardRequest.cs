@@ -38,8 +38,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Priority { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID. 
-        /// &lt;props=&quot;china&quot;&gt;For more information about how to query the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
+        /// <para>The workspace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>380</para>

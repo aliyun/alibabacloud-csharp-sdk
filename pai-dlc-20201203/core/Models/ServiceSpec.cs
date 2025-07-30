@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 
         [NameInMap("ExtraPorts")]
         [Validation(Required=false)]
-        public int? ExtraPorts { get; set; }
+        public List<int?> ExtraPorts { get; set; }
 
         [NameInMap("ServiceMode")]
         [Validation(Required=false)]
