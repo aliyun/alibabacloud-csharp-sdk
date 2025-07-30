@@ -66,6 +66,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             [Validation(Required=false)]
             public string Email { get; set; }
 
+            [NameInMap("EnableAdminAccess")]
+            [Validation(Required=false)]
+            public bool? EnableAdminAccess { get; set; }
+
             /// <summary>
             /// <para>The username of the convenience user.</para>
             /// 

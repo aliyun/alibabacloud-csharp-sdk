@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [Validation(Required=false)]
         public string BizType { get; set; }
 
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
         [NameInMap("GroupName")]
         [Validation(Required=false)]
         public string GroupName { get; set; }

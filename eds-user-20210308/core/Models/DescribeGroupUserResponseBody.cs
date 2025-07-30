@@ -35,6 +35,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 
         }
 
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>AA8D67CB-345D-5CDA-986E-FFAC7D0****</para>
@@ -118,6 +122,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             [NameInMap("Phone")]
             [Validation(Required=false)]
             public string Phone { get; set; }
+
+            [NameInMap("Remark")]
+            [Validation(Required=false)]
+            public string Remark { get; set; }
 
         }
 

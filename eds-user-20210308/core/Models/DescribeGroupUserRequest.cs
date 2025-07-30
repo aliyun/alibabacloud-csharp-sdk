@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [Validation(Required=false)]
         public string BizType { get; set; }
 
+        [NameInMap("Filter")]
+        [Validation(Required=false)]
+        public string Filter { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>ug-12341234****</para>
@@ -24,6 +28,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
+
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

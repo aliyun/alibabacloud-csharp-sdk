@@ -29,6 +29,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [Validation(Required=false)]
         public string GroupName { get; set; }
 
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>co-0esnf80jab***</para>
@@ -36,6 +44,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [NameInMap("SolutionId")]
         [Validation(Required=false)]
         public string SolutionId { get; set; }
+
+        [NameInMap("TransferFileNeedApproval")]
+        [Validation(Required=false)]
+        public bool? TransferFileNeedApproval { get; set; }
 
     }
 

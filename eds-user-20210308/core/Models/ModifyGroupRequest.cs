@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class ModifyGroupRequest : TeaModel {
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

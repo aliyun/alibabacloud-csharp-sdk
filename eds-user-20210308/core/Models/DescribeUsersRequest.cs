@@ -27,6 +27,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [Validation(Required=false)]
         public List<string> ExcludeEndUserIds { get; set; }
 
+        [NameInMap("ExcludeGroupId")]
+        [Validation(Required=false)]
+        public string ExcludeGroupId { get; set; }
+
         /// <summary>
         /// <para>The string that is used for fuzzy search. You perform fuzzy search by username (EndUserId) and email address (Email). Wildcard characters (\*) are supported. For example, if you set this parameter to <c>a*m</c>, usernames or email addresses that start with <c>a</c> and end with <c>m</c> are returned.</para>
         /// 
