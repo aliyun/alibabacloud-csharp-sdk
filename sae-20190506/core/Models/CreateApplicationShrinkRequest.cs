@@ -341,6 +341,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string GpuConfig { get; set; }
 
+        [NameInMap("HeadlessPvtzDiscoverySvc")]
+        [Validation(Required=false)]
+        public string HeadlessPvtzDiscoverySvc { get; set; }
+
         [NameInMap("Html")]
         [Validation(Required=false)]
         public string Html { get; set; }

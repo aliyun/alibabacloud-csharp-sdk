@@ -141,6 +141,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string ClusterId { get; set; }
 
+            [NameInMap("CmsServiceId")]
+            [Validation(Required=false)]
+            public string CmsServiceId { get; set; }
+
             /// <summary>
             /// <para>The command that is used to start the image. The command must be an existing executable object in the container. Example:</para>
             /// <pre><c>
@@ -407,6 +411,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [NameInMap("GpuType")]
             [Validation(Required=false)]
             public string GpuType { get; set; }
+
+            [NameInMap("HeadlessPvtzDiscovery")]
+            [Validation(Required=false)]
+            public string HeadlessPvtzDiscovery { get; set; }
 
             [NameInMap("Html")]
             [Validation(Required=false)]
