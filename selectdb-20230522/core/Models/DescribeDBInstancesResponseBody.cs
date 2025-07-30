@@ -295,6 +295,10 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             [Validation(Required=false)]
             public long? ScaleReplica { get; set; }
 
+            [NameInMap("Serverless")]
+            [Validation(Required=false)]
+            public bool? Serverless { get; set; }
+
             /// <summary>
             /// <para>The state of the instance. Valid values:</para>
             /// <list type="bullet">

@@ -85,6 +85,14 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             [Validation(Required=false)]
             public string ClusterBinding { get; set; }
 
+            [NameInMap("ClusterNodeCount")]
+            [Validation(Required=false)]
+            public int? ClusterNodeCount { get; set; }
+
+            [NameInMap("ClusterNodeType")]
+            [Validation(Required=false)]
+            public string ClusterNodeType { get; set; }
+
             /// <summary>
             /// <para>The number of CPU cores.</para>
             /// 
@@ -183,6 +191,14 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             [NameInMap("PerformanceLevel")]
             [Validation(Required=false)]
             public string PerformanceLevel { get; set; }
+
+            [NameInMap("ScaleMax")]
+            [Validation(Required=false)]
+            public double? ScaleMax { get; set; }
+
+            [NameInMap("ScaleMin")]
+            [Validation(Required=false)]
+            public double? ScaleMin { get; set; }
 
             [NameInMap("ScalingRulesEnable")]
             [Validation(Required=false)]
@@ -419,6 +435,10 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
+
+        [NameInMap("Serverless")]
+        [Validation(Required=false)]
+        public bool? Serverless { get; set; }
 
         /// <summary>
         /// <para>The state of the instance. Valid values:</para>

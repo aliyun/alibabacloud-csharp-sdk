@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             [Validation(Required=false)]
             public string Currency { get; set; }
 
+            [NameInMap("PricingRules")]
+            [Validation(Required=false)]
+            public Dictionary<string, string> PricingRules { get; set; }
+
             /// <summary>
             /// <para>The amount of money.</para>
             /// 

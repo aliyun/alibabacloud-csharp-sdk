@@ -26,6 +26,16 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             [Validation(Required=false)]
             public string Currency { get; set; }
 
+            [NameInMap("PricingRules")]
+            [Validation(Required=false)]
+            public Dictionary<string, string> PricingRules { get; set; }
+
+            /// <summary>
+            /// <para>The estimated refund amount when the subscription cluster of a subscription instance is changed to a pay-as-you-go cluster.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>-100</para>
+            /// </summary>
             [NameInMap("RefundAmount")]
             [Validation(Required=false)]
             public string RefundAmount { get; set; }

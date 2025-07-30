@@ -29,6 +29,14 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
+        [NameInMap("ClusterNodeCount")]
+        [Validation(Required=false)]
+        public int? ClusterNodeCount { get; set; }
+
+        [NameInMap("ClusterNodeType")]
+        [Validation(Required=false)]
+        public string ClusterNodeType { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -101,6 +109,14 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("ScaleMax")]
+        [Validation(Required=false)]
+        public double? ScaleMax { get; set; }
+
+        [NameInMap("ScaleMin")]
+        [Validation(Required=false)]
+        public double? ScaleMin { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

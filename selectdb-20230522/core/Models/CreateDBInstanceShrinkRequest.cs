@@ -9,6 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class CreateDBInstanceShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>Specifies whether to add the virtual private cloud (VPC) CIDR block to the IP address whitelist. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: yes.</description></item>
+        /// <item><description>0: no.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("AddVPCIPs")]
         [Validation(Required=false)]
         public string AddVPCIPs { get; set; }
@@ -49,6 +59,14 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("ClusterNodeCount")]
+        [Validation(Required=false)]
+        public int? ClusterNodeCount { get; set; }
+
+        [NameInMap("ClusterNodeType")]
+        [Validation(Required=false)]
+        public string ClusterNodeType { get; set; }
+
         /// <summary>
         /// <para>The instance endpoint.</para>
         /// 
@@ -82,11 +100,6 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 
         /// <summary>
         /// <para>The deployment method of the instance.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>multi_az</description></item>
-        /// <item><description>single_az</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>single_az</para>
@@ -172,6 +185,14 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
+
+        [NameInMap("ScaleMax")]
+        [Validation(Required=false)]
+        public double? ScaleMax { get; set; }
+
+        [NameInMap("ScaleMin")]
+        [Validation(Required=false)]
+        public double? ScaleMin { get; set; }
 
         /// <summary>
         /// <para>The IP addresses in the whitelist of the instance. Separate multiple IP addresses with commas (,).</para>

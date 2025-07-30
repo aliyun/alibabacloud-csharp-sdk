@@ -84,6 +84,12 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         [Validation(Required=false)]
         public string DbInstanceId { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to change the billing method of the cluster.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("ModifyClusterChargeType")]
         [Validation(Required=false)]
         public bool? ModifyClusterChargeType { get; set; }
