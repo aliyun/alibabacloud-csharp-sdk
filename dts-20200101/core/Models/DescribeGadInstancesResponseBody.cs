@@ -145,6 +145,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
                 [Validation(Required=false)]
                 public string MasterDbInstanceZoneId { get; set; }
 
+                [NameInMap("MasterEngineArchType")]
+                [Validation(Required=false)]
+                public int? MasterEngineArchType { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>rg-aekzq276dmnaxqa</para>

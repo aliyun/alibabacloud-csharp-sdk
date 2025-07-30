@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeGadInstancesRequest : TeaModel {
+        [NameInMap("DbEngineTypes")]
+        [Validation(Required=false)]
+        public string DbEngineTypes { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>test</para>

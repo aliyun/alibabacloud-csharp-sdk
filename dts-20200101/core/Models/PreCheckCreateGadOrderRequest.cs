@@ -17,6 +17,22 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("MasterDatabaseName")]
+        [Validation(Required=false)]
+        public string MasterDatabaseName { get; set; }
+
+        [NameInMap("MasterEngineArchType")]
+        [Validation(Required=false)]
+        public string MasterEngineArchType { get; set; }
+
+        [NameInMap("MasterShardAccountName")]
+        [Validation(Required=false)]
+        public string MasterShardAccountName { get; set; }
+
+        [NameInMap("MasterShardAccountPassword")]
+        [Validation(Required=false)]
+        public string MasterShardAccountPassword { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public string OwnerId { get; set; }
@@ -37,6 +53,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        [NameInMap("SlaveDatabaseName")]
+        [Validation(Required=false)]
+        public string SlaveDatabaseName { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>rm-bp17562h64****</para>
@@ -52,6 +72,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [NameInMap("SlaveDbInstanceRegion")]
         [Validation(Required=false)]
         public string SlaveDbInstanceRegion { get; set; }
+
+        [NameInMap("SlaveEngineArchType")]
+        [Validation(Required=false)]
+        public string SlaveEngineArchType { get; set; }
 
     }
 
