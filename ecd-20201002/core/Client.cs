@@ -2319,7 +2319,7 @@ namespace AlibabaCloud.SDK.Ecd20201002
         /// <para>Obtains logon credentials.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// GetLoginTokenRequest
         /// </param>
         /// <param name="runtime">
@@ -2329,13 +2329,23 @@ namespace AlibabaCloud.SDK.Ecd20201002
         /// <returns>
         /// GetLoginTokenResponse
         /// </returns>
-        public GetLoginTokenResponse GetLoginTokenWithOptions(GetLoginTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetLoginTokenResponse GetLoginTokenWithOptions(GetLoginTokenRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetLoginTokenShrinkRequest request = new GetLoginTokenShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AvailableFeatures))
+            {
+                request.AvailableFeaturesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AvailableFeatures, "AvailableFeatures", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthenticationCode))
             {
                 query["AuthenticationCode"] = request.AuthenticationCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AvailableFeaturesShrink))
+            {
+                query["AvailableFeatures"] = request.AvailableFeaturesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
             {
@@ -2429,7 +2439,7 @@ namespace AlibabaCloud.SDK.Ecd20201002
         /// <para>Obtains logon credentials.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// GetLoginTokenRequest
         /// </param>
         /// <param name="runtime">
@@ -2439,13 +2449,23 @@ namespace AlibabaCloud.SDK.Ecd20201002
         /// <returns>
         /// GetLoginTokenResponse
         /// </returns>
-        public async Task<GetLoginTokenResponse> GetLoginTokenWithOptionsAsync(GetLoginTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetLoginTokenResponse> GetLoginTokenWithOptionsAsync(GetLoginTokenRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetLoginTokenShrinkRequest request = new GetLoginTokenShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AvailableFeatures))
+            {
+                request.AvailableFeaturesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AvailableFeatures, "AvailableFeatures", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthenticationCode))
             {
                 query["AuthenticationCode"] = request.AuthenticationCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AvailableFeaturesShrink))
+            {
+                query["AvailableFeatures"] = request.AvailableFeaturesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
             {
