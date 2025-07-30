@@ -6029,6 +6029,14 @@ namespace AlibabaCloud.SDK.Live20161101
             {
                 query["InStreamName2"] = request.InStreamName2;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LiveMerger))
+            {
+                query["LiveMerger"] = request.LiveMerger;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MergeParameters))
+            {
+                query["MergeParameters"] = request.MergeParameters;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
@@ -6119,6 +6127,14 @@ namespace AlibabaCloud.SDK.Live20161101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InStreamName2))
             {
                 query["InStreamName2"] = request.InStreamName2;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LiveMerger))
+            {
+                query["LiveMerger"] = request.LiveMerger;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MergeParameters))
+            {
+                query["MergeParameters"] = request.MergeParameters;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {

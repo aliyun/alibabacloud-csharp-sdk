@@ -90,6 +90,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string InStreamName2 { get; set; }
 
+        [NameInMap("LiveMerger")]
+        [Validation(Required=false)]
+        public string LiveMerger { get; set; }
+
+        [NameInMap("MergeParameters")]
+        [Validation(Required=false)]
+        public string MergeParameters { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
