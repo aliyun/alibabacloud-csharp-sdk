@@ -21,7 +21,6 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         /// <item><description><b>SM2_256</b>: The signature algorithm is SM3WithSM2.</description></item>
         /// </list>
         /// <para>The encryption algorithm of the root CA certificate must be consistent with the <b>encryption algorithm</b> of the private root CA instance that you purchase. For example, if the <b>encryption algorithm</b> of the private root CA instance that you purchase is <b>RSA</b>, the key algorithm of the root CA certificate must be <b>RSA_1024</b>, <b>RSA_2048</b>, or <b>RSA_4096</b>.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RSA_2048</para>
@@ -29,6 +28,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         [NameInMap("Algorithm")]
         [Validation(Required=false)]
         public string Algorithm { get; set; }
+
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
 
         /// <summary>
         /// <para>The common name or abbreviation of the organization. The value can contain letters.</para>

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cas20200630.Models
 {
     public class UpdateCACertificateStatusRequest : TeaModel {
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
         /// <summary>
         /// <para>The unique identifier of the CA certificate whose status you want to change.</para>
         /// <remarks>
@@ -28,7 +32,6 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         /// <remarks>
         /// <para> You can call this operation only if the status of a CA certificate is <b>ISSUE</b>. You can call the <a href="https://help.aliyun.com/document_detail/328096.html">DescribeCACertificate</a> operation to query the status of a CA certificate.</para>
         /// </remarks>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>REVOKE</para>

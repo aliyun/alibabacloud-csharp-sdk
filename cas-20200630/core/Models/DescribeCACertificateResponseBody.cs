@@ -164,6 +164,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             [Validation(Required=false)]
             public string CrlUrl { get; set; }
 
+            [NameInMap("FullAlgorithm")]
+            [Validation(Required=false)]
+            public string FullAlgorithm { get; set; }
+
             /// <summary>
             /// <para>The unique identifier of the CA certificate.</para>
             /// 
@@ -173,6 +177,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             [NameInMap("Identifier")]
             [Validation(Required=false)]
             public string Identifier { get; set; }
+
+            [NameInMap("IssuerType")]
+            [Validation(Required=false)]
+            public string IssuerType { get; set; }
 
             /// <summary>
             /// <para>The key length of the CA certificate.</para>
@@ -328,6 +336,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             [NameInMap("X509Certificate")]
             [Validation(Required=false)]
             public string X509Certificate { get; set; }
+
+            [NameInMap("Years")]
+            [Validation(Required=false)]
+            public int? Years { get; set; }
 
         }
 
