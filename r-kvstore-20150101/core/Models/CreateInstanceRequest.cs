@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? Capacity { get; set; }
 
         /// <summary>
-        /// <para>The billing method. Valid values:</para>
+        /// <para>The billing method of the instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>PrePaid</b>: subscription</description></item>
         /// <item><description><b>PostPaid</b> (default): pay-as-you-go</description></item>
@@ -159,9 +159,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string DedicatedHostGroupId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs a dry run and does not create the instance. The system prechecks the request parameters, request format, service limits, and available resources. If the request fails the dry run, an error code is returned. If the request passes the precheck, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>true</b>: performs a dry run and does not create the instance. The system prechecks the request parameters, request format, service limits, and available resources. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the <c>DryRunOperation</c> error code is returned.</description></item>
         /// <item><description><b>false</b>: performs a dry run and sends the request. If the request passes the dry run, the instance is created.</description></item>
         /// </list>
         /// 
@@ -203,11 +203,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <item><description><b>false</b> (default): does not use the new instance as the first child instance.</description></item>
         /// </list>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>If you want to create a Tair DRAM-based instance that runs Redis 5.0, you must set this parameter to <b>true</b>.</description></item>
-        /// <item><description>This parameter is available only on the China site (aliyun.com).</description></item>
-        /// </list>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>If you want to create a Tair DRAM-based instance that runs Redis 5.0, you must set this parameter to <b>true</b>.</para>
+        /// </description></item>
+        /// <item><description><para>This parameter is available only on the China site (aliyun.com).</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -273,7 +275,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The network type. Valid values:</para>
+        /// <para>The network type. Valid value:</para>
         /// <list type="bullet">
         /// <item><description><b>VPC</b> (default)</description></item>
         /// </list>
@@ -474,7 +476,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The number of shards. This parameter is applicable only to cloud-native cluster instances. You can use this parameter to customize the number of shards.</para>
+        /// <para>The number of shards. This parameter applies only to cloud-native cluster instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
