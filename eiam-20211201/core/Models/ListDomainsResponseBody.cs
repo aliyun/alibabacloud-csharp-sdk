@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListDomainsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The information about the domain names.</para>
+        /// </summary>
         [NameInMap("Domains")]
         [Validation(Required=false)]
         public List<ListDomainsResponseBodyDomains> Domains { get; set; }
         public class ListDomainsResponseBodyDomains : TeaModel {
             /// <summary>
-            /// <para>域名创建时间，Unix时间戳格式，单位为毫秒。</para>
+            /// <para>The time when the domain name was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830226000</para>
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>是否默认域名。true表示实例默认域名，false表示非默认域名</para>
+            /// <para>Indicates whether the domain name is the default domain.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -34,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public bool? DefaultDomain { get; set; }
 
             /// <summary>
-            /// <para>域名。</para>
+            /// <para>The domain.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://www.example.com">www.example.com</a></para>
@@ -44,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Domain { get; set; }
 
             /// <summary>
-            /// <para>域名ID。</para>
+            /// <para>The domain ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dm_examplexxxxx</para>
@@ -54,7 +57,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string DomainId { get; set; }
 
             /// <summary>
-            /// <para>域名类型。枚举取值:system_init(系统初始化)、user_custom(用户自定义)。</para>
+            /// <para>The type of the domain name. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>system_init: an initial domain name.</description></item>
+            /// <item><description>user_custom: a custom domain name.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>system_init</para>
@@ -64,14 +71,17 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string DomainType { get; set; }
 
             /// <summary>
-            /// <para>域名备案信息。</para>
+            /// <para>The information about the Internet content provider (ICP) filing of the domain name.</para>
             /// </summary>
             [NameInMap("Filing")]
             [Validation(Required=false)]
             public ListDomainsResponseBodyDomainsFiling Filing { get; set; }
             public class ListDomainsResponseBodyDomainsFiling : TeaModel {
                 /// <summary>
-                /// <para>域名关联的备案号, 长度最大限制64。</para>
+                /// <para>The ICP number associated with the domain name. Both the entity ICP number and website ICP number are supported.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Zhexx-xxxxxx</para>
                 /// </summary>
                 [NameInMap("IcpNumber")]
                 [Validation(Required=false)]
@@ -80,7 +90,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>实例ID。</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
@@ -90,7 +100,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>域名锁定状态。枚举取值:unlock(正常)、lockByLicense(因License限制不可用)。</para>
+            /// <para>Indicates whether the domain name is locked. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>unlock</description></item>
+            /// <item><description>lockByLicense</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>unlock</para>
@@ -100,7 +114,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string LockMode { get; set; }
 
             /// <summary>
-            /// <para>域名最近更新时间，Unix时间戳格式，单位为毫秒。</para>
+            /// <para>The time when the domain name was last updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830226000</para>
@@ -112,6 +126,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>

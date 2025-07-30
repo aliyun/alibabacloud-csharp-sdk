@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetNetworkAccessEndpointResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Network endpoint information.</para>
+        /// </summary>
         [NameInMap("NetworkAccessEndpoint")]
         [Validation(Required=false)]
         public GetNetworkAccessEndpointResponseBodyNetworkAccessEndpoint NetworkAccessEndpoint { get; set; }
         public class GetNetworkAccessEndpointResponseBodyNetworkAccessEndpoint : TeaModel {
             /// <summary>
-            /// <para>专属网络端点创建时间，Unix时间戳格式，单位为毫秒。</para>
+            /// <para>The time when the baseline was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830226000</para>
@@ -24,7 +27,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>网络访问端私网出口IP地址列表。</para>
+            /// <para>Public egress ip address range of the dedicated network endpoint
+            /// This field is returned only when NetworkEndpointType is set to private.</para>
             /// 
             /// <b>Example:</b>
             /// <para>172.168.x.x</para>
@@ -34,7 +38,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public List<string> EgressPrivateIpAddresses { get; set; }
 
             /// <summary>
-            /// <para>网络访问端点公网出口IP地址段</para>
+            /// <para>Public egress ip address range of the shared network endpoint
+            /// This field is returned only when networkEndpointType is set to shared.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8.xx.xx.xxx/27</para>
@@ -44,7 +49,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public List<string> EgressPublicIpAddresses { get; set; }
 
             /// <summary>
-            /// <para>实例ID。</para>
+            /// <para>Instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
@@ -54,7 +59,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>专属网络端点ID。</para>
+            /// <para>The unique identifier of the network access endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>nae_examplexxx</para>
@@ -64,17 +69,20 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string NetworkAccessEndpointId { get; set; }
 
             /// <summary>
-            /// <para>专属网络端点名称。</para>
+            /// <para>Private network endpoint name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xx业务VPC访问端点</para>
+            /// <para>xx business VPC access endpoint</para>
             /// </summary>
             [NameInMap("NetworkAccessEndpointName")]
             [Validation(Required=false)]
             public string NetworkAccessEndpointName { get; set; }
 
             /// <summary>
-            /// <para>专属网络端点连接的类型。</para>
+            /// <para>Type of the Network Endpoint
+            /// Possible values:</para>
+            /// <para>shared: Shared network endpoint</para>
+            /// <para>private: Dedicated network endpoint</para>
             /// 
             /// <b>Example:</b>
             /// <para>private</para>
@@ -84,7 +92,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string NetworkAccessEndpointType { get; set; }
 
             /// <summary>
-            /// <para>专属网络端点使用的安全组ID。</para>
+            /// <para>The ID of the destination security group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sg-examplexxx</para>
@@ -94,7 +102,12 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string SecurityGroupId { get; set; }
 
             /// <summary>
-            /// <para>专属网络端点状态。</para>
+            /// <para>Status of the Network Endpoint
+            /// Possible values:</para>
+            /// <para>pending: Pending initialization</para>
+            /// <para>creating: Being created</para>
+            /// <para>running: Running</para>
+            /// <para>deleting: Being deleted</para>
             /// 
             /// <b>Example:</b>
             /// <para>running</para>
@@ -104,7 +117,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>专属网络端点最近更新时间，Unix时间戳格式，单位为毫秒。</para>
+            /// <para>The time when the endpoint was updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830226000</para>
@@ -114,7 +127,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>专属网络端点连接的指定vSwitch列表。</para>
+            /// <para>List of specified vSwitches associated with the dedicated network endpoint connection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-examplexxx</para>
@@ -124,7 +137,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public List<string> VSwitchIds { get; set; }
 
             /// <summary>
-            /// <para>专属网络端点连接的VpcID。</para>
+            /// <para>The ID of the virtual private cloud (VPC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-examplexxx</para>
@@ -134,7 +147,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string VpcId { get; set; }
 
             /// <summary>
-            /// <para>专属网络端点连接的Vpc所属地域。</para>
+            /// <para>The region ID of the outbound virtual private cloud (VPC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -146,6 +159,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>

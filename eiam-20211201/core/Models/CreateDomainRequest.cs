@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateDomainRequest : TeaModel {
         /// <summary>
-        /// <para>域名。最大长度限制255，格式由数字、字母、横线（-）点（.）组成;</para>
+        /// <para>The domain name of the website.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string Domain { get; set; }
 
         /// <summary>
-        /// <para>备案信息参数。</para>
+        /// <para>Registration information parameters.</para>
         /// </summary>
         [NameInMap("Filing")]
         [Validation(Required=false)]
         public CreateDomainRequestFiling Filing { get; set; }
         public class CreateDomainRequestFiling : TeaModel {
             /// <summary>
-            /// <para>域名关联的备案号，长度最大限制64。</para>
+            /// <para>Record number associated with the domain name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>浙xx-xxxxxx</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>IDaaS EIAM实例的ID。</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

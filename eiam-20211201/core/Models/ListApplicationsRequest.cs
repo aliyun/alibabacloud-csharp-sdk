@@ -55,6 +55,12 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Used to determine whether M2M client identity is enabled.</para>
+        /// <list type="bullet">
+        /// <item><description>enabled</description></item>
+        /// <item><description>disabled</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>enabled</para>
         /// </summary>
@@ -83,6 +89,12 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Used to determine whether the ResourceServer capability is enabled.</para>
+        /// <list type="bullet">
+        /// <item><description>enabled</description></item>
+        /// <item><description>disabled</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>enabled</para>
         /// </summary>
@@ -91,6 +103,13 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ResourceServerStatus { get; set; }
 
         /// <summary>
+        /// <para>SSO type.</para>
+        /// <list type="bullet">
+        /// <item><description>oidc</description></item>
+        /// <item><description>saml2</description></item>
+        /// <item><description>oauth2/m2m</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>oauth2/m2m</para>
         /// </summary>

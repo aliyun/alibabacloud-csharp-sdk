@@ -74,6 +74,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public string ApplicationTemplateId { get; set; }
 
+            /// <summary>
+            /// <para>Application visibility</para>
+            /// </summary>
             [NameInMap("ApplicationVisibility")]
             [Validation(Required=false)]
             public List<string> ApplicationVisibility { get; set; }
@@ -111,6 +114,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
+
+            [NameInMap("CustomSubjectStatus")]
+            [Validation(Required=false)]
+            public string CustomSubjectStatus { get; set; }
 
             /// <summary>
             /// <para>The description of the application.</para>
@@ -157,6 +164,12 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public string LogoUrl { get; set; }
 
+            /// <summary>
+            /// <para>M2M client status.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>enabled</para>
+            /// </summary>
             [NameInMap("M2MClientStatus")]
             [Validation(Required=false)]
             public string M2MClientStatus { get; set; }
@@ -171,10 +184,22 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public string ManagedServiceCode { get; set; }
 
+            /// <summary>
+            /// <para>Unique identifier of the resource server</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="https://www.example.com">https://www.example.com</a></para>
+            /// </summary>
             [NameInMap("ResourceServerIdentifier")]
             [Validation(Required=false)]
             public string ResourceServerIdentifier { get; set; }
 
+            /// <summary>
+            /// <para>Resource server status.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>disabled	enabled</para>
+            /// </summary>
             [NameInMap("ResourceServerStatus")]
             [Validation(Required=false)]
             public string ResourceServerStatus { get; set; }

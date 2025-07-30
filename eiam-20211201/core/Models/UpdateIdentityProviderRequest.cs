@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class UpdateIdentityProviderRequest : TeaModel {
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
         /// <summary>
         /// <para>钉钉出基本信息</para>
         /// </summary>
@@ -18,7 +22,6 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public class UpdateIdentityProviderRequestDingtalkAppConfig : TeaModel {
             /// <summary>
             /// <para>钉钉一方应用的AppKey</para>
-            /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>49nyeaqumk7f</para>
@@ -29,7 +32,6 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 
             /// <summary>
             /// <para>钉钉一方应用的AppSecret</para>
-            /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>86nozWFL2CxgwnhKiXaG8dN4keLPkUNc5xxxx</para>
@@ -37,6 +39,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [NameInMap("AppSecret")]
             [Validation(Required=false)]
             public string AppSecret { get; set; }
+
+            [NameInMap("EncryptKey")]
+            [Validation(Required=false)]
+            public string EncryptKey { get; set; }
+
+            [NameInMap("VerificationToken")]
+            [Validation(Required=false)]
+            public string VerificationToken { get; set; }
 
         }
 

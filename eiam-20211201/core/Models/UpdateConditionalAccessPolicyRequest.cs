@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class UpdateConditionalAccessPolicyRequest : TeaModel {
         /// <summary>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>client-examplexxx</para>
+        /// </summary>
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        /// <summary>
         /// <para>Conditional Access Policy ID</para>
         /// <para>This parameter is required.</para>
         /// 

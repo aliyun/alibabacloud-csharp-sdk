@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string OrganizationalUnitId { get; set; }
 
             /// <summary>
-            /// <para>组织名称。</para>
+            /// <para>The Name of the organizational unit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test_organizationalUnit_name</para>

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public GetForgetPasswordConfigurationResponseBodyOpenForgetPasswordConfiguration OpenForgetPasswordConfiguration { get; set; }
         public class GetForgetPasswordConfigurationResponseBodyOpenForgetPasswordConfiguration : TeaModel {
             /// <summary>
-            /// <para>表示忘记密码认证渠道。枚举取值:email(邮件)、sms(短信)</para>
+            /// <para>The authentication channels. Valid values:<br>email<br>sms<br>totp<br>web_authn</para>
             /// </summary>
             [NameInMap("AuthenticationChannels")]
             [Validation(Required=false)]
@@ -54,7 +54,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public bool? EnableSms { get; set; }
 
             /// <summary>
-            /// <para>表示忘记密码配置状态。枚举取值:enabled(开启)、disabled(禁用)</para>
+            /// <para>The status of the forgot password feature. Valid values: enabled and disabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>enabled</para>
             /// </summary>
             [NameInMap("ForgetPasswordStatus")]
             [Validation(Required=false)]

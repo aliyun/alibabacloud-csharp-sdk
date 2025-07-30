@@ -51,7 +51,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationSourceType { get; set; }
 
             /// <summary>
-            /// <para>应用模板ID</para>
+            /// <para>The application template ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>apt_xxx_xxx</para>
             /// </summary>
             [NameInMap("ApplicationTemplateId")]
             [Validation(Required=false)]
@@ -91,12 +94,16 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <para>The features that are supported by the application. The value is a JSON array. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>sso: The application supports SSO.</description></item>
+            /// <item><description>slo: The application supports SLO.</description></item>
             /// <item><description>provision: The application supports account synchronization.</description></item>
             /// <item><description>api_invoke: The application supports custom APIs.</description></item>
+            /// <item><description>m2m_client: The application supports M2M Client.</description></item>
+            /// <item><description>resource_server: The application supports Resource Server.</description></item>
+            /// <item><description>other: undertake.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>[&quot;sso&quot;, &quot;provision&quot;]</para>
+            /// <para>[&quot;sso&quot;,&quot;slo&quot;, &quot;provision&quot;,&quot;api_invoke&quot;, &quot;m2m_client&quot;,&quot;resource_server&quot;,&quot;other&quot;]</para>
             /// </summary>
             [NameInMap("Features")]
             [Validation(Required=false)]
@@ -122,10 +129,6 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public string LogoUrl { get; set; }
 
-            [NameInMap("M2MClientStatus")]
-            [Validation(Required=false)]
-            public string M2MClientStatus { get; set; }
-
             /// <summary>
             /// <para>The service code of the cloud service that manages the application template.</para>
             /// 
@@ -135,14 +138,6 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [NameInMap("ManagedServiceCode")]
             [Validation(Required=false)]
             public string ManagedServiceCode { get; set; }
-
-            [NameInMap("ResourceServerIdentifier")]
-            [Validation(Required=false)]
-            public string ResourceServerIdentifier { get; set; }
-
-            [NameInMap("ResourceServerStatus")]
-            [Validation(Required=false)]
-            public string ResourceServerStatus { get; set; }
 
             /// <summary>
             /// <para>Indicates whether the application template is managed by a cloud service.</para>
@@ -159,6 +154,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <list type="bullet">
             /// <item><description>saml2: the Security Assertion Markup Language (SAML) 2.0 protocol.</description></item>
             /// <item><description>oidc: the OpenID Connect (OIDC) protocol.</description></item>
+            /// <item><description>oauth2/m2m: the OAuth2.0  protocol M2M.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -171,8 +167,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The status of the application. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Enabled: The application is enabled.</description></item>
-            /// <item><description>Disabled: The application is disabled.</description></item>
+            /// <item><description>enabled: The application is enabled.</description></item>
+            /// <item><description>disabled: The application is disabled.</description></item>
+            /// <item><description>deleted: The application is deleted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

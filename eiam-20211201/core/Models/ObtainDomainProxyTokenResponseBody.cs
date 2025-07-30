@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ObtainDomainProxyTokenResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The information about the proxy token.</para>
+        /// </summary>
         [NameInMap("DomainProxyToken")]
         [Validation(Required=false)]
         public ObtainDomainProxyTokenResponseBodyDomainProxyToken DomainProxyToken { get; set; }
         public class ObtainDomainProxyTokenResponseBodyDomainProxyToken : TeaModel {
             /// <summary>
-            /// <para>域名代理Token创建时间，Unix时间戳格式，单位为毫秒。</para>
+            /// <para>The time when the proxy token of the domain name was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830226000</para>
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>域名ID。</para>
+            /// <para>The ID of the domain name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dm_examplexxxx</para>
@@ -34,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string DomainId { get; set; }
 
             /// <summary>
-            /// <para>域名代理Token。</para>
+            /// <para>The proxy token of the domain name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PTxxxxxxxx</para>
@@ -44,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string DomainProxyToken { get; set; }
 
             /// <summary>
-            /// <para>域名代理Token ID。</para>
+            /// <para>The ID of the proxy token of the domain name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pt_examplexxxx</para>
@@ -54,7 +57,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string DomainProxyTokenId { get; set; }
 
             /// <summary>
-            /// <para>实例ID。</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
@@ -64,7 +67,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>域名代理Token最近使用时间，Unix时间戳格式，单位为毫秒。</para>
+            /// <para>The time when the proxy token of the domain name was last used. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830226000</para>
@@ -74,7 +77,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? LastUsedTime { get; set; }
 
             /// <summary>
-            /// <para>token状态，枚举类型：(enabled）启用,（disabled）禁用。</para>
+            /// <para>The state of the proxy token. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>enabled</description></item>
+            /// <item><description>disabled</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>enabled</para>
@@ -84,7 +91,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>域名代理Token最近更新时间，Unix时间戳格式，单位为毫秒。</para>
+            /// <para>The time when the proxy token of the domain name was last updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830226000</para>
@@ -96,6 +103,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>

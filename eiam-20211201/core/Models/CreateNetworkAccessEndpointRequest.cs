@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateNetworkAccessEndpointRequest : TeaModel {
         /// <summary>
-        /// <para>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。</para>
+        /// <para>Idempotent token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>client-token-example</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>IDaaS EIAM实例的ID。</para>
+        /// <para>The region ID of the VPC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,18 +31,18 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>专属网络端点名称。</para>
+        /// <para>Private network endpoint name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xx业务VPC访问端点</para>
+        /// <para>eiam-vpc-access-endpoint</para>
         /// </summary>
         [NameInMap("NetworkAccessEndpointName")]
         [Validation(Required=false)]
         public string NetworkAccessEndpointName { get; set; }
 
         /// <summary>
-        /// <para>专属网络端点连接的指定vSwitch。</para>
+        /// <para>The IDs of vSwitches.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-examplexxx</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<string> VSwitchIds { get; set; }
 
         /// <summary>
-        /// <para>专属网络端点连接的VpcID。</para>
+        /// <para>The ID of the VPC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>专属网络端点连接的VpcID所属地域，该地域取值必须在ListNetworkAccessEndpointAvailableRegions接口中返回。</para>
+        /// <para>The region ID of the outbound VPC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

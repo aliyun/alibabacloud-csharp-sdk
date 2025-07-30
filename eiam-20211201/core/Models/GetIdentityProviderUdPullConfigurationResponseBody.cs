@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetIdentityProviderUdPullConfigurationResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>
@@ -17,12 +19,18 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Inbound Synchronization Configuration Information</para>
+        /// </summary>
         [NameInMap("UdPullConfiguration")]
         [Validation(Required=false)]
         public GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfiguration UdPullConfiguration { get; set; }
         public class GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfiguration : TeaModel {
             /// <summary>
-            /// <para>组同步状态</para>
+            /// <para>Group Synchronization Status
+            /// Possible values:</para>
+            /// <para>Disabled: disabled</para>
+            /// <para>Enabled: enabled</para>
             /// 
             /// <b>Example:</b>
             /// <para>enabled</para>
@@ -32,7 +40,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string GroupSyncStatus { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM 身份提供方ID</para>
+            /// <para>Identity provider ID</para>
             /// 
             /// <b>Example:</b>
             /// <para>idp_my664lwkhpicbyzirog3xxxxx</para>
@@ -42,7 +50,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string IdentityProviderId { get; set; }
 
             /// <summary>
-            /// <para>增量回调状态，是否处理来自IdP的增量回调数据</para>
+            /// <para>Incremental Callback Status: Whether to process incremental callback data from the IdP</para>
             /// 
             /// <b>Example:</b>
             /// <para>enabled</para>
@@ -52,7 +60,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string IncrementalCallbackStatus { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM 实例Id</para>
+            /// <para>The ID of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
@@ -62,14 +70,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>ldap同步侧相关配置信息</para>
+            /// <para>LDAP Synchronization Side Related Configuration Information</para>
             /// </summary>
             [NameInMap("LdapUdPullConfig")]
             [Validation(Required=false)]
             public GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfigurationLdapUdPullConfig LdapUdPullConfig { get; set; }
             public class GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfigurationLdapUdPullConfig : TeaModel {
                 /// <summary>
-                /// <para>组成员标识</para>
+                /// <para>Group Member Identifier</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>group</para>
@@ -79,7 +87,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string GroupMemberAttributeName { get; set; }
 
                 /// <summary>
-                /// <para>组objectClass</para>
+                /// <para>Group ObjectClass</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>member</para>
@@ -89,7 +97,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string GroupObjectClass { get; set; }
 
                 /// <summary>
-                /// <para>组自定义Filter</para>
+                /// <para>Group Custom Filter</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>(|(cn=test)(group=<a href="mailto:test@test.com">test@test.com</a>))</para>
@@ -99,7 +107,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string GroupObjectClassCustomFilter { get; set; }
 
                 /// <summary>
-                /// <para>组织objectClass</para>
+                /// <para>Organization ObjectClass</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ou,top</para>
@@ -109,7 +117,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string OrganizationUnitObjectClass { get; set; }
 
                 /// <summary>
-                /// <para>用户objectClass</para>
+                /// <para>User ObjectClass</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ou,top</para>
@@ -119,7 +127,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string UserObjectClass { get; set; }
 
                 /// <summary>
-                /// <para>用户自定义Filter</para>
+                /// <para>User ObjectClass Custom Filter</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>(|(cn=test)(mail=<a href="mailto:test@test.com">test@test.com</a>))</para>
@@ -130,11 +138,16 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 
             }
 
+            /// <summary>
+            /// <para>Scheduled sync configuration</para>
+            /// </summary>
             [NameInMap("PeriodicSyncConfig")]
             [Validation(Required=false)]
             public GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfigurationPeriodicSyncConfig PeriodicSyncConfig { get; set; }
             public class GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfigurationPeriodicSyncConfig : TeaModel {
                 /// <summary>
+                /// <para>Cron expression</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0 45 1 * * ?</para>
                 /// </summary>
@@ -142,11 +155,19 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 [Validation(Required=false)]
                 public string PeriodicSyncCron { get; set; }
 
+                /// <summary>
+                /// <para>Execution time slots, for example 3,5, meaning the task runs once between 03:00–04:00 and once between 05:00–06:00.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>[3,5]</para>
+                /// </summary>
                 [NameInMap("PeriodicSyncTimes")]
                 [Validation(Required=false)]
                 public int? PeriodicSyncTimes { get; set; }
 
                 /// <summary>
+                /// <para>type</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>cron</para>
                 /// </summary>
@@ -157,6 +178,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
+            /// <para>Scheduled Validation Status: Whether to periodically validate data discrepancies between IDaaS and the Identity Provider. Possible values:</para>
+            /// <para>Disabled: disabled</para>
+            /// <para>Enabled: enabled</para>
+            /// 
             /// <b>Example:</b>
             /// <para>enabled</para>
             /// </summary>
@@ -165,14 +190,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string PeriodicSyncStatus { get; set; }
 
             /// <summary>
-            /// <para>同步入用户映射字段配置列表</para>
+            /// <para>Inbound Synchronization Protection Rule Configuration</para>
             /// </summary>
             [NameInMap("PullProtectedRule")]
             [Validation(Required=false)]
             public GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfigurationPullProtectedRule PullProtectedRule { get; set; }
             public class GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfigurationPullProtectedRule : TeaModel {
                 /// <summary>
-                /// <para>同步保护规则-删除组数量</para>
+                /// <para>Group Deletion Threshold: If the number of deleted groups exceeds this value, the synchronization task will be terminated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -182,7 +207,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public int? GroupDeletedThreshold { get; set; }
 
                 /// <summary>
-                /// <para>IDaaS EIAM 钉钉一方应用同步保护规则-删除组织数量</para>
+                /// <para>Organization Deletion Threshold: If the number of deleted organizations exceeds this value, the synchronization task will be terminated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -192,7 +217,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public int? OrganizationalUnitDeletedThreshold { get; set; }
 
                 /// <summary>
-                /// <para>IDaaS EIAM 钉钉一方应用同步保护规则-删除账户数量</para>
+                /// <para>Account Deletion Threshold: If the number of deleted users exceeds this value, the synchronization task will be terminated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>30</para>
@@ -204,21 +229,21 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>同步入配置信息</para>
+            /// <para>Synchronization Scope Configuration Information</para>
             /// </summary>
             [NameInMap("UdSyncScopeConfig")]
             [Validation(Required=false)]
             public GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfigurationUdSyncScopeConfig UdSyncScopeConfig { get; set; }
             public class GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfigurationUdSyncScopeConfig : TeaModel {
                 /// <summary>
-                /// <para>同步来源节点</para>
+                /// <para>Synchronization Source Node</para>
                 /// </summary>
                 [NameInMap("SourceScopes")]
                 [Validation(Required=false)]
                 public List<string> SourceScopes { get; set; }
 
                 /// <summary>
-                /// <para>同步目标节点</para>
+                /// <para>Synchronization Target Node</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ou_asjdfhaskfhw213mnsj33sXXX</para>

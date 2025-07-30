@@ -10,7 +10,20 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateUserRequest : TeaModel {
         /// <summary>
-        /// <para>The extended fields.</para>
+        /// <para>The password initialization method. Set the value to random,</para>
+        /// <list type="bullet">
+        /// <item><description>which indicates that the password is randomly generated.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>client-token-demo</para>
+        /// </summary>
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        /// <summary>
+        /// <para>The custom extended fields.</para>
         /// 
         /// <b>Example:</b>
         /// <para>description</para>
@@ -42,7 +55,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The description of the organizational unit. The description can be up to 256 characters in length.</para>
+        /// <para>The description of the organization. The value can be up to 256 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>description text</para>
@@ -62,7 +75,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The email address of the user who owns the account. The email address prefix can contain letters, digits, underscores (_), periods (.), and hyphens (-).</para>
+        /// <para>The name of the account. The name can be up to 64 characters in length and can contain letters, digits, underscores (_), periods (.), at signs (@), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="mailto:example@example.com">example@example.com</a></para>
@@ -72,7 +85,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string Email { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the email address is a trusted email address. This parameter is required if the Email parameter is specified. If you have no special business requirements, set this parameter to true.</para>
+        /// <para>The description of the account. The description can be up to 256 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -82,7 +95,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public bool? EmailVerified { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -93,17 +106,17 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of organizational units to which the account belongs. An account can belong to multiple organizational units.</para>
+        /// <para>Specifies whether the mobile phone number is a trusted mobile phone number. This parameter is required if the PhoneNumber parameter is specified. If you have no special business requirements, set this parameter to true.</para>
         /// </summary>
         [NameInMap("OrganizationalUnitIds")]
         [Validation(Required=false)]
         public List<string> OrganizationalUnitIds { get; set; }
 
         /// <summary>
-        /// <para>The password of the account. For more information, view the password policy of the instance in the IDaaS console.</para>
+        /// <para>The password of the account. For more information,view the password policyof the instanceinthe IDaaS console.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>123456</para>
+        /// <para>123456xxx</para>
         /// </summary>
         [NameInMap("Password")]
         [Validation(Required=false)]
@@ -119,7 +132,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>Specifies whether to forcibly change the password status. Default value: disabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>enabled: forcibly changes the password status.</description></item>
+            /// <item><description>enabled:forcibly changes the password status.</description></item>
             /// <item><description>disabled: does not forcibly change the password status.</description></item>
             /// </list>
             /// 
@@ -133,7 +146,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The priority of the password initialization policy. By default, this parameter does not take effect. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>global: The password initialization policy globally takes effect.</description></item>
+            /// <item><description>global:The password initialization policy globally takes effect.</description></item>
             /// <item><description>custom: The password initialization policy takes effect based on custom settings.</description></item>
             /// </list>
             /// 
@@ -147,7 +160,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The password initialization method. Set the value to random,</para>
             /// <list type="bullet">
-            /// <item><description>which indicates that the password is randomly generated.</description></item>
+            /// <item><description>whichindicates that the password is randomly generated.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -158,7 +171,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string PasswordInitializationType { get; set; }
 
             /// <summary>
-            /// <para>The password notification methods.</para>
+            /// <para>The value of the extended field. The value follows the limits on the properties of the extended field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sms</para>
@@ -170,17 +183,17 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The mobile phone number, which contains 6 to 15 digits.</para>
+        /// <para>The ID of the account.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>12345678901</para>
+        /// <para>12345678901xxx</para>
         /// </summary>
         [NameInMap("PhoneNumber")]
         [Validation(Required=false)]
         public string PhoneNumber { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the mobile phone number is a trusted mobile phone number. This parameter is required if the PhoneNumber parameter is specified. If you have no special business requirements, set this parameter to true.</para>
+        /// <para>The email address of the user who owns the account. The email address prefix can contain letters, digits, underscores (_), periods (.), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -190,7 +203,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public bool? PhoneNumberVerified { get; set; }
 
         /// <summary>
-        /// <para>The country code of the mobile phone number. The country code contains only digits and does not contain a plus sign (+).</para>
+        /// <para>The IDs of organizational units to which the account belongs. An account can belong to multiple organizational units.</para>
         /// 
         /// <b>Example:</b>
         /// <para>86</para>
@@ -200,7 +213,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string PhoneRegion { get; set; }
 
         /// <summary>
-        /// <para>The ID of the primary organizational unit to which the account belongs.</para>
+        /// <para>主组织ID。</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -211,7 +224,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string PrimaryOrganizationalUnitId { get; set; }
 
         /// <summary>
-        /// <para>The external ID of the account. The external ID can be used to associate the account with an external system. The external ID can be up to 64 characters in length. If you do not specify an external ID for the account, the ID of the account is used as the external ID by default.</para>
+        /// <para>The display name of the account. The display name can be up to 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user_d6sbsuumeta4h66ec3il7yxxxx</para>
@@ -221,7 +234,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string UserExternalId { get; set; }
 
         /// <summary>
-        /// <para>The name of the account. The name can be up to 64 characters in length and can contain letters, digits, underscores (_), periods (.), at signs (@), and hyphens (-).</para>
+        /// <para>The name of the extended field. You must create the extended field in advance. To create an extended field, log on to the IDaaS console. In the left-side navigation pane, choose Accounts &gt; Extended Fields, and then click Create Field on the Extended Fields page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

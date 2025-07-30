@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetDomainDnsChallengeResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The DNS challenge records.</para>
+        /// </summary>
         [NameInMap("DomainDnsChallenge")]
         [Validation(Required=false)]
         public GetDomainDnsChallengeResponseBodyDomainDnsChallenge DomainDnsChallenge { get; set; }
         public class GetDomainDnsChallengeResponseBodyDomainDnsChallenge : TeaModel {
             /// <summary>
-            /// <para>DNS challenge名称。</para>
+            /// <para>The name of the DNS challenge record.</para>
             /// 
             /// <b>Example:</b>
             /// <para>_idaas-challenge.${domain}</para>
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string DnsChallengeName { get; set; }
 
             /// <summary>
-            /// <para>DNS challenge值。</para>
+            /// <para>The value of the DNS challenge record.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exmple123xxx</para>
@@ -34,10 +37,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string DnsChallengeValue { get; set; }
 
             /// <summary>
-            /// <para>DNS记录类型。</para>
+            /// <para>The type of the DNS challenge record.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>枚举，目前只支持TXT类型</para>
+            /// <para>txt</para>
             /// </summary>
             [NameInMap("DnsType")]
             [Validation(Required=false)]
@@ -46,6 +49,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>

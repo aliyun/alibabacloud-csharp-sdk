@@ -9,19 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListEiamInstancesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The instance list.</para>
+        /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public List<ListEiamInstancesResponseBodyInstances> Instances { get; set; }
         public class ListEiamInstancesResponseBodyInstances : TeaModel {
             /// <summary>
-            /// <para>实例描述信息</para>
+            /// <para>The instance description.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>instance test</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>实例developer私网域名地址</para>
+            /// <para>The private domain name of the instance Developer API.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eiam-developerapi-cn.vpc-proxy.aliyuncs.com</para>
@@ -31,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string DeveloperAPIPrivateDomain { get; set; }
 
             /// <summary>
-            /// <para>实例developer公网域名地址</para>
+            /// <para>The public domain of the instance Developer API.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eiam-developerapi.cn-hangzhou.aliyuncs.com</para>
@@ -41,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string DeveloperAPIPublicDomain { get; set; }
 
             /// <summary>
-            /// <para>实例id</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_eypq6ljgyeuwmlw672sulxxxxx</para>
@@ -51,7 +57,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>实例状态，Pending(初始状态)、Creating(创建中)、Running(运行中)、Disabled(禁用)、CreateFailed(创建失败)</para>
+            /// <para>The instance status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
@@ -61,7 +67,12 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceStatus { get; set; }
 
             /// <summary>
-            /// <para>实例版本，EIAM2.0/ EIAM1.0</para>
+            /// <para>The instance version.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>EIAM 2.0</description></item>
+            /// <item><description>EIAM 1.0</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>EIAM 2.0</para>
@@ -71,7 +82,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceVersion { get; set; }
 
             /// <summary>
-            /// <para>实例openApi私网域名地址</para>
+            /// <para>The private domain of the instance OpenAPI.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eiam-cn.vpc-proxy.aliyuncs.com</para>
@@ -81,7 +92,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string OpenAPIPrivateDomain { get; set; }
 
             /// <summary>
-            /// <para>实例openApi公网域名地址</para>
+            /// <para>The public domain of the instance OpenAPI.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eiam.cn-hangzhou.aliyuncs.com</para>
@@ -91,7 +102,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string OpenAPIPublicDomain { get; set; }
 
             /// <summary>
-            /// <para>实例域名地址</para>
+            /// <para>The single sign-on (SSO) domain  of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxxx.aliyunidaas.com</para>
@@ -101,7 +112,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string SSODomain { get; set; }
 
             /// <summary>
-            /// <para>实例的创建时间</para>
+            /// <para>The time when the instance was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1677810869300</para>
@@ -113,6 +124,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>

@@ -20,6 +20,12 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [Validation(Required=false)]
         public string ApplicationId { get; set; }
 
+        /// <summary>
+        /// <para>Idp client token.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>client-examplexxx</para>
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
@@ -104,7 +110,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string ClaimName { get; set; }
 
                 /// <summary>
-                /// <para>The expression that is used to generate the value of the claim.</para>
+                /// <para>The expression that is used to calculate the value of the claim.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>user.dict.applicationRole</para>
@@ -126,7 +132,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public List<string> GrantScopes { get; set; }
 
             /// <summary>
-            /// <para>The list of grant types that are supported for OIDC protocols.</para>
+            /// <para>The authorization types that are supported for OIDC protocols.</para>
             /// 
             /// <b>Example:</b>
             /// <para>authorization_code</para>
@@ -146,7 +152,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? IdTokenEffectiveTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the identity authentication source in password mode. Specify this parameter only when the value of the GrantTypes parameter includes the password mode.</para>
+            /// <para>The ID of the identity authentication source in password mode. Configure this parameter only when the value of the GrantTypes parameter includes the password mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ia_password</para>
@@ -156,7 +162,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string PasswordAuthenticationSourceId { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether time-based one-time password (TOTP) authentication is required in password mode. Specify this parameter only when the value of the GrantTypes parameter includes the password mode.</para>
+            /// <para>Specifies whether time-based one-time password (TOTP) authentication is required in password mode. Configure this parameter only when the value of the GrantTypes parameter includes the password mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -186,14 +192,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public bool? PkceRequired { get; set; }
 
             /// <summary>
-            /// <para>The list of logout redirect URIs that are supported by the application.</para>
+            /// <para>The logout redirect URIs that are supported by the application.</para>
             /// </summary>
             [NameInMap("PostLogoutRedirectUris")]
             [Validation(Required=false)]
             public List<string> PostLogoutRedirectUris { get; set; }
 
             /// <summary>
-            /// <para>The list of redirect URIs that are supported by the application.</para>
+            /// <para>The redirect URIs that are supported by the application.</para>
             /// </summary>
             [NameInMap("RedirectUris")]
             [Validation(Required=false)]
@@ -210,7 +216,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? RefreshTokenEffective { get; set; }
 
             /// <summary>
-            /// <para>The response types that are supported by the application. Specify this parameter when the value of the GrantTypes parameter includes the implicit mode.</para>
+            /// <para>The response types that are supported by the application. Configure this parameter when the value of the GrantTypes parameter includes the implicit mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>token id_token</para>
@@ -220,7 +226,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public List<string> ResponseTypes { get; set; }
 
             /// <summary>
-            /// <para>The custom expression that is used to generate the subject ID returned for the ID token.</para>
+            /// <para>The custom expression that is used to calculate the subject ID returned for the ID token.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user.userid</para>
@@ -232,14 +238,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The Security Assertion Markup Language (SAML)-based single sign-on (SSO) configuration attributes of the application.</para>
+        /// <para>The Security Assertion Markup Language (SAML)-based SSO configuration attributes of the application.</para>
         /// </summary>
         [NameInMap("SamlSsoConfig")]
         [Validation(Required=false)]
         public SetApplicationSsoConfigRequestSamlSsoConfig SamlSsoConfig { get; set; }
         public class SetApplicationSsoConfigRequestSamlSsoConfig : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to calculate the signature for the assertion. You cannot set ResponseSigned and AssertionSigned to false at the same time.</para>
+            /// <para>Specifies whether to calculate the signature for the assertion. You cannot set the ResponseSigned and AssertionSigned parameters to false at the same time. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true</description></item>
             /// <item><description>false</description></item>
@@ -260,7 +266,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public List<SetApplicationSsoConfigRequestSamlSsoConfigAttributeStatements> AttributeStatements { get; set; }
             public class SetApplicationSsoConfigRequestSamlSsoConfigAttributeStatements : TeaModel {
                 /// <summary>
-                /// <para>The attribute name.</para>
+                /// <para>The name of the attribute in the SAML assertion.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://www.aliyun.com/SAML-Role/Attributes/RoleSessionName">https://www.aliyun.com/SAML-Role/Attributes/RoleSessionName</a></para>
@@ -270,7 +276,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string AttributeName { get; set; }
 
                 /// <summary>
-                /// <para>The expression that is used to generate the value of the attribute.</para>
+                /// <para>The expression that is used to generate the value of the attribute in the SAML assertion.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>user.username</para>
@@ -291,14 +297,27 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public string DefaultRelayState { get; set; }
 
+            /// <summary>
+            /// <para>IdP entityId.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="https://example.com/">https://example.com/</a></para>
+            /// </summary>
             [NameInMap("IdPEntityId")]
             [Validation(Required=false)]
             public string IdPEntityId { get; set; }
 
             /// <summary>
-            /// <para>The Format attribute of the NameID element in the SAML assertion. Valid values:</para>
+            /// <para>The format of the NameID element in the SAML assertion. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified: No format is specified. How to resolve the NameID element depends on the application.</description></item>
+            /// <item><description>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress: The NameID element must be an email address.</description></item>
+            /// <item><description>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent: The NameID element must be persistent.</description></item>
+            /// <item><description>urn:oasis:names:tc:SAML:2.0:nameid-format:transient: The NameID element must be transient.</description></item>
+            /// </list>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified: No format is specified. This is the default value.</description></item>
             /// <item><description>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress: The NameID element must be an email address.</description></item>
             /// <item><description>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent: The NameID element must be persistent.</description></item>
             /// <item><description>urn:oasis:names:tc:SAML:2.0:nameid-format:transient: The NameID element must be transient.</description></item>
@@ -321,14 +340,29 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public string NameIdValueExpression { get; set; }
 
+            /// <summary>
+            /// <para>Optional relayStates</para>
+            /// </summary>
             [NameInMap("OptionalRelayStates")]
             [Validation(Required=false)]
             public List<SetApplicationSsoConfigRequestSamlSsoConfigOptionalRelayStates> OptionalRelayStates { get; set; }
             public class SetApplicationSsoConfigRequestSamlSsoConfigOptionalRelayStates : TeaModel {
+                /// <summary>
+                /// <para>RelayState displayName</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Ram</para>
+                /// </summary>
                 [NameInMap("DisplayName")]
                 [Validation(Required=false)]
                 public string DisplayName { get; set; }
 
+                /// <summary>
+                /// <para>RelayState value</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="https://example">https://example</a> .aliyun.com</para>
+                /// </summary>
                 [NameInMap("RelayState")]
                 [Validation(Required=false)]
                 public string RelayState { get; set; }
@@ -336,7 +370,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether to calculate the signature for the response. You cannot set ResponseSigned and AssertionSigned to false at the same time.</para>
+            /// <para>Specifies whether to calculate the signature for the response. You cannot set the ResponseSigned and AssertionSigned parameters to false at the same time. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true</description></item>
             /// <item><description>false</description></item>
@@ -351,19 +385,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 
             /// <summary>
             /// <para>The algorithm that is used to calculate the signature for the SAML assertion.</para>
-            /// <para>Enumeration value:</para>
+            /// <para>Valid value:</para>
             /// <list type="bullet">
-            /// <item><description><para>RSA-SHA256</para>
-            /// <!-- -->
-            /// 
-            /// <para>:</para>
-            /// <!-- -->
-            /// 
-            /// <para>the Rivest-Shamir-Adleman (RSA)-Secure Hash Algorithm 256 (SHA-256) algorithm</para>
-            /// <!-- -->
-            /// 
-            /// <para>.</para>
-            /// </description></item>
+            /// <item><description>RSA-SHA256: the Rivest-Shamir-Adleman (RSA)-Secure Hash Algorithm 256 (SHA-256) algorithm.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

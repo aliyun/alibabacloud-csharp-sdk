@@ -9,22 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListEiamRegionsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The region list.</para>
+        /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public List<ListEiamRegionsResponseBodyRegions> Regions { get; set; }
         public class ListEiamRegionsResponseBodyRegions : TeaModel {
             /// <summary>
-            /// <para>地域名称</para>
+            /// <para>The region name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>华东1（杭州）</para>
+            /// <para>China (Hangzhou)</para>
             /// </summary>
             [NameInMap("LocalName")]
             [Validation(Required=false)]
             public string LocalName { get; set; }
 
             /// <summary>
-            /// <para>地域ID</para>
+            /// <para>The ID of the region in which the instance resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -36,6 +39,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>

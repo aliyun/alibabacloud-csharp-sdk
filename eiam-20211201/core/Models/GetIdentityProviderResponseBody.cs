@@ -9,12 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetIdentityProviderResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Identity provider Information.</para>
+        /// </summary>
         [NameInMap("IdentityProviderDetail")]
         [Validation(Required=false)]
         public GetIdentityProviderResponseBodyIdentityProviderDetail IdentityProviderDetail { get; set; }
         public class GetIdentityProviderResponseBodyIdentityProviderDetail : TeaModel {
             /// <summary>
-            /// <para>高阶配置能力</para>
+            /// <para>Advanced configuration capability. 
+            /// Value range:<br>Disabled: disabled<br>Enable: enabled</para>
             /// 
             /// <b>Example:</b>
             /// <para>disabled</para>
@@ -24,7 +28,15 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AdvancedStatus { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM 对应的认证来源产品，okta or google or azure ad</para>
+            /// <para>The corresponding identity provider product, e.g., Okta, Google, or Azure AD. Possible values:</para>
+            /// <para>DingTalk: urn:alibaba:idaas:idp:alibaba:dingtalk</para>
+            /// <para>LDAP: urn:alibaba:idaas:idp:unknown:ldap</para>
+            /// <para>Alibaba Cloud IDaaS: urn:alibaba:idaas:idp:alibaba:idaas</para>
+            /// <para>WeCom (Enterprise WeChat): urn:alibaba:idaas:idp:tencent:wecom</para>
+            /// <para>Lark (Feishu): urn:alibaba:idaas:idp:bytedance:lark</para>
+            /// <para>Active Directory: urn:alibaba:idaas:idp:microsoft:ad</para>
+            /// <para>Azure Active Directory: urn:alibaba:idaas:idp:microsoft:aad</para>
+            /// <para>Alibaba Cloud SASE: urn:alibaba:idaas:idp:alibaba:sase</para>
             /// 
             /// <b>Example:</b>
             /// <para>urn:alibaba:idaas:idp:bytedance:lark</para>
@@ -34,7 +46,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthnSourceSupplier { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM 认证方式类型 oidc or saml</para>
+            /// <para>Authentication type — OIDC or SAML. Possible values:</para>
+            /// <para>OIDC: urn:alibaba:idaas:authntype:oidc</para>
+            /// <para>SAML: urn:alibaba:idaas:authntype:saml2</para>
             /// 
             /// <b>Example:</b>
             /// <para>urn:alibaba:idaas:authntype:oidc</para>
@@ -44,7 +58,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthnSourceType { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM 对应IdP是否支持认证</para>
+            /// <para>Whether the corresponding IdP supports authentication. Value range: 
+            /// Disabled: disabled<br>Enabled: enabled</para>
             /// 
             /// <b>Example:</b>
             /// <para>disabled</para>
@@ -54,7 +69,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthnStatus { get; set; }
 
             /// <summary>
-            /// <para>创建时间</para>
+            /// <para>The time when the version was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1726021079000</para>
@@ -64,7 +79,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM 身份提供方描述</para>
+            /// <para>Identity provider description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>for poc test</para>
@@ -74,14 +89,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>钉钉基础配置</para>
+            /// <para>DingTalk Basic Configuration</para>
             /// </summary>
             [NameInMap("DingtalkAppConfig")]
             [Validation(Required=false)]
             public GetIdentityProviderResponseBodyIdentityProviderDetailDingtalkAppConfig DingtalkAppConfig { get; set; }
             public class GetIdentityProviderResponseBodyIdentityProviderDetailDingtalkAppConfig : TeaModel {
                 /// <summary>
-                /// <para>IDaaS EIAM 钉钉一方应用的AppKey</para>
+                /// <para>The AppKey for the application.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>41reopmwoy9s</para>
@@ -91,7 +106,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string AppKey { get; set; }
 
                 /// <summary>
-                /// <para>IDaaS EIAM 钉钉一方应用的AppSecret</para>
+                /// <para>The details of the application secret.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>REOQ6Cl55kriOd8NOBeqWYLKpHR4p6fdZxxxx</para>
@@ -101,7 +116,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string AppSecret { get; set; }
 
                 /// <summary>
-                /// <para>IDaaS EIAM 钉钉一方应用的corpId</para>
+                /// <para>DingTalk corpId.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3756043633237690761</para>
@@ -111,7 +126,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string CorpId { get; set; }
 
                 /// <summary>
-                /// <para>IDaaS EIAM 钉钉版本</para>
+                /// <para>DingTalk Version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>public_dingtalk</para>
@@ -120,24 +135,44 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 [Validation(Required=false)]
                 public string DingtalkVersion { get; set; }
 
+                /// <summary>
+                /// <para>DingTalk  encrypt key.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>29003eb11d0a28b4802a6f02fb8aa25dff730e2ac26ffdxxx</para>
+                /// </summary>
+                [NameInMap("EncryptKey")]
+                [Validation(Required=false)]
+                public string EncryptKey { get; set; }
+
+                /// <summary>
+                /// <para>DingTalk  verification token.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>5ba9c127a7abe029003eb11d0a28b4802a6f02fb8aa25dff730e2ac26ffxxxxx</para>
+                /// </summary>
+                [NameInMap("VerificationToken")]
+                [Validation(Required=false)]
+                public string VerificationToken { get; set; }
+
             }
 
             /// <summary>
-            /// <para>钉钉同步配置</para>
+            /// <para>DingTalk synchronous configuration.</para>
             /// </summary>
             [NameInMap("DingtalkProvisioningConfig")]
             [Validation(Required=false)]
             public GetIdentityProviderResponseBodyIdentityProviderDetailDingtalkProvisioningConfig DingtalkProvisioningConfig { get; set; }
             public class GetIdentityProviderResponseBodyIdentityProviderDetailDingtalkProvisioningConfig : TeaModel {
                 /// <summary>
-                /// <para>授权的钉钉部门</para>
+                /// <para>List of authorized DingTalk departments.</para>
                 /// </summary>
                 [NameInMap("AuthedDepartmentIds")]
                 [Validation(Required=false)]
                 public List<GetIdentityProviderResponseBodyIdentityProviderDetailDingtalkProvisioningConfigAuthedDepartmentIds> AuthedDepartmentIds { get; set; }
                 public class GetIdentityProviderResponseBodyIdentityProviderDetailDingtalkProvisioningConfigAuthedDepartmentIds : TeaModel {
                     /// <summary>
-                    /// <para>钉钉部门Id</para>
+                    /// <para>Department ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>123xxx444</para>
@@ -147,10 +182,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     public string DeptId { get; set; }
 
                     /// <summary>
-                    /// <para>钉钉部门名称</para>
+                    /// <para>Department name.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>测试部门</para>
+                    /// <para>test_xxx</para>
                     /// </summary>
                     [NameInMap("DeptName")]
                     [Validation(Required=false)]
@@ -159,27 +194,27 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 }
 
                 /// <summary>
-                /// <para>授权的钉钉账户列表</para>
+                /// <para>Authorized DingTalk account list.</para>
                 /// </summary>
                 [NameInMap("AuthedUsers")]
                 [Validation(Required=false)]
                 public List<GetIdentityProviderResponseBodyIdentityProviderDetailDingtalkProvisioningConfigAuthedUsers> AuthedUsers { get; set; }
                 public class GetIdentityProviderResponseBodyIdentityProviderDetailDingtalkProvisioningConfigAuthedUsers : TeaModel {
                     /// <summary>
-                    /// <para>钉钉用户名称</para>
+                    /// <para>DingTalk user name.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>张三</para>
+                    /// <para>zhangsan</para>
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>钉钉用户userId</para>
+                    /// <para>DingTalk user id.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>130308333929200479</para>
+                    /// <para>13030833392920xxx</para>
                     /// </summary>
                     [NameInMap("UserId")]
                     [Validation(Required=false)]
@@ -188,7 +223,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 }
 
                 /// <summary>
-                /// <para>钉钉企业corpId</para>
+                /// <para>DingTalk enterprise corpId.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ding_xxxxx</para>
@@ -198,10 +233,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string CorpId { get; set; }
 
                 /// <summary>
-                /// <para>钉钉企业名称</para>
+                /// <para>The name of the company.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>测试企业</para>
+                /// <para>test_xxx</para>
                 /// </summary>
                 [NameInMap("CorpName")]
                 [Validation(Required=false)]
@@ -210,7 +245,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>IDaaS EIAM 身份提供方外部ID</para>
+            /// <para>Identity provider external ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idp_xxxx</para>
@@ -220,17 +255,17 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string IdentityProviderExternalId { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM 身份提供方ID</para>
+            /// <para>Identity provider ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>idp_mwpcwnhrimlr2horx7xgg7pp7y</para>
+            /// <para>idp_mwpcwnhrimlr2horx7xgg7xxxx</para>
             /// </summary>
             [NameInMap("IdentityProviderId")]
             [Validation(Required=false)]
             public string IdentityProviderId { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM 身份提供方名称</para>
+            /// <para>Identity provider name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -240,7 +275,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string IdentityProviderName { get; set; }
 
             /// <summary>
-            /// <para>身份提供方同步类型</para>
+            /// <para>Identity provider type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>urn:alibaba:idaas:idp:alibaba:dingtalk:push</para>
@@ -250,7 +285,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string IdentityProviderType { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM 实例Id</para>
+            /// <para>Instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_x2df3bak3uwnapqm6xxxx</para>
@@ -260,24 +295,24 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>飞书配置</para>
+            /// <para>Lark configuration.</para>
             /// </summary>
             [NameInMap("LarkConfig")]
             [Validation(Required=false)]
             public GetIdentityProviderResponseBodyIdentityProviderDetailLarkConfig LarkConfig { get; set; }
             public class GetIdentityProviderResponseBodyIdentityProviderDetailLarkConfig : TeaModel {
                 /// <summary>
-                /// <para>IDaaS EIAM 飞书自建应用的corpId</para>
+                /// <para>The application ID.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>cli_a7a99f53a317100c</para>
+                /// <para>cli_a7a99f53a317xxxx</para>
                 /// </summary>
                 [NameInMap("AppId")]
                 [Validation(Required=false)]
                 public string AppId { get; set; }
 
                 /// <summary>
-                /// <para>IDaaS EIAM 飞书自建应用的AppSecret</para>
+                /// <para>The creation time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <hr>
@@ -286,12 +321,18 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 [Validation(Required=false)]
                 public string AppSecret { get; set; }
 
+                /// <summary>
+                /// <para>Feishu encryptKey.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>c5db46da8d4b751a7878e5d670402fb60e4d2391de3fa01f7c9e6353f6d1xxxxx</para>
+                /// </summary>
                 [NameInMap("EncryptKey")]
                 [Validation(Required=false)]
                 public string EncryptKey { get; set; }
 
                 /// <summary>
-                /// <para>IDaaS EIAM 飞书企业编码</para>
+                /// <para>Feishu enterprise code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>FX1231xxxx</para>
@@ -300,6 +341,12 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 [Validation(Required=false)]
                 public string EnterpriseNumber { get; set; }
 
+                /// <summary>
+                /// <para>Feishu verificationToken.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>c5db46da8d4b751a7878e5d670402fb60e4d2391de3fa01f7c9e6353f6d1xxxxx</para>
+                /// </summary>
                 [NameInMap("VerificationToken")]
                 [Validation(Required=false)]
                 public string VerificationToken { get; set; }
@@ -307,7 +354,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>最后一次状态检查结果</para>
+            /// <para>Last status check result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -317,14 +364,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string LastStatusCheckJobResult { get; set; }
 
             /// <summary>
-            /// <para>AD/LDAP身份提供方相关信息</para>
+            /// <para>AD/LDAP Identity provider information.</para>
             /// </summary>
             [NameInMap("LdapConfig")]
             [Validation(Required=false)]
             public GetIdentityProviderResponseBodyIdentityProviderDetailLdapConfig LdapConfig { get; set; }
             public class GetIdentityProviderResponseBodyIdentityProviderDetailLdapConfig : TeaModel {
                 /// <summary>
-                /// <para>管理员密码</para>
+                /// <para>Administrator password.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>XXXX</para>
@@ -334,7 +381,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string AdministratorPassword { get; set; }
 
                 /// <summary>
-                /// <para>管理员账号</para>
+                /// <para>Administrator username.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>example.com</para>
@@ -344,7 +391,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string AdministratorUsername { get; set; }
 
                 /// <summary>
-                /// <para>是否验证指纹证书</para>
+                /// <para>Whether to verify the fingerprint certificate.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>enabled</para>
@@ -354,14 +401,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string CertificateFingerprintStatus { get; set; }
 
                 /// <summary>
-                /// <para>证书指纹列表</para>
+                /// <para>Certificate fingerprint list.</para>
                 /// </summary>
                 [NameInMap("CertificateFingerprints")]
                 [Validation(Required=false)]
                 public List<string> CertificateFingerprints { get; set; }
 
                 /// <summary>
-                /// <para>通信协议</para>
+                /// <para>Ldap protocol.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ldap</para>
@@ -371,7 +418,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string LdapProtocol { get; set; }
 
                 /// <summary>
-                /// <para>ad/ldap 服务器地址</para>
+                /// <para>ldap server host.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>127.xx.xx.100</para>
@@ -381,7 +428,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string LdapServerHost { get; set; }
 
                 /// <summary>
-                /// <para>ad/ldap 服务器地址</para>
+                /// <para>ldap server port.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>389</para>
@@ -391,7 +438,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public int? LdapServerPort { get; set; }
 
                 /// <summary>
-                /// <para>startTls是否开启</para>
+                /// <para>StartTls status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>enabled</para>
@@ -403,7 +450,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>锁定原因</para>
+            /// <para>The reason why write operations on the instance are locked.</para>
             /// 
             /// <b>Example:</b>
             /// <para>financial</para>
@@ -412,12 +459,18 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public string LockReason { get; set; }
 
+            /// <summary>
+            /// <para>The URL of the application logo.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="https://img.alicdn.com/imgextra/i4/O1CN01OB8fJj22fpoZm4sd0_!!6000000007148-2-tps-149-xxx.png">https://img.alicdn.com/imgextra/i4/O1CN01OB8fJj22fpoZm4sd0_!!6000000007148-2-tps-149-xxx.png</a></para>
+            /// </summary>
             [NameInMap("LogoUrl")]
             [Validation(Required=false)]
             public string LogoUrl { get; set; }
 
             /// <summary>
-            /// <para>网络端点ID</para>
+            /// <para>The unique identifier of the network access endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>nae_mx4vsadfe6govkqkwckxxxx</para>
@@ -427,21 +480,21 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string NetworkAccessEndpointId { get; set; }
 
             /// <summary>
-            /// <para>OIDC IdP配置。</para>
+            /// <para>OIDC IdP configuration.</para>
             /// </summary>
             [NameInMap("OidcConfig")]
             [Validation(Required=false)]
             public GetIdentityProviderResponseBodyIdentityProviderDetailOidcConfig OidcConfig { get; set; }
             public class GetIdentityProviderResponseBodyIdentityProviderDetailOidcConfig : TeaModel {
                 /// <summary>
-                /// <para>OIDC客户端认证配置。</para>
+                /// <para>OIDC client authentication configuration.</para>
                 /// </summary>
                 [NameInMap("AuthnParam")]
                 [Validation(Required=false)]
                 public GetIdentityProviderResponseBodyIdentityProviderDetailOidcConfigAuthnParam AuthnParam { get; set; }
                 public class GetIdentityProviderResponseBodyIdentityProviderDetailOidcConfigAuthnParam : TeaModel {
                     /// <summary>
-                    /// <para>OIDC/oAuth2 认证方法。</para>
+                    /// <para>OIDC/OAuth2 authentication method.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>client_secret_post</para>
@@ -451,7 +504,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     public string AuthnMethod { get; set; }
 
                     /// <summary>
-                    /// <para>OIDC/oAuth2 客户端ID。</para>
+                    /// <para>The client ID of the device whose access credential you want to query.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>mkv7rgt4d7i4u7zqtzev2mxxxx</para>
@@ -461,7 +514,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     public string ClientId { get; set; }
 
                     /// <summary>
-                    /// <para>OIDC/oAuth2 客户端密钥。</para>
+                    /// <para>The application secret registered with the OIDC authentication service.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>CSEHDddddddxxxxuxkJEHPveWRXBGqVqRsxxxx</para>
@@ -473,14 +526,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 }
 
                 /// <summary>
-                /// <para>OIDC 端点配置。</para>
+                /// <para>OIDC endpoint configuration.</para>
                 /// </summary>
                 [NameInMap("EndpointConfig")]
                 [Validation(Required=false)]
                 public GetIdentityProviderResponseBodyIdentityProviderDetailOidcConfigEndpointConfig EndpointConfig { get; set; }
                 public class GetIdentityProviderResponseBodyIdentityProviderDetailOidcConfigEndpointConfig : TeaModel {
                     /// <summary>
-                    /// <para>oAuth2 授权端点。</para>
+                    /// <para>OAuth2 authorization endpoint.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para><a href="https://example.com/oauth/authorize">https://example.com/oauth/authorize</a></para>
@@ -490,7 +543,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     public string AuthorizationEndpoint { get; set; }
 
                     /// <summary>
-                    /// <para>OIDC issuer信息。</para>
+                    /// <para>The CA that issued the certificate.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para><a href="https://example.com/oauth">https://example.com/oauth</a></para>
@@ -500,7 +553,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     public string Issuer { get; set; }
 
                     /// <summary>
-                    /// <para>OIDC jwks地址。</para>
+                    /// <para>Jwks uri.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para><a href="https://example.com/oauth/jwks">https://example.com/oauth/jwks</a></para>
@@ -510,7 +563,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     public string JwksUri { get; set; }
 
                     /// <summary>
-                    /// <para>oAuth2 Token端点。</para>
+                    /// <para>Token endpoint.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para><a href="https://example.com/oauth/token">https://example.com/oauth/token</a></para>
@@ -520,7 +573,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     public string TokenEndpoint { get; set; }
 
                     /// <summary>
-                    /// <para>OIDC 用户信息端点。</para>
+                    /// <para>OIDC user info endpoint.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para><a href="https://example.com/oauth/userinfo">https://example.com/oauth/userinfo</a></para>
@@ -532,7 +585,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 }
 
                 /// <summary>
-                /// <para>OIDC标准参数，如profile、email等</para>
+                /// <para>OIDC authorization scope list.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>openid</para>
@@ -542,7 +595,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public List<string> GrantScopes { get; set; }
 
                 /// <summary>
-                /// <para>OIDC授权类型。</para>
+                /// <para>OIDC authorization grant type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>authorization_code</para>
@@ -552,7 +605,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string GrantType { get; set; }
 
                 /// <summary>
-                /// <para>支持的PKCE算法类型。</para>
+                /// <para>Supported PKCE code challenge methods.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>S256</para>
@@ -562,7 +615,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string PkceChallengeMethod { get; set; }
 
                 /// <summary>
-                /// <para>AuthorizationCode授权模式下是否使用PKCE。</para>
+                /// <para>Whether to use PKCE in authorization code grant flow.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -574,13 +627,17 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>同步入配置</para>
+            /// <para>Sync in configuration.</para>
             /// </summary>
             [NameInMap("UdPullConfig")]
             [Validation(Required=false)]
             public GetIdentityProviderResponseBodyIdentityProviderDetailUdPullConfig UdPullConfig { get; set; }
             public class GetIdentityProviderResponseBodyIdentityProviderDetailUdPullConfig : TeaModel {
                 /// <summary>
+                /// <para>Whether to enable group synchronization. Possible values:</para>
+                /// <para>Disabled: disabled</para>
+                /// <para>Enabled: enabled</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>disabled</para>
                 /// </summary>
@@ -589,7 +646,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string GroupSyncStatus { get; set; }
 
                 /// <summary>
-                /// <para>增量回调状态，是否处理来自IdP的增量回调数据</para>
+                /// <para>Incremental callback status: Whether to process incremental callback data from the IdP.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>disabled</para>
@@ -599,21 +656,21 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string IncrementalCallbackStatus { get; set; }
 
                 /// <summary>
-                /// <para>同步入配置信息</para>
+                /// <para>Inbound synchronization configuration Information.</para>
                 /// </summary>
                 [NameInMap("UdSyncScopeConfig")]
                 [Validation(Required=false)]
                 public GetIdentityProviderResponseBodyIdentityProviderDetailUdPullConfigUdSyncScopeConfig UdSyncScopeConfig { get; set; }
                 public class GetIdentityProviderResponseBodyIdentityProviderDetailUdPullConfigUdSyncScopeConfig : TeaModel {
                     /// <summary>
-                    /// <para>同步来源节点</para>
+                    /// <para>Synchronization source node.</para>
                     /// </summary>
                     [NameInMap("SourceScopes")]
                     [Validation(Required=false)]
                     public List<string> SourceScopes { get; set; }
 
                     /// <summary>
-                    /// <para>同步目标节点</para>
+                    /// <para>Synchronization target node.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ou_123xxxx</para>
@@ -627,7 +684,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>IDaaS EIAM 是否支持UD同步</para>
+            /// <para>Indicates whether the IDaaS EIAM system supports UD (User Directory) synchronization.</para>
             /// 
             /// <b>Example:</b>
             /// <para>disabled</para>
@@ -637,14 +694,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string UdPullStatus { get; set; }
 
             /// <summary>
-            /// <para>同步出配置</para>
+            /// <para>Outbound synchronization configuration.</para>
             /// </summary>
             [NameInMap("UdPushConfig")]
             [Validation(Required=false)]
             public GetIdentityProviderResponseBodyIdentityProviderDetailUdPushConfig UdPushConfig { get; set; }
             public class GetIdentityProviderResponseBodyIdentityProviderDetailUdPushConfig : TeaModel {
                 /// <summary>
-                /// <para>增量回调状态，是否处理来自IdP的增量回调数据</para>
+                /// <para>Incremental callback status: Whether to process incremental callback data from the IdP.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>disabled</para>
@@ -654,21 +711,21 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string IncrementalCallbackStatus { get; set; }
 
                 /// <summary>
-                /// <para>同步出配置信息</para>
+                /// <para>Outbound synchronization configuration Information.</para>
                 /// </summary>
                 [NameInMap("UdSyncScopeConfigs")]
                 [Validation(Required=false)]
                 public List<GetIdentityProviderResponseBodyIdentityProviderDetailUdPushConfigUdSyncScopeConfigs> UdSyncScopeConfigs { get; set; }
                 public class GetIdentityProviderResponseBodyIdentityProviderDetailUdPushConfigUdSyncScopeConfigs : TeaModel {
                     /// <summary>
-                    /// <para>同步来源节点</para>
+                    /// <para>Synchronization source node.</para>
                     /// </summary>
                     [NameInMap("SourceScopes")]
                     [Validation(Required=false)]
                     public List<string> SourceScopes { get; set; }
 
                     /// <summary>
-                    /// <para>同步目标节点</para>
+                    /// <para>Synchronization target node.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ou_123xxxx</para>
@@ -682,7 +739,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>同步出能力</para>
+            /// <para>Outbound synchronization capability.</para>
             /// 
             /// <b>Example:</b>
             /// <para>disabled</para>
@@ -692,7 +749,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string UdPushStatus { get; set; }
 
             /// <summary>
-            /// <para>更新时间</para>
+            /// <para>The time when the serviceInstance  was last updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1726021079000</para>
@@ -702,14 +759,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>企业微信</para>
+            /// <para>WeCom configuration.</para>
             /// </summary>
             [NameInMap("WeComConfig")]
             [Validation(Required=false)]
             public GetIdentityProviderResponseBodyIdentityProviderDetailWeComConfig WeComConfig { get; set; }
             public class GetIdentityProviderResponseBodyIdentityProviderDetailWeComConfig : TeaModel {
                 /// <summary>
-                /// <para>IDaaS EIAM 企业微信自建应用的Id</para>
+                /// <para>The ID of the load generator. This parameter is disabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1242350</para>
@@ -719,7 +776,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string AgentId { get; set; }
 
                 /// <summary>
-                /// <para>授权回调域</para>
+                /// <para>Authorization callback domain.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://example.com/xxxx">https://example.com/xxxx</a></para>
@@ -729,17 +786,17 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string AuthorizeCallbackDomain { get; set; }
 
                 /// <summary>
-                /// <para>IDaaS EIAM 企业微信自建应用的corpId</para>
+                /// <para>CorpId.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>3562012953454577801</para>
+                /// <para>356201295345457xxxxx</para>
                 /// </summary>
                 [NameInMap("CorpId")]
                 [Validation(Required=false)]
                 public string CorpId { get; set; }
 
                 /// <summary>
-                /// <para>IDaaS EIAM 企业微信自建应用的corpSecret</para>
+                /// <para>Corp secret.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>weaseiszjskejskaj12sjeszojxxxx</para>
@@ -749,7 +806,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string CorpSecret { get; set; }
 
                 /// <summary>
-                /// <para>可信域名</para>
+                /// <para>Trusted domain.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://example.com">https://example.com</a></para>
@@ -763,6 +820,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>

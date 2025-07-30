@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public GetApplicationProvisioningScopeResponseBodyApplicationProvisioningScope ApplicationProvisioningScope { get; set; }
         public class GetApplicationProvisioningScopeResponseBodyApplicationProvisioningScope : TeaModel {
             /// <summary>
-            /// <para>Synchronize the list of authorized groups</para>
+            /// <para>Synchronize the list of authorized groups.</para>
             /// </summary>
             [NameInMap("GroupIds")]
             [Validation(Required=false)]
             public List<string> GroupIds { get; set; }
 
             /// <summary>
-            /// <para>Instance Indicates the maximum quota number of authorized agents</para>
+            /// <para>Instance Indicates the maximum quota number of authorized agents.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public List<string> OrganizationalUnitIds { get; set; }
 
             /// <summary>
-            /// <para>Indicates the quota number of used authorized agents</para>
+            /// <para>Indicates the quota number of used authorized agents.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class SetPasswordExpirationConfigurationRequest : TeaModel {
+        /// <summary>
+        /// <para>Effective authentication sourceIds</para>
+        /// </summary>
         [NameInMap("EffectiveAuthenticationSourceIds")]
         [Validation(Required=false)]
         public List<string> EffectiveAuthenticationSourceIds { get; set; }
