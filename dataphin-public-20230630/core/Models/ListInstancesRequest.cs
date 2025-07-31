@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [Validation(Required=false)]
             public long? BizUnitId { get; set; }
 
+            [NameInMap("FlowId")]
+            [Validation(Required=false)]
+            public string FlowId { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>2024-05-31</para>

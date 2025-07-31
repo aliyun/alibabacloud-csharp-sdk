@@ -145,6 +145,22 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>30231123</para>
+            /// </summary>
+            [NameInMap("DevelopOwnerId")]
+            [Validation(Required=false)]
+            public string DevelopOwnerId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>张三</para>
+            /// </summary>
+            [NameInMap("DevelopOwnerName")]
+            [Validation(Required=false)]
+            public string DevelopOwnerName { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>12113111</para>
             /// </summary>
             [NameInMap("FileId")]
@@ -218,6 +234,22 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [NameInMap("OperatorUserId")]
             [Validation(Required=false)]
             public string OperatorUserId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>30231123</para>
+            /// </summary>
+            [NameInMap("OpsOwnerId")]
+            [Validation(Required=false)]
+            public string OpsOwnerId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>张三</para>
+            /// </summary>
+            [NameInMap("OpsOwnerName")]
+            [Validation(Required=false)]
+            public string OpsOwnerName { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
