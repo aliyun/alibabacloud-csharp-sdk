@@ -137,6 +137,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string Launcher { get; set; }
 
+        [NameInMap("OssOutputDelivery")]
+        [Validation(Required=false)]
+        public string OssOutputDelivery { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }

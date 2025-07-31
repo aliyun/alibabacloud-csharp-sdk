@@ -269,6 +269,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public string Launcher { get; set; }
 
+                    [NameInMap("OssOutputDelivery")]
+                    [Validation(Required=false)]
+                    public string OssOutputDelivery { get; set; }
+
+                    [NameInMap("OssOutputStatus")]
+                    [Validation(Required=false)]
+                    public string OssOutputStatus { get; set; }
+
+                    [NameInMap("OssOutputUri")]
+                    [Validation(Required=false)]
+                    public string OssOutputUri { get; set; }
+
                     /// <summary>
                     /// <para>The command output.</para>
                     /// <list type="bullet">
