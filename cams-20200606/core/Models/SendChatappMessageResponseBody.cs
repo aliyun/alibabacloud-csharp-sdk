@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class SendChatappMessageResponseBody : TeaModel {
+        [NameInMap("AccessDeniedDetail")]
+        [Validation(Required=false)]
+        public string AccessDeniedDetail { get; set; }
+
         /// <summary>
         /// <para>The HTTP status code returned.</para>
         /// <list type="bullet">
