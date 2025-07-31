@@ -47,6 +47,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 [Validation(Required=false)]
                 public string BackupEndTime { get; set; }
 
+                [NameInMap("BackupExpireTime")]
+                [Validation(Required=false)]
+                public string BackupExpireTime { get; set; }
+
                 /// <summary>
                 /// <para>The ID of the backup set.</para>
                 /// 

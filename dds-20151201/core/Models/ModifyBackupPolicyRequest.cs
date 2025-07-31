@@ -327,6 +327,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string PreferredBackupTime { get; set; }
 
+        [NameInMap("PreserveOneEachHour")]
+        [Validation(Required=false)]
+        public bool? PreserveOneEachHour { get; set; }
+
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }

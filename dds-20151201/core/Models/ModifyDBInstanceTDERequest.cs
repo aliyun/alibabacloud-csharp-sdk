@@ -79,6 +79,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string RoleARN { get; set; }
 
+        [NameInMap("SwitchMode")]
+        [Validation(Required=false)]
+        public string SwitchMode { get; set; }
+
         /// <summary>
         /// <para>The TDE status. When the value of this parameter is set to <b>Enabled</b>, TDE is enabled.</para>
         /// <remarks>

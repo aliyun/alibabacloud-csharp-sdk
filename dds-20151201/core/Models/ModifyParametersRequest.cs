@@ -91,6 +91,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("SwitchMode")]
+        [Validation(Required=false)]
+        public string SwitchMode { get; set; }
+
     }
 
 }

@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string BackupMethod { get; set; }
 
+        [NameInMap("BackupRetentionPeriod")]
+        [Validation(Required=false)]
+        public long? BackupRetentionPeriod { get; set; }
+
         /// <summary>
         /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>

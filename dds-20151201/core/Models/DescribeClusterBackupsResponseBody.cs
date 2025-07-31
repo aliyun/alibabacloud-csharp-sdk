@@ -36,6 +36,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             [Validation(Required=false)]
             public string AttachLogStatus { get; set; }
 
+            [NameInMap("BackupExpireTime")]
+            [Validation(Required=false)]
+            public string BackupExpireTime { get; set; }
+
             /// <summary>
             /// <para>The collection of the backup sets of each child node in a cluster backup set.</para>
             /// </summary>

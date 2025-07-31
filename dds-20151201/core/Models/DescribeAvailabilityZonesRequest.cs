@@ -188,21 +188,19 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string StorageSupport { get; set; }
 
         /// <summary>
-        /// <para>The disk type. Valid values:</para>
+        /// <para>The storage type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cloud_essd</b>: PL1 Enterprise SSD (ESSD)</description></item>
-        /// <item><description><b>cloud_essd2</b>: PL2 ESSD</description></item>
-        /// <item><description><b>cloud_essd3</b>: PL3 ESSD</description></item>
-        /// <item><description><b>dhg_local_ssd</b>: local SSD</description></item>
+        /// <item><description><b>cloud_essd1</b>: PL1 Enterprise SSDs (ESSDs)</description></item>
+        /// <item><description><b>cloud_essd2</b>: PL2 ESSDs</description></item>
+        /// <item><description><b>cloud_essd3</b>: PL3 ESSDs</description></item>
+        /// <item><description><b>local_ssd</b>: local SSDs</description></item>
         /// </list>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>Instances that run MongoDB 4.4 or later only use cloud disks to store data. If you do not specify this parameter, the value <b>cloud_essd1</b> is used by default.</para>
-        /// </description></item>
-        /// <item><description><para>Instances that run MongoDB 4.2 and earlier only use local disks to store data. If you do not specify this parameter, the value <b>local_ssd</b> is used by default.</para>
-        /// </description></item>
+        /// <item><description>Instances that run MongoDB 4.4 or later only use cloud disks to store data. If you do not specify this parameter, the value <b>cloud_essd1</b> is used by default.</description></item>
+        /// <item><description>Instances that run MongoDB 4.2 and earlier only use local disks to store data. If you do not specify this parameter, the value <b>local_ssd</b> is used by default.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>local_ssd</para>

@@ -222,6 +222,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string PreferredNextBackupTime { get; set; }
 
+        [NameInMap("PreserveOneEachHour")]
+        [Validation(Required=false)]
+        public bool? PreserveOneEachHour { get; set; }
+
         /// <summary>
         /// <para>The request ID.</para>
         /// 

@@ -8,30 +8,24 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
-    public class RestartDBInstanceRequest : TeaModel {
+    public class ModifyDBInstanceAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>dds-bpxxxxxxxx</para>
+        /// <para>dds-7xv0912d85924194</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the shard or mongos node in the sharded cluster instance.</para>
-        /// <remarks>
-        /// <para>The sharded cluster instance is restarted if you do not specify this parameter.</para>
-        /// </remarks>
-        /// 
         /// <b>Example:</b>
-        /// <para>d-bpxxxxxxxx</para>
+        /// <para>false</para>
         /// </summary>
-        [NameInMap("NodeId")]
+        [NameInMap("DBInstanceReleaseProtection")]
         [Validation(Required=false)]
-        public string NodeId { get; set; }
+        public bool? DBInstanceReleaseProtection { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -48,10 +42,6 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("SwitchMode")]
-        [Validation(Required=false)]
-        public string SwitchMode { get; set; }
 
     }
 

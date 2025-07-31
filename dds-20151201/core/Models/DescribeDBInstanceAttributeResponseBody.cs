@@ -319,6 +319,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 [Validation(Required=false)]
                 public string DestroyTime { get; set; }
 
+                [NameInMap("DisasterRecoveryInfo")]
+                [Validation(Required=false)]
+                public string DisasterRecoveryInfo { get; set; }
+
                 /// <summary>
                 /// <para>Indicates whether disk encryption is enabled.</para>
                 /// 
@@ -1078,6 +1082,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                         [NameInMap("ReadonlyReplicas")]
                         [Validation(Required=false)]
                         public int? ReadonlyReplicas { get; set; }
+
+                        [NameInMap("ReplicaSetName")]
+                        [Validation(Required=false)]
+                        public string ReplicaSetName { get; set; }
 
                         /// <summary>
                         /// <para>The status of the shard node. For more information, see <a href="https://help.aliyun.com/document_detail/63870.html">Instance states</a>.</para>

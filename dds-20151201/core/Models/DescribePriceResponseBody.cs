@@ -436,6 +436,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             [Validation(Required=false)]
             public double? StandPrice { get; set; }
 
+            [NameInMap("TotalCostAmount")]
+            [Validation(Required=false)]
+            public double? TotalCostAmount { get; set; }
+
             /// <summary>
             /// <para>The final price of the order.</para>
             /// 
