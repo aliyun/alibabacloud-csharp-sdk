@@ -8,18 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Green20220926.Models
 {
-    public class ExportResultRequest : TeaModel {
+    public class UpdateOssCheckResultsFreezeRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>1</para>
-        /// </summary>
-        [NameInMap("CurrentPage")]
-        [Validation(Required=false)]
-        public int? CurrentPage { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>2023-08-24 10:01:55</para>
+        /// <para>2023-10-21 16:08:38</para>
         /// </summary>
         [NameInMap("EndDate")]
         [Validation(Required=false)]
@@ -27,19 +19,23 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>20</para>
+        /// <para>[]</para>
         /// </summary>
-        [NameInMap("PageSize")]
+        [NameInMap("FreezeItems")]
         [Validation(Required=false)]
-        public int? PageSize { get; set; }
+        public string FreezeItems { get; set; }
+
+        [NameInMap("FreezeRestorePath")]
+        [Validation(Required=false)]
+        public string FreezeRestorePath { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>{&quot;TaskId&quot;:&quot;P_11TL5T&quot;}</para>
+        /// <para>ACL</para>
         /// </summary>
-        [NameInMap("Query")]
+        [NameInMap("FreezeType")]
         [Validation(Required=false)]
-        public string Query { get; set; }
+        public string FreezeType { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -49,21 +45,21 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        [NameInMap("Sort")]
-        [Validation(Required=false)]
-        public Dictionary<string, string> Sort { get; set; }
-
-        [NameInMap("Source")]
-        [Validation(Required=false)]
-        public string Source { get; set; }
-
         /// <summary>
         /// <b>Example:</b>
-        /// <para>2023-08-11 09:00:19</para>
+        /// <para>2023-08-21 16:08:38</para>
         /// </summary>
         [NameInMap("StartDate")]
         [Validation(Required=false)]
         public string StartDate { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>P_15BU42</para>
+        /// </summary>
+        [NameInMap("TaskId")]
+        [Validation(Required=false)]
+        public string TaskId { get; set; }
 
     }
 

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Green20220926.Models
 {
-    public class ExportResultRequest : TeaModel {
+    public class GetOssCheckFreezeResultShrinkRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>1</para>
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>2023-08-24 10:01:55</para>
+        /// <para>2025-05-19 10:05:11</para>
         /// </summary>
         [NameInMap("EndDate")]
         [Validation(Required=false)]
@@ -27,7 +27,15 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>20</para>
+        /// <para>0</para>
+        /// </summary>
+        [NameInMap("FinishNum")]
+        [Validation(Required=false)]
+        public long? FinishNum { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -35,7 +43,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>{&quot;TaskId&quot;:&quot;P_11TL5T&quot;}</para>
+        /// <para>{\&quot;TaskId\&quot;:\&quot;P_O3SI0I\&quot;}</para>
         /// </summary>
         [NameInMap("Query")]
         [Validation(Required=false)]
@@ -51,19 +59,23 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 
         [NameInMap("Sort")]
         [Validation(Required=false)]
-        public Dictionary<string, string> Sort { get; set; }
-
-        [NameInMap("Source")]
-        [Validation(Required=false)]
-        public string Source { get; set; }
+        public string SortShrink { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>2023-08-11 09:00:19</para>
+        /// <para>2025-01-09 10:28:54</para>
         /// </summary>
         [NameInMap("StartDate")]
         [Validation(Required=false)]
         public string StartDate { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public int? Status { get; set; }
 
     }
 

@@ -8,50 +8,38 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Green20220926.Models
 {
-    public class GetFeatureConfigRequest : TeaModel {
-        [NameInMap("Query")]
-        [Validation(Required=false)]
-        public string Query { get; set; }
-
+    public class CreateOnlineTestRequest : TeaModel {
         /// <summary>
-        /// <para>Region ID</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>cn-shanghai</para>
+        /// <para>xxxxxxx</para>
         /// </summary>
-        [NameInMap("RegionId")]
+        [NameInMap("DataId")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string DataId { get; set; }
 
         /// <summary>
-        /// <para>Resource type.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>text</para>
+        /// <para>video</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>Service code.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>llm_query_moderation</para>
+        /// <para>VideoModeration</para>
         /// </summary>
         [NameInMap("ServiceCode")]
         [Validation(Required=false)]
         public string ServiceCode { get; set; }
 
         /// <summary>
-        /// <para>Type</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>custom_llm_template</para>
+        /// <para><a href="https://xxxxxxxxxx.com/data/data.png">https://xxxxxxxxxx.com/data/data.png</a></para>
         /// </summary>
-        [NameInMap("Type")]
+        [NameInMap("Url")]
         [Validation(Required=false)]
-        public string Type { get; set; }
+        public string Url { get; set; }
 
     }
 

@@ -8,14 +8,24 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Green20220926.Models
 {
-    public class GetFeatureConfigRequest : TeaModel {
-        [NameInMap("Query")]
+    public class UpdateOssCheckResultsFeedBackRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>misreport</para>
+        /// </summary>
+        [NameInMap("Feedback")]
         [Validation(Required=false)]
-        public string Query { get; set; }
+        public string Feedback { get; set; }
 
         /// <summary>
-        /// <para>Region ID</para>
-        /// 
+        /// <b>Example:</b>
+        /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
+        /// </summary>
+        [NameInMap("QueryRequestId")]
+        [Validation(Required=false)]
+        public string QueryRequestId { get; set; }
+
+        /// <summary>
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
         /// </summary>
@@ -24,34 +34,20 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Resource type.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>text</para>
-        /// </summary>
-        [NameInMap("ResourceType")]
-        [Validation(Required=false)]
-        public string ResourceType { get; set; }
-
-        /// <summary>
-        /// <para>Service code.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>llm_query_moderation</para>
+        /// <para>baselineCheck</para>
         /// </summary>
         [NameInMap("ServiceCode")]
         [Validation(Required=false)]
         public string ServiceCode { get; set; }
 
         /// <summary>
-        /// <para>Type</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>custom_llm_template</para>
+        /// <para>P_7SCUK8</para>
         /// </summary>
-        [NameInMap("Type")]
+        [NameInMap("TaskId")]
         [Validation(Required=false)]
-        public string Type { get; set; }
+        public string TaskId { get; set; }
 
     }
 

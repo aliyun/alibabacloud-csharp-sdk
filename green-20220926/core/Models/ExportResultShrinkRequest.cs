@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public string SortShrink { get; set; }
 
+        [NameInMap("Source")]
+        [Validation(Required=false)]
+        public string Source { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>2023-08-11 09:00:19</para>

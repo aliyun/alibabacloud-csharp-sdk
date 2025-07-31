@@ -77,6 +77,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public bool? FreezeMediumRisk2 { get; set; }
 
+        [NameInMap("FreezeRestorePath")]
+        [Validation(Required=false)]
+        public string FreezeRestorePath { get; set; }
+
         [NameInMap("FreezeType")]
         [Validation(Required=false)]
         public string FreezeType { get; set; }
@@ -120,6 +124,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [NameInMap("Priority")]
         [Validation(Required=false)]
         public int? Priority { get; set; }
+
+        [NameInMap("Referer")]
+        [Validation(Required=false)]
+        public string Referer { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
