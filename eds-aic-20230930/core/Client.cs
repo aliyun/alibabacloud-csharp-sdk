@@ -7992,6 +7992,134 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>安装监控插件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InstallMonitorAgentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallMonitorAgentResponse
+        /// </returns>
+        public InstallMonitorAgentResponse InstallMonitorAgentWithOptions(InstallMonitorAgentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidInstanceIds))
+            {
+                body["AndroidInstanceIds"] = request.AndroidInstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaleMode))
+            {
+                body["SaleMode"] = request.SaleMode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "InstallMonitorAgent",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<InstallMonitorAgentResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>安装监控插件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InstallMonitorAgentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallMonitorAgentResponse
+        /// </returns>
+        public async Task<InstallMonitorAgentResponse> InstallMonitorAgentWithOptionsAsync(InstallMonitorAgentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidInstanceIds))
+            {
+                body["AndroidInstanceIds"] = request.AndroidInstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaleMode))
+            {
+                body["SaleMode"] = request.SaleMode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "InstallMonitorAgent",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<InstallMonitorAgentResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>安装监控插件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InstallMonitorAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallMonitorAgentResponse
+        /// </returns>
+        public InstallMonitorAgentResponse InstallMonitorAgent(InstallMonitorAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return InstallMonitorAgentWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>安装监控插件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InstallMonitorAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallMonitorAgentResponse
+        /// </returns>
+        public async Task<InstallMonitorAgentResponse> InstallMonitorAgentAsync(InstallMonitorAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await InstallMonitorAgentWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries policies.</para>
         /// </summary>
         /// 
@@ -10642,6 +10770,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["AndroidInstanceIdList"] = request.AndroidInstanceIdList;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoInstall))
+            {
+                query["AutoInstall"] = request.AutoInstall;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceFilePath))
             {
                 query["SourceFilePath"] = request.SourceFilePath;
@@ -10708,6 +10840,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidInstanceIdList))
             {
                 query["AndroidInstanceIdList"] = request.AndroidInstanceIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoInstall))
+            {
+                query["AutoInstall"] = request.AutoInstall;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceFilePath))
             {
@@ -11540,6 +11676,134 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UninstallAppWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>卸载监控插件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UninstallMonitorAgentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UninstallMonitorAgentResponse
+        /// </returns>
+        public UninstallMonitorAgentResponse UninstallMonitorAgentWithOptions(UninstallMonitorAgentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidInstanceIds))
+            {
+                body["AndroidInstanceIds"] = request.AndroidInstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaleMode))
+            {
+                body["SaleMode"] = request.SaleMode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UninstallMonitorAgent",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UninstallMonitorAgentResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>卸载监控插件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UninstallMonitorAgentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UninstallMonitorAgentResponse
+        /// </returns>
+        public async Task<UninstallMonitorAgentResponse> UninstallMonitorAgentWithOptionsAsync(UninstallMonitorAgentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidInstanceIds))
+            {
+                body["AndroidInstanceIds"] = request.AndroidInstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaleMode))
+            {
+                body["SaleMode"] = request.SaleMode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UninstallMonitorAgent",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UninstallMonitorAgentResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>卸载监控插件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UninstallMonitorAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UninstallMonitorAgentResponse
+        /// </returns>
+        public UninstallMonitorAgentResponse UninstallMonitorAgent(UninstallMonitorAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UninstallMonitorAgentWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>卸载监控插件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UninstallMonitorAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UninstallMonitorAgentResponse
+        /// </returns>
+        public async Task<UninstallMonitorAgentResponse> UninstallMonitorAgentAsync(UninstallMonitorAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UninstallMonitorAgentWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public List<string> AndroidInstanceIdList { get; set; }
 
+        [NameInMap("AutoInstall")]
+        [Validation(Required=false)]
+        public bool? AutoInstall { get; set; }
+
         /// <summary>
         /// <para>The path to which you want to upload the pushed file in the cloud phone instance.</para>
         /// <para>This parameter is required.</para>
