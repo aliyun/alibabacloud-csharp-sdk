@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Yunjian20211217.Models
         [Validation(Required=false)]
         public string AccountId { get; set; }
 
+        [NameInMap("demandType")]
+        [Validation(Required=false)]
+        public string DemandType { get; set; }
+
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
