@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -12,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.OpenPlatform20191219.Models
 {
     public class AuthorizeFileUploadRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("Product")]
         [Validation(Required=false)]
         public string Product { get; set; }
@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.OpenPlatform20191219.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("UseSts")]
+        [Validation(Required=false)]
+        public bool? UseSts { get; set; }
 
     }
 

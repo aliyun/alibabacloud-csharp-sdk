@@ -33,6 +33,14 @@ namespace AlibabaCloud.SDK.OpenPlatform20191219.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
+        [NameInMap("SecurityToken")]
+        [Validation(Required=false)]
+        public string SecurityToken { get; set; }
+
         [NameInMap("Signature")]
         [Validation(Required=false)]
         public string Signature { get; set; }
