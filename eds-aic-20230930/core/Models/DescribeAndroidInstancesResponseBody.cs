@@ -431,6 +431,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string RenderingType { get; set; }
 
+            [NameInMap("ServerStatus")]
+            [Validation(Required=false)]
+            public string ServerStatus { get; set; }
+
             [NameInMap("ServerType")]
             [Validation(Required=false)]
             public string ServerType { get; set; }
