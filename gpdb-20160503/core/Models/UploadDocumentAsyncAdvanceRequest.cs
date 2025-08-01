@@ -205,6 +205,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string TextSplitterName { get; set; }
 
+        [NameInMap("VlEnhance")]
+        [Validation(Required=false)]
+        public bool? VlEnhance { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to enable title enhancement.</para>
         /// <remarks>

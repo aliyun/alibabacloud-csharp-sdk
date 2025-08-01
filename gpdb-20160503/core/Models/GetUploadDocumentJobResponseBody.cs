@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [Validation(Required=false)]
             public string ChunkFileUrl { get; set; }
 
+            [NameInMap("DocumentLoaderResultFileUrl")]
+            [Validation(Required=false)]
+            public string DocumentLoaderResultFileUrl { get; set; }
+
             /// <summary>
             /// <para>The URL of the file that does not contain metadata after chunking. The validity period of the URL is 2 hours. The file is in the TXT format. Each line is a chunk. The file can be easily used for embedding.</para>
             /// 

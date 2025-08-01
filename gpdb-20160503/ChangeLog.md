@@ -1,3 +1,20 @@
+2025-08-01 Version: 2.4.0
+- Support API CreateSupabaseProject.
+- Support API DeleteSupabaseProject.
+- Support API GetSupabaseProject.
+- Support API GetSupabaseProjectApiKeys.
+- Support API GetSupabaseProjectDashboardAccount.
+- Support API ListSupabaseProjects.
+- Support API ModifyCollection.
+- Support API ModifySupabaseProjectSecurityIps.
+- Support API ResetSupabaseProjectPassword.
+- Update API DescribeDBInstanceAttribute: add response parameters Body.Items.$.InstanceSpec.
+- Update API DescribeDocument: add response parameters Body.DocumentLoaderResultFileUrl.
+- Update API GetUploadDocumentJob: add response parameters Body.ChunkResult.DocumentLoaderResultFileUrl.
+- Update API UploadDocumentAsync: add request parameters VlEnhance.
+- Update API UpsertChunks: add request parameters AllowInsertWithFilter.
+
+
 2025-05-29 Version: 2.2.5
 - Update API CreateDBInstance: add request parameters CacheStorageSize.
 - Update API DescribeDBInstanceAttribute: add response parameters Body.Items.$.CacheStorageSize.

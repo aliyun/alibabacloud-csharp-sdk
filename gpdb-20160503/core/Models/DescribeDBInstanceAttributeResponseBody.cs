@@ -378,6 +378,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 [Validation(Required=false)]
                 public string InstanceNetworkType { get; set; }
 
+                [NameInMap("InstanceSpec")]
+                [Validation(Required=false)]
+                public string InstanceSpec { get; set; }
+
                 /// <summary>
                 /// <para>Lock mode, with the following values:</para>
                 /// <list type="bullet">

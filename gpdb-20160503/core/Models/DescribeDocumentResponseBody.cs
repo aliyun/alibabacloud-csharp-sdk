@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string DocumentLoader { get; set; }
 
+        [NameInMap("DocumentLoaderResultFileUrl")]
+        [Validation(Required=false)]
+        public string DocumentLoaderResultFileUrl { get; set; }
+
         /// <summary>
         /// <para>File extension.</para>
         /// 

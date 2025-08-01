@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class UpsertChunksRequest : TeaModel {
+        [NameInMap("AllowInsertWithFilter")]
+        [Validation(Required=false)]
+        public bool? AllowInsertWithFilter { get; set; }
+
         /// <summary>
         /// <para>Document collection name.</para>
         /// <remarks>
