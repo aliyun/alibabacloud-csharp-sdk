@@ -3643,6 +3643,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             {
                 body["check_only"] = request.CheckOnly;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                body["source"] = request.Source;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3688,6 +3692,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckOnly))
             {
                 body["check_only"] = request.CheckOnly;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                body["source"] = request.Source;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

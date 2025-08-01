@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [Validation(Required=false)]
         public bool? CheckOnly { get; set; }
 
+        [NameInMap("source")]
+        [Validation(Required=false)]
+        public string Source { get; set; }
+
     }
 
 }
