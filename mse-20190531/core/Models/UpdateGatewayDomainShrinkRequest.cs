@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
-    public class AddGatewayDomainRequest : TeaModel {
+    public class UpdateGatewayDomainShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <para>The ID of the certificate.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>6828169-cn-hangzhou</para>
+        /// <para>6209108-cn-hangzhou</para>
         /// </summary>
         [NameInMap("CertIdentifier")]
         [Validation(Required=false)]
@@ -46,9 +46,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// <para>Specifies whether to enable <c>HTTP/2</c>.</para>
         /// <list type="bullet">
-        /// <item><description><c>open</c>: enables <c>HTTP/2</c></description></item>
-        /// <item><description><c>close</c>: disables <c>HTTP/2</c></description></item>
-        /// <item><description><c>globalConfig</c>: uses global configurations</description></item>
+        /// <item><description><c>open</c>: <c>HTTP/2</c> is enabled.</description></item>
+        /// <item><description><c>close</c>: <c>HTTP/2</c> is disabled.</description></item>
+        /// <item><description><c>globalConfig</c>: Global configurations are used.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -59,34 +59,34 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Http2 { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable HTTPS.</para>
+        /// <para>The ID of the domain name that you want to update.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>94</para>
+        /// </summary>
+        [NameInMap("Id")]
+        [Validation(Required=false)]
+        public long? Id { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to forcibly use HTTPS.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("MustHttps")]
         [Validation(Required=false)]
         public bool? MustHttps { get; set; }
 
         /// <summary>
-        /// <para>The domain name.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>test.com</para>
-        /// </summary>
-        [NameInMap("Name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
-
-        /// <summary>
         /// <para>The type of the protocol. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>HTTP</c></description></item>
-        /// <item><description><c>HTTPS</c></description></item>
+        /// <item><description>HTTPS</description></item>
+        /// <item><description>HTTP</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>HTTP</para>
+        /// <para>HTTPS</para>
         /// </summary>
         [NameInMap("Protocol")]
         [Validation(Required=false)]
@@ -94,17 +94,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         [NameInMap("TlsCipherSuitesConfigJSON")]
         [Validation(Required=false)]
-        public AddGatewayDomainRequestTlsCipherSuitesConfigJSON TlsCipherSuitesConfigJSON { get; set; }
-        public class AddGatewayDomainRequestTlsCipherSuitesConfigJSON : TeaModel {
-            [NameInMap("ConfigType")]
-            [Validation(Required=false)]
-            public string ConfigType { get; set; }
-
-            [NameInMap("TlsCipherSuites")]
-            [Validation(Required=false)]
-            public List<string> TlsCipherSuites { get; set; }
-
-        }
+        public string TlsCipherSuitesConfigJSONShrink { get; set; }
 
         /// <summary>
         /// <para>The maximum version of Transport Layer Security (TLS).</para>

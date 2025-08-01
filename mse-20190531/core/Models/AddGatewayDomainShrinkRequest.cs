@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
-    public class AddGatewayDomainRequest : TeaModel {
+    public class AddGatewayDomainShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
@@ -94,17 +94,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         [NameInMap("TlsCipherSuitesConfigJSON")]
         [Validation(Required=false)]
-        public AddGatewayDomainRequestTlsCipherSuitesConfigJSON TlsCipherSuitesConfigJSON { get; set; }
-        public class AddGatewayDomainRequestTlsCipherSuitesConfigJSON : TeaModel {
-            [NameInMap("ConfigType")]
-            [Validation(Required=false)]
-            public string ConfigType { get; set; }
-
-            [NameInMap("TlsCipherSuites")]
-            [Validation(Required=false)]
-            public List<string> TlsCipherSuites { get; set; }
-
-        }
+        public string TlsCipherSuitesConfigJSONShrink { get; set; }
 
         /// <summary>
         /// <para>The maximum version of Transport Layer Security (TLS).</para>

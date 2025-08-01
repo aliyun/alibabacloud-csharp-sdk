@@ -225,6 +225,20 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string Sans { get; set; }
 
+            [NameInMap("TlsCipherSuitesConfig")]
+            [Validation(Required=false)]
+            public GetGatewayDomainDetailResponseBodyDataTlsCipherSuitesConfig TlsCipherSuitesConfig { get; set; }
+            public class GetGatewayDomainDetailResponseBodyDataTlsCipherSuitesConfig : TeaModel {
+                [NameInMap("ConfigType")]
+                [Validation(Required=false)]
+                public string ConfigType { get; set; }
+
+                [NameInMap("TlsCipherSuites")]
+                [Validation(Required=false)]
+                public List<string> TlsCipherSuites { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The maximum version of Transport Layer Security (TLS).</para>
             /// 

@@ -1479,7 +1479,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         /// <para>Associates a domain name with a gateway.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// AddGatewayDomainRequest
         /// </param>
         /// <param name="runtime">
@@ -1489,9 +1489,15 @@ namespace AlibabaCloud.SDK.Mse20190531
         /// <returns>
         /// AddGatewayDomainResponse
         /// </returns>
-        public AddGatewayDomainResponse AddGatewayDomainWithOptions(AddGatewayDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public AddGatewayDomainResponse AddGatewayDomainWithOptions(AddGatewayDomainRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AddGatewayDomainShrinkRequest request = new AddGatewayDomainShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TlsCipherSuitesConfigJSON))
+            {
+                request.TlsCipherSuitesConfigJSONShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TlsCipherSuitesConfigJSON, "TlsCipherSuitesConfigJSON", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
             {
@@ -1520,6 +1526,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Protocol))
             {
                 query["Protocol"] = request.Protocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TlsCipherSuitesConfigJSONShrink))
+            {
+                query["TlsCipherSuitesConfigJSON"] = request.TlsCipherSuitesConfigJSONShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TlsMax))
             {
@@ -1553,7 +1563,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         /// <para>Associates a domain name with a gateway.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// AddGatewayDomainRequest
         /// </param>
         /// <param name="runtime">
@@ -1563,9 +1573,15 @@ namespace AlibabaCloud.SDK.Mse20190531
         /// <returns>
         /// AddGatewayDomainResponse
         /// </returns>
-        public async Task<AddGatewayDomainResponse> AddGatewayDomainWithOptionsAsync(AddGatewayDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<AddGatewayDomainResponse> AddGatewayDomainWithOptionsAsync(AddGatewayDomainRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AddGatewayDomainShrinkRequest request = new AddGatewayDomainShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TlsCipherSuitesConfigJSON))
+            {
+                request.TlsCipherSuitesConfigJSONShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TlsCipherSuitesConfigJSON, "TlsCipherSuitesConfigJSON", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
             {
@@ -1594,6 +1610,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Protocol))
             {
                 query["Protocol"] = request.Protocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TlsCipherSuitesConfigJSONShrink))
+            {
+                query["TlsCipherSuitesConfigJSON"] = request.TlsCipherSuitesConfigJSONShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TlsMax))
             {
@@ -7912,6 +7932,206 @@ namespace AlibabaCloud.SDK.Mse20190531
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreatePluginConfigWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建行为管理</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSentinelBlockFallbackDefinitionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSentinelBlockFallbackDefinitionResponse
+        /// </returns>
+        public CreateSentinelBlockFallbackDefinitionResponse CreateSentinelBlockFallbackDefinitionWithOptions(CreateSentinelBlockFallbackDefinitionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                query["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FallbackBehavior))
+            {
+                query["FallbackBehavior"] = request.FallbackBehavior;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceClassification))
+            {
+                query["ResourceClassification"] = request.ResourceClassification;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scenario))
+            {
+                query["Scenario"] = request.Scenario;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSentinelBlockFallbackDefinition",
+                Version = "2019-05-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSentinelBlockFallbackDefinitionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建行为管理</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSentinelBlockFallbackDefinitionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSentinelBlockFallbackDefinitionResponse
+        /// </returns>
+        public async Task<CreateSentinelBlockFallbackDefinitionResponse> CreateSentinelBlockFallbackDefinitionWithOptionsAsync(CreateSentinelBlockFallbackDefinitionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                query["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FallbackBehavior))
+            {
+                query["FallbackBehavior"] = request.FallbackBehavior;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceClassification))
+            {
+                query["ResourceClassification"] = request.ResourceClassification;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scenario))
+            {
+                query["Scenario"] = request.Scenario;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSentinelBlockFallbackDefinition",
+                Version = "2019-05-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSentinelBlockFallbackDefinitionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建行为管理</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSentinelBlockFallbackDefinitionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSentinelBlockFallbackDefinitionResponse
+        /// </returns>
+        public CreateSentinelBlockFallbackDefinitionResponse CreateSentinelBlockFallbackDefinition(CreateSentinelBlockFallbackDefinitionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateSentinelBlockFallbackDefinitionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建行为管理</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSentinelBlockFallbackDefinitionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSentinelBlockFallbackDefinitionResponse
+        /// </returns>
+        public async Task<CreateSentinelBlockFallbackDefinitionResponse> CreateSentinelBlockFallbackDefinitionAsync(CreateSentinelBlockFallbackDefinitionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateSentinelBlockFallbackDefinitionWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -34607,7 +34827,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         /// <para>Modifies the information about the domain name associated with a gateway.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// UpdateGatewayDomainRequest
         /// </param>
         /// <param name="runtime">
@@ -34617,9 +34837,15 @@ namespace AlibabaCloud.SDK.Mse20190531
         /// <returns>
         /// UpdateGatewayDomainResponse
         /// </returns>
-        public UpdateGatewayDomainResponse UpdateGatewayDomainWithOptions(UpdateGatewayDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public UpdateGatewayDomainResponse UpdateGatewayDomainWithOptions(UpdateGatewayDomainRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateGatewayDomainShrinkRequest request = new UpdateGatewayDomainShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TlsCipherSuitesConfigJSON))
+            {
+                request.TlsCipherSuitesConfigJSONShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TlsCipherSuitesConfigJSON, "TlsCipherSuitesConfigJSON", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
             {
@@ -34648,6 +34874,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Protocol))
             {
                 query["Protocol"] = request.Protocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TlsCipherSuitesConfigJSONShrink))
+            {
+                query["TlsCipherSuitesConfigJSON"] = request.TlsCipherSuitesConfigJSONShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TlsMax))
             {
@@ -34681,7 +34911,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         /// <para>Modifies the information about the domain name associated with a gateway.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// UpdateGatewayDomainRequest
         /// </param>
         /// <param name="runtime">
@@ -34691,9 +34921,15 @@ namespace AlibabaCloud.SDK.Mse20190531
         /// <returns>
         /// UpdateGatewayDomainResponse
         /// </returns>
-        public async Task<UpdateGatewayDomainResponse> UpdateGatewayDomainWithOptionsAsync(UpdateGatewayDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<UpdateGatewayDomainResponse> UpdateGatewayDomainWithOptionsAsync(UpdateGatewayDomainRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateGatewayDomainShrinkRequest request = new UpdateGatewayDomainShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TlsCipherSuitesConfigJSON))
+            {
+                request.TlsCipherSuitesConfigJSONShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TlsCipherSuitesConfigJSON, "TlsCipherSuitesConfigJSON", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
             {
@@ -34722,6 +34958,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Protocol))
             {
                 query["Protocol"] = request.Protocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TlsCipherSuitesConfigJSONShrink))
+            {
+                query["TlsCipherSuitesConfigJSON"] = request.TlsCipherSuitesConfigJSONShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TlsMax))
             {
