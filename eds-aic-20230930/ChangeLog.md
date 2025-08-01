@@ -2,6 +2,10 @@
 - Update API DescribeAndroidInstances: add response parameters Body.InstanceModel.$.ServerStatus.
 
 
+2025-08-01 Version: 4.10.2
+- Update API DescribeAndroidInstances: add response parameters Body.InstanceModel.$.ServerStatus.
+
+
 2025-08-01 Version: 4.10.1
 - Generated csharp 2023-09-30 for eds-aic.
 
