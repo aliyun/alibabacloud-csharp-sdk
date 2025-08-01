@@ -31,9 +31,35 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 [Validation(Required=false)]
                 public long? Angle { get; set; }
 
+                [NameInMap("Enhance")]
+                [Validation(Required=false)]
+                public bool? Enhance { get; set; }
+
                 [NameInMap("LogoBase64")]
                 [Validation(Required=false)]
                 public string LogoBase64 { get; set; }
+
+                [NameInMap("Margin")]
+                [Validation(Required=false)]
+                public CreateWmBaseImageRequestImageControlLogoVisibleControlMargin Margin { get; set; }
+                public class CreateWmBaseImageRequestImageControlLogoVisibleControlMargin : TeaModel {
+                    [NameInMap("Bottom")]
+                    [Validation(Required=false)]
+                    public float? Bottom { get; set; }
+
+                    [NameInMap("Left")]
+                    [Validation(Required=false)]
+                    public float? Left { get; set; }
+
+                    [NameInMap("Right")]
+                    [Validation(Required=false)]
+                    public float? Right { get; set; }
+
+                    [NameInMap("Top")]
+                    [Validation(Required=false)]
+                    public float? Top { get; set; }
+
+                }
 
                 [NameInMap("Mode")]
                 [Validation(Required=false)]
@@ -88,6 +114,28 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 [NameInMap("FontSize")]
                 [Validation(Required=false)]
                 public long? FontSize { get; set; }
+
+                [NameInMap("Margin")]
+                [Validation(Required=false)]
+                public CreateWmBaseImageRequestImageControlTextVisibleControlMargin Margin { get; set; }
+                public class CreateWmBaseImageRequestImageControlTextVisibleControlMargin : TeaModel {
+                    [NameInMap("Bottom")]
+                    [Validation(Required=false)]
+                    public float? Bottom { get; set; }
+
+                    [NameInMap("Left")]
+                    [Validation(Required=false)]
+                    public float? Left { get; set; }
+
+                    [NameInMap("Right")]
+                    [Validation(Required=false)]
+                    public float? Right { get; set; }
+
+                    [NameInMap("Top")]
+                    [Validation(Required=false)]
+                    public float? Top { get; set; }
+
+                }
 
                 [NameInMap("Mode")]
                 [Validation(Required=false)]
@@ -196,6 +244,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [NameInMap("WmType")]
         [Validation(Required=false)]
         public string WmType { get; set; }
+
+        [NameInMap("comment")]
+        [Validation(Required=false)]
+        public string Comment { get; set; }
 
     }
 

@@ -87,6 +87,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public string WmType { get; set; }
 
+        [NameInMap("comment")]
+        [Validation(Required=false)]
+        public string Comment { get; set; }
+
     }
 
 }

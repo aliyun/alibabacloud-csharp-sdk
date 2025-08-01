@@ -52,6 +52,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public string Filename { get; set; }
 
+        [NameInMap("ImageExtractParamsOpenApi")]
+        [Validation(Required=false)]
+        public string ImageExtractParamsOpenApiShrink { get; set; }
+
         [NameInMap("IsClientEmbed")]
         [Validation(Required=false)]
         public bool? IsClientEmbed { get; set; }

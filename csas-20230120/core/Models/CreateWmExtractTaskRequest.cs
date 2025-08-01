@@ -114,6 +114,16 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public string Filename { get; set; }
 
+        [NameInMap("ImageExtractParamsOpenApi")]
+        [Validation(Required=false)]
+        public CreateWmExtractTaskRequestImageExtractParamsOpenApi ImageExtractParamsOpenApi { get; set; }
+        public class CreateWmExtractTaskRequestImageExtractParamsOpenApi : TeaModel {
+            [NameInMap("SrcLogoBase64")]
+            [Validation(Required=false)]
+            public string SrcLogoBase64 { get; set; }
+
+        }
+
         [NameInMap("IsClientEmbed")]
         [Validation(Required=false)]
         public bool? IsClientEmbed { get; set; }

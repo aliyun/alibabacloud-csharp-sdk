@@ -2361,6 +2361,11 @@ namespace AlibabaCloud.SDK.Csas20230120
             {
                 request.ImageControlShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ImageControl, "ImageControl", "json");
             }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comment))
+            {
+                query["comment"] = request.Comment;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Height))
             {
@@ -2400,6 +2405,7 @@ namespace AlibabaCloud.SDK.Csas20230120
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -2441,6 +2447,11 @@ namespace AlibabaCloud.SDK.Csas20230120
             {
                 request.ImageControlShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ImageControl, "ImageControl", "json");
             }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comment))
+            {
+                query["comment"] = request.Comment;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Height))
             {
@@ -2480,6 +2491,7 @@ namespace AlibabaCloud.SDK.Csas20230120
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -2789,10 +2801,18 @@ namespace AlibabaCloud.SDK.Csas20230120
             {
                 request.CsvControlShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CsvControl, "CsvControl", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ImageExtractParamsOpenApi))
+            {
+                request.ImageExtractParamsOpenApiShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ImageExtractParamsOpenApi, "ImageExtractParamsOpenApi", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CsvControlShrink))
             {
                 query["CsvControl"] = request.CsvControlShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageExtractParamsOpenApiShrink))
+            {
+                query["ImageExtractParamsOpenApi"] = request.ImageExtractParamsOpenApiShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsClientEmbed))
             {
@@ -2871,10 +2891,18 @@ namespace AlibabaCloud.SDK.Csas20230120
             {
                 request.CsvControlShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CsvControl, "CsvControl", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ImageExtractParamsOpenApi))
+            {
+                request.ImageExtractParamsOpenApiShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ImageExtractParamsOpenApi, "ImageExtractParamsOpenApi", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CsvControlShrink))
             {
                 query["CsvControl"] = request.CsvControlShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageExtractParamsOpenApiShrink))
+            {
+                query["ImageExtractParamsOpenApi"] = request.ImageExtractParamsOpenApiShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsClientEmbed))
             {
