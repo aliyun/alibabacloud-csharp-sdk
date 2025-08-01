@@ -575,6 +575,250 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>图片检索</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SearchImageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchImageResponse
+        /// </returns>
+        public SearchImageResponse SearchImageWithOptions(SearchImageRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SearchImageShrinkRequest request = new SearchImageShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
+            {
+                request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "simple");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColorHex))
+            {
+                query["ColorHex"] = request.ColorHex;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HasPerson))
+            {
+                query["HasPerson"] = request.HasPerson;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageCategory))
+            {
+                query["ImageCategory"] = request.ImageCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageRatio))
+            {
+                query["ImageRatio"] = request.ImageRatio;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxHeight))
+            {
+                query["MaxHeight"] = request.MaxHeight;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxWidth))
+            {
+                query["MaxWidth"] = request.MaxWidth;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinHeight))
+            {
+                query["MinHeight"] = request.MinHeight;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinWidth))
+            {
+                query["MinWidth"] = request.MinWidth;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssKey))
+            {
+                query["OssKey"] = request.OssKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["Size"] = request.Size;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Start))
+            {
+                query["Start"] = request.Start;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
+            {
+                query["Tags"] = request.TagsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Text))
+            {
+                query["Text"] = request.Text;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SearchImage",
+                Version = "2025-04-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SearchImageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>图片检索</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SearchImageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchImageResponse
+        /// </returns>
+        public async Task<SearchImageResponse> SearchImageWithOptionsAsync(SearchImageRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SearchImageShrinkRequest request = new SearchImageShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
+            {
+                request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "simple");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColorHex))
+            {
+                query["ColorHex"] = request.ColorHex;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HasPerson))
+            {
+                query["HasPerson"] = request.HasPerson;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageCategory))
+            {
+                query["ImageCategory"] = request.ImageCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageRatio))
+            {
+                query["ImageRatio"] = request.ImageRatio;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxHeight))
+            {
+                query["MaxHeight"] = request.MaxHeight;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxWidth))
+            {
+                query["MaxWidth"] = request.MaxWidth;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinHeight))
+            {
+                query["MinHeight"] = request.MinHeight;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinWidth))
+            {
+                query["MinWidth"] = request.MinWidth;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssKey))
+            {
+                query["OssKey"] = request.OssKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["Size"] = request.Size;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Start))
+            {
+                query["Start"] = request.Start;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
+            {
+                query["Tags"] = request.TagsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Text))
+            {
+                query["Text"] = request.Text;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SearchImage",
+                Version = "2025-04-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SearchImageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>图片检索</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchImageResponse
+        /// </returns>
+        public SearchImageResponse SearchImage(SearchImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SearchImageWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>图片检索</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchImageResponse
+        /// </returns>
+        public async Task<SearchImageResponse> SearchImageAsync(SearchImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SearchImageWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>合作伙伴同步应用实例</para>
         /// </summary>
         /// 
