@@ -35,6 +35,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
         }
 
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public int? HttpStatusCode { get; set; }
+
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
         /// <summary>
         /// <para>Id of the request</para>
         /// 
@@ -44,6 +52,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 
