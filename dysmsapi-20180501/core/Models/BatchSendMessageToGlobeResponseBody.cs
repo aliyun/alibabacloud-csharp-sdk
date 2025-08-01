@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501.Models
 {
     public class BatchSendMessageToGlobeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of mobile phone numbers that failed to receive the message.</para>
+        /// <para>The list of the mobile phone numbers that failed to receive the messages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;931520581****&quot;,&quot;931530581****&quot;]</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501.Models
         public string FailedList { get; set; }
 
         /// <summary>
-        /// <para>The sender ID returned.</para>
+        /// <para>The sender ID that was returned. The API operation returns the sender ID that you have specified in the request parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Alicloud321</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501.Models
         public string From { get; set; }
 
         /// <summary>
-        /// <para>The ID of the message.</para>
+        /// <para>The ID of the sent message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;123****&quot;,&quot;124****&quot;]</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status code. If OK is returned, the request is successful. For more information, see <a href="https://www.alibabacloud.com/help/en/short-message-service/latest/error-codes">Error codes</a>.</para>
+        /// <para>The HTTP status code. If OK is returned, the request is successful. For more information, see <a href="https://help.aliyun.com/document_detail/180674.html">Error codes</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501.Models
         public string ResponseDescription { get; set; }
 
         /// <summary>
-        /// <para>The number of mobile phone numbers that received the message.</para>
+        /// <para>The number of sent messages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

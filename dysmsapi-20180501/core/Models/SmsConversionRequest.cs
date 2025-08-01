@@ -44,6 +44,13 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501.Models
         [Validation(Required=false)]
         public string MessageId { get; set; }
 
+        /// <summary>
+        /// <para>The mobile phone number of the recipient. You must add the dialing code to the beginning of the mobile phone number.</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/158400.html">Dialing codes</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8521245567****</para>
+        /// </summary>
         [NameInMap("To")]
         [Validation(Required=false)]
         public string To { get; set; }

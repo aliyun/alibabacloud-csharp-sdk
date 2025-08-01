@@ -53,14 +53,13 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You cannot call the BatchSendMessageToGlobe operation to send messages to the Chinese mainland.</para>
+        /// <h2>Usage notes</h2>
         /// <list type="bullet">
-        /// <item><description>You can call the BatchSendMessageToGlobe operation to send notifications and promotional messages to a limited number of mobile phone numbers at a time. To send messages to a large number of mobile phone numbers at a time, use the mass messaging feature in the SMS console.</description></item>
-        /// <item><description>For time-sensitive related messages, we recommend that you use the <a href="https://www.alibabacloud.com/help/en/sms/developer-reference/api-dysmsapi-2018-05-01-batchsendmessagetoglobe">SendMessageToGlobe</a> operation to ensure that messages are delivered on time.</description></item>
+        /// <item><description>You cannot call the BatchSendMessageToGlobe operation to send messages to the Chinese mainland.</description></item>
+        /// <item><description>You can call the BatchSendMessageToGlobe operation to send notifications and promotional messages to a small number of mobile phone numbers at a time. To send messages to a large number of mobile phone numbers at a time, use the mass messaging feature of the SMS console.</description></item>
+        /// <item><description>To ensure that messages can be sent on time, call the <a href="https://help.aliyun.com/document_detail/406238.html">SendMessageToGlobe</a> operation.</description></item>
         /// <item><description>In each request, you can send messages to up to 1,000 mobile phone numbers.</description></item>
         /// </list>
-        /// <h3><a href="#qps-"></a>QPS limit</h3>
-        /// <para>You can call this operation only once per second. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -131,14 +130,13 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You cannot call the BatchSendMessageToGlobe operation to send messages to the Chinese mainland.</para>
+        /// <h2>Usage notes</h2>
         /// <list type="bullet">
-        /// <item><description>You can call the BatchSendMessageToGlobe operation to send notifications and promotional messages to a limited number of mobile phone numbers at a time. To send messages to a large number of mobile phone numbers at a time, use the mass messaging feature in the SMS console.</description></item>
-        /// <item><description>For time-sensitive related messages, we recommend that you use the <a href="https://www.alibabacloud.com/help/en/sms/developer-reference/api-dysmsapi-2018-05-01-batchsendmessagetoglobe">SendMessageToGlobe</a> operation to ensure that messages are delivered on time.</description></item>
+        /// <item><description>You cannot call the BatchSendMessageToGlobe operation to send messages to the Chinese mainland.</description></item>
+        /// <item><description>You can call the BatchSendMessageToGlobe operation to send notifications and promotional messages to a small number of mobile phone numbers at a time. To send messages to a large number of mobile phone numbers at a time, use the mass messaging feature of the SMS console.</description></item>
+        /// <item><description>To ensure that messages can be sent on time, call the <a href="https://help.aliyun.com/document_detail/406238.html">SendMessageToGlobe</a> operation.</description></item>
         /// <item><description>In each request, you can send messages to up to 1,000 mobile phone numbers.</description></item>
         /// </list>
-        /// <h3><a href="#qps-"></a>QPS limit</h3>
-        /// <para>You can call this operation only once per second. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -209,14 +207,13 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You cannot call the BatchSendMessageToGlobe operation to send messages to the Chinese mainland.</para>
+        /// <h2>Usage notes</h2>
         /// <list type="bullet">
-        /// <item><description>You can call the BatchSendMessageToGlobe operation to send notifications and promotional messages to a limited number of mobile phone numbers at a time. To send messages to a large number of mobile phone numbers at a time, use the mass messaging feature in the SMS console.</description></item>
-        /// <item><description>For time-sensitive related messages, we recommend that you use the <a href="https://www.alibabacloud.com/help/en/sms/developer-reference/api-dysmsapi-2018-05-01-batchsendmessagetoglobe">SendMessageToGlobe</a> operation to ensure that messages are delivered on time.</description></item>
+        /// <item><description>You cannot call the BatchSendMessageToGlobe operation to send messages to the Chinese mainland.</description></item>
+        /// <item><description>You can call the BatchSendMessageToGlobe operation to send notifications and promotional messages to a small number of mobile phone numbers at a time. To send messages to a large number of mobile phone numbers at a time, use the mass messaging feature of the SMS console.</description></item>
+        /// <item><description>To ensure that messages can be sent on time, call the <a href="https://help.aliyun.com/document_detail/406238.html">SendMessageToGlobe</a> operation.</description></item>
         /// <item><description>In each request, you can send messages to up to 1,000 mobile phone numbers.</description></item>
         /// </list>
-        /// <h3><a href="#qps-"></a>QPS limit</h3>
-        /// <para>You can call this operation only once per second. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -239,14 +236,13 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You cannot call the BatchSendMessageToGlobe operation to send messages to the Chinese mainland.</para>
+        /// <h2>Usage notes</h2>
         /// <list type="bullet">
-        /// <item><description>You can call the BatchSendMessageToGlobe operation to send notifications and promotional messages to a limited number of mobile phone numbers at a time. To send messages to a large number of mobile phone numbers at a time, use the mass messaging feature in the SMS console.</description></item>
-        /// <item><description>For time-sensitive related messages, we recommend that you use the <a href="https://www.alibabacloud.com/help/en/sms/developer-reference/api-dysmsapi-2018-05-01-batchsendmessagetoglobe">SendMessageToGlobe</a> operation to ensure that messages are delivered on time.</description></item>
+        /// <item><description>You cannot call the BatchSendMessageToGlobe operation to send messages to the Chinese mainland.</description></item>
+        /// <item><description>You can call the BatchSendMessageToGlobe operation to send notifications and promotional messages to a small number of mobile phone numbers at a time. To send messages to a large number of mobile phone numbers at a time, use the mass messaging feature of the SMS console.</description></item>
+        /// <item><description>To ensure that messages can be sent on time, call the <a href="https://help.aliyun.com/document_detail/406238.html">SendMessageToGlobe</a> operation.</description></item>
         /// <item><description>In each request, you can send messages to up to 1,000 mobile phone numbers.</description></item>
         /// </list>
-        /// <h3><a href="#qps-"></a>QPS limit</h3>
-        /// <para>You can call this operation only once per second. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -581,10 +577,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Usage notes</h3>
+        /// <h3><a href="#"></a></h3>
         /// <para>The SendMessageToGlobe API operation does not support message delivery to the Chinese mainland.</para>
         /// <h3><a href="#qps-"></a>QPS limit</h3>
-        /// <para>You can call this operation up to 30 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>You can call this operation up to 2,000 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -621,6 +617,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501
             {
                 query["To"] = request.To;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValidityPeriod))
             {
                 query["ValidityPeriod"] = request.ValidityPeriod;
@@ -651,10 +651,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Usage notes</h3>
+        /// <h3><a href="#"></a></h3>
         /// <para>The SendMessageToGlobe API operation does not support message delivery to the Chinese mainland.</para>
         /// <h3><a href="#qps-"></a>QPS limit</h3>
-        /// <para>You can call this operation up to 30 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>You can call this operation up to 2,000 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -691,6 +691,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501
             {
                 query["To"] = request.To;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValidityPeriod))
             {
                 query["ValidityPeriod"] = request.ValidityPeriod;
@@ -721,10 +725,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Usage notes</h3>
+        /// <h3><a href="#"></a></h3>
         /// <para>The SendMessageToGlobe API operation does not support message delivery to the Chinese mainland.</para>
         /// <h3><a href="#qps-"></a>QPS limit</h3>
-        /// <para>You can call this operation up to 30 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>You can call this operation up to 2,000 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -747,10 +751,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Usage notes</h3>
+        /// <h3><a href="#"></a></h3>
         /// <para>The SendMessageToGlobe API operation does not support message delivery to the Chinese mainland.</para>
         /// <h3><a href="#qps-"></a>QPS limit</h3>
-        /// <para>You can call this operation up to 30 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>You can call this operation up to 2,000 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501.Models
 {
     public class BatchSendMessageToGlobeRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the delivery channel.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>sms-djnfjn344</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501.Models
         public string ChannelId { get; set; }
 
         /// <summary>
-        /// <para>The mobile phone number of the sender. You can also specify a sender ID. The sender ID can contain both letters and digits. If it does, the ID must be between 1 to 11 characters in length. If the sender ID contains only digits, it must be 1 to 15 characters in length.</para>
+        /// <para>The mobile phone number of the sender. You can specify the sender ID when you call the API operation. The sender ID can contain only digits and letters. If the sender ID contains letters, it can be a maximum of 11 characters in length. If the sender ID contains only digits, it can be a maximum of 15 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Alicloud321</para>
@@ -49,8 +51,8 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The mobile phone numbers to which the message is sent. You must add the dialing code to the beginning of each mobile phone number.</para>
-        /// <para>For more information, see <a href="https://www.alibabacloud.com/help/en/short-message-service/latest/dialing-codes">Dialing codes</a>.</para>
+        /// <para>The mobile phone number of the recipient. You must add the dialing code to the beginning of each mobile phone number.</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/158400.html">Dialing codes</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -78,7 +80,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501.Models
         /// <para>The validity period of the message. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>600</para>
         /// </summary>
         [NameInMap("ValidityPeriod")]
         [Validation(Required=false)]

@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20180501.Models
         [Validation(Required=false)]
         public string To { get; set; }
 
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
+
         /// <summary>
         /// <para>The validity period of the message. Unit: seconds.</para>
         /// 
