@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiLLMTrace20240311.Models
 {
     public class ListOnlineEvalTasksRequest : TeaModel {
+        [NameInMap("AppName")]
+        [Validation(Required=false)]
+        public string AppName { get; set; }
+
         /// <summary>
         /// <para>Search keyword. It will match on fields such as task name, application name (appName), task description, and evaluation metric name.</para>
         /// 
@@ -68,6 +72,10 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311.Models
         [NameInMap("SortOrder")]
         [Validation(Required=false)]
         public string SortOrder { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
 
     }
 

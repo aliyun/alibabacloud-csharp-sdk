@@ -1331,6 +1331,10 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                query["AppName"] = request.AppName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
             {
                 query["Keyword"] = request.Keyword;
@@ -1358,6 +1362,10 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
             {
                 query["SortOrder"] = request.SortOrder;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1401,6 +1409,10 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                query["AppName"] = request.AppName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
             {
                 query["Keyword"] = request.Keyword;
@@ -1428,6 +1440,10 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
             {
                 query["SortOrder"] = request.SortOrder;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
