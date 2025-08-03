@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [Validation(Required=false)]
         public float? End { get; set; }
 
+        [NameInMap("event")]
+        [Validation(Required=false)]
+        public string Event { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>i-wz9d00ut2ska3mlyhn6j</para>

@@ -745,6 +745,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             {
                 query["instance"] = request.Instance;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Level))
+            {
+                query["level"] = request.Level;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
             {
                 query["namespace"] = request.Namespace;
@@ -814,6 +818,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Instance))
             {
                 query["instance"] = request.Instance;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Level))
+            {
+                query["level"] = request.Level;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
             {
@@ -4381,6 +4389,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             {
                 query["end"] = request.End;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Event))
+            {
+                query["event"] = request.Event;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Instance))
             {
                 query["instance"] = request.Instance;
@@ -4462,6 +4474,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.End))
             {
                 query["end"] = request.End;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Event))
+            {
+                query["event"] = request.Event;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Instance))
             {

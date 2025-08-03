@@ -26,14 +26,16 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public float? End { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>i-wz9d00ut2ska3mlyhn6j</para>
         /// </summary>
         [NameInMap("instance")]
         [Validation(Required=false)]
         public string Instance { get; set; }
+
+        [NameInMap("level")]
+        [Validation(Required=false)]
+        public string Level { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

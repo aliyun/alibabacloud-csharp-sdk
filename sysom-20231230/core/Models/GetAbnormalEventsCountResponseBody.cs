@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [Validation(Required=false)]
         public List<GetAbnormalEventsCountResponseBodyData> Data { get; set; }
         public class GetAbnormalEventsCountResponseBodyData : TeaModel {
+            [NameInMap("eventList")]
+            [Validation(Required=false)]
+            public List<string> EventList { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>health</para>
