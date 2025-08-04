@@ -24697,6 +24697,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             SubmitSmartAuditShrinkRequest request = new SubmitSmartAuditShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ImageUrlList))
+            {
+                request.ImageUrlListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ImageUrlList, "ImageUrlList", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SubCodes))
             {
                 request.SubCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SubCodes, "SubCodes", "json");
@@ -24706,6 +24710,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
                 request.ImageUrlsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ImageUrls, "imageUrls", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrlListShrink))
+            {
+                body["ImageUrlList"] = request.ImageUrlListShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubCodesShrink))
             {
                 body["SubCodes"] = request.SubCodesShrink;
@@ -24761,6 +24769,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             SubmitSmartAuditShrinkRequest request = new SubmitSmartAuditShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ImageUrlList))
+            {
+                request.ImageUrlListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ImageUrlList, "ImageUrlList", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SubCodes))
             {
                 request.SubCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SubCodes, "SubCodes", "json");
@@ -24770,6 +24782,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
                 request.ImageUrlsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ImageUrls, "imageUrls", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrlListShrink))
+            {
+                body["ImageUrlList"] = request.ImageUrlListShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubCodesShrink))
             {
                 body["SubCodes"] = request.SubCodesShrink;

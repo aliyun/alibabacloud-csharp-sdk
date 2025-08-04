@@ -107,6 +107,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
             }
 
+            [NameInMap("ErrorMessage")]
+            [Validation(Required=false)]
+            public string ErrorMessage { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>SUCCESSED</para>

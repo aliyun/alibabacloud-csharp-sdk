@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class SubmitSmartAuditShrinkRequest : TeaModel {
+        [NameInMap("ImageUrlList")]
+        [Validation(Required=false)]
+        public string ImageUrlListShrink { get; set; }
+
         [NameInMap("SubCodes")]
         [Validation(Required=false)]
         public string SubCodesShrink { get; set; }

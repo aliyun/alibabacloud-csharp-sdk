@@ -9,6 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class SubmitSmartAuditRequest : TeaModel {
+        [NameInMap("ImageUrlList")]
+        [Validation(Required=false)]
+        public List<SubmitSmartAuditRequestImageUrlList> ImageUrlList { get; set; }
+        public class SubmitSmartAuditRequestImageUrlList : TeaModel {
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public string Id { get; set; }
+
+            [NameInMap("Url")]
+            [Validation(Required=false)]
+            public string Url { get; set; }
+
+        }
+
         [NameInMap("SubCodes")]
         [Validation(Required=false)]
         public List<string> SubCodes { get; set; }
