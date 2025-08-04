@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public List<string> DesktopId { get; set; }
 
+        [NameInMap("NeedExtraInfo")]
+        [Validation(Required=false)]
+        public bool? NeedExtraInfo { get; set; }
+
         /// <summary>
         /// <para>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
