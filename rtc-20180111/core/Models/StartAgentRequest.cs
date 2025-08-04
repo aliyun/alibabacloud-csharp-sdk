@@ -50,6 +50,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             [Validation(Required=false)]
             public string UserId { get; set; }
 
+            [NameInMap("UserInactivityTimeout")]
+            [Validation(Required=false)]
+            public int? UserInactivityTimeout { get; set; }
+
         }
 
         /// <summary>
@@ -108,6 +112,16 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
                 [Validation(Required=false)]
                 public string SourceLanguage { get; set; }
 
+                [NameInMap("VadConfig")]
+                [Validation(Required=false)]
+                public StartAgentRequestVoiceChatConfigASRConfigVadConfig VadConfig { get; set; }
+                public class StartAgentRequestVoiceChatConfigASRConfigVadConfig : TeaModel {
+                    [NameInMap("InterruptSpeechDuration")]
+                    [Validation(Required=false)]
+                    public int? InterruptSpeechDuration { get; set; }
+
+                }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>vocab-xxx-24ee19fa8cfb4d52902170a0xxxxxxxx</para>
@@ -115,6 +129,32 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
                 [NameInMap("VocabularyId")]
                 [Validation(Required=false)]
                 public string VocabularyId { get; set; }
+
+            }
+
+            [NameInMap("AgentSilenceConfig")]
+            [Validation(Required=false)]
+            public StartAgentRequestVoiceChatConfigAgentSilenceConfig AgentSilenceConfig { get; set; }
+            public class StartAgentRequestVoiceChatConfigAgentSilenceConfig : TeaModel {
+                [NameInMap("AlertTimeout")]
+                [Validation(Required=false)]
+                public int? AlertTimeout { get; set; }
+
+                [NameInMap("Content")]
+                [Validation(Required=false)]
+                public string Content { get; set; }
+
+                [NameInMap("Enable")]
+                [Validation(Required=false)]
+                public bool? Enable { get; set; }
+
+                [NameInMap("Strategy")]
+                [Validation(Required=false)]
+                public int? Strategy { get; set; }
+
+                [NameInMap("WebhookTriggerTimeout")]
+                [Validation(Required=false)]
+                public int? WebhookTriggerTimeout { get; set; }
 
             }
 
@@ -150,6 +190,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
                 [Validation(Required=false)]
                 public string ApiKey { get; set; }
 
+                [NameInMap("AppId")]
+                [Validation(Required=false)]
+                public string AppId { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -173,6 +217,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
                 [NameInMap("Model")]
                 [Validation(Required=false)]
                 public string Model { get; set; }
+
+                [NameInMap("Params")]
+                [Validation(Required=false)]
+                public Dictionary<string, object> Params { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>

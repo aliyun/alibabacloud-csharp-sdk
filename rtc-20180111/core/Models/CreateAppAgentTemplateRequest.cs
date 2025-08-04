@@ -9,6 +9,40 @@ using Tea;
 namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class CreateAppAgentTemplateRequest : TeaModel {
+        [NameInMap("AgentSilenceConfig")]
+        [Validation(Required=false)]
+        public CreateAppAgentTemplateRequestAgentSilenceConfig AgentSilenceConfig { get; set; }
+        public class CreateAppAgentTemplateRequestAgentSilenceConfig : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>30</para>
+            /// </summary>
+            [NameInMap("AlertTimeout")]
+            [Validation(Required=false)]
+            public int? AlertTimeout { get; set; }
+
+            [NameInMap("Content")]
+            [Validation(Required=false)]
+            public string Content { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2</para>
+            /// </summary>
+            [NameInMap("Strategy")]
+            [Validation(Required=false)]
+            public int? Strategy { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>30</para>
+            /// </summary>
+            [NameInMap("WebhookTriggerTimeout")]
+            [Validation(Required=false)]
+            public int? WebhookTriggerTimeout { get; set; }
+
+        }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -40,6 +74,20 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
+            [NameInMap("VadConfig")]
+            [Validation(Required=false)]
+            public CreateAppAgentTemplateRequestAsrConfigVadConfig VadConfig { get; set; }
+            public class CreateAppAgentTemplateRequestAsrConfigVadConfig : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1000</para>
+                /// </summary>
+                [NameInMap("InterruptSpeechDuration")]
+                [Validation(Required=false)]
+                public int? InterruptSpeechDuration { get; set; }
+
+            }
 
             [NameInMap("WordWeights")]
             [Validation(Required=false)]
@@ -101,6 +149,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public CreateAppAgentTemplateRequestLlmConfig LlmConfig { get; set; }
         public class CreateAppAgentTemplateRequestLlmConfig : TeaModel {
+            [NameInMap("AgentAppId")]
+            [Validation(Required=false)]
+            public string AgentAppId { get; set; }
+
             /// <summary>
             /// <para>This parameter is required.</para>
             /// 

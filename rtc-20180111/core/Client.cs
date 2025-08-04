@@ -301,6 +301,10 @@ namespace AlibabaCloud.SDK.Rtc20180111
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateAppAgentTemplateShrinkRequest request = new CreateAppAgentTemplateShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AgentSilenceConfig))
+            {
+                request.AgentSilenceConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AgentSilenceConfig, "AgentSilenceConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AsrConfig))
             {
                 request.AsrConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AsrConfig, "AsrConfig", "json");
@@ -314,6 +318,10 @@ namespace AlibabaCloud.SDK.Rtc20180111
                 request.TtsConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TtsConfig, "TtsConfig", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentSilenceConfigShrink))
+            {
+                query["AgentSilenceConfig"] = request.AgentSilenceConfigShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
             {
                 query["AppId"] = request.AppId;
@@ -389,6 +397,10 @@ namespace AlibabaCloud.SDK.Rtc20180111
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateAppAgentTemplateShrinkRequest request = new CreateAppAgentTemplateShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AgentSilenceConfig))
+            {
+                request.AgentSilenceConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AgentSilenceConfig, "AgentSilenceConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AsrConfig))
             {
                 request.AsrConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AsrConfig, "AsrConfig", "json");
@@ -402,6 +414,10 @@ namespace AlibabaCloud.SDK.Rtc20180111
                 request.TtsConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TtsConfig, "TtsConfig", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentSilenceConfigShrink))
+            {
+                query["AgentSilenceConfig"] = request.AgentSilenceConfigShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
             {
                 query["AppId"] = request.AppId;
@@ -11627,6 +11643,10 @@ namespace AlibabaCloud.SDK.Rtc20180111
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ModifyAppAgentTemplateShrinkRequest request = new ModifyAppAgentTemplateShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AgentSilenceConfig))
+            {
+                request.AgentSilenceConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AgentSilenceConfig, "AgentSilenceConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AsrConfig))
             {
                 request.AsrConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AsrConfig, "AsrConfig", "json");
@@ -11640,6 +11660,10 @@ namespace AlibabaCloud.SDK.Rtc20180111
                 request.TtsConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TtsConfig, "TtsConfig", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentSilenceConfigShrink))
+            {
+                query["AgentSilenceConfig"] = request.AgentSilenceConfigShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
             {
                 query["AppId"] = request.AppId;
@@ -11719,6 +11743,10 @@ namespace AlibabaCloud.SDK.Rtc20180111
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ModifyAppAgentTemplateShrinkRequest request = new ModifyAppAgentTemplateShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AgentSilenceConfig))
+            {
+                request.AgentSilenceConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AgentSilenceConfig, "AgentSilenceConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AsrConfig))
             {
                 request.AsrConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AsrConfig, "AsrConfig", "json");
@@ -11732,6 +11760,10 @@ namespace AlibabaCloud.SDK.Rtc20180111
                 request.TtsConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TtsConfig, "TtsConfig", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentSilenceConfigShrink))
+            {
+                query["AgentSilenceConfig"] = request.AgentSilenceConfigShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
             {
                 query["AppId"] = request.AppId;

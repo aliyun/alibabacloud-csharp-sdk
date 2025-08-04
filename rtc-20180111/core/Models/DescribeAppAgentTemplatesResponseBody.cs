@@ -23,6 +23,28 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public List<DescribeAppAgentTemplatesResponseBodyTemplates> Templates { get; set; }
         public class DescribeAppAgentTemplatesResponseBodyTemplates : TeaModel {
+            [NameInMap("AgentSilenceConfig")]
+            [Validation(Required=false)]
+            public DescribeAppAgentTemplatesResponseBodyTemplatesAgentSilenceConfig AgentSilenceConfig { get; set; }
+            public class DescribeAppAgentTemplatesResponseBodyTemplatesAgentSilenceConfig : TeaModel {
+                [NameInMap("AlertTimeout")]
+                [Validation(Required=false)]
+                public int? AlertTimeout { get; set; }
+
+                [NameInMap("Content")]
+                [Validation(Required=false)]
+                public string Content { get; set; }
+
+                [NameInMap("Strategy")]
+                [Validation(Required=false)]
+                public int? Strategy { get; set; }
+
+                [NameInMap("WebhookTriggerTimeout")]
+                [Validation(Required=false)]
+                public int? WebhookTriggerTimeout { get; set; }
+
+            }
+
             [NameInMap("AsrConfig")]
             [Validation(Required=false)]
             public DescribeAppAgentTemplatesResponseBodyTemplatesAsrConfig AsrConfig { get; set; }
@@ -38,6 +60,16 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("VadConfig")]
+                [Validation(Required=false)]
+                public DescribeAppAgentTemplatesResponseBodyTemplatesAsrConfigVadConfig VadConfig { get; set; }
+                public class DescribeAppAgentTemplatesResponseBodyTemplatesAsrConfigVadConfig : TeaModel {
+                    [NameInMap("InterruptSpeechDuration")]
+                    [Validation(Required=false)]
+                    public int? InterruptSpeechDuration { get; set; }
+
+                }
 
                 /// <summary>
                 /// <b>Example:</b>
@@ -119,6 +151,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             [Validation(Required=false)]
             public DescribeAppAgentTemplatesResponseBodyTemplatesLlmConfig LlmConfig { get; set; }
             public class DescribeAppAgentTemplatesResponseBodyTemplatesLlmConfig : TeaModel {
+                [NameInMap("AgentAppId")]
+                [Validation(Required=false)]
+                public string AgentAppId { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>qW8GpBOdHK/pv9gdUSVLvQ==</para>

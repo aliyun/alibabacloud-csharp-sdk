@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class CreateAppAgentTemplateShrinkRequest : TeaModel {
+        [NameInMap("AgentSilenceConfig")]
+        [Validation(Required=false)]
+        public string AgentSilenceConfigShrink { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
