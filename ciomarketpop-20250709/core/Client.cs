@@ -150,5 +150,153 @@ namespace AlibabaCloud.SDK.CioMarketPop20250709
             return await GetEveryOneSellsFormListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>推送钉钉消息</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// PushEveryOneSellMsgRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PushEveryOneSellMsgResponse
+        /// </returns>
+        public PushEveryOneSellMsgResponse PushEveryOneSellMsgWithOptions(PushEveryOneSellMsgRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            PushEveryOneSellMsgShrinkRequest request = new PushEveryOneSellMsgShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DingIdList))
+            {
+                request.DingIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DingIdList, "DingIdList", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DingIdListShrink))
+            {
+                body["DingIdList"] = request.DingIdListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PushMsg))
+            {
+                body["PushMsg"] = request.PushMsg;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PushType))
+            {
+                body["PushType"] = request.PushType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PushEveryOneSellMsg",
+                Version = "2025-07-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "Anonymous",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "string",
+            };
+            return TeaModel.ToObject<PushEveryOneSellMsgResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>推送钉钉消息</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// PushEveryOneSellMsgRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PushEveryOneSellMsgResponse
+        /// </returns>
+        public async Task<PushEveryOneSellMsgResponse> PushEveryOneSellMsgWithOptionsAsync(PushEveryOneSellMsgRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            PushEveryOneSellMsgShrinkRequest request = new PushEveryOneSellMsgShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DingIdList))
+            {
+                request.DingIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DingIdList, "DingIdList", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DingIdListShrink))
+            {
+                body["DingIdList"] = request.DingIdListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PushMsg))
+            {
+                body["PushMsg"] = request.PushMsg;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PushType))
+            {
+                body["PushType"] = request.PushType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PushEveryOneSellMsg",
+                Version = "2025-07-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "Anonymous",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "string",
+            };
+            return TeaModel.ToObject<PushEveryOneSellMsgResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>推送钉钉消息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PushEveryOneSellMsgRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PushEveryOneSellMsgResponse
+        /// </returns>
+        public PushEveryOneSellMsgResponse PushEveryOneSellMsg(PushEveryOneSellMsgRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return PushEveryOneSellMsgWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>推送钉钉消息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PushEveryOneSellMsgRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PushEveryOneSellMsgResponse
+        /// </returns>
+        public async Task<PushEveryOneSellMsgResponse> PushEveryOneSellMsgAsync(PushEveryOneSellMsgRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await PushEveryOneSellMsgWithOptionsAsync(request, runtime);
+        }
+
     }
 }
