@@ -1,3 +1,12 @@
+2025-08-05 Version: 1.7.0
+- Support API SumStorageMetricsByDate.
+- Update API GetProject: add response parameters Body.data.properties.externalProjectProperties.externalCatalogId.
+- Update API GetProject: add response parameters Body.data.properties.externalProjectProperties.foreignServerName.
+- Update API GetProject: add response parameters Body.data.properties.externalProjectProperties.foreignServerType.
+- Update API GetProject: add response parameters Body.data.properties.externalProjectProperties.tableFormat.
+- Update API GetProject: add response parameters Body.data.properties.externalProjectProperties.warehouse.
+
+
 2025-07-11 Version: 1.6.0
 - Support API GetStorageAmountSummary.
 - Support API GetStorageSizeSummary.

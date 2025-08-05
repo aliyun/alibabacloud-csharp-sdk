@@ -251,6 +251,18 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 [Validation(Required=false)]
                 public GetProjectResponseBodyDataPropertiesExternalProjectProperties ExternalProjectProperties { get; set; }
                 public class GetProjectResponseBodyDataPropertiesExternalProjectProperties : TeaModel {
+                    [NameInMap("externalCatalogId")]
+                    [Validation(Required=false)]
+                    public string ExternalCatalogId { get; set; }
+
+                    [NameInMap("foreignServerName")]
+                    [Validation(Required=false)]
+                    public string ForeignServerName { get; set; }
+
+                    [NameInMap("foreignServerType")]
+                    [Validation(Required=false)]
+                    public string ForeignServerType { get; set; }
+
                     /// <summary>
                     /// <para>Indicates whether the external project is an external project for <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/lake-warehouse-integrated-2-0-use-guide">data lakehouse solution 2.0</a>.</para>
                     /// 
@@ -260,6 +272,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     [NameInMap("isExternalCatalogBound")]
                     [Validation(Required=false)]
                     public string IsExternalCatalogBound { get; set; }
+
+                    [NameInMap("tableFormat")]
+                    [Validation(Required=false)]
+                    public string TableFormat { get; set; }
+
+                    [NameInMap("warehouse")]
+                    [Validation(Required=false)]
+                    public string Warehouse { get; set; }
 
                 }
 
