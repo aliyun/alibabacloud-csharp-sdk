@@ -189,6 +189,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public List<string> Separators { get; set; }
 
+        [NameInMap("SplitterModel")]
+        [Validation(Required=false)]
+        public string SplitterModel { get; set; }
+
         /// <summary>
         /// <para>The name of the splitter. Valid values:</para>
         /// <list type="bullet">

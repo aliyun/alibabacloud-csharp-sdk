@@ -35329,6 +35329,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 body["Separators"] = request.SeparatorsShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SplitterModel))
+            {
+                body["SplitterModel"] = request.SplitterModel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TextSplitterName))
             {
                 body["TextSplitterName"] = request.TextSplitterName;
@@ -35461,6 +35465,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SeparatorsShrink))
             {
                 body["Separators"] = request.SeparatorsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SplitterModel))
+            {
+                body["SplitterModel"] = request.SplitterModel;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TextSplitterName))
             {
