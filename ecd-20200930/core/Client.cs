@@ -40637,6 +40637,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 body["ChargeType"] = request.ChargeType;
             }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataDiskList))
+            {
+                bodyFlat["DataDiskList"] = request.DataDiskList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultLanguage))
             {
                 body["DefaultLanguage"] = request.DefaultLanguage;
@@ -40665,7 +40670,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 body["PostPaidAfterUsedUp"] = request.PostPaidAfterUsedUp;
             }
-            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionConfigList))
             {
                 bodyFlat["RegionConfigList"] = request.RegionConfigList;
@@ -40761,6 +40765,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 body["ChargeType"] = request.ChargeType;
             }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataDiskList))
+            {
+                bodyFlat["DataDiskList"] = request.DataDiskList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultLanguage))
             {
                 body["DefaultLanguage"] = request.DefaultLanguage;
@@ -40789,7 +40798,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 body["PostPaidAfterUsedUp"] = request.PostPaidAfterUsedUp;
             }
-            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionConfigList))
             {
                 bodyFlat["RegionConfigList"] = request.RegionConfigList;

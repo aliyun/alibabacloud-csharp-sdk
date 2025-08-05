@@ -21,6 +21,20 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
+        [NameInMap("DataDiskList")]
+        [Validation(Required=false)]
+        public List<ModifyTemplateRequestDataDiskList> DataDiskList { get; set; }
+        public class ModifyTemplateRequestDataDiskList : TeaModel {
+            [NameInMap("PerformanceLevel")]
+            [Validation(Required=false)]
+            public string PerformanceLevel { get; set; }
+
+            [NameInMap("Size")]
+            [Validation(Required=false)]
+            public int? Size { get; set; }
+
+        }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>zh-CN</para>
