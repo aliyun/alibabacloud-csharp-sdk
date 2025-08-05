@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         [Validation(Required=false)]
         public List<DescribePoliciesV2ResponseBodyPolicies> Policies { get; set; }
         public class DescribePoliciesV2ResponseBodyPolicies : TeaModel {
+            [NameInMap("BusinessStatus")]
+            [Validation(Required=false)]
+            public string BusinessStatus { get; set; }
+
             /// <summary>
             /// <para>The time when the backup policy was created. The value is a UNIX timestamp. Unit: seconds.</para>
             /// 

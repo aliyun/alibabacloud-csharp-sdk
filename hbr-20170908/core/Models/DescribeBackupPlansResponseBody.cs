@@ -50,6 +50,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 [Validation(Required=false)]
                 public string Bucket { get; set; }
 
+                [NameInMap("BusinessStatus")]
+                [Validation(Required=false)]
+                public string BusinessStatus { get; set; }
+
                 /// <summary>
                 /// <para>The configurations of the incremental file synchronization. This parameter is returned only for data synchronization.</para>
                 /// 

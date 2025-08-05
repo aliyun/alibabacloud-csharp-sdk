@@ -55,6 +55,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 [Validation(Required=false)]
                 public string BackupType { get; set; }
 
+                [NameInMap("BusinessStatus")]
+                [Validation(Required=false)]
+                public string BusinessStatus { get; set; }
+
                 /// <summary>
                 /// <para>The ID of the SAP HANA instance.</para>
                 /// 
