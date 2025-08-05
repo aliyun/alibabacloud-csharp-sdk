@@ -644,6 +644,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
+        [NameInMap("InitCheckpoint")]
+        [Validation(Required=false)]
+        public string InitCheckpoint { get; set; }
+
         /// <summary>
         /// <para>The type of the DTS task. Valid values:</para>
         /// <list type="bullet">
