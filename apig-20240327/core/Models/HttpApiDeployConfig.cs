@@ -67,6 +67,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public GatewayInfo GatewayInfo { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>API</para>
+        /// </summary>
+        [NameInMap("gatewayType")]
+        [Validation(Required=false)]
+        public string GatewayType { get; set; }
+
         [NameInMap("mock")]
         [Validation(Required=false)]
         public HttpApiMockContract Mock { get; set; }

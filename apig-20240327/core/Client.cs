@@ -469,6 +469,192 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>CreateAndAttachPolicy</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAndAttachPolicyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAndAttachPolicyResponse
+        /// </returns>
+        public CreateAndAttachPolicyResponse CreateAndAttachPolicyWithOptions(CreateAndAttachPolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttachResourceIds))
+            {
+                body["attachResourceIds"] = request.AttachResourceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttachResourceType))
+            {
+                body["attachResourceType"] = request.AttachResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClassName))
+            {
+                body["className"] = request.ClassName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                body["config"] = request.Config;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvironmentId))
+            {
+                body["environmentId"] = request.EnvironmentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                body["gatewayId"] = request.GatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAndAttachPolicy",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/policies",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAndAttachPolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CreateAndAttachPolicy</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAndAttachPolicyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAndAttachPolicyResponse
+        /// </returns>
+        public async Task<CreateAndAttachPolicyResponse> CreateAndAttachPolicyWithOptionsAsync(CreateAndAttachPolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttachResourceIds))
+            {
+                body["attachResourceIds"] = request.AttachResourceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttachResourceType))
+            {
+                body["attachResourceType"] = request.AttachResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClassName))
+            {
+                body["className"] = request.ClassName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                body["config"] = request.Config;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvironmentId))
+            {
+                body["environmentId"] = request.EnvironmentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                body["gatewayId"] = request.GatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAndAttachPolicy",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/policies",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAndAttachPolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CreateAndAttachPolicy</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAndAttachPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAndAttachPolicyResponse
+        /// </returns>
+        public CreateAndAttachPolicyResponse CreateAndAttachPolicy(CreateAndAttachPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateAndAttachPolicyWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CreateAndAttachPolicy</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAndAttachPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAndAttachPolicyResponse
+        /// </returns>
+        public async Task<CreateAndAttachPolicyResponse> CreateAndAttachPolicyAsync(CreateAndAttachPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateAndAttachPolicyWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>创建消费者</para>
         /// </summary>
         /// 
@@ -8279,6 +8465,176 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>ListPolicies</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPoliciesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPoliciesResponse
+        /// </returns>
+        public ListPoliciesResponse ListPoliciesWithOptions(ListPoliciesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttachResourceId))
+            {
+                query["attachResourceId"] = request.AttachResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttachResourceType))
+            {
+                query["attachResourceType"] = request.AttachResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvironmentId))
+            {
+                query["environmentId"] = request.EnvironmentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                query["gatewayId"] = request.GatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithAttachments))
+            {
+                query["withAttachments"] = request.WithAttachments;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithSystemPolicy))
+            {
+                query["withSystemPolicy"] = request.WithSystemPolicy;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListPolicies",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/policies",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListPoliciesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListPolicies</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPoliciesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPoliciesResponse
+        /// </returns>
+        public async Task<ListPoliciesResponse> ListPoliciesWithOptionsAsync(ListPoliciesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttachResourceId))
+            {
+                query["attachResourceId"] = request.AttachResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttachResourceType))
+            {
+                query["attachResourceType"] = request.AttachResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvironmentId))
+            {
+                query["environmentId"] = request.EnvironmentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                query["gatewayId"] = request.GatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithAttachments))
+            {
+                query["withAttachments"] = request.WithAttachments;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithSystemPolicy))
+            {
+                query["withSystemPolicy"] = request.WithSystemPolicy;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListPolicies",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/policies",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListPoliciesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListPolicies</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPoliciesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPoliciesResponse
+        /// </returns>
+        public ListPoliciesResponse ListPolicies(ListPoliciesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListPoliciesWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListPolicies</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPoliciesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPoliciesResponse
+        /// </returns>
+        public async Task<ListPoliciesResponse> ListPoliciesAsync(ListPoliciesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListPoliciesWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>ListPolicyClasses</para>
         /// </summary>
         /// 
@@ -9305,7 +9661,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消部署HttpApi</para>
+        /// <para>Unpublishes an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9363,7 +9719,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消部署HttpApi</para>
+        /// <para>Unpublishes an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9421,7 +9777,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消部署HttpApi</para>
+        /// <para>Unpublishes an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9440,7 +9796,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消部署HttpApi</para>
+        /// <para>Unpublishes an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9455,6 +9811,184 @@ namespace AlibabaCloud.SDK.APIG20240327
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UndeployHttpApiWithOptionsAsync(httpApiId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>UpdateAndAttachPolicy</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAndAttachPolicyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAndAttachPolicyResponse
+        /// </returns>
+        public UpdateAndAttachPolicyResponse UpdateAndAttachPolicyWithOptions(string policyId, UpdateAndAttachPolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttachResourceIds))
+            {
+                body["attachResourceIds"] = request.AttachResourceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttachResourceType))
+            {
+                body["attachResourceType"] = request.AttachResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                body["config"] = request.Config;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvironmentId))
+            {
+                body["environmentId"] = request.EnvironmentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                body["gatewayId"] = request.GatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAndAttachPolicy",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/policies/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(policyId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAndAttachPolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>UpdateAndAttachPolicy</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAndAttachPolicyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAndAttachPolicyResponse
+        /// </returns>
+        public async Task<UpdateAndAttachPolicyResponse> UpdateAndAttachPolicyWithOptionsAsync(string policyId, UpdateAndAttachPolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttachResourceIds))
+            {
+                body["attachResourceIds"] = request.AttachResourceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttachResourceType))
+            {
+                body["attachResourceType"] = request.AttachResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                body["config"] = request.Config;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvironmentId))
+            {
+                body["environmentId"] = request.EnvironmentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                body["gatewayId"] = request.GatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAndAttachPolicy",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/policies/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(policyId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAndAttachPolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>UpdateAndAttachPolicy</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAndAttachPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAndAttachPolicyResponse
+        /// </returns>
+        public UpdateAndAttachPolicyResponse UpdateAndAttachPolicy(string policyId, UpdateAndAttachPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateAndAttachPolicyWithOptions(policyId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>UpdateAndAttachPolicy</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAndAttachPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAndAttachPolicyResponse
+        /// </returns>
+        public async Task<UpdateAndAttachPolicyResponse> UpdateAndAttachPolicyAsync(string policyId, UpdateAndAttachPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateAndAttachPolicyWithOptionsAsync(policyId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

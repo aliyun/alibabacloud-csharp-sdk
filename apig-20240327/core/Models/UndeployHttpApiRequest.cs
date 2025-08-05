@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string OperationId { get; set; }
 
         /// <summary>
-        /// <para>Route ID. This must be provided when publishing the route of an HTTP API.</para>
+        /// <para>The route ID. You must specify this parameter when you unpublish the route of an HTTP API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hr-cr82undlhtgrle***</para>
