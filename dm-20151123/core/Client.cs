@@ -4188,6 +4188,270 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取专属ip的预热详情信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDedicatedIpWarmUpDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDedicatedIpWarmUpDetailResponse
+        /// </returns>
+        public GetDedicatedIpWarmUpDetailResponse GetDedicatedIpWarmUpDetailWithOptions(GetDedicatedIpWarmUpDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DedicatedIp))
+            {
+                query["DedicatedIp"] = request.DedicatedIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDayMark))
+            {
+                query["EndDayMark"] = request.EndDayMark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Esp))
+            {
+                query["Esp"] = request.Esp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDayMark))
+            {
+                query["StartDayMark"] = request.StartDayMark;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDedicatedIpWarmUpDetail",
+                Version = "2015-11-23",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDedicatedIpWarmUpDetailResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取专属ip的预热详情信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDedicatedIpWarmUpDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDedicatedIpWarmUpDetailResponse
+        /// </returns>
+        public async Task<GetDedicatedIpWarmUpDetailResponse> GetDedicatedIpWarmUpDetailWithOptionsAsync(GetDedicatedIpWarmUpDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DedicatedIp))
+            {
+                query["DedicatedIp"] = request.DedicatedIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDayMark))
+            {
+                query["EndDayMark"] = request.EndDayMark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Esp))
+            {
+                query["Esp"] = request.Esp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDayMark))
+            {
+                query["StartDayMark"] = request.StartDayMark;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDedicatedIpWarmUpDetail",
+                Version = "2015-11-23",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDedicatedIpWarmUpDetailResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取专属ip的预热详情信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDedicatedIpWarmUpDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDedicatedIpWarmUpDetailResponse
+        /// </returns>
+        public GetDedicatedIpWarmUpDetailResponse GetDedicatedIpWarmUpDetail(GetDedicatedIpWarmUpDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetDedicatedIpWarmUpDetailWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取专属ip的预热详情信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDedicatedIpWarmUpDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDedicatedIpWarmUpDetailResponse
+        /// </returns>
+        public async Task<GetDedicatedIpWarmUpDetailResponse> GetDedicatedIpWarmUpDetailAsync(GetDedicatedIpWarmUpDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetDedicatedIpWarmUpDetailWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取专属ip的预热信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDedicatedIpWarmUpInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDedicatedIpWarmUpInfoResponse
+        /// </returns>
+        public GetDedicatedIpWarmUpInfoResponse GetDedicatedIpWarmUpInfoWithOptions(GetDedicatedIpWarmUpInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DedicatedIp))
+            {
+                query["DedicatedIp"] = request.DedicatedIp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDedicatedIpWarmUpInfo",
+                Version = "2015-11-23",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDedicatedIpWarmUpInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取专属ip的预热信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDedicatedIpWarmUpInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDedicatedIpWarmUpInfoResponse
+        /// </returns>
+        public async Task<GetDedicatedIpWarmUpInfoResponse> GetDedicatedIpWarmUpInfoWithOptionsAsync(GetDedicatedIpWarmUpInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DedicatedIp))
+            {
+                query["DedicatedIp"] = request.DedicatedIp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDedicatedIpWarmUpInfo",
+                Version = "2015-11-23",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDedicatedIpWarmUpInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取专属ip的预热信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDedicatedIpWarmUpInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDedicatedIpWarmUpInfoResponse
+        /// </returns>
+        public GetDedicatedIpWarmUpInfoResponse GetDedicatedIpWarmUpInfo(GetDedicatedIpWarmUpInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetDedicatedIpWarmUpInfoWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取专属ip的预热信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDedicatedIpWarmUpInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDedicatedIpWarmUpInfoResponse
+        /// </returns>
+        public async Task<GetDedicatedIpWarmUpInfoResponse> GetDedicatedIpWarmUpInfoAsync(GetDedicatedIpWarmUpInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetDedicatedIpWarmUpInfoWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Get IP Protection Information</para>
         /// </summary>
         /// 

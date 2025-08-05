@@ -103,6 +103,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 [Validation(Required=false)]
                 public bool? HasSendMail { get; set; }
 
+                [NameInMap("LastWarmUpTypeChangedTime")]
+                [Validation(Required=false)]
+                public string LastWarmUpTypeChangedTime { get; set; }
+
             }
 
             /// <summary>
