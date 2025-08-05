@@ -195,26 +195,6 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public ListEventStreamingsResponseBodyDataEventStreamingsRunOptionsRetryStrategy RetryStrategy { get; set; }
                     public class ListEventStreamingsResponseBodyDataEventStreamingsRunOptionsRetryStrategy : TeaModel {
                         /// <summary>
-                        /// <para>The maximum timeout period for a retry.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>512</para>
-                        /// </summary>
-                        [NameInMap("MaximumEventAgeInSeconds")]
-                        [Validation(Required=false)]
-                        public float? MaximumEventAgeInSeconds { get; set; }
-
-                        /// <summary>
-                        /// <para>The maximum number of retries.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>2</para>
-                        /// </summary>
-                        [NameInMap("MaximumRetryAttempts")]
-                        [Validation(Required=false)]
-                        public float? MaximumRetryAttempts { get; set; }
-
-                        /// <summary>
                         /// <para>The retry policy. Valid values: BACKOFF_RETRY and EXPONENTIAL_DECAY_RETRY.</para>
                         /// 
                         /// <b>Example:</b>
