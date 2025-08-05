@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeRiskEventGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The names of attacked applications. Set the value in the <c>[&quot;AttackApp1&quot;,&quot;AttackApp2&quot;]</c> format.</para>
+        /// <para>The names of the attacked applications. Set the value in the <c>[&quot;AttackApp1&quot;,&quot;AttackApp2&quot;]</c> format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;MySql&quot;,&quot;DNS&quot;]</para>
@@ -18,6 +18,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [NameInMap("AttackApp")]
         [Validation(Required=false)]
         public List<string> AttackApp { get; set; }
+
+        /// <summary>
+        /// <para>A list of categories of attacked applications, expressed in the format [&quot;AttackAppCategory1&quot;,&quot;AttackAppCategory2&quot;].</para>
+        /// </summary>
+        [NameInMap("AttackAppCategory")]
+        [Validation(Required=false)]
+        public List<string> AttackAppCategory { get; set; }
 
         /// <summary>
         /// <para>The attack type of the intrusion events. Valid values:</para>

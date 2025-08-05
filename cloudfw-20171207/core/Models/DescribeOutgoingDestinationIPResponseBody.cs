@@ -133,6 +133,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 [Validation(Required=false)]
                 public int? Port { get; set; }
 
+                /// <summary>
+                /// <para>List of reasons for failing to analyze the protocol when it is identified as Unknown.</para>
+                /// </summary>
                 [NameInMap("UnknownReason")]
                 [Validation(Required=false)]
                 public List<string> UnknownReason { get; set; }
@@ -268,7 +271,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <para>Location name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>山东省青岛市</para>
+            /// <para>Qingdao, Shandong</para>
             /// </summary>
             [NameInMap("LocationName")]
             [Validation(Required=false)]

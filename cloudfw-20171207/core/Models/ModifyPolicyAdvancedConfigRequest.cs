@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyPolicyAdvancedConfigRequest : TeaModel {
+        /// <summary>
+        /// <para>The IP addresses. The versions of the IP addresses must be the same. You can specify a maximum of 100 IP addresses.</para>
+        /// </summary>
         [NameInMap("Eips")]
         [Validation(Required=false)]
         public List<string> Eips { get; set; }

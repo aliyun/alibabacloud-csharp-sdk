@@ -180,6 +180,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string TrAttachmentMasterCidr { get; set; }
 
+        /// <summary>
+        /// <para>In automatic mode, the primary availability zone of the subnet in the firewall VPC used for connecting to TR.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-h</para>
+        /// </summary>
         [NameInMap("TrAttachmentMasterZone")]
         [Validation(Required=false)]
         public string TrAttachmentMasterZone { get; set; }
@@ -194,6 +200,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string TrAttachmentSlaveCidr { get; set; }
 
+        /// <summary>
+        /// <para>In automatic mode, the backup availability zone for the subnet used to connect TR in the firewall VPC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-i</para>
+        /// </summary>
         [NameInMap("TrAttachmentSlaveZone")]
         [Validation(Required=false)]
         public string TrAttachmentSlaveZone { get; set; }

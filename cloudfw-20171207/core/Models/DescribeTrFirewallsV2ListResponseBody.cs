@@ -30,16 +30,29 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The information about the VPC firewalls.</para>
+        /// <para>The VPC firewalls.</para>
         /// </summary>
         [NameInMap("VpcTrFirewalls")]
         [Validation(Required=false)]
         public List<DescribeTrFirewallsV2ListResponseBodyVpcTrFirewalls> VpcTrFirewalls { get; set; }
         public class DescribeTrFirewallsV2ListResponseBodyVpcTrFirewalls : TeaModel {
+            /// <summary>
+            /// <para>ACL engine mode.</para>
+            /// </summary>
             [NameInMap("AclConfig")]
             [Validation(Required=false)]
             public DescribeTrFirewallsV2ListResponseBodyVpcTrFirewallsAclConfig AclConfig { get; set; }
             public class DescribeTrFirewallsV2ListResponseBodyVpcTrFirewallsAclConfig : TeaModel {
+                /// <summary>
+                /// <para>Whether to enable strict mode</para>
+                /// <list type="bullet">
+                /// <item><description>1: Enable strict mode</description></item>
+                /// <item><description>0: Disable strict mode</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("StrictMode")]
                 [Validation(Required=false)]
                 public int? StrictMode { get; set; }

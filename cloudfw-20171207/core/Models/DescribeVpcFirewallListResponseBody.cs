@@ -36,12 +36,23 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public List<DescribeVpcFirewallListResponseBodyVpcFirewalls> VpcFirewalls { get; set; }
         public class DescribeVpcFirewallListResponseBodyVpcFirewalls : TeaModel {
+            /// <summary>
+            /// <para>ACL engine mode.</para>
+            /// </summary>
             [NameInMap("AclConfig")]
             [Validation(Required=false)]
             public DescribeVpcFirewallListResponseBodyVpcFirewallsAclConfig AclConfig { get; set; }
             public class DescribeVpcFirewallListResponseBodyVpcFirewallsAclConfig : TeaModel {
                 /// <summary>
+                /// <para>Specifies whether to enable the strict mode. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>1: yes</description></item>
+                /// <item><description>0: no</description></item>
+                /// </list>
                 /// <para>This parameter is required.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("StrictMode")]
                 [Validation(Required=false)]

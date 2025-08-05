@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The information about the versions.</para>
+        /// <para>The version information.</para>
         /// </summary>
         [NameInMap("Version")]
         [Validation(Required=false)]
@@ -68,6 +68,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public string Type { get; set; }
 
+            /// <summary>
+            /// <para>Update time.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1741067915</para>
+            /// </summary>
             [NameInMap("UpdateTime")]
             [Validation(Required=false)]
             public long? UpdateTime { get; set; }

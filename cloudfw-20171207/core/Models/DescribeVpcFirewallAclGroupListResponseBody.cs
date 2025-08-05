@@ -10,16 +10,29 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeVpcFirewallAclGroupListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the policy groups.</para>
+        /// <para>The information about the access control policy groups.</para>
         /// </summary>
         [NameInMap("AclGroupList")]
         [Validation(Required=false)]
         public List<DescribeVpcFirewallAclGroupListResponseBodyAclGroupList> AclGroupList { get; set; }
         public class DescribeVpcFirewallAclGroupListResponseBodyAclGroupList : TeaModel {
+            /// <summary>
+            /// <para>ACL engine mode.</para>
+            /// </summary>
             [NameInMap("AclConfig")]
             [Validation(Required=false)]
             public DescribeVpcFirewallAclGroupListResponseBodyAclGroupListAclConfig AclConfig { get; set; }
             public class DescribeVpcFirewallAclGroupListResponseBodyAclGroupListAclConfig : TeaModel {
+                /// <summary>
+                /// <para>Specifies Whether strict mode is enabled. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>1: yes</description></item>
+                /// <item><description>0: no</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("StrictMode")]
                 [Validation(Required=false)]
                 public int? StrictMode { get; set; }
@@ -70,10 +83,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? AclRuleCount { get; set; }
 
             /// <summary>
-            /// <para>是否是默认防火墙。取值：</para>
+            /// <para>Whether it is the default firewall. Values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>：是默认防火墙。</description></item>
-            /// <item><description><b>false</b>：不是默认防火墙。</description></item>
+            /// <item><description><b>true</b>: It is the default firewall.</description></item>
+            /// <item><description><b>false</b>: It is not the default firewall.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

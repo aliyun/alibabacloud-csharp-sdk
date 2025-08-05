@@ -37,6 +37,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string CurrentPage { get; set; }
 
+        /// <summary>
+        /// <para>The source of traffic for statistics. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>internet</b> (default): the Internet firewall.</description></item>
+        /// <item><description><b>nat</b>: NAT firewalls.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>nat</para>
+        /// </summary>
         [NameInMap("DataType")]
         [Validation(Required=false)]
         public string DataType { get; set; }
@@ -62,6 +72,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to collect statistics only on AI service access traffic. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b> (default)</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("IsAITraffic")]
         [Validation(Required=false)]
         public string IsAITraffic { get; set; }
@@ -81,10 +101,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The method that is used to sort the results. Valid values:</para>
+        /// <para>The method that you want to use to sort the query results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>asc</b>: the ascending order.</description></item>
-        /// <item><description><b>desc</b> (default): the descending order.</description></item>
+        /// <item><description><b>asc</b></description></item>
+        /// <item><description><b>desc</b> (default)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -34,6 +34,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string FirewallConfigureStatus { get; set; }
 
+        /// <summary>
+        /// <para>The instance ID of the VPC firewall.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vfw-tr-5b202e7f0be64611****</para>
+        /// </summary>
         [NameInMap("FirewallId")]
         [Validation(Required=false)]
         public string FirewallId { get; set; }
