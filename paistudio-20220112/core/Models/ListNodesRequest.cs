@@ -109,6 +109,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("PaymentType")]
+        [Validation(Required=false)]
+        public string PaymentType { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>quotamtl37ge7gkvdz</para>

@@ -77,6 +77,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public bool? SupportRDMA { get; set; }
 
+        [NameInMap("UseCase")]
+        [Validation(Required=false)]
+        public string UseCase { get; set; }
+
         [NameInMap("UserVpc")]
         [Validation(Required=false)]
         public UserVpc UserVpc { get; set; }
