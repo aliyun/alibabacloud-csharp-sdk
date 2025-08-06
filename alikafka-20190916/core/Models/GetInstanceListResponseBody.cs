@@ -259,6 +259,34 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 
                 }
 
+                [NameInMap("ConfluentInstanceComponents")]
+                [Validation(Required=false)]
+                public GetInstanceListResponseBodyInstanceListInstanceVOConfluentInstanceComponents ConfluentInstanceComponents { get; set; }
+                public class GetInstanceListResponseBodyInstanceListInstanceVOConfluentInstanceComponents : TeaModel {
+                    [NameInMap("ConfluentInstanceComponentVO")]
+                    [Validation(Required=false)]
+                    public List<GetInstanceListResponseBodyInstanceListInstanceVOConfluentInstanceComponentsConfluentInstanceComponentVO> ConfluentInstanceComponentVO { get; set; }
+                    public class GetInstanceListResponseBodyInstanceListInstanceVOConfluentInstanceComponentsConfluentInstanceComponentVO : TeaModel {
+                        [NameInMap("ComponentType")]
+                        [Validation(Required=false)]
+                        public string ComponentType { get; set; }
+
+                        [NameInMap("DeployModule")]
+                        [Validation(Required=false)]
+                        public string DeployModule { get; set; }
+
+                        [NameInMap("PubEndpoint")]
+                        [Validation(Required=false)]
+                        public string PubEndpoint { get; set; }
+
+                        [NameInMap("VpcEndpoint")]
+                        [Validation(Required=false)]
+                        public string VpcEndpoint { get; set; }
+
+                    }
+
+                }
+
                 /// <summary>
                 /// <para>The time when the instance was created. Unit: milliseconds.</para>
                 /// 
