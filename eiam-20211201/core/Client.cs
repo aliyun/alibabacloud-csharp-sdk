@@ -14986,6 +14986,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkAccessEndpointId))
+            {
+                query["NetworkAccessEndpointId"] = request.NetworkAccessEndpointId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProvisionPassword))
             {
                 query["ProvisionPassword"] = request.ProvisionPassword;
@@ -15047,6 +15051,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkAccessEndpointId))
+            {
+                query["NetworkAccessEndpointId"] = request.NetworkAccessEndpointId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProvisionPassword))
             {

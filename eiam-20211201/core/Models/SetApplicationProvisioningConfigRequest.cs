@@ -81,6 +81,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("NetworkAccessEndpointId")]
+        [Validation(Required=false)]
+        public string NetworkAccessEndpointId { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to synchronize the password in IDaaS user event callbacks. Valid values:</para>
         /// <list type="bullet">

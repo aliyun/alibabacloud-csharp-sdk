@@ -100,6 +100,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            [NameInMap("NetworkAccessEndpointId")]
+            [Validation(Required=false)]
+            public string NetworkAccessEndpointId { get; set; }
+
             /// <summary>
             /// <para>The public key endpoint for signature verification of the synchronization callback information.</para>
             /// 
