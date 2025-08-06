@@ -1,0 +1,118 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Vod20170321.Models
+{
+    public class AddWatermarkConsoleResponseBody : TeaModel {
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("Watermark")]
+        [Validation(Required=false)]
+        public AddWatermarkConsoleResponseBodyWatermark Watermark { get; set; }
+        public class AddWatermarkConsoleResponseBodyWatermark : TeaModel {
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public int? CreateTime { get; set; }
+
+            [NameInMap("Height")]
+            [Validation(Required=false)]
+            public string Height { get; set; }
+
+            [NameInMap("HorizontalOffset")]
+            [Validation(Required=false)]
+            public string HorizontalOffset { get; set; }
+
+            [NameInMap("IsDefault")]
+            [Validation(Required=false)]
+            public string IsDefault { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("Position")]
+            [Validation(Required=false)]
+            public string Position { get; set; }
+
+            [NameInMap("ScreenMode")]
+            [Validation(Required=false)]
+            public string ScreenMode { get; set; }
+
+            [NameInMap("Url")]
+            [Validation(Required=false)]
+            public string Url { get; set; }
+
+            [NameInMap("VerticalOffset")]
+            [Validation(Required=false)]
+            public string VerticalOffset { get; set; }
+
+            [NameInMap("VideoHeight")]
+            [Validation(Required=false)]
+            public int? VideoHeight { get; set; }
+
+            [NameInMap("VideoWidth")]
+            [Validation(Required=false)]
+            public int? VideoWidth { get; set; }
+
+            [NameInMap("WatermarkId")]
+            [Validation(Required=false)]
+            public string WatermarkId { get; set; }
+
+            [NameInMap("Width")]
+            [Validation(Required=false)]
+            public string Width { get; set; }
+
+        }
+
+        [NameInMap("WatermarkInfo")]
+        [Validation(Required=false)]
+        public AddWatermarkConsoleResponseBodyWatermarkInfo WatermarkInfo { get; set; }
+        public class AddWatermarkConsoleResponseBodyWatermarkInfo : TeaModel {
+            [NameInMap("CreationTime")]
+            [Validation(Required=false)]
+            public string CreationTime { get; set; }
+
+            [NameInMap("FileUrl")]
+            [Validation(Required=false)]
+            public string FileUrl { get; set; }
+
+            [NameInMap("IsDefault")]
+            [Validation(Required=false)]
+            public string IsDefault { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("ScreenHeight")]
+            [Validation(Required=false)]
+            public int? ScreenHeight { get; set; }
+
+            [NameInMap("ScreenWidth")]
+            [Validation(Required=false)]
+            public int? ScreenWidth { get; set; }
+
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
+            [NameInMap("WatermarkConfig")]
+            [Validation(Required=false)]
+            public string WatermarkConfig { get; set; }
+
+            [NameInMap("WatermarkId")]
+            [Validation(Required=false)]
+            public string WatermarkId { get; set; }
+
+        }
+
+    }
+
+}

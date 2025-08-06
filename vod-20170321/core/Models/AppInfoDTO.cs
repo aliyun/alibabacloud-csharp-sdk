@@ -21,13 +21,25 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public int? AppType { get; set; }
 
+        [NameInMap("CreationTime")]
+        [Validation(Required=false)]
+        public string CreationTime { get; set; }
+
         [NameInMap("GmtCreate")]
         [Validation(Required=false)]
         public string GmtCreate { get; set; }
 
+        [NameInMap("GmtModified")]
+        [Validation(Required=false)]
+        public string GmtModified { get; set; }
+
         [NameInMap("ItemId")]
         [Validation(Required=false)]
         public string ItemId { get; set; }
+
+        [NameInMap("ModificationTime")]
+        [Validation(Required=false)]
+        public string ModificationTime { get; set; }
 
         [NameInMap("Platforms")]
         [Validation(Required=false)]
