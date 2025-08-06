@@ -85,6 +85,18 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public int? Priority { get; set; }
 
+        [NameInMap("remindNotifyConfigs")]
+        [Validation(Required=false)]
+        public string RemindNotifyConfigsShrink { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1754364432000</para>
+        /// </summary>
+        [NameInMap("reminderTimeStamp")]
+        [Validation(Required=false)]
+        public long? ReminderTimeStamp { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>isv_dingtalkTodo1</para>

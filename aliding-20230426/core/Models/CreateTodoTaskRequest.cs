@@ -163,6 +163,22 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             [Validation(Required=false)]
             public string DingNotify { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("sendAssistantChat")]
+            [Validation(Required=false)]
+            public string SendAssistantChat { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("sendTodoApn")]
+            [Validation(Required=false)]
+            public string SendTodoApn { get; set; }
+
         }
 
         /// <summary>
@@ -184,6 +200,36 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [NameInMap("priority")]
         [Validation(Required=false)]
         public int? Priority { get; set; }
+
+        [NameInMap("remindNotifyConfigs")]
+        [Validation(Required=false)]
+        public CreateTodoTaskRequestRemindNotifyConfigs RemindNotifyConfigs { get; set; }
+        public class CreateTodoTaskRequestRemindNotifyConfigs : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("dingNotify")]
+            [Validation(Required=false)]
+            public string DingNotify { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("sendTodoApn")]
+            [Validation(Required=false)]
+            public string SendTodoApn { get; set; }
+
+        }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1754364432000</para>
+        /// </summary>
+        [NameInMap("reminderTimeStamp")]
+        [Validation(Required=false)]
+        public long? ReminderTimeStamp { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
