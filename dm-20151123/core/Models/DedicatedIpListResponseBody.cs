@@ -159,6 +159,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             [Validation(Required=false)]
             public string WarmupType { get; set; }
 
+            [NameInMap("ZoneId")]
+            [Validation(Required=false)]
+            public string ZoneId { get; set; }
+
         }
 
         /// <summary>

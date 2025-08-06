@@ -93,6 +93,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 [Validation(Required=false)]
                 public string Ip { get; set; }
 
+                [NameInMap("ZoneId")]
+                [Validation(Required=false)]
+                public string ZoneId { get; set; }
+
             }
 
             /// <summary>
