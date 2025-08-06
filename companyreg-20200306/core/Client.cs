@@ -444,6 +444,11 @@ namespace AlibabaCloud.SDK.Companyreg20200306
             return await CloseUserIntentionWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CreateBusinessOpportunity</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateBusinessOpportunityRequest
         /// </param>
@@ -497,6 +502,11 @@ namespace AlibabaCloud.SDK.Companyreg20200306
             return TeaModel.ToObject<CreateBusinessOpportunityResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CreateBusinessOpportunity</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateBusinessOpportunityRequest
         /// </param>
@@ -550,6 +560,11 @@ namespace AlibabaCloud.SDK.Companyreg20200306
             return TeaModel.ToObject<CreateBusinessOpportunityResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CreateBusinessOpportunity</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateBusinessOpportunityRequest
         /// </param>
@@ -563,6 +578,11 @@ namespace AlibabaCloud.SDK.Companyreg20200306
             return CreateBusinessOpportunityWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CreateBusinessOpportunity</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateBusinessOpportunityRequest
         /// </param>
@@ -800,6 +820,11 @@ namespace AlibabaCloud.SDK.Companyreg20200306
             return await DescribePartnerConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GenerateUploadFilePolicy</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GenerateUploadFilePolicyRequest
         /// </param>
@@ -845,6 +870,11 @@ namespace AlibabaCloud.SDK.Companyreg20200306
             return TeaModel.ToObject<GenerateUploadFilePolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GenerateUploadFilePolicy</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GenerateUploadFilePolicyRequest
         /// </param>
@@ -890,6 +920,11 @@ namespace AlibabaCloud.SDK.Companyreg20200306
             return TeaModel.ToObject<GenerateUploadFilePolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GenerateUploadFilePolicy</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GenerateUploadFilePolicyRequest
         /// </param>
@@ -903,6 +938,11 @@ namespace AlibabaCloud.SDK.Companyreg20200306
             return GenerateUploadFilePolicyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GenerateUploadFilePolicy</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GenerateUploadFilePolicyRequest
         /// </param>
@@ -2578,6 +2618,142 @@ namespace AlibabaCloud.SDK.Companyreg20200306
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryBagRemainingWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询玄坛外呼语音文件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryCallRecordListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryCallRecordListResponse
+        /// </returns>
+        public QueryCallRecordListResponse QueryCallRecordListWithOptions(QueryCallRecordListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                query["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillType))
+            {
+                query["SkillType"] = request.SkillType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryCallRecordList",
+                Version = "2020-03-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryCallRecordListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询玄坛外呼语音文件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryCallRecordListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryCallRecordListResponse
+        /// </returns>
+        public async Task<QueryCallRecordListResponse> QueryCallRecordListWithOptionsAsync(QueryCallRecordListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                query["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillType))
+            {
+                query["SkillType"] = request.SkillType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryCallRecordList",
+                Version = "2020-03-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryCallRecordListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询玄坛外呼语音文件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryCallRecordListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryCallRecordListResponse
+        /// </returns>
+        public QueryCallRecordListResponse QueryCallRecordList(QueryCallRecordListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryCallRecordListWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询玄坛外呼语音文件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryCallRecordListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryCallRecordListResponse
+        /// </returns>
+        public async Task<QueryCallRecordListResponse> QueryCallRecordListAsync(QueryCallRecordListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryCallRecordListWithOptionsAsync(request, runtime);
         }
 
         /// <param name="request">
