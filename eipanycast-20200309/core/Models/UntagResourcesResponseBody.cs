@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
 {
     public class UntagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C46FF5A8-C5F0-4024-8262-B16B639225A0</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the operation is successful. Valid values:
+        /// <para>Indicates whether the operation is successful. Valid values:</para>
+        /// <para><b>true</b></para>
+        /// <para><b>false</b></para>
         /// 
-        /// **true**
-        /// 
-        /// **false**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

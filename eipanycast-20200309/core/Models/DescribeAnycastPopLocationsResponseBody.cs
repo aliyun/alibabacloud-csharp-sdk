@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
 {
     public class DescribeAnycastPopLocationsResponseBody : TeaModel {
         /// <summary>
-        /// The list of access points in the specified access area.
+        /// <para>The list of access points in the specified access area.</para>
         /// </summary>
         [NameInMap("AnycastPopLocationList")]
         [Validation(Required=false)]
         public List<DescribeAnycastPopLocationsResponseBodyAnycastPopLocationList> AnycastPopLocationList { get; set; }
         public class DescribeAnycastPopLocationsResponseBodyAnycastPopLocationList : TeaModel {
             /// <summary>
-            /// The ID of the region where the access point is deployed.
+            /// <para>The ID of the region where the access point is deployed.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>us-west-1-pop</para>
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
             /// <summary>
-            /// The name of the region where the access point is deployed.
+            /// <para>The name of the region where the access point is deployed.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>us-west-1-pop</para>
             /// </summary>
             [NameInMap("RegionName")]
             [Validation(Required=false)]
@@ -33,14 +39,20 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
         }
 
         /// <summary>
-        /// The number of access points.
+        /// <para>The number of access points.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Count")]
         [Validation(Required=false)]
         public string Count { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4EC47282-1B74-4534-BD0E-403F3EE64CAF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

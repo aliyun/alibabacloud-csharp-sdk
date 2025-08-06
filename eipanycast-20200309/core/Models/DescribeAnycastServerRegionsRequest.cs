@@ -10,11 +10,12 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
 {
     public class DescribeAnycastServerRegionsRequest : TeaModel {
         /// <summary>
-        /// The access area from which you use the Anycast EIP to communicate with the Internet.
+        /// <para>The access area from which you use the Anycast EIP to communicate with the Internet.</para>
+        /// <para>Set the value to <b>international</b>, which specifies the areas outside the Chinese mainland.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// Set the value to **international**, which specifies the areas outside the Chinese mainland.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>international</para>
         /// </summary>
         [NameInMap("ServiceLocation")]
         [Validation(Required=false)]

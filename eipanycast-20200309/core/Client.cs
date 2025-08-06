@@ -37,13 +37,21 @@ namespace AlibabaCloud.SDK.Eipanycast20200309
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-         * @summary Creates an Anycast elastic IP address (Anycast EIP).
-         *
-         * @param request AllocateAnycastEipAddressRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AllocateAnycastEipAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an Anycast elastic IP address (Anycast EIP).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AllocateAnycastEipAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AllocateAnycastEipAddressResponse
+        /// </returns>
         public AllocateAnycastEipAddressResponse AllocateAnycastEipAddressWithOptions(AllocateAnycastEipAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -99,13 +107,21 @@ namespace AlibabaCloud.SDK.Eipanycast20200309
             return TeaModel.ToObject<AllocateAnycastEipAddressResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates an Anycast elastic IP address (Anycast EIP).
-         *
-         * @param request AllocateAnycastEipAddressRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AllocateAnycastEipAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an Anycast elastic IP address (Anycast EIP).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AllocateAnycastEipAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AllocateAnycastEipAddressResponse
+        /// </returns>
         public async Task<AllocateAnycastEipAddressResponse> AllocateAnycastEipAddressWithOptionsAsync(AllocateAnycastEipAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -161,37 +177,57 @@ namespace AlibabaCloud.SDK.Eipanycast20200309
             return TeaModel.ToObject<AllocateAnycastEipAddressResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates an Anycast elastic IP address (Anycast EIP).
-         *
-         * @param request AllocateAnycastEipAddressRequest
-         * @return AllocateAnycastEipAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an Anycast elastic IP address (Anycast EIP).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AllocateAnycastEipAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AllocateAnycastEipAddressResponse
+        /// </returns>
         public AllocateAnycastEipAddressResponse AllocateAnycastEipAddress(AllocateAnycastEipAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AllocateAnycastEipAddressWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates an Anycast elastic IP address (Anycast EIP).
-         *
-         * @param request AllocateAnycastEipAddressRequest
-         * @return AllocateAnycastEipAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an Anycast elastic IP address (Anycast EIP).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AllocateAnycastEipAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AllocateAnycastEipAddressResponse
+        /// </returns>
         public async Task<AllocateAnycastEipAddressResponse> AllocateAnycastEipAddressAsync(AllocateAnycastEipAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AllocateAnycastEipAddressWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Associates an Anycast elastic IP address (Anycast EIP) with an endpoint.
-         *
-         * @param request AssociateAnycastEipAddressRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AssociateAnycastEipAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates an Anycast elastic IP address (Anycast EIP) with an endpoint.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AssociateAnycastEipAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateAnycastEipAddressResponse
+        /// </returns>
         public AssociateAnycastEipAddressResponse AssociateAnycastEipAddressWithOptions(AssociateAnycastEipAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -251,13 +287,21 @@ namespace AlibabaCloud.SDK.Eipanycast20200309
             return TeaModel.ToObject<AssociateAnycastEipAddressResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Associates an Anycast elastic IP address (Anycast EIP) with an endpoint.
-         *
-         * @param request AssociateAnycastEipAddressRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return AssociateAnycastEipAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates an Anycast elastic IP address (Anycast EIP) with an endpoint.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AssociateAnycastEipAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateAnycastEipAddressResponse
+        /// </returns>
         public async Task<AssociateAnycastEipAddressResponse> AssociateAnycastEipAddressWithOptionsAsync(AssociateAnycastEipAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -317,37 +361,193 @@ namespace AlibabaCloud.SDK.Eipanycast20200309
             return TeaModel.ToObject<AssociateAnycastEipAddressResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Associates an Anycast elastic IP address (Anycast EIP) with an endpoint.
-         *
-         * @param request AssociateAnycastEipAddressRequest
-         * @return AssociateAnycastEipAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates an Anycast elastic IP address (Anycast EIP) with an endpoint.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AssociateAnycastEipAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateAnycastEipAddressResponse
+        /// </returns>
         public AssociateAnycastEipAddressResponse AssociateAnycastEipAddress(AssociateAnycastEipAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AssociateAnycastEipAddressWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Associates an Anycast elastic IP address (Anycast EIP) with an endpoint.
-         *
-         * @param request AssociateAnycastEipAddressRequest
-         * @return AssociateAnycastEipAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates an Anycast elastic IP address (Anycast EIP) with an endpoint.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AssociateAnycastEipAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateAnycastEipAddressResponse
+        /// </returns>
         public async Task<AssociateAnycastEipAddressResponse> AssociateAnycastEipAddressAsync(AssociateAnycastEipAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AssociateAnycastEipAddressWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries Anycast elastic IP addresses (Anycast EIPs) associated with specified instance IP addresses or instance IDs, including instance status, maximum bandwidth, and associated resources.
-         *
-         * @param request DescribeAnycastEipAddressRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAnycastEipAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改AnycastEIp实例资源组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeResourceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeResourceGroupResponse
+        /// </returns>
+        public ChangeResourceGroupResponse ChangeResourceGroupWithOptions(ChangeResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewResourceGroupId))
+            {
+                query["NewResourceGroupId"] = request.NewResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ChangeResourceGroup",
+                Version = "2020-03-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ChangeResourceGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改AnycastEIp实例资源组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeResourceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeResourceGroupResponse
+        /// </returns>
+        public async Task<ChangeResourceGroupResponse> ChangeResourceGroupWithOptionsAsync(ChangeResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewResourceGroupId))
+            {
+                query["NewResourceGroupId"] = request.NewResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ChangeResourceGroup",
+                Version = "2020-03-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ChangeResourceGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改AnycastEIp实例资源组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeResourceGroupResponse
+        /// </returns>
+        public ChangeResourceGroupResponse ChangeResourceGroup(ChangeResourceGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ChangeResourceGroupWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改AnycastEIp实例资源组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeResourceGroupResponse
+        /// </returns>
+        public async Task<ChangeResourceGroupResponse> ChangeResourceGroupAsync(ChangeResourceGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ChangeResourceGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Anycast elastic IP addresses (Anycast EIPs) associated with specified instance IP addresses or instance IDs, including instance status, maximum bandwidth, and associated resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAnycastEipAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAnycastEipAddressResponse
+        /// </returns>
         public DescribeAnycastEipAddressResponse DescribeAnycastEipAddressWithOptions(DescribeAnycastEipAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -383,13 +583,21 @@ namespace AlibabaCloud.SDK.Eipanycast20200309
             return TeaModel.ToObject<DescribeAnycastEipAddressResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries Anycast elastic IP addresses (Anycast EIPs) associated with specified instance IP addresses or instance IDs, including instance status, maximum bandwidth, and associated resources.
-         *
-         * @param request DescribeAnycastEipAddressRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAnycastEipAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Anycast elastic IP addresses (Anycast EIPs) associated with specified instance IP addresses or instance IDs, including instance status, maximum bandwidth, and associated resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAnycastEipAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAnycastEipAddressResponse
+        /// </returns>
         public async Task<DescribeAnycastEipAddressResponse> DescribeAnycastEipAddressWithOptionsAsync(DescribeAnycastEipAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -425,37 +633,57 @@ namespace AlibabaCloud.SDK.Eipanycast20200309
             return TeaModel.ToObject<DescribeAnycastEipAddressResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries Anycast elastic IP addresses (Anycast EIPs) associated with specified instance IP addresses or instance IDs, including instance status, maximum bandwidth, and associated resources.
-         *
-         * @param request DescribeAnycastEipAddressRequest
-         * @return DescribeAnycastEipAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Anycast elastic IP addresses (Anycast EIPs) associated with specified instance IP addresses or instance IDs, including instance status, maximum bandwidth, and associated resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAnycastEipAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAnycastEipAddressResponse
+        /// </returns>
         public DescribeAnycastEipAddressResponse DescribeAnycastEipAddress(DescribeAnycastEipAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAnycastEipAddressWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries Anycast elastic IP addresses (Anycast EIPs) associated with specified instance IP addresses or instance IDs, including instance status, maximum bandwidth, and associated resources.
-         *
-         * @param request DescribeAnycastEipAddressRequest
-         * @return DescribeAnycastEipAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Anycast elastic IP addresses (Anycast EIPs) associated with specified instance IP addresses or instance IDs, including instance status, maximum bandwidth, and associated resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAnycastEipAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAnycastEipAddressResponse
+        /// </returns>
         public async Task<DescribeAnycastEipAddressResponse> DescribeAnycastEipAddressAsync(DescribeAnycastEipAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAnycastEipAddressWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about the access points in an area.
-         *
-         * @param request DescribeAnycastPopLocationsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAnycastPopLocationsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the access points in an area.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAnycastPopLocationsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAnycastPopLocationsResponse
+        /// </returns>
         public DescribeAnycastPopLocationsResponse DescribeAnycastPopLocationsWithOptions(DescribeAnycastPopLocationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -483,13 +711,21 @@ namespace AlibabaCloud.SDK.Eipanycast20200309
             return TeaModel.ToObject<DescribeAnycastPopLocationsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about the access points in an area.
-         *
-         * @param request DescribeAnycastPopLocationsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAnycastPopLocationsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the access points in an area.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAnycastPopLocationsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAnycastPopLocationsResponse
+        /// </returns>
         public async Task<DescribeAnycastPopLocationsResponse> DescribeAnycastPopLocationsWithOptionsAsync(DescribeAnycastPopLocationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -517,37 +753,57 @@ namespace AlibabaCloud.SDK.Eipanycast20200309
             return TeaModel.ToObject<DescribeAnycastPopLocationsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the information about the access points in an area.
-         *
-         * @param request DescribeAnycastPopLocationsRequest
-         * @return DescribeAnycastPopLocationsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the access points in an area.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAnycastPopLocationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAnycastPopLocationsResponse
+        /// </returns>
         public DescribeAnycastPopLocationsResponse DescribeAnycastPopLocations(DescribeAnycastPopLocationsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAnycastPopLocationsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about the access points in an area.
-         *
-         * @param request DescribeAnycastPopLocationsRequest
-         * @return DescribeAnycastPopLocationsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the access points in an area.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAnycastPopLocationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAnycastPopLocationsResponse
+        /// </returns>
         public async Task<DescribeAnycastPopLocationsResponse> DescribeAnycastPopLocationsAsync(DescribeAnycastPopLocationsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAnycastPopLocationsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the regions where you can associate Anycast elastic IP addresses (Anycast EIPs) with endpoints.
-         *
-         * @param request DescribeAnycastServerRegionsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAnycastServerRegionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the regions where you can associate Anycast elastic IP addresses (Anycast EIPs) with endpoints.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAnycastServerRegionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAnycastServerRegionsResponse
+        /// </returns>
         public DescribeAnycastServerRegionsResponse DescribeAnycastServerRegionsWithOptions(DescribeAnycastServerRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -575,13 +831,21 @@ namespace AlibabaCloud.SDK.Eipanycast20200309
             return TeaModel.ToObject<DescribeAnycastServerRegionsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the regions where you can associate Anycast elastic IP addresses (Anycast EIPs) with endpoints.
-         *
-         * @param request DescribeAnycastServerRegionsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DescribeAnycastServerRegionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the regions where you can associate Anycast elastic IP addresses (Anycast EIPs) with endpoints.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAnycastServerRegionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAnycastServerRegionsResponse
+        /// </returns>
         public async Task<DescribeAnycastServerRegionsResponse> DescribeAnycastServerRegionsWithOptionsAsync(DescribeAnycastServerRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -609,37 +873,57 @@ namespace AlibabaCloud.SDK.Eipanycast20200309
             return TeaModel.ToObject<DescribeAnycastServerRegionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the regions where you can associate Anycast elastic IP addresses (Anycast EIPs) with endpoints.
-         *
-         * @param request DescribeAnycastServerRegionsRequest
-         * @return DescribeAnycastServerRegionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the regions where you can associate Anycast elastic IP addresses (Anycast EIPs) with endpoints.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAnycastServerRegionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAnycastServerRegionsResponse
+        /// </returns>
         public DescribeAnycastServerRegionsResponse DescribeAnycastServerRegions(DescribeAnycastServerRegionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeAnycastServerRegionsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the regions where you can associate Anycast elastic IP addresses (Anycast EIPs) with endpoints.
-         *
-         * @param request DescribeAnycastServerRegionsRequest
-         * @return DescribeAnycastServerRegionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the regions where you can associate Anycast elastic IP addresses (Anycast EIPs) with endpoints.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAnycastServerRegionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAnycastServerRegionsResponse
+        /// </returns>
         public async Task<DescribeAnycastServerRegionsResponse> DescribeAnycastServerRegionsAsync(DescribeAnycastServerRegionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAnycastServerRegionsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary 查询指定接入区域已创建的Anycast EIP实例
-         *
-         * @param request ListAnycastEipAddressesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListAnycastEipAddressesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about Anycast elastic IP addresses (Anycast EIPs) in an access area, including instance status, maximum bandwidth, and associated resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAnycastEipAddressesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAnycastEipAddressesResponse
+        /// </returns>
         public ListAnycastEipAddressesResponse ListAnycastEipAddressesWithOptions(ListAnycastEipAddressesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -719,13 +1003,21 @@ namespace AlibabaCloud.SDK.Eipanycast20200309
             return TeaModel.ToObject<ListAnycastEipAddressesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询指定接入区域已创建的Anycast EIP实例
-         *
-         * @param request ListAnycastEipAddressesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListAnycastEipAddressesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about Anycast elastic IP addresses (Anycast EIPs) in an access area, including instance status, maximum bandwidth, and associated resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAnycastEipAddressesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAnycastEipAddressesResponse
+        /// </returns>
         public async Task<ListAnycastEipAddressesResponse> ListAnycastEipAddressesWithOptionsAsync(ListAnycastEipAddressesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -805,37 +1097,57 @@ namespace AlibabaCloud.SDK.Eipanycast20200309
             return TeaModel.ToObject<ListAnycastEipAddressesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询指定接入区域已创建的Anycast EIP实例
-         *
-         * @param request ListAnycastEipAddressesRequest
-         * @return ListAnycastEipAddressesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about Anycast elastic IP addresses (Anycast EIPs) in an access area, including instance status, maximum bandwidth, and associated resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAnycastEipAddressesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAnycastEipAddressesResponse
+        /// </returns>
         public ListAnycastEipAddressesResponse ListAnycastEipAddresses(ListAnycastEipAddressesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListAnycastEipAddressesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary 查询指定接入区域已创建的Anycast EIP实例
-         *
-         * @param request ListAnycastEipAddressesRequest
-         * @return ListAnycastEipAddressesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about Anycast elastic IP addresses (Anycast EIPs) in an access area, including instance status, maximum bandwidth, and associated resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAnycastEipAddressesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAnycastEipAddressesResponse
+        /// </returns>
         public async Task<ListAnycastEipAddressesResponse> ListAnycastEipAddressesAsync(ListAnycastEipAddressesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListAnycastEipAddressesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the tags that are added to resources.
-         *
-         * @param request ListTagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags that are added to resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public ListTagResourcesResponse ListTagResourcesWithOptions(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -879,13 +1191,21 @@ namespace AlibabaCloud.SDK.Eipanycast20200309
             return TeaModel.ToObject<ListTagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the tags that are added to resources.
-         *
-         * @param request ListTagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags that are added to resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public async Task<ListTagResourcesResponse> ListTagResourcesWithOptionsAsync(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -929,37 +1249,57 @@ namespace AlibabaCloud.SDK.Eipanycast20200309
             return TeaModel.ToObject<ListTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Queries the tags that are added to resources.
-         *
-         * @param request ListTagResourcesRequest
-         * @return ListTagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags that are added to resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public ListTagResourcesResponse ListTagResources(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTagResourcesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the tags that are added to resources.
-         *
-         * @param request ListTagResourcesRequest
-         * @return ListTagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags that are added to resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public async Task<ListTagResourcesResponse> ListTagResourcesAsync(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTagResourcesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the name and description of an Anycast elastic IP address (Anycast EIP).
-         *
-         * @param request ModifyAnycastEipAddressAttributeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyAnycastEipAddressAttributeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name and description of an Anycast elastic IP address (Anycast EIP).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyAnycastEipAddressAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAnycastEipAddressAttributeResponse
+        /// </returns>
         public ModifyAnycastEipAddressAttributeResponse ModifyAnycastEipAddressAttributeWithOptions(ModifyAnycastEipAddressAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -995,13 +1335,21 @@ namespace AlibabaCloud.SDK.Eipanycast20200309
             return TeaModel.ToObject<ModifyAnycastEipAddressAttributeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the name and description of an Anycast elastic IP address (Anycast EIP).
-         *
-         * @param request ModifyAnycastEipAddressAttributeRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyAnycastEipAddressAttributeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name and description of an Anycast elastic IP address (Anycast EIP).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyAnycastEipAddressAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAnycastEipAddressAttributeResponse
+        /// </returns>
         public async Task<ModifyAnycastEipAddressAttributeResponse> ModifyAnycastEipAddressAttributeWithOptionsAsync(ModifyAnycastEipAddressAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1037,37 +1385,57 @@ namespace AlibabaCloud.SDK.Eipanycast20200309
             return TeaModel.ToObject<ModifyAnycastEipAddressAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the name and description of an Anycast elastic IP address (Anycast EIP).
-         *
-         * @param request ModifyAnycastEipAddressAttributeRequest
-         * @return ModifyAnycastEipAddressAttributeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name and description of an Anycast elastic IP address (Anycast EIP).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyAnycastEipAddressAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAnycastEipAddressAttributeResponse
+        /// </returns>
         public ModifyAnycastEipAddressAttributeResponse ModifyAnycastEipAddressAttribute(ModifyAnycastEipAddressAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyAnycastEipAddressAttributeWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the name and description of an Anycast elastic IP address (Anycast EIP).
-         *
-         * @param request ModifyAnycastEipAddressAttributeRequest
-         * @return ModifyAnycastEipAddressAttributeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name and description of an Anycast elastic IP address (Anycast EIP).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyAnycastEipAddressAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAnycastEipAddressAttributeResponse
+        /// </returns>
         public async Task<ModifyAnycastEipAddressAttributeResponse> ModifyAnycastEipAddressAttributeAsync(ModifyAnycastEipAddressAttributeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyAnycastEipAddressAttributeWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the maximum bandwidth of an Anycast elastic IP address (Anycast EIP).
-         *
-         * @param request ModifyAnycastEipAddressSpecRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyAnycastEipAddressSpecResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the maximum bandwidth of an Anycast elastic IP address (Anycast EIP).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyAnycastEipAddressSpecRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAnycastEipAddressSpecResponse
+        /// </returns>
         public ModifyAnycastEipAddressSpecResponse ModifyAnycastEipAddressSpecWithOptions(ModifyAnycastEipAddressSpecRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1099,13 +1467,21 @@ namespace AlibabaCloud.SDK.Eipanycast20200309
             return TeaModel.ToObject<ModifyAnycastEipAddressSpecResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the maximum bandwidth of an Anycast elastic IP address (Anycast EIP).
-         *
-         * @param request ModifyAnycastEipAddressSpecRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ModifyAnycastEipAddressSpecResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the maximum bandwidth of an Anycast elastic IP address (Anycast EIP).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyAnycastEipAddressSpecRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAnycastEipAddressSpecResponse
+        /// </returns>
         public async Task<ModifyAnycastEipAddressSpecResponse> ModifyAnycastEipAddressSpecWithOptionsAsync(ModifyAnycastEipAddressSpecRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1137,37 +1513,57 @@ namespace AlibabaCloud.SDK.Eipanycast20200309
             return TeaModel.ToObject<ModifyAnycastEipAddressSpecResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Modifies the maximum bandwidth of an Anycast elastic IP address (Anycast EIP).
-         *
-         * @param request ModifyAnycastEipAddressSpecRequest
-         * @return ModifyAnycastEipAddressSpecResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the maximum bandwidth of an Anycast elastic IP address (Anycast EIP).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyAnycastEipAddressSpecRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAnycastEipAddressSpecResponse
+        /// </returns>
         public ModifyAnycastEipAddressSpecResponse ModifyAnycastEipAddressSpec(ModifyAnycastEipAddressSpecRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyAnycastEipAddressSpecWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the maximum bandwidth of an Anycast elastic IP address (Anycast EIP).
-         *
-         * @param request ModifyAnycastEipAddressSpecRequest
-         * @return ModifyAnycastEipAddressSpecResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the maximum bandwidth of an Anycast elastic IP address (Anycast EIP).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyAnycastEipAddressSpecRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAnycastEipAddressSpecResponse
+        /// </returns>
         public async Task<ModifyAnycastEipAddressSpecResponse> ModifyAnycastEipAddressSpecAsync(ModifyAnycastEipAddressSpecRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyAnycastEipAddressSpecWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Releases an Anycast elastic IP address (Anycast EIP).
-         *
-         * @param request ReleaseAnycastEipAddressRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ReleaseAnycastEipAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases an Anycast elastic IP address (Anycast EIP).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReleaseAnycastEipAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReleaseAnycastEipAddressResponse
+        /// </returns>
         public ReleaseAnycastEipAddressResponse ReleaseAnycastEipAddressWithOptions(ReleaseAnycastEipAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1199,13 +1595,21 @@ namespace AlibabaCloud.SDK.Eipanycast20200309
             return TeaModel.ToObject<ReleaseAnycastEipAddressResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Releases an Anycast elastic IP address (Anycast EIP).
-         *
-         * @param request ReleaseAnycastEipAddressRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ReleaseAnycastEipAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases an Anycast elastic IP address (Anycast EIP).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReleaseAnycastEipAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReleaseAnycastEipAddressResponse
+        /// </returns>
         public async Task<ReleaseAnycastEipAddressResponse> ReleaseAnycastEipAddressWithOptionsAsync(ReleaseAnycastEipAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1237,37 +1641,57 @@ namespace AlibabaCloud.SDK.Eipanycast20200309
             return TeaModel.ToObject<ReleaseAnycastEipAddressResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Releases an Anycast elastic IP address (Anycast EIP).
-         *
-         * @param request ReleaseAnycastEipAddressRequest
-         * @return ReleaseAnycastEipAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases an Anycast elastic IP address (Anycast EIP).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReleaseAnycastEipAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReleaseAnycastEipAddressResponse
+        /// </returns>
         public ReleaseAnycastEipAddressResponse ReleaseAnycastEipAddress(ReleaseAnycastEipAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ReleaseAnycastEipAddressWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Releases an Anycast elastic IP address (Anycast EIP).
-         *
-         * @param request ReleaseAnycastEipAddressRequest
-         * @return ReleaseAnycastEipAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases an Anycast elastic IP address (Anycast EIP).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReleaseAnycastEipAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReleaseAnycastEipAddressResponse
+        /// </returns>
         public async Task<ReleaseAnycastEipAddressResponse> ReleaseAnycastEipAddressAsync(ReleaseAnycastEipAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ReleaseAnycastEipAddressWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates and adds tags to resources.
-         *
-         * @param request TagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates and adds tags to resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public TagResourcesResponse TagResourcesWithOptions(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1303,13 +1727,21 @@ namespace AlibabaCloud.SDK.Eipanycast20200309
             return TeaModel.ToObject<TagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates and adds tags to resources.
-         *
-         * @param request TagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates and adds tags to resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public async Task<TagResourcesResponse> TagResourcesWithOptionsAsync(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1345,37 +1777,57 @@ namespace AlibabaCloud.SDK.Eipanycast20200309
             return TeaModel.ToObject<TagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Creates and adds tags to resources.
-         *
-         * @param request TagResourcesRequest
-         * @return TagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates and adds tags to resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public TagResourcesResponse TagResources(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return TagResourcesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates and adds tags to resources.
-         *
-         * @param request TagResourcesRequest
-         * @return TagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates and adds tags to resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public async Task<TagResourcesResponse> TagResourcesAsync(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await TagResourcesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Disassociates an Anycast elastic IP address (Anycast EIP) from an endpoint.
-         *
-         * @param request UnassociateAnycastEipAddressRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UnassociateAnycastEipAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates an Anycast elastic IP address (Anycast EIP) from an endpoint.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnassociateAnycastEipAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnassociateAnycastEipAddressResponse
+        /// </returns>
         public UnassociateAnycastEipAddressResponse UnassociateAnycastEipAddressWithOptions(UnassociateAnycastEipAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1427,13 +1879,21 @@ namespace AlibabaCloud.SDK.Eipanycast20200309
             return TeaModel.ToObject<UnassociateAnycastEipAddressResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Disassociates an Anycast elastic IP address (Anycast EIP) from an endpoint.
-         *
-         * @param request UnassociateAnycastEipAddressRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UnassociateAnycastEipAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates an Anycast elastic IP address (Anycast EIP) from an endpoint.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnassociateAnycastEipAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnassociateAnycastEipAddressResponse
+        /// </returns>
         public async Task<UnassociateAnycastEipAddressResponse> UnassociateAnycastEipAddressWithOptionsAsync(UnassociateAnycastEipAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1485,37 +1945,57 @@ namespace AlibabaCloud.SDK.Eipanycast20200309
             return TeaModel.ToObject<UnassociateAnycastEipAddressResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Disassociates an Anycast elastic IP address (Anycast EIP) from an endpoint.
-         *
-         * @param request UnassociateAnycastEipAddressRequest
-         * @return UnassociateAnycastEipAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates an Anycast elastic IP address (Anycast EIP) from an endpoint.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnassociateAnycastEipAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnassociateAnycastEipAddressResponse
+        /// </returns>
         public UnassociateAnycastEipAddressResponse UnassociateAnycastEipAddress(UnassociateAnycastEipAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UnassociateAnycastEipAddressWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Disassociates an Anycast elastic IP address (Anycast EIP) from an endpoint.
-         *
-         * @param request UnassociateAnycastEipAddressRequest
-         * @return UnassociateAnycastEipAddressResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates an Anycast elastic IP address (Anycast EIP) from an endpoint.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnassociateAnycastEipAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnassociateAnycastEipAddressResponse
+        /// </returns>
         public async Task<UnassociateAnycastEipAddressResponse> UnassociateAnycastEipAddressAsync(UnassociateAnycastEipAddressRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UnassociateAnycastEipAddressWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Removes tags from Anycast EIPs.
-         *
-         * @param request UntagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UntagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes tags from Anycast EIPs.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public UntagResourcesResponse UntagResourcesWithOptions(UntagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1551,13 +2031,21 @@ namespace AlibabaCloud.SDK.Eipanycast20200309
             return TeaModel.ToObject<UntagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary Removes tags from Anycast EIPs.
-         *
-         * @param request UntagResourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UntagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes tags from Anycast EIPs.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public async Task<UntagResourcesResponse> UntagResourcesWithOptionsAsync(UntagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1593,37 +2081,57 @@ namespace AlibabaCloud.SDK.Eipanycast20200309
             return TeaModel.ToObject<UntagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary Removes tags from Anycast EIPs.
-         *
-         * @param request UntagResourcesRequest
-         * @return UntagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes tags from Anycast EIPs.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public UntagResourcesResponse UntagResources(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UntagResourcesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Removes tags from Anycast EIPs.
-         *
-         * @param request UntagResourcesRequest
-         * @return UntagResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes tags from Anycast EIPs.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public async Task<UntagResourcesResponse> UntagResourcesAsync(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UntagResourcesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary If an Anycast EIP is associated with endpoints in different regions, you can change the access points that are mapped to an endpoint. You can call UpdateAnycastEipAddressAssociations to add or delete endpoints to modify the mappings between endpoints and access points.
-         *
-         * @param request UpdateAnycastEipAddressAssociationsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateAnycastEipAddressAssociationsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>If an Anycast EIP is associated with endpoints in different regions, you can change the access points that are mapped to an endpoint. You can call UpdateAnycastEipAddressAssociations to add or delete endpoints to modify the mappings between endpoints and access points.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAnycastEipAddressAssociationsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAnycastEipAddressAssociationsResponse
+        /// </returns>
         public UpdateAnycastEipAddressAssociationsResponse UpdateAnycastEipAddressAssociationsWithOptions(UpdateAnycastEipAddressAssociationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1675,13 +2183,21 @@ namespace AlibabaCloud.SDK.Eipanycast20200309
             return TeaModel.ToObject<UpdateAnycastEipAddressAssociationsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary If an Anycast EIP is associated with endpoints in different regions, you can change the access points that are mapped to an endpoint. You can call UpdateAnycastEipAddressAssociations to add or delete endpoints to modify the mappings between endpoints and access points.
-         *
-         * @param request UpdateAnycastEipAddressAssociationsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateAnycastEipAddressAssociationsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>If an Anycast EIP is associated with endpoints in different regions, you can change the access points that are mapped to an endpoint. You can call UpdateAnycastEipAddressAssociations to add or delete endpoints to modify the mappings between endpoints and access points.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAnycastEipAddressAssociationsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAnycastEipAddressAssociationsResponse
+        /// </returns>
         public async Task<UpdateAnycastEipAddressAssociationsResponse> UpdateAnycastEipAddressAssociationsWithOptionsAsync(UpdateAnycastEipAddressAssociationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1733,24 +2249,36 @@ namespace AlibabaCloud.SDK.Eipanycast20200309
             return TeaModel.ToObject<UpdateAnycastEipAddressAssociationsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary If an Anycast EIP is associated with endpoints in different regions, you can change the access points that are mapped to an endpoint. You can call UpdateAnycastEipAddressAssociations to add or delete endpoints to modify the mappings between endpoints and access points.
-         *
-         * @param request UpdateAnycastEipAddressAssociationsRequest
-         * @return UpdateAnycastEipAddressAssociationsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>If an Anycast EIP is associated with endpoints in different regions, you can change the access points that are mapped to an endpoint. You can call UpdateAnycastEipAddressAssociations to add or delete endpoints to modify the mappings between endpoints and access points.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAnycastEipAddressAssociationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAnycastEipAddressAssociationsResponse
+        /// </returns>
         public UpdateAnycastEipAddressAssociationsResponse UpdateAnycastEipAddressAssociations(UpdateAnycastEipAddressAssociationsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateAnycastEipAddressAssociationsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary If an Anycast EIP is associated with endpoints in different regions, you can change the access points that are mapped to an endpoint. You can call UpdateAnycastEipAddressAssociations to add or delete endpoints to modify the mappings between endpoints and access points.
-         *
-         * @param request UpdateAnycastEipAddressAssociationsRequest
-         * @return UpdateAnycastEipAddressAssociationsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>If an Anycast EIP is associated with endpoints in different regions, you can change the access points that are mapped to an endpoint. You can call UpdateAnycastEipAddressAssociations to add or delete endpoints to modify the mappings between endpoints and access points.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAnycastEipAddressAssociationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAnycastEipAddressAssociationsResponse
+        /// </returns>
         public async Task<UpdateAnycastEipAddressAssociationsResponse> UpdateAnycastEipAddressAssociationsAsync(UpdateAnycastEipAddressAssociationsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

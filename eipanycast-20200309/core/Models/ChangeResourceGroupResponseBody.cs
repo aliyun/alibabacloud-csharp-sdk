@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eipanycast20200309.Models
 {
-    public class AssociateAnycastEipAddressResponseBody : TeaModel {
+    public class ChangeResourceGroupResponseBody : TeaModel {
         /// <summary>
         /// <para>The request ID.</para>
         /// 

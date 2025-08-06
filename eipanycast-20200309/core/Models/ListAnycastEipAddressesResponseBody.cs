@@ -10,52 +10,68 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
 {
     public class ListAnycastEipAddressesResponseBody : TeaModel {
         /// <summary>
-        /// The list of Anycast EIPs.
+        /// <para>The list of Anycast EIPs.</para>
         /// </summary>
         [NameInMap("AnycastList")]
         [Validation(Required=false)]
         public List<ListAnycastEipAddressesResponseBodyAnycastList> AnycastList { get; set; }
         public class ListAnycastEipAddressesResponseBodyAnycastList : TeaModel {
             /// <summary>
-            /// The ID of the account to which the Anycast EIP belongs.
+            /// <para>The ID of the account to which the Anycast EIP belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>123440159596****</para>
             /// </summary>
             [NameInMap("AliUid")]
             [Validation(Required=false)]
             public long? AliUid { get; set; }
 
             /// <summary>
-            /// The list of cloud resources with which the Anycast EIPs are associated.
+            /// <para>The list of cloud resources with which the Anycast EIPs are associated.</para>
             /// </summary>
             [NameInMap("AnycastEipBindInfoList")]
             [Validation(Required=false)]
             public List<ListAnycastEipAddressesResponseBodyAnycastListAnycastEipBindInfoList> AnycastEipBindInfoList { get; set; }
             public class ListAnycastEipAddressesResponseBodyAnycastListAnycastEipBindInfoList : TeaModel {
                 /// <summary>
-                /// The ID of the cloud resource with which the Anycast EIP is associated.
+                /// <para>The ID of the cloud resource with which the Anycast EIP is associated.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>lb-2zebb08phyczzawe****</para>
                 /// </summary>
                 [NameInMap("BindInstanceId")]
                 [Validation(Required=false)]
                 public string BindInstanceId { get; set; }
 
                 /// <summary>
-                /// The ID of the region where the cloud resource is deployed.
+                /// <para>The ID of the region where the cloud resource is deployed.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>us-west-1</para>
                 /// </summary>
                 [NameInMap("BindInstanceRegionId")]
                 [Validation(Required=false)]
                 public string BindInstanceRegionId { get; set; }
 
                 /// <summary>
-                /// The type of cloud resource with which the Anycast EIP is associated.
+                /// <para>The type of cloud resource with which the Anycast EIP is associated.</para>
+                /// <list type="bullet">
+                /// <item><description><b>SlbInstance</b>: an internal-facing Classic Load Balancer (CLB) instance deployed in a virtual private cloud (VPC). CLB is formerly known as Server Load Balancer (SLB).</description></item>
+                /// <item><description><b>NetworkInterface</b>: an elastic network interface (ENI).</description></item>
+                /// </list>
                 /// 
-                /// *   **SlbInstance**: an internal-facing Classic Load Balancer (CLB) instance deployed in a virtual private cloud (VPC). CLB is formerly known as Server Load Balancer (SLB).
-                /// *   **NetworkInterface**: an elastic network interface (ENI).
+                /// <b>Example:</b>
+                /// <para>SlbInstance</para>
                 /// </summary>
                 [NameInMap("BindInstanceType")]
                 [Validation(Required=false)]
                 public string BindInstanceType { get; set; }
 
                 /// <summary>
-                /// The time when the Anycast EIP was associated.
+                /// <para>The time when the Anycast EIP was associated.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2022-04-23T01:37:38Z</para>
                 /// </summary>
                 [NameInMap("BindTime")]
                 [Validation(Required=false)]
@@ -64,129 +80,177 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
             }
 
             /// <summary>
-            /// The ID of the Anycast EIP.
+            /// <para>The ID of the Anycast EIP.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>aeip-2zeerraiwb7ujsxdc****</para>
             /// </summary>
             [NameInMap("AnycastId")]
             [Validation(Required=false)]
             public string AnycastId { get; set; }
 
             /// <summary>
-            /// The maximum bandwidth of the Anycast EIP. Unit: Mbit/s.
+            /// <para>The maximum bandwidth of the Anycast EIP. Unit: Mbit/s.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>200</para>
             /// </summary>
             [NameInMap("Bandwidth")]
             [Validation(Required=false)]
             public int? Bandwidth { get; set; }
 
             /// <summary>
-            /// The service status of the Anycast EIP. Valid values:
+            /// <para>The service status of the Anycast EIP. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Normal</b></description></item>
+            /// <item><description><b>FinancialLocked</b></description></item>
+            /// </list>
             /// 
-            /// *   **Normal**
-            /// *   **FinancialLocked**
+            /// <b>Example:</b>
+            /// <para>Normal</para>
             /// </summary>
             [NameInMap("BusinessStatus")]
             [Validation(Required=false)]
             public string BusinessStatus { get; set; }
 
             /// <summary>
-            /// The time when the Anycast EIP was created.
+            /// <para>The time when the Anycast EIP was created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2022-04-22T01:37:38Z</para>
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// The description of the Anycast EIP.
+            /// <para>The description of the Anycast EIP.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>docdesc</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The billing method of the Anycast EIP.
+            /// <para>The billing method of the Anycast EIP.</para>
+            /// <para><b>PostPaid</b>: pay-as-you-go</para>
             /// 
-            /// **PostPaid**: pay-as-you-go
+            /// <b>Example:</b>
+            /// <para>PostPaid</para>
             /// </summary>
             [NameInMap("InstanceChargeType")]
             [Validation(Required=false)]
             public string InstanceChargeType { get; set; }
 
             /// <summary>
-            /// The metering method of the Anycast EIP.
+            /// <para>The metering method of the Anycast EIP.</para>
+            /// <para><b>PayByTraffic</b>: pay-by-data-transfer</para>
             /// 
-            /// **PayByTraffic**: pay-by-data-transfer
+            /// <b>Example:</b>
+            /// <para>PayByTraffic</para>
             /// </summary>
             [NameInMap("InternetChargeType")]
             [Validation(Required=false)]
             public string InternetChargeType { get; set; }
 
             /// <summary>
-            /// The IP address of the Anycast EIP.
+            /// <para>The IP address of the Anycast EIP.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>139.95.XX.XX</para>
             /// </summary>
             [NameInMap("IpAddress")]
             [Validation(Required=false)]
             public string IpAddress { get; set; }
 
             /// <summary>
-            /// The name of the Anycast EIP.
+            /// <para>The name of the Anycast EIP.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>docname</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the resource group to which the instance belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rg-aekzthsmwsnfuni</para>
+            /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// The access area of the Anycast EIP.
+            /// <para>The access area of the Anycast EIP.</para>
+            /// <para><b>international</b>: regions outside the Chinese mainland</para>
             /// 
-            /// **international**: regions outside the Chinese mainland
+            /// <b>Example:</b>
+            /// <para>international</para>
             /// </summary>
             [NameInMap("ServiceLocation")]
             [Validation(Required=false)]
             public string ServiceLocation { get; set; }
 
             /// <summary>
-            /// Indicates whether the resource is created by the service account.
+            /// <para>Indicates whether the resource is created by the service account.</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: no</description></item>
+            /// <item><description><b>1</b>: yes</description></item>
+            /// </list>
             /// 
-            /// *   **0**: no
-            /// *   **1**: yes
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("ServiceManaged")]
             [Validation(Required=false)]
             public int? ServiceManaged { get; set; }
 
             /// <summary>
-            /// The status of the Anycast EIP.
+            /// <para>The status of the Anycast EIP.</para>
+            /// <list type="bullet">
+            /// <item><description><b>Associating</b></description></item>
+            /// <item><description><b>Unassociating</b></description></item>
+            /// <item><description><b>Allocated</b></description></item>
+            /// <item><description><b>Associated</b></description></item>
+            /// <item><description><b>Modifying</b></description></item>
+            /// <item><description><b>Releasing</b></description></item>
+            /// <item><description><b>Released</b></description></item>
+            /// </list>
             /// 
-            /// *   **Associating**
-            /// *   **Unassociating**
-            /// *   **Allocated**
-            /// *   **Associated**
-            /// *   **Modifying**
-            /// *   **Releasing**
-            /// *   **Released**
+            /// <b>Example:</b>
+            /// <para>Associating</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The information about the tags.
+            /// <para>The information about the tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListAnycastEipAddressesResponseBodyAnycastListTags> Tags { get; set; }
             public class ListAnycastEipAddressesResponseBodyAnycastListTags : TeaModel {
                 /// <summary>
-                /// The tag key.
+                /// <para>The tag key.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>FinanceDept</para>
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The tag value.
+                /// <para>The tag value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>FinanceJoshua</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -197,24 +261,34 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
         }
 
         /// <summary>
-        /// A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>If <b>NextToken</b> is empty, no next page exists.</description></item>
+        /// <item><description>If <b>NextToken</b> is not empty, the value of NextToken can be used in the next request to retrieve a new page of results.</description></item>
+        /// </list>
         /// 
-        /// *   If **NextToken** is empty, no next page exists.
-        /// *   If **NextToken** is not empty, the value of NextToken can be used in the next request to retrieve a new page of results.
+        /// <b>Example:</b>
+        /// <para>FFmyTO70tTpLG6I3FmYAXGKPd****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4EC47282-1B74-4534-BD0E-403F3EE64CAF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The number of entries returned.
+        /// <para>The number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

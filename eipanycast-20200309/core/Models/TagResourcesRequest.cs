@@ -10,49 +10,55 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
 {
     public class TagResourcesRequest : TeaModel {
         /// <summary>
-        /// The resource ID. You can specify at most 20 IDs.
-        /// 
-        /// This parameter is required.
+        /// <para>The resource ID. You can specify at most 20 IDs.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// The resource type. Set the value to **ANYCASTEIPADDRESS**.
+        /// <para>The resource type. Set the value to <b>ANYCASTEIPADDRESS</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ANYCASTEIPADDRESS</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The tag information.
-        /// 
-        /// This parameter is required.
+        /// <para>The tag information.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// The key of tag N to add to the resource. You must enter at least one tag key and at most 20 tag keys. The tag key cannot be an empty string.
+            /// <para>The key of tag N to add to the resource. You must enter at least one tag key and at most 20 tag keys. The tag key cannot be an empty string.</para>
+            /// <para>The tag key can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <remarks>
+            /// <para>When you call this operation, <b>Tag.N.Key</b> is required.</para>
+            /// </remarks>
             /// 
-            /// The tag key can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain `http://` or `https://`.
-            /// 
-            /// > When you call this operation, **Tag.N.Key** is required.
+            /// <b>Example:</b>
+            /// <para>FinanceDept</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of tag N to add to the resource. You must enter at least one tag value and at most 20 tag values. The tag value can be an empty string.
+            /// <para>The value of tag N to add to the resource. You must enter at least one tag value and at most 20 tag values. The tag value can be an empty string.</para>
+            /// <para>It can be up to 128 characters in length and cannot start with <c>acs:</c> or <c>aliyun</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <remarks>
+            /// <para>When you call this operation, <b>Tag.N.Value</b> is required.</para>
+            /// </remarks>
             /// 
-            /// It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
-            /// 
-            /// > When you call this operation, **Tag.N.Value** is required.
+            /// <b>Example:</b>
+            /// <para>FinanceJoshua</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

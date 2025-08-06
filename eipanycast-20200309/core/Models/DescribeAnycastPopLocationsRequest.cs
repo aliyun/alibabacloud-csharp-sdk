@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
 {
     public class DescribeAnycastPopLocationsRequest : TeaModel {
         /// <summary>
-        /// The access area of the Anycast elastic IP address (EIP).
+        /// <para>The access area of the Anycast elastic IP address (EIP).</para>
+        /// <para>Set the value to <b>international</b>, which specifies the areas outside the Chinese mainland.</para>
         /// 
-        /// Set the value to **international**, which specifies the areas outside the Chinese mainland.
+        /// <b>Example:</b>
+        /// <para>international</para>
         /// </summary>
         [NameInMap("ServiceLocation")]
         [Validation(Required=false)]
