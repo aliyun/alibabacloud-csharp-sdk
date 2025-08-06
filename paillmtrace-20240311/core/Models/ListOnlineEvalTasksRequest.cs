@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("SamplingMethod")]
+        [Validation(Required=false)]
+        public string SamplingMethod { get; set; }
+
         [NameInMap("SortBy")]
         [Validation(Required=false)]
         public string SortBy { get; set; }
