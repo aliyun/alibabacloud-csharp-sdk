@@ -544,6 +544,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("ClockOptions")]
+        [Validation(Required=false)]
+        public RunInstancesRequestClockOptions ClockOptions { get; set; }
+        public class RunInstancesRequestClockOptions : TeaModel {
+            [NameInMap("PtpStatus")]
+            [Validation(Required=false)]
+            public string PtpStatus { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The performance mode of the burstable instance. Valid values:</para>
         /// <list type="bullet">
