@@ -11,7 +11,6 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
     public class CreateBackupPlanRequest : TeaModel {
         /// <summary>
         /// <para>Backup type. Value: <b>COMPLETE</b>, indicating a full backup.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>COMPLETE</para>
@@ -255,7 +254,6 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 
         /// <summary>
         /// <para>Name of the backup plan. 1 to 64 characters. The name must be unique for each data source type within a single backup vault.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>planname</para>
@@ -383,7 +381,6 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         /// <item><description><b>startTime</b>: Start time of the backup, in UNIX timestamp, in seconds.</description></item>
         /// <item><description><b>interval</b>: ISO8601 time interval. For example, PT1H indicates an interval of one hour, and P1D indicates an interval of one day.</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>I|1602673264|P1D</para>
