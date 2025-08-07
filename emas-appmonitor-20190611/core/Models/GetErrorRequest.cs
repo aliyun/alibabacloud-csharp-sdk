@@ -46,6 +46,10 @@ namespace AlibabaCloud.SDK.Emas_appmonitor20190611.Models
         [Validation(Required=false)]
         public string Did { get; set; }
 
+        [NameInMap("DigestHash")]
+        [Validation(Required=false)]
+        public string DigestHash { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>false</para>

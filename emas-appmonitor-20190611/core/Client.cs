@@ -72,6 +72,10 @@ namespace AlibabaCloud.SDK.Emas_appmonitor20190611
             {
                 body["Did"] = request.Did;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DigestHash))
+            {
+                body["DigestHash"] = request.DigestHash;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
             {
                 body["Force"] = request.Force;
@@ -137,6 +141,10 @@ namespace AlibabaCloud.SDK.Emas_appmonitor20190611
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Did))
             {
                 body["Did"] = request.Did;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DigestHash))
+            {
+                body["DigestHash"] = request.DigestHash;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
             {

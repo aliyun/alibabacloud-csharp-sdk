@@ -1127,6 +1127,10 @@ namespace AlibabaCloud.SDK.Emas_appmonitor20190611.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            [NameInMap("StructuredStack")]
+            [Validation(Required=false)]
+            public string StructuredStack { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>{\&quot;HandledCheckToday\&quot;: 0, \&quot;RiskCheckCnt\&quot;: 34, \&quot;RiskWarningCnt\&quot;: 57, \&quot;RiskDays\&quot;: 30, \&quot;HandledCheckTotal\&quot;: 5, \&quot;HandledDays\&quot;: 365}</para>

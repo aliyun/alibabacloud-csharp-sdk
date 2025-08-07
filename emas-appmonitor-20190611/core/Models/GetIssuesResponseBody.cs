@@ -48,6 +48,22 @@ namespace AlibabaCloud.SDK.Emas_appmonitor20190611.Models
                 [Validation(Required=false)]
                 public int? AffectedUserCount { get; set; }
 
+                [NameInMap("AllocSizeMax")]
+                [Validation(Required=false)]
+                public long? AllocSizeMax { get; set; }
+
+                [NameInMap("AllocSizePct50")]
+                [Validation(Required=false)]
+                public long? AllocSizePct50 { get; set; }
+
+                [NameInMap("AllocSizePct70")]
+                [Validation(Required=false)]
+                public long? AllocSizePct70 { get; set; }
+
+                [NameInMap("AllocSizePct90")]
+                [Validation(Required=false)]
+                public long? AllocSizePct90 { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>-3481243636390427020</para>
