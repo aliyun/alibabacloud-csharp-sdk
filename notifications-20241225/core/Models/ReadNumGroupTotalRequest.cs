@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
         [Validation(Required=false)]
         public string TenantCode { get; set; }
 
+        [NameInMap("Title")]
+        [Validation(Required=false)]
+        public string Title { get; set; }
+
         [NameInMap("UidType")]
         [Validation(Required=false)]
         public string UidType { get; set; }

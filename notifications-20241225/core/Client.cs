@@ -1872,6 +1872,10 @@ namespace AlibabaCloud.SDK.Notifications20241225
             {
                 body["TenantCode"] = request.TenantCode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            {
+                body["Title"] = request.Title;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UidType))
             {
                 body["UidType"] = request.UidType;
@@ -1945,6 +1949,10 @@ namespace AlibabaCloud.SDK.Notifications20241225
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantCode))
             {
                 body["TenantCode"] = request.TenantCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            {
+                body["Title"] = request.Title;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UidType))
             {
