@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class GetServiceEstimateCostResponseBody : TeaModel {
         /// <summary>
-        /// <para>The estimated price.</para>
+        /// <para>Alibaba Cloud Marketplace purchase order information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;cmgj00059839\&quot;: {\&quot;Result\&quot;: {\&quot;InquiryType\&quot;: \&quot;Buy\&quot;, \&quot;Order\&quot;: {\&quot;Currency\&quot;: \&quot;CNY\&quot;, \&quot;DiscountAmount\&quot;: \&quot;0.0\&quot;, \&quot;TradeAmount\&quot;: \&quot;0.01\&quot;, \&quot;OriginalAmount\&quot;: \&quot;0.01\&quot;}}}}</para>

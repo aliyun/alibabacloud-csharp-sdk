@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public GetServiceEstimateCostRequestCommodity Commodity { get; set; }
         public class GetServiceEstimateCostRequestCommodity : TeaModel {
             /// <summary>
-            /// <para>优惠券ID</para>
+            /// <para>The coupon ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>302070970220</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string CouponId { get; set; }
 
             /// <summary>
-            /// <para>The subscription duration.</para>
+            /// <para>The subscription duration of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -61,6 +61,12 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             [Validation(Required=false)]
             public string PayPeriodUnit { get; set; }
 
+            /// <summary>
+            /// <para>Marketplace private offer Id</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>17cde2e8-2f5d-xxxx-xxxx-5120dd215d66</para>
+            /// </summary>
             [NameInMap("QuotationId")]
             [Validation(Required=false)]
             public string QuotationId { get; set; }
