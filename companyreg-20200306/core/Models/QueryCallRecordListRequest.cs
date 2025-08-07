@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Companyreg20200306.Models
     public class QueryCallRecordListRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>P20210928095324000002</para>
         /// </summary>
         [NameInMap("BizId")]
         [Validation(Required=false)]
@@ -18,6 +21,9 @@ namespace AlibabaCloud.SDK.Companyreg20200306.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>esp.bookkeeping</para>
         /// </summary>
         [NameInMap("BizType")]
         [Validation(Required=false)]
@@ -25,6 +31,9 @@ namespace AlibabaCloud.SDK.Companyreg20200306.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("SkillType")]
         [Validation(Required=false)]
