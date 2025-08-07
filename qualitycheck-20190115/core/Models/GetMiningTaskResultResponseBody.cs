@@ -29,6 +29,20 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [Validation(Required=false)]
             public string FilePath { get; set; }
 
+            [NameInMap("FilePathList")]
+            [Validation(Required=false)]
+            public List<GetMiningTaskResultResponseBodyDataFilePathList> FilePathList { get; set; }
+            public class GetMiningTaskResultResponseBodyDataFilePathList : TeaModel {
+                [NameInMap("FileType")]
+                [Validation(Required=false)]
+                public string FileType { get; set; }
+
+                [NameInMap("FileUrl")]
+                [Validation(Required=false)]
+                public string FileUrl { get; set; }
+
+            }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>123.22.com/manger/static/login-back.md</para>
