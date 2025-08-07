@@ -115,6 +115,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 
                 }
 
+                [NameInMap("InstanceType")]
+                [Validation(Required=false)]
+                public string InstanceType { get; set; }
+
                 [NameInMap("Memory")]
                 [Validation(Required=false)]
                 public float? Memory { get; set; }

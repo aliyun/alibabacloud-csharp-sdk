@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             [Validation(Required=false)]
             public int? Pending { get; set; }
 
+            [NameInMap("Restarting")]
+            [Validation(Required=false)]
+            public int? Restarting { get; set; }
+
             [NameInMap("Running")]
             [Validation(Required=false)]
             public int? Running { get; set; }
@@ -40,6 +44,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             [NameInMap("Succeeded")]
             [Validation(Required=false)]
             public int? Succeeded { get; set; }
+
+            [NameInMap("Suspended")]
+            [Validation(Required=false)]
+            public int? Suspended { get; set; }
 
         }
 

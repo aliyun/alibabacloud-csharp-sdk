@@ -365,10 +365,6 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                             [Validation(Required=false)]
                             public string Script { get; set; }
 
-                            [NameInMap("UserName")]
-                            [Validation(Required=false)]
-                            public string UserName { get; set; }
-
                         }
 
                     }
