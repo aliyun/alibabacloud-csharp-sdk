@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         [Validation(Required=false)]
         public int? GenericTextSearch { get; set; }
 
+        [NameInMap("liteAdvancedTextSearch")]
+        [Validation(Required=false)]
+        public int? LiteAdvancedTextSearch { get; set; }
+
     }
 
 }

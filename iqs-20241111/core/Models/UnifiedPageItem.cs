@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.IQS20241111.Models
 {
     public class UnifiedPageItem : TeaModel {
+        [NameInMap("hostAuthorityScore")]
+        [Validation(Required=false)]
+        public double? HostAuthorityScore { get; set; }
+
         [NameInMap("hostLogo")]
         [Validation(Required=false)]
         public string HostLogo { get; set; }

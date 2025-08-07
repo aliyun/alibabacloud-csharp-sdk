@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.IQS20241111.Models
 {
     public class UnifiedSearchInput : TeaModel {
+        [NameInMap("advancedParams")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> AdvancedParams { get; set; }
+
         [NameInMap("category")]
         [Validation(Required=false)]
         public string Category { get; set; }
