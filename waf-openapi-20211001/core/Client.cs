@@ -11350,6 +11350,158 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询用户防护场景的配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseSceneConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseSceneConfigResponse
+        /// </returns>
+        public DescribeDefenseSceneConfigResponse DescribeDefenseSceneConfigWithOptions(DescribeDefenseSceneConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigKey))
+            {
+                query["ConfigKey"] = request.ConfigKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefenseScene))
+            {
+                query["DefenseScene"] = request.DefenseScene;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDefenseSceneConfig",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDefenseSceneConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询用户防护场景的配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseSceneConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseSceneConfigResponse
+        /// </returns>
+        public async Task<DescribeDefenseSceneConfigResponse> DescribeDefenseSceneConfigWithOptionsAsync(DescribeDefenseSceneConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigKey))
+            {
+                query["ConfigKey"] = request.ConfigKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefenseScene))
+            {
+                query["DefenseScene"] = request.DefenseScene;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDefenseSceneConfig",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDefenseSceneConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询用户防护场景的配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseSceneConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseSceneConfigResponse
+        /// </returns>
+        public DescribeDefenseSceneConfigResponse DescribeDefenseSceneConfig(DescribeDefenseSceneConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDefenseSceneConfigWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询用户防护场景的配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDefenseSceneConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDefenseSceneConfigResponse
+        /// </returns>
+        public async Task<DescribeDefenseSceneConfigResponse> DescribeDefenseSceneConfigAsync(DescribeDefenseSceneConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDefenseSceneConfigWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries a protection rule template.</para>
         /// </summary>
         /// 
@@ -25822,6 +25974,166 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDefenseRuleStatusWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改用户防护场景的配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDefenseSceneConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDefenseSceneConfigResponse
+        /// </returns>
+        public ModifyDefenseSceneConfigResponse ModifyDefenseSceneConfigWithOptions(ModifyDefenseSceneConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigKey))
+            {
+                query["ConfigKey"] = request.ConfigKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigValue))
+            {
+                query["ConfigValue"] = request.ConfigValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefenseScene))
+            {
+                query["DefenseScene"] = request.DefenseScene;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyDefenseSceneConfig",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyDefenseSceneConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改用户防护场景的配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDefenseSceneConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDefenseSceneConfigResponse
+        /// </returns>
+        public async Task<ModifyDefenseSceneConfigResponse> ModifyDefenseSceneConfigWithOptionsAsync(ModifyDefenseSceneConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigKey))
+            {
+                query["ConfigKey"] = request.ConfigKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigValue))
+            {
+                query["ConfigValue"] = request.ConfigValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefenseScene))
+            {
+                query["DefenseScene"] = request.DefenseScene;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyDefenseSceneConfig",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyDefenseSceneConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改用户防护场景的配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDefenseSceneConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDefenseSceneConfigResponse
+        /// </returns>
+        public ModifyDefenseSceneConfigResponse ModifyDefenseSceneConfig(ModifyDefenseSceneConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyDefenseSceneConfigWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改用户防护场景的配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDefenseSceneConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDefenseSceneConfigResponse
+        /// </returns>
+        public async Task<ModifyDefenseSceneConfigResponse> ModifyDefenseSceneConfigAsync(ModifyDefenseSceneConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyDefenseSceneConfigWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

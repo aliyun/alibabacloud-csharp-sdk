@@ -320,11 +320,22 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public DescribeDomainDetailResponseBodyRedirect Redirect { get; set; }
         public class DescribeDomainDetailResponseBodyRedirect : TeaModel {
+            [NameInMap("BackUpBackendList")]
+            [Validation(Required=false)]
+            public List<string> BackUpBackendList { get; set; }
+
+            [NameInMap("BackendList")]
+            [Validation(Required=false)]
+            public List<string> BackendList { get; set; }
+
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>An array of addresses of origin servers.</para>
             /// </summary>
             [NameInMap("Backends")]
             [Validation(Required=false)]
+            [Obsolete]
             public List<DescribeDomainDetailResponseBodyRedirectBackends> Backends { get; set; }
             public class DescribeDomainDetailResponseBodyRedirectBackends : TeaModel {
                 /// <summary>
@@ -339,11 +350,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
             }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>An array of HTTPS listener ports.</para>
             /// </summary>
             [NameInMap("BackupBackends")]
             [Validation(Required=false)]
+            [Obsolete]
             public List<DescribeDomainDetailResponseBodyRedirectBackupBackends> BackupBackends { get; set; }
             public class DescribeDomainDetailResponseBodyRedirectBackupBackends : TeaModel {
                 /// <summary>
