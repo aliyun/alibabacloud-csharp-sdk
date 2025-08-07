@@ -5494,6 +5494,126 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>删除PolarDB应用</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteApplicationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteApplicationResponse
+        /// </returns>
+        public DeleteApplicationResponse DeleteApplicationWithOptions(DeleteApplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteApplication",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteApplicationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除PolarDB应用</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteApplicationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteApplicationResponse
+        /// </returns>
+        public async Task<DeleteApplicationResponse> DeleteApplicationWithOptionsAsync(DeleteApplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteApplication",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteApplicationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除PolarDB应用</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteApplicationResponse
+        /// </returns>
+        public DeleteApplicationResponse DeleteApplication(DeleteApplicationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteApplicationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除PolarDB应用</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteApplicationResponse
+        /// </returns>
+        public async Task<DeleteApplicationResponse> DeleteApplicationAsync(DeleteApplicationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteApplicationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes the backup sets of a PolarDB cluster.</para>
         /// </summary>
         /// 
@@ -7610,6 +7730,158 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteParameterGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取ai容器性能指标</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAIDBClusterPerformanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAIDBClusterPerformanceResponse
+        /// </returns>
+        public DescribeAIDBClusterPerformanceResponse DescribeAIDBClusterPerformanceWithOptions(DescribeAIDBClusterPerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
+            {
+                query["Interval"] = request.Interval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Key))
+            {
+                query["Key"] = request.Key;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAIDBClusterPerformance",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAIDBClusterPerformanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取ai容器性能指标</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAIDBClusterPerformanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAIDBClusterPerformanceResponse
+        /// </returns>
+        public async Task<DescribeAIDBClusterPerformanceResponse> DescribeAIDBClusterPerformanceWithOptionsAsync(DescribeAIDBClusterPerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
+            {
+                query["Interval"] = request.Interval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Key))
+            {
+                query["Key"] = request.Key;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAIDBClusterPerformance",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAIDBClusterPerformanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取ai容器性能指标</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAIDBClusterPerformanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAIDBClusterPerformanceResponse
+        /// </returns>
+        public DescribeAIDBClusterPerformanceResponse DescribeAIDBClusterPerformance(DescribeAIDBClusterPerformanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeAIDBClusterPerformanceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取ai容器性能指标</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAIDBClusterPerformanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAIDBClusterPerformanceResponse
+        /// </returns>
+        public async Task<DescribeAIDBClusterPerformanceResponse> DescribeAIDBClusterPerformanceAsync(DescribeAIDBClusterPerformanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeAIDBClusterPerformanceWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -16259,6 +16531,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBType))
+            {
+                query["DBType"] = request.DBType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -16333,6 +16609,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBType))
+            {
+                query["DBType"] = request.DBType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;

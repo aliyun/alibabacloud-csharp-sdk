@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeParameterGroupRequest : TeaModel {
+        [NameInMap("DBType")]
+        [Validation(Required=false)]
+        public string DBType { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
