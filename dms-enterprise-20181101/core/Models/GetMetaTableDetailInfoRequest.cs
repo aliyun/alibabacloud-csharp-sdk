@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class GetMetaTableDetailInfoRequest : TeaModel {
+        [NameInMap("RealLoginUserUid")]
+        [Validation(Required=false)]
+        public string RealLoginUserUid { get; set; }
+
         /// <summary>
         /// <para>The GUID of the table in Data Management (DMS).</para>
         /// <remarks>
