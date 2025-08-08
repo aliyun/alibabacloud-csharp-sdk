@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Devs20230714.Models
 {
     public class GitLabConfig : TeaModel {
+        [NameInMap("isFixedIP")]
+        [Validation(Required=false)]
+        public bool? IsFixedIP { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>your-token</para>

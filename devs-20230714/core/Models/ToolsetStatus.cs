@@ -19,7 +19,53 @@ namespace AlibabaCloud.SDK.Devs20230714.Models
 
         [NameInMap("outputs")]
         [Validation(Required=false)]
-        public Dictionary<string, object> Outputs { get; set; }
+        public ToolsetStatusOutputs Outputs { get; set; }
+        public class ToolsetStatusOutputs : TeaModel {
+            [NameInMap("functionArn")]
+            [Validation(Required=false)]
+            public string FunctionArn { get; set; }
+
+            [NameInMap("mcpServerConfig")]
+            [Validation(Required=false)]
+            public ToolsetStatusOutputsMcpServerConfig McpServerConfig { get; set; }
+            public class ToolsetStatusOutputsMcpServerConfig : TeaModel {
+                [NameInMap("headers")]
+                [Validation(Required=false)]
+                public Dictionary<string, string> Headers { get; set; }
+
+                [NameInMap("transportType")]
+                [Validation(Required=false)]
+                public string TransportType { get; set; }
+
+                [NameInMap("url")]
+                [Validation(Required=false)]
+                public string Url { get; set; }
+
+            }
+
+            [NameInMap("openApiTools")]
+            [Validation(Required=false)]
+            public List<OpenAPIToolMeta> OpenApiTools { get; set; }
+
+            [NameInMap("tools")]
+            [Validation(Required=false)]
+            public List<MCPToolMeta> Tools { get; set; }
+
+            [NameInMap("urls")]
+            [Validation(Required=false)]
+            public ToolsetStatusOutputsUrls Urls { get; set; }
+            public class ToolsetStatusOutputsUrls : TeaModel {
+                [NameInMap("internetUrl")]
+                [Validation(Required=false)]
+                public string InternetUrl { get; set; }
+
+                [NameInMap("intranetUrl")]
+                [Validation(Required=false)]
+                public string IntranetUrl { get; set; }
+
+            }
+
+        }
 
         /// <summary>
         /// <b>Example:</b>

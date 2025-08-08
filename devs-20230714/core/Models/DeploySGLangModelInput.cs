@@ -27,6 +27,16 @@ namespace AlibabaCloud.SDK.Devs20230714.Models
         [Validation(Required=false)]
         public float? Cpu { get; set; }
 
+        [NameInMap("customContainerConfig")]
+        [Validation(Required=false)]
+        public DeploySGLangModelInputCustomContainerConfig CustomContainerConfig { get; set; }
+        public class DeploySGLangModelInputCustomContainerConfig : TeaModel {
+            [NameInMap("role")]
+            [Validation(Required=false)]
+            public string Role { get; set; }
+
+        }
+
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
@@ -42,6 +52,20 @@ namespace AlibabaCloud.SDK.Devs20230714.Models
         [NameInMap("environmentVariables")]
         [Validation(Required=false)]
         public Dictionary<string, object> EnvironmentVariables { get; set; }
+
+        [NameInMap("featureGates")]
+        [Validation(Required=false)]
+        public DeploySGLangModelInputFeatureGates FeatureGates { get; set; }
+        public class DeploySGLangModelInputFeatureGates : TeaModel {
+            [NameInMap("asyncProvisionCheck")]
+            [Validation(Required=false)]
+            public bool? AsyncProvisionCheck { get; set; }
+
+            [NameInMap("disableRollbackOnProvisionFailure")]
+            [Validation(Required=false)]
+            public bool? DisableRollbackOnProvisionFailure { get; set; }
+
+        }
 
         [NameInMap("gpuConfig")]
         [Validation(Required=false)]
@@ -69,6 +93,10 @@ namespace AlibabaCloud.SDK.Devs20230714.Models
             [Validation(Required=false)]
             public DeploySGLangModelInputHttpTriggerTriggerConfig TriggerConfig { get; set; }
             public class DeploySGLangModelInputHttpTriggerTriggerConfig : TeaModel {
+                [NameInMap("authConfig")]
+                [Validation(Required=false)]
+                public string AuthConfig { get; set; }
+
                 [NameInMap("authType")]
                 [Validation(Required=false)]
                 public string AuthType { get; set; }
@@ -193,6 +221,10 @@ namespace AlibabaCloud.SDK.Devs20230714.Models
             [Validation(Required=false)]
             public string Prefix { get; set; }
 
+            [NameInMap("skipDownload")]
+            [Validation(Required=false)]
+            public bool? SkipDownload { get; set; }
+
             [NameInMap("sourceType")]
             [Validation(Required=false)]
             public string SourceType { get; set; }
@@ -224,6 +256,14 @@ namespace AlibabaCloud.SDK.Devs20230714.Models
             [NameInMap("syncStrategy")]
             [Validation(Required=false)]
             public string SyncStrategy { get; set; }
+
+            [NameInMap("withPPU")]
+            [Validation(Required=false)]
+            public bool? WithPPU { get; set; }
+
+            [NameInMap("workingDir")]
+            [Validation(Required=false)]
+            public string WorkingDir { get; set; }
 
         }
 
@@ -269,6 +309,38 @@ namespace AlibabaCloud.SDK.Devs20230714.Models
         [NameInMap("originalName")]
         [Validation(Required=false)]
         public string OriginalName { get; set; }
+
+        [NameInMap("ossMountConfig")]
+        [Validation(Required=false)]
+        public DeploySGLangModelInputOssMountConfig OssMountConfig { get; set; }
+        public class DeploySGLangModelInputOssMountConfig : TeaModel {
+            [NameInMap("mountPoints")]
+            [Validation(Required=false)]
+            public List<DeploySGLangModelInputOssMountConfigMountPoints> MountPoints { get; set; }
+            public class DeploySGLangModelInputOssMountConfigMountPoints : TeaModel {
+                [NameInMap("bucketName")]
+                [Validation(Required=false)]
+                public string BucketName { get; set; }
+
+                [NameInMap("bucketPath")]
+                [Validation(Required=false)]
+                public string BucketPath { get; set; }
+
+                [NameInMap("endpoint")]
+                [Validation(Required=false)]
+                public string Endpoint { get; set; }
+
+                [NameInMap("mountDir")]
+                [Validation(Required=false)]
+                public string MountDir { get; set; }
+
+                [NameInMap("readOnly")]
+                [Validation(Required=false)]
+                public bool? ReadOnly { get; set; }
+
+            }
+
+        }
 
         [NameInMap("projectName")]
         [Validation(Required=false)]

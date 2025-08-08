@@ -43,6 +43,20 @@ namespace AlibabaCloud.SDK.Devs20230714.Models
         [Validation(Required=false)]
         public Dictionary<string, object> EnvironmentVariables { get; set; }
 
+        [NameInMap("featureGates")]
+        [Validation(Required=false)]
+        public DeployHuggingFaceModelInputFeatureGates FeatureGates { get; set; }
+        public class DeployHuggingFaceModelInputFeatureGates : TeaModel {
+            [NameInMap("asyncProvisionCheck")]
+            [Validation(Required=false)]
+            public bool? AsyncProvisionCheck { get; set; }
+
+            [NameInMap("disableRollbackOnProvisionFailure")]
+            [Validation(Required=false)]
+            public bool? DisableRollbackOnProvisionFailure { get; set; }
+
+        }
+
         [NameInMap("gpuConfig")]
         [Validation(Required=false)]
         public DeployHuggingFaceModelInputGpuConfig GpuConfig { get; set; }
@@ -69,6 +83,10 @@ namespace AlibabaCloud.SDK.Devs20230714.Models
             [Validation(Required=false)]
             public DeployHuggingFaceModelInputHttpTriggerTriggerConfig TriggerConfig { get; set; }
             public class DeployHuggingFaceModelInputHttpTriggerTriggerConfig : TeaModel {
+                [NameInMap("authConfig")]
+                [Validation(Required=false)]
+                public string AuthConfig { get; set; }
+
                 [NameInMap("authType")]
                 [Validation(Required=false)]
                 public string AuthType { get; set; }
@@ -161,6 +179,10 @@ namespace AlibabaCloud.SDK.Devs20230714.Models
             [Validation(Required=false)]
             public string Prefix { get; set; }
 
+            [NameInMap("skipDownload")]
+            [Validation(Required=false)]
+            public bool? SkipDownload { get; set; }
+
             [NameInMap("sourceType")]
             [Validation(Required=false)]
             public string SourceType { get; set; }
@@ -192,6 +214,14 @@ namespace AlibabaCloud.SDK.Devs20230714.Models
             [NameInMap("syncStrategy")]
             [Validation(Required=false)]
             public string SyncStrategy { get; set; }
+
+            [NameInMap("withPPU")]
+            [Validation(Required=false)]
+            public bool? WithPPU { get; set; }
+
+            [NameInMap("workingDir")]
+            [Validation(Required=false)]
+            public string WorkingDir { get; set; }
 
         }
 

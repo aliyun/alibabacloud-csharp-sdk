@@ -69,6 +69,10 @@ namespace AlibabaCloud.SDK.Devs20230714.Models
             [Validation(Required=false)]
             public DeployModelScopeModelInputHttpTriggerTriggerConfig TriggerConfig { get; set; }
             public class DeployModelScopeModelInputHttpTriggerTriggerConfig : TeaModel {
+                [NameInMap("authConfig")]
+                [Validation(Required=false)]
+                public string AuthConfig { get; set; }
+
                 [NameInMap("authType")]
                 [Validation(Required=false)]
                 public string AuthType { get; set; }

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Devs20230714.Models
 {
-    public class Toolset : TeaModel {
+    public class ModelSet : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>2021-11-19T09:34:38Z</para>
@@ -25,22 +25,22 @@ namespace AlibabaCloud.SDK.Devs20230714.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1</para>
-        /// </summary>
         [NameInMap("generation")]
         [Validation(Required=false)]
         public long? Generation { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>Toolset</para>
+        /// <para>ModelProvider</para>
         /// </summary>
         [NameInMap("kind")]
         [Validation(Required=false)]
         public string Kind { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>key=value</para>
+        /// </summary>
         [NameInMap("labels")]
         [Validation(Required=false)]
         public Dictionary<string, string> Labels { get; set; }
@@ -49,19 +49,15 @@ namespace AlibabaCloud.SDK.Devs20230714.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>my-toolset</para>
+        /// <para>my-modelset</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        [NameInMap("spec")]
-        [Validation(Required=false)]
-        public ToolsetSpec Spec { get; set; }
-
         [NameInMap("status")]
         [Validation(Required=false)]
-        public ToolsetStatus Status { get; set; }
+        public ModelSetStatus Status { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
