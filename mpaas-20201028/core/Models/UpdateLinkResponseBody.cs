@@ -8,8 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.MPaaS20201028.Models
 {
-    public class UploadBitcodeToMsaResponseBody : TeaModel {
+    public class UpdateLinkResponseBody : TeaModel {
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
         /// <para>11E66B29-9E5E-5C10-B64E-B5A0E0F26355</para>
         /// </summary>
@@ -19,7 +21,7 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>OK</para>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("ResultCode")]
         [Validation(Required=false)]
@@ -27,19 +29,11 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
 
         [NameInMap("ResultContent")]
         [Validation(Required=false)]
-        public UploadBitcodeToMsaResponseBodyResultContent ResultContent { get; set; }
-        public class UploadBitcodeToMsaResponseBodyResultContent : TeaModel {
+        public UpdateLinkResponseBodyResultContent ResultContent { get; set; }
+        public class UpdateLinkResponseBodyResultContent : TeaModel {
             /// <summary>
             /// <b>Example:</b>
-            /// <para>200</para>
-            /// </summary>
-            [NameInMap("Code")]
-            [Validation(Required=false)]
-            public string Code { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1234</para>
+            /// <para><a href="https://xxx/xxx">https://xxx/xxx</a></para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
@@ -47,25 +41,25 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>Normal</para>
+            /// <para><a href="https://xxx/xxx/xxx">https://xxx/xxx/xxx</a></para>
             /// </summary>
-            [NameInMap("Message")]
+            [NameInMap("Target")]
             [Validation(Required=false)]
-            public string Message { get; set; }
+            public string Target { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>True</para>
+            /// <para>1</para>
             /// </summary>
-            [NameInMap("Success")]
+            [NameInMap("Version")]
             [Validation(Required=false)]
-            public bool? Success { get; set; }
+            public string Version { get; set; }
 
         }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>SYSTEM_ERROR</para>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("ResultMessage")]
         [Validation(Required=false)]

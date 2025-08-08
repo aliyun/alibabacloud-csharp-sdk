@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
 {
     public class PushReportRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         public string ConnectType { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DeliveryToken")]
         [Validation(Required=false)]
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         public string Model { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("OsType")]
         [Validation(Required=false)]
@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         [NameInMap("PushVersion")]
         [Validation(Required=false)]
         public string PushVersion { get; set; }
+
+        [NameInMap("TenantId")]
+        [Validation(Required=false)]
+        public string TenantId { get; set; }
 
         [NameInMap("ThirdChannel")]
         [Validation(Required=false)]
@@ -67,7 +71,7 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         public string ThirdChannelDeviceToken { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]

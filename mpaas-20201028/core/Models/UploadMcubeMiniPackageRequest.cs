@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
 {
     public class UploadMcubeMiniPackageRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AutoInstall")]
         [Validation(Required=false)]
@@ -28,28 +28,28 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         public string ClientVersionMax { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ClientVersionMin")]
         [Validation(Required=false)]
         public string ClientVersionMin { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("EnableKeepAlive")]
         [Validation(Required=false)]
         public string EnableKeepAlive { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("EnableOptionMenu")]
         [Validation(Required=false)]
         public string EnableOptionMenu { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("EnableTabBar")]
         [Validation(Required=false)]
@@ -60,21 +60,21 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         public string ExtendInfo { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("H5Id")]
         [Validation(Required=false)]
         public string H5Id { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("H5Name")]
         [Validation(Required=false)]
         public string H5Name { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("H5Version")]
         [Validation(Required=false)]
@@ -89,63 +89,63 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         public string IconUrl { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InstallType")]
         [Validation(Required=false)]
         public long? InstallType { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("MainUrl")]
         [Validation(Required=false)]
         public string MainUrl { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("OnexFlag")]
         [Validation(Required=false)]
         public bool? OnexFlag { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("PackageType")]
         [Validation(Required=false)]
         public long? PackageType { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Platform")]
         [Validation(Required=false)]
         public string Platform { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceFileUrl")]
         [Validation(Required=false)]
         public string ResourceFileUrl { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public long? ResourceType { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TenantId")]
         [Validation(Required=false)]
         public string TenantId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]
@@ -156,14 +156,14 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         public string Uuid { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Vhost")]
         [Validation(Required=false)]
         public string Vhost { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]

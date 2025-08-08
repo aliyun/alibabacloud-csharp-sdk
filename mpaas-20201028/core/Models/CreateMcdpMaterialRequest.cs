@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("MpaasMappcenterMcdpMaterialCreateJsonStr")]
         [Validation(Required=false)]

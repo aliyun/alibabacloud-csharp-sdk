@@ -8,67 +8,66 @@ using Tea;
 
 namespace AlibabaCloud.SDK.MPaaS20201028.Models
 {
-    public class CreateMcubeMiniTaskRequest : TeaModel {
+    public class UpdateLinkRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>BB5953C300957</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
-        [NameInMap("GreyConfigInfo")]
-        [Validation(Required=false)]
-        public string GreyConfigInfo { get; set; }
-
-        [NameInMap("GreyEndtimeData")]
-        [Validation(Required=false)]
-        public string GreyEndtimeData { get; set; }
-
-        [NameInMap("GreyNum")]
-        [Validation(Required=false)]
-        public long? GreyNum { get; set; }
-
         /// <summary>
-        /// <para>This parameter is required.</para>
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
-        [NameInMap("Memo")]
+        [NameInMap("Cors")]
         [Validation(Required=false)]
-        public string Memo { get; set; }
+        public bool? Cors { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
+        /// <b>Example:</b>
+        /// <para>x519.cn</para>
         /// </summary>
-        [NameInMap("PackageId")]
+        [NameInMap("Domain")]
         [Validation(Required=false)]
-        public long? PackageId { get; set; }
+        public string Domain { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
+        /// <b>Example:</b>
+        /// <para>txt</para>
         /// </summary>
-        [NameInMap("PublishMode")]
+        [NameInMap("Dynamicfield")]
         [Validation(Required=false)]
-        public long? PublishMode { get; set; }
+        public string Dynamicfield { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>https://********</para>
         /// </summary>
-        [NameInMap("PublishType")]
+        [NameInMap("TargetUrl")]
         [Validation(Required=false)]
-        public long? PublishType { get; set; }
+        public string TargetUrl { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="https://xxx/8hGb9SyJARqp7V4PGP92X">https://xxx/8hGb9SyJARqp7V4PGP92X</a></para>
         /// </summary>
-        [NameInMap("TenantId")]
+        [NameInMap("Url")]
         [Validation(Required=false)]
-        public string TenantId { get; set; }
-
-        [NameInMap("WhitelistIds")]
-        [Validation(Required=false)]
-        public string WhitelistIds { get; set; }
+        public string Url { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>default</para>
         /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]

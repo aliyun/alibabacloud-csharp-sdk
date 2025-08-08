@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         public string ActivityEvent { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
@@ -33,14 +33,14 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         public string Classification { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public string Content { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DeliveryType")]
         [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         public long? DismissalDate { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ExpiredSeconds")]
         [Validation(Required=false)]
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         public int? StrategyType { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TargetMsgkey")]
         [Validation(Required=false)]
@@ -124,23 +124,35 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         [Validation(Required=false)]
         public string TaskName { get; set; }
 
+        [NameInMap("TenantId")]
+        [Validation(Required=false)]
+        public string TenantId { get; set; }
+
         [NameInMap("ThirdChannelCategory")]
         [Validation(Required=false)]
         public string ThirdChannelCategoryShrink { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]
         public string Title { get; set; }
+
+        [NameInMap("TransparentMessagePayload")]
+        [Validation(Required=false)]
+        public object TransparentMessagePayload { get; set; }
+
+        [NameInMap("TransparentMessageUrgency")]
+        [Validation(Required=false)]
+        public string TransparentMessageUrgency { get; set; }
 
         [NameInMap("Uri")]
         [Validation(Required=false)]
         public string Uri { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]

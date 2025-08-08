@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         public int? AndroidChannel { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
@@ -33,14 +33,14 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         public string Classification { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DeliveryType")]
         [Validation(Required=false)]
         public long? DeliveryType { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ExpiredSeconds")]
         [Validation(Required=false)]
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         public string MiChannelId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Msgkey")]
         [Validation(Required=false)]
@@ -94,22 +94,34 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         public string TemplateKeyValue { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]
         public string TemplateName { get; set; }
 
+        [NameInMap("TenantId")]
+        [Validation(Required=false)]
+        public string TenantId { get; set; }
+
         [NameInMap("ThirdChannelCategory")]
         [Validation(Required=false)]
         public string ThirdChannelCategoryShrink { get; set; }
+
+        [NameInMap("TransparentMessagePayload")]
+        [Validation(Required=false)]
+        public object TransparentMessagePayload { get; set; }
+
+        [NameInMap("TransparentMessageUrgency")]
+        [Validation(Required=false)]
+        public string TransparentMessageUrgency { get; set; }
 
         [NameInMap("UnBindPeriod")]
         [Validation(Required=false)]
         public long? UnBindPeriod { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]
