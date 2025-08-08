@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public List<string> NodeIds { get; set; }
 
+        [NameInMap("PhoneDataVolume")]
+        [Validation(Required=false)]
+        public int? PhoneDataVolume { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>100</para>

@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class ChangeCloudPhoneNodeRequest : TeaModel {
+        [NameInMap("AutoPay")]
+        [Validation(Required=false)]
+        public bool? AutoPay { get; set; }
+
+        [NameInMap("DownBandwidthLimit")]
+        [Validation(Required=false)]
+        public int? DownBandwidthLimit { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>ac.max</para>
@@ -32,6 +40,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [NameInMap("PhoneCount")]
         [Validation(Required=false)]
         public int? PhoneCount { get; set; }
+
+        [NameInMap("PhoneDataVolume")]
+        [Validation(Required=false)]
+        public int? PhoneDataVolume { get; set; }
+
+        [NameInMap("UpBandwidthLimit")]
+        [Validation(Required=false)]
+        public int? UpBandwidthLimit { get; set; }
 
     }
 

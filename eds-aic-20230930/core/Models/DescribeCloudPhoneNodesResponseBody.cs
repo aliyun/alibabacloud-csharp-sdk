@@ -44,6 +44,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string BandwidthPackageId { get; set; }
 
+            [NameInMap("BandwidthPackageStatus")]
+            [Validation(Required=false)]
+            public string BandwidthPackageStatus { get; set; }
+
             [NameInMap("BandwidthPackageType")]
             [Validation(Required=false)]
             public string BandwidthPackageType { get; set; }

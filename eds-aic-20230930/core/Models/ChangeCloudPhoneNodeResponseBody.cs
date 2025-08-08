@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
+                [NameInMap("PhoneDataVolume")]
+                [Validation(Required=false)]
+                public int? PhoneDataVolume { get; set; }
+
             }
 
             /// <summary>
@@ -35,7 +39,15 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string NodeId { get; set; }
 
+            [NameInMap("ShareDataVolume")]
+            [Validation(Required=false)]
+            public int? ShareDataVolume { get; set; }
+
         }
+
+        [NameInMap("OrderId")]
+        [Validation(Required=false)]
+        public string OrderId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
