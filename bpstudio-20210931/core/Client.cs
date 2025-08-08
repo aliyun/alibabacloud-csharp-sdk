@@ -1951,6 +1951,194 @@ namespace AlibabaCloud.SDK.BPStudio20210931
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取模板变参可选值</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GetLinkageAttributesTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetLinkageAttributesTemplateResponse
+        /// </returns>
+        public GetLinkageAttributesTemplateResponse GetLinkageAttributesTemplateWithOptions(GetLinkageAttributesTemplateRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetLinkageAttributesTemplateShrinkRequest request = new GetLinkageAttributesTemplateShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Instances))
+            {
+                request.InstancesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Instances, "Instances", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Variables))
+            {
+                request.VariablesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Variables, "Variables", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AreaId))
+            {
+                body["AreaId"] = request.AreaId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstancesShrink))
+            {
+                body["Instances"] = request.InstancesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetVariable))
+            {
+                body["TargetVariable"] = request.TargetVariable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                body["TemplateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VariablesShrink))
+            {
+                body["Variables"] = request.VariablesShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetLinkageAttributesTemplate",
+                Version = "2021-09-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetLinkageAttributesTemplateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取模板变参可选值</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GetLinkageAttributesTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetLinkageAttributesTemplateResponse
+        /// </returns>
+        public async Task<GetLinkageAttributesTemplateResponse> GetLinkageAttributesTemplateWithOptionsAsync(GetLinkageAttributesTemplateRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetLinkageAttributesTemplateShrinkRequest request = new GetLinkageAttributesTemplateShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Instances))
+            {
+                request.InstancesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Instances, "Instances", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Variables))
+            {
+                request.VariablesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Variables, "Variables", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AreaId))
+            {
+                body["AreaId"] = request.AreaId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstancesShrink))
+            {
+                body["Instances"] = request.InstancesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetVariable))
+            {
+                body["TargetVariable"] = request.TargetVariable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                body["TemplateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VariablesShrink))
+            {
+                body["Variables"] = request.VariablesShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetLinkageAttributesTemplate",
+                Version = "2021-09-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetLinkageAttributesTemplateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取模板变参可选值</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetLinkageAttributesTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetLinkageAttributesTemplateResponse
+        /// </returns>
+        public GetLinkageAttributesTemplateResponse GetLinkageAttributesTemplate(GetLinkageAttributesTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetLinkageAttributesTemplateWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取模板变参可选值</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetLinkageAttributesTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetLinkageAttributesTemplateResponse
+        /// </returns>
+        public async Task<GetLinkageAttributesTemplateResponse> GetLinkageAttributesTemplateAsync(GetLinkageAttributesTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetLinkageAttributesTemplateWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the zones where the specified disaster recovery service can be switched.</para>
         /// </summary>
         /// 
