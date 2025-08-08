@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 /// </summary>
                 [NameInMap("CompleteRate")]
                 [Validation(Required=false)]
-                public double? CompleteRate { get; set; }
+                public string CompleteRate { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 /// </summary>
                 [NameInMap("DayConnectRate")]
                 [Validation(Required=false)]
-                public double? DayConnectRate { get; set; }
+                public string DayConnectRate { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 /// </summary>
                 [NameInMap("HistoryConnectRate")]
                 [Validation(Required=false)]
-                public double? HistoryConnectRate { get; set; }
+                public string HistoryConnectRate { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
