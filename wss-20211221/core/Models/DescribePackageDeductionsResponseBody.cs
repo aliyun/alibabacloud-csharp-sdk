@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             [Validation(Required=false)]
             public string EndTime { get; set; }
 
+            [NameInMap("GroupResourceType")]
+            [Validation(Required=false)]
+            public string GroupResourceType { get; set; }
+
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
