@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         /// </summary>
         [NameInMap("maxResults")]
         [Validation(Required=false)]
-        public string MaxResults { get; set; }
+        public int? MaxResults { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

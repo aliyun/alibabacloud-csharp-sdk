@@ -17,12 +17,32 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public MoMValues DatabaseCount { get; set; }
 
+        [NameInMap("fileAccessCountMonthly")]
+        [Validation(Required=false)]
+        public long? FileAccessCountMonthly { get; set; }
+
         /// <summary>
         /// <para>Update date of the statistics</para>
         /// </summary>
         [NameInMap("generatedDate")]
         [Validation(Required=false)]
         public string GeneratedDate { get; set; }
+
+        [NameInMap("objTypeArchiveSize")]
+        [Validation(Required=false)]
+        public long? ObjTypeArchiveSize { get; set; }
+
+        [NameInMap("objTypeColdArchiveSize")]
+        [Validation(Required=false)]
+        public long? ObjTypeColdArchiveSize { get; set; }
+
+        [NameInMap("objTypeIaSize")]
+        [Validation(Required=false)]
+        public long? ObjTypeIaSize { get; set; }
+
+        [NameInMap("objTypeStandardSize")]
+        [Validation(Required=false)]
+        public long? ObjTypeStandardSize { get; set; }
 
         [NameInMap("partitionCount")]
         [Validation(Required=false)]

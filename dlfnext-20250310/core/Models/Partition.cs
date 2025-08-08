@@ -41,6 +41,18 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public Dictionary<string, object> Spec { get; set; }
 
+        [NameInMap("storageAction")]
+        [Validation(Required=false)]
+        public string StorageAction { get; set; }
+
+        [NameInMap("storageActionTimestamp")]
+        [Validation(Required=false)]
+        public long? StorageActionTimestamp { get; set; }
+
+        [NameInMap("storageClass")]
+        [Validation(Required=false)]
+        public string StorageClass { get; set; }
+
         [NameInMap("updatedAt")]
         [Validation(Required=false)]
         public long? UpdatedAt { get; set; }

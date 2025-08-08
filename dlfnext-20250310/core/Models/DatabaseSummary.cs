@@ -37,6 +37,22 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public string Location { get; set; }
 
+        [NameInMap("objTypeArchiveSize")]
+        [Validation(Required=false)]
+        public long? ObjTypeArchiveSize { get; set; }
+
+        [NameInMap("objTypeColdArchiveSize")]
+        [Validation(Required=false)]
+        public long? ObjTypeColdArchiveSize { get; set; }
+
+        [NameInMap("objTypeIaSize")]
+        [Validation(Required=false)]
+        public long? ObjTypeIaSize { get; set; }
+
+        [NameInMap("objTypeStandardSize")]
+        [Validation(Required=false)]
+        public long? ObjTypeStandardSize { get; set; }
+
         [NameInMap("partitionCount")]
         [Validation(Required=false)]
         public long? PartitionCount { get; set; }

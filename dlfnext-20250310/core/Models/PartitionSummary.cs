@@ -37,6 +37,18 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public string PartitionName { get; set; }
 
+        [NameInMap("storageActionParams")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> StorageActionParams { get; set; }
+
+        [NameInMap("storageActionTimestamp")]
+        [Validation(Required=false)]
+        public long? StorageActionTimestamp { get; set; }
+
+        [NameInMap("storageClass")]
+        [Validation(Required=false)]
+        public string StorageClass { get; set; }
+
         /// <summary>
         /// <para>Table name</para>
         /// </summary>

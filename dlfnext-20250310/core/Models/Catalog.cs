@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public string Id { get; set; }
 
+        [NameInMap("isShared")]
+        [Validation(Required=false)]
+        public bool? IsShared { get; set; }
+
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
@@ -32,6 +36,10 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [NameInMap("owner")]
         [Validation(Required=false)]
         public string Owner { get; set; }
+
+        [NameInMap("shareId")]
+        [Validation(Required=false)]
+        public string ShareId { get; set; }
 
         [NameInMap("status")]
         [Validation(Required=false)]

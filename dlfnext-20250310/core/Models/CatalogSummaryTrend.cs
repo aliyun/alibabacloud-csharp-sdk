@@ -17,6 +17,13 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public List<DateSummary> ApiVisitCount { get; set; }
 
         /// <summary>
+        /// <para>file access count trends</para>
+        /// </summary>
+        [NameInMap("fileAccessCount")]
+        [Validation(Required=false)]
+        public List<DateSummary> FileAccessCount { get; set; }
+
+        /// <summary>
         /// <para>Table count trends</para>
         /// </summary>
         [NameInMap("throughput")]

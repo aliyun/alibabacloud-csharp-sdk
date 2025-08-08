@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public string CatalogId { get; set; }
 
+        [NameInMap("cuUsage")]
+        [Validation(Required=false)]
+        public double? CuUsage { get; set; }
+
         [NameInMap("lastCompactedFileTime")]
         [Validation(Required=false)]
         public long? LastCompactedFileTime { get; set; }
