@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string Granularity { get; set; }
 
                 /// <summary>
-                /// <para>字段别名，结果参数values中map数据行的key。</para>
+                /// <para>Alias for the field, serving as the key in the map data row of the values parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>area</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             /// <para>The SQL of the query request.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>SELECT COMPANY_T_1_.<c>area</c> AS D_AREA_2_, COMPANY_T_1_.<c>city</c> AS D_CITY_3_, SUM(COMPANY_T_1_.<c>profit_amt</c>) AS D_PROFIT_4_ FROM <c>quickbi_test</c>.<c>company_sales_record_copy</c> AS COMPANY_T_1_ WHERE COMPANY_T_1_.<c>area</c> LIKE \&quot;%华东%\&quot; GROUP BY COMPANY_T_1_.<c>area</c>, COMPANY_T_1_.<c>city</c> HAVING SUM(COMPANY_T_1_.<c>order_amt</c>) &gt; 1 LIMIT 0, 10</para>
+            /// <para>SELECT COMPANY_T_1_.<c>area</c> AS D_AREA_2_, COMPANY_T_1_.<c>city</c> AS D_CITY_3_, SUM(COMPANY_T_1_.<c>profit_amt</c>) AS D_PROFIT_4_ FROM <c>quickbi_test</c>.<c>company_sales_record_copy</c> AS COMPANY_T_1_   LIMIT 0, 10</para>
             /// </summary>
             [NameInMap("Sql")]
             [Validation(Required=false)]

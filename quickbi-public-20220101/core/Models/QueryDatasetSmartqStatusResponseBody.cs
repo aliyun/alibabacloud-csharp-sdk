@@ -34,10 +34,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public bool? Result { get; set; }
 
         /// <summary>
-        /// <para>是否请求成功。取值范围：</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true：请求成功</description></item>
-        /// <item><description>false：请求失败</description></item>
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

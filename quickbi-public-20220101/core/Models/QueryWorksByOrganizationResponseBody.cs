@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>作品修改的毫秒级时间戳。</para>
+                /// <para>Millisecond-level timestamp of the work modification.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1572334870000</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string GmtModify { get; set; }
 
                 /// <summary>
-                /// <para>作品修改者的阿里云账户名。</para>
+                /// <para>The Alibaba Cloud account name of the work modifier.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>

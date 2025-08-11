@@ -107,6 +107,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string Label { get; set; }
 
                 /// <summary>
+                /// <b>if can be null:</b>
+                /// <c>true</c>
+                /// </summary>
+                [NameInMap("OriginalColumn")]
+                [Validation(Required=false)]
+                public string OriginalColumn { get; set; }
+
+                /// <summary>
                 /// <para>Field type, used to distinguish between dimension and measure fields.</para>
                 /// <list type="bullet">
                 /// <item><description>Dimension: dimension</description></item>

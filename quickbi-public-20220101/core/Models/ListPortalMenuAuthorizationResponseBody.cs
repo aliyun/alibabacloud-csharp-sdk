@@ -44,6 +44,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public List<ListPortalMenuAuthorizationResponseBodyResultReceivers> Receivers { get; set; }
             public class ListPortalMenuAuthorizationResponseBodyResultReceivers : TeaModel {
                 /// <summary>
+                /// <b>if can be null:</b>
+                /// <c>true</c>
+                /// </summary>
+                [NameInMap("AuthPointsValue")]
+                [Validation(Required=false)]
+                public int? AuthPointsValue { get; set; }
+
+                /// <summary>
                 /// <para>The ID of the authorization object.</para>
                 /// 
                 /// <b>Example:</b>

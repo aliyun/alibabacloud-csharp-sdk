@@ -8669,6 +8669,134 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询仪表板的问数资源信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryDashboardNl2sqlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDashboardNl2sqlResponse
+        /// </returns>
+        public QueryDashboardNl2sqlResponse QueryDashboardNl2sqlWithOptions(QueryDashboardNl2sqlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryDashboardNl2sql",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryDashboardNl2sqlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询仪表板的问数资源信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryDashboardNl2sqlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDashboardNl2sqlResponse
+        /// </returns>
+        public async Task<QueryDashboardNl2sqlResponse> QueryDashboardNl2sqlWithOptionsAsync(QueryDashboardNl2sqlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryDashboardNl2sql",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryDashboardNl2sqlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询仪表板的问数资源信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryDashboardNl2sqlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDashboardNl2sqlResponse
+        /// </returns>
+        public QueryDashboardNl2sqlResponse QueryDashboardNl2sql(QueryDashboardNl2sqlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryDashboardNl2sqlWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询仪表板的问数资源信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryDashboardNl2sqlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDashboardNl2sqlResponse
+        /// </returns>
+        public async Task<QueryDashboardNl2sqlResponse> QueryDashboardNl2sqlAsync(QueryDashboardNl2sqlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryDashboardNl2sqlWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Invoke the open data service API.</para>
         /// </summary>
         /// 
@@ -10223,6 +10351,126 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>通过数据集ID查询最近一次加速任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryLastAccelerationEngineJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryLastAccelerationEngineJobResponse
+        /// </returns>
+        public QueryLastAccelerationEngineJobResponse QueryLastAccelerationEngineJobWithOptions(QueryLastAccelerationEngineJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CubeId))
+            {
+                query["CubeId"] = request.CubeId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryLastAccelerationEngineJob",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryLastAccelerationEngineJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过数据集ID查询最近一次加速任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryLastAccelerationEngineJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryLastAccelerationEngineJobResponse
+        /// </returns>
+        public async Task<QueryLastAccelerationEngineJobResponse> QueryLastAccelerationEngineJobWithOptionsAsync(QueryLastAccelerationEngineJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CubeId))
+            {
+                query["CubeId"] = request.CubeId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryLastAccelerationEngineJob",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryLastAccelerationEngineJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过数据集ID查询最近一次加速任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryLastAccelerationEngineJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryLastAccelerationEngineJobResponse
+        /// </returns>
+        public QueryLastAccelerationEngineJobResponse QueryLastAccelerationEngineJob(QueryLastAccelerationEngineJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryLastAccelerationEngineJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过数据集ID查询最近一次加速任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryLastAccelerationEngineJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryLastAccelerationEngineJobResponse
+        /// </returns>
+        public async Task<QueryLastAccelerationEngineJobResponse> QueryLastAccelerationEngineJobAsync(QueryLastAccelerationEngineJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryLastAccelerationEngineJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Check which datasets and analysis themes the user has question authorization for</para>
         /// </summary>
         /// 
@@ -10751,7 +10999,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户有权查看的作品列表(新)</para>
+        /// <para>Query list of works user has permission to view (new)</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10801,7 +11049,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户有权查看的作品列表(新)</para>
+        /// <para>Query list of works user has permission to view (new)</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10851,7 +11099,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户有权查看的作品列表(新)</para>
+        /// <para>Query list of works user has permission to view (new)</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10869,7 +11117,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户有权查看的作品列表(新)</para>
+        /// <para>Query list of works user has permission to view (new)</para>
         /// </summary>
         /// 
         /// <param name="request">
