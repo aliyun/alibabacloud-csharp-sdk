@@ -1,3 +1,6 @@
+2025-08-11 Version: 5.1.1
+- Generated csharp 2021-09-31 for BPStudio.
+
 2025-08-08 Version: 5.1.0
 - Support API GetLinkageAttributesTemplate.
 
