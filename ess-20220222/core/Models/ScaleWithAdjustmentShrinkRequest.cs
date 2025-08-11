@@ -61,6 +61,17 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// <para>The execution mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>None: If this is not specified, auto scaling is performed.</description></item>
+        /// <item><description>PlanOnly: Scaling is not triggered. Only elastic planning is performed. The planning result is returned in PlanResult, including the instance type, zone ID, billing type, and number of created instances.</description></item>
+        /// </list>
+        /// <para>Default value: None.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PlanOnly</para>
+        /// </summary>
         [NameInMap("ExecutionMode")]
         [Validation(Required=false)]
         public string ExecutionMode { get; set; }
@@ -93,6 +104,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>Whether the current scale-out task supports concurrency.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("ParallelTask")]
         [Validation(Required=false)]
         public bool? ParallelTask { get; set; }
@@ -113,13 +130,13 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ScalingGroupId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to trigger the scaling activity in a synchronous manner. This parameter takes effect only on scaling groups for which you specified an expected number of instances. Valid values:</para>
+        /// <para>Specifies whether to trigger the scaling task in a synchronous manner. This parameter takes effect only on scaling groups for which you specified an expected number of instances. Valid Values:</para>
         /// <list type="bullet">
-        /// <item><description>true: triggers the scaling activity in a synchronous manner. A scaling activity is triggered at the time when the scaling rule is executed.</description></item>
-        /// <item><description>false: does not trigger the scaling activity in a synchronous manner. After you change the expected number of instances for the scaling group, Auto Scaling checks whether the total number of instances in the scaling group matches the new expected number and determines whether to trigger the scaling activity based on the check result.</description></item>
+        /// <item><description>true: triggers the scaling task in a synchronous manner. A scaling activity is triggered at the time when the scaling rule is executed.</description></item>
+        /// <item><description>false: does not trigger the scaling task in a synchronous manner. After you change the expected number of instances for the scaling group, Auto Scaling checks whether the total number of instances in the scaling group matches the new expected number and determines whether to trigger the scaling activity based on the check result.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> For more information about the expected number of instances feature, see <a href="https://help.aliyun.com/document_detail/146231.html">Expected number of instances</a>.</para>
+        /// <para> For more information, see <a href="https://help.aliyun.com/document_detail/146231.html">Expected number of instances</a>.</para>
         /// </remarks>
         /// <para>Default value: false.</para>
         /// 

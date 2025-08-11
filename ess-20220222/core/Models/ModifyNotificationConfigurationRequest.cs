@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class ModifyNotificationConfigurationRequest : TeaModel {
+        [NameInMap("MessageEncoding")]
+        [Validation(Required=false)]
+        public string MessageEncoding { get; set; }
+
         /// <summary>
         /// <para>The Alibaba Cloud Resource Name (ARN) of the notification recipient. The following list describes the value formats of this parameter:</para>
         /// <list type="bullet">

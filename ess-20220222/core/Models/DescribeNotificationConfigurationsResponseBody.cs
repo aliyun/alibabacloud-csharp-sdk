@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public List<DescribeNotificationConfigurationsResponseBodyNotificationConfigurationModels> NotificationConfigurationModels { get; set; }
         public class DescribeNotificationConfigurationsResponseBodyNotificationConfigurationModels : TeaModel {
+            [NameInMap("MessageEncoding")]
+            [Validation(Required=false)]
+            public string MessageEncoding { get; set; }
+
             /// <summary>
             /// <para>The Alibaba Cloud Resource Name (ARN) of the notification recipient. The value is in one of the following formats:</para>
             /// <list type="bullet">

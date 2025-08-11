@@ -61,6 +61,17 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// <para>The execution mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>None: If this is not specified, auto scaling is performed.</description></item>
+        /// <item><description>PlanOnly: Scaling is not triggered. Only elastic planning is performed. The planning result is returned in PlanResult, including the instance type, zone ID, billing type, and number of created instances.</description></item>
+        /// </list>
+        /// <para>Default value: None.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PlanOnly</para>
+        /// </summary>
         [NameInMap("ExecutionMode")]
         [Validation(Required=false)]
         public string ExecutionMode { get; set; }
@@ -120,7 +131,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public List<ScaleWithAdjustmentRequestOverridesContainerOverrides> ContainerOverrides { get; set; }
             public class ScaleWithAdjustmentRequestOverridesContainerOverrides : TeaModel {
                 /// <summary>
-                /// <para>The arguments that correspond to the startup commands of the container. You can specify up to 10 arguments.</para>
+                /// <para>The argument that corresponds to the startup command of the container. You can specify up to 10 arguments.</para>
                 /// </summary>
                 [NameInMap("Args")]
                 [Validation(Required=false)]
@@ -134,7 +145,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public List<string> Commands { get; set; }
 
                 /// <summary>
-                /// <para>The number of vCPUs that you want to allocate to the container.</para>
+                /// <para>The number of vCPUs that you want to allocate to the container. Unit: vCPUs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -151,7 +162,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public List<ScaleWithAdjustmentRequestOverridesContainerOverridesEnvironmentVars> EnvironmentVars { get; set; }
                 public class ScaleWithAdjustmentRequestOverridesContainerOverridesEnvironmentVars : TeaModel {
                     /// <summary>
-                    /// <para>The name of the environment variable. The name must be 1 to 128 characters in length and can contain letters, underscores (_), and digits. The name cannot start with a digit. Specify the value in the <c>[0-9a-zA-Z]</c> format.</para>
+                    /// <para>The name of the environment variable. The name must be 1 to 128 characters in length. Format requirement: <c>[0-9a-zA-Z]</c> and underscores (_). It cannot start with a digit.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>PATH</para>
@@ -183,7 +194,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public float? Memory { get; set; }
 
                 /// <summary>
-                /// <para>The container name. If you specify ContainerOverrides, you must also specify Name. ContainerOverrides takes effect only when the container name specified by Name matches that specified in the scaling configuration.</para>
+                /// <para>The name of container N. If you specify ContainerOverrides, you must also specify Name. ContainerOverrides takes effect only when the container name specified by Name matches that specified in the scaling configuration.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>container-1</para>
@@ -195,7 +206,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             }
 
             /// <summary>
-            /// <para>The number of vCPUs that you want to allocate to the instance.</para>
+            /// <para>The number of vCPUs that you want to allocate to the instance. Unit: vCPUs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -214,6 +225,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public float? Memory { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>ZWNobyBoZWxsbyBlY3Mh</para>
+            /// </summary>
             [NameInMap("UserData")]
             [Validation(Required=false)]
             public string UserData { get; set; }
@@ -224,6 +239,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>Whether the current scale-out task supports concurrency.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("ParallelTask")]
         [Validation(Required=false)]
         public bool? ParallelTask { get; set; }
@@ -244,13 +265,13 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ScalingGroupId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to trigger the scaling activity in a synchronous manner. This parameter takes effect only on scaling groups for which you specified an expected number of instances. Valid values:</para>
+        /// <para>Specifies whether to trigger the scaling task in a synchronous manner. This parameter takes effect only on scaling groups for which you specified an expected number of instances. Valid Values:</para>
         /// <list type="bullet">
-        /// <item><description>true: triggers the scaling activity in a synchronous manner. A scaling activity is triggered at the time when the scaling rule is executed.</description></item>
-        /// <item><description>false: does not trigger the scaling activity in a synchronous manner. After you change the expected number of instances for the scaling group, Auto Scaling checks whether the total number of instances in the scaling group matches the new expected number and determines whether to trigger the scaling activity based on the check result.</description></item>
+        /// <item><description>true: triggers the scaling task in a synchronous manner. A scaling activity is triggered at the time when the scaling rule is executed.</description></item>
+        /// <item><description>false: does not trigger the scaling task in a synchronous manner. After you change the expected number of instances for the scaling group, Auto Scaling checks whether the total number of instances in the scaling group matches the new expected number and determines whether to trigger the scaling activity based on the check result.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> For more information about the expected number of instances feature, see <a href="https://help.aliyun.com/document_detail/146231.html">Expected number of instances</a>.</para>
+        /// <para> For more information, see <a href="https://help.aliyun.com/document_detail/146231.html">Expected number of instances</a>.</para>
         /// </remarks>
         /// <para>Default value: false.</para>
         /// 

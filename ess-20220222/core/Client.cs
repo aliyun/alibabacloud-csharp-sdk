@@ -4100,6 +4100,10 @@ namespace AlibabaCloud.SDK.Ess20220222
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageEncoding))
+            {
+                query["MessageEncoding"] = request.MessageEncoding;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationArn))
             {
                 query["NotificationArn"] = request.NotificationArn;
@@ -4175,6 +4179,10 @@ namespace AlibabaCloud.SDK.Ess20220222
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageEncoding))
+            {
+                query["MessageEncoding"] = request.MessageEncoding;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationArn))
             {
                 query["NotificationArn"] = request.NotificationArn;
@@ -16395,6 +16403,10 @@ namespace AlibabaCloud.SDK.Ess20220222
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageEncoding))
+            {
+                query["MessageEncoding"] = request.MessageEncoding;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationArn))
             {
                 query["NotificationArn"] = request.NotificationArn;
@@ -16461,6 +16473,10 @@ namespace AlibabaCloud.SDK.Ess20220222
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageEncoding))
+            {
+                query["MessageEncoding"] = request.MessageEncoding;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationArn))
             {
                 query["NotificationArn"] = request.NotificationArn;
