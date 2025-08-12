@@ -131,6 +131,10 @@ namespace AlibabaCloud.SDK.PaiLLMTrace20240311.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("SessionId")]
+        [Validation(Required=false)]
+        public string SessionId { get; set; }
+
         /// <summary>
         /// <para>The field used to sort the returned results. Valid values: StartTime and Duration.</para>
         /// 
