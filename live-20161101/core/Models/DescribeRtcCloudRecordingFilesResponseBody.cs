@@ -37,6 +37,24 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 [Validation(Required=false)]
                 public List<string> Mp4FileList { get; set; }
 
+                [NameInMap("VodMediaList")]
+                [Validation(Required=false)]
+                public List<DescribeRtcCloudRecordingFilesResponseBodyTaskInfoRecordFileListVodMediaList> VodMediaList { get; set; }
+                public class DescribeRtcCloudRecordingFilesResponseBodyTaskInfoRecordFileListVodMediaList : TeaModel {
+                    [NameInMap("MediaIds")]
+                    [Validation(Required=false)]
+                    public List<string> MediaIds { get; set; }
+
+                    [NameInMap("MergedIds")]
+                    [Validation(Required=false)]
+                    public List<string> MergedIds { get; set; }
+
+                    [NameInMap("Stream")]
+                    [Validation(Required=false)]
+                    public string Stream { get; set; }
+
+                }
+
             }
 
             /// <summary>

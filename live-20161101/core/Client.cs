@@ -72298,6 +72298,10 @@ namespace AlibabaCloud.SDK.Live20161101
             {
                 query["ChannelId"] = request.ChannelId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxIdleTime))
+            {
+                query["MaxIdleTime"] = request.MaxIdleTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MixLayoutParamsShrink))
             {
                 query["MixLayoutParams"] = request.MixLayoutParamsShrink;
@@ -72305,6 +72309,10 @@ namespace AlibabaCloud.SDK.Live20161101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MixTranscodeParamsShrink))
             {
                 query["MixTranscodeParams"] = request.MixTranscodeParamsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyAuthKey))
+            {
+                query["NotifyAuthKey"] = request.NotifyAuthKey;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyUrl))
             {
@@ -72390,6 +72398,10 @@ namespace AlibabaCloud.SDK.Live20161101
             {
                 query["ChannelId"] = request.ChannelId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxIdleTime))
+            {
+                query["MaxIdleTime"] = request.MaxIdleTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MixLayoutParamsShrink))
             {
                 query["MixLayoutParams"] = request.MixLayoutParamsShrink;
@@ -72397,6 +72409,10 @@ namespace AlibabaCloud.SDK.Live20161101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MixTranscodeParamsShrink))
             {
                 query["MixTranscodeParams"] = request.MixTranscodeParamsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyAuthKey))
+            {
+                query["NotifyAuthKey"] = request.NotifyAuthKey;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyUrl))
             {

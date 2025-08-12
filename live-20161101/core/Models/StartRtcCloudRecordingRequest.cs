@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string ChannelId { get; set; }
 
+        [NameInMap("MaxIdleTime")]
+        [Validation(Required=false)]
+        public long? MaxIdleTime { get; set; }
+
         [NameInMap("MixLayoutParams")]
         [Validation(Required=false)]
         public StartRtcCloudRecordingRequestMixLayoutParams MixLayoutParams { get; set; }
@@ -233,6 +237,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 
         }
 
+        [NameInMap("NotifyAuthKey")]
+        [Validation(Required=false)]
+        public string NotifyAuthKey { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para><a href="http://xxxx/test/mycallback">http://xxxx/test/mycallback</a></para>
@@ -295,6 +303,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 [Validation(Required=false)]
                 public string FileNamePattern { get; set; }
 
+                [NameInMap("FilePathPrefix")]
+                [Validation(Required=false)]
+                public List<string> FilePathPrefix { get; set; }
+
                 /// <summary>
                 /// <para>This parameter is required.</para>
                 /// 
@@ -350,6 +362,28 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [NameInMap("StorageType")]
             [Validation(Required=false)]
             public int? StorageType { get; set; }
+
+            [NameInMap("VodParams")]
+            [Validation(Required=false)]
+            public StartRtcCloudRecordingRequestStorageParamsVodParams VodParams { get; set; }
+            public class StartRtcCloudRecordingRequestStorageParamsVodParams : TeaModel {
+                [NameInMap("AutoCompose")]
+                [Validation(Required=false)]
+                public int? AutoCompose { get; set; }
+
+                [NameInMap("ComposeVodTranscodeGroupId")]
+                [Validation(Required=false)]
+                public string ComposeVodTranscodeGroupId { get; set; }
+
+                [NameInMap("StorageLocation")]
+                [Validation(Required=false)]
+                public string StorageLocation { get; set; }
+
+                [NameInMap("VodTranscodeGroupId")]
+                [Validation(Required=false)]
+                public string VodTranscodeGroupId { get; set; }
+
+            }
 
         }
 

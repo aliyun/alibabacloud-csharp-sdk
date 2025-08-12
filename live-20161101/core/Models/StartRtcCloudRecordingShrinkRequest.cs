@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string ChannelId { get; set; }
 
+        [NameInMap("MaxIdleTime")]
+        [Validation(Required=false)]
+        public long? MaxIdleTime { get; set; }
+
         [NameInMap("MixLayoutParams")]
         [Validation(Required=false)]
         public string MixLayoutParamsShrink { get; set; }
@@ -36,6 +40,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [NameInMap("MixTranscodeParams")]
         [Validation(Required=false)]
         public string MixTranscodeParamsShrink { get; set; }
+
+        [NameInMap("NotifyAuthKey")]
+        [Validation(Required=false)]
+        public string NotifyAuthKey { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
