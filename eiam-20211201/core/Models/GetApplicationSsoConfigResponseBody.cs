@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 [Validation(Required=false)]
                 public long? AccessTokenEffectiveTime { get; set; }
 
+                [NameInMap("AllowedPublicClient")]
+                [Validation(Required=false)]
+                public string AllowedPublicClient { get; set; }
+
                 /// <summary>
                 /// <para>The validity period of the issued code. Unit: seconds. Default value: 60.</para>
                 /// 

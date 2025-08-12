@@ -1,3 +1,11 @@
+2025-08-12 Version: 1.8.5
+- Update API CreateApplicationClientSecret: add request parameters ExpirationTime.
+- Update API GetApplicationSsoConfig: add response parameters Body.ApplicationSsoConfig.OidcSsoConfig.AllowedPublicClient.
+- Update API ListApplicationClientSecrets: add response parameters Body.ApplicationClientSecrets.$.ExpirationTime.
+- Update API ObtainApplicationClientSecret: add response parameters Body.ApplicationClientSecret.ExpirationTime.
+- Update API SetApplicationSsoConfig: add request parameters OidcSsoConfig.AllowedPublicClient.
+
+
 2025-08-06 Version: 1.8.4
 - Update API GetApplicationProvisioningConfig: add response parameters Body.ApplicationProvisioningConfig.NetworkAccessEndpointId.
 - Update API SetApplicationProvisioningConfig: add request parameters NetworkAccessEndpointId.

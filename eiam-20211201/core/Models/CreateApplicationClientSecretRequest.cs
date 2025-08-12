@@ -21,6 +21,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>1735530123762</para>
+        /// </summary>
+        [NameInMap("ExpirationTime")]
+        [Validation(Required=false)]
+        public long? ExpirationTime { get; set; }
+
+        /// <summary>
         /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 

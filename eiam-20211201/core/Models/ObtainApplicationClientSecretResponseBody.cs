@@ -46,6 +46,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public string ClientSecret { get; set; }
 
+            [NameInMap("ExpirationTime")]
+            [Validation(Required=false)]
+            public long? ExpirationTime { get; set; }
+
             /// <summary>
             /// <para>The ID of the instance.</para>
             /// 
