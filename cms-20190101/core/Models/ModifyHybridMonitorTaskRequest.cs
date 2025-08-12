@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the logs that are imported from Log Service.</para>
+        /// <para>The configurations of the logs that are imported from Simple Log Service.</para>
         /// </summary>
         [NameInMap("SLSProcessConfig")]
         [Validation(Required=false)]
@@ -101,21 +101,21 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// <para>The conditions that are used to filter logs imported from Log Service.</para>
+            /// <para>The conditions that are used to filter logs imported from Simple Log Service.</para>
             /// </summary>
             [NameInMap("Filter")]
             [Validation(Required=false)]
             public ModifyHybridMonitorTaskRequestSLSProcessConfigFilter Filter { get; set; }
             public class ModifyHybridMonitorTaskRequestSLSProcessConfigFilter : TeaModel {
                 /// <summary>
-                /// <para>None</para>
+                /// <para>None.</para>
                 /// </summary>
                 [NameInMap("Filters")]
                 [Validation(Required=false)]
                 public List<ModifyHybridMonitorTaskRequestSLSProcessConfigFilterFilters> Filters { get; set; }
                 public class ModifyHybridMonitorTaskRequestSLSProcessConfigFilterFilters : TeaModel {
                     /// <summary>
-                    /// <para>The method that is used to filter logs imported from Log Service. Valid values:</para>
+                    /// <para>The method that is used to filter logs imported from Simple Log Service. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description><c>contain</c>: contains</description></item>
                     /// <item><description><c>notContain</c>: does not contain</description></item>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public string Operator { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the key that is used to filter logs imported from Log Service.</para>
+                    /// <para>The name of the key that is used to filter logs imported from Simple Log Service.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>code</para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public string SLSKeyName { get; set; }
 
                     /// <summary>
-                    /// <para>The value of the key that is used to filter logs imported from Log Service.</para>
+                    /// <para>The value of the key that is used to filter logs imported from Simple Log Service.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>200</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// <para>The dimensions based on which data is aggregated. This parameter is equivalent to the GROUP BY clause in SQL.</para>
+            /// <para>The dimension based on which data is aggregated. This parameter is equivalent to the GROUP BY clause in SQL.</para>
             /// </summary>
             [NameInMap("GroupBy")]
             [Validation(Required=false)]
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Alias { get; set; }
 
                 /// <summary>
-                /// <para>The name of the key that is used to aggregate logs imported from Log Service.</para>
+                /// <para>The name of the key that is used to aggregate logs imported from Simple Log Service.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>code</para>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// <para>None</para>
+            /// <para>None.</para>
             /// </summary>
             [NameInMap("Statistics")]
             [Validation(Required=false)]
@@ -227,10 +227,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// <item><description>max: calculates the maximum value.</description></item>
                 /// <item><description>min: calculates the minimum value.</description></item>
                 /// <item><description>value: collects samples within the statistical period.</description></item>
-                /// <item><description>countps: calculates the counted number of the specified field divided by the total number of seconds within the statistical period.</description></item>
-                /// <item><description>sumps: calculates the total value of the specified field divided by the total number of seconds within the statistical period.</description></item>
-                /// <item><description>distinct: counts the number of logs where the specified field appears within the statistical period.</description></item>
-                /// <item><description>distribution: counts the number of logs that meet a specified condition within the statistical period.</description></item>
+                /// <item><description>countps: calculates the number of values of the specified field divided by the total number of seconds within the statistical period.</description></item>
+                /// <item><description>sumps: calculates the sum of the values of the specified field divided by the total number of seconds within the statistical period.</description></item>
+                /// <item><description>distinct: calculates the number of unique values of the specified field within the statistical period.</description></item>
+                /// <item><description>distribution: calculates the number of logs that meet a specified condition within the statistical period.</description></item>
                 /// <item><description>percentile: sorts the values of the specified field in ascending order, and then returns the value that is at the specified percentile within the statistical period. Example: P50.</description></item>
                 /// </list>
                 /// 
@@ -242,10 +242,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Function { get; set; }
 
                 /// <summary>
-                /// <para>The value of the function that is used to aggregate logs imported from Log Service.</para>
+                /// <para>The value of the function that is used to aggregate logs imported from Simple Log Service.</para>
                 /// <list type="bullet">
                 /// <item><description>If the <c>Function</c> parameter is set to <c>distribution</c>, this parameter specifies the lower limit of the statistical interval. For example, if you want to calculate the number of HTTP requests whose status code is 2XX, set this parameter to 200.</description></item>
-                /// <item><description>If you set the <c>Function</c> parameter to <c>percentile</c>, this parameter specifies the percentile at which the expected value is. For example, 0.5 specifies P50.</description></item>
+                /// <item><description>If the <c>Function</c> parameter is set to <c>percentile</c>, this parameter specifies the percentile at which the expected value is. For example, 0.5 specifies P50.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -256,9 +256,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Parameter1 { get; set; }
 
                 /// <summary>
-                /// <para>The value of the function that is used to aggregate logs imported from Log Service.</para>
+                /// <para>The value of the function that is used to aggregate logs imported from Simple Log Service.</para>
                 /// <remarks>
-                /// <para>This parameter must be specified when <c>Function</c> is set to <c>distribution</c>. This parameter specifies the upper limit of the statistical interval. For example, if you want to calculate the number of HTTP requests whose status code is 2XX, set this parameter to 299.</para>
+                /// <para> This parameter is required only if the <c>Function</c> parameter is set to <c>distribution</c>. This parameter specifies the upper limit of the statistical interval. For example, if you want to calculate the number of HTTP requests whose status code is 2XX, set this parameter to 299.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -269,7 +269,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Parameter2 { get; set; }
 
                 /// <summary>
-                /// <para>The name of the key that is used to aggregate logs imported from Log Service.</para>
+                /// <para>The name of the key that is used to aggregate logs imported from Simple Log Service.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>name</para>

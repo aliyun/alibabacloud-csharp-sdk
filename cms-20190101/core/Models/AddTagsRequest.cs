@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The ID of the application group.</para>
         /// <para>Valid values of N: 1 to 20.</para>
-        /// <para>For more information about how to obtain the ID of an application group, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</para>
+        /// <para>For information about how to query the IDs of application groups, see <a href="https://help.aliyun.com/document_detail/2513168.html">DescribeMonitorGroups</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// <para>The tag key.</para>
             /// <para>Valid values of N: 1 to 3. A tag key can be 1 to 64 characters in length.</para>
-            /// <para>You can create a tag key or specify an existing tag key. For more information about how to obtain a tag key, see <a href="https://help.aliyun.com/document_detail/145558.html">DescribeTagKeyList</a>.</para>
+            /// <para>You can create a tag key or specify an existing tag key. For more information about how to obtain a tag key, see <a href="https://help.aliyun.com/document_detail/2513189.html">DescribeTagKeyList</a>.</para>
             /// <remarks>
             /// <para> The tag key cannot start with <c>aliyun</c> or <c>acs:</c>. The tag key (<c>Tag.N.Key</c>) and tag value (<c>Tag.N.Value</c>) must be specified at the same time.</para>
             /// </remarks>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// <para>The tag value.</para>
             /// <para>Valid values of N: 1 to 3. A tag value can be 1 to 64 characters in length.</para>
-            /// <para>You can create a tag value or specify an existing tag value. For more information about how to obtain a tag value, see <a href="https://help.aliyun.com/document_detail/145557.html">DescribeTagValueList</a>.</para>
+            /// <para>You can create a tag value or specify an existing tag value. For more information about how to obtain a tag value, see <a href="https://help.aliyun.com/document_detail/2513188.html">DescribeTagValueList</a>.</para>
             /// <remarks>
             /// <para> The tag value cannot start with <c>aliyun</c> or <c>acs:</c>. The tag key (<c>Tag.N.Key</c>) and tag value (<c>Tag.N.Value</c>) must be specified at the same time.</para>
             /// </remarks>

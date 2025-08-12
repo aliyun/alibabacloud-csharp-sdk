@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeLogMonitorAttributeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The status code.</para>
         /// <remarks>
-        /// <para> The status code 200 indicates that the call was successful.</para>
+        /// <para> The status code 200 indicates that the request was successful.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public DescribeLogMonitorAttributeResponseBodyLogMonitor LogMonitor { get; set; }
         public class DescribeLogMonitorAttributeResponseBodyLogMonitor : TeaModel {
             /// <summary>
-            /// <para>The aggregate functions.</para>
+            /// <para>The aggregation logic.</para>
             /// </summary>
             [NameInMap("Aggregates")]
             [Validation(Required=false)]
             public List<DescribeLogMonitorAttributeResponseBodyLogMonitorAggregates> Aggregates { get; set; }
             public class DescribeLogMonitorAttributeResponseBodyLogMonitorAggregates : TeaModel {
                 /// <summary>
-                /// <para>The alias of the aggregate function.</para>
+                /// <para>The alias of the field.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>HostName</para>
@@ -57,16 +57,16 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string FieldName { get; set; }
 
                 /// <summary>
-                /// <para>The function that is used to aggregate the monitoring data of logs within an aggregation period. Valid values:</para>
+                /// <para>The function that is used to aggregate the monitoring data of logs within a statistical period. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>count: counts the number.</description></item>
-                /// <item><description>sum: calculates the total value.</description></item>
-                /// <item><description>avg: calculates the average value.</description></item>
-                /// <item><description>max: selects the maximum value.</description></item>
-                /// <item><description>min: selects the minimum value.</description></item>
-                /// <item><description>countps: calculates the counted number of the specified field divided by the total number of seconds of the aggregation period.</description></item>
-                /// <item><description>sumps: calculates the total value of the specified field divided by the total number of seconds of the aggregation period.</description></item>
-                /// <item><description>distinct: counts the number of logs where the specified field appears within the aggregation period.</description></item>
+                /// <item><description>count: counts the number</description></item>
+                /// <item><description>sum: calculates the total value</description></item>
+                /// <item><description>avg: calculates the average value</description></item>
+                /// <item><description>max: calculates the maximum value</description></item>
+                /// <item><description>min: calculates the minimum value</description></item>
+                /// <item><description>countps: calculates the number of values of the specified field divided by the total number of seconds within a statistical period</description></item>
+                /// <item><description>sumps: calculates the sum of the values of the specified field divided by the total number of seconds within a statistical period</description></item>
+                /// <item><description>distinct: calculates the number of unique values of the specified field within a statistical period</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -99,8 +99,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// <para>The time when the log monitoring metric was created.</para>
-            /// <para>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The time when the metric was created.</para>
+            /// <para>This value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1547431398000</para>
@@ -119,15 +119,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public long? GroupId { get; set; }
 
-            /// <summary>
-            /// <para>The dimension based on which the data is grouped. This parameter is equivalent to the GROUP BY clause in SQL statements. If no dimension is specified, all data is aggregated based on the aggregate function.</para>
-            /// </summary>
             [NameInMap("Groupbys")]
             [Validation(Required=false)]
             public List<string> Groupbys { get; set; }
 
             /// <summary>
-            /// <para>The ID returned by Log Service.</para>
+            /// <para>The ID of the log.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234</para>
@@ -138,7 +135,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
             /// <summary>
             /// <para>The extended field. The extended field allows you to perform basic operations on the aggregation results.</para>
-            /// <para>Assume that you have calculated TotalNumber and 5XXNumber by aggregating the data. TotalNumber indicates the total number of HTTP requests, and 5XXNumber indicates the number of HTTP requests whose status code is greater than 499. You can calculate the server error rate by adding the following formula to the extended field: 5XXNumber/TotalNumber\*100.</para>
+            /// <para>For example, if you have calculated TotalNumber and 5XXNumber by aggregating the data. TotalNumber indicates the total number of HTTP requests, and 5XXNumber indicates the number of HTTP requests whose status code is greater than 499. You can calculate the server error rate by adding the following formula to the extended field: 5XXNumber/TotalNumber\*100.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;extend&quot;:{&quot;errorPercent&quot;:&quot;5XXNumber/TotalNumber*100&quot;}}</para>
@@ -148,7 +145,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string MetricExpress { get; set; }
 
             /// <summary>
-            /// <para>The name of the log monitoring metric. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
+            /// <para>The metric name. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cpu_total</para>
@@ -158,7 +155,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string MetricName { get; set; }
 
             /// <summary>
-            /// <para>The name of the Log Service Logstore.</para>
+            /// <para>The name of the Simple Log Service Logstore.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-logstore</para>
@@ -168,7 +165,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string SlsLogstore { get; set; }
 
             /// <summary>
-            /// <para>The name of the Log Service project.</para>
+            /// <para>The name of the SLS project.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-project</para>
@@ -178,7 +175,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string SlsProject { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region where the Log Service Logstore resides.</para>
+            /// <para>The ID of the region where the Simple Log Service (SLS) Logstore resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -187,16 +184,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public string SlsRegionId { get; set; }
 
-            /// <summary>
-            /// <para>The size of the tumbling window for calculation. Unit: seconds. The system performs an aggregation for each tumbling window.</para>
-            /// </summary>
             [NameInMap("Tumblingwindows")]
             [Validation(Required=false)]
             public List<string> Tumblingwindows { get; set; }
 
             /// <summary>
             /// <para>The condition that is used to filter logs. The ValueFilter and ValueFilterRelation parameters are used in pair. The filter condition is equivalent to the WHERE clause in SQL statements.</para>
-            /// <para>If no filter condition is specified, all logs are processed. Assume that logs contain the Level field, which may be set to Error. If you need to calculate the number of times that logs of the Error level appear every minute, you can set the filter condition to Level=Error and count the number of logs that meet this condition.</para>
+            /// <para>If no filter condition is specified, all logs are processed. For example, logs contain the Level and Error fields. If you need to calculate the number of times that logs of the Error level appear every minute, you can set the filter condition to Level=Error and count the number of logs that meet this condition.</para>
             /// </summary>
             [NameInMap("ValueFilter")]
             [Validation(Required=false)]
@@ -215,8 +209,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// <summary>
                 /// <para>The method that is used to match the field value. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><c>contain</c></description></item>
-                /// <item><description><c>notContain</c></description></item>
+                /// <item><description><c>contain</c>: contains</description></item>
+                /// <item><description><c>notContain</c>: does not contain</description></item>
                 /// <item><description><c>&gt;</c>: greater than</description></item>
                 /// <item><description><c>&lt;</c>: less than</description></item>
                 /// <item><description><c>&gt;=</c>: greater than or equal to</description></item>
@@ -243,7 +237,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// <para>The logical operator that is used between log filter conditions. The ValueFilter and ValueFilterRelation parameters are used in pair. Valid values:</para>
+            /// <para>The logical operator that is used between log filter conditions. The ValueFilter and ValueFilterRelation parameters must be used in pair. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>and</description></item>
             /// <item><description>or</description></item>
@@ -259,7 +253,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// <para>The returned message. If the call was successful, the value success is returned. If the call failed, an error message is returned.</para>
+        /// <para>The returned message. If the request was successful, a success message is returned. If the request failed, an error message is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -269,7 +263,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C6718537-E673-4A58-8EE1-24B8B38C7AAE</para>
@@ -279,10 +273,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The call was successful.</description></item>
-        /// <item><description>false: The call failed.</description></item>
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

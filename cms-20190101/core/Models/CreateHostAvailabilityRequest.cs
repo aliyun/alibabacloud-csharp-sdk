@@ -400,8 +400,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The range of instances that are monitored by the availability monitoring task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>GROUP: All Elastic Compute Service (ECS) instances in the application group are monitored.</description></item>
-        /// <item><description>GROUP_SPEC_INSTANCE: Specified ECS instances in the application group are monitored. The TaskScope parameter must be used in combination with the InstanceList.N parameter. The InstanceList.N parameter specifies the ECS instances to be monitored.</description></item>
+        /// <item><description>GROUP: All ECS instances in the application group are monitored.</description></item>
+        /// <item><description>GROUP_SPEC_INSTANCE: Specified ECS instances in the application group are monitored. The TaskScope parameter must be used in combination with the InstanceList parameter. The InstanceList parameter specifies the ECS instances to be monitored.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -22,6 +22,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string ContactGroupName { get; set; }
 
         /// <summary>
+        /// <para>The name of the alert contact. Valid values of N: 1 to 100.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Alice</para>
         /// </summary>
@@ -46,7 +48,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <item><description>false: The weekly report subscription feature is disabled.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> You can enable the weekly report subscription only for an Alibaba Cloud account that has at least five Elastic Compute Service (ECS) instances.</para>
+        /// <para> You can enable the weekly report subscription feature only for an Alibaba Cloud account that has at least five Elastic Compute Service (ECS) instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

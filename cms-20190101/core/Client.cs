@@ -1436,9 +1436,9 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h1><a href="#"></a>Prerequisites</h1>
+        /// <h2><a href="#"></a>Prerequisites</h2>
         /// <para>Hybrid Cloud Monitoring is activated. For more information, see <a href="https://help.aliyun.com/document_detail/250773.html">Activate Hybrid Cloud Monitoring</a>.</para>
-        /// <h1><a href="#"></a>Description</h1>
+        /// <h2><a href="#"></a>Operation description</h2>
         /// <para>This topic provides an example on how to create a namespace named <c>aliyun</c>. In this example, the data retention period of the namespace is set to <c>cms.s1.3xlarge</c>. The returned result indicates that the namespace is created.</para>
         /// </description>
         /// 
@@ -1502,9 +1502,9 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h1><a href="#"></a>Prerequisites</h1>
+        /// <h2><a href="#"></a>Prerequisites</h2>
         /// <para>Hybrid Cloud Monitoring is activated. For more information, see <a href="https://help.aliyun.com/document_detail/250773.html">Activate Hybrid Cloud Monitoring</a>.</para>
-        /// <h1><a href="#"></a>Description</h1>
+        /// <h2><a href="#"></a>Operation description</h2>
         /// <para>This topic provides an example on how to create a namespace named <c>aliyun</c>. In this example, the data retention period of the namespace is set to <c>cms.s1.3xlarge</c>. The returned result indicates that the namespace is created.</para>
         /// </description>
         /// 
@@ -1568,9 +1568,9 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h1><a href="#"></a>Prerequisites</h1>
+        /// <h2><a href="#"></a>Prerequisites</h2>
         /// <para>Hybrid Cloud Monitoring is activated. For more information, see <a href="https://help.aliyun.com/document_detail/250773.html">Activate Hybrid Cloud Monitoring</a>.</para>
-        /// <h1><a href="#"></a>Description</h1>
+        /// <h2><a href="#"></a>Operation description</h2>
         /// <para>This topic provides an example on how to create a namespace named <c>aliyun</c>. In this example, the data retention period of the namespace is set to <c>cms.s1.3xlarge</c>. The returned result indicates that the namespace is created.</para>
         /// </description>
         /// 
@@ -1594,9 +1594,9 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h1><a href="#"></a>Prerequisites</h1>
+        /// <h2><a href="#"></a>Prerequisites</h2>
         /// <para>Hybrid Cloud Monitoring is activated. For more information, see <a href="https://help.aliyun.com/document_detail/250773.html">Activate Hybrid Cloud Monitoring</a>.</para>
-        /// <h1><a href="#"></a>Description</h1>
+        /// <h2><a href="#"></a>Operation description</h2>
         /// <para>This topic provides an example on how to create a namespace named <c>aliyun</c>. In this example, the data retention period of the namespace is set to <c>cms.s1.3xlarge</c>. The returned result indicates that the namespace is created.</para>
         /// </description>
         /// 
@@ -1620,9 +1620,9 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a>Prerequisites</h2>
+        /// <h3><a href="#"></a>Prerequisites</h3>
         /// <para>Simple Log Service is activated. A project and a Logstore are created in Simple Log Service. For more information, see <a href="https://help.aliyun.com/document_detail/54604.html">Getting Started</a>.</para>
-        /// <h2><a href="#"></a>Description</h2>
+        /// <h3><a href="#"></a>Operation description</h3>
         /// <para>This topic provides an example on how to create a Logstore group named <c>Logstore_test</c>. The region ID is <c>cn-hangzhou</c>. The project is <c>aliyun-project</c>. The Logstore is <c>Logstore-ECS</c>. The response shows that the Logstore group is created.</para>
         /// </description>
         /// 
@@ -1678,9 +1678,9 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a>Prerequisites</h2>
+        /// <h3><a href="#"></a>Prerequisites</h3>
         /// <para>Simple Log Service is activated. A project and a Logstore are created in Simple Log Service. For more information, see <a href="https://help.aliyun.com/document_detail/54604.html">Getting Started</a>.</para>
-        /// <h2><a href="#"></a>Description</h2>
+        /// <h3><a href="#"></a>Operation description</h3>
         /// <para>This topic provides an example on how to create a Logstore group named <c>Logstore_test</c>. The region ID is <c>cn-hangzhou</c>. The project is <c>aliyun-project</c>. The Logstore is <c>Logstore-ECS</c>. The response shows that the Logstore group is created.</para>
         /// </description>
         /// 
@@ -1736,9 +1736,9 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a>Prerequisites</h2>
+        /// <h3><a href="#"></a>Prerequisites</h3>
         /// <para>Simple Log Service is activated. A project and a Logstore are created in Simple Log Service. For more information, see <a href="https://help.aliyun.com/document_detail/54604.html">Getting Started</a>.</para>
-        /// <h2><a href="#"></a>Description</h2>
+        /// <h3><a href="#"></a>Operation description</h3>
         /// <para>This topic provides an example on how to create a Logstore group named <c>Logstore_test</c>. The region ID is <c>cn-hangzhou</c>. The project is <c>aliyun-project</c>. The Logstore is <c>Logstore-ECS</c>. The response shows that the Logstore group is created.</para>
         /// </description>
         /// 
@@ -1762,9 +1762,9 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a>Prerequisites</h2>
+        /// <h3><a href="#"></a>Prerequisites</h3>
         /// <para>Simple Log Service is activated. A project and a Logstore are created in Simple Log Service. For more information, see <a href="https://help.aliyun.com/document_detail/54604.html">Getting Started</a>.</para>
-        /// <h2><a href="#"></a>Description</h2>
+        /// <h3><a href="#"></a>Operation description</h3>
         /// <para>This topic provides an example on how to create a Logstore group named <c>Logstore_test</c>. The region ID is <c>cn-hangzhou</c>. The project is <c>aliyun-project</c>. The Logstore is <c>Logstore-ECS</c>. The response shows that the Logstore group is created.</para>
         /// </description>
         /// 
@@ -3349,7 +3349,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>If the policy is valid, no alert notifications are sent for the application group.
-        /// This topic describes how to create the <c>PauseNotify</c> policy to pause alert notifications for the <c>7301****</c> application group. The StartTime parameter is set to <c>1622949300000</c> and the EndTime parameter is set to <c>1623208500000</c>. This indicates that the policy is valid from <c>2021-06-06 11:15:00 UTC+8</c> to <c>2021-06-09 11:15:00 UTC+8</c>.</para>
+        /// This topic describes how to create a <c>PauseNotify</c> policy to pause alert notifications for the <c>7301****</c> application group. The StartTime parameter is set to <c>1622949300000</c> and the EndTime parameter is set to <c>1623208500000</c>. This indicates that the policy is valid from <c>2021-06-06 11:15:00 UTC+8</c> to <c>2021-06-09 11:15:00 UTC+8</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3409,7 +3409,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>If the policy is valid, no alert notifications are sent for the application group.
-        /// This topic describes how to create the <c>PauseNotify</c> policy to pause alert notifications for the <c>7301****</c> application group. The StartTime parameter is set to <c>1622949300000</c> and the EndTime parameter is set to <c>1623208500000</c>. This indicates that the policy is valid from <c>2021-06-06 11:15:00 UTC+8</c> to <c>2021-06-09 11:15:00 UTC+8</c>.</para>
+        /// This topic describes how to create a <c>PauseNotify</c> policy to pause alert notifications for the <c>7301****</c> application group. The StartTime parameter is set to <c>1622949300000</c> and the EndTime parameter is set to <c>1623208500000</c>. This indicates that the policy is valid from <c>2021-06-06 11:15:00 UTC+8</c> to <c>2021-06-09 11:15:00 UTC+8</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3469,7 +3469,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>If the policy is valid, no alert notifications are sent for the application group.
-        /// This topic describes how to create the <c>PauseNotify</c> policy to pause alert notifications for the <c>7301****</c> application group. The StartTime parameter is set to <c>1622949300000</c> and the EndTime parameter is set to <c>1623208500000</c>. This indicates that the policy is valid from <c>2021-06-06 11:15:00 UTC+8</c> to <c>2021-06-09 11:15:00 UTC+8</c>.</para>
+        /// This topic describes how to create a <c>PauseNotify</c> policy to pause alert notifications for the <c>7301****</c> application group. The StartTime parameter is set to <c>1622949300000</c> and the EndTime parameter is set to <c>1623208500000</c>. This indicates that the policy is valid from <c>2021-06-06 11:15:00 UTC+8</c> to <c>2021-06-09 11:15:00 UTC+8</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3493,7 +3493,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>If the policy is valid, no alert notifications are sent for the application group.
-        /// This topic describes how to create the <c>PauseNotify</c> policy to pause alert notifications for the <c>7301****</c> application group. The StartTime parameter is set to <c>1622949300000</c> and the EndTime parameter is set to <c>1623208500000</c>. This indicates that the policy is valid from <c>2021-06-06 11:15:00 UTC+8</c> to <c>2021-06-09 11:15:00 UTC+8</c>.</para>
+        /// This topic describes how to create a <c>PauseNotify</c> policy to pause alert notifications for the <c>7301****</c> application group. The StartTime parameter is set to <c>1622949300000</c> and the EndTime parameter is set to <c>1623208500000</c>. This indicates that the policy is valid from <c>2021-06-06 11:15:00 UTC+8</c> to <c>2021-06-09 11:15:00 UTC+8</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3511,7 +3511,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a task to monitor a specified process.</para>
+        /// <para>Creates a task to monitor a process.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3561,7 +3561,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a task to monitor a specified process.</para>
+        /// <para>Creates a task to monitor a process.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3611,7 +3611,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a task to monitor a specified process.</para>
+        /// <para>Creates a task to monitor a process.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3629,7 +3629,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a task to monitor a specified process.</para>
+        /// <para>Creates a task to monitor a process.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4183,7 +4183,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an alert group.</para>
+        /// <para>Deletes an alert contact group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4225,7 +4225,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an alert group.</para>
+        /// <para>Deletes an alert contact group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4267,7 +4267,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an alert group.</para>
+        /// <para>Deletes an alert contact group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4285,7 +4285,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an alert group.</para>
+        /// <para>Deletes an alert contact group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4695,7 +4695,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more event-triggered alert rules.</para>
+        /// <para>Deletes event-triggered alert rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4737,7 +4737,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more event-triggered alert rules.</para>
+        /// <para>Deletes event-triggered alert rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4779,7 +4779,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more event-triggered alert rules.</para>
+        /// <para>Deletes event-triggered alert rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4797,7 +4797,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more event-triggered alert rules.</para>
+        /// <para>Deletes event-triggered alert rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5183,7 +5183,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more availability monitoring tasks.</para>
+        /// <para>Deletes availability monitoring tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5225,7 +5225,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more availability monitoring tasks.</para>
+        /// <para>Deletes availability monitoring tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5267,7 +5267,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more availability monitoring tasks.</para>
+        /// <para>Deletes availability monitoring tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5285,7 +5285,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more availability monitoring tasks.</para>
+        /// <para>Deletes availability monitoring tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6607,7 +6607,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a rule that is used to dynamically add instances of a service that meet the rule to an application group.</para>
+        /// <para>Deletes a rule that is used to dynamically add the instances of a service to an application group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6653,7 +6653,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a rule that is used to dynamically add instances of a service that meet the rule to an application group.</para>
+        /// <para>Deletes a rule that is used to dynamically add the instances of a service to an application group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6699,7 +6699,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a rule that is used to dynamically add instances of a service that meet the rule to an application group.</para>
+        /// <para>Deletes a rule that is used to dynamically add the instances of a service to an application group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6717,7 +6717,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a rule that is used to dynamically add instances of a service that meet the rule to an application group.</para>
+        /// <para>Deletes a rule that is used to dynamically add the instances of a service to an application group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7405,7 +7405,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// <returns>
         /// DescribeAlertHistoryListResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeAlertHistoryList is deprecated, please use Cms::2019-01-01::DescribeAlertLogList instead.\n")]
+        [Obsolete("OpenAPI DescribeAlertHistoryList is deprecated, please use Cms::2019-01-01::DescribeAlertLogList instead.")]
         // Deprecated
         public DescribeAlertHistoryListResponse DescribeAlertHistoryListWithOptions(DescribeAlertHistoryListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7502,7 +7502,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// <returns>
         /// DescribeAlertHistoryListResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeAlertHistoryList is deprecated, please use Cms::2019-01-01::DescribeAlertLogList instead.\n")]
+        [Obsolete("OpenAPI DescribeAlertHistoryList is deprecated, please use Cms::2019-01-01::DescribeAlertLogList instead.")]
         // Deprecated
         public async Task<DescribeAlertHistoryListResponse> DescribeAlertHistoryListWithOptionsAsync(DescribeAlertHistoryListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -7596,7 +7596,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// <returns>
         /// DescribeAlertHistoryListResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeAlertHistoryList is deprecated, please use Cms::2019-01-01::DescribeAlertLogList instead.\n")]
+        [Obsolete("OpenAPI DescribeAlertHistoryList is deprecated, please use Cms::2019-01-01::DescribeAlertLogList instead.")]
         // Deprecated
         public DescribeAlertHistoryListResponse DescribeAlertHistoryList(DescribeAlertHistoryListRequest request)
         {
@@ -7625,7 +7625,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// <returns>
         /// DescribeAlertHistoryListResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribeAlertHistoryList is deprecated, please use Cms::2019-01-01::DescribeAlertLogList instead.\n")]
+        [Obsolete("OpenAPI DescribeAlertHistoryList is deprecated, please use Cms::2019-01-01::DescribeAlertLogList instead.")]
         // Deprecated
         public async Task<DescribeAlertHistoryListResponse> DescribeAlertHistoryListAsync(DescribeAlertHistoryListRequest request)
         {
@@ -8983,7 +8983,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a custom event that occurred in a specified time period.</para>
+        /// <para>Queries the details of a custom event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9053,7 +9053,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a custom event that occurred in a specified time period.</para>
+        /// <para>Queries the details of a custom event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9123,7 +9123,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a custom event that occurred in a specified time period.</para>
+        /// <para>Queries the details of a custom event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9141,7 +9141,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a custom event that occurred in a specified time period.</para>
+        /// <para>Queries the details of a custom event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9159,13 +9159,13 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of times that a custom event occurred in a specified time period.</para>
+        /// <para>Queries the number of times that a custom event occurred within a period of time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> This operation counts the number of times that a custom event occurred for each service.</para>
+        /// <para> This operation queries the number of times that a custom event occurred for each service.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -9228,13 +9228,13 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of times that a custom event occurred in a specified time period.</para>
+        /// <para>Queries the number of times that a custom event occurred within a period of time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> This operation counts the number of times that a custom event occurred for each service.</para>
+        /// <para> This operation queries the number of times that a custom event occurred for each service.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -9297,13 +9297,13 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of times that a custom event occurred in a specified time period.</para>
+        /// <para>Queries the number of times that a custom event occurred within a period of time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> This operation counts the number of times that a custom event occurred for each service.</para>
+        /// <para> This operation queries the number of times that a custom event occurred for each service.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -9322,13 +9322,13 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of times that a custom event occurred in a specified time period.</para>
+        /// <para>Queries the number of times that a custom event occurred within a period of time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> This operation counts the number of times that a custom event occurred for each service.</para>
+        /// <para> This operation queries the number of times that a custom event occurred for each service.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -9347,7 +9347,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of times that a custom event occurred during each interval of a time period.</para>
+        /// <para>Queries the number of times that a custom event occurred during each interval within a period of time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9413,7 +9413,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of times that a custom event occurred during each interval of a time period.</para>
+        /// <para>Queries the number of times that a custom event occurred during each interval within a period of time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9479,7 +9479,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of times that a custom event occurred during each interval of a time period.</para>
+        /// <para>Queries the number of times that a custom event occurred during each interval within a period of time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9497,7 +9497,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of times that a custom event occurred during each interval of a time period.</para>
+        /// <para>Queries the number of times that a custom event occurred during each interval within a period of time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10928,11 +10928,11 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h1><a href="#"></a>Prerequisites</h1>
+        /// <h2><a href="#"></a>Prerequisites</h2>
         /// <para>Hybrid Cloud Monitoring is activated. For more information, see <a href="https://help.aliyun.com/document_detail/250773.html">Activate Hybrid Cloud Monitoring</a>.</para>
-        /// <h1><a href="#"></a>Limits</h1>
+        /// <h2><a href="#"></a>Limits</h2>
         /// <para>The size of monitoring data that is returned in each call cannot exceed 1.5 MB. If the returned data reaches the upper limit, the query fails. You must reset the query conditions.</para>
-        /// <h1><a href="#"></a>Description</h1>
+        /// <h2><a href="#"></a>Operation description</h2>
         /// <para>This topic provides an example to show how to query the monitoring data of the <c>AliyunEcs_cpu_total</c> metric in the <c>default-aliyun</c> namespace from <c>1653804865</c> (14:14:25 on May 29, 2022) to <c>1653805225</c> (14:20:25 on May 29, 2022).</para>
         /// </description>
         /// 
@@ -10996,11 +10996,11 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h1><a href="#"></a>Prerequisites</h1>
+        /// <h2><a href="#"></a>Prerequisites</h2>
         /// <para>Hybrid Cloud Monitoring is activated. For more information, see <a href="https://help.aliyun.com/document_detail/250773.html">Activate Hybrid Cloud Monitoring</a>.</para>
-        /// <h1><a href="#"></a>Limits</h1>
+        /// <h2><a href="#"></a>Limits</h2>
         /// <para>The size of monitoring data that is returned in each call cannot exceed 1.5 MB. If the returned data reaches the upper limit, the query fails. You must reset the query conditions.</para>
-        /// <h1><a href="#"></a>Description</h1>
+        /// <h2><a href="#"></a>Operation description</h2>
         /// <para>This topic provides an example to show how to query the monitoring data of the <c>AliyunEcs_cpu_total</c> metric in the <c>default-aliyun</c> namespace from <c>1653804865</c> (14:14:25 on May 29, 2022) to <c>1653805225</c> (14:20:25 on May 29, 2022).</para>
         /// </description>
         /// 
@@ -11064,11 +11064,11 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h1><a href="#"></a>Prerequisites</h1>
+        /// <h2><a href="#"></a>Prerequisites</h2>
         /// <para>Hybrid Cloud Monitoring is activated. For more information, see <a href="https://help.aliyun.com/document_detail/250773.html">Activate Hybrid Cloud Monitoring</a>.</para>
-        /// <h1><a href="#"></a>Limits</h1>
+        /// <h2><a href="#"></a>Limits</h2>
         /// <para>The size of monitoring data that is returned in each call cannot exceed 1.5 MB. If the returned data reaches the upper limit, the query fails. You must reset the query conditions.</para>
-        /// <h1><a href="#"></a>Description</h1>
+        /// <h2><a href="#"></a>Operation description</h2>
         /// <para>This topic provides an example to show how to query the monitoring data of the <c>AliyunEcs_cpu_total</c> metric in the <c>default-aliyun</c> namespace from <c>1653804865</c> (14:14:25 on May 29, 2022) to <c>1653805225</c> (14:20:25 on May 29, 2022).</para>
         /// </description>
         /// 
@@ -11092,11 +11092,11 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h1><a href="#"></a>Prerequisites</h1>
+        /// <h2><a href="#"></a>Prerequisites</h2>
         /// <para>Hybrid Cloud Monitoring is activated. For more information, see <a href="https://help.aliyun.com/document_detail/250773.html">Activate Hybrid Cloud Monitoring</a>.</para>
-        /// <h1><a href="#"></a>Limits</h1>
+        /// <h2><a href="#"></a>Limits</h2>
         /// <para>The size of monitoring data that is returned in each call cannot exceed 1.5 MB. If the returned data reaches the upper limit, the query fails. You must reset the query conditions.</para>
-        /// <h1><a href="#"></a>Description</h1>
+        /// <h2><a href="#"></a>Operation description</h2>
         /// <para>This topic provides an example to show how to query the monitoring data of the <c>AliyunEcs_cpu_total</c> metric in the <c>default-aliyun</c> namespace from <c>1653804865</c> (14:14:25 on May 29, 2022) to <c>1653805225</c> (14:20:25 on May 29, 2022).</para>
         /// </description>
         /// 
@@ -11911,17 +11911,20 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the monitoring data of a metric for a specified cloud service.</para>
+        /// <para>Queries the monitoring data of a metric for a cloud service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3><a href="#"></a>Limits</h3>
-        /// <para>Each API operation can be called up to 10 times per second. An Alibaba Cloud account and the RAM users within the account share the quota.</para>
+        /// <list type="bullet">
+        /// <item><description>The total free quota is 1 million calls per month for the DescribeMetricLast, DescribeMetricList, DescribeMetricData, and DescribeMetricTop operations. If the free quota is used up and CloudMonitor Basic (pay-as-you-go) is not activated, these API operations can no longer be called as expected. If you have activated CloudMonitor Basic (pay-as-you-go), these API operations can still be called even if the free quota is used up. If the free quota is used up, you are automatically charged for the excess usage based on the pay-as-you-go billing method. For more information about how to activate CloudMonitor Basic (pay-as-you-go), see <a href="https://common-buy.aliyun.com/?spm=a2c4g.11186623.0.0.6c8f3481IbSHgG%5C&commodityCode=cms_basic_public_cn%5C&from_biz_channel=help_bill">Enable the pay-as-you-go billing method</a>.</description></item>
+        /// <item><description>Each API operation can be called up to 10 times per second. An Alibaba Cloud account and the Resource Access Management (RAM) users within the account share the quota.</description></item>
+        /// </list>
         /// <h3><a href="#"></a>Description</h3>
         /// <remarks>
         /// <para> Different from <a href="https://help.aliyun.com/document_detail/51936.html">DescribeMetricList</a>, the DescribeMetricData operation provides statistical features. You can set the Dimension parameter to <c>{&quot;instanceId&quot;: &quot;i-abcdefgh12****&quot;}</c> to aggregate all data of your Alibaba Cloud account.
-        /// This topic provides an example to show how to query the monitoring data of the <c>cpu_idle</c> metric for Elastic Compute Service (ECS). The namespace of ECS is <c>acs_ecs_dashboard</c>.</para>
+        /// This topic provides an example on how to query the monitoring data of the <c>cpu_idle</c> metric for Elastic Compute Service (ECS). The namespace of ECS is <c>acs_ecs_dashboard</c>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -11992,17 +11995,20 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the monitoring data of a metric for a specified cloud service.</para>
+        /// <para>Queries the monitoring data of a metric for a cloud service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3><a href="#"></a>Limits</h3>
-        /// <para>Each API operation can be called up to 10 times per second. An Alibaba Cloud account and the RAM users within the account share the quota.</para>
+        /// <list type="bullet">
+        /// <item><description>The total free quota is 1 million calls per month for the DescribeMetricLast, DescribeMetricList, DescribeMetricData, and DescribeMetricTop operations. If the free quota is used up and CloudMonitor Basic (pay-as-you-go) is not activated, these API operations can no longer be called as expected. If you have activated CloudMonitor Basic (pay-as-you-go), these API operations can still be called even if the free quota is used up. If the free quota is used up, you are automatically charged for the excess usage based on the pay-as-you-go billing method. For more information about how to activate CloudMonitor Basic (pay-as-you-go), see <a href="https://common-buy.aliyun.com/?spm=a2c4g.11186623.0.0.6c8f3481IbSHgG%5C&commodityCode=cms_basic_public_cn%5C&from_biz_channel=help_bill">Enable the pay-as-you-go billing method</a>.</description></item>
+        /// <item><description>Each API operation can be called up to 10 times per second. An Alibaba Cloud account and the Resource Access Management (RAM) users within the account share the quota.</description></item>
+        /// </list>
         /// <h3><a href="#"></a>Description</h3>
         /// <remarks>
         /// <para> Different from <a href="https://help.aliyun.com/document_detail/51936.html">DescribeMetricList</a>, the DescribeMetricData operation provides statistical features. You can set the Dimension parameter to <c>{&quot;instanceId&quot;: &quot;i-abcdefgh12****&quot;}</c> to aggregate all data of your Alibaba Cloud account.
-        /// This topic provides an example to show how to query the monitoring data of the <c>cpu_idle</c> metric for Elastic Compute Service (ECS). The namespace of ECS is <c>acs_ecs_dashboard</c>.</para>
+        /// This topic provides an example on how to query the monitoring data of the <c>cpu_idle</c> metric for Elastic Compute Service (ECS). The namespace of ECS is <c>acs_ecs_dashboard</c>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -12073,17 +12079,20 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the monitoring data of a metric for a specified cloud service.</para>
+        /// <para>Queries the monitoring data of a metric for a cloud service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3><a href="#"></a>Limits</h3>
-        /// <para>Each API operation can be called up to 10 times per second. An Alibaba Cloud account and the RAM users within the account share the quota.</para>
+        /// <list type="bullet">
+        /// <item><description>The total free quota is 1 million calls per month for the DescribeMetricLast, DescribeMetricList, DescribeMetricData, and DescribeMetricTop operations. If the free quota is used up and CloudMonitor Basic (pay-as-you-go) is not activated, these API operations can no longer be called as expected. If you have activated CloudMonitor Basic (pay-as-you-go), these API operations can still be called even if the free quota is used up. If the free quota is used up, you are automatically charged for the excess usage based on the pay-as-you-go billing method. For more information about how to activate CloudMonitor Basic (pay-as-you-go), see <a href="https://common-buy.aliyun.com/?spm=a2c4g.11186623.0.0.6c8f3481IbSHgG%5C&commodityCode=cms_basic_public_cn%5C&from_biz_channel=help_bill">Enable the pay-as-you-go billing method</a>.</description></item>
+        /// <item><description>Each API operation can be called up to 10 times per second. An Alibaba Cloud account and the Resource Access Management (RAM) users within the account share the quota.</description></item>
+        /// </list>
         /// <h3><a href="#"></a>Description</h3>
         /// <remarks>
         /// <para> Different from <a href="https://help.aliyun.com/document_detail/51936.html">DescribeMetricList</a>, the DescribeMetricData operation provides statistical features. You can set the Dimension parameter to <c>{&quot;instanceId&quot;: &quot;i-abcdefgh12****&quot;}</c> to aggregate all data of your Alibaba Cloud account.
-        /// This topic provides an example to show how to query the monitoring data of the <c>cpu_idle</c> metric for Elastic Compute Service (ECS). The namespace of ECS is <c>acs_ecs_dashboard</c>.</para>
+        /// This topic provides an example on how to query the monitoring data of the <c>cpu_idle</c> metric for Elastic Compute Service (ECS). The namespace of ECS is <c>acs_ecs_dashboard</c>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -12102,17 +12111,20 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the monitoring data of a metric for a specified cloud service.</para>
+        /// <para>Queries the monitoring data of a metric for a cloud service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3><a href="#"></a>Limits</h3>
-        /// <para>Each API operation can be called up to 10 times per second. An Alibaba Cloud account and the RAM users within the account share the quota.</para>
+        /// <list type="bullet">
+        /// <item><description>The total free quota is 1 million calls per month for the DescribeMetricLast, DescribeMetricList, DescribeMetricData, and DescribeMetricTop operations. If the free quota is used up and CloudMonitor Basic (pay-as-you-go) is not activated, these API operations can no longer be called as expected. If you have activated CloudMonitor Basic (pay-as-you-go), these API operations can still be called even if the free quota is used up. If the free quota is used up, you are automatically charged for the excess usage based on the pay-as-you-go billing method. For more information about how to activate CloudMonitor Basic (pay-as-you-go), see <a href="https://common-buy.aliyun.com/?spm=a2c4g.11186623.0.0.6c8f3481IbSHgG%5C&commodityCode=cms_basic_public_cn%5C&from_biz_channel=help_bill">Enable the pay-as-you-go billing method</a>.</description></item>
+        /// <item><description>Each API operation can be called up to 10 times per second. An Alibaba Cloud account and the Resource Access Management (RAM) users within the account share the quota.</description></item>
+        /// </list>
         /// <h3><a href="#"></a>Description</h3>
         /// <remarks>
         /// <para> Different from <a href="https://help.aliyun.com/document_detail/51936.html">DescribeMetricList</a>, the DescribeMetricData operation provides statistical features. You can set the Dimension parameter to <c>{&quot;instanceId&quot;: &quot;i-abcdefgh12****&quot;}</c> to aggregate all data of your Alibaba Cloud account.
-        /// This topic provides an example to show how to query the monitoring data of the <c>cpu_idle</c> metric for Elastic Compute Service (ECS). The namespace of ECS is <c>acs_ecs_dashboard</c>.</para>
+        /// This topic provides an example on how to query the monitoring data of the <c>cpu_idle</c> metric for Elastic Compute Service (ECS). The namespace of ECS is <c>acs_ecs_dashboard</c>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -12137,18 +12149,21 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3><a href="#"></a>Limits</h3>
-        /// <para>Each API operation can be called up to 50 times per second. An Alibaba Cloud account and the RAM users within the account share the quota.</para>
-        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The total free quota is 1 million calls per month for the DescribeMetricLast, DescribeMetricList, DescribeMetricData, and DescribeMetricTop operations. If the free quota is used up and CloudMonitor Basic (pay-as-you-go) is not activated, these API operations can no longer be called as expected. If you have activated CloudMonitor Basic (pay-as-you-go), these API operations can still be called even if the free quota is used up. After the free quota is used up, you are charged for the excess usage based on the pay-as-you-go billing method. For more information about how to activate CloudMonitor Basic (pay-as-you-go), see <a href="https://common-buy.aliyun.com/?spm=a2c4g.11186623.0.0.6c8f3481IbSHgG%5C&commodityCode=cms_basic_public_cn%5C&from_biz_channel=help_bill">Enable the pay-as-you-go billing method</a>.</description></item>
+        /// <item><description>Each API operation can be called up to 50 times per second. An Alibaba Cloud account and the Resource Access Management (RAM) users within the account share the quota.<remarks>
         /// <para> If <c>Throttling.User</c> or <c>Request was denied due to user flow control</c> is returned when you call an API operation, the API operation is throttled. For more information about how to handle the issue, see <a href="https://help.aliyun.com/document_detail/2615031.html">How do I handle the throttling of a query API?</a></para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// <h3><a href="#"></a>Precautions</h3>
         /// <para>The storage duration of the monitoring data of each cloud service is related to the <c>Period</c> parameter (statistical period). A larger value of the <c>Period</c> parameter indicates that the monitoring data is distributed in a larger time range and the storage duration of the monitoring data is longer. The following list describes the specific relationships:</para>
         /// <list type="bullet">
-        /// <item><description>If the value of the <c>Period</c> parameter is less than 60 seconds, the storage duration is seven days.</description></item>
-        /// <item><description>If the value of the <c>Period</c> parameter is 60 seconds, the storage duration is 31 days.</description></item>
-        /// <item><description>If the value of the <c>Period</c> parameter is 300 seconds, the storage duration is 91 days.</description></item>
+        /// <item><description>The storage duration is 7 days if the value of the <c>Period</c> parameter is less than 60 seconds.</description></item>
+        /// <item><description>The storage duration is 31 days if the value of the <c>Period</c> parameter is 60 seconds.</description></item>
+        /// <item><description>The storage duration is 91 days if the value of the <c>Period</c> parameter is greater than or equal to 300 seconds.</description></item>
         /// </list>
-        /// <h3><a href="#"></a>Description</h3>
+        /// <h3><a href="#"></a>Operation description</h3>
         /// <para>This topic provides an example on how to query the latest monitoring data of the <c>CPUUtilization</c> metric for Elastic Compute Service (ECS). The namespace of ECS is <c>acs_ecs_dashboard</c>. The returned result indicates that the monitoring data for the instance <c>i-abcdefgh12****</c> of the account <c>123456789876****</c> is queried at an interval of 60 seconds. The maximum, minimum, and average values of the metric are 100, 93.1, and 99.52.</para>
         /// </description>
         /// 
@@ -12229,18 +12244,21 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3><a href="#"></a>Limits</h3>
-        /// <para>Each API operation can be called up to 50 times per second. An Alibaba Cloud account and the RAM users within the account share the quota.</para>
-        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The total free quota is 1 million calls per month for the DescribeMetricLast, DescribeMetricList, DescribeMetricData, and DescribeMetricTop operations. If the free quota is used up and CloudMonitor Basic (pay-as-you-go) is not activated, these API operations can no longer be called as expected. If you have activated CloudMonitor Basic (pay-as-you-go), these API operations can still be called even if the free quota is used up. After the free quota is used up, you are charged for the excess usage based on the pay-as-you-go billing method. For more information about how to activate CloudMonitor Basic (pay-as-you-go), see <a href="https://common-buy.aliyun.com/?spm=a2c4g.11186623.0.0.6c8f3481IbSHgG%5C&commodityCode=cms_basic_public_cn%5C&from_biz_channel=help_bill">Enable the pay-as-you-go billing method</a>.</description></item>
+        /// <item><description>Each API operation can be called up to 50 times per second. An Alibaba Cloud account and the Resource Access Management (RAM) users within the account share the quota.<remarks>
         /// <para> If <c>Throttling.User</c> or <c>Request was denied due to user flow control</c> is returned when you call an API operation, the API operation is throttled. For more information about how to handle the issue, see <a href="https://help.aliyun.com/document_detail/2615031.html">How do I handle the throttling of a query API?</a></para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// <h3><a href="#"></a>Precautions</h3>
         /// <para>The storage duration of the monitoring data of each cloud service is related to the <c>Period</c> parameter (statistical period). A larger value of the <c>Period</c> parameter indicates that the monitoring data is distributed in a larger time range and the storage duration of the monitoring data is longer. The following list describes the specific relationships:</para>
         /// <list type="bullet">
-        /// <item><description>If the value of the <c>Period</c> parameter is less than 60 seconds, the storage duration is seven days.</description></item>
-        /// <item><description>If the value of the <c>Period</c> parameter is 60 seconds, the storage duration is 31 days.</description></item>
-        /// <item><description>If the value of the <c>Period</c> parameter is 300 seconds, the storage duration is 91 days.</description></item>
+        /// <item><description>The storage duration is 7 days if the value of the <c>Period</c> parameter is less than 60 seconds.</description></item>
+        /// <item><description>The storage duration is 31 days if the value of the <c>Period</c> parameter is 60 seconds.</description></item>
+        /// <item><description>The storage duration is 91 days if the value of the <c>Period</c> parameter is greater than or equal to 300 seconds.</description></item>
         /// </list>
-        /// <h3><a href="#"></a>Description</h3>
+        /// <h3><a href="#"></a>Operation description</h3>
         /// <para>This topic provides an example on how to query the latest monitoring data of the <c>CPUUtilization</c> metric for Elastic Compute Service (ECS). The namespace of ECS is <c>acs_ecs_dashboard</c>. The returned result indicates that the monitoring data for the instance <c>i-abcdefgh12****</c> of the account <c>123456789876****</c> is queried at an interval of 60 seconds. The maximum, minimum, and average values of the metric are 100, 93.1, and 99.52.</para>
         /// </description>
         /// 
@@ -12321,18 +12339,21 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3><a href="#"></a>Limits</h3>
-        /// <para>Each API operation can be called up to 50 times per second. An Alibaba Cloud account and the RAM users within the account share the quota.</para>
-        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The total free quota is 1 million calls per month for the DescribeMetricLast, DescribeMetricList, DescribeMetricData, and DescribeMetricTop operations. If the free quota is used up and CloudMonitor Basic (pay-as-you-go) is not activated, these API operations can no longer be called as expected. If you have activated CloudMonitor Basic (pay-as-you-go), these API operations can still be called even if the free quota is used up. After the free quota is used up, you are charged for the excess usage based on the pay-as-you-go billing method. For more information about how to activate CloudMonitor Basic (pay-as-you-go), see <a href="https://common-buy.aliyun.com/?spm=a2c4g.11186623.0.0.6c8f3481IbSHgG%5C&commodityCode=cms_basic_public_cn%5C&from_biz_channel=help_bill">Enable the pay-as-you-go billing method</a>.</description></item>
+        /// <item><description>Each API operation can be called up to 50 times per second. An Alibaba Cloud account and the Resource Access Management (RAM) users within the account share the quota.<remarks>
         /// <para> If <c>Throttling.User</c> or <c>Request was denied due to user flow control</c> is returned when you call an API operation, the API operation is throttled. For more information about how to handle the issue, see <a href="https://help.aliyun.com/document_detail/2615031.html">How do I handle the throttling of a query API?</a></para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// <h3><a href="#"></a>Precautions</h3>
         /// <para>The storage duration of the monitoring data of each cloud service is related to the <c>Period</c> parameter (statistical period). A larger value of the <c>Period</c> parameter indicates that the monitoring data is distributed in a larger time range and the storage duration of the monitoring data is longer. The following list describes the specific relationships:</para>
         /// <list type="bullet">
-        /// <item><description>If the value of the <c>Period</c> parameter is less than 60 seconds, the storage duration is seven days.</description></item>
-        /// <item><description>If the value of the <c>Period</c> parameter is 60 seconds, the storage duration is 31 days.</description></item>
-        /// <item><description>If the value of the <c>Period</c> parameter is 300 seconds, the storage duration is 91 days.</description></item>
+        /// <item><description>The storage duration is 7 days if the value of the <c>Period</c> parameter is less than 60 seconds.</description></item>
+        /// <item><description>The storage duration is 31 days if the value of the <c>Period</c> parameter is 60 seconds.</description></item>
+        /// <item><description>The storage duration is 91 days if the value of the <c>Period</c> parameter is greater than or equal to 300 seconds.</description></item>
         /// </list>
-        /// <h3><a href="#"></a>Description</h3>
+        /// <h3><a href="#"></a>Operation description</h3>
         /// <para>This topic provides an example on how to query the latest monitoring data of the <c>CPUUtilization</c> metric for Elastic Compute Service (ECS). The namespace of ECS is <c>acs_ecs_dashboard</c>. The returned result indicates that the monitoring data for the instance <c>i-abcdefgh12****</c> of the account <c>123456789876****</c> is queried at an interval of 60 seconds. The maximum, minimum, and average values of the metric are 100, 93.1, and 99.52.</para>
         /// </description>
         /// 
@@ -12357,18 +12378,21 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3><a href="#"></a>Limits</h3>
-        /// <para>Each API operation can be called up to 50 times per second. An Alibaba Cloud account and the RAM users within the account share the quota.</para>
-        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The total free quota is 1 million calls per month for the DescribeMetricLast, DescribeMetricList, DescribeMetricData, and DescribeMetricTop operations. If the free quota is used up and CloudMonitor Basic (pay-as-you-go) is not activated, these API operations can no longer be called as expected. If you have activated CloudMonitor Basic (pay-as-you-go), these API operations can still be called even if the free quota is used up. After the free quota is used up, you are charged for the excess usage based on the pay-as-you-go billing method. For more information about how to activate CloudMonitor Basic (pay-as-you-go), see <a href="https://common-buy.aliyun.com/?spm=a2c4g.11186623.0.0.6c8f3481IbSHgG%5C&commodityCode=cms_basic_public_cn%5C&from_biz_channel=help_bill">Enable the pay-as-you-go billing method</a>.</description></item>
+        /// <item><description>Each API operation can be called up to 50 times per second. An Alibaba Cloud account and the Resource Access Management (RAM) users within the account share the quota.<remarks>
         /// <para> If <c>Throttling.User</c> or <c>Request was denied due to user flow control</c> is returned when you call an API operation, the API operation is throttled. For more information about how to handle the issue, see <a href="https://help.aliyun.com/document_detail/2615031.html">How do I handle the throttling of a query API?</a></para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// <h3><a href="#"></a>Precautions</h3>
         /// <para>The storage duration of the monitoring data of each cloud service is related to the <c>Period</c> parameter (statistical period). A larger value of the <c>Period</c> parameter indicates that the monitoring data is distributed in a larger time range and the storage duration of the monitoring data is longer. The following list describes the specific relationships:</para>
         /// <list type="bullet">
-        /// <item><description>If the value of the <c>Period</c> parameter is less than 60 seconds, the storage duration is seven days.</description></item>
-        /// <item><description>If the value of the <c>Period</c> parameter is 60 seconds, the storage duration is 31 days.</description></item>
-        /// <item><description>If the value of the <c>Period</c> parameter is 300 seconds, the storage duration is 91 days.</description></item>
+        /// <item><description>The storage duration is 7 days if the value of the <c>Period</c> parameter is less than 60 seconds.</description></item>
+        /// <item><description>The storage duration is 31 days if the value of the <c>Period</c> parameter is 60 seconds.</description></item>
+        /// <item><description>The storage duration is 91 days if the value of the <c>Period</c> parameter is greater than or equal to 300 seconds.</description></item>
         /// </list>
-        /// <h3><a href="#"></a>Description</h3>
+        /// <h3><a href="#"></a>Operation description</h3>
         /// <para>This topic provides an example on how to query the latest monitoring data of the <c>CPUUtilization</c> metric for Elastic Compute Service (ECS). The namespace of ECS is <c>acs_ecs_dashboard</c>. The returned result indicates that the monitoring data for the instance <c>i-abcdefgh12****</c> of the account <c>123456789876****</c> is queried at an interval of 60 seconds. The maximum, minimum, and average values of the metric are 100, 93.1, and 99.52.</para>
         /// </description>
         /// 
@@ -13781,16 +13805,19 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3><a href="#"></a>Limits</h3>
-        /// <para>Each API operation can be called up to 10 times per second. An Alibaba Cloud account and the RAM users within the account share the quota.</para>
+        /// <list type="bullet">
+        /// <item><description>The total free quota is 1 million calls per month for the DescribeMetricLast, DescribeMetricList, DescribeMetricData, and DescribeMetricTop operations. If the free quota is used up and CloudMonitor Basic (pay-as-you-go) is not activated, these API operations can no longer be called as expected. If you have activated CloudMonitor Basic (pay-as-you-go), these API operations can still be called even if the free quota is used up. After the free quota is used up, you are charged for the excess usage based on the pay-as-you-go billing method. For more information about how to activate CloudMonitor Basic (pay-as-you-go), see <a href="https://common-buy.aliyun.com/?spm=a2c4g.11186623.0.0.6c8f3481IbSHgG%5C&commodityCode=cms_basic_public_cn%5C&from_biz_channel=help_bill">Enable the pay-as-you-go billing method</a>.</description></item>
+        /// <item><description>Each API operation can be called up to 10 times per second. An Alibaba Cloud account and the Resource Access Management (RAM) users within the account share the quota.</description></item>
+        /// </list>
         /// <h3><a href="#"></a>Precautions</h3>
         /// <para>The storage duration of the monitoring data of each cloud service is related to the <c>Period</c> parameter (statistical period). A larger value of the <c>Period</c> parameter indicates that the monitoring data is distributed in a larger time range and the storage duration of the monitoring data is longer. The following list describes the specific relationships:</para>
         /// <list type="bullet">
-        /// <item><description>If the value of the <c>Period</c> parameter is less than 60 seconds, the storage duration is seven days.</description></item>
-        /// <item><description>If the value of the <c>Period</c> parameter is 60 seconds, the storage duration is 31 days.</description></item>
-        /// <item><description>If the value of the <c>Period</c> parameter is 300 seconds, the storage duration is 91 days.</description></item>
+        /// <item><description>The storage duration is 7 days if the value of the <c>Period</c> parameter is less than 60 seconds.</description></item>
+        /// <item><description>The storage duration is 31 days if the value of the <c>Period</c> parameter is 60 seconds.</description></item>
+        /// <item><description>The storage duration is 91 days if the value of the <c>Period</c> is greater than or equal to 300 seconds.</description></item>
         /// </list>
-        /// <h3><a href="#"></a>Description</h3>
-        /// <para>This topic provides an example to show how to query the monitoring data of the <c>cpu_idle</c> metric in the last 60 seconds for Elastic Compute Service (ECS). The namespace of ECS is <c>acs_ecs_dashboard</c>. The monitoring data is sorted in the descending order based on the <c>Average</c> field.</para>
+        /// <h3><a href="#"></a>Operation description</h3>
+        /// <para>This topic provides an example on how to query the monitoring data of the <c>cpu_idle</c> metric in the last 60 seconds for Elastic Compute Service (ECS). The namespace of ECS is <c>acs_ecs_dashboard</c>. The monitoring data is sorted in descending order based on the <c>Average</c> field.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13874,16 +13901,19 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3><a href="#"></a>Limits</h3>
-        /// <para>Each API operation can be called up to 10 times per second. An Alibaba Cloud account and the RAM users within the account share the quota.</para>
+        /// <list type="bullet">
+        /// <item><description>The total free quota is 1 million calls per month for the DescribeMetricLast, DescribeMetricList, DescribeMetricData, and DescribeMetricTop operations. If the free quota is used up and CloudMonitor Basic (pay-as-you-go) is not activated, these API operations can no longer be called as expected. If you have activated CloudMonitor Basic (pay-as-you-go), these API operations can still be called even if the free quota is used up. After the free quota is used up, you are charged for the excess usage based on the pay-as-you-go billing method. For more information about how to activate CloudMonitor Basic (pay-as-you-go), see <a href="https://common-buy.aliyun.com/?spm=a2c4g.11186623.0.0.6c8f3481IbSHgG%5C&commodityCode=cms_basic_public_cn%5C&from_biz_channel=help_bill">Enable the pay-as-you-go billing method</a>.</description></item>
+        /// <item><description>Each API operation can be called up to 10 times per second. An Alibaba Cloud account and the Resource Access Management (RAM) users within the account share the quota.</description></item>
+        /// </list>
         /// <h3><a href="#"></a>Precautions</h3>
         /// <para>The storage duration of the monitoring data of each cloud service is related to the <c>Period</c> parameter (statistical period). A larger value of the <c>Period</c> parameter indicates that the monitoring data is distributed in a larger time range and the storage duration of the monitoring data is longer. The following list describes the specific relationships:</para>
         /// <list type="bullet">
-        /// <item><description>If the value of the <c>Period</c> parameter is less than 60 seconds, the storage duration is seven days.</description></item>
-        /// <item><description>If the value of the <c>Period</c> parameter is 60 seconds, the storage duration is 31 days.</description></item>
-        /// <item><description>If the value of the <c>Period</c> parameter is 300 seconds, the storage duration is 91 days.</description></item>
+        /// <item><description>The storage duration is 7 days if the value of the <c>Period</c> parameter is less than 60 seconds.</description></item>
+        /// <item><description>The storage duration is 31 days if the value of the <c>Period</c> parameter is 60 seconds.</description></item>
+        /// <item><description>The storage duration is 91 days if the value of the <c>Period</c> is greater than or equal to 300 seconds.</description></item>
         /// </list>
-        /// <h3><a href="#"></a>Description</h3>
-        /// <para>This topic provides an example to show how to query the monitoring data of the <c>cpu_idle</c> metric in the last 60 seconds for Elastic Compute Service (ECS). The namespace of ECS is <c>acs_ecs_dashboard</c>. The monitoring data is sorted in the descending order based on the <c>Average</c> field.</para>
+        /// <h3><a href="#"></a>Operation description</h3>
+        /// <para>This topic provides an example on how to query the monitoring data of the <c>cpu_idle</c> metric in the last 60 seconds for Elastic Compute Service (ECS). The namespace of ECS is <c>acs_ecs_dashboard</c>. The monitoring data is sorted in descending order based on the <c>Average</c> field.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13967,16 +13997,19 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3><a href="#"></a>Limits</h3>
-        /// <para>Each API operation can be called up to 10 times per second. An Alibaba Cloud account and the RAM users within the account share the quota.</para>
+        /// <list type="bullet">
+        /// <item><description>The total free quota is 1 million calls per month for the DescribeMetricLast, DescribeMetricList, DescribeMetricData, and DescribeMetricTop operations. If the free quota is used up and CloudMonitor Basic (pay-as-you-go) is not activated, these API operations can no longer be called as expected. If you have activated CloudMonitor Basic (pay-as-you-go), these API operations can still be called even if the free quota is used up. After the free quota is used up, you are charged for the excess usage based on the pay-as-you-go billing method. For more information about how to activate CloudMonitor Basic (pay-as-you-go), see <a href="https://common-buy.aliyun.com/?spm=a2c4g.11186623.0.0.6c8f3481IbSHgG%5C&commodityCode=cms_basic_public_cn%5C&from_biz_channel=help_bill">Enable the pay-as-you-go billing method</a>.</description></item>
+        /// <item><description>Each API operation can be called up to 10 times per second. An Alibaba Cloud account and the Resource Access Management (RAM) users within the account share the quota.</description></item>
+        /// </list>
         /// <h3><a href="#"></a>Precautions</h3>
         /// <para>The storage duration of the monitoring data of each cloud service is related to the <c>Period</c> parameter (statistical period). A larger value of the <c>Period</c> parameter indicates that the monitoring data is distributed in a larger time range and the storage duration of the monitoring data is longer. The following list describes the specific relationships:</para>
         /// <list type="bullet">
-        /// <item><description>If the value of the <c>Period</c> parameter is less than 60 seconds, the storage duration is seven days.</description></item>
-        /// <item><description>If the value of the <c>Period</c> parameter is 60 seconds, the storage duration is 31 days.</description></item>
-        /// <item><description>If the value of the <c>Period</c> parameter is 300 seconds, the storage duration is 91 days.</description></item>
+        /// <item><description>The storage duration is 7 days if the value of the <c>Period</c> parameter is less than 60 seconds.</description></item>
+        /// <item><description>The storage duration is 31 days if the value of the <c>Period</c> parameter is 60 seconds.</description></item>
+        /// <item><description>The storage duration is 91 days if the value of the <c>Period</c> is greater than or equal to 300 seconds.</description></item>
         /// </list>
-        /// <h3><a href="#"></a>Description</h3>
-        /// <para>This topic provides an example to show how to query the monitoring data of the <c>cpu_idle</c> metric in the last 60 seconds for Elastic Compute Service (ECS). The namespace of ECS is <c>acs_ecs_dashboard</c>. The monitoring data is sorted in the descending order based on the <c>Average</c> field.</para>
+        /// <h3><a href="#"></a>Operation description</h3>
+        /// <para>This topic provides an example on how to query the monitoring data of the <c>cpu_idle</c> metric in the last 60 seconds for Elastic Compute Service (ECS). The namespace of ECS is <c>acs_ecs_dashboard</c>. The monitoring data is sorted in descending order based on the <c>Average</c> field.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14000,16 +14033,19 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3><a href="#"></a>Limits</h3>
-        /// <para>Each API operation can be called up to 10 times per second. An Alibaba Cloud account and the RAM users within the account share the quota.</para>
+        /// <list type="bullet">
+        /// <item><description>The total free quota is 1 million calls per month for the DescribeMetricLast, DescribeMetricList, DescribeMetricData, and DescribeMetricTop operations. If the free quota is used up and CloudMonitor Basic (pay-as-you-go) is not activated, these API operations can no longer be called as expected. If you have activated CloudMonitor Basic (pay-as-you-go), these API operations can still be called even if the free quota is used up. After the free quota is used up, you are charged for the excess usage based on the pay-as-you-go billing method. For more information about how to activate CloudMonitor Basic (pay-as-you-go), see <a href="https://common-buy.aliyun.com/?spm=a2c4g.11186623.0.0.6c8f3481IbSHgG%5C&commodityCode=cms_basic_public_cn%5C&from_biz_channel=help_bill">Enable the pay-as-you-go billing method</a>.</description></item>
+        /// <item><description>Each API operation can be called up to 10 times per second. An Alibaba Cloud account and the Resource Access Management (RAM) users within the account share the quota.</description></item>
+        /// </list>
         /// <h3><a href="#"></a>Precautions</h3>
         /// <para>The storage duration of the monitoring data of each cloud service is related to the <c>Period</c> parameter (statistical period). A larger value of the <c>Period</c> parameter indicates that the monitoring data is distributed in a larger time range and the storage duration of the monitoring data is longer. The following list describes the specific relationships:</para>
         /// <list type="bullet">
-        /// <item><description>If the value of the <c>Period</c> parameter is less than 60 seconds, the storage duration is seven days.</description></item>
-        /// <item><description>If the value of the <c>Period</c> parameter is 60 seconds, the storage duration is 31 days.</description></item>
-        /// <item><description>If the value of the <c>Period</c> parameter is 300 seconds, the storage duration is 91 days.</description></item>
+        /// <item><description>The storage duration is 7 days if the value of the <c>Period</c> parameter is less than 60 seconds.</description></item>
+        /// <item><description>The storage duration is 31 days if the value of the <c>Period</c> parameter is 60 seconds.</description></item>
+        /// <item><description>The storage duration is 91 days if the value of the <c>Period</c> is greater than or equal to 300 seconds.</description></item>
         /// </list>
-        /// <h3><a href="#"></a>Description</h3>
-        /// <para>This topic provides an example to show how to query the monitoring data of the <c>cpu_idle</c> metric in the last 60 seconds for Elastic Compute Service (ECS). The namespace of ECS is <c>acs_ecs_dashboard</c>. The monitoring data is sorted in the descending order based on the <c>Average</c> field.</para>
+        /// <h3><a href="#"></a>Operation description</h3>
+        /// <para>This topic provides an example on how to query the monitoring data of the <c>cpu_idle</c> metric in the last 60 seconds for Elastic Compute Service (ECS). The namespace of ECS is <c>acs_ecs_dashboard</c>. The monitoring data is sorted in descending order based on the <c>Average</c> field.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15205,6 +15241,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return await DescribeMonitoringAgentAccessKeyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configurations of the CloudMonitor agent.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMonitoringAgentConfigRequest
         /// </param>
@@ -15234,6 +15275,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<DescribeMonitoringAgentConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configurations of the CloudMonitor agent.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMonitoringAgentConfigRequest
         /// </param>
@@ -15263,6 +15309,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<DescribeMonitoringAgentConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configurations of the CloudMonitor agent.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMonitoringAgentConfigRequest
         /// </param>
@@ -15276,6 +15327,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return DescribeMonitoringAgentConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configurations of the CloudMonitor agent.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMonitoringAgentConfigRequest
         /// </param>
@@ -15761,6 +15817,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return await DescribeMonitoringAgentStatusesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the global configurations of the CloudMonitor agent.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMonitoringConfigRequest
         /// </param>
@@ -15790,6 +15851,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<DescribeMonitoringConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the global configurations of the CloudMonitor agent.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMonitoringConfigRequest
         /// </param>
@@ -15819,6 +15885,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<DescribeMonitoringConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the global configurations of the CloudMonitor agent.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMonitoringConfigRequest
         /// </param>
@@ -15832,6 +15903,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return DescribeMonitoringConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the global configurations of the CloudMonitor agent.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMonitoringConfigRequest
         /// </param>
@@ -15845,6 +15921,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return await DescribeMonitoringConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the keys of all tags that are attached to cloud resources in a region.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -15889,6 +15970,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<DescribeProductResourceTagKeyListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the keys of all tags that are attached to cloud resources in a region.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -15933,6 +16019,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<DescribeProductResourceTagKeyListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the keys of all tags that are attached to cloud resources in a region.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -15953,6 +16044,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return DescribeProductResourceTagKeyListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the keys of all tags that are attached to cloud resources in a region.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -16753,6 +16849,10 @@ namespace AlibabaCloud.SDK.Cms20190101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentGroup))
+            {
+                query["AgentGroup"] = request.AgentGroup;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
             {
                 query["Keyword"] = request.Keyword;
@@ -16820,6 +16920,10 @@ namespace AlibabaCloud.SDK.Cms20190101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentGroup))
+            {
+                query["AgentGroup"] = request.AgentGroup;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
             {
                 query["Keyword"] = request.Keyword;
@@ -18185,6 +18289,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return await DescribeSystemEventHistogramWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the meta information about system events.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSystemEventMetaListRequest
         /// </param>
@@ -18214,6 +18323,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<DescribeSystemEventMetaListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the meta information about system events.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSystemEventMetaListRequest
         /// </param>
@@ -18243,6 +18357,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<DescribeSystemEventMetaListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the meta information about system events.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSystemEventMetaListRequest
         /// </param>
@@ -18256,6 +18375,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return DescribeSystemEventMetaListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the meta information about system events.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSystemEventMetaListRequest
         /// </param>
@@ -18269,6 +18393,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return await DescribeSystemEventMetaListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries tag keys.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeTagKeyListRequest
         /// </param>
@@ -18310,6 +18439,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<DescribeTagKeyListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries tag keys.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeTagKeyListRequest
         /// </param>
@@ -18351,6 +18485,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<DescribeTagKeyListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries tag keys.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeTagKeyListRequest
         /// </param>
@@ -18364,6 +18503,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return DescribeTagKeyListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries tag keys.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeTagKeyListRequest
         /// </param>
@@ -18377,6 +18521,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return await DescribeTagKeyListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tag values corresponding to a specified tag key.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This topic provides an example of how to query the tag values corresponding to <c>tagKey1</c>. The return results are <c>tagValue1</c> and <c>tagValue2</c>.</para>
@@ -18427,6 +18576,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<DescribeTagValueListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tag values corresponding to a specified tag key.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This topic provides an example of how to query the tag values corresponding to <c>tagKey1</c>. The return results are <c>tagValue1</c> and <c>tagValue2</c>.</para>
@@ -18477,6 +18631,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<DescribeTagValueListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tag values corresponding to a specified tag key.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This topic provides an example of how to query the tag values corresponding to <c>tagKey1</c>. The return results are <c>tagValue1</c> and <c>tagValue2</c>.</para>
@@ -18495,6 +18654,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return DescribeTagValueListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tag values corresponding to a specified tag key.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This topic provides an example of how to query the tag values corresponding to <c>tagKey1</c>. The return results are <c>tagValue1</c> and <c>tagValue2</c>.</para>
@@ -18513,6 +18677,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return await DescribeTagValueListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries unhealthy instances detected by availability monitoring tasks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeUnhealthyHostAvailabilityRequest
         /// </param>
@@ -18550,6 +18719,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<DescribeUnhealthyHostAvailabilityResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries unhealthy instances detected by availability monitoring tasks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeUnhealthyHostAvailabilityRequest
         /// </param>
@@ -18587,6 +18761,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<DescribeUnhealthyHostAvailabilityResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries unhealthy instances detected by availability monitoring tasks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeUnhealthyHostAvailabilityRequest
         /// </param>
@@ -18600,6 +18779,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return DescribeUnhealthyHostAvailabilityWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries unhealthy instances detected by availability monitoring tasks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeUnhealthyHostAvailabilityRequest
         /// </param>
@@ -18613,6 +18797,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return await DescribeUnhealthyHostAvailabilityWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables the initiative alert feature for a cloud service.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableActiveMetricRuleRequest
         /// </param>
@@ -18650,6 +18839,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<DisableActiveMetricRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables the initiative alert feature for a cloud service.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableActiveMetricRuleRequest
         /// </param>
@@ -18687,6 +18881,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<DisableActiveMetricRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables the initiative alert feature for a cloud service.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableActiveMetricRuleRequest
         /// </param>
@@ -18700,6 +18899,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return DisableActiveMetricRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables the initiative alert feature for a cloud service.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableActiveMetricRuleRequest
         /// </param>
@@ -18813,6 +19017,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return await DisableEventRulesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables availability monitoring tasks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableHostAvailabilityRequest
         /// </param>
@@ -18850,6 +19059,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<DisableHostAvailabilityResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables availability monitoring tasks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableHostAvailabilityRequest
         /// </param>
@@ -18887,6 +19101,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<DisableHostAvailabilityResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables availability monitoring tasks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableHostAvailabilityRequest
         /// </param>
@@ -18900,6 +19119,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return DisableHostAvailabilityWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables availability monitoring tasks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableHostAvailabilityRequest
         /// </param>
@@ -19153,6 +19377,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return await DisableSiteMonitorsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the initiative alert feature for a cloud service.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableActiveMetricRuleRequest
         /// </param>
@@ -19190,6 +19419,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<EnableActiveMetricRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the initiative alert feature for a cloud service.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableActiveMetricRuleRequest
         /// </param>
@@ -19227,6 +19461,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<EnableActiveMetricRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the initiative alert feature for a cloud service.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableActiveMetricRuleRequest
         /// </param>
@@ -19240,6 +19479,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return EnableActiveMetricRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the initiative alert feature for a cloud service.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableActiveMetricRuleRequest
         /// </param>
@@ -19353,6 +19597,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return await EnableEventRulesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables availability monitoring tasks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableHostAvailabilityRequest
         /// </param>
@@ -19390,6 +19639,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<EnableHostAvailabilityResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables availability monitoring tasks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableHostAvailabilityRequest
         /// </param>
@@ -19427,6 +19681,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<EnableHostAvailabilityResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables availability monitoring tasks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableHostAvailabilityRequest
         /// </param>
@@ -19440,6 +19699,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return EnableHostAvailabilityWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables availability monitoring tasks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableHostAvailabilityRequest
         /// </param>
@@ -19583,7 +19847,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables one or more alert rules.</para>
+        /// <para>Enables alert rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19625,7 +19889,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables one or more alert rules.</para>
+        /// <para>Enables alert rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19667,7 +19931,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables one or more alert rules.</para>
+        /// <para>Enables alert rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19685,7 +19949,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables one or more alert rules.</para>
+        /// <para>Enables alert rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19821,6 +20085,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return await EnableSiteMonitorsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>InstallMonitoringAgent</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Prerequisites</h2>
@@ -19872,6 +20141,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<InstallMonitoringAgentResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>InstallMonitoringAgent</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Prerequisites</h2>
@@ -19923,6 +20197,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<InstallMonitoringAgentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>InstallMonitoringAgent</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Prerequisites</h2>
@@ -19942,6 +20221,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return InstallMonitoringAgentWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>InstallMonitoringAgent</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Prerequisites</h2>
@@ -21397,6 +21681,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return await ModifyMonitorGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ModifyMonitorGroupInstances</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyMonitorGroupInstancesRequest
         /// </param>
@@ -21438,6 +21727,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<ModifyMonitorGroupInstancesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ModifyMonitorGroupInstances</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyMonitorGroupInstancesRequest
         /// </param>
@@ -21479,6 +21773,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<ModifyMonitorGroupInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ModifyMonitorGroupInstances</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyMonitorGroupInstancesRequest
         /// </param>
@@ -21492,6 +21791,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return ModifyMonitorGroupInstancesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ModifyMonitorGroupInstances</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyMonitorGroupInstancesRequest
         /// </param>
@@ -21709,104 +22013,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return await ModifySiteMonitorWithOptionsAsync(request, runtime);
         }
 
-        /// <term><b>Deprecated</b></term>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates or modifies an alert contact.</para>
+        /// </summary>
         /// 
-        /// OpenAPI OpenCmsService is deprecated
-        /// 
-        /// <param name="request">
-        /// OpenCmsServiceRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// OpenCmsServiceResponse
-        /// </returns>
-        [Obsolete("OpenAPI OpenCmsService is deprecated\n")]
-        // Deprecated
-        public OpenCmsServiceResponse OpenCmsServiceWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "OpenCmsService",
-                Version = "2019-01-01",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<OpenCmsServiceResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Deprecated</b></term>
-        /// 
-        /// OpenAPI OpenCmsService is deprecated
-        /// 
-        /// <param name="request">
-        /// OpenCmsServiceRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// OpenCmsServiceResponse
-        /// </returns>
-        [Obsolete("OpenAPI OpenCmsService is deprecated\n")]
-        // Deprecated
-        public async Task<OpenCmsServiceResponse> OpenCmsServiceWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "OpenCmsService",
-                Version = "2019-01-01",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<OpenCmsServiceResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Deprecated</b></term>
-        /// 
-        /// OpenAPI OpenCmsService is deprecated
-        /// 
-        /// <returns>
-        /// OpenCmsServiceResponse
-        /// </returns>
-        [Obsolete("OpenAPI OpenCmsService is deprecated\n")]
-        // Deprecated
-        public OpenCmsServiceResponse OpenCmsService()
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return OpenCmsServiceWithOptions(runtime);
-        }
-
-        /// <term><b>Deprecated</b></term>
-        /// 
-        /// OpenAPI OpenCmsService is deprecated
-        /// 
-        /// <returns>
-        /// OpenCmsServiceResponse
-        /// </returns>
-        [Obsolete("OpenAPI OpenCmsService is deprecated\n")]
-        // Deprecated
-        public async Task<OpenCmsServiceResponse> OpenCmsServiceAsync()
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await OpenCmsServiceWithOptionsAsync(runtime);
-        }
-
         /// <param name="request">
         /// PutContactRequest
         /// </param>
@@ -21856,6 +22067,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<PutContactResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates or modifies an alert contact.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// PutContactRequest
         /// </param>
@@ -21905,6 +22121,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<PutContactResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates or modifies an alert contact.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// PutContactRequest
         /// </param>
@@ -21918,6 +22139,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return PutContactWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates or modifies an alert contact.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// PutContactRequest
         /// </param>
@@ -21933,7 +22159,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加或者修改报警联系人组</para>
+        /// <para>Creates or modifies an alert contact group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -21992,7 +22218,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加或者修改报警联系人组</para>
+        /// <para>Creates or modifies an alert contact group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -22051,7 +22277,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加或者修改报警联系人组</para>
+        /// <para>Creates or modifies an alert contact group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -22074,7 +22300,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加或者修改报警联系人组</para>
+        /// <para>Creates or modifies an alert contact group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -22415,6 +22641,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return await PutCustomEventRuleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Reports monitoring data.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -22459,6 +22690,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<PutCustomMetricResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Reports monitoring data.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -22503,6 +22739,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<PutCustomMetricResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Reports monitoring data.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -22523,6 +22764,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return PutCustomMetricWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Reports monitoring data.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -22543,6 +22789,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return await PutCustomMetricWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom alert rule.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you call this operation, call the PutCustomMetric operation to report custom monitoring data. For more information, see <a href="https://help.aliyun.com/document_detail/115004.html">PutCustomMetric</a>.</para>
@@ -22645,6 +22896,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<PutCustomMetricRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom alert rule.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you call this operation, call the PutCustomMetric operation to report custom monitoring data. For more information, see <a href="https://help.aliyun.com/document_detail/115004.html">PutCustomMetric</a>.</para>
@@ -22747,6 +23003,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<PutCustomMetricRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom alert rule.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you call this operation, call the PutCustomMetric operation to report custom monitoring data. For more information, see <a href="https://help.aliyun.com/document_detail/115004.html">PutCustomMetric</a>.</para>
@@ -22765,6 +23026,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return PutCustomMetricRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom alert rule.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you call this operation, call the PutCustomMetric operation to report custom monitoring data. For more information, see <a href="https://help.aliyun.com/document_detail/115004.html">PutCustomMetric</a>.</para>
@@ -23774,11 +24040,11 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h1><a href="#"></a>Prerequisites</h1>
+        /// <h2><a href="#"></a>Prerequisites</h2>
         /// <para>Hybrid Cloud Monitoring is activated. For more information, see <a href="https://help.aliyun.com/document_detail/250773.html">Activate Hybrid Cloud Monitoring</a>.</para>
-        /// <h1><a href="#"></a>Limits</h1>
+        /// <h2><a href="#"></a>Limits</h2>
         /// <para>The size of the monitoring data that you import at a time must be less than or equal to 1 MB.</para>
-        /// <h1><a href="#"></a>Description</h1>
+        /// <h2><a href="#"></a>Operation description</h2>
         /// <para>This topic provides an example on how to import the monitoring data of the <c>CPU_Usage</c> metric to the <c>default-aliyun</c> namespace of Hybrid Cloud Monitoring.</para>
         /// </description>
         /// 
@@ -23830,11 +24096,11 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h1><a href="#"></a>Prerequisites</h1>
+        /// <h2><a href="#"></a>Prerequisites</h2>
         /// <para>Hybrid Cloud Monitoring is activated. For more information, see <a href="https://help.aliyun.com/document_detail/250773.html">Activate Hybrid Cloud Monitoring</a>.</para>
-        /// <h1><a href="#"></a>Limits</h1>
+        /// <h2><a href="#"></a>Limits</h2>
         /// <para>The size of the monitoring data that you import at a time must be less than or equal to 1 MB.</para>
-        /// <h1><a href="#"></a>Description</h1>
+        /// <h2><a href="#"></a>Operation description</h2>
         /// <para>This topic provides an example on how to import the monitoring data of the <c>CPU_Usage</c> metric to the <c>default-aliyun</c> namespace of Hybrid Cloud Monitoring.</para>
         /// </description>
         /// 
@@ -23886,11 +24152,11 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h1><a href="#"></a>Prerequisites</h1>
+        /// <h2><a href="#"></a>Prerequisites</h2>
         /// <para>Hybrid Cloud Monitoring is activated. For more information, see <a href="https://help.aliyun.com/document_detail/250773.html">Activate Hybrid Cloud Monitoring</a>.</para>
-        /// <h1><a href="#"></a>Limits</h1>
+        /// <h2><a href="#"></a>Limits</h2>
         /// <para>The size of the monitoring data that you import at a time must be less than or equal to 1 MB.</para>
-        /// <h1><a href="#"></a>Description</h1>
+        /// <h2><a href="#"></a>Operation description</h2>
         /// <para>This topic provides an example on how to import the monitoring data of the <c>CPU_Usage</c> metric to the <c>default-aliyun</c> namespace of Hybrid Cloud Monitoring.</para>
         /// </description>
         /// 
@@ -23914,11 +24180,11 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h1><a href="#"></a>Prerequisites</h1>
+        /// <h2><a href="#"></a>Prerequisites</h2>
         /// <para>Hybrid Cloud Monitoring is activated. For more information, see <a href="https://help.aliyun.com/document_detail/250773.html">Activate Hybrid Cloud Monitoring</a>.</para>
-        /// <h1><a href="#"></a>Limits</h1>
+        /// <h2><a href="#"></a>Limits</h2>
         /// <para>The size of the monitoring data that you import at a time must be less than or equal to 1 MB.</para>
-        /// <h1><a href="#"></a>Description</h1>
+        /// <h2><a href="#"></a>Operation description</h2>
         /// <para>This topic provides an example on how to import the monitoring data of the <c>CPU_Usage</c> metric to the <c>default-aliyun</c> namespace of Hybrid Cloud Monitoring.</para>
         /// </description>
         /// 
@@ -25175,9 +25441,14 @@ namespace AlibabaCloud.SDK.Cms20190101
             return await RemoveTagsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Debugs a system event of an Alibaba Cloud service.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is used to test whether a system event can be triggered as expected. You can call this operation to simulate a system event and check whether an expected response is returned after an alert is triggered by the system event.</para>
+        /// <para>This operation is used to test whether a system event can be triggered as expected. You can call this operation to simulate a system event and check whether an expected response is returned after the system event triggers an alert.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25229,9 +25500,14 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<SendDryRunSystemEventResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Debugs a system event of an Alibaba Cloud service.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is used to test whether a system event can be triggered as expected. You can call this operation to simulate a system event and check whether an expected response is returned after an alert is triggered by the system event.</para>
+        /// <para>This operation is used to test whether a system event can be triggered as expected. You can call this operation to simulate a system event and check whether an expected response is returned after the system event triggers an alert.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25283,9 +25559,14 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<SendDryRunSystemEventResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Debugs a system event of an Alibaba Cloud service.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is used to test whether a system event can be triggered as expected. You can call this operation to simulate a system event and check whether an expected response is returned after an alert is triggered by the system event.</para>
+        /// <para>This operation is used to test whether a system event can be triggered as expected. You can call this operation to simulate a system event and check whether an expected response is returned after the system event triggers an alert.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25301,9 +25582,14 @@ namespace AlibabaCloud.SDK.Cms20190101
             return SendDryRunSystemEventWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Debugs a system event of an Alibaba Cloud service.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is used to test whether a system event can be triggered as expected. You can call this operation to simulate a system event and check whether an expected response is returned after an alert is triggered by the system event.</para>
+        /// <para>This operation is used to test whether a system event can be triggered as expected. You can call this operation to simulate a system event and check whether an expected response is returned after the system event triggers an alert.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25319,10 +25605,15 @@ namespace AlibabaCloud.SDK.Cms20190101
             return await SendDryRunSystemEventWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uninstalls the CloudMonitor agent from a third-party host.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> This API operation is not applicable to ECS instances. To uninstall the agent from an ECS instance, see <a href="https://help.aliyun.com/document_detail/183482.html">Install and uninstall the Cloud Monitor agent</a>.</para>
+        /// <para> This API operation is not applicable to Elastic Compute Service (ECS) instances. To uninstall the agent from an ECS instance, see <a href="https://help.aliyun.com/document_detail/183482.html">Install and uninstall the CloudMonitor agent</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -25363,10 +25654,15 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<UninstallMonitoringAgentResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uninstalls the CloudMonitor agent from a third-party host.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> This API operation is not applicable to ECS instances. To uninstall the agent from an ECS instance, see <a href="https://help.aliyun.com/document_detail/183482.html">Install and uninstall the Cloud Monitor agent</a>.</para>
+        /// <para> This API operation is not applicable to Elastic Compute Service (ECS) instances. To uninstall the agent from an ECS instance, see <a href="https://help.aliyun.com/document_detail/183482.html">Install and uninstall the CloudMonitor agent</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -25407,10 +25703,15 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<UninstallMonitoringAgentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uninstalls the CloudMonitor agent from a third-party host.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> This API operation is not applicable to ECS instances. To uninstall the agent from an ECS instance, see <a href="https://help.aliyun.com/document_detail/183482.html">Install and uninstall the Cloud Monitor agent</a>.</para>
+        /// <para> This API operation is not applicable to Elastic Compute Service (ECS) instances. To uninstall the agent from an ECS instance, see <a href="https://help.aliyun.com/document_detail/183482.html">Install and uninstall the CloudMonitor agent</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -25427,10 +25728,15 @@ namespace AlibabaCloud.SDK.Cms20190101
             return UninstallMonitoringAgentWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uninstalls the CloudMonitor agent from a third-party host.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> This API operation is not applicable to ECS instances. To uninstall the agent from an ECS instance, see <a href="https://help.aliyun.com/document_detail/183482.html">Install and uninstall the Cloud Monitor agent</a>.</para>
+        /// <para> This API operation is not applicable to Elastic Compute Service (ECS) instances. To uninstall the agent from an ECS instance, see <a href="https://help.aliyun.com/document_detail/183482.html">Install and uninstall the CloudMonitor agent</a>.</para>
         /// </remarks>
         /// </description>
         /// 

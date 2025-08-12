@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteEventRulesRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the alert rule. Valid values of N: 1 to 20.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

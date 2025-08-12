@@ -10,19 +10,19 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DisableActiveMetricRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The service for which you want to disable one-click alert. Valid values:</para>
+        /// <para>The cloud service for which you want to disable proactive alerting. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ecs: Elastic Compute Service (ECS)</description></item>
+        /// <item><description>ECS: Elastic Compute Service (ECS)</description></item>
         /// <item><description>rds: ApsaraDB RDS</description></item>
         /// <item><description>slb: Server Load Balancer (SLB)</description></item>
-        /// <item><description>redis_standard: ApsaraDB for Redis of the standard architecture</description></item>
-        /// <item><description>redis_sharding: ApsaraDB for Redis of the cluster architecture</description></item>
-        /// <item><description>redis_splitrw: ApsaraDB for Redis of the read/write splitting architecture</description></item>
+        /// <item><description>redis_standard: Redis Open-Source Edition (standard architecture)</description></item>
+        /// <item><description>redis_sharding: Redis Open-Source Edition (cluster architecture)</description></item>
+        /// <item><description>redis_splitrw: Redis Open-Source Edition (read/write splitting architecture)</description></item>
         /// <item><description>mongodb: ApsaraDB for MongoDB of the replica set architecture</description></item>
         /// <item><description>mongodb_sharding: ApsaraDB for MongoDB of the sharded cluster architecture</description></item>
         /// <item><description>hbase: ApsaraDB for HBase</description></item>
         /// <item><description>elasticsearch: Elasticsearch</description></item>
-        /// <item><description>opensearch: Open Search</description></item>
+        /// <item><description>opensearch: OpenSearch</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeMonitoringAgentConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the Cloud Monitor agent is automatically installed on existing Elastic Compute Service (ECS) instances. Valid values:</para>
+        /// <para>Indicates whether the CloudMonitor agent is automatically installed on existing Elastic Compute Service (ECS) instances. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true</description></item>
         /// <item><description>false</description></item>
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The status code.</para>
         /// <remarks>
-        /// <para> The status code 200 indicates a success.</para>
+        /// <para> The status code 200 indicates that the request was successful.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The service for which one-click alert is enabled.</para>
+        /// <para>The cloud services for which proactive alerting is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>redis,rds,ecs</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string EnableActiveAlert { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the Cloud Monitor agent is automatically installed on new ECS instances. Valid values:</para>
+        /// <para>Indicates whether the CloudMonitor agent is automatically installed on newly purchased ECS instances. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true</description></item>
         /// <item><description>false</description></item>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E9F4FA2A-54BE-4EF9-9D1D-1A0B1DC86B8D</para>
@@ -81,10 +81,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: successful.</description></item>
-        /// <item><description>false: failed.</description></item>
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

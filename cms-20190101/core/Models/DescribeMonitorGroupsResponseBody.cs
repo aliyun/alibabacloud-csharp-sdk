@@ -246,6 +246,30 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
                 }
 
+                [NameInMap("TemplateInfos")]
+                [Validation(Required=false)]
+                public DescribeMonitorGroupsResponseBodyResourcesResourceTemplateInfos TemplateInfos { get; set; }
+                public class DescribeMonitorGroupsResponseBodyResourcesResourceTemplateInfos : TeaModel {
+                    [NameInMap("TemplateInfo")]
+                    [Validation(Required=false)]
+                    public List<DescribeMonitorGroupsResponseBodyResourcesResourceTemplateInfosTemplateInfo> TemplateInfo { get; set; }
+                    public class DescribeMonitorGroupsResponseBodyResourcesResourceTemplateInfosTemplateInfo : TeaModel {
+                        [NameInMap("EffectTime")]
+                        [Validation(Required=false)]
+                        public long? EffectTime { get; set; }
+
+                        [NameInMap("TemplateId")]
+                        [Validation(Required=false)]
+                        public string TemplateId { get; set; }
+
+                        [NameInMap("Ver")]
+                        [Validation(Required=false)]
+                        public string Ver { get; set; }
+
+                    }
+
+                }
+
                 /// <summary>
                 /// <para>The type of the application group. Valid values:</para>
                 /// <list type="bullet">

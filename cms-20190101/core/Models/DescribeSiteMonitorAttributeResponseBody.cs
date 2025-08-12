@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The information of the alert rules that are configured for the site monitoring task.</para>
+        /// <para>The alert rules that are configured for the site monitoring task.</para>
         /// </summary>
         [NameInMap("MetricRules")]
         [Validation(Required=false)]
@@ -273,6 +273,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Address { get; set; }
 
             /// <summary>
+            /// <para>The type of the detection point. Default value: PC. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>PC</description></item>
+            /// <item><description>MOBILE</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>PC</para>
             /// </summary>
@@ -280,10 +286,16 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public string AgentGroup { get; set; }
 
+            /// <summary>
+            /// <para>The custom detection cycle. You can specify only a time range within a week (from Monday to Sunday).</para>
+            /// </summary>
             [NameInMap("CustomSchedule")]
             [Validation(Required=false)]
             public DescribeSiteMonitorAttributeResponseBodySiteMonitorsCustomSchedule CustomSchedule { get; set; }
             public class DescribeSiteMonitorAttributeResponseBodySiteMonitorsCustomSchedule : TeaModel {
+                /// <summary>
+                /// <para>The days in a week.</para>
+                /// </summary>
                 [NameInMap("days")]
                 [Validation(Required=false)]
                 public DescribeSiteMonitorAttributeResponseBodySiteMonitorsCustomScheduleDays Days { get; set; }
@@ -295,6 +307,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 }
 
                 /// <summary>
+                /// <para>The end time of the detection. Unit: hours.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>18</para>
                 /// </summary>
@@ -303,6 +317,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public int? EndHour { get; set; }
 
                 /// <summary>
+                /// <para>The start time of the detection. Unit: hours.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>8</para>
                 /// </summary>
@@ -311,6 +327,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public int? StartHour { get; set; }
 
                 /// <summary>
+                /// <para>The time zone of the detection.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>local</para>
                 /// </summary>
@@ -376,10 +394,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public string IspName { get; set; }
 
                     /// <summary>
-                    /// <para>探测点网络类型。取值：
-                    /// IDC: IDC机房
-                    /// LASTMILE: 网民家宽
-                    /// MOBILE: 移动蜂窝网</para>
+                    /// <para>The network type of the detection point. Valid values: IDC, LASTMILE, and MOBILE.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>IDC</para>
@@ -399,6 +414,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson OptionJson { get; set; }
             public class DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson : TeaModel {
+                /// <summary>
+                /// <para>The assertions.</para>
+                /// </summary>
                 [NameInMap("assertions")]
                 [Validation(Required=false)]
                 public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonAssertions Assertions { get; set; }
@@ -408,6 +426,18 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public List<DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonAssertionsAssertions> Assertions { get; set; }
                     public class DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonAssertionsAssertions : TeaModel {
                         /// <summary>
+                        /// <para>The operator. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>contains: contains</description></item>
+                        /// <item><description>doesNotContain: does not contain</description></item>
+                        /// <item><description>matches: matches a regular expression</description></item>
+                        /// <item><description>doesNotMatch: does not match a regular expression</description></item>
+                        /// <item><description>is: equal to</description></item>
+                        /// <item><description>isNot: not equal to</description></item>
+                        /// <item><description>lessThan: less than</description></item>
+                        /// <item><description>moreThan: greater than</description></item>
+                        /// </list>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>lessThan</para>
                         /// </summary>
@@ -416,6 +446,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                         public string Operator { get; set; }
 
                         /// <summary>
+                        /// <para>The path to the assertion.</para>
+                        /// <list type="bullet">
+                        /// <item><description>If the assertion type is body_json, the path is json path.</description></item>
+                        /// <item><description>If the assertion type is body_xml, the path is xml path.</description></item>
+                        /// </list>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>json path</para>
                         /// </summary>
@@ -424,6 +460,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                         public string Property { get; set; }
 
                         /// <summary>
+                        /// <para>The value or character to which the condition of the assertion is compared.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>0</para>
                         /// </summary>
@@ -432,6 +470,16 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                         public string Target { get; set; }
 
                         /// <summary>
+                        /// <para>The assertion type. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>response_time: checks whether the response time meets expectations.</description></item>
+                        /// <item><description>status_code: checks whether the HTTP status code meets expectations.</description></item>
+                        /// <item><description>header: checks whether the fields in the response header meet expectations.</description></item>
+                        /// <item><description>body_text: check whether the content in the response body meets expectations by using text matching.</description></item>
+                        /// <item><description>body_json: check whether the content in the response body meets expectations by using JSON parsing (JSONPath).</description></item>
+                        /// <item><description>body_xml: check whether the content in the response body meets expectations by using XML parsing (XPath).</description></item>
+                        /// </list>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>response_time</para>
                         /// </summary>
@@ -453,20 +501,93 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public long? Attempts { get; set; }
 
-                /// <summary>
-                /// <para>Indicates whether the security authentication feature is enabled. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>0: The feature is disabled.</description></item>
-                /// <item><description>1: The feature is enabled.</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
-                [NameInMap("authentication")]
+                [NameInMap("auth_info")]
                 [Validation(Required=false)]
-                public int? Authentication { get; set; }
+                public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonAuthInfo AuthInfo { get; set; }
+                public class DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonAuthInfo : TeaModel {
+                    [NameInMap("access_key_id")]
+                    [Validation(Required=false)]
+                    public string AccessKeyId { get; set; }
 
+                    [NameInMap("access_key_secret")]
+                    [Validation(Required=false)]
+                    public string AccessKeySecret { get; set; }
+
+                    [NameInMap("api_action")]
+                    [Validation(Required=false)]
+                    public string ApiAction { get; set; }
+
+                    [NameInMap("api_version")]
+                    [Validation(Required=false)]
+                    public string ApiVersion { get; set; }
+
+                    [NameInMap("auth_style")]
+                    [Validation(Required=false)]
+                    public string AuthStyle { get; set; }
+
+                    [NameInMap("client_id")]
+                    [Validation(Required=false)]
+                    public string ClientId { get; set; }
+
+                    [NameInMap("client_secret")]
+                    [Validation(Required=false)]
+                    public string ClientSecret { get; set; }
+
+                    [NameInMap("grant_type")]
+                    [Validation(Required=false)]
+                    public string GrantType { get; set; }
+
+                    [NameInMap("password")]
+                    [Validation(Required=false)]
+                    public string Password { get; set; }
+
+                    [NameInMap("region_id")]
+                    [Validation(Required=false)]
+                    public string RegionId { get; set; }
+
+                    [NameInMap("scopes")]
+                    [Validation(Required=false)]
+                    public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonAuthInfoScopes Scopes { get; set; }
+                    public class DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonAuthInfoScopes : TeaModel {
+                        [NameInMap("scopes")]
+                        [Validation(Required=false)]
+                        public List<string> Scopes { get; set; }
+
+                    }
+
+                    [NameInMap("service_name")]
+                    [Validation(Required=false)]
+                    public string ServiceName { get; set; }
+
+                    [NameInMap("session_token")]
+                    [Validation(Required=false)]
+                    public string SessionToken { get; set; }
+
+                    [NameInMap("token_url")]
+                    [Validation(Required=false)]
+                    public string TokenUrl { get; set; }
+
+                    [NameInMap("type")]
+                    [Validation(Required=false)]
+                    public string Type { get; set; }
+
+                    [NameInMap("use_cookie_session_key")]
+                    [Validation(Required=false)]
+                    public bool? UseCookieSessionKey { get; set; }
+
+                    [NameInMap("username")]
+                    [Validation(Required=false)]
+                    public string Username { get; set; }
+
+                    [NameInMap("with_addon_resources")]
+                    [Validation(Required=false)]
+                    public bool? WithAddonResources { get; set; }
+
+                }
+
+                /// <summary>
+                /// <para>The blocked URLs. Wildcards are supported in paths.</para>
+                /// </summary>
                 [NameInMap("blocked_url_list")]
                 [Validation(Required=false)]
                 public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBlockedUrlList BlockedUrlList { get; set; }
@@ -477,6 +598,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
                 }
 
+                /// <summary>
+                /// <para>The custom headers. Format: {&quot;key&quot;: &quot;somekey&quot;, &quot;value&quot;:&quot;somevalue&quot;}.</para>
+                /// </summary>
                 [NameInMap("browser_headers")]
                 [Validation(Required=false)]
                 public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserHeaders BrowserHeaders { get; set; }
@@ -487,6 +611,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
                 }
 
+                /// <summary>
+                /// <para>The custom hosts. Format: {&quot;key&quot;: &quot;somekey&quot;, &quot;value&quot;:&quot;somevalue&quot;}.</para>
+                /// </summary>
                 [NameInMap("browser_hosts")]
                 [Validation(Required=false)]
                 public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserHosts BrowserHosts { get; set; }
@@ -497,6 +624,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
                 }
 
+                /// <summary>
+                /// <para>The browser information.</para>
+                /// </summary>
                 [NameInMap("browser_info")]
                 [Validation(Required=false)]
                 public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserInfo BrowserInfo { get; set; }
@@ -506,6 +636,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public List<DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserInfoBrowserInfo> BrowserInfo { get; set; }
                     public class DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserInfoBrowserInfo : TeaModel {
                         /// <summary>
+                        /// <para>The browser type.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>Chrome</para>
                         /// </summary>
@@ -514,6 +646,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                         public string Browser { get; set; }
 
                         /// <summary>
+                        /// <para>The device type.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>laptop</para>
                         /// </summary>
@@ -526,6 +660,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 }
 
                 /// <summary>
+                /// <para>Indicates whether certificate errors are ignored. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>false: Certificate errors are not ignored.</description></item>
+                /// <item><description>true: Certificate errors are ignored.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
                 /// </summary>
@@ -534,12 +674,42 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public bool? BrowserInsecure { get; set; }
 
                 /// <summary>
+                /// <para>The version of the browser test task. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>1: browser test for a single page</description></item>
+                /// <item><description>2: browser test for multiple pages</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
                 [NameInMap("browser_task_version")]
                 [Validation(Required=false)]
                 public string BrowserTaskVersion { get; set; }
+
+                [NameInMap("config_variables")]
+                [Validation(Required=false)]
+                public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonConfigVariables ConfigVariables { get; set; }
+                public class DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonConfigVariables : TeaModel {
+                    [NameInMap("config_variables")]
+                    [Validation(Required=false)]
+                    public List<DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonConfigVariablesConfigVariables> ConfigVariables { get; set; }
+                    public class DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonConfigVariablesConfigVariables : TeaModel {
+                        [NameInMap("name")]
+                        [Validation(Required=false)]
+                        public string Name { get; set; }
+
+                        [NameInMap("secure")]
+                        [Validation(Required=false)]
+                        public bool? Secure { get; set; }
+
+                        [NameInMap("value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                }
 
                 /// <summary>
                 /// <para>The cookie of the HTTP request.</para>
@@ -552,6 +722,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Cookie { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether the automatic MTR diagnostics feature is enabled for a failed task. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>false: The automatic MTR diagnostics feature is disabled for a failed task.</description></item>
+                /// <item><description>true: The automatic MTR diagnostics feature is enabled for a failed task.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
                 /// </summary>
@@ -560,6 +736,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public bool? DiagnosisMtr { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether the automatic ping latency detection feature is enabled for a failed task. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>false: The automatic ping latency detection feature is disabled for a failed task.</description></item>
+                /// <item><description>true: The automatic ping latency detection feature is enabled for a failed task.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
                 /// </summary>
@@ -568,6 +750,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public bool? DiagnosisPing { get; set; }
 
                 /// <summary>
+                /// <para>The DNS hijack whitelist.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://www.taobao.com:www.taobao.com.danuoyi.tbcache.com">www.taobao.com:www.taobao.com.danuoyi.tbcache.com</a></para>
                 /// </summary>
@@ -622,6 +806,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string DnsType { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether the WebSocket task is allowed to return no response or return an empty response. Default value: false. Valid values: false and true.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
                 /// </summary>
@@ -629,6 +815,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public bool? EmptyMessage { get; set; }
 
+                /// <summary>
+                /// <para>The string that is expected to exist on the page.</para>
+                /// </summary>
                 [NameInMap("expect_exist_string")]
                 [Validation(Required=false)]
                 public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonExpectExistString ExpectExistString { get; set; }
@@ -639,6 +828,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
                 }
 
+                /// <summary>
+                /// <para>The string that is not expected to exist on the page.</para>
+                /// </summary>
                 [NameInMap("expect_non_exist_string")]
                 [Validation(Required=false)]
                 public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonExpectNonExistString ExpectNonExistString { get; set; }
@@ -685,10 +877,32 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public string Header { get; set; }
 
+                /// <summary>
+                /// <para>The number of hops to perform traceroute diagnostics if the PING task fails.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>20</para>
+                /// </summary>
+                [NameInMap("hops")]
+                [Validation(Required=false)]
+                public int? Hops { get; set; }
+
+                /// <summary>
+                /// <para>The custom hosts for the HTTP test task. Format: ip1,ip2:address. You can specify values in multiple lines. Specify the A record or CNAME record that can be resolved by the domain name at the left of the colon. Separate multiple records with commas (,). Specify the domain name at the right of the colon.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>127.0.0.1:<a href="http://www.aliyun.com">www.aliyun.com</a></para>
+                /// </summary>
                 [NameInMap("host_binding")]
                 [Validation(Required=false)]
                 public string HostBinding { get; set; }
 
+                /// <summary>
+                /// <para>The host binding type. Valid values: 0 and 1. 0 indicates random. 1 indicates polling.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
                 [NameInMap("host_binding_type")]
                 [Validation(Required=false)]
                 public int? HostBindingType { get; set; }
@@ -709,6 +923,16 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string HttpMethod { get; set; }
 
                 /// <summary>
+                /// <para>The timeout period of a PING task that uses ICMP. Unit: milliseconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3000</para>
+                /// </summary>
+                [NameInMap("icmp_timeout_millis")]
+                [Validation(Required=false)]
+                public int? IcmpTimeoutMillis { get; set; }
+
+                /// <summary>
                 /// <para>ip_network indicates the network type of the task. Valid values: v4, v6, and auto. Default value: v4.</para>
                 /// 
                 /// <b>Example:</b>
@@ -719,6 +943,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string IpNetwork { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether to perform Base64 decoding and then store the password. Valid values: true and false.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
                 /// </summary>
@@ -741,6 +967,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public int? MatchRule { get; set; }
 
                 /// <summary>
+                /// <para>The minimum TLS version. By default, TLS 1.2 and later versions are supported. TLS 1.0 and 1.1 are disabled. If you still require TLS 1.0 or 1.1, you can change the configuration.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>tlsv1.2</para>
                 /// </summary>
@@ -769,6 +997,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public int? PingNum { get; set; }
 
                 /// <summary>
+                /// <para>The port number for TCP pings.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>80</para>
                 /// </summary>
@@ -883,6 +1113,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string ResponseFormat { get; set; }
 
                 /// <summary>
+                /// <para>The number of retries for failed detections.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -891,7 +1123,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public int? RetryDelay { get; set; }
 
                 /// <summary>
-                /// <para>是否开启页面截图</para>
+                /// <para>Indicates whether page screenshot is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -900,11 +1132,111 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public bool? ScreenShot { get; set; }
 
+                /// <summary>
+                /// <para>Indicates whether to scroll to the bottom of the page after opening the page. This parameter is valid for a browser test task.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
                 [NameInMap("scroll_end")]
                 [Validation(Required=false)]
                 public bool? ScrollEnd { get; set; }
 
+                [NameInMap("steps")]
+                [Validation(Required=false)]
+                public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonSteps Steps { get; set; }
+                public class DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonSteps : TeaModel {
+                    [NameInMap("steps")]
+                    [Validation(Required=false)]
+                    public List<DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonStepsSteps> Steps { get; set; }
+                    public class DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonStepsSteps : TeaModel {
+                        [NameInMap("allow_failure")]
+                        [Validation(Required=false)]
+                        public bool? AllowFailure { get; set; }
+
+                        [NameInMap("auto_extract_cookie")]
+                        [Validation(Required=false)]
+                        public bool? AutoExtractCookie { get; set; }
+
+                        [NameInMap("extracted_variables")]
+                        [Validation(Required=false)]
+                        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonStepsStepsExtractedVariables ExtractedVariables { get; set; }
+                        public class DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonStepsStepsExtractedVariables : TeaModel {
+                            [NameInMap("extracted_variables")]
+                            [Validation(Required=false)]
+                            public List<DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonStepsStepsExtractedVariablesExtractedVariables> ExtractedVariables { get; set; }
+                            public class DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonStepsStepsExtractedVariablesExtractedVariables : TeaModel {
+                                [NameInMap("extracted_type")]
+                                [Validation(Required=false)]
+                                public string ExtractedType { get; set; }
+
+                                [NameInMap("field")]
+                                [Validation(Required=false)]
+                                public string Field { get; set; }
+
+                                [NameInMap("name")]
+                                [Validation(Required=false)]
+                                public string Name { get; set; }
+
+                                [NameInMap("parser")]
+                                [Validation(Required=false)]
+                                public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonStepsStepsExtractedVariablesExtractedVariablesParser Parser { get; set; }
+                                public class DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonStepsStepsExtractedVariablesExtractedVariablesParser : TeaModel {
+                                    [NameInMap("parser_type")]
+                                    [Validation(Required=false)]
+                                    public string ParserType { get; set; }
+
+                                    [NameInMap("value")]
+                                    [Validation(Required=false)]
+                                    public string Value { get; set; }
+
+                                }
+
+                            }
+
+                        }
+
+                        [NameInMap("is_critical")]
+                        [Validation(Required=false)]
+                        public bool? IsCritical { get; set; }
+
+                        /// <term><b>Obsolete</b></term>
+                        [NameInMap("name")]
+                        [Validation(Required=false)]
+                        [Obsolete]
+                        public string Name { get; set; }
+
+                        [NameInMap("option")]
+                        [Validation(Required=false)]
+                        public string Option { get; set; }
+
+                        [NameInMap("step_name")]
+                        [Validation(Required=false)]
+                        public string StepName { get; set; }
+
+                        [NameInMap("step_type")]
+                        [Validation(Required=false)]
+                        public string StepType { get; set; }
+
+                        [NameInMap("url")]
+                        [Validation(Required=false)]
+                        public string Url { get; set; }
+
+                        [NameInMap("use_generated_cookie")]
+                        [Validation(Required=false)]
+                        public bool? UseGeneratedCookie { get; set; }
+
+                        [NameInMap("wait_time_in_secs")]
+                        [Validation(Required=false)]
+                        public int? WaitTimeInSecs { get; set; }
+
+                    }
+
+                }
+
                 /// <summary>
+                /// <para>Indicates whether to allow the loading failures of some page elements. Valid values: false and true.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
                 /// </summary>
@@ -922,6 +1254,17 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public long? TimeOut { get; set; }
 
+                [NameInMap("trace_region")]
+                [Validation(Required=false)]
+                public string TraceRegion { get; set; }
+
+                [NameInMap("trace_type")]
+                [Validation(Required=false)]
+                public string TraceType { get; set; }
+
+                /// <summary>
+                /// <para>The traffic hijacking blacklist. When redirection occurs, if the URL of the resource loaded by the browser matches the expression in the blacklist, traffic hijacking is considered to have occurred.</para>
+                /// </summary>
                 [NameInMap("traffic_hijack_element_blacklist")]
                 [Validation(Required=false)]
                 public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonTrafficHijackElementBlacklist TrafficHijackElementBlacklist { get; set; }
@@ -933,6 +1276,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 }
 
                 /// <summary>
+                /// <para>When redirection occurs, if the browser loads more than the specified number of resources, traffic hijacking is considered to have occurred. If you set the value to 0, no validation is performed. Default value: 0.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -940,6 +1285,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public int? TrafficHijackElementCount { get; set; }
 
+                /// <summary>
+                /// <para>The traffic hijacking whitelist. When redirection occurs, if the URL of the resource loaded by the browser does not match any expression in the whitelist, traffic hijacking is considered to have occurred.</para>
+                /// </summary>
                 [NameInMap("traffic_hijack_element_whitelist")]
                 [Validation(Required=false)]
                 public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonTrafficHijackElementWhitelist TrafficHijackElementWhitelist { get; set; }
@@ -961,6 +1309,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Username { get; set; }
 
                 /// <summary>
+                /// <para>The additional waiting time after a page is opened in a browser test task.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
                 /// </summary>
@@ -1014,12 +1364,15 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public string TaskType { get; set; }
 
+            /// <summary>
+            /// <para>The VPC configurations of the synthetic test task.</para>
+            /// </summary>
             [NameInMap("VpcConfig")]
             [Validation(Required=false)]
             public DescribeSiteMonitorAttributeResponseBodySiteMonitorsVpcConfig VpcConfig { get; set; }
             public class DescribeSiteMonitorAttributeResponseBodySiteMonitorsVpcConfig : TeaModel {
                 /// <summary>
-                /// <para>内网拨测任务的目标站点所在地域。</para>
+                /// <para>The region of the website for synthetic monitoring.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-beijing</para>
@@ -1029,6 +1382,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Region { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the security group.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>sg-xxxxxx</para>
                 /// </summary>
@@ -1037,6 +1392,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string SecurityGroupId { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the VPC used by the synthetic test task.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>vpc-xxxxxx</para>
                 /// </summary>
@@ -1045,6 +1402,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string VpcId { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the vSwitch used by the synthetic test task.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>vsw-xxxxxx</para>
                 /// </summary>

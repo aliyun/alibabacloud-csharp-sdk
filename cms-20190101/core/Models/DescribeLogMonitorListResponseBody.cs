@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeLogMonitorListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The status code.</para>
         /// <remarks>
-        /// <para> The status code 200 indicates that the call was successful.</para>
+        /// <para> The status code 200 indicates that the request was successful.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public class DescribeLogMonitorListResponseBodyLogMonitorList : TeaModel {
             /// <summary>
             /// <para>The time when the log monitoring metric was created.</para>
-            /// <para>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1577766395000</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public long? GroupId { get; set; }
 
             /// <summary>
-            /// <para>The ID returned by Log Service.</para>
+            /// <para>The ID of the log monitoring metric.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12345</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public long? LogId { get; set; }
 
             /// <summary>
-            /// <para>The name of the log monitoring metric. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
+            /// <para>The metric name. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cpu_total</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string MetricName { get; set; }
 
             /// <summary>
-            /// <para>The name of the Log Service Logstore.</para>
+            /// <para>The name of the Simple Log Service (SLS) Logstore.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testSlS****</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string SlsLogstore { get; set; }
 
             /// <summary>
-            /// <para>The name of the Log Service project.</para>
+            /// <para>The name of the SLS project.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sls-project-test****</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string SlsProject { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region where the Log Service Logstore resides.</para>
+            /// <para>The ID of the region where the SLS Logstore resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -101,8 +101,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string SlsRegionId { get; set; }
 
             /// <summary>
-            /// <para>The condition that is used to filter logs. The ValueFilter and ValueFilterRelation parameters are used in pair. The filter condition is equivalent to the WHERE clause in SQL statements.</para>
-            /// <para>If no filter condition is specified, all logs are processed. Assume that logs contain the Level field, which may be set to Error. If you need to calculate the number of times that logs of the Error level appear every minute, you can set the filter condition to Level=Error and count the number of logs that meet this condition.</para>
+            /// <para>The condition that is used to filter logs. The ValueFilter and ValueFilterRelation parameters are used in pair. The filter condition is equivalent to the WHERE clause in SQL statements. If no filter condition is specified, all logs are processed. For example, logs contain the Level and Error fields. If you need to calculate the number of times that logs of the Error level appear every minute, you can set the filter condition to Level=Error and count the number of logs that meet this condition.</para>
             /// </summary>
             [NameInMap("ValueFilter")]
             [Validation(Required=false)]
@@ -121,8 +120,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// <summary>
                 /// <para>The method that is used to match the field value. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>contain</description></item>
-                /// <item><description>notContain</description></item>
+                /// <item><description>contain: contains</description></item>
+                /// <item><description>notContain: does not contain</description></item>
                 /// <item><description><c>&gt;</c>: greater than</description></item>
                 /// <item><description><c>&lt;</c>: less than</description></item>
                 /// <item><description><c>&gt;=</c>: greater than or equal to</description></item>
@@ -175,7 +174,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -185,7 +184,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -195,7 +194,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>01E90080-4300-4FAA-B9AE-161956BC350D</para>
@@ -205,10 +204,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The call was successful.</description></item>
-        /// <item><description>false: The call failed.</description></item>
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -219,7 +218,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of the returned entries.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>

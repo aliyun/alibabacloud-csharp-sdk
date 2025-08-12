@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The policy type.</para>
+        /// <para>The type of the policy.</para>
         /// <para>Valid value: PauseNotify.</para>
         /// <para>This parameter is required.</para>
         /// 

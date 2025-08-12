@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeLogMonitorAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the log monitoring metric. Exact match is supported.</para>
+        /// <para>The metric name. Exact match is supported.</para>
         /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
         /// <para>This parameter is required.</para>
         /// 

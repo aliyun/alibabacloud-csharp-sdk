@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeCustomEventHistogramResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The status code.</para>
         /// <remarks>
-        /// <para> The status code 200 indicates that the call was successful.</para>
+        /// <para> The status code 200 indicates that the request was successful.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The information about the number of times that the custom event occurred during each interval of a time period.</para>
+        /// <para>The information about the number of times that the custom event occurred during each interval of the specified time period.</para>
         /// </summary>
         [NameInMap("EventHistograms")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<DescribeCustomEventHistogramResponseBodyEventHistogramsEventHistogram> EventHistogram { get; set; }
             public class DescribeCustomEventHistogramResponseBodyEventHistogramsEventHistogram : TeaModel {
                 /// <summary>
-                /// <para>The information about the number of times that the custom event occurred during an interval of a time period.</para>
+                /// <para>The information about the number of times that the custom event occurred during an interval of the specified time period.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -44,8 +44,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public long? Count { get; set; }
 
                 /// <summary>
-                /// <para>The end of an interval.</para>
-                /// <para>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</para>
+                /// <para>The end time.</para>
+                /// <para>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1552226750000</para>
@@ -55,8 +55,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public long? EndTime { get; set; }
 
                 /// <summary>
-                /// <para>The beginning of an interval.</para>
-                /// <para>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</para>
+                /// <para>The start time.</para>
+                /// <para>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1552226740000</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// <para>The returned message. If the call was successful, the value success is returned. If the call failed, an error message is returned.</para>
+        /// <para>The returned message. If the request was successful, a success message is returned. If the request failed, an error message is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>486029C9-53E1-44B4-85A8-16A571A043FD</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.</para>
+        /// <para>Indicates whether the request was successful. Valid values: true and false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

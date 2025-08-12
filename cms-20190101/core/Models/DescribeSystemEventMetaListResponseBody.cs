@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeSystemEventMetaListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The status code.</para>
         /// <remarks>
-        /// <para> The status code 200 indicates that the call was successful.</para>
+        /// <para> The status code 200 indicates that the request was successful.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The detailed meta information.</para>
+        /// <para>The queried meta information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -36,9 +36,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// <summary>
                 /// <para>The type of the system event. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>StatusNotification</description></item>
-                /// <item><description>Exception</description></item>
-                /// <item><description>Maintenance</description></item>
+                /// <item><description>StatusNotification: fault notifications</description></item>
+                /// <item><description>Exception: exceptions</description></item>
+                /// <item><description>Maintenance: O\&amp;M</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string EventType { get; set; }
 
                 /// <summary>
-                /// <para>The level of the alert. Valid values:</para>
+                /// <para>The alert level. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>CRITICAL</description></item>
                 /// <item><description>WARN</description></item>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The description of the system event, in Chinese.</para>
+                /// <para>The description of the event name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>High query failure rate</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A6582C8B-E67C-4A19-BC15-EAEFEBDC7995</para>
@@ -142,10 +142,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The call was successful.</description></item>
-        /// <item><description>false: The call failed.</description></item>
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

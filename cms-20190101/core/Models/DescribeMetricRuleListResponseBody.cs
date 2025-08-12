@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeMetricRuleListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The alert rules.</para>
+        /// <para>The queried alert rules.</para>
         /// </summary>
         [NameInMap("Alarms")]
         [Validation(Required=false)]
@@ -470,6 +470,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
                 }
 
+                [NameInMap("GmtCreate")]
+                [Validation(Required=false)]
+                public long? GmtCreate { get; set; }
+
+                [NameInMap("GmtUpdate")]
+                [Validation(Required=false)]
+                public string GmtUpdate { get; set; }
+
                 /// <summary>
                 /// <para>The ID of the application group.</para>
                 /// 
@@ -592,6 +600,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [NameInMap("Period")]
                 [Validation(Required=false)]
                 public string Period { get; set; }
+
+                [NameInMap("ProductCategory")]
+                [Validation(Required=false)]
+                public string ProductCategory { get; set; }
 
                 /// <summary>
                 /// <para>The Prometheus alerts.</para>

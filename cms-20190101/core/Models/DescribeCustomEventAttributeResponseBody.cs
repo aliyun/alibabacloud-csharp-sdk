@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeCustomEventAttributeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The status code.</para>
         /// <remarks>
-        /// <para> The status code 200 indicates that the call was successful.</para>
+        /// <para> The status code 200 indicates that the request was successful.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The details of the custom event.</para>
+        /// <para>The event details.</para>
         /// </summary>
         [NameInMap("CustomEvents")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<DescribeCustomEventAttributeResponseBodyCustomEventsCustomEvent> CustomEvent { get; set; }
             public class DescribeCustomEventAttributeResponseBodyCustomEventsCustomEvent : TeaModel {
                 /// <summary>
-                /// <para>The content of the custom event.</para>
+                /// <para>The content of the event.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>requestId:4975A6F3-19AC-4C01-BAD2-034DA07FEBB5, info:{&quot;autoPay&quot;:false,&quot;autoUseCoupon&quot;:false,&quot;bid&quot;:&quot;26842&quot;,&quot;buyerId&quot;:118935342242****,&quot;commodities&quot;:[{&quot;aliyunProduceCode&quot;:&quot;cms&quot;,&quot;chargeType&quot;:&quot;PREPAY&quot;,&quot;commodityCode&quot;:&quot;cms_call_num&quot;,&quot;components&quot;:[{&quot;componentCode&quot;:&quot;phone_count&quot;,&quot;instanceProperty&quot;:[{&quot;code&quot;:&quot;phone_count&quot;,&quot;value&quot;:&quot;500&quot;}],&quot;moduleAttrStatus&quot;:1}],&quot;duration&quot;:6,&quot;free&quot;:false,&quot;orderParams&quot;:{&quot;aliyunProduceCode&quot;:&quot;cms&quot;},&quot;orderType&quot;:&quot;BUY&quot;,&quot;prePayPostCharge&quot;:false,&quot;pricingCycle&quot;:&quot;Month&quot;,&quot;quantity&quot;:1,&quot;refundSpecCode&quot;:&quot;&quot;,&quot;renewChange&quot;:false,&quot;specCode&quot;:&quot;cms_call_num&quot;,&quot;specUpdate&quot;:false,&quot;syncToSubscription&quot;:false,&quot;upgradeInquireFinancialValue&quot;:true}],&quot;fromApp&quot;:&quot;commonbuy&quot;,&quot;orderParams&quot;:{&quot;priceCheck&quot;:&quot;true&quot;},&quot;payerId&quot;:118935342242****,&quot;requestId&quot;:&quot;ade3ad32-f58b-45d7-add4-ac542be3d8ec&quot;,&quot;skipChannel&quot;:false,&quot;userId&quot;:118935342242****}</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string GroupId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the custom event.</para>
+                /// <para>The event ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The name of the custom event.</para>
+                /// <para>The event name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>BABEL_CHECK</para>
@@ -74,8 +74,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The time when the custom event occurred.</para>
-                /// <para>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</para>
+                /// <para>The time when the event occurred.</para>
+                /// <para>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1552199984000</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60912C8D-B340-4253-ADE7-61ACDFD25CFC</para>
@@ -109,10 +109,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values: Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The call was successful.</description></item>
-        /// <item><description>false: The call failed.</description></item>
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

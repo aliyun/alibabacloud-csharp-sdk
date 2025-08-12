@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The queried detection points.</para>
+        /// </summary>
         [NameInMap("IspCityList")]
         [Validation(Required=false)]
         public List<DescribeSyntheticProbeListResponseBodyIspCityList> IspCityList { get; set; }
@@ -81,10 +84,19 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public int? IdcV4ProbeCount { get; set; }
 
+            /// <summary>
+            /// <para>The number of IPv6 nodes in data centers.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("IdcV6ProbeCount")]
             [Validation(Required=false)]
             public int? IdcV6ProbeCount { get; set; }
 
+            /// <summary>
+            /// <para>The IP addresses of the monitored nodes.</para>
+            /// </summary>
             [NameInMap("IpPool")]
             [Validation(Required=false)]
             public List<string> IpPool { get; set; }

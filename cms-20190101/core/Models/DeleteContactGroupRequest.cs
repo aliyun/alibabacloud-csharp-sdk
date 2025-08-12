@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteContactGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the alert group.</para>
+        /// <para>The name of the alert contact group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

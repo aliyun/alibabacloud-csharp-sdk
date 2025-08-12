@@ -191,14 +191,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The information about the services for which one-click alert is enabled. Services are separated with commas (,). Valid values:</para>
+        /// <para>The information about the services for which the initiative alert feature is enabled. Services are separated with commas (,). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ecs: Elastic Compute Service (ECS)</description></item>
+        /// <item><description>ECS: Elastic Compute Service (ECS)</description></item>
         /// <item><description>rds: ApsaraDB RDS</description></item>
         /// <item><description>slb: Server Load Balancer (SLB)</description></item>
-        /// <item><description>redis_standard: ApsaraDB for Redis of the standard architecture</description></item>
-        /// <item><description>redis_sharding: ApsaraDB for Redis of the cluster architecture</description></item>
-        /// <item><description>redis_splitrw: ApsaraDB for Redis of the read/write splitting architecture</description></item>
+        /// <item><description>redis_standard: Redis Open-Source Edition (standard architecture)</description></item>
+        /// <item><description>redis_sharding: Redis Open-Source Edition (cluster architecture)</description></item>
+        /// <item><description>redis_splitrw: Redis Open-Source Edition (read/write splitting architecture)</description></item>
         /// <item><description>mongodb: ApsaraDB for MongoDB of the replica set architecture</description></item>
         /// <item><description>mongodb_sharding: ApsaraDB for MongoDB of the sharded cluster architecture</description></item>
         /// <item><description>hbase: ApsaraDB for HBase</description></item>

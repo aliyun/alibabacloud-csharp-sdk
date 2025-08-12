@@ -147,6 +147,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public string NamespaceRegion { get; set; }
 
+                [NameInMap("PrometheusInstanceId")]
+                [Validation(Required=false)]
+                public string PrometheusInstanceId { get; set; }
+
                 /// <summary>
                 /// <para>The project where the metric data is located.</para>
                 /// <remarks>

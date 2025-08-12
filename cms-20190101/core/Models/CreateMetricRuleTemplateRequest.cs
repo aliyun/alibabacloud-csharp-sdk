@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class CreateMetricRuleTemplateRequest : TeaModel {
+        /// <summary>
+        /// <para>The details of the alert template.</para>
+        /// </summary>
         [NameInMap("AlertTemplates")]
         [Validation(Required=false)]
         public List<CreateMetricRuleTemplateRequestAlertTemplates> AlertTemplates { get; set; }
@@ -98,8 +101,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// <para>The abbreviation of the Alibaba Cloud service name.</para>
-            /// <para>To obtain the abbreviation of an Alibaba Cloud service name, call the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation. The <c>metricCategory</c> tag in the <c>Labels</c> response parameter indicates the abbreviation of the Alibaba Cloud service name.</para>
+            /// <para>The abbreviation of the cloud service name.</para>
+            /// <para>Valid values of N: 1 to 200.</para>
+            /// <para>For more information about how to obtain the abbreviation of a cloud service name, see <c>metricCategory</c> in the response parameter <c>Labels</c> of the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -110,10 +114,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Category { get; set; }
 
             /// <summary>
-            /// <para>The name of the metric. Valid values of N: 1 to 200.</para>
-            /// <remarks>
-            /// <para> For more information, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/28619.html">Appendix 1: Metrics</a>.</para>
-            /// </remarks>
+            /// <para>The metric name.</para>
+            /// <para>Valid values of N: 1 to 200.</para>
+            /// <para>For information about how to obtain the name of a metric, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Metrics</a>.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -124,10 +127,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string MetricName { get; set; }
 
             /// <summary>
-            /// <para>The namespace of the cloud service. Valid values of N: 1 to 200.</para>
-            /// <remarks>
-            /// <para> For more information, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/28619.html">Appendix 1: Metrics</a>.</para>
-            /// </remarks>
+            /// <para>The namespace of the cloud service.</para>
+            /// <para>Valid values of N: 1 to 200.</para>
+            /// <para>For information about how to obtain the namespace of a cloud service, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -150,15 +152,24 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public int? Period { get; set; }
 
             /// <summary>
-            /// <para>The name of the alert rule. Valid values of N: 1 to 200.</para>
+            /// <para>The name of the alert rule.</para>
+            /// <para>Valid values of N: 1 to 200.</para>
             /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ECS_Rule1</para>
             /// </summary>
             [NameInMap("RuleName")]
             [Validation(Required=false)]
             public string RuleName { get; set; }
 
             /// <summary>
-            /// <para>The extended field selectors. Valid values of N: 1 to 200.</para>
+            /// <para>The dimension of the alert. It is an extended field.</para>
+            /// <para>Valid values of N: 1 to 200.</para>
+            /// <para>For example, an alert template is applied to an application group, this parameter is set to <c>{&quot;disk&quot;:&quot;/&quot;}</c>, and the MetricName parameter is set to <c>DiskUtilization</c>. In this case, the generated alert rule is applied to the root disk partition (<c>&quot;/&quot;</c>) of all instances in the application group to which the alert template is applied.</para>
+            /// <remarks>
+            /// <para> For more information about the values of extended fields, see <a href="https://help.aliyun.com/document_detail/114979.html">DescribeMetricRuleTemplateAttribute</a>.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;disk&quot;:&quot;/&quot;}</para>
@@ -168,7 +179,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Selector { get; set; }
 
             /// <summary>
-            /// <para>The callback URL to which a POST request is sent when an alert is triggered based on the alert rule.</para>
+            /// <para>The callback URL.</para>
+            /// <para>Valid values of N: 1 to 200.</para>
+            /// <para>The callback URL must be accessible over the Internet. CloudMonitor pushes an alert notification to the specified callback URL by sending an HTTP POST request. Only the HTTP protocol is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://ww.aliyun.com">http://ww.aliyun.com</a></para>

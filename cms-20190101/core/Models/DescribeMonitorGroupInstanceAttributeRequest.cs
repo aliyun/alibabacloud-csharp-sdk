@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
     public class DescribeMonitorGroupInstanceAttributeRequest : TeaModel {
         /// <summary>
         /// <para>The abbreviation of the cloud service name.</para>
-        /// <para>For more information about how to obtain the abbreviation of a cloud service name, see <c>metricCategory</c> in the response parameter <c>Labels</c> of the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation.</para>
+        /// <para>For more information about how to obtain the abbreviation of a cloud service name, see <c>metricCategory</c> in the response parameter <c>Labels</c> of the <a href="https://help.aliyun.com/document_detail/2513265.html">DescribeProjectMeta</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs</para>

@@ -358,6 +358,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     [Validation(Required=false)]
                     public string Selector { get; set; }
 
+                    [NameInMap("SilenceTime")]
+                    [Validation(Required=false)]
+                    public int? SilenceTime { get; set; }
+
                     /// <summary>
                     /// <para>The callback URL to which a request is sent when an alert is triggered.</para>
                     /// 

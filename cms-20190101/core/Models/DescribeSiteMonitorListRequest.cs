@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeSiteMonitorListRequest : TeaModel {
+        [NameInMap("AgentGroup")]
+        [Validation(Required=false)]
+        public string AgentGroup { get; set; }
+
         /// <summary>
         /// <para>The keyword to be matched.</para>
         /// <remarks>

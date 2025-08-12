@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteHostAvailabilityRequest : TeaModel {
         /// <summary>
+        /// <para>The task ID. Valid values of N: 1 to 20.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

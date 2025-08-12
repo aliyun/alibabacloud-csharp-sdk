@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The name of the cloud service.</para>
         /// <remarks>
-        /// <para> For information about the system events supported by Cloud Monitor for Alibaba Cloud services, see <a href="https://help.aliyun.com/document_detail/167388.html">System events</a>.</para>
+        /// <para> For information about the Alibaba Cloud services that are supported by CloudMonitor, see <a href="https://help.aliyun.com/document_detail/167388.html">Supported cloud services and their system events</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

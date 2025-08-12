@@ -29,9 +29,17 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public string ContentType { get; set; }
 
+            [NameInMap("EncryptSignatureKey")]
+            [Validation(Required=false)]
+            public string EncryptSignatureKey { get; set; }
+
             [NameInMap("EncryptString")]
             [Validation(Required=false)]
             public string EncryptString { get; set; }
+
+            [NameInMap("EncryptTimestampKey")]
+            [Validation(Required=false)]
+            public string EncryptTimestampKey { get; set; }
 
             [NameInMap("Headers")]
             [Validation(Required=false)]

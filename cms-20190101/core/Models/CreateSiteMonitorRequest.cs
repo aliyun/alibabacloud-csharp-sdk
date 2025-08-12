@@ -103,6 +103,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string TaskType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{&quot;vpcId&quot;: &quot;vpc-xxxxxx&quot;, &quot;vswitchId&quot;: &quot;vsw-xxxxxx&quot;, &quot;securityGroupId&quot;: &quot;sg-xxxxxx&quot;, &quot;region&quot;: &quot;cn-beijing&quot;}</para>
+        /// </summary>
         [NameInMap("VpcConfig")]
         [Validation(Required=false)]
         public string VpcConfig { get; set; }

@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The relationship between the conditional expressions for the tag values of the cloud resources. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>and (default value)</description></item>
+        /// <item><description>and (default)</description></item>
         /// <item><description>or</description></item>
         /// </list>
         /// 
