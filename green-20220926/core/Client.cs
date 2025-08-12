@@ -9941,6 +9941,10 @@ namespace AlibabaCloud.SDK.Green20220926
             {
                 body["TopP"] = request.TopP;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -9990,6 +9994,10 @@ namespace AlibabaCloud.SDK.Green20220926
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopP))
             {
                 body["TopP"] = request.TopP;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public float? TopP { get; set; }
 
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
+
     }
 
 }
