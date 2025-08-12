@@ -24,12 +24,12 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public bool? AlpnEnabled { get; set; }
 
         /// <summary>
-        /// <para>The ALPN policy. Valid values:</para>
+        /// <para>The name of the ALPN policy. The following are the possible values:</para>
         /// <list type="bullet">
-        /// <item><description><b>HTTP1Only</b>: uses only HTTP 1.x. The priority of HTTP 1.1 is higher than the priority of HTTP 1.0.</description></item>
-        /// <item><description><b>HTTP2Only</b>: uses only HTTP 2.0.</description></item>
-        /// <item><description><b>HTTP2Optional</b>: preferentially uses HTTP 1.x over HTTP 2.0. The priority of HTTP 1.1 is higher than the priority of HTTP 1.0, and the priority of HTTP 1.0 is higher than the priority of HTTP 2.0.</description></item>
-        /// <item><description><b>HTTP2Preferred</b>: preferentially uses HTTP 2.0 over HTTP 1.x. The priority of HTTP 2.0 is higher than the priority of HTTP 1.1, and the priority of HTTP 1.1 is higher than the priority of HTTP 1.0.</description></item>
+        /// <item><description><b>HTTP1Only</b>: Negotiate only HTTP/1.\*. The ALPN preference list is HTTP/1.1, HTTP/1.0.</description></item>
+        /// <item><description><b>HTTP2Only</b>: Negotiate only HTTP/2. The ALPN preference list is HTTP/2.</description></item>
+        /// <item><description><b>HTTP2Optional</b>: Prefer HTTP/1.\* over HTTP/2. The ALPN preference list is HTTP/1.1, HTTP/1.0, HTTP/2.</description></item>
+        /// <item><description><b>HTTP2Preferred</b>: Prefer HTTP/2 over HTTP/1.\*. The ALPN preference list is HTTP/2, HTTP/1.1, HTTP/1.0.</description></item>
         /// </list>
         /// <remarks>
         /// <para> This parameter is required if AlpnEnabled is set to true.</para>

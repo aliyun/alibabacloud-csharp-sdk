@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         /// <summary>
         /// <para>Specifies whether to enable multi-port forwarding. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true:</b></description></item>
+        /// <item><description><b>true</b></description></item>
         /// <item><description><b>false</b> (default)</description></item>
         /// </list>
         /// 
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         /// <summary>
         /// <para>Specifies whether to enable connection draining. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true:</b></description></item>
+        /// <item><description><b>true</b></description></item>
         /// <item><description><b>false</b> (default)</description></item>
         /// </list>
         /// 
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public bool? ConnectionDrainEnabled { get; set; }
 
         /// <summary>
-        /// <para>Specifies a timeout period for connection draining. Unit: seconds Valid values: <b>0</b> to <b>900</b>.</para>
+        /// <para>Specifies a timeout period for connection draining. Unit: seconds. Valid values: <b>0</b> to <b>900</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public int? HealthCheckConnectPort { get; set; }
 
             /// <summary>
-            /// <para>The timeout period for a health check response. Unit: seconds Valid values: <b>1</b> to <b>300</b> Default value: <b>5</b>.</para>
+            /// <para>The timeout period for a health check response. Unit: seconds. Valid values: <b>1</b> to <b>300</b>. Default value: <b>5</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -170,6 +170,11 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public List<string> HealthCheckHttpCode { get; set; }
 
             /// <summary>
+            /// <para>The HTTP version used for health checks. Valid values: <b>HTTP1.0</b> (default) and <b>HTTP1.1</b>.</para>
+            /// <remarks>
+            /// <para> This parameter takes effect only if you set <b>HealthCheckType</b> to <b>HTTP</b>.</para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>HTTP1.0</para>
             /// </summary>
@@ -178,7 +183,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string HealthCheckHttpVersion { get; set; }
 
             /// <summary>
-            /// <para>The interval at which health checks are performed. Unit: seconds Default value: <b>5</b></para>
+            /// <para>The interval at which health checks are performed. Unit: seconds. Default value: <b>5</b>.</para>
             /// <list type="bullet">
             /// <item><description>If you set <b>HealthCheckType</b> to <b>TCP</b> or <b>HTTP</b>, valid values are <b>1</b> to <b>50</b>.</description></item>
             /// <item><description>If you set <b>HealthCheckType</b> to <b>UDP</b>, valid values are <b>1</b> to <b>300</b>. Set the health check interval equal to or larger than the response timeout period to ensure that UDP response timeouts are not determined as no responses.</description></item>
@@ -232,8 +237,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 
             /// <summary>
             /// <para>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status changes from <b>fail</b> to <b>success</b>.</para>
-            /// <para>Valid values: <b>2</b> to <b>10</b></para>
-            /// <para>Default value: <b>2</b></para>
+            /// <para>Valid values: <b>2</b> to <b>10</b>.</para>
+            /// <para>Default value: <b>2</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -257,8 +262,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 
             /// <summary>
             /// <para>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status changes from <b>success</b> to <b>fail</b>.</para>
-            /// <para>Valid values: <b>2</b> to <b>10</b></para>
-            /// <para>Default value: <b>2</b></para>
+            /// <para>Valid values: <b>2</b> to <b>10</b>.</para>
+            /// <para>Default value: <b>2</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>

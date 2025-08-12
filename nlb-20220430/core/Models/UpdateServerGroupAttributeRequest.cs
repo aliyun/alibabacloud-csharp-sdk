@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public int? HealthCheckConnectPort { get; set; }
 
             /// <summary>
-            /// <para>The timeout period for a health check response. Unit: seconds. Valid values: <b>1 to 300</b>. Default value: <b>5</b></para>
+            /// <para>The timeout period for a health check response. Unit: seconds. Valid values: <b>1 to 300</b>. Default value: <b>5</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -139,12 +139,21 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             [Validation(Required=false)]
             public List<string> HealthCheckHttpCode { get; set; }
 
+            /// <summary>
+            /// <para>The version of the HTTP protocol. Valid values: <b>HTTP1.0</b> and <b>HTTP1.1</b>.</para>
+            /// <remarks>
+            /// <para> This parameter takes effect only if you set <b>HealthCheckType</b> to <b>HTTP</b>.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>HTTP1.0</para>
+            /// </summary>
             [NameInMap("HealthCheckHttpVersion")]
             [Validation(Required=false)]
             public string HealthCheckHttpVersion { get; set; }
 
             /// <summary>
-            /// <para>The interval at which health checks are performed. Unit: seconds. Default value: <b>5</b></para>
+            /// <para>The interval at which health checks are performed. Unit: seconds. Default value: <b>5</b>.</para>
             /// <list type="bullet">
             /// <item><description>If you set <b>HealthCheckType</b> to <b>TCP</b> or <b>HTTP</b>, valid values are <b>1 to 50</b>.</description></item>
             /// <item><description>If you set <b>HealthCheckType</b> to <b>UDP</b>, valid values are <b>1 to 300</b>. Set the health check interval equal to or larger than the response timeout period to ensure that UDP response timeouts are not determined as no responses.</description></item>
@@ -168,7 +177,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string HealthCheckReq { get; set; }
 
             /// <summary>
-            /// <para>The protocol that you want to use for health checks. Valid values:</para>
+            /// <para>The protocol that is used for health checks. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>TCP</b></description></item>
             /// <item><description><b>HTTP</b></description></item>

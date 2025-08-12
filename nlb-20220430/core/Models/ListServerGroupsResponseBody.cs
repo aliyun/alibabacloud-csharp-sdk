@@ -193,6 +193,15 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
                 [Validation(Required=false)]
                 public List<string> HealthCheckHttpCode { get; set; }
 
+                /// <summary>
+                /// <para>The version of the HTTP protocol. Valid values: <b>HTTP1.0</b> and <b>HTTP1.1</b>.</para>
+                /// <remarks>
+                /// <para> This parameter takes effect only if you set <b>HealthCheckType</b> to <b>HTTP</b>.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>HTTP1.0</para>
+                /// </summary>
                 [NameInMap("HealthCheckHttpVersion")]
                 [Validation(Required=false)]
                 public string HealthCheckHttpVersion { get; set; }

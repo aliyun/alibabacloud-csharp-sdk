@@ -51,8 +51,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public List<ListSecurityPolicyResponseBodySecurityPolicies> SecurityPolicies { get; set; }
         public class ListSecurityPolicyResponseBodySecurityPolicies : TeaModel {
             /// <summary>
-            /// <para>The supported cipher suites, which are determined by the TLS protocol version. You can specify at most 32 cipher suites.</para>
-            /// <para>TLS 1.0 and TLS 1.1 support the following cipher suites:</para>
+            /// <para>The cipher suites supported by the security policy. Valid values of this parameter vary based on the value of TlsVersions. A security policy supports up to 32 cipher suites.</para>
+            /// <para>TLSv1.0 and TLSv1.1 support the following cipher suites:</para>
             /// <list type="bullet">
             /// <item><description><b>ECDHE-ECDSA-AES128-SHA</b></description></item>
             /// <item><description><b>ECDHE-ECDSA-AES256-SHA</b></description></item>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             /// <item><description><b>AES256-SHA</b></description></item>
             /// <item><description><b>DES-CBC3-SHA</b></description></item>
             /// </list>
-            /// <para>TLS 1.2 supports the following cipher suites:</para>
+            /// <para>TLSv1.2 supports the following cipher suites:</para>
             /// <list type="bullet">
             /// <item><description><b>ECDHE-ECDSA-AES128-SHA</b></description></item>
             /// <item><description><b>ECDHE-ECDSA-AES256-SHA</b></description></item>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             /// <item><description><b>AES128-SHA256</b></description></item>
             /// <item><description><b>AES256-SHA256</b></description></item>
             /// </list>
-            /// <para>TLS 1.3 supports the following cipher suites:</para>
+            /// <para>TLSv1.3 supports the following cipher suites:</para>
             /// <list type="bullet">
             /// <item><description><b>TLS_AES_128_GCM_SHA256</b></description></item>
             /// <item><description><b>TLS_AES_256_GCM_SHA384</b></description></item>

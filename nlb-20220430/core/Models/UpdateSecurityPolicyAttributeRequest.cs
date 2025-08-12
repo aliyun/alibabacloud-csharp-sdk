@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 {
     public class UpdateSecurityPolicyAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The supported cipher suites. Valid values of this parameter vary base on the value of TlsVersions. You can specify up to 32 cipher suites.</para>
+        /// <para>The cipher suites supported by the security policy. Valid values of this parameter vary based on the value of TlsVersions. You can specify up to 32 cipher suites.</para>
         /// <para>TLSv1.0 and TLSv1.1 support the following cipher suites:</para>
         /// <list type="bullet">
         /// <item><description><b>ECDHE-ECDSA-AES128-SHA</b></description></item>

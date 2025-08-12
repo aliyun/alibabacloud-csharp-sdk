@@ -26,10 +26,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         /// <summary>
         /// <para>The ALPN policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>HTTP1Only</b>: uses only HTTP 1.x. The priority of HTTP 1.1 is higher than the priority of HTTP 1.0.</description></item>
+        /// <item><description><b>HTTP1Only</b>: uses only HTTP 1.x. The priority of HTTP 1.1 is higher than that of HTTP 1.0.</description></item>
         /// <item><description><b>HTTP2Only</b>: uses only HTTP 2.0.</description></item>
-        /// <item><description><b>HTTP2Optional</b>: preferentially uses HTTP 1.x over HTTP 2.0. The priority of HTTP 1.1 is higher than the priority of HTTP 1.0, and the priority of HTTP 1.0 is higher than the priority of HTTP 2.0.</description></item>
-        /// <item><description><b>HTTP2Preferred</b>: preferentially uses HTTP 2.0 over HTTP 1.x. The priority of HTTP 2.0 is higher than the priority of HTTP 1.1, and the priority of HTTP 1.1 is higher than the priority of HTTP 1.0.</description></item>
+        /// <item><description><b>HTTP2Optional</b>: preferentially uses HTTP 1.x over HTTP 2.0. The priority of HTTP 1.1 is higher than that of HTTP 1.0, and the priority of HTTP 1.0 is higher than that of HTTP 2.0.</description></item>
+        /// <item><description><b>HTTP2Preferred</b>: preferentially uses HTTP 2.0 over HTTP 1.x. The priority of HTTP 2.0 is higher than that of HTTP 1.1, and the priority of HTTP 1.1 is higher than that of HTTP 1.0.</description></item>
         /// </list>
         /// <remarks>
         /// <para> This parameter is required if <b>AlpnEnabled</b> is set to true.</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public int? Cps { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run, without sending the actual request. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: validates the request without performing the operation. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the validation, the corresponding error message is returned. If the request passes the validation, the <c>DryRunOperation</c> error code is returned.</description></item>
         /// <item><description><b>false</b> (default): validates the request and performs the operation. If the request passes the validation, a 2xx HTTP status code is returned and the operation is performed.</description></item>

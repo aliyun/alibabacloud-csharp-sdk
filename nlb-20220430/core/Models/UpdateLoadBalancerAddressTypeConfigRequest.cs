@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         /// <summary>
         /// <para>The new network type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Internet</b>: The NLB instance uses a public IP address. The domain name of the NLB instance is resolved to the public IP address. The NLB instance is accessible over the Internet.</description></item>
-        /// <item><description><b>Intranet</b>: The NLB instance uses a private IP address. The domain name of the NLB instance is resolved to the private IP address. The NLB instance can be accessed over the virtual private cloud (VPC) where the NLB instance is deployed.</description></item>
+        /// <item><description><b>Internet</b>: The nodes of an Internet-facing NLB instance have public IP addresses. The DNS name of an Internet-facing NLB instance is publicly resolvable to the public IP addresses of the nodes. Therefore, Internet-facing NLB instances can route requests from clients over the Internet.</description></item>
+        /// <item><description><b>Intranet</b>: The nodes of an internal-facing NLB instance have only private IP addresses. The DNS name of an internal-facing NLB instance is publicly resolvable to the private IP addresses of the nodes. Therefore, internal-facing NLB instances can route requests only from clients with access to the virtual private cloud (VPC) for the NLB instance.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -39,10 +39,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run, without sending the actual request. Valid values:</para>
+        /// <para>Perform a dry run without actually making the request. Valid values are:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and sends the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// <item><description><b>true</b>: Perform only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the check, an error message specifying the issue is returned. If the request passes, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): Check the request and perform the operation. If the request passes the check, a 2xx HTTP status code is returned, and the operation is performed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
