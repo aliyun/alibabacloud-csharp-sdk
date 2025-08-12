@@ -695,10 +695,6 @@ namespace AlibabaCloud.SDK.Cms20240330
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommonSchemaRef))
-            {
-                body["commonSchemaRef"] = request.CommonSchemaRef;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["description"] = request.Description;
@@ -745,10 +741,6 @@ namespace AlibabaCloud.SDK.Cms20240330
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommonSchemaRef))
-            {
-                body["commonSchemaRef"] = request.CommonSchemaRef;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["description"] = request.Description;
@@ -2997,10 +2989,6 @@ namespace AlibabaCloud.SDK.Cms20240330
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommonSchemaRef))
-            {
-                body["commonSchemaRef"] = request.CommonSchemaRef;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["description"] = request.Description;
@@ -3047,10 +3035,6 @@ namespace AlibabaCloud.SDK.Cms20240330
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommonSchemaRef))
-            {
-                body["commonSchemaRef"] = request.CommonSchemaRef;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["description"] = request.Description;

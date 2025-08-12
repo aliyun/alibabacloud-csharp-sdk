@@ -21,10 +21,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             [Validation(Required=false)]
             public string Group { get; set; }
 
-            [NameInMap("items")]
-            [Validation(Required=false)]
-            public List<string> Items { get; set; }
-
             /// <summary>
             /// <b>Example:</b>
             /// <para>5</para>
