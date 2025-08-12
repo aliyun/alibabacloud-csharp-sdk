@@ -2184,7 +2184,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
         /// <para>An organization is in a tree structure. The root organization ID is in the following format: org-aliyun-wy-org-id.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// DescribeOrgsRequest
         /// </param>
         /// <param name="runtime">
@@ -2194,9 +2194,15 @@ namespace AlibabaCloud.SDK.Eds_user20210308
         /// <returns>
         /// DescribeOrgsResponse
         /// </returns>
-        public DescribeOrgsResponse DescribeOrgsWithOptions(DescribeOrgsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeOrgsResponse DescribeOrgsWithOptions(DescribeOrgsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DescribeOrgsShrinkRequest request = new DescribeOrgsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ShowExtras))
+            {
+                request.ShowExtrasShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ShowExtras, "ShowExtras", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
@@ -2213,6 +2219,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentOrgId))
             {
                 query["ParentOrgId"] = request.ParentOrgId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowExtrasShrink))
+            {
+                query["ShowExtras"] = request.ShowExtrasShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2243,7 +2253,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
         /// <para>An organization is in a tree structure. The root organization ID is in the following format: org-aliyun-wy-org-id.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// DescribeOrgsRequest
         /// </param>
         /// <param name="runtime">
@@ -2253,9 +2263,15 @@ namespace AlibabaCloud.SDK.Eds_user20210308
         /// <returns>
         /// DescribeOrgsResponse
         /// </returns>
-        public async Task<DescribeOrgsResponse> DescribeOrgsWithOptionsAsync(DescribeOrgsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeOrgsResponse> DescribeOrgsWithOptionsAsync(DescribeOrgsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DescribeOrgsShrinkRequest request = new DescribeOrgsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ShowExtras))
+            {
+                request.ShowExtrasShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ShowExtras, "ShowExtras", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
@@ -2272,6 +2288,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentOrgId))
             {
                 query["ParentOrgId"] = request.ParentOrgId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowExtrasShrink))
+            {
+                query["ShowExtras"] = request.ShowExtrasShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

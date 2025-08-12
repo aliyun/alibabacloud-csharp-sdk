@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
-    public class DescribeOrgsRequest : TeaModel {
+    public class DescribeOrgsShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The maximum number of entries to return. Valid values: 1 to 100.\
         /// Default value: 100.</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 
         [NameInMap("ShowExtras")]
         [Validation(Required=false)]
-        public Dictionary<string, object> ShowExtras { get; set; }
+        public string ShowExtrasShrink { get; set; }
 
     }
 
