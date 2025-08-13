@@ -71,6 +71,18 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
 
         /// <summary>
         /// <para>The Alibaba Cloud Resource Name (ARN) of a resource.</para>
+        /// <para>Valid values of N: 1 to 50.</para>
+        /// <para>ARN format: <c>arn:acs:${ProductCode}:${Region}:${Account}:${ResourceType}/${ResourceId}</c> Fields:</para>
+        /// <list type="bullet">
+        /// <item><description><c>ProductCode</c>: the service code. You can set this field to a value obtained from the response of the <a href="https://help.aliyun.com/document_detail/2330915.html">ListSupportResourceTypes</a> operation.</description></item>
+        /// <item><description><c>Region</c>: the region ID of the resource. You can set this field to an asterisk (\*) to indicate the current region.</description></item>
+        /// <item><description><c>Account</c>: the ID of the Alibaba Cloud account to which the resource belongs. You can set this field to an asterisk (\*) to indicate the current Alibaba Cloud account.</description></item>
+        /// <item><description><c>ResourceType</c>: the resource type. You can set this field to a value obtained from the response of the <a href="https://help.aliyun.com/document_detail/2330915.html">ListSupportResourceTypes</a> operation.</description></item>
+        /// <item><description><c>ResourceId</c>: the ID of the resource.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> You can set <c>ProductCode</c> and <c>ResourceType</c> in ResourceARN to values defined in Resource Group, ActionTrail, or Resource Center.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>arn:acs:ecs:cn-hangzhou:123456789****:instance/i-bp15hr53jws84akg****</para>

@@ -8,12 +8,12 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Tag20180828.Models
 {
-    public class ModifyPolicyResponseBody : TeaModel {
+    public class UpdateAssociatedResourceRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>4A32F5B0-0B0B-5537-B4A0-7A6E1C3AA96A</para>
+        /// <para>94E16BB6-3FB6-1297-B5B2-ED2250F437CD</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

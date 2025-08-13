@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         /// <summary>
         /// <para>The ID of the object.</para>
         /// <remarks>
-        /// <para> If you use the Tag Policy feature in single-account mode, this parameter is optional. If you use the Tag Policy feature in multi-account mode, this feature is required.</para>
+        /// <para>If you use the Tag Policy feature in single-account mode, this parameter is optional. If you use the Tag Policy feature in multi-account mode, this parameter is required.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         /// <item><description>ACCOUNT: a member in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you use the Tag Policy feature in single-account mode, this parameter is optional. If you use the Tag Policy feature in multi-account mode, this feature is required. The value of this parameter is not case-sensitive.</para>
+        /// <para>If you use the Tag Policy feature in single-account mode, this parameter is optional. If you use the Tag Policy feature in multi-account mode, this parameter is required. The value of this parameter is not case-sensitive.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
