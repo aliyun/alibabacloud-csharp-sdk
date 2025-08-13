@@ -279,6 +279,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     [Validation(Required=false)]
                     public List<string> IpList { get; set; }
 
+                    [NameInMap("Ipv6List")]
+                    [Validation(Required=false)]
+                    public List<string> Ipv6List { get; set; }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>PUB_NET</para>
@@ -286,6 +290,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     [NameInMap("NetType")]
                     [Validation(Required=false)]
                     public string NetType { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>Ready</para>
+                    /// </summary>
+                    [NameInMap("Status")]
+                    [Validation(Required=false)]
+                    public string Status { get; set; }
 
                 }
 

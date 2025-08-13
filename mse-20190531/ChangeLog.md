@@ -1,3 +1,8 @@
+2025-08-13 Version: 6.19.1
+- Update API ListGateway: add response parameters Body.Data.Result.$.GatewayEntry.$.Ipv6List.
+- Update API ListGateway: add response parameters Body.Data.Result.$.GatewayEntry.$.Status.
+
+
 2025-08-01 Version: 6.19.0
 - Support API CreateSentinelBlockFallbackDefinition.
 - Update API AddGatewayDomain: add request parameters TlsCipherSuitesConfigJSON.
