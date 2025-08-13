@@ -9,58 +9,121 @@ using Tea;
 namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeEventResultBarChartResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
+        /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>HTTP status code</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
+        /// </summary>
         [NameInMap("httpStatusCode")]
         [Validation(Required=false)]
         public string HttpStatusCode { get; set; }
 
+        /// <summary>
+        /// <para>Error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The input parameter data is not valid. order_storage_company_num component not found</para>
+        /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>Request ID</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</para>
+        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Returned object</para>
+        /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public DescribeEventResultBarChartResponseBodyResultObject ResultObject { get; set; }
         public class DescribeEventResultBarChartResponseBodyResultObject : TeaModel {
+            /// <summary>
+            /// <para>Chart data</para>
+            /// </summary>
             [NameInMap("series")]
             [Validation(Required=false)]
             public List<DescribeEventResultBarChartResponseBodyResultObjectSeries> Series { get; set; }
             public class DescribeEventResultBarChartResponseBodyResultObjectSeries : TeaModel {
+                /// <summary>
+                /// <para>Returned data object</para>
+                /// </summary>
                 [NameInMap("data")]
                 [Validation(Required=false)]
                 public List<DescribeEventResultBarChartResponseBodyResultObjectSeriesData> Data { get; set; }
                 public class DescribeEventResultBarChartResponseBodyResultObjectSeriesData : TeaModel {
+                    /// <summary>
+                    /// <para>Number.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>100</para>
+                    /// </summary>
                     [NameInMap("num")]
                     [Validation(Required=false)]
                     public long? Num { get; set; }
 
+                    /// <summary>
+                    /// <para>Scale</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>50.00%</para>
+                    /// </summary>
                     [NameInMap("scale")]
                     [Validation(Required=false)]
                     public string Scale { get; set; }
 
                 }
 
+                /// <summary>
+                /// <para>Series name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>通过</para>
+                /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// <para>Label key</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>通过</para>
+                /// </summary>
                 [NameInMap("stack")]
                 [Validation(Required=false)]
                 public string Stack { get; set; }
 
             }
 
+            /// <summary>
+            /// <para>xaxis interface configuration.</para>
+            /// </summary>
             [NameInMap("xaxis")]
             [Validation(Required=false)]
             public DescribeEventResultBarChartResponseBodyResultObjectXaxis Xaxis { get; set; }
             public class DescribeEventResultBarChartResponseBodyResultObjectXaxis : TeaModel {
+                /// <summary>
+                /// <para>Returned data object</para>
+                /// </summary>
                 [NameInMap("data")]
                 [Validation(Required=false)]
                 public List<string> Data { get; set; }
@@ -69,6 +132,12 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 
         }
 
+        /// <summary>
+        /// <para>Whether the request was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

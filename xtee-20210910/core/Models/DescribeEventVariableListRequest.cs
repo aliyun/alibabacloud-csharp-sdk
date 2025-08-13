@@ -22,14 +22,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string FilterDTO { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("refObjId")]
         [Validation(Required=false)]
         public string RefObjId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("refObjType")]
         [Validation(Required=false)]

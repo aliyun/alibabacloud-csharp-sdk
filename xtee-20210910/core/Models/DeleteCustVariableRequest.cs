@@ -9,22 +9,56 @@ using Tea;
 namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DeleteCustVariableRequest : TeaModel {
+        /// <summary>
+        /// <para>Sets the language type for requests and received messages, default value is <b>zh</b>. Values: </para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>zh</para>
+        /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <summary>
+        /// <para>Creation type</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>NORMAL</para>
+        /// </summary>
         [NameInMap("createType")]
         [Validation(Required=false)]
         public string CreateType { get; set; }
 
+        /// <summary>
+        /// <para>Data version.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("dataVersion")]
         [Validation(Required=false)]
         public long? DataVersion { get; set; }
 
+        /// <summary>
+        /// <para>Region code</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
+        /// </summary>
         [NameInMap("regId")]
         [Validation(Required=false)]
         public string RegId { get; set; }
 
+        /// <summary>
+        /// <para>Variable ID</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>235</para>
+        /// </summary>
         [NameInMap("variableId")]
         [Validation(Required=false)]
         public string VariableId { get; set; }

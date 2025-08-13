@@ -9,19 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeDataSourceDataDownloadUrlRequest : TeaModel {
+        /// <summary>
+        /// <para>Sets the language type for requests and received messages, default value is <b>zh</b>. Values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>zh</para>
+        /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>Data source ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>69</para>
         /// </summary>
         [NameInMap("dataSourceId")]
         [Validation(Required=false)]
         public long? DataSourceId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>Region code</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("regId")]
         [Validation(Required=false)]

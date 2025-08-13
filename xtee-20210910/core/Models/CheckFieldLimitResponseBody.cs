@@ -9,10 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class CheckFieldLimitResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Request ID</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</para>
+        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Whether the condition is met: -<b>true</b>: meets the condition-<b>false</b>: does not meet the condition</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public bool? ResultObject { get; set; }

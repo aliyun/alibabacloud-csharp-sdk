@@ -9,32 +9,59 @@ using Tea;
 namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeTagsNumLineChartResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</para>
+        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Returned object</para>
+        /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public DescribeTagsNumLineChartResponseBodyResultObject ResultObject { get; set; }
         public class DescribeTagsNumLineChartResponseBodyResultObject : TeaModel {
+            /// <summary>
+            /// <para>Data list</para>
+            /// </summary>
             [NameInMap("series")]
             [Validation(Required=false)]
             public List<DescribeTagsNumLineChartResponseBodyResultObjectSeries> Series { get; set; }
             public class DescribeTagsNumLineChartResponseBodyResultObjectSeries : TeaModel {
+                /// <summary>
+                /// <para>Chart data list</para>
+                /// </summary>
                 [NameInMap("data")]
                 [Validation(Required=false)]
                 public List<string> Data { get; set; }
 
+                /// <summary>
+                /// <para>Series name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>rn101</para>
+                /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
             }
 
+            /// <summary>
+            /// <para>xaxis node.</para>
+            /// </summary>
             [NameInMap("xaxis")]
             [Validation(Required=false)]
             public DescribeTagsNumLineChartResponseBodyResultObjectXaxis Xaxis { get; set; }
             public class DescribeTagsNumLineChartResponseBodyResultObjectXaxis : TeaModel {
+                /// <summary>
+                /// <para>Chart data list</para>
+                /// </summary>
                 [NameInMap("data")]
                 [Validation(Required=false)]
                 public List<string> Data { get; set; }

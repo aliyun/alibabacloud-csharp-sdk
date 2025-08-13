@@ -9,18 +9,46 @@ using Tea;
 namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeEventBaseInfoByEventCodeRequest : TeaModel {
+        /// <summary>
+        /// <para>Set the language type for requests and received messages, default value is <b>zh</b>. Values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>zh</para>
+        /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <summary>
+        /// <para>Creation type</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>NORMAL</para>
+        /// </summary>
         [NameInMap("createType")]
         [Validation(Required=false)]
         public string CreateType { get; set; }
 
+        /// <summary>
+        /// <para>Event code</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>de_arcehq4370</para>
+        /// </summary>
         [NameInMap("eventCode")]
         [Validation(Required=false)]
         public string EventCode { get; set; }
 
+        /// <summary>
+        /// <para>Region code</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
+        /// </summary>
         [NameInMap("regId")]
         [Validation(Required=false)]
         public string RegId { get; set; }

@@ -9,14 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeSafOrderResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A32FE941-35F2-5378-B37C-4B8FDB16F094</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Returned object.</para>
+        /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public DescribeSafOrderResponseBodyResultObject ResultObject { get; set; }
         public class DescribeSafOrderResponseBodyResultObject : TeaModel {
+            /// <summary>
+            /// <para>Expiration date (timestamp).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1755076800000</para>
+            /// </summary>
             [NameInMap("expirationDate")]
             [Validation(Required=false)]
             public long? ExpirationDate { get; set; }

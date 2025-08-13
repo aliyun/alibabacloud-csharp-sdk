@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Content { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("service")]
         [Validation(Required=false)]

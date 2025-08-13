@@ -9,10 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class CreateEventResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Return result.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public bool? Data { get; set; }
 
+        /// <summary>
+        /// <para>Request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</para>
+        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
