@@ -95,7 +95,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// </list>
         /// </description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FlowLogStore</para>
@@ -127,7 +126,6 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// </list>
         /// </description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FlowLogProject</para>

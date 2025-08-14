@@ -31037,6 +31037,11 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return await UnassociateCenBandwidthPackageWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除PrivateZone</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UnroutePrivateZoneInCenToVpcRequest
         /// </param>
@@ -31094,6 +31099,11 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<UnroutePrivateZoneInCenToVpcResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除PrivateZone</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UnroutePrivateZoneInCenToVpcRequest
         /// </param>
@@ -31151,6 +31161,11 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TeaModel.ToObject<UnroutePrivateZoneInCenToVpcResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除PrivateZone</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UnroutePrivateZoneInCenToVpcRequest
         /// </param>
@@ -31164,6 +31179,11 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return UnroutePrivateZoneInCenToVpcWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除PrivateZone</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UnroutePrivateZoneInCenToVpcRequest
         /// </param>
