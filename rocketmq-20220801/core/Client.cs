@@ -3285,7 +3285,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询容灾计划详情</para>
+        /// <para>Queries the details of a Global Replicator task.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3321,7 +3321,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询容灾计划详情</para>
+        /// <para>Queries the details of a Global Replicator task.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3357,7 +3357,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询容灾计划详情</para>
+        /// <para>Queries the details of a Global Replicator task.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3372,7 +3372,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询容灾计划详情</para>
+        /// <para>Queries the details of a Global Replicator task.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4134,6 +4134,9 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         /// <para>Queries the trace of a specific message in a specific topic.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetTraceRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -4144,11 +4147,22 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         /// <returns>
         /// GetTraceResponse
         /// </returns>
-        public GetTraceResponse GetTraceWithOptions(string instanceId, string topicName, string messageId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetTraceResponse GetTraceWithOptions(string instanceId, string topicName, string messageId, GetTraceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["startTime"] = request.StartTime;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4170,6 +4184,9 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         /// <para>Queries the trace of a specific message in a specific topic.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetTraceRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -4180,11 +4197,22 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         /// <returns>
         /// GetTraceResponse
         /// </returns>
-        public async Task<GetTraceResponse> GetTraceWithOptionsAsync(string instanceId, string topicName, string messageId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetTraceResponse> GetTraceWithOptionsAsync(string instanceId, string topicName, string messageId, GetTraceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["startTime"] = request.StartTime;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4206,14 +4234,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         /// <para>Queries the trace of a specific message in a specific topic.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetTraceRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetTraceResponse
         /// </returns>
-        public GetTraceResponse GetTrace(string instanceId, string topicName, string messageId)
+        public GetTraceResponse GetTrace(string instanceId, string topicName, string messageId, GetTraceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetTraceWithOptions(instanceId, topicName, messageId, headers, runtime);
+            return GetTraceWithOptions(instanceId, topicName, messageId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4221,14 +4253,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         /// <para>Queries the trace of a specific message in a specific topic.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetTraceRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetTraceResponse
         /// </returns>
-        public async Task<GetTraceResponse> GetTraceAsync(string instanceId, string topicName, string messageId)
+        public async Task<GetTraceResponse> GetTraceAsync(string instanceId, string topicName, string messageId, GetTraceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetTraceWithOptionsAsync(instanceId, topicName, messageId, headers, runtime);
+            return await GetTraceWithOptionsAsync(instanceId, topicName, messageId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4895,7 +4931,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Disaster Recovery Plan Entry List</para>
+        /// <para>Queries the Global Replicator tasks of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4953,7 +4989,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Disaster Recovery Plan Entry List</para>
+        /// <para>Queries the Global Replicator tasks of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5011,7 +5047,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Disaster Recovery Plan Entry List</para>
+        /// <para>Queries the Global Replicator tasks of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5030,7 +5066,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Disaster Recovery Plan Entry List</para>
+        /// <para>Queries the Global Replicator tasks of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5049,7 +5085,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Disaster Recovery Plan List</para>
+        /// <para>Queries Global Replicator tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5107,7 +5143,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Disaster Recovery Plan List</para>
+        /// <para>Queries Global Replicator tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5165,7 +5201,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Disaster Recovery Plan List</para>
+        /// <para>Queries Global Replicator tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5184,7 +5220,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Disaster Recovery Plan List</para>
+        /// <para>Queries Global Replicator tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">

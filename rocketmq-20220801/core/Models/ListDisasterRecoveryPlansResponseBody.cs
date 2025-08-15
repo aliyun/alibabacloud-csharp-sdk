@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class ListDisasterRecoveryPlansResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial. This parameter is returned only if the access is denied due to the reason that the Resource Access Management (RAM) user does not have the required permissions.</para>
+        /// <para>The details about the access denial. This parameter is returned only if the access is denied because the Resource Access Management (RAM) user does not have the required permissions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Error code</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,21 +30,21 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Return result</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ListDisasterRecoveryPlansResponseBodyData Data { get; set; }
         public class ListDisasterRecoveryPlansResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Paged data</para>
+            /// <para>The Global Replicator tasks.</para>
             /// </summary>
             [NameInMap("list")]
             [Validation(Required=false)]
             public List<ListDisasterRecoveryPlansResponseBodyDataList> List { get; set; }
             public class ListDisasterRecoveryPlansResponseBodyDataList : TeaModel {
                 /// <summary>
-                /// <para>Whether to enable automatic synchronization of consumption progress.</para>
+                /// <para>Indicates whether automatic consumer progress synchronization is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public bool? AutoSyncCheckpoint { get; set; }
 
                 /// <summary>
-                /// <para>Creation time</para>
+                /// <para>The time when the query task was created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-08-01 20:05:50</para>
@@ -64,21 +64,21 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>Extended information</para>
+                /// <para>The extended information.</para>
                 /// </summary>
                 [NameInMap("extInfo")]
                 [Validation(Required=false)]
                 public Dictionary<string, string> ExtInfo { get; set; }
 
                 /// <summary>
-                /// <para>Instances involved in the backup plan</para>
+                /// <para>The instances involved in the Global Replicator task.</para>
                 /// </summary>
                 [NameInMap("instances")]
                 [Validation(Required=false)]
                 public List<ListDisasterRecoveryPlansResponseBodyDataListInstances> Instances { get; set; }
                 public class ListDisasterRecoveryPlansResponseBodyDataListInstances : TeaModel {
                     /// <summary>
-                    /// <para>Authentication method</para>
+                    /// <para>The authentication type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>NO_AUTH</para>
@@ -87,12 +87,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     [Validation(Required=false)]
                     public string AuthType { get; set; }
 
+                    /// <summary>
+                    /// <para>The ID of the consumer group.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>GID_ui_xxx</para>
+                    /// </summary>
                     [NameInMap("consumerGroupId")]
                     [Validation(Required=false)]
                     public string ConsumerGroupId { get; set; }
 
                     /// <summary>
-                    /// <para>Endpoint URL</para>
+                    /// <para>The endpoint.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>xxx</para>
@@ -102,7 +108,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     public string EndpointUrl { get; set; }
 
                     /// <summary>
-                    /// <para>Instance ID</para>
+                    /// <para>The instance ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>rmq-cn-ot93rbxxx</para>
@@ -112,7 +118,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     public string InstanceId { get; set; }
 
                     /// <summary>
-                    /// <para>Instance role</para>
+                    /// <para>The instance role.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ACTIVE</para>
@@ -122,11 +128,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     public string InstanceRole { get; set; }
 
                     /// <summary>
-                    /// <para>Instance type</para>
-                    /// <list type="bullet">
-                    /// <item><description>ALIYUN_ROCKETMQ: Alibaba Cloud instance</description></item>
-                    /// <item><description>EXTERNAL_ROCKETMQ: External instance, open-source instance, open-source cluster</description></item>
-                    /// </list>
+                    /// <para>The instance type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ALIYUN_ROCKETMQ</para>
@@ -136,14 +138,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     public string InstanceType { get; set; }
 
                     /// <summary>
-                    /// <para>Message property</para>
+                    /// <para>The message attribute.</para>
                     /// </summary>
                     [NameInMap("messageProperty")]
                     [Validation(Required=false)]
                     public ListDisasterRecoveryPlansResponseBodyDataListInstancesMessageProperty MessageProperty { get; set; }
                     public class ListDisasterRecoveryPlansResponseBodyDataListInstancesMessageProperty : TeaModel {
                         /// <summary>
-                        /// <para>Property key</para>
+                        /// <para>The attribute key.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>aaa</para>
@@ -153,7 +155,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                         public string PropertyKey { get; set; }
 
                         /// <summary>
-                        /// <para>Property value</para>
+                        /// <para>The attribute value.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>bbb</para>
@@ -165,7 +167,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     }
 
                     /// <summary>
-                    /// <para>Network type</para>
+                    /// <para>The network type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>TCP_INTERNET</para>
@@ -175,7 +177,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     public string NetworkType { get; set; }
 
                     /// <summary>
-                    /// <para>Authentication password</para>
+                    /// <para>The password used for authentication.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>xxx</para>
@@ -185,7 +187,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     public string Password { get; set; }
 
                     /// <summary>
-                    /// <para>The region where the instance is located</para>
+                    /// <para>The ID of the region where the instance resides.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cn-hangzhou</para>
@@ -195,7 +197,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     public string RegionId { get; set; }
 
                     /// <summary>
-                    /// <para>Security group ID</para>
+                    /// <para>The security group ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>sg-bp17hpmgz9******</para>
@@ -205,7 +207,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     public string SecurityGroupId { get; set; }
 
                     /// <summary>
-                    /// <para>Authentication username</para>
+                    /// <para>The username used for authentication.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>xxx</para>
@@ -215,7 +217,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     public string Username { get; set; }
 
                     /// <summary>
-                    /// <para>VSwitch ID</para>
+                    /// <para>The vSwitch ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>vsw-uf6gwtbn6etadpv******</para>
@@ -225,7 +227,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     public string VSwitchId { get; set; }
 
                     /// <summary>
-                    /// <para>VPC ID</para>
+                    /// <para>The virtual private cloud (VPC) ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>vpc-bp13docqysrgxtbxxxx</para>
@@ -237,7 +239,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 }
 
                 /// <summary>
-                /// <para>Plan description</para>
+                /// <para>The description of the Global Replicator task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xxx</para>
@@ -247,7 +249,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string PlanDesc { get; set; }
 
                 /// <summary>
-                /// <para>Plan ID</para>
+                /// <para>The ID of the Global Replicator task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1300000016</para>
@@ -257,7 +259,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public long? PlanId { get; set; }
 
                 /// <summary>
-                /// <para>Plan name</para>
+                /// <para>The name of the Global Replicator task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xxx</para>
@@ -267,11 +269,11 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string PlanName { get; set; }
 
                 /// <summary>
-                /// <para>Plan status:</para>
+                /// <para>The status of the Global Replicator task. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>CREATED (Created)</description></item>
-                /// <item><description>RUNNING (Running)</description></item>
-                /// <item><description>DELETED (Deleted)</description></item>
+                /// <item><description>CREATED</description></item>
+                /// <item><description>RUNNING</description></item>
+                /// <item><description>DELETED</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -282,10 +284,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string PlanStatus { get; set; }
 
                 /// <summary>
-                /// <para>Plan type:</para>
+                /// <para>The type of the Global Replicator task. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>ACTIVE_PASSIVE (One-way backup)</description></item>
-                /// <item><description>ACTIVE_ACTIVE (Two-way backup)</description></item>
+                /// <item><description>ACTIVE_PASSIVE: one-way backup</description></item>
+                /// <item><description>ACTIVE_ACTIVE: two-way backup</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -296,7 +298,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string PlanType { get; set; }
 
                 /// <summary>
-                /// <para>Sync checkpoint switch</para>
+                /// <para>Indicates whether consumer progress synchronization is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -306,7 +308,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public bool? SyncCheckpointEnabled { get; set; }
 
                 /// <summary>
-                /// <para>Update time</para>
+                /// <para>The time when the query task was last modified.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-08-01 20:05:50</para>
@@ -318,7 +320,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             }
 
             /// <summary>
-            /// <para>Current page number</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -328,7 +330,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public long? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>Page size</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -338,8 +340,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// <para>Scroll request ID.
-            /// Automatically generated by the system, subsequent paging requests need to include this result to continue paging.</para>
+            /// <para>The scroll ID of the request. The ID is automatically generated by the system. The result can be paginated only if this parameter is included in the pagination request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>B13D0B07-F24B-4790-88D8-D47A38063D00</para>
@@ -349,7 +350,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string ScrollId { get; set; }
 
             /// <summary>
-            /// <para>Total number of records</para>
+            /// <para>The total number of entries returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>28</para>
@@ -361,7 +362,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         }
 
         /// <summary>
-        /// <para>Dynamic error code</para>
+        /// <para>The dynamic error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InstanceId</para>
@@ -371,7 +372,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>Dynamic error message</para>
+        /// <para>The returned dynamic error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InstanceId</para>
@@ -381,7 +382,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>HTTP status code</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -391,7 +392,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Error message</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
@@ -401,7 +402,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>855EF8E6-9C1D-5DE2-9E84-924E13Exxxx</para>
@@ -411,7 +412,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Whether the operation was successful</para>
+        /// <para>Indicates whether the information about the service was queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

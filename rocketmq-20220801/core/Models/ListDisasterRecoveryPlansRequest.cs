@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class ListDisasterRecoveryPlansRequest : TeaModel {
         /// <summary>
-        /// <para>Filter conditions, filter by backup name and description</para>
+        /// <para>The filter condition. Global Replicator tasks are filtered by task name or description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
@@ -19,12 +19,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         [Validation(Required=false)]
         public string Filter { get; set; }
 
+        /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rmq-cn-778xxx</para>
+        /// </summary>
         [NameInMap("instanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Page number, the page of results to be queried.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -34,7 +40,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Page size, the maximum number of results displayed per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

@@ -14,11 +14,11 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         /// <para>The following types of operations are supported based on the resource type:</para>
         /// <list type="bullet">
         /// <item><description>Topic: Pub, Sub, and Pub|Sub</description></item>
-        /// <item><description>Consumer group: Sub</description></item>
+        /// <item><description>Group: Sub</description></item>
         /// </list>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SUB: subscribe</description></item>
+        /// <item><description>Sub: subscribe</description></item>
         /// <item><description>Pub|Sub: publish and subscribe</description></item>
         /// <item><description>Pub: publish</description></item>
         /// </list>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Decision { get; set; }
 
         /// <summary>
-        /// <para>The IP address whitelists.</para>
+        /// <para>The IP addresses in the whitelist.</para>
         /// </summary>
         [NameInMap("ipWhitelists")]
         [Validation(Required=false)]

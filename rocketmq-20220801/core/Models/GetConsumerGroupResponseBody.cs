@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public GetConsumerGroupResponseBodyData Data { get; set; }
         public class GetConsumerGroupResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The consumption retry policy that you want to configure for the consumer group. For more information, see <a href="https://help.aliyun.com/document_detail/440356.html">Consumption retry</a>.</para>
+            /// <para>The consumption retry policy of the consumer group. For more information, see <a href="https://help.aliyun.com/document_detail/440356.html">Consumption retry</a>.</para>
             /// </summary>
             [NameInMap("consumeRetryPolicy")]
             [Validation(Required=false)]
@@ -44,6 +44,16 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 [Validation(Required=false)]
                 public string DeadLetterTargetTopic { get; set; }
 
+                /// <summary>
+                /// <para>Fixed interval retry time,Value range, unit: seconds</para>
+                /// <list type="bullet">
+                /// <item><description>Concurrently:10-1800</description></item>
+                /// <item><description>Orderly:1-600</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>20</para>
+                /// </summary>
                 [NameInMap("fixedIntervalRetryTime")]
                 [Validation(Required=false)]
                 public int? FixedIntervalRetryTime { get; set; }
@@ -62,28 +72,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 /// <para>The retry policy.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>FixedRetryPolicy</para>
-                /// <!-- -->
-                /// 
-                /// <para>:</para>
-                /// <!-- -->
-                /// 
-                /// <para>Failed messages are retried at a fixed interval</para>
-                /// <!-- -->
-                /// 
-                /// <para>.</para>
-                /// </description></item>
-                /// <item><description><para>DefaultRetryPolicy</para>
-                /// <!-- -->
-                /// 
-                /// <para>:</para>
-                /// <!-- -->
-                /// 
-                /// <para>Failed messages are retried at incremental intervals as the number of retries increases</para>
-                /// <!-- -->
-                /// 
-                /// <para>.</para>
-                /// </description></item>
+                /// <item><description>FixedRetryPolicy: fixed-interval retry</description></item>
+                /// <item><description>DefaultRetryPolicy: exponential backoff retry</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -116,26 +106,11 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The message delivery order of the consumer group.</para>
+            /// <para>The message delivery method of the consumer group.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Concurrently</para>
-            /// <!-- -->
-            /// 
-            /// <para>:</para>
-            /// <!-- -->
-            /// 
-            /// <para>concurrent delivery</para>
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>Orderly</para>
-            /// <!-- -->
-            /// 
-            /// <para>:</para>
-            /// <!-- -->
-            /// 
-            /// <para>ordered delivery</para>
-            /// <!-- --></description></item>
+            /// <item><description>Concurrently: concurrent delivery</description></item>
+            /// <item><description>Orderly: ordered delivery</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -186,31 +161,11 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string Remark { get; set; }
 
             /// <summary>
-            /// <para>The state of the consumer group.</para>
+            /// <para>The status of the consumer group.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>RUNNING</para>
-            /// <!-- -->
-            /// 
-            /// <para>: The consumer group is</para>
-            /// <!-- -->
-            /// 
-            /// <para>running</para>
-            /// <!-- -->
-            /// 
-            /// <para>.</para>
-            /// </description></item>
-            /// <item><description><para>CREATING</para>
-            /// <!-- -->
-            /// 
-            /// <para>: The consumer group is</para>
-            /// <!-- -->
-            /// 
-            /// <para>being created</para>
-            /// <!-- -->
-            /// 
-            /// <para>.</para>
-            /// </description></item>
+            /// <item><description>RUNNING</description></item>
+            /// <item><description>CREATING</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

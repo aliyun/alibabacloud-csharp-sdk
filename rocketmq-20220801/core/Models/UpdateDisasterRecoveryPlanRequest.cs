@@ -10,10 +10,15 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class UpdateDisasterRecoveryPlanRequest : TeaModel {
         /// <summary>
-        /// <para>Whether to enable automatic synchronization of consumption progress.</para>
+        /// <para>Specifies whether to enable automatic consumer progress synchronization.</para>
         /// <remarks>
-        /// <para>This is effective only when consumption progress synchronization is enabled, i.e., the value of <c>syncCheckpointEnabled</c> is true.</para>
+        /// <para> This parameter takes effect only when you set <c>syncCheckpointEnabled</c> to true.</para>
         /// </remarks>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -23,17 +28,23 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public bool? AutoSyncCheckpoint { get; set; }
 
         /// <summary>
-        /// <para>The instances that are involved in the global message backup plan.</para>
+        /// <para>The instances involved in the Global Replicator task. After you create a Global Replicator task, you cannot change the instances involved in the task. You can change only the message attribute and authentication type of the task.</para>
         /// </summary>
         [NameInMap("instances")]
         [Validation(Required=false)]
         public List<UpdateDisasterRecoveryPlanRequestInstances> Instances { get; set; }
         public class UpdateDisasterRecoveryPlanRequestInstances : TeaModel {
             /// <summary>
-            /// <para>The authentication type.</para>
+            /// <para>The authentication type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>NO_AUTH: no authentication</description></item>
             /// <item><description>ACL_AUTH: access control list (ACL)-based authentication</description></item>
+            /// </list>
+            /// <!---->
+            /// 
+            /// <list type="bullet">
+            /// <item><description></description></item>
+            /// <item><description></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -43,6 +54,12 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             [Validation(Required=false)]
             public string AuthType { get; set; }
 
+            /// <summary>
+            /// <para>The consumer group ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>GID_DS_XXX_YYY</para>
+            /// </summary>
             [NameInMap("consumerGroupId")]
             [Validation(Required=false)]
             public string ConsumerGroupId { get; set; }
@@ -139,7 +156,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string NetworkType { get; set; }
 
             /// <summary>
-            /// <para>The password that is used for authentication. This parameter is required only if you set authType to ACL_AUTH.</para>
+            /// <para>The password used for authentication. This parameter is required only if you set authType to ACL_AUTH.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -149,7 +166,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string Password { get; set; }
 
             /// <summary>
-            /// <para>The region in which the instance resides.</para>
+            /// <para>The ID of the region where the instance resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -159,7 +176,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the security group to which the instance belongs. This parameter is required only if you set instanceType to EXTERNAL_ROCKETMQ.</para>
+            /// <para>The ID of the security group to which the instance belongs. This parameter is required only if you set instanceType to EXTERNAL_ROCKETMQ and networkType to TCP_VPC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sg-bp17hpmgz9******</para>
@@ -169,7 +186,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string SecurityGroupId { get; set; }
 
             /// <summary>
-            /// <para>The username that is used for authentication. This parameter is required only if you set authType to ACL_AUTH.</para>
+            /// <para>The username used for authentication. This parameter is required only if you set authType to ACL_AUTH.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -179,7 +196,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string Username { get; set; }
 
             /// <summary>
-            /// <para>The ID of the vSwitch with which the instance is associated. If you want to specify multiple vSwitches, separate the vSwitches with vertical bars (|).</para>
+            /// <para>The ID of the vSwitch with which the instance is associated. This parameter is required only if you set instanceType to EXTERNAL_ROCKETMQ and networkType to TCP_VPC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-uf6gwtbn6etadpv******</para>
@@ -189,7 +206,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the VPC with which the instance is associated. This parameter is required only if you set instanceType to EXTERNAL_ROCKETMQ.</para>
+            /// <para>The ID of the VPC with which the instance is associated. This parameter is required only if you set instanceType to EXTERNAL_ROCKETMQ and networkType to TCP_VPC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-wz9qt50xhtj9krb******</para>
@@ -201,7 +218,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         }
 
         /// <summary>
-        /// <para>The description of the global message backup plan.</para>
+        /// <para>The description of the Global Replicator task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
@@ -211,7 +228,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string PlanDesc { get; set; }
 
         /// <summary>
-        /// <para>The name of the global message backup plan.</para>
+        /// <para>The name of the Global Replicator task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
@@ -221,10 +238,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string PlanName { get; set; }
 
         /// <summary>
-        /// <para>The type of the global message backup plan. Valid values:</para>
+        /// <para>The type of the Global Replicator task. After you create a Global Replicator task, you cannot change the type of the task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ACTIVE_PASSIVE: geo-disaster recovery</description></item>
-        /// <item><description>ACTIVE_ACTIVE: active geo-redundancy</description></item>
+        /// <item><description>ACTIVE_PASSIVE: one-way backup</description></item>
+        /// <item><description>ACTIVE_ACTIVE: two-way backup</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -235,7 +252,12 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string PlanType { get; set; }
 
         /// <summary>
-        /// <para>Switch for synchronizing consumption progress</para>
+        /// <para>Specifies whether to enable consumer progress synchronization.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

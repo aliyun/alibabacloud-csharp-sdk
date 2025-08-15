@@ -29,10 +29,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string DeadLetterTargetTopic { get; set; }
 
             /// <summary>
-            /// <para>Fixed retry interval, unit: seconds.This option is effective when retryPolicy is FixedRetryPolicy.Value range：</para>
+            /// <para>The fixed interval. Unit: seconds. This parameter takes effect only if you set retryPolicy to FixedRetryPolicy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Concurrently:10-600</description></item>
-            /// <item><description>Orderly:1-60</description></item>
+            /// <item><description>Concurrent delivery: 10 to 1800</description></item>
+            /// <item><description>Ordered delivery: 1 to 600</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
