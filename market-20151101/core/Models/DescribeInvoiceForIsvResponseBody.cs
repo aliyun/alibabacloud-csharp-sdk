@@ -77,6 +77,10 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             [Validation(Required=false)]
             public string AliyunPk { get; set; }
 
+            [NameInMap("CheckNotice")]
+            [Validation(Required=false)]
+            public string CheckNotice { get; set; }
+
             [NameInMap("CreateTimeStr")]
             [Validation(Required=false)]
             public string CreateTimeStr { get; set; }
@@ -132,6 +136,18 @@ namespace AlibabaCloud.SDK.Market20151101.Models
                 [NameInMap("OutBizId")]
                 [Validation(Required=false)]
                 public string OutBizId { get; set; }
+
+                [NameInMap("ProductCode")]
+                [Validation(Required=false)]
+                public string ProductCode { get; set; }
+
+                [NameInMap("ProductName")]
+                [Validation(Required=false)]
+                public string ProductName { get; set; }
+
+                [NameInMap("RealAliyunId")]
+                [Validation(Required=false)]
+                public string RealAliyunId { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
@@ -272,6 +288,10 @@ namespace AlibabaCloud.SDK.Market20151101.Models
                 public string PostalCode { get; set; }
 
             }
+
+            [NameInMap("UserNotice")]
+            [Validation(Required=false)]
+            public string UserNotice { get; set; }
 
         }
 
