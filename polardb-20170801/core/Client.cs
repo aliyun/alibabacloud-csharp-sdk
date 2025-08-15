@@ -21284,7 +21284,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// </remarks>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ModifyBackupPolicyRequest
         /// </param>
         /// <param name="runtime">
@@ -21294,13 +21294,27 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// <returns>
         /// ModifyBackupPolicyResponse
         /// </returns>
-        public ModifyBackupPolicyResponse ModifyBackupPolicyWithOptions(ModifyBackupPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ModifyBackupPolicyResponse ModifyBackupPolicyWithOptions(ModifyBackupPolicyRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyBackupPolicyShrinkRequest request = new ModifyBackupPolicyShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AdvancedDataPolicies))
+            {
+                request.AdvancedDataPoliciesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AdvancedDataPolicies, "AdvancedDataPolicies", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdvancedDataPoliciesShrink))
+            {
+                query["AdvancedDataPolicies"] = request.AdvancedDataPoliciesShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupFrequency))
             {
                 query["BackupFrequency"] = request.BackupFrequency;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupPolicyLevel))
+            {
+                query["BackupPolicyLevel"] = request.BackupPolicyLevel;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupRetentionPolicyOnClusterDeletion))
             {
@@ -21397,7 +21411,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// </remarks>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ModifyBackupPolicyRequest
         /// </param>
         /// <param name="runtime">
@@ -21407,13 +21421,27 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// <returns>
         /// ModifyBackupPolicyResponse
         /// </returns>
-        public async Task<ModifyBackupPolicyResponse> ModifyBackupPolicyWithOptionsAsync(ModifyBackupPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ModifyBackupPolicyResponse> ModifyBackupPolicyWithOptionsAsync(ModifyBackupPolicyRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyBackupPolicyShrinkRequest request = new ModifyBackupPolicyShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AdvancedDataPolicies))
+            {
+                request.AdvancedDataPoliciesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AdvancedDataPolicies, "AdvancedDataPolicies", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdvancedDataPoliciesShrink))
+            {
+                query["AdvancedDataPolicies"] = request.AdvancedDataPoliciesShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupFrequency))
             {
                 query["BackupFrequency"] = request.BackupFrequency;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupPolicyLevel))
+            {
+                query["BackupPolicyLevel"] = request.BackupPolicyLevel;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupRetentionPolicyOnClusterDeletion))
             {

@@ -9,6 +9,82 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeBackupPolicyResponseBody : TeaModel {
+        [NameInMap("AdvancedDataPolicies")]
+        [Validation(Required=false)]
+        public DescribeBackupPolicyResponseBodyAdvancedDataPolicies AdvancedDataPolicies { get; set; }
+        public class DescribeBackupPolicyResponseBodyAdvancedDataPolicies : TeaModel {
+            [NameInMap("AdvancedDataPolicy")]
+            [Validation(Required=false)]
+            public List<DescribeBackupPolicyResponseBodyAdvancedDataPoliciesAdvancedDataPolicy> AdvancedDataPolicy { get; set; }
+            public class DescribeBackupPolicyResponseBodyAdvancedDataPoliciesAdvancedDataPolicy : TeaModel {
+                [NameInMap("AutoCreated")]
+                [Validation(Required=false)]
+                public bool? AutoCreated { get; set; }
+
+                [NameInMap("BakType")]
+                [Validation(Required=false)]
+                public string BakType { get; set; }
+
+                [NameInMap("DestRegion")]
+                [Validation(Required=false)]
+                public string DestRegion { get; set; }
+
+                [NameInMap("DestType")]
+                [Validation(Required=false)]
+                public string DestType { get; set; }
+
+                [NameInMap("DumpAction")]
+                [Validation(Required=false)]
+                public string DumpAction { get; set; }
+
+                [NameInMap("FilterKey")]
+                [Validation(Required=false)]
+                public string FilterKey { get; set; }
+
+                [NameInMap("FilterType")]
+                [Validation(Required=false)]
+                public string FilterType { get; set; }
+
+                [NameInMap("FilterValue")]
+                [Validation(Required=false)]
+                public string FilterValue { get; set; }
+
+                [NameInMap("OnlyPreserveOneEachDay")]
+                [Validation(Required=false)]
+                public bool? OnlyPreserveOneEachDay { get; set; }
+
+                [NameInMap("OnlyPreserveOneEachHour")]
+                [Validation(Required=false)]
+                public bool? OnlyPreserveOneEachHour { get; set; }
+
+                [NameInMap("PolicyId")]
+                [Validation(Required=false)]
+                public string PolicyId { get; set; }
+
+                [NameInMap("RetentionType")]
+                [Validation(Required=false)]
+                public string RetentionType { get; set; }
+
+                [NameInMap("RetentionValue")]
+                [Validation(Required=false)]
+                public string RetentionValue { get; set; }
+
+                [NameInMap("SrcRegion")]
+                [Validation(Required=false)]
+                public string SrcRegion { get; set; }
+
+                [NameInMap("SrcType")]
+                [Validation(Required=false)]
+                public string SrcType { get; set; }
+
+            }
+
+        }
+
+        [NameInMap("AdvancedPolicyOption")]
+        [Validation(Required=false)]
+        public string AdvancedPolicyOption { get; set; }
+
         /// <summary>
         /// <para>The backup frequency. Default value: Normal. Valid values:</para>
         /// <list type="bullet">
@@ -30,6 +106,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("BackupFrequency")]
         [Validation(Required=false)]
         public string BackupFrequency { get; set; }
+
+        [NameInMap("BackupPolicyLevel")]
+        [Validation(Required=false)]
+        public string BackupPolicyLevel { get; set; }
 
         /// <summary>
         /// <para>Indicates whether backups are retained when you delete a cluster. Valid values:</para>

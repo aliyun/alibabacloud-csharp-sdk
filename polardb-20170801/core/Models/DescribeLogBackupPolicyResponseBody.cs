@@ -9,6 +9,50 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeLogBackupPolicyResponseBody : TeaModel {
+        [NameInMap("AdvancedLogPolicies")]
+        [Validation(Required=false)]
+        public DescribeLogBackupPolicyResponseBodyAdvancedLogPolicies AdvancedLogPolicies { get; set; }
+        public class DescribeLogBackupPolicyResponseBodyAdvancedLogPolicies : TeaModel {
+            [NameInMap("AdvancedLogPolicy")]
+            [Validation(Required=false)]
+            public List<DescribeLogBackupPolicyResponseBodyAdvancedLogPoliciesAdvancedLogPolicy> AdvancedLogPolicy { get; set; }
+            public class DescribeLogBackupPolicyResponseBodyAdvancedLogPoliciesAdvancedLogPolicy : TeaModel {
+                [NameInMap("DestRegion")]
+                [Validation(Required=false)]
+                public string DestRegion { get; set; }
+
+                [NameInMap("DestType")]
+                [Validation(Required=false)]
+                public string DestType { get; set; }
+
+                [NameInMap("EnableLogBackup")]
+                [Validation(Required=false)]
+                public int? EnableLogBackup { get; set; }
+
+                [NameInMap("LogRetentionType")]
+                [Validation(Required=false)]
+                public string LogRetentionType { get; set; }
+
+                [NameInMap("LogRetentionValue")]
+                [Validation(Required=false)]
+                public string LogRetentionValue { get; set; }
+
+                [NameInMap("PolicyId")]
+                [Validation(Required=false)]
+                public string PolicyId { get; set; }
+
+                [NameInMap("SrcRegion")]
+                [Validation(Required=false)]
+                public string SrcRegion { get; set; }
+
+                [NameInMap("SrcType")]
+                [Validation(Required=false)]
+                public string SrcType { get; set; }
+
+            }
+
+        }
+
         /// <summary>
         /// <para>Indicates whether the log backup feature is enabled. Valid values:</para>
         /// <list type="bullet">

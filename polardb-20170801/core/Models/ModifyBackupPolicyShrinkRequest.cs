@@ -8,76 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
-    public class ModifyBackupPolicyRequest : TeaModel {
+    public class ModifyBackupPolicyShrinkRequest : TeaModel {
         [NameInMap("AdvancedDataPolicies")]
         [Validation(Required=false)]
-        public List<ModifyBackupPolicyRequestAdvancedDataPolicies> AdvancedDataPolicies { get; set; }
-        public class ModifyBackupPolicyRequestAdvancedDataPolicies : TeaModel {
-            [NameInMap("ActionType")]
-            [Validation(Required=false)]
-            public string ActionType { get; set; }
-
-            [NameInMap("AutoCreated")]
-            [Validation(Required=false)]
-            public bool? AutoCreated { get; set; }
-
-            [NameInMap("BakType")]
-            [Validation(Required=false)]
-            public string BakType { get; set; }
-
-            [NameInMap("DestRegion")]
-            [Validation(Required=false)]
-            public string DestRegion { get; set; }
-
-            [NameInMap("DestType")]
-            [Validation(Required=false)]
-            public string DestType { get; set; }
-
-            [NameInMap("DumpAction")]
-            [Validation(Required=false)]
-            public string DumpAction { get; set; }
-
-            [NameInMap("FilterKey")]
-            [Validation(Required=false)]
-            public string FilterKey { get; set; }
-
-            [NameInMap("FilterType")]
-            [Validation(Required=false)]
-            public string FilterType { get; set; }
-
-            [NameInMap("FilterValue")]
-            [Validation(Required=false)]
-            public string FilterValue { get; set; }
-
-            [NameInMap("OnlyPreserveOneEachDay")]
-            [Validation(Required=false)]
-            public bool? OnlyPreserveOneEachDay { get; set; }
-
-            [NameInMap("OnlyPreserveOneEachHour")]
-            [Validation(Required=false)]
-            public bool? OnlyPreserveOneEachHour { get; set; }
-
-            [NameInMap("PolicyId")]
-            [Validation(Required=false)]
-            public string PolicyId { get; set; }
-
-            [NameInMap("RetentionType")]
-            [Validation(Required=false)]
-            public string RetentionType { get; set; }
-
-            [NameInMap("RetentionValue")]
-            [Validation(Required=false)]
-            public string RetentionValue { get; set; }
-
-            [NameInMap("SrcRegion")]
-            [Validation(Required=false)]
-            public string SrcRegion { get; set; }
-
-            [NameInMap("SrcType")]
-            [Validation(Required=false)]
-            public string SrcType { get; set; }
-
-        }
+        public string AdvancedDataPoliciesShrink { get; set; }
 
         /// <summary>
         /// <para>The backup frequency. Default value: Normal. Valid values:</para>
