@@ -34,10 +34,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string ProxyId { get; set; }
 
-        [NameInMap("trimSql")]
-        [Validation(Required=false)]
-        public string TrimSql { get; set; }
-
     }
 
 }

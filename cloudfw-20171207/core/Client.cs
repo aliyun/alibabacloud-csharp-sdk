@@ -5333,10 +5333,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["ProxyId"] = request.ProxyId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrimSql))
-            {
-                query["trimSql"] = request.TrimSql;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -5382,10 +5378,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyId))
             {
                 query["ProxyId"] = request.ProxyId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrimSql))
-            {
-                query["trimSql"] = request.TrimSql;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
