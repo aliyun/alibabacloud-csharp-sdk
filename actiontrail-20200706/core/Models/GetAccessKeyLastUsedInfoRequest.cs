@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
 {
     public class GetAccessKeyLastUsedInfoRequest : TeaModel {
         /// <summary>
-        /// The AccessKey secret.
+        /// <para>The AccessKey ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>LTAI****************</para>
         /// </summary>
         [NameInMap("AccessKey")]
         [Validation(Required=false)]

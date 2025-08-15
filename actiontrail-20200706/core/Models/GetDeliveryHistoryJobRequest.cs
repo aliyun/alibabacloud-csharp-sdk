@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
 {
     public class GetDeliveryHistoryJobRequest : TeaModel {
         /// <summary>
-        /// The ID of the historical event delivery task.
+        /// <para>The ID of the historical event delivery task.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>16602</para>
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]

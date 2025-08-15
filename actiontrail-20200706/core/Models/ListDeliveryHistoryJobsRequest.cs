@@ -10,20 +10,28 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
 {
     public class ListDeliveryHistoryJobsRequest : TeaModel {
         /// <summary>
-        /// The page number.
+        /// <para>The page number.</para>
+        /// <list type="bullet">
+        /// <item><description>Pages start from page 1.</description></item>
+        /// <item><description>Default value: 1.</description></item>
+        /// </list>
         /// 
-        /// *   Pages start from page 1.
-        /// *   Default value: 1.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// <list type="bullet">
+        /// <item><description>Valid values: 1 to 100.</description></item>
+        /// <item><description>Default value: 20.</description></item>
+        /// </list>
         /// 
-        /// *   Valid values: 1 to 100.
-        /// *   Default value: 20.
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

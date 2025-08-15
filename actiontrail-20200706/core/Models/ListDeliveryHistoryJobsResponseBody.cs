@@ -10,68 +10,93 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
 {
     public class ListDeliveryHistoryJobsResponseBody : TeaModel {
         /// <summary>
-        /// The list of historical event delivery tasks.
+        /// <para>The list of historical event delivery tasks.</para>
         /// </summary>
         [NameInMap("DeliveryHistoryJobs")]
         [Validation(Required=false)]
         public List<ListDeliveryHistoryJobsResponseBodyDeliveryHistoryJobs> DeliveryHistoryJobs { get; set; }
         public class ListDeliveryHistoryJobsResponseBodyDeliveryHistoryJobs : TeaModel {
             /// <summary>
-            /// The time when the task was created.
+            /// <para>The time when the task was created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2021-04-26T03:17:04Z</para>
             /// </summary>
             [NameInMap("CreatedTime")]
             [Validation(Required=false)]
             public string CreatedTime { get; set; }
 
             /// <summary>
-            /// The time when the task ended.
+            /// <para>The time when the task ended.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2021-04-26T03:22:04Z</para>
             /// </summary>
             [NameInMap("EndTime")]
             [Validation(Required=false)]
             public string EndTime { get; set; }
 
             /// <summary>
-            /// The home region of the trail.
+            /// <para>The home region of the trail.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
             /// </summary>
             [NameInMap("HomeRegion")]
             [Validation(Required=false)]
             public string HomeRegion { get; set; }
 
             /// <summary>
-            /// The task ID.
+            /// <para>The task ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>16602</para>
             /// </summary>
             [NameInMap("JobId")]
             [Validation(Required=false)]
             public long? JobId { get; set; }
 
             /// <summary>
-            /// The task status. Valid values:
+            /// <para>The task status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: The task is initializing.</description></item>
+            /// <item><description>1: The task is delivering historical events.</description></item>
+            /// <item><description>2: The task is complete.</description></item>
+            /// <item><description>3: The task fails.</description></item>
+            /// </list>
             /// 
-            /// *   0: The task is initializing.
-            /// *   1: The task is delivering historical events.
-            /// *   2: The task is complete.
-            /// *   3: The task fails.
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("JobStatus")]
             [Validation(Required=false)]
             public int? JobStatus { get; set; }
 
             /// <summary>
-            /// The time when the task started.
+            /// <para>The time when the task started.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2021-01-26T03:17:04Z</para>
             /// </summary>
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public string StartTime { get; set; }
 
             /// <summary>
-            /// The name of the trail.
+            /// <para>The name of the trail.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>trail-name</para>
             /// </summary>
             [NameInMap("TrailName")]
             [Validation(Required=false)]
             public string TrailName { get; set; }
 
             /// <summary>
-            /// The time when the task was updated.
+            /// <para>The time when the task was updated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2021-04-26T03:20:08Z</para>
             /// </summary>
             [NameInMap("UpdatedTime")]
             [Validation(Required=false)]
@@ -80,28 +105,40 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// <para>The page number of the returned page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>B190816C-6DCA-4DC5-9B8E-EE0367B57CFF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The number of historical event delivery tasks returned.
+        /// <para>The number of historical event delivery tasks returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

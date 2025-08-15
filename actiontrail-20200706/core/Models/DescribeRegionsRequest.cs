@@ -10,10 +10,14 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
 {
     public class DescribeRegionsRequest : TeaModel {
         /// <summary>
-        /// The language in which the region names are returned. Valid values:
+        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh-CN: Chinese</description></item>
+        /// <item><description>en-US (default): English</description></item>
+        /// </list>
         /// 
-        /// - zh-CN: Chinese.
-        /// - en-US: English. It is the default value.
+        /// <b>Example:</b>
+        /// <para>en-US</para>
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]

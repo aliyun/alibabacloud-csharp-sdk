@@ -10,80 +10,109 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
 {
     public class GetDeliveryHistoryJobResponseBody : TeaModel {
         /// <summary>
-        /// The time when the task was created.
+        /// <para>The time when the task was created.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2021-05-27T07:15:03Z</para>
         /// </summary>
         [NameInMap("CreatedTime")]
         [Validation(Required=false)]
         public string CreatedTime { get; set; }
 
         /// <summary>
-        /// The time when the task ended.
+        /// <para>The time when the task ended.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2021-05-27T07:20:03Z</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The home region of the trail.
+        /// <para>The home region of the trail.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("HomeRegion")]
         [Validation(Required=false)]
         public string HomeRegion { get; set; }
 
         /// <summary>
-        /// The ID of the task.
+        /// <para>The ID of the task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>16602</para>
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public long? JobId { get; set; }
 
         /// <summary>
-        /// The task status. Valid values:
+        /// <para>The task status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: The task is initializing.</description></item>
+        /// <item><description>1: The task is delivering historical events.</description></item>
+        /// <item><description>2: The task is complete.</description></item>
+        /// <item><description>3: The task fails.</description></item>
+        /// </list>
         /// 
-        /// *   0: The task is initializing.
-        /// *   1: The task is delivering historical events.
-        /// *   2: The task is complete.
-        /// *   3: The task fails.
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("JobStatus")]
         [Validation(Required=false)]
         public int? JobStatus { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>FAFEC427-A00D-5653-B837-D0FA52220D8C</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The time when the task started.
+        /// <para>The time when the task started.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2021-02-26T07:15:03Z</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
         /// <summary>
-        /// A list of task statuses in each region.
+        /// <para>A list of task statuses in each region.</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public List<GetDeliveryHistoryJobResponseBodyStatus> Status { get; set; }
         public class GetDeliveryHistoryJobResponseBodyStatus : TeaModel {
             /// <summary>
-            /// The ID of the region.
+            /// <para>The ID of the region.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
             /// </summary>
             [NameInMap("Region")]
             [Validation(Required=false)]
             public string Region { get; set; }
 
             /// <summary>
-            /// The task status in each region. Valid values:
+            /// <para>The task status in each region. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: The task is initializing.</description></item>
+            /// <item><description>1: The task is delivering historical events.</description></item>
+            /// <item><description>2: The task is complete.</description></item>
+            /// <item><description>3: The task fails.</description></item>
+            /// </list>
             /// 
-            /// *   0: The task is initializing.
-            /// *   1: The task is delivering historical events.
-            /// *   2: The task is complete.
-            /// *   3: The task fails.
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -92,14 +121,20 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         }
 
         /// <summary>
-        /// The name of the trail based on which the task delivers events.
+        /// <para>The name of the trail based on which the task delivers events.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>trail-name</para>
         /// </summary>
         [NameInMap("TrailName")]
         [Validation(Required=false)]
         public string TrailName { get; set; }
 
         /// <summary>
-        /// The time when the task was updated.
+        /// <para>The time when the task was updated.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2021-05-27T07:28:47Z</para>
         /// </summary>
         [NameInMap("UpdatedTime")]
         [Validation(Required=false)]

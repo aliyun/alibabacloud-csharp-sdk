@@ -10,35 +10,73 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
 {
     public class GetAccessKeyLastUsedIpsResponseBody : TeaModel {
         /// <summary>
-        /// The list of returned IP addresses.
+        /// <para>The IP addresses.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Ips")]
         [Validation(Required=false)]
         public List<GetAccessKeyLastUsedIpsResponseBodyIps> Ips { get; set; }
         public class GetAccessKeyLastUsedIpsResponseBodyIps : TeaModel {
             /// <summary>
-            /// An array that consists of the details about the event.
+            /// <para>The event details.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{
+            ///   &quot;eventId&quot;: &quot;239EB588-CD24-522E-B0B5-174A1A58****&quot;,
+            ///   &quot;eventVersion&quot;: 1,
+            ///   &quot;eventSource&quot;: &quot;ecs.cn-hangzhou.aliyuncs.com&quot;,
+            ///   &quot;sourceIpAddress&quot;: &quot;<c>10.10.**.**</c>&quot;,
+            ///   &quot;eventType&quot;: &quot;ApiCall&quot;,
+            ///   &quot;userIdentity&quot;: {
+            ///     &quot;accountId&quot;: &quot;104758519118****&quot;,
+            ///     &quot;principalId&quot;: &quot;24549429003625****&quot;,
+            ///     &quot;type&quot;: &quot;ram-user&quot;,
+            ///     &quot;userName&quot;: &quot;alice&quot;
+            ///   },
+            ///   &quot;serviceName&quot;: &quot;Ecs&quot;,
+            ///   &quot;apiVersion&quot;: &quot;2016-01-20&quot;,
+            ///   &quot;requestId&quot;: &quot;239EB588-CD24-522E-B0B5-174A1A588BE0&quot;,
+            ///   &quot;eventTime&quot;: &quot;2021-08-05T09:21:32Z&quot;,
+            ///   &quot;isGlobal&quot;: false,
+            ///   &quot;acsRegion&quot;: &quot;cn-hangzhou&quot;,
+            ///   &quot;eventName&quot;: &quot;DescribeInstances&quot;
+            /// }</para>
             /// </summary>
             [NameInMap("Detail")]
             [Validation(Required=false)]
             public string Detail { get; set; }
 
             /// <summary>
-            /// The IP address.
+            /// <para>The IP address.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><c>10.10.**.**</c></para>
             /// </summary>
             [NameInMap("Ip")]
             [Validation(Required=false)]
             public string Ip { get; set; }
 
             /// <summary>
-            /// The event source.
+            /// <para>The event source.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Internal: other events.</description></item>
+            /// <item><description>ManagementEvent: management events.</description></item>
+            /// <item><description>DataEvent: data events.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ManagementEvent</para>
             /// </summary>
             [NameInMap("Source")]
             [Validation(Required=false)]
             public string Source { get; set; }
 
             /// <summary>
-            /// The timestamp when the IP address was used.
+            /// <para>The timestamp when the IP address was used. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1657247532000</para>
             /// </summary>
             [NameInMap("UsedTimestamp")]
             [Validation(Required=false)]
@@ -47,14 +85,21 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         }
 
         /// <summary>
-        /// The token that determines the start point of the query.
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>eyJhY2NvdW50IjoiMTQyNDM3OTU4NjM4NzE2MSIsImV2ZW50SWQiOiI3MkJDRTExRi02OTU3LTQ0NUItQjY0MC1CNEUyMkM4NUEwQzgiLCJsb2dJZCI6IjgyLTE0MjQzNzk1ODYzODcxNjEiLCJ0aW1lIjoxNjAyMzExNTQwMD****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The request ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>145318BE-DEE1-4C57-AA7C-5BE7D34A6AE0</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

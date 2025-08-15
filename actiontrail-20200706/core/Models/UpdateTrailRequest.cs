@@ -10,88 +10,134 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
 {
     public class UpdateTrailRequest : TeaModel {
         /// <summary>
-        /// The read/write type of the events to be delivered. Valid values:
+        /// <para>The read/write type of the events to be delivered. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Write: write events. It is the default value.</description></item>
+        /// <item><description>Read: read events.</description></item>
+        /// <item><description>All: read and write events.</description></item>
+        /// </list>
         /// 
-        /// *   Write: write events. It is the default value.
-        /// *   Read: read events.
-        /// *   All: read and write events.
+        /// <b>Example:</b>
+        /// <para>All</para>
         /// </summary>
         [NameInMap("EventRW")]
         [Validation(Required=false)]
         public string EventRW { get; set; }
 
+        /// <summary>
+        /// <para>The ARN of the MaxCompute project to which you want to deliver events.</para>
+        /// <remarks>
+        /// <para> The name of the MaxCompute project must be prefixed with actiontrail_.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>acs:odps:cn-hangzhou:、151277687691****:project/actiontrail_****</para>
+        /// </summary>
         [NameInMap("MaxComputeProjectArn")]
         [Validation(Required=false)]
         public string MaxComputeProjectArn { get; set; }
 
+        /// <summary>
+        /// <para>The ARN of the role that is assumed by ActionTrail to deliver events to the destination Simple Log Service project.</para>
+        /// <list type="bullet">
+        /// <item><description>If you do not specify this parameter, ActionTrail creates a service-linked role to create the required resources. For more information, see <a href="https://help.aliyun.com/document_detail/169244.html">Manage the service-linked role</a>.</description></item>
+        /// <item><description>If you specify this parameter and deliver events to the current account, you must grant the RAM role the permissions on the service-linked role for ActionTrail. If you want to deliver events to other accounts, you must attach a system policy to the RAM role. For more information about how to deliver events across Alibaba Cloud accounts, see <a href="https://help.aliyun.com/document_detail/207462.html">Deliver events across Alibaba Cloud accounts</a>.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>acs:ram::151277687691****:role/aliyunserviceroleforactiontrail</para>
+        /// </summary>
         [NameInMap("MaxComputeWriteRoleArn")]
         [Validation(Required=false)]
         public string MaxComputeWriteRoleArn { get; set; }
 
         /// <summary>
-        /// The name of the trail whose configurations you want to update.
+        /// <para>The name of the trail whose configurations you want to update.</para>
+        /// <para>The name must be 6 to 36 characters in length and can contain lowercase letters, digits, hyphens (-), and underscores (_). It must start with a lowercase letter.</para>
+        /// <remarks>
+        /// <para> The name must be unique within an Alibaba Cloud account.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// The name must be 6 to 36 characters in length and can contain lowercase letters, digits, hyphens (-), and underscores (\_). It must start with a lowercase letter.
-        /// 
-        /// >  The name must be unique within an Alibaba Cloud account.
+        /// <b>Example:</b>
+        /// <para>trail-test</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The name of the Object Storage Service (OSS) bucket to which you want to deliver events.
+        /// <para>The name of the Object Storage Service (OSS) bucket to which you want to deliver events.</para>
+        /// <para>The name must be 3 to 63 characters in length. The name must start with a lowercase letter or a digit and can contain lowercase letters, digits, and hyphens (-).</para>
+        /// <remarks>
+        /// <para> Make sure that the bucket exists before you update the configuration of the trail.</para>
+        /// </remarks>
         /// 
-        /// The name must be 3 to 63 characters in length. The name must start with a lowercase letter or a digit and can contain lowercase letters, digits, and hyphens (-).
-        /// 
-        /// >  Make sure that the bucket exists before you update the configuration of the trail.
+        /// <b>Example:</b>
+        /// <para>audit-log</para>
         /// </summary>
         [NameInMap("OssBucketName")]
         [Validation(Required=false)]
         public string OssBucketName { get; set; }
 
         /// <summary>
-        /// The prefix of the files that are stored in the OSS bucket.
+        /// <para>The prefix of the files that are stored in the OSS bucket.</para>
+        /// <para>The prefix must be 6 to 32 characters in length. The prefix must start with a letter and can contain letters, digits, hyphens (-), forward slashes (/), and underscores (_).</para>
         /// 
-        /// The prefix must be 6 to 32 characters in length. The prefix must start with a letter and can contain letters, digits, hyphens (-), forward slashes (/), and underscores (\_).
+        /// <b>Example:</b>
+        /// <para>at-product-account-audit-B</para>
         /// </summary>
         [NameInMap("OssKeyPrefix")]
         [Validation(Required=false)]
         public string OssKeyPrefix { get; set; }
 
         /// <summary>
-        /// The Alibaba Cloud Resource Name (ARN) of the RAM role that is assumed by ActionTrail to deliver events to the OSS bucket.
+        /// <para>The Alibaba Cloud Resource Name (ARN) of the RAM role that is assumed by ActionTrail to deliver events to the OSS bucket.</para>
+        /// <list type="bullet">
+        /// <item><description>If you do not specify this parameter, ActionTrail creates a service-linked role to create the required resources. For more information, see <a href="https://help.aliyun.com/document_detail/169244.html">Manage the service-linked role</a>.</description></item>
+        /// <item><description>If you specify this parameter, you must grant the permissions of the service-linked role that is assumed by ActionTrail to the RAM role before you can deliver events to your Alibaba Cloud account. If you need to deliver events to other Alibaba Cloud accounts, you must attach the permission policy that is used to grant permissions related to event delivery to the RAM role. For more information about how to deliver events across Alibaba Cloud accounts, see <a href="https://help.aliyun.com/document_detail/207462.html">Deliver events across Alibaba Cloud accounts</a>.</description></item>
+        /// </list>
         /// 
-        /// *   If you do not specify this parameter, ActionTrail creates a service-linked role to create the required resources. For more information, see [Manage the service-linked role](~~169244~~).
-        /// *   If you specify this parameter, you must grant the permissions of the service-linked role that is assumed by ActionTrail to the RAM role before you can deliver events to your Alibaba Cloud account. If you need to deliver events to other Alibaba Cloud accounts, you must attach the permission policy that is used to grant permissions related to event delivery to the RAM role. For more information about how to deliver events across Alibaba Cloud accounts, see [Deliver events across Alibaba Cloud accounts](~~207462~~).
+        /// <b>Example:</b>
+        /// <para>acs:ram::***:role/aliyunserviceroleforactiontrail</para>
         /// </summary>
         [NameInMap("OssWriteRoleArn")]
         [Validation(Required=false)]
         public string OssWriteRoleArn { get; set; }
 
         /// <summary>
-        /// The ARN of the Log Service project to which you want to deliver events.
+        /// <para>The ARN of the Log Service project to which you want to deliver events.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>acs:log:cn-shanghai::project/***</para>
         /// </summary>
         [NameInMap("SlsProjectArn")]
         [Validation(Required=false)]
         public string SlsProjectArn { get; set; }
 
         /// <summary>
-        /// The ARN of the RAM role that is assumed by ActionTrail to deliver events to the Log Service project.
+        /// <para>The ARN of the RAM role that is assumed by ActionTrail to deliver events to the Log Service project.</para>
+        /// <list type="bullet">
+        /// <item><description>If you do not specify this parameter, ActionTrail creates a service-linked role to create the corresponding resource. For more information, see <a href="https://help.aliyun.com/document_detail/169244.html">Manage the service-linked role</a>.</description></item>
+        /// <item><description>If you specify this parameter, you must grant the permissions of the service-linked role that is assumed by ActionTrail to the RAM role before you can deliver events to your Alibaba Cloud account. If you need to deliver events to other Alibaba Cloud accounts, you must attach the permission policy that is used to grant permissions related to event delivery to the RAM role. For more information about how to deliver events across Alibaba Cloud accounts, see <a href="https://help.aliyun.com/document_detail/207462.html">Deliver events across Alibaba Cloud accounts</a>.</description></item>
+        /// </list>
         /// 
-        /// *   If you do not specify this parameter, ActionTrail creates a service-linked role to create the corresponding resource. For more information, see [Manage the service-linked role](~~169244~~).
-        /// *   If you specify this parameter, you must grant the permissions of the service-linked role that is assumed by ActionTrail to the RAM role before you can deliver events to your Alibaba Cloud account. If you need to deliver events to other Alibaba Cloud accounts, you must attach the permission policy that is used to grant permissions related to event delivery to the RAM role. For more information about how to deliver events across Alibaba Cloud accounts, see [Deliver events across Alibaba Cloud accounts](~~207462~~).
+        /// <b>Example:</b>
+        /// <para>acs:ram::***:role/aliyunserviceroleforactiontrail</para>
         /// </summary>
         [NameInMap("SlsWriteRoleArn")]
         [Validation(Required=false)]
         public string SlsWriteRoleArn { get; set; }
 
         /// <summary>
-        /// The region of the trail.
+        /// <para>The region of the trail.</para>
+        /// <list type="bullet">
+        /// <item><description>The default value is All, which indicates that the trail delivers events from all regions.</description></item>
+        /// </list>
+        /// <para>You can also specify specific regions. You can call the <a href="https://help.aliyun.com/document_detail/213597.html">DescribeRegions</a> operation to query all the supported regions.</para>
         /// 
-        /// *   The default value is All, which indicates that the trail delivers events from all regions.
-        /// 
-        /// You can also specify specific regions. You can call the [DescribeRegions](~~213597~~) operation to query all the supported regions.
+        /// <b>Example:</b>
+        /// <para>All</para>
         /// </summary>
         [NameInMap("TrailRegion")]
         [Validation(Required=false)]

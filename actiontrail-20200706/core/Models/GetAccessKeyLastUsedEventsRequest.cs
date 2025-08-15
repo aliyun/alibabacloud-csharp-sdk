@@ -10,34 +10,47 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
 {
     public class GetAccessKeyLastUsedEventsRequest : TeaModel {
         /// <summary>
-        /// The AccessKey ID.
+        /// <para>The AccessKey ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>LTAI****************</para>
         /// </summary>
         [NameInMap("AccessKey")]
         [Validation(Required=false)]
         public string AccessKey { get; set; }
 
         /// <summary>
-        /// The token that determines the start point of the query.
+        /// <para>The token that determines the start point of the query.</para>
+        /// <remarks>
+        /// <para>The request parameters must be the same as those of the last request.</para>
+        /// </remarks>
         /// 
-        /// > The request parameters must be the same as those of the last request.
+        /// <b>Example:</b>
+        /// <para>eyJhY2NvdW50IjoiMTQyNDM3OTU4NjM4NzE2MSIsImV2ZW50SWQiOiI3MkJDRTExRi02OTU3LTQ0NUItQjY0MC1CNEUyMkM4NUEwQzgiLCJsb2dJZCI6IjgyLTE0MjQzNzk1ODYzODcxNjEiLCJ0aW1lIjoxNjAyMzExNTQwMD****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// <para>Valid values: 0 to 100.</para>
+        /// <para>Default value: 20.</para>
         /// 
-        /// Valid values: 0 to 100.
-        /// 
-        /// Default value: 20.
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
 
         /// <summary>
-        /// The Alibaba Cloud service. For more information about the Alibaba Cloud services supported by ActionTrail, see [Supported Alibaba Cloud services](~~28829~~).
+        /// <para>The Alibaba Cloud service. For more information about the Alibaba Cloud services supported by ActionTrail, see <a href="https://help.aliyun.com/document_detail/28829.html">Supported Alibaba Cloud services</a>.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Ecs</para>
         /// </summary>
         [NameInMap("ServiceName")]
         [Validation(Required=false)]

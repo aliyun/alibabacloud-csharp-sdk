@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
 {
     public class StopLoggingResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1C488B66-B819-4D14-8711-C4EAAA13AC01</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

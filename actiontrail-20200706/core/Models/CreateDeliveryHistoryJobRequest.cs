@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -13,18 +10,23 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
 {
     public class CreateDeliveryHistoryJobRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests.
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests.</para>
+        /// <para>The token can contain only ASCII characters and can be up to 64 characters in length.</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
-        /// The token can contain only ASCII characters and can be up to 64 characters in length.
-        /// 
-        /// For more information, see [How to ensure idempotence](~~25693~~).
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-12d3-a456-42665544****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The name of the trail for which you want to create a historical event delivery task.
+        /// <para>The name of the trail for which you want to create a historical event delivery task.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>trail-name</para>
         /// </summary>
         [NameInMap("TrailName")]
         [Validation(Required=false)]

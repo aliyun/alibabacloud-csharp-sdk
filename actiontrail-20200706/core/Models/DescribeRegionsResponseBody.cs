@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
         /// <summary>
-        /// The regions returned.
+        /// <para>A list of regions.</para>
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
@@ -21,23 +21,33 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
             public List<DescribeRegionsResponseBodyRegionsRegion> Region { get; set; }
             public class DescribeRegionsResponseBodyRegionsRegion : TeaModel {
                 /// <summary>
-                /// The name of the region.
+                /// <para>The name of the region.</para>
+                /// <remarks>
+                /// <para> If AcceptLanguage is set to zh-CN, the Chinese name of the region is returned. If AcceptLanguage is set to en-US or left empty, the English name of the region is returned.</para>
+                /// </remarks>
                 /// 
-                /// > If the AcceptLanguage parameter is set to zh-CN, the Chinese name of the region is returned. If the AcceptLanguage parameter is set to zh-US or left empty, the English name of the region is returned.
+                /// <b>Example:</b>
+                /// <para>China (Hangzhou)</para>
                 /// </summary>
                 [NameInMap("LocalName")]
                 [Validation(Required=false)]
                 public string LocalName { get; set; }
 
                 /// <summary>
-                /// The endpoint of ActionTrail in the region.
+                /// <para>The endpoint of ActionTrail in the region.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>actiontrail.cn-hangzhou.aliyuncs.com</para>
                 /// </summary>
                 [NameInMap("RegionEndpoint")]
                 [Validation(Required=false)]
                 public string RegionEndpoint { get; set; }
 
                 /// <summary>
-                /// The ID of the region.
+                /// <para>The ID of the region.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
@@ -48,7 +58,10 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ACA7C814-12BC-4D81-A0D2-72071C9D6D2C</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

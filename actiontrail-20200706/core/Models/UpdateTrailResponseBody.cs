@@ -10,78 +10,120 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
 {
     public class UpdateTrailResponseBody : TeaModel {
         /// <summary>
-        /// The read/write type of the events to be delivered.
+        /// <para>The read/write type of the events to be delivered.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Write</para>
         /// </summary>
         [NameInMap("EventRW")]
         [Validation(Required=false)]
         public string EventRW { get; set; }
 
         /// <summary>
-        /// The home region of the trail.
+        /// <para>The home region of the trail.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("HomeRegion")]
         [Validation(Required=false)]
         public string HomeRegion { get; set; }
 
+        /// <summary>
+        /// <para>ARN of the Big Data Compute Service project for tracking delivery.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>acs:odps:cn-hangzhou:151266687691****:project/actiontrail_****</para>
+        /// </summary>
         [NameInMap("MaxComputeProjectArn")]
         [Validation(Required=false)]
         public string MaxComputeProjectArn { get; set; }
 
+        /// <summary>
+        /// <para>The ARN of the role that Operation Audit assumes when delivering operation events to the Big Data Compute Service project.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>acs:ram::151266687691****:role/aliyunserviceroleforactiontrail</para>
+        /// </summary>
         [NameInMap("MaxComputeWriteRoleArn")]
         [Validation(Required=false)]
         public string MaxComputeWriteRoleArn { get; set; }
 
         /// <summary>
-        /// The name of the trail.
+        /// <para>The name of the trail.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>trail-test</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The name of the OSS bucket.
+        /// <para>The name of the OSS bucket.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>audit-log</para>
         /// </summary>
         [NameInMap("OssBucketName")]
         [Validation(Required=false)]
         public string OssBucketName { get; set; }
 
         /// <summary>
-        /// The prefix of the log files to be stored in the destination OSS bucket.
+        /// <para>The prefix of the log files to be stored in the destination OSS bucket.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>at-product-account-audit-B</para>
         /// </summary>
         [NameInMap("OssKeyPrefix")]
         [Validation(Required=false)]
         public string OssKeyPrefix { get; set; }
 
         /// <summary>
-        /// The ARN of the RAM role that is assumed by ActionTrail to deliver events to the OSS bucket.
+        /// <para>The ARN of the RAM role that is assumed by ActionTrail to deliver events to the OSS bucket.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>acs:ram::***:role/aliyunserviceroleforactiontrail</para>
         /// </summary>
         [NameInMap("OssWriteRoleArn")]
         [Validation(Required=false)]
         public string OssWriteRoleArn { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2599A180-5236-44D8-9490-50B6F4F8BA35</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ARN of the Log Service project to which events are to be delivered.
+        /// <para>The ARN of the Log Service project to which events are to be delivered.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>acs:log:cn-hangzhou:151266687691****:project/test-project</para>
         /// </summary>
         [NameInMap("SlsProjectArn")]
         [Validation(Required=false)]
         public string SlsProjectArn { get; set; }
 
         /// <summary>
-        /// The ARN of the RAM role that is assumed by ActionTrail is to deliver events to the Log Service project.
+        /// <para>The ARN of the RAM role that is assumed by ActionTrail is to deliver events to the Log Service project.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>acs:ram::***:role/aliyunserviceroleforactiontrail</para>
         /// </summary>
         [NameInMap("SlsWriteRoleArn")]
         [Validation(Required=false)]
         public string SlsWriteRoleArn { get; set; }
 
         /// <summary>
-        /// The one or more regions from which the trail delivers events.
+        /// <para>The one or more regions from which the trail delivers events.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>All</para>
         /// </summary>
         [NameInMap("TrailRegion")]
         [Validation(Required=false)]
