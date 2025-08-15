@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? SubmitTime { get; set; }
 
             /// <summary>
-            /// <para>The tags.</para>
+            /// <para>The tags of the job.</para>
             /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]

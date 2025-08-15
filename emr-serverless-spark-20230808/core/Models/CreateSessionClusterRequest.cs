@@ -49,7 +49,11 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
-        /// <para>The automatic startup configuration.</para>
+        /// <para>Specifies whether to enable automatic startup.</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// </summary>
         [NameInMap("autoStartConfiguration")]
         [Validation(Required=false)]

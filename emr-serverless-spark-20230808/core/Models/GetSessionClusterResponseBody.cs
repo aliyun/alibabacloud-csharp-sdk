@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The session.</para>
+        /// <para>The session object.</para>
         /// </summary>
         [NameInMap("sessionCluster")]
         [Validation(Required=false)]
@@ -120,6 +120,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public int? IdleTimeoutMinutes { get; set; }
 
             }
+
+            [NameInMap("connectionToken")]
+            [Validation(Required=false)]
+            public string ConnectionToken { get; set; }
 
             /// <summary>
             /// <para>The version of the Spark engine.</para>

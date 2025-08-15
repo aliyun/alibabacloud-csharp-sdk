@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
+        [NameInMap("minDuration")]
+        [Validation(Required=false)]
+        public long? MinDuration { get; set; }
+
         /// <summary>
         /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
         /// 
@@ -48,6 +52,18 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [NameInMap("nextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
+
+        [NameInMap("orderBy")]
+        [Validation(Required=false)]
+        public List<string> OrderBy { get; set; }
+
+        [NameInMap("resourceQueueId")]
+        [Validation(Required=false)]
+        public string ResourceQueueId { get; set; }
+
+        [NameInMap("sort")]
+        [Validation(Required=false)]
+        public string Sort { get; set; }
 
         /// <summary>
         /// <para>The range of start time.</para>

@@ -133,6 +133,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 
             }
 
+            [NameInMap("connectionToken")]
+            [Validation(Required=false)]
+            public string ConnectionToken { get; set; }
+
             /// <summary>
             /// <para>The version of the Spark engine.</para>
             /// 

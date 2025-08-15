@@ -56,6 +56,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [Validation(Required=false)]
             public string EndTime { get; set; }
 
+            [NameInMap("latestSqlStatementStatus")]
+            [Validation(Required=false)]
+            public string LatestSqlStatementStatus { get; set; }
+
             /// <summary>
             /// <para>The total amount of memory allocated to the job multiplied by the running duration (seconds).</para>
             /// 

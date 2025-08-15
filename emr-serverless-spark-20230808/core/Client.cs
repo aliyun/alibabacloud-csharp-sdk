@@ -319,6 +319,418 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建Livy compute</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLivyComputeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLivyComputeResponse
+        /// </returns>
+        public CreateLivyComputeResponse CreateLivyComputeWithOptions(string workspaceBizId, CreateLivyComputeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                body["authType"] = request.AuthType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStartConfiguration))
+            {
+                body["autoStartConfiguration"] = request.AutoStartConfiguration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStopConfiguration))
+            {
+                body["autoStopConfiguration"] = request.AutoStopConfiguration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CpuLimit))
+            {
+                body["cpuLimit"] = request.CpuLimit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayReleaseVersion))
+            {
+                body["displayReleaseVersion"] = request.DisplayReleaseVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnablePublic))
+            {
+                body["enablePublic"] = request.EnablePublic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvironmentId))
+            {
+                body["environmentId"] = request.EnvironmentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Fusion))
+            {
+                body["fusion"] = request.Fusion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LivyServerConf))
+            {
+                body["livyServerConf"] = request.LivyServerConf;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LivyVersion))
+            {
+                body["livyVersion"] = request.LivyVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemoryLimit))
+            {
+                body["memoryLimit"] = request.MemoryLimit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkName))
+            {
+                body["networkName"] = request.NetworkName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueName))
+            {
+                body["queueName"] = request.QueueName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReleaseVersion))
+            {
+                body["releaseVersion"] = request.ReleaseVersion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateLivyCompute",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/interactive/v1/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceBizId) + "/livycompute",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateLivyComputeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建Livy compute</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLivyComputeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLivyComputeResponse
+        /// </returns>
+        public async Task<CreateLivyComputeResponse> CreateLivyComputeWithOptionsAsync(string workspaceBizId, CreateLivyComputeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                body["authType"] = request.AuthType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStartConfiguration))
+            {
+                body["autoStartConfiguration"] = request.AutoStartConfiguration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStopConfiguration))
+            {
+                body["autoStopConfiguration"] = request.AutoStopConfiguration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CpuLimit))
+            {
+                body["cpuLimit"] = request.CpuLimit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayReleaseVersion))
+            {
+                body["displayReleaseVersion"] = request.DisplayReleaseVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnablePublic))
+            {
+                body["enablePublic"] = request.EnablePublic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvironmentId))
+            {
+                body["environmentId"] = request.EnvironmentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Fusion))
+            {
+                body["fusion"] = request.Fusion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LivyServerConf))
+            {
+                body["livyServerConf"] = request.LivyServerConf;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LivyVersion))
+            {
+                body["livyVersion"] = request.LivyVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemoryLimit))
+            {
+                body["memoryLimit"] = request.MemoryLimit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkName))
+            {
+                body["networkName"] = request.NetworkName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueName))
+            {
+                body["queueName"] = request.QueueName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReleaseVersion))
+            {
+                body["releaseVersion"] = request.ReleaseVersion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateLivyCompute",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/interactive/v1/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceBizId) + "/livycompute",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateLivyComputeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建Livy compute</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLivyComputeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLivyComputeResponse
+        /// </returns>
+        public CreateLivyComputeResponse CreateLivyCompute(string workspaceBizId, CreateLivyComputeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateLivyComputeWithOptions(workspaceBizId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建Livy compute</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLivyComputeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLivyComputeResponse
+        /// </returns>
+        public async Task<CreateLivyComputeResponse> CreateLivyComputeAsync(string workspaceBizId, CreateLivyComputeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateLivyComputeWithOptionsAsync(workspaceBizId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建Livy Compute的token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLivyComputeTokenRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLivyComputeTokenResponse
+        /// </returns>
+        public CreateLivyComputeTokenResponse CreateLivyComputeTokenWithOptions(string workspaceBizId, string livyComputeId, CreateLivyComputeTokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoExpireConfiguration))
+            {
+                body["autoExpireConfiguration"] = request.AutoExpireConfiguration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
+            {
+                body["token"] = request.Token;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateLivyComputeToken",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/interactive/v1/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceBizId) + "/livycompute/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(livyComputeId) + "/token",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateLivyComputeTokenResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建Livy Compute的token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLivyComputeTokenRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLivyComputeTokenResponse
+        /// </returns>
+        public async Task<CreateLivyComputeTokenResponse> CreateLivyComputeTokenWithOptionsAsync(string workspaceBizId, string livyComputeId, CreateLivyComputeTokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoExpireConfiguration))
+            {
+                body["autoExpireConfiguration"] = request.AutoExpireConfiguration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
+            {
+                body["token"] = request.Token;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateLivyComputeToken",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/interactive/v1/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceBizId) + "/livycompute/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(livyComputeId) + "/token",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateLivyComputeTokenResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建Livy Compute的token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLivyComputeTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLivyComputeTokenResponse
+        /// </returns>
+        public CreateLivyComputeTokenResponse CreateLivyComputeToken(string workspaceBizId, string livyComputeId, CreateLivyComputeTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateLivyComputeTokenWithOptions(workspaceBizId, livyComputeId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建Livy Compute的token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLivyComputeTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLivyComputeTokenResponse
+        /// </returns>
+        public async Task<CreateLivyComputeTokenResponse> CreateLivyComputeTokenAsync(string workspaceBizId, string livyComputeId, CreateLivyComputeTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateLivyComputeTokenWithOptionsAsync(workspaceBizId, livyComputeId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a workflow.</para>
         /// </summary>
         /// 
@@ -1279,6 +1691,266 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>删除livy compute</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLivyComputeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLivyComputeResponse
+        /// </returns>
+        public DeleteLivyComputeResponse DeleteLivyComputeWithOptions(string workspaceBizId, string livyComputeId, DeleteLivyComputeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteLivyCompute",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/interactive/v1/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceBizId) + "/livycompute/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(livyComputeId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteLivyComputeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除livy compute</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLivyComputeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLivyComputeResponse
+        /// </returns>
+        public async Task<DeleteLivyComputeResponse> DeleteLivyComputeWithOptionsAsync(string workspaceBizId, string livyComputeId, DeleteLivyComputeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteLivyCompute",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/interactive/v1/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceBizId) + "/livycompute/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(livyComputeId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteLivyComputeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除livy compute</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLivyComputeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLivyComputeResponse
+        /// </returns>
+        public DeleteLivyComputeResponse DeleteLivyCompute(string workspaceBizId, string livyComputeId, DeleteLivyComputeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteLivyComputeWithOptions(workspaceBizId, livyComputeId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除livy compute</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLivyComputeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLivyComputeResponse
+        /// </returns>
+        public async Task<DeleteLivyComputeResponse> DeleteLivyComputeAsync(string workspaceBizId, string livyComputeId, DeleteLivyComputeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteLivyComputeWithOptionsAsync(workspaceBizId, livyComputeId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除Livy Compute的token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLivyComputeTokenRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLivyComputeTokenResponse
+        /// </returns>
+        public DeleteLivyComputeTokenResponse DeleteLivyComputeTokenWithOptions(string workspaceBizId, string livyComputeId, string tokenId, DeleteLivyComputeTokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteLivyComputeToken",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/interactive/v1/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceBizId) + "/livycompute/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(livyComputeId) + "/token/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(tokenId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteLivyComputeTokenResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除Livy Compute的token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLivyComputeTokenRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLivyComputeTokenResponse
+        /// </returns>
+        public async Task<DeleteLivyComputeTokenResponse> DeleteLivyComputeTokenWithOptionsAsync(string workspaceBizId, string livyComputeId, string tokenId, DeleteLivyComputeTokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteLivyComputeToken",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/interactive/v1/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceBizId) + "/livycompute/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(livyComputeId) + "/token/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(tokenId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteLivyComputeTokenResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除Livy Compute的token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLivyComputeTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLivyComputeTokenResponse
+        /// </returns>
+        public DeleteLivyComputeTokenResponse DeleteLivyComputeToken(string workspaceBizId, string livyComputeId, string tokenId, DeleteLivyComputeTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteLivyComputeTokenWithOptions(workspaceBizId, livyComputeId, tokenId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除Livy Compute的token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLivyComputeTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLivyComputeTokenResponse
+        /// </returns>
+        public async Task<DeleteLivyComputeTokenResponse> DeleteLivyComputeTokenAsync(string workspaceBizId, string livyComputeId, string tokenId, DeleteLivyComputeTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteLivyComputeTokenWithOptionsAsync(workspaceBizId, livyComputeId, tokenId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Modifies the queue of a workspace.</para>
         /// </summary>
         /// 
@@ -1855,6 +2527,266 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetJobRunWithOptionsAsync(workspaceId, jobRunId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取livy compute</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetLivyComputeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetLivyComputeResponse
+        /// </returns>
+        public GetLivyComputeResponse GetLivyComputeWithOptions(string workspaceBizId, string livyComputeId, GetLivyComputeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetLivyCompute",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/interactive/v1/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceBizId) + "/livycompute/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(livyComputeId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetLivyComputeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取livy compute</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetLivyComputeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetLivyComputeResponse
+        /// </returns>
+        public async Task<GetLivyComputeResponse> GetLivyComputeWithOptionsAsync(string workspaceBizId, string livyComputeId, GetLivyComputeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetLivyCompute",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/interactive/v1/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceBizId) + "/livycompute/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(livyComputeId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetLivyComputeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取livy compute</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetLivyComputeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetLivyComputeResponse
+        /// </returns>
+        public GetLivyComputeResponse GetLivyCompute(string workspaceBizId, string livyComputeId, GetLivyComputeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetLivyComputeWithOptions(workspaceBizId, livyComputeId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取livy compute</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetLivyComputeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetLivyComputeResponse
+        /// </returns>
+        public async Task<GetLivyComputeResponse> GetLivyComputeAsync(string workspaceBizId, string livyComputeId, GetLivyComputeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetLivyComputeWithOptionsAsync(workspaceBizId, livyComputeId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取livy compute token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetLivyComputeTokenRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetLivyComputeTokenResponse
+        /// </returns>
+        public GetLivyComputeTokenResponse GetLivyComputeTokenWithOptions(string workspaceBizId, string livyComputeId, string tokenId, GetLivyComputeTokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetLivyComputeToken",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/interactive/v1/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceBizId) + "/livycompute/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(livyComputeId) + "/token/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(tokenId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetLivyComputeTokenResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取livy compute token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetLivyComputeTokenRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetLivyComputeTokenResponse
+        /// </returns>
+        public async Task<GetLivyComputeTokenResponse> GetLivyComputeTokenWithOptionsAsync(string workspaceBizId, string livyComputeId, string tokenId, GetLivyComputeTokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetLivyComputeToken",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/interactive/v1/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceBizId) + "/livycompute/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(livyComputeId) + "/token/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(tokenId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetLivyComputeTokenResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取livy compute token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetLivyComputeTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetLivyComputeTokenResponse
+        /// </returns>
+        public GetLivyComputeTokenResponse GetLivyComputeToken(string workspaceBizId, string livyComputeId, string tokenId, GetLivyComputeTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetLivyComputeTokenWithOptions(workspaceBizId, livyComputeId, tokenId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取livy compute token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetLivyComputeTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetLivyComputeTokenResponse
+        /// </returns>
+        public async Task<GetLivyComputeTokenResponse> GetLivyComputeTokenAsync(string workspaceBizId, string livyComputeId, string tokenId, GetLivyComputeTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetLivyComputeTokenWithOptionsAsync(workspaceBizId, livyComputeId, tokenId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2461,6 +3393,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             {
                 query["endTime"] = request.EndTimeShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsWorkflow))
+            {
+                query["isWorkflow"] = request.IsWorkflow;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobRunDeploymentId))
             {
                 query["jobRunDeploymentId"] = request.JobRunDeploymentId;
@@ -2573,6 +3509,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             {
                 query["endTime"] = request.EndTimeShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsWorkflow))
+            {
+                query["isWorkflow"] = request.IsWorkflow;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobRunDeploymentId))
             {
                 query["jobRunDeploymentId"] = request.JobRunDeploymentId;
@@ -2677,6 +3617,108 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>ListKyuubiServices</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKyuubiServicesResponse
+        /// </returns>
+        public ListKyuubiServicesResponse ListKyuubiServicesWithOptions(string workspaceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListKyuubiServices",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/kyuubi/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListKyuubiServicesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListKyuubiServices</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKyuubiServicesResponse
+        /// </returns>
+        public async Task<ListKyuubiServicesResponse> ListKyuubiServicesWithOptionsAsync(string workspaceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListKyuubiServices",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/kyuubi/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListKyuubiServicesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListKyuubiServices</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListKyuubiServicesResponse
+        /// </returns>
+        public ListKyuubiServicesResponse ListKyuubiServices(string workspaceId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListKyuubiServicesWithOptions(workspaceId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListKyuubiServices</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListKyuubiServicesResponse
+        /// </returns>
+        public async Task<ListKyuubiServicesResponse> ListKyuubiServicesAsync(string workspaceId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListKyuubiServicesWithOptionsAsync(workspaceId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the applications that are submitted by using a Kyuubi gateway.</para>
         /// </summary>
         /// 
@@ -2698,6 +3740,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ListKyuubiSparkApplicationsShrinkRequest request = new ListKyuubiSparkApplicationsShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OrderBy))
+            {
+                request.OrderByShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OrderBy, "orderBy", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.StartTime))
             {
                 request.StartTimeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.StartTime, "startTime", "json");
@@ -2715,9 +3761,25 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             {
                 query["maxResults"] = request.MaxResults;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinDuration))
+            {
+                query["minDuration"] = request.MinDuration;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderByShrink))
+            {
+                query["orderBy"] = request.OrderByShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceQueueId))
+            {
+                query["resourceQueueId"] = request.ResourceQueueId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sort))
+            {
+                query["sort"] = request.Sort;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTimeShrink))
             {
@@ -2766,6 +3828,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ListKyuubiSparkApplicationsShrinkRequest request = new ListKyuubiSparkApplicationsShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OrderBy))
+            {
+                request.OrderByShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OrderBy, "orderBy", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.StartTime))
             {
                 request.StartTimeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.StartTime, "startTime", "json");
@@ -2783,9 +3849,25 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             {
                 query["maxResults"] = request.MaxResults;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinDuration))
+            {
+                query["minDuration"] = request.MinDuration;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderByShrink))
+            {
+                query["orderBy"] = request.OrderByShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceQueueId))
+            {
+                query["resourceQueueId"] = request.ResourceQueueId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sort))
+            {
+                query["sort"] = request.Sort;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTimeShrink))
             {
@@ -2847,6 +3929,404 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListKyuubiSparkApplicationsWithOptionsAsync(workspaceId, kyuubiServiceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出compute的token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListKyuubiTokenRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKyuubiTokenResponse
+        /// </returns>
+        public ListKyuubiTokenResponse ListKyuubiTokenWithOptions(string workspaceId, string kyuubiServiceId, ListKyuubiTokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListKyuubiToken",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/kyuubiService/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(kyuubiServiceId) + "/token",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListKyuubiTokenResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出compute的token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListKyuubiTokenRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKyuubiTokenResponse
+        /// </returns>
+        public async Task<ListKyuubiTokenResponse> ListKyuubiTokenWithOptionsAsync(string workspaceId, string kyuubiServiceId, ListKyuubiTokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListKyuubiToken",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/kyuubiService/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(kyuubiServiceId) + "/token",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListKyuubiTokenResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出compute的token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListKyuubiTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKyuubiTokenResponse
+        /// </returns>
+        public ListKyuubiTokenResponse ListKyuubiToken(string workspaceId, string kyuubiServiceId, ListKyuubiTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListKyuubiTokenWithOptions(workspaceId, kyuubiServiceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出compute的token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListKyuubiTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKyuubiTokenResponse
+        /// </returns>
+        public async Task<ListKyuubiTokenResponse> ListKyuubiTokenAsync(string workspaceId, string kyuubiServiceId, ListKyuubiTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListKyuubiTokenWithOptionsAsync(workspaceId, kyuubiServiceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出livy compute</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListLivyComputeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLivyComputeResponse
+        /// </returns>
+        public ListLivyComputeResponse ListLivyComputeWithOptions(string workspaceBizId, ListLivyComputeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvironmentId))
+            {
+                query["environmentId"] = request.EnvironmentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListLivyCompute",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/interactive/v1/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceBizId) + "/livycompute",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListLivyComputeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出livy compute</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListLivyComputeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLivyComputeResponse
+        /// </returns>
+        public async Task<ListLivyComputeResponse> ListLivyComputeWithOptionsAsync(string workspaceBizId, ListLivyComputeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvironmentId))
+            {
+                query["environmentId"] = request.EnvironmentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListLivyCompute",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/interactive/v1/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceBizId) + "/livycompute",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListLivyComputeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出livy compute</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListLivyComputeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLivyComputeResponse
+        /// </returns>
+        public ListLivyComputeResponse ListLivyCompute(string workspaceBizId, ListLivyComputeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListLivyComputeWithOptions(workspaceBizId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出livy compute</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListLivyComputeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLivyComputeResponse
+        /// </returns>
+        public async Task<ListLivyComputeResponse> ListLivyComputeAsync(string workspaceBizId, ListLivyComputeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListLivyComputeWithOptionsAsync(workspaceBizId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出livy compute token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListLivyComputeTokenRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLivyComputeTokenResponse
+        /// </returns>
+        public ListLivyComputeTokenResponse ListLivyComputeTokenWithOptions(string workspaceBizId, string livyComputeId, ListLivyComputeTokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListLivyComputeToken",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/interactive/v1/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceBizId) + "/livycompute/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(livyComputeId) + "/token",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListLivyComputeTokenResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出livy compute token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListLivyComputeTokenRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLivyComputeTokenResponse
+        /// </returns>
+        public async Task<ListLivyComputeTokenResponse> ListLivyComputeTokenWithOptionsAsync(string workspaceBizId, string livyComputeId, ListLivyComputeTokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListLivyComputeToken",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/interactive/v1/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceBizId) + "/livycompute/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(livyComputeId) + "/token",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListLivyComputeTokenResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出livy compute token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListLivyComputeTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLivyComputeTokenResponse
+        /// </returns>
+        public ListLivyComputeTokenResponse ListLivyComputeToken(string workspaceBizId, string livyComputeId, ListLivyComputeTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListLivyComputeTokenWithOptions(workspaceBizId, livyComputeId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出livy compute token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListLivyComputeTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLivyComputeTokenResponse
+        /// </returns>
+        public async Task<ListLivyComputeTokenResponse> ListLivyComputeTokenAsync(string workspaceBizId, string livyComputeId, ListLivyComputeTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListLivyComputeTokenWithOptionsAsync(workspaceBizId, livyComputeId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3345,6 +4825,152 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取sql statement内容</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSqlStatementContentsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSqlStatementContentsResponse
+        /// </returns>
+        public ListSqlStatementContentsResponse ListSqlStatementContentsWithOptions(string workspaceId, ListSqlStatementContentsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                query["fileName"] = request.FileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSqlStatementContents",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/action/listSqlStatementContents",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSqlStatementContentsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取sql statement内容</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSqlStatementContentsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSqlStatementContentsResponse
+        /// </returns>
+        public async Task<ListSqlStatementContentsResponse> ListSqlStatementContentsWithOptionsAsync(string workspaceId, ListSqlStatementContentsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                query["fileName"] = request.FileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSqlStatementContents",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/action/listSqlStatementContents",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSqlStatementContentsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取sql statement内容</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSqlStatementContentsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSqlStatementContentsResponse
+        /// </returns>
+        public ListSqlStatementContentsResponse ListSqlStatementContents(string workspaceId, ListSqlStatementContentsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListSqlStatementContentsWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取sql statement内容</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSqlStatementContentsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSqlStatementContentsResponse
+        /// </returns>
+        public async Task<ListSqlStatementContentsResponse> ListSqlStatementContentsAsync(string workspaceId, ListSqlStatementContentsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListSqlStatementContentsWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the list of queues in a Spark workspace.</para>
         /// </summary>
         /// 
@@ -3665,6 +5291,164 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>更新Livy Compute的token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RefreshLivyComputeTokenRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RefreshLivyComputeTokenResponse
+        /// </returns>
+        public RefreshLivyComputeTokenResponse RefreshLivyComputeTokenWithOptions(string workspaceBizId, string livyComputeId, string tokenId, RefreshLivyComputeTokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoExpireConfiguration))
+            {
+                body["autoExpireConfiguration"] = request.AutoExpireConfiguration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
+            {
+                body["token"] = request.Token;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RefreshLivyComputeToken",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/interactive/v1/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceBizId) + "/livycompute/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(livyComputeId) + "/token/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(tokenId),
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RefreshLivyComputeTokenResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新Livy Compute的token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RefreshLivyComputeTokenRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RefreshLivyComputeTokenResponse
+        /// </returns>
+        public async Task<RefreshLivyComputeTokenResponse> RefreshLivyComputeTokenWithOptionsAsync(string workspaceBizId, string livyComputeId, string tokenId, RefreshLivyComputeTokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoExpireConfiguration))
+            {
+                body["autoExpireConfiguration"] = request.AutoExpireConfiguration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
+            {
+                body["token"] = request.Token;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RefreshLivyComputeToken",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/interactive/v1/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceBizId) + "/livycompute/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(livyComputeId) + "/token/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(tokenId),
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RefreshLivyComputeTokenResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新Livy Compute的token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RefreshLivyComputeTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RefreshLivyComputeTokenResponse
+        /// </returns>
+        public RefreshLivyComputeTokenResponse RefreshLivyComputeToken(string workspaceBizId, string livyComputeId, string tokenId, RefreshLivyComputeTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return RefreshLivyComputeTokenWithOptions(workspaceBizId, livyComputeId, tokenId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新Livy Compute的token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RefreshLivyComputeTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RefreshLivyComputeTokenResponse
+        /// </returns>
+        public async Task<RefreshLivyComputeTokenResponse> RefreshLivyComputeTokenAsync(string workspaceBizId, string livyComputeId, string tokenId, RefreshLivyComputeTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await RefreshLivyComputeTokenWithOptionsAsync(workspaceBizId, livyComputeId, tokenId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Starts a Spark job.</para>
         /// </summary>
         /// 
@@ -3891,6 +5675,136 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await StartJobRunWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启动livy compute</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartLivyComputeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartLivyComputeResponse
+        /// </returns>
+        public StartLivyComputeResponse StartLivyComputeWithOptions(string workspaceBizId, string livyComputeId, StartLivyComputeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartLivyCompute",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/interactive/v1/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceBizId) + "/livycompute/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(livyComputeId) + "/start",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartLivyComputeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启动livy compute</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartLivyComputeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartLivyComputeResponse
+        /// </returns>
+        public async Task<StartLivyComputeResponse> StartLivyComputeWithOptionsAsync(string workspaceBizId, string livyComputeId, StartLivyComputeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartLivyCompute",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/interactive/v1/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceBizId) + "/livycompute/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(livyComputeId) + "/start",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartLivyComputeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启动livy compute</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartLivyComputeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartLivyComputeResponse
+        /// </returns>
+        public StartLivyComputeResponse StartLivyCompute(string workspaceBizId, string livyComputeId, StartLivyComputeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return StartLivyComputeWithOptions(workspaceBizId, livyComputeId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启动livy compute</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartLivyComputeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartLivyComputeResponse
+        /// </returns>
+        public async Task<StartLivyComputeResponse> StartLivyComputeAsync(string workspaceBizId, string livyComputeId, StartLivyComputeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await StartLivyComputeWithOptionsAsync(workspaceBizId, livyComputeId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4255,6 +6169,136 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>停止livy compute</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopLivyComputeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopLivyComputeResponse
+        /// </returns>
+        public StopLivyComputeResponse StopLivyComputeWithOptions(string workspaceBizId, string livyComputeId, StopLivyComputeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopLivyCompute",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/interactive/v1/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceBizId) + "/livycompute/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(livyComputeId) + "/stop",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopLivyComputeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止livy compute</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopLivyComputeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopLivyComputeResponse
+        /// </returns>
+        public async Task<StopLivyComputeResponse> StopLivyComputeWithOptionsAsync(string workspaceBizId, string livyComputeId, StopLivyComputeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopLivyCompute",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/interactive/v1/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceBizId) + "/livycompute/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(livyComputeId) + "/stop",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopLivyComputeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止livy compute</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopLivyComputeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopLivyComputeResponse
+        /// </returns>
+        public StopLivyComputeResponse StopLivyCompute(string workspaceBizId, string livyComputeId, StopLivyComputeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return StopLivyComputeWithOptions(workspaceBizId, livyComputeId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止livy compute</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopLivyComputeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopLivyComputeResponse
+        /// </returns>
+        public async Task<StopLivyComputeResponse> StopLivyComputeAsync(string workspaceBizId, string livyComputeId, StopLivyComputeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await StopLivyComputeWithOptionsAsync(workspaceBizId, livyComputeId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Stops a session.</para>
         /// </summary>
         /// 
@@ -4531,6 +6575,260 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await TerminateSqlStatementWithOptionsAsync(workspaceId, statementId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新livy compute</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateLivyComputeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLivyComputeResponse
+        /// </returns>
+        public UpdateLivyComputeResponse UpdateLivyComputeWithOptions(string workspaceBizId, string livyComputeId, UpdateLivyComputeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                body["authType"] = request.AuthType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStartConfiguration))
+            {
+                body["autoStartConfiguration"] = request.AutoStartConfiguration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStopConfiguration))
+            {
+                body["autoStopConfiguration"] = request.AutoStopConfiguration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CpuLimit))
+            {
+                body["cpuLimit"] = request.CpuLimit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayReleaseVersion))
+            {
+                body["displayReleaseVersion"] = request.DisplayReleaseVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnablePublic))
+            {
+                body["enablePublic"] = request.EnablePublic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvironmentId))
+            {
+                body["environmentId"] = request.EnvironmentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Fusion))
+            {
+                body["fusion"] = request.Fusion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LivyServerConf))
+            {
+                body["livyServerConf"] = request.LivyServerConf;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LivyVersion))
+            {
+                body["livyVersion"] = request.LivyVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemoryLimit))
+            {
+                body["memoryLimit"] = request.MemoryLimit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkName))
+            {
+                body["networkName"] = request.NetworkName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueName))
+            {
+                body["queueName"] = request.QueueName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReleaseVersion))
+            {
+                body["releaseVersion"] = request.ReleaseVersion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateLivyCompute",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/interactive/v1/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceBizId) + "/livycompute/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(livyComputeId),
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateLivyComputeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新livy compute</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateLivyComputeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLivyComputeResponse
+        /// </returns>
+        public async Task<UpdateLivyComputeResponse> UpdateLivyComputeWithOptionsAsync(string workspaceBizId, string livyComputeId, UpdateLivyComputeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                body["authType"] = request.AuthType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStartConfiguration))
+            {
+                body["autoStartConfiguration"] = request.AutoStartConfiguration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStopConfiguration))
+            {
+                body["autoStopConfiguration"] = request.AutoStopConfiguration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CpuLimit))
+            {
+                body["cpuLimit"] = request.CpuLimit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayReleaseVersion))
+            {
+                body["displayReleaseVersion"] = request.DisplayReleaseVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnablePublic))
+            {
+                body["enablePublic"] = request.EnablePublic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvironmentId))
+            {
+                body["environmentId"] = request.EnvironmentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Fusion))
+            {
+                body["fusion"] = request.Fusion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LivyServerConf))
+            {
+                body["livyServerConf"] = request.LivyServerConf;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LivyVersion))
+            {
+                body["livyVersion"] = request.LivyVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemoryLimit))
+            {
+                body["memoryLimit"] = request.MemoryLimit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkName))
+            {
+                body["networkName"] = request.NetworkName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueName))
+            {
+                body["queueName"] = request.QueueName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReleaseVersion))
+            {
+                body["releaseVersion"] = request.ReleaseVersion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateLivyCompute",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/interactive/v1/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceBizId) + "/livycompute/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(livyComputeId),
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateLivyComputeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新livy compute</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateLivyComputeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLivyComputeResponse
+        /// </returns>
+        public UpdateLivyComputeResponse UpdateLivyCompute(string workspaceBizId, string livyComputeId, UpdateLivyComputeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateLivyComputeWithOptions(workspaceBizId, livyComputeId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新livy compute</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateLivyComputeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLivyComputeResponse
+        /// </returns>
+        public async Task<UpdateLivyComputeResponse> UpdateLivyComputeAsync(string workspaceBizId, string livyComputeId, UpdateLivyComputeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateLivyComputeWithOptionsAsync(workspaceBizId, livyComputeId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

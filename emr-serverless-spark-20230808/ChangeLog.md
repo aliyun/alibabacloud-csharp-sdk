@@ -1,3 +1,29 @@
+2025-08-15 Version: 1.10.0
+- Support API CreateLivyCompute.
+- Support API CreateLivyComputeToken.
+- Support API DeleteLivyCompute.
+- Support API DeleteLivyComputeToken.
+- Support API GetLivyCompute.
+- Support API GetLivyComputeToken.
+- Support API ListKyuubiServices.
+- Support API ListKyuubiToken.
+- Support API ListLivyCompute.
+- Support API ListLivyComputeToken.
+- Support API ListSqlStatementContents.
+- Support API RefreshLivyComputeToken.
+- Support API StartLivyCompute.
+- Support API StopLivyCompute.
+- Support API UpdateLivyCompute.
+- Update API GetSessionCluster: add response parameters Body.sessionCluster.connectionToken.
+- Update API ListJobRuns: add request parameters isWorkflow.
+- Update API ListKyuubiSparkApplications: add request parameters minDuration.
+- Update API ListKyuubiSparkApplications: add request parameters orderBy.
+- Update API ListKyuubiSparkApplications: add request parameters resourceQueueId.
+- Update API ListKyuubiSparkApplications: add request parameters sort.
+- Update API ListKyuubiSparkApplications: add response parameters Body.applications.$.latestSqlStatementStatus.
+- Update API ListSessionClusters: add response parameters Body.sessionClusters.$.connectionToken.
+
+
 2025-05-30 Version: 1.8.6
 - Generated csharp 2023-08-08 for emr-serverless-spark.
 

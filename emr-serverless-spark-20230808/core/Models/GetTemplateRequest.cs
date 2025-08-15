@@ -25,6 +25,11 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 
         /// <summary>
         /// <para>The template type.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>TASK</description></item>
+        /// <item><description>SESSION</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>TASK</para>

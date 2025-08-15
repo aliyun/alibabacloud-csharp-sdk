@@ -48,6 +48,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 
         }
 
+        [NameInMap("isWorkflow")]
+        [Validation(Required=false)]
+        public string IsWorkflow { get; set; }
+
         /// <summary>
         /// <para>The job run ID.</para>
         /// 
