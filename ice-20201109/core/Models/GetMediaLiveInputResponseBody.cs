@@ -100,6 +100,22 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [Validation(Required=false)]
                 public string SourceUrl { get; set; }
 
+                [NameInMap("SrtLatency")]
+                [Validation(Required=false)]
+                public int? SrtLatency { get; set; }
+
+                [NameInMap("SrtMaxBitrate")]
+                [Validation(Required=false)]
+                public int? SrtMaxBitrate { get; set; }
+
+                [NameInMap("SrtPassphrase")]
+                [Validation(Required=false)]
+                public string SrtPassphrase { get; set; }
+
+                [NameInMap("SrtPbKeyLen")]
+                [Validation(Required=false)]
+                public int? SrtPbKeyLen { get; set; }
+
                 /// <summary>
                 /// <para>The name of the pushed stream. This parameter is returned for PUSH inputs.</para>
                 /// 

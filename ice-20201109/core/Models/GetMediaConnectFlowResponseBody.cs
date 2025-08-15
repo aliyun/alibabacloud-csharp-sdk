@@ -50,6 +50,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string FlowName { get; set; }
 
+            [NameInMap("FlowRegion")]
+            [Validation(Required=false)]
+            public string FlowRegion { get; set; }
+
             /// <summary>
             /// <para>The state of the flow.</para>
             /// 

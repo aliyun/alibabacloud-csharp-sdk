@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string CustomParams { get; set; }
 
+            [NameInMap("VadDuration")]
+            [Validation(Required=false)]
+            public int? VadDuration { get; set; }
+
             [NameInMap("VadLevel")]
             [Validation(Required=false)]
             public int? VadLevel { get; set; }
@@ -69,6 +73,24 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string BailianAppParams { get; set; }
 
+            [NameInMap("FunctionMap")]
+            [Validation(Required=false)]
+            public List<AIAgentOutboundCallConfigLlmConfigFunctionMap> FunctionMap { get; set; }
+            public class AIAgentOutboundCallConfigLlmConfigFunctionMap : TeaModel {
+                [NameInMap("Function")]
+                [Validation(Required=false)]
+                public string Function { get; set; }
+
+                [NameInMap("MatchFunction")]
+                [Validation(Required=false)]
+                public string MatchFunction { get; set; }
+
+            }
+
+            [NameInMap("LlmCompleteReply")]
+            [Validation(Required=false)]
+            public bool? LlmCompleteReply { get; set; }
+
             [NameInMap("LlmHistory")]
             [Validation(Required=false)]
             public List<AIAgentOutboundCallConfigLlmConfigLlmHistory> LlmHistory { get; set; }
@@ -91,12 +113,36 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string LlmSystemPrompt { get; set; }
 
+            [NameInMap("OpenAIExtraQuery")]
+            [Validation(Required=false)]
+            public string OpenAIExtraQuery { get; set; }
+
+            [NameInMap("OutputMaxDelay")]
+            [Validation(Required=false)]
+            public string OutputMaxDelay { get; set; }
+
+            [NameInMap("OutputMinLength")]
+            [Validation(Required=false)]
+            public int? OutputMinLength { get; set; }
+
         }
 
         [NameInMap("TtsConfig")]
         [Validation(Required=false)]
         public AIAgentOutboundCallConfigTtsConfig TtsConfig { get; set; }
         public class AIAgentOutboundCallConfigTtsConfig : TeaModel {
+            [NameInMap("Emotion")]
+            [Validation(Required=false)]
+            public string Emotion { get; set; }
+
+            [NameInMap("LanguageId")]
+            [Validation(Required=false)]
+            public string LanguageId { get; set; }
+
+            [NameInMap("ModelId")]
+            [Validation(Required=false)]
+            public string ModelId { get; set; }
+
             [NameInMap("PronunciationRules")]
             [Validation(Required=false)]
             public List<AIAgentOutboundCallConfigTtsConfigPronunciationRules> PronunciationRules { get; set; }
@@ -114,6 +160,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string Word { get; set; }
 
             }
+
+            [NameInMap("SpeechRate")]
+            [Validation(Required=false)]
+            public double? SpeechRate { get; set; }
 
             [NameInMap("VoiceId")]
             [Validation(Required=false)]

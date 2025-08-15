@@ -30,6 +30,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string CallLogUrl { get; set; }
 
+            [NameInMap("GmtCreate")]
+            [Validation(Required=false)]
+            public string GmtCreate { get; set; }
+
+            [NameInMap("GmtModified")]
+            [Validation(Required=false)]
+            public string GmtModified { get; set; }
+
             /// <summary>
             /// <para>The runtime configurations of the AI agent.</para>
             /// 

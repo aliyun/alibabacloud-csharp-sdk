@@ -1,3 +1,6 @@
+2025-08-15 Version: 6.4.5
+- Update SDK.
+
 2025-07-09 Version: 6.4.4
 - Update API DeleteMediaFromSearchLib: add request parameters Namespace.
 - Update API InsertMediaToSearchLib: add request parameters Namespace.
