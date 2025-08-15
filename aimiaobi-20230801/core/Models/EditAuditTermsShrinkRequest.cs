@@ -8,10 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
-    public class AddAuditTermsRequest : TeaModel {
+    public class EditAuditTermsShrinkRequest : TeaModel {
         [NameInMap("ExceptionWord")]
         [Validation(Required=false)]
-        public List<string> ExceptionWord { get; set; }
+        public string ExceptionWordShrink { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>20103</para>
+        /// </summary>
+        [NameInMap("Id")]
+        [Validation(Required=false)]
+        public string Id { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

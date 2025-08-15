@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class EditAuditTermsRequest : TeaModel {
+        [NameInMap("ExceptionWord")]
+        [Validation(Required=false)]
+        public List<string> ExceptionWord { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>20103</para>

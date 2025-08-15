@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         /// <para>添加审核自定义词库记录</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// AddAuditTermsRequest
         /// </param>
         /// <param name="runtime">
@@ -52,10 +52,20 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         /// <returns>
         /// AddAuditTermsResponse
         /// </returns>
-        public AddAuditTermsResponse AddAuditTermsWithOptions(AddAuditTermsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public AddAuditTermsResponse AddAuditTermsWithOptions(AddAuditTermsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AddAuditTermsShrinkRequest request = new AddAuditTermsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExceptionWord))
+            {
+                request.ExceptionWordShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExceptionWord, "ExceptionWord", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExceptionWordShrink))
+            {
+                body["ExceptionWord"] = request.ExceptionWordShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
             {
                 body["Keyword"] = request.Keyword;
@@ -96,7 +106,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         /// <para>添加审核自定义词库记录</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// AddAuditTermsRequest
         /// </param>
         /// <param name="runtime">
@@ -106,10 +116,20 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         /// <returns>
         /// AddAuditTermsResponse
         /// </returns>
-        public async Task<AddAuditTermsResponse> AddAuditTermsWithOptionsAsync(AddAuditTermsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<AddAuditTermsResponse> AddAuditTermsWithOptionsAsync(AddAuditTermsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AddAuditTermsShrinkRequest request = new AddAuditTermsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExceptionWord))
+            {
+                request.ExceptionWordShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExceptionWord, "ExceptionWord", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExceptionWordShrink))
+            {
+                body["ExceptionWord"] = request.ExceptionWordShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
             {
                 body["Keyword"] = request.Keyword;
@@ -3147,6 +3167,134 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>删除指定的用于事实性审核的 URL。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteFactAuditUrlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFactAuditUrlResponse
+        /// </returns>
+        public DeleteFactAuditUrlResponse DeleteFactAuditUrlWithOptions(DeleteFactAuditUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                body["Url"] = request.Url;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteFactAuditUrl",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteFactAuditUrlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除指定的用于事实性审核的 URL。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteFactAuditUrlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFactAuditUrlResponse
+        /// </returns>
+        public async Task<DeleteFactAuditUrlResponse> DeleteFactAuditUrlWithOptionsAsync(DeleteFactAuditUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                body["Url"] = request.Url;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteFactAuditUrl",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteFactAuditUrlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除指定的用于事实性审核的 URL。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteFactAuditUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFactAuditUrlResponse
+        /// </returns>
+        public DeleteFactAuditUrlResponse DeleteFactAuditUrl(DeleteFactAuditUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteFactAuditUrlWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除指定的用于事实性审核的 URL。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteFactAuditUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFactAuditUrlResponse
+        /// </returns>
+        public async Task<DeleteFactAuditUrlResponse> DeleteFactAuditUrlAsync(DeleteFactAuditUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteFactAuditUrlWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>文档管理-删除。</para>
         /// </summary>
         /// 
@@ -3958,7 +4106,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         /// <para>编辑审核自定义词库记录</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// EditAuditTermsRequest
         /// </param>
         /// <param name="runtime">
@@ -3968,10 +4116,20 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         /// <returns>
         /// EditAuditTermsResponse
         /// </returns>
-        public EditAuditTermsResponse EditAuditTermsWithOptions(EditAuditTermsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public EditAuditTermsResponse EditAuditTermsWithOptions(EditAuditTermsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            EditAuditTermsShrinkRequest request = new EditAuditTermsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExceptionWord))
+            {
+                request.ExceptionWordShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExceptionWord, "ExceptionWord", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExceptionWordShrink))
+            {
+                body["ExceptionWord"] = request.ExceptionWordShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
                 body["Id"] = request.Id;
@@ -4016,7 +4174,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         /// <para>编辑审核自定义词库记录</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// EditAuditTermsRequest
         /// </param>
         /// <param name="runtime">
@@ -4026,10 +4184,20 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         /// <returns>
         /// EditAuditTermsResponse
         /// </returns>
-        public async Task<EditAuditTermsResponse> EditAuditTermsWithOptionsAsync(EditAuditTermsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<EditAuditTermsResponse> EditAuditTermsWithOptionsAsync(EditAuditTermsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            EditAuditTermsShrinkRequest request = new EditAuditTermsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExceptionWord))
+            {
+                request.ExceptionWordShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExceptionWord, "ExceptionWord", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExceptionWordShrink))
+            {
+                body["ExceptionWord"] = request.ExceptionWordShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
                 body["Id"] = request.Id;
@@ -8391,6 +8559,126 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetEnterpriseVocAnalysisTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取当前正用于事实性审核的信源 URL。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetFactAuditUrlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFactAuditUrlResponse
+        /// </returns>
+        public GetFactAuditUrlResponse GetFactAuditUrlWithOptions(GetFactAuditUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetFactAuditUrl",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetFactAuditUrlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取当前正用于事实性审核的信源 URL。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetFactAuditUrlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFactAuditUrlResponse
+        /// </returns>
+        public async Task<GetFactAuditUrlResponse> GetFactAuditUrlWithOptionsAsync(GetFactAuditUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetFactAuditUrl",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetFactAuditUrlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取当前正用于事实性审核的信源 URL。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetFactAuditUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFactAuditUrlResponse
+        /// </returns>
+        public GetFactAuditUrlResponse GetFactAuditUrl(GetFactAuditUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetFactAuditUrlWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取当前正用于事实性审核的信源 URL。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetFactAuditUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFactAuditUrlResponse
+        /// </returns>
+        public async Task<GetFactAuditUrlResponse> GetFactAuditUrlAsync(GetFactAuditUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetFactAuditUrlWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -24547,6 +24835,134 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SubmitExportTermsTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>妙笔为您提供了新的事实性审核能力，在联网搜索并判断正误的前提下，还支持用户自定义配置搜索来源 URL。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitFactAuditUrlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitFactAuditUrlResponse
+        /// </returns>
+        public SubmitFactAuditUrlResponse SubmitFactAuditUrlWithOptions(SubmitFactAuditUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                body["Url"] = request.Url;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitFactAuditUrl",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitFactAuditUrlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>妙笔为您提供了新的事实性审核能力，在联网搜索并判断正误的前提下，还支持用户自定义配置搜索来源 URL。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitFactAuditUrlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitFactAuditUrlResponse
+        /// </returns>
+        public async Task<SubmitFactAuditUrlResponse> SubmitFactAuditUrlWithOptionsAsync(SubmitFactAuditUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                body["Url"] = request.Url;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitFactAuditUrl",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitFactAuditUrlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>妙笔为您提供了新的事实性审核能力，在联网搜索并判断正误的前提下，还支持用户自定义配置搜索来源 URL。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitFactAuditUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitFactAuditUrlResponse
+        /// </returns>
+        public SubmitFactAuditUrlResponse SubmitFactAuditUrl(SubmitFactAuditUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitFactAuditUrlWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>妙笔为您提供了新的事实性审核能力，在联网搜索并判断正误的前提下，还支持用户自定义配置搜索来源 URL。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitFactAuditUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitFactAuditUrlResponse
+        /// </returns>
+        public async Task<SubmitFactAuditUrlResponse> SubmitFactAuditUrlAsync(SubmitFactAuditUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitFactAuditUrlWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

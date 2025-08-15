@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public List<ListAuditTermsResponseBodyData> Data { get; set; }
         public class ListAuditTermsResponseBodyData : TeaModel {
+            [NameInMap("ExceptionWord")]
+            [Validation(Required=false)]
+            public List<string> ExceptionWord { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>1</para>
