@@ -77,6 +77,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             [Validation(Required=false)]
             public string EndTime { get; set; }
 
+            [NameInMap("FirstBuy")]
+            [Validation(Required=false)]
+            public bool? FirstBuy { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>2021-03-02T15:12Z</para>

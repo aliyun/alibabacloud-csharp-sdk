@@ -5990,6 +5990,338 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询财务单元分摊规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryCostCenterShareRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryCostCenterShareRuleResponse
+        /// </returns>
+        public QueryCostCenterShareRuleResponse QueryCostCenterShareRuleWithOptions(QueryCostCenterShareRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcIdAccountIds))
+            {
+                query["EcIdAccountIds"] = request.EcIdAccountIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nbid))
+            {
+                query["Nbid"] = request.Nbid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccountId))
+            {
+                query["OwnerAccountId"] = request.OwnerAccountId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryCostCenterShareRule",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryCostCenterShareRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询财务单元分摊规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryCostCenterShareRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryCostCenterShareRuleResponse
+        /// </returns>
+        public async Task<QueryCostCenterShareRuleResponse> QueryCostCenterShareRuleWithOptionsAsync(QueryCostCenterShareRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcIdAccountIds))
+            {
+                query["EcIdAccountIds"] = request.EcIdAccountIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nbid))
+            {
+                query["Nbid"] = request.Nbid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccountId))
+            {
+                query["OwnerAccountId"] = request.OwnerAccountId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryCostCenterShareRule",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryCostCenterShareRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询财务单元分摊规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryCostCenterShareRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryCostCenterShareRuleResponse
+        /// </returns>
+        public QueryCostCenterShareRuleResponse QueryCostCenterShareRule(QueryCostCenterShareRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryCostCenterShareRuleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询财务单元分摊规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryCostCenterShareRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryCostCenterShareRuleResponse
+        /// </returns>
+        public async Task<QueryCostCenterShareRuleResponse> QueryCostCenterShareRuleAsync(QueryCostCenterShareRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryCostCenterShareRuleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改财务单元分摊规则</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SaveCostCenterShareRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveCostCenterShareRuleResponse
+        /// </returns>
+        public SaveCostCenterShareRuleResponse SaveCostCenterShareRuleWithOptions(SaveCostCenterShareRuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SaveCostCenterShareRuleShrinkRequest request = new SaveCostCenterShareRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CreateShareRuleList))
+            {
+                request.CreateShareRuleListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CreateShareRuleList, "CreateShareRuleList", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ModifyShareRuleList))
+            {
+                request.ModifyShareRuleListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ModifyShareRuleList, "ModifyShareRuleList", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RemoveShareRuleList))
+            {
+                request.RemoveShareRuleListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RemoveShareRuleList, "RemoveShareRuleList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateShareRuleListShrink))
+            {
+                query["CreateShareRuleList"] = request.CreateShareRuleListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModifyShareRuleListShrink))
+            {
+                query["ModifyShareRuleList"] = request.ModifyShareRuleListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nbid))
+            {
+                query["Nbid"] = request.Nbid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccountId))
+            {
+                query["OwnerAccountId"] = request.OwnerAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemoveShareRuleListShrink))
+            {
+                query["RemoveShareRuleList"] = request.RemoveShareRuleListShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SaveCostCenterShareRule",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SaveCostCenterShareRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改财务单元分摊规则</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SaveCostCenterShareRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveCostCenterShareRuleResponse
+        /// </returns>
+        public async Task<SaveCostCenterShareRuleResponse> SaveCostCenterShareRuleWithOptionsAsync(SaveCostCenterShareRuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SaveCostCenterShareRuleShrinkRequest request = new SaveCostCenterShareRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CreateShareRuleList))
+            {
+                request.CreateShareRuleListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CreateShareRuleList, "CreateShareRuleList", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ModifyShareRuleList))
+            {
+                request.ModifyShareRuleListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ModifyShareRuleList, "ModifyShareRuleList", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RemoveShareRuleList))
+            {
+                request.RemoveShareRuleListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RemoveShareRuleList, "RemoveShareRuleList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateShareRuleListShrink))
+            {
+                query["CreateShareRuleList"] = request.CreateShareRuleListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModifyShareRuleListShrink))
+            {
+                query["ModifyShareRuleList"] = request.ModifyShareRuleListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nbid))
+            {
+                query["Nbid"] = request.Nbid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccountId))
+            {
+                query["OwnerAccountId"] = request.OwnerAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemoveShareRuleListShrink))
+            {
+                query["RemoveShareRuleList"] = request.RemoveShareRuleListShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SaveCostCenterShareRule",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SaveCostCenterShareRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改财务单元分摊规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SaveCostCenterShareRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveCostCenterShareRuleResponse
+        /// </returns>
+        public SaveCostCenterShareRuleResponse SaveCostCenterShareRule(SaveCostCenterShareRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SaveCostCenterShareRuleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改财务单元分摊规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SaveCostCenterShareRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveCostCenterShareRuleResponse
+        /// </returns>
+        public async Task<SaveCostCenterShareRuleResponse> SaveCostCenterShareRuleAsync(SaveCostCenterShareRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SaveCostCenterShareRuleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>设置资金账户的信控限额</para>
         /// </summary>
         /// 
