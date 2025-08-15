@@ -1,3 +1,7 @@
+2025-08-15 Version: 1.3.0
+- Support API RefreshUserSync.
+
+
 2025-08-08 Version: 1.2.0
 - Support API AlterDatabase.
 - Support API AlterReceiver.
