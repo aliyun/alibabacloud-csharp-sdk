@@ -272,6 +272,24 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public ModifyDomainRequestRedirect Redirect { get; set; }
         public class ModifyDomainRequestRedirect : TeaModel {
+            [NameInMap("BackendPorts")]
+            [Validation(Required=false)]
+            public List<ModifyDomainRequestRedirectBackendPorts> BackendPorts { get; set; }
+            public class ModifyDomainRequestRedirectBackendPorts : TeaModel {
+                [NameInMap("BackendPort")]
+                [Validation(Required=false)]
+                public int? BackendPort { get; set; }
+
+                [NameInMap("ListenPort")]
+                [Validation(Required=false)]
+                public int? ListenPort { get; set; }
+
+                [NameInMap("Protocol")]
+                [Validation(Required=false)]
+                public string Protocol { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The IP addresses or domain names of the origin server. You cannot specify both IP addresses and domain names. If you specify domain names, the domain names can be resolved only to IPv4 addresses.</para>
             /// <list type="bullet">

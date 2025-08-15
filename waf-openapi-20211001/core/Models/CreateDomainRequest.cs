@@ -282,6 +282,24 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public CreateDomainRequestRedirect Redirect { get; set; }
         public class CreateDomainRequestRedirect : TeaModel {
+            [NameInMap("BackendPorts")]
+            [Validation(Required=false)]
+            public List<CreateDomainRequestRedirectBackendPorts> BackendPorts { get; set; }
+            public class CreateDomainRequestRedirectBackendPorts : TeaModel {
+                [NameInMap("BackendPort")]
+                [Validation(Required=false)]
+                public int? BackendPort { get; set; }
+
+                [NameInMap("ListenPort")]
+                [Validation(Required=false)]
+                public int? ListenPort { get; set; }
+
+                [NameInMap("Protocol")]
+                [Validation(Required=false)]
+                public string Protocol { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The IP addresses or domain names of the origin server.</para>
             /// </summary>

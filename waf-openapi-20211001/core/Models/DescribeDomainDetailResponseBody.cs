@@ -328,6 +328,24 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public List<string> BackendList { get; set; }
 
+            [NameInMap("BackendPorts")]
+            [Validation(Required=false)]
+            public List<DescribeDomainDetailResponseBodyRedirectBackendPorts> BackendPorts { get; set; }
+            public class DescribeDomainDetailResponseBodyRedirectBackendPorts : TeaModel {
+                [NameInMap("BackendPort")]
+                [Validation(Required=false)]
+                public int? BackendPort { get; set; }
+
+                [NameInMap("ListenPort")]
+                [Validation(Required=false)]
+                public int? ListenPort { get; set; }
+
+                [NameInMap("Protocol")]
+                [Validation(Required=false)]
+                public string Protocol { get; set; }
+
+            }
+
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
