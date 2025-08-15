@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// </summary>
             [NameInMap("HitTimes")]
             [Validation(Required=false)]
-            public int? HitTimes { get; set; }
+            public long? HitTimes { get; set; }
 
             /// <summary>
             /// <para>The time when the access control policy was modified.</para>
