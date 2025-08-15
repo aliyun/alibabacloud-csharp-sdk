@@ -4803,6 +4803,158 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>修改专线网关关联的属性</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyExpressConnectRouterAssociationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyExpressConnectRouterAssociationResponse
+        /// </returns>
+        public ModifyExpressConnectRouterAssociationResponse ModifyExpressConnectRouterAssociationWithOptions(ModifyExpressConnectRouterAssociationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssociationId))
+            {
+                body["AssociationId"] = request.AssociationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                body["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcrId))
+            {
+                body["EcrId"] = request.EcrId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyExpressConnectRouterAssociation",
+                Version = "2023-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyExpressConnectRouterAssociationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改专线网关关联的属性</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyExpressConnectRouterAssociationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyExpressConnectRouterAssociationResponse
+        /// </returns>
+        public async Task<ModifyExpressConnectRouterAssociationResponse> ModifyExpressConnectRouterAssociationWithOptionsAsync(ModifyExpressConnectRouterAssociationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssociationId))
+            {
+                body["AssociationId"] = request.AssociationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                body["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcrId))
+            {
+                body["EcrId"] = request.EcrId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyExpressConnectRouterAssociation",
+                Version = "2023-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyExpressConnectRouterAssociationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改专线网关关联的属性</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyExpressConnectRouterAssociationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyExpressConnectRouterAssociationResponse
+        /// </returns>
+        public ModifyExpressConnectRouterAssociationResponse ModifyExpressConnectRouterAssociation(ModifyExpressConnectRouterAssociationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyExpressConnectRouterAssociationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改专线网关关联的属性</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyExpressConnectRouterAssociationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyExpressConnectRouterAssociationResponse
+        /// </returns>
+        public async Task<ModifyExpressConnectRouterAssociationResponse> ModifyExpressConnectRouterAssociationAsync(ModifyExpressConnectRouterAssociationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyExpressConnectRouterAssociationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Modifies the route prefixes of a virtual private cloud (VPC) or a transit router (TR) that is associated with an Express Connect router (ECR).</para>
         /// </summary>
         /// 
@@ -4967,6 +5119,166 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyExpressConnectRouterAssociationAllowedPrefixWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改专线网关子实例的属性</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyExpressConnectRouterChildInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyExpressConnectRouterChildInstanceResponse
+        /// </returns>
+        public ModifyExpressConnectRouterChildInstanceResponse ModifyExpressConnectRouterChildInstanceWithOptions(ModifyExpressConnectRouterChildInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChildInstanceId))
+            {
+                body["ChildInstanceId"] = request.ChildInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChildInstanceType))
+            {
+                body["ChildInstanceType"] = request.ChildInstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                body["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcrId))
+            {
+                body["EcrId"] = request.EcrId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyExpressConnectRouterChildInstance",
+                Version = "2023-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyExpressConnectRouterChildInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改专线网关子实例的属性</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyExpressConnectRouterChildInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyExpressConnectRouterChildInstanceResponse
+        /// </returns>
+        public async Task<ModifyExpressConnectRouterChildInstanceResponse> ModifyExpressConnectRouterChildInstanceWithOptionsAsync(ModifyExpressConnectRouterChildInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChildInstanceId))
+            {
+                body["ChildInstanceId"] = request.ChildInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChildInstanceType))
+            {
+                body["ChildInstanceType"] = request.ChildInstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                body["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcrId))
+            {
+                body["EcrId"] = request.EcrId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyExpressConnectRouterChildInstance",
+                Version = "2023-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyExpressConnectRouterChildInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改专线网关子实例的属性</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyExpressConnectRouterChildInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyExpressConnectRouterChildInstanceResponse
+        /// </returns>
+        public ModifyExpressConnectRouterChildInstanceResponse ModifyExpressConnectRouterChildInstance(ModifyExpressConnectRouterChildInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyExpressConnectRouterChildInstanceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改专线网关子实例的属性</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyExpressConnectRouterChildInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyExpressConnectRouterChildInstanceResponse
+        /// </returns>
+        public async Task<ModifyExpressConnectRouterChildInstanceResponse> ModifyExpressConnectRouterChildInstanceAsync(ModifyExpressConnectRouterChildInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyExpressConnectRouterChildInstanceWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
