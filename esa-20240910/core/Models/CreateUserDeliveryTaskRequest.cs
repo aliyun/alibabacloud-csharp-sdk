@@ -32,7 +32,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <item><description>cn: the Chinese mainland.</description></item>
         /// <item><description>sg: outside the Chinese mainland.</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn</para>
@@ -85,6 +84,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string FieldName { get; set; }
 
+        [NameInMap("FilterVer")]
+        [Validation(Required=false)]
+        public string FilterVer { get; set; }
+
         /// <summary>
         /// <para>The configurations for delivery to an HTTP server.</para>
         /// </summary>
@@ -127,7 +130,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// </summary>
             [NameInMap("LastLogSplit")]
             [Validation(Required=false)]
-            public string LastLogSplit { get; set; }
+            public bool? LastLogSplit { get; set; }
 
             /// <summary>
             /// <para>The prefix of the log delivery package.</para>
@@ -157,7 +160,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// </summary>
             [NameInMap("LogSplit")]
             [Validation(Required=false)]
-            public string LogSplit { get; set; }
+            public bool? LogSplit { get; set; }
 
             /// <summary>
             /// <para>The log separator.</para>
@@ -168,16 +171,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [NameInMap("LogSplitWords")]
             [Validation(Required=false)]
             public string LogSplitWords { get; set; }
-
-            /// <summary>
-            /// <para>The maximum backoff time. Unit: milliseconds.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>1000</para>
-            /// </summary>
-            [NameInMap("MaxBackoffMS")]
-            [Validation(Required=false)]
-            public long? MaxBackoffMS { get; set; }
 
             /// <summary>
             /// <para>The maximum size of data for each delivery. Unit: MB.</para>
@@ -210,31 +203,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? MaxRetry { get; set; }
 
             /// <summary>
-            /// <para>The minimum backoff time. Unit: milliseconds.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>100</para>
-            /// </summary>
-            [NameInMap("MinBackoffMS")]
-            [Validation(Required=false)]
-            public long? MinBackoffMS { get; set; }
-
-            /// <summary>
             /// <para>The custom query parameters.</para>
             /// </summary>
             [NameInMap("QueryParam")]
             [Validation(Required=false)]
             public Dictionary<string, HttpDeliveryQueryParamValue> QueryParam { get; set; }
-
-            /// <summary>
-            /// <para>The response field key used for success check.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>err_code</para>
-            /// </summary>
-            [NameInMap("ResponseBodyKey")]
-            [Validation(Required=false)]
-            public string ResponseBodyKey { get; set; }
 
             /// <summary>
             /// <para>Specifies whether to use server authentication.</para>
@@ -284,16 +257,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string UrlPath { get; set; }
 
             }
-
-            /// <summary>
-            /// <para>The custom code for a success.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>200</para>
-            /// </summary>
-            [NameInMap("SuccessCode")]
-            [Validation(Required=false)]
-            public long? SuccessCode { get; set; }
 
             /// <summary>
             /// <para>The timeout period. Unit: seconds.</para>

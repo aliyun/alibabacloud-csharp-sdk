@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public List<GetEdgeContainerAppResourceStatusResponseBodyRegions> Regions { get; set; }
         public class GetEdgeContainerAppResourceStatusResponseBodyRegions : TeaModel {
+            [NameInMap("IsOffline")]
+            [Validation(Required=false)]
+            public bool? IsOffline { get; set; }
+
+            [NameInMap("IsStaging")]
+            [Validation(Required=false)]
+            public bool? IsStaging { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>unicom</para>

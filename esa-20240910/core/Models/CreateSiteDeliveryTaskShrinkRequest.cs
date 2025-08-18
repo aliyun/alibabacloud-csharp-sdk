@@ -32,7 +32,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <item><description>cn: the Chinese mainland.</description></item>
         /// <item><description>oversea: outside the Chinese mainland.</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn</para>
@@ -80,6 +79,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [NameInMap("FieldName")]
         [Validation(Required=false)]
         public string FieldName { get; set; }
+
+        [NameInMap("FilterVer")]
+        [Validation(Required=false)]
+        public string FilterVer { get; set; }
 
         /// <summary>
         /// <para>The configurations for delivery to an HTTP server.</para>

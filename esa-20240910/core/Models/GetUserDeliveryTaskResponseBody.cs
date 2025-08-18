@@ -91,6 +91,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string FilterRules { get; set; }
 
+        [NameInMap("FilterVer")]
+        [Validation(Required=false)]
+        public string FilterVer { get; set; }
+
+        [NameInMap("RawRule")]
+        [Validation(Required=false)]
+        public string RawRule { get; set; }
+
         /// <summary>
         /// <para>The request ID.</para>
         /// 

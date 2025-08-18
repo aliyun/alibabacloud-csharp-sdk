@@ -46,6 +46,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string FieldName { get; set; }
 
+        [NameInMap("FilterVer")]
+        [Validation(Required=false)]
+        public string FilterVer { get; set; }
+
         /// <summary>
         /// <para>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
         /// 

@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string Bypass { get; set; }
 
+        [NameInMap("Fallback")]
+        [Validation(Required=false)]
+        public string Fallback { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>on</para>

@@ -32,7 +32,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <item><description>cn: the Chinese mainland.</description></item>
         /// <item><description>oversea: outside the Chinese mainland.</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn</para>
@@ -81,6 +80,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string FieldName { get; set; }
 
+        [NameInMap("FilterVer")]
+        [Validation(Required=false)]
+        public string FilterVer { get; set; }
+
         /// <summary>
         /// <para>The configurations for delivery to an HTTP server.</para>
         /// </summary>
@@ -115,6 +118,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public Dictionary<string, HttpDeliveryHeaderParamValue> HeaderParam { get; set; }
 
+            [NameInMap("LastLogSplit")]
+            [Validation(Required=false)]
+            public bool? LastLogSplit { get; set; }
+
             /// <summary>
             /// <para>The prefix of the log delivery package.</para>
             /// 
@@ -134,6 +141,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [NameInMap("LogBodySuffix")]
             [Validation(Required=false)]
             public string LogBodySuffix { get; set; }
+
+            [NameInMap("LogSplit")]
+            [Validation(Required=false)]
+            public bool? LogSplit { get; set; }
+
+            [NameInMap("LogSplitWords")]
+            [Validation(Required=false)]
+            public string LogSplitWords { get; set; }
 
             /// <summary>
             /// <para>The maximum size of data for each delivery. Unit: MB.</para>
