@@ -1,3 +1,6 @@
+2025-08-18 Version: 1.1.6
+- Generated csharp 2020-06-30 for cas.
+
 2025-08-07 Version: 1.1.5
 - Generated csharp 2020-06-30 for cas.
 
