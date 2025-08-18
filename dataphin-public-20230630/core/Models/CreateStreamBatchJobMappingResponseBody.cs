@@ -31,6 +31,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>123123</para>
+            /// </summary>
+            [NameInMap("JobId")]
+            [Validation(Required=false)]
+            public long? JobId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>/dev/streamJob/7083701105376640?env=DEV&amp;projectId=7081229106458752&amp;tenantId=300001420</para>
             /// </summary>
             [NameInMap("Url")]
