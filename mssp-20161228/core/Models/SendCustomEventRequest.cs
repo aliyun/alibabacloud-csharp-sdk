@@ -51,11 +51,21 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         public string EventDetails { get; set; }
 
         /// <summary>
+        /// <para>Details of markdown format</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
+        /// </summary>
+        [NameInMap("EventMarkdown")]
+        [Validation(Required=false)]
+        public string EventMarkdown { get; set; }
+
+        /// <summary>
         /// <para>Event name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>客户端离线</para>
+        /// <para>客户端离线 Client offline</para>
         /// </summary>
         [NameInMap("EventName")]
         [Validation(Required=false)]

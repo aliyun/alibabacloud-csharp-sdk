@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
             /// <para>Completion time.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2024-03-07 16:45:01</para>
+            /// <para>1734788109000</para>
             /// </summary>
             [NameInMap("CompleteTime")]
             [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
             /// <para>Creation time.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2024-10-04T02:19:55Z</para>
+            /// <para>1734788109000</para>
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
             /// <para>End time.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>24-03-11 00:00:00</para>
+            /// <para>1734788109000</para>
             /// </summary>
             [NameInMap("EndTime")]
             [Validation(Required=false)]
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
             /// <para>Start time.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2021-01-21 15:25:25</para>
+            /// <para>1734788109000</para>
             /// </summary>
             [NameInMap("StartTime")]
             [Validation(Required=false)]
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
             /// <para>Work order name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>安全月报交付任务</para>
+            /// <para>Delivery task of safety monthly report</para>
             /// </summary>
             [NameInMap("WorkOrderName")]
             [Validation(Required=false)]
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
             /// <para>Work order source.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>工单迁移</para>
+            /// <para>Work order migration</para>
             /// </summary>
             [NameInMap("WorkOrderSource")]
             [Validation(Required=false)]
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The prompt message of the returned result.</para>
+        /// <para>Prompt message of the returned result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -192,7 +192,10 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         /// <summary>
         /// <para>Whether the call was successful.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The call was successful. - <b>false</b>: The call failed.</description></item>
+        /// <item><description><para><b>true</b>: Call succeeded.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Call failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

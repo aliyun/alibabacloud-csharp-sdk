@@ -1856,6 +1856,10 @@ namespace AlibabaCloud.SDK.Mssp20161228
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileKey))
+            {
+                body["FileKey"] = request.FileKey;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
                 body["Id"] = request.Id;
@@ -1902,6 +1906,10 @@ namespace AlibabaCloud.SDK.Mssp20161228
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileKey))
+            {
+                body["FileKey"] = request.FileKey;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
                 body["Id"] = request.Id;
@@ -4090,6 +4098,10 @@ namespace AlibabaCloud.SDK.Mssp20161228
             {
                 body["EventDetails"] = request.EventDetails;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventMarkdown))
+            {
+                body["EventMarkdown"] = request.EventMarkdown;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventName))
             {
                 body["EventName"] = request.EventName;
@@ -4191,6 +4203,10 @@ namespace AlibabaCloud.SDK.Mssp20161228
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventDetails))
             {
                 body["EventDetails"] = request.EventDetails;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventMarkdown))
+            {
+                body["EventMarkdown"] = request.EventMarkdown;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventName))
             {

@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
             /// <para>Customer name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>天津瑞鹏昇科技发展有限公司</para>
+            /// <para>Tianjin Ruipengsheng Technology Development Co., Ltd</para>
             /// </summary>
             [NameInMap("CustomerName")]
             [Validation(Required=false)]
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
             /// <para>Owner name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>乐牙</para>
+            /// <para>Le Ya</para>
             /// </summary>
             [NameInMap("OwnerName")]
             [Validation(Required=false)]

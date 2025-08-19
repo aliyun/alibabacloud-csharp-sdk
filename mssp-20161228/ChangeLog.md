@@ -1,3 +1,8 @@
+2025-08-19 Version: 1.3.3
+- Update API GetDocumentDownloadUrl: add request parameters FileKey.
+- Update API SendCustomEvent: add request parameters EventMarkdown.
+
+
 2025-01-15 Version: 1.3.2
 - Update API CreateServiceWorkOrder: add param IsMilestone.
 

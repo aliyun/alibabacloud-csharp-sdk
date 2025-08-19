@@ -53,6 +53,12 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         [Validation(Required=false)]
         public string IsAttachment { get; set; }
 
+        /// <summary>
+        /// <para>Is milestone.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Y</para>
+        /// </summary>
         [NameInMap("IsMilestone")]
         [Validation(Required=false)]
         public string IsMilestone { get; set; }
@@ -93,7 +99,7 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>新建</para>
+        /// <para>newly built</para>
         /// </summary>
         [NameInMap("OperateRemark")]
         [Validation(Required=false)]
@@ -133,7 +139,7 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2021-01-21 15:25:25</para>
+        /// <para>1734788109000</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
@@ -155,7 +161,7 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>安全月报交付任务</para>
+        /// <para>Delivery task of safety monthly report</para>
         /// </summary>
         [NameInMap("WorkOrderName")]
         [Validation(Required=false)]
@@ -166,7 +172,7 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>工单迁移</para>
+        /// <para>Work order migration</para>
         /// </summary>
         [NameInMap("WorkOrderSource")]
         [Validation(Required=false)]

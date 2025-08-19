@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Mssp20161228.Models
 {
     public class GetDocumentDownloadUrlRequest : TeaModel {
+        [NameInMap("FileKey")]
+        [Validation(Required=false)]
+        public string FileKey { get; set; }
+
         /// <summary>
         /// <para>Document management ID.</para>
         /// <para>This parameter is required.</para>
