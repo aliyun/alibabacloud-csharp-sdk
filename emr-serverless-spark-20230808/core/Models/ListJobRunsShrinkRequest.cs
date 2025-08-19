@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class ListJobRunsShrinkRequest : TeaModel {
+        [NameInMap("applicationConfigs")]
+        [Validation(Required=false)]
+        public string ApplicationConfigs { get; set; }
+
         /// <summary>
         /// <para>The ID of the user who created the job.</para>
         /// 
@@ -109,6 +113,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [NameInMap("resourceQueueId")]
         [Validation(Required=false)]
         public string ResourceQueueId { get; set; }
+
+        [NameInMap("runtimeConfigs")]
+        [Validation(Required=false)]
+        public string RuntimeConfigs { get; set; }
 
         /// <summary>
         /// <para>The range of start time.</para>

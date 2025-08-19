@@ -56,6 +56,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [Validation(Required=false)]
             public string EndTime { get; set; }
 
+            [NameInMap("exitReason")]
+            [Validation(Required=false)]
+            public string ExitReason { get; set; }
+
             [NameInMap("latestSqlStatementStatus")]
             [Validation(Required=false)]
             public string LatestSqlStatementStatus { get; set; }

@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [Validation(Required=false)]
             public List<ListKyuubiTokenResponseBodyDataTokens> Tokens { get; set; }
             public class ListKyuubiTokenResponseBodyDataTokens : TeaModel {
+                [NameInMap("accountNames")]
+                [Validation(Required=false)]
+                public List<string> AccountNames { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>2025-02-11T02:23:02Z</para>
@@ -48,6 +52,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 [NameInMap("lastUsedTime")]
                 [Validation(Required=false)]
                 public long? LastUsedTime { get; set; }
+
+                [NameInMap("memberArns")]
+                [Validation(Required=false)]
+                public List<string> MemberArns { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>

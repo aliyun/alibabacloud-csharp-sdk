@@ -58,6 +58,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 [Validation(Required=false)]
                 public string KyuubiConfigs { get; set; }
 
+                [NameInMap("kyuubiReleaseVersion")]
+                [Validation(Required=false)]
+                public string KyuubiReleaseVersion { get; set; }
+
                 /// <summary>
                 /// <para>KyuubiServer ID。</para>
                 /// 

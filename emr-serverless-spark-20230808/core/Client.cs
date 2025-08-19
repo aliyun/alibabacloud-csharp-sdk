@@ -1070,6 +1070,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             {
                 body["autoStopConfiguration"] = request.AutoStopConfiguration;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["clientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayReleaseVersion))
             {
                 body["displayReleaseVersion"] = request.DisplayReleaseVersion;
@@ -1161,6 +1165,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStopConfiguration))
             {
                 body["autoStopConfiguration"] = request.AutoStopConfiguration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["clientToken"] = request.ClientToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayReleaseVersion))
             {
@@ -3385,6 +3393,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "tags", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationConfigs))
+            {
+                query["applicationConfigs"] = request.ApplicationConfigs;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Creator))
             {
                 query["creator"] = request.Creator;
@@ -3428,6 +3440,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceQueueId))
             {
                 query["resourceQueueId"] = request.ResourceQueueId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuntimeConfigs))
+            {
+                query["runtimeConfigs"] = request.RuntimeConfigs;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTimeShrink))
             {
@@ -3501,6 +3517,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "tags", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationConfigs))
+            {
+                query["applicationConfigs"] = request.ApplicationConfigs;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Creator))
             {
                 query["creator"] = request.Creator;
@@ -3544,6 +3564,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceQueueId))
             {
                 query["resourceQueueId"] = request.ResourceQueueId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuntimeConfigs))
+            {
+                query["runtimeConfigs"] = request.RuntimeConfigs;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTimeShrink))
             {
