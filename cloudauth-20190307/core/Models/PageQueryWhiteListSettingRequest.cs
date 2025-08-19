@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class PageQueryWhiteListSettingRequest : TeaModel {
         /// <summary>
+        /// <para>ID number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>330103xxxxxxxxxxxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string CertNo { get; set; }
 
         /// <summary>
+        /// <para>Unique identifier for real person authentication.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>sha75b4e19a1ddda059b920757b0e12b</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string CertifyId { get; set; }
 
         /// <summary>
+        /// <para>Current page number, default is 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
+        /// <para>Number of items per page, default is 10</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Authentication scene ID. This ID is automatically generated after creating an authentication scene in the console. For how to create an authentication scene, see Adding an Authentication Scene.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1000000xxx</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public long? SceneId { get; set; }
 
         /// <summary>
+        /// <para>ServiceCode of the real person cloud product, value: <b>antcloudauth</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>antcloudauth</para>
         /// </summary>
@@ -58,6 +70,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ServiceCode { get; set; }
 
         /// <summary>
+        /// <para>Status:</para>
+        /// <list type="bullet">
+        /// <item><description>DELETE: Deleted</description></item>
+        /// <item><description>VALID: Not deleted and within the validity period, valid</description></item>
+        /// <item><description>INVALID: Not deleted but outside the validity period, invalid</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>VALID</para>
         /// </summary>
@@ -66,6 +85,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// <para>End date of validity (timestamp in milliseconds)</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1725379200000</para>
         /// </summary>
@@ -74,6 +95,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ValidEndDate { get; set; }
 
         /// <summary>
+        /// <para>Start date of validity (timestamp in milliseconds)</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1725120000000</para>
         /// </summary>

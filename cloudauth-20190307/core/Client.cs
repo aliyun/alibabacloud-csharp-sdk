@@ -23,6 +23,93 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             this._endpoint = GetEndpoint("cloudauth", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
 
+        public Dictionary<string, object> _postOSSObject(string bucketName, Dictionary<string, object> data)
+        {
+            TeaRequest request_ = new TeaRequest();
+            Dictionary<string, object> form = AlibabaCloud.TeaUtil.Common.AssertAsMap(data);
+            string boundary = AlibabaCloud.SDK.TeaFileform.Client.GetBoundary();
+            string host = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
+            request_.Protocol = "HTTPS";
+            request_.Method = "POST";
+            request_.Pathname = "/";
+            request_.Headers = new Dictionary<string, string>
+            {
+                {"host", host},
+                {"date", AlibabaCloud.TeaUtil.Common.GetDateUTCString()},
+                {"user-agent", AlibabaCloud.TeaUtil.Common.GetUserAgent("")},
+            };
+            request_.Headers["content-type"] = "multipart/form-data; boundary=" + boundary;
+            request_.Body = AlibabaCloud.SDK.TeaFileform.Client.ToFileForm(form, boundary);
+            TeaResponse response_ = TeaCore.DoAction(request_);
+
+            Dictionary<string, object> respMap = null;
+            string bodyStr = AlibabaCloud.TeaUtil.Common.ReadAsString(response_.Body);
+            if (AlibabaCloud.TeaUtil.Common.Is4xx(response_.StatusCode) || AlibabaCloud.TeaUtil.Common.Is5xx(response_.StatusCode))
+            {
+                respMap = AlibabaCloud.TeaXML.Client.ParseXml(bodyStr, null);
+                Dictionary<string, object> err = AlibabaCloud.TeaUtil.Common.AssertAsMap(respMap.Get("Error"));
+                throw new TeaException(new Dictionary<string, object>
+                {
+                    {"code", err.Get("Code")},
+                    {"message", err.Get("Message")},
+                    {"data", new Dictionary<string, object>
+                    {
+                        {"httpCode", response_.StatusCode},
+                        {"requestId", err.Get("RequestId")},
+                        {"hostId", err.Get("HostId")},
+                    }},
+                });
+            }
+            respMap = AlibabaCloud.TeaXML.Client.ParseXml(bodyStr, null);
+            return TeaConverter.merge<object>
+            (
+                respMap
+            );
+        }
+
+        public async Task<Dictionary<string, object>> _postOSSObjectAsync(string bucketName, Dictionary<string, object> data)
+        {
+            TeaRequest request_ = new TeaRequest();
+            Dictionary<string, object> form = AlibabaCloud.TeaUtil.Common.AssertAsMap(data);
+            string boundary = AlibabaCloud.SDK.TeaFileform.Client.GetBoundary();
+            string host = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
+            request_.Protocol = "HTTPS";
+            request_.Method = "POST";
+            request_.Pathname = "/";
+            request_.Headers = new Dictionary<string, string>
+            {
+                {"host", host},
+                {"date", AlibabaCloud.TeaUtil.Common.GetDateUTCString()},
+                {"user-agent", AlibabaCloud.TeaUtil.Common.GetUserAgent("")},
+            };
+            request_.Headers["content-type"] = "multipart/form-data; boundary=" + boundary;
+            request_.Body = AlibabaCloud.SDK.TeaFileform.Client.ToFileForm(form, boundary);
+            TeaResponse response_ = await TeaCore.DoActionAsync(request_);
+
+            Dictionary<string, object> respMap = null;
+            string bodyStr = AlibabaCloud.TeaUtil.Common.ReadAsString(response_.Body);
+            if (AlibabaCloud.TeaUtil.Common.Is4xx(response_.StatusCode) || AlibabaCloud.TeaUtil.Common.Is5xx(response_.StatusCode))
+            {
+                respMap = AlibabaCloud.TeaXML.Client.ParseXml(bodyStr, null);
+                Dictionary<string, object> err = AlibabaCloud.TeaUtil.Common.AssertAsMap(respMap.Get("Error"));
+                throw new TeaException(new Dictionary<string, object>
+                {
+                    {"code", err.Get("Code")},
+                    {"message", err.Get("Message")},
+                    {"data", new Dictionary<string, object>
+                    {
+                        {"httpCode", response_.StatusCode},
+                        {"requestId", err.Get("RequestId")},
+                        {"hostId", err.Get("HostId")},
+                    }},
+                });
+            }
+            respMap = AlibabaCloud.TeaXML.Client.ParseXml(bodyStr, null);
+            return TeaConverter.merge<object>
+            (
+                respMap
+            );
+        }
 
         public string GetEndpoint(string productId, string regionId, string endpointRule, string network, string suffix, Dictionary<string, string> endpointMap, string endpoint)
         {
@@ -39,7 +126,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增AIGC人脸检测能力</para>
+        /// <para>Add AIGC Face Detection Capability</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -107,7 +194,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增AIGC人脸检测能力</para>
+        /// <para>Add AIGC Face Detection Capability</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -175,7 +262,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增AIGC人脸检测能力</para>
+        /// <para>Add AIGC Face Detection Capability</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -193,7 +280,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增AIGC人脸检测能力</para>
+        /// <para>Add AIGC Face Detection Capability</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -211,8 +298,22 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>银行卡要素核验接口</para>
+        /// <para>Bank Card Element Verification Interface</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Bank card verification, including: two elements (name + bank card number), three elements (name + ID number + bank card number), and four elements (name + ID number + mobile phone number + bank card number) consistency verification.</para>
+        /// <list type="bullet">
+        /// <item><description>Service address:<list type="bullet">
+        /// <item><description>Beijing region: cloudauth.cn-beijing.aliyuncs.com (IPv4) or cloudauth-dualstack.cn-beijing.aliyuncs.com (IPv6).</description></item>
+        /// <item><description>Shanghai region: cloudauth.cn-shanghai.aliyuncs.com (IPv4) or cloudauth-dualstack.cn-shanghai.aliyuncs.com (IPv6).</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Request method: POST and GET.</description></item>
+        /// <item><description>Transfer protocol: HTTPS.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// BankMetaVerifyRequest
@@ -281,8 +382,22 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>银行卡要素核验接口</para>
+        /// <para>Bank Card Element Verification Interface</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Bank card verification, including: two elements (name + bank card number), three elements (name + ID number + bank card number), and four elements (name + ID number + mobile phone number + bank card number) consistency verification.</para>
+        /// <list type="bullet">
+        /// <item><description>Service address:<list type="bullet">
+        /// <item><description>Beijing region: cloudauth.cn-beijing.aliyuncs.com (IPv4) or cloudauth-dualstack.cn-beijing.aliyuncs.com (IPv6).</description></item>
+        /// <item><description>Shanghai region: cloudauth.cn-shanghai.aliyuncs.com (IPv4) or cloudauth-dualstack.cn-shanghai.aliyuncs.com (IPv6).</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Request method: POST and GET.</description></item>
+        /// <item><description>Transfer protocol: HTTPS.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// BankMetaVerifyRequest
@@ -351,8 +466,22 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>银行卡要素核验接口</para>
+        /// <para>Bank Card Element Verification Interface</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Bank card verification, including: two elements (name + bank card number), three elements (name + ID number + bank card number), and four elements (name + ID number + mobile phone number + bank card number) consistency verification.</para>
+        /// <list type="bullet">
+        /// <item><description>Service address:<list type="bullet">
+        /// <item><description>Beijing region: cloudauth.cn-beijing.aliyuncs.com (IPv4) or cloudauth-dualstack.cn-beijing.aliyuncs.com (IPv6).</description></item>
+        /// <item><description>Shanghai region: cloudauth.cn-shanghai.aliyuncs.com (IPv4) or cloudauth-dualstack.cn-shanghai.aliyuncs.com (IPv6).</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Request method: POST and GET.</description></item>
+        /// <item><description>Transfer protocol: HTTPS.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// BankMetaVerifyRequest
@@ -369,8 +498,22 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>银行卡要素核验接口</para>
+        /// <para>Bank Card Element Verification Interface</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Bank card verification, including: two elements (name + bank card number), three elements (name + ID number + bank card number), and four elements (name + ID number + mobile phone number + bank card number) consistency verification.</para>
+        /// <list type="bullet">
+        /// <item><description>Service address:<list type="bullet">
+        /// <item><description>Beijing region: cloudauth.cn-beijing.aliyuncs.com (IPv4) or cloudauth-dualstack.cn-beijing.aliyuncs.com (IPv6).</description></item>
+        /// <item><description>Shanghai region: cloudauth.cn-shanghai.aliyuncs.com (IPv4) or cloudauth-dualstack.cn-shanghai.aliyuncs.com (IPv6).</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Request method: POST and GET.</description></item>
+        /// <item><description>Transfer protocol: HTTPS.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// BankMetaVerifyRequest
@@ -385,6 +528,30 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return await BankMetaVerifyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Financial-grade Pure Server-Side API for Face Comparison.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>API Name: CompareFaceVerify.</description></item>
+        /// <item><description>Service Address: cloudauth.aliyuncs.com.</description></item>
+        /// <item><description>Request Method: HTTPS POST and GET.</description></item>
+        /// <item><description>API Description: An interface to achieve real-person authentication through server-side integration.</description></item>
+        /// </list>
+        /// <h4>Photo Format Requirements</h4>
+        /// <para>When performing face comparison, please upload 2 facial photos that meet all the following conditions:</para>
+        /// <list type="bullet">
+        /// <item><description>Recent photo/recent database photo, with a complete, clear, unobstructed face, natural expression, and facing the camera directly.</description></item>
+        /// <item><description>Clear photo with normal exposure, no overly dark, overly bright, or halo effects on the face, and no significant angle deviation.</description></item>
+        /// <item><description>Resolution not exceeding 1920<em>1080, at least 640</em>480, recommended to scale the shorter side to 720 pixels, with a compression ratio greater than 0.9.</description></item>
+        /// <item><description>Photo size: &lt;1MB.</description></item>
+        /// <item><description>Supports 90, 180, and 270-degree photos; in cases of multiple faces, the largest face will be selected.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CompareFaceVerifyRequest
         /// </param>
@@ -474,6 +641,30 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return TeaModel.ToObject<CompareFaceVerifyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Financial-grade Pure Server-Side API for Face Comparison.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>API Name: CompareFaceVerify.</description></item>
+        /// <item><description>Service Address: cloudauth.aliyuncs.com.</description></item>
+        /// <item><description>Request Method: HTTPS POST and GET.</description></item>
+        /// <item><description>API Description: An interface to achieve real-person authentication through server-side integration.</description></item>
+        /// </list>
+        /// <h4>Photo Format Requirements</h4>
+        /// <para>When performing face comparison, please upload 2 facial photos that meet all the following conditions:</para>
+        /// <list type="bullet">
+        /// <item><description>Recent photo/recent database photo, with a complete, clear, unobstructed face, natural expression, and facing the camera directly.</description></item>
+        /// <item><description>Clear photo with normal exposure, no overly dark, overly bright, or halo effects on the face, and no significant angle deviation.</description></item>
+        /// <item><description>Resolution not exceeding 1920<em>1080, at least 640</em>480, recommended to scale the shorter side to 720 pixels, with a compression ratio greater than 0.9.</description></item>
+        /// <item><description>Photo size: &lt;1MB.</description></item>
+        /// <item><description>Supports 90, 180, and 270-degree photos; in cases of multiple faces, the largest face will be selected.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CompareFaceVerifyRequest
         /// </param>
@@ -563,6 +754,30 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return TeaModel.ToObject<CompareFaceVerifyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Financial-grade Pure Server-Side API for Face Comparison.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>API Name: CompareFaceVerify.</description></item>
+        /// <item><description>Service Address: cloudauth.aliyuncs.com.</description></item>
+        /// <item><description>Request Method: HTTPS POST and GET.</description></item>
+        /// <item><description>API Description: An interface to achieve real-person authentication through server-side integration.</description></item>
+        /// </list>
+        /// <h4>Photo Format Requirements</h4>
+        /// <para>When performing face comparison, please upload 2 facial photos that meet all the following conditions:</para>
+        /// <list type="bullet">
+        /// <item><description>Recent photo/recent database photo, with a complete, clear, unobstructed face, natural expression, and facing the camera directly.</description></item>
+        /// <item><description>Clear photo with normal exposure, no overly dark, overly bright, or halo effects on the face, and no significant angle deviation.</description></item>
+        /// <item><description>Resolution not exceeding 1920<em>1080, at least 640</em>480, recommended to scale the shorter side to 720 pixels, with a compression ratio greater than 0.9.</description></item>
+        /// <item><description>Photo size: &lt;1MB.</description></item>
+        /// <item><description>Supports 90, 180, and 270-degree photos; in cases of multiple faces, the largest face will be selected.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CompareFaceVerifyRequest
         /// </param>
@@ -576,6 +791,30 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return CompareFaceVerifyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Financial-grade Pure Server-Side API for Face Comparison.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>API Name: CompareFaceVerify.</description></item>
+        /// <item><description>Service Address: cloudauth.aliyuncs.com.</description></item>
+        /// <item><description>Request Method: HTTPS POST and GET.</description></item>
+        /// <item><description>API Description: An interface to achieve real-person authentication through server-side integration.</description></item>
+        /// </list>
+        /// <h4>Photo Format Requirements</h4>
+        /// <para>When performing face comparison, please upload 2 facial photos that meet all the following conditions:</para>
+        /// <list type="bullet">
+        /// <item><description>Recent photo/recent database photo, with a complete, clear, unobstructed face, natural expression, and facing the camera directly.</description></item>
+        /// <item><description>Clear photo with normal exposure, no overly dark, overly bright, or halo effects on the face, and no significant angle deviation.</description></item>
+        /// <item><description>Resolution not exceeding 1920<em>1080, at least 640</em>480, recommended to scale the shorter side to 720 pixels, with a compression ratio greater than 0.9.</description></item>
+        /// <item><description>Photo size: &lt;1MB.</description></item>
+        /// <item><description>Supports 90, 180, and 270-degree photos; in cases of multiple faces, the largest face will be selected.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CompareFaceVerifyRequest
         /// </param>
@@ -589,6 +828,30 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return await CompareFaceVerifyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke CompareFaces for face comparison.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Request Method: Only supports sending requests via HTTPS POST.
+        /// Interface Description: Compares two face images and outputs the similarity score of the faces in the two images as the result.</para>
+        /// <list type="bullet">
+        /// <item><description>At least one of the specified comparison images should be a face photo (FacePic).</description></item>
+        /// <item><description>If an image contains multiple faces, the algorithm will automatically select the largest face in the image.</description></item>
+        /// <item><description>If one of the two comparison images does not detect a face, the system will return an error message stating \&quot;No face detected\&quot;.
+        /// When uploading images, you need to provide the HTTP address or base64 encoding of the image.</description></item>
+        /// <item><description>HTTP Address: A publicly accessible HTTP address. For example, <c>http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</c>.</description></item>
+        /// <item><description>Base64 Encoding: An image encoded in base64, formatted as <c>base64://&lt;base64 string of the image&gt;</c>.
+        /// Image Restrictions</description></item>
+        /// <item><description>Does not support relative or absolute paths for local images.</description></item>
+        /// <item><description>Please keep the size of a single image within 2MB to avoid timeout during retrieval by the algorithm.</description></item>
+        /// <item><description>The body of a single request has a size limit of 8MB; please calculate the total size of all images and other information in the request to ensure it does not exceed this limit.</description></item>
+        /// <item><description>When using base64 to transmit images, the request method must be changed to POST; the header description such as <c>data:image/png;base64,</c> should be removed from the base64 string of the image.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CompareFacesRequest
         /// </param>
@@ -638,6 +901,30 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return TeaModel.ToObject<CompareFacesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke CompareFaces for face comparison.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Request Method: Only supports sending requests via HTTPS POST.
+        /// Interface Description: Compares two face images and outputs the similarity score of the faces in the two images as the result.</para>
+        /// <list type="bullet">
+        /// <item><description>At least one of the specified comparison images should be a face photo (FacePic).</description></item>
+        /// <item><description>If an image contains multiple faces, the algorithm will automatically select the largest face in the image.</description></item>
+        /// <item><description>If one of the two comparison images does not detect a face, the system will return an error message stating \&quot;No face detected\&quot;.
+        /// When uploading images, you need to provide the HTTP address or base64 encoding of the image.</description></item>
+        /// <item><description>HTTP Address: A publicly accessible HTTP address. For example, <c>http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</c>.</description></item>
+        /// <item><description>Base64 Encoding: An image encoded in base64, formatted as <c>base64://&lt;base64 string of the image&gt;</c>.
+        /// Image Restrictions</description></item>
+        /// <item><description>Does not support relative or absolute paths for local images.</description></item>
+        /// <item><description>Please keep the size of a single image within 2MB to avoid timeout during retrieval by the algorithm.</description></item>
+        /// <item><description>The body of a single request has a size limit of 8MB; please calculate the total size of all images and other information in the request to ensure it does not exceed this limit.</description></item>
+        /// <item><description>When using base64 to transmit images, the request method must be changed to POST; the header description such as <c>data:image/png;base64,</c> should be removed from the base64 string of the image.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CompareFacesRequest
         /// </param>
@@ -687,6 +974,30 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return TeaModel.ToObject<CompareFacesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke CompareFaces for face comparison.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Request Method: Only supports sending requests via HTTPS POST.
+        /// Interface Description: Compares two face images and outputs the similarity score of the faces in the two images as the result.</para>
+        /// <list type="bullet">
+        /// <item><description>At least one of the specified comparison images should be a face photo (FacePic).</description></item>
+        /// <item><description>If an image contains multiple faces, the algorithm will automatically select the largest face in the image.</description></item>
+        /// <item><description>If one of the two comparison images does not detect a face, the system will return an error message stating \&quot;No face detected\&quot;.
+        /// When uploading images, you need to provide the HTTP address or base64 encoding of the image.</description></item>
+        /// <item><description>HTTP Address: A publicly accessible HTTP address. For example, <c>http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</c>.</description></item>
+        /// <item><description>Base64 Encoding: An image encoded in base64, formatted as <c>base64://&lt;base64 string of the image&gt;</c>.
+        /// Image Restrictions</description></item>
+        /// <item><description>Does not support relative or absolute paths for local images.</description></item>
+        /// <item><description>Please keep the size of a single image within 2MB to avoid timeout during retrieval by the algorithm.</description></item>
+        /// <item><description>The body of a single request has a size limit of 8MB; please calculate the total size of all images and other information in the request to ensure it does not exceed this limit.</description></item>
+        /// <item><description>When using base64 to transmit images, the request method must be changed to POST; the header description such as <c>data:image/png;base64,</c> should be removed from the base64 string of the image.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CompareFacesRequest
         /// </param>
@@ -700,6 +1011,30 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return CompareFacesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke CompareFaces for face comparison.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Request Method: Only supports sending requests via HTTPS POST.
+        /// Interface Description: Compares two face images and outputs the similarity score of the faces in the two images as the result.</para>
+        /// <list type="bullet">
+        /// <item><description>At least one of the specified comparison images should be a face photo (FacePic).</description></item>
+        /// <item><description>If an image contains multiple faces, the algorithm will automatically select the largest face in the image.</description></item>
+        /// <item><description>If one of the two comparison images does not detect a face, the system will return an error message stating \&quot;No face detected\&quot;.
+        /// When uploading images, you need to provide the HTTP address or base64 encoding of the image.</description></item>
+        /// <item><description>HTTP Address: A publicly accessible HTTP address. For example, <c>http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</c>.</description></item>
+        /// <item><description>Base64 Encoding: An image encoded in base64, formatted as <c>base64://&lt;base64 string of the image&gt;</c>.
+        /// Image Restrictions</description></item>
+        /// <item><description>Does not support relative or absolute paths for local images.</description></item>
+        /// <item><description>Please keep the size of a single image within 2MB to avoid timeout during retrieval by the algorithm.</description></item>
+        /// <item><description>The body of a single request has a size limit of 8MB; please calculate the total size of all images and other information in the request to ensure it does not exceed this limit.</description></item>
+        /// <item><description>When using base64 to transmit images, the request method must be changed to POST; the header description such as <c>data:image/png;base64,</c> should be removed from the base64 string of the image.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CompareFacesRequest
         /// </param>
@@ -964,10 +1299,20 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
         public ContrastFaceVerifyResponse ContrastFaceVerifyAdvance(ContrastFaceVerifyAdvanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             // Step 0: init client
-            string accessKeyId = this._credential.GetAccessKeyId();
-            string accessKeySecret = this._credential.GetAccessKeySecret();
-            string securityToken = this._credential.GetSecurityToken();
-            string credentialType = this._credential.GetType();
+            Aliyun.Credentials.Models.CredentialModel credentialModel = null;
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_credential))
+            {
+                throw new TeaException(new Dictionary<string, string>
+                {
+                    {"code", "InvalidCredentials"},
+                    {"message", "Please set up the credentials correctly. If you are setting them through environment variables, please ensure that ALIBABA_CLOUD_ACCESS_KEY_ID and ALIBABA_CLOUD_ACCESS_KEY_SECRET are set correctly. See https://help.aliyun.com/zh/sdk/developer-reference/configure-the-alibaba-cloud-accesskey-environment-variable-on-linux-macos-and-windows-systems for more details."},
+                });
+            }
+            credentialModel = this._credential.GetCredential();
+            string accessKeyId = credentialModel.AccessKeyId;
+            string accessKeySecret = credentialModel.AccessKeySecret;
+            string securityToken = credentialModel.SecurityToken;
+            string credentialType = credentialModel.Type;
             string openPlatformEndpoint = _openPlatformEndpoint;
             if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
@@ -987,57 +1332,61 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.SDK.OpenPlatform20191219.Client authClient = new AlibabaCloud.SDK.OpenPlatform20191219.Client(authConfig);
-            AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadRequest authRequest = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadRequest
+            AlibabaCloud.OpenApiClient.Client authClient = new AlibabaCloud.OpenApiClient.Client(authConfig);
+            Dictionary<string, string> authRequest = new Dictionary<string, string>
             {
-                Product = "Cloudauth",
-                RegionId = _regionId,
+                {"Product", "Cloudauth"},
+                {"RegionId", _regionId},
             };
-            AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
-            AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest authReq = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                AccessKeyId = accessKeyId,
-                AccessKeySecret = accessKeySecret,
-                Type = "access_key",
-                Protocol = _protocol,
-                RegionId = _regionId,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(authRequest),
             };
-            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
+            AlibabaCloud.OpenApiClient.Models.Params authParams = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AuthorizeFileUpload",
+                Version = "2019-12-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            Dictionary<string, object> authResponse = new Dictionary<string, object>(){};
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
-            AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
-            AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
-            AlibabaCloud.OSSUtil.Models.RuntimeOptions ossRuntime = new AlibabaCloud.OSSUtil.Models.RuntimeOptions();
-            AlibabaCloud.OpenApiUtil.Client.Convert(runtime, ossRuntime);
+            Dictionary<string, object> ossHeader = new Dictionary<string, object>(){};
+            Dictionary<string, object> tmpBody = new Dictionary<string, object>(){};
+            bool? useAccelerate = false;
+            Dictionary<string, string> authResponseBody = new Dictionary<string, string>(){};
             ContrastFaceVerifyRequest contrastFaceVerifyReq = new ContrastFaceVerifyRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(request, contrastFaceVerifyReq);
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceContrastFileObject))
             {
-                authResponse = authClient.AuthorizeFileUploadWithOptions(authRequest, runtime);
-                ossConfig.AccessKeyId = authResponse.Body.AccessKeyId;
-                ossConfig.Endpoint = AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponse.Body.Endpoint, authResponse.Body.UseAccelerate, _endpointType);
-                ossClient = new AlibabaCloud.OSS.Client(ossConfig);
+                object tmpResp0 = authClient.CallApi(authParams, authReq, runtime);
+                authResponse = AlibabaCloud.TeaUtil.Common.AssertAsMap(tmpResp0);
+                tmpBody = AlibabaCloud.TeaUtil.Common.AssertAsMap(authResponse.Get("body"));
+                useAccelerate = AlibabaCloud.TeaUtil.Common.AssertAsBoolean(tmpBody.Get("UseAccelerate"));
+                authResponseBody = AlibabaCloud.TeaUtil.Common.StringifyMapValue(tmpBody);
                 fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
                 {
-                    Filename = authResponse.Body.ObjectKey,
+                    Filename = authResponseBody.Get("ObjectKey"),
                     Content = request.FaceContrastFileObject,
                     ContentType = "",
                 };
-                ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader
+                ossHeader = new Dictionary<string, object>
                 {
-                    AccessKeyId = authResponse.Body.AccessKeyId,
-                    Policy = authResponse.Body.EncodedPolicy,
-                    Signature = authResponse.Body.Signature,
-                    Key = authResponse.Body.ObjectKey,
-                    File = fileObj,
-                    SuccessActionStatus = "201",
+                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
+                    {"policy", authResponseBody.Get("EncodedPolicy")},
+                    {"Signature", authResponseBody.Get("Signature")},
+                    {"key", authResponseBody.Get("ObjectKey")},
+                    {"file", fileObj},
+                    {"success_action_status", "201"},
                 };
-                uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest
-                {
-                    BucketName = authResponse.Body.Bucket,
-                    Header = ossHeader,
-                };
-                ossClient.PostObject(uploadRequest, ossRuntime);
-                contrastFaceVerifyReq.FaceContrastFile = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
+                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader);
+                contrastFaceVerifyReq.FaceContrastFile = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             ContrastFaceVerifyResponse contrastFaceVerifyResp = ContrastFaceVerifyWithOptions(contrastFaceVerifyReq, runtime);
             return contrastFaceVerifyResp;
@@ -1046,10 +1395,20 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
         public async Task<ContrastFaceVerifyResponse> ContrastFaceVerifyAdvanceAsync(ContrastFaceVerifyAdvanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             // Step 0: init client
-            string accessKeyId = await this._credential.GetAccessKeyIdAsync();
-            string accessKeySecret = await this._credential.GetAccessKeySecretAsync();
-            string securityToken = await this._credential.GetSecurityTokenAsync();
-            string credentialType = this._credential.GetType();
+            Aliyun.Credentials.Models.CredentialModel credentialModel = null;
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_credential))
+            {
+                throw new TeaException(new Dictionary<string, string>
+                {
+                    {"code", "InvalidCredentials"},
+                    {"message", "Please set up the credentials correctly. If you are setting them through environment variables, please ensure that ALIBABA_CLOUD_ACCESS_KEY_ID and ALIBABA_CLOUD_ACCESS_KEY_SECRET are set correctly. See https://help.aliyun.com/zh/sdk/developer-reference/configure-the-alibaba-cloud-accesskey-environment-variable-on-linux-macos-and-windows-systems for more details."},
+                });
+            }
+            credentialModel = await this._credential.GetCredentialAsync();
+            string accessKeyId = credentialModel.AccessKeyId;
+            string accessKeySecret = credentialModel.AccessKeySecret;
+            string securityToken = credentialModel.SecurityToken;
+            string credentialType = credentialModel.Type;
             string openPlatformEndpoint = _openPlatformEndpoint;
             if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
@@ -1069,57 +1428,61 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.SDK.OpenPlatform20191219.Client authClient = new AlibabaCloud.SDK.OpenPlatform20191219.Client(authConfig);
-            AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadRequest authRequest = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadRequest
+            AlibabaCloud.OpenApiClient.Client authClient = new AlibabaCloud.OpenApiClient.Client(authConfig);
+            Dictionary<string, string> authRequest = new Dictionary<string, string>
             {
-                Product = "Cloudauth",
-                RegionId = _regionId,
+                {"Product", "Cloudauth"},
+                {"RegionId", _regionId},
             };
-            AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
-            AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest authReq = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                AccessKeyId = accessKeyId,
-                AccessKeySecret = accessKeySecret,
-                Type = "access_key",
-                Protocol = _protocol,
-                RegionId = _regionId,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(authRequest),
             };
-            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
+            AlibabaCloud.OpenApiClient.Models.Params authParams = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AuthorizeFileUpload",
+                Version = "2019-12-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            Dictionary<string, object> authResponse = new Dictionary<string, object>(){};
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
-            AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
-            AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
-            AlibabaCloud.OSSUtil.Models.RuntimeOptions ossRuntime = new AlibabaCloud.OSSUtil.Models.RuntimeOptions();
-            AlibabaCloud.OpenApiUtil.Client.Convert(runtime, ossRuntime);
+            Dictionary<string, object> ossHeader = new Dictionary<string, object>(){};
+            Dictionary<string, object> tmpBody = new Dictionary<string, object>(){};
+            bool? useAccelerate = false;
+            Dictionary<string, string> authResponseBody = new Dictionary<string, string>(){};
             ContrastFaceVerifyRequest contrastFaceVerifyReq = new ContrastFaceVerifyRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(request, contrastFaceVerifyReq);
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceContrastFileObject))
             {
-                authResponse = await authClient.AuthorizeFileUploadWithOptionsAsync(authRequest, runtime);
-                ossConfig.AccessKeyId = authResponse.Body.AccessKeyId;
-                ossConfig.Endpoint = AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponse.Body.Endpoint, authResponse.Body.UseAccelerate, _endpointType);
-                ossClient = new AlibabaCloud.OSS.Client(ossConfig);
+                object tmpResp0 = await authClient.CallApiAsync(authParams, authReq, runtime);
+                authResponse = AlibabaCloud.TeaUtil.Common.AssertAsMap(tmpResp0);
+                tmpBody = AlibabaCloud.TeaUtil.Common.AssertAsMap(authResponse.Get("body"));
+                useAccelerate = AlibabaCloud.TeaUtil.Common.AssertAsBoolean(tmpBody.Get("UseAccelerate"));
+                authResponseBody = AlibabaCloud.TeaUtil.Common.StringifyMapValue(tmpBody);
                 fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
                 {
-                    Filename = authResponse.Body.ObjectKey,
+                    Filename = authResponseBody.Get("ObjectKey"),
                     Content = request.FaceContrastFileObject,
                     ContentType = "",
                 };
-                ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader
+                ossHeader = new Dictionary<string, object>
                 {
-                    AccessKeyId = authResponse.Body.AccessKeyId,
-                    Policy = authResponse.Body.EncodedPolicy,
-                    Signature = authResponse.Body.Signature,
-                    Key = authResponse.Body.ObjectKey,
-                    File = fileObj,
-                    SuccessActionStatus = "201",
+                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
+                    {"policy", authResponseBody.Get("EncodedPolicy")},
+                    {"Signature", authResponseBody.Get("Signature")},
+                    {"key", authResponseBody.Get("ObjectKey")},
+                    {"file", fileObj},
+                    {"success_action_status", "201"},
                 };
-                uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest
-                {
-                    BucketName = authResponse.Body.Bucket,
-                    Header = ossHeader,
-                };
-                await ossClient.PostObjectAsync(uploadRequest, ossRuntime);
-                contrastFaceVerifyReq.FaceContrastFile = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
+                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader);
+                contrastFaceVerifyReq.FaceContrastFile = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             ContrastFaceVerifyResponse contrastFaceVerifyResp = await ContrastFaceVerifyWithOptionsAsync(contrastFaceVerifyReq, runtime);
             return contrastFaceVerifyResp;
@@ -1391,8 +1754,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>商品凭证核验</para>
+        /// <para>Product Credential Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Upload e-commerce product images to perform tampering, quality (clarity), and similar image detection, returning risk labels and scores.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CredentialProductVerifyV2Request
@@ -1455,8 +1823,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>商品凭证核验</para>
+        /// <para>Product Credential Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Upload e-commerce product images to perform tampering, quality (clarity), and similar image detection, returning risk labels and scores.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CredentialProductVerifyV2Request
@@ -1519,8 +1892,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>商品凭证核验</para>
+        /// <para>Product Credential Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Upload e-commerce product images to perform tampering, quality (clarity), and similar image detection, returning risk labels and scores.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CredentialProductVerifyV2Request
@@ -1537,8 +1915,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>商品凭证核验</para>
+        /// <para>Product Credential Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Upload e-commerce product images to perform tampering, quality (clarity), and similar image detection, returning risk labels and scores.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CredentialProductVerifyV2Request
@@ -1556,10 +1939,20 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
         public CredentialProductVerifyV2Response CredentialProductVerifyV2Advance(CredentialProductVerifyV2AdvanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             // Step 0: init client
-            string accessKeyId = this._credential.GetAccessKeyId();
-            string accessKeySecret = this._credential.GetAccessKeySecret();
-            string securityToken = this._credential.GetSecurityToken();
-            string credentialType = this._credential.GetType();
+            Aliyun.Credentials.Models.CredentialModel credentialModel = null;
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_credential))
+            {
+                throw new TeaException(new Dictionary<string, string>
+                {
+                    {"code", "InvalidCredentials"},
+                    {"message", "Please set up the credentials correctly. If you are setting them through environment variables, please ensure that ALIBABA_CLOUD_ACCESS_KEY_ID and ALIBABA_CLOUD_ACCESS_KEY_SECRET are set correctly. See https://help.aliyun.com/zh/sdk/developer-reference/configure-the-alibaba-cloud-accesskey-environment-variable-on-linux-macos-and-windows-systems for more details."},
+                });
+            }
+            credentialModel = this._credential.GetCredential();
+            string accessKeyId = credentialModel.AccessKeyId;
+            string accessKeySecret = credentialModel.AccessKeySecret;
+            string securityToken = credentialModel.SecurityToken;
+            string credentialType = credentialModel.Type;
             string openPlatformEndpoint = _openPlatformEndpoint;
             if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
@@ -1579,57 +1972,61 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.SDK.OpenPlatform20191219.Client authClient = new AlibabaCloud.SDK.OpenPlatform20191219.Client(authConfig);
-            AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadRequest authRequest = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadRequest
+            AlibabaCloud.OpenApiClient.Client authClient = new AlibabaCloud.OpenApiClient.Client(authConfig);
+            Dictionary<string, string> authRequest = new Dictionary<string, string>
             {
-                Product = "Cloudauth",
-                RegionId = _regionId,
+                {"Product", "Cloudauth"},
+                {"RegionId", _regionId},
             };
-            AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
-            AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest authReq = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                AccessKeyId = accessKeyId,
-                AccessKeySecret = accessKeySecret,
-                Type = "access_key",
-                Protocol = _protocol,
-                RegionId = _regionId,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(authRequest),
             };
-            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
+            AlibabaCloud.OpenApiClient.Models.Params authParams = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AuthorizeFileUpload",
+                Version = "2019-12-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            Dictionary<string, object> authResponse = new Dictionary<string, object>(){};
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
-            AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
-            AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
-            AlibabaCloud.OSSUtil.Models.RuntimeOptions ossRuntime = new AlibabaCloud.OSSUtil.Models.RuntimeOptions();
-            AlibabaCloud.OpenApiUtil.Client.Convert(runtime, ossRuntime);
+            Dictionary<string, object> ossHeader = new Dictionary<string, object>(){};
+            Dictionary<string, object> tmpBody = new Dictionary<string, object>(){};
+            bool? useAccelerate = false;
+            Dictionary<string, string> authResponseBody = new Dictionary<string, string>(){};
             CredentialProductVerifyV2Request credentialProductVerifyV2Req = new CredentialProductVerifyV2Request();
             AlibabaCloud.OpenApiUtil.Client.Convert(request, credentialProductVerifyV2Req);
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageFileObject))
             {
-                authResponse = authClient.AuthorizeFileUploadWithOptions(authRequest, runtime);
-                ossConfig.AccessKeyId = authResponse.Body.AccessKeyId;
-                ossConfig.Endpoint = AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponse.Body.Endpoint, authResponse.Body.UseAccelerate, _endpointType);
-                ossClient = new AlibabaCloud.OSS.Client(ossConfig);
+                object tmpResp0 = authClient.CallApi(authParams, authReq, runtime);
+                authResponse = AlibabaCloud.TeaUtil.Common.AssertAsMap(tmpResp0);
+                tmpBody = AlibabaCloud.TeaUtil.Common.AssertAsMap(authResponse.Get("body"));
+                useAccelerate = AlibabaCloud.TeaUtil.Common.AssertAsBoolean(tmpBody.Get("UseAccelerate"));
+                authResponseBody = AlibabaCloud.TeaUtil.Common.StringifyMapValue(tmpBody);
                 fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
                 {
-                    Filename = authResponse.Body.ObjectKey,
+                    Filename = authResponseBody.Get("ObjectKey"),
                     Content = request.ImageFileObject,
                     ContentType = "",
                 };
-                ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader
+                ossHeader = new Dictionary<string, object>
                 {
-                    AccessKeyId = authResponse.Body.AccessKeyId,
-                    Policy = authResponse.Body.EncodedPolicy,
-                    Signature = authResponse.Body.Signature,
-                    Key = authResponse.Body.ObjectKey,
-                    File = fileObj,
-                    SuccessActionStatus = "201",
+                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
+                    {"policy", authResponseBody.Get("EncodedPolicy")},
+                    {"Signature", authResponseBody.Get("Signature")},
+                    {"key", authResponseBody.Get("ObjectKey")},
+                    {"file", fileObj},
+                    {"success_action_status", "201"},
                 };
-                uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest
-                {
-                    BucketName = authResponse.Body.Bucket,
-                    Header = ossHeader,
-                };
-                ossClient.PostObject(uploadRequest, ossRuntime);
-                credentialProductVerifyV2Req.ImageFile = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
+                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader);
+                credentialProductVerifyV2Req.ImageFile = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             CredentialProductVerifyV2Response credentialProductVerifyV2Resp = CredentialProductVerifyV2WithOptions(credentialProductVerifyV2Req, runtime);
             return credentialProductVerifyV2Resp;
@@ -1638,10 +2035,20 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
         public async Task<CredentialProductVerifyV2Response> CredentialProductVerifyV2AdvanceAsync(CredentialProductVerifyV2AdvanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             // Step 0: init client
-            string accessKeyId = await this._credential.GetAccessKeyIdAsync();
-            string accessKeySecret = await this._credential.GetAccessKeySecretAsync();
-            string securityToken = await this._credential.GetSecurityTokenAsync();
-            string credentialType = this._credential.GetType();
+            Aliyun.Credentials.Models.CredentialModel credentialModel = null;
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_credential))
+            {
+                throw new TeaException(new Dictionary<string, string>
+                {
+                    {"code", "InvalidCredentials"},
+                    {"message", "Please set up the credentials correctly. If you are setting them through environment variables, please ensure that ALIBABA_CLOUD_ACCESS_KEY_ID and ALIBABA_CLOUD_ACCESS_KEY_SECRET are set correctly. See https://help.aliyun.com/zh/sdk/developer-reference/configure-the-alibaba-cloud-accesskey-environment-variable-on-linux-macos-and-windows-systems for more details."},
+                });
+            }
+            credentialModel = await this._credential.GetCredentialAsync();
+            string accessKeyId = credentialModel.AccessKeyId;
+            string accessKeySecret = credentialModel.AccessKeySecret;
+            string securityToken = credentialModel.SecurityToken;
+            string credentialType = credentialModel.Type;
             string openPlatformEndpoint = _openPlatformEndpoint;
             if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
@@ -1661,57 +2068,61 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.SDK.OpenPlatform20191219.Client authClient = new AlibabaCloud.SDK.OpenPlatform20191219.Client(authConfig);
-            AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadRequest authRequest = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadRequest
+            AlibabaCloud.OpenApiClient.Client authClient = new AlibabaCloud.OpenApiClient.Client(authConfig);
+            Dictionary<string, string> authRequest = new Dictionary<string, string>
             {
-                Product = "Cloudauth",
-                RegionId = _regionId,
+                {"Product", "Cloudauth"},
+                {"RegionId", _regionId},
             };
-            AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
-            AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest authReq = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                AccessKeyId = accessKeyId,
-                AccessKeySecret = accessKeySecret,
-                Type = "access_key",
-                Protocol = _protocol,
-                RegionId = _regionId,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(authRequest),
             };
-            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
+            AlibabaCloud.OpenApiClient.Models.Params authParams = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AuthorizeFileUpload",
+                Version = "2019-12-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            Dictionary<string, object> authResponse = new Dictionary<string, object>(){};
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
-            AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
-            AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
-            AlibabaCloud.OSSUtil.Models.RuntimeOptions ossRuntime = new AlibabaCloud.OSSUtil.Models.RuntimeOptions();
-            AlibabaCloud.OpenApiUtil.Client.Convert(runtime, ossRuntime);
+            Dictionary<string, object> ossHeader = new Dictionary<string, object>(){};
+            Dictionary<string, object> tmpBody = new Dictionary<string, object>(){};
+            bool? useAccelerate = false;
+            Dictionary<string, string> authResponseBody = new Dictionary<string, string>(){};
             CredentialProductVerifyV2Request credentialProductVerifyV2Req = new CredentialProductVerifyV2Request();
             AlibabaCloud.OpenApiUtil.Client.Convert(request, credentialProductVerifyV2Req);
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageFileObject))
             {
-                authResponse = await authClient.AuthorizeFileUploadWithOptionsAsync(authRequest, runtime);
-                ossConfig.AccessKeyId = authResponse.Body.AccessKeyId;
-                ossConfig.Endpoint = AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponse.Body.Endpoint, authResponse.Body.UseAccelerate, _endpointType);
-                ossClient = new AlibabaCloud.OSS.Client(ossConfig);
+                object tmpResp0 = await authClient.CallApiAsync(authParams, authReq, runtime);
+                authResponse = AlibabaCloud.TeaUtil.Common.AssertAsMap(tmpResp0);
+                tmpBody = AlibabaCloud.TeaUtil.Common.AssertAsMap(authResponse.Get("body"));
+                useAccelerate = AlibabaCloud.TeaUtil.Common.AssertAsBoolean(tmpBody.Get("UseAccelerate"));
+                authResponseBody = AlibabaCloud.TeaUtil.Common.StringifyMapValue(tmpBody);
                 fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
                 {
-                    Filename = authResponse.Body.ObjectKey,
+                    Filename = authResponseBody.Get("ObjectKey"),
                     Content = request.ImageFileObject,
                     ContentType = "",
                 };
-                ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader
+                ossHeader = new Dictionary<string, object>
                 {
-                    AccessKeyId = authResponse.Body.AccessKeyId,
-                    Policy = authResponse.Body.EncodedPolicy,
-                    Signature = authResponse.Body.Signature,
-                    Key = authResponse.Body.ObjectKey,
-                    File = fileObj,
-                    SuccessActionStatus = "201",
+                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
+                    {"policy", authResponseBody.Get("EncodedPolicy")},
+                    {"Signature", authResponseBody.Get("Signature")},
+                    {"key", authResponseBody.Get("ObjectKey")},
+                    {"file", fileObj},
+                    {"success_action_status", "201"},
                 };
-                uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest
-                {
-                    BucketName = authResponse.Body.Bucket,
-                    Header = ossHeader,
-                };
-                await ossClient.PostObjectAsync(uploadRequest, ossRuntime);
-                credentialProductVerifyV2Req.ImageFile = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
+                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader);
+                credentialProductVerifyV2Req.ImageFile = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             CredentialProductVerifyV2Response credentialProductVerifyV2Resp = await CredentialProductVerifyV2WithOptionsAsync(credentialProductVerifyV2Req, runtime);
             return credentialProductVerifyV2Resp;
@@ -1959,8 +2370,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>凭证核验</para>
+        /// <para>Credential Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Input credential image information, perform image tampering and forgery detection, and image semantic understanding. Return the risk detection results.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CredentialVerifyV2Request
@@ -2065,8 +2481,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>凭证核验</para>
+        /// <para>Credential Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Input credential image information, perform image tampering and forgery detection, and image semantic understanding. Return the risk detection results.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CredentialVerifyV2Request
@@ -2171,8 +2592,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>凭证核验</para>
+        /// <para>Credential Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Input credential image information, perform image tampering and forgery detection, and image semantic understanding. Return the risk detection results.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CredentialVerifyV2Request
@@ -2189,8 +2615,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>凭证核验</para>
+        /// <para>Credential Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Input credential image information, perform image tampering and forgery detection, and image semantic understanding. Return the risk detection results.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CredentialVerifyV2Request
@@ -2208,10 +2639,20 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
         public CredentialVerifyV2Response CredentialVerifyV2Advance(CredentialVerifyV2AdvanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             // Step 0: init client
-            string accessKeyId = this._credential.GetAccessKeyId();
-            string accessKeySecret = this._credential.GetAccessKeySecret();
-            string securityToken = this._credential.GetSecurityToken();
-            string credentialType = this._credential.GetType();
+            Aliyun.Credentials.Models.CredentialModel credentialModel = null;
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_credential))
+            {
+                throw new TeaException(new Dictionary<string, string>
+                {
+                    {"code", "InvalidCredentials"},
+                    {"message", "Please set up the credentials correctly. If you are setting them through environment variables, please ensure that ALIBABA_CLOUD_ACCESS_KEY_ID and ALIBABA_CLOUD_ACCESS_KEY_SECRET are set correctly. See https://help.aliyun.com/zh/sdk/developer-reference/configure-the-alibaba-cloud-accesskey-environment-variable-on-linux-macos-and-windows-systems for more details."},
+                });
+            }
+            credentialModel = this._credential.GetCredential();
+            string accessKeyId = credentialModel.AccessKeyId;
+            string accessKeySecret = credentialModel.AccessKeySecret;
+            string securityToken = credentialModel.SecurityToken;
+            string credentialType = credentialModel.Type;
             string openPlatformEndpoint = _openPlatformEndpoint;
             if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
@@ -2231,57 +2672,61 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.SDK.OpenPlatform20191219.Client authClient = new AlibabaCloud.SDK.OpenPlatform20191219.Client(authConfig);
-            AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadRequest authRequest = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadRequest
+            AlibabaCloud.OpenApiClient.Client authClient = new AlibabaCloud.OpenApiClient.Client(authConfig);
+            Dictionary<string, string> authRequest = new Dictionary<string, string>
             {
-                Product = "Cloudauth",
-                RegionId = _regionId,
+                {"Product", "Cloudauth"},
+                {"RegionId", _regionId},
             };
-            AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
-            AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest authReq = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                AccessKeyId = accessKeyId,
-                AccessKeySecret = accessKeySecret,
-                Type = "access_key",
-                Protocol = _protocol,
-                RegionId = _regionId,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(authRequest),
             };
-            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
+            AlibabaCloud.OpenApiClient.Models.Params authParams = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AuthorizeFileUpload",
+                Version = "2019-12-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            Dictionary<string, object> authResponse = new Dictionary<string, object>(){};
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
-            AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
-            AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
-            AlibabaCloud.OSSUtil.Models.RuntimeOptions ossRuntime = new AlibabaCloud.OSSUtil.Models.RuntimeOptions();
-            AlibabaCloud.OpenApiUtil.Client.Convert(runtime, ossRuntime);
+            Dictionary<string, object> ossHeader = new Dictionary<string, object>(){};
+            Dictionary<string, object> tmpBody = new Dictionary<string, object>(){};
+            bool? useAccelerate = false;
+            Dictionary<string, string> authResponseBody = new Dictionary<string, string>(){};
             CredentialVerifyV2Request credentialVerifyV2Req = new CredentialVerifyV2Request();
             AlibabaCloud.OpenApiUtil.Client.Convert(request, credentialVerifyV2Req);
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageFileObject))
             {
-                authResponse = authClient.AuthorizeFileUploadWithOptions(authRequest, runtime);
-                ossConfig.AccessKeyId = authResponse.Body.AccessKeyId;
-                ossConfig.Endpoint = AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponse.Body.Endpoint, authResponse.Body.UseAccelerate, _endpointType);
-                ossClient = new AlibabaCloud.OSS.Client(ossConfig);
+                object tmpResp0 = authClient.CallApi(authParams, authReq, runtime);
+                authResponse = AlibabaCloud.TeaUtil.Common.AssertAsMap(tmpResp0);
+                tmpBody = AlibabaCloud.TeaUtil.Common.AssertAsMap(authResponse.Get("body"));
+                useAccelerate = AlibabaCloud.TeaUtil.Common.AssertAsBoolean(tmpBody.Get("UseAccelerate"));
+                authResponseBody = AlibabaCloud.TeaUtil.Common.StringifyMapValue(tmpBody);
                 fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
                 {
-                    Filename = authResponse.Body.ObjectKey,
+                    Filename = authResponseBody.Get("ObjectKey"),
                     Content = request.ImageFileObject,
                     ContentType = "",
                 };
-                ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader
+                ossHeader = new Dictionary<string, object>
                 {
-                    AccessKeyId = authResponse.Body.AccessKeyId,
-                    Policy = authResponse.Body.EncodedPolicy,
-                    Signature = authResponse.Body.Signature,
-                    Key = authResponse.Body.ObjectKey,
-                    File = fileObj,
-                    SuccessActionStatus = "201",
+                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
+                    {"policy", authResponseBody.Get("EncodedPolicy")},
+                    {"Signature", authResponseBody.Get("Signature")},
+                    {"key", authResponseBody.Get("ObjectKey")},
+                    {"file", fileObj},
+                    {"success_action_status", "201"},
                 };
-                uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest
-                {
-                    BucketName = authResponse.Body.Bucket,
-                    Header = ossHeader,
-                };
-                ossClient.PostObject(uploadRequest, ossRuntime);
-                credentialVerifyV2Req.ImageFile = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
+                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader);
+                credentialVerifyV2Req.ImageFile = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             CredentialVerifyV2Response credentialVerifyV2Resp = CredentialVerifyV2WithOptions(credentialVerifyV2Req, runtime);
             return credentialVerifyV2Resp;
@@ -2290,10 +2735,20 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
         public async Task<CredentialVerifyV2Response> CredentialVerifyV2AdvanceAsync(CredentialVerifyV2AdvanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             // Step 0: init client
-            string accessKeyId = await this._credential.GetAccessKeyIdAsync();
-            string accessKeySecret = await this._credential.GetAccessKeySecretAsync();
-            string securityToken = await this._credential.GetSecurityTokenAsync();
-            string credentialType = this._credential.GetType();
+            Aliyun.Credentials.Models.CredentialModel credentialModel = null;
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_credential))
+            {
+                throw new TeaException(new Dictionary<string, string>
+                {
+                    {"code", "InvalidCredentials"},
+                    {"message", "Please set up the credentials correctly. If you are setting them through environment variables, please ensure that ALIBABA_CLOUD_ACCESS_KEY_ID and ALIBABA_CLOUD_ACCESS_KEY_SECRET are set correctly. See https://help.aliyun.com/zh/sdk/developer-reference/configure-the-alibaba-cloud-accesskey-environment-variable-on-linux-macos-and-windows-systems for more details."},
+                });
+            }
+            credentialModel = await this._credential.GetCredentialAsync();
+            string accessKeyId = credentialModel.AccessKeyId;
+            string accessKeySecret = credentialModel.AccessKeySecret;
+            string securityToken = credentialModel.SecurityToken;
+            string credentialType = credentialModel.Type;
             string openPlatformEndpoint = _openPlatformEndpoint;
             if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
@@ -2313,57 +2768,61 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.SDK.OpenPlatform20191219.Client authClient = new AlibabaCloud.SDK.OpenPlatform20191219.Client(authConfig);
-            AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadRequest authRequest = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadRequest
+            AlibabaCloud.OpenApiClient.Client authClient = new AlibabaCloud.OpenApiClient.Client(authConfig);
+            Dictionary<string, string> authRequest = new Dictionary<string, string>
             {
-                Product = "Cloudauth",
-                RegionId = _regionId,
+                {"Product", "Cloudauth"},
+                {"RegionId", _regionId},
             };
-            AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
-            AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest authReq = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                AccessKeyId = accessKeyId,
-                AccessKeySecret = accessKeySecret,
-                Type = "access_key",
-                Protocol = _protocol,
-                RegionId = _regionId,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(authRequest),
             };
-            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
+            AlibabaCloud.OpenApiClient.Models.Params authParams = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AuthorizeFileUpload",
+                Version = "2019-12-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            Dictionary<string, object> authResponse = new Dictionary<string, object>(){};
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
-            AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
-            AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
-            AlibabaCloud.OSSUtil.Models.RuntimeOptions ossRuntime = new AlibabaCloud.OSSUtil.Models.RuntimeOptions();
-            AlibabaCloud.OpenApiUtil.Client.Convert(runtime, ossRuntime);
+            Dictionary<string, object> ossHeader = new Dictionary<string, object>(){};
+            Dictionary<string, object> tmpBody = new Dictionary<string, object>(){};
+            bool? useAccelerate = false;
+            Dictionary<string, string> authResponseBody = new Dictionary<string, string>(){};
             CredentialVerifyV2Request credentialVerifyV2Req = new CredentialVerifyV2Request();
             AlibabaCloud.OpenApiUtil.Client.Convert(request, credentialVerifyV2Req);
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageFileObject))
             {
-                authResponse = await authClient.AuthorizeFileUploadWithOptionsAsync(authRequest, runtime);
-                ossConfig.AccessKeyId = authResponse.Body.AccessKeyId;
-                ossConfig.Endpoint = AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponse.Body.Endpoint, authResponse.Body.UseAccelerate, _endpointType);
-                ossClient = new AlibabaCloud.OSS.Client(ossConfig);
+                object tmpResp0 = await authClient.CallApiAsync(authParams, authReq, runtime);
+                authResponse = AlibabaCloud.TeaUtil.Common.AssertAsMap(tmpResp0);
+                tmpBody = AlibabaCloud.TeaUtil.Common.AssertAsMap(authResponse.Get("body"));
+                useAccelerate = AlibabaCloud.TeaUtil.Common.AssertAsBoolean(tmpBody.Get("UseAccelerate"));
+                authResponseBody = AlibabaCloud.TeaUtil.Common.StringifyMapValue(tmpBody);
                 fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
                 {
-                    Filename = authResponse.Body.ObjectKey,
+                    Filename = authResponseBody.Get("ObjectKey"),
                     Content = request.ImageFileObject,
                     ContentType = "",
                 };
-                ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader
+                ossHeader = new Dictionary<string, object>
                 {
-                    AccessKeyId = authResponse.Body.AccessKeyId,
-                    Policy = authResponse.Body.EncodedPolicy,
-                    Signature = authResponse.Body.Signature,
-                    Key = authResponse.Body.ObjectKey,
-                    File = fileObj,
-                    SuccessActionStatus = "201",
+                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
+                    {"policy", authResponseBody.Get("EncodedPolicy")},
+                    {"Signature", authResponseBody.Get("Signature")},
+                    {"key", authResponseBody.Get("ObjectKey")},
+                    {"file", fileObj},
+                    {"success_action_status", "201"},
                 };
-                uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest
-                {
-                    BucketName = authResponse.Body.Bucket,
-                    Header = ossHeader,
-                };
-                await ossClient.PostObjectAsync(uploadRequest, ossRuntime);
-                credentialVerifyV2Req.ImageFile = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
+                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader);
+                credentialVerifyV2Req.ImageFile = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             CredentialVerifyV2Response credentialVerifyV2Resp = await CredentialVerifyV2WithOptionsAsync(credentialVerifyV2Req, runtime);
             return credentialVerifyV2Resp;
@@ -2371,8 +2830,20 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>人脸凭证核验服务</para>
+        /// <para>Face Credential Verification Service</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>The Face Deepfake Detection API is currently in the free public beta stage, which will end on August 30, 2024, at 23:59:59. During the public beta, the QPS (Queries Per Second) cannot exceed 3 times/second.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Service address: cloudauth.aliyuncs.com (IPv4) or cloudauth-dualstack.aliyuncs.com (IPv6).</description></item>
+        /// <item><description>Request method: POST and GET.</description></item>
+        /// <item><description>Transfer protocol: HTTPS.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeepfakeDetectRequest
@@ -2427,8 +2898,20 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>人脸凭证核验服务</para>
+        /// <para>Face Credential Verification Service</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>The Face Deepfake Detection API is currently in the free public beta stage, which will end on August 30, 2024, at 23:59:59. During the public beta, the QPS (Queries Per Second) cannot exceed 3 times/second.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Service address: cloudauth.aliyuncs.com (IPv4) or cloudauth-dualstack.aliyuncs.com (IPv6).</description></item>
+        /// <item><description>Request method: POST and GET.</description></item>
+        /// <item><description>Transfer protocol: HTTPS.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeepfakeDetectRequest
@@ -2483,8 +2966,20 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>人脸凭证核验服务</para>
+        /// <para>Face Credential Verification Service</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>The Face Deepfake Detection API is currently in the free public beta stage, which will end on August 30, 2024, at 23:59:59. During the public beta, the QPS (Queries Per Second) cannot exceed 3 times/second.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Service address: cloudauth.aliyuncs.com (IPv4) or cloudauth-dualstack.aliyuncs.com (IPv6).</description></item>
+        /// <item><description>Request method: POST and GET.</description></item>
+        /// <item><description>Transfer protocol: HTTPS.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeepfakeDetectRequest
@@ -2501,8 +2996,20 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>人脸凭证核验服务</para>
+        /// <para>Face Credential Verification Service</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>The Face Deepfake Detection API is currently in the free public beta stage, which will end on August 30, 2024, at 23:59:59. During the public beta, the QPS (Queries Per Second) cannot exceed 3 times/second.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Service address: cloudauth.aliyuncs.com (IPv4) or cloudauth-dualstack.aliyuncs.com (IPv6).</description></item>
+        /// <item><description>Request method: POST and GET.</description></item>
+        /// <item><description>Transfer protocol: HTTPS.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeepfakeDetectRequest
@@ -2519,8 +3026,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>金融级服务敏感数据删除接口</para>
+        /// <para>Financial Level Sensitive Data Deletion Interface</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes all personal information fields in the request, including name, ID number, phone number, IP, images, videos, and device information, etc.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteFaceVerifyResultRequest
@@ -2565,8 +3077,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>金融级服务敏感数据删除接口</para>
+        /// <para>Financial Level Sensitive Data Deletion Interface</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes all personal information fields in the request, including name, ID number, phone number, IP, images, videos, and device information, etc.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteFaceVerifyResultRequest
@@ -2611,8 +3128,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>金融级服务敏感数据删除接口</para>
+        /// <para>Financial Level Sensitive Data Deletion Interface</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes all personal information fields in the request, including name, ID number, phone number, IP, images, videos, and device information, etc.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteFaceVerifyResultRequest
@@ -2629,8 +3151,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>金融级服务敏感数据删除接口</para>
+        /// <para>Financial Level Sensitive Data Deletion Interface</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes all personal information fields in the request, including name, ID number, phone number, IP, images, videos, and device information, etc.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteFaceVerifyResultRequest
@@ -4077,7 +4604,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>二要素有效期核验接口</para>
+        /// <para>Two-Factor Validity Verification API</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4135,7 +4662,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>二要素有效期核验接口</para>
+        /// <para>Two-Factor Validity Verification API</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4193,7 +4720,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>二要素有效期核验接口</para>
+        /// <para>Two-Factor Validity Verification API</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4211,7 +4738,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>二要素有效期核验接口</para>
+        /// <para>Two-Factor Validity Verification API</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4229,7 +4756,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>身份二要素标准版</para>
+        /// <para>Identity Two-Factor Standard</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4279,7 +4806,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>身份二要素标准版</para>
+        /// <para>Identity Two-Factor Standard</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4329,7 +4856,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>身份二要素标准版</para>
+        /// <para>Identity Two-Factor Standard</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4347,7 +4874,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>身份二要素标准版</para>
+        /// <para>Identity Two-Factor Standard</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4365,8 +4892,17 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>身份二要素接口</para>
+        /// <para>Identity Two-Factor Interface</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Service address: cloudauth.aliyuncs.com (IPv4) or cloudauth-dualstack.aliyuncs.com (IPv6).</description></item>
+        /// <item><description>Request method: POST and GET.</description></item>
+        /// <item><description>Transfer protocol: HTTPS.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// Id2MetaVerifyRequest
@@ -4415,8 +4951,17 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>身份二要素接口</para>
+        /// <para>Identity Two-Factor Interface</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Service address: cloudauth.aliyuncs.com (IPv4) or cloudauth-dualstack.aliyuncs.com (IPv6).</description></item>
+        /// <item><description>Request method: POST and GET.</description></item>
+        /// <item><description>Transfer protocol: HTTPS.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// Id2MetaVerifyRequest
@@ -4465,8 +5010,17 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>身份二要素接口</para>
+        /// <para>Identity Two-Factor Interface</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Service address: cloudauth.aliyuncs.com (IPv4) or cloudauth-dualstack.aliyuncs.com (IPv6).</description></item>
+        /// <item><description>Request method: POST and GET.</description></item>
+        /// <item><description>Transfer protocol: HTTPS.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// Id2MetaVerifyRequest
@@ -4483,8 +5037,17 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>身份二要素接口</para>
+        /// <para>Identity Two-Factor Interface</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Service address: cloudauth.aliyuncs.com (IPv4) or cloudauth-dualstack.aliyuncs.com (IPv6).</description></item>
+        /// <item><description>Request method: POST and GET.</description></item>
+        /// <item><description>Transfer protocol: HTTPS.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// Id2MetaVerifyRequest
@@ -4501,8 +5064,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>身份二要素图片核验</para>
+        /// <para>ID Two-Factor Image Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Upload both sides of the ID card, and get the verification result of the two factors from an authoritative data source.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// Id2MetaVerifyWithOCRRequest
@@ -4555,8 +5123,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>身份二要素图片核验</para>
+        /// <para>ID Two-Factor Image Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Upload both sides of the ID card, and get the verification result of the two factors from an authoritative data source.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// Id2MetaVerifyWithOCRRequest
@@ -4609,8 +5182,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>身份二要素图片核验</para>
+        /// <para>ID Two-Factor Image Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Upload both sides of the ID card, and get the verification result of the two factors from an authoritative data source.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// Id2MetaVerifyWithOCRRequest
@@ -4627,8 +5205,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>身份二要素图片核验</para>
+        /// <para>ID Two-Factor Image Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Upload both sides of the ID card, and get the verification result of the two factors from an authoritative data source.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// Id2MetaVerifyWithOCRRequest
@@ -4646,10 +5229,20 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
         public Id2MetaVerifyWithOCRResponse Id2MetaVerifyWithOCRAdvance(Id2MetaVerifyWithOCRAdvanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             // Step 0: init client
-            string accessKeyId = this._credential.GetAccessKeyId();
-            string accessKeySecret = this._credential.GetAccessKeySecret();
-            string securityToken = this._credential.GetSecurityToken();
-            string credentialType = this._credential.GetType();
+            Aliyun.Credentials.Models.CredentialModel credentialModel = null;
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_credential))
+            {
+                throw new TeaException(new Dictionary<string, string>
+                {
+                    {"code", "InvalidCredentials"},
+                    {"message", "Please set up the credentials correctly. If you are setting them through environment variables, please ensure that ALIBABA_CLOUD_ACCESS_KEY_ID and ALIBABA_CLOUD_ACCESS_KEY_SECRET are set correctly. See https://help.aliyun.com/zh/sdk/developer-reference/configure-the-alibaba-cloud-accesskey-environment-variable-on-linux-macos-and-windows-systems for more details."},
+                });
+            }
+            credentialModel = this._credential.GetCredential();
+            string accessKeyId = credentialModel.AccessKeyId;
+            string accessKeySecret = credentialModel.AccessKeySecret;
+            string securityToken = credentialModel.SecurityToken;
+            string credentialType = credentialModel.Type;
             string openPlatformEndpoint = _openPlatformEndpoint;
             if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
@@ -4669,86 +5262,87 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.SDK.OpenPlatform20191219.Client authClient = new AlibabaCloud.SDK.OpenPlatform20191219.Client(authConfig);
-            AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadRequest authRequest = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadRequest
+            AlibabaCloud.OpenApiClient.Client authClient = new AlibabaCloud.OpenApiClient.Client(authConfig);
+            Dictionary<string, string> authRequest = new Dictionary<string, string>
             {
-                Product = "Cloudauth",
-                RegionId = _regionId,
+                {"Product", "Cloudauth"},
+                {"RegionId", _regionId},
             };
-            AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
-            AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest authReq = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                AccessKeyId = accessKeyId,
-                AccessKeySecret = accessKeySecret,
-                Type = "access_key",
-                Protocol = _protocol,
-                RegionId = _regionId,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(authRequest),
             };
-            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
+            AlibabaCloud.OpenApiClient.Models.Params authParams = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AuthorizeFileUpload",
+                Version = "2019-12-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            Dictionary<string, object> authResponse = new Dictionary<string, object>(){};
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
-            AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
-            AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
-            AlibabaCloud.OSSUtil.Models.RuntimeOptions ossRuntime = new AlibabaCloud.OSSUtil.Models.RuntimeOptions();
-            AlibabaCloud.OpenApiUtil.Client.Convert(runtime, ossRuntime);
+            Dictionary<string, object> ossHeader = new Dictionary<string, object>(){};
+            Dictionary<string, object> tmpBody = new Dictionary<string, object>(){};
+            bool? useAccelerate = false;
+            Dictionary<string, string> authResponseBody = new Dictionary<string, string>(){};
             Id2MetaVerifyWithOCRRequest id2MetaVerifyWithOCRReq = new Id2MetaVerifyWithOCRRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(request, id2MetaVerifyWithOCRReq);
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertFileObject))
             {
-                authResponse = authClient.AuthorizeFileUploadWithOptions(authRequest, runtime);
-                ossConfig.AccessKeyId = authResponse.Body.AccessKeyId;
-                ossConfig.Endpoint = AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponse.Body.Endpoint, authResponse.Body.UseAccelerate, _endpointType);
-                ossClient = new AlibabaCloud.OSS.Client(ossConfig);
+                object tmpResp0 = authClient.CallApi(authParams, authReq, runtime);
+                authResponse = AlibabaCloud.TeaUtil.Common.AssertAsMap(tmpResp0);
+                tmpBody = AlibabaCloud.TeaUtil.Common.AssertAsMap(authResponse.Get("body"));
+                useAccelerate = AlibabaCloud.TeaUtil.Common.AssertAsBoolean(tmpBody.Get("UseAccelerate"));
+                authResponseBody = AlibabaCloud.TeaUtil.Common.StringifyMapValue(tmpBody);
                 fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
                 {
-                    Filename = authResponse.Body.ObjectKey,
+                    Filename = authResponseBody.Get("ObjectKey"),
                     Content = request.CertFileObject,
                     ContentType = "",
                 };
-                ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader
+                ossHeader = new Dictionary<string, object>
                 {
-                    AccessKeyId = authResponse.Body.AccessKeyId,
-                    Policy = authResponse.Body.EncodedPolicy,
-                    Signature = authResponse.Body.Signature,
-                    Key = authResponse.Body.ObjectKey,
-                    File = fileObj,
-                    SuccessActionStatus = "201",
+                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
+                    {"policy", authResponseBody.Get("EncodedPolicy")},
+                    {"Signature", authResponseBody.Get("Signature")},
+                    {"key", authResponseBody.Get("ObjectKey")},
+                    {"file", fileObj},
+                    {"success_action_status", "201"},
                 };
-                uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest
-                {
-                    BucketName = authResponse.Body.Bucket,
-                    Header = ossHeader,
-                };
-                ossClient.PostObject(uploadRequest, ossRuntime);
-                id2MetaVerifyWithOCRReq.CertFile = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
+                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader);
+                id2MetaVerifyWithOCRReq.CertFile = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertNationalFileObject))
             {
-                authResponse = authClient.AuthorizeFileUploadWithOptions(authRequest, runtime);
-                ossConfig.AccessKeyId = authResponse.Body.AccessKeyId;
-                ossConfig.Endpoint = AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponse.Body.Endpoint, authResponse.Body.UseAccelerate, _endpointType);
-                ossClient = new AlibabaCloud.OSS.Client(ossConfig);
+                object tmpResp1 = authClient.CallApi(authParams, authReq, runtime);
+                authResponse = AlibabaCloud.TeaUtil.Common.AssertAsMap(tmpResp1);
+                tmpBody = AlibabaCloud.TeaUtil.Common.AssertAsMap(authResponse.Get("body"));
+                useAccelerate = AlibabaCloud.TeaUtil.Common.AssertAsBoolean(tmpBody.Get("UseAccelerate"));
+                authResponseBody = AlibabaCloud.TeaUtil.Common.StringifyMapValue(tmpBody);
                 fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
                 {
-                    Filename = authResponse.Body.ObjectKey,
+                    Filename = authResponseBody.Get("ObjectKey"),
                     Content = request.CertNationalFileObject,
                     ContentType = "",
                 };
-                ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader
+                ossHeader = new Dictionary<string, object>
                 {
-                    AccessKeyId = authResponse.Body.AccessKeyId,
-                    Policy = authResponse.Body.EncodedPolicy,
-                    Signature = authResponse.Body.Signature,
-                    Key = authResponse.Body.ObjectKey,
-                    File = fileObj,
-                    SuccessActionStatus = "201",
+                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
+                    {"policy", authResponseBody.Get("EncodedPolicy")},
+                    {"Signature", authResponseBody.Get("Signature")},
+                    {"key", authResponseBody.Get("ObjectKey")},
+                    {"file", fileObj},
+                    {"success_action_status", "201"},
                 };
-                uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest
-                {
-                    BucketName = authResponse.Body.Bucket,
-                    Header = ossHeader,
-                };
-                ossClient.PostObject(uploadRequest, ossRuntime);
-                id2MetaVerifyWithOCRReq.CertNationalFile = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
+                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader);
+                id2MetaVerifyWithOCRReq.CertNationalFile = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             Id2MetaVerifyWithOCRResponse id2MetaVerifyWithOCRResp = Id2MetaVerifyWithOCRWithOptions(id2MetaVerifyWithOCRReq, runtime);
             return id2MetaVerifyWithOCRResp;
@@ -4757,10 +5351,20 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
         public async Task<Id2MetaVerifyWithOCRResponse> Id2MetaVerifyWithOCRAdvanceAsync(Id2MetaVerifyWithOCRAdvanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             // Step 0: init client
-            string accessKeyId = await this._credential.GetAccessKeyIdAsync();
-            string accessKeySecret = await this._credential.GetAccessKeySecretAsync();
-            string securityToken = await this._credential.GetSecurityTokenAsync();
-            string credentialType = this._credential.GetType();
+            Aliyun.Credentials.Models.CredentialModel credentialModel = null;
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_credential))
+            {
+                throw new TeaException(new Dictionary<string, string>
+                {
+                    {"code", "InvalidCredentials"},
+                    {"message", "Please set up the credentials correctly. If you are setting them through environment variables, please ensure that ALIBABA_CLOUD_ACCESS_KEY_ID and ALIBABA_CLOUD_ACCESS_KEY_SECRET are set correctly. See https://help.aliyun.com/zh/sdk/developer-reference/configure-the-alibaba-cloud-accesskey-environment-variable-on-linux-macos-and-windows-systems for more details."},
+                });
+            }
+            credentialModel = await this._credential.GetCredentialAsync();
+            string accessKeyId = credentialModel.AccessKeyId;
+            string accessKeySecret = credentialModel.AccessKeySecret;
+            string securityToken = credentialModel.SecurityToken;
+            string credentialType = credentialModel.Type;
             string openPlatformEndpoint = _openPlatformEndpoint;
             if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
@@ -4780,86 +5384,87 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.SDK.OpenPlatform20191219.Client authClient = new AlibabaCloud.SDK.OpenPlatform20191219.Client(authConfig);
-            AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadRequest authRequest = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadRequest
+            AlibabaCloud.OpenApiClient.Client authClient = new AlibabaCloud.OpenApiClient.Client(authConfig);
+            Dictionary<string, string> authRequest = new Dictionary<string, string>
             {
-                Product = "Cloudauth",
-                RegionId = _regionId,
+                {"Product", "Cloudauth"},
+                {"RegionId", _regionId},
             };
-            AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
-            AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest authReq = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                AccessKeyId = accessKeyId,
-                AccessKeySecret = accessKeySecret,
-                Type = "access_key",
-                Protocol = _protocol,
-                RegionId = _regionId,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(authRequest),
             };
-            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
+            AlibabaCloud.OpenApiClient.Models.Params authParams = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AuthorizeFileUpload",
+                Version = "2019-12-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            Dictionary<string, object> authResponse = new Dictionary<string, object>(){};
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
-            AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
-            AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
-            AlibabaCloud.OSSUtil.Models.RuntimeOptions ossRuntime = new AlibabaCloud.OSSUtil.Models.RuntimeOptions();
-            AlibabaCloud.OpenApiUtil.Client.Convert(runtime, ossRuntime);
+            Dictionary<string, object> ossHeader = new Dictionary<string, object>(){};
+            Dictionary<string, object> tmpBody = new Dictionary<string, object>(){};
+            bool? useAccelerate = false;
+            Dictionary<string, string> authResponseBody = new Dictionary<string, string>(){};
             Id2MetaVerifyWithOCRRequest id2MetaVerifyWithOCRReq = new Id2MetaVerifyWithOCRRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(request, id2MetaVerifyWithOCRReq);
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertFileObject))
             {
-                authResponse = await authClient.AuthorizeFileUploadWithOptionsAsync(authRequest, runtime);
-                ossConfig.AccessKeyId = authResponse.Body.AccessKeyId;
-                ossConfig.Endpoint = AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponse.Body.Endpoint, authResponse.Body.UseAccelerate, _endpointType);
-                ossClient = new AlibabaCloud.OSS.Client(ossConfig);
+                object tmpResp0 = await authClient.CallApiAsync(authParams, authReq, runtime);
+                authResponse = AlibabaCloud.TeaUtil.Common.AssertAsMap(tmpResp0);
+                tmpBody = AlibabaCloud.TeaUtil.Common.AssertAsMap(authResponse.Get("body"));
+                useAccelerate = AlibabaCloud.TeaUtil.Common.AssertAsBoolean(tmpBody.Get("UseAccelerate"));
+                authResponseBody = AlibabaCloud.TeaUtil.Common.StringifyMapValue(tmpBody);
                 fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
                 {
-                    Filename = authResponse.Body.ObjectKey,
+                    Filename = authResponseBody.Get("ObjectKey"),
                     Content = request.CertFileObject,
                     ContentType = "",
                 };
-                ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader
+                ossHeader = new Dictionary<string, object>
                 {
-                    AccessKeyId = authResponse.Body.AccessKeyId,
-                    Policy = authResponse.Body.EncodedPolicy,
-                    Signature = authResponse.Body.Signature,
-                    Key = authResponse.Body.ObjectKey,
-                    File = fileObj,
-                    SuccessActionStatus = "201",
+                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
+                    {"policy", authResponseBody.Get("EncodedPolicy")},
+                    {"Signature", authResponseBody.Get("Signature")},
+                    {"key", authResponseBody.Get("ObjectKey")},
+                    {"file", fileObj},
+                    {"success_action_status", "201"},
                 };
-                uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest
-                {
-                    BucketName = authResponse.Body.Bucket,
-                    Header = ossHeader,
-                };
-                await ossClient.PostObjectAsync(uploadRequest, ossRuntime);
-                id2MetaVerifyWithOCRReq.CertFile = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
+                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader);
+                id2MetaVerifyWithOCRReq.CertFile = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertNationalFileObject))
             {
-                authResponse = await authClient.AuthorizeFileUploadWithOptionsAsync(authRequest, runtime);
-                ossConfig.AccessKeyId = authResponse.Body.AccessKeyId;
-                ossConfig.Endpoint = AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponse.Body.Endpoint, authResponse.Body.UseAccelerate, _endpointType);
-                ossClient = new AlibabaCloud.OSS.Client(ossConfig);
+                object tmpResp1 = await authClient.CallApiAsync(authParams, authReq, runtime);
+                authResponse = AlibabaCloud.TeaUtil.Common.AssertAsMap(tmpResp1);
+                tmpBody = AlibabaCloud.TeaUtil.Common.AssertAsMap(authResponse.Get("body"));
+                useAccelerate = AlibabaCloud.TeaUtil.Common.AssertAsBoolean(tmpBody.Get("UseAccelerate"));
+                authResponseBody = AlibabaCloud.TeaUtil.Common.StringifyMapValue(tmpBody);
                 fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
                 {
-                    Filename = authResponse.Body.ObjectKey,
+                    Filename = authResponseBody.Get("ObjectKey"),
                     Content = request.CertNationalFileObject,
                     ContentType = "",
                 };
-                ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader
+                ossHeader = new Dictionary<string, object>
                 {
-                    AccessKeyId = authResponse.Body.AccessKeyId,
-                    Policy = authResponse.Body.EncodedPolicy,
-                    Signature = authResponse.Body.Signature,
-                    Key = authResponse.Body.ObjectKey,
-                    File = fileObj,
-                    SuccessActionStatus = "201",
+                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
+                    {"policy", authResponseBody.Get("EncodedPolicy")},
+                    {"Signature", authResponseBody.Get("Signature")},
+                    {"key", authResponseBody.Get("ObjectKey")},
+                    {"file", fileObj},
+                    {"success_action_status", "201"},
                 };
-                uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest
-                {
-                    BucketName = authResponse.Body.Bucket,
-                    Header = ossHeader,
-                };
-                await ossClient.PostObjectAsync(uploadRequest, ossRuntime);
-                id2MetaVerifyWithOCRReq.CertNationalFile = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
+                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader);
+                id2MetaVerifyWithOCRReq.CertNationalFile = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             Id2MetaVerifyWithOCRResponse id2MetaVerifyWithOCRResp = await Id2MetaVerifyWithOCRWithOptionsAsync(id2MetaVerifyWithOCRReq, runtime);
             return id2MetaVerifyWithOCRResp;
@@ -4867,8 +5472,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>图片核验发起认证请求</para>
+        /// <para>Initiate an authentication request for image verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before each authentication, use this interface to obtain the CertifyId, which is used to link various interfaces in the authentication request.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// InitCardVerifyRequest
@@ -4945,8 +5555,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>图片核验发起认证请求</para>
+        /// <para>Initiate an authentication request for image verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before each authentication, use this interface to obtain the CertifyId, which is used to link various interfaces in the authentication request.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// InitCardVerifyRequest
@@ -5023,8 +5638,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>图片核验发起认证请求</para>
+        /// <para>Initiate an authentication request for image verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before each authentication, use this interface to obtain the CertifyId, which is used to link various interfaces in the authentication request.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// InitCardVerifyRequest
@@ -5041,8 +5661,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>图片核验发起认证请求</para>
+        /// <para>Initiate an authentication request for image verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before each authentication, use this interface to obtain the CertifyId, which is used to link various interfaces in the authentication request.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// InitCardVerifyRequest
@@ -5451,7 +6076,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增实人白名单</para>
+        /// <para>Add Real Person Whitelist</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5513,7 +6138,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增实人白名单</para>
+        /// <para>Add Real Person Whitelist</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5575,7 +6200,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增实人白名单</para>
+        /// <para>Add Real Person Whitelist</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5593,7 +6218,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增实人白名单</para>
+        /// <para>Add Real Person Whitelist</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5819,8 +6444,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>手机二要素核验</para>
+        /// <para>Mobile Two-Factor Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Input the phone number and name, verify their authenticity and consistency through authoritative data sources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// Mobile2MetaVerifyRequest
@@ -5869,8 +6499,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>手机二要素核验</para>
+        /// <para>Mobile Two-Factor Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Input the phone number and name, verify their authenticity and consistency through authoritative data sources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// Mobile2MetaVerifyRequest
@@ -5919,8 +6554,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>手机二要素核验</para>
+        /// <para>Mobile Two-Factor Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Input the phone number and name, verify their authenticity and consistency through authoritative data sources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// Mobile2MetaVerifyRequest
@@ -5937,8 +6577,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>手机二要素核验</para>
+        /// <para>Mobile Two-Factor Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Input the phone number and name, verify their authenticity and consistency through authoritative data sources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// Mobile2MetaVerifyRequest
@@ -5955,8 +6600,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>手机号三要素详版_标准版</para>
+        /// <para>Detailed Three-Element Verification for Phone Number_Standard Version</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Input the phone number, name, and ID number to verify their authenticity and consistency through authoritative data sources. If they do not match, the reason for the mismatch is returned.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// Mobile3MetaDetailStandardVerifyRequest
@@ -6009,8 +6659,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>手机号三要素详版_标准版</para>
+        /// <para>Detailed Three-Element Verification for Phone Number_Standard Version</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Input the phone number, name, and ID number to verify their authenticity and consistency through authoritative data sources. If they do not match, the reason for the mismatch is returned.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// Mobile3MetaDetailStandardVerifyRequest
@@ -6063,8 +6718,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>手机号三要素详版_标准版</para>
+        /// <para>Detailed Three-Element Verification for Phone Number_Standard Version</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Input the phone number, name, and ID number to verify their authenticity and consistency through authoritative data sources. If they do not match, the reason for the mismatch is returned.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// Mobile3MetaDetailStandardVerifyRequest
@@ -6081,8 +6741,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>手机号三要素详版_标准版</para>
+        /// <para>Detailed Three-Element Verification for Phone Number_Standard Version</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Input the phone number, name, and ID number to verify their authenticity and consistency through authoritative data sources. If they do not match, the reason for the mismatch is returned.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// Mobile3MetaDetailStandardVerifyRequest
@@ -6099,8 +6764,17 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>手机三要素详版接口</para>
+        /// <para>Detailed Mobile Three-Element Verification Interface</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Service address: cloudauth.aliyuncs.com (IPv4) or cloudauth-dualstack.aliyuncs.com (IPv6).</description></item>
+        /// <item><description>Request method: POST and GET.</description></item>
+        /// <item><description>Transfer protocol: HTTPS.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// Mobile3MetaDetailVerifyRequest
@@ -6153,8 +6827,17 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>手机三要素详版接口</para>
+        /// <para>Detailed Mobile Three-Element Verification Interface</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Service address: cloudauth.aliyuncs.com (IPv4) or cloudauth-dualstack.aliyuncs.com (IPv6).</description></item>
+        /// <item><description>Request method: POST and GET.</description></item>
+        /// <item><description>Transfer protocol: HTTPS.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// Mobile3MetaDetailVerifyRequest
@@ -6207,8 +6890,17 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>手机三要素详版接口</para>
+        /// <para>Detailed Mobile Three-Element Verification Interface</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Service address: cloudauth.aliyuncs.com (IPv4) or cloudauth-dualstack.aliyuncs.com (IPv6).</description></item>
+        /// <item><description>Request method: POST and GET.</description></item>
+        /// <item><description>Transfer protocol: HTTPS.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// Mobile3MetaDetailVerifyRequest
@@ -6225,8 +6917,17 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>手机三要素详版接口</para>
+        /// <para>Detailed Mobile Three-Element Verification Interface</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Service address: cloudauth.aliyuncs.com (IPv4) or cloudauth-dualstack.aliyuncs.com (IPv6).</description></item>
+        /// <item><description>Request method: POST and GET.</description></item>
+        /// <item><description>Transfer protocol: HTTPS.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// Mobile3MetaDetailVerifyRequest
@@ -6243,8 +6944,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>手机号三要素简版_标准版</para>
+        /// <para>Simplified Three-Element Verification for Phone Number_Standard Version</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Input the phone number, name, and ID number to verify their authenticity and consistency through authoritative data sources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// Mobile3MetaSimpleStandardVerifyRequest
@@ -6297,8 +7003,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>手机号三要素简版_标准版</para>
+        /// <para>Simplified Three-Element Verification for Phone Number_Standard Version</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Input the phone number, name, and ID number to verify their authenticity and consistency through authoritative data sources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// Mobile3MetaSimpleStandardVerifyRequest
@@ -6351,8 +7062,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>手机号三要素简版_标准版</para>
+        /// <para>Simplified Three-Element Verification for Phone Number_Standard Version</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Input the phone number, name, and ID number to verify their authenticity and consistency through authoritative data sources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// Mobile3MetaSimpleStandardVerifyRequest
@@ -6369,8 +7085,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>手机号三要素简版_标准版</para>
+        /// <para>Simplified Three-Element Verification for Phone Number_Standard Version</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Input the phone number, name, and ID number to verify their authenticity and consistency through authoritative data sources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// Mobile3MetaSimpleStandardVerifyRequest
@@ -6387,8 +7108,17 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>手机号三要素简版接口</para>
+        /// <para>Mobile Three Elements Simplified Interface</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Service address: cloudauth.aliyuncs.com (IPv4) or cloudauth-dualstack.aliyuncs.com (IPv6).</description></item>
+        /// <item><description>Request method: POST and GET.</description></item>
+        /// <item><description>Transfer protocol: HTTPS.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// Mobile3MetaSimpleVerifyRequest
@@ -6441,8 +7171,17 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>手机号三要素简版接口</para>
+        /// <para>Mobile Three Elements Simplified Interface</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Service address: cloudauth.aliyuncs.com (IPv4) or cloudauth-dualstack.aliyuncs.com (IPv6).</description></item>
+        /// <item><description>Request method: POST and GET.</description></item>
+        /// <item><description>Transfer protocol: HTTPS.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// Mobile3MetaSimpleVerifyRequest
@@ -6495,8 +7234,17 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>手机号三要素简版接口</para>
+        /// <para>Mobile Three Elements Simplified Interface</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Service address: cloudauth.aliyuncs.com (IPv4) or cloudauth-dualstack.aliyuncs.com (IPv6).</description></item>
+        /// <item><description>Request method: POST and GET.</description></item>
+        /// <item><description>Transfer protocol: HTTPS.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// Mobile3MetaSimpleVerifyRequest
@@ -6513,8 +7261,17 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>手机号三要素简版接口</para>
+        /// <para>Mobile Three Elements Simplified Interface</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Service address: cloudauth.aliyuncs.com (IPv4) or cloudauth-dualstack.aliyuncs.com (IPv6).</description></item>
+        /// <item><description>Request method: POST and GET.</description></item>
+        /// <item><description>Transfer protocol: HTTPS.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// Mobile3MetaSimpleVerifyRequest
@@ -6531,7 +7288,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>号码检测</para>
+        /// <para>Number Detection</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6577,7 +7334,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>号码检测</para>
+        /// <para>Number Detection</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6623,7 +7380,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>号码检测</para>
+        /// <para>Number Detection</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6641,7 +7398,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>号码检测</para>
+        /// <para>Number Detection</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6659,7 +7416,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询手机号在网状态</para>
+        /// <para>Query the online status of a mobile number</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6705,7 +7462,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询手机号在网状态</para>
+        /// <para>Query the online status of a mobile number</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6751,7 +7508,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询手机号在网状态</para>
+        /// <para>Query the online status of a mobile number</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6769,7 +7526,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询手机号在网状态</para>
+        /// <para>Query the online status of a mobile number</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6787,7 +7544,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询手机号在网时长</para>
+        /// <para>Query the online duration of a mobile number</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6833,7 +7590,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询手机号在网时长</para>
+        /// <para>Query the online duration of a mobile number</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6879,7 +7636,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询手机号在网时长</para>
+        /// <para>Query the online duration of a mobile number</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6897,7 +7654,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询手机号在网时长</para>
+        /// <para>Query the online duration of a mobile number</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6913,6 +7670,16 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return await MobileOnlineTimeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call ModifyDeviceInfo to update device-related information, such as extending the device authorization validity period, updating the business party\&quot;s custom business identifier, and device ID. Suitable for scenarios like renewing the device validity period.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Request Method: Supports sending requests using HTTPS POST and GET methods.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyDeviceInfoRequest
         /// </param>
@@ -6966,6 +7733,16 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return TeaModel.ToObject<ModifyDeviceInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call ModifyDeviceInfo to update device-related information, such as extending the device authorization validity period, updating the business party\&quot;s custom business identifier, and device ID. Suitable for scenarios like renewing the device validity period.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Request Method: Supports sending requests using HTTPS POST and GET methods.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyDeviceInfoRequest
         /// </param>
@@ -7019,6 +7796,16 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return TeaModel.ToObject<ModifyDeviceInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call ModifyDeviceInfo to update device-related information, such as extending the device authorization validity period, updating the business party\&quot;s custom business identifier, and device ID. Suitable for scenarios like renewing the device validity period.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Request Method: Supports sending requests using HTTPS POST and GET methods.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyDeviceInfoRequest
         /// </param>
@@ -7032,6 +7819,16 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return ModifyDeviceInfoWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call ModifyDeviceInfo to update device-related information, such as extending the device authorization validity period, updating the business party\&quot;s custom business identifier, and device ID. Suitable for scenarios like renewing the device validity period.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Request Method: Supports sending requests using HTTPS POST and GET methods.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyDeviceInfoRequest
         /// </param>
@@ -7047,7 +7844,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询实人白名单配置</para>
+        /// <para>Paging Query for Real Person Whitelist Configuration</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7121,7 +7918,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询实人白名单配置</para>
+        /// <para>Paging Query for Real Person Whitelist Configuration</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7195,7 +7992,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询实人白名单配置</para>
+        /// <para>Paging Query for Real Person Whitelist Configuration</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7213,7 +8010,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询实人白名单配置</para>
+        /// <para>Paging Query for Real Person Whitelist Configuration</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7231,7 +8028,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除实人白名单</para>
+        /// <para>Delete Real Person Whitelist</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7283,7 +8080,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除实人白名单</para>
+        /// <para>Delete Real Person Whitelist</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7335,7 +8132,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除实人白名单</para>
+        /// <para>Delete Real Person Whitelist</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7353,7 +8150,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除实人白名单</para>
+        /// <para>Delete Real Person Whitelist</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7371,8 +8168,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>车五项信息识别</para>
+        /// <para>Five-Item Vehicle Information Recognition</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query basic vehicle information through the license plate number and vehicle type.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// Vehicle5ItemQueryRequest
@@ -7421,8 +8223,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>车五项信息识别</para>
+        /// <para>Five-Item Vehicle Information Recognition</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query basic vehicle information through the license plate number and vehicle type.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// Vehicle5ItemQueryRequest
@@ -7471,8 +8278,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>车五项信息识别</para>
+        /// <para>Five-Item Vehicle Information Recognition</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query basic vehicle information through the license plate number and vehicle type.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// Vehicle5ItemQueryRequest
@@ -7489,8 +8301,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>车五项信息识别</para>
+        /// <para>Five-Item Vehicle Information Recognition</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query basic vehicle information through the license plate number and vehicle type.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// Vehicle5ItemQueryRequest
@@ -7507,8 +8324,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>车辆投保日期查询</para>
+        /// <para>Vehicle Insurance Date Inquiry</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query the vehicle insurance date through the license plate number, vehicle type, and vehicle identification number (VIN).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// VehicleInsureQueryRequest
@@ -7561,8 +8383,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>车辆投保日期查询</para>
+        /// <para>Vehicle Insurance Date Inquiry</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query the vehicle insurance date through the license plate number, vehicle type, and vehicle identification number (VIN).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// VehicleInsureQueryRequest
@@ -7615,8 +8442,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>车辆投保日期查询</para>
+        /// <para>Vehicle Insurance Date Inquiry</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query the vehicle insurance date through the license plate number, vehicle type, and vehicle identification number (VIN).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// VehicleInsureQueryRequest
@@ -7633,8 +8465,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>车辆投保日期查询</para>
+        /// <para>Vehicle Insurance Date Inquiry</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query the vehicle insurance date through the license plate number, vehicle type, and vehicle identification number (VIN).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// VehicleInsureQueryRequest
@@ -7651,8 +8488,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>车辆要素核验</para>
+        /// <para>Vehicle Element Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Verifies the consistency of name, ID number, vehicle license plate, and vehicle type.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// VehicleMetaVerifyRequest
@@ -7713,8 +8555,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>车辆要素核验</para>
+        /// <para>Vehicle Element Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Verifies the consistency of name, ID number, vehicle license plate, and vehicle type.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// VehicleMetaVerifyRequest
@@ -7775,8 +8622,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>车辆要素核验</para>
+        /// <para>Vehicle Element Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Verifies the consistency of name, ID number, vehicle license plate, and vehicle type.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// VehicleMetaVerifyRequest
@@ -7793,8 +8645,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>车辆要素核验</para>
+        /// <para>Vehicle Element Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Verifies the consistency of name, ID number, vehicle license plate, and vehicle type.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// VehicleMetaVerifyRequest
@@ -7811,8 +8668,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>车辆要素核验增强版</para>
+        /// <para>Enhanced Vehicle Element Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Verifies the consistency of name, ID number, license plate number, and vehicle type, and supports returning detailed vehicle information.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// VehicleMetaVerifyV2Request
@@ -7873,8 +8735,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>车辆要素核验增强版</para>
+        /// <para>Enhanced Vehicle Element Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Verifies the consistency of name, ID number, license plate number, and vehicle type, and supports returning detailed vehicle information.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// VehicleMetaVerifyV2Request
@@ -7935,8 +8802,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>车辆要素核验增强版</para>
+        /// <para>Enhanced Vehicle Element Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Verifies the consistency of name, ID number, license plate number, and vehicle type, and supports returning detailed vehicle information.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// VehicleMetaVerifyV2Request
@@ -7953,8 +8825,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>车辆要素核验增强版</para>
+        /// <para>Enhanced Vehicle Element Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Verifies the consistency of name, ID number, license plate number, and vehicle type, and supports returning detailed vehicle information.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// VehicleMetaVerifyV2Request
@@ -7971,8 +8848,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>车辆信息识别</para>
+        /// <para>Vehicle Information Recognition</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query detailed vehicle information through the license plate number and vehicle type.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// VehicleQueryRequest
@@ -8021,8 +8903,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>车辆信息识别</para>
+        /// <para>Vehicle Information Recognition</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query detailed vehicle information through the license plate number and vehicle type.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// VehicleQueryRequest
@@ -8071,8 +8958,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>车辆信息识别</para>
+        /// <para>Vehicle Information Recognition</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query detailed vehicle information through the license plate number and vehicle type.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// VehicleQueryRequest
@@ -8089,8 +8981,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>车辆信息识别</para>
+        /// <para>Vehicle Information Recognition</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query detailed vehicle information through the license plate number and vehicle type.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// VehicleQueryRequest

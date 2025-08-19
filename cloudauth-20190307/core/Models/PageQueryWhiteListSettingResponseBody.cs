@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class PageQueryWhiteListSettingResponseBody : TeaModel {
         /// <summary>
+        /// <para>Return code, <b>200</b> indicates a successful API response.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>Current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
+        /// <para>Return message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Number of items per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -42,7 +50,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>ID of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>5A6229C0-E156-48E4-B6EC-0F528BDF60D2</para>
@@ -51,11 +59,16 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Request result</para>
+        /// </summary>
         [NameInMap("ResultObject")]
         [Validation(Required=false)]
         public List<PageQueryWhiteListSettingResponseBodyResultObject> ResultObject { get; set; }
         public class PageQueryWhiteListSettingResponseBodyResultObject : TeaModel {
             /// <summary>
+            /// <para>ID number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>330103xxxxxxxxxxxx</para>
             /// </summary>
@@ -64,6 +77,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string CertNo { get; set; }
 
             /// <summary>
+            /// <para>Unique identifier for real person authentication.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>sha43d9cabd52d370d9f4cca9468f71e</para>
             /// </summary>
@@ -72,6 +87,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string CertifyId { get; set; }
 
             /// <summary>
+            /// <para>Creation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-08-30 14:00:00</para>
             /// </summary>
@@ -80,6 +97,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
+            /// <para>Modification time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-08-30 14:00:00</para>
             /// </summary>
@@ -88,6 +107,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string GmtModified { get; set; }
 
             /// <summary>
+            /// <para>Whitelist ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>234822</para>
             /// </summary>
@@ -96,6 +117,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public long? Id { get; set; }
 
             /// <summary>
+            /// <para>Remark information.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -104,6 +127,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string Remark { get; set; }
 
             /// <summary>
+            /// <para>Authentication scene ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1000000332</para>
             /// </summary>
@@ -112,6 +137,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public long? SceneId { get; set; }
 
             /// <summary>
+            /// <para>ServiceCode of the real person cloud product</para>
+            /// 
             /// <b>Example:</b>
             /// <para>antcloudauth</para>
             /// </summary>
@@ -120,6 +147,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string ServiceCode { get; set; }
 
             /// <summary>
+            /// <para>Status:</para>
+            /// <list type="bullet">
+            /// <item><description>DELETE: Deleted</description></item>
+            /// <item><description>VALID: Not deleted and within the validity period, valid</description></item>
+            /// <item><description>INVALID: Not deleted but outside the validity period, invalid</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>VALID</para>
             /// </summary>
@@ -128,6 +162,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>End date of validity</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-09-02 13:57:51</para>
             /// </summary>
@@ -136,6 +172,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string ValidEndDate { get; set; }
 
             /// <summary>
+            /// <para>Start date of validity</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-08-30 13:57:51</para>
             /// </summary>
@@ -146,6 +184,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         }
 
         /// <summary>
+        /// <para>Whether the response was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -154,6 +194,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>Total number of items.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>28</para>
         /// </summary>
@@ -162,6 +204,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public int? TotalItem { get; set; }
 
         /// <summary>
+        /// <para>Total number of pages.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
