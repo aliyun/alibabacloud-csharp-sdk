@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Docmind_api20220711.Models
 {
     public class SubmitDocParserJobAdvanceRequest : TeaModel {
+        [NameInMap("EnhancementMode")]
+        [Validation(Required=false)]
+        public string EnhancementMode { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>docStructure.pdf</para>
