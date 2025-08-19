@@ -50,6 +50,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// <para>Cloud Assistant Session Manager configuration.</para>
+        /// </summary>
         [NameInMap("SessionManagerConfig")]
         [Validation(Required=false)]
         public string SessionManagerConfigShrink { get; set; }

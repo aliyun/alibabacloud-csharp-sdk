@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// <para>The time when the ENI was created.</para>
+                /// <para>The time when the security group was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2019-12-25T12:31:31Z</para>

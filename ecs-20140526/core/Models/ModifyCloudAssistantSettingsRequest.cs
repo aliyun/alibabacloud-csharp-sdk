@@ -163,10 +163,27 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// <para>Cloud Assistant Session Manager configuration.</para>
+        /// </summary>
         [NameInMap("SessionManagerConfig")]
         [Validation(Required=false)]
         public ModifyCloudAssistantSettingsRequestSessionManagerConfig SessionManagerConfig { get; set; }
         public class ModifyCloudAssistantSettingsRequestSessionManagerConfig : TeaModel {
+            /// <summary>
+            /// <para>Specify whether to enable Cloud Assistant Session Manager. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: Enables the feature.</description></item>
+            /// <item><description>false: Disables the feature.</description></item>
+            /// </list>
+            /// <para>Notes:</para>
+            /// <list type="bullet">
+            /// <item><description>The feature applies to all regions.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("SessionManagerEnabled")]
             [Validation(Required=false)]
             public bool? SessionManagerEnabled { get; set; }

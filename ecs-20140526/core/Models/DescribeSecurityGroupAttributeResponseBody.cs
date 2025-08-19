@@ -358,6 +358,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string SecurityGroupName { get; set; }
 
+        [NameInMap("SnapshotPolicyIds")]
+        [Validation(Required=false)]
+        public DescribeSecurityGroupAttributeResponseBodySnapshotPolicyIds SnapshotPolicyIds { get; set; }
+        public class DescribeSecurityGroupAttributeResponseBodySnapshotPolicyIds : TeaModel {
+            [NameInMap("SnapshotPolicyId")]
+            [Validation(Required=false)]
+            public List<string> SnapshotPolicyId { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The ID of the VPC. If a VPC ID is returned, the network type of the security group is VPC. If no VPC ID is returned, the network type of the security group is classic network.</para>
         /// 

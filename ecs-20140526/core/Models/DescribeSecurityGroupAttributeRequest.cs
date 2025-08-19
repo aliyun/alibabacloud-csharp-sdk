@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSecurityGroupAttributeRequest : TeaModel {
+        [NameInMap("Attribute")]
+        [Validation(Required=false)]
+        public string Attribute { get; set; }
+
         /// <summary>
         /// <para>The direction in which the security group rule is applied. Valid values:</para>
         /// <list type="bullet">
