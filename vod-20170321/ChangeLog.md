@@ -1,3 +1,6 @@
+2025-08-19 Version: 3.9.1
+- Generated csharp 2017-03-21 for vod.
+
 2025-08-06 Version: 3.9.0
 - Support API AddCustomTemplateAndGroupConsole.
 - Support API AddFilterConfigs.
