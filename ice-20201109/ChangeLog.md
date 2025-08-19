@@ -1,3 +1,7 @@
+2025-08-19 Version: 6.4.6
+- Update API RegisterMediaStream: add request parameters StreamTags.
+
+
 2025-08-15 Version: 6.4.5
 - Update SDK.
 

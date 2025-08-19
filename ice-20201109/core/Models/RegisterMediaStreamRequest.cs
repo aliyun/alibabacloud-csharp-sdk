@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string MediaId { get; set; }
 
+        [NameInMap("StreamTags")]
+        [Validation(Required=false)]
+        public string StreamTags { get; set; }
+
         /// <summary>
         /// <para>The user data.</para>
         /// 

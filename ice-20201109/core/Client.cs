@@ -18,7 +18,6 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._signatureAlgorithm = "v2";
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
@@ -22490,7 +22489,7 @@ namespace AlibabaCloud.SDK.ICE20201109
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetPublicMediaInfoResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<GetPublicMediaInfoResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -22532,7 +22531,7 @@ namespace AlibabaCloud.SDK.ICE20201109
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetPublicMediaInfoResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<GetPublicMediaInfoResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -26006,7 +26005,7 @@ namespace AlibabaCloud.SDK.ICE20201109
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListAllPublicMediaTagsResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<ListAllPublicMediaTagsResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -26052,7 +26051,7 @@ namespace AlibabaCloud.SDK.ICE20201109
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListAllPublicMediaTagsResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<ListAllPublicMediaTagsResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -31698,7 +31697,7 @@ namespace AlibabaCloud.SDK.ICE20201109
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListPublicMediaBasicInfosResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<ListPublicMediaBasicInfosResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -31764,7 +31763,7 @@ namespace AlibabaCloud.SDK.ICE20201109
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListPublicMediaBasicInfosResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<ListPublicMediaBasicInfosResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -37351,6 +37350,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             {
                 query["MediaId"] = request.MediaId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StreamTags))
+            {
+                query["StreamTags"] = request.StreamTags;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
             {
                 query["UserData"] = request.UserData;
@@ -37405,6 +37408,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaId))
             {
                 query["MediaId"] = request.MediaId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StreamTags))
+            {
+                query["StreamTags"] = request.StreamTags;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
             {
