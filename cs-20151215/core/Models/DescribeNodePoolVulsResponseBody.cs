@@ -96,6 +96,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 [Validation(Required=false)]
                 public bool? NeedReboot { get; set; }
 
+                [NameInMap("package_list")]
+                [Validation(Required=false)]
+                public List<DescribeNodePoolVulsResponseBodyVulRecordsVulListPackageList> PackageList { get; set; }
+                public class DescribeNodePoolVulsResponseBodyVulRecordsVulListPackageList : TeaModel {
+                    [NameInMap("name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
+
+                }
+
             }
 
         }

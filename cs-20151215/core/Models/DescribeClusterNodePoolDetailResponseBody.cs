@@ -425,6 +425,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public DescribeClusterNodePoolDetailResponseBodyManagementAutoVulFixPolicy AutoVulFixPolicy { get; set; }
             public class DescribeClusterNodePoolDetailResponseBodyManagementAutoVulFixPolicy : TeaModel {
+                [NameInMap("exclude_packages")]
+                [Validation(Required=false)]
+                public string ExcludePackages { get; set; }
+
                 /// <summary>
                 /// <para>Whether to allow restarting nodes.</para>
                 /// 

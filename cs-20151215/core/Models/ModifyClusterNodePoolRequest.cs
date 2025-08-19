@@ -193,6 +193,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public List<Tag> Labels { get; set; }
 
+            [NameInMap("node_name_mode")]
+            [Validation(Required=false)]
+            public string NodeNameMode { get; set; }
+
             /// <summary>
             /// <para>Predefined custom data. Nodes automatically run predefined scripts before they are added to the cluster. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">User-Data script</a>.</para>
             /// 
@@ -399,6 +403,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public ModifyClusterNodePoolRequestManagementAutoVulFixPolicy AutoVulFixPolicy { get; set; }
             public class ModifyClusterNodePoolRequestManagementAutoVulFixPolicy : TeaModel {
+                [NameInMap("exclude_packages")]
+                [Validation(Required=false)]
+                public string ExcludePackages { get; set; }
+
                 /// <summary>
                 /// <para>Specifies whether ACK is allowed to automatically restart nodes after repairing the nodes. Valid values:</para>
                 /// <list type="bullet">

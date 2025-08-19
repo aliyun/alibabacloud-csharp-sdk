@@ -372,6 +372,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string ExternalLoadbalancerId { get; set; }
 
+        [NameInMap("extra_sans")]
+        [Validation(Required=false)]
+        public List<string> ExtraSans { get; set; }
+
         /// <summary>
         /// <para>The initial Kubernetes version of the cluster.</para>
         /// 
@@ -579,6 +583,44 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("resource_group_id")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
+
+        [NameInMap("rrsa_config")]
+        [Validation(Required=false)]
+        public DescribeClusterDetailResponseBodyRrsaConfig RrsaConfig { get; set; }
+        public class DescribeClusterDetailResponseBodyRrsaConfig : TeaModel {
+            [NameInMap("audience")]
+            [Validation(Required=false)]
+            public string Audience { get; set; }
+
+            [NameInMap("enabled")]
+            [Validation(Required=false)]
+            public bool? Enabled { get; set; }
+
+            [NameInMap("issuer")]
+            [Validation(Required=false)]
+            public string Issuer { get; set; }
+
+            [NameInMap("jwks_url")]
+            [Validation(Required=false)]
+            public string JwksUrl { get; set; }
+
+            [NameInMap("max_oidc_token_expiration")]
+            [Validation(Required=false)]
+            public string MaxOidcTokenExpiration { get; set; }
+
+            [NameInMap("oidc_arn")]
+            [Validation(Required=false)]
+            public string OidcArn { get; set; }
+
+            [NameInMap("oidc_name")]
+            [Validation(Required=false)]
+            public string OidcName { get; set; }
+
+            [NameInMap("open_api_configuration_url")]
+            [Validation(Required=false)]
+            public string OpenApiConfigurationUrl { get; set; }
+
+        }
 
         /// <summary>
         /// <para>The ID of the security group to which the cluster belongs.</para>
