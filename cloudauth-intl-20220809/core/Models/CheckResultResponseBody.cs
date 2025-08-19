@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class CheckResultResponseBody : TeaModel {
         /// <summary>
+        /// <para>Return code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>Return message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -26,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>ID of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>4EB35****87EBA1</para>
@@ -35,11 +39,16 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Return result.</para>
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public CheckResultResponseBodyResult Result { get; set; }
         public class CheckResultResponseBodyResult : TeaModel {
             /// <summary>
+            /// <para>Authentication result.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>**</para>
             /// </summary>
@@ -48,6 +57,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string EkycResult { get; set; }
 
             /// <summary>
+            /// <para>Extended basic information.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>**</para>
             /// </summary>
@@ -56,6 +67,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string ExtBasicInfo { get; set; }
 
             /// <summary>
+            /// <para>Face information.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>**</para>
             /// </summary>
@@ -64,6 +77,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string ExtFaceInfo { get; set; }
 
             /// <summary>
+            /// <para>ID information.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>**</para>
             /// </summary>
@@ -71,11 +86,19 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             [Validation(Required=false)]
             public string ExtIdInfo { get; set; }
 
+            /// <summary>
+            /// <para>Extended information</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{}</para>
+            /// </summary>
             [NameInMap("ExtInfo")]
             [Validation(Required=false)]
             public string ExtInfo { get; set; }
 
             /// <summary>
+            /// <para>Risk information.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>**</para>
             /// </summary>
@@ -84,6 +107,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string ExtRiskInfo { get; set; }
 
             /// <summary>
+            /// <para>Whether the authentication is passed.</para>
+            /// <list type="bullet">
+            /// <item><description>Y: Passed</description></item>
+            /// <item><description>N: Not passed</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>Y</para>
             /// </summary>
@@ -92,6 +121,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string Passed { get; set; }
 
             /// <summary>
+            /// <para>Sub-result code.</para>
+            /// 
             /// <b>Example:</b>
             /// <hr>
             /// </summary>

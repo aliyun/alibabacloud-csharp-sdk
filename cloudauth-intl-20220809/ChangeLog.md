@@ -1,3 +1,6 @@
+2025-08-19 Version: 3.8.4
+- Generated csharp 2022-08-09 for Cloudauth-intl.
+
 2025-07-11 Version: 3.9.0
 - Support API KeepaliveIntl.
 

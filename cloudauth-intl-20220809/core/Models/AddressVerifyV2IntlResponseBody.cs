@@ -8,20 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
-    public class DeleteVerifyResultResponseBody : TeaModel {
+    public class AddressVerifyV2IntlResponseBody : TeaModel {
         /// <summary>
-        /// <para>Return code</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>200</para>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Return message</para>
-        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -30,37 +26,42 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>ID of this request</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>4EB35****87EBA1</para>
+        /// <para>7F971622-38C0-5F56-B2EC-315367979B4F</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>Return result</para>
-        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
-        public DeleteVerifyResultResponseBodyResult Result { get; set; }
-        public class DeleteVerifyResultResponseBodyResult : TeaModel {
+        public AddressVerifyV2IntlResponseBodyResult Result { get; set; }
+        public class AddressVerifyV2IntlResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Deletion result. Y indicates successful deletion, N indicates failed deletion</para>
-            /// 
             /// <b>Example:</b>
-            /// <para>Y/N</para>
+            /// <para>1</para>
             /// </summary>
-            [NameInMap("DeleteResult")]
+            [NameInMap("BizCode")]
             [Validation(Required=false)]
-            public string DeleteResult { get; set; }
+            public string BizCode { get; set; }
 
             /// <summary>
-            /// <para>Unique identifier of the authentication request</para>
-            /// 
             /// <b>Example:</b>
-            /// <para>4ab0b***cbde97</para>
+            /// <para>{
+            ///   &quot;distanceRange&quot;: &quot;0-3000&quot;,
+            ///   &quot;ispName&quot;: &quot;CTCC&quot;,
+            ///   &quot;phoneStatus&quot;: &quot;1&quot;
+            /// }</para>
+            /// </summary>
+            [NameInMap("Detail")]
+            [Validation(Required=false)]
+            public string Detail { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>hksb7ba1b28130d24e015d69********</para>
             /// </summary>
             [NameInMap("TransactionId")]
             [Validation(Required=false)]

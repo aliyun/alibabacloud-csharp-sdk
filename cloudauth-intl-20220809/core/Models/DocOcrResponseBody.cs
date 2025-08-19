@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class DocOcrResponseBody : TeaModel {
         /// <summary>
+        /// <para>Return code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>Return message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -26,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>ID of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>86C40EC3-5940-5F47-995C-BFE90B70E540</para>
@@ -35,15 +39,48 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Return result</para>
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public DocOcrResponseBodyResult Result { get; set; }
         public class DocOcrResponseBodyResult : TeaModel {
+            /// <summary>
+            /// <para>Card and document recognition result	Only returned when the interface response is successful</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{
+            ///   &quot;idFaceQualityScore&quot;: 98.0
+            ///   &quot;ocrIdInfo&quot;: {
+            ///     &quot;expiryDate&quot;: &quot;&quot;,
+            ///     &quot;originOfIssue&quot;: &quot;公安部出入境管理局&quot;,
+            ///     &quot;englishName&quot;: &quot;LI SI&quot;,
+            ///     &quot;sex&quot;: &quot;男&quot;,
+            ///     &quot;name&quot;: &quot;李四&quot;,
+            ///     &quot;idNumber&quot;: &quot;H11111112&quot;,
+            ///     &quot;issueDate&quot;: &quot;2013-01-02&quot;,
+            ///     &quot;birthDate&quot;: &quot;1990-02-21&quot;
+            ///   },
+            ///   &quot;spoofInfo&quot;: {
+            ///     &quot;spoofResult&quot;: &quot;Y&quot;,
+            ///     &quot;spoofType&quot;: [
+            ///       &quot;SCREEN_REMARK&quot;
+            ///     ]
+            ///   }
+            /// }</para>
+            /// </summary>
             [NameInMap("ExtIdInfo")]
             [Validation(Required=false)]
             public string ExtIdInfo { get; set; }
 
             /// <summary>
+            /// <para>Whether the authentication passed.</para>
+            /// <list type="bullet">
+            /// <item><description>Y: Passed</description></item>
+            /// <item><description>N: Not passed</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>Y</para>
             /// </summary>
@@ -52,6 +89,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string Passed { get; set; }
 
             /// <summary>
+            /// <para>Sub-result code</para>
+            /// 
             /// <b>Example:</b>
             /// <para>200</para>
             /// </summary>
@@ -60,6 +99,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string SubCode { get; set; }
 
             /// <summary>
+            /// <para>Unique identifier of the authentication request</para>
+            /// 
             /// <b>Example:</b>
             /// <para>08573be80f944d95ac812e019e3655a8</para>
             /// </summary>

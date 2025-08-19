@@ -126,8 +126,157 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>地址核验</para>
+        /// <para>地址相似比对</para>
         /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddressCompareIntlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddressCompareIntlResponse
+        /// </returns>
+        public AddressCompareIntlResponse AddressCompareIntlWithOptions(AddressCompareIntlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultCountry))
+            {
+                query["DefaultCountry"] = request.DefaultCountry;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Text1))
+            {
+                query["Text1"] = request.Text1;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Text2))
+            {
+                query["Text2"] = request.Text2;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddressCompareIntl",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddressCompareIntlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>地址相似比对</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddressCompareIntlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddressCompareIntlResponse
+        /// </returns>
+        public async Task<AddressCompareIntlResponse> AddressCompareIntlWithOptionsAsync(AddressCompareIntlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultCountry))
+            {
+                query["DefaultCountry"] = request.DefaultCountry;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Text1))
+            {
+                query["Text1"] = request.Text1;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Text2))
+            {
+                query["Text2"] = request.Text2;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddressCompareIntl",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddressCompareIntlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>地址相似比对</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddressCompareIntlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddressCompareIntlResponse
+        /// </returns>
+        public AddressCompareIntlResponse AddressCompareIntl(AddressCompareIntlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AddressCompareIntlWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>地址相似比对</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddressCompareIntlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddressCompareIntlResponse
+        /// </returns>
+        public async Task<AddressCompareIntlResponse> AddressCompareIntlAsync(AddressCompareIntlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AddressCompareIntlWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Address Verification</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Based on the operator\&quot;s capabilities, input the phone number and address (or latitude and longitude) to verify whether the provided address is the user\&quot;s usual residence.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddressVerifyIntlRequest
@@ -208,8 +357,13 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>地址核验</para>
+        /// <para>Address Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Based on the operator\&quot;s capabilities, input the phone number and address (or latitude and longitude) to verify whether the provided address is the user\&quot;s usual residence.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddressVerifyIntlRequest
@@ -290,8 +444,13 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>地址核验</para>
+        /// <para>Address Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Based on the operator\&quot;s capabilities, input the phone number and address (or latitude and longitude) to verify whether the provided address is the user\&quot;s usual residence.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddressVerifyIntlRequest
@@ -308,8 +467,13 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>地址核验</para>
+        /// <para>Address Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Based on the operator\&quot;s capabilities, input the phone number and address (or latitude and longitude) to verify whether the provided address is the user\&quot;s usual residence.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddressVerifyIntlRequest
@@ -326,8 +490,173 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>银行卡核验</para>
+        /// <para>地址核验</para>
         /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddressVerifyV2IntlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddressVerifyV2IntlResponse
+        /// </returns>
+        public AddressVerifyV2IntlResponse AddressVerifyV2IntlWithOptions(AddressVerifyV2IntlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceToken))
+            {
+                query["DeviceToken"] = request.DeviceToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mobile))
+            {
+                query["Mobile"] = request.Mobile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegCountry))
+            {
+                query["RegCountry"] = request.RegCountry;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Text))
+            {
+                query["Text"] = request.Text;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VerifyType))
+            {
+                query["VerifyType"] = request.VerifyType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddressVerifyV2Intl",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddressVerifyV2IntlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>地址核验</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddressVerifyV2IntlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddressVerifyV2IntlResponse
+        /// </returns>
+        public async Task<AddressVerifyV2IntlResponse> AddressVerifyV2IntlWithOptionsAsync(AddressVerifyV2IntlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceToken))
+            {
+                query["DeviceToken"] = request.DeviceToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mobile))
+            {
+                query["Mobile"] = request.Mobile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegCountry))
+            {
+                query["RegCountry"] = request.RegCountry;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Text))
+            {
+                query["Text"] = request.Text;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VerifyType))
+            {
+                query["VerifyType"] = request.VerifyType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddressVerifyV2Intl",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddressVerifyV2IntlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>地址核验</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddressVerifyV2IntlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddressVerifyV2IntlResponse
+        /// </returns>
+        public AddressVerifyV2IntlResponse AddressVerifyV2Intl(AddressVerifyV2IntlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AddressVerifyV2IntlWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>地址核验</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddressVerifyV2IntlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddressVerifyV2IntlResponse
+        /// </returns>
+        public async Task<AddressVerifyV2IntlResponse> AddressVerifyV2IntlAsync(AddressVerifyV2IntlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AddressVerifyV2IntlWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Bank Card Verification</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Verification of bank card elements, including: two-element verification (name + bank card number), three-element verification (name + ID number + bank card number), and four-element verification (name + ID number + phone number + bank card number) for consistency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// BankMetaVerifyIntlRequest
@@ -400,8 +729,13 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>银行卡核验</para>
+        /// <para>Bank Card Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Verification of bank card elements, including: two-element verification (name + bank card number), three-element verification (name + ID number + bank card number), and four-element verification (name + ID number + phone number + bank card number) for consistency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// BankMetaVerifyIntlRequest
@@ -474,8 +808,13 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>银行卡核验</para>
+        /// <para>Bank Card Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Verification of bank card elements, including: two-element verification (name + bank card number), three-element verification (name + ID number + bank card number), and four-element verification (name + ID number + phone number + bank card number) for consistency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// BankMetaVerifyIntlRequest
@@ -492,8 +831,13 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>银行卡核验</para>
+        /// <para>Bank Card Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Verification of bank card elements, including: two-element verification (name + bank card number), three-element verification (name + ID number + bank card number), and four-element verification (name + ID number + phone number + bank card number) for consistency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// BankMetaVerifyIntlRequest
@@ -514,7 +858,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>证件OCR识别纯服务端接口</para>
+        /// <para>Pure server-side interface for document OCR recognition</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -596,7 +940,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>证件OCR识别纯服务端接口</para>
+        /// <para>Pure server-side interface for document OCR recognition</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -678,7 +1022,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>证件OCR识别纯服务端接口</para>
+        /// <para>Pure server-side interface for document OCR recognition</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -702,7 +1046,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>证件OCR识别纯服务端接口</para>
+        /// <para>Pure server-side interface for document OCR recognition</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -722,7 +1066,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>结果查询</para>
+        /// <para>Result Query</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -780,7 +1124,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>结果查询</para>
+        /// <para>Result Query</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -838,7 +1182,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>结果查询</para>
+        /// <para>Result Query</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -856,7 +1200,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>结果查询</para>
+        /// <para>Result Query</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -874,7 +1218,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>认证日志查询接口</para>
+        /// <para>Authentication Log Query Interface</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -920,7 +1264,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>认证日志查询接口</para>
+        /// <para>Authentication Log Query Interface</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -966,7 +1310,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>认证日志查询接口</para>
+        /// <para>Authentication Log Query Interface</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -984,7 +1328,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>认证日志查询接口</para>
+        /// <para>Authentication Log Query Interface</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1002,8 +1346,13 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>凭证核验</para>
+        /// <para>Credential Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Input credential image information, perform image quality, tampering, and forgery detection, and return the detection results.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CredentialVerifyIntlRequest
@@ -1062,8 +1411,13 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>凭证核验</para>
+        /// <para>Credential Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Input credential image information, perform image quality, tampering, and forgery detection, and return the detection results.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CredentialVerifyIntlRequest
@@ -1122,8 +1476,13 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>凭证核验</para>
+        /// <para>Credential Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Input credential image information, perform image quality, tampering, and forgery detection, and return the detection results.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CredentialVerifyIntlRequest
@@ -1140,8 +1499,13 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>凭证核验</para>
+        /// <para>Credential Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Input credential image information, perform image quality, tampering, and forgery detection, and return the detection results.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CredentialVerifyIntlRequest
@@ -1514,7 +1878,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除用户认证记录结果</para>
+        /// <para>Delete user authentication record results</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1564,7 +1928,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除用户认证记录结果</para>
+        /// <para>Delete user authentication record results</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1614,7 +1978,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除用户认证记录结果</para>
+        /// <para>Delete user authentication record results</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1632,7 +1996,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除用户认证记录结果</para>
+        /// <para>Delete user authentication record results</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1650,7 +2014,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>卡证ocr纯服务端</para>
+        /// <para>Card and document OCR pure server-side</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1734,7 +2098,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>卡证ocr纯服务端</para>
+        /// <para>Card and document OCR pure server-side</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1818,7 +2182,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>卡证ocr纯服务端</para>
+        /// <para>Card and document OCR pure server-side</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1836,7 +2200,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>卡证ocr纯服务端</para>
+        /// <para>Card and document OCR pure server-side</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1871,6 +2235,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocPage))
+            {
+                body["DocPage"] = request.DocPage;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocType))
             {
                 body["DocType"] = request.DocType;
@@ -1957,6 +2325,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocPage))
+            {
+                body["DocPage"] = request.DocPage;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocType))
             {
                 body["DocType"] = request.DocType;
@@ -3776,7 +4148,151 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>手机号三要素国际版接口</para>
+        /// <para>手机号二要素核验API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// Mobile2MetaVerifyIntlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// Mobile2MetaVerifyIntlResponse
+        /// </returns>
+        public Mobile2MetaVerifyIntlResponse Mobile2MetaVerifyIntlWithOptions(Mobile2MetaVerifyIntlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mobile))
+            {
+                body["Mobile"] = request.Mobile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamType))
+            {
+                body["ParamType"] = request.ParamType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                body["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                body["UserName"] = request.UserName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "Mobile2MetaVerifyIntl",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<Mobile2MetaVerifyIntlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>手机号二要素核验API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// Mobile2MetaVerifyIntlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// Mobile2MetaVerifyIntlResponse
+        /// </returns>
+        public async Task<Mobile2MetaVerifyIntlResponse> Mobile2MetaVerifyIntlWithOptionsAsync(Mobile2MetaVerifyIntlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mobile))
+            {
+                body["Mobile"] = request.Mobile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamType))
+            {
+                body["ParamType"] = request.ParamType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                body["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                body["UserName"] = request.UserName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "Mobile2MetaVerifyIntl",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<Mobile2MetaVerifyIntlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>手机号二要素核验API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// Mobile2MetaVerifyIntlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// Mobile2MetaVerifyIntlResponse
+        /// </returns>
+        public Mobile2MetaVerifyIntlResponse Mobile2MetaVerifyIntl(Mobile2MetaVerifyIntlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return Mobile2MetaVerifyIntlWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>手机号二要素核验API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// Mobile2MetaVerifyIntlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// Mobile2MetaVerifyIntlResponse
+        /// </returns>
+        public async Task<Mobile2MetaVerifyIntlResponse> Mobile2MetaVerifyIntlAsync(Mobile2MetaVerifyIntlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await Mobile2MetaVerifyIntlWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>International Version of Mobile Three Elements API</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3834,7 +4350,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>手机号三要素国际版接口</para>
+        /// <para>International Version of Mobile Three Elements API</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3892,7 +4408,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>手机号三要素国际版接口</para>
+        /// <para>International Version of Mobile Three Elements API</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3910,7 +4426,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>手机号三要素国际版接口</para>
+        /// <para>International Version of Mobile Three Elements API</para>
         /// </summary>
         /// 
         /// <param name="request">

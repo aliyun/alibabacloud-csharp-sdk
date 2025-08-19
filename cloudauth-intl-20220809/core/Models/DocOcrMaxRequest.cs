@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class DocOcrMaxRequest : TeaModel {
+        [NameInMap("DocPage")]
+        [Validation(Required=false)]
+        public string DocPage { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>CNSSC01</para>
