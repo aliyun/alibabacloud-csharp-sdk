@@ -1,3 +1,7 @@
+2025-08-19 Version: 2.2.0
+- Support API UpdateNetwork.
+
+
 2025-06-09 Version: 2.1.5
 - Update API ListApps: add response parameters Body.result.$.tags.
 

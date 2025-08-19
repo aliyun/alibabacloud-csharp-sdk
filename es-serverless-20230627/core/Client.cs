@@ -3175,6 +3175,126 @@ namespace AlibabaCloud.SDK.Es_serverless20230627
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>修改应用公网配置。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateNetworkRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateNetworkResponse
+        /// </returns>
+        public UpdateNetworkResponse UpdateNetworkWithOptions(string appName, UpdateNetworkRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.TeaUtil.Common.ToArray(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateNetwork",
+                Version = "2023-06-27",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/es-serverless/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appName) + "/networks",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateNetworkResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改应用公网配置。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateNetworkRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateNetworkResponse
+        /// </returns>
+        public async Task<UpdateNetworkResponse> UpdateNetworkWithOptionsAsync(string appName, UpdateNetworkRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.TeaUtil.Common.ToArray(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateNetwork",
+                Version = "2023-06-27",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/es-serverless/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appName) + "/networks",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateNetworkResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改应用公网配置。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateNetworkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateNetworkResponse
+        /// </returns>
+        public UpdateNetworkResponse UpdateNetwork(string appName, UpdateNetworkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateNetworkWithOptions(appName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改应用公网配置。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateNetworkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateNetworkResponse
+        /// </returns>
+        public async Task<UpdateNetworkResponse> UpdateNetworkAsync(string appName, UpdateNetworkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateNetworkWithOptionsAsync(appName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>修改自动备份配置</para>
         /// </summary>
         /// 
