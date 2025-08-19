@@ -53,8 +53,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public int? DiskSize { get; set; }
 
+        /// <term><b>Obsolete</b></term>
         [NameInMap("enableLongLiving")]
         [Validation(Required=false)]
+        [Obsolete]
         public bool? EnableLongLiving { get; set; }
 
         [NameInMap("environmentVariables")]
@@ -92,6 +94,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [NameInMap("instanceConcurrency")]
         [Validation(Required=false)]
         public int? InstanceConcurrency { get; set; }
+
+        [NameInMap("instanceIsolationMode")]
+        [Validation(Required=false)]
+        public string InstanceIsolationMode { get; set; }
 
         [NameInMap("instanceLifecycleConfig")]
         [Validation(Required=false)]
@@ -158,6 +164,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [NameInMap("sessionAffinity")]
         [Validation(Required=false)]
         public string SessionAffinity { get; set; }
+
+        [NameInMap("sessionAffinityConfig")]
+        [Validation(Required=false)]
+        public string SessionAffinityConfig { get; set; }
 
         [NameInMap("tags")]
         [Validation(Required=false)]

@@ -39,6 +39,126 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>修改实例所在资源组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeResourceGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeResourceGroupResponse
+        /// </returns>
+        public ChangeResourceGroupResponse ChangeResourceGroupWithOptions(ChangeResourceGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ChangeResourceGroup",
+                Version = "2023-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/2023-03-30/resource-groups",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ChangeResourceGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改实例所在资源组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeResourceGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeResourceGroupResponse
+        /// </returns>
+        public async Task<ChangeResourceGroupResponse> ChangeResourceGroupWithOptionsAsync(ChangeResourceGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ChangeResourceGroup",
+                Version = "2023-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/2023-03-30/resource-groups",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ChangeResourceGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改实例所在资源组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeResourceGroupResponse
+        /// </returns>
+        public ChangeResourceGroupResponse ChangeResourceGroup(ChangeResourceGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ChangeResourceGroupWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改实例所在资源组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeResourceGroupResponse
+        /// </returns>
+        public async Task<ChangeResourceGroupResponse> ChangeResourceGroupAsync(ChangeResourceGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ChangeResourceGroupWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>创建函数别名。</para>
         /// </summary>
         /// 
