@@ -1487,6 +1487,134 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取事件通知规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEventRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEventRuleResponse
+        /// </returns>
+        public GetEventRuleResponse GetEventRuleWithOptions(GetEventRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductName))
+            {
+                query["ProductName"] = request.ProductName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetEventRule",
+                Version = "2022-01-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetEventRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取事件通知规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEventRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEventRuleResponse
+        /// </returns>
+        public async Task<GetEventRuleResponse> GetEventRuleWithOptionsAsync(GetEventRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductName))
+            {
+                query["ProductName"] = request.ProductName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetEventRule",
+                Version = "2022-01-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetEventRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取事件通知规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEventRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEventRuleResponse
+        /// </returns>
+        public GetEventRuleResponse GetEventRule(GetEventRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetEventRuleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取事件通知规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEventRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEventRuleResponse
+        /// </returns>
+        public async Task<GetEventRuleResponse> GetEventRuleAsync(GetEventRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetEventRuleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the attributes of an existing queue.</para>
         /// </summary>
         /// 
@@ -1867,6 +1995,202 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetTopicAttributesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询事件通知列表</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListEventRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEventRulesResponse
+        /// </returns>
+        public ListEventRulesResponse ListEventRulesWithOptions(ListEventRulesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListEventRulesShrinkRequest request = new ListEventRulesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Subscription))
+            {
+                request.SubscriptionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Subscription, "Subscription", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductName))
+            {
+                query["ProductName"] = request.ProductName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceName))
+            {
+                query["ResourceName"] = request.ResourceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscriptionShrink))
+            {
+                query["Subscription"] = request.SubscriptionShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopicName))
+            {
+                query["TopicName"] = request.TopicName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEventRules",
+                Version = "2022-01-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEventRulesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询事件通知列表</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListEventRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEventRulesResponse
+        /// </returns>
+        public async Task<ListEventRulesResponse> ListEventRulesWithOptionsAsync(ListEventRulesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListEventRulesShrinkRequest request = new ListEventRulesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Subscription))
+            {
+                request.SubscriptionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Subscription, "Subscription", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductName))
+            {
+                query["ProductName"] = request.ProductName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceName))
+            {
+                query["ResourceName"] = request.ResourceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscriptionShrink))
+            {
+                query["Subscription"] = request.SubscriptionShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopicName))
+            {
+                query["TopicName"] = request.TopicName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEventRules",
+                Version = "2022-01-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEventRulesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询事件通知列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEventRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEventRulesResponse
+        /// </returns>
+        public ListEventRulesResponse ListEventRules(ListEventRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListEventRulesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询事件通知列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEventRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEventRulesResponse
+        /// </returns>
+        public async Task<ListEventRulesResponse> ListEventRulesAsync(ListEventRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListEventRulesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
