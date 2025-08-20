@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Brain_industrial20200920.Models
 {
     public class AicsOpenApiInvokeRequest : TeaModel {
+        [NameInMap("JobId")]
+        [Validation(Required=false)]
+        public string JobId { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>119397</para>

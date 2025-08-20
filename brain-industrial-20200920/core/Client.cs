@@ -206,6 +206,10 @@ namespace AlibabaCloud.SDK.Brain_industrial20200920
                 request.ParamShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Param, "Param", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeId))
             {
                 query["NodeId"] = request.NodeId;
@@ -268,6 +272,10 @@ namespace AlibabaCloud.SDK.Brain_industrial20200920
                 request.ParamShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Param, "Param", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeId))
             {
                 query["NodeId"] = request.NodeId;
