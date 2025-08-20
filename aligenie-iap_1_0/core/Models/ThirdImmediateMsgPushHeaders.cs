@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
 {
-    public class AppUseTimeReportHeaders : TeaModel {
+    public class ThirdImmediateMsgPushHeaders : TeaModel {
         [NameInMap("commonHeaders")]
         [Validation(Required=false)]
         public Dictionary<string, string> CommonHeaders { get; set; }

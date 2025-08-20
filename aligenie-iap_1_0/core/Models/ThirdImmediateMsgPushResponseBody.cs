@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
 {
-    public class CreateReminderResponseBody : TeaModel {
+    public class ThirdImmediateMsgPushResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>400</para>
+        /// <para>500000000</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
@@ -19,24 +19,30 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>不能设置过去的时间。</para>
+        /// <para>服务器内部异常</para>
         /// </summary>
         [NameInMap("ErrorMsg")]
         [Validation(Required=false)]
         public string ErrorMsg { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>20****1</para>
-        /// </summary>
         [NameInMap("Model")]
         [Validation(Required=false)]
-        public long? Model { get; set; }
+        public ThirdImmediateMsgPushResponseBodyModel Model { get; set; }
+        public class ThirdImmediateMsgPushResponseBodyModel : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2DF6FEFE-3301-16DD-ABCC-968A9524920B</para>
+            /// </summary>
+            [NameInMap("RequestId")]
+            [Validation(Required=false)]
+            public string RequestId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>true</para>
-        /// </summary>
+            [NameInMap("Success")]
+            [Validation(Required=false)]
+            public bool? Success { get; set; }
+
+        }
+
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

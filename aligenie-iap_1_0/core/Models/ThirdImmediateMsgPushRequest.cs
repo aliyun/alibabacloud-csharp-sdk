@@ -8,18 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
 {
-    public class CallBackThirdRightSendPlanShrinkRequest : TeaModel {
+    public class ThirdImmediateMsgPushRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>cc</para>
-        /// </summary>
-        [NameInMap("BizGroup")]
-        [Validation(Required=false)]
-        public string BizGroup { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>ailabs</para>
+        /// <para>FLIGHT</para>
         /// </summary>
         [NameInMap("BizType")]
         [Validation(Required=false)]
@@ -27,59 +19,67 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>1001</para>
+        /// <para>changeDetail</para>
         /// </summary>
-        [NameInMap("CardType")]
+        [NameInMap("ChangeDetail")]
         [Validation(Required=false)]
-        public int? CardType { get; set; }
+        public string ChangeDetail { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>领取异常</para>
+        /// <para>orderId</para>
         /// </summary>
-        [NameInMap("ErrorMsg")]
+        [NameInMap("OrderId")]
         [Validation(Required=false)]
-        public string ErrorMsg { get; set; }
+        public string OrderId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>{}</para>
+        /// <para>psgIds</para>
         /// </summary>
-        [NameInMap("ExtendInfo")]
+        [NameInMap("PsgIds")]
         [Validation(Required=false)]
-        public string ExtendInfoShrink { get; set; }
+        public string PsgIds { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>1dsds2FzCXFGVA1ADS</para>
+        /// <para>trafficChangeType</para>
         /// </summary>
-        [NameInMap("GenieOpenId")]
+        [NameInMap("TrafficChangeType")]
         [Validation(Required=false)]
-        public string GenieOpenId { get; set; }
+        public string TrafficChangeType { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>trafficChangeTypeDesc</para>
         /// </summary>
-        [NameInMap("ReceiveStatus")]
+        [NameInMap("TrafficChangeTypeDesc")]
         [Validation(Required=false)]
-        public int? ReceiveStatus { get; set; }
+        public string TrafficChangeTypeDesc { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>01000019100307010000600</para>
+        /// <para>trafficJourneyIds</para>
         /// </summary>
-        [NameInMap("Sn")]
+        [NameInMap("TrafficJourneyIds")]
         [Validation(Required=false)]
-        public string Sn { get; set; }
+        public string TrafficJourneyIds { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>trafficSubOrderIds</para>
         /// </summary>
-        [NameInMap("SupplierId")]
+        [NameInMap("TrafficSubOrderIds")]
         [Validation(Required=false)]
-        public long? SupplierId { get; set; }
+        public string TrafficSubOrderIds { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>userId</para>
+        /// </summary>
+        [NameInMap("UserId")]
+        [Validation(Required=false)]
+        public string UserId { get; set; }
 
     }
 

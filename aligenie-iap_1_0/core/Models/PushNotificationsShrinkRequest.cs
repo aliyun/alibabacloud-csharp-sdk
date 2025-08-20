@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
 {
     public class PushNotificationsShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("NotificationUnicastRequest")]
         [Validation(Required=false)]
         public string NotificationUnicastRequestShrink { get; set; }

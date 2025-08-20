@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
         [Validation(Required=false)]
         public string PayloadShrink { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("UserInfo")]
         [Validation(Required=false)]
         public string UserInfoShrink { get; set; }
