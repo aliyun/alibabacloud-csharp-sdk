@@ -103,6 +103,44 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public long? NextTime { get; set; }
 
+        [NameInMap("Policies")]
+        [Validation(Required=false)]
+        public List<GetArtifactLifecycleRuleResponseBodyPolicies> Policies { get; set; }
+        public class GetArtifactLifecycleRuleResponseBodyPolicies : TeaModel {
+            [NameInMap("Condition")]
+            [Validation(Required=false)]
+            public GetArtifactLifecycleRuleResponseBodyPoliciesCondition Condition { get; set; }
+            public class GetArtifactLifecycleRuleResponseBodyPoliciesCondition : TeaModel {
+                [NameInMap("LastPullOlderThanDays")]
+                [Validation(Required=false)]
+                public int? LastPullOlderThanDays { get; set; }
+
+                [NameInMap("LastPushOlderThanDays")]
+                [Validation(Required=false)]
+                public int? LastPushOlderThanDays { get; set; }
+
+                [NameInMap("LatestTagCount")]
+                [Validation(Required=false)]
+                public int? LatestTagCount { get; set; }
+
+            }
+
+            [NameInMap("Filter")]
+            [Validation(Required=false)]
+            public GetArtifactLifecycleRuleResponseBodyPoliciesFilter Filter { get; set; }
+            public class GetArtifactLifecycleRuleResponseBodyPoliciesFilter : TeaModel {
+                [NameInMap("TagWildcard")]
+                [Validation(Required=false)]
+                public string TagWildcard { get; set; }
+
+            }
+
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The name of the image repository.</para>
         /// 

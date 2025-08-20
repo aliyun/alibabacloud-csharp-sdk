@@ -20,10 +20,6 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             [Validation(Required=false)]
             public bool? ImageIndexOnly { get; set; }
 
-            [NameInMap("PriorityFile")]
-            [Validation(Required=false)]
-            public string PriorityFile { get; set; }
-
         }
 
         /// <summary>

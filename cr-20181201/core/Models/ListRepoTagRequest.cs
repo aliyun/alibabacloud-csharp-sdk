@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

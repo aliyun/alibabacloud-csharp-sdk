@@ -90,6 +90,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             [Validation(Required=false)]
             public string AddedBy { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The name of the vulnerability.</para>
             /// 
@@ -98,6 +100,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             /// </summary>
             [NameInMap("AliasName")]
             [Validation(Required=false)]
+            [Obsolete]
             public string AliasName { get; set; }
 
             /// <summary>
