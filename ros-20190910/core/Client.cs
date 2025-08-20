@@ -12881,6 +12881,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             {
                 query["TimeoutInMinutes"] = request.TimeoutInMinutes;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsePreviousParameters))
+            {
+                query["UsePreviousParameters"] = request.UsePreviousParameters;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateBody))
             {
@@ -12997,6 +13001,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeoutInMinutes))
             {
                 query["TimeoutInMinutes"] = request.TimeoutInMinutes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsePreviousParameters))
+            {
+                query["UsePreviousParameters"] = request.UsePreviousParameters;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateBody))

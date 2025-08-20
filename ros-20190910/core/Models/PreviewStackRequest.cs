@@ -249,6 +249,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public long? TimeoutInMinutes { get; set; }
 
+        [NameInMap("UsePreviousParameters")]
+        [Validation(Required=false)]
+        public bool? UsePreviousParameters { get; set; }
+
     }
 
 }
