@@ -1,3 +1,6 @@
+2025-08-20 Version: 3.9.2
+- Generated csharp 2017-03-21 for vod.
+
 2025-08-19 Version: 3.9.1
 - Generated csharp 2017-03-21 for vod.
 
