@@ -1171,6 +1171,160 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>通用图片分析</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GeneralAnalyzeImageRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GeneralAnalyzeImageResponse
+        /// </returns>
+        public GeneralAnalyzeImageResponse GeneralAnalyzeImageWithOptions(string workspaceId, string appId, GeneralAnalyzeImageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomPrompt))
+            {
+                body["customPrompt"] = request.CustomPrompt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrls))
+            {
+                body["imageUrls"] = request.ImageUrls;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Stream))
+            {
+                body["stream"] = request.Stream;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateIds))
+            {
+                body["templateIds"] = request.TemplateIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GeneralAnalyzeImage",
+                Version = "2024-06-03",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/ccai/app/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appId) + "/generalanalyzeImage",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GeneralAnalyzeImageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通用图片分析</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GeneralAnalyzeImageRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GeneralAnalyzeImageResponse
+        /// </returns>
+        public async Task<GeneralAnalyzeImageResponse> GeneralAnalyzeImageWithOptionsAsync(string workspaceId, string appId, GeneralAnalyzeImageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomPrompt))
+            {
+                body["customPrompt"] = request.CustomPrompt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrls))
+            {
+                body["imageUrls"] = request.ImageUrls;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Stream))
+            {
+                body["stream"] = request.Stream;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateIds))
+            {
+                body["templateIds"] = request.TemplateIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GeneralAnalyzeImage",
+                Version = "2024-06-03",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/ccai/app/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appId) + "/generalanalyzeImage",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GeneralAnalyzeImageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通用图片分析</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GeneralAnalyzeImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GeneralAnalyzeImageResponse
+        /// </returns>
+        public GeneralAnalyzeImageResponse GeneralAnalyzeImage(string workspaceId, string appId, GeneralAnalyzeImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GeneralAnalyzeImageWithOptions(workspaceId, appId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通用图片分析</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GeneralAnalyzeImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GeneralAnalyzeImageResponse
+        /// </returns>
+        public async Task<GeneralAnalyzeImageResponse> GeneralAnalyzeImageAsync(string workspaceId, string appId, GeneralAnalyzeImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GeneralAnalyzeImageWithOptionsAsync(workspaceId, appId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>语音文件调用大模型获取结果</para>
         /// </summary>
         /// 
