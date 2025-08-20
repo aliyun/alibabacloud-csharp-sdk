@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
                     [Validation(Required=false)]
                     public string AnchorUnionId { get; set; }
 
+                    [NameInMap("AnchorUnionIdInAlibaba")]
+                    [Validation(Required=false)]
+                    public string AnchorUnionIdInAlibaba { get; set; }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>ersqqdddf</para>
@@ -168,6 +172,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
                     [NameInMap("AnchorUnionId")]
                     [Validation(Required=false)]
                     public string AnchorUnionId { get; set; }
+
+                    [NameInMap("AnchorUnionIdInAlibaba")]
+                    [Validation(Required=false)]
+                    public string AnchorUnionIdInAlibaba { get; set; }
 
                     /// <summary>
                     /// <b>Example:</b>
