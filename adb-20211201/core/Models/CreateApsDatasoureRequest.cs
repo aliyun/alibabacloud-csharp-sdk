@@ -392,6 +392,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
             /// <summary>
             /// <para>The name of the database account of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>user</para>
             /// </summary>
             [NameInMap("UserName")]
             [Validation(Required=false)]

@@ -51,6 +51,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>36000</para>
+        /// </summary>
+        [NameInMap("ExecutionDurationInMillis")]
+        [Validation(Required=false)]
+        public long? ExecutionDurationInMillis { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>s202204291426hzpre60cfa*****-0003</para>
         /// </summary>
         [NameInMap("LastAttemptId")]
@@ -80,6 +88,25 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [NameInMap("ResourceGroupName")]
         [Validation(Required=false)]
         public string ResourceGroupName { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>36000</para>
+        /// </summary>
+        [NameInMap("ResourceProvisioningDurationInMillis")]
+        [Validation(Required=false)]
+        public long? ResourceProvisioningDurationInMillis { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>36000</para>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>false</c>
+        /// </summary>
+        [NameInMap("RunningStartTimeInMillis")]
+        [Validation(Required=false)]
+        public long? RunningStartTimeInMillis { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

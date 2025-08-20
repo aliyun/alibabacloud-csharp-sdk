@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public string SchemaName { get; set; }
 
+            [NameInMap("TableEngine")]
+            [Validation(Required=false)]
+            public string TableEngine { get; set; }
+
             [NameInMap("TableName")]
             [Validation(Required=false)]
             public string TableName { get; set; }
@@ -70,6 +74,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [NameInMap("ResourceGroup")]
         [Validation(Required=false)]
         public string ResourceGroup { get; set; }
+
+        [NameInMap("TableEngine")]
+        [Validation(Required=false)]
+        public string TableEngine { get; set; }
 
         [NameInMap("UpdatedAt")]
         [Validation(Required=false)]

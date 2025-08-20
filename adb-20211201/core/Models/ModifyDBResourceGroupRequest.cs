@@ -166,9 +166,25 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public string Category { get; set; }
 
+            [NameInMap("EnableUserEni")]
+            [Validation(Required=false)]
+            public bool? EnableUserEni { get; set; }
+
+            [NameInMap("HeadAllocateUnit")]
+            [Validation(Required=false)]
+            public string HeadAllocateUnit { get; set; }
+
+            [NameInMap("HeadDiskCapacity")]
+            [Validation(Required=false)]
+            public string HeadDiskCapacity { get; set; }
+
             [NameInMap("HeadSpec")]
             [Validation(Required=false)]
             public string HeadSpec { get; set; }
+
+            [NameInMap("HeadSpecType")]
+            [Validation(Required=false)]
+            public string HeadSpecType { get; set; }
 
             [NameInMap("WorkerGroups")]
             [Validation(Required=false)]
