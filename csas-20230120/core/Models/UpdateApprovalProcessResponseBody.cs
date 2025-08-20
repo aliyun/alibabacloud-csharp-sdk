@@ -17,6 +17,28 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public UpdateApprovalProcessResponseBodyProcessAppUninstallPolicies AppUninstallPolicies { get; set; }
             public class UpdateApprovalProcessResponseBodyProcessAppUninstallPolicies : TeaModel {
+                [NameInMap("ExternalProcessId")]
+                [Validation(Required=false)]
+                public string ExternalProcessId { get; set; }
+
+                [NameInMap("FieldMap")]
+                [Validation(Required=false)]
+                public List<UpdateApprovalProcessResponseBodyProcessAppUninstallPoliciesFieldMap> FieldMap { get; set; }
+                public class UpdateApprovalProcessResponseBodyProcessAppUninstallPoliciesFieldMap : TeaModel {
+                    [NameInMap("DisplayField")]
+                    [Validation(Required=false)]
+                    public string DisplayField { get; set; }
+
+                    [NameInMap("DisplayFieldValue")]
+                    [Validation(Required=false)]
+                    public string DisplayFieldValue { get; set; }
+
+                    [NameInMap("SystemField")]
+                    [Validation(Required=false)]
+                    public string SystemField { get; set; }
+
+                }
+
                 [NameInMap("PolicyIds")]
                 [Validation(Required=false)]
                 public List<string> PolicyIds { get; set; }
@@ -30,6 +52,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string SchemaId { get; set; }
 
             }
+
+            [NameInMap("ApprovalType")]
+            [Validation(Required=false)]
+            public int? ApprovalType { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
@@ -47,6 +73,28 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public UpdateApprovalProcessResponseBodyProcessDeviceRegistrationPolicies DeviceRegistrationPolicies { get; set; }
             public class UpdateApprovalProcessResponseBodyProcessDeviceRegistrationPolicies : TeaModel {
+                [NameInMap("ExternalProcessId")]
+                [Validation(Required=false)]
+                public string ExternalProcessId { get; set; }
+
+                [NameInMap("FieldMap")]
+                [Validation(Required=false)]
+                public List<UpdateApprovalProcessResponseBodyProcessDeviceRegistrationPoliciesFieldMap> FieldMap { get; set; }
+                public class UpdateApprovalProcessResponseBodyProcessDeviceRegistrationPoliciesFieldMap : TeaModel {
+                    [NameInMap("DisplayField")]
+                    [Validation(Required=false)]
+                    public string DisplayField { get; set; }
+
+                    [NameInMap("DisplayFieldValue")]
+                    [Validation(Required=false)]
+                    public string DisplayFieldValue { get; set; }
+
+                    [NameInMap("SystemField")]
+                    [Validation(Required=false)]
+                    public string SystemField { get; set; }
+
+                }
+
                 [NameInMap("PolicyIds")]
                 [Validation(Required=false)]
                 public List<string> PolicyIds { get; set; }
@@ -65,6 +113,28 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public UpdateApprovalProcessResponseBodyProcessDlpSendPolicies DlpSendPolicies { get; set; }
             public class UpdateApprovalProcessResponseBodyProcessDlpSendPolicies : TeaModel {
+                [NameInMap("ExternalProcessId")]
+                [Validation(Required=false)]
+                public string ExternalProcessId { get; set; }
+
+                [NameInMap("FieldMap")]
+                [Validation(Required=false)]
+                public List<UpdateApprovalProcessResponseBodyProcessDlpSendPoliciesFieldMap> FieldMap { get; set; }
+                public class UpdateApprovalProcessResponseBodyProcessDlpSendPoliciesFieldMap : TeaModel {
+                    [NameInMap("DisplayField")]
+                    [Validation(Required=false)]
+                    public string DisplayField { get; set; }
+
+                    [NameInMap("DisplayFieldValue")]
+                    [Validation(Required=false)]
+                    public string DisplayFieldValue { get; set; }
+
+                    [NameInMap("SystemField")]
+                    [Validation(Required=false)]
+                    public string SystemField { get; set; }
+
+                }
+
                 [NameInMap("PolicyIds")]
                 [Validation(Required=false)]
                 public List<string> PolicyIds { get; set; }
@@ -83,6 +153,28 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public UpdateApprovalProcessResponseBodyProcessDomainBlacklistPolicies DomainBlacklistPolicies { get; set; }
             public class UpdateApprovalProcessResponseBodyProcessDomainBlacklistPolicies : TeaModel {
+                [NameInMap("ExternalProcessId")]
+                [Validation(Required=false)]
+                public string ExternalProcessId { get; set; }
+
+                [NameInMap("FieldMap")]
+                [Validation(Required=false)]
+                public List<UpdateApprovalProcessResponseBodyProcessDomainBlacklistPoliciesFieldMap> FieldMap { get; set; }
+                public class UpdateApprovalProcessResponseBodyProcessDomainBlacklistPoliciesFieldMap : TeaModel {
+                    [NameInMap("DisplayField")]
+                    [Validation(Required=false)]
+                    public string DisplayField { get; set; }
+
+                    [NameInMap("DisplayFieldValue")]
+                    [Validation(Required=false)]
+                    public string DisplayFieldValue { get; set; }
+
+                    [NameInMap("SystemField")]
+                    [Validation(Required=false)]
+                    public string SystemField { get; set; }
+
+                }
+
                 [NameInMap("PolicyIds")]
                 [Validation(Required=false)]
                 public List<string> PolicyIds { get; set; }
@@ -101,6 +193,28 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public UpdateApprovalProcessResponseBodyProcessDomainWhitelistPolicies DomainWhitelistPolicies { get; set; }
             public class UpdateApprovalProcessResponseBodyProcessDomainWhitelistPolicies : TeaModel {
+                [NameInMap("ExternalProcessId")]
+                [Validation(Required=false)]
+                public string ExternalProcessId { get; set; }
+
+                [NameInMap("FieldMap")]
+                [Validation(Required=false)]
+                public List<UpdateApprovalProcessResponseBodyProcessDomainWhitelistPoliciesFieldMap> FieldMap { get; set; }
+                public class UpdateApprovalProcessResponseBodyProcessDomainWhitelistPoliciesFieldMap : TeaModel {
+                    [NameInMap("DisplayField")]
+                    [Validation(Required=false)]
+                    public string DisplayField { get; set; }
+
+                    [NameInMap("DisplayFieldValue")]
+                    [Validation(Required=false)]
+                    public string DisplayFieldValue { get; set; }
+
+                    [NameInMap("SystemField")]
+                    [Validation(Required=false)]
+                    public string SystemField { get; set; }
+
+                }
+
                 [NameInMap("PolicyIds")]
                 [Validation(Required=false)]
                 public List<string> PolicyIds { get; set; }
@@ -119,6 +233,28 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public UpdateApprovalProcessResponseBodyProcessEndpointHardeningPolicies EndpointHardeningPolicies { get; set; }
             public class UpdateApprovalProcessResponseBodyProcessEndpointHardeningPolicies : TeaModel {
+                [NameInMap("ExternalProcessId")]
+                [Validation(Required=false)]
+                public string ExternalProcessId { get; set; }
+
+                [NameInMap("FieldMap")]
+                [Validation(Required=false)]
+                public List<UpdateApprovalProcessResponseBodyProcessEndpointHardeningPoliciesFieldMap> FieldMap { get; set; }
+                public class UpdateApprovalProcessResponseBodyProcessEndpointHardeningPoliciesFieldMap : TeaModel {
+                    [NameInMap("DisplayField")]
+                    [Validation(Required=false)]
+                    public string DisplayField { get; set; }
+
+                    [NameInMap("DisplayFieldValue")]
+                    [Validation(Required=false)]
+                    public string DisplayFieldValue { get; set; }
+
+                    [NameInMap("SystemField")]
+                    [Validation(Required=false)]
+                    public string SystemField { get; set; }
+
+                }
+
                 [NameInMap("PolicyIds")]
                 [Validation(Required=false)]
                 public List<string> PolicyIds { get; set; }
@@ -129,10 +265,40 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 
             }
 
+            [NameInMap("EventLabel")]
+            [Validation(Required=false)]
+            public string EventLabel { get; set; }
+
+            [NameInMap("ExternalConfig")]
+            [Validation(Required=false)]
+            public string ExternalConfig { get; set; }
+
             [NameInMap("PeripheraBlockPolicies")]
             [Validation(Required=false)]
             public UpdateApprovalProcessResponseBodyProcessPeripheraBlockPolicies PeripheraBlockPolicies { get; set; }
             public class UpdateApprovalProcessResponseBodyProcessPeripheraBlockPolicies : TeaModel {
+                [NameInMap("ExternalProcessId")]
+                [Validation(Required=false)]
+                public string ExternalProcessId { get; set; }
+
+                [NameInMap("FieldMap")]
+                [Validation(Required=false)]
+                public List<UpdateApprovalProcessResponseBodyProcessPeripheraBlockPoliciesFieldMap> FieldMap { get; set; }
+                public class UpdateApprovalProcessResponseBodyProcessPeripheraBlockPoliciesFieldMap : TeaModel {
+                    [NameInMap("DisplayField")]
+                    [Validation(Required=false)]
+                    public string DisplayField { get; set; }
+
+                    [NameInMap("DisplayFieldValue")]
+                    [Validation(Required=false)]
+                    public string DisplayFieldValue { get; set; }
+
+                    [NameInMap("SystemField")]
+                    [Validation(Required=false)]
+                    public string SystemField { get; set; }
+
+                }
+
                 [NameInMap("PolicyIds")]
                 [Validation(Required=false)]
                 public List<string> PolicyIds { get; set; }
@@ -181,6 +347,28 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public UpdateApprovalProcessResponseBodyProcessSoftwareBlockPolicies SoftwareBlockPolicies { get; set; }
             public class UpdateApprovalProcessResponseBodyProcessSoftwareBlockPolicies : TeaModel {
+                [NameInMap("ExternalProcessId")]
+                [Validation(Required=false)]
+                public string ExternalProcessId { get; set; }
+
+                [NameInMap("FieldMap")]
+                [Validation(Required=false)]
+                public List<UpdateApprovalProcessResponseBodyProcessSoftwareBlockPoliciesFieldMap> FieldMap { get; set; }
+                public class UpdateApprovalProcessResponseBodyProcessSoftwareBlockPoliciesFieldMap : TeaModel {
+                    [NameInMap("DisplayField")]
+                    [Validation(Required=false)]
+                    public string DisplayField { get; set; }
+
+                    [NameInMap("DisplayFieldValue")]
+                    [Validation(Required=false)]
+                    public string DisplayFieldValue { get; set; }
+
+                    [NameInMap("SystemField")]
+                    [Validation(Required=false)]
+                    public string SystemField { get; set; }
+
+                }
+
                 [NameInMap("PolicyIds")]
                 [Validation(Required=false)]
                 public List<string> PolicyIds { get; set; }
@@ -199,6 +387,28 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public UpdateApprovalProcessResponseBodyProcessSoftwareHardeningPolicies SoftwareHardeningPolicies { get; set; }
             public class UpdateApprovalProcessResponseBodyProcessSoftwareHardeningPolicies : TeaModel {
+                [NameInMap("ExternalProcessId")]
+                [Validation(Required=false)]
+                public string ExternalProcessId { get; set; }
+
+                [NameInMap("FieldMap")]
+                [Validation(Required=false)]
+                public List<UpdateApprovalProcessResponseBodyProcessSoftwareHardeningPoliciesFieldMap> FieldMap { get; set; }
+                public class UpdateApprovalProcessResponseBodyProcessSoftwareHardeningPoliciesFieldMap : TeaModel {
+                    [NameInMap("DisplayField")]
+                    [Validation(Required=false)]
+                    public string DisplayField { get; set; }
+
+                    [NameInMap("DisplayFieldValue")]
+                    [Validation(Required=false)]
+                    public string DisplayFieldValue { get; set; }
+
+                    [NameInMap("SystemField")]
+                    [Validation(Required=false)]
+                    public string SystemField { get; set; }
+
+                }
+
                 [NameInMap("PolicyIds")]
                 [Validation(Required=false)]
                 public List<string> PolicyIds { get; set; }

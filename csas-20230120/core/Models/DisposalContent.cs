@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public string AlertContentEn { get; set; }
 
+        [NameInMap("AlertIntervalSeconds")]
+        [Validation(Required=false)]
+        public long? AlertIntervalSeconds { get; set; }
+
         /// <summary>
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -58,6 +62,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [NameInMap("ProhibitActions")]
         [Validation(Required=false)]
         public List<string> ProhibitActions { get; set; }
+
+        [NameInMap("ProhibitSoftwareIds")]
+        [Validation(Required=false)]
+        public List<string> ProhibitSoftwareIds { get; set; }
 
     }
 

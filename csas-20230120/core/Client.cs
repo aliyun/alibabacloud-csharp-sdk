@@ -12487,9 +12487,30 @@ namespace AlibabaCloud.SDK.Csas20230120
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             UpdateApprovalProcessShrinkRequest request = new UpdateApprovalProcessShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MatchSchemaConfigs))
+            {
+                request.MatchSchemaConfigsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MatchSchemaConfigs, "MatchSchemaConfigs", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MatchSchemas))
             {
                 request.MatchSchemasShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MatchSchemas, "MatchSchemas", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApprovalType))
+            {
+                query["ApprovalType"] = request.ApprovalType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventLabel))
+            {
+                query["EventLabel"] = request.EventLabel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalConfig))
+            {
+                query["ExternalConfig"] = request.ExternalConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchSchemaConfigsShrink))
+            {
+                query["MatchSchemaConfigs"] = request.MatchSchemaConfigsShrink;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
@@ -12520,6 +12541,7 @@ namespace AlibabaCloud.SDK.Csas20230120
             );
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -12557,9 +12579,30 @@ namespace AlibabaCloud.SDK.Csas20230120
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             UpdateApprovalProcessShrinkRequest request = new UpdateApprovalProcessShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MatchSchemaConfigs))
+            {
+                request.MatchSchemaConfigsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MatchSchemaConfigs, "MatchSchemaConfigs", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MatchSchemas))
             {
                 request.MatchSchemasShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MatchSchemas, "MatchSchemas", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApprovalType))
+            {
+                query["ApprovalType"] = request.ApprovalType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventLabel))
+            {
+                query["EventLabel"] = request.EventLabel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalConfig))
+            {
+                query["ExternalConfig"] = request.ExternalConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchSchemaConfigsShrink))
+            {
+                query["MatchSchemaConfigs"] = request.MatchSchemaConfigsShrink;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
@@ -12590,6 +12633,7 @@ namespace AlibabaCloud.SDK.Csas20230120
             );
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params

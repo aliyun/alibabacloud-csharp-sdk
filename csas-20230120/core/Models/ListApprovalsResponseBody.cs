@@ -85,6 +85,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 
             }
 
+            [NameInMap("ApprovalType")]
+            [Validation(Required=false)]
+            public int? ApprovalType { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>2022-11-15 22:11:55</para>
