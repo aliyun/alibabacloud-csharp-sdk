@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.IntlMarket20250812.Models
             [Validation(Required=false)]
             public long? CanPromFee { get; set; }
 
+            [NameInMap("CouponDesc")]
+            [Validation(Required=false)]
+            public string CouponDesc { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>CouponName</para>
