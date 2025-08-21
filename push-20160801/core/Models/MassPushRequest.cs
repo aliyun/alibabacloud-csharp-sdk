@@ -116,6 +116,17 @@ namespace AlibabaCloud.SDK.Push20160801.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>0</para>
+            /// 
+            /// <b>if can be null:</b>
+            /// <c>false</c>
+            /// </summary>
+            [NameInMap("AndroidMeizuNoticeMsgType")]
+            [Validation(Required=false)]
+            public int? AndroidMeizuNoticeMsgType { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>VOIP</para>
             /// </summary>
             [NameInMap("AndroidMessageHuaweiCategory")]
