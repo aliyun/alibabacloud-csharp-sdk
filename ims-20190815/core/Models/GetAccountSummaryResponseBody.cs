@@ -36,6 +36,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [Validation(Required=false)]
             public int? AccessKeysPerUserQuota { get; set; }
 
+            [NameInMap("AccountAccessKeysPerAccountQuota")]
+            [Validation(Required=false)]
+            public int? AccountAccessKeysPerAccountQuota { get; set; }
+
             /// <summary>
             /// <para>The maximum number of custom policies that can be added to a RAM user group.</para>
             /// 

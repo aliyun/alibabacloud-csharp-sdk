@@ -160,6 +160,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [Validation(Required=false)]
             public bool? IsMultiTenant { get; set; }
 
+            [NameInMap("ProtocolVersion")]
+            [Validation(Required=false)]
+            public string ProtocolVersion { get; set; }
+
             /// <summary>
             /// <para>The callback URL.</para>
             /// </summary>

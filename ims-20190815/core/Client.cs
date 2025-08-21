@@ -1028,6 +1028,10 @@ namespace AlibabaCloud.SDK.Ims20190815
             {
                 query["PredefinedScopes"] = request.PredefinedScopes;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProtocolVersion))
+            {
+                query["ProtocolVersion"] = request.ProtocolVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RedirectUris))
             {
                 query["RedirectUris"] = request.RedirectUris;
@@ -1105,6 +1109,10 @@ namespace AlibabaCloud.SDK.Ims20190815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PredefinedScopes))
             {
                 query["PredefinedScopes"] = request.PredefinedScopes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProtocolVersion))
+            {
+                query["ProtocolVersion"] = request.ProtocolVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RedirectUris))
             {
