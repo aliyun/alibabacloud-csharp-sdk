@@ -2573,6 +2573,10 @@ namespace AlibabaCloud.SDK.Csas20230120
             {
                 request.DocumentControlShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DocumentControl, "DocumentControl", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ImageControl))
+            {
+                request.ImageControlShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ImageControl, "ImageControl", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CsvControlShrink))
             {
@@ -2590,6 +2594,10 @@ namespace AlibabaCloud.SDK.Csas20230120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filename))
             {
                 body["Filename"] = request.Filename;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageControlShrink))
+            {
+                body["ImageControl"] = request.ImageControlShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageEmbedJpegQuality))
             {
@@ -2671,6 +2679,10 @@ namespace AlibabaCloud.SDK.Csas20230120
             {
                 request.DocumentControlShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DocumentControl, "DocumentControl", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ImageControl))
+            {
+                request.ImageControlShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ImageControl, "ImageControl", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CsvControlShrink))
             {
@@ -2688,6 +2700,10 @@ namespace AlibabaCloud.SDK.Csas20230120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filename))
             {
                 body["Filename"] = request.Filename;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageControlShrink))
+            {
+                body["ImageControl"] = request.ImageControlShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageEmbedJpegQuality))
             {

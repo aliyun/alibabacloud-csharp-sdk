@@ -207,6 +207,178 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public string Filename { get; set; }
 
+        [NameInMap("ImageControl")]
+        [Validation(Required=false)]
+        public CreateWmEmbedTaskRequestImageControl ImageControl { get; set; }
+        public class CreateWmEmbedTaskRequestImageControl : TeaModel {
+            [NameInMap("LogoVisibleControl")]
+            [Validation(Required=false)]
+            public CreateWmEmbedTaskRequestImageControlLogoVisibleControl LogoVisibleControl { get; set; }
+            public class CreateWmEmbedTaskRequestImageControlLogoVisibleControl : TeaModel {
+                [NameInMap("Angle")]
+                [Validation(Required=false)]
+                public long? Angle { get; set; }
+
+                [NameInMap("LogoBase64")]
+                [Validation(Required=false)]
+                public string LogoBase64 { get; set; }
+
+                [NameInMap("Margin")]
+                [Validation(Required=false)]
+                public CreateWmEmbedTaskRequestImageControlLogoVisibleControlMargin Margin { get; set; }
+                public class CreateWmEmbedTaskRequestImageControlLogoVisibleControlMargin : TeaModel {
+                    [NameInMap("Bottom")]
+                    [Validation(Required=false)]
+                    public float? Bottom { get; set; }
+
+                    [NameInMap("Left")]
+                    [Validation(Required=false)]
+                    public float? Left { get; set; }
+
+                    [NameInMap("Right")]
+                    [Validation(Required=false)]
+                    public float? Right { get; set; }
+
+                    [NameInMap("Top")]
+                    [Validation(Required=false)]
+                    public float? Top { get; set; }
+
+                }
+
+                [NameInMap("Mode")]
+                [Validation(Required=false)]
+                public string Mode { get; set; }
+
+                [NameInMap("Opacity")]
+                [Validation(Required=false)]
+                public int? Opacity { get; set; }
+
+                [NameInMap("PosAx")]
+                [Validation(Required=false)]
+                public float? PosAx { get; set; }
+
+                [NameInMap("PosAy")]
+                [Validation(Required=false)]
+                public float? PosAy { get; set; }
+
+                [NameInMap("PosX")]
+                [Validation(Required=false)]
+                public long? PosX { get; set; }
+
+                [NameInMap("PosY")]
+                [Validation(Required=false)]
+                public long? PosY { get; set; }
+
+                [NameInMap("SpaceX")]
+                [Validation(Required=false)]
+                public long? SpaceX { get; set; }
+
+                [NameInMap("SpaceY")]
+                [Validation(Required=false)]
+                public long? SpaceY { get; set; }
+
+                [NameInMap("Visible")]
+                [Validation(Required=false)]
+                public bool? Visible { get; set; }
+
+            }
+
+            [NameInMap("MetadataControl")]
+            [Validation(Required=false)]
+            public CreateWmEmbedTaskRequestImageControlMetadataControl MetadataControl { get; set; }
+            public class CreateWmEmbedTaskRequestImageControlMetadataControl : TeaModel {
+                [NameInMap("Enable")]
+                [Validation(Required=false)]
+                public bool? Enable { get; set; }
+
+                [NameInMap("XmpKvBase64")]
+                [Validation(Required=false)]
+                public string XmpKvBase64 { get; set; }
+
+            }
+
+            [NameInMap("TextVisibleControl")]
+            [Validation(Required=false)]
+            public CreateWmEmbedTaskRequestImageControlTextVisibleControl TextVisibleControl { get; set; }
+            public class CreateWmEmbedTaskRequestImageControlTextVisibleControl : TeaModel {
+                [NameInMap("Angle")]
+                [Validation(Required=false)]
+                public long? Angle { get; set; }
+
+                [NameInMap("FontColor")]
+                [Validation(Required=false)]
+                public string FontColor { get; set; }
+
+                [NameInMap("FontSize")]
+                [Validation(Required=false)]
+                public long? FontSize { get; set; }
+
+                [NameInMap("Margin")]
+                [Validation(Required=false)]
+                public CreateWmEmbedTaskRequestImageControlTextVisibleControlMargin Margin { get; set; }
+                public class CreateWmEmbedTaskRequestImageControlTextVisibleControlMargin : TeaModel {
+                    [NameInMap("Bottom")]
+                    [Validation(Required=false)]
+                    public float? Bottom { get; set; }
+
+                    [NameInMap("Left")]
+                    [Validation(Required=false)]
+                    public float? Left { get; set; }
+
+                    [NameInMap("Right")]
+                    [Validation(Required=false)]
+                    public float? Right { get; set; }
+
+                    [NameInMap("Top")]
+                    [Validation(Required=false)]
+                    public float? Top { get; set; }
+
+                }
+
+                [NameInMap("Mode")]
+                [Validation(Required=false)]
+                public string Mode { get; set; }
+
+                [NameInMap("Opacity")]
+                [Validation(Required=false)]
+                public int? Opacity { get; set; }
+
+                [NameInMap("PosAx")]
+                [Validation(Required=false)]
+                public float? PosAx { get; set; }
+
+                [NameInMap("PosAy")]
+                [Validation(Required=false)]
+                public float? PosAy { get; set; }
+
+                [NameInMap("PosX")]
+                [Validation(Required=false)]
+                public long? PosX { get; set; }
+
+                [NameInMap("PosY")]
+                [Validation(Required=false)]
+                public long? PosY { get; set; }
+
+                [NameInMap("SpaceX")]
+                [Validation(Required=false)]
+                public long? SpaceX { get; set; }
+
+                [NameInMap("SpaceY")]
+                [Validation(Required=false)]
+                public long? SpaceY { get; set; }
+
+                [NameInMap("Visible")]
+                [Validation(Required=false)]
+                public bool? Visible { get; set; }
+
+                [NameInMap("VisibleText")]
+                [Validation(Required=false)]
+                public string VisibleText { get; set; }
+
+            }
+
+        }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>95</para>

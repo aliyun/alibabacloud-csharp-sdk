@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public string Filename { get; set; }
 
+        [NameInMap("ImageControl")]
+        [Validation(Required=false)]
+        public string ImageControlShrink { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>95</para>
