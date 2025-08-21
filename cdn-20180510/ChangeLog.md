@@ -1,3 +1,6 @@
+2025-08-21 Version: 6.0.2
+- Generated csharp 2018-05-10 for Cdn.
+
 2025-07-16 Version: 6.0.1
 - Update API DescribeDomainUsageData: add request parameters ServiceType.
 
