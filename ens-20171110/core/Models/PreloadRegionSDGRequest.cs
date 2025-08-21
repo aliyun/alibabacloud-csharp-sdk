@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public List<string> DestinationRegionIds { get; set; }
 
+        [NameInMap("DiskType")]
+        [Validation(Required=false)]
+        public string DiskType { get; set; }
+
         /// <summary>
         /// <para>An array that consists of queried namespaces.</para>
         /// </summary>

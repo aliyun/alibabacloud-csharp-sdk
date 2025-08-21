@@ -19,6 +19,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string DeploymentType { get; set; }
 
+        [NameInMap("DiskAccessProtocol")]
+        [Validation(Required=false)]
+        public string DiskAccessProtocol { get; set; }
+
+        [NameInMap("DiskType")]
+        [Validation(Required=false)]
+        public string DiskType { get; set; }
+
         /// <summary>
         /// <para>The IDs of the instances. The value is a JSON array that consists of up to 100 IDs.</para>
         /// <para>This parameter is required.</para>

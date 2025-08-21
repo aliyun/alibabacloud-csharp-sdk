@@ -102,6 +102,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
             }
 
+            [NameInMap("BillingCycle")]
+            [Validation(Required=false)]
+            public string BillingCycle { get; set; }
+
+            [NameInMap("CreationDiskType")]
+            [Validation(Required=false)]
+            public string CreationDiskType { get; set; }
+
             /// <summary>
             /// <para>The ID of the instance on which the SDG is created.</para>
             /// 
@@ -168,6 +176,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
+
+                [NameInMap("DiskType")]
+                [Validation(Required=false)]
+                public string DiskType { get; set; }
 
                 /// <summary>
                 /// <para>The namespace.</para>

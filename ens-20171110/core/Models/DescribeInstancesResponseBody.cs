@@ -206,6 +206,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
                 }
 
+                [NameInMap("DeletionProtection")]
+                [Validation(Required=false)]
+                public bool? DeletionProtection { get; set; }
+
                 /// <summary>
                 /// <para>The total size of the disk. Unit: MiB.</para>
                 /// 

@@ -50,6 +50,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string ImageName { get; set; }
 
+        [NameInMap("LicenseType")]
+        [Validation(Required=false)]
+        public string LicenseType { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>tmp-hybrid</para>
@@ -93,8 +97,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string OSVersion { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>centos</para>
         /// </summary>

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateSDGRequest : TeaModel {
+        [NameInMap("BillingCycle")]
+        [Validation(Required=false)]
+        public string BillingCycle { get; set; }
+
         /// <summary>
         /// <para>The description of the SDG.</para>
         /// <remarks>
@@ -21,6 +25,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
+
+        [NameInMap("DiskType")]
+        [Validation(Required=false)]
+        public string DiskType { get; set; }
 
         /// <summary>
         /// <para>The ID of the SDG from which you want to create an SDG.</para>

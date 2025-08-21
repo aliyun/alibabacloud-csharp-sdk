@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ModifyInstanceAttributeRequest : TeaModel {
+        [NameInMap("DeletionProtection")]
+        [Validation(Required=false)]
+        public bool? DeletionProtection { get; set; }
+
         /// <summary>
         /// <para>The hostname of the Elastic Compute Service (ECS) instance. The value can be 2 to 64 characters in length. You can use periods (.) to separate the value into multiple segments. Each segment can contain letters, digits, hyphens (-), and periods. Consecutive periods or hyphens are not allowed. The name cannot start or end with a period (.) or a hyphen (-).</para>
         /// 

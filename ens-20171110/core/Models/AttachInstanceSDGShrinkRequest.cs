@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class AttachInstanceSDGShrinkRequest : TeaModel {
+        [NameInMap("DiskAccessProtocol")]
+        [Validation(Required=false)]
+        public string DiskAccessProtocol { get; set; }
+
+        [NameInMap("DiskType")]
+        [Validation(Required=false)]
+        public string DiskType { get; set; }
+
         /// <summary>
         /// <para>The IDs of the instances.</para>
         /// <para>This parameter is required.</para>

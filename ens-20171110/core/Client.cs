@@ -1442,6 +1442,14 @@ namespace AlibabaCloud.SDK.Ens20171110
                 request.LoadOptShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LoadOpt, "LoadOpt", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskAccessProtocol))
+            {
+                query["DiskAccessProtocol"] = request.DiskAccessProtocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskType))
+            {
+                query["DiskType"] = request.DiskType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdsShrink))
             {
                 query["InstanceIds"] = request.InstanceIdsShrink;
@@ -1502,6 +1510,14 @@ namespace AlibabaCloud.SDK.Ens20171110
                 request.LoadOptShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LoadOpt, "LoadOpt", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskAccessProtocol))
+            {
+                query["DiskAccessProtocol"] = request.DiskAccessProtocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskType))
+            {
+                query["DiskType"] = request.DiskType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdsShrink))
             {
                 query["InstanceIds"] = request.InstanceIdsShrink;
@@ -13002,6 +13018,14 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["DeploymentType"] = request.DeploymentType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskAccessProtocol))
+            {
+                query["DiskAccessProtocol"] = request.DiskAccessProtocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskType))
+            {
+                query["DiskType"] = request.DiskType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdsShrink))
             {
                 query["InstanceIds"] = request.InstanceIdsShrink;
@@ -13057,6 +13081,14 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentType))
             {
                 query["DeploymentType"] = request.DeploymentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskAccessProtocol))
+            {
+                query["DiskAccessProtocol"] = request.DiskAccessProtocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskType))
+            {
+                query["DiskType"] = request.DiskType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdsShrink))
             {
@@ -28940,6 +28972,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["ImageName"] = request.ImageName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LicenseType))
+            {
+                query["LicenseType"] = request.LicenseType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OSSBucket))
             {
                 query["OSSBucket"] = request.OSSBucket;
@@ -29031,6 +29067,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageName))
             {
                 query["ImageName"] = request.ImageName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LicenseType))
+            {
+                query["LicenseType"] = request.LicenseType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OSSBucket))
             {
@@ -31737,6 +31777,10 @@ namespace AlibabaCloud.SDK.Ens20171110
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeletionProtection))
+            {
+                query["DeletionProtection"] = request.DeletionProtection;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HostName))
             {
                 query["HostName"] = request.HostName;
@@ -31804,6 +31848,10 @@ namespace AlibabaCloud.SDK.Ens20171110
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeletionProtection))
+            {
+                query["DeletionProtection"] = request.DeletionProtection;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HostName))
             {
                 query["HostName"] = request.HostName;
@@ -33762,6 +33810,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["DestinationRegionIds"] = request.DestinationRegionIdsShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskType))
+            {
+                query["DiskType"] = request.DiskType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespacesShrink))
             {
                 query["Namespaces"] = request.NamespacesShrink;
@@ -33825,6 +33877,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationRegionIdsShrink))
             {
                 query["DestinationRegionIds"] = request.DestinationRegionIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskType))
+            {
+                query["DiskType"] = request.DiskType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespacesShrink))
             {
@@ -38794,6 +38850,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["DataDisk"] = request.DataDiskShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeletionProtection))
+            {
+                query["DeletionProtection"] = request.DeletionProtection;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnsRegionId))
             {
                 query["EnsRegionId"] = request.EnsRegionId;
@@ -38993,6 +39053,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataDiskShrink))
             {
                 query["DataDisk"] = request.DataDiskShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeletionProtection))
+            {
+                query["DeletionProtection"] = request.DeletionProtection;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnsRegionId))
             {
