@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class QueryMusicTypeShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("DeviceInfo")]
         [Validation(Required=false)]
         public string DeviceInfoShrink { get; set; }
@@ -17,6 +20,9 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         [Validation(Required=false)]
         public string PayloadShrink { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("UserInfo")]
         [Validation(Required=false)]
         public string UserInfoShrink { get; set; }

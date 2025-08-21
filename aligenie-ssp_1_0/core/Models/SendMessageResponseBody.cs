@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class SendMessageResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>SUCCESS</para>
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -17,6 +21,10 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public bool? Result { get; set; }

@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         [Validation(Required=false)]
         public string CalleePhoneNum { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("DeviceInfo")]
         [Validation(Required=false)]
         public CheckAndDoVoipCallForHotelRequestDeviceInfo DeviceInfo { get; set; }
@@ -47,6 +50,9 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 
         }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("UserInfo")]
         [Validation(Required=false)]
         public CheckAndDoVoipCallForHotelRequestUserInfo UserInfo { get; set; }

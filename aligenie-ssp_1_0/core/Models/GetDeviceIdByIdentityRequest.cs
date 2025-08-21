@@ -9,22 +9,50 @@ using Tea;
 namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class GetDeviceIdByIdentityRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>129****0946</para>
+        /// </summary>
         [NameInMap("EncodeKey")]
         [Validation(Required=false)]
         public string EncodeKey { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PROJECT_ID</para>
+        /// </summary>
         [NameInMap("EncodeType")]
         [Validation(Required=false)]
         public string EncodeType { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>b4:xx:xx:xx:65:2b</para>
+        /// </summary>
         [NameInMap("IdentityId")]
         [Validation(Required=false)]
         public string IdentityId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MAC</para>
+        /// </summary>
         [NameInMap("IdentityType")]
         [Validation(Required=false)]
         public string IdentityType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Mm*****XnZ8</para>
+        /// </summary>
         [NameInMap("ProductKey")]
         [Validation(Required=false)]
         public string ProductKey { get; set; }

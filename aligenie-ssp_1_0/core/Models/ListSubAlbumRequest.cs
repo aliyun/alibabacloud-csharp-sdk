@@ -36,34 +36,59 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         }
 
         /// <summary>
-        /// request
+        /// <para>request</para>
         /// </summary>
         [NameInMap("QuerySubscriptionAlbumRequest")]
         [Validation(Required=false)]
         public ListSubAlbumRequestQuerySubscriptionAlbumRequest QuerySubscriptionAlbumRequest { get; set; }
         public class ListSubAlbumRequestQuerySubscriptionAlbumRequest : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>4476001</para>
+            /// </summary>
             [NameInMap("AlbumId")]
             [Validation(Required=false)]
             public string AlbumId { get; set; }
 
+            /// <summary>
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>80011</para>
+            /// </summary>
             [NameInMap("CategoryId")]
             [Validation(Required=false)]
             public int? CategoryId { get; set; }
 
+            /// <summary>
+            /// <para>This parameter is required.</para>
+            /// </summary>
             [NameInMap("Page")]
             [Validation(Required=false)]
             public ListSubAlbumRequestQuerySubscriptionAlbumRequestPage Page { get; set; }
             public class ListSubAlbumRequestQuerySubscriptionAlbumRequestPage : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("PageNum")]
                 [Validation(Required=false)]
                 public int? PageNum { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>10</para>
+                /// </summary>
                 [NameInMap("PageSize")]
                 [Validation(Required=false)]
                 public int? PageSize { get; set; }
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>睡前故事</para>
+            /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]
             public string Title { get; set; }

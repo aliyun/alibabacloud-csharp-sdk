@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class ListCommonCateFirstFloorRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>song</para>
+        /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }

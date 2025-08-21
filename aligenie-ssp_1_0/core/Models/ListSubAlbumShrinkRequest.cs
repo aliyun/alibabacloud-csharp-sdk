@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string DeviceInfoShrink { get; set; }
 
         /// <summary>
-        /// request
+        /// <para>request</para>
         /// </summary>
         [NameInMap("QuerySubscriptionAlbumRequest")]
         [Validation(Required=false)]

@@ -9,14 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class GetDeviceTagResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>200</para>
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>success</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0EC7*726E</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -25,6 +37,10 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         [Validation(Required=false)]
         public GetDeviceTagResponseBodyResult Result { get; set; }
         public class GetDeviceTagResponseBodyResult : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>{       &quot;antest1&quot;: &quot;antest1&quot;,       &quot;antest&quot;: &quot;a&quot;     }</para>
+            /// </summary>
             [NameInMap("DeviceTags")]
             [Validation(Required=false)]
             public Dictionary<string, object> DeviceTags { get; set; }

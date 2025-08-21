@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
                     [Validation(Required=false)]
                     public string DeviceName { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>true</para>
+                    /// </summary>
                     [NameInMap("Online")]
                     [Validation(Required=false)]
                     public bool? Online { get; set; }
@@ -44,6 +48,14 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
                     [NameInMap("OpenDeviceId")]
                     [Validation(Required=false)]
                     public string OpenDeviceId { get; set; }
+
+                    [NameInMap("TmeDeviceId")]
+                    [Validation(Required=false)]
+                    public string TmeDeviceId { get; set; }
+
+                    [NameInMap("TmeProductId")]
+                    [Validation(Required=false)]
+                    public string TmeProductId { get; set; }
 
                 }
 

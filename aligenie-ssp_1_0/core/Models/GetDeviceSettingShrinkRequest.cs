@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         [Validation(Required=false)]
         public string DeviceInfoShrink { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("Keys")]
         [Validation(Required=false)]
         public string KeysShrink { get; set; }
