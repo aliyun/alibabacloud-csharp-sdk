@@ -38,6 +38,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         [Validation(Required=false)]
         public string EventType { get; set; }
 
+        [NameInMap("Ip")]
+        [Validation(Required=false)]
+        public string Ip { get; set; }
+
         /// <summary>
         /// <para>The number of the page to return.</para>
         /// <para>This parameter is required.</para>

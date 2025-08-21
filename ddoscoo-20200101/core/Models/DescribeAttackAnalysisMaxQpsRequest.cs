@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
+        [NameInMap("Ip")]
+        [Validation(Required=false)]
+        public string Ip { get; set; }
+
         /// <summary>
         /// <para>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</para>
         /// <para>This parameter is required.</para>
