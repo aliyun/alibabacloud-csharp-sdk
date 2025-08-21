@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         [Validation(Required=false)]
         public List<DescribeInstanceResponseBodyCategories> Categories { get; set; }
         public class DescribeInstanceResponseBodyCategories : TeaModel {
+            [NameInMap("AbilityType")]
+            [Validation(Required=false)]
+            public string AbilityType { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>30000066832</para>

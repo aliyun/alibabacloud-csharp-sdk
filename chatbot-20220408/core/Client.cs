@@ -7188,6 +7188,10 @@ namespace AlibabaCloud.SDK.Chatbot20220408
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AbilityType))
+            {
+                query["AbilityType"] = request.AbilityType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentKey))
             {
                 query["AgentKey"] = request.AgentKey;
@@ -7240,6 +7244,10 @@ namespace AlibabaCloud.SDK.Chatbot20220408
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AbilityType))
+            {
+                query["AbilityType"] = request.AbilityType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentKey))
             {
                 query["AgentKey"] = request.AgentKey;
@@ -10419,6 +10427,142 @@ namespace AlibabaCloud.SDK.Chatbot20220408
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SearchFaqWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>大模型问答调试信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TongyiChatDebugInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TongyiChatDebugInfoResponse
+        /// </returns>
+        public TongyiChatDebugInfoResponse TongyiChatDebugInfoWithOptions(TongyiChatDebugInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentKey))
+            {
+                query["AgentKey"] = request.AgentKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageId))
+            {
+                query["MessageId"] = request.MessageId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TongyiChatDebugInfo",
+                Version = "2022-04-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TongyiChatDebugInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>大模型问答调试信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TongyiChatDebugInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TongyiChatDebugInfoResponse
+        /// </returns>
+        public async Task<TongyiChatDebugInfoResponse> TongyiChatDebugInfoWithOptionsAsync(TongyiChatDebugInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentKey))
+            {
+                query["AgentKey"] = request.AgentKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageId))
+            {
+                query["MessageId"] = request.MessageId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TongyiChatDebugInfo",
+                Version = "2022-04-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TongyiChatDebugInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>大模型问答调试信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TongyiChatDebugInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TongyiChatDebugInfoResponse
+        /// </returns>
+        public TongyiChatDebugInfoResponse TongyiChatDebugInfo(TongyiChatDebugInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return TongyiChatDebugInfoWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>大模型问答调试信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TongyiChatDebugInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TongyiChatDebugInfoResponse
+        /// </returns>
+        public async Task<TongyiChatDebugInfoResponse> TongyiChatDebugInfoAsync(TongyiChatDebugInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await TongyiChatDebugInfoWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
