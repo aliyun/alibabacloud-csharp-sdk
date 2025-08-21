@@ -1,3 +1,7 @@
+2025-08-21 Version: 2.1.0
+- Support API GetEmonAlarmRecordStatisticsDistribute.
+
+
 2025-06-12 Version: 2.0.3
 - Update API InstallUserPlugins: add request parameters force.
 - Update API ListInstance: add request parameters status.

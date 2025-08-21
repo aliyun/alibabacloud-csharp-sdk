@@ -18,7 +18,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._signatureAlgorithm = "v2";
             this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("elasticsearch", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -855,7 +854,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CapacityPlanResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<CapacityPlanResponse>(DoROARequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.Pathname, params_.BodyType, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -913,7 +912,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CapacityPlanResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<CapacityPlanResponse>(await DoROARequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.Pathname, params_.BodyType, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -6296,6 +6295,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await DescribeRegionsWithOptionsAsync(headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看备份设置</para>
+        /// </summary>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -6327,6 +6331,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeSnapshotSettingResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看备份设置</para>
+        /// </summary>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -6358,6 +6367,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<DescribeSnapshotSettingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看备份设置</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// DescribeSnapshotSettingResponse
         /// </returns>
@@ -6368,6 +6382,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return DescribeSnapshotSettingWithOptions(InstanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看备份设置</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// DescribeSnapshotSettingResponse
         /// </returns>
@@ -7452,6 +7471,160 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>GetEmonAlarmRecordStatisticsDistribute</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEmonAlarmRecordStatisticsDistributeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEmonAlarmRecordStatisticsDistributeResponse
+        /// </returns>
+        public GetEmonAlarmRecordStatisticsDistributeResponse GetEmonAlarmRecordStatisticsDistributeWithOptions(GetEmonAlarmRecordStatisticsDistributeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Body))
+            {
+                query["body"] = request.Body;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["groupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeEnd))
+            {
+                query["timeEnd"] = request.TimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeStart))
+            {
+                query["timeStart"] = request.TimeStart;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetEmonAlarmRecordStatisticsDistribute",
+                Version = "2017-06-13",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/emon/alarm-record-statistics/distribute",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetEmonAlarmRecordStatisticsDistributeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetEmonAlarmRecordStatisticsDistribute</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEmonAlarmRecordStatisticsDistributeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEmonAlarmRecordStatisticsDistributeResponse
+        /// </returns>
+        public async Task<GetEmonAlarmRecordStatisticsDistributeResponse> GetEmonAlarmRecordStatisticsDistributeWithOptionsAsync(GetEmonAlarmRecordStatisticsDistributeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Body))
+            {
+                query["body"] = request.Body;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["groupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeEnd))
+            {
+                query["timeEnd"] = request.TimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeStart))
+            {
+                query["timeStart"] = request.TimeStart;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetEmonAlarmRecordStatisticsDistribute",
+                Version = "2017-06-13",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/emon/alarm-record-statistics/distribute",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetEmonAlarmRecordStatisticsDistributeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetEmonAlarmRecordStatisticsDistribute</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEmonAlarmRecordStatisticsDistributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEmonAlarmRecordStatisticsDistributeResponse
+        /// </returns>
+        public GetEmonAlarmRecordStatisticsDistributeResponse GetEmonAlarmRecordStatisticsDistribute(GetEmonAlarmRecordStatisticsDistributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetEmonAlarmRecordStatisticsDistributeWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetEmonAlarmRecordStatisticsDistribute</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEmonAlarmRecordStatisticsDistributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEmonAlarmRecordStatisticsDistributeResponse
+        /// </returns>
+        public async Task<GetEmonAlarmRecordStatisticsDistributeResponse> GetEmonAlarmRecordStatisticsDistributeAsync(GetEmonAlarmRecordStatisticsDistributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetEmonAlarmRecordStatisticsDistributeWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取高级监控报警自定义Grafana监控报警项</para>
         /// </summary>
         /// 
@@ -7471,10 +7644,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public GetEmonGrafanaAlertsResponse GetEmonGrafanaAlertsWithOptions(string ProjectId, GetEmonGrafanaAlertsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Body))
+            {
+                query["body"] = request.Body;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7512,10 +7690,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<GetEmonGrafanaAlertsResponse> GetEmonGrafanaAlertsWithOptionsAsync(string ProjectId, GetEmonGrafanaAlertsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Body))
+            {
+                query["body"] = request.Body;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7591,10 +7774,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public GetEmonGrafanaDashboardsResponse GetEmonGrafanaDashboardsWithOptions(string ProjectId, GetEmonGrafanaDashboardsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Body))
+            {
+                query["body"] = request.Body;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7632,10 +7820,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<GetEmonGrafanaDashboardsResponse> GetEmonGrafanaDashboardsWithOptionsAsync(string ProjectId, GetEmonGrafanaDashboardsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Body))
+            {
+                query["body"] = request.Body;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7690,6 +7883,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await GetEmonGrafanaDashboardsWithOptionsAsync(ProjectId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetEmonMonitorData</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetEmonMonitorDataRequest
         /// </param>
@@ -7706,10 +7904,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public GetEmonMonitorDataResponse GetEmonMonitorDataWithOptions(string ProjectId, GetEmonMonitorDataRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Body))
+            {
+                query["body"] = request.Body;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7726,6 +7929,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<GetEmonMonitorDataResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetEmonMonitorData</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetEmonMonitorDataRequest
         /// </param>
@@ -7742,10 +7950,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<GetEmonMonitorDataResponse> GetEmonMonitorDataWithOptionsAsync(string ProjectId, GetEmonMonitorDataRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Body))
+            {
+                query["body"] = request.Body;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7762,6 +7975,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<GetEmonMonitorDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetEmonMonitorData</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetEmonMonitorDataRequest
         /// </param>
@@ -7776,6 +7994,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return GetEmonMonitorDataWithOptions(ProjectId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetEmonMonitorData</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetEmonMonitorDataRequest
         /// </param>
@@ -10956,6 +11179,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListConnectedClustersWithOptionsAsync(InstanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询数据流</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListDataStreamsRequest
         /// </param>
@@ -11001,6 +11229,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListDataStreamsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询数据流</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListDataStreamsRequest
         /// </param>
@@ -11046,6 +11279,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListDataStreamsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询数据流</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListDataStreamsRequest
         /// </param>
@@ -11060,6 +11298,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListDataStreamsWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询数据流</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListDataStreamsRequest
         /// </param>
@@ -12320,6 +12563,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListDictsWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询ecs实例</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para><em>Important</em>* To call this operation, you must create the Aliyun Elasticsearch AccessingOOSRole and the system service role AliyunOOSAccessingECS 4ESRole to Elasticsearch the service account to obtain the ECS access permissions of the primary account. For more information, see <a href="https://help.aliyun.com/document_detail/146446.html">Collect ECS service logs</a>.</para>
@@ -12386,6 +12634,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListEcsInstancesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询ecs实例</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para><em>Important</em>* To call this operation, you must create the Aliyun Elasticsearch AccessingOOSRole and the system service role AliyunOOSAccessingECS 4ESRole to Elasticsearch the service account to obtain the ECS access permissions of the primary account. For more information, see <a href="https://help.aliyun.com/document_detail/146446.html">Collect ECS service logs</a>.</para>
@@ -12452,6 +12705,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListEcsInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询ecs实例</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para><em>Important</em>* To call this operation, you must create the Aliyun Elasticsearch AccessingOOSRole and the system service role AliyunOOSAccessingECS 4ESRole to Elasticsearch the service account to obtain the ECS access permissions of the primary account. For more information, see <a href="https://help.aliyun.com/document_detail/146446.html">Collect ECS service logs</a>.</para>
@@ -12471,6 +12729,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListEcsInstancesWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询ecs实例</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para><em>Important</em>* To call this operation, you must create the Aliyun Elasticsearch AccessingOOSRole and the system service role AliyunOOSAccessingECS 4ESRole to Elasticsearch the service account to obtain the ECS access permissions of the primary account. For more information, see <a href="https://help.aliyun.com/document_detail/146446.html">Collect ECS service logs</a>.</para>
@@ -14376,6 +14639,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await ListNodesWithOptionsAsync(ResId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListPipeline</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListPipelineRequest
         /// </param>
@@ -14425,6 +14693,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListPipelineResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListPipeline</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListPipelineRequest
         /// </param>
@@ -14474,6 +14747,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<ListPipelineResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListPipeline</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListPipelineRequest
         /// </param>
@@ -14488,6 +14766,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return ListPipelineWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListPipeline</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListPipelineRequest
         /// </param>
@@ -17006,6 +17289,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return await OpenHttpsWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>PostEmonTryAlarmRule</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// PostEmonTryAlarmRuleRequest
         /// </param>
@@ -17022,10 +17310,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public PostEmonTryAlarmRuleResponse PostEmonTryAlarmRuleWithOptions(string ProjectId, string AlarmGroupId, PostEmonTryAlarmRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Body))
+            {
+                query["body"] = request.Body;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -17042,6 +17335,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<PostEmonTryAlarmRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>PostEmonTryAlarmRule</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// PostEmonTryAlarmRuleRequest
         /// </param>
@@ -17058,10 +17356,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public async Task<PostEmonTryAlarmRuleResponse> PostEmonTryAlarmRuleWithOptionsAsync(string ProjectId, string AlarmGroupId, PostEmonTryAlarmRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Body))
+            {
+                query["body"] = request.Body;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Body = request.Body,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -17078,6 +17381,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return TeaModel.ToObject<PostEmonTryAlarmRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>PostEmonTryAlarmRule</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// PostEmonTryAlarmRuleRequest
         /// </param>
@@ -17092,6 +17400,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             return PostEmonTryAlarmRuleWithOptions(ProjectId, AlarmGroupId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>PostEmonTryAlarmRule</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// PostEmonTryAlarmRuleRequest
         /// </param>
@@ -20346,11 +20659,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 query["TagKeys"] = request.TagKeys;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Body))
+            {
+                query["body"] = request.Body;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -20417,11 +20733,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 query["TagKeys"] = request.TagKeys;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Body))
+            {
+                query["body"] = request.Body;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = request.Body,
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
