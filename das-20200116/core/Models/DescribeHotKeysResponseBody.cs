@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             [Validation(Required=false)]
             public List<DescribeHotKeysResponseBodyDataHotKey> HotKey { get; set; }
             public class DescribeHotKeysResponseBodyDataHotKey : TeaModel {
+                [NameInMap("Category")]
+                [Validation(Required=false)]
+                public string Category { get; set; }
+
                 /// <summary>
                 /// <para>The database in which the key is stored.</para>
                 /// 
@@ -50,6 +54,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [Validation(Required=false)]
                 public string Hot { get; set; }
 
+                [NameInMap("InBytes")]
+                [Validation(Required=false)]
+                public long? InBytes { get; set; }
+
                 /// <summary>
                 /// <para>The name of the key.</para>
                 /// 
@@ -69,6 +77,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [NameInMap("KeyType")]
                 [Validation(Required=false)]
                 public string KeyType { get; set; }
+
+                [NameInMap("NodeId")]
+                [Validation(Required=false)]
+                public string NodeId { get; set; }
+
+                [NameInMap("OutBytes")]
+                [Validation(Required=false)]
+                public long? OutBytes { get; set; }
 
                 /// <summary>
                 /// <para>The number of elements in the key.</para>

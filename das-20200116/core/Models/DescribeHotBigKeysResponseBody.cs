@@ -101,6 +101,54 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
             }
 
+            [NameInMap("HighTrafficKeyMsg")]
+            [Validation(Required=false)]
+            public string HighTrafficKeyMsg { get; set; }
+
+            [NameInMap("HighTrafficKeys")]
+            [Validation(Required=false)]
+            public DescribeHotBigKeysResponseBodyDataHighTrafficKeys HighTrafficKeys { get; set; }
+            public class DescribeHotBigKeysResponseBodyDataHighTrafficKeys : TeaModel {
+                [NameInMap("HighTrafficKey")]
+                [Validation(Required=false)]
+                public List<DescribeHotBigKeysResponseBodyDataHighTrafficKeysHighTrafficKey> HighTrafficKey { get; set; }
+                public class DescribeHotBigKeysResponseBodyDataHighTrafficKeysHighTrafficKey : TeaModel {
+                    [NameInMap("Db")]
+                    [Validation(Required=false)]
+                    public int? Db { get; set; }
+
+                    [NameInMap("Hot")]
+                    [Validation(Required=false)]
+                    public string Hot { get; set; }
+
+                    [NameInMap("Key")]
+                    [Validation(Required=false)]
+                    public string Key { get; set; }
+
+                    [NameInMap("KeyType")]
+                    [Validation(Required=false)]
+                    public string KeyType { get; set; }
+
+                    [NameInMap("NodeId")]
+                    [Validation(Required=false)]
+                    public string NodeId { get; set; }
+
+                    [NameInMap("Size")]
+                    [Validation(Required=false)]
+                    public long? Size { get; set; }
+
+                    [NameInMap("inBytes")]
+                    [Validation(Required=false)]
+                    public long? InBytes { get; set; }
+
+                    [NameInMap("outBytes")]
+                    [Validation(Required=false)]
+                    public long? OutBytes { get; set; }
+
+                }
+
+            }
+
             /// <summary>
             /// <para>The reason why the hot key failed to be queried.</para>
             /// 
@@ -181,6 +229,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     [NameInMap("NodeId")]
                     [Validation(Required=false)]
                     public string NodeId { get; set; }
+
+                    [NameInMap("Size")]
+                    [Validation(Required=false)]
+                    public long? Size { get; set; }
 
                 }
 
