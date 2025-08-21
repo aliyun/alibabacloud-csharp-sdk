@@ -1,3 +1,8 @@
+2025-08-21 Version: 2.28.1
+- Update API GetRecord: add response parameters Body.RecordModel.Data.Tags.
+- Update API ListRecords: add response parameters Body.Records.$.Data.Tags.
+
+
 2025-08-18 Version: 2.28.0
 - Support API CreateUrlObservation.
 - Support API DeleteUrlObservation.

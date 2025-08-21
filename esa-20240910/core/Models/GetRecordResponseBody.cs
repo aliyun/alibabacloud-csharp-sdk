@@ -231,6 +231,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 [Validation(Required=false)]
                 public string Tag { get; set; }
 
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
+                public Dictionary<string, object> Tags { get; set; }
+
                 /// <summary>
                 /// <para>The certificate type of the record (in CERT records), or the public key type (in SSHFP records). This parameter is required when you add CERT or SSHFP records.</para>
                 /// 

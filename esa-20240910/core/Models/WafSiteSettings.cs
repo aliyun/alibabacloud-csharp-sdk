@@ -29,6 +29,24 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         }
 
+        [NameInMap("BandwidthAbuseProtection")]
+        [Validation(Required=false)]
+        public WafSiteSettingsBandwidthAbuseProtection BandwidthAbuseProtection { get; set; }
+        public class WafSiteSettingsBandwidthAbuseProtection : TeaModel {
+            [NameInMap("Action")]
+            [Validation(Required=false)]
+            public string Action { get; set; }
+
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public long? Id { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
+        }
+
         [NameInMap("BotManagement")]
         [Validation(Required=false)]
         public WafSiteSettingsBotManagement BotManagement { get; set; }
@@ -108,6 +126,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [NameInMap("Mode")]
             [Validation(Required=false)]
             public string Mode { get; set; }
+
+        }
+
+        [NameInMap("DisableSecurityModule")]
+        [Validation(Required=false)]
+        public WafSiteSettingsDisableSecurityModule DisableSecurityModule { get; set; }
+        public class WafSiteSettingsDisableSecurityModule : TeaModel {
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
 
         }
 
