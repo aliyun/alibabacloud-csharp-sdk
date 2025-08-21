@@ -18,7 +18,6 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._signatureAlgorithm = "v2";
             this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("vs", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -14999,6 +14998,10 @@ namespace AlibabaCloud.SDK.Vs20181212
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PatchId))
+            {
+                query["PatchId"] = request.PatchId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
             {
                 query["ProjectId"] = request.ProjectId;
@@ -15066,6 +15069,10 @@ namespace AlibabaCloud.SDK.Vs20181212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PatchId))
+            {
+                query["PatchId"] = request.PatchId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
             {
@@ -16586,6 +16593,10 @@ namespace AlibabaCloud.SDK.Vs20181212
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PatchId))
+            {
+                query["PatchId"] = request.PatchId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
             {
                 query["ProjectId"] = request.ProjectId;
@@ -16672,6 +16683,10 @@ namespace AlibabaCloud.SDK.Vs20181212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PatchId))
+            {
+                query["PatchId"] = request.PatchId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
             {
@@ -20909,6 +20924,10 @@ namespace AlibabaCloud.SDK.Vs20181212
             {
                 query["ClientParams"] = request.ClientParamsShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PatchId))
+            {
+                query["PatchId"] = request.PatchId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
             {
                 query["ProjectId"] = request.ProjectId;
@@ -20968,6 +20987,10 @@ namespace AlibabaCloud.SDK.Vs20181212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientParamsShrink))
             {
                 query["ClientParams"] = request.ClientParamsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PatchId))
+            {
+                query["PatchId"] = request.PatchId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
             {
@@ -22901,6 +22924,10 @@ namespace AlibabaCloud.SDK.Vs20181212
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PatchId))
+            {
+                query["PatchId"] = request.PatchId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
             {
                 query["ProjectId"] = request.ProjectId;
@@ -22968,6 +22995,10 @@ namespace AlibabaCloud.SDK.Vs20181212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PatchId))
+            {
+                query["PatchId"] = request.PatchId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
             {
@@ -23149,7 +23180,7 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <para>更新云应用信息</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// UpdateCloudAppInfoRequest
         /// </param>
         /// <param name="runtime">
@@ -23159,9 +23190,15 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <returns>
         /// UpdateCloudAppInfoResponse
         /// </returns>
-        public UpdateCloudAppInfoResponse UpdateCloudAppInfoWithOptions(UpdateCloudAppInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public UpdateCloudAppInfoResponse UpdateCloudAppInfoWithOptions(UpdateCloudAppInfoRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateCloudAppInfoShrinkRequest request = new UpdateCloudAppInfoShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Patch))
+            {
+                request.PatchShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Patch, "Patch", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
             {
@@ -23170,6 +23207,14 @@ namespace AlibabaCloud.SDK.Vs20181212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PatchShrink))
+            {
+                query["Patch"] = request.PatchShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StablePatchId))
+            {
+                query["StablePatchId"] = request.StablePatchId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -23195,7 +23240,7 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <para>更新云应用信息</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// UpdateCloudAppInfoRequest
         /// </param>
         /// <param name="runtime">
@@ -23205,9 +23250,15 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <returns>
         /// UpdateCloudAppInfoResponse
         /// </returns>
-        public async Task<UpdateCloudAppInfoResponse> UpdateCloudAppInfoWithOptionsAsync(UpdateCloudAppInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<UpdateCloudAppInfoResponse> UpdateCloudAppInfoWithOptionsAsync(UpdateCloudAppInfoRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateCloudAppInfoShrinkRequest request = new UpdateCloudAppInfoShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Patch))
+            {
+                request.PatchShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Patch, "Patch", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
             {
@@ -23216,6 +23267,14 @@ namespace AlibabaCloud.SDK.Vs20181212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PatchShrink))
+            {
+                query["Patch"] = request.PatchShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StablePatchId))
+            {
+                query["StablePatchId"] = request.StablePatchId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

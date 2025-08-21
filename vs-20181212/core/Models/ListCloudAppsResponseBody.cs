@@ -55,6 +55,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>patch-7bdf679812484df08a956b73e0b3bdf6</para>
+            /// </summary>
+            [NameInMap("StablePatchId")]
+            [Validation(Required=false)]
+            public string StablePatchId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>Success</para>
             /// </summary>
             [NameInMap("Status")]

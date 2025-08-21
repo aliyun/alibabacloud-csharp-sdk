@@ -47,6 +47,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>patch-7bdf679812484df08a956b73e0b3bdf6</para>
+            /// </summary>
+            [NameInMap("PatchId")]
+            [Validation(Required=false)]
+            public string PatchId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>render-9f8c57355d224ad7beaf95e145f22111</para>
             /// </summary>
             [NameInMap("RenderingInstanceId")]

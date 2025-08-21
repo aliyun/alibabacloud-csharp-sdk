@@ -27,6 +27,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>patch-7bdf679812484df08a956b73e0b3bdf6</para>
+        /// </summary>
+        [NameInMap("PatchId")]
+        [Validation(Required=false)]
+        public string PatchId { get; set; }
+
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public string ProjectId { get; set; }
