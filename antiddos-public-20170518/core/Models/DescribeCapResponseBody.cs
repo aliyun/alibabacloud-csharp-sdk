@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
             /// <para>The download link to the traffic data.</para>
             /// 
             /// <b>Example:</b>
-            /// <para><a href="http://beaver-pack****.oss-cn-hangzhou.aliyuncs.com/ddos-2021112511-121.89.XX.XX.cap?Expires=1637824408&OSSAccessKeyId=LTAIXu2lJhw3****&Signature=KKSzOMSUajtwcqfqxkU1nK69d4">http://beaver-pack****.oss-cn-hangzhou.aliyuncs.com/ddos-2021112511-121.89.XX.XX.cap?Expires=1637824408&amp;OSSAccessKeyId=LTAIXu2lJhw3****&amp;Signature=KKSzOMSUajtwcqfqxkU1nK69d4</a>****</para>
+            /// <para><a href="http://beaver-pack****.oss-cn-hangzhou.aliyuncs.com/ddos-2021****-121.89.XX.XX.cap?Expires=1637****&OSSAccessKeyId=LTAI****************&Signature=">http://beaver-pack****.oss-cn-hangzhou.aliyuncs.com/ddos-2021****-121.89.XX.XX.cap?Expires=1637****&amp;OSSAccessKeyId=LTAI****************&amp;Signature=</a>******</para>
             /// </summary>
             [NameInMap("Url")]
             [Validation(Required=false)]

@@ -87,6 +87,10 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("QueryDays")]
+        [Validation(Required=false)]
+        public int? QueryDays { get; set; }
+
     }
 
 }
