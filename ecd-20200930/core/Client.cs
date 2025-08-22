@@ -18,7 +18,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._signatureAlgorithm = "v2";
             this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("ecd", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -43364,6 +43363,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["ImageId"] = request.ImageId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LastRetryTime))
+            {
+                query["LastRetryTime"] = request.LastRetryTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayType))
             {
                 query["PayType"] = request.PayType;
@@ -43440,6 +43443,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
             {
                 query["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LastRetryTime))
+            {
+                query["LastRetryTime"] = request.LastRetryTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayType))
             {

@@ -47,6 +47,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string ImageId { get; set; }
 
+        [NameInMap("LastRetryTime")]
+        [Validation(Required=false)]
+        public long? LastRetryTime { get; set; }
+
         /// <summary>
         /// <para>The billing method of the cloud computer share.</para>
         /// <remarks>
