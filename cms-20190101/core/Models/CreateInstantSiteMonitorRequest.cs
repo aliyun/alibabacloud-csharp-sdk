@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string Address { get; set; }
 
+        [NameInMap("AgentGroup")]
+        [Validation(Required=false)]
+        public string AgentGroup { get; set; }
+
         /// <summary>
         /// <para>The detection points. If you leave this parameter empty, the system randomly selects three detection points.</para>
         /// <para>The value is a <c>JSON array</c>. Example: {&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}. The values of the city field indicate Beijing, Hangzhou, and Qingdao.</para>

@@ -2070,6 +2070,10 @@ namespace AlibabaCloud.SDK.Cms20190101
             {
                 query["Address"] = request.Address;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentGroup))
+            {
+                query["AgentGroup"] = request.AgentGroup;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IspCities))
             {
                 query["IspCities"] = request.IspCities;
@@ -2137,6 +2141,10 @@ namespace AlibabaCloud.SDK.Cms20190101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Address))
             {
                 query["Address"] = request.Address;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentGroup))
+            {
+                query["AgentGroup"] = request.AgentGroup;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IspCities))
             {
