@@ -34,6 +34,10 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         [Validation(Required=false)]
         public string ClientId { get; set; }
 
+        [NameInMap("ClientName")]
+        [Validation(Required=false)]
+        public string ClientName { get; set; }
+
         /// <summary>
         /// <para>The operating system (OS) of the device that runs an Alibaba Cloud Workspace client.</para>
         /// 
