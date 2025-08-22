@@ -71,6 +71,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 
                 /// <summary>
                 /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("AppType")]
+                [Validation(Required=false)]
+                public int? AppType { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
                 /// <para>1827811800555555</para>
                 /// </summary>
                 [NameInMap("Creator")]

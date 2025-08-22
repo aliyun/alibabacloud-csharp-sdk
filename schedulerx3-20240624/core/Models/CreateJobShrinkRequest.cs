@@ -187,6 +187,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [Validation(Required=false)]
         public string Timezone { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("Weight")]
+        [Validation(Required=false)]
+        public int? Weight { get; set; }
+
     }
 
 }

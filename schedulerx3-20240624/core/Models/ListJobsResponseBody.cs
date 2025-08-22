@@ -259,6 +259,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 [Validation(Required=false)]
                 public string Updater { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("Weight")]
+                [Validation(Required=false)]
+                public int? Weight { get; set; }
+
                 [NameInMap("Xattrs")]
                 [Validation(Required=false)]
                 public string Xattrs { get; set; }
