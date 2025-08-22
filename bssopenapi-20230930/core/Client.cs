@@ -1397,9 +1397,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
             {
                 query["BeginBillingCycle"] = request.BeginBillingCycle;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeMembers))
+            {
+                query["IncludeMembers"] = request.IncludeMembers;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nbid))
             {
                 query["Nbid"] = request.Nbid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotSendOnNoData))
+            {
+                query["NotSendOnNoData"] = request.NotSendOnNoData;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssBucketName))
             {
@@ -1416,6 +1424,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportType))
             {
                 query["ReportType"] = request.ReportType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SendWithAttach))
+            {
+                query["SendWithAttach"] = request.SendWithAttach;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SplitFileOnUserId))
+            {
+                query["SplitFileOnUserId"] = request.SplitFileOnUserId;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.McProject))
@@ -1473,9 +1489,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
             {
                 query["BeginBillingCycle"] = request.BeginBillingCycle;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeMembers))
+            {
+                query["IncludeMembers"] = request.IncludeMembers;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nbid))
             {
                 query["Nbid"] = request.Nbid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotSendOnNoData))
+            {
+                query["NotSendOnNoData"] = request.NotSendOnNoData;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssBucketName))
             {
@@ -1492,6 +1516,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportType))
             {
                 query["ReportType"] = request.ReportType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SendWithAttach))
+            {
+                query["SendWithAttach"] = request.SendWithAttach;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SplitFileOnUserId))
+            {
+                query["SplitFileOnUserId"] = request.SplitFileOnUserId;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.McProject))

@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         [Validation(Required=false)]
         public string BeginBillingCycle { get; set; }
 
+        [NameInMap("IncludeMembers")]
+        [Validation(Required=false)]
+        public string IncludeMembers { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>project</para>
@@ -40,6 +44,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         [NameInMap("Nbid")]
         [Validation(Required=false)]
         public string Nbid { get; set; }
+
+        [NameInMap("NotSendOnNoData")]
+        [Validation(Required=false)]
+        public string NotSendOnNoData { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -82,6 +90,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         [NameInMap("ReportType")]
         [Validation(Required=false)]
         public string ReportType { get; set; }
+
+        [NameInMap("SendWithAttach")]
+        [Validation(Required=false)]
+        public string SendWithAttach { get; set; }
+
+        [NameInMap("SplitFileOnUserId")]
+        [Validation(Required=false)]
+        public string SplitFileOnUserId { get; set; }
 
     }
 
