@@ -19,9 +19,20 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string AppType { get; set; }
 
+        [NameInMap("FileName")]
+        [Validation(Required=false)]
+        public string FileName { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
         /// <summary>
         /// <para>The process ID (PID) of the application.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aoxxxxxly@741623b4e91****</para>

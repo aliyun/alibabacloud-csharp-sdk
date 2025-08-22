@@ -24,57 +24,37 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public List<GetRumUploadFilesResponseBodyData> Data { get; set; }
+        public GetRumUploadFilesResponseBodyData Data { get; set; }
         public class GetRumUploadFilesResponseBodyData : TeaModel {
-            /// <summary>
-            /// <para>The file name.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>test.js.map</para>
-            /// </summary>
-            [NameInMap("FileName")]
+            [NameInMap("FileList")]
             [Validation(Required=false)]
-            public string FileName { get; set; }
+            public List<GetRumUploadFilesResponseBodyDataFileList> FileList { get; set; }
+            public class GetRumUploadFilesResponseBodyDataFileList : TeaModel {
+                [NameInMap("FileName")]
+                [Validation(Required=false)]
+                public string FileName { get; set; }
 
-            /// <summary>
-            /// <para>The time when the file was last modified. The value is a timestamp.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>1682863151000</para>
-            /// </summary>
-            [NameInMap("LastModifiedTime")]
-            [Validation(Required=false)]
-            public object LastModifiedTime { get; set; }
+                [NameInMap("LastModifiedTime")]
+                [Validation(Required=false)]
+                public object LastModifiedTime { get; set; }
 
-            /// <summary>
-            /// <para>The size of the file. Unit: bytes.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>1000</para>
-            /// </summary>
-            [NameInMap("Size")]
-            [Validation(Required=false)]
-            public string Size { get; set; }
+                [NameInMap("Size")]
+                [Validation(Required=false)]
+                public string Size { get; set; }
 
-            /// <summary>
-            /// <para>The file ID.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>cxxxerfewrfwerfwerffvrt</para>
-            /// </summary>
-            [NameInMap("Uuid")]
-            [Validation(Required=false)]
-            public string Uuid { get; set; }
+                [NameInMap("Uuid")]
+                [Validation(Required=false)]
+                public string Uuid { get; set; }
 
-            /// <summary>
-            /// <para>The version number of the file.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>1.0.0</para>
-            /// </summary>
-            [NameInMap("VersionId")]
+                [NameInMap("VersionId")]
+                [Validation(Required=false)]
+                public string VersionId { get; set; }
+
+            }
+
+            [NameInMap("NextToken")]
             [Validation(Required=false)]
-            public string VersionId { get; set; }
+            public string NextToken { get; set; }
 
         }
 
