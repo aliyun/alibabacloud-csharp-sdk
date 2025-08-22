@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public string Comment { get; set; }
 
+        [NameInMap("enableWrite")]
+        [Validation(Required=false)]
+        public bool? EnableWrite { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

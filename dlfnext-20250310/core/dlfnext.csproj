@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>AlibabaCloud.SDK.DlfNext20250310</AssemblyName>
-    <Version>1.3.0</Version>
+    <Version>1.3.1</Version>
     <LangVersion>5</LangVersion>
     <Authors>Alibaba Cloud</Authors>
     <Description>Alibaba Cloud DlfNext (20250310) SDK Library for .NET</Description>
