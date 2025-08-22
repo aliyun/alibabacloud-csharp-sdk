@@ -60,6 +60,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string FilterSide { get; set; }
 
+            [NameInMap("GrayBaseTags")]
+            [Validation(Required=false)]
+            public List<string> GrayBaseTags { get; set; }
+
             /// <summary>
             /// <para>The region ID.</para>
             /// 

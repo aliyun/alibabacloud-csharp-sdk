@@ -18,7 +18,6 @@ namespace AlibabaCloud.SDK.Mse20190531
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._signatureAlgorithm = "v2";
             this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("mse", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -39202,6 +39201,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             UpdateMessageQueueRouteShrinkRequest request = new UpdateMessageQueueRouteShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.GrayBaseTags))
+            {
+                request.GrayBaseTagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.GrayBaseTags, "GrayBaseTags", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
             {
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
@@ -39226,6 +39229,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterSide))
             {
                 query["FilterSide"] = request.FilterSide;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrayBaseTagsShrink))
+            {
+                query["GrayBaseTags"] = request.GrayBaseTagsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
             {
@@ -39278,6 +39285,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             UpdateMessageQueueRouteShrinkRequest request = new UpdateMessageQueueRouteShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.GrayBaseTags))
+            {
+                request.GrayBaseTagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.GrayBaseTags, "GrayBaseTags", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
             {
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
@@ -39302,6 +39313,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterSide))
             {
                 query["FilterSide"] = request.FilterSide;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrayBaseTagsShrink))
+            {
+                query["GrayBaseTags"] = request.GrayBaseTagsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
             {
