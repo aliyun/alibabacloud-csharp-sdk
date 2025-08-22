@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string Caller { get; set; }
 
+        [NameInMap("DataJuicerConfig")]
+        [Validation(Required=false)]
+        public DataJuicerConfig DataJuicerConfig { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>false</para>
@@ -56,6 +60,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [NameInMap("EnableCPUAffinity")]
         [Validation(Required=false)]
         public bool? EnableCPUAffinity { get; set; }
+
+        [NameInMap("EnableDSWDev")]
+        [Validation(Required=false)]
+        public bool? EnableDSWDev { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

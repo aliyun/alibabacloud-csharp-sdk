@@ -79,6 +79,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public SpotSpec SpotSpec { get; set; }
 
+        [NameInMap("SystemDisk")]
+        [Validation(Required=false)]
+        public SystemDisk SystemDisk { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>Worker</para>
