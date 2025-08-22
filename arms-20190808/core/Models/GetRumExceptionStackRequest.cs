@@ -57,7 +57,6 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// <para>The application ID.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>atxxxxzkcf@d8deedfa9bf****</para>
@@ -76,6 +75,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("ServiceId")]
+        [Validation(Required=false)]
+        public string ServiceId { get; set; }
+
         /// <summary>
         /// <para>The parsing type. Valid values:</para>
         /// <list type="bullet">
@@ -92,6 +95,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [NameInMap("SourcemapType")]
         [Validation(Required=false)]
         public string SourcemapType { get; set; }
+
+        [NameInMap("Workspace")]
+        [Validation(Required=false)]
+        public string Workspace { get; set; }
 
     }
 

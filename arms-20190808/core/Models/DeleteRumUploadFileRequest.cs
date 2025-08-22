@@ -39,7 +39,6 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// <para>The application ID.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>atc889zkcf@d8deedfa9bf****</para>
@@ -58,6 +57,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("ServiceId")]
+        [Validation(Required=false)]
+        public string ServiceId { get; set; }
 
         /// <summary>
         /// <para>The file ID.</para>
@@ -78,6 +81,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [NameInMap("VersionId")]
         [Validation(Required=false)]
         public string VersionId { get; set; }
+
+        [NameInMap("Workspace")]
+        [Validation(Required=false)]
+        public string Workspace { get; set; }
 
     }
 

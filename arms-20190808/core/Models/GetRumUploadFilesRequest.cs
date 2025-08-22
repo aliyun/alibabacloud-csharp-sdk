@@ -52,6 +52,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("ServiceId")]
+        [Validation(Required=false)]
+        public string ServiceId { get; set; }
+
         /// <summary>
         /// <para>The version number of the files. If you do not specify this parameter, all versions of the files are returned by default.</para>
         /// 
@@ -61,6 +65,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [NameInMap("VersionId")]
         [Validation(Required=false)]
         public string VersionId { get; set; }
+
+        [NameInMap("Workspace")]
+        [Validation(Required=false)]
+        public string Workspace { get; set; }
 
     }
 

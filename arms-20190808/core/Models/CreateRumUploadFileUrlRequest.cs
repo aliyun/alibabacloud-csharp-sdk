@@ -42,7 +42,6 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// <para>The process ID (PID) of the application.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>iioe7jcnuk@582846f37******</para>
@@ -61,6 +60,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("ServiceId")]
+        [Validation(Required=false)]
+        public string ServiceId { get; set; }
 
         /// <summary>
         /// <para>The file type. Valid values: source-map: SourceMap files. mapping: symbol table files for Android. dsym: dSYM files for iOS.</para>
@@ -91,6 +94,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [NameInMap("VersionId")]
         [Validation(Required=false)]
         public string VersionId { get; set; }
+
+        [NameInMap("Workspace")]
+        [Validation(Required=false)]
+        public string Workspace { get; set; }
 
     }
 
