@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnDomainLogResponseBody : TeaModel {
         /// <summary>
-        /// <para>The log information. The log information is indicated by the DomainLogDetail parameter.</para>
+        /// <para>The log information.</para>
         /// </summary>
         [NameInMap("DomainLogDetails")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 public long? LogCount { get; set; }
 
                 /// <summary>
-                /// <para>The log information. The log information is indicated by the LogInfoDetail parameter.</para>
+                /// <para>Details about the logs.</para>
                 /// </summary>
                 [NameInMap("LogInfos")]
                 [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                         /// <para>Take note of the Expires field (expiration timestamp) in the response parameter LogPath. If the log download URL expires, you must obtain it again. For more information, see <a href="https://help.aliyun.com/document_detail/31952.html">LogPath field</a>.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>example.aliyundoc.com /v1.l1cache/105252530/example.com/2021_11_08/example.com_2021_11_08_010000_020000.gz?Expires=1636963354&amp;OSSAccessKeyId=LTAIviCc6zy8****&amp;Signature=u0V6foRfZniHE8i%2BHUdxGOhZsK****</para>
+                        /// <para>example.aliyundoc.com /v1.l1cache/105252530/example.com/2021_11_08/example.com_2021_11_08_010000_020000.gz?Expires=1636963354&amp;OSSAccessKeyId=yourAccessKeyID&amp;Signature=u0V6foRfZniHE8i%2BHUdxGOhZsK****</para>
                         /// </summary>
                         [NameInMap("LogPath")]
                         [Validation(Required=false)]
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                         public long? LogSize { get; set; }
 
                         /// <summary>
-                        /// <para>The start of the time range during which data was queried.</para>
+                        /// <para>The beginning of the time range during which data was queried.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>2021-11-07T17:00:00Z</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 }
 
                 /// <summary>
-                /// <para>The page information. The page information is indicated by the PageInfoDetail parameter.</para>
+                /// <para>The page information.</para>
                 /// </summary>
                 [NameInMap("PageInfos")]
                 [Validation(Required=false)]

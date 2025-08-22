@@ -54,6 +54,18 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 [Validation(Required=false)]
                 public string CurrCapacity { get; set; }
 
+                [NameInMap("CurrCapacityBaseUnit")]
+                [Validation(Required=false)]
+                public string CurrCapacityBaseUnit { get; set; }
+
+                [NameInMap("CurrCapacityShowUnit")]
+                [Validation(Required=false)]
+                public string CurrCapacityShowUnit { get; set; }
+
+                [NameInMap("CurrCapacityShowValue")]
+                [Validation(Required=false)]
+                public string CurrCapacityShowValue { get; set; }
+
                 /// <summary>
                 /// <para>The name of the resource plan.</para>
                 /// 
@@ -88,6 +100,18 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 [Validation(Required=false)]
                 public string InitCapacity { get; set; }
 
+                [NameInMap("InitCapacityBaseUnit")]
+                [Validation(Required=false)]
+                public string InitCapacityBaseUnit { get; set; }
+
+                [NameInMap("InitCapacityShowUnit")]
+                [Validation(Required=false)]
+                public string InitCapacityShowUnit { get; set; }
+
+                [NameInMap("InitCapacityShowValue")]
+                [Validation(Required=false)]
+                public string InitCapacityShowValue { get; set; }
+
                 /// <summary>
                 /// <para>The ID of the resource plan.</para>
                 /// 
@@ -97,6 +121,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
+
+                [NameInMap("Region")]
+                [Validation(Required=false)]
+                public string Region { get; set; }
 
                 /// <summary>
                 /// <para>The validation time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>

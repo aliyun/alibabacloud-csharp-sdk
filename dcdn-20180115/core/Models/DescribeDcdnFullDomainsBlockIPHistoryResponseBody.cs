@@ -52,6 +52,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             [Validation(Required=false)]
             public string BlockIP { get; set; }
 
+            [NameInMap("BlockInterval")]
+            [Validation(Required=false)]
+            public string BlockInterval { get; set; }
+
             /// <summary>
             /// <para>The delivery time.</para>
             /// 
@@ -61,6 +65,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             [NameInMap("DeliverTime")]
             [Validation(Required=false)]
             public string DeliverTime { get; set; }
+
+            [NameInMap("OperationType")]
+            [Validation(Required=false)]
+            public string OperationType { get; set; }
 
             /// <summary>
             /// <para>The delivery status.</para>
@@ -75,6 +83,10 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
+            [NameInMap("UpdateType")]
+            [Validation(Required=false)]
+            public string UpdateType { get; set; }
 
         }
 

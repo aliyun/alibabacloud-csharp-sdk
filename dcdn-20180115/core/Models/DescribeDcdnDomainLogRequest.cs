@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
 {
     public class DescribeDcdnDomainLogRequest : TeaModel {
         /// <summary>
-        /// <para>The accelerated domain name that you want to query. You can specify only one domain name in each call.</para>
+        /// <para>The accelerated domain name that you want to query. You can specify only one domain name in each request.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

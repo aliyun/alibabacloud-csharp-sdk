@@ -40,6 +40,14 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
                 [Validation(Required=false)]
                 public string Domain { get; set; }
 
+                [NameInMap("ErrMsg")]
+                [Validation(Required=false)]
+                public string ErrMsg { get; set; }
+
+                [NameInMap("Passed")]
+                [Validation(Required=false)]
+                public string Passed { get; set; }
+
                 /// <summary>
                 /// <para>The configuration status of the CNAME record. If the operation returns 0 for the parameter, the configuration was successful. Otherwise, the configuration failed.</para>
                 /// 

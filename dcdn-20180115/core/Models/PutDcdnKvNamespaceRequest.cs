@@ -11,7 +11,6 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
     public class PutDcdnKvNamespaceRequest : TeaModel {
         /// <summary>
         /// <para>The description of the namespace.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>the first namespace</para>

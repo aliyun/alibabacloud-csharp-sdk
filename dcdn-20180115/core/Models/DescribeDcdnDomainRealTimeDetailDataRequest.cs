@@ -51,8 +51,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public string Field { get; set; }
 
         /// <summary>
-        /// <para>The name of the ISP. You can call the <a href="https://help.aliyun.com/document_detail/207199.html">DescribeDcdnRegionAndIsp</a> operation to query the ISP name.</para>
-        /// <para>If you leave this parameter empty, all ISPs are queried.</para>
+        /// <para>The name of the ISP. You can call the <a href="~~DescribeDcdnRegionAndIsp~~">DescribeDcdnRegionAndIsp</a> operation to obtain the ISP name.</para>
+        /// <para>If you do not set this parameter, data of all ISPs is queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>unicom</para>
@@ -62,8 +62,8 @@ namespace AlibabaCloud.SDK.Dcdn20180115.Models
         public string IspNameEn { get; set; }
 
         /// <summary>
-        /// <para>The name of the region. You can call the <a href="https://help.aliyun.com/document_detail/207199.html">DescribeDcdnRegionAndIsp</a> operation to query the region name.</para>
-        /// <para>If you leave this parameter empty, all regions are queried.</para>
+        /// <para>The name of the region. You can call the <a href="~~DescribeDcdnRegionAndIsp~~">DescribeDcdnRegionAndIsp</a> operation to obtain the region name.</para>
+        /// <para>If you do not set this parameter, all regions are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>beijing</para>
