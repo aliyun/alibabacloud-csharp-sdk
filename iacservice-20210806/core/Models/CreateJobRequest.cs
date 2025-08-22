@@ -29,10 +29,6 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        [NameInMap("executeType")]
-        [Validation(Required=false)]
-        public string ExecuteType { get; set; }
-
         /// <summary>
         /// <b>Example:</b>
         /// <para>null</para>

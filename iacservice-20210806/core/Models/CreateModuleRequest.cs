@@ -60,6 +60,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OSS</para>
         /// </summary>
@@ -85,6 +87,20 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         [NameInMap("statePath")]
         [Validation(Required=false)]
         public string StatePath { get; set; }
+
+        [NameInMap("tags")]
+        [Validation(Required=false)]
+        public List<CreateModuleRequestTags> Tags { get; set; }
+        public class CreateModuleRequestTags : TeaModel {
+            [NameInMap("tagKey")]
+            [Validation(Required=false)]
+            public string TagKey { get; set; }
+
+            [NameInMap("tagValue")]
+            [Validation(Required=false)]
+            public string TagValue { get; set; }
+
+        }
 
         /// <summary>
         /// <b>Example:</b>

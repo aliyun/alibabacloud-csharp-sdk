@@ -33,10 +33,6 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
 
-        [NameInMap("verisonList")]
-        [Validation(Required=false)]
-        public List<string> VerisonList { get; set; }
-
         [NameInMap("versions")]
         [Validation(Required=false)]
         public List<ListTerraformProviderVersionsResponseBodyVersions> Versions { get; set; }

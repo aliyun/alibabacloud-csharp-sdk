@@ -10,8 +10,6 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class CreateTaskRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -101,17 +99,11 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        [NameInMap("parameters")]
-        [Validation(Required=false)]
-        public Dictionary<string, string> Parameters { get; set; }
-
         [NameInMap("protectionStrategy")]
         [Validation(Required=false)]
         public List<string> ProtectionStrategy { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -122,6 +114,20 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         [NameInMap("skipPropertyValidation")]
         [Validation(Required=false)]
         public bool? SkipPropertyValidation { get; set; }
+
+        [NameInMap("tags")]
+        [Validation(Required=false)]
+        public List<CreateTaskRequestTags> Tags { get; set; }
+        public class CreateTaskRequestTags : TeaModel {
+            [NameInMap("tagKey")]
+            [Validation(Required=false)]
+            public string TagKey { get; set; }
+
+            [NameInMap("tagValue")]
+            [Validation(Required=false)]
+            public string TagValue { get; set; }
+
+        }
 
         [NameInMap("taskBackend")]
         [Validation(Required=false)]
@@ -150,22 +156,12 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string TerraformVersion { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>Always</para>
         /// </summary>
         [NameInMap("triggerStrategy")]
         [Validation(Required=false)]
         public string TriggerStrategy { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <hr>
-        /// </summary>
-        [NameInMap("triggerValue")]
-        [Validation(Required=false)]
-        public string TriggerValue { get; set; }
 
     }
 

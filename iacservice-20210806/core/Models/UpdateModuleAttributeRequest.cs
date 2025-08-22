@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class UpdateModuleAttributeRequest : TeaModel {
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
+        [NameInMap("clientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        /// <summary>
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -41,14 +48,6 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>OSS</para>
-        /// </summary>
-        [NameInMap("source")]
-        [Validation(Required=false)]
-        public string Source { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
         /// <para>OSS：
         /// &quot;oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip</a>&quot;
         /// Registry：
@@ -65,6 +64,20 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         [NameInMap("statePath")]
         [Validation(Required=false)]
         public string StatePath { get; set; }
+
+        [NameInMap("tags")]
+        [Validation(Required=false)]
+        public List<UpdateModuleAttributeRequestTags> Tags { get; set; }
+        public class UpdateModuleAttributeRequestTags : TeaModel {
+            [NameInMap("tagKey")]
+            [Validation(Required=false)]
+            public string TagKey { get; set; }
+
+            [NameInMap("tagValue")]
+            [Validation(Required=false)]
+            public string TagValue { get; set; }
+
+        }
 
         /// <summary>
         /// <b>Example:</b>

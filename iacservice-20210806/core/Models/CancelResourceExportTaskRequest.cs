@@ -19,14 +19,6 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>{}</para>
-        /// </summary>
-        [NameInMap("ramRole")]
-        [Validation(Required=false)]
-        public string RamRole { get; set; }
-
     }
 
 }

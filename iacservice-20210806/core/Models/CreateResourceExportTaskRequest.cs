@@ -19,10 +19,6 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
-        [NameInMap("configPath")]
-        [Validation(Required=false)]
-        public string ConfigPath { get; set; }
-
         /// <summary>
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -30,24 +26,6 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
-
-        [NameInMap("excludeRules")]
-        [Validation(Required=false)]
-        public List<CreateResourceExportTaskRequestExcludeRules> ExcludeRules { get; set; }
-        public class CreateResourceExportTaskRequestExcludeRules : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>VPC</para>
-            /// </summary>
-            [NameInMap("key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
-
-            [NameInMap("values")]
-            [Validation(Required=false)]
-            public List<string> Values { get; set; }
-
-        }
 
         [NameInMap("exportToModule")]
         [Validation(Required=false)]

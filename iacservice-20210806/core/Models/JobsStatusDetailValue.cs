@@ -13,17 +13,17 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
         /// </summary>
-        [NameInMap("comment")]
+        [NameInMap("jobResult")]
         [Validation(Required=false)]
-        public string Comment { get; set; }
+        public string JobResult { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
         /// </summary>
-        [NameInMap("jobResult")]
+        [NameInMap("comment")]
         [Validation(Required=false)]
-        public string JobResult { get; set; }
+        public string Comment { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

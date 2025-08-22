@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class ListTasksRequest : TeaModel {
-        [NameInMap("excludeTaskIds")]
-        [Validation(Required=false)]
-        public List<string> ExcludeTaskIds { get; set; }
-
         /// <summary>
         /// <b>Example:</b>
         /// <para>g-59d8d22e78792ffe3d3eb6154d727</para>
@@ -69,13 +65,13 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         [Validation(Required=false)]
         public List<ListTasksRequestTag> Tag { get; set; }
         public class ListTasksRequestTag : TeaModel {
-            [NameInMap("key")]
+            [NameInMap("tagKey")]
             [Validation(Required=false)]
-            public string Key { get; set; }
+            public string TagKey { get; set; }
 
-            [NameInMap("value")]
+            [NameInMap("tagValue")]
             [Validation(Required=false)]
-            public string Value { get; set; }
+            public string TagValue { get; set; }
 
         }
 

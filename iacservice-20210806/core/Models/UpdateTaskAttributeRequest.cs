@@ -10,8 +10,6 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class UpdateTaskAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -26,6 +24,13 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         [NameInMap("autoDestroy")]
         [Validation(Required=false)]
         public bool? AutoDestroy { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
+        [NameInMap("clientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -62,18 +67,6 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public bool? InitModuleState { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>mod-148e7853433574fff6b316f4eb737e</para>
-        /// </summary>
-        [NameInMap("moduleId")]
-        [Validation(Required=false)]
-        public string ModuleId { get; set; }
-
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>v1</para>
         /// </summary>
@@ -82,8 +75,6 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string ModuleVersion { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -91,17 +82,11 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        [NameInMap("parameters")]
-        [Validation(Required=false)]
-        public Dictionary<string, string> Parameters { get; set; }
-
         [NameInMap("protectionStrategy")]
         [Validation(Required=false)]
         public List<string> ProtectionStrategy { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -113,6 +98,20 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         [Validation(Required=false)]
         public bool? SkipPropertyValidation { get; set; }
 
+        [NameInMap("tags")]
+        [Validation(Required=false)]
+        public List<UpdateTaskAttributeRequestTags> Tags { get; set; }
+        public class UpdateTaskAttributeRequestTags : TeaModel {
+            [NameInMap("tagKey")]
+            [Validation(Required=false)]
+            public string TagKey { get; set; }
+
+            [NameInMap("tagValue")]
+            [Validation(Required=false)]
+            public string TagValue { get; set; }
+
+        }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>1.2.6</para>
@@ -122,22 +121,12 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string TerraformVersion { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>Manual</para>
         /// </summary>
         [NameInMap("triggerStrategy")]
         [Validation(Required=false)]
         public string TriggerStrategy { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <hr>
-        /// </summary>
-        [NameInMap("triggerValue")]
-        [Validation(Required=false)]
-        public string TriggerValue { get; set; }
 
     }
 

@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class ListModulesShrinkRequest : TeaModel {
-        [NameInMap("excludeModuleIds")]
-        [Validation(Required=false)]
-        public string ExcludeModuleIdsShrink { get; set; }
-
         [NameInMap("groupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }

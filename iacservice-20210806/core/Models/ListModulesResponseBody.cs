@@ -67,10 +67,6 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             [Validation(Required=false)]
             public string LatestVersion { get; set; }
 
-            [NameInMap("meta")]
-            [Validation(Required=false)]
-            public Dictionary<string, object> Meta { get; set; }
-
             /// <summary>
             /// <b>Example:</b>
             /// <para>mod-518855d9a058cdbd3fd6951d59</para>
@@ -91,10 +87,6 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             [Validation(Required=false)]
             public string Source { get; set; }
 
-            [NameInMap("sourceConfig")]
-            [Validation(Required=false)]
-            public Dictionary<string, object> SourceConfig { get; set; }
-
             /// <summary>
             /// <b>Example:</b>
             /// <para>Created</para>
@@ -110,6 +102,14 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 [NameInMap("key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
+
+                [NameInMap("tagKey")]
+                [Validation(Required=false)]
+                public string TagKey { get; set; }
+
+                [NameInMap("tagValue")]
+                [Validation(Required=false)]
+                public string TagValue { get; set; }
 
                 [NameInMap("value")]
                 [Validation(Required=false)]

@@ -107,6 +107,10 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 
             }
 
+            [NameInMap("latestModuleVersion")]
+            [Validation(Required=false)]
+            public string LatestModuleVersion { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>mod-518855d9a058c331e9c60bc0ce</para>
@@ -150,6 +154,14 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 [NameInMap("key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
+
+                [NameInMap("tagKey")]
+                [Validation(Required=false)]
+                public string TagKey { get; set; }
+
+                [NameInMap("tagValue")]
+                [Validation(Required=false)]
+                public string TagValue { get; set; }
 
                 [NameInMap("value")]
                 [Validation(Required=false)]

@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class ListTasksShrinkRequest : TeaModel {
-        [NameInMap("excludeTaskIds")]
-        [Validation(Required=false)]
-        public string ExcludeTaskIdsShrink { get; set; }
-
         /// <summary>
         /// <b>Example:</b>
         /// <para>g-59d8d22e78792ffe3d3eb6154d727</para>

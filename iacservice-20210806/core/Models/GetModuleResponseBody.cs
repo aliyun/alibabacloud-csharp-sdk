@@ -29,6 +29,28 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            [NameInMap("groupInfo")]
+            [Validation(Required=false)]
+            public GetModuleResponseBodyModuleGroupInfo GroupInfo { get; set; }
+            public class GetModuleResponseBodyModuleGroupInfo : TeaModel {
+                [NameInMap("groupId")]
+                [Validation(Required=false)]
+                public string GroupId { get; set; }
+
+                [NameInMap("groupName")]
+                [Validation(Required=false)]
+                public string GroupName { get; set; }
+
+                [NameInMap("projectId")]
+                [Validation(Required=false)]
+                public string ProjectId { get; set; }
+
+                [NameInMap("projectName")]
+                [Validation(Required=false)]
+                public string ProjectName { get; set; }
+
+            }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>v1</para>
@@ -95,6 +117,20 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
+            [NameInMap("tags")]
+            [Validation(Required=false)]
+            public List<GetModuleResponseBodyModuleTags> Tags { get; set; }
+            public class GetModuleResponseBodyModuleTags : TeaModel {
+                [NameInMap("tagKey")]
+                [Validation(Required=false)]
+                public string TagKey { get; set; }
+
+                [NameInMap("tagValue")]
+                [Validation(Required=false)]
+                public string TagValue { get; set; }
+
+            }
 
             /// <summary>
             /// <b>Example:</b>

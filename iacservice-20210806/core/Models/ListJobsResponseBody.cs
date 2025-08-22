@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 [Validation(Required=false)]
                 public bool? IsDestroy { get; set; }
 
+                [NameInMap("moduleDescription")]
+                [Validation(Required=false)]
+                public string ModuleDescription { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>v4</para>

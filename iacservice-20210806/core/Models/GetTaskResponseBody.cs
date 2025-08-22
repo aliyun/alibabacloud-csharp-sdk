@@ -55,6 +55,14 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             [Validation(Required=false)]
             public string CurrentJobId { get; set; }
 
+            [NameInMap("currentJobStatus")]
+            [Validation(Required=false)]
+            public string CurrentJobStatus { get; set; }
+
+            [NameInMap("deletionProtection")]
+            [Validation(Required=false)]
+            public bool? DeletionProtection { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>demo</para>
@@ -105,6 +113,10 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             [Validation(Required=false)]
             public bool? InitModuleState { get; set; }
 
+            [NameInMap("latestModuleVersion")]
+            [Validation(Required=false)]
+            public string LatestModuleVersion { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>mod-4267dcfbf1b6d14625614ddbe15</para>
@@ -112,6 +124,10 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             [NameInMap("moduleId")]
             [Validation(Required=false)]
             public string ModuleId { get; set; }
+
+            [NameInMap("moduleName")]
+            [Validation(Required=false)]
+            public string ModuleName { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
@@ -124,10 +140,6 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
-
-            [NameInMap("parameters")]
-            [Validation(Required=false)]
-            public Dictionary<string, string> Parameters { get; set; }
 
             [NameInMap("protectionStrategy")]
             [Validation(Required=false)]
@@ -152,6 +164,38 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
+            [NameInMap("tags")]
+            [Validation(Required=false)]
+            public List<GetTaskResponseBodyTaskTags> Tags { get; set; }
+            public class GetTaskResponseBodyTaskTags : TeaModel {
+                [NameInMap("tagKey")]
+                [Validation(Required=false)]
+                public string TagKey { get; set; }
+
+                [NameInMap("tagValue")]
+                [Validation(Required=false)]
+                public string TagValue { get; set; }
+
+            }
+
+            [NameInMap("taskBackend")]
+            [Validation(Required=false)]
+            public GetTaskResponseBodyTaskTaskBackend TaskBackend { get; set; }
+            public class GetTaskResponseBodyTaskTaskBackend : TeaModel {
+                [NameInMap("bucketEndpoint")]
+                [Validation(Required=false)]
+                public string BucketEndpoint { get; set; }
+
+                [NameInMap("bucketName")]
+                [Validation(Required=false)]
+                public string BucketName { get; set; }
+
+                [NameInMap("objectPath")]
+                [Validation(Required=false)]
+                public string ObjectPath { get; set; }
+
+            }
 
             /// <summary>
             /// <b>Example:</b>
@@ -184,14 +228,6 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             [NameInMap("triggerStrategy")]
             [Validation(Required=false)]
             public string TriggerStrategy { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>**<em>10</em></para>
-            /// </summary>
-            [NameInMap("triggerValue")]
-            [Validation(Required=false)]
-            public string TriggerValue { get; set; }
 
         }
 

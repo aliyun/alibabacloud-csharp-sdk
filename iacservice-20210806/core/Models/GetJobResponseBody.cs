@@ -145,10 +145,6 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             [Validation(Required=false)]
             public Dictionary<string, string> Parameters { get; set; }
 
-            [NameInMap("runtimeType")]
-            [Validation(Required=false)]
-            public string RuntimeType { get; set; }
-
             /// <summary>
             /// <b>Example:</b>
             /// <para>Errored</para>
