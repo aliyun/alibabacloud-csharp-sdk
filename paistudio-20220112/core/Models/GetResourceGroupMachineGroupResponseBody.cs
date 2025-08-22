@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class GetResourceGroupMachineGroupResponseBody : TeaModel {
+        [NameInMap("AllocatableCpu")]
+        [Validation(Required=false)]
+        public string AllocatableCpu { get; set; }
+
+        [NameInMap("AllocatableMemory")]
+        [Validation(Required=false)]
+        public string AllocatableMemory { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>2</para>
@@ -164,6 +172,14 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [NameInMap("SupportedDrivers")]
         [Validation(Required=false)]
         public List<string> SupportedDrivers { get; set; }
+
+        [NameInMap("SystemReservedCpu")]
+        [Validation(Required=false)]
+        public string SystemReservedCpu { get; set; }
+
+        [NameInMap("SystemReservedMemory")]
+        [Validation(Required=false)]
+        public string SystemReservedMemory { get; set; }
 
         [NameInMap("Tags")]
         [Validation(Required=false)]

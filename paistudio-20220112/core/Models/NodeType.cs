@@ -17,6 +17,14 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string AcceleratorType { get; set; }
 
+        [NameInMap("AllocatableCPU")]
+        [Validation(Required=false)]
+        public string AllocatableCPU { get; set; }
+
+        [NameInMap("AllocatableMemory")]
+        [Validation(Required=false)]
+        public string AllocatableMemory { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>16</para>
@@ -60,6 +68,14 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [NameInMap("NodeType")]
         [Validation(Required=false)]
         public string NodeType_ { get; set; }
+
+        [NameInMap("SystemReservedCPU")]
+        [Validation(Required=false)]
+        public string SystemReservedCPU { get; set; }
+
+        [NameInMap("SystemReservedMemory")]
+        [Validation(Required=false)]
+        public string SystemReservedMemory { get; set; }
 
     }
 

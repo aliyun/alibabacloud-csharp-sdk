@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class MachineGroup : TeaModel {
+        [NameInMap("AllocatableCpu")]
+        [Validation(Required=false)]
+        public long? AllocatableCpu { get; set; }
+
+        [NameInMap("AllocatableMemory")]
+        [Validation(Required=false)]
+        public long? AllocatableMemory { get; set; }
+
         [NameInMap("Cpu")]
         [Validation(Required=false)]
         public long? Cpu { get; set; }
@@ -120,6 +128,14 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [NameInMap("SupportedDrivers")]
         [Validation(Required=false)]
         public List<string> SupportedDrivers { get; set; }
+
+        [NameInMap("SystemReservedCpu")]
+        [Validation(Required=false)]
+        public long? SystemReservedCpu { get; set; }
+
+        [NameInMap("SystemReservedMemory")]
+        [Validation(Required=false)]
+        public long? SystemReservedMemory { get; set; }
 
     }
 

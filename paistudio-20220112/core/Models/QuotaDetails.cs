@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public ResourceAmount ActualMinQuota { get; set; }
 
+        [NameInMap("AllocatableQuota")]
+        [Validation(Required=false)]
+        public ResourceAmount AllocatableQuota { get; set; }
+
         [NameInMap("AllocatedQuota")]
         [Validation(Required=false)]
         public ResourceAmount AllocatedQuota { get; set; }
@@ -40,6 +44,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [NameInMap("SelfSubmittedQuota")]
         [Validation(Required=false)]
         public ResourceAmount SelfSubmittedQuota { get; set; }
+
+        [NameInMap("SystemReservedQuota")]
+        [Validation(Required=false)]
+        public ResourceAmount SystemReservedQuota { get; set; }
 
         [NameInMap("UsedQuota")]
         [Validation(Required=false)]

@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string AcceleratorType { get; set; }
 
+        [NameInMap("AllocatableCPU")]
+        [Validation(Required=false)]
+        public string AllocatableCPU { get; set; }
+
+        [NameInMap("AllocatableMemory")]
+        [Validation(Required=false)]
+        public string AllocatableMemory { get; set; }
+
         [NameInMap("AvailabilityZone")]
         [Validation(Required=false)]
         public string AvailabilityZone { get; set; }
@@ -128,6 +136,14 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [NameInMap("ResourceGroupName")]
         [Validation(Required=false)]
         public string ResourceGroupName { get; set; }
+
+        [NameInMap("SystemReservedCPU")]
+        [Validation(Required=false)]
+        public string SystemReservedCPU { get; set; }
+
+        [NameInMap("SystemReservedMemory")]
+        [Validation(Required=false)]
+        public string SystemReservedMemory { get; set; }
 
         [NameInMap("Users")]
         [Validation(Required=false)]
