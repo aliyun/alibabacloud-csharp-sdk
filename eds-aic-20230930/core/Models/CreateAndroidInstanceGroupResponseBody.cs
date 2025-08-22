@@ -42,6 +42,20 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
         }
 
+        [NameInMap("NetworkPackageOrderModel")]
+        [Validation(Required=false)]
+        public CreateAndroidInstanceGroupResponseBodyNetworkPackageOrderModel NetworkPackageOrderModel { get; set; }
+        public class CreateAndroidInstanceGroupResponseBodyNetworkPackageOrderModel : TeaModel {
+            [NameInMap("BandwidthPackageId")]
+            [Validation(Required=false)]
+            public string BandwidthPackageId { get; set; }
+
+            [NameInMap("BandwidthPackageOrderId")]
+            [Validation(Required=false)]
+            public string BandwidthPackageOrderId { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The ID of the order.</para>
         /// 

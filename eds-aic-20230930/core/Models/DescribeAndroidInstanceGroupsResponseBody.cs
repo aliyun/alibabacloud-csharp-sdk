@@ -49,6 +49,18 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public int? AvailableInstanceAmount { get; set; }
 
+            [NameInMap("BandwidthPackageId")]
+            [Validation(Required=false)]
+            public string BandwidthPackageId { get; set; }
+
+            [NameInMap("BandwidthPackageStatus")]
+            [Validation(Required=false)]
+            public string BandwidthPackageStatus { get; set; }
+
+            [NameInMap("BandwidthPackageType")]
+            [Validation(Required=false)]
+            public string BandwidthPackageType { get; set; }
+
             /// <summary>
             /// <para>The billing method.</para>
             /// 
@@ -234,6 +246,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public int? Memory { get; set; }
 
+            [NameInMap("NetworkType")]
+            [Validation(Required=false)]
+            public string NetworkType { get; set; }
+
             /// <summary>
             /// <para>The number of instances in the instance group.</para>
             /// 
@@ -329,6 +345,20 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [NameInMap("SystemVersion")]
             [Validation(Required=false)]
             public string SystemVersion { get; set; }
+
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelTags> Tags { get; set; }
+            public class DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelTags : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
 
             /// <summary>
             /// <para>The ID of the vSwitch.</para>

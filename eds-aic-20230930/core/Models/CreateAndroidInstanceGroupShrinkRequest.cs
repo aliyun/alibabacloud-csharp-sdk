@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
-    public class CreateAndroidInstanceGroupRequest : TeaModel {
+    public class CreateAndroidInstanceGroupShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The number of instance groups. Default value: 1. Maximum value: 1.</para>
         /// 
@@ -197,57 +197,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
         [NameInMap("NetworkInfo")]
         [Validation(Required=false)]
-        public CreateAndroidInstanceGroupRequestNetworkInfo NetworkInfo { get; set; }
-        public class CreateAndroidInstanceGroupRequestNetworkInfo : TeaModel {
-            [NameInMap("AutoPay")]
-            [Validation(Required=false)]
-            public bool? AutoPay { get; set; }
-
-            [NameInMap("AutoRenew")]
-            [Validation(Required=false)]
-            public bool? AutoRenew { get; set; }
-
-            [NameInMap("BandwidthPackageName")]
-            [Validation(Required=false)]
-            public string BandwidthPackageName { get; set; }
-
-            [NameInMap("CidrBlock")]
-            [Validation(Required=false)]
-            public string CidrBlock { get; set; }
-
-            [NameInMap("InternetChargeType")]
-            [Validation(Required=false)]
-            public string InternetChargeType { get; set; }
-
-            [NameInMap("IpRatio")]
-            [Validation(Required=false)]
-            public int? IpRatio { get; set; }
-
-            [NameInMap("Isp")]
-            [Validation(Required=false)]
-            public string Isp { get; set; }
-
-            [NameInMap("LimitedBandwidth")]
-            [Validation(Required=false)]
-            public int? LimitedBandwidth { get; set; }
-
-            [NameInMap("PayType")]
-            [Validation(Required=false)]
-            public string PayType { get; set; }
-
-            [NameInMap("Period")]
-            [Validation(Required=false)]
-            public int? Period { get; set; }
-
-            [NameInMap("PeriodUnit")]
-            [Validation(Required=false)]
-            public string PeriodUnit { get; set; }
-
-            [NameInMap("VisibleType")]
-            [Validation(Required=false)]
-            public string VisibleType { get; set; }
-
-        }
+        public string NetworkInfoShrink { get; set; }
 
         [NameInMap("NetworkType")]
         [Validation(Required=false)]
@@ -318,8 +268,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
-        public List<CreateAndroidInstanceGroupRequestTag> Tag { get; set; }
-        public class CreateAndroidInstanceGroupRequestTag : TeaModel {
+        public List<CreateAndroidInstanceGroupShrinkRequestTag> Tag { get; set; }
+        public class CreateAndroidInstanceGroupShrinkRequestTag : TeaModel {
             /// <summary>
             /// <para>The tag key.</para>
             /// 

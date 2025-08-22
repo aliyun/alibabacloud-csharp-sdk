@@ -458,6 +458,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public int? StreamMode { get; set; }
 
+            [NameInMap("SystemVersion")]
+            [Validation(Required=false)]
+            public string SystemVersion { get; set; }
+
             /// <summary>
             /// <para>The tags.</para>
             /// </summary>

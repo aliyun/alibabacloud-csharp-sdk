@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public List<string> InstanceIdList { get; set; }
 
+        [NameInMap("Reset")]
+        [Validation(Required=false)]
+        public bool? Reset { get; set; }
+
     }
 
 }

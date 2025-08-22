@@ -167,6 +167,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string PayType { get; set; }
 
+            [NameInMap("VisibleType")]
+            [Validation(Required=false)]
+            public string VisibleType { get; set; }
+
         }
 
         [NameInMap("NetworkType")]
