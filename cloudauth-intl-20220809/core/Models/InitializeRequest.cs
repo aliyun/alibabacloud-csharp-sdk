@@ -79,6 +79,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string DocumentNumber { get; set; }
 
+        [NameInMap("EditOcrResult")]
+        [Validation(Required=false)]
+        public string EditOcrResult { get; set; }
+
         [NameInMap("ExperienceCode")]
         [Validation(Required=false)]
         public string ExperienceCode { get; set; }

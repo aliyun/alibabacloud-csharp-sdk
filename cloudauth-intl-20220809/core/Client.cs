@@ -3689,6 +3689,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["DocumentNumber"] = request.DocumentNumber;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EditOcrResult))
+            {
+                query["EditOcrResult"] = request.EditOcrResult;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExperienceCode))
             {
                 query["ExperienceCode"] = request.ExperienceCode;
@@ -3894,6 +3898,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocumentNumber))
             {
                 query["DocumentNumber"] = request.DocumentNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EditOcrResult))
+            {
+                query["EditOcrResult"] = request.EditOcrResult;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExperienceCode))
             {
