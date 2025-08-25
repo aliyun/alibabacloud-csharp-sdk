@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Imageenhan20190930.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>7574ee8f-38a3-4b1e-9280-11c33ab46e51</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -1,3 +1,6 @@
+2025-08-25 Version: 1.0.11
+- Generated csharp 2019-09-30 for imageenhan.
+
 2024-02-20 Version: 1.0.10
 - Update API GenerateCartoonizedImage: update param ImageType.
 - Update API GenerateCartoonizedImage: update response param.

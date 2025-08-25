@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Imageenhan20190930.Models
         public RecolorImageResponseBodyData Data { get; set; }
         public class RecolorImageResponseBodyData : TeaModel {
             /// <summary>
-            /// 1
+            /// <para>1</para>
             /// </summary>
             [NameInMap("ImageList")]
             [Validation(Required=false)]
@@ -22,6 +22,10 @@ namespace AlibabaCloud.SDK.Imageenhan20190930.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>3A9BFC5E-3F7C-4D9A-9445-908C6D14AB5B</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
