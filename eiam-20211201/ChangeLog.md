@@ -1,3 +1,7 @@
+2025-08-25 Version: 1.9.0
+- Support API UpdateApplicationClientSecretExpirationTime.
+
+
 2025-08-12 Version: 1.8.5
 - Update API CreateApplicationClientSecret: add request parameters ExpirationTime.
 - Update API GetApplicationSsoConfig: add response parameters Body.ApplicationSsoConfig.OidcSsoConfig.AllowedPublicClient.

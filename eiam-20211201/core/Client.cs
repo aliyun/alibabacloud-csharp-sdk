@@ -16921,6 +16921,150 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>更新应用的指定ClientSecret的到期时间</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateApplicationClientSecretExpirationTimeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateApplicationClientSecretExpirationTimeResponse
+        /// </returns>
+        public UpdateApplicationClientSecretExpirationTimeResponse UpdateApplicationClientSecretExpirationTimeWithOptions(UpdateApplicationClientSecretExpirationTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpirationTime))
+            {
+                query["ExpirationTime"] = request.ExpirationTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretId))
+            {
+                query["SecretId"] = request.SecretId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateApplicationClientSecretExpirationTime",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateApplicationClientSecretExpirationTimeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新应用的指定ClientSecret的到期时间</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateApplicationClientSecretExpirationTimeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateApplicationClientSecretExpirationTimeResponse
+        /// </returns>
+        public async Task<UpdateApplicationClientSecretExpirationTimeResponse> UpdateApplicationClientSecretExpirationTimeWithOptionsAsync(UpdateApplicationClientSecretExpirationTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpirationTime))
+            {
+                query["ExpirationTime"] = request.ExpirationTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretId))
+            {
+                query["SecretId"] = request.SecretId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateApplicationClientSecretExpirationTime",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateApplicationClientSecretExpirationTimeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新应用的指定ClientSecret的到期时间</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateApplicationClientSecretExpirationTimeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateApplicationClientSecretExpirationTimeResponse
+        /// </returns>
+        public UpdateApplicationClientSecretExpirationTimeResponse UpdateApplicationClientSecretExpirationTime(UpdateApplicationClientSecretExpirationTimeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateApplicationClientSecretExpirationTimeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新应用的指定ClientSecret的到期时间</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateApplicationClientSecretExpirationTimeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateApplicationClientSecretExpirationTimeResponse
+        /// </returns>
+        public async Task<UpdateApplicationClientSecretExpirationTimeResponse> UpdateApplicationClientSecretExpirationTimeAsync(UpdateApplicationClientSecretExpirationTimeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateApplicationClientSecretExpirationTimeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Modifies the description of an Employee Identity and Access Management (EIAM) application.</para>
         /// </summary>
         /// 
