@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSecurityGroupAttributeRequest : TeaModel {
+        /// <summary>
+        /// <para>The attributes of the security group. Valid value: snapshotPolicyIds: queries information about snapshot policies associated with a security group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>snapshotPolicyIds</para>
+        /// </summary>
         [NameInMap("Attribute")]
         [Validation(Required=false)]
         public string Attribute { get; set; }

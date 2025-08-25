@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstanceTypesRequest : TeaModel {
+        [NameInMap("AdditionalAttributes")]
+        [Validation(Required=false)]
+        public List<string> AdditionalAttributes { get; set; }
+
         /// <summary>
         /// <para>The CPU architecture. Valid values:</para>
         /// <list type="bullet">

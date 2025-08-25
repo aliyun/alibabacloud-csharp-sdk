@@ -582,6 +582,50 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public bool? NetworkEncryptionSupport { get; set; }
 
+                [NameInMap("NetworkInfo")]
+                [Validation(Required=false)]
+                public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkInfo NetworkInfo { get; set; }
+                public class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkInfo : TeaModel {
+                    [NameInMap("BandwidthWeighting")]
+                    [Validation(Required=false)]
+                    public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkInfoBandwidthWeighting BandwidthWeighting { get; set; }
+                    public class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkInfoBandwidthWeighting : TeaModel {
+                        [NameInMap("WeightingInfos")]
+                        [Validation(Required=false)]
+                        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkInfoBandwidthWeightingWeightingInfos WeightingInfos { get; set; }
+                        public class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkInfoBandwidthWeightingWeightingInfos : TeaModel {
+                            [NameInMap("WeightingInfo")]
+                            [Validation(Required=false)]
+                            public List<DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkInfoBandwidthWeightingWeightingInfosWeightingInfo> WeightingInfo { get; set; }
+                            public class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkInfoBandwidthWeightingWeightingInfosWeightingInfo : TeaModel {
+                                [NameInMap("EbsBandwidth")]
+                                [Validation(Required=false)]
+                                public long? EbsBandwidth { get; set; }
+
+                                [NameInMap("EbsBurstBandwidth")]
+                                [Validation(Required=false)]
+                                public long? EbsBurstBandwidth { get; set; }
+
+                                [NameInMap("Name")]
+                                [Validation(Required=false)]
+                                public string Name { get; set; }
+
+                                [NameInMap("VpcBandwidth")]
+                                [Validation(Required=false)]
+                                public long? VpcBandwidth { get; set; }
+
+                                [NameInMap("VpcBurstBandwidth")]
+                                [Validation(Required=false)]
+                                public long? VpcBurstBandwidth { get; set; }
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
                 /// <summary>
                 /// <para>Indicates whether cloud disks can be attached by using the NVMe protocol. Valid values:</para>
                 /// <list type="bullet">

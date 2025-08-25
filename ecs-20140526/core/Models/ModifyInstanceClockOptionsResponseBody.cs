@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyInstanceClockOptionsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
         /// </summary>
@@ -18,6 +20,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the modification task.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/25622.html">DescribeTasks</a> operation to query the modification results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>t-bp1hvgwromzv32iq****</para>
         /// </summary>
