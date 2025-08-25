@@ -10470,6 +10470,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await GetInstanceTrendingReportWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取IVR轨迹小结</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetIvrTrackingSummaryRequest
         /// </param>
@@ -10511,6 +10516,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetIvrTrackingSummaryResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取IVR轨迹小结</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetIvrTrackingSummaryRequest
         /// </param>
@@ -10552,6 +10562,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetIvrTrackingSummaryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取IVR轨迹小结</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetIvrTrackingSummaryRequest
         /// </param>
@@ -10565,6 +10580,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return GetIvrTrackingSummaryWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取IVR轨迹小结</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetIvrTrackingSummaryRequest
         /// </param>
@@ -13704,6 +13724,138 @@ namespace AlibabaCloud.SDK.CCC20200701
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ImportDocumentsWithOptionsAsync(request, runtime);
+        }
+
+        /// <param name="request">
+        /// ImportRamUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportRamUsersResponse
+        /// </returns>
+        public ImportRamUsersResponse ImportRamUsersWithOptions(ImportRamUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RamIdList))
+            {
+                query["RamIdList"] = request.RamIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleId))
+            {
+                query["RoleId"] = request.RoleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillLevelList))
+            {
+                query["SkillLevelList"] = request.SkillLevelList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkMode))
+            {
+                query["WorkMode"] = request.WorkMode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImportRamUsers",
+                Version = "2020-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImportRamUsersResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// ImportRamUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportRamUsersResponse
+        /// </returns>
+        public async Task<ImportRamUsersResponse> ImportRamUsersWithOptionsAsync(ImportRamUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RamIdList))
+            {
+                query["RamIdList"] = request.RamIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleId))
+            {
+                query["RoleId"] = request.RoleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillLevelList))
+            {
+                query["SkillLevelList"] = request.SkillLevelList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkMode))
+            {
+                query["WorkMode"] = request.WorkMode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImportRamUsers",
+                Version = "2020-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImportRamUsersResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// ImportRamUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportRamUsersResponse
+        /// </returns>
+        public ImportRamUsersResponse ImportRamUsers(ImportRamUsersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ImportRamUsersWithOptions(request, runtime);
+        }
+
+        /// <param name="request">
+        /// ImportRamUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportRamUsersResponse
+        /// </returns>
+        public async Task<ImportRamUsersResponse> ImportRamUsersAsync(ImportRamUsersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ImportRamUsersWithOptionsAsync(request, runtime);
         }
 
         /// <param name="request">
@@ -17888,6 +18040,150 @@ namespace AlibabaCloud.SDK.CCC20200701
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListFlashSmsApplicationsWithOptionsAsync(request, runtime);
+        }
+
+        /// <param name="tmpReq">
+        /// ListFlashSmsSettingsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFlashSmsSettingsResponse
+        /// </returns>
+        public ListFlashSmsSettingsResponse ListFlashSmsSettingsWithOptions(ListFlashSmsSettingsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListFlashSmsSettingsShrinkRequest request = new ListFlashSmsSettingsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SkillGroupIdList))
+            {
+                request.SkillGroupIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SkillGroupIdList, "SkillGroupIdList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillGroupIdListShrink))
+            {
+                query["SkillGroupIdList"] = request.SkillGroupIdListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillGroupName))
+            {
+                query["SkillGroupName"] = request.SkillGroupName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListFlashSmsSettings",
+                Version = "2020-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListFlashSmsSettingsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <param name="tmpReq">
+        /// ListFlashSmsSettingsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFlashSmsSettingsResponse
+        /// </returns>
+        public async Task<ListFlashSmsSettingsResponse> ListFlashSmsSettingsWithOptionsAsync(ListFlashSmsSettingsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListFlashSmsSettingsShrinkRequest request = new ListFlashSmsSettingsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SkillGroupIdList))
+            {
+                request.SkillGroupIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SkillGroupIdList, "SkillGroupIdList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillGroupIdListShrink))
+            {
+                query["SkillGroupIdList"] = request.SkillGroupIdListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillGroupName))
+            {
+                query["SkillGroupName"] = request.SkillGroupName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListFlashSmsSettings",
+                Version = "2020-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListFlashSmsSettingsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// ListFlashSmsSettingsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFlashSmsSettingsResponse
+        /// </returns>
+        public ListFlashSmsSettingsResponse ListFlashSmsSettings(ListFlashSmsSettingsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListFlashSmsSettingsWithOptions(request, runtime);
+        }
+
+        /// <param name="request">
+        /// ListFlashSmsSettingsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFlashSmsSettingsResponse
+        /// </returns>
+        public async Task<ListFlashSmsSettingsResponse> ListFlashSmsSettingsAsync(ListFlashSmsSettingsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListFlashSmsSettingsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

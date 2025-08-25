@@ -383,6 +383,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 [Validation(Required=false)]
                 public string OffsiteAgentOriginatorNumbers { get; set; }
 
+                [NameInMap("OffsiteAgentReleaseReason")]
+                [Validation(Required=false)]
+                public string OffsiteAgentReleaseReason { get; set; }
+
                 [NameInMap("OutsideNumberReleaseReason")]
                 [Validation(Required=false)]
                 public string OutsideNumberReleaseReason { get; set; }
@@ -516,6 +520,14 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 [NameInMap("TransferCount")]
                 [Validation(Required=false)]
                 public long? TransferCount { get; set; }
+
+                [NameInMap("VoicebotDestinationNumber")]
+                [Validation(Required=false)]
+                public string VoicebotDestinationNumber { get; set; }
+
+                [NameInMap("VoicebotOriginatorNumber")]
+                [Validation(Required=false)]
+                public string VoicebotOriginatorNumber { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>

@@ -1,3 +1,13 @@
+2025-08-25 Version: 2.37.0
+- Support API ImportRamUsers.
+- Support API ListFlashSmsSettings.
+- Update API ListCallDetailRecordsV2: add response parameters Body.Data.List.$.OffsiteAgentReleaseReason.
+- Update API ListCallDetailRecordsV2: add response parameters Body.Data.List.$.VoicebotDestinationNumber.
+- Update API ListCallDetailRecordsV2: add response parameters Body.Data.List.$.VoicebotOriginatorNumber.
+- Update API ListOutboundNumbersOfUser: add response parameters Body.Data.List.$.ProviderShortName.
+- Update API ListOutboundNumbersOfUser: add response parameters Body.Data.List.$.ProviderType.
+
+
 2025-07-02 Version: 2.36.3
 - Update API ListFlashSmsTemplates: add response parameters Body.Data.$.TemplateDetails.
 

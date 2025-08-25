@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
-    public class ListOutboundNumbersOfUserResponseBody : TeaModel {
+    public class ListFlashSmsSettingsResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -19,51 +19,39 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public ListOutboundNumbersOfUserResponseBodyData Data { get; set; }
-        public class ListOutboundNumbersOfUserResponseBodyData : TeaModel {
+        public ListFlashSmsSettingsResponseBodyData Data { get; set; }
+        public class ListFlashSmsSettingsResponseBodyData : TeaModel {
             [NameInMap("List")]
             [Validation(Required=false)]
-            public List<ListOutboundNumbersOfUserResponseBodyDataList> List { get; set; }
-            public class ListOutboundNumbersOfUserResponseBodyDataList : TeaModel {
-                [NameInMap("City")]
+            public List<ListFlashSmsSettingsResponseBodyDataList> List { get; set; }
+            public class ListFlashSmsSettingsResponseBodyDataList : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
+                [NameInMap("Enabled")]
                 [Validation(Required=false)]
-                public string City { get; set; }
+                public bool? Enabled { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>0830019****</para>
+                /// <para>ccc-test</para>
                 /// </summary>
-                [NameInMap("Number")]
+                [NameInMap("InstanceId")]
                 [Validation(Required=false)]
-                public string Number { get; set; }
+                public string InstanceId { get; set; }
 
-                [NameInMap("Provider")]
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>skillgroup1@ccc-test</para>
+                /// </summary>
+                [NameInMap("SkillGroupId")]
                 [Validation(Required=false)]
-                public string Provider { get; set; }
+                public string SkillGroupId { get; set; }
 
-                /// <term><b>Obsolete</b></term>
-                [NameInMap("ProviderCode")]
+                [NameInMap("SkillGroupName")]
                 [Validation(Required=false)]
-                [Obsolete]
-                public string ProviderCode { get; set; }
-
-                /// <term><b>Obsolete</b></term>
-                [NameInMap("ProviderDisplayName")]
-                [Validation(Required=false)]
-                [Obsolete]
-                public string ProviderDisplayName { get; set; }
-
-                [NameInMap("ProviderShortName")]
-                [Validation(Required=false)]
-                public string ProviderShortName { get; set; }
-
-                [NameInMap("ProviderType")]
-                [Validation(Required=false)]
-                public string ProviderType { get; set; }
-
-                [NameInMap("Province")]
-                [Validation(Required=false)]
-                public string Province { get; set; }
+                public string SkillGroupName { get; set; }
 
             }
 
@@ -105,9 +93,13 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        [NameInMap("Params")]
+        [Validation(Required=false)]
+        public List<string> Params { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
-        /// <para>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</para>
+        /// <para>BA03159C-E808-4FF1-B27E-A61B6E888D7F</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
