@@ -14,7 +14,10 @@ namespace AlibabaCloud.SDK.Videoenhan20200320.Models
         public string VideoScene { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="http://invi-label.oss-cn-shanghai.aliyuncs.com/labl/temp/faceswap/test_for_api/xxxx.mp4">http://invi-label.oss-cn-shanghai.aliyuncs.com/labl/temp/faceswap/test_for_api/xxxx.mp4</a></para>
         /// </summary>
         [NameInMap("VideoURL")]
         [Validation(Required=false)]

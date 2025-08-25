@@ -27,6 +27,10 @@ namespace AlibabaCloud.SDK.Videoenhan20200320.Models
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>6cd509ea-54fa-4730-8e9d-c94cadcda048</para>
+            /// </summary>
             [NameInMap("TemplateId")]
             [Validation(Required=false)]
             public string TemplateId { get; set; }
@@ -41,6 +45,10 @@ namespace AlibabaCloud.SDK.Videoenhan20200320.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>F61182AE-515B-5B0A-A877-1C9AE908FF15</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

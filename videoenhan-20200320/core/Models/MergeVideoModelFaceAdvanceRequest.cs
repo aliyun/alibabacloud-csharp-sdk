@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Videoenhan20200320.Models
         [Validation(Required=false)]
         public bool? Enhance { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><a href="https://invi-label.oss-cn-shanghai.aliyuncs.com/label/temp/faceswap/ref/ref.jpg">https://invi-label.oss-cn-shanghai.aliyuncs.com/label/temp/faceswap/ref/ref.jpg</a></para>
+        /// </summary>
         [NameInMap("FaceImageURL")]
         [Validation(Required=false)]
         public Stream FaceImageURLObject { get; set; }
@@ -40,7 +44,10 @@ namespace AlibabaCloud.SDK.Videoenhan20200320.Models
         }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3bf2418c-7adf-4002-a9d6-2f7cf1889c0d</para>
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
