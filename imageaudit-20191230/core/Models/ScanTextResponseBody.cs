@@ -35,26 +35,46 @@ namespace AlibabaCloud.SDK.Imageaudit20191230.Models
 
                         }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>ad</para>
+                        /// </summary>
                         [NameInMap("Label")]
                         [Validation(Required=false)]
                         public string Label { get; set; }
 
                     }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>ad</para>
+                    /// </summary>
                     [NameInMap("Label")]
                     [Validation(Required=false)]
                     public string Label { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>99.91</para>
+                    /// </summary>
                     [NameInMap("Rate")]
                     [Validation(Required=false)]
                     public float? Rate { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>block</para>
+                    /// </summary>
                     [NameInMap("Suggestion")]
                     [Validation(Required=false)]
                     public string Suggestion { get; set; }
 
                 }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>txt6Vh5Fv0DAFy5hgdVRt3pqf-1s82jj</para>
+                /// </summary>
                 [NameInMap("TaskId")]
                 [Validation(Required=false)]
                 public string TaskId { get; set; }
@@ -63,6 +83,10 @@ namespace AlibabaCloud.SDK.Imageaudit20191230.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>C7CD87E3-57A5-4E2F-8A44-809F3554692C</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
