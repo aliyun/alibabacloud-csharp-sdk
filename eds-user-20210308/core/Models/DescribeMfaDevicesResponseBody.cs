@@ -16,6 +16,28 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [Validation(Required=false)]
         public List<DescribeMfaDevicesResponseBodyMfaDevices> MfaDevices { get; set; }
         public class DescribeMfaDevicesResponseBodyMfaDevices : TeaModel {
+            [NameInMap("AdUser")]
+            [Validation(Required=false)]
+            public DescribeMfaDevicesResponseBodyMfaDevicesAdUser AdUser { get; set; }
+            public class DescribeMfaDevicesResponseBodyMfaDevicesAdUser : TeaModel {
+                [NameInMap("DisplayName")]
+                [Validation(Required=false)]
+                public string DisplayName { get; set; }
+
+                [NameInMap("DisplayNameNew")]
+                [Validation(Required=false)]
+                public string DisplayNameNew { get; set; }
+
+                [NameInMap("EndUser")]
+                [Validation(Required=false)]
+                public string EndUser { get; set; }
+
+                [NameInMap("UserPrincipalName")]
+                [Validation(Required=false)]
+                public string UserPrincipalName { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The number of consecutive failures to bind the virtual MFA device, or the number of authentication failures based on the virtual MFA device.</para>
             /// 

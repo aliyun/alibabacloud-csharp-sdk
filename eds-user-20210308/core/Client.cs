@@ -18,7 +18,6 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._signatureAlgorithm = "v2";
             this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("eds-user", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -1921,6 +1920,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             {
                 query["EndUserIds"] = request.EndUserIds;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                query["Filter"] = request.Filter;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["MaxResults"] = request.MaxResults;
@@ -1978,6 +1981,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserIds))
             {
                 query["EndUserIds"] = request.EndUserIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                query["Filter"] = request.Filter;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {

@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [Validation(Required=false)]
         public List<string> EndUserIds { get; set; }
 
+        [NameInMap("Filter")]
+        [Validation(Required=false)]
+        public string Filter { get; set; }
+
         /// <summary>
         /// <para>The maximum number of entries to return. Valid values: 1 to 500.\
         /// Default value: 100.</para>
