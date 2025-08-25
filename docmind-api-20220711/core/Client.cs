@@ -3800,7 +3800,7 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
         /// <para>文档智能解析流式输出</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// SubmitDocParserJobRequest
         /// </param>
         /// <param name="runtime">
@@ -3810,9 +3810,15 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
         /// <returns>
         /// SubmitDocParserJobResponse
         /// </returns>
-        public SubmitDocParserJobResponse SubmitDocParserJobWithOptions(SubmitDocParserJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public SubmitDocParserJobResponse SubmitDocParserJobWithOptions(SubmitDocParserJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitDocParserJobShrinkRequest request = new SubmitDocParserJobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MultimediaParameters))
+            {
+                request.MultimediaParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MultimediaParameters, "MultimediaParameters", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnhancementMode))
             {
@@ -3837,6 +3843,10 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LlmEnhancement))
             {
                 query["LlmEnhancement"] = request.LlmEnhancement;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MultimediaParametersShrink))
+            {
+                query["MultimediaParameters"] = request.MultimediaParametersShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Option))
             {
@@ -3882,7 +3892,7 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
         /// <para>文档智能解析流式输出</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// SubmitDocParserJobRequest
         /// </param>
         /// <param name="runtime">
@@ -3892,9 +3902,15 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
         /// <returns>
         /// SubmitDocParserJobResponse
         /// </returns>
-        public async Task<SubmitDocParserJobResponse> SubmitDocParserJobWithOptionsAsync(SubmitDocParserJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<SubmitDocParserJobResponse> SubmitDocParserJobWithOptionsAsync(SubmitDocParserJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitDocParserJobShrinkRequest request = new SubmitDocParserJobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MultimediaParameters))
+            {
+                request.MultimediaParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MultimediaParameters, "MultimediaParameters", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnhancementMode))
             {
@@ -3919,6 +3935,10 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LlmEnhancement))
             {
                 query["LlmEnhancement"] = request.LlmEnhancement;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MultimediaParametersShrink))
+            {
+                query["MultimediaParameters"] = request.MultimediaParametersShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Option))
             {

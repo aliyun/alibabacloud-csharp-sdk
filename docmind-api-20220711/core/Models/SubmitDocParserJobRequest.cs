@@ -45,6 +45,20 @@ namespace AlibabaCloud.SDK.Docmind_api20220711.Models
         [Validation(Required=false)]
         public bool? LlmEnhancement { get; set; }
 
+        [NameInMap("MultimediaParameters")]
+        [Validation(Required=false)]
+        public SubmitDocParserJobRequestMultimediaParameters MultimediaParameters { get; set; }
+        public class SubmitDocParserJobRequestMultimediaParameters : TeaModel {
+            [NameInMap("EnableSynopsisParse")]
+            [Validation(Required=false)]
+            public bool? EnableSynopsisParse { get; set; }
+
+            [NameInMap("VlParsePrompt")]
+            [Validation(Required=false)]
+            public string VlParsePrompt { get; set; }
+
+        }
+
         [NameInMap("Option")]
         [Validation(Required=false)]
         public string Option { get; set; }

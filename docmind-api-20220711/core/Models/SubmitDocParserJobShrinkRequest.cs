@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Docmind_api20220711.Models
 {
-    public class SubmitDocParserJobAdvanceRequest : TeaModel {
+    public class SubmitDocParserJobShrinkRequest : TeaModel {
         [NameInMap("EnhancementMode")]
         [Validation(Required=false)]
         public string EnhancementMode { get; set; }
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Docmind_api20220711.Models
         /// </summary>
         [NameInMap("FileUrl")]
         [Validation(Required=false)]
-        public Stream FileUrlObject { get; set; }
+        public string FileUrl { get; set; }
 
         [NameInMap("FormulaEnhancement")]
         [Validation(Required=false)]
@@ -47,17 +47,7 @@ namespace AlibabaCloud.SDK.Docmind_api20220711.Models
 
         [NameInMap("MultimediaParameters")]
         [Validation(Required=false)]
-        public SubmitDocParserJobAdvanceRequestMultimediaParameters MultimediaParameters { get; set; }
-        public class SubmitDocParserJobAdvanceRequestMultimediaParameters : TeaModel {
-            [NameInMap("EnableSynopsisParse")]
-            [Validation(Required=false)]
-            public bool? EnableSynopsisParse { get; set; }
-
-            [NameInMap("VlParsePrompt")]
-            [Validation(Required=false)]
-            public string VlParsePrompt { get; set; }
-
-        }
+        public string MultimediaParametersShrink { get; set; }
 
         [NameInMap("Option")]
         [Validation(Required=false)]
