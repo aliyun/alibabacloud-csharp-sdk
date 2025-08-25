@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public List<string> EndUserId { get; set; }
 
+        [NameInMap("Filter")]
+        [Validation(Required=false)]
+        public string Filter { get; set; }
+
         /// <summary>
         /// <para>The number of entries per page. Valid values: 1 to 500. Default value: 100.</para>
         /// 

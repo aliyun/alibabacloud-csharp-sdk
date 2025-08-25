@@ -36,6 +36,28 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public List<DescribeVirtualMFADevicesResponseBodyVirtualMFADevices> VirtualMFADevices { get; set; }
         public class DescribeVirtualMFADevicesResponseBodyVirtualMFADevices : TeaModel {
+            [NameInMap("AdUser")]
+            [Validation(Required=false)]
+            public DescribeVirtualMFADevicesResponseBodyVirtualMFADevicesAdUser AdUser { get; set; }
+            public class DescribeVirtualMFADevicesResponseBodyVirtualMFADevicesAdUser : TeaModel {
+                [NameInMap("DisplayName")]
+                [Validation(Required=false)]
+                public string DisplayName { get; set; }
+
+                [NameInMap("DisplayNameNew")]
+                [Validation(Required=false)]
+                public string DisplayNameNew { get; set; }
+
+                [NameInMap("EndUser")]
+                [Validation(Required=false)]
+                public string EndUser { get; set; }
+
+                [NameInMap("UserPrincipalName")]
+                [Validation(Required=false)]
+                public string UserPrincipalName { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The number of consecutive failures to bind the virtual MFA device, or the number of failures on the verification of the virtual MFA device.</para>
             /// 
