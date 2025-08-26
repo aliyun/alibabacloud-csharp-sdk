@@ -8,17 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dms20250414.Models
 {
-    public class CreateAirflowLoginTokenRequest : TeaModel {
+    public class GetAirflowRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Airflow instance. You can view the instance ID on the <a href="https://help.aliyun.com/document_detail/2881043.html">Airflow Instances</a> page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>af-b3a7f110a6vmvn7xxxxxx</para>
+        /// <para>af-b3a7f110a6vmvn7****</para>
         /// </summary>
         [NameInMap("AirflowId")]
         [Validation(Required=false)]
         public string AirflowId { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8630242382****</para>
+        /// </summary>
+        [NameInMap("WorkspaceId")]
+        [Validation(Required=false)]
+        public string WorkspaceId { get; set; }
 
     }
 
