@@ -21,18 +21,34 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 [Validation(Required=false)]
                 public RecognizeTaxiInvoiceResponseBodyDataInvoicesInvoiceRoi InvoiceRoi { get; set; }
                 public class RecognizeTaxiInvoiceResponseBodyDataInvoicesInvoiceRoi : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>3625</para>
+                    /// </summary>
                     [NameInMap("H")]
                     [Validation(Required=false)]
                     public float? H { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>1773</para>
+                    /// </summary>
                     [NameInMap("W")]
                     [Validation(Required=false)]
                     public float? W { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>513</para>
+                    /// </summary>
                     [NameInMap("X")]
                     [Validation(Required=false)]
                     public float? X { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>302</para>
+                    /// </summary>
                     [NameInMap("Y")]
                     [Validation(Required=false)]
                     public float? Y { get; set; }
@@ -47,6 +63,10 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                     [Validation(Required=false)]
                     public RecognizeTaxiInvoiceResponseBodyDataInvoicesItemsItemRoi ItemRoi { get; set; }
                     public class RecognizeTaxiInvoiceResponseBodyDataInvoicesItemsItemRoi : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>-90</para>
+                        /// </summary>
                         [NameInMap("Angle")]
                         [Validation(Required=false)]
                         public float? Angle { get; set; }
@@ -55,10 +75,18 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                         [Validation(Required=false)]
                         public RecognizeTaxiInvoiceResponseBodyDataInvoicesItemsItemRoiCenter Center { get; set; }
                         public class RecognizeTaxiInvoiceResponseBodyDataInvoicesItemsItemRoiCenter : TeaModel {
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>1593</para>
+                            /// </summary>
                             [NameInMap("X")]
                             [Validation(Required=false)]
                             public float? X { get; set; }
 
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>1360</para>
+                            /// </summary>
                             [NameInMap("Y")]
                             [Validation(Required=false)]
                             public float? Y { get; set; }
@@ -69,10 +97,18 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                         [Validation(Required=false)]
                         public RecognizeTaxiInvoiceResponseBodyDataInvoicesItemsItemRoiSize Size { get; set; }
                         public class RecognizeTaxiInvoiceResponseBodyDataInvoicesItemsItemRoiSize : TeaModel {
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>81.999984741210938</para>
+                            /// </summary>
                             [NameInMap("H")]
                             [Validation(Required=false)]
                             public float? H { get; set; }
 
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>887.9998779296875</para>
+                            /// </summary>
                             [NameInMap("W")]
                             [Validation(Required=false)]
                             public float? W { get; set; }
@@ -81,12 +117,20 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
 
                     }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>86655664</para>
+                    /// </summary>
                     [NameInMap("Text")]
                     [Validation(Required=false)]
                     public string Text { get; set; }
 
                 }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
                 [NameInMap("RotateType")]
                 [Validation(Required=false)]
                 public int? RotateType { get; set; }
@@ -95,6 +139,10 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>B2BBBD26-1D3E-4CFA-A80B-6A9266B8D125</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

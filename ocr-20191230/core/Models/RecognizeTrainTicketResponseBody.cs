@@ -33,10 +33,18 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>G7350</para>
+            /// </summary>
             [NameInMap("Number")]
             [Validation(Required=false)]
             public string Number { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>104.5</para>
+            /// </summary>
             [NameInMap("Price")]
             [Validation(Required=false)]
             public float? Price { get; set; }
@@ -47,6 +55,10 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>BE4B73EA-30A0-4573-A548-3A101B34641A</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

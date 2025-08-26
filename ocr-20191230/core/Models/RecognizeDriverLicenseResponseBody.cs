@@ -17,10 +17,18 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
             [Validation(Required=false)]
             public RecognizeDriverLicenseResponseBodyDataBackResult BackResult { get; set; }
             public class RecognizeDriverLicenseResponseBodyDataBackResult : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>130601473955</para>
+                /// </summary>
                 [NameInMap("ArchiveNumber")]
                 [Validation(Required=false)]
                 public string ArchiveNumber { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>210288898898898888</para>
+                /// </summary>
                 [NameInMap("CardNumber")]
                 [Validation(Required=false)]
                 public string CardNumber { get; set; }
@@ -47,6 +55,10 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 [Validation(Required=false)]
                 public string BirthDate { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>20190201</para>
+                /// </summary>
                 [NameInMap("EndDate")]
                 [Validation(Required=false)]
                 public string EndDate { get; set; }
@@ -55,6 +67,10 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 [Validation(Required=false)]
                 public string Gender { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>20130208</para>
+                /// </summary>
                 [NameInMap("IssueDate")]
                 [Validation(Required=false)]
                 public string IssueDate { get; set; }
@@ -63,6 +79,10 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 [Validation(Required=false)]
                 public string IssueUnit { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>210288898898898888</para>
+                /// </summary>
                 [NameInMap("LicenseNumber")]
                 [Validation(Required=false)]
                 public string LicenseNumber { get; set; }
@@ -75,10 +95,18 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                 [Validation(Required=false)]
                 public string Nationality { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>20130208</para>
+                /// </summary>
                 [NameInMap("StartDate")]
                 [Validation(Required=false)]
                 public string StartDate { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>C1</para>
+                /// </summary>
                 [NameInMap("VehicleType")]
                 [Validation(Required=false)]
                 public string VehicleType { get; set; }
@@ -87,6 +115,10 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>374D8C7E-9ECC-4750-A87F-50571702F175</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
