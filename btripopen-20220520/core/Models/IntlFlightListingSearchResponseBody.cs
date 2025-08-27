@@ -47,13 +47,23 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
                     }
 
-                    [NameInMap("item_id")]
-                    [Validation(Required=false)]
-                    public string ItemId { get; set; }
-
                     [NameInMap("item_type")]
                     [Validation(Required=false)]
                     public string ItemType { get; set; }
+
+                    [NameInMap("label_list")]
+                    [Validation(Required=false)]
+                    public List<IntlFlightListingSearchResponseBodyModuleFlightItemListBestPriceItemLabelList> LabelList { get; set; }
+                    public class IntlFlightListingSearchResponseBodyModuleFlightItemListBestPriceItemLabelList : TeaModel {
+                        [NameInMap("labelCode")]
+                        [Validation(Required=false)]
+                        public int? LabelCode { get; set; }
+
+                        [NameInMap("labelName")]
+                        [Validation(Required=false)]
+                        public string LabelName { get; set; }
+
+                    }
 
                     [NameInMap("shopping_item_map")]
                     [Validation(Required=false)]

@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class UpdateEmployeeRequest : TeaModel {
+        [NameInMap("account_email")]
+        [Validation(Required=false)]
+        public string AccountEmail { get; set; }
+
+        [NameInMap("account_phone")]
+        [Validation(Required=false)]
+        public string AccountPhone { get; set; }
+
         [NameInMap("attribute")]
         [Validation(Required=false)]
         public string Attribute { get; set; }

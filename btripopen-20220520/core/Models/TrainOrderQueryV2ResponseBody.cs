@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public double? ChangeHandlingFee { get; set; }
 
+                [NameInMap("change_order_id")]
+                [Validation(Required=false)]
+                public string ChangeOrderId { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>004C</para>
@@ -498,6 +502,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("gmt_modify")]
                 [Validation(Required=false)]
                 public string GmtModify { get; set; }
+
+                [NameInMap("refund_apply_id")]
+                [Validation(Required=false)]
+                public string RefundApplyId { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>

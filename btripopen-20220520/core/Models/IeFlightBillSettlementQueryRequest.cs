@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         [NameInMap("order_id")]
         [Validation(Required=false)]
-        public double? OrderId { get; set; }
+        public long? OrderId { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

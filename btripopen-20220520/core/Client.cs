@@ -395,6 +395,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
                 request.OutDeptIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OutDeptIdList, "out_dept_id_list", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountEmail))
+            {
+                body["account_email"] = request.AccountEmail;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountPhone))
+            {
+                body["account_phone"] = request.AccountPhone;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Attribute))
             {
                 body["attribute"] = request.Attribute;
@@ -556,6 +564,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
                 request.OutDeptIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OutDeptIdList, "out_dept_id_list", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountEmail))
+            {
+                body["account_email"] = request.AccountEmail;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountPhone))
+            {
+                body["account_phone"] = request.AccountPhone;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Attribute))
             {
                 body["attribute"] = request.Attribute;
@@ -26967,6 +26983,418 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>国际机票改签申请</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// IntlFlightReShopApplyRequest
+        /// </param>
+        /// <param name="headers">
+        /// IntlFlightReShopApplyHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// IntlFlightReShopApplyResponse
+        /// </returns>
+        public IntlFlightReShopApplyResponse IntlFlightReShopApplyWithOptions(IntlFlightReShopApplyRequest tmpReq, IntlFlightReShopApplyHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            IntlFlightReShopApplyShrinkRequest request = new IntlFlightReShopApplyShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SelectedJourneys))
+            {
+                request.SelectedJourneysShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SelectedJourneys, "selected_journeys", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SelectedPassengers))
+            {
+                request.SelectedPassengersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SelectedPassengers, "selected_passengers", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsyncApplyKey))
+            {
+                body["async_apply_key"] = request.AsyncApplyKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsyncApplyMode))
+            {
+                body["async_apply_mode"] = request.AsyncApplyMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                body["order_id"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutOrderId))
+            {
+                body["out_order_id"] = request.OutOrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutReShopApplyId))
+            {
+                body["out_re_shop_apply_id"] = request.OutReShopApplyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PassengerJourneyGroupKey))
+            {
+                body["passenger_journey_group_key"] = request.PassengerJourneyGroupKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReShopReasonCode))
+            {
+                body["re_shop_reason_code"] = request.ReShopReasonCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectedJourneysShrink))
+            {
+                body["selected_journeys"] = request.SelectedJourneysShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectedPassengersShrink))
+            {
+                body["selected_passengers"] = request.SelectedPassengersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserIntentionMemo))
+            {
+                body["user_intention_memo"] = request.UserIntentionMemo;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "IntlFlightReShopApply",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/intl-flight/v1/flights/action/reshop/apply",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<IntlFlightReShopApplyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>国际机票改签申请</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// IntlFlightReShopApplyRequest
+        /// </param>
+        /// <param name="headers">
+        /// IntlFlightReShopApplyHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// IntlFlightReShopApplyResponse
+        /// </returns>
+        public async Task<IntlFlightReShopApplyResponse> IntlFlightReShopApplyWithOptionsAsync(IntlFlightReShopApplyRequest tmpReq, IntlFlightReShopApplyHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            IntlFlightReShopApplyShrinkRequest request = new IntlFlightReShopApplyShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SelectedJourneys))
+            {
+                request.SelectedJourneysShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SelectedJourneys, "selected_journeys", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SelectedPassengers))
+            {
+                request.SelectedPassengersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SelectedPassengers, "selected_passengers", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsyncApplyKey))
+            {
+                body["async_apply_key"] = request.AsyncApplyKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsyncApplyMode))
+            {
+                body["async_apply_mode"] = request.AsyncApplyMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                body["order_id"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutOrderId))
+            {
+                body["out_order_id"] = request.OutOrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutReShopApplyId))
+            {
+                body["out_re_shop_apply_id"] = request.OutReShopApplyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PassengerJourneyGroupKey))
+            {
+                body["passenger_journey_group_key"] = request.PassengerJourneyGroupKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReShopReasonCode))
+            {
+                body["re_shop_reason_code"] = request.ReShopReasonCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectedJourneysShrink))
+            {
+                body["selected_journeys"] = request.SelectedJourneysShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectedPassengersShrink))
+            {
+                body["selected_passengers"] = request.SelectedPassengersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserIntentionMemo))
+            {
+                body["user_intention_memo"] = request.UserIntentionMemo;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "IntlFlightReShopApply",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/intl-flight/v1/flights/action/reshop/apply",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<IntlFlightReShopApplyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>国际机票改签申请</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IntlFlightReShopApplyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// IntlFlightReShopApplyResponse
+        /// </returns>
+        public IntlFlightReShopApplyResponse IntlFlightReShopApply(IntlFlightReShopApplyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            IntlFlightReShopApplyHeaders headers = new IntlFlightReShopApplyHeaders();
+            return IntlFlightReShopApplyWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>国际机票改签申请</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IntlFlightReShopApplyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// IntlFlightReShopApplyResponse
+        /// </returns>
+        public async Task<IntlFlightReShopApplyResponse> IntlFlightReShopApplyAsync(IntlFlightReShopApplyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            IntlFlightReShopApplyHeaders headers = new IntlFlightReShopApplyHeaders();
+            return await IntlFlightReShopApplyWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>国际机票改签取消</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IntlFlightReShopCancelRequest
+        /// </param>
+        /// <param name="headers">
+        /// IntlFlightReShopCancelHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// IntlFlightReShopCancelResponse
+        /// </returns>
+        public IntlFlightReShopCancelResponse IntlFlightReShopCancelWithOptions(IntlFlightReShopCancelRequest request, IntlFlightReShopCancelHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                body["order_id"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutOrderId))
+            {
+                body["out_order_id"] = request.OutOrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutReShopApplyId))
+            {
+                body["out_re_shop_apply_id"] = request.OutReShopApplyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReShopApplyId))
+            {
+                body["re_shop_apply_id"] = request.ReShopApplyId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "IntlFlightReShopCancel",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/intl-flight/v1/flights/action/reshop/cancel",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<IntlFlightReShopCancelResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>国际机票改签取消</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IntlFlightReShopCancelRequest
+        /// </param>
+        /// <param name="headers">
+        /// IntlFlightReShopCancelHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// IntlFlightReShopCancelResponse
+        /// </returns>
+        public async Task<IntlFlightReShopCancelResponse> IntlFlightReShopCancelWithOptionsAsync(IntlFlightReShopCancelRequest request, IntlFlightReShopCancelHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                body["order_id"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutOrderId))
+            {
+                body["out_order_id"] = request.OutOrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutReShopApplyId))
+            {
+                body["out_re_shop_apply_id"] = request.OutReShopApplyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReShopApplyId))
+            {
+                body["re_shop_apply_id"] = request.ReShopApplyId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "IntlFlightReShopCancel",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/intl-flight/v1/flights/action/reshop/cancel",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<IntlFlightReShopCancelResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>国际机票改签取消</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IntlFlightReShopCancelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// IntlFlightReShopCancelResponse
+        /// </returns>
+        public IntlFlightReShopCancelResponse IntlFlightReShopCancel(IntlFlightReShopCancelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            IntlFlightReShopCancelHeaders headers = new IntlFlightReShopCancelHeaders();
+            return IntlFlightReShopCancelWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>国际机票改签取消</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IntlFlightReShopCancelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// IntlFlightReShopCancelResponse
+        /// </returns>
+        public async Task<IntlFlightReShopCancelResponse> IntlFlightReShopCancelAsync(IntlFlightReShopCancelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            IntlFlightReShopCancelHeaders headers = new IntlFlightReShopCancelHeaders();
+            return await IntlFlightReShopCancelWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>国际机票改签咨询</para>
         /// </summary>
         /// 
@@ -26987,18 +27415,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BtripUserId))
-            {
-                query["btrip_user_id"] = request.BtripUserId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BuyerName))
-            {
-                query["buyer_name"] = request.BuyerName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsvName))
-            {
-                query["isv_name"] = request.IsvName;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
             {
                 query["order_id"] = request.OrderId;
@@ -27058,18 +27474,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BtripUserId))
-            {
-                query["btrip_user_id"] = request.BtripUserId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BuyerName))
-            {
-                query["buyer_name"] = request.BuyerName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsvName))
-            {
-                query["isv_name"] = request.IsvName;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
             {
                 query["order_id"] = request.OrderId;
@@ -27143,6 +27547,894 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             IntlFlightReShopConsultHeaders headers = new IntlFlightReShopConsultHeaders();
             return await IntlFlightReShopConsultWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>国际机票改签详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IntlFlightReShopDetailRequest
+        /// </param>
+        /// <param name="headers">
+        /// IntlFlightReShopDetailHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// IntlFlightReShopDetailResponse
+        /// </returns>
+        public IntlFlightReShopDetailResponse IntlFlightReShopDetailWithOptions(IntlFlightReShopDetailRequest request, IntlFlightReShopDetailHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["order_id"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutOrderId))
+            {
+                query["out_order_id"] = request.OutOrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutReShopApplyId))
+            {
+                query["out_re_shop_apply_id"] = request.OutReShopApplyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReShopApplyId))
+            {
+                query["re_shop_apply_id"] = request.ReShopApplyId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "IntlFlightReShopDetail",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/intl-flight/v1/flights/action/reshop/detail",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<IntlFlightReShopDetailResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>国际机票改签详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IntlFlightReShopDetailRequest
+        /// </param>
+        /// <param name="headers">
+        /// IntlFlightReShopDetailHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// IntlFlightReShopDetailResponse
+        /// </returns>
+        public async Task<IntlFlightReShopDetailResponse> IntlFlightReShopDetailWithOptionsAsync(IntlFlightReShopDetailRequest request, IntlFlightReShopDetailHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["order_id"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutOrderId))
+            {
+                query["out_order_id"] = request.OutOrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutReShopApplyId))
+            {
+                query["out_re_shop_apply_id"] = request.OutReShopApplyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReShopApplyId))
+            {
+                query["re_shop_apply_id"] = request.ReShopApplyId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "IntlFlightReShopDetail",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/intl-flight/v1/flights/action/reshop/detail",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<IntlFlightReShopDetailResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>国际机票改签详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IntlFlightReShopDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// IntlFlightReShopDetailResponse
+        /// </returns>
+        public IntlFlightReShopDetailResponse IntlFlightReShopDetail(IntlFlightReShopDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            IntlFlightReShopDetailHeaders headers = new IntlFlightReShopDetailHeaders();
+            return IntlFlightReShopDetailWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>国际机票改签详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IntlFlightReShopDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// IntlFlightReShopDetailResponse
+        /// </returns>
+        public async Task<IntlFlightReShopDetailResponse> IntlFlightReShopDetailAsync(IntlFlightReShopDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            IntlFlightReShopDetailHeaders headers = new IntlFlightReShopDetailHeaders();
+            return await IntlFlightReShopDetailWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>国际机票改签支付</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IntlFlightReShopPayRequest
+        /// </param>
+        /// <param name="headers">
+        /// IntlFlightReShopPayHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// IntlFlightReShopPayResponse
+        /// </returns>
+        public IntlFlightReShopPayResponse IntlFlightReShopPayWithOptions(IntlFlightReShopPayRequest request, IntlFlightReShopPayHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                body["order_id"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutOrderId))
+            {
+                body["out_order_id"] = request.OutOrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutReShopApplyId))
+            {
+                body["out_re_shop_apply_id"] = request.OutReShopApplyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReShopApplyId))
+            {
+                body["re_shop_apply_id"] = request.ReShopApplyId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "IntlFlightReShopPay",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/intl-flight/v1/flights/action/reshop/pay",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<IntlFlightReShopPayResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>国际机票改签支付</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IntlFlightReShopPayRequest
+        /// </param>
+        /// <param name="headers">
+        /// IntlFlightReShopPayHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// IntlFlightReShopPayResponse
+        /// </returns>
+        public async Task<IntlFlightReShopPayResponse> IntlFlightReShopPayWithOptionsAsync(IntlFlightReShopPayRequest request, IntlFlightReShopPayHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                body["order_id"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutOrderId))
+            {
+                body["out_order_id"] = request.OutOrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutReShopApplyId))
+            {
+                body["out_re_shop_apply_id"] = request.OutReShopApplyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReShopApplyId))
+            {
+                body["re_shop_apply_id"] = request.ReShopApplyId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "IntlFlightReShopPay",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/intl-flight/v1/flights/action/reshop/pay",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<IntlFlightReShopPayResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>国际机票改签支付</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IntlFlightReShopPayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// IntlFlightReShopPayResponse
+        /// </returns>
+        public IntlFlightReShopPayResponse IntlFlightReShopPay(IntlFlightReShopPayRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            IntlFlightReShopPayHeaders headers = new IntlFlightReShopPayHeaders();
+            return IntlFlightReShopPayWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>国际机票改签支付</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IntlFlightReShopPayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// IntlFlightReShopPayResponse
+        /// </returns>
+        public async Task<IntlFlightReShopPayResponse> IntlFlightReShopPayAsync(IntlFlightReShopPayRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            IntlFlightReShopPayHeaders headers = new IntlFlightReShopPayHeaders();
+            return await IntlFlightReShopPayWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>国际机票退票申请</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// IntlFlightRefundApplyRequest
+        /// </param>
+        /// <param name="headers">
+        /// IntlFlightRefundApplyHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// IntlFlightRefundApplyResponse
+        /// </returns>
+        public IntlFlightRefundApplyResponse IntlFlightRefundApplyWithOptions(IntlFlightRefundApplyRequest tmpReq, IntlFlightRefundApplyHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            IntlFlightRefundApplyShrinkRequest request = new IntlFlightRefundApplyShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RefundSegmentList))
+            {
+                request.RefundSegmentListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RefundSegmentList, "refund_segment_list", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SelectedPassengers))
+            {
+                request.SelectedPassengersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SelectedPassengers, "selected_passengers", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                body["order_id"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutOrderId))
+            {
+                body["out_order_id"] = request.OutOrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutRefundApplyId))
+            {
+                body["out_refund_apply_id"] = request.OutRefundApplyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PassengerJourneyGroupKey))
+            {
+                body["passenger_journey_group_key"] = request.PassengerJourneyGroupKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RefundReasonCode))
+            {
+                body["refund_reason_code"] = request.RefundReasonCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RefundSegmentListShrink))
+            {
+                body["refund_segment_list"] = request.RefundSegmentListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectedPassengersShrink))
+            {
+                body["selected_passengers"] = request.SelectedPassengersShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "IntlFlightRefundApply",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/intl-flight/v1/flights/action/refund/apply",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<IntlFlightRefundApplyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>国际机票退票申请</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// IntlFlightRefundApplyRequest
+        /// </param>
+        /// <param name="headers">
+        /// IntlFlightRefundApplyHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// IntlFlightRefundApplyResponse
+        /// </returns>
+        public async Task<IntlFlightRefundApplyResponse> IntlFlightRefundApplyWithOptionsAsync(IntlFlightRefundApplyRequest tmpReq, IntlFlightRefundApplyHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            IntlFlightRefundApplyShrinkRequest request = new IntlFlightRefundApplyShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RefundSegmentList))
+            {
+                request.RefundSegmentListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RefundSegmentList, "refund_segment_list", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SelectedPassengers))
+            {
+                request.SelectedPassengersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SelectedPassengers, "selected_passengers", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                body["order_id"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutOrderId))
+            {
+                body["out_order_id"] = request.OutOrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutRefundApplyId))
+            {
+                body["out_refund_apply_id"] = request.OutRefundApplyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PassengerJourneyGroupKey))
+            {
+                body["passenger_journey_group_key"] = request.PassengerJourneyGroupKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RefundReasonCode))
+            {
+                body["refund_reason_code"] = request.RefundReasonCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RefundSegmentListShrink))
+            {
+                body["refund_segment_list"] = request.RefundSegmentListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectedPassengersShrink))
+            {
+                body["selected_passengers"] = request.SelectedPassengersShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "IntlFlightRefundApply",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/intl-flight/v1/flights/action/refund/apply",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<IntlFlightRefundApplyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>国际机票退票申请</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IntlFlightRefundApplyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// IntlFlightRefundApplyResponse
+        /// </returns>
+        public IntlFlightRefundApplyResponse IntlFlightRefundApply(IntlFlightRefundApplyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            IntlFlightRefundApplyHeaders headers = new IntlFlightRefundApplyHeaders();
+            return IntlFlightRefundApplyWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>国际机票退票申请</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IntlFlightRefundApplyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// IntlFlightRefundApplyResponse
+        /// </returns>
+        public async Task<IntlFlightRefundApplyResponse> IntlFlightRefundApplyAsync(IntlFlightRefundApplyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            IntlFlightRefundApplyHeaders headers = new IntlFlightRefundApplyHeaders();
+            return await IntlFlightRefundApplyWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>国际机票退票咨询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IntlFlightRefundConsultRequest
+        /// </param>
+        /// <param name="headers">
+        /// IntlFlightRefundConsultHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// IntlFlightRefundConsultResponse
+        /// </returns>
+        public IntlFlightRefundConsultResponse IntlFlightRefundConsultWithOptions(IntlFlightRefundConsultRequest request, IntlFlightRefundConsultHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["order_id"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutOrderId))
+            {
+                query["out_order_id"] = request.OutOrderId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "IntlFlightRefundConsult",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/intl-flight/v1/flights/action/refund/consult",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<IntlFlightRefundConsultResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>国际机票退票咨询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IntlFlightRefundConsultRequest
+        /// </param>
+        /// <param name="headers">
+        /// IntlFlightRefundConsultHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// IntlFlightRefundConsultResponse
+        /// </returns>
+        public async Task<IntlFlightRefundConsultResponse> IntlFlightRefundConsultWithOptionsAsync(IntlFlightRefundConsultRequest request, IntlFlightRefundConsultHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["order_id"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutOrderId))
+            {
+                query["out_order_id"] = request.OutOrderId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "IntlFlightRefundConsult",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/intl-flight/v1/flights/action/refund/consult",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<IntlFlightRefundConsultResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>国际机票退票咨询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IntlFlightRefundConsultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// IntlFlightRefundConsultResponse
+        /// </returns>
+        public IntlFlightRefundConsultResponse IntlFlightRefundConsult(IntlFlightRefundConsultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            IntlFlightRefundConsultHeaders headers = new IntlFlightRefundConsultHeaders();
+            return IntlFlightRefundConsultWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>国际机票退票咨询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IntlFlightRefundConsultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// IntlFlightRefundConsultResponse
+        /// </returns>
+        public async Task<IntlFlightRefundConsultResponse> IntlFlightRefundConsultAsync(IntlFlightRefundConsultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            IntlFlightRefundConsultHeaders headers = new IntlFlightRefundConsultHeaders();
+            return await IntlFlightRefundConsultWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>国际机票退票详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IntlFlightRefundDetailRequest
+        /// </param>
+        /// <param name="headers">
+        /// IntlFlightRefundDetailHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// IntlFlightRefundDetailResponse
+        /// </returns>
+        public IntlFlightRefundDetailResponse IntlFlightRefundDetailWithOptions(IntlFlightRefundDetailRequest request, IntlFlightRefundDetailHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["order_id"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutOrderId))
+            {
+                query["out_order_id"] = request.OutOrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutRefundApplyId))
+            {
+                query["out_refund_apply_id"] = request.OutRefundApplyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RefundApplyId))
+            {
+                query["refund_apply_id"] = request.RefundApplyId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "IntlFlightRefundDetail",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/intl-flight/v1/flights/action/refund/detail",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<IntlFlightRefundDetailResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>国际机票退票详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IntlFlightRefundDetailRequest
+        /// </param>
+        /// <param name="headers">
+        /// IntlFlightRefundDetailHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// IntlFlightRefundDetailResponse
+        /// </returns>
+        public async Task<IntlFlightRefundDetailResponse> IntlFlightRefundDetailWithOptionsAsync(IntlFlightRefundDetailRequest request, IntlFlightRefundDetailHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["order_id"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutOrderId))
+            {
+                query["out_order_id"] = request.OutOrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutRefundApplyId))
+            {
+                query["out_refund_apply_id"] = request.OutRefundApplyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RefundApplyId))
+            {
+                query["refund_apply_id"] = request.RefundApplyId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "IntlFlightRefundDetail",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/intl-flight/v1/flights/action/refund/detail",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<IntlFlightRefundDetailResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>国际机票退票详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IntlFlightRefundDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// IntlFlightRefundDetailResponse
+        /// </returns>
+        public IntlFlightRefundDetailResponse IntlFlightRefundDetail(IntlFlightRefundDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            IntlFlightRefundDetailHeaders headers = new IntlFlightRefundDetailHeaders();
+            return IntlFlightRefundDetailWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>国际机票退票详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IntlFlightRefundDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// IntlFlightRefundDetailResponse
+        /// </returns>
+        public async Task<IntlFlightRefundDetailResponse> IntlFlightRefundDetailAsync(IntlFlightRefundDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            IntlFlightRefundDetailHeaders headers = new IntlFlightRefundDetailHeaders();
+            return await IntlFlightRefundDetailWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -37415,6 +38707,678 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>新增差旅标准关联人员实体</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// TravelStandardRelateAddRequest
+        /// </param>
+        /// <param name="headers">
+        /// TravelStandardRelateAddHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TravelStandardRelateAddResponse
+        /// </returns>
+        public TravelStandardRelateAddResponse TravelStandardRelateAddWithOptions(TravelStandardRelateAddRequest tmpReq, TravelStandardRelateAddHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            TravelStandardRelateAddShrinkRequest request = new TravelStandardRelateAddShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AddList))
+            {
+                request.AddListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AddList, "add_list", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddListShrink))
+            {
+                body["add_list"] = request.AddListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromGroup))
+            {
+                body["from_group"] = request.FromGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleId))
+            {
+                body["rule_id"] = request.RuleId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TravelStandardRelateAdd",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/travel-manage/v1/standards/add-relate",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TravelStandardRelateAddResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增差旅标准关联人员实体</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// TravelStandardRelateAddRequest
+        /// </param>
+        /// <param name="headers">
+        /// TravelStandardRelateAddHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TravelStandardRelateAddResponse
+        /// </returns>
+        public async Task<TravelStandardRelateAddResponse> TravelStandardRelateAddWithOptionsAsync(TravelStandardRelateAddRequest tmpReq, TravelStandardRelateAddHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            TravelStandardRelateAddShrinkRequest request = new TravelStandardRelateAddShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AddList))
+            {
+                request.AddListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AddList, "add_list", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddListShrink))
+            {
+                body["add_list"] = request.AddListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromGroup))
+            {
+                body["from_group"] = request.FromGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleId))
+            {
+                body["rule_id"] = request.RuleId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TravelStandardRelateAdd",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/travel-manage/v1/standards/add-relate",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TravelStandardRelateAddResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增差旅标准关联人员实体</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TravelStandardRelateAddRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TravelStandardRelateAddResponse
+        /// </returns>
+        public TravelStandardRelateAddResponse TravelStandardRelateAdd(TravelStandardRelateAddRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            TravelStandardRelateAddHeaders headers = new TravelStandardRelateAddHeaders();
+            return TravelStandardRelateAddWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增差旅标准关联人员实体</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TravelStandardRelateAddRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TravelStandardRelateAddResponse
+        /// </returns>
+        public async Task<TravelStandardRelateAddResponse> TravelStandardRelateAddAsync(TravelStandardRelateAddRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            TravelStandardRelateAddHeaders headers = new TravelStandardRelateAddHeaders();
+            return await TravelStandardRelateAddWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除差旅标准关联人员实体</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// TravelStandardRelateDeleteRequest
+        /// </param>
+        /// <param name="headers">
+        /// TravelStandardRelateDeleteHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TravelStandardRelateDeleteResponse
+        /// </returns>
+        public TravelStandardRelateDeleteResponse TravelStandardRelateDeleteWithOptions(TravelStandardRelateDeleteRequest tmpReq, TravelStandardRelateDeleteHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            TravelStandardRelateDeleteShrinkRequest request = new TravelStandardRelateDeleteShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RemoveList))
+            {
+                request.RemoveListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RemoveList, "remove_list", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromGroup))
+            {
+                body["from_group"] = request.FromGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemoveListShrink))
+            {
+                body["remove_list"] = request.RemoveListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleId))
+            {
+                body["rule_id"] = request.RuleId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TravelStandardRelateDelete",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/travel-manage/v1/standards/delete-relate",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TravelStandardRelateDeleteResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除差旅标准关联人员实体</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// TravelStandardRelateDeleteRequest
+        /// </param>
+        /// <param name="headers">
+        /// TravelStandardRelateDeleteHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TravelStandardRelateDeleteResponse
+        /// </returns>
+        public async Task<TravelStandardRelateDeleteResponse> TravelStandardRelateDeleteWithOptionsAsync(TravelStandardRelateDeleteRequest tmpReq, TravelStandardRelateDeleteHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            TravelStandardRelateDeleteShrinkRequest request = new TravelStandardRelateDeleteShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RemoveList))
+            {
+                request.RemoveListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RemoveList, "remove_list", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromGroup))
+            {
+                body["from_group"] = request.FromGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemoveListShrink))
+            {
+                body["remove_list"] = request.RemoveListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleId))
+            {
+                body["rule_id"] = request.RuleId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TravelStandardRelateDelete",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/travel-manage/v1/standards/delete-relate",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TravelStandardRelateDeleteResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除差旅标准关联人员实体</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TravelStandardRelateDeleteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TravelStandardRelateDeleteResponse
+        /// </returns>
+        public TravelStandardRelateDeleteResponse TravelStandardRelateDelete(TravelStandardRelateDeleteRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            TravelStandardRelateDeleteHeaders headers = new TravelStandardRelateDeleteHeaders();
+            return TravelStandardRelateDeleteWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除差旅标准关联人员实体</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TravelStandardRelateDeleteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TravelStandardRelateDeleteResponse
+        /// </returns>
+        public async Task<TravelStandardRelateDeleteResponse> TravelStandardRelateDeleteAsync(TravelStandardRelateDeleteRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            TravelStandardRelateDeleteHeaders headers = new TravelStandardRelateDeleteHeaders();
+            return await TravelStandardRelateDeleteWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询差旅标准关联人员实体</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TravelStandardRelateQueryRequest
+        /// </param>
+        /// <param name="headers">
+        /// TravelStandardRelateQueryHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TravelStandardRelateQueryResponse
+        /// </returns>
+        public TravelStandardRelateQueryResponse TravelStandardRelateQueryWithOptions(TravelStandardRelateQueryRequest request, TravelStandardRelateQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromGroup))
+            {
+                query["from_group"] = request.FromGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleId))
+            {
+                query["rule_id"] = request.RuleId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TravelStandardRelateQuery",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/travel-manage/v1/standards/query-relate",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TravelStandardRelateQueryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询差旅标准关联人员实体</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TravelStandardRelateQueryRequest
+        /// </param>
+        /// <param name="headers">
+        /// TravelStandardRelateQueryHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TravelStandardRelateQueryResponse
+        /// </returns>
+        public async Task<TravelStandardRelateQueryResponse> TravelStandardRelateQueryWithOptionsAsync(TravelStandardRelateQueryRequest request, TravelStandardRelateQueryHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromGroup))
+            {
+                query["from_group"] = request.FromGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleId))
+            {
+                query["rule_id"] = request.RuleId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TravelStandardRelateQuery",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/travel-manage/v1/standards/query-relate",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TravelStandardRelateQueryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询差旅标准关联人员实体</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TravelStandardRelateQueryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TravelStandardRelateQueryResponse
+        /// </returns>
+        public TravelStandardRelateQueryResponse TravelStandardRelateQuery(TravelStandardRelateQueryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            TravelStandardRelateQueryHeaders headers = new TravelStandardRelateQueryHeaders();
+            return TravelStandardRelateQueryWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询差旅标准关联人员实体</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TravelStandardRelateQueryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TravelStandardRelateQueryResponse
+        /// </returns>
+        public async Task<TravelStandardRelateQueryResponse> TravelStandardRelateQueryAsync(TravelStandardRelateQueryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            TravelStandardRelateQueryHeaders headers = new TravelStandardRelateQueryHeaders();
+            return await TravelStandardRelateQueryWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新差旅标准绑定员工类型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TravelStandardScopeSaveRequest
+        /// </param>
+        /// <param name="headers">
+        /// TravelStandardScopeSaveHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TravelStandardScopeSaveResponse
+        /// </returns>
+        public TravelStandardScopeSaveResponse TravelStandardScopeSaveWithOptions(TravelStandardScopeSaveRequest request, TravelStandardScopeSaveHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromGroup))
+            {
+                query["from_group"] = request.FromGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleId))
+            {
+                query["rule_id"] = request.RuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scope))
+            {
+                query["scope"] = request.Scope;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TravelStandardScopeSave",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/travel-manage/v1/standards/save-scope",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TravelStandardScopeSaveResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新差旅标准绑定员工类型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TravelStandardScopeSaveRequest
+        /// </param>
+        /// <param name="headers">
+        /// TravelStandardScopeSaveHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TravelStandardScopeSaveResponse
+        /// </returns>
+        public async Task<TravelStandardScopeSaveResponse> TravelStandardScopeSaveWithOptionsAsync(TravelStandardScopeSaveRequest request, TravelStandardScopeSaveHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromGroup))
+            {
+                query["from_group"] = request.FromGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleId))
+            {
+                query["rule_id"] = request.RuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scope))
+            {
+                query["scope"] = request.Scope;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TravelStandardScopeSave",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/travel-manage/v1/standards/save-scope",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TravelStandardScopeSaveResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新差旅标准绑定员工类型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TravelStandardScopeSaveRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TravelStandardScopeSaveResponse
+        /// </returns>
+        public TravelStandardScopeSaveResponse TravelStandardScopeSave(TravelStandardScopeSaveRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            TravelStandardScopeSaveHeaders headers = new TravelStandardScopeSaveHeaders();
+            return TravelStandardScopeSaveWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新差旅标准绑定员工类型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TravelStandardScopeSaveRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TravelStandardScopeSaveResponse
+        /// </returns>
+        public async Task<TravelStandardScopeSaveResponse> TravelStandardScopeSaveAsync(TravelStandardScopeSaveRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            TravelStandardScopeSaveHeaders headers = new TravelStandardScopeSaveHeaders();
+            return await TravelStandardScopeSaveWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询业务流程</para>
         /// </summary>
         /// 
@@ -38305,6 +40269,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
                 request.OutDeptIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OutDeptIdList, "out_dept_id_list", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountEmail))
+            {
+                body["account_email"] = request.AccountEmail;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountPhone))
+            {
+                body["account_phone"] = request.AccountPhone;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Attribute))
             {
                 body["attribute"] = request.Attribute;
@@ -38462,6 +40434,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
                 request.OutDeptIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OutDeptIdList, "out_dept_id_list", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountEmail))
+            {
+                body["account_email"] = request.AccountEmail;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountPhone))
+            {
+                body["account_phone"] = request.AccountPhone;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Attribute))
             {
                 body["attribute"] = request.Attribute;

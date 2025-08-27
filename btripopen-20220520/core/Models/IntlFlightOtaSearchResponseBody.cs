@@ -470,6 +470,20 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string ItemType { get; set; }
 
+                [NameInMap("label_list")]
+                [Validation(Required=false)]
+                public List<IntlFlightOtaSearchResponseBodyModuleItemListLabelList> LabelList { get; set; }
+                public class IntlFlightOtaSearchResponseBodyModuleItemListLabelList : TeaModel {
+                    [NameInMap("labelCode")]
+                    [Validation(Required=false)]
+                    public int? LabelCode { get; set; }
+
+                    [NameInMap("labelName")]
+                    [Validation(Required=false)]
+                    public string LabelName { get; set; }
+
+                }
+
                 [NameInMap("shopping_item_map")]
                 [Validation(Required=false)]
                 public Dictionary<string, ModuleItemListShoppingItemMapValue> ShoppingItemMap { get; set; }

@@ -189,6 +189,28 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string TravelDistance { get; set; }
 
+                [NameInMap("way_points")]
+                [Validation(Required=false)]
+                public List<CarOrderQueryResponseBodyModuleCarInfoWayPoints> WayPoints { get; set; }
+                public class CarOrderQueryResponseBodyModuleCarInfoWayPoints : TeaModel {
+                    [NameInMap("address")]
+                    [Validation(Required=false)]
+                    public string Address { get; set; }
+
+                    [NameInMap("index")]
+                    [Validation(Required=false)]
+                    public string Index { get; set; }
+
+                    [NameInMap("latitude")]
+                    [Validation(Required=false)]
+                    public string Latitude { get; set; }
+
+                    [NameInMap("longitude")]
+                    [Validation(Required=false)]
+                    public string Longitude { get; set; }
+
+                }
+
             }
 
             [NameInMap("invoice_info")]

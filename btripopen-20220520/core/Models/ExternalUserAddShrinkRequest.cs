@@ -47,9 +47,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string Phone { get; set; }
 
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
         [NameInMap("real_name")]
         [Validation(Required=false)]
         public string RealName { get; set; }

@@ -597,6 +597,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     [Validation(Required=false)]
                     public string IssueTime { get; set; }
 
+                    [NameInMap("pnr_no")]
+                    [Validation(Required=false)]
+                    public string PnrNo { get; set; }
+
                     [NameInMap("price_info")]
                     [Validation(Required=false)]
                     public IntlFlightOrderDetailResponseBodyModulePassengerTicketListTicketListPriceInfo PriceInfo { get; set; }

@@ -8,24 +8,24 @@ using Tea;
 
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
-    public class IntlFlightReShopConsultRequest : TeaModel {
+    public class TravelStandardRelateQueryRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("from_group")]
+        [Validation(Required=false)]
+        public bool? FromGroup { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1003038202430742196</para>
+        /// <para>6516571</para>
         /// </summary>
-        [NameInMap("order_id")]
+        [NameInMap("rule_id")]
         [Validation(Required=false)]
-        public string OrderId { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>JP2024072600000006</para>
-        /// </summary>
-        [NameInMap("out_order_id")]
-        [Validation(Required=false)]
-        public string OutOrderId { get; set; }
+        public long? RuleId { get; set; }
 
     }
 
