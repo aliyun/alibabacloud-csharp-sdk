@@ -5682,6 +5682,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return await InitCardVerifyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实人服务端初始化接口</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// InitFaceVerifyRequest
         /// </param>
@@ -5865,6 +5870,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return TeaModel.ToObject<InitFaceVerifyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实人服务端初始化接口</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// InitFaceVerifyRequest
         /// </param>
@@ -6048,6 +6058,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return TeaModel.ToObject<InitFaceVerifyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实人服务端初始化接口</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// InitFaceVerifyRequest
         /// </param>
@@ -6061,6 +6076,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return InitFaceVerifyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实人服务端初始化接口</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// InitFaceVerifyRequest
         /// </param>
