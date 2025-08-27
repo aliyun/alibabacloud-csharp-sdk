@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class RunCommandRequest : TeaModel {
+        [NameInMap("AgentType")]
+        [Validation(Required=false)]
+        public string AgentType { get; set; }
+
         /// <summary>
         /// <para>The content of the command.</para>
         /// 

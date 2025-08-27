@@ -10868,6 +10868,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentType))
+            {
+                query["AgentType"] = request.AgentType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommandContent))
             {
                 query["CommandContent"] = request.CommandContent;
@@ -10922,6 +10926,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentType))
+            {
+                query["AgentType"] = request.AgentType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommandContent))
             {
                 query["CommandContent"] = request.CommandContent;
