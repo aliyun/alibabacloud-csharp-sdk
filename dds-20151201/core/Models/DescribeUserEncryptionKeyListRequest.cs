@@ -36,6 +36,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("RoleARN")]
+        [Validation(Required=false)]
+        public string RoleARN { get; set; }
+
         /// <summary>
         /// <para>The zone ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent zone list.</para>
         /// 

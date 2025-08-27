@@ -247,6 +247,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             [Validation(Required=false)]
             public string SwitchTime { get; set; }
 
+            [NameInMap("TaskParams")]
+            [Validation(Required=false)]
+            public string TaskParams { get; set; }
+
             /// <summary>
             /// <para>The task type.</para>
             /// 

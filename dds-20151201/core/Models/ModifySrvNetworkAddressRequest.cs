@@ -8,21 +8,36 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
-    public class DescribeClusterRecoverTimeRequest : TeaModel {
+    public class ModifySrvNetworkAddressRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>dds-bp18f7d6b6a7****</para>
+        /// <para>VPC</para>
+        /// </summary>
+        [NameInMap("ConnectionType")]
+        [Validation(Required=false)]
+        public string ConnectionType { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dds-bp1fd530f271****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
-        [NameInMap("DestRegion")]
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>aliyuntest111</para>
+        /// </summary>
+        [NameInMap("NewConnectionString")]
         [Validation(Required=false)]
-        public string DestRegion { get; set; }
+        public string NewConnectionString { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -39,10 +54,6 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        [NameInMap("SrcRegion")]
-        [Validation(Required=false)]
-        public string SrcRegion { get; set; }
 
     }
 

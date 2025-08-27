@@ -1154,6 +1154,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                         [Validation(Required=false)]
                         public double? TotalProductFee { get; set; }
 
+                        [NameInMap("UnitPriceUnit4Buy")]
+                        [Validation(Required=false)]
+                        public string UnitPriceUnit4Buy { get; set; }
+
                         /// <summary>
                         /// <para>The price type.</para>
                         /// 

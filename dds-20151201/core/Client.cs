@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Dds20151201
                 {"ap-south-1", "mongodb.ap-south-1.aliyuncs.com"},
                 {"me-east-1", "mongodb.me-east-1.aliyuncs.com"},
                 {"cn-hangzhou-finance", "mongodb.aliyuncs.com"},
-                {"cn-shanghai-finance-1", "mongodb.aliyuncs.com"},
+                {"cn-shanghai-finance-1", "mongodb.cn-shanghai-finance-1.aliyuncs.com"},
                 {"cn-shenzhen-finance-1", "mongodb.cn-shenzhen-finance-1.aliyuncs.com"},
                 {"cn-north-2-gov-1", "mongodb.cn-north-2-gov-1.aliyuncs.com"},
                 {"ap-northeast-2-pop", "mongodb.aliyuncs.com"},
@@ -80,7 +80,6 @@ namespace AlibabaCloud.SDK.Dds20151201
                 {"cn-zhengzhou-nebula-1", "mongodb.aliyuncs.com"},
                 {"eu-west-1-oxs", "mongodb.aliyuncs.com"},
                 {"rus-west-1-pop", "mongodb.aliyuncs.com"},
-                {"na-south-1", "mongodb.na-south-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("dds", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -98,6 +97,154 @@ namespace AlibabaCloud.SDK.Dds20151201
                 return endpointMap.Get(regionId);
             }
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
+        }
+
+        /// <param name="request">
+        /// AllocateDBInstanceSrvNetworkAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AllocateDBInstanceSrvNetworkAddressResponse
+        /// </returns>
+        public AllocateDBInstanceSrvNetworkAddressResponse AllocateDBInstanceSrvNetworkAddressWithOptions(AllocateDBInstanceSrvNetworkAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeId))
+            {
+                query["NodeId"] = request.NodeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrvConnectionType))
+            {
+                query["SrvConnectionType"] = request.SrvConnectionType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AllocateDBInstanceSrvNetworkAddress",
+                Version = "2015-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AllocateDBInstanceSrvNetworkAddressResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// AllocateDBInstanceSrvNetworkAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AllocateDBInstanceSrvNetworkAddressResponse
+        /// </returns>
+        public async Task<AllocateDBInstanceSrvNetworkAddressResponse> AllocateDBInstanceSrvNetworkAddressWithOptionsAsync(AllocateDBInstanceSrvNetworkAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeId))
+            {
+                query["NodeId"] = request.NodeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrvConnectionType))
+            {
+                query["SrvConnectionType"] = request.SrvConnectionType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AllocateDBInstanceSrvNetworkAddress",
+                Version = "2015-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AllocateDBInstanceSrvNetworkAddressResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// AllocateDBInstanceSrvNetworkAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AllocateDBInstanceSrvNetworkAddressResponse
+        /// </returns>
+        public AllocateDBInstanceSrvNetworkAddressResponse AllocateDBInstanceSrvNetworkAddress(AllocateDBInstanceSrvNetworkAddressRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AllocateDBInstanceSrvNetworkAddressWithOptions(request, runtime);
+        }
+
+        /// <param name="request">
+        /// AllocateDBInstanceSrvNetworkAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AllocateDBInstanceSrvNetworkAddressResponse
+        /// </returns>
+        public async Task<AllocateDBInstanceSrvNetworkAddressResponse> AllocateDBInstanceSrvNetworkAddressAsync(AllocateDBInstanceSrvNetworkAddressRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AllocateDBInstanceSrvNetworkAddressWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -14200,6 +14347,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleARN))
+            {
+                query["RoleARN"] = request.RoleARN;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetRegionId))
             {
                 query["TargetRegionId"] = request.TargetRegionId;
@@ -14266,6 +14417,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleARN))
+            {
+                query["RoleARN"] = request.RoleARN;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetRegionId))
             {
@@ -18557,6 +18712,22 @@ namespace AlibabaCloud.SDK.Dds20151201
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetHiddenZoneId))
+            {
+                query["TargetHiddenZoneId"] = request.TargetHiddenZoneId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetSecondaryZoneId))
+            {
+                query["TargetSecondaryZoneId"] = request.TargetSecondaryZoneId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetVswitchId))
+            {
+                query["TargetVswitchId"] = request.TargetVswitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetZoneId))
+            {
+                query["TargetZoneId"] = request.TargetZoneId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -18660,6 +18831,22 @@ namespace AlibabaCloud.SDK.Dds20151201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetHiddenZoneId))
+            {
+                query["TargetHiddenZoneId"] = request.TargetHiddenZoneId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetSecondaryZoneId))
+            {
+                query["TargetSecondaryZoneId"] = request.TargetSecondaryZoneId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetVswitchId))
+            {
+                query["TargetVswitchId"] = request.TargetVswitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetZoneId))
+            {
+                query["TargetZoneId"] = request.TargetZoneId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -20011,6 +20198,22 @@ namespace AlibabaCloud.SDK.Dds20151201
             {
                 query["SwitchTime"] = request.SwitchTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetHiddenZoneId))
+            {
+                query["TargetHiddenZoneId"] = request.TargetHiddenZoneId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetSecondaryZoneId))
+            {
+                query["TargetSecondaryZoneId"] = request.TargetSecondaryZoneId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetVswitchId))
+            {
+                query["TargetVswitchId"] = request.TargetVswitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetZoneId))
+            {
+                query["TargetZoneId"] = request.TargetZoneId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -20124,6 +20327,22 @@ namespace AlibabaCloud.SDK.Dds20151201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SwitchTime))
             {
                 query["SwitchTime"] = request.SwitchTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetHiddenZoneId))
+            {
+                query["TargetHiddenZoneId"] = request.TargetHiddenZoneId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetSecondaryZoneId))
+            {
+                query["TargetSecondaryZoneId"] = request.TargetSecondaryZoneId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetVswitchId))
+            {
+                query["TargetVswitchId"] = request.TargetVswitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetZoneId))
+            {
+                query["TargetZoneId"] = request.TargetZoneId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -20274,6 +20493,22 @@ namespace AlibabaCloud.SDK.Dds20151201
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetHiddenZoneId))
+            {
+                query["TargetHiddenZoneId"] = request.TargetHiddenZoneId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetSecondaryZoneId))
+            {
+                query["TargetSecondaryZoneId"] = request.TargetSecondaryZoneId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetVswitchId))
+            {
+                query["TargetVswitchId"] = request.TargetVswitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetZoneId))
+            {
+                query["TargetZoneId"] = request.TargetZoneId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -20370,6 +20605,22 @@ namespace AlibabaCloud.SDK.Dds20151201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetHiddenZoneId))
+            {
+                query["TargetHiddenZoneId"] = request.TargetHiddenZoneId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetSecondaryZoneId))
+            {
+                query["TargetSecondaryZoneId"] = request.TargetSecondaryZoneId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetVswitchId))
+            {
+                query["TargetVswitchId"] = request.TargetVswitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetZoneId))
+            {
+                query["TargetZoneId"] = request.TargetZoneId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -21222,6 +21473,174 @@ namespace AlibabaCloud.SDK.Dds20151201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifySecurityIpsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改MongoDB实例的SRV连接地址</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySrvNetworkAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySrvNetworkAddressResponse
+        /// </returns>
+        public ModifySrvNetworkAddressResponse ModifySrvNetworkAddressWithOptions(ModifySrvNetworkAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionType))
+            {
+                query["ConnectionType"] = request.ConnectionType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewConnectionString))
+            {
+                query["NewConnectionString"] = request.NewConnectionString;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifySrvNetworkAddress",
+                Version = "2015-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifySrvNetworkAddressResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改MongoDB实例的SRV连接地址</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySrvNetworkAddressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySrvNetworkAddressResponse
+        /// </returns>
+        public async Task<ModifySrvNetworkAddressResponse> ModifySrvNetworkAddressWithOptionsAsync(ModifySrvNetworkAddressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionType))
+            {
+                query["ConnectionType"] = request.ConnectionType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewConnectionString))
+            {
+                query["NewConnectionString"] = request.NewConnectionString;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifySrvNetworkAddress",
+                Version = "2015-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifySrvNetworkAddressResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改MongoDB实例的SRV连接地址</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySrvNetworkAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySrvNetworkAddressResponse
+        /// </returns>
+        public ModifySrvNetworkAddressResponse ModifySrvNetworkAddress(ModifySrvNetworkAddressRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifySrvNetworkAddressWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改MongoDB实例的SRV连接地址</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySrvNetworkAddressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySrvNetworkAddressResponse
+        /// </returns>
+        public async Task<ModifySrvNetworkAddressResponse> ModifySrvNetworkAddressAsync(ModifySrvNetworkAddressRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifySrvNetworkAddressWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

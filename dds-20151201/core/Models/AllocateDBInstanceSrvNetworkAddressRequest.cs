@@ -8,21 +8,24 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
-    public class DescribeClusterRecoverTimeRequest : TeaModel {
+    public class AllocateDBInstanceSrvNetworkAddressRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>dds-bp18f7d6b6a7****</para>
+        /// <para>dds-2ze5eb9514e31364</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
-        [NameInMap("DestRegion")]
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>d-bp1b7bb3bbe****</para>
+        /// </summary>
+        [NameInMap("NodeId")]
         [Validation(Required=false)]
-        public string DestRegion { get; set; }
+        public string NodeId { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -40,9 +43,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("SrcRegion")]
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>vpc</para>
+        /// </summary>
+        [NameInMap("SrvConnectionType")]
         [Validation(Required=false)]
-        public string SrcRegion { get; set; }
+        public string SrvConnectionType { get; set; }
 
     }
 

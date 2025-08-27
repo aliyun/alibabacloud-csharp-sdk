@@ -189,6 +189,22 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("TargetHiddenZoneId")]
+        [Validation(Required=false)]
+        public string TargetHiddenZoneId { get; set; }
+
+        [NameInMap("TargetSecondaryZoneId")]
+        [Validation(Required=false)]
+        public string TargetSecondaryZoneId { get; set; }
+
+        [NameInMap("TargetVswitchId")]
+        [Validation(Required=false)]
+        public string TargetVswitchId { get; set; }
+
+        [NameInMap("TargetZoneId")]
+        [Validation(Required=false)]
+        public string TargetZoneId { get; set; }
+
     }
 
 }
