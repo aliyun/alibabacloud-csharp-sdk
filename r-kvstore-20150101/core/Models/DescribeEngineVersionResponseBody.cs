@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <para>The release notes for the minor version of the instance, including the release date, minor version number, release type such as new feature, and description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;releaseInfo\&quot;:{\&quot;createTime\&quot;:\&quot;2021-07-27\&quot;,\&quot;level\&quot;:1,\&quot;releaseVersion\&quot;:\&quot;0.5.4\&quot;,\&quot;releaseNote\&quot;:\&quot;功能更新：增强稳定性。\&quot;}],\&quot;versionChangesLevel\&quot;:2}</para>
+        /// <para>{\&quot;releaseInfo\&quot;:{\&quot;createTime\&quot;:\&quot;2021-07-27\&quot;,\&quot;level\&quot;:1,\&quot;releaseVersion\&quot;:\&quot;0.5.4\&quot;,\&quot;releaseNote\&quot;:\&quot;Feature optimization: The stability is improved.\&quot;}],\&quot;versionChangesLevel\&quot;:2}</para>
         /// </summary>
         [NameInMap("DBVersionRelease")]
         [Validation(Required=false)]
@@ -434,7 +434,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;releaseInfo\&quot;:[{\&quot;createTime\&quot;:\&quot;2021-06-08\&quot;,\&quot;level\&quot;:0,\&quot;releaseVersion\&quot;:\&quot;6.6.2\&quot;,\&quot;releaseNote\&quot;:\&quot;新特性：增加对部分内部命令的支持。\&quot;}],\&quot;versionChangesLevel\&quot;:2}</para>
+        /// <para>{\&quot;releaseInfo\&quot;:[{\&quot;createTime\&quot;:\&quot;2021-06-08\&quot;,\&quot;level\&quot;:0,\&quot;releaseVersion\&quot;:\&quot;6.6.2\&quot;,\&quot;releaseNote\&quot;:\&quot;New feature: Some internal commands are supported.\&quot;}],\&quot;versionChangesLevel\&quot;:2}</para>
         /// </summary>
         [NameInMap("ProxyVersionRelease")]
         [Validation(Required=false)]

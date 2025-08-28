@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             [Validation(Required=false)]
             public List<DescribeTairKVCacheInferInstancesResponseBodyInstancesTairInferInstanceDTO> TairInferInstanceDTO { get; set; }
             public class DescribeTairKVCacheInferInstancesResponseBodyInstancesTairInferInstanceDTO : TeaModel {
+                [NameInMap("AckId")]
+                [Validation(Required=false)]
+                public string AckId { get; set; }
+
                 [NameInMap("Capacity")]
                 [Validation(Required=false)]
                 public long? Capacity { get; set; }
@@ -104,6 +108,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                     }
 
                 }
+
+                [NameInMap("VNodeCount")]
+                [Validation(Required=false)]
+                public int? VNodeCount { get; set; }
 
                 [NameInMap("VNodeName")]
                 [Validation(Required=false)]

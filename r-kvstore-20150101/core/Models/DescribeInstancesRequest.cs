@@ -181,6 +181,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string NetworkType { get; set; }
 
+        [NameInMap("NodeType")]
+        [Validation(Required=false)]
+        public string NodeType { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
