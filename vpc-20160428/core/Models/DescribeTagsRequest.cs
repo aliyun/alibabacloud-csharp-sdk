@@ -53,6 +53,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The resource IDs.</para>
+        /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
@@ -84,6 +87,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        /// <summary>
+        /// <para>The tags.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeTagsRequestTag> Tag { get; set; }

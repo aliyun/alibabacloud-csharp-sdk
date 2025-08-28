@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public List<ListNatIpsResponseBodyNatIps> NatIps { get; set; }
         public class ListNatIpsResponseBodyNatIps : TeaModel {
+            [NameInMap("Ipv4Prefix")]
+            [Validation(Required=false)]
+            public string Ipv4Prefix { get; set; }
+
             /// <summary>
             /// <para>Indicates whether the IP address is the default IP address of the NAT gateway. Valid values:</para>
             /// <list type="bullet">

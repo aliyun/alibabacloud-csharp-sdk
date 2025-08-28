@@ -280,6 +280,22 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
                 }
 
+                [NameInMap("IpPrefixList")]
+                [Validation(Required=false)]
+                public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpPrefixList IpPrefixList { get; set; }
+                public class DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpPrefixList : TeaModel {
+                    [NameInMap("IpPrefixList")]
+                    [Validation(Required=false)]
+                    public List<DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpPrefixListIpPrefixList> IpPrefixList { get; set; }
+                    public class DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpPrefixListIpPrefixList : TeaModel {
+                        [NameInMap("IpPrefix")]
+                        [Validation(Required=false)]
+                        public string IpPrefix { get; set; }
+
+                    }
+
+                }
+
                 /// <summary>
                 /// <para>The name of the NAT gateway.</para>
                 /// 

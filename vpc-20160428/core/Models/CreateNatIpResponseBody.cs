@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateNatIpResponseBody : TeaModel {
+        [NameInMap("Ipv4Prefix")]
+        [Validation(Required=false)]
+        public string Ipv4Prefix { get; set; }
+
         /// <summary>
         /// <para>The NAT IP address.</para>
         /// 

@@ -123,10 +123,22 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string Ipv6CidrBlock { get; set; }
 
+        /// <summary>
+        /// <para>Add an IPv6 CIDR block from the IPAM pool to the VPC by entering a mask.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>56</para>
+        /// </summary>
         [NameInMap("Ipv6CidrMask")]
         [Validation(Required=false)]
         public int? Ipv6CidrMask { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the IP Address Manager (IPAM) pool of the IPv6 type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ipam-pool-bp1aq51kkfh477z03****</para>
+        /// </summary>
         [NameInMap("Ipv6IpamPoolId")]
         [Validation(Required=false)]
         public string Ipv6IpamPoolId { get; set; }

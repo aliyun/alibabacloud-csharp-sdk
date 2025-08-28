@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the route table in the vRouter.</para>
+                /// <para>The IDs of the route tables.</para>
                 /// </summary>
                 [NameInMap("RouteTableIds")]
                 [Validation(Required=false)]

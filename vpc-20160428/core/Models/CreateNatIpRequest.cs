@@ -38,6 +38,18 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>null</para>
+        /// </summary>
+        [NameInMap("Ipv4Prefix")]
+        [Validation(Required=false)]
+        public string Ipv4Prefix { get; set; }
+
+        [NameInMap("Ipv4PrefixCount")]
+        [Validation(Required=false)]
+        public long? Ipv4PrefixCount { get; set; }
+
+        /// <summary>
         /// <para>The ID of the Virtual Private Cloud (VPC) NAT gateway for which you want to create the NAT IP address.</para>
         /// <para>This parameter is required.</para>
         /// 

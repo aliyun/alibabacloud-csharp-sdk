@@ -14833,9 +14833,17 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["InternetChargeType"] = request.InternetChargeType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv4Prefix))
+            {
+                query["Ipv4Prefix"] = request.Ipv4Prefix;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NatIp))
+            {
+                query["NatIp"] = request.NatIp;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NatType))
             {
@@ -14989,9 +14997,17 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["InternetChargeType"] = request.InternetChargeType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv4Prefix))
+            {
+                query["Ipv4Prefix"] = request.Ipv4Prefix;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NatIp))
+            {
+                query["NatIp"] = request.NatIp;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NatType))
             {
@@ -15174,6 +15190,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["DryRun"] = request.DryRun;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv4Prefix))
+            {
+                query["Ipv4Prefix"] = request.Ipv4Prefix;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv4PrefixCount))
+            {
+                query["Ipv4PrefixCount"] = request.Ipv4PrefixCount;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NatGatewayId))
             {
                 query["NatGatewayId"] = request.NatGatewayId;
@@ -15274,6 +15298,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
                 query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv4Prefix))
+            {
+                query["Ipv4Prefix"] = request.Ipv4Prefix;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv4PrefixCount))
+            {
+                query["Ipv4PrefixCount"] = request.Ipv4PrefixCount;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NatGatewayId))
             {
@@ -29228,6 +29260,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["DryRun"] = request.DryRun;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv4Prefix))
+            {
+                query["Ipv4Prefix"] = request.Ipv4Prefix;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NatGatewayId))
+            {
+                query["NatGatewayId"] = request.NatGatewayId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NatIpId))
             {
                 query["NatIpId"] = request.NatIpId;
@@ -29314,6 +29354,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
                 query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv4Prefix))
+            {
+                query["Ipv4Prefix"] = request.Ipv4Prefix;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NatGatewayId))
+            {
+                query["NatGatewayId"] = request.NatGatewayId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NatIpId))
             {
@@ -39222,7 +39270,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about flow logs.</para>
+        /// <para>Query flow logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39336,7 +39384,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about flow logs.</para>
+        /// <para>Query flow logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39450,7 +39498,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about flow logs.</para>
+        /// <para>Query flow logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39468,7 +39516,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about flow logs.</para>
+        /// <para>Query flow logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46674,7 +46722,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询满足筛选条件的标签列表。</para>
+        /// <para>Queries tags that meet the specified filter conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -46762,7 +46810,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询满足筛选条件的标签列表。</para>
+        /// <para>Queries tags that meet the specified filter conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -46850,7 +46898,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询满足筛选条件的标签列表。</para>
+        /// <para>Queries tags that meet the specified filter conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -46878,7 +46926,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询满足筛选条件的标签列表。</para>
+        /// <para>Queries tags that meet the specified filter conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -46906,7 +46954,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询路由器列表</para>
+        /// <para>Queries vRouters in a region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46976,7 +47024,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询路由器列表</para>
+        /// <para>Queries vRouters in a region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47046,7 +47094,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询路由器列表</para>
+        /// <para>Queries vRouters in a region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47064,7 +47112,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询路由器列表</para>
+        /// <para>Queries vRouters in a region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48414,6 +48462,222 @@ namespace AlibabaCloud.SDK.Vpc20160428
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeVpcAttributeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询VPC跨账号授权给ECR</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcGrantRulesToEcrRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcGrantRulesToEcrResponse
+        /// </returns>
+        public DescribeVpcGrantRulesToEcrResponse DescribeVpcGrantRulesToEcrWithOptions(DescribeVpcGrantRulesToEcrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcrInstanceId))
+            {
+                query["EcrInstanceId"] = request.EcrInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcrOwnerId))
+            {
+                query["EcrOwnerId"] = request.EcrOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                query["InstanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVpcGrantRulesToEcr",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVpcGrantRulesToEcrResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询VPC跨账号授权给ECR</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcGrantRulesToEcrRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcGrantRulesToEcrResponse
+        /// </returns>
+        public async Task<DescribeVpcGrantRulesToEcrResponse> DescribeVpcGrantRulesToEcrWithOptionsAsync(DescribeVpcGrantRulesToEcrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcrInstanceId))
+            {
+                query["EcrInstanceId"] = request.EcrInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcrOwnerId))
+            {
+                query["EcrOwnerId"] = request.EcrOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                query["InstanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVpcGrantRulesToEcr",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVpcGrantRulesToEcrResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询VPC跨账号授权给ECR</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcGrantRulesToEcrRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcGrantRulesToEcrResponse
+        /// </returns>
+        public DescribeVpcGrantRulesToEcrResponse DescribeVpcGrantRulesToEcr(DescribeVpcGrantRulesToEcrRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeVpcGrantRulesToEcrWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询VPC跨账号授权给ECR</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcGrantRulesToEcrRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcGrantRulesToEcrResponse
+        /// </returns>
+        public async Task<DescribeVpcGrantRulesToEcrResponse> DescribeVpcGrantRulesToEcrAsync(DescribeVpcGrantRulesToEcrRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeVpcGrantRulesToEcrWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

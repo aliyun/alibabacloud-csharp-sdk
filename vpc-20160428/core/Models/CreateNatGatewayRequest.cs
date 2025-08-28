@@ -150,6 +150,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string InternetChargeType { get; set; }
 
+        [NameInMap("Ipv4Prefix")]
+        [Validation(Required=false)]
+        public string Ipv4Prefix { get; set; }
+
         /// <summary>
         /// <para>The name of the NAT gateway.</para>
         /// <para>The name must be 2 to 128 characters in length and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</para>
@@ -161,6 +165,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        [NameInMap("NatIp")]
+        [Validation(Required=false)]
+        public string NatIp { get; set; }
 
         /// <summary>
         /// <para>The type of NAT gateway. Set the value to <b>Enhanced</b>, which specifies enhanced NAT gateway.</para>

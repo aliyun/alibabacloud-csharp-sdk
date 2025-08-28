@@ -52,6 +52,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string FlowLogName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>IPv4</para>
+        /// </summary>
         [NameInMap("IpVersion")]
         [Validation(Required=false)]
         public string IpVersion { get; set; }

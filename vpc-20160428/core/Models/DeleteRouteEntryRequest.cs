@@ -19,6 +19,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string DestinationCidrBlock { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para><b>true</b>: sends a request without deleting the route entry. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized RAM users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
+        /// <para><b>false</b> (default): performs a dry run and the actual request. If the request passes the check, a 2xx HTTP status code is returned and the route entry is deleted.</para>
+        /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }

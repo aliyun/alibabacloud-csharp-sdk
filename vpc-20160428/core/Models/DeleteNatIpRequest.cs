@@ -37,9 +37,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
+        [NameInMap("Ipv4Prefix")]
+        [Validation(Required=false)]
+        public string Ipv4Prefix { get; set; }
+
+        [NameInMap("NatGatewayId")]
+        [Validation(Required=false)]
+        public string NatGatewayId { get; set; }
+
         /// <summary>
         /// <para>The ID of the NAT IP address that you want to delete.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpcnatip-gw8y7q3cpk3fggs87****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeFlowLogsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the flow logs.</para>
+        /// <para>List of flow logs.</para>
         /// </summary>
         [NameInMap("FlowLogs")]
         [Validation(Required=false)]
@@ -31,10 +31,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public int? AggregationInterval { get; set; }
 
                 /// <summary>
-                /// <para>The business status of the flow log. Valid values:</para>
+                /// <para>The business status. Values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Normal</b></description></item>
-                /// <item><description><b>FinancialLocked</b></description></item>
+                /// <item><description><b>Normal</b>: Normal status.</description></item>
+                /// <item><description><b>FinancialLocked</b>: Locked due to unpaid bills.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string BusinessStatus { get; set; }
 
                 /// <summary>
-                /// <para>The time when the flow log was created.</para>
+                /// <para>The creation time of the flow log.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-01-21T03:08:50Z</para>
@@ -65,11 +65,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>If the flow log failed to be delivered, you can troubleshoot based on the following error messages that may be returned:</para>
+                /// <para>When log delivery fails, you can troubleshoot based on the error messages. Possible error messages include:</para>
                 /// <list type="bullet">
-                /// <item><description><b>UnavaliableTarget</b>: The Logstore of SLS is unavailable and cannot receive logs. Check whether the Logstore is available.</description></item>
-                /// <item><description><b>ProjectNotExist</b>: The project of SLS does not exist. We recommend that you delete the project and create a new one.</description></item>
-                /// <item><description><b>UnknownError</b>: An internal error occurred. Try again later.</description></item>
+                /// <item><description><b>UnavaliableTarget</b>: The Logstore of the Log Service SLS is unavailable and cannot receive logs. It is recommended to check if the corresponding Logstore actually exists and is accessible. </description></item>
+                /// <item><description><b>ProjectNotExist</b>: The Project of the Log Service SLS does not exist. It is suggested to delete the original flow log and create a new one pointing to an existing Project. </description></item>
+                /// <item><description><b>UnknownError</b>: An internal error has occurred. Please try again later.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -80,10 +80,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string FlowLogDeliverErrorMessage { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the flow log is delivered. Valid values:</para>
+                /// <para>The delivery status of the flow log, with values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>SUCCESS</b> </description></item>
-                /// <item><description><b>FAILED</b></description></item>
+                /// <item><description><b>SUCCESS</b>: Delivery succeeded. </description></item>
+                /// <item><description><b>FAILED</b>: Delivery failed.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -113,12 +113,18 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string FlowLogName { get; set; }
 
+                /// <summary>
+                /// <para>The type of IP address for collecting flow log traffic.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>IPv4</para>
+                /// </summary>
                 [NameInMap("IpVersion")]
                 [Validation(Required=false)]
                 public string IpVersion { get; set; }
 
                 /// <summary>
-                /// <para>The Logstore that stores the captured traffic data.</para>
+                /// <para>The Logstore where the captured traffic is stored.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>FlowLogStore</para>
@@ -128,7 +134,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string LogStoreName { get; set; }
 
                 /// <summary>
-                /// <para>The project that manages the captured traffic data.</para>
+                /// <para>The Project that manages the captured traffic.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>FlowLogProject</para>
@@ -138,7 +144,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string ProjectName { get; set; }
 
                 /// <summary>
-                /// <para>The region ID of the flow log.</para>
+                /// <para>The region ID to which the flow log belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
@@ -158,7 +164,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the resource from which traffic is captured.</para>
+                /// <para>The resource ID of the traffic captured by the flow log.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>eni-askldfas****</para>
@@ -168,11 +174,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// <para>The type of the resource from which traffic is captured. Valid values:</para>
+                /// <para>The resource type of the traffic captured by the flow log:</para>
                 /// <list type="bullet">
-                /// <item><description><b>NetworkInterface</b>: ENI</description></item>
-                /// <item><description><b>VSwitch</b>: all ENIs in a vSwitch</description></item>
-                /// <item><description><b>VPC</b>: all ENIs in a VPC</description></item>
+                /// <item><description><b>NetworkInterface</b>: Elastic network interface.</description></item>
+                /// <item><description><b>VSwitch</b>: All elastic network interfaces within a VSwitch.</description></item>
+                /// <item><description><b>VPC</b>: All elastic network interfaces within a VPC.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -185,12 +191,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// <para>The hosting type of the cloud service.</para>
                 /// <list type="bullet">
-                /// <item><description>This parameter can be empty, which indicates that the flow log is created by the user.</description></item>
-                /// <item><description>If this parameter is not empty, the value is set to <b>sls</b>. The value sls indicates that the flow log is created in the Simple Log Service (SLS) console.</description></item>
-                /// </list>
-                /// <remarks>
-                /// <para>A flow log that is created in the SLS console can be displayed in the VPC list. However, you cannot modify, start, stop, or delete the flow log in the VPC console. If you want to manage the flow log, you can log on to the <a href="https://sls.console.aliyun.com">SLS console</a> and perform required operations.</para>
+                /// <item><description>It can be empty, indicating that the flow log was created by the user. </description></item>
+                /// <item><description>When not empty, the only supported value is: <b>sls</b>, indicating that the flow log was created through the Log Service console.<remarks>
+                /// <para>Flow log instances created through the Log Service console can be displayed in the VPC list, but they cannot be modified, started, stopped, or deleted within the VPC. If you need to perform these operations on the flow log, you can log in to the <a href="https://sls.console.aliyun.com">Log Service console</a> to modify, start, stop, or delete it.</para>
                 /// </remarks>
+                /// </description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sls</para>
@@ -200,11 +206,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string ServiceType { get; set; }
 
                 /// <summary>
-                /// <para>The status of the flow log. Valid values:</para>
+                /// <para>The status of the flow log. Values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Active</b></description></item>
-                /// <item><description><b>Activating</b></description></item>
-                /// <item><description><b>Inactive</b></description></item>
+                /// <item><description><para><b>Active</b>: The flow log is in an active state.</para>
+                /// </description></item>
+                /// <item><description><para><b>Activating</b>: The flow log is being created.</para>
+                /// </description></item>
+                /// <item><description><para><b>Inactive</b>: The flow log is in an inactive state.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -215,7 +224,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The list of tags.</para>
+                /// <para>List of tags</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -226,7 +235,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     public List<DescribeFlowLogsResponseBodyFlowLogsFlowLogTagsTag> Tag { get; set; }
                     public class DescribeFlowLogsResponseBodyFlowLogsFlowLogTagsTag : TeaModel {
                         /// <summary>
-                        /// <para>The key of tag N.</para>
+                        /// <para>Tag key.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>FinanceDept</para>
@@ -236,7 +245,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// <para>The value of tag N.</para>
+                        /// <para>Tag value.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>FinanceJoshua</para>
@@ -250,14 +259,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
                 /// <summary>
-                /// <para>The sampling scope of the traffic that is collected. Valid values:</para>
+                /// <para>The path of the captured traffic. Values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>all</b> (default value): all traffic</description></item>
-                /// <item><description><b>internetGateway</b>: Internet traffic</description></item>
+                /// <item><description><b>all</b>: Indicates full collection.</description></item>
+                /// <item><description><b>internetGateway</b>: Indicates public network traffic collection.</description></item>
                 /// </list>
-                /// <remarks>
-                /// <para>By default, the traffic path feature is unavailable. To use this feature, <a href="https://workorder-intl.console.aliyun.com/?spm=5176.11182188.console-base-top.dworkorder.18ae4882n3v6ZW#/ticket/createIndex">submit a ticket</a>.</para>
-                /// </remarks>
                 /// </summary>
                 [NameInMap("TrafficPath")]
                 [Validation(Required=false)]
@@ -270,11 +276,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 }
 
                 /// <summary>
-                /// <para>The type of traffic that is captured by the flow log. Valid values:</para>
+                /// <para>The type of traffic captured by the flow log. Values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>All</b>: all traffic</description></item>
-                /// <item><description><b>Allow</b>: traffic that is allowed by access control</description></item>
-                /// <item><description><b>Drop</b>: traffic that is denied by access control</description></item>
+                /// <item><description><b>All</b>: All traffic.</description></item>
+                /// <item><description><b>Allow</b>: Traffic allowed by access control.</description></item>
+                /// <item><description><b>Drop</b>: Traffic denied by access control.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -289,7 +295,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -299,7 +305,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of items per page in a paginated query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -319,10 +325,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation is successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -333,7 +339,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Success { get; set; }
 
         /// <summary>
-        /// <para>The number of flow logs that are queried.</para>
+        /// <para>The number of entries in the queried flow log list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -37,6 +37,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
+        /// <summary>
+        /// <para>Select the public network mode of the VPC after deleting the IPv4 gateway. The values are:</para>
+        /// <list type="bullet">
+        /// <item><description><b>private</b>: Default value, after deleting the IPv4 gateway, the VPC will become a pure private VPC without public network access capability. </description></item>
+        /// <item><description><b>public</b>: After deleting the IPv4 gateway, the VPC\&quot;s public network access is no longer centrally controlled by the IPv4 gateway, and instances with public IPs bound can access the public network by default.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>public</para>
+        /// </summary>
         [NameInMap("InternetMode")]
         [Validation(Required=false)]
         public string InternetMode { get; set; }

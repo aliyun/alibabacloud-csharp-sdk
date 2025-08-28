@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class AssociateVpcCidrBlockRequest : TeaModel {
         /// <summary>
-        /// <para>The IPv6 CIDR block to be added.</para>
+        /// <para>The IPv6 CIDR block that you want to add to the VPC.</para>
         /// <remarks>
-        /// <para> You must and can specify only one of <b>SecondaryCidrBlock</b> and <b>Ipv6CidrBlock</b>.</para>
+        /// <para> You can specify only one of <b>SecondaryCidrBlock</b> and <b>Ipv6CidrBlock</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string IpVersion { get; set; }
 
         /// <summary>
-        /// <para>The ID of the IP Address Manager (IPAM) pool that contains IPv4 addresses.</para>
+        /// <para>The ID of the IPAM pool.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ipam-pool-sycmt3p2a9v63i****</para>
@@ -46,6 +46,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string IpamPoolId { get; set; }
 
+        /// <summary>
+        /// <para>Add an IPv6 CIDR block from the IPAM pool to the VPC by entering a mask.</para>
+        /// <remarks>
+        /// <para> To add an IPv6 CIDR block to a VPC, specify at least one of the IPv6CidrBlock and Ipv6CidrMask parameters.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>56</para>
+        /// </summary>
         [NameInMap("Ipv6CidrMask")]
         [Validation(Required=false)]
         public int? Ipv6CidrMask { get; set; }
@@ -119,9 +128,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string SecondaryCidrBlock { get; set; }
 
         /// <summary>
-        /// <para>Add secondary CIDR blocks to the VPC from the IPAM pool by entering a mask.</para>
+        /// <para>Add an IPv4 CIDR block from the IPAM pool to the VPC by specifying a mask.</para>
         /// <remarks>
-        /// <para>To add a secondary CIDR block to the VPC using the specified IPAM pool, you must specify at least one of the parameters, SecondaryCidrBlock or SecondaryCidrMask.</para>
+        /// <para> If you use an IPAM pool, you must specify at least one of SecondaryCidrBlock and SecondaryCidrMask.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

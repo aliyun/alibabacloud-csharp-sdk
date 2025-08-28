@@ -95,10 +95,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string BizType { get; set; }
 
                 /// <summary>
-                /// <para>The service state of the EIP. Valid values:</para>
+                /// <para>The service status of the EIP. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>Normal</b></description></item>
-                /// <item><description><b>FinancialLocked</b></description></item>
+                /// <item><description><b>OperationLock</b></description></item>
+                /// <item><description><b>Unactivated</b></description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -331,7 +332,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                         /// <para>The reason why the EIP is locked. Valid values:</para>
                         /// <list type="bullet">
                         /// <item><description><b>financial</b>: The EIP is locked due to overdue payments.</description></item>
-                        /// <item><description><b>security</b>: The EIP is locked for security reasons.</description></item>
+                        /// <item><description><b>security</b>: The instance is locked for security purposes.</description></item>
+                        /// <item><description><b>sharedPool</b>: The shared IP address pool is locked due to overdue payments.</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
