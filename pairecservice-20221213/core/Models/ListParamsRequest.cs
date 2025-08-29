@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListParamsRequest : TeaModel {
+        [NameInMap("Encrypted")]
+        [Validation(Required=false)]
+        public bool? Encrypted { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>Daily</para>

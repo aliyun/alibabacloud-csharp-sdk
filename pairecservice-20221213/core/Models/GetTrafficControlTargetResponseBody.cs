@@ -87,6 +87,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public string TrafficControlTargetId { get; set; }
 
+        [NameInMap("TrafficControlTaskId")]
+        [Validation(Required=false)]
+        public string TrafficControlTaskId { get; set; }
+
         [NameInMap("Value")]
         [Validation(Required=false)]
         public float? Value { get; set; }

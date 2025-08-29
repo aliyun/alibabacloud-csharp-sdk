@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public string SceneId { get; set; }
 
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>house</para>

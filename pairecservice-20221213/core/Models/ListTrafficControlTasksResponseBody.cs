@@ -41,6 +41,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            [NameInMap("EffectiveSceneIds")]
+            [Validation(Required=false)]
+            public List<int?> EffectiveSceneIds { get; set; }
+
+            [NameInMap("EffectiveSceneNames")]
+            [Validation(Required=false)]
+            public List<int?> EffectiveSceneNames { get; set; }
+
             [NameInMap("EndTime")]
             [Validation(Required=false)]
             public string EndTime { get; set; }
@@ -116,6 +124,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             [NameInMap("ServiceId")]
             [Validation(Required=false)]
             public string ServiceId { get; set; }
+
+            [NameInMap("ServiceIds")]
+            [Validation(Required=false)]
+            public List<string> ServiceIds { get; set; }
 
             [NameInMap("StartTime")]
             [Validation(Required=false)]
@@ -210,6 +222,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
                 [NameInMap("TrafficControlTargetId")]
                 [Validation(Required=false)]
                 public string TrafficControlTargetId { get; set; }
+
+                [NameInMap("TrafficControlTaskId")]
+                [Validation(Required=false)]
+                public string TrafficControlTaskId { get; set; }
 
                 [NameInMap("Value")]
                 [Validation(Required=false)]

@@ -4161,6 +4161,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             {
                 body["SceneId"] = request.SceneId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Value))
             {
                 body["Value"] = request.Value;
@@ -4222,6 +4226,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneId))
             {
                 body["SceneId"] = request.SceneId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Value))
             {
@@ -5621,6 +5629,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             {
                 body["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveSceneIds))
+            {
+                body["EffectiveSceneIds"] = request.EffectiveSceneIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 body["EndTime"] = request.EndTime;
@@ -5672,6 +5684,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceId))
             {
                 body["ServiceId"] = request.ServiceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceIds))
+            {
+                body["ServiceIds"] = request.ServiceIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
@@ -5771,6 +5787,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             {
                 body["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveSceneIds))
+            {
+                body["EffectiveSceneIds"] = request.EffectiveSceneIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 body["EndTime"] = request.EndTime;
@@ -5822,6 +5842,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceId))
             {
                 body["ServiceId"] = request.ServiceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceIds))
+            {
+                body["ServiceIds"] = request.ServiceIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
@@ -8385,6 +8409,152 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteTrafficControlTaskWithOptionsAsync(TrafficControlTaskId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成算法定制脚本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateAlgorithmCustomizationScriptRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateAlgorithmCustomizationScriptResponse
+        /// </returns>
+        public GenerateAlgorithmCustomizationScriptResponse GenerateAlgorithmCustomizationScriptWithOptions(string AlgorithmCustomizationId, GenerateAlgorithmCustomizationScriptRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeployMode))
+            {
+                body["DeployMode"] = request.DeployMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModuleFieldTypes))
+            {
+                body["ModuleFieldTypes"] = request.ModuleFieldTypes;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenerateAlgorithmCustomizationScript",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/algorithmcustomizations/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(AlgorithmCustomizationId) + "/action/generatescript",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenerateAlgorithmCustomizationScriptResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成算法定制脚本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateAlgorithmCustomizationScriptRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateAlgorithmCustomizationScriptResponse
+        /// </returns>
+        public async Task<GenerateAlgorithmCustomizationScriptResponse> GenerateAlgorithmCustomizationScriptWithOptionsAsync(string AlgorithmCustomizationId, GenerateAlgorithmCustomizationScriptRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeployMode))
+            {
+                body["DeployMode"] = request.DeployMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModuleFieldTypes))
+            {
+                body["ModuleFieldTypes"] = request.ModuleFieldTypes;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenerateAlgorithmCustomizationScript",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/algorithmcustomizations/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(AlgorithmCustomizationId) + "/action/generatescript",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenerateAlgorithmCustomizationScriptResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成算法定制脚本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateAlgorithmCustomizationScriptRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateAlgorithmCustomizationScriptResponse
+        /// </returns>
+        public GenerateAlgorithmCustomizationScriptResponse GenerateAlgorithmCustomizationScript(string AlgorithmCustomizationId, GenerateAlgorithmCustomizationScriptRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GenerateAlgorithmCustomizationScriptWithOptions(AlgorithmCustomizationId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成算法定制脚本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateAlgorithmCustomizationScriptRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateAlgorithmCustomizationScriptResponse
+        /// </returns>
+        public async Task<GenerateAlgorithmCustomizationScriptResponse> GenerateAlgorithmCustomizationScriptAsync(string AlgorithmCustomizationId, GenerateAlgorithmCustomizationScriptRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GenerateAlgorithmCustomizationScriptWithOptionsAsync(AlgorithmCustomizationId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -13895,6 +14065,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Encrypted))
+            {
+                query["Encrypted"] = request.Encrypted;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Environment))
             {
                 query["Environment"] = request.Environment;
@@ -13961,6 +14135,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Encrypted))
+            {
+                query["Encrypted"] = request.Encrypted;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Environment))
             {
                 query["Environment"] = request.Environment;
@@ -21449,6 +21627,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             {
                 body["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveSceneIds))
+            {
+                body["EffectiveSceneIds"] = request.EffectiveSceneIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 body["EndTime"] = request.EndTime;
@@ -21500,6 +21682,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceId))
             {
                 body["ServiceId"] = request.ServiceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceIds))
+            {
+                body["ServiceIds"] = request.ServiceIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
@@ -21599,6 +21785,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             {
                 body["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveSceneIds))
+            {
+                body["EffectiveSceneIds"] = request.EffectiveSceneIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 body["EndTime"] = request.EndTime;
@@ -21650,6 +21840,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceId))
             {
                 body["ServiceId"] = request.ServiceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceIds))
+            {
+                body["ServiceIds"] = request.ServiceIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
