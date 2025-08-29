@@ -18,7 +18,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._signatureAlgorithm = "v2";
             this._endpointRule = "";
             CheckConfig(config);
             this._endpoint = GetEndpoint("appstream-center", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -1022,6 +1021,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             {
                 body["VSwitchIds"] = request.VSwitchIds;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VirtualNodePoolId))
+            {
+                body["VirtualNodePoolId"] = request.VirtualNodePoolId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WuyingServerName))
             {
                 body["WuyingServerName"] = request.WuyingServerName;
@@ -1137,6 +1140,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchIds))
             {
                 body["VSwitchIds"] = request.VSwitchIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VirtualNodePoolId))
+            {
+                body["VirtualNodePoolId"] = request.VirtualNodePoolId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WuyingServerName))
             {
@@ -4251,6 +4258,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddVirtualNodePoolStatusList))
+            {
+                bodyFlat["AddVirtualNodePoolStatusList"] = request.AddVirtualNodePoolStatusList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
             {
                 body["BizRegionId"] = request.BizRegionId;
@@ -4283,7 +4295,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             {
                 body["Status"] = request.Status;
             }
-            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VirtualNodePoolId))
+            {
+                body["VirtualNodePoolId"] = request.VirtualNodePoolId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WuyingServerIdList))
             {
                 bodyFlat["WuyingServerIdList"] = request.WuyingServerIdList;
@@ -4335,6 +4350,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddVirtualNodePoolStatusList))
+            {
+                bodyFlat["AddVirtualNodePoolStatusList"] = request.AddVirtualNodePoolStatusList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
             {
                 body["BizRegionId"] = request.BizRegionId;
@@ -4367,7 +4387,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             {
                 body["Status"] = request.Status;
             }
-            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VirtualNodePoolId))
+            {
+                body["VirtualNodePoolId"] = request.VirtualNodePoolId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WuyingServerIdList))
             {
                 bodyFlat["WuyingServerIdList"] = request.WuyingServerIdList;
@@ -5128,6 +5151,22 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             return await ModifyNodePoolAmountWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the scaling policy of a delivery group. The following scaling policies are supported: fixed resource number, scheduled scaling, and auto scaling.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can select one of the following scaling policies for cloud app resources:</para>
+        /// <list type="bullet">
+        /// <item><description>No scaling: Resources are not scaled.</description></item>
+        /// <item><description>Auto scaling: Resources are automatically scaled based on the number of connected sessions and the duration during which no session is connected.</description></item>
+        /// <item><description>Scheduled scaling: Resources are scaled during specific periods of time on specific dates.
+        /// Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/426039.html">billing methods and prices</a> of App Streaming.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// ModifyNodePoolAttributeRequest
         /// </param>
@@ -5187,6 +5226,22 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             return TeaModel.ToObject<ModifyNodePoolAttributeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the scaling policy of a delivery group. The following scaling policies are supported: fixed resource number, scheduled scaling, and auto scaling.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can select one of the following scaling policies for cloud app resources:</para>
+        /// <list type="bullet">
+        /// <item><description>No scaling: Resources are not scaled.</description></item>
+        /// <item><description>Auto scaling: Resources are automatically scaled based on the number of connected sessions and the duration during which no session is connected.</description></item>
+        /// <item><description>Scheduled scaling: Resources are scaled during specific periods of time on specific dates.
+        /// Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/426039.html">billing methods and prices</a> of App Streaming.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// ModifyNodePoolAttributeRequest
         /// </param>
@@ -5246,6 +5301,22 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             return TeaModel.ToObject<ModifyNodePoolAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the scaling policy of a delivery group. The following scaling policies are supported: fixed resource number, scheduled scaling, and auto scaling.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can select one of the following scaling policies for cloud app resources:</para>
+        /// <list type="bullet">
+        /// <item><description>No scaling: Resources are not scaled.</description></item>
+        /// <item><description>Auto scaling: Resources are automatically scaled based on the number of connected sessions and the duration during which no session is connected.</description></item>
+        /// <item><description>Scheduled scaling: Resources are scaled during specific periods of time on specific dates.
+        /// Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/426039.html">billing methods and prices</a> of App Streaming.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyNodePoolAttributeRequest
         /// </param>
@@ -5259,6 +5330,22 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             return ModifyNodePoolAttributeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the scaling policy of a delivery group. The following scaling policies are supported: fixed resource number, scheduled scaling, and auto scaling.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can select one of the following scaling policies for cloud app resources:</para>
+        /// <list type="bullet">
+        /// <item><description>No scaling: Resources are not scaled.</description></item>
+        /// <item><description>Auto scaling: Resources are automatically scaled based on the number of connected sessions and the duration during which no session is connected.</description></item>
+        /// <item><description>Scheduled scaling: Resources are scaled during specific periods of time on specific dates.
+        /// Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/426039.html">billing methods and prices</a> of App Streaming.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyNodePoolAttributeRequest
         /// </param>

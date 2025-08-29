@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListWuyingServerRequest : TeaModel {
+        [NameInMap("AddVirtualNodePoolStatusList")]
+        [Validation(Required=false)]
+        public List<string> AddVirtualNodePoolStatusList { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -72,6 +76,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
+
+        [NameInMap("VirtualNodePoolId")]
+        [Validation(Required=false)]
+        public string VirtualNodePoolId { get; set; }
 
         [NameInMap("WuyingServerIdList")]
         [Validation(Required=false)]

@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ModifyNodePoolAttributeShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the region where the delivery group resides. For information about the supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>cn-shanghai: China (Shanghai)</description></item>
+        /// <item><description>cn-hangzhou: China (Hangzhou)</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -25,6 +32,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public int? NodeCapacity { get; set; }
 
+        /// <summary>
+        /// <para>The auto scaling policy used by the delivery group.</para>
+        /// </summary>
         [NameInMap("NodePoolStrategy")]
         [Validation(Required=false)]
         public string NodePoolStrategyShrink { get; set; }
@@ -38,7 +48,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string PoolId { get; set; }
 
         /// <summary>
-        /// <para>产品类型。</para>
+        /// <para>The product type.</para>
+        /// <para>Valid value:</para>
+        /// <list type="bullet">
+        /// <item><description>CloudApp: App Streaming</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>CloudApp</para>

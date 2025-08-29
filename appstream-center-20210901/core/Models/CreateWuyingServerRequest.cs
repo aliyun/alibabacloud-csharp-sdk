@@ -163,6 +163,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public List<string> VSwitchIds { get; set; }
 
+        [NameInMap("VirtualNodePoolId")]
+        [Validation(Required=false)]
+        public string VirtualNodePoolId { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>exampleServerName</para>

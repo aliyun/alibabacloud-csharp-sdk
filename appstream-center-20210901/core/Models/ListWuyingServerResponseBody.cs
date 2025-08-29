@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public List<ListWuyingServerResponseBodyWuyingServerList> WuyingServerList { get; set; }
         public class ListWuyingServerResponseBodyWuyingServerList : TeaModel {
+            [NameInMap("AddVirtualNodePoolStatus")]
+            [Validation(Required=false)]
+            public string AddVirtualNodePoolStatus { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -181,6 +185,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string OsType { get; set; }
 
+            [NameInMap("SecurityGroupIds")]
+            [Validation(Required=false)]
+            public List<string> SecurityGroupIds { get; set; }
+
             [NameInMap("ServerInstanceTypeInfo")]
             [Validation(Required=false)]
             public ListWuyingServerResponseBodyWuyingServerListServerInstanceTypeInfo ServerInstanceTypeInfo { get; set; }
@@ -258,6 +266,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [NameInMap("SystemDiskSize")]
             [Validation(Required=false)]
             public int? SystemDiskSize { get; set; }
+
+            [NameInMap("VirtualNodePoolId")]
+            [Validation(Required=false)]
+            public string VirtualNodePoolId { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
