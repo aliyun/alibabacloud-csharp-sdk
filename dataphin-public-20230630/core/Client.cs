@@ -14239,6 +14239,134 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>根据转交任务ID查询转交任务的进度</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTransferInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTransferInfoResponse
+        /// </returns>
+        public GetTransferInfoResponse GetTransferInfoWithOptions(GetTransferInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProposalId))
+            {
+                query["ProposalId"] = request.ProposalId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTransferInfo",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTransferInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据转交任务ID查询转交任务的进度</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTransferInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTransferInfoResponse
+        /// </returns>
+        public async Task<GetTransferInfoResponse> GetTransferInfoWithOptionsAsync(GetTransferInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProposalId))
+            {
+                query["ProposalId"] = request.ProposalId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTransferInfo",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTransferInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据转交任务ID查询转交任务的进度</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTransferInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTransferInfoResponse
+        /// </returns>
+        public GetTransferInfoResponse GetTransferInfo(GetTransferInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetTransferInfoWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据转交任务ID查询转交任务的进度</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTransferInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTransferInfoResponse
+        /// </returns>
+        public async Task<GetTransferInfoResponse> GetTransferInfoAsync(GetTransferInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetTransferInfoWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取自定义函数详情。</para>
         /// </summary>
         /// 
@@ -21919,6 +22047,150 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>重新转交运行失败的转交任务</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// RetryTransferOwnershipRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetryTransferOwnershipResponse
+        /// </returns>
+        public RetryTransferOwnershipResponse RetryTransferOwnershipWithOptions(RetryTransferOwnershipRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RetryTransferOwnershipShrinkRequest request = new RetryTransferOwnershipShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PrivilegeTransferRecord))
+            {
+                request.PrivilegeTransferRecordShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PrivilegeTransferRecord, "PrivilegeTransferRecord", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivilegeTransferRecordShrink))
+            {
+                body["PrivilegeTransferRecord"] = request.PrivilegeTransferRecordShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RetryTransferOwnership",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RetryTransferOwnershipResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重新转交运行失败的转交任务</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// RetryTransferOwnershipRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetryTransferOwnershipResponse
+        /// </returns>
+        public async Task<RetryTransferOwnershipResponse> RetryTransferOwnershipWithOptionsAsync(RetryTransferOwnershipRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RetryTransferOwnershipShrinkRequest request = new RetryTransferOwnershipShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PrivilegeTransferRecord))
+            {
+                request.PrivilegeTransferRecordShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PrivilegeTransferRecord, "PrivilegeTransferRecord", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivilegeTransferRecordShrink))
+            {
+                body["PrivilegeTransferRecord"] = request.PrivilegeTransferRecordShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RetryTransferOwnership",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RetryTransferOwnershipResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重新转交运行失败的转交任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RetryTransferOwnershipRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetryTransferOwnershipResponse
+        /// </returns>
+        public RetryTransferOwnershipResponse RetryTransferOwnership(RetryTransferOwnershipRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RetryTransferOwnershipWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重新转交运行失败的转交任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RetryTransferOwnershipRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetryTransferOwnershipResponse
+        /// </returns>
+        public async Task<RetryTransferOwnershipResponse> RetryTransferOwnershipAsync(RetryTransferOwnershipRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RetryTransferOwnershipWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>回收API授权。</para>
         /// </summary>
         /// 
@@ -22491,6 +22763,150 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SubmitBatchTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>一键转交负责人</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// TransferOwnershipForAllObjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransferOwnershipForAllObjectResponse
+        /// </returns>
+        public TransferOwnershipForAllObjectResponse TransferOwnershipForAllObjectWithOptions(TransferOwnershipForAllObjectRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            TransferOwnershipForAllObjectShrinkRequest request = new TransferOwnershipForAllObjectShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PrivilegeTransferRecord))
+            {
+                request.PrivilegeTransferRecordShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PrivilegeTransferRecord, "PrivilegeTransferRecord", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivilegeTransferRecordShrink))
+            {
+                body["PrivilegeTransferRecord"] = request.PrivilegeTransferRecordShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TransferOwnershipForAllObject",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TransferOwnershipForAllObjectResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>一键转交负责人</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// TransferOwnershipForAllObjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransferOwnershipForAllObjectResponse
+        /// </returns>
+        public async Task<TransferOwnershipForAllObjectResponse> TransferOwnershipForAllObjectWithOptionsAsync(TransferOwnershipForAllObjectRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            TransferOwnershipForAllObjectShrinkRequest request = new TransferOwnershipForAllObjectShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PrivilegeTransferRecord))
+            {
+                request.PrivilegeTransferRecordShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PrivilegeTransferRecord, "PrivilegeTransferRecord", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivilegeTransferRecordShrink))
+            {
+                body["PrivilegeTransferRecord"] = request.PrivilegeTransferRecordShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TransferOwnershipForAllObject",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TransferOwnershipForAllObjectResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>一键转交负责人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TransferOwnershipForAllObjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransferOwnershipForAllObjectResponse
+        /// </returns>
+        public TransferOwnershipForAllObjectResponse TransferOwnershipForAllObject(TransferOwnershipForAllObjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return TransferOwnershipForAllObjectWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>一键转交负责人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TransferOwnershipForAllObjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransferOwnershipForAllObjectResponse
+        /// </returns>
+        public async Task<TransferOwnershipForAllObjectResponse> TransferOwnershipForAllObjectAsync(TransferOwnershipForAllObjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await TransferOwnershipForAllObjectWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
