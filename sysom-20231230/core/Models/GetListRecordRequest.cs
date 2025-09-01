@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
+        [NameInMap("region")]
+        [Validation(Required=false)]
+        public string Region { get; set; }
+
     }
 
 }
