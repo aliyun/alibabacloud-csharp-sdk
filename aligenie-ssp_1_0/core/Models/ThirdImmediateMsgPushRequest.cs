@@ -43,6 +43,14 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>source</para>
+        /// </summary>
+        [NameInMap("Source")]
+        [Validation(Required=false)]
+        public string Source { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>trafficChangeType</para>
         /// </summary>
         [NameInMap("TrafficChangeType")]

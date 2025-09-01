@@ -13377,6 +13377,10 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
             {
                 query["PsgIds"] = request.PsgIds;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrafficChangeType))
             {
                 query["TrafficChangeType"] = request.TrafficChangeType;
@@ -13467,6 +13471,10 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PsgIds))
             {
                 query["PsgIds"] = request.PsgIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrafficChangeType))
             {
