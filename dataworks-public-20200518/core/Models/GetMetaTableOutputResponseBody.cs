@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public GetMetaTableOutputResponseBodyData Data { get; set; }
         public class GetMetaTableOutputResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of instances.</para>
+            /// <para>The partitions.</para>
             /// </summary>
             [NameInMap("DataEntityList")]
             [Validation(Required=false)]

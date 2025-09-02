@@ -27,6 +27,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The type of the compute engine with which the permission request order is associated. The parameter value is odps and cannot be changed. This value indicates that you can request permissions only on fields of tables in the MaxCompute compute engine.</para>
         /// 
@@ -35,6 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// </summary>
         [NameInMap("EngineType")]
         [Validation(Required=false)]
+        [Obsolete]
         public string EngineType { get; set; }
 
         /// <summary>
@@ -63,6 +66,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string MaxComputeProjectName { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The type of the permission request order. The parameter value is 1 and cannot be changed. This value indicates ACL-based authorization.</para>
         /// 
@@ -71,6 +76,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// </summary>
         [NameInMap("OrderType")]
         [Validation(Required=false)]
+        [Obsolete]
         public int? OrderType { get; set; }
 
         /// <summary>

@@ -185,7 +185,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? LastModifyTime { get; set; }
 
             /// <summary>
-            /// <para>The lifecycle of the metatable. Unit: days.</para>
+            /// <para>The lifecycle of the table. Unit: day.</para>
+            /// <remarks>
+            /// <para> If the lifecycle is not set for a MaxCompute table, the return value is 0, indicating that the table is permanently valid.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
