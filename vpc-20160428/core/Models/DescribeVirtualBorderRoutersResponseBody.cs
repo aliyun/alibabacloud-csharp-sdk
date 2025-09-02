@@ -490,6 +490,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public long? MinTxInterval { get; set; }
 
+                [NameInMap("Mtu")]
+                [Validation(Required=false)]
+                public int? Mtu { get; set; }
+
                 /// <summary>
                 /// <para>The VBR name.</para>
                 /// 

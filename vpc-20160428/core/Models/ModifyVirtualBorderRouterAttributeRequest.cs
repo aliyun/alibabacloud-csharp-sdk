@@ -140,6 +140,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? MinTxInterval { get; set; }
 
+        [NameInMap("Mtu")]
+        [Validation(Required=false)]
+        public int? Mtu { get; set; }
+
         /// <summary>
         /// <para>The name of the VBR.</para>
         /// <para>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter. It cannot start with <c>http://</c> or <c>https://</c>.</para>

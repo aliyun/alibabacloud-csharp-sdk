@@ -16202,6 +16202,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["AutoPay"] = request.AutoPay;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                query["AutoRenew"] = request.AutoRenew;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenewDuration))
+            {
+                query["AutoRenewDuration"] = request.AutoRenewDuration;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -16290,6 +16298,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
             {
                 query["AutoPay"] = request.AutoPay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                query["AutoRenew"] = request.AutoRenew;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenewDuration))
+            {
+                query["AutoRenewDuration"] = request.AutoRenewDuration;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -71082,6 +71098,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["MinTxInterval"] = request.MinTxInterval;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mtu))
+            {
+                query["Mtu"] = request.Mtu;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
@@ -71228,6 +71248,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinTxInterval))
             {
                 query["MinTxInterval"] = request.MinTxInterval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mtu))
+            {
+                query["Mtu"] = request.Mtu;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
