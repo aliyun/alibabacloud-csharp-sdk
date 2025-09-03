@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class DedicatedIpPoolListRequest : TeaModel {
+        [NameInMap("All")]
+        [Validation(Required=false)]
+        public bool? All { get; set; }
+
         /// <summary>
         /// <para>Search keyword for the name</para>
         /// 

@@ -80,6 +80,14 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 [Validation(Required=false)]
                 public string AccountStatus { get; set; }
 
+                [NameInMap("ConfigSetId")]
+                [Validation(Required=false)]
+                public string ConfigSetId { get; set; }
+
+                [NameInMap("ConfigSetName")]
+                [Validation(Required=false)]
+                public string ConfigSetName { get; set; }
+
                 /// <summary>
                 /// <para>Creation time</para>
                 /// 

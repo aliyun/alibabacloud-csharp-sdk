@@ -23,6 +23,14 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string AccountName { get; set; }
 
         /// <summary>
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
+        [NameInMap("ConfigSetId")]
+        [Validation(Required=false)]
+        public string ConfigSetId { get; set; }
+
+        /// <summary>
         /// <para>End time. The span between start and end times cannot exceed 30 days, format: yyyy-MM-dd HH:mm.</para>
         /// 
         /// <b>Example:</b>
@@ -31,6 +39,14 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
+
+        /// <summary>
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
+        [NameInMap("IpPoolId")]
+        [Validation(Required=false)]
+        public string IpPoolId { get; set; }
 
         /// <summary>
         /// <para>Specifies the number of results to return in this request. Range is 1~100.</para>

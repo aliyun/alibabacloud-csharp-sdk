@@ -51,6 +51,22 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 public string AccountName { get; set; }
 
                 /// <summary>
+                /// <b>if can be null:</b>
+                /// <c>true</c>
+                /// </summary>
+                [NameInMap("ConfigSetId")]
+                [Validation(Required=false)]
+                public string ConfigSetId { get; set; }
+
+                /// <summary>
+                /// <b>if can be null:</b>
+                /// <c>true</c>
+                /// </summary>
+                [NameInMap("ConfigSetName")]
+                [Validation(Required=false)]
+                public string ConfigSetName { get; set; }
+
+                /// <summary>
                 /// <para>Detailed classification of error reasons: - SendOk - SmtpNxBox
                 /// etc.</para>
                 /// 
@@ -60,6 +76,22 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 [NameInMap("ErrorClassification")]
                 [Validation(Required=false)]
                 public string ErrorClassification { get; set; }
+
+                /// <summary>
+                /// <b>if can be null:</b>
+                /// <c>true</c>
+                /// </summary>
+                [NameInMap("IpPoolId")]
+                [Validation(Required=false)]
+                public string IpPoolId { get; set; }
+
+                /// <summary>
+                /// <b>if can be null:</b>
+                /// <c>true</c>
+                /// </summary>
+                [NameInMap("IpPoolName")]
+                [Validation(Required=false)]
+                public string IpPoolName { get; set; }
 
                 /// <summary>
                 /// <para>Update time</para>
