@@ -247,6 +247,166 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         [Validation(Required=false)]
         public UpdateEventStreamingRequestSink Sink { get; set; }
         public class UpdateEventStreamingRequestSink : TeaModel {
+            [NameInMap("SinkApacheKafkaParameters")]
+            [Validation(Required=false)]
+            public UpdateEventStreamingRequestSinkSinkApacheKafkaParameters SinkApacheKafkaParameters { get; set; }
+            public class UpdateEventStreamingRequestSinkSinkApacheKafkaParameters : TeaModel {
+                [NameInMap("Acks")]
+                [Validation(Required=false)]
+                public string Acks { get; set; }
+
+                [NameInMap("Bootstraps")]
+                [Validation(Required=false)]
+                public string Bootstraps { get; set; }
+
+                [NameInMap("Headers")]
+                [Validation(Required=false)]
+                public UpdateEventStreamingRequestSinkSinkApacheKafkaParametersHeaders Headers { get; set; }
+                public class UpdateEventStreamingRequestSinkSinkApacheKafkaParametersHeaders : TeaModel {
+                    [NameInMap("Form")]
+                    [Validation(Required=false)]
+                    public string Form { get; set; }
+
+                    [NameInMap("Template")]
+                    [Validation(Required=false)]
+                    public string Template { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public UpdateEventStreamingRequestSinkSinkApacheKafkaParametersKey Key { get; set; }
+                public class UpdateEventStreamingRequestSinkSinkApacheKafkaParametersKey : TeaModel {
+                    [NameInMap("Form")]
+                    [Validation(Required=false)]
+                    public string Form { get; set; }
+
+                    [NameInMap("Template")]
+                    [Validation(Required=false)]
+                    public string Template { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
+                [NameInMap("NetworkType")]
+                [Validation(Required=false)]
+                public UpdateEventStreamingRequestSinkSinkApacheKafkaParametersNetworkType NetworkType { get; set; }
+                public class UpdateEventStreamingRequestSinkSinkApacheKafkaParametersNetworkType : TeaModel {
+                    [NameInMap("Form")]
+                    [Validation(Required=false)]
+                    public string Form { get; set; }
+
+                    [NameInMap("Template")]
+                    [Validation(Required=false)]
+                    public string Template { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
+                [NameInMap("SaslMechanism")]
+                [Validation(Required=false)]
+                public string SaslMechanism { get; set; }
+
+                [NameInMap("SaslPassword")]
+                [Validation(Required=false)]
+                public string SaslPassword { get; set; }
+
+                [NameInMap("SaslUser")]
+                [Validation(Required=false)]
+                public string SaslUser { get; set; }
+
+                [NameInMap("SecurityGroupId")]
+                [Validation(Required=false)]
+                public UpdateEventStreamingRequestSinkSinkApacheKafkaParametersSecurityGroupId SecurityGroupId { get; set; }
+                public class UpdateEventStreamingRequestSinkSinkApacheKafkaParametersSecurityGroupId : TeaModel {
+                    [NameInMap("Form")]
+                    [Validation(Required=false)]
+                    public string Form { get; set; }
+
+                    [NameInMap("Template")]
+                    [Validation(Required=false)]
+                    public string Template { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
+                [NameInMap("SecurityProtocol")]
+                [Validation(Required=false)]
+                public string SecurityProtocol { get; set; }
+
+                [NameInMap("Topic")]
+                [Validation(Required=false)]
+                public string Topic { get; set; }
+
+                [NameInMap("VSwitchIds")]
+                [Validation(Required=false)]
+                public UpdateEventStreamingRequestSinkSinkApacheKafkaParametersVSwitchIds VSwitchIds { get; set; }
+                public class UpdateEventStreamingRequestSinkSinkApacheKafkaParametersVSwitchIds : TeaModel {
+                    [NameInMap("Form")]
+                    [Validation(Required=false)]
+                    public string Form { get; set; }
+
+                    [NameInMap("Template")]
+                    [Validation(Required=false)]
+                    public string Template { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public UpdateEventStreamingRequestSinkSinkApacheKafkaParametersValue Value { get; set; }
+                public class UpdateEventStreamingRequestSinkSinkApacheKafkaParametersValue : TeaModel {
+                    [NameInMap("Form")]
+                    [Validation(Required=false)]
+                    public string Form { get; set; }
+
+                    [NameInMap("Template")]
+                    [Validation(Required=false)]
+                    public string Template { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
+                [NameInMap("VpcId")]
+                [Validation(Required=false)]
+                public UpdateEventStreamingRequestSinkSinkApacheKafkaParametersVpcId VpcId { get; set; }
+                public class UpdateEventStreamingRequestSinkSinkApacheKafkaParametersVpcId : TeaModel {
+                    [NameInMap("Form")]
+                    [Validation(Required=false)]
+                    public string Form { get; set; }
+
+                    [NameInMap("Template")]
+                    [Validation(Required=false)]
+                    public string Template { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
+            }
+
             /// <summary>
             /// <para>The parameters that are configured if you specify Apache RocketMQ (Offset Data) as the event target.</para>
             /// </summary>
@@ -4244,6 +4404,64 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         [Validation(Required=false)]
         public UpdateEventStreamingRequestSource Source { get; set; }
         public class UpdateEventStreamingRequestSource : TeaModel {
+            [NameInMap("SourceApacheKafkaParameters")]
+            [Validation(Required=false)]
+            public UpdateEventStreamingRequestSourceSourceApacheKafkaParameters SourceApacheKafkaParameters { get; set; }
+            public class UpdateEventStreamingRequestSourceSourceApacheKafkaParameters : TeaModel {
+                [NameInMap("Bootstraps")]
+                [Validation(Required=false)]
+                public string Bootstraps { get; set; }
+
+                [NameInMap("ConsumerGroup")]
+                [Validation(Required=false)]
+                public string ConsumerGroup { get; set; }
+
+                [NameInMap("NetworkType")]
+                [Validation(Required=false)]
+                public string NetworkType { get; set; }
+
+                [NameInMap("OffsetReset")]
+                [Validation(Required=false)]
+                public string OffsetReset { get; set; }
+
+                [NameInMap("SaslMechanism")]
+                [Validation(Required=false)]
+                public string SaslMechanism { get; set; }
+
+                [NameInMap("SaslPassword")]
+                [Validation(Required=false)]
+                public string SaslPassword { get; set; }
+
+                [NameInMap("SaslUser")]
+                [Validation(Required=false)]
+                public string SaslUser { get; set; }
+
+                [NameInMap("SecurityGroupId")]
+                [Validation(Required=false)]
+                public string SecurityGroupId { get; set; }
+
+                [NameInMap("SecurityProtocol")]
+                [Validation(Required=false)]
+                public string SecurityProtocol { get; set; }
+
+                [NameInMap("Topic")]
+                [Validation(Required=false)]
+                public string Topic { get; set; }
+
+                [NameInMap("VSwitchIds")]
+                [Validation(Required=false)]
+                public string VSwitchIds { get; set; }
+
+                [NameInMap("ValueDataType")]
+                [Validation(Required=false)]
+                public string ValueDataType { get; set; }
+
+                [NameInMap("VpcId")]
+                [Validation(Required=false)]
+                public string VpcId { get; set; }
+
+            }
+
             [NameInMap("SourceApacheRocketMQCheckpointParameters")]
             [Validation(Required=false)]
             public UpdateEventStreamingRequestSourceSourceApacheRocketMQCheckpointParameters SourceApacheRocketMQCheckpointParameters { get; set; }
