@@ -56,6 +56,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                query["Remark"] = request.Remark;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountAccessKey))
             {
                 query["accountAccessKey"] = request.AccountAccessKey;
@@ -118,6 +122,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                query["Remark"] = request.Remark;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountAccessKey))
             {
                 query["accountAccessKey"] = request.AccountAccessKey;

@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 {
     public class CreateAccountRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>***环境</para>
+        /// </summary>
+        [NameInMap("Remark")]
+        [Validation(Required=false)]
+        public string Remark { get; set; }
+
+        /// <summary>
         /// <para>The AccessKey ID of your Alibaba Cloud account or RAM user. For information about how to obtain an AccessKey pair, see <a href="https://help.aliyun.com/document_detail/116401.html">Create an AccessKey pair</a>.</para>
         /// <remarks>
         /// <para> If you use the pair of static username and password that is created by using the Accesskey pair of a RAM user to access ApsaraMQ for RabbitMQ to send and receive messages, make sure that the RAM user is granted the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/146559.html">RAM policies</a>.</para>

@@ -77,6 +77,14 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
             public string Password { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>***环境</para>
+            /// </summary>
+            [NameInMap("Remark")]
+            [Validation(Required=false)]
+            public string Remark { get; set; }
+
+            /// <summary>
             /// <para>The created static username.</para>
             /// 
             /// <b>Example:</b>
