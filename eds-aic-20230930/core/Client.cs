@@ -748,6 +748,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["PhoneDataVolume"] = request.PhoneDataVolume;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
+            {
+                query["PromotionId"] = request.PromotionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpBandwidthLimit))
             {
                 query["UpBandwidthLimit"] = request.UpBandwidthLimit;
@@ -813,6 +817,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneDataVolume))
             {
                 query["PhoneDataVolume"] = request.PhoneDataVolume;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
+            {
+                query["PromotionId"] = request.PromotionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpBandwidthLimit))
             {
@@ -1147,6 +1155,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["PolicyGroupId"] = request.PolicyGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
+            {
+                query["PromotionId"] = request.PromotionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
                 query["Tag"] = request.Tag;
@@ -1295,6 +1307,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyGroupId))
             {
                 query["PolicyGroupId"] = request.PolicyGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
+            {
+                query["PromotionId"] = request.PromotionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
@@ -1782,6 +1798,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["PhoneDataVolume"] = request.PhoneDataVolume;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
+            {
+                query["PromotionId"] = request.PromotionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResolutionHeight))
             {
                 query["ResolutionHeight"] = request.ResolutionHeight;
@@ -1943,6 +1963,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneDataVolume))
             {
                 query["PhoneDataVolume"] = request.PhoneDataVolume;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
+            {
+                query["PromotionId"] = request.PromotionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResolutionHeight))
             {
@@ -7220,6 +7244,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["PhoneDataVolume"] = request.PhoneDataVolume;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
+            {
+                query["PromotionId"] = request.PromotionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareDataVolume))
             {
                 query["ShareDataVolume"] = request.ShareDataVolume;
@@ -7277,6 +7305,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneDataVolume))
             {
                 query["PhoneDataVolume"] = request.PhoneDataVolume;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
+            {
+                query["PromotionId"] = request.PromotionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareDataVolume))
             {
@@ -9272,6 +9304,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["PeriodUnit"] = request.PeriodUnit;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
+            {
+                query["PromotionId"] = request.PromotionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -9333,6 +9369,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodUnit))
             {
                 query["PeriodUnit"] = request.PeriodUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
+            {
+                query["PromotionId"] = request.PromotionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -10428,6 +10468,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["PeriodUnit"] = request.PeriodUnit;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
+            {
+                query["PromotionId"] = request.PromotionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -10481,6 +10525,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodUnit))
             {
                 query["PeriodUnit"] = request.PeriodUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
+            {
+                query["PromotionId"] = request.PromotionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -10560,6 +10608,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["AutoPay"] = request.AutoPay;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
+            {
+                query["PromotionId"] = request.PromotionId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
             {
@@ -10619,6 +10671,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
             {
                 query["AutoPay"] = request.AutoPay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
+            {
+                query["PromotionId"] = request.PromotionId;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
@@ -12793,6 +12849,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["InstanceGroupId"] = request.InstanceGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
+            {
+                query["PromotionId"] = request.PromotionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -12847,6 +12907,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceGroupId))
             {
                 query["InstanceGroupId"] = request.InstanceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
+            {
+                query["PromotionId"] = request.PromotionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

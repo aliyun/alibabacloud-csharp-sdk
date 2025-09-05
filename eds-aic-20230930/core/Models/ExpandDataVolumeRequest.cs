@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public int? PhoneDataVolume { get; set; }
 
+        [NameInMap("PromotionId")]
+        [Validation(Required=false)]
+        public string PromotionId { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>100</para>

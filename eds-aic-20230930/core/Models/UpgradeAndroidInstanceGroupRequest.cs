@@ -44,6 +44,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string InstanceGroupId { get; set; }
 
+        [NameInMap("PromotionId")]
+        [Validation(Required=false)]
+        public string PromotionId { get; set; }
+
     }
 
 }
