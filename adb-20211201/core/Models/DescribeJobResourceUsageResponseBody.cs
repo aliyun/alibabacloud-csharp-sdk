@@ -154,6 +154,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
             }
 
+            [NameInMap("PageNumber")]
+            [Validation(Required=false)]
+            public int? PageNumber { get; set; }
+
+            [NameInMap("PageSize")]
+            [Validation(Required=false)]
+            public int? PageSize { get; set; }
+
             /// <summary>
             /// <para>The start time of the query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
@@ -163,6 +171,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public string StartTime { get; set; }
+
+            [NameInMap("TotalCount")]
+            [Validation(Required=false)]
+            public int? TotalCount { get; set; }
 
         }
 

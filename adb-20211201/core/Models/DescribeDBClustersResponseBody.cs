@@ -20,6 +20,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public List<DescribeDBClustersResponseBodyItemsDBCluster> DBCluster { get; set; }
             public class DescribeDBClustersResponseBodyItemsDBCluster : TeaModel {
+                [NameInMap("AINodeNumber")]
+                [Validation(Required=false)]
+                public int? AINodeNumber { get; set; }
+
+                [NameInMap("AINodeSpec")]
+                [Validation(Required=false)]
+                public string AINodeSpec { get; set; }
+
                 /// <summary>
                 /// <para>The mode of the cluster. This parameter is returned only for Data Warehouse Edition clusters. Valid values:</para>
                 /// <list type="bullet">
