@@ -8690,7 +8690,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a channel in MediaWeaver.</para>
+        /// <para>Deletes a channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8732,7 +8732,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a channel in MediaWeaver.</para>
+        /// <para>Deletes a channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8774,7 +8774,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a channel in MediaWeaver.</para>
+        /// <para>Deletes a channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8792,7 +8792,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a channel in MediaWeaver.</para>
+        /// <para>Deletes a channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22964,7 +22964,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a source in MediaWeaver.</para>
+        /// <para>Queries a source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23014,7 +23014,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a source in MediaWeaver.</para>
+        /// <para>Queries a source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23064,7 +23064,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a source in MediaWeaver.</para>
+        /// <para>Queries a source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23082,7 +23082,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a source in MediaWeaver.</para>
+        /// <para>Queries a source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39416,6 +39416,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             {
                 query["Text"] = request.Text;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -39476,6 +39480,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Text))
             {
                 query["Text"] = request.Text;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

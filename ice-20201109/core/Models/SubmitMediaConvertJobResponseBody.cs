@@ -50,6 +50,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [Validation(Required=false)]
                 public List<MediaConvertInput> Inputs { get; set; }
 
+                /// <summary>
+                /// <para>The name of the job.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>insx6-1310</para>
+                /// </summary>
                 [NameInMap("JobName")]
                 [Validation(Required=false)]
                 public string JobName { get; set; }
@@ -129,13 +135,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             /// <list type="bullet">
             /// <item><description>Inited: The task is initialized.</description></item>
             /// <item><description>Running</description></item>
-            /// <item><description>Success</description></item>
-            /// <item><description>Failed</description></item>
+            /// <item><description>Complete</description></item>
+            /// <item><description>Error</description></item>
             /// <item><description>Cancelled</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>Created</para>
+            /// <para>Inited</para>
             /// </summary>
             [NameInMap("State")]
             [Validation(Required=false)]

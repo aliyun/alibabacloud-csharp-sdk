@@ -9,6 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class AIAgentConfig : TeaModel {
+        [NameInMap("AmbientSoundConfig")]
+        [Validation(Required=false)]
+        public AIAgentConfigAmbientSoundConfig AmbientSoundConfig { get; set; }
+        public class AIAgentConfigAmbientSoundConfig : TeaModel {
+            [NameInMap("ResourceId")]
+            [Validation(Required=false)]
+            public string ResourceId { get; set; }
+
+            [NameInMap("Volume")]
+            [Validation(Required=false)]
+            public int? Volume { get; set; }
+
+        }
+
         [NameInMap("AsrConfig")]
         [Validation(Required=false)]
         public AIAgentConfigAsrConfig AsrConfig { get; set; }
@@ -263,6 +277,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [Validation(Required=false)]
                 public int? CallbackDelay { get; set; }
 
+                [NameInMap("Enabled")]
+                [Validation(Required=false)]
+                public bool? Enabled { get; set; }
+
+            }
+
+            [NameInMap("LookAway")]
+            [Validation(Required=false)]
+            public AIAgentConfigVcrConfigLookAway LookAway { get; set; }
+            public class AIAgentConfigVcrConfigLookAway : TeaModel {
                 [NameInMap("Enabled")]
                 [Validation(Required=false)]
                 public bool? Enabled { get; set; }

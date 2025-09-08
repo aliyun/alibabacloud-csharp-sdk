@@ -9,6 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class AIAgentOutboundCallConfig : TeaModel {
+        [NameInMap("AmbientSoundConfig")]
+        [Validation(Required=false)]
+        public AIAgentOutboundCallConfigAmbientSoundConfig AmbientSoundConfig { get; set; }
+        public class AIAgentOutboundCallConfigAmbientSoundConfig : TeaModel {
+            [NameInMap("ResourceId")]
+            [Validation(Required=false)]
+            public string ResourceId { get; set; }
+
+            [NameInMap("Volume")]
+            [Validation(Required=false)]
+            public int? Volume { get; set; }
+
+        }
+
         [NameInMap("AsrConfig")]
         [Validation(Required=false)]
         public AIAgentOutboundCallConfigAsrConfig AsrConfig { get; set; }
