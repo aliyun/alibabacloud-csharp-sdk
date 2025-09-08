@@ -145,9 +145,6 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 
                 /// <summary>
                 /// <para>The playbooks that can handle the entity.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>[{&quot;name&quot;:&quot;云安全中心-云服务器安全&quot;,&quot;code&quot;:&quot;1&quot;}]</para>
                 /// </summary>
                 [NameInMap("PlaybookList")]
                 [Validation(Required=false)]
