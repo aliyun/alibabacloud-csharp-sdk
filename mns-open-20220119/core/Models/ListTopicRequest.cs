@@ -68,6 +68,10 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         [Validation(Required=false)]
         public string TopicName { get; set; }
 
+        [NameInMap("TopicType")]
+        [Validation(Required=false)]
+        public string TopicType { get; set; }
+
     }
 
 }

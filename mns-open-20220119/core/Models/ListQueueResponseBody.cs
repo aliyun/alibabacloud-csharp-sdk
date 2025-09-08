@@ -186,6 +186,10 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                 [Validation(Required=false)]
                 public string QueueName { get; set; }
 
+                [NameInMap("QueueType")]
+                [Validation(Required=false)]
+                public string QueueType { get; set; }
+
                 /// <summary>
                 /// <para>The tags added to the resources.</para>
                 /// </summary>
