@@ -1,3 +1,13 @@
+2025-09-08 Version: 1.35.0
+- Support API CancelDeepWriteTask.
+- Support API GetDeepWriteTask.
+- Support API GetDeepWriteTaskResult.
+- Support API RunDeepWriting.
+- Support API RunVideoScriptGenerate.
+- Support API SubmitDeepWriteTask.
+- Update API AddAuditTerms: add response parameters Body.DataV1.
+
+
 2025-08-15 Version: 1.34.0
 - Support API DeleteFactAuditUrl.
 - Support API GetFactAuditUrl.

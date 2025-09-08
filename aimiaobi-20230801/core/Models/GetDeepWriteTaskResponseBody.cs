@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
-    public class AddAuditTermsResponseBody : TeaModel {
+    public class GetDeepWriteTaskResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>DataNotExists</para>
@@ -17,35 +17,35 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>true</para>
-        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public bool? Data { get; set; }
+        public GetDeepWriteTaskResponseBodyData Data { get; set; }
+        public class GetDeepWriteTaskResponseBodyData : TeaModel {
+            [NameInMap("Input")]
+            [Validation(Required=false)]
+            public string Input { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>返回添加的实体信息</para>
-        /// </summary>
-        [NameInMap("DataV1")]
-        [Validation(Required=false)]
-        public AddAuditTermsResponseBodyDataV1 DataV1 { get; set; }
-        public class AddAuditTermsResponseBodyDataV1 : TeaModel {
             /// <summary>
             /// <b>Example:</b>
-            /// <para>562fe4163a59d7bcb44bfdde4e3d5046</para>
+            /// <para>queued</para>
             /// </summary>
-            [NameInMap("Id")]
+            [NameInMap("Status")]
             [Validation(Required=false)]
-            public long? Id { get; set; }
+            public string Status { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>a2267372-6042-46a4-aab0-1670dfc38c94</para>
+            /// </summary>
+            [NameInMap("TaskId")]
+            [Validation(Required=false)]
+            public string TaskId { get; set; }
 
         }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>200</para>
+        /// <para>400</para>
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>success</para>
+        /// <para>错误消息</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>F2F366D6-E9FE-1006-BB70-2C650896AAB5</para>
+        /// <para>xxxxx</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
