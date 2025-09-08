@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
         [Validation(Required=false)]
         public long? ExpireSecond { get; set; }
 
+        [NameInMap("ExtraInfo")]
+        [Validation(Required=false)]
+        public string ExtraInfo { get; set; }
+
         /// <summary>
         /// <para>Integration ID</para>
         /// 

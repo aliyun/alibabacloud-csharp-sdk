@@ -64,6 +64,10 @@ namespace AlibabaCloud.SDK.Appflow20230904
             {
                 query["ExpireSecond"] = request.ExpireSecond;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtraInfo))
+            {
+                query["ExtraInfo"] = request.ExtraInfo;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IntegrateId))
             {
                 query["IntegrateId"] = request.IntegrateId;
@@ -125,6 +129,10 @@ namespace AlibabaCloud.SDK.Appflow20230904
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireSecond))
             {
                 query["ExpireSecond"] = request.ExpireSecond;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtraInfo))
+            {
+                query["ExtraInfo"] = request.ExtraInfo;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IntegrateId))
             {
