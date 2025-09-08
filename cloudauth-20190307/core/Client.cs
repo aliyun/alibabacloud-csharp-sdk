@@ -5773,6 +5773,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             {
                 query["Mode"] = request.Mode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedMultiFaceCheck))
+            {
+                query["NeedMultiFaceCheck"] = request.NeedMultiFaceCheck;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssBucketName))
             {
                 query["OssBucketName"] = request.OssBucketName;
@@ -5960,6 +5964,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mode))
             {
                 query["Mode"] = request.Mode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedMultiFaceCheck))
+            {
+                query["NeedMultiFaceCheck"] = request.NeedMultiFaceCheck;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssBucketName))
             {

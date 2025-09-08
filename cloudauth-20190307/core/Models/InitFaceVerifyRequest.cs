@@ -129,6 +129,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=false)]
         public string Model { get; set; }
 
+        [NameInMap("NeedMultiFaceCheck")]
+        [Validation(Required=false)]
+        public string NeedMultiFaceCheck { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>cn-shanghai-aliyun-cloudauth-xxxxx</para>
