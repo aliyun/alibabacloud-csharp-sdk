@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 
             }
 
+            [NameInMap("DataId")]
+            [Validation(Required=false)]
+            public string DataId { get; set; }
+
             [NameInMap("MainData")]
             [Validation(Required=false)]
             public DescribeMultimodalModerationResultResponseBodyDataMainData MainData { get; set; }
