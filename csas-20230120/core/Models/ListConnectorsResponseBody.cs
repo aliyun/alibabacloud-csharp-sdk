@@ -35,6 +35,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 
             }
 
+            [NameInMap("ClusterIP")]
+            [Validation(Required=false)]
+            public string ClusterIP { get; set; }
+
+            [NameInMap("ClusterPort")]
+            [Validation(Required=false)]
+            public string ClusterPort { get; set; }
+
             [NameInMap("ConnectorClients")]
             [Validation(Required=false)]
             public List<ListConnectorsResponseBodyConnectorsConnectorClients> ConnectorClients { get; set; }
