@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>商家通过服务使用请求</para>
+        /// <para>Merchant uses service request</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -253,7 +253,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>商家通过服务使用请求</para>
+        /// <para>Merchant uses service request</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -315,7 +315,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>商家通过服务使用请求</para>
+        /// <para>Merchant uses service request</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -333,7 +333,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>商家通过服务使用请求</para>
+        /// <para>Merchant uses service request</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1623,7 +1623,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建服务测试任务</para>
+        /// <para>Create service test task</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1677,7 +1677,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建服务测试任务</para>
+        /// <para>Create service test task</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1731,7 +1731,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建服务测试任务</para>
+        /// <para>Create service test task</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1749,7 +1749,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建服务测试任务</para>
+        /// <para>Create service test task</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2155,6 +2155,302 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateSupplierRegistrationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除Acr镜像仓库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAcrImageRepositoriesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAcrImageRepositoriesResponse
+        /// </returns>
+        public DeleteAcrImageRepositoriesResponse DeleteAcrImageRepositoriesWithOptions(DeleteAcrImageRepositoriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArtifactType))
+            {
+                query["ArtifactType"] = request.ArtifactType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepoId))
+            {
+                query["RepoId"] = request.RepoId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAcrImageRepositories",
+                Version = "2021-05-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAcrImageRepositoriesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除Acr镜像仓库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAcrImageRepositoriesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAcrImageRepositoriesResponse
+        /// </returns>
+        public async Task<DeleteAcrImageRepositoriesResponse> DeleteAcrImageRepositoriesWithOptionsAsync(DeleteAcrImageRepositoriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArtifactType))
+            {
+                query["ArtifactType"] = request.ArtifactType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepoId))
+            {
+                query["RepoId"] = request.RepoId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAcrImageRepositories",
+                Version = "2021-05-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAcrImageRepositoriesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除Acr镜像仓库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAcrImageRepositoriesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAcrImageRepositoriesResponse
+        /// </returns>
+        public DeleteAcrImageRepositoriesResponse DeleteAcrImageRepositories(DeleteAcrImageRepositoriesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteAcrImageRepositoriesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除Acr镜像仓库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAcrImageRepositoriesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAcrImageRepositoriesResponse
+        /// </returns>
+        public async Task<DeleteAcrImageRepositoriesResponse> DeleteAcrImageRepositoriesAsync(DeleteAcrImageRepositoriesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteAcrImageRepositoriesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除Acr容器镜像版本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAcrImageTagsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAcrImageTagsResponse
+        /// </returns>
+        public DeleteAcrImageTagsResponse DeleteAcrImageTagsWithOptions(DeleteAcrImageTagsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArtifactType))
+            {
+                query["ArtifactType"] = request.ArtifactType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepoId))
+            {
+                query["RepoId"] = request.RepoId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAcrImageTags",
+                Version = "2021-05-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAcrImageTagsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除Acr容器镜像版本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAcrImageTagsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAcrImageTagsResponse
+        /// </returns>
+        public async Task<DeleteAcrImageTagsResponse> DeleteAcrImageTagsWithOptionsAsync(DeleteAcrImageTagsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArtifactType))
+            {
+                query["ArtifactType"] = request.ArtifactType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepoId))
+            {
+                query["RepoId"] = request.RepoId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAcrImageTags",
+                Version = "2021-05-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAcrImageTagsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除Acr容器镜像版本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAcrImageTagsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAcrImageTagsResponse
+        /// </returns>
+        public DeleteAcrImageTagsResponse DeleteAcrImageTags(DeleteAcrImageTagsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteAcrImageTagsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除Acr容器镜像版本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAcrImageTagsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAcrImageTagsResponse
+        /// </returns>
+        public async Task<DeleteAcrImageTagsResponse> DeleteAcrImageTagsAsync(DeleteAcrImageTagsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteAcrImageTagsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2575,7 +2871,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除服务测试配置</para>
+        /// <para>Delete service test configuration</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2621,7 +2917,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除服务测试配置</para>
+        /// <para>Delete service test configuration</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2667,7 +2963,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除服务测试配置</para>
+        /// <para>Delete service test configuration</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2685,7 +2981,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除服务测试配置</para>
+        /// <para>Delete service test configuration</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3399,6 +3695,182 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>根据地域参数获取地域可用区列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetNetworkAvailableZonesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetNetworkAvailableZonesResponse
+        /// </returns>
+        public GetNetworkAvailableZonesResponse GetNetworkAvailableZonesWithOptions(GetNetworkAvailableZonesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsPoc))
+            {
+                body["IsPoc"] = request.IsPoc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkRegionId))
+            {
+                body["NetworkRegionId"] = request.NetworkRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateVpcConnectionMode))
+            {
+                body["PrivateVpcConnectionMode"] = request.PrivateVpcConnectionMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceId))
+            {
+                body["ServiceId"] = request.ServiceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceInstanceEndpointServiceType))
+            {
+                body["ServiceInstanceEndpointServiceType"] = request.ServiceInstanceEndpointServiceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceRegionId))
+            {
+                body["ServiceRegionId"] = request.ServiceRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceVersion))
+            {
+                body["ServiceVersion"] = request.ServiceVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                body["ZoneId"] = request.ZoneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetNetworkAvailableZones",
+                Version = "2021-05-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetNetworkAvailableZonesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据地域参数获取地域可用区列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetNetworkAvailableZonesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetNetworkAvailableZonesResponse
+        /// </returns>
+        public async Task<GetNetworkAvailableZonesResponse> GetNetworkAvailableZonesWithOptionsAsync(GetNetworkAvailableZonesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsPoc))
+            {
+                body["IsPoc"] = request.IsPoc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkRegionId))
+            {
+                body["NetworkRegionId"] = request.NetworkRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateVpcConnectionMode))
+            {
+                body["PrivateVpcConnectionMode"] = request.PrivateVpcConnectionMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceId))
+            {
+                body["ServiceId"] = request.ServiceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceInstanceEndpointServiceType))
+            {
+                body["ServiceInstanceEndpointServiceType"] = request.ServiceInstanceEndpointServiceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceRegionId))
+            {
+                body["ServiceRegionId"] = request.ServiceRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceVersion))
+            {
+                body["ServiceVersion"] = request.ServiceVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                body["ZoneId"] = request.ZoneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetNetworkAvailableZones",
+                Version = "2021-05-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetNetworkAvailableZonesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据地域参数获取地域可用区列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetNetworkAvailableZonesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetNetworkAvailableZonesResponse
+        /// </returns>
+        public GetNetworkAvailableZonesResponse GetNetworkAvailableZones(GetNetworkAvailableZonesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetNetworkAvailableZonesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据地域参数获取地域可用区列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetNetworkAvailableZonesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetNetworkAvailableZonesResponse
+        /// </returns>
+        public async Task<GetNetworkAvailableZonesResponse> GetNetworkAvailableZonesAsync(GetNetworkAvailableZonesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetNetworkAvailableZonesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the information about a service.</para>
         /// </summary>
         /// 
@@ -3907,7 +4379,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>计算巢查询服务是否开通</para>
+        /// <para>Queries the information about the activation status and Resource Access Management (RAM) roles of the cloud services required by a service.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3971,7 +4443,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>计算巢查询服务是否开通</para>
+        /// <para>Queries the information about the activation status and Resource Access Management (RAM) roles of the cloud services required by a service.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4035,7 +4507,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>计算巢查询服务是否开通</para>
+        /// <para>Queries the information about the activation status and Resource Access Management (RAM) roles of the cloud services required by a service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4053,7 +4525,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>计算巢查询服务是否开通</para>
+        /// <para>Queries the information about the activation status and Resource Access Management (RAM) roles of the cloud services required by a service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4195,6 +4667,142 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetServiceRegistrationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询服务模板存在的规范问题</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetServiceTemplateCriterionIssuesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceTemplateCriterionIssuesResponse
+        /// </returns>
+        public GetServiceTemplateCriterionIssuesResponse GetServiceTemplateCriterionIssuesWithOptions(GetServiceTemplateCriterionIssuesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceId))
+            {
+                query["ServiceId"] = request.ServiceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceVersion))
+            {
+                query["ServiceVersion"] = request.ServiceVersion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetServiceTemplateCriterionIssues",
+                Version = "2021-05-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetServiceTemplateCriterionIssuesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询服务模板存在的规范问题</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetServiceTemplateCriterionIssuesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceTemplateCriterionIssuesResponse
+        /// </returns>
+        public async Task<GetServiceTemplateCriterionIssuesResponse> GetServiceTemplateCriterionIssuesWithOptionsAsync(GetServiceTemplateCriterionIssuesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceId))
+            {
+                query["ServiceId"] = request.ServiceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceVersion))
+            {
+                query["ServiceVersion"] = request.ServiceVersion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetServiceTemplateCriterionIssues",
+                Version = "2021-05-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetServiceTemplateCriterionIssuesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询服务模板存在的规范问题</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetServiceTemplateCriterionIssuesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceTemplateCriterionIssuesResponse
+        /// </returns>
+        public GetServiceTemplateCriterionIssuesResponse GetServiceTemplateCriterionIssues(GetServiceTemplateCriterionIssuesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetServiceTemplateCriterionIssuesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询服务模板存在的规范问题</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetServiceTemplateCriterionIssuesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceTemplateCriterionIssuesResponse
+        /// </returns>
+        public async Task<GetServiceTemplateCriterionIssuesResponse> GetServiceTemplateCriterionIssuesAsync(GetServiceTemplateCriterionIssuesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetServiceTemplateCriterionIssuesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4383,7 +4991,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取服务测试任务中Cases执行情况</para>
+        /// <para>Get the execution status of Cases in the service test task</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4429,7 +5037,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取服务测试任务中Cases执行情况</para>
+        /// <para>Get the execution status of Cases in the service test task</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4475,7 +5083,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取服务测试任务中Cases执行情况</para>
+        /// <para>Get the execution status of Cases in the service test task</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4493,7 +5101,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取服务测试任务中Cases执行情况</para>
+        /// <para>Get the execution status of Cases in the service test task</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4511,7 +5119,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取服务商信息</para>
+        /// <para>Get service provider information</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4553,7 +5161,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取服务商信息</para>
+        /// <para>Get service provider information</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4595,7 +5203,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取服务商信息</para>
+        /// <para>Get service provider information</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4613,7 +5221,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取服务商信息</para>
+        /// <para>Get service provider information</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4759,8 +5367,13 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上线服务</para>
+        /// <para>Launch service</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>需要上线的服务必须为已通过审核的服务。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// LaunchServiceRequest
@@ -4821,8 +5434,13 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上线服务</para>
+        /// <para>Launch service</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>需要上线的服务必须为已通过审核的服务。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// LaunchServiceRequest
@@ -4883,8 +5501,13 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上线服务</para>
+        /// <para>Launch service</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>需要上线的服务必须为已通过审核的服务。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// LaunchServiceRequest
@@ -4901,8 +5524,13 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上线服务</para>
+        /// <para>Launch service</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>需要上线的服务必须为已通过审核的服务。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// LaunchServiceRequest
@@ -5203,6 +5831,174 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListAcrImageTagsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询部署实例、升级以及应用的日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListArtifactBuildLogsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListArtifactBuildLogsResponse
+        /// </returns>
+        public ListArtifactBuildLogsResponse ListArtifactBuildLogsWithOptions(ListArtifactBuildLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArtifactId))
+            {
+                query["ArtifactId"] = request.ArtifactId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArtifactVersion))
+            {
+                query["ArtifactVersion"] = request.ArtifactVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                query["Filter"] = request.Filter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
+            {
+                query["SortOrder"] = request.SortOrder;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListArtifactBuildLogs",
+                Version = "2021-05-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListArtifactBuildLogsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询部署实例、升级以及应用的日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListArtifactBuildLogsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListArtifactBuildLogsResponse
+        /// </returns>
+        public async Task<ListArtifactBuildLogsResponse> ListArtifactBuildLogsWithOptionsAsync(ListArtifactBuildLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArtifactId))
+            {
+                query["ArtifactId"] = request.ArtifactId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArtifactVersion))
+            {
+                query["ArtifactVersion"] = request.ArtifactVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                query["Filter"] = request.Filter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
+            {
+                query["SortOrder"] = request.SortOrder;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListArtifactBuildLogs",
+                Version = "2021-05-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListArtifactBuildLogsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询部署实例、升级以及应用的日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListArtifactBuildLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListArtifactBuildLogsResponse
+        /// </returns>
+        public ListArtifactBuildLogsResponse ListArtifactBuildLogs(ListArtifactBuildLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListArtifactBuildLogsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询部署实例、升级以及应用的日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListArtifactBuildLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListArtifactBuildLogsResponse
+        /// </returns>
+        public async Task<ListArtifactBuildLogsResponse> ListArtifactBuildLogsAsync(ListArtifactBuildLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListArtifactBuildLogsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5787,7 +6583,167 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>展示服务实例账单</para>
+        /// <para>查询部署实例、升级以及应用的日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListServiceBuildLogsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListServiceBuildLogsResponse
+        /// </returns>
+        public ListServiceBuildLogsResponse ListServiceBuildLogsWithOptions(ListServiceBuildLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                query["Filter"] = request.Filter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceId))
+            {
+                query["ServiceId"] = request.ServiceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
+            {
+                query["SortOrder"] = request.SortOrder;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListServiceBuildLogs",
+                Version = "2021-05-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListServiceBuildLogsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询部署实例、升级以及应用的日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListServiceBuildLogsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListServiceBuildLogsResponse
+        /// </returns>
+        public async Task<ListServiceBuildLogsResponse> ListServiceBuildLogsWithOptionsAsync(ListServiceBuildLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                query["Filter"] = request.Filter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceId))
+            {
+                query["ServiceId"] = request.ServiceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
+            {
+                query["SortOrder"] = request.SortOrder;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListServiceBuildLogs",
+                Version = "2021-05-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListServiceBuildLogsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询部署实例、升级以及应用的日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListServiceBuildLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListServiceBuildLogsResponse
+        /// </returns>
+        public ListServiceBuildLogsResponse ListServiceBuildLogs(ListServiceBuildLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListServiceBuildLogsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询部署实例、升级以及应用的日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListServiceBuildLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListServiceBuildLogsResponse
+        /// </returns>
+        public async Task<ListServiceBuildLogsResponse> ListServiceBuildLogsAsync(ListServiceBuildLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListServiceBuildLogsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Display service instance bill</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5857,7 +6813,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>展示服务实例账单</para>
+        /// <para>Display service instance bill</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5927,7 +6883,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>展示服务实例账单</para>
+        /// <para>Display service instance bill</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5945,7 +6901,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>展示服务实例账单</para>
+        /// <para>Display service instance bill</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5963,7 +6919,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询服务实例部署详情</para>
+        /// <para>Query service instance deployment details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6037,7 +6993,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询服务实例部署详情</para>
+        /// <para>Query service instance deployment details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6111,7 +7067,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询服务实例部署详情</para>
+        /// <para>Query service instance deployment details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6129,7 +7085,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询服务实例部署详情</para>
+        /// <para>Query service instance deployment details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7107,7 +8063,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务测试用例列表</para>
+        /// <para>Service test case list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7169,7 +8125,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务测试用例列表</para>
+        /// <para>Service test case list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7231,7 +8187,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务测试用例列表</para>
+        /// <para>Service test case list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7249,7 +8205,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务测试用例列表</para>
+        /// <para>Service test case list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7267,7 +8223,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取服务测试实时日志</para>
+        /// <para>Get service test real-time logs</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7321,7 +8277,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取服务测试实时日志</para>
+        /// <para>Get service test real-time logs</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7375,7 +8331,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取服务测试实时日志</para>
+        /// <para>Get service test real-time logs</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7393,7 +8349,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取服务测试实时日志</para>
+        /// <para>Get service test real-time logs</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7851,7 +8807,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询服务商入职审核列表</para>
+        /// <para>Query the list of service provider onboarding reviews</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7905,7 +8861,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询服务商入职审核列表</para>
+        /// <para>Query the list of service provider onboarding reviews</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7959,7 +8915,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询服务商入职审核列表</para>
+        /// <para>Query the list of service provider onboarding reviews</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7977,7 +8933,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询服务商入职审核列表</para>
+        /// <para>Query the list of service provider onboarding reviews</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7995,7 +8951,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询标签键列表</para>
+        /// <para>Query tag key list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8045,7 +9001,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询标签键列表</para>
+        /// <para>Query tag key list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8095,7 +9051,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询标签键列表</para>
+        /// <para>Query tag key list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8113,7 +9069,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询标签键列表</para>
+        /// <para>Query tag key list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8131,7 +9087,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资源标签</para>
+        /// <para>Query resource tags</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8189,7 +9145,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资源标签</para>
+        /// <para>Query resource tags</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8247,7 +9203,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资源标签</para>
+        /// <para>Query resource tags</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8265,7 +9221,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资源标签</para>
+        /// <para>Query resource tags</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8283,7 +9239,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询标签值列表</para>
+        /// <para>Query tag value list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8337,7 +9293,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询标签值列表</para>
+        /// <para>Query tag value list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8391,7 +9347,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询标签值列表</para>
+        /// <para>Query tag value list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8409,7 +9365,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询标签值列表</para>
+        /// <para>Query tag value list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8563,7 +9519,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预发布服务</para>
+        /// <para>Pre-release service</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8613,7 +9569,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预发布服务</para>
+        /// <para>Pre-release service</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8663,7 +9619,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预发布服务</para>
+        /// <para>Pre-release service</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8681,7 +9637,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预发布服务</para>
+        /// <para>Pre-release service</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9939,7 +10895,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>给资源打标签</para>
+        /// <para>Tag a resource</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9993,7 +10949,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>给资源打标签</para>
+        /// <para>Tag a resource</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10047,7 +11003,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>给资源打标签</para>
+        /// <para>Tag a resource</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10065,7 +11021,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>给资源打标签</para>
+        /// <para>Tag a resource</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10083,7 +11039,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>资源解绑标签</para>
+        /// <para>Unbind resource from tag</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10141,7 +11097,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>资源解绑标签</para>
+        /// <para>Unbind resource from tag</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10199,7 +11155,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>资源解绑标签</para>
+        /// <para>Unbind resource from tag</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10217,7 +11173,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>资源解绑标签</para>
+        /// <para>Unbind resource from tag</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11123,7 +12079,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改服务测试用例</para>
+        /// <para>Modify Service Test Case</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11177,7 +12133,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改服务测试用例</para>
+        /// <para>Modify Service Test Case</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11231,7 +12187,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改服务测试用例</para>
+        /// <para>Modify Service Test Case</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11249,7 +12205,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改服务测试用例</para>
+        /// <para>Modify Service Test Case</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11427,7 +12383,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新供应商全局信息</para>
+        /// <para>Update the information of supplier.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11497,7 +12453,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新供应商全局信息</para>
+        /// <para>Update the information of supplier.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11567,7 +12523,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新供应商全局信息</para>
+        /// <para>Update the information of supplier.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11585,7 +12541,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新供应商全局信息</para>
+        /// <para>Update the information of supplier.</para>
         /// </summary>
         /// 
         /// <param name="request">

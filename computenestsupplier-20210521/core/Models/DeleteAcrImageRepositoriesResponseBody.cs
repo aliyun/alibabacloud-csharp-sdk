@@ -8,12 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
-    public class UpdateServiceTestCaseResponseBody : TeaModel {
+    public class DeleteAcrImageRepositoriesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>DB1FA13E-1087-5654-84D5-58A0ACAD1B18</para>
+        /// <para>9B55A3FD-B562-5BFE-A91A-DB1790717236</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

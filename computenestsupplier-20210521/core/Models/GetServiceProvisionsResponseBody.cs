@@ -40,18 +40,39 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [Validation(Required=false)]
             public bool? AutoEnableService { get; set; }
 
+            /// <summary>
+            /// <para>Product details. Some services (such as ACS) involve the activation of multiple products</para>
+            /// </summary>
             [NameInMap("CommodityProvisions")]
             [Validation(Required=false)]
             public List<GetServiceProvisionsResponseBodyServiceProvisionsCommodityProvisions> CommodityProvisions { get; set; }
             public class GetServiceProvisionsResponseBodyServiceProvisionsCommodityProvisions : TeaModel {
+                /// <summary>
+                /// <para>Commodity Code</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>acs_postpaid_public_cn</para>
+                /// </summary>
                 [NameInMap("CommodityCode")]
                 [Validation(Required=false)]
                 public string CommodityCode { get; set; }
 
+                /// <summary>
+                /// <para>Product activation link.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="https://common-buy.aliyun.com/?commodityCode=acs_postpaid_public_cn">https://common-buy.aliyun.com/?commodityCode=acs_postpaid_public_cn</a></para>
+                /// </summary>
                 [NameInMap("EnableURL")]
                 [Validation(Required=false)]
                 public string EnableURL { get; set; }
 
+                /// <summary>
+                /// <para>Cloud service activation status.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Disabled</para>
+                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }

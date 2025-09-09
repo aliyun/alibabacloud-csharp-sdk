@@ -36,6 +36,12 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string ApprovalType { get; set; }
 
+        /// <summary>
+        /// <para>The Parameters to build service parameters.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{ &quot;ServiceTemplateId&quot;: &quot;st-xxxxx&quot;}</para>
+        /// </summary>
         [NameInMap("BuildParameters")]
         [Validation(Required=false)]
         public string BuildParameters { get; set; }

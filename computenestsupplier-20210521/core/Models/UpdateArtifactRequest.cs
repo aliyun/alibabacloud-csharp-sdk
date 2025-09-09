@@ -188,6 +188,12 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [Validation(Required=false)]
             public string DockerfilePath { get; set; }
 
+            /// <summary>
+            /// <para>Whether GPU is required. CPU instance is used by default.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("EnableGpu")]
             [Validation(Required=false)]
             public bool? EnableGpu { get; set; }
@@ -239,6 +245,15 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [Validation(Required=false)]
             public string SourceImageId { get; set; }
 
+            /// <summary>
+            /// <para>The size of the system disk. Unit: GiB.</para>
+            /// <remarks>
+            /// <para> The system disk must be at least as large as the image.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>40</para>
+            /// </summary>
             [NameInMap("SystemDiskSize")]
             [Validation(Required=false)]
             public long? SystemDiskSize { get; set; }

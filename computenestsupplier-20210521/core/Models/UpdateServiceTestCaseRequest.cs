@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class UpdateServiceTestCaseRequest : TeaModel {
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>Region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The service test case id.</para>
+        /// <para>Service test case ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string TestCaseId { get; set; }
 
         /// <summary>
-        /// <para>The service test case name.</para>
+        /// <para>Test case name</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string TestCaseName { get; set; }
 
         /// <summary>
-        /// <para>The service test config.</para>
+        /// <para>Test configuration</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

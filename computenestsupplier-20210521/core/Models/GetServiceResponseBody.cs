@@ -715,6 +715,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        [NameInMap("SecretKey")]
+        [Validation(Required=false)]
+        public string SecretKey { get; set; }
+
         /// <summary>
         /// <para>The URL of the service audit file.</para>
         /// 
