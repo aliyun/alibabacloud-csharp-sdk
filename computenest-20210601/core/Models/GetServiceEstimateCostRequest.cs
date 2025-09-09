@@ -49,9 +49,9 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             /// <summary>
             /// <para>The unit of the subscription duration. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Year</description></item>
-            /// <item><description>Month</description></item>
-            /// <item><description>Day</description></item>
+            /// <item><description>Year.</description></item>
+            /// <item><description>Month.</description></item>
+            /// <item><description>Day.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string PayPeriodUnit { get; set; }
 
             /// <summary>
-            /// <para>Marketplace private offer Id</para>
+            /// <para>The PrivateOffer ID of the Alibaba Cloud Marketplace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>17cde2e8-2f5d-xxxx-xxxx-5120dd215d66</para>

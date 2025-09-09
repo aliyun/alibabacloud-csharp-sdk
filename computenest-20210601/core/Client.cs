@@ -356,6 +356,10 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             {
                 query["ServiceVersion"] = request.ServiceVersion;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
+            {
+                query["TemplateName"] = request.TemplateName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrialType))
             {
                 query["TrialType"] = request.TrialType;
@@ -417,6 +421,10 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceVersion))
             {
                 query["ServiceVersion"] = request.ServiceVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
+            {
+                query["TemplateName"] = request.TemplateName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrialType))
             {
@@ -2231,6 +2239,182 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetBackupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据指定地域获取可用区列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetNetworkAvailableZonesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetNetworkAvailableZonesResponse
+        /// </returns>
+        public GetNetworkAvailableZonesResponse GetNetworkAvailableZonesWithOptions(GetNetworkAvailableZonesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsPoc))
+            {
+                body["IsPoc"] = request.IsPoc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkRegionId))
+            {
+                body["NetworkRegionId"] = request.NetworkRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateVpcConnectionMode))
+            {
+                body["PrivateVpcConnectionMode"] = request.PrivateVpcConnectionMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceId))
+            {
+                body["ServiceId"] = request.ServiceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceInstanceEndpointServiceType))
+            {
+                body["ServiceInstanceEndpointServiceType"] = request.ServiceInstanceEndpointServiceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceRegionId))
+            {
+                body["ServiceRegionId"] = request.ServiceRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceVersion))
+            {
+                body["ServiceVersion"] = request.ServiceVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                body["ZoneId"] = request.ZoneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetNetworkAvailableZones",
+                Version = "2021-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetNetworkAvailableZonesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据指定地域获取可用区列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetNetworkAvailableZonesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetNetworkAvailableZonesResponse
+        /// </returns>
+        public async Task<GetNetworkAvailableZonesResponse> GetNetworkAvailableZonesWithOptionsAsync(GetNetworkAvailableZonesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsPoc))
+            {
+                body["IsPoc"] = request.IsPoc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkRegionId))
+            {
+                body["NetworkRegionId"] = request.NetworkRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateVpcConnectionMode))
+            {
+                body["PrivateVpcConnectionMode"] = request.PrivateVpcConnectionMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceId))
+            {
+                body["ServiceId"] = request.ServiceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceInstanceEndpointServiceType))
+            {
+                body["ServiceInstanceEndpointServiceType"] = request.ServiceInstanceEndpointServiceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceRegionId))
+            {
+                body["ServiceRegionId"] = request.ServiceRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceVersion))
+            {
+                body["ServiceVersion"] = request.ServiceVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                body["ZoneId"] = request.ZoneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetNetworkAvailableZones",
+                Version = "2021-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetNetworkAvailableZonesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据指定地域获取可用区列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetNetworkAvailableZonesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetNetworkAvailableZonesResponse
+        /// </returns>
+        public GetNetworkAvailableZonesResponse GetNetworkAvailableZones(GetNetworkAvailableZonesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetNetworkAvailableZonesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据指定地域获取可用区列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetNetworkAvailableZonesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetNetworkAvailableZonesResponse
+        /// </returns>
+        public async Task<GetNetworkAvailableZonesResponse> GetNetworkAvailableZonesAsync(GetNetworkAvailableZonesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetNetworkAvailableZonesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7313,6 +7497,166 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpgradeServiceInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>校验服务实例名称</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ValidateServiceInstanceNameRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateServiceInstanceNameResponse
+        /// </returns>
+        public ValidateServiceInstanceNameResponse ValidateServiceInstanceNameWithOptions(ValidateServiceInstanceNameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsTrial))
+            {
+                query["IsTrial"] = request.IsTrial;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceId))
+            {
+                query["ServiceId"] = request.ServiceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceInstanceName))
+            {
+                query["ServiceInstanceName"] = request.ServiceInstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceVersion))
+            {
+                query["ServiceVersion"] = request.ServiceVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
+            {
+                query["TemplateName"] = request.TemplateName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ValidateServiceInstanceName",
+                Version = "2021-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ValidateServiceInstanceNameResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>校验服务实例名称</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ValidateServiceInstanceNameRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateServiceInstanceNameResponse
+        /// </returns>
+        public async Task<ValidateServiceInstanceNameResponse> ValidateServiceInstanceNameWithOptionsAsync(ValidateServiceInstanceNameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsTrial))
+            {
+                query["IsTrial"] = request.IsTrial;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceId))
+            {
+                query["ServiceId"] = request.ServiceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceInstanceName))
+            {
+                query["ServiceInstanceName"] = request.ServiceInstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceVersion))
+            {
+                query["ServiceVersion"] = request.ServiceVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
+            {
+                query["TemplateName"] = request.TemplateName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ValidateServiceInstanceName",
+                Version = "2021-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ValidateServiceInstanceNameResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>校验服务实例名称</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ValidateServiceInstanceNameRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateServiceInstanceNameResponse
+        /// </returns>
+        public ValidateServiceInstanceNameResponse ValidateServiceInstanceName(ValidateServiceInstanceNameRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ValidateServiceInstanceNameWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>校验服务实例名称</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ValidateServiceInstanceNameRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateServiceInstanceNameResponse
+        /// </returns>
+        public async Task<ValidateServiceInstanceNameResponse> ValidateServiceInstanceNameAsync(ValidateServiceInstanceNameRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ValidateServiceInstanceNameWithOptionsAsync(request, runtime);
         }
 
     }

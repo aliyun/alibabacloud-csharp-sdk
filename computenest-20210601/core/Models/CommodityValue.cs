@@ -265,10 +265,22 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 
                         }
 
+                        /// <summary>
+                        /// <para>Module English name.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>data unit</para>
+                        /// </summary>
                         [NameInMap("ModuleNameEn")]
                         [Validation(Required=false)]
                         public string ModuleNameEn { get; set; }
 
+                        /// <summary>
+                        /// <para>Price Unit English Name</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>Yuan/Month</para>
+                        /// </summary>
                         [NameInMap("PriceUnitEn")]
                         [Validation(Required=false)]
                         public string PriceUnitEn { get; set; }

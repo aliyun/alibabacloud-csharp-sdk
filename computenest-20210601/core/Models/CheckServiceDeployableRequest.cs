@@ -60,6 +60,10 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         [Validation(Required=false)]
         public string ServiceVersion { get; set; }
 
+        [NameInMap("TemplateName")]
+        [Validation(Required=false)]
+        public string TemplateName { get; set; }
+
         /// <summary>
         /// <para>The trial type of the service instance. Valid values:</para>
         /// <list type="bullet">
