@@ -331,6 +331,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     [Validation(Required=false)]
                     public string State { get; set; }
 
+                    [NameInMap("TableName")]
+                    [Validation(Required=false)]
+                    public string TableName { get; set; }
+
                     /// <summary>
                     /// <para>The thread ID.</para>
                     /// 

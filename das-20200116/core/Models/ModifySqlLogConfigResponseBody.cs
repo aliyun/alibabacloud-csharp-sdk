@@ -181,6 +181,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             [Validation(Required=false)]
             public bool? SqlLogEnable { get; set; }
 
+            [NameInMap("SqlLogSource")]
+            [Validation(Required=false)]
+            public string SqlLogSource { get; set; }
+
             /// <summary>
             /// <para>The state of data migration. Valid values:</para>
             /// <list type="bullet">
