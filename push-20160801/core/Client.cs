@@ -1673,7 +1673,7 @@ namespace AlibabaCloud.SDK.Push20160801
         /// <para>高级推送接口</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// PushRequest
         /// </param>
         /// <param name="runtime">
@@ -1683,9 +1683,19 @@ namespace AlibabaCloud.SDK.Push20160801
         /// <returns>
         /// PushResponse
         /// </returns>
-        public PushResponse PushWithOptions(PushRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public PushResponse PushWithOptions(PushRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            PushShrinkRequest request = new PushShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AndroidOppoPrivateContentParameters))
+            {
+                request.AndroidOppoPrivateContentParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AndroidOppoPrivateContentParameters, "androidOppoPrivateContentParameters", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AndroidOppoPrivateTitleParameters))
+            {
+                request.AndroidOppoPrivateTitleParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AndroidOppoPrivateTitleParameters, "androidOppoPrivateTitleParameters", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidActivity))
             {
@@ -2026,6 +2036,18 @@ namespace AlibabaCloud.SDK.Push20160801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Trim))
             {
                 query["Trim"] = request.Trim;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidOppoPrivateContentParametersShrink))
+            {
+                query["androidOppoPrivateContentParameters"] = request.AndroidOppoPrivateContentParametersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidOppoPrivateMsgTemplateId))
+            {
+                query["androidOppoPrivateMsgTemplateId"] = request.AndroidOppoPrivateMsgTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidOppoPrivateTitleParametersShrink))
+            {
+                query["androidOppoPrivateTitleParameters"] = request.AndroidOppoPrivateTitleParametersShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IOSApnsEnv))
             {
@@ -2139,7 +2161,7 @@ namespace AlibabaCloud.SDK.Push20160801
         /// <para>高级推送接口</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// PushRequest
         /// </param>
         /// <param name="runtime">
@@ -2149,9 +2171,19 @@ namespace AlibabaCloud.SDK.Push20160801
         /// <returns>
         /// PushResponse
         /// </returns>
-        public async Task<PushResponse> PushWithOptionsAsync(PushRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<PushResponse> PushWithOptionsAsync(PushRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            PushShrinkRequest request = new PushShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AndroidOppoPrivateContentParameters))
+            {
+                request.AndroidOppoPrivateContentParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AndroidOppoPrivateContentParameters, "androidOppoPrivateContentParameters", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AndroidOppoPrivateTitleParameters))
+            {
+                request.AndroidOppoPrivateTitleParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AndroidOppoPrivateTitleParameters, "androidOppoPrivateTitleParameters", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidActivity))
             {
@@ -2492,6 +2524,18 @@ namespace AlibabaCloud.SDK.Push20160801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Trim))
             {
                 query["Trim"] = request.Trim;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidOppoPrivateContentParametersShrink))
+            {
+                query["androidOppoPrivateContentParameters"] = request.AndroidOppoPrivateContentParametersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidOppoPrivateMsgTemplateId))
+            {
+                query["androidOppoPrivateMsgTemplateId"] = request.AndroidOppoPrivateMsgTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidOppoPrivateTitleParametersShrink))
+            {
+                query["androidOppoPrivateTitleParameters"] = request.AndroidOppoPrivateTitleParametersShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IOSApnsEnv))
             {

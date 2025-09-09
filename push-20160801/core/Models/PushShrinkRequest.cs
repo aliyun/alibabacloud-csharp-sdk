@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Push20160801.Models
 {
-    public class PushRequest : TeaModel {
+    public class PushShrinkRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>com.alibaba.cloudpushdemo.bizactivity</para>
@@ -570,7 +570,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
 
         [NameInMap("androidOppoPrivateContentParameters")]
         [Validation(Required=false)]
-        public Dictionary<string, string> AndroidOppoPrivateContentParameters { get; set; }
+        public string AndroidOppoPrivateContentParametersShrink { get; set; }
 
         [NameInMap("androidOppoPrivateMsgTemplateId")]
         [Validation(Required=false)]
@@ -578,7 +578,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
 
         [NameInMap("androidOppoPrivateTitleParameters")]
         [Validation(Required=false)]
-        public Dictionary<string, string> AndroidOppoPrivateTitleParameters { get; set; }
+        public string AndroidOppoPrivateTitleParametersShrink { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
