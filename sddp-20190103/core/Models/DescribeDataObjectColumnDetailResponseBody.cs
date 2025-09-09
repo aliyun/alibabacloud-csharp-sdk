@@ -103,11 +103,11 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             /// <summary>
             /// <para>Column encryption status. Possible values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>-1</b>：Not encrypted</para>
+            /// <item><description><para><b>-1</b>: Not encrypted</para>
             /// </description></item>
-            /// <item><description><para><b>1</b>：Encryption successful</para>
+            /// <item><description><para><b>1</b>: Encryption successful</para>
             /// </description></item>
-            /// <item><description><para><b>2</b>：Encryption failed</para>
+            /// <item><description><para><b>2</b>: Encryption failed</para>
             /// </description></item>
             /// </list>
             /// 
@@ -128,9 +128,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 /// <summary>
                 /// <para>ID corresponding to the data tag name. Possible values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>101</b>：Personal sensitive information</description></item>
-                /// <item><description><b>102</b>：Personal information</description></item>
-                /// <item><description><b>107</b>：General information</description></item>
+                /// <item><description><b>101</b>: Personal sensitive information.</description></item>
+                /// <item><description><b>102</b>: Personal information.</description></item>
+                /// <item><description><b>107</b>: General information.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -143,9 +143,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 /// <summary>
                 /// <para>Data tag name. Possible values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>101</b>：Personal sensitive information</description></item>
-                /// <item><description><b>102</b>：Personal information</description></item>
-                /// <item><description><b>107</b>：General information</description></item>
+                /// <item><description><b>101</b>: Personal sensitive information.</description></item>
+                /// <item><description><b>102</b>: Personal information.</description></item>
+                /// <item><description><b>107</b>: General information.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -174,18 +174,18 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             /// <summary>
             /// <para>ID corresponding to the product name of the data object. Possible values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>：MaxCompute</description></item>
-            /// <item><description><b>2</b>：OSS</description></item>
-            /// <item><description><b>3</b>：ADB-MYSQL</description></item>
-            /// <item><description><b>4</b>：TableStore</description></item>
-            /// <item><description><b>5</b>：RDS</description></item>
-            /// <item><description><b>6</b>：SELF_DB</description></item>
-            /// <item><description><b>7</b>：PolarDB-X</description></item>
-            /// <item><description><b>8</b>：PolarDB</description></item>
-            /// <item><description><b>9</b>：ADB-PG</description></item>
-            /// <item><description><b>10</b>：OceanBase</description></item>
-            /// <item><description><b>11</b>：MongoDB</description></item>
-            /// <item><description><b>25</b>：Redis</description></item>
+            /// <item><description><b>1</b>: MaxCompute</description></item>
+            /// <item><description><b>2</b>: OSS</description></item>
+            /// <item><description><b>3</b>: ADB-MYSQL</description></item>
+            /// <item><description><b>4</b>: TableStore</description></item>
+            /// <item><description><b>5</b>: RDS</description></item>
+            /// <item><description><b>6</b>: SELF_DB</description></item>
+            /// <item><description><b>7</b>: PolarDB-X</description></item>
+            /// <item><description><b>8</b>: PolarDB</description></item>
+            /// <item><description><b>9</b>: ADB-PG</description></item>
+            /// <item><description><b>10</b>: OceanBase</description></item>
+            /// <item><description><b>11</b>: MongoDB</description></item>
+            /// <item><description><b>25</b>: Redis</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -225,11 +225,11 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             /// <summary>
             /// <para>Risk level name. Possible values:</para>
             /// <list type="bullet">
-            /// <item><description><b>N/A</b>：No sensitive data detected.</description></item>
-            /// <item><description><b>S1</b>：Level 1 sensitive data.</description></item>
-            /// <item><description><b>S2</b>：Level 2 sensitive data.</description></item>
-            /// <item><description><b>S3</b>：Level 3 sensitive data.</description></item>
-            /// <item><description><b>S4</b>：Level 4 sensitive data.</description></item>
+            /// <item><description><b>N/A</b>: No sensitive data detected.</description></item>
+            /// <item><description><b>S1</b>: Level 1 sensitive data.</description></item>
+            /// <item><description><b>S2</b>: Level 2 sensitive data.</description></item>
+            /// <item><description><b>S3</b>: Level 3 sensitive data.</description></item>
+            /// <item><description><b>S4</b>: Level 4 sensitive data.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -237,8 +237,6 @@ namespace AlibabaCloud.SDK.Sddp20190103
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can call this operation to authorize DSC to scan data assets to ensure the security of the data assets.</para>
-        /// <h2><a href="#qps-"></a>Limits</h2>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -358,8 +356,6 @@ namespace AlibabaCloud.SDK.Sddp20190103
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can call this operation to authorize DSC to scan data assets to ensure the security of the data assets.</para>
-        /// <h2><a href="#qps-"></a>Limits</h2>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -479,8 +475,6 @@ namespace AlibabaCloud.SDK.Sddp20190103
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can call this operation to authorize DSC to scan data assets to ensure the security of the data assets.</para>
-        /// <h2><a href="#qps-"></a>Limits</h2>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -504,8 +498,6 @@ namespace AlibabaCloud.SDK.Sddp20190103
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can call this operation to authorize DSC to scan data assets to ensure the security of the data assets.</para>
-        /// <h2><a href="#qps-"></a>Limits</h2>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1507,6 +1499,318 @@ namespace AlibabaCloud.SDK.Sddp20190103
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteRuleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询审计告警日志列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAuditLogsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAuditLogsResponse
+        /// </returns>
+        public DescribeAuditLogsResponse DescribeAuditLogsWithOptions(DescribeAuditLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsyncRequestId))
+            {
+                query["AsyncRequestId"] = request.AsyncRequestId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientIp))
+            {
+                query["ClientIp"] = request.ClientIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientUa))
+            {
+                query["ClientUa"] = request.ClientUa;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseName))
+            {
+                query["DatabaseName"] = request.DatabaseName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectRowRange))
+            {
+                query["EffectRowRange"] = request.EffectRowRange;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecuteTimeRange))
+            {
+                query["ExecuteTimeRange"] = request.ExecuteTimeRange;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpType))
+            {
+                query["IpType"] = request.IpType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoadWhiteList))
+            {
+                query["LoadWhiteList"] = request.LoadWhiteList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberAccount))
+            {
+                query["MemberAccount"] = request.MemberAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Message))
+            {
+                query["Message"] = request.Message;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperateType))
+            {
+                query["OperateType"] = request.OperateType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssObjectKey))
+            {
+                query["OssObjectKey"] = request.OssObjectKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductId))
+            {
+                query["ProductId"] = request.ProductId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleCategory))
+            {
+                query["RuleCategory"] = request.RuleCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleID))
+            {
+                query["RuleID"] = request.RuleID;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SqlText))
+            {
+                query["SqlText"] = request.SqlText;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                query["UserName"] = request.UserName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAuditLogs",
+                Version = "2019-01-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAuditLogsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询审计告警日志列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAuditLogsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAuditLogsResponse
+        /// </returns>
+        public async Task<DescribeAuditLogsResponse> DescribeAuditLogsWithOptionsAsync(DescribeAuditLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsyncRequestId))
+            {
+                query["AsyncRequestId"] = request.AsyncRequestId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientIp))
+            {
+                query["ClientIp"] = request.ClientIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientUa))
+            {
+                query["ClientUa"] = request.ClientUa;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseName))
+            {
+                query["DatabaseName"] = request.DatabaseName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectRowRange))
+            {
+                query["EffectRowRange"] = request.EffectRowRange;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecuteTimeRange))
+            {
+                query["ExecuteTimeRange"] = request.ExecuteTimeRange;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpType))
+            {
+                query["IpType"] = request.IpType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoadWhiteList))
+            {
+                query["LoadWhiteList"] = request.LoadWhiteList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberAccount))
+            {
+                query["MemberAccount"] = request.MemberAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Message))
+            {
+                query["Message"] = request.Message;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperateType))
+            {
+                query["OperateType"] = request.OperateType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssObjectKey))
+            {
+                query["OssObjectKey"] = request.OssObjectKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductId))
+            {
+                query["ProductId"] = request.ProductId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleCategory))
+            {
+                query["RuleCategory"] = request.RuleCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleID))
+            {
+                query["RuleID"] = request.RuleID;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SqlText))
+            {
+                query["SqlText"] = request.SqlText;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                query["UserName"] = request.UserName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAuditLogs",
+                Version = "2019-01-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAuditLogsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询审计告警日志列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAuditLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAuditLogsResponse
+        /// </returns>
+        public DescribeAuditLogsResponse DescribeAuditLogs(DescribeAuditLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeAuditLogsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询审计告警日志列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAuditLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAuditLogsResponse
+        /// </returns>
+        public async Task<DescribeAuditLogsResponse> DescribeAuditLogsAsync(DescribeAuditLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeAuditLogsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5054,8 +5358,6 @@ namespace AlibabaCloud.SDK.Sddp20190103
         /// <description>
         /// <para>You can query a list of unauthorized or authorized data assets based on the value of AuthStatus.
         /// This operation is no longer used for the KMS console of the new version.</para>
-        /// <h1><a href="#qps-"></a>QPS limits</h1>
-        /// <para>This operation can be called up to 10 times per second for each Alibaba Cloud account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5152,8 +5454,6 @@ namespace AlibabaCloud.SDK.Sddp20190103
         /// <description>
         /// <para>You can query a list of unauthorized or authorized data assets based on the value of AuthStatus.
         /// This operation is no longer used for the KMS console of the new version.</para>
-        /// <h1><a href="#qps-"></a>QPS limits</h1>
-        /// <para>This operation can be called up to 10 times per second for each Alibaba Cloud account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5250,8 +5550,6 @@ namespace AlibabaCloud.SDK.Sddp20190103
         /// <description>
         /// <para>You can query a list of unauthorized or authorized data assets based on the value of AuthStatus.
         /// This operation is no longer used for the KMS console of the new version.</para>
-        /// <h1><a href="#qps-"></a>QPS limits</h1>
-        /// <para>This operation can be called up to 10 times per second for each Alibaba Cloud account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5276,8 +5574,6 @@ namespace AlibabaCloud.SDK.Sddp20190103
         /// <description>
         /// <para>You can query a list of unauthorized or authorized data assets based on the value of AuthStatus.
         /// This operation is no longer used for the KMS console of the new version.</para>
-        /// <h1><a href="#qps-"></a>QPS limits</h1>
-        /// <para>This operation can be called up to 10 times per second for each Alibaba Cloud account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">

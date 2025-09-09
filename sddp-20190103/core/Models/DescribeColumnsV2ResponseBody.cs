@@ -163,11 +163,11 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             /// <summary>
             /// <para>The risk level name of the asset. Values:</para>
             /// <list type="bullet">
-            /// <item><description><b>N/A</b>：No sensitive data detected.</description></item>
-            /// <item><description><b>S1</b>：Level 1 sensitive data.</description></item>
-            /// <item><description><b>S2</b>：Level 2 sensitive data.</description></item>
-            /// <item><description><b>S3</b>：Level 3 sensitive data.</description></item>
-            /// <item><description><b>S4</b>：Level 4 sensitive data.</description></item>
+            /// <item><description><b>N/A</b>: No sensitive data detected.</description></item>
+            /// <item><description><b>S1</b>: Level 1 sensitive data.</description></item>
+            /// <item><description><b>S2</b>: Level 2 sensitive data.</description></item>
+            /// <item><description><b>S3</b>: Level 3 sensitive data.</description></item>
+            /// <item><description><b>S4</b>: Level 4 sensitive data.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -180,11 +180,11 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             /// <summary>
             /// <para>The risk level code of the asset. Values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>：N/A.</description></item>
-            /// <item><description><b>2</b>：S1.</description></item>
-            /// <item><description><b>3</b>：S2.</description></item>
-            /// <item><description><b>4</b>：S3.</description></item>
-            /// <item><description><b>5</b>：S4.</description></item>
+            /// <item><description><b>1</b>: N/A.</description></item>
+            /// <item><description><b>2</b>: S1.</description></item>
+            /// <item><description><b>3</b>: S2.</description></item>
+            /// <item><description><b>4</b>: S3.</description></item>
+            /// <item><description><b>5</b>: S4.</description></item>
             /// </list>
             /// <remarks>
             /// <para>A return value &lt;= 1 represents N/A.</para>
@@ -262,11 +262,11 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             /// <summary>
             /// <para>The risk level ID of the column data in the data asset table. Values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>：N/A.</description></item>
-            /// <item><description><b>2</b>：S1.</description></item>
-            /// <item><description><b>3</b>：S2.</description></item>
-            /// <item><description><b>4</b>：S3.</description></item>
-            /// <item><description><b>5</b>：S4.</description></item>
+            /// <item><description><b>1</b>: N/A.</description></item>
+            /// <item><description><b>2</b>: S1.</description></item>
+            /// <item><description><b>3</b>: S2.</description></item>
+            /// <item><description><b>4</b>: S3.</description></item>
+            /// <item><description><b>5</b>: S4.</description></item>
             /// </list>
             /// <remarks>
             /// <para>A return value &lt;= 1 represents N/A.</para>
@@ -282,11 +282,11 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             /// <summary>
             /// <para>The risk level name of the column data in the data asset table. Values:</para>
             /// <list type="bullet">
-            /// <item><description><b>N/A</b>：No sensitive data detected.</description></item>
-            /// <item><description><b>S1</b>：Level 1 sensitive data.</description></item>
-            /// <item><description><b>S2</b>：Level 2 sensitive data.</description></item>
-            /// <item><description><b>S3</b>：Level 3 sensitive data.</description></item>
-            /// <item><description><b>S4</b>：Level 4 sensitive data.</description></item>
+            /// <item><description><b>N/A</b>: No sensitive data detected.</description></item>
+            /// <item><description><b>S1</b>: Level 1 sensitive data.</description></item>
+            /// <item><description><b>S2</b>: Level 2 sensitive data.</description></item>
+            /// <item><description><b>S3</b>: Level 3 sensitive data.</description></item>
+            /// <item><description><b>S4</b>: Level 4 sensitive data.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -319,11 +319,11 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             /// <summary>
             /// <para>The sensitivity level name. Values:</para>
             /// <list type="bullet">
-            /// <item><description><b>N/A</b>：No sensitive data detected.</description></item>
-            /// <item><description><b>S1</b>：Level 1 sensitive data.</description></item>
-            /// <item><description><b>S2</b>：Level 2 sensitive data.</description></item>
-            /// <item><description><b>S3</b>：Level 3 sensitive data.</description></item>
-            /// <item><description><b>S4</b>：Level 4 sensitive data.</description></item>
+            /// <item><description><b>N/A</b>: No sensitive data detected.</description></item>
+            /// <item><description><b>S1</b>: Level 1 sensitive data.</description></item>
+            /// <item><description><b>S2</b>: Level 2 sensitive data.</description></item>
+            /// <item><description><b>S3</b>: Level 3 sensitive data.</description></item>
+            /// <item><description><b>S4</b>: Level 4 sensitive data.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -128,9 +128,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 /// <summary>
                 /// <para>ID corresponding to the data tag name. Values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>101</b>: Personal Sensitive Information</description></item>
-                /// <item><description><b>102</b>: Personal Information</description></item>
-                /// <item><description><b>107</b>: General Information</description></item>
+                /// <item><description><b>101</b>: Personal Sensitive Information.</description></item>
+                /// <item><description><b>102</b>: Personal Information.</description></item>
+                /// <item><description><b>107</b>: General Information.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -143,9 +143,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 /// <summary>
                 /// <para>Data tag name. Values:</para>
                 /// <list type="bullet">
-                /// <item><description>Personal Sensitive Information</description></item>
-                /// <item><description>Personal Information</description></item>
-                /// <item><description>General Information</description></item>
+                /// <item><description>Personal Sensitive Information.</description></item>
+                /// <item><description>Personal Information.</description></item>
+                /// <item><description>General Information.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -223,13 +223,13 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? RiskLevelId { get; set; }
 
             /// <summary>
-            /// <para>风险等级名称。取值：</para>
+            /// <para>Risk level name. Values:</para>
             /// <list type="bullet">
-            /// <item><description><b>N/A</b>：未识别到敏感数据。</description></item>
-            /// <item><description><b>S1</b>：1级敏感数据。</description></item>
-            /// <item><description><b>S2</b>：2级敏感数据。</description></item>
-            /// <item><description><b>S3</b>：3级敏感数据。</description></item>
-            /// <item><description><b>S4</b>：4级敏感数据。</description></item>
+            /// <item><description><b>N/A</b>: No sensitive data was identified.</description></item>
+            /// <item><description><b>S1</b>: Level 1 sensitive data.</description></item>
+            /// <item><description><b>S2</b>: Level 2 sensitive data.</description></item>
+            /// <item><description><b>S3</b>: Level 3 sensitive data.</description></item>
+            /// <item><description><b>S4</b>: Level 4 sensitive data.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>An array that consists of the queried data assets.</para>
+        /// <para>The assets.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -124,7 +124,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? Enable { get; set; }
 
             /// <summary>
-            /// <para>The type of the database engine. Valid values: <b>MySQL, MariaDB, Oracle, PostgreSQL, and SQLServer</b>.</para>
+            /// <para>The engine type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>MySQL</b></description></item>
+            /// <item><description><b>MariaDB</b></description></item>
+            /// <item><description><b>Oracle</b></description></item>
+            /// <item><description><b>PostgreSQL</b></description></item>
+            /// <item><description><b>SQLServer</b></description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>MySQL</para>
@@ -238,7 +245,15 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? PasswordStatus { get; set; }
 
             /// <summary>
-            /// <para>The ID of the service to which the data asset belongs. Valid values include <b>1</b>, <b>2</b>, <b>3</b>, <b>4</b>, and <b>5</b>. The value 1 indicates MaxCompute. The value 2 indicates OSS. The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</para>
+            /// <para>The ID of the service to which the asset belongs. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>1</b>: MaxCompute</description></item>
+            /// <item><description><b>2</b>: OSS</description></item>
+            /// <item><description><b>3</b>: AnalyticDB for MySQL</description></item>
+            /// <item><description><b>4</b>: OTS</description></item>
+            /// <item><description><b>5</b>: ApsaraDB RDS</description></item>
+            /// <item><description><b>6</b>: self-managed databases</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
