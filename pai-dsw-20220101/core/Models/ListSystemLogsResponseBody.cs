@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
 {
     public class ListSystemLogsResponseBody : TeaModel {
+        [NameInMap("Offset")]
+        [Validation(Required=false)]
+        public string Offset { get; set; }
+
         [NameInMap("SystemLogs")]
         [Validation(Required=false)]
         public List<ListSystemLogsResponseBodySystemLogs> SystemLogs { get; set; }
@@ -40,14 +44,6 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
             public string Level { get; set; }
 
         }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>10</para>
-        /// </summary>
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public long? TotalCount { get; set; }
 
     }
 

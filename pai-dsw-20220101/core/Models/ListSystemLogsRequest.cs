@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("LifecycleId")]
+        [Validation(Required=false)]
+        public string LifecycleId { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>Error</para>
@@ -45,6 +49,14 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [Validation(Required=false)]
         public string LogLevel { get; set; }
 
+        [NameInMap("LogRepository")]
+        [Validation(Required=false)]
+        public string LogRepository { get; set; }
+
+        [NameInMap("Offset")]
+        [Validation(Required=false)]
+        public string Offset { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>ASC</para>
@@ -52,22 +64,6 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [NameInMap("Order")]
         [Validation(Required=false)]
         public string Order { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1</para>
-        /// </summary>
-        [NameInMap("PageNumber")]
-        [Validation(Required=false)]
-        public long? PageNumber { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>100</para>
-        /// </summary>
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public long? PageSize { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -92,14 +88,6 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [NameInMap("SourceRequestId")]
         [Validation(Required=false)]
         public string SourceRequestId { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>NotebookMainContainerLogs</para>
-        /// </summary>
-        [NameInMap("SourceType")]
-        [Validation(Required=false)]
-        public string SourceType { get; set; }
 
     }
 
