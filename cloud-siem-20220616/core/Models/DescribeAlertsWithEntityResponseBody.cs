@@ -328,6 +328,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 [Validation(Required=false)]
                 public string CloudCode { get; set; }
 
+                [NameInMap("DetectionRuleId")]
+                [Validation(Required=false)]
+                public string DetectionRuleId { get; set; }
+
                 /// <summary>
                 /// <para>The time when the alert was closed.</para>
                 /// 
@@ -436,6 +440,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 [Validation(Required=false)]
                 public string OccurTime { get; set; }
 
+                [NameInMap("ProductId")]
+                [Validation(Required=false)]
+                public string ProductId { get; set; }
+
                 /// <summary>
                 /// <para>The time at which the alert was first generated.</para>
                 /// 
@@ -463,6 +471,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 [NameInMap("SubUserName")]
                 [Validation(Required=false)]
                 public string SubUserName { get; set; }
+
+                [NameInMap("VendorId")]
+                [Validation(Required=false)]
+                public string VendorId { get; set; }
 
             }
 

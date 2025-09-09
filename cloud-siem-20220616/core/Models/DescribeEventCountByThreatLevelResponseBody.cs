@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             [Validation(Required=false)]
             public long? HighLevelEventNum { get; set; }
 
+            [NameInMap("InfoLevelEventNum")]
+            [Validation(Required=false)]
+            public long? InfoLevelEventNum { get; set; }
+
             /// <summary>
             /// <para>The number of low-risk events.</para>
             /// 
@@ -68,6 +72,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             [NameInMap("MediumLevelEventNum")]
             [Validation(Required=false)]
             public long? MediumLevelEventNum { get; set; }
+
+            [NameInMap("SeriousLevelEventNum")]
+            [Validation(Required=false)]
+            public long? SeriousLevelEventNum { get; set; }
 
             /// <summary>
             /// <para>The number of unhandled events.</para>
