@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class UpdateCloudGtmAddressEnableStatusRequest : TeaModel {
         /// <summary>
-        /// <para>返回结果显示的语言。取值：</para>
+        /// <para>The language of the returned results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>zh-CN：中文</para>
+        /// <item><description><para>zh-CN: Chinese</para>
         /// </description></item>
-        /// <item><description><para>en-US：英文</para>
+        /// <item><description><para>en-US: English</para>
         /// </description></item>
         /// </list>
         /// 

@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>Address ownership information.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>当前版本不支持传入此参数，请不要传入参数。</para>
+        /// <para>This parameter is not supported in the version. Do not enter this parameter</para>
         /// </summary>
         [NameInMap("AttributeInfo")]
         [Validation(Required=false)]

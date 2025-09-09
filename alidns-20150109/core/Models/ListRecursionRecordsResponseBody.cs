@@ -1,0 +1,226 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Alidns20150109.Models
+{
+    public class ListRecursionRecordsResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>500</para>
+        /// </summary>
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>4698691</para>
+        /// </summary>
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>20</para>
+        /// </summary>
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("Records")]
+        [Validation(Required=false)]
+        public ListRecursionRecordsResponseBodyRecords Records { get; set; }
+        public class ListRecursionRecordsResponseBodyRecords : TeaModel {
+            [NameInMap("Record")]
+            [Validation(Required=false)]
+            public List<ListRecursionRecordsResponseBodyRecordsRecord> Record { get; set; }
+            public class ListRecursionRecordsResponseBodyRecordsRecord : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2023-06-28T09:16Z</para>
+                /// </summary>
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
+                public string CreateTime { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1721119172000</para>
+                /// </summary>
+                [NameInMap("CreateTimestamp")]
+                [Validation(Required=false)]
+                public long? CreateTimestamp { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>123121312</para>
+                /// </summary>
+                [NameInMap("Creator")]
+                [Validation(Required=false)]
+                public long? Creator { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>custom</para>
+                /// </summary>
+                [NameInMap("CreatorSubType")]
+                [Validation(Required=false)]
+                public string CreatorSubType { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>user</para>
+                /// </summary>
+                [NameInMap("CreatorType")]
+                [Validation(Required=false)]
+                public string CreatorType { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>enable</para>
+                /// </summary>
+                [NameInMap("EnableStatus")]
+                [Validation(Required=false)]
+                public string EnableStatus { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>10</para>
+                /// </summary>
+                [NameInMap("Priority")]
+                [Validation(Required=false)]
+                public int? Priority { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1897105298264316928</para>
+                /// </summary>
+                [NameInMap("RecordId")]
+                [Validation(Required=false)]
+                public string RecordId { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1150</para>
+                /// </summary>
+                [NameInMap("Remark")]
+                [Validation(Required=false)]
+                public string Remark { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>default</para>
+                /// </summary>
+                [NameInMap("RequestSource")]
+                [Validation(Required=false)]
+                public string RequestSource { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>wap</para>
+                /// </summary>
+                [NameInMap("Rr")]
+                [Validation(Required=false)]
+                public string Rr { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>60</para>
+                /// </summary>
+                [NameInMap("Ttl")]
+                [Validation(Required=false)]
+                public int? Ttl { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>A</para>
+                /// </summary>
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2024-10-22T09:54Z</para>
+                /// </summary>
+                [NameInMap("UpdateTime")]
+                [Validation(Required=false)]
+                public string UpdateTime { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1620283051000</para>
+                /// </summary>
+                [NameInMap("UpdateTimestamp")]
+                [Validation(Required=false)]
+                public long? UpdateTimestamp { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>120.38.70.54</para>
+                /// </summary>
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("Weight")]
+                [Validation(Required=false)]
+                public int? Weight { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>169439170000011</para>
+                /// </summary>
+                [NameInMap("ZoneId")]
+                [Validation(Required=false)]
+                public string ZoneId { get; set; }
+
+            }
+
+        }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>6856BCF6-11D6-4D7E-AC53-FD579933522B</para>
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>100</para>
+        /// </summary>
+        [NameInMap("TotalItems")]
+        [Validation(Required=false)]
+        public int? TotalItems { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>5</para>
+        /// </summary>
+        [NameInMap("TotalPages")]
+        [Validation(Required=false)]
+        public int? TotalPages { get; set; }
+
+    }
+
+}
