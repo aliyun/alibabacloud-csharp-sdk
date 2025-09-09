@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string SnapshotId { get; set; }
 
+        [NameInMap("StopDesktop")]
+        [Validation(Required=false)]
+        public bool? StopDesktop { get; set; }
+
     }
 
 }

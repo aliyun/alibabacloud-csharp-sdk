@@ -196,6 +196,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RootDiskCategory { get; set; }
 
+        [NameInMap("RootDiskPerformanceLevel")]
+        [Validation(Required=false)]
+        public string RootDiskPerformanceLevel { get; set; }
+
         /// <summary>
         /// <para>The size of the system disk. Unit: GiB. If you set <c>ResourceType</c> to <c>Desktop</c>, you must specify this parameter.</para>
         /// 
@@ -221,6 +225,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("UserDiskCategory")]
         [Validation(Required=false)]
         public string UserDiskCategory { get; set; }
+
+        [NameInMap("UserDiskPerformanceLevel")]
+        [Validation(Required=false)]
+        public string UserDiskPerformanceLevel { get; set; }
 
         /// <summary>
         /// <para>The size of the data disk. Unit: GiB.</para>

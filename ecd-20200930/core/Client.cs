@@ -23480,9 +23480,17 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["ResourceType"] = request.ResourceType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RootDiskPerformanceLevel))
+            {
+                query["RootDiskPerformanceLevel"] = request.RootDiskPerformanceLevel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RootDiskSizeGib))
             {
                 query["RootDiskSizeGib"] = request.RootDiskSizeGib;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserDiskPerformanceLevel))
+            {
+                query["UserDiskPerformanceLevel"] = request.UserDiskPerformanceLevel;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserDiskSizeGib))
             {
@@ -23558,9 +23566,17 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["ResourceType"] = request.ResourceType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RootDiskPerformanceLevel))
+            {
+                query["RootDiskPerformanceLevel"] = request.RootDiskPerformanceLevel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RootDiskSizeGib))
             {
                 query["RootDiskSizeGib"] = request.RootDiskSizeGib;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserDiskPerformanceLevel))
+            {
+                query["UserDiskPerformanceLevel"] = request.UserDiskPerformanceLevel;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserDiskSizeGib))
             {
@@ -24534,6 +24550,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["RootDiskCategory"] = request.RootDiskCategory;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RootDiskPerformanceLevel))
+            {
+                query["RootDiskPerformanceLevel"] = request.RootDiskPerformanceLevel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RootDiskSizeGib))
             {
                 query["RootDiskSizeGib"] = request.RootDiskSizeGib;
@@ -24541,6 +24561,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserDiskCategory))
             {
                 query["UserDiskCategory"] = request.UserDiskCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserDiskPerformanceLevel))
+            {
+                query["UserDiskPerformanceLevel"] = request.UserDiskPerformanceLevel;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserDiskSizeGib))
             {
@@ -24654,6 +24678,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["RootDiskCategory"] = request.RootDiskCategory;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RootDiskPerformanceLevel))
+            {
+                query["RootDiskPerformanceLevel"] = request.RootDiskPerformanceLevel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RootDiskSizeGib))
             {
                 query["RootDiskSizeGib"] = request.RootDiskSizeGib;
@@ -24661,6 +24689,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserDiskCategory))
             {
                 query["UserDiskCategory"] = request.UserDiskCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserDiskPerformanceLevel))
+            {
+                query["UserDiskPerformanceLevel"] = request.UserDiskPerformanceLevel;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserDiskSizeGib))
             {
@@ -43728,6 +43760,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["SnapshotId"] = request.SnapshotId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StopDesktop))
+            {
+                query["StopDesktop"] = request.StopDesktop;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -43785,6 +43821,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnapshotId))
             {
                 query["SnapshotId"] = request.SnapshotId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StopDesktop))
+            {
+                query["StopDesktop"] = request.StopDesktop;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

@@ -124,6 +124,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        [NameInMap("RootDiskPerformanceLevel")]
+        [Validation(Required=false)]
+        public string RootDiskPerformanceLevel { get; set; }
+
         /// <summary>
         /// <para>The size of the system disk. Unit: GiB.</para>
         /// 
@@ -133,6 +137,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("RootDiskSizeGib")]
         [Validation(Required=false)]
         public int? RootDiskSizeGib { get; set; }
+
+        [NameInMap("UserDiskPerformanceLevel")]
+        [Validation(Required=false)]
+        public string UserDiskPerformanceLevel { get; set; }
 
         /// <summary>
         /// <para>The size of the data disk. Unit: GiB.</para>
