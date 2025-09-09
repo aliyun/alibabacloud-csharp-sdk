@@ -66,6 +66,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
+        [NameInMap("SubGroupName")]
+        [Validation(Required=false)]
+        public string SubGroupName { get; set; }
+
         /// <summary>
         /// <para>The query type.</para>
         /// 
