@@ -207,6 +207,14 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
             public string LinkType { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>SWAS</para>
+            /// </summary>
+            [NameInMap("ManagedService")]
+            [Validation(Required=false)]
+            public string ManagedService { get; set; }
+
+            /// <summary>
             /// <para>The name of the VPC peering connection.</para>
             /// 
             /// <b>Example:</b>

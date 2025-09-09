@@ -10,6 +10,21 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         /// <summary>
+        /// <para>Tag Type:</para>
+        /// <list type="bullet">
+        /// <item><description>All(Default)</description></item>
+        /// <item><description>Custom</description></item>
+        /// <item><description>System</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>All</para>
+        /// </summary>
+        [NameInMap("Category")]
+        [Validation(Required=false)]
+        public string Category { get; set; }
+
+        /// <summary>
         /// <para>The number of entries to return on each page. Valid values: <b>1</b> to <b>50</b>. Default value: <b>50</b>.</para>
         /// 
         /// <b>Example:</b>
