@@ -707,6 +707,142 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>添加RD成员账号</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddInstanceRdMemberRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddInstanceRdMemberResponse
+        /// </returns>
+        public AddInstanceRdMemberResponse AddInstanceRdMemberWithOptions(AddInstanceRdMemberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberId))
+            {
+                query["MemberId"] = request.MemberId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddInstanceRdMember",
+                Version = "2019-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddInstanceRdMemberResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加RD成员账号</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddInstanceRdMemberRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddInstanceRdMemberResponse
+        /// </returns>
+        public async Task<AddInstanceRdMemberResponse> AddInstanceRdMemberWithOptionsAsync(AddInstanceRdMemberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberId))
+            {
+                query["MemberId"] = request.MemberId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddInstanceRdMember",
+                Version = "2019-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddInstanceRdMemberResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加RD成员账号</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddInstanceRdMemberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddInstanceRdMemberResponse
+        /// </returns>
+        public AddInstanceRdMemberResponse AddInstanceRdMember(AddInstanceRdMemberRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AddInstanceRdMemberWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加RD成员账号</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddInstanceRdMemberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddInstanceRdMemberResponse
+        /// </returns>
+        public async Task<AddInstanceRdMemberResponse> AddInstanceRdMemberAsync(AddInstanceRdMemberRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AddInstanceRdMemberWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Add one or more users to a user group.</para>
         /// </summary>
         /// 
@@ -14483,6 +14619,150 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取RD成员账号列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceRdMembersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceRdMembersResponse
+        /// </returns>
+        public ListInstanceRdMembersResponse ListInstanceRdMembersWithOptions(ListInstanceRdMembersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListInstanceRdMembers",
+                Version = "2019-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListInstanceRdMembersResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取RD成员账号列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceRdMembersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceRdMembersResponse
+        /// </returns>
+        public async Task<ListInstanceRdMembersResponse> ListInstanceRdMembersWithOptionsAsync(ListInstanceRdMembersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListInstanceRdMembers",
+                Version = "2019-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListInstanceRdMembersResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取RD成员账号列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceRdMembersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceRdMembersResponse
+        /// </returns>
+        public ListInstanceRdMembersResponse ListInstanceRdMembers(ListInstanceRdMembersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListInstanceRdMembersWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取RD成员账号列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceRdMembersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceRdMembersResponse
+        /// </returns>
+        public async Task<ListInstanceRdMembersResponse> ListInstanceRdMembersAsync(ListInstanceRdMembersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListInstanceRdMembersWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the network domains created in a bastion host.</para>
         /// </summary>
         /// 
@@ -21143,6 +21423,142 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RemoveHostsFromGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除RD成员账号</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveInstanceRdMemberRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveInstanceRdMemberResponse
+        /// </returns>
+        public RemoveInstanceRdMemberResponse RemoveInstanceRdMemberWithOptions(RemoveInstanceRdMemberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberId))
+            {
+                query["MemberId"] = request.MemberId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveInstanceRdMember",
+                Version = "2019-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveInstanceRdMemberResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除RD成员账号</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveInstanceRdMemberRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveInstanceRdMemberResponse
+        /// </returns>
+        public async Task<RemoveInstanceRdMemberResponse> RemoveInstanceRdMemberWithOptionsAsync(RemoveInstanceRdMemberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberId))
+            {
+                query["MemberId"] = request.MemberId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveInstanceRdMember",
+                Version = "2019-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveInstanceRdMemberResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除RD成员账号</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveInstanceRdMemberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveInstanceRdMemberResponse
+        /// </returns>
+        public RemoveInstanceRdMemberResponse RemoveInstanceRdMember(RemoveInstanceRdMemberRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RemoveInstanceRdMemberWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除RD成员账号</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveInstanceRdMemberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveInstanceRdMemberResponse
+        /// </returns>
+        public async Task<RemoveInstanceRdMemberResponse> RemoveInstanceRdMemberAsync(RemoveInstanceRdMemberRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RemoveInstanceRdMemberWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
