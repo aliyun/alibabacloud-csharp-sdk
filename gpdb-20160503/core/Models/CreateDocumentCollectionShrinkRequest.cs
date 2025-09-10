@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
-    public class CreateDocumentCollectionRequest : TeaModel {
+    public class CreateDocumentCollectionShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The name of the document collection that you want to create.</para>
         /// <remarks>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         [NameInMap("EntityTypes")]
         [Validation(Required=false)]
-        public List<string> EntityTypes { get; set; }
+        public string EntityTypesShrink { get; set; }
 
         /// <summary>
         /// <para>Specifies whether to use the memory mapping technology to create HNSW indexes. Valid values: 0 and 1. Default value: 0. We recommend that you set the value to 1 in scenarios that require upload speed but not data deletion.</para>
@@ -278,7 +278,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         [NameInMap("RelationshipTypes")]
         [Validation(Required=false)]
-        public List<string> RelationshipTypes { get; set; }
+        public string RelationshipTypesShrink { get; set; }
 
     }
 

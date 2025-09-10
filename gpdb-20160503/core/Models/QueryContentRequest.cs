@@ -82,6 +82,20 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string Filter { get; set; }
 
+        [NameInMap("GraphEnhance")]
+        [Validation(Required=false)]
+        public bool? GraphEnhance { get; set; }
+
+        [NameInMap("GraphSearchArgs")]
+        [Validation(Required=false)]
+        public QueryContentRequestGraphSearchArgs GraphSearchArgs { get; set; }
+        public class QueryContentRequestGraphSearchArgs : TeaModel {
+            [NameInMap("GraphTopK")]
+            [Validation(Required=false)]
+            public int? GraphTopK { get; set; }
+
+        }
+
         /// <summary>
         /// <para>Dual recall algorithm, default is empty (i.e., directly compare and sort the scores of vectors and full text).</para>
         /// <para>Available values:</para>

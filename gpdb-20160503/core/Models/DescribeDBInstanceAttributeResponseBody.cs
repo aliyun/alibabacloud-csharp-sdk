@@ -334,6 +334,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 [Validation(Required=false)]
                 public string ExpireTime { get; set; }
 
+                [NameInMap("GraphEngineStatus")]
+                [Validation(Required=false)]
+                public string GraphEngineStatus { get; set; }
+
                 /// <summary>
                 /// <para>Compute group machine type, with the following values:</para>
                 /// <list type="bullet">

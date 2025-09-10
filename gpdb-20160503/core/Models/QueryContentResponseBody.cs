@@ -22,6 +22,38 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string EmbeddingTokens { get; set; }
 
+        [NameInMap("Entities")]
+        [Validation(Required=false)]
+        public QueryContentResponseBodyEntities Entities { get; set; }
+        public class QueryContentResponseBodyEntities : TeaModel {
+            [NameInMap("entities")]
+            [Validation(Required=false)]
+            public List<QueryContentResponseBodyEntitiesEntities> Entities { get; set; }
+            public class QueryContentResponseBodyEntitiesEntities : TeaModel {
+                [NameInMap("Description")]
+                [Validation(Required=false)]
+                public string Description { get; set; }
+
+                [NameInMap("Entity")]
+                [Validation(Required=false)]
+                public string Entity { get; set; }
+
+                [NameInMap("FileName")]
+                [Validation(Required=false)]
+                public string FileName { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
+                public string Id { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+            }
+
+        }
+
         /// <summary>
         /// <para>The retrieved data.</para>
         /// </summary>
@@ -160,6 +192,38 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
+
+        [NameInMap("Relations")]
+        [Validation(Required=false)]
+        public QueryContentResponseBodyRelations Relations { get; set; }
+        public class QueryContentResponseBodyRelations : TeaModel {
+            [NameInMap("relations")]
+            [Validation(Required=false)]
+            public List<QueryContentResponseBodyRelationsRelations> Relations { get; set; }
+            public class QueryContentResponseBodyRelationsRelations : TeaModel {
+                [NameInMap("Description")]
+                [Validation(Required=false)]
+                public string Description { get; set; }
+
+                [NameInMap("FileName")]
+                [Validation(Required=false)]
+                public string FileName { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
+                public string Id { get; set; }
+
+                [NameInMap("SourceEntity")]
+                [Validation(Required=false)]
+                public string SourceEntity { get; set; }
+
+                [NameInMap("TargetEntity")]
+                [Validation(Required=false)]
+                public string TargetEntity { get; set; }
+
+            }
+
+        }
 
         /// <summary>
         /// <para>The request ID.</para>

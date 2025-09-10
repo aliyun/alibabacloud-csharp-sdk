@@ -22,6 +22,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string EmbeddingTokens { get; set; }
 
+        [NameInMap("JobId")]
+        [Validation(Required=false)]
+        public string JobId { get; set; }
+
         /// <summary>
         /// <para>Return message.</para>
         /// 

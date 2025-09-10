@@ -3253,7 +3253,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         /// <para>Creates a document collection.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// CreateDocumentCollectionRequest
         /// </param>
         /// <param name="runtime">
@@ -3263,9 +3263,19 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         /// <returns>
         /// CreateDocumentCollectionResponse
         /// </returns>
-        public CreateDocumentCollectionResponse CreateDocumentCollectionWithOptions(CreateDocumentCollectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateDocumentCollectionResponse CreateDocumentCollectionWithOptions(CreateDocumentCollectionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateDocumentCollectionShrinkRequest request = new CreateDocumentCollectionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EntityTypes))
+            {
+                request.EntityTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EntityTypes, "EntityTypes", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RelationshipTypes))
+            {
+                request.RelationshipTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RelationshipTypes, "RelationshipTypes", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Collection))
             {
@@ -3283,6 +3293,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["EmbeddingModel"] = request.EmbeddingModel;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableGraph))
+            {
+                query["EnableGraph"] = request.EnableGraph;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityTypesShrink))
+            {
+                query["EntityTypes"] = request.EntityTypesShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalStorage))
             {
                 query["ExternalStorage"] = request.ExternalStorage;
@@ -3298,6 +3316,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HnswM))
             {
                 query["HnswM"] = request.HnswM;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LLMModel))
+            {
+                query["LLMModel"] = request.LLMModel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagerAccount))
             {
@@ -3338,6 +3364,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelationshipTypesShrink))
+            {
+                query["RelationshipTypes"] = request.RelationshipTypesShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3363,7 +3393,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         /// <para>Creates a document collection.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// CreateDocumentCollectionRequest
         /// </param>
         /// <param name="runtime">
@@ -3373,9 +3403,19 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         /// <returns>
         /// CreateDocumentCollectionResponse
         /// </returns>
-        public async Task<CreateDocumentCollectionResponse> CreateDocumentCollectionWithOptionsAsync(CreateDocumentCollectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateDocumentCollectionResponse> CreateDocumentCollectionWithOptionsAsync(CreateDocumentCollectionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateDocumentCollectionShrinkRequest request = new CreateDocumentCollectionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EntityTypes))
+            {
+                request.EntityTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EntityTypes, "EntityTypes", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RelationshipTypes))
+            {
+                request.RelationshipTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RelationshipTypes, "RelationshipTypes", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Collection))
             {
@@ -3393,6 +3433,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["EmbeddingModel"] = request.EmbeddingModel;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableGraph))
+            {
+                query["EnableGraph"] = request.EnableGraph;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityTypesShrink))
+            {
+                query["EntityTypes"] = request.EntityTypesShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalStorage))
             {
                 query["ExternalStorage"] = request.ExternalStorage;
@@ -3408,6 +3456,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HnswM))
             {
                 query["HnswM"] = request.HnswM;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LLMModel))
+            {
+                query["LLMModel"] = request.LLMModel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagerAccount))
             {
@@ -3448,6 +3504,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelationshipTypesShrink))
+            {
+                query["RelationshipTypes"] = request.RelationshipTypesShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -31080,6 +31140,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             QueryContentShrinkRequest request = new QueryContentShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.GraphSearchArgs))
+            {
+                request.GraphSearchArgsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.GraphSearchArgs, "GraphSearchArgs", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HybridSearchArgs))
             {
                 request.HybridSearchArgsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HybridSearchArgs, "HybridSearchArgs", "json");
@@ -31108,6 +31172,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
             {
                 query["Filter"] = request.Filter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GraphEnhance))
+            {
+                query["GraphEnhance"] = request.GraphEnhance;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GraphSearchArgsShrink))
+            {
+                query["GraphSearchArgs"] = request.GraphSearchArgsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HybridSearch))
             {
@@ -31214,6 +31286,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             QueryContentShrinkRequest request = new QueryContentShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.GraphSearchArgs))
+            {
+                request.GraphSearchArgsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.GraphSearchArgs, "GraphSearchArgs", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HybridSearchArgs))
             {
                 request.HybridSearchArgsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HybridSearchArgs, "HybridSearchArgs", "json");
@@ -31242,6 +31318,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
             {
                 query["Filter"] = request.Filter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GraphEnhance))
+            {
+                query["GraphEnhance"] = request.GraphEnhance;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GraphSearchArgsShrink))
+            {
+                query["GraphSearchArgs"] = request.GraphSearchArgsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HybridSearch))
             {
