@@ -1,3 +1,6 @@
+2025-09-10 Version: 2.8.2
+- Generated csharp 2022-12-15 for eflo-controller.
+
 2025-09-10 Version: 2.8.1
 - Generated csharp 2022-12-15 for eflo-controller.
 
