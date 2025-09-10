@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <para>创建应用服务实例</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// CreateAppInstanceRequest
         /// </param>
         /// <param name="runtime">
@@ -52,9 +52,15 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <returns>
         /// CreateAppInstanceResponse
         /// </returns>
-        public CreateAppInstanceResponse CreateAppInstanceWithOptions(CreateAppInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateAppInstanceResponse CreateAppInstanceWithOptions(CreateAppInstanceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateAppInstanceShrinkRequest request = new CreateAppInstanceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DBInstanceConfig))
+            {
+                request.DBInstanceConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DBInstanceConfig, "DBInstanceConfig", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
             {
@@ -67,6 +73,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceConfigShrink))
+            {
+                query["DBInstanceConfig"] = request.DBInstanceConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceName))
             {
@@ -91,6 +101,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublicNetworkAccessEnabled))
             {
                 query["PublicNetworkAccessEnabled"] = request.PublicNetworkAccessEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RAGEnabled))
+            {
+                query["RAGEnabled"] = request.RAGEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -124,7 +138,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <para>创建应用服务实例</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// CreateAppInstanceRequest
         /// </param>
         /// <param name="runtime">
@@ -134,9 +148,15 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <returns>
         /// CreateAppInstanceResponse
         /// </returns>
-        public async Task<CreateAppInstanceResponse> CreateAppInstanceWithOptionsAsync(CreateAppInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateAppInstanceResponse> CreateAppInstanceWithOptionsAsync(CreateAppInstanceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateAppInstanceShrinkRequest request = new CreateAppInstanceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DBInstanceConfig))
+            {
+                request.DBInstanceConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DBInstanceConfig, "DBInstanceConfig", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
             {
@@ -149,6 +169,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceConfigShrink))
+            {
+                query["DBInstanceConfig"] = request.DBInstanceConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceName))
             {
@@ -173,6 +197,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublicNetworkAccessEnabled))
             {
                 query["PublicNetworkAccessEnabled"] = request.PublicNetworkAccessEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RAGEnabled))
+            {
+                query["RAGEnabled"] = request.RAGEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {

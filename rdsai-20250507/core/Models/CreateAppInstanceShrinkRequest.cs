@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
-    public class CreateAppInstanceRequest : TeaModel {
+    public class CreateAppInstanceShrinkRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>test-supabase</para>
@@ -35,33 +35,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 
         [NameInMap("DBInstanceConfig")]
         [Validation(Required=false)]
-        public CreateAppInstanceRequestDBInstanceConfig DBInstanceConfig { get; set; }
-        public class CreateAppInstanceRequestDBInstanceConfig : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>pg.n2.2c.1m</para>
-            /// </summary>
-            [NameInMap("DBInstanceClass")]
-            [Validation(Required=false)]
-            public string DBInstanceClass { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>100</para>
-            /// </summary>
-            [NameInMap("DBInstanceStorage")]
-            [Validation(Required=false)]
-            public int? DBInstanceStorage { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>Postpaid</para>
-            /// </summary>
-            [NameInMap("PayType")]
-            [Validation(Required=false)]
-            public string PayType { get; set; }
-
-        }
+        public string DBInstanceConfigShrink { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
