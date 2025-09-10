@@ -1061,7 +1061,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateAlert</para>
+        /// <para>Creates an alert rule in a project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1126,7 +1126,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateAlert</para>
+        /// <para>Creates an alert rule in a project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1191,7 +1191,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateAlert</para>
+        /// <para>Creates an alert rule in a project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1210,7 +1210,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateAlert</para>
+        /// <para>Creates an alert rule in a project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3270,6 +3270,10 @@ namespace AlibabaCloud.SDK.Sls20201230
             {
                 body["processors"] = request.Processors;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Task))
+            {
+                body["task"] = request.Task;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -3347,6 +3351,10 @@ namespace AlibabaCloud.SDK.Sls20201230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Processors))
             {
                 body["processors"] = request.Processors;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Task))
+            {
+                body["task"] = request.Task;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -6517,6 +6525,114 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteConfigWithOptionsAsync(project, configName, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DeleteConsumeProcessor</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConsumeProcessorResponse
+        /// </returns>
+        public DeleteConsumeProcessorResponse DeleteConsumeProcessorWithOptions(string project, string processorName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteConsumeProcessor",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/consumeprocessors/" + processorName,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteConsumeProcessorResponse>(Execute(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DeleteConsumeProcessor</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConsumeProcessorResponse
+        /// </returns>
+        public async Task<DeleteConsumeProcessorResponse> DeleteConsumeProcessorWithOptionsAsync(string project, string processorName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteConsumeProcessor",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/consumeprocessors/" + processorName,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteConsumeProcessorResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DeleteConsumeProcessor</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteConsumeProcessorResponse
+        /// </returns>
+        public DeleteConsumeProcessorResponse DeleteConsumeProcessor(string project, string processorName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteConsumeProcessorWithOptions(project, processorName, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DeleteConsumeProcessor</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteConsumeProcessorResponse
+        /// </returns>
+        public async Task<DeleteConsumeProcessorResponse> DeleteConsumeProcessorAsync(string project, string processorName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteConsumeProcessorWithOptionsAsync(project, processorName, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -11265,6 +11381,114 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Query the details of a consumer processor</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConsumeProcessorResponse
+        /// </returns>
+        public GetConsumeProcessorResponse GetConsumeProcessorWithOptions(string project, string processorName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetConsumeProcessor",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/consumeprocessors/" + processorName,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetConsumeProcessorResponse>(Execute(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the details of a consumer processor</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConsumeProcessorResponse
+        /// </returns>
+        public async Task<GetConsumeProcessorResponse> GetConsumeProcessorWithOptionsAsync(string project, string processorName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetConsumeProcessor",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/consumeprocessors/" + processorName,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetConsumeProcessorResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the details of a consumer processor</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetConsumeProcessorResponse
+        /// </returns>
+        public GetConsumeProcessorResponse GetConsumeProcessor(string project, string processorName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetConsumeProcessorWithOptions(project, processorName, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the details of a consumer processor</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetConsumeProcessorResponse
+        /// </returns>
+        public async Task<GetConsumeProcessorResponse> GetConsumeProcessorAsync(string project, string processorName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetConsumeProcessorWithOptionsAsync(project, processorName, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the contextual logs of a specified log.</para>
         /// </summary>
         /// 
@@ -13422,11 +13646,25 @@ namespace AlibabaCloud.SDK.Sls20201230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation by using Alibaba Cloud SDK for Go, Java, TypeScript, or Python.</para>
+        /// <para>You can call this operation by using Simple Log Service SDK for Go, Java, or Python. You can call this operation by using Alibaba Cloud SDK for all programming languages.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation by using Simple Log Service SDK for Go or Java.</description></item>
-        /// <item><description>For more information, see <a href="https://help.aliyun.com/document_detail/29029.html">GetLogs</a>.</description></item>
+        /// <item><description>When you call this operation, take note of the compression method that you use. The supported compression algorithms vary based on the programming language. For more information, see the description of the Accept-Encoding parameter in this topic.</description></item>
+        /// <item><description>For more information, see <a href="https://help.aliyun.com/document_detail/2771313.html">GetLogs</a>.</description></item>
         /// </list>
+        /// <h3>Authentication resources</h3>
+        /// <para>The following table describes the authorization information that is required for this operation. You can add the information to the Action element of a Resource Access Management (RAM) policy statement to grant a RAM user or a RAM role the permissions to call this operation.</para>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th align="left">Action</th>
+        /// <th align="left">Resource</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td align="left"><c>log:GetLogStoreLogs</c></td>
+        /// <td align="left"><c>acs:log:{#regionId}:{#accountId}:project/{#ProjectName}</c></td>
+        /// </tr>
+        /// </tbody></table>
         /// </description>
         /// 
         /// <param name="request">
@@ -13529,11 +13767,25 @@ namespace AlibabaCloud.SDK.Sls20201230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation by using Alibaba Cloud SDK for Go, Java, TypeScript, or Python.</para>
+        /// <para>You can call this operation by using Simple Log Service SDK for Go, Java, or Python. You can call this operation by using Alibaba Cloud SDK for all programming languages.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation by using Simple Log Service SDK for Go or Java.</description></item>
-        /// <item><description>For more information, see <a href="https://help.aliyun.com/document_detail/29029.html">GetLogs</a>.</description></item>
+        /// <item><description>When you call this operation, take note of the compression method that you use. The supported compression algorithms vary based on the programming language. For more information, see the description of the Accept-Encoding parameter in this topic.</description></item>
+        /// <item><description>For more information, see <a href="https://help.aliyun.com/document_detail/2771313.html">GetLogs</a>.</description></item>
         /// </list>
+        /// <h3>Authentication resources</h3>
+        /// <para>The following table describes the authorization information that is required for this operation. You can add the information to the Action element of a Resource Access Management (RAM) policy statement to grant a RAM user or a RAM role the permissions to call this operation.</para>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th align="left">Action</th>
+        /// <th align="left">Resource</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td align="left"><c>log:GetLogStoreLogs</c></td>
+        /// <td align="left"><c>acs:log:{#regionId}:{#accountId}:project/{#ProjectName}</c></td>
+        /// </tr>
+        /// </tbody></table>
         /// </description>
         /// 
         /// <param name="request">
@@ -13636,11 +13888,25 @@ namespace AlibabaCloud.SDK.Sls20201230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation by using Alibaba Cloud SDK for Go, Java, TypeScript, or Python.</para>
+        /// <para>You can call this operation by using Simple Log Service SDK for Go, Java, or Python. You can call this operation by using Alibaba Cloud SDK for all programming languages.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation by using Simple Log Service SDK for Go or Java.</description></item>
-        /// <item><description>For more information, see <a href="https://help.aliyun.com/document_detail/29029.html">GetLogs</a>.</description></item>
+        /// <item><description>When you call this operation, take note of the compression method that you use. The supported compression algorithms vary based on the programming language. For more information, see the description of the Accept-Encoding parameter in this topic.</description></item>
+        /// <item><description>For more information, see <a href="https://help.aliyun.com/document_detail/2771313.html">GetLogs</a>.</description></item>
         /// </list>
+        /// <h3>Authentication resources</h3>
+        /// <para>The following table describes the authorization information that is required for this operation. You can add the information to the Action element of a Resource Access Management (RAM) policy statement to grant a RAM user or a RAM role the permissions to call this operation.</para>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th align="left">Action</th>
+        /// <th align="left">Resource</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td align="left"><c>log:GetLogStoreLogs</c></td>
+        /// <td align="left"><c>acs:log:{#regionId}:{#accountId}:project/{#ProjectName}</c></td>
+        /// </tr>
+        /// </tbody></table>
         /// </description>
         /// 
         /// <param name="request">
@@ -13664,11 +13930,25 @@ namespace AlibabaCloud.SDK.Sls20201230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation by using Alibaba Cloud SDK for Go, Java, TypeScript, or Python.</para>
+        /// <para>You can call this operation by using Simple Log Service SDK for Go, Java, or Python. You can call this operation by using Alibaba Cloud SDK for all programming languages.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation by using Simple Log Service SDK for Go or Java.</description></item>
-        /// <item><description>For more information, see <a href="https://help.aliyun.com/document_detail/29029.html">GetLogs</a>.</description></item>
+        /// <item><description>When you call this operation, take note of the compression method that you use. The supported compression algorithms vary based on the programming language. For more information, see the description of the Accept-Encoding parameter in this topic.</description></item>
+        /// <item><description>For more information, see <a href="https://help.aliyun.com/document_detail/2771313.html">GetLogs</a>.</description></item>
         /// </list>
+        /// <h3>Authentication resources</h3>
+        /// <para>The following table describes the authorization information that is required for this operation. You can add the information to the Action element of a Resource Access Management (RAM) policy statement to grant a RAM user or a RAM role the permissions to call this operation.</para>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th align="left">Action</th>
+        /// <th align="left">Resource</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td align="left"><c>log:GetLogStoreLogs</c></td>
+        /// <td align="left"><c>acs:log:{#regionId}:{#accountId}:project/{#ProjectName}</c></td>
+        /// </tr>
+        /// </tbody></table>
         /// </description>
         /// 
         /// <param name="request">
@@ -17413,6 +17693,166 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries a list of consumption processors that meet specific conditions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListConsumeProcessorsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConsumeProcessorsResponse
+        /// </returns>
+        public ListConsumeProcessorsResponse ListConsumeProcessorsWithOptions(string project, ListConsumeProcessorsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
+            {
+                query["displayName"] = request.DisplayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProcessorName))
+            {
+                query["processorName"] = request.ProcessorName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListConsumeProcessors",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/consumeprocessors",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListConsumeProcessorsResponse>(Execute(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of consumption processors that meet specific conditions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListConsumeProcessorsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConsumeProcessorsResponse
+        /// </returns>
+        public async Task<ListConsumeProcessorsResponse> ListConsumeProcessorsWithOptionsAsync(string project, ListConsumeProcessorsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
+            {
+                query["displayName"] = request.DisplayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProcessorName))
+            {
+                query["processorName"] = request.ProcessorName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListConsumeProcessors",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/consumeprocessors",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListConsumeProcessorsResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of consumption processors that meet specific conditions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListConsumeProcessorsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConsumeProcessorsResponse
+        /// </returns>
+        public ListConsumeProcessorsResponse ListConsumeProcessors(string project, ListConsumeProcessorsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListConsumeProcessorsWithOptions(project, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of consumption processors that meet specific conditions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListConsumeProcessorsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConsumeProcessorsResponse
+        /// </returns>
+        public async Task<ListConsumeProcessorsResponse> ListConsumeProcessorsAsync(string project, ListConsumeProcessorsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListConsumeProcessorsWithOptionsAsync(project, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries all consumer groups of a Logstore.</para>
         /// </summary>
         /// 
@@ -18792,6 +19232,10 @@ namespace AlibabaCloud.SDK.Sls20201230
             {
                 query["configName"] = request.ConfigName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigType))
+            {
+                query["configType"] = request.ConfigType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogstoreName))
             {
                 query["logstoreName"] = request.LogstoreName;
@@ -18857,6 +19301,10 @@ namespace AlibabaCloud.SDK.Sls20201230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigName))
             {
                 query["configName"] = request.ConfigName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigType))
+            {
+                query["configType"] = request.ConfigType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogstoreName))
             {
@@ -21741,6 +22189,158 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates or updates a consumption processor.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PutConsumeProcessorRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PutConsumeProcessorResponse
+        /// </returns>
+        public PutConsumeProcessorResponse PutConsumeProcessorWithOptions(string project, string processorName, PutConsumeProcessorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Configuration))
+            {
+                body["configuration"] = request.Configuration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
+            {
+                body["displayName"] = request.DisplayName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PutConsumeProcessor",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/consumeprocessors/" + processorName,
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<PutConsumeProcessorResponse>(Execute(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates or updates a consumption processor.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PutConsumeProcessorRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PutConsumeProcessorResponse
+        /// </returns>
+        public async Task<PutConsumeProcessorResponse> PutConsumeProcessorWithOptionsAsync(string project, string processorName, PutConsumeProcessorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Configuration))
+            {
+                body["configuration"] = request.Configuration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
+            {
+                body["displayName"] = request.DisplayName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PutConsumeProcessor",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/consumeprocessors/" + processorName,
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<PutConsumeProcessorResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates or updates a consumption processor.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PutConsumeProcessorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PutConsumeProcessorResponse
+        /// </returns>
+        public PutConsumeProcessorResponse PutConsumeProcessor(string project, string processorName, PutConsumeProcessorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return PutConsumeProcessorWithOptions(project, processorName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates or updates a consumption processor.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PutConsumeProcessorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PutConsumeProcessorResponse
+        /// </returns>
+        public async Task<PutConsumeProcessorResponse> PutConsumeProcessorAsync(string project, string processorName, PutConsumeProcessorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await PutConsumeProcessorWithOptionsAsync(project, processorName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates or modifies an ingest processor.</para>
         /// </summary>
         /// 
@@ -22283,7 +22883,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置project传输加速状态</para>
+        /// <para>Enables or disables transfer acceleration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22332,7 +22932,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置project传输加速状态</para>
+        /// <para>Enables or disables transfer acceleration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22381,7 +22981,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置project传输加速状态</para>
+        /// <para>Enables or disables transfer acceleration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22400,7 +23000,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置project传输加速状态</para>
+        /// <para>Enables or disables transfer acceleration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27198,6 +27798,10 @@ namespace AlibabaCloud.SDK.Sls20201230
             {
                 body["processors"] = request.Processors;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Task))
+            {
+                body["task"] = request.Task;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
@@ -27275,6 +27879,10 @@ namespace AlibabaCloud.SDK.Sls20201230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Processors))
             {
                 body["processors"] = request.Processors;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Task))
+            {
+                body["task"] = request.Task;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -29813,8 +30421,13 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用UpsertCollectionPolicy接口创建或更新日志采集规则</para>
+        /// <para>Creates a log collection policy for a cloud service. This way, logs can be automatically collected from the service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You must use the Simple Log Service endpoint for the China (Shanghai) or Singapore region to call the operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpsertCollectionPolicyRequest
@@ -29891,8 +30504,13 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用UpsertCollectionPolicy接口创建或更新日志采集规则</para>
+        /// <para>Creates a log collection policy for a cloud service. This way, logs can be automatically collected from the service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You must use the Simple Log Service endpoint for the China (Shanghai) or Singapore region to call the operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpsertCollectionPolicyRequest
@@ -29969,8 +30587,13 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用UpsertCollectionPolicy接口创建或更新日志采集规则</para>
+        /// <para>Creates a log collection policy for a cloud service. This way, logs can be automatically collected from the service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You must use the Simple Log Service endpoint for the China (Shanghai) or Singapore region to call the operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpsertCollectionPolicyRequest
@@ -29988,8 +30611,13 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用UpsertCollectionPolicy接口创建或更新日志采集规则</para>
+        /// <para>Creates a log collection policy for a cloud service. This way, logs can be automatically collected from the service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You must use the Simple Log Service endpoint for the China (Shanghai) or Singapore region to call the operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpsertCollectionPolicyRequest

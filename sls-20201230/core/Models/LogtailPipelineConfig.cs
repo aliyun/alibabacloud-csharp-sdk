@@ -69,6 +69,14 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public List<Dictionary<string, object>> Processors { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{&quot;Type&quot;: &quot;task_example&quot;}</para>
+        /// </summary>
+        [NameInMap("task")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> Task { get; set; }
+
     }
 
 }

@@ -1,3 +1,13 @@
+2025-09-10 Version: 5.9.0
+- Support API DeleteConsumeProcessor.
+- Support API GetConsumeProcessor.
+- Support API ListConsumeProcessors.
+- Support API PutConsumeProcessor.
+- Update API CreateLogtailPipelineConfig: add request parameters body.task.
+- Update API ListLogtailPipelineConfig: add request parameters configType.
+- Update API UpdateLogtailPipelineConfig: add request parameters body.task.
+
+
 2025-06-10 Version: 5.8.2
 - Generated csharp 2020-12-30 for Sls.
 

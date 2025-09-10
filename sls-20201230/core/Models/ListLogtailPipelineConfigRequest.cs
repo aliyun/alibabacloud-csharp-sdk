@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string ConfigName { get; set; }
 
+        [NameInMap("configType")]
+        [Validation(Required=false)]
+        public string ConfigType { get; set; }
+
         /// <summary>
         /// <para>The name of the Logstore.</para>
         /// 

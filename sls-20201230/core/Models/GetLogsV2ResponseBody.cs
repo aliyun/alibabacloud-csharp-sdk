@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public long? ProcessedBytes { get; set; }
 
             /// <summary>
-            /// <para>The number of rows that are processed in the request.</para>
+            /// <para>The number of rows that are processed in the query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10000</para>
