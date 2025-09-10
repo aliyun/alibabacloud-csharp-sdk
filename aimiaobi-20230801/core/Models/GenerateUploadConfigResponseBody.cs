@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
             [NameInMap("FormDatas")]
             [Validation(Required=false)]
-            public Dictionary<string, object> FormDatas { get; set; }
+            public Dictionary<string, string> FormDatas { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
