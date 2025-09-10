@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        [NameInMap("EventLevel")]
+        [Validation(Required=false)]
+        public string EventLevel { get; set; }
+
         /// <summary>
         /// <para>The maximum number of events. Default value: 2000.</para>
         /// 

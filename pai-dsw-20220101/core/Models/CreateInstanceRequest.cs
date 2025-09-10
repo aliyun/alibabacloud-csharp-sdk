@@ -56,6 +56,28 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
 
         }
 
+        [NameInMap("AssignNodeSpec")]
+        [Validation(Required=false)]
+        public CreateInstanceRequestAssignNodeSpec AssignNodeSpec { get; set; }
+        public class CreateInstanceRequestAssignNodeSpec : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>node-b</para>
+            /// </summary>
+            [NameInMap("AntiAffinityNodeNames")]
+            [Validation(Required=false)]
+            public string AntiAffinityNodeNames { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>node-a</para>
+            /// </summary>
+            [NameInMap("NodeNames")]
+            [Validation(Required=false)]
+            public string NodeNames { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The cloud disks.</para>
         /// 
@@ -489,6 +511,44 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public string ResourceId { get; set; }
+
+        [NameInMap("SpotSpec")]
+        [Validation(Required=false)]
+        public CreateInstanceRequestSpotSpec SpotSpec { get; set; }
+        public class CreateInstanceRequestSpotSpec : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>0.1</para>
+            /// </summary>
+            [NameInMap("SpotDiscountLimit")]
+            [Validation(Required=false)]
+            public string SpotDiscountLimit { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
+            [NameInMap("SpotDuration")]
+            [Validation(Required=false)]
+            public string SpotDuration { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>0.12</para>
+            /// </summary>
+            [NameInMap("SpotPriceLimit")]
+            [Validation(Required=false)]
+            public string SpotPriceLimit { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>SpotWithPriceLimit</para>
+            /// </summary>
+            [NameInMap("SpotStrategy")]
+            [Validation(Required=false)]
+            public string SpotStrategy { get; set; }
+
+        }
 
         /// <summary>
         /// <para>The tags.</para>

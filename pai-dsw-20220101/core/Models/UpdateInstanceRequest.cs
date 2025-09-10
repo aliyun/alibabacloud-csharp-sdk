@@ -56,6 +56,28 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
 
         }
 
+        [NameInMap("AssignNodeSpec")]
+        [Validation(Required=false)]
+        public UpdateInstanceRequestAssignNodeSpec AssignNodeSpec { get; set; }
+        public class UpdateInstanceRequestAssignNodeSpec : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>node-b</para>
+            /// </summary>
+            [NameInMap("AntiAffinityNodeNames")]
+            [Validation(Required=false)]
+            public string AntiAffinityNodeNames { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>node-a</para>
+            /// </summary>
+            [NameInMap("NodeNames")]
+            [Validation(Required=false)]
+            public string NodeNames { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The cloud disks.</para>
         /// 
@@ -221,6 +243,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
 
         }
 
+        [NameInMap("DisassociateAssignNode")]
+        [Validation(Required=false)]
+        public bool? DisassociateAssignNode { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to delete the credential injection information.</para>
         /// 
@@ -268,6 +294,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [NameInMap("DisassociateForwardInfos")]
         [Validation(Required=false)]
         public bool? DisassociateForwardInfos { get; set; }
+
+        [NameInMap("DisassociateSpot")]
+        [Validation(Required=false)]
+        public bool? DisassociateSpot { get; set; }
 
         [NameInMap("DisassociateUserCommand")]
         [Validation(Required=false)]
@@ -435,6 +465,44 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
             [NameInMap("SharedMemory")]
             [Validation(Required=false)]
             public string SharedMemory { get; set; }
+
+        }
+
+        [NameInMap("SpotSpec")]
+        [Validation(Required=false)]
+        public UpdateInstanceRequestSpotSpec SpotSpec { get; set; }
+        public class UpdateInstanceRequestSpotSpec : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>0.1</para>
+            /// </summary>
+            [NameInMap("SpotDiscountLimit")]
+            [Validation(Required=false)]
+            public string SpotDiscountLimit { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
+            [NameInMap("SpotDuration")]
+            [Validation(Required=false)]
+            public string SpotDuration { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>0.12</para>
+            /// </summary>
+            [NameInMap("SpotPriceLimit")]
+            [Validation(Required=false)]
+            public string SpotPriceLimit { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>SpotWithPriceLimit</para>
+            /// </summary>
+            [NameInMap("SpotStrategy")]
+            [Validation(Required=false)]
+            public string SpotStrategy { get; set; }
 
         }
 
