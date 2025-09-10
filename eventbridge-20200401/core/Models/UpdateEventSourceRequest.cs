@@ -287,6 +287,42 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
         }
 
+        [NameInMap("SourceOSSEventParameters")]
+        [Validation(Required=false)]
+        public UpdateEventSourceRequestSourceOSSEventParameters SourceOSSEventParameters { get; set; }
+        public class UpdateEventSourceRequestSourceOSSEventParameters : TeaModel {
+            [NameInMap("EventTypes")]
+            [Validation(Required=false)]
+            public List<string> EventTypes { get; set; }
+
+            [NameInMap("MatchRules")]
+            [Validation(Required=false)]
+            public List<List<UpdateEventSourceRequestSourceOSSEventParametersMatchRules>> MatchRules { get; set; }
+            public class UpdateEventSourceRequestSourceOSSEventParametersMatchRules : TeaModel {
+                [NameInMap("Suffix")]
+                [Validation(Required=false)]
+                public string Suffix { get; set; }
+
+                [NameInMap("MatchState")]
+                [Validation(Required=false)]
+                public bool? MatchState { get; set; }
+
+                [NameInMap("Prefix")]
+                [Validation(Required=false)]
+                public string Prefix { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+            }
+
+            [NameInMap("StsRoleArn")]
+            [Validation(Required=false)]
+            public string StsRoleArn { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The parameters that are configured if the event source is Message Queue for RabbitMQ.</para>
         /// </summary>

@@ -86,6 +86,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         [Validation(Required=false)]
         public string SourceMNSParametersShrink { get; set; }
 
+        [NameInMap("SourceOSSEventParameters")]
+        [Validation(Required=false)]
+        public string SourceOSSEventParametersShrink { get; set; }
+
         /// <summary>
         /// <para>The parameters that are configured if the event source is Message Queue for RabbitMQ.</para>
         /// </summary>

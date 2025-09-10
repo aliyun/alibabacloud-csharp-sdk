@@ -706,6 +706,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             {
                 request.SourceMNSParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceMNSParameters, "SourceMNSParameters", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SourceOSSEventParameters))
+            {
+                request.SourceOSSEventParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceOSSEventParameters, "SourceOSSEventParameters", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SourceRabbitMQParameters))
             {
                 request.SourceRabbitMQParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceRabbitMQParameters, "SourceRabbitMQParameters", "json");
@@ -758,6 +762,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceMNSParametersShrink))
             {
                 body["SourceMNSParameters"] = request.SourceMNSParametersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceOSSEventParametersShrink))
+            {
+                body["SourceOSSEventParameters"] = request.SourceOSSEventParametersShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRabbitMQParametersShrink))
             {
@@ -835,6 +843,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             {
                 request.SourceMNSParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceMNSParameters, "SourceMNSParameters", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SourceOSSEventParameters))
+            {
+                request.SourceOSSEventParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceOSSEventParameters, "SourceOSSEventParameters", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SourceRabbitMQParameters))
             {
                 request.SourceRabbitMQParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceRabbitMQParameters, "SourceRabbitMQParameters", "json");
@@ -887,6 +899,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceMNSParametersShrink))
             {
                 body["SourceMNSParameters"] = request.SourceMNSParametersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceOSSEventParametersShrink))
+            {
+                body["SourceOSSEventParameters"] = request.SourceOSSEventParametersShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRabbitMQParametersShrink))
             {
@@ -7056,6 +7072,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             {
                 request.SourceMNSParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceMNSParameters, "SourceMNSParameters", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SourceOSSEventParameters))
+            {
+                request.SourceOSSEventParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceOSSEventParameters, "SourceOSSEventParameters", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SourceRabbitMQParameters))
             {
                 request.SourceRabbitMQParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceRabbitMQParameters, "SourceRabbitMQParameters", "json");
@@ -7108,6 +7128,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceMNSParametersShrink))
             {
                 body["SourceMNSParameters"] = request.SourceMNSParametersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceOSSEventParametersShrink))
+            {
+                body["SourceOSSEventParameters"] = request.SourceOSSEventParametersShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRabbitMQParametersShrink))
             {
@@ -7185,6 +7209,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             {
                 request.SourceMNSParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceMNSParameters, "SourceMNSParameters", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SourceOSSEventParameters))
+            {
+                request.SourceOSSEventParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceOSSEventParameters, "SourceOSSEventParameters", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SourceRabbitMQParameters))
             {
                 request.SourceRabbitMQParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceRabbitMQParameters, "SourceRabbitMQParameters", "json");
@@ -7237,6 +7265,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceMNSParametersShrink))
             {
                 body["SourceMNSParameters"] = request.SourceMNSParametersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceOSSEventParametersShrink))
+            {
+                body["SourceOSSEventParameters"] = request.SourceOSSEventParametersShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRabbitMQParametersShrink))
             {
