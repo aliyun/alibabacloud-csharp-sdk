@@ -1,3 +1,6 @@
+2025-09-10 Version: 1.0.8
+- Generated csharp 2019-09-30 for imagerecog.
+
 2022-11-23 Version: 1.0.7
 - Update TaggingAdImage.
 

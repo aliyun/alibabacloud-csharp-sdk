@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Imagerecog20190930.Models
             [Validation(Required=false)]
             public List<RecognizeSceneResponseBodyDataTags> Tags { get; set; }
             public class RecognizeSceneResponseBodyDataTags : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>79</para>
+                /// </summary>
                 [NameInMap("Confidence")]
                 [Validation(Required=false)]
                 public float? Confidence { get; set; }
@@ -29,6 +33,10 @@ namespace AlibabaCloud.SDK.Imagerecog20190930.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>AC79F887-5CCB-42BE-8AC3-4D455EFEDB94</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

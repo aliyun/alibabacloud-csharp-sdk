@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Imagerecog20190930.Models
 {
     public class ClassifyingRubbishResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public ClassifyingRubbishResponseBody Body { get; set; }
 
     }
