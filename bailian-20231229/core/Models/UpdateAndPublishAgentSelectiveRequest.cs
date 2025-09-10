@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 [Validation(Required=false)]
                 public int? DialogRound { get; set; }
 
+                [NameInMap("enable_thinking")]
+                [Validation(Required=false)]
+                public bool? EnableThinking { get; set; }
+
                 [NameInMap("maxTokens")]
                 [Validation(Required=false)]
                 public int? MaxTokens { get; set; }

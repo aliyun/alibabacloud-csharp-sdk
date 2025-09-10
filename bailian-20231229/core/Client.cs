@@ -469,6 +469,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             {
                 body["OssRegionId"] = request.OssRegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OverWriteFileByOssKey))
+            {
+                body["OverWriteFileByOssKey"] = request.OverWriteFileByOssKey;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
             {
                 body["Tags"] = request.TagsShrink;
@@ -544,6 +548,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssRegionId))
             {
                 body["OssRegionId"] = request.OssRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OverWriteFileByOssKey))
+            {
+                body["OverWriteFileByOssKey"] = request.OverWriteFileByOssKey;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
             {
