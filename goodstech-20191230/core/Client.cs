@@ -23,6 +23,93 @@ namespace AlibabaCloud.SDK.Goodstech20191230
             this._endpoint = GetEndpoint("goodstech", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
 
+        public Dictionary<string, object> _postOSSObject(string bucketName, Dictionary<string, object> data)
+        {
+            TeaRequest request_ = new TeaRequest();
+            Dictionary<string, object> form = AlibabaCloud.TeaUtil.Common.AssertAsMap(data);
+            string boundary = AlibabaCloud.SDK.TeaFileform.Client.GetBoundary();
+            string host = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
+            request_.Protocol = "HTTPS";
+            request_.Method = "POST";
+            request_.Pathname = "/";
+            request_.Headers = new Dictionary<string, string>
+            {
+                {"host", host},
+                {"date", AlibabaCloud.TeaUtil.Common.GetDateUTCString()},
+                {"user-agent", AlibabaCloud.TeaUtil.Common.GetUserAgent("")},
+            };
+            request_.Headers["content-type"] = "multipart/form-data; boundary=" + boundary;
+            request_.Body = AlibabaCloud.SDK.TeaFileform.Client.ToFileForm(form, boundary);
+            TeaResponse response_ = TeaCore.DoAction(request_);
+
+            Dictionary<string, object> respMap = null;
+            string bodyStr = AlibabaCloud.TeaUtil.Common.ReadAsString(response_.Body);
+            if (AlibabaCloud.TeaUtil.Common.Is4xx(response_.StatusCode) || AlibabaCloud.TeaUtil.Common.Is5xx(response_.StatusCode))
+            {
+                respMap = AlibabaCloud.TeaXML.Client.ParseXml(bodyStr, null);
+                Dictionary<string, object> err = AlibabaCloud.TeaUtil.Common.AssertAsMap(respMap.Get("Error"));
+                throw new TeaException(new Dictionary<string, object>
+                {
+                    {"code", err.Get("Code")},
+                    {"message", err.Get("Message")},
+                    {"data", new Dictionary<string, object>
+                    {
+                        {"httpCode", response_.StatusCode},
+                        {"requestId", err.Get("RequestId")},
+                        {"hostId", err.Get("HostId")},
+                    }},
+                });
+            }
+            respMap = AlibabaCloud.TeaXML.Client.ParseXml(bodyStr, null);
+            return TeaConverter.merge<object>
+            (
+                respMap
+            );
+        }
+
+        public async Task<Dictionary<string, object>> _postOSSObjectAsync(string bucketName, Dictionary<string, object> data)
+        {
+            TeaRequest request_ = new TeaRequest();
+            Dictionary<string, object> form = AlibabaCloud.TeaUtil.Common.AssertAsMap(data);
+            string boundary = AlibabaCloud.SDK.TeaFileform.Client.GetBoundary();
+            string host = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
+            request_.Protocol = "HTTPS";
+            request_.Method = "POST";
+            request_.Pathname = "/";
+            request_.Headers = new Dictionary<string, string>
+            {
+                {"host", host},
+                {"date", AlibabaCloud.TeaUtil.Common.GetDateUTCString()},
+                {"user-agent", AlibabaCloud.TeaUtil.Common.GetUserAgent("")},
+            };
+            request_.Headers["content-type"] = "multipart/form-data; boundary=" + boundary;
+            request_.Body = AlibabaCloud.SDK.TeaFileform.Client.ToFileForm(form, boundary);
+            TeaResponse response_ = await TeaCore.DoActionAsync(request_);
+
+            Dictionary<string, object> respMap = null;
+            string bodyStr = AlibabaCloud.TeaUtil.Common.ReadAsString(response_.Body);
+            if (AlibabaCloud.TeaUtil.Common.Is4xx(response_.StatusCode) || AlibabaCloud.TeaUtil.Common.Is5xx(response_.StatusCode))
+            {
+                respMap = AlibabaCloud.TeaXML.Client.ParseXml(bodyStr, null);
+                Dictionary<string, object> err = AlibabaCloud.TeaUtil.Common.AssertAsMap(respMap.Get("Error"));
+                throw new TeaException(new Dictionary<string, object>
+                {
+                    {"code", err.Get("Code")},
+                    {"message", err.Get("Message")},
+                    {"data", new Dictionary<string, object>
+                    {
+                        {"httpCode", response_.StatusCode},
+                        {"requestId", err.Get("RequestId")},
+                        {"hostId", err.Get("HostId")},
+                    }},
+                });
+            }
+            respMap = AlibabaCloud.TeaXML.Client.ParseXml(bodyStr, null);
+            return TeaConverter.merge<object>
+            (
+                respMap
+            );
+        }
 
         public string GetEndpoint(string productId, string regionId, string endpointRule, string network, string suffix, Dictionary<string, string> endpointMap, string endpoint)
         {
@@ -37,6 +124,16 @@ namespace AlibabaCloud.SDK.Goodstech20191230
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /// <param name="request">
+        /// ClassifyCommodityRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ClassifyCommodityResponse
+        /// </returns>
         public ClassifyCommodityResponse ClassifyCommodityWithOptions(ClassifyCommodityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -64,6 +161,16 @@ namespace AlibabaCloud.SDK.Goodstech20191230
             return TeaModel.ToObject<ClassifyCommodityResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// ClassifyCommodityRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ClassifyCommodityResponse
+        /// </returns>
         public async Task<ClassifyCommodityResponse> ClassifyCommodityWithOptionsAsync(ClassifyCommodityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -91,12 +198,26 @@ namespace AlibabaCloud.SDK.Goodstech20191230
             return TeaModel.ToObject<ClassifyCommodityResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// ClassifyCommodityRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ClassifyCommodityResponse
+        /// </returns>
         public ClassifyCommodityResponse ClassifyCommodity(ClassifyCommodityRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ClassifyCommodityWithOptions(request, runtime);
         }
 
+        /// <param name="request">
+        /// ClassifyCommodityRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ClassifyCommodityResponse
+        /// </returns>
         public async Task<ClassifyCommodityResponse> ClassifyCommodityAsync(ClassifyCommodityRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -106,12 +227,22 @@ namespace AlibabaCloud.SDK.Goodstech20191230
         public ClassifyCommodityResponse ClassifyCommodityAdvance(ClassifyCommodityAdvanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             // Step 0: init client
-            string accessKeyId = this._credential.GetAccessKeyId();
-            string accessKeySecret = this._credential.GetAccessKeySecret();
-            string securityToken = this._credential.GetSecurityToken();
-            string credentialType = this._credential.GetType();
+            Aliyun.Credentials.Models.CredentialModel credentialModel = null;
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_credential))
+            {
+                throw new TeaException(new Dictionary<string, string>
+                {
+                    {"code", "InvalidCredentials"},
+                    {"message", "Please set up the credentials correctly. If you are setting them through environment variables, please ensure that ALIBABA_CLOUD_ACCESS_KEY_ID and ALIBABA_CLOUD_ACCESS_KEY_SECRET are set correctly. See https://help.aliyun.com/zh/sdk/developer-reference/configure-the-alibaba-cloud-accesskey-environment-variable-on-linux-macos-and-windows-systems for more details."},
+                });
+            }
+            credentialModel = this._credential.GetCredential();
+            string accessKeyId = credentialModel.AccessKeyId;
+            string accessKeySecret = credentialModel.AccessKeySecret;
+            string securityToken = credentialModel.SecurityToken;
+            string credentialType = credentialModel.Type;
             string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
                 openPlatformEndpoint = "openplatform.aliyuncs.com";
             }
@@ -129,56 +260,61 @@ namespace AlibabaCloud.SDK.Goodstech20191230
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.SDK.OpenPlatform20191219.Client authClient = new AlibabaCloud.SDK.OpenPlatform20191219.Client(authConfig);
-            AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadRequest authRequest = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadRequest
+            AlibabaCloud.OpenApiClient.Client authClient = new AlibabaCloud.OpenApiClient.Client(authConfig);
+            Dictionary<string, string> authRequest = new Dictionary<string, string>
             {
-                Product = "goodstech",
-                RegionId = _regionId,
+                {"Product", "goodstech"},
+                {"RegionId", _regionId},
             };
-            AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
-            AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest authReq = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                AccessKeySecret = accessKeySecret,
-                Type = "access_key",
-                Protocol = _protocol,
-                RegionId = _regionId,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(authRequest),
             };
-            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.OpenApiClient.Models.Params authParams = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AuthorizeFileUpload",
+                Version = "2019-12-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            Dictionary<string, object> authResponse = new Dictionary<string, object>(){};
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
-            AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
-            AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
-            AlibabaCloud.OSSUtil.Models.RuntimeOptions ossRuntime = new AlibabaCloud.OSSUtil.Models.RuntimeOptions();
-            AlibabaCloud.OpenApiUtil.Client.Convert(runtime, ossRuntime);
+            Dictionary<string, object> ossHeader = new Dictionary<string, object>(){};
+            Dictionary<string, object> tmpBody = new Dictionary<string, object>(){};
+            bool? useAccelerate = false;
+            Dictionary<string, string> authResponseBody = new Dictionary<string, string>(){};
             ClassifyCommodityRequest classifyCommodityReq = new ClassifyCommodityRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(request, classifyCommodityReq);
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageURLObject))
             {
-                authResponse = authClient.AuthorizeFileUploadWithOptions(authRequest, runtime);
-                ossConfig.AccessKeyId = authResponse.Body.AccessKeyId;
-                ossConfig.Endpoint = AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponse.Body.Endpoint, authResponse.Body.UseAccelerate, _endpointType);
-                ossClient = new AlibabaCloud.OSS.Client(ossConfig);
+                object tmpResp0 = authClient.CallApi(authParams, authReq, runtime);
+                authResponse = AlibabaCloud.TeaUtil.Common.AssertAsMap(tmpResp0);
+                tmpBody = AlibabaCloud.TeaUtil.Common.AssertAsMap(authResponse.Get("body"));
+                useAccelerate = AlibabaCloud.TeaUtil.Common.AssertAsBoolean(tmpBody.Get("UseAccelerate"));
+                authResponseBody = AlibabaCloud.TeaUtil.Common.StringifyMapValue(tmpBody);
                 fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
                 {
-                    Filename = authResponse.Body.ObjectKey,
+                    Filename = authResponseBody.Get("ObjectKey"),
                     Content = request.ImageURLObject,
                     ContentType = "",
                 };
-                ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader
+                ossHeader = new Dictionary<string, object>
                 {
-                    AccessKeyId = authResponse.Body.AccessKeyId,
-                    Policy = authResponse.Body.EncodedPolicy,
-                    Signature = authResponse.Body.Signature,
-                    Key = authResponse.Body.ObjectKey,
-                    File = fileObj,
-                    SuccessActionStatus = "201",
+                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
+                    {"policy", authResponseBody.Get("EncodedPolicy")},
+                    {"Signature", authResponseBody.Get("Signature")},
+                    {"key", authResponseBody.Get("ObjectKey")},
+                    {"file", fileObj},
+                    {"success_action_status", "201"},
                 };
-                uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest
-                {
-                    BucketName = authResponse.Body.Bucket,
-                    Header = ossHeader,
-                };
-                ossClient.PostObject(uploadRequest, ossRuntime);
-                classifyCommodityReq.ImageURL = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
+                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader);
+                classifyCommodityReq.ImageURL = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             ClassifyCommodityResponse classifyCommodityResp = ClassifyCommodityWithOptions(classifyCommodityReq, runtime);
             return classifyCommodityResp;
@@ -187,12 +323,22 @@ namespace AlibabaCloud.SDK.Goodstech20191230
         public async Task<ClassifyCommodityResponse> ClassifyCommodityAdvanceAsync(ClassifyCommodityAdvanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             // Step 0: init client
-            string accessKeyId = await this._credential.GetAccessKeyIdAsync();
-            string accessKeySecret = await this._credential.GetAccessKeySecretAsync();
-            string securityToken = await this._credential.GetSecurityTokenAsync();
-            string credentialType = this._credential.GetType();
+            Aliyun.Credentials.Models.CredentialModel credentialModel = null;
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_credential))
+            {
+                throw new TeaException(new Dictionary<string, string>
+                {
+                    {"code", "InvalidCredentials"},
+                    {"message", "Please set up the credentials correctly. If you are setting them through environment variables, please ensure that ALIBABA_CLOUD_ACCESS_KEY_ID and ALIBABA_CLOUD_ACCESS_KEY_SECRET are set correctly. See https://help.aliyun.com/zh/sdk/developer-reference/configure-the-alibaba-cloud-accesskey-environment-variable-on-linux-macos-and-windows-systems for more details."},
+                });
+            }
+            credentialModel = await this._credential.GetCredentialAsync();
+            string accessKeyId = credentialModel.AccessKeyId;
+            string accessKeySecret = credentialModel.AccessKeySecret;
+            string securityToken = credentialModel.SecurityToken;
+            string credentialType = credentialModel.Type;
             string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
             {
                 openPlatformEndpoint = "openplatform.aliyuncs.com";
             }
@@ -210,539 +356,64 @@ namespace AlibabaCloud.SDK.Goodstech20191230
                 Protocol = _protocol,
                 RegionId = _regionId,
             };
-            AlibabaCloud.SDK.OpenPlatform20191219.Client authClient = new AlibabaCloud.SDK.OpenPlatform20191219.Client(authConfig);
-            AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadRequest authRequest = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadRequest
+            AlibabaCloud.OpenApiClient.Client authClient = new AlibabaCloud.OpenApiClient.Client(authConfig);
+            Dictionary<string, string> authRequest = new Dictionary<string, string>
             {
-                Product = "goodstech",
-                RegionId = _regionId,
+                {"Product", "goodstech"},
+                {"RegionId", _regionId},
             };
-            AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
-            AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest authReq = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                AccessKeySecret = accessKeySecret,
-                Type = "access_key",
-                Protocol = _protocol,
-                RegionId = _regionId,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(authRequest),
             };
-            AlibabaCloud.OSS.Client ossClient = null;
+            AlibabaCloud.OpenApiClient.Models.Params authParams = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AuthorizeFileUpload",
+                Version = "2019-12-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            Dictionary<string, object> authResponse = new Dictionary<string, object>(){};
             AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
-            AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
-            AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
-            AlibabaCloud.OSSUtil.Models.RuntimeOptions ossRuntime = new AlibabaCloud.OSSUtil.Models.RuntimeOptions();
-            AlibabaCloud.OpenApiUtil.Client.Convert(runtime, ossRuntime);
+            Dictionary<string, object> ossHeader = new Dictionary<string, object>(){};
+            Dictionary<string, object> tmpBody = new Dictionary<string, object>(){};
+            bool? useAccelerate = false;
+            Dictionary<string, string> authResponseBody = new Dictionary<string, string>(){};
             ClassifyCommodityRequest classifyCommodityReq = new ClassifyCommodityRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(request, classifyCommodityReq);
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageURLObject))
             {
-                authResponse = await authClient.AuthorizeFileUploadWithOptionsAsync(authRequest, runtime);
-                ossConfig.AccessKeyId = authResponse.Body.AccessKeyId;
-                ossConfig.Endpoint = AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponse.Body.Endpoint, authResponse.Body.UseAccelerate, _endpointType);
-                ossClient = new AlibabaCloud.OSS.Client(ossConfig);
+                object tmpResp0 = await authClient.CallApiAsync(authParams, authReq, runtime);
+                authResponse = AlibabaCloud.TeaUtil.Common.AssertAsMap(tmpResp0);
+                tmpBody = AlibabaCloud.TeaUtil.Common.AssertAsMap(authResponse.Get("body"));
+                useAccelerate = AlibabaCloud.TeaUtil.Common.AssertAsBoolean(tmpBody.Get("UseAccelerate"));
+                authResponseBody = AlibabaCloud.TeaUtil.Common.StringifyMapValue(tmpBody);
                 fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
                 {
-                    Filename = authResponse.Body.ObjectKey,
+                    Filename = authResponseBody.Get("ObjectKey"),
                     Content = request.ImageURLObject,
                     ContentType = "",
                 };
-                ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader
+                ossHeader = new Dictionary<string, object>
                 {
-                    AccessKeyId = authResponse.Body.AccessKeyId,
-                    Policy = authResponse.Body.EncodedPolicy,
-                    Signature = authResponse.Body.Signature,
-                    Key = authResponse.Body.ObjectKey,
-                    File = fileObj,
-                    SuccessActionStatus = "201",
+                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
+                    {"policy", authResponseBody.Get("EncodedPolicy")},
+                    {"Signature", authResponseBody.Get("Signature")},
+                    {"key", authResponseBody.Get("ObjectKey")},
+                    {"file", fileObj},
+                    {"success_action_status", "201"},
                 };
-                uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest
-                {
-                    BucketName = authResponse.Body.Bucket,
-                    Header = ossHeader,
-                };
-                await ossClient.PostObjectAsync(uploadRequest, ossRuntime);
-                classifyCommodityReq.ImageURL = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
+                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader);
+                classifyCommodityReq.ImageURL = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             ClassifyCommodityResponse classifyCommodityResp = await ClassifyCommodityWithOptionsAsync(classifyCommodityReq, runtime);
             return classifyCommodityResp;
-        }
-
-        public RecognizeFurnitureAttributeResponse RecognizeFurnitureAttributeWithOptions(RecognizeFurnitureAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageURL))
-            {
-                body["ImageURL"] = request.ImageURL;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "RecognizeFurnitureAttribute",
-                Version = "2019-12-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<RecognizeFurnitureAttributeResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<RecognizeFurnitureAttributeResponse> RecognizeFurnitureAttributeWithOptionsAsync(RecognizeFurnitureAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageURL))
-            {
-                body["ImageURL"] = request.ImageURL;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "RecognizeFurnitureAttribute",
-                Version = "2019-12-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<RecognizeFurnitureAttributeResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public RecognizeFurnitureAttributeResponse RecognizeFurnitureAttribute(RecognizeFurnitureAttributeRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return RecognizeFurnitureAttributeWithOptions(request, runtime);
-        }
-
-        public async Task<RecognizeFurnitureAttributeResponse> RecognizeFurnitureAttributeAsync(RecognizeFurnitureAttributeRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await RecognizeFurnitureAttributeWithOptionsAsync(request, runtime);
-        }
-
-        public RecognizeFurnitureAttributeResponse RecognizeFurnitureAttributeAdvance(RecognizeFurnitureAttributeAdvanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            // Step 0: init client
-            string accessKeyId = this._credential.GetAccessKeyId();
-            string accessKeySecret = this._credential.GetAccessKeySecret();
-            string securityToken = this._credential.GetSecurityToken();
-            string credentialType = this._credential.GetType();
-            string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
-            {
-                openPlatformEndpoint = "openplatform.aliyuncs.com";
-            }
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(credentialType))
-            {
-                credentialType = "access_key";
-            }
-            AlibabaCloud.OpenApiClient.Models.Config authConfig = new AlibabaCloud.OpenApiClient.Models.Config
-            {
-                AccessKeyId = accessKeyId,
-                AccessKeySecret = accessKeySecret,
-                SecurityToken = securityToken,
-                Type = credentialType,
-                Endpoint = openPlatformEndpoint,
-                Protocol = _protocol,
-                RegionId = _regionId,
-            };
-            AlibabaCloud.SDK.OpenPlatform20191219.Client authClient = new AlibabaCloud.SDK.OpenPlatform20191219.Client(authConfig);
-            AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadRequest authRequest = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadRequest
-            {
-                Product = "goodstech",
-                RegionId = _regionId,
-            };
-            AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
-            AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
-            {
-                AccessKeySecret = accessKeySecret,
-                Type = "access_key",
-                Protocol = _protocol,
-                RegionId = _regionId,
-            };
-            AlibabaCloud.OSS.Client ossClient = null;
-            AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
-            AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
-            AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
-            AlibabaCloud.OSSUtil.Models.RuntimeOptions ossRuntime = new AlibabaCloud.OSSUtil.Models.RuntimeOptions();
-            AlibabaCloud.OpenApiUtil.Client.Convert(runtime, ossRuntime);
-            RecognizeFurnitureAttributeRequest recognizeFurnitureAttributeReq = new RecognizeFurnitureAttributeRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(request, recognizeFurnitureAttributeReq);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageURLObject))
-            {
-                authResponse = authClient.AuthorizeFileUploadWithOptions(authRequest, runtime);
-                ossConfig.AccessKeyId = authResponse.Body.AccessKeyId;
-                ossConfig.Endpoint = AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponse.Body.Endpoint, authResponse.Body.UseAccelerate, _endpointType);
-                ossClient = new AlibabaCloud.OSS.Client(ossConfig);
-                fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
-                {
-                    Filename = authResponse.Body.ObjectKey,
-                    Content = request.ImageURLObject,
-                    ContentType = "",
-                };
-                ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader
-                {
-                    AccessKeyId = authResponse.Body.AccessKeyId,
-                    Policy = authResponse.Body.EncodedPolicy,
-                    Signature = authResponse.Body.Signature,
-                    Key = authResponse.Body.ObjectKey,
-                    File = fileObj,
-                    SuccessActionStatus = "201",
-                };
-                uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest
-                {
-                    BucketName = authResponse.Body.Bucket,
-                    Header = ossHeader,
-                };
-                ossClient.PostObject(uploadRequest, ossRuntime);
-                recognizeFurnitureAttributeReq.ImageURL = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
-            }
-            RecognizeFurnitureAttributeResponse recognizeFurnitureAttributeResp = RecognizeFurnitureAttributeWithOptions(recognizeFurnitureAttributeReq, runtime);
-            return recognizeFurnitureAttributeResp;
-        }
-
-        public async Task<RecognizeFurnitureAttributeResponse> RecognizeFurnitureAttributeAdvanceAsync(RecognizeFurnitureAttributeAdvanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            // Step 0: init client
-            string accessKeyId = await this._credential.GetAccessKeyIdAsync();
-            string accessKeySecret = await this._credential.GetAccessKeySecretAsync();
-            string securityToken = await this._credential.GetSecurityTokenAsync();
-            string credentialType = this._credential.GetType();
-            string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
-            {
-                openPlatformEndpoint = "openplatform.aliyuncs.com";
-            }
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(credentialType))
-            {
-                credentialType = "access_key";
-            }
-            AlibabaCloud.OpenApiClient.Models.Config authConfig = new AlibabaCloud.OpenApiClient.Models.Config
-            {
-                AccessKeyId = accessKeyId,
-                AccessKeySecret = accessKeySecret,
-                SecurityToken = securityToken,
-                Type = credentialType,
-                Endpoint = openPlatformEndpoint,
-                Protocol = _protocol,
-                RegionId = _regionId,
-            };
-            AlibabaCloud.SDK.OpenPlatform20191219.Client authClient = new AlibabaCloud.SDK.OpenPlatform20191219.Client(authConfig);
-            AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadRequest authRequest = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadRequest
-            {
-                Product = "goodstech",
-                RegionId = _regionId,
-            };
-            AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
-            AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
-            {
-                AccessKeySecret = accessKeySecret,
-                Type = "access_key",
-                Protocol = _protocol,
-                RegionId = _regionId,
-            };
-            AlibabaCloud.OSS.Client ossClient = null;
-            AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
-            AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
-            AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
-            AlibabaCloud.OSSUtil.Models.RuntimeOptions ossRuntime = new AlibabaCloud.OSSUtil.Models.RuntimeOptions();
-            AlibabaCloud.OpenApiUtil.Client.Convert(runtime, ossRuntime);
-            RecognizeFurnitureAttributeRequest recognizeFurnitureAttributeReq = new RecognizeFurnitureAttributeRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(request, recognizeFurnitureAttributeReq);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageURLObject))
-            {
-                authResponse = await authClient.AuthorizeFileUploadWithOptionsAsync(authRequest, runtime);
-                ossConfig.AccessKeyId = authResponse.Body.AccessKeyId;
-                ossConfig.Endpoint = AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponse.Body.Endpoint, authResponse.Body.UseAccelerate, _endpointType);
-                ossClient = new AlibabaCloud.OSS.Client(ossConfig);
-                fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
-                {
-                    Filename = authResponse.Body.ObjectKey,
-                    Content = request.ImageURLObject,
-                    ContentType = "",
-                };
-                ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader
-                {
-                    AccessKeyId = authResponse.Body.AccessKeyId,
-                    Policy = authResponse.Body.EncodedPolicy,
-                    Signature = authResponse.Body.Signature,
-                    Key = authResponse.Body.ObjectKey,
-                    File = fileObj,
-                    SuccessActionStatus = "201",
-                };
-                uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest
-                {
-                    BucketName = authResponse.Body.Bucket,
-                    Header = ossHeader,
-                };
-                await ossClient.PostObjectAsync(uploadRequest, ossRuntime);
-                recognizeFurnitureAttributeReq.ImageURL = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
-            }
-            RecognizeFurnitureAttributeResponse recognizeFurnitureAttributeResp = await RecognizeFurnitureAttributeWithOptionsAsync(recognizeFurnitureAttributeReq, runtime);
-            return recognizeFurnitureAttributeResp;
-        }
-
-        public RecognizeFurnitureSpuResponse RecognizeFurnitureSpuWithOptions(RecognizeFurnitureSpuRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageURL))
-            {
-                body["ImageURL"] = request.ImageURL;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XLength))
-            {
-                body["XLength"] = request.XLength;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.YLength))
-            {
-                body["YLength"] = request.YLength;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZLength))
-            {
-                body["ZLength"] = request.ZLength;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "RecognizeFurnitureSpu",
-                Version = "2019-12-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<RecognizeFurnitureSpuResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<RecognizeFurnitureSpuResponse> RecognizeFurnitureSpuWithOptionsAsync(RecognizeFurnitureSpuRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageURL))
-            {
-                body["ImageURL"] = request.ImageURL;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XLength))
-            {
-                body["XLength"] = request.XLength;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.YLength))
-            {
-                body["YLength"] = request.YLength;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZLength))
-            {
-                body["ZLength"] = request.ZLength;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "RecognizeFurnitureSpu",
-                Version = "2019-12-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<RecognizeFurnitureSpuResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public RecognizeFurnitureSpuResponse RecognizeFurnitureSpu(RecognizeFurnitureSpuRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return RecognizeFurnitureSpuWithOptions(request, runtime);
-        }
-
-        public async Task<RecognizeFurnitureSpuResponse> RecognizeFurnitureSpuAsync(RecognizeFurnitureSpuRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await RecognizeFurnitureSpuWithOptionsAsync(request, runtime);
-        }
-
-        public RecognizeFurnitureSpuResponse RecognizeFurnitureSpuAdvance(RecognizeFurnitureSpuAdvanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            // Step 0: init client
-            string accessKeyId = this._credential.GetAccessKeyId();
-            string accessKeySecret = this._credential.GetAccessKeySecret();
-            string securityToken = this._credential.GetSecurityToken();
-            string credentialType = this._credential.GetType();
-            string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
-            {
-                openPlatformEndpoint = "openplatform.aliyuncs.com";
-            }
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(credentialType))
-            {
-                credentialType = "access_key";
-            }
-            AlibabaCloud.OpenApiClient.Models.Config authConfig = new AlibabaCloud.OpenApiClient.Models.Config
-            {
-                AccessKeyId = accessKeyId,
-                AccessKeySecret = accessKeySecret,
-                SecurityToken = securityToken,
-                Type = credentialType,
-                Endpoint = openPlatformEndpoint,
-                Protocol = _protocol,
-                RegionId = _regionId,
-            };
-            AlibabaCloud.SDK.OpenPlatform20191219.Client authClient = new AlibabaCloud.SDK.OpenPlatform20191219.Client(authConfig);
-            AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadRequest authRequest = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadRequest
-            {
-                Product = "goodstech",
-                RegionId = _regionId,
-            };
-            AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
-            AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
-            {
-                AccessKeySecret = accessKeySecret,
-                Type = "access_key",
-                Protocol = _protocol,
-                RegionId = _regionId,
-            };
-            AlibabaCloud.OSS.Client ossClient = null;
-            AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
-            AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
-            AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
-            AlibabaCloud.OSSUtil.Models.RuntimeOptions ossRuntime = new AlibabaCloud.OSSUtil.Models.RuntimeOptions();
-            AlibabaCloud.OpenApiUtil.Client.Convert(runtime, ossRuntime);
-            RecognizeFurnitureSpuRequest recognizeFurnitureSpuReq = new RecognizeFurnitureSpuRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(request, recognizeFurnitureSpuReq);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageURLObject))
-            {
-                authResponse = authClient.AuthorizeFileUploadWithOptions(authRequest, runtime);
-                ossConfig.AccessKeyId = authResponse.Body.AccessKeyId;
-                ossConfig.Endpoint = AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponse.Body.Endpoint, authResponse.Body.UseAccelerate, _endpointType);
-                ossClient = new AlibabaCloud.OSS.Client(ossConfig);
-                fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
-                {
-                    Filename = authResponse.Body.ObjectKey,
-                    Content = request.ImageURLObject,
-                    ContentType = "",
-                };
-                ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader
-                {
-                    AccessKeyId = authResponse.Body.AccessKeyId,
-                    Policy = authResponse.Body.EncodedPolicy,
-                    Signature = authResponse.Body.Signature,
-                    Key = authResponse.Body.ObjectKey,
-                    File = fileObj,
-                    SuccessActionStatus = "201",
-                };
-                uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest
-                {
-                    BucketName = authResponse.Body.Bucket,
-                    Header = ossHeader,
-                };
-                ossClient.PostObject(uploadRequest, ossRuntime);
-                recognizeFurnitureSpuReq.ImageURL = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
-            }
-            RecognizeFurnitureSpuResponse recognizeFurnitureSpuResp = RecognizeFurnitureSpuWithOptions(recognizeFurnitureSpuReq, runtime);
-            return recognizeFurnitureSpuResp;
-        }
-
-        public async Task<RecognizeFurnitureSpuResponse> RecognizeFurnitureSpuAdvanceAsync(RecognizeFurnitureSpuAdvanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            // Step 0: init client
-            string accessKeyId = await this._credential.GetAccessKeyIdAsync();
-            string accessKeySecret = await this._credential.GetAccessKeySecretAsync();
-            string securityToken = await this._credential.GetSecurityTokenAsync();
-            string credentialType = this._credential.GetType();
-            string openPlatformEndpoint = _openPlatformEndpoint;
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(openPlatformEndpoint))
-            {
-                openPlatformEndpoint = "openplatform.aliyuncs.com";
-            }
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(credentialType))
-            {
-                credentialType = "access_key";
-            }
-            AlibabaCloud.OpenApiClient.Models.Config authConfig = new AlibabaCloud.OpenApiClient.Models.Config
-            {
-                AccessKeyId = accessKeyId,
-                AccessKeySecret = accessKeySecret,
-                SecurityToken = securityToken,
-                Type = credentialType,
-                Endpoint = openPlatformEndpoint,
-                Protocol = _protocol,
-                RegionId = _regionId,
-            };
-            AlibabaCloud.SDK.OpenPlatform20191219.Client authClient = new AlibabaCloud.SDK.OpenPlatform20191219.Client(authConfig);
-            AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadRequest authRequest = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadRequest
-            {
-                Product = "goodstech",
-                RegionId = _regionId,
-            };
-            AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
-            AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
-            {
-                AccessKeySecret = accessKeySecret,
-                Type = "access_key",
-                Protocol = _protocol,
-                RegionId = _regionId,
-            };
-            AlibabaCloud.OSS.Client ossClient = null;
-            AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
-            AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
-            AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
-            AlibabaCloud.OSSUtil.Models.RuntimeOptions ossRuntime = new AlibabaCloud.OSSUtil.Models.RuntimeOptions();
-            AlibabaCloud.OpenApiUtil.Client.Convert(runtime, ossRuntime);
-            RecognizeFurnitureSpuRequest recognizeFurnitureSpuReq = new RecognizeFurnitureSpuRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(request, recognizeFurnitureSpuReq);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageURLObject))
-            {
-                authResponse = await authClient.AuthorizeFileUploadWithOptionsAsync(authRequest, runtime);
-                ossConfig.AccessKeyId = authResponse.Body.AccessKeyId;
-                ossConfig.Endpoint = AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponse.Body.Endpoint, authResponse.Body.UseAccelerate, _endpointType);
-                ossClient = new AlibabaCloud.OSS.Client(ossConfig);
-                fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
-                {
-                    Filename = authResponse.Body.ObjectKey,
-                    Content = request.ImageURLObject,
-                    ContentType = "",
-                };
-                ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader
-                {
-                    AccessKeyId = authResponse.Body.AccessKeyId,
-                    Policy = authResponse.Body.EncodedPolicy,
-                    Signature = authResponse.Body.Signature,
-                    Key = authResponse.Body.ObjectKey,
-                    File = fileObj,
-                    SuccessActionStatus = "201",
-                };
-                uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest
-                {
-                    BucketName = authResponse.Body.Bucket,
-                    Header = ossHeader,
-                };
-                await ossClient.PostObjectAsync(uploadRequest, ossRuntime);
-                recognizeFurnitureSpuReq.ImageURL = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
-            }
-            RecognizeFurnitureSpuResponse recognizeFurnitureSpuResp = await RecognizeFurnitureSpuWithOptionsAsync(recognizeFurnitureSpuReq, runtime);
-            return recognizeFurnitureSpuResp;
         }
 
     }

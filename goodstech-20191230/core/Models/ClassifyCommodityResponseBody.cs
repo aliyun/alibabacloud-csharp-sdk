@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Goodstech20191230.Models
             [Validation(Required=false)]
             public List<ClassifyCommodityResponseBodyDataCategories> Categories { get; set; }
             public class ClassifyCommodityResponseBodyDataCategories : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>584</para>
+                /// </summary>
                 [NameInMap("CategoryId")]
                 [Validation(Required=false)]
                 public string CategoryId { get; set; }
@@ -25,6 +29,10 @@ namespace AlibabaCloud.SDK.Goodstech20191230.Models
                 [Validation(Required=false)]
                 public string CategoryName { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0.417248</para>
+                /// </summary>
                 [NameInMap("Score")]
                 [Validation(Required=false)]
                 public float? Score { get; set; }
@@ -33,6 +41,10 @@ namespace AlibabaCloud.SDK.Goodstech20191230.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>87C5AF93-F641-54C2-873D-0501E637489C</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
