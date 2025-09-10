@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
     public class GetQuotaTemplateServiceStatusRequest : TeaModel {
         /// <summary>
-        /// The ID of the resource directory.
+        /// <para>The ID of the resource directory.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rd-pG****</para>
         /// </summary>
         [NameInMap("ResourceDirectoryId")]
         [Validation(Required=false)]

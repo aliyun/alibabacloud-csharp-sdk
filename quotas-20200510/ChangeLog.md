@@ -1,3 +1,7 @@
+2025-09-10 Version: 1.2.1
+- Update API CreateQuotaAlarm: add request parameters OriginalContext.
+
+
 2024-07-01 Version: 1.2.0
 - Support API GetQuotaApplicationApproval.
 - Support API RemindQuotaApplicationApproval.

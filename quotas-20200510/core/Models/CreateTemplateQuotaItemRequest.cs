@@ -10,48 +10,62 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
     public class CreateTemplateQuotaItemRequest : TeaModel {
         /// <summary>
-        /// The requested value of the quota.
+        /// <para>The requested value of the quota.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>You can specify DesireValue based on the values of <c>TotalUsage</c> and <c>ApplicableRange</c> in the response to the <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a> operation.</para>
+        /// </description></item>
+        /// <item><description><para>Applications are reviewed by the technical support team for each cloud service. To increase the success rate of your application, specify a reasonable quota value and a detailed reason.</para>
+        /// </description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > 
-        /// 
-        /// *   You can specify DesireValue based on the values of `TotalUsage` and `ApplicableRange` in the response to the [ListProductQuotas](https://help.aliyun.com/document_detail/440554.html) operation.
-        /// 
-        /// *   Applications are reviewed by the technical support team for each cloud service. To increase the success rate of your application, specify a reasonable quota value and a detailed reason.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>804</para>
         /// </summary>
         [NameInMap("DesireValue")]
         [Validation(Required=false)]
         public float? DesireValue { get; set; }
 
         /// <summary>
-        /// The quota dimensions.
+        /// <para>The quota dimensions.</para>
         /// </summary>
         [NameInMap("Dimensions")]
         [Validation(Required=false)]
         public List<CreateTemplateQuotaItemRequestDimensions> Dimensions { get; set; }
         public class CreateTemplateQuotaItemRequestDimensions : TeaModel {
             /// <summary>
-            /// The key of the dimension.
+            /// <para>The key of the dimension.</para>
+            /// <remarks>
+            /// </remarks>
+            /// <list type="bullet">
+            /// <item><description><para>The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</para>
+            /// </description></item>
+            /// <item><description><para>This parameter is required if you set the <c>ProductCode</c> parameter to <c>ecs</c>, <c>ecs-spec</c>, <c>actiontrail</c>, or <c>ess</c>.</para>
+            /// </description></item>
+            /// </list>
             /// 
-            /// > 
-            /// 
-            /// *   The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
-            /// 
-            /// *   This parameter is required if you set the `ProductCode` parameter to `ecs`, `ecs-spec`, `actiontrail`, or `ess`.
+            /// <b>Example:</b>
+            /// <para>regionId</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of the dimension.
+            /// <para>The value of the dimension.</para>
+            /// <remarks>
+            /// </remarks>
+            /// <list type="bullet">
+            /// <item><description><para>The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</para>
+            /// </description></item>
+            /// <item><description><para>This parameter is required if you set the <c>ProductCode</c> parameter to <c>ecs</c>, <c>ecs-spec</c>, <c>actiontrail</c>, or <c>ess</c>.</para>
+            /// </description></item>
+            /// </list>
             /// 
-            /// > 
-            /// 
-            /// *   The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
-            /// 
-            /// *   This parameter is required if you set the `ProductCode` parameter to `ecs`, `ecs-spec`, `actiontrail`, or `ess`.
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -60,71 +74,97 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         }
 
         /// <summary>
-        /// The start time of the validity period of the quota. Specify the value in UTC. This parameter is valid only if you set the QuotaCategory parameter to WhiteListLabel.
+        /// <para>The start time of the validity period of the quota. Specify the value in UTC. This parameter is valid only if you set the QuotaCategory parameter to WhiteListLabel.</para>
+        /// <remarks>
+        /// <para>If you leave this parameter empty, the quota takes effect immediately.</para>
+        /// </remarks>
         /// 
-        /// > If you leave this parameter empty, the quota takes effect immediately.
+        /// <b>Example:</b>
+        /// <para>2021-01-19T09:25:56Z</para>
         /// </summary>
         [NameInMap("EffectiveTime")]
         [Validation(Required=false)]
         public string EffectiveTime { get; set; }
 
         /// <summary>
-        /// The language of the quota alert notification. Valid values:
+        /// <para>The language of the quota alert notification. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh (default value): Chinese</description></item>
+        /// <item><description>en: English</description></item>
+        /// </list>
         /// 
-        /// *   zh (default value): Chinese
-        /// *   en: English
+        /// <b>Example:</b>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("EnvLanguage")]
         [Validation(Required=false)]
         public string EnvLanguage { get; set; }
 
         /// <summary>
-        /// The end time of the validity period of the quota. Specify the value in UTC. This parameter is valid only if you set the QuotaCategory parameter to WhiteListLabel.
+        /// <para>The end time of the validity period of the quota. Specify the value in UTC. This parameter is valid only if you set the QuotaCategory parameter to WhiteListLabel.</para>
+        /// <remarks>
+        /// <para>If you leave this parameter empty, no end time is specified.</para>
+        /// </remarks>
         /// 
-        /// > If you leave this parameter empty, no end time is specified.
+        /// <b>Example:</b>
+        /// <para>2021-01-20T09:25:56Z</para>
         /// </summary>
         [NameInMap("ExpireTime")]
         [Validation(Required=false)]
         public string ExpireTime { get; set; }
 
         /// <summary>
-        /// Specifies whether to send a notification about the application result. Valid values:
+        /// <para>Specifies whether to send a notification about the application result. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0 (default value): no</description></item>
+        /// <item><description>3: yes</description></item>
+        /// </list>
         /// 
-        /// *   0 (default value): no
-        /// *   3: yes
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("NoticeType")]
         [Validation(Required=false)]
         public long? NoticeType { get; set; }
 
         /// <summary>
-        /// The abbreviation of the Alibaba Cloud service name.
+        /// <para>The abbreviation of the Alibaba Cloud service name.</para>
+        /// <remarks>
+        /// <para> To query the abbreviation of an Alibaba Cloud service name, call the <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a> operation and check the value of <c>ProductCode</c> in the response.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  To query the abbreviation of an Alibaba Cloud service name, call the [ListProducts](https://help.aliyun.com/document_detail/440555.html) operation and check the value of `ProductCode` in the response.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ecs</para>
         /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// The quota ID.
+        /// <para>The quota ID.</para>
+        /// <remarks>
+        /// <para> To obtain the quota ID of an Alibaba Cloud service, call the <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a> operation and check the value of <c>QuotaActionCode</c> in the response.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  To obtain the quota ID of an Alibaba Cloud service, call the [ListProductQuotas](https://help.aliyun.com/document_detail/440554.html) operation and check the value of `QuotaActionCode` in the response.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>q_security-groups</para>
         /// </summary>
         [NameInMap("QuotaActionCode")]
         [Validation(Required=false)]
         public string QuotaActionCode { get; set; }
 
         /// <summary>
-        /// The quota type. Valid values:
+        /// <para>The quota type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>CommonQuota: general quota</description></item>
+        /// <item><description>WhiteListLabel: privilege</description></item>
+        /// <item><description>FlowControl: API rate limit</description></item>
+        /// </list>
         /// 
-        /// *   CommonQuota: general quota
-        /// *   WhiteListLabel: privilege
-        /// *   FlowControl: API rate limit
+        /// <b>Example:</b>
+        /// <para>CommonQuota</para>
         /// </summary>
         [NameInMap("QuotaCategory")]
         [Validation(Required=false)]

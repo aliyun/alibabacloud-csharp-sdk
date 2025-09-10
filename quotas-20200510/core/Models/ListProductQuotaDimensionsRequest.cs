@@ -10,37 +10,49 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
     public class ListProductQuotaDimensionsRequest : TeaModel {
         /// <summary>
-        /// The maximum number of records that can be returned for the query.
+        /// <para>The maximum number of records that can be returned for the query.</para>
+        /// <para>Valid values: 1 to 200. Default value: 30.</para>
         /// 
-        /// Valid values: 1 to 200. Default value: 30.
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that marks the position from which you want to start the query. If you leave this parameter empty, the query starts from the beginning.
+        /// <para>The token that marks the position from which you want to start the query. If you leave this parameter empty, the query starts from the beginning.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The abbreviation of the Alibaba Cloud service name.
+        /// <para>The abbreviation of the Alibaba Cloud service name.</para>
+        /// <remarks>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/182368.html">Alibaba Cloud services that support Quota Center</a>.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// > For more information, see [Alibaba Cloud services that support Quota Center](https://help.aliyun.com/document_detail/182368.html).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ecs</para>
         /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// The type of the quota. Valid values:
+        /// <para>The type of the quota. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>FlowControl: API rate limit.</description></item>
+        /// <item><description>CommonQuota: general quota. This is the default value.</description></item>
+        /// </list>
         /// 
-        /// *   FlowControl: API rate limit.
-        /// *   CommonQuota: general quota. This is the default value.
+        /// <b>Example:</b>
+        /// <para>CommonQuota</para>
         /// </summary>
         [NameInMap("QuotaCategory")]
         [Validation(Required=false)]

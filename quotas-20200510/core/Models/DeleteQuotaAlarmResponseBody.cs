@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
     public class DeleteQuotaAlarmResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A95C65B3-7CF4-469E-B1D5-1CA0628A6411</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

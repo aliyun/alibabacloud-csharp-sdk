@@ -10,66 +10,92 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
     public class ListQuotaApplicationsForTemplateRequest : TeaModel {
         /// <summary>
-        /// The UTC time when the quota application ends.
+        /// <para>The UTC time when the quota application ends.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2023-05-22T16:00:00Z</para>
         /// </summary>
         [NameInMap("ApplyEndTime")]
         [Validation(Required=false)]
         public string ApplyEndTime { get; set; }
 
         /// <summary>
-        /// The UTC time when the quota application starts.
+        /// <para>The UTC time when the quota application starts.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2023-05-22T16:00:00Z</para>
         /// </summary>
         [NameInMap("ApplyStartTime")]
         [Validation(Required=false)]
         public string ApplyStartTime { get; set; }
 
         /// <summary>
-        /// The ID of the quota application batch.
+        /// <para>The ID of the quota application batch.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>d314d6ae-867d-484c-9009-3d421a80****</para>
         /// </summary>
         [NameInMap("BatchQuotaApplicationId")]
         [Validation(Required=false)]
         public string BatchQuotaApplicationId { get; set; }
 
         /// <summary>
-        /// The maximum number of entries to return for a single request.
+        /// <para>The maximum number of entries to return for a single request.</para>
+        /// <para>Valid values: 1 to 100. Default value: 30.</para>
         /// 
-        /// Valid values: 1 to 100. Default value: 30.
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that marks the position from which you want to start the query.
+        /// <para>The token that marks the position from which you want to start the query.</para>
+        /// <remarks>
+        /// <para> An empty value indicates that the query starts from the beginning.</para>
+        /// </remarks>
         /// 
-        /// >  An empty value indicates that the query starts from the beginning.
+        /// <b>Example:</b>
+        /// <para>4</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The abbreviation of the Alibaba Cloud service name.
+        /// <para>The abbreviation of the Alibaba Cloud service name.</para>
+        /// <remarks>
+        /// <para> To query the abbreviation of an Alibaba Cloud service name, call the <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a> operation and check the value of <c>ProductCode</c> in the response.</para>
+        /// </remarks>
         /// 
-        /// >  To query the abbreviation of an Alibaba Cloud service name, call the [ListProducts](https://help.aliyun.com/document_detail/440555.html) operation and check the value of `ProductCode` in the response.
+        /// <b>Example:</b>
+        /// <para>ecs-spec</para>
         /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// The quota ID.
+        /// <para>The quota ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ecs.g5.2xlarge</para>
         /// </summary>
         [NameInMap("QuotaActionCode")]
         [Validation(Required=false)]
         public string QuotaActionCode { get; set; }
 
         /// <summary>
-        /// The quota type. Valid values:
+        /// <para>The type of the quota. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>CommonQuota: general quota</description></item>
+        /// <item><description>FlowControl: API rate limit</description></item>
+        /// <item><description>WhiteListLabel: privilege</description></item>
+        /// </list>
         /// 
-        /// *   CommonQuota: general quota
-        /// *   FlowControl: API rate limit
-        /// *   WhiteListLabel: privilege
+        /// <b>Example:</b>
+        /// <para>CommonQuota</para>
         /// </summary>
         [NameInMap("QuotaCategory")]
         [Validation(Required=false)]

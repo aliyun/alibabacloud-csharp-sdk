@@ -10,124 +10,164 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
     public class ListQuotaApplicationTemplatesResponseBody : TeaModel {
         /// <summary>
-        /// The maximum number of records returned for the query.
+        /// <para>The maximum number of records returned for the query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The token that marks the position at which the query ends.
+        /// <para>The token that marks the position at which the query ends.</para>
+        /// <remarks>
+        /// <para>An empty value indicates that all data is returned.</para>
+        /// </remarks>
         /// 
-        /// > An empty value indicates that all data is returned.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The queried quota templates.
+        /// <para>The information about quota templates.</para>
         /// </summary>
         [NameInMap("QuotaApplicationTemplates")]
         [Validation(Required=false)]
         public List<ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplates> QuotaApplicationTemplates { get; set; }
         public class ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplates : TeaModel {
             /// <summary>
-            /// None
+            /// <para>None.</para>
             /// </summary>
             [NameInMap("ApplicableRange")]
             [Validation(Required=false)]
             public List<float?> ApplicableRange { get; set; }
 
             /// <summary>
-            /// The type of the adjustable value. Valid values:
+            /// <para>The type of the adjustable value. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>continuous</description></item>
+            /// <item><description>discontinuous</description></item>
+            /// </list>
             /// 
-            /// *   continuous
-            /// *   discontinuous
+            /// <b>Example:</b>
+            /// <para>continuous</para>
             /// </summary>
             [NameInMap("ApplicableType")]
             [Validation(Required=false)]
             public string ApplicableType { get; set; }
 
             /// <summary>
-            /// The requested value of the quota.
+            /// <para>The requested value of the quota.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>802</para>
             /// </summary>
             [NameInMap("DesireValue")]
             [Validation(Required=false)]
             public float? DesireValue { get; set; }
 
             /// <summary>
-            /// The quota dimensions.
+            /// <para>The quota dimensions.</para>
+            /// <para>Format: {&quot;regionId&quot;:&quot;Region&quot;}.</para>
             /// 
-            /// Format: {"regionId":"Region"}.
+            /// <b>Example:</b>
+            /// <para>{&quot;regionId&quot;:&quot;cn-hangzhou&quot;}</para>
             /// </summary>
             [NameInMap("Dimensions")]
             [Validation(Required=false)]
             public Dictionary<string, object> Dimensions { get; set; }
 
             /// <summary>
-            /// The start time of the validity period of the quota. The value is displayed in UTC.
+            /// <para>The start time of the validity period of the quota. The value is displayed in UTC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2022-09-28T06:07:00Z</para>
             /// </summary>
             [NameInMap("EffectiveTime")]
             [Validation(Required=false)]
             public string EffectiveTime { get; set; }
 
             /// <summary>
-            /// The language of the quota alert notification. Valid values:
+            /// <para>The language of the quota alert notification. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>zh: Chinese</description></item>
+            /// <item><description>en: English</description></item>
+            /// </list>
             /// 
-            /// *   zh: Chinese
-            /// *   en: English
+            /// <b>Example:</b>
+            /// <para>zh</para>
             /// </summary>
             [NameInMap("EnvLanguage")]
             [Validation(Required=false)]
             public string EnvLanguage { get; set; }
 
             /// <summary>
-            /// The end time of the validity period of the quota. The value is displayed in UTC.
+            /// <para>The end time of the validity period of the quota. The value is displayed in UTC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2022-09-29T06:07:00Z</para>
             /// </summary>
             [NameInMap("ExpireTime")]
             [Validation(Required=false)]
             public string ExpireTime { get; set; }
 
             /// <summary>
-            /// The ID of the quota template.
+            /// <para>The ID of the quota template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1****</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
             /// <summary>
-            /// Indicates whether Quota Center sends a notification about the application result. Valid values:
+            /// <para>Indicates whether Quota Center sends a notification about the application result. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: no</description></item>
+            /// <item><description>3: yes</description></item>
+            /// </list>
             /// 
-            /// *   0: no
-            /// *   3: yes
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("NoticeType")]
             [Validation(Required=false)]
             public int? NoticeType { get; set; }
 
             /// <summary>
-            /// The calculation cycle of the quota.
+            /// <para>The calculation cycle of the quota.</para>
             /// </summary>
             [NameInMap("Period")]
             [Validation(Required=false)]
             public ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplatesPeriod Period { get; set; }
             public class ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplatesPeriod : TeaModel {
                 /// <summary>
-                /// The unit of the calculation cycle. Valid values:
+                /// <para>The unit of the calculation cycle. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>second</description></item>
+                /// <item><description>minute</description></item>
+                /// <item><description>hour</description></item>
+                /// <item><description>day</description></item>
+                /// <item><description>week</description></item>
+                /// </list>
                 /// 
-                /// *   second
-                /// *   minute
-                /// *   hour
-                /// *   day
-                /// *   week
+                /// <b>Example:</b>
+                /// <para>day</para>
                 /// </summary>
                 [NameInMap("PeriodUnit")]
                 [Validation(Required=false)]
                 public string PeriodUnit { get; set; }
 
                 /// <summary>
-                /// The value of the calculation cycle.
+                /// <para>The value of the calculation cycle.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("PeriodValue")]
                 [Validation(Required=false)]
@@ -136,39 +176,55 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             }
 
             /// <summary>
-            /// The abbreviation of the Alibaba Cloud service name.
+            /// <para>The abbreviation of the Alibaba Cloud service name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ecs</para>
             /// </summary>
             [NameInMap("ProductCode")]
             [Validation(Required=false)]
             public string ProductCode { get; set; }
 
             /// <summary>
-            /// The ID of the quota.
+            /// <para>The ID of the quota.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>q_security-groups</para>
             /// </summary>
             [NameInMap("QuotaActionCode")]
             [Validation(Required=false)]
             public string QuotaActionCode { get; set; }
 
             /// <summary>
-            /// The type of the quota. Valid values:
+            /// <para>The type of the quota. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>CommonQuota: general quota</description></item>
+            /// <item><description>FlowControl: API rate limit</description></item>
+            /// <item><description>WhiteListLabel: privilege</description></item>
+            /// </list>
             /// 
-            /// *   CommonQuota: general quota
-            /// *   FlowControl: API rate limit
-            /// *   WhiteListLabel: privilege
+            /// <b>Example:</b>
+            /// <para>CommonQuota</para>
             /// </summary>
             [NameInMap("QuotaCategory")]
             [Validation(Required=false)]
             public string QuotaCategory { get; set; }
 
             /// <summary>
-            /// The description of the quota.
+            /// <para>The description of the quota.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>The maximum number of security groups that can be created by the current account.</para>
             /// </summary>
             [NameInMap("QuotaDescription")]
             [Validation(Required=false)]
             public string QuotaDescription { get; set; }
 
             /// <summary>
-            /// The name of the quota.
+            /// <para>The name of the quota.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Maximum Number of Security Groups</para>
             /// </summary>
             [NameInMap("QuotaName")]
             [Validation(Required=false)]
@@ -177,14 +233,20 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>D47B3A10-CDAC-5412-B2EE-EC9A3DBE9053</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of records returned for the query.
+        /// <para>The total number of records returned for the query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>40</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

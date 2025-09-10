@@ -10,11 +10,12 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
     public class DeleteTemplateQuotaItemRequest : TeaModel {
         /// <summary>
-        /// The ID of the quota template.
+        /// <para>The ID of the quota template.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/450403.html">ListQuotaApplicationTemplates</a> operation to obtain the ID of a quota template.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [ListQuotaApplicationTemplates](https://help.aliyun.com/document_detail/450403.html) operation to obtain the ID of a quota template.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1****</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
