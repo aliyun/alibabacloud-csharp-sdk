@@ -14,6 +14,7 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         /// <list type="bullet">
         /// <item><description>TAG_POLICY: the Tag Policy feature.</description></item>
         /// <item><description>VERIFY_NO_TAG: the strong verification feature.</description></item>
+        /// <item><description>TAG_POLICY_NOTIFY: the notification feature that sends notifications for resources found to be non-compliant with the tag policy.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
