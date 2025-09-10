@@ -210,6 +210,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string Id { get; set; }
 
                 /// <summary>
+                /// <b>if can be null:</b>
+                /// <c>true</c>
+                /// </summary>
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                /// <summary>
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou-g-aliyun</para>
                 /// </summary>
