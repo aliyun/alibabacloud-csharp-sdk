@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ListVirtualResourceRequest : TeaModel {
+        [NameInMap("Order")]
+        [Validation(Required=false)]
+        public string Order { get; set; }
+
         /// <summary>
         /// <para>The page number. Pages start from page 1. Default value: 1.</para>
         /// 
@@ -28,6 +32,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("Sort")]
+        [Validation(Required=false)]
+        public string Sort { get; set; }
 
         /// <summary>
         /// <para>The ID of the virtual resource group.</para>

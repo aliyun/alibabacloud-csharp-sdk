@@ -377,6 +377,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string Sort { get; set; }
 
+        [NameInMap("TrafficState")]
+        [Validation(Required=false)]
+        public string TrafficState { get; set; }
+
         /// <summary>
         /// <para>The workspace ID.</para>
         /// 
