@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         [Validation(Required=false)]
         public long? CrossAccountUserId { get; set; }
 
+        [NameInMap("Edition")]
+        [Validation(Required=false)]
+        public string Edition { get; set; }
+
         /// <summary>
         /// <para>The path not to be restored. All documents under this path will not be restored. Maximum length is 255 characters.</para>
         /// 

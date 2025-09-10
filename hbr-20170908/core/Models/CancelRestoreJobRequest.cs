@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class CancelRestoreJobRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>STANDARD</para>
+        /// </summary>
+        [NameInMap("Edition")]
+        [Validation(Required=false)]
+        public string Edition { get; set; }
+
+        /// <summary>
         /// <para>The ID of the restore job.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -22,7 +30,6 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 
         /// <summary>
         /// <para>The ID of the backup vault.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v-*********************</para>

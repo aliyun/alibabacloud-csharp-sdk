@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class SearchHistoricalSnapshotsShrinkRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>BASIC</para>
+        /// </summary>
+        [NameInMap("Edition")]
+        [Validation(Required=false)]
+        public string Edition { get; set; }
+
+        /// <summary>
         /// <para>The maximum number of rows that you want the current query to return. To query only the number of matched rows without the need to return specific data, you can set the Limit parameter to <c>0</c>. Then, the operation returns only the number of matched rows.</para>
         /// 
         /// <b>Example:</b>

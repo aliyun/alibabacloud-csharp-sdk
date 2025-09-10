@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class DescribeRestoreJobs2Request : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>STANDARD</para>
+        /// </summary>
+        [NameInMap("Edition")]
+        [Validation(Required=false)]
+        public string Edition { get; set; }
+
+        /// <summary>
         /// <para>The keys in the filter.</para>
         /// </summary>
         [NameInMap("Filters")]

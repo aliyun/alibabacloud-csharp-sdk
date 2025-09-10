@@ -336,6 +336,14 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string Prefix { get; set; }
 
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>42949672960</para>
+                /// </summary>
+                [NameInMap("ProtectedDataSize")]
+                [Validation(Required=false)]
+                public long? ProtectedDataSize { get; set; }
+
+                /// <summary>
                 /// <para>The time when the backup job ended. The value is a UNIX timestamp. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>

@@ -440,6 +440,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 [Validation(Required=false)]
                 public string SnapshotId { get; set; }
 
+                [NameInMap("SourceInstanceId")]
+                [Validation(Required=false)]
+                public string SourceInstanceId { get; set; }
+
                 /// <summary>
                 /// <para>The type of the data source. Valid values:</para>
                 /// <list type="bullet">

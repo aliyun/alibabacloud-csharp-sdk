@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class DescribeBackupPlansRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>STANDARD</para>
+        /// </summary>
+        [NameInMap("Edition")]
+        [Validation(Required=false)]
+        public string Edition { get; set; }
+
+        /// <summary>
         /// <para>The filters.</para>
         /// </summary>
         [NameInMap("Filters")]
