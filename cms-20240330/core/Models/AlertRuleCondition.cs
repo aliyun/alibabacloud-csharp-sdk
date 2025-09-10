@@ -162,6 +162,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string NoDataPolicy { get; set; }
 
+        [NameInMap("oper")]
+        [Validation(Required=false)]
+        public string Oper { get; set; }
+
         [NameInMap("relation")]
         [Validation(Required=false)]
         public string Relation { get; set; }
@@ -213,6 +217,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [NameInMap("type")]
         [Validation(Required=false)]
         public string Type { get; set; }
+
+        [NameInMap("value")]
+        [Validation(Required=false)]
+        public double? Value { get; set; }
 
     }
 

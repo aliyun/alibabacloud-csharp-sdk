@@ -25,6 +25,50 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("responseStatus")]
+        [Validation(Required=false)]
+        public GetEntityStoreDataResponseBodyResponseStatus ResponseStatus { get; set; }
+        public class GetEntityStoreDataResponseBodyResponseStatus : TeaModel {
+            [NameInMap("executionStates")]
+            [Validation(Required=false)]
+            public string ExecutionStates { get; set; }
+
+            [NameInMap("level")]
+            [Validation(Required=false)]
+            public string Level { get; set; }
+
+            [NameInMap("result")]
+            [Validation(Required=false)]
+            public string Result { get; set; }
+
+            [NameInMap("retryPolicy")]
+            [Validation(Required=false)]
+            public string RetryPolicy { get; set; }
+
+            [NameInMap("statusItem")]
+            [Validation(Required=false)]
+            public List<GetEntityStoreDataResponseBodyResponseStatusStatusItem> StatusItem { get; set; }
+            public class GetEntityStoreDataResponseBodyResponseStatusStatusItem : TeaModel {
+                [NameInMap("code")]
+                [Validation(Required=false)]
+                public string Code { get; set; }
+
+                [NameInMap("level")]
+                [Validation(Required=false)]
+                public string Level { get; set; }
+
+                [NameInMap("message")]
+                [Validation(Required=false)]
+                public string Message { get; set; }
+
+                [NameInMap("suggestion")]
+                [Validation(Required=false)]
+                public string Suggestion { get; set; }
+
+            }
+
+        }
+
     }
 
 }

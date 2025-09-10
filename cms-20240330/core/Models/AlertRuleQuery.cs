@@ -124,6 +124,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public AlertRuleSlsQueryJoin SecondJoin { get; set; }
 
+        [NameInMap("serviceIds")]
+        [Validation(Required=false)]
+        public List<string> ServiceIds { get; set; }
+
         /// <summary>
         /// <para>查询类型</para>
         /// <para>This parameter is required.</para>
