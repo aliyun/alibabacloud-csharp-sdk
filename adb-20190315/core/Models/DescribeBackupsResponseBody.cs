@@ -90,6 +90,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 [Validation(Required=false)]
                 public string BackupStartTime { get; set; }
 
+                [NameInMap("BackupStatus")]
+                [Validation(Required=false)]
+                public string BackupStatus { get; set; }
+
                 /// <summary>
                 /// <para>The backup type. Valid values:</para>
                 /// <list type="bullet">

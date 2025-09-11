@@ -1,3 +1,7 @@
+2025-09-11 Version: 5.0.7
+- Update API DescribeBackups: add response parameters Body.Items.$.BackupStatus.
+
+
 2025-07-10 Version: 5.0.6
 - Update API ApplyAdviceById: add request parameters ApplyType.
 - Update API ApplyAdviceById: add request parameters BuildImmediately.
