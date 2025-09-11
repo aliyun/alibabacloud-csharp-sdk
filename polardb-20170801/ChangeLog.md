@@ -1,3 +1,8 @@
+2025-09-11 Version: 5.11.0
+- Support API DescribeBackupRegions.
+- Update API CreateDBCluster: add request parameters SourceUid.
+
+
 2025-09-09 Version: 5.10.0
 - Support API ModifyDBNodeDescription.
 - Update API DescribeDBClusterPerformance: add request parameters SubGroupName.

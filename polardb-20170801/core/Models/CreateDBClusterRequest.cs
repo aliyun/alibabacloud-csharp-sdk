@@ -663,6 +663,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SourceResourceId { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>1022xxxxxxxx</para>
+        /// </summary>
+        [NameInMap("SourceUid")]
+        [Validation(Required=false)]
+        public long? SourceUid { get; set; }
+
+        /// <summary>
         /// <para>The availability zone where the hot standby cluster is stored. Applicable to the standard edition 3AZ scenario.</para>
         /// <remarks>
         /// <para>This parameter takes effect only when multi-zone data strong consistency is enabled.</para>
